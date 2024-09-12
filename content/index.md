@@ -1,17 +1,20 @@
 ---
-title: index
-alias: []
+title: About The Garden
+alias: index
 uid: 202408232037
 author: ped_yc
 description: 
 date-created: 2024-08-23 20:37
-date-modified: 2024-09-11 22:12
+date-modified: 2024-09-12 07:50
 type: 
-aliases: []
+aliases: [index]
 tags: []
 ---
+<img src="_resources/banner.svg" width="701" height="183" />
 
-Hello，我是 pedyc，欢迎来到我的 [[数字花园]]。
+Welcome! 
+
+我是 pedyc，欢迎来到我的 [[数字花园]]。
 
 这里是我延展思维的空间，我利用这个花园来捕捉灵感，整合观点。
 
@@ -21,7 +24,7 @@ Hello，我是 pedyc，欢迎来到我的 [[数字花园]]。
 
 这里是我最近发布的内容：
 
-> [!NOTE] 小提示
+> [!hint] 小提示
 > 本花园通过 obsidian 构建，通过反向链接聚焦于观点间的联系。知识花园相较博客的区别详见 [[34-PKMer_知识管理常见问题讨论@annote]]。
 > 本花园的知识单元（颗粒度）设定为一个观点。
 >

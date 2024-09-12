@@ -1,18 +1,18 @@
 ---
 title: 34-PKMer_知识管理常见问题讨论@annote
-alias: ["PKMer_知识管理常见问题讨论"]
+alias: 34-PKMer_知识管理常见问题讨论@annote
 uid: 
 author: 
 description: 
 date-created: 2024-09-11 21:11
-date-modified: 2024-09-11 22:09
+date-modified: 2024-09-12 08:07
 type: Simpread
-banner: "/img/pkmer-avatar.png "
+aliases: [PKMer_知识管理常见问题讨论]
+banner: "/img/pkmer-avatar.png"
 banner_icon: 🔖
 created-date: 2024-08-23T10:36:17+0800
 idx: 34
-tag: []
-tags: 
+tags: []
 ---
 
 ## PKMer_ 知识管理常见问题讨论

@@ -26,7 +26,7 @@ await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
 
 ### 今日计划
 - TODO
-- TODO
+- TODO[]()
 
 ### 习惯养成
 - TODO

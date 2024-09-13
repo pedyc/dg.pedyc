@@ -1,12 +1,12 @@
 ---
 title: 21-(14) javascript - 【转载】深入理解Proxy和defineProperty - 个人文章 - SegmentFault 思否@annote
+alias: 21-(14) javascript - 【转载】深入理解Proxy和defineProperty - 个人文章 - SegmentFault 思否@annote
 uid: 
 author: 
 description: 
 date-created: 2024-08-16 11:26
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: Simpread
-alias: ["(14) javascript - 【转载】深入理解Proxy和defineProperty - 个人文章 - SegmentFault 思否"]
 created-date: 2024-08-10T23:34:00+0800
 idx: 21
 tag: []

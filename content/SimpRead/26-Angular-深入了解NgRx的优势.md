@@ -1,12 +1,13 @@
 ---
 title: 26-Angular-深入了解NgRx的优势
+alias: 26-Angular-深入了解NgRx的优势
 uid: 
 author: 
 description: 
 date-created: 2024-08-15 00:47
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
-tags: 
+tags: []
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [limeii.github.io](https://limeii.github.io/2022/09/ngrx-introduction/)
@@ -36,13 +37,9 @@ NgRx 的核心是 state（即 JS 对象），那怎么管理 state 对象呢？N
 从上图中我们可以看到：
 
 * 如果需要读取 state 里的数据，并把这些数据显示到页面上（component view），必须要通过 `selector` 这个函数；
-
 * 如果需要更新 state 这个对象的值，那就必须通过 `reducer` 这个函数；
-
 * 那怎么触发 `reducer` 这个函数执行呢？必须要通过 `Action` 触发 `reducer` 函数执行；
-
 * 如果有异步事件要更新 state 的值呢？比如我们这个 demo 例子中，是通过 call GitHub 的 user API 拿到相关用户信息，那这些异步事件（API call）就可以写在 effects 里，在 API response 回来以后，再触发 `Action`，从而触发 `reducer` 函数去更新 state 的值；
-
 * 那 `Action` 是谁来触发的呢？有两种方式：一种是用户的交互操作，比如上面这个例子里，用户输入关键字后，按下 Enter 键，触发一个 search action；还有一种方式是在 effects 里，在异步事件 callback 回来以后，触发一个 search success action；
 
 再详细介绍什么是 `actions` `effects` `reducers` `selector` 之前， 我们先来总结下整个事件执行的流程：用户在 search input 里输入关键字，按下 Enter 键，会触发一个 search action，在 effects 里去 call GitHub user API，这个 API response 回来以后，触发一个 search success action，这个 action 会触发 reducer 函数执行更新 state 的值，state 更新以后，会把更新后的值，通过 selector 这个函数，推送给页面（component view），component 拿到最新的 state 值后，把这些值更新显示在页面上。
@@ -213,9 +210,6 @@ Immutable State 除了这个性能优势之外，还有个优势是，因为每�
 NgRx 是函数编程的一种实现，理解了函数编程的优势以后，就能理解 NgRx 的优势了：
 
 * 共享 state：state 是共享的且唯一，不同的页面都是从一个 state 对象里读取值，这样可以保证 state 对象的准确性和唯一性。
-
 * 纯函数：reduer 和 selector 都是纯函数，代码可读性强、容易维护、利用缓存提高性能
-
 * 不可更改的 state：每次更新 state 对象，都是创建全新的对象引用，大大提高判断对象是否更新的性能，从而提高了 change detection 的性能
-
 * 副作用：把异步事件代码（API call）和页面数据呈现代码解耦，提高代码可读性、容易维护、容易写单元测试

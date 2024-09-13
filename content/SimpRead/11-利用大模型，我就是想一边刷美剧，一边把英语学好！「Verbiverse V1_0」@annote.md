@@ -1,11 +1,11 @@
 ---
 title: 11-利用大模型，我就是想一边刷美剧，一边把英语学好！「Verbiverse V1_0」@annote
-alias: ["利用大模型，我就是想一边刷美剧，一边把英语学好！「Verbiverse V1_0」"]
+alias: 11-利用大模型，我就是想一边刷美剧，一边把英语学好！「Verbiverse V1_0」@annote
 uid: 
 author: 
 description: 
 date-created: 2023-12-31 18:01
-date-modified: 2024-09-10 23:10
+date-modified: 2024-09-13 11:31
 type: Simpread
 aliases: 
 banner: "https://cdnfile.sspai.com/2024/07/30/8ba63144ef309d6bbe36f83ad7d64e3a.png "

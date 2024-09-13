@@ -1,12 +1,12 @@
 ---
 title: 23-How Google handles JavaScript throughout the indexing process – Vercel@annote
+alias: 23-How Google handles JavaScript throughout the indexing process – Vercel@annote
 uid: 
 author: 
 description: 
 date-created: 2024-11-30 19:36
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: Simpread
-alias: ["How Google handles JavaScript throughout the indexing process – Vercel"]
 aliases: 
 banner: "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6nqy4P5SHMmpt3EiD5IrjW/b4e23dd168dbe39c6cb5268f0b089e36/demystifying-googles-rendering.png "
 banner_icon: 🔖

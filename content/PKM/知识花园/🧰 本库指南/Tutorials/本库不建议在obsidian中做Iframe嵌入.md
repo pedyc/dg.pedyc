@@ -1,14 +1,15 @@
 ---
 title: 本库不建议在obsidian中做Iframe嵌入
+alias: 本库不建议在obsidian中做Iframe嵌入
 uid: 
 author: 
 description: 
 date-created: 2024-08-17 20:45
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
 date created: 2022-09-02
 date modified: 2022-09-02
-tags: 
+tags: []
 ---
 
 如 [[本库不建议在obsidian中搞太多奇技淫巧]] 所言，使用 Iframe 嵌入各种 web 网站到 obsidian 中，其实也算奇技淫巧的一种。

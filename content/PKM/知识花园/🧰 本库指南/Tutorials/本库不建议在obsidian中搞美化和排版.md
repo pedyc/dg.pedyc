@@ -1,14 +1,15 @@
 ---
 title: 本库不建议在obsidian中搞美化和排版
+alias: 本库不建议在obsidian中搞美化和排版
 uid: 
 author: 
 description: 
 date-created: 2024-08-17 20:45
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
 date created: 2022-09-02
 date modified: 2022-09-02
-tags: 
+tags: []
 ---
 
 很多朋友可能是第一次接触 [[markdown]]。也会在使用过程中发现各种 word 能轻易实现，但是 markdown 却做不到的排版格式。于是开始寻找解决方案，往 md 文件中，先是加入了 html，又不满足，再加入了 css。最后实现出了跟 word 一样的排版效果，却花了比 word 还要多得多的额外时间。

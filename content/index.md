@@ -5,14 +5,15 @@ uid: 202408232037
 author: ped_yc
 description: 
 date-created: 2024-08-23 20:37
-date-modified: 2024-09-12 07:50
+date-modified: 2024-09-13 11:32
 type: 
 aliases: [index]
 tags: []
 ---
-<img src="_resources/banner.svg" width="701" height="183" />
 
-Welcome! 
+![](./_resources/banner.svg)
+
+Welcome!
 
 我是 pedyc，欢迎来到我的 [[数字花园]]。
 

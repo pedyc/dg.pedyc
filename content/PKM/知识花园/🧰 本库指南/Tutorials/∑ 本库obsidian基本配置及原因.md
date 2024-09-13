@@ -1,10 +1,11 @@
 ---
 title: ∑ 本库obsidian基本配置及原因
+alias: ∑ 本库obsidian基本配置及原因
 uid: 
 author: 
 description: 
 date-created: 2024-08-17 20:45
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
 date created: 2022-08-09
 date modified: 2022-08-29

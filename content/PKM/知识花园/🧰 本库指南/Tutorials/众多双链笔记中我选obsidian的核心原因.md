@@ -1,14 +1,15 @@
 ---
 title: 众多双链笔记中我选obsidian的核心原因
+alias: 众多双链笔记中我选obsidian的核心原因
 uid: 
 author: 
 description: 
 date-created: 2024-08-17 20:45
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
 date created: 2022-08-18
 date modified: 2022-09-02
-tags: 
+tags: []
 ---
 
 以下是当初在众多双链笔记软件中选择它的初始原因，即初心。

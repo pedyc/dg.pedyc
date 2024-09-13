@@ -1,12 +1,13 @@
 ---
 title: 11-利用大模型，我就是想一边刷美剧，一边把英语学好！「Verbiverse V1_0」
+alias: 11-利用大模型，我就是想一边刷美剧，一边把英语学好！「Verbiverse V1_0」
 uid: 
 author: 
 description: 
 date-created: 2024-08-01 10:01
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
-tags: 
+tags: []
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [sspai.com](https://sspai.com/post/90975)

@@ -1,12 +1,12 @@
 ---
 title: 14-轻松阅读英文内容-终极翻译工具和插件推荐 - 少数派@annote
+alias: 14-轻松阅读英文内容-终极翻译工具和插件推荐 - 少数派@annote
 uid: 
 author: 
 description: 
 date-created: 2024-08-16 11:26
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: Simpread
-alias: ["轻松阅读英文内容-终极翻译工具和插件推荐 - 少数派"]
 banner: "https://cdnfile.sspai.com/2023/12/25/e8c4027d4f8f0a39687c05476237f252.png "
 banner_icon: 🔖
 created-date: 2024-08-01T18:24:17+0800

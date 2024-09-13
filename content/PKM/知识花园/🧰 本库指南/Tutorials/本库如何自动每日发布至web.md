@@ -1,14 +1,15 @@
 ---
 title: 本库如何自动每日发布至web
+alias: 本库如何自动每日发布至web
 uid: 
 author: 
 description: 
 date-created: 2024-08-17 20:45
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
 date created: 2022-08-25
 date modified: 2022-09-09
-tags: 
+tags: []
 ---
 
 将 obsidian 的笔记库以类似博客的方式发布至网络，目前本库采用了 2 个第三方免费方案，详见 [[obsidian 目前最完美的免费发布方案 - 渐进式教程]]。

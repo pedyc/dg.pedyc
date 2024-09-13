@@ -1,14 +1,15 @@
 ---
 title: 本库如何指定笔记同步至github
+alias: 本库如何指定笔记同步至github
 uid: 
 author: 
 description: 
 date-created: 2024-08-17 20:45
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
 date created: 2022-09-03
 date modified: 2022-09-03
-tags: 
+tags: []
 ---
 
 按 2 个维度去讨论场景：

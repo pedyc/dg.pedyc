@@ -1,23 +1,30 @@
 ---
 title: "部署在多个环境保护与行动。 --- Deploy on multiple env with GitHub Actions"
-alias: 
-  - "部署在多个环境保护与行动。 --- Deploy on multiple env with GitHub Actions"
-created-date: 2024-08-01T19:14:29+0800
+alias: 15-部署在多个环境保护与行动。 --- Deploy on multiple env with GitHub Actions@annote
+uid: 
+author: 
+description: 
+date-created: 2024-09-11 21:11
+date-modified: 2024-09-13 11:31
 type: Simpread
 banner: "https://limeii.github.io/assets/images/posts/github-actions/github-actions-workflow-deploy-on-multi-env.png "
 banner_icon: 🔖
-tag: 
+created-date: 2024-08-01T19:14:29+0800
 idx: 15
+tag: []
+tags: 
 ---
 
-# 部署在多个环境保护与行动。 --- Deploy on multiple env with GitHub Actions
+## 部署在多个环境保护与行动。 --- Deploy on multiple env with GitHub Actions
 
-> [!example]- [🧷内部链接](<http://localhost:7026/unread/15>) [🌐外部链接](<>)    
-> URI:: [🧷](<http://localhost:7026/unread/15>) [🌐](<>) 
+> [!example]- [🧷内部链接](<http://localhost:7026/unread/15>) [🌐外部链接](<>)
+> URI:: [🧷](<http://localhost:7026/unread/15>) [🌐](<>)
 > intURI:: [🧷内部链接](<http://localhost:7026/reading/15>)
 
 %%
-> [!example]+ **Comments**  
+
+> [!example]+ **Comments**
+>
 > ```dataview
 > TABLE 
 >     WITHOUT ID
@@ -30,10 +37,9 @@ idx: 15
 > GROUP BY file.link as Source
 > SORT rows.file.day desc
 > ```
->  **Description**:: This article is going to introduce:  Deploy on multiple environment with GitHub Actons  Add reviewers......
+>  **Description**:: This article is going to introduce: Deploy on multiple environment with GitHub Actons Add reviewers……
 %%
 
-> [!md] Metadata  
-> **标题**:: [部署在多个环境保护与行动。 --- Deploy on multiple env with GitHub Actions](https://limeii.github.io/2022/11/deploy-on-multiple-environment-with-github-actions/)  
-> **日期**:: [[2024-08-01]]  
-
+> [!md] Metadata
+> **标题**:: [部署在多个环境保护与行动。 --- Deploy on multiple env with GitHub Actions](https://limeii.github.io/2022/11/deploy-on-multiple-environment-with-github-actions/)
+> **日期**:: [[2024-08-01]]

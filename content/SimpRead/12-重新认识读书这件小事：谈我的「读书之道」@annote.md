@@ -1,12 +1,12 @@
 ---
 title: 12-重新认识读书这件小事：谈我的「读书之道」@annote
+alias: 12-重新认识读书这件小事：谈我的「读书之道」@annote
 uid: 
 author: 
 description: 
 date-created: 2024-01-01 02:33
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: Simpread
-alias: ["重新认识读书这件小事：谈我的「读书之道」"]
 aliases: 
 banner: "https://cdnfile.sspai.com/2024/07/29/f41c4f727f51a2026db230acf3fdccef.png "
 banner_icon: 🔖

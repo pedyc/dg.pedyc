@@ -1,11 +1,11 @@
 ---
 title: 27-How does the Internet Work？ - cs_fyi
-alias: 
+alias: 27-How does the Internet Work？ - cs_fyi
 uid: 
 author: 
 description: 
 date-created: 2024-08-14 02:47
-date-modified: 2024-09-10 22:48
+date-modified: 2024-09-13 11:31
 type: 
 aliases: []
 banner: "https://images.unsplash.com/photo-1721504483802-6503a4ba6eeb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Njc1ODd8MHwxfHJhbmRvbXx8fHx8fHwxfHwxNzIzNjAzNDI4fA&ixlib=rb-4.0.3&q=85&fit=crop&w=823&max-h=540"

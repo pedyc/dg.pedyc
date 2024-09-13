@@ -1,14 +1,15 @@
 ---
 title: 本库如何自动每日同步至github
+alias: 本库如何自动每日同步至github
 uid: 
 author: 
 description: 
 date-created: 2024-08-17 20:45
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
 date created: 2022-08-25
 date modified: 2022-08-25
-tags: 
+tags: []
 ---
 
 [[本库如何指定笔记同步至github]]

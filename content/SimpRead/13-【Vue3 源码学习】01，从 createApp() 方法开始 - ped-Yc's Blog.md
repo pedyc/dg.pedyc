@@ -1,12 +1,13 @@
 ---
 title: "13-【Vue3 源码学习】01，从 createApp() 方法开始 - ped-Yc's Blog"
+alias: "13-【Vue3 源码学习】01，从 createApp() 方法开始 - ped-Yc's Blog"
 uid: 
 author: 
 description: 
 date-created: 2024-08-01 17:18
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
-tags: 
+tags: []
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [ped-yc.github.io](https://ped-yc.github.io/2022/06/03/vueSourceCodeStudy01/) ![](https://ped-yc.github.io/2022/06/03/vueSourceCodeStudy01/s0.jpg)

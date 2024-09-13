@@ -1,11 +1,11 @@
 ---
 title: 2-我如何使用 Notion 管理简悦的一切@annote
-alias: ["我如何使用 Notion 管理简悦的一切"]
+alias: 2-我如何使用 Notion 管理简悦的一切@annote
 uid: 
 author: 
 description: 
 date-created: 2024-09-11 21:11
-date-modified: 2024-09-11 23:46
+date-modified: 2024-09-13 11:31
 type: Simpread
 banner: "https://cdn.sspai.com/2021/12/01/316ccb44c2542cfdc492b84faf0e3085.png "
 banner_icon: 🔖

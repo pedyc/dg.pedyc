@@ -1,14 +1,15 @@
 ---
 title: 本库推荐的obsidian入门路线及资源
+alias: 本库推荐的obsidian入门路线及资源
 uid: 
 author: 
 description: 
 date-created: 2024-08-17 20:45
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
 date created: 2022-07-14
 date modified: 2022-08-20
-tags: 
+tags: []
 ---
 
 up:: [[🧰 本库使用指南]]

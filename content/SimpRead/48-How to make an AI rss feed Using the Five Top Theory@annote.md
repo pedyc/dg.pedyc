@@ -1,11 +1,11 @@
 ---
 title: 48-How to make an AI rss feed Using the Five Top Theory@annote
-alias: ["How to make an AI rss feed Using the Five Top Theory"]
+alias: 48-How to make an AI rss feed Using the Five Top Theory@annote
 uid: 
 author: 
 description: 
 date-created: 2024-09-11 21:11
-date-modified: 2024-09-12 07:49
+date-modified: 2024-09-13 11:31
 type: Simpread
 banner: "https://static.quickcreator.io/static/aaakawazfziwojfc/image/06efc3334faa4288a26b1bdf934dbc45.png "
 banner_icon: 🔖

@@ -1,13 +1,12 @@
 ---
 title: PKM
-alias: []
+alias: PKM
 uid: 202408181751
 author: ped_yc
 description: 
 date-created: 2024-08-18 17:51
-date-modified: 2024-09-11 12:04
-type:
-  - 方法论
+date-modified: 2024-09-13 08:42
+type: [方法论]
 aliases: []
 tags: [PKM]
 ---

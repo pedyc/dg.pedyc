@@ -1,10 +1,11 @@
 ---
 title: Learn-Vim
+alias: Learn-Vim
 uid: 
 author: 
 description: 
 date-created: 2024-08-01 09:12
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
 aliases: []
 date updated: 2024-08-08 09:32
@@ -35,20 +36,35 @@ tags: []
 光标移动
 
 ### w
+
 ### W
+
 ### b
+
 ### B
+
 ### e
+
 ### E
+
 ### f
+
 ### F
+
 ### t
+
 ### T
+
 ### 0
+
 ### ^
+
 ### $
+
 ### /
+
 ### ?
+
 ### %
 
 ### g
@@ -57,17 +73,23 @@ g_
 gn
 
 ### Ctrl
+
 <C-u>
 
 ---
+
 ## horizontally
 
 ### h l 0 ^ $ g_
 
 ### vertically
+
 ### { } <C-D> <C-U>
+
 ### asd
+
 ###
+
 
 ### search pattern
 

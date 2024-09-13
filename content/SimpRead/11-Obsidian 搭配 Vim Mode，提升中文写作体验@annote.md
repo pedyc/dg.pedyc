@@ -1,10 +1,11 @@
 ---
 title: 11-Obsidian 搭配 Vim Mode，提升中文写作体验@annote
+alias: 11-Obsidian 搭配 Vim Mode，提升中文写作体验@annote
 uid: 
 author: 
 description: 
 date-created: 2023-12-31 17:57
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: Simpread
 aliases: []
 banner: "https://cdnfile.sspai.com/2023/01/31/5aa4c5b5aa860db4a9b99360b40aeb5e.png "

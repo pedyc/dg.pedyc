@@ -1,12 +1,12 @@
 ---
 title: 26-Angular：深入了解NgRx的优势@annote
+alias: 26-Angular：深入了解NgRx的优势@annote
 uid: 
 author: 
 description: 
 date-created: 2024-08-13 10:01
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: Simpread
-alias: ["Angular:深入了解NgRx的优势"]
 aliases: 
 created-date: 2024-08-13T18:00:46+0800
 idx: 26

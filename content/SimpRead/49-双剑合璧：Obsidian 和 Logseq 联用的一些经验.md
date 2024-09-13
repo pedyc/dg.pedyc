@@ -1,12 +1,13 @@
 ---
 title: 49-双剑合璧：Obsidian 和 Logseq 联用的一些经验
+alias: 49-双剑合璧：Obsidian 和 Logseq 联用的一些经验
 uid: 
 author: 
 description: 
 date-created: 2024-09-12 07:26
-date-modified: 2024-09-12 07:29
+date-modified: 2024-09-13 09:20
 type: 
-tags: 
+tags: []
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [sspai.com](https://sspai.com/post/80042)

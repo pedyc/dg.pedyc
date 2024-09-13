@@ -1,10 +1,11 @@
 ---
 title: Obsidian
+alias: Obsidian
 uid: 
 author: 
 description: 
 date-created: 2024-08-14 13:30
-date-modified: 2024-08-18 16:18
+date-modified: 2024-09-13 11:31
 type: 记录 
 tags: [tools]
 ---

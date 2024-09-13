@@ -1,12 +1,13 @@
 ---
 title: 23-How Google handles JavaScript throughout the indexing process – Vercel
+alias: 23-How Google handles JavaScript throughout the indexing process – Vercel
 uid: 
 author: 
 description: 
 date-created: 2024-08-12 11:36
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
-tags: 
+tags: []
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [vercel.com](https://vercel.com/blog/how-google-handles-javascript-throughout-the-indexing-process)

@@ -1,14 +1,15 @@
 ---
 title: 本库不建议在obsidian中搞任务管理
+alias: 本库不建议在obsidian中搞任务管理
 uid: 
 author: 
 description: 
 date-created: 2024-08-17 20:45
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
 date created: 2022-09-02
 date modified: 2022-09-02
-tags: 
+tags: []
 ---
 
 你也许会发现，我在本库中，几乎没有使用过 `- []` 这个可以勾选的任务清单语法。取而代之的是，用 `#todo` 标签去做一些简易的任务管理。

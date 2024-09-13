@@ -1,14 +1,15 @@
 ---
 title: macos系统中快捷输入各种特殊符号
+alias: macos系统中快捷输入各种特殊符号
 uid: 
 author: 
 description: 
 date-created: 2024-08-17 20:45
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
 date created: 2022-08-24
 date modified: 2022-08-24
-tags: 
+tags: []
 ---
 
 - 左上角的『edit - 表情与符号』中可以批量看 emoji 表情和所有特殊字符。但输入的话，没有快捷键很麻烦。

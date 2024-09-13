@@ -1,14 +1,15 @@
 ---
 title: 本库不建议在obsidian中搞太多奇技淫巧
+alias: 本库不建议在obsidian中搞太多奇技淫巧
 uid: 
 author: 
 description: 
 date-created: 2024-08-17 20:45
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
 date created: 2022-09-02
 date modified: 2022-09-02
-tags: 
+tags: []
 ---
 
 可能，你们的第一眼，看到本库，会觉得有点失望，相比于看到 cuman 或 rainbell 或其他示例库，简直显得有点简陋。界面配色一股性冷淡风，可视化的图标也看不到几个，简直无从下手。

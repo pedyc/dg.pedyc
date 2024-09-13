@@ -1,12 +1,12 @@
 ---
 title: "13-【Vue3 源码学习】01，从 createApp() 方法开始 - ped-Yc's Blog@annote"
+alias: "13-【Vue3 源码学习】01，从 createApp() 方法开始 - ped-Yc's Blog@annote"
 uid: 
 author: 
 description: 
 date-created: 2024-08-01 09:18
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: Simpread
-alias: ["【Vue3 源码学习】01，从 createApp() 方法开始 - ped-Yc's Blog"]
 aliases: 
 banner: "https://images.unsplash.com/photo-1722247478581-17f7d9ffb3a6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Njc1ODd8MHwxfHJhbmRvbXx8fHx8fHwxfHwxNzIyNTAzODc1fA&ixlib=rb-4.0.3&q=85&fit=crop&w=1284&max-h=540 "
 banner_icon: 🔖

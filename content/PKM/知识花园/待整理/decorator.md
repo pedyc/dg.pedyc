@@ -1,10 +1,11 @@
 ---
 title: decorator
+alias: decorator
 uid: 
 author: 
 description: 
 date-created: 2024-08-15 13:21
-date-modified: 2024-08-19 18:45
+date-modified: 2024-09-13 11:31
 type: 
 aliases: [装饰器]
 status: todo

@@ -1,10 +1,11 @@
 ---
 title: DNS
+alias: DNS
 uid: 202408172046
 author: ped_yc
 description: 
 date-created: 2024-08-17 20:46
-date-modified: 2024-08-19 18:30
+date-modified: 2024-09-13 11:31
 type: 
 aliases: []
 status: 

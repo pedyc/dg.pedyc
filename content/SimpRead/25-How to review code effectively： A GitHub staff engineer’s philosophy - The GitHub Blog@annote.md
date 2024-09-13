@@ -1,10 +1,11 @@
 ---
 title: 25-How to review code effectively： A GitHub staff engineer’s philosophy - The GitHub Blog@annote
+alias: 25-How to review code effectively： A GitHub staff engineer’s philosophy - The GitHub Blog@annote
 uid: 
 author: 
 description: 
 date-created: 2024-08-13 22:16
-date-modified: 2024-08-21 11:43
+date-modified: 2024-09-13 11:31
 type: Simpread
 banner: "https://github.blog/wp-content/uploads/2024/05/Collaboration-LightMode-2-1.png "
 banner_icon: 🔖

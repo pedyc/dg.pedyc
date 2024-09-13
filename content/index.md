@@ -5,13 +5,13 @@ uid: 202408232037
 author: ped_yc
 description: 
 date-created: 2024-08-23 20:37
-date-modified: 2024-09-13 11:32
+date-modified: 2024-09-13 16:20
 type: 
 aliases: [index]
 tags: []
 ---
 
-![](./_resources/banner.svg)
+![banner](./_resources/banner.svg)
 
 Welcome!
 

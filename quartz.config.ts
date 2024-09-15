@@ -16,7 +16,13 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "dg.pedyc.site",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: [
+      "_resources",
+      "_templates",
+      "_scripts",
+      ".obsidian",
+      "private",
+    ],
     defaultDateType: "created",
     theme: {
       fontOrigin: "local",

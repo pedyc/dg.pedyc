@@ -5,13 +5,13 @@ uid: 202408181751
 author: ped_yc
 description: 
 date-created: 2024-08-18 17:51
-date-modified: 2024-09-13 08:42
+date-modified: 2024-09-14 23:50
 type: [方法论]
 aliases: []
 tags: [PKM]
 ---
 
-::up::[[数字花园]]
+⬆[[数字花园]]
 
 ## 概述
 
@@ -32,7 +32,7 @@ tags: [PKM]
 - 方案：<mark class="hltr-red">简悦 +RSS</mark>方案，实现本地和云端的双向同步，因为本地化，所以可以非常快
 - 工具：
 	- 简悦：浏览器插件，阅读优化、本地导出
-	- RSS：RSSHub Radar + Inoreader/Tidyread
+	- [[RSS]]：RSSHub Radar + Inoreader/Tidyread
 
 信息筛选（稍后读/AI 总结）：
 

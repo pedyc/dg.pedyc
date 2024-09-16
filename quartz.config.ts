@@ -17,11 +17,12 @@ const config: QuartzConfig = {
     locale: "en-US",
     baseUrl: "dg.pedyc.site",
     ignorePatterns: [
-      "_resources",
-      "_templates",
-      "_scripts",
       ".obsidian",
-      "private",
+      ".trash",
+      "_resources",
+      "_template",
+      "_scripts",
+      "Private",
     ],
     defaultDateType: "created",
     theme: {

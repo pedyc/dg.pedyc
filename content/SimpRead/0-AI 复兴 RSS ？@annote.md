@@ -3,16 +3,12 @@ title: "srAnnote@AI 复兴 RSS ？"
 alias: ["srAnnote@AI 复兴 RSS ？"]
 type: Simpread
 tags: 
-url: {{uri}}
+url: https://sspai.com/post/89494
 int_uil: http://localhost:7026/reading/0
 ---
-# AI 复兴 RSS ？
-
 > [!md] Metadata  
 > **标题**:: "AI 复兴 RSS ？"  
->
 > **日期**:: [[2024-09-14]]  
->
 > **外部链接**:: [[0-AI 复兴 RSS ？]]
 
 

@@ -12,7 +12,7 @@ tags: []
 
 ## About The Garden
 
-![banner](./_resources/banner.svg)
+![banner](./banner.svg)
 
 Welcome!
 

@@ -1,13 +1,14 @@
 ---
-title: "srAnnote@如何进入生成式 AI 的新范式"
+title: srAnnote@如何进入生成式 AI 的新范式
 alias: 1-如何进入生成式 AI 的新范式@annote
 uid: 
 author: 
 description: 
 date-created: 2024-09-15 22:43
-date-modified: 2024-09-15 23:30
+date-modified: 2024-09-16 00:27
 type: Simpread
-tags: []
+aliases: [1-如何进入生成式 AI 的新范式@annote]
+tags: [annote]
 ---
 
 ## 如何进入生成式 AI 的新范式

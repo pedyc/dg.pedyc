@@ -1,15 +1,16 @@
 ---
-title: About The Garden
-alias: index
+title: index
 uid: 202408232037
 author: ped_yc
 description: 
 date-created: 2024-08-23 20:37
-date-modified: 2024-09-13 22:06
+date-modified: 2024-09-16 01:33
 type: 
-aliases: [index]
+aliases: [About The Garden]
 tags: []
 ---
+
+## About The Garden
 
 ![banner](./_resources/banner.svg)
 
@@ -25,8 +26,10 @@ Welcome!
 
 这里是我最近发布的内容：
 
+
 > [!hint] 小提示
-> 本花园通过 obsidian 构建，通过反向链接聚焦于观点间的联系。知识花园相较博客的区别详见 [[34-PKMer_知识管理常见问题讨论@annote]]。
+> 本花园通过 obsidian 构建，通过反向链接聚焦于观点间的联系。本花园的构建方式详见 [[我的方案]]。
+>
 > 本花园的知识单元（颗粒度）设定为一个观点。
 >
 >

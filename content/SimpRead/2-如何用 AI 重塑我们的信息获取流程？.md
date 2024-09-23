@@ -1,16 +1,17 @@
 ---
-title: 如何用 AI 重塑我们的信息获取流程？
-alias: 2-如何用 AI 重塑我们的信息获取流程？
+title: 2-如何用 AI 重塑我们的信息获取流程？
+aliases: 
 uid: 
 author: 
 description: 
 date-created: 2024-09-15 23:27
-date-modified: 2024-09-15 23:27
+date-modified: 2024-09-17 22:29
+status: 
 type: 
 banner: "https://cdnfile.sspai.com/2024/07/12/255ddbb2ead1104308d5a826a64be47a.png"
 banner_icon: 🔖
 tag: []
-tags: 
+tags: []
 url: https://sspai.com/post/90423
 ---
 

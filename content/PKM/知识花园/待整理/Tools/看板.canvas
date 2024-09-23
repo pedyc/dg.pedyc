@@ -1,7 +1,0 @@
-{
-	"nodes":[
-		{"id":"9633d1d93d2b2636","type":"file","file":"清单.md","x":-2120,"y":-1140,"width":400,"height":400},
-		{"id":"a26011cf4e5a3136","x":-1700,"y":-1140,"width":400,"height":400,"type":"file","file":"Tools/Learn-Vim.md"}
-	],
-	"edges":[]
-}

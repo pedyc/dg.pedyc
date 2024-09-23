@@ -1,6 +1,6 @@
 ---
 title: <% tp.file.creation_date() %>
-uid: <% tp.file.creation_date("YYYYMMDDHHmm").toString() %>
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 tags:
   - diary
 ---

@@ -1,13 +1,13 @@
 ---
 title: PKM
-alias: PKM
+aliases: [个人知识管理, Personal Knowledge Manager]
 uid: 202408181751
 author: ped_yc
 description: 
 date-created: 2024-08-18 17:51
-date-modified: 2024-09-14 23:50
-type: [方法论]
-aliases: []
+date-modified: 2024-09-20 19:25
+status: 
+type: [概念]
 tags: [PKM]
 ---
 
@@ -20,7 +20,7 @@ tags: [PKM]
 
 " 知识管理 " 一词最早起源于工商管理领域，其目的是应用管理学知识使得企业更加高效的运转。本文讨论的是 " 个人知识管理 "，核心在于统筹自己的知识，让我们对自己的知识有更深更全的把握，让我们能够更加系统性的分析自己的能力构成，加强我们希望加强的部分。
 
-知识管理的工作流如下：
+知识管理的工作流可见 [[» 播客笔记工作流]] 如下：
 
 > 略读/订阅 --> 稍后读/AI 总结 --> 笔记 --> 存储
 
@@ -62,6 +62,19 @@ tags: [PKM]
 - 工具：
 	- Obsidian
 	- 坚果云
+
+## 一些 PKM 方案
+
+- Zettelkasten
+- 第二大脑
+- GTD
+- Mind Mapping
+- Personal Wiki
+- Evergreen Notes
+- Notion-based PKM
+- Roam Research
+- Obsidian
+- 日记法
 
 ## 我的方案
 

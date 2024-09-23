@@ -3,6 +3,7 @@
 // put your custom CSS here!
 @use "./variables.scss" as *;
 
+// 首页样式
 body[data-slug="index"] img {
     filter: invert(0%);
     opacity: 0.85;
@@ -13,34 +14,41 @@ body {
     min-height: 100vh;
 }
 
-[saved-theme="dark"] #texture {
-    mix-blend-mode: overlay;
-}
-
-[saved-theme="dark"] body[data-slug="index"] img[src*="banner.svg"] {
-    filter: invert(100%);
-}
-
-body[data-slug="thoughts/craft"] {
-    & li:has(> img, > video) {
-        list-style-type: none;
-
-        & > img,
-        & > video {
-            margin: 1rem 0;
-        }
+[saved-theme="dark"] {
+    // 黑暗模式背景色
+    body {
+        background-color: #0c141c;
+    }
+    
+    #texture {
+        mix-blend-mode: overlay;
     }
 
-    article > ul {
-        padding-left: 0;
-
-        & > li {
-            list-style-type: none;
-            margin: 1rem 0;
-        }
+    // 头图
+    body[data-slug="index"] img[src*="banner.svg"] {
+        filter: invert(100%);
     }
 }
 
+// 黑暗模式高亮
+[saved-theme="dark"] mark {
+    /* background-color: hsla(57, 40%, 38%, 0.541); */ /* color: linear-gradient(120deg, #43d3ff 0%, #baaaff 80%); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #f55454;
+    background-image: linear-gradient(120deg, #43d3ff 0%, #baaaff 80%);
+}
+// 明亮模式高亮
+[saved-theme="light"] mark {
+    background-color: unset;
+    background-position: bottom;
+    background-size: 100% 40%;
+    --tw-gradient-stops: #43d3ffab, #baaaff8a;
+    background-image: linear-gradient(120deg, var(--tw-gradient-stops));
+    background-repeat: no-repeat;
+}
+
+// 左侧侧边栏
 .left {
     display: grid !important;
     gap: 1.5rem !important;
@@ -78,6 +86,19 @@ body[data-slug="thoughts/craft"] {
     }
 }
 
+// 标题
+.center {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #2a6e3f;
+    }
+}
+
+// 分割线
 hr {
     overflow: visible;
     padding: 0;
@@ -97,6 +118,7 @@ hr {
     }
 }
 
+// 代码块
 pre.poetry {
     font-size: 1.2rem;
     font-family: biro_script_standardRgus;
@@ -112,4 +134,25 @@ pre.poetry {
 
 audio::-webkit-media-controls-panel {
     background-color: var(--lightgray);
+}
+
+// 自定义文章
+body[data-slug="thoughts/craft"] {
+    & li:has(> img, > video) {
+        list-style-type: none;
+
+        & > img,
+        & > video {
+            margin: 1rem 0;
+        }
+    }
+
+    article > ul {
+        padding-left: 0;
+
+        & > li {
+            list-style-type: none;
+            margin: 1rem 0;
+        }
+    }
 }

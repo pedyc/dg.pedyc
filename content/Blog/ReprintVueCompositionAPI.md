@@ -1,16 +1,18 @@
 ---
+title: ReprintVueCompositionAPI
+aliases: 
+uid: 
+author: 
+description: 
+date-created: 2024-09-23
+date-modified: 2024-10-08
+status: 
 url: https://zhuanlan.zhihu.com/p/408272742
-title: 【转载】Vue Composition API
-date: 2022-05-02 20:39:42
-tags:
-  - JS
-  - API
-categories:
-  - 转载
+tags: [JS, API]
+categories: [转载]
 ---
 
 > 原文转自：https://zhuanlan.zhihu.com/p/408272742
-
 
 ## 前言
 
@@ -76,8 +78,8 @@ Vue 3 中引入的一种新的编写 Vue 组件的方式，可以将 2.x 中与�
 
 它接收两个参数：
 
-1.  响应式的 `props`
-2.  非响应式的 `context`，包含：attrs、slots、emit
+1. 响应式的 `props`
+2. 非响应式的 `context`，包含：attrs、slots、emit
 
 它执行的时候组件实例尚未被创建，所以我们无法访问 data、computed、methods 这些组件选项。
 
@@ -101,7 +103,7 @@ Vue 3 中引入的一种新的编写 Vue 组件的方式，可以将 2.x 中与�
 
 返回对象的响应式副本，相当于 `Vue.observable(obj)` 。
 
-该响应式转换是 “深度转换”——它会影响嵌套对象传递的所有 property。
+该响应式转换是 " 深度转换 "——它会影响嵌套对象传递的所有 property。
 
 怎么理解这里的响应式呢？就是我们在渲染期间使用响应式对象，当值改变的时候视图会自动更新，就和修改挂在 data 对象里的值一样。
 
@@ -125,17 +127,17 @@ reactive() 函数可以代理一个对象，但不能代理基本类型值，这
 
 **2.3.1 自动解包（不需要加 .value 的情况）**
 
-1.  ref 在模板中会自动解包
+1. ref 在模板中会自动解包
 
 2.`watch` 可以直接接受 ref 作为监听对象，在回调函数中会直接返回解包后的值。
 
 ![[Blog/_resources/ReprintVueCompositionAPI/6a69095ab1b3cbed4cf2c484631a47fe_MD5.jpg]]
 
-3. 使用 reactive() / readonly() 解包对象嵌套的 ref
+1. 使用 reactive() / readonly() 解包对象嵌套的 ref
 
 ![[Blog/_resources/ReprintVueCompositionAPI/7e1684a96ac2e3ab2dd48cc8e6d5c8a4_MD5.jpg]]
 
-但是从 `Array` 或原生集合类型如 `Map`访问 ref 时，不会进行解包。
+但是从 `Array` 或原生集合类型如 `Map` 访问 ref 时，不会进行解包。
 
 **2.3.2 unref（ref 的反向操作）**
 
@@ -187,8 +189,8 @@ reactive() 函数可以代理一个对象，但不能代理基本类型值，这
 
 第一个参数接收数据源，可以是：
 
-*   getter 函数、ref
-*   包含上述两种类型的数组（也就是可以 watch 多个源，其中任一个变化都会触发回调）
+* getter 函数、ref
+* 包含上述两种类型的数组（也就是可以 watch 多个源，其中任一个变化都会触发回调）
 
 第二个参数是回调函数，在数据源变动的时候触发。
 
@@ -210,8 +212,8 @@ watcher 的回调会接收到的第三个参数是一个用来注册清理操作
 
 调用这个函数可以注册一个清理函数，执行时机在：
 
-*   回调被下一次调用前
-*   watcher 被停止前
+* 回调被下一次调用前
+* watcher 被停止前
 
 ![[Blog/_resources/ReprintVueCompositionAPI/e85a574a52c9731775708dba9ed68514_MD5.jpg]]
 
@@ -225,48 +227,35 @@ watcher 的回调会接收到的第三个参数是一个用来注册清理操作
 
 对比 2.x 对象式 API：
 
-*   极易复用。
-
-*   状态可以从组件中拆出来放到组合函数中。
-
-*   更清楚的逻辑。
-
-*   代码可以按功能 / 逻辑组织，而不是分散在各个选项中。
-
-*   更好的 TypeScript 类型支持。
-
-*   基于 Class 的 API 存在 TS 类型问题，而基于函数的 API 天然对类型推导很友好，因为 TS 对函数的参数、返回值和泛型的支持已经非常完备。
-
-*   更小的打包体积。
-
-*   基于函数的 API 每一个函数都可以作为 named ES export 被单独引入，这使得它们对 tree-shaking 非常友好。没有被使用的 API 的相关代码可以在最终打包时被移除。
-*   同时，基于函数 API 所写的代码也有更好的压缩效率，因为所有的函数名和 setup 函数体内部的变量名都可以被压缩，但对象和 class 的属性 / 方法名却不可以。
+* 极易复用。
+* 状态可以从组件中拆出来放到组合函数中。
+* 更清楚的逻辑。
+* 代码可以按功能 / 逻辑组织，而不是分散在各个选项中。
+* 更好的 TypeScript 类型支持。
+* 基于 Class 的 API 存在 TS 类型问题，而基于函数的 API 天然对类型推导很友好，因为 TS 对函数的参数、返回值和泛型的支持已经非常完备。
+* 更小的打包体积。
+* 基于函数的 API 每一个函数都可以作为 named ES export 被单独引入，这使得它们对 tree-shaking 非常友好。没有被使用的 API 的相关代码可以在最终打包时被移除。
+* 同时，基于函数 API 所写的代码也有更好的压缩效率，因为所有的函数名和 setup 函数体内部的变量名都可以被压缩，但对象和 class 的属性 / 方法名却不可以。
 
 **3.3 对比 2.x 的复用模式**
 
 Vue 2.x 目前的 API 我们有一些常见的逻辑复用模式，包括：
 
-*   Mixins
-*   高阶组件 (Higher-order Components, aka HOCs)
-*   Renderless Components （基于 scoped slots / 作用域插槽封装逻辑的组件）
+* Mixins
+* 高阶组件 (Higher-order Components, aka HOCs)
+* Renderless Components （基于 scoped slots / 作用域插槽封装逻辑的组件）
 
 总体来说，以上这些模式存在以下问题：
 
-*   模版中的数据来源不清晰。
-
-*   举例来说，当一个组件中使用了多个 mixin 的时候，光看模版会很难分清一个属性到底是来自哪一个 mixin。HOC 也有类似的问题。
-
-*   使用 Composition API 只需要观察 setup 函数就可以知道数据的来源。
-*   命名空间冲突。
-
-*   由不同开发者开发的 mixin 无法保证不会正好用到一样的属性或是方法名。HOC 在注入的 props 中也存在类似问题。
-
-*   组合函数在使用和返回给渲染层的两个阶段都可以做重命名的操作。
-*   性能。
-
-*   HOC 和 Renderless Components 都需要额外的组件实例嵌套来封装逻辑，导致无谓的性能开销。
-
-*   组合函数没有创建额外的组件实例所带来的性能损耗。
+* 模版中的数据来源不清晰。
+* 举例来说，当一个组件中使用了多个 mixin 的时候，光看模版会很难分清一个属性到底是来自哪一个 mixin。HOC 也有类似的问题。
+* 使用 Composition API 只需要观察 setup 函数就可以知道数据的来源。
+* 命名空间冲突。
+* 由不同开发者开发的 mixin 无法保证不会正好用到一样的属性或是方法名。HOC 在注入的 props 中也存在类似问题。
+* 组合函数在使用和返回给渲染层的两个阶段都可以做重命名的操作。
+* 性能。
+* HOC 和 Renderless Components 都需要额外的组件实例嵌套来封装逻辑，导致无谓的性能开销。
+* 组合函数没有创建额外的组件实例所带来的性能损耗。
 
 **3.4 对比 React Hooks**
 
@@ -276,25 +265,16 @@ React Hooks 在每次组件渲染时都会调用，通过隐式地将状态挂�
 
 也就是说，Composition API 相比 React Hooks：
 
-*   整体上更符合 JavaScript 的直觉；
-
-*   Mutable 写法。
-
-*   不受调用顺序的限制，可以有条件地被调用；
-
-*   Hooks 需要使用下标来获取对应的 state。
-
-*   不会在后续更新时不断产生大量的内联函数而影响引擎优化或是导致 GC 压力；
-
-*   Hooks 的每次渲染都是单独的闭包。
-
-*   不需要总是使用 `useCallback` 来缓存传给子组件的回调以防止过度更新；
-
-*   如果给子组件传了函数，每次渲染都会被当作新 props。
-
-*   不需要担心传了错误的依赖数组给 `useEffect/useMemo/useCallback` 从而导致回调中使用了过期的值。
-
-*   Vue 的依赖收集是全自动的，可以做到最小粒度的更新。
+* 整体上更符合 JavaScript 的直觉；
+* Mutable 写法。
+* 不受调用顺序的限制，可以有条件地被调用；
+* Hooks 需要使用下标来获取对应的 state。
+* 不会在后续更新时不断产生大量的内联函数而影响引擎优化或是导致 GC 压力；
+* Hooks 的每次渲染都是单独的闭包。
+* 不需要总是使用 `useCallback` 来缓存传给子组件的回调以防止过度更新；
+* 如果给子组件传了函数，每次渲染都会被当作新 props。
+* 不需要担心传了错误的依赖数组给 `useEffect/useMemo/useCallback` 从而导致回调中使用了过期的值。
+* Vue 的依赖收集是全自动的，可以做到最小粒度的更新。
 
 这都是基于 Vue 的响应式更新能力。
 
@@ -318,10 +298,10 @@ React Hooks 在每次组件渲染时都会调用，通过隐式地将状态挂�
 
 ## 总结
 
-**面向生命周期编程 vs 面向业务逻辑编程**  
-Composition API 带来了组件逻辑抽取和复用的优化，抽取逻辑会变得非常简单，所以我们不必只在需要复用逻辑的时候才抽取函数，也可以单纯为了更好地组织代码去抽取函数，以此避免每个逻辑任务的代码都被选项切成了多个碎片分散在各处。  
-当然如果组件足够简单，我们还是可以只使用 Options API，以原来的习惯写代码。**我可以在 Vue 2 中使用吗？**  
-可以的，官方团队提供了可供 Vue 2 使用的插件： [@vue/composition-api](https://link.zhihu.com/?target=https%3A//github.com/vuejs/composition-api)。  
+**面向生命周期编程 vs 面向业务逻辑编程**
+Composition API 带来了组件逻辑抽取和复用的优化，抽取逻辑会变得非常简单，所以我们不必只在需要复用逻辑的时候才抽取函数，也可以单纯为了更好地组织代码去抽取函数，以此避免每个逻辑任务的代码都被选项切成了多个碎片分散在各处。
+当然如果组件足够简单，我们还是可以只使用 Options API，以原来的习惯写代码。**我可以在 Vue 2 中使用吗？**
+可以的，官方团队提供了可供 Vue 2 使用的插件： [@vue/composition-api](https://link.zhihu.com/?target=https%3A//github.com/vuejs/composition-api)。
 另外他们也计划让 Composition API 在 Vue 2.7 原生支持。
 
 ## 参考

@@ -19,7 +19,7 @@ body {
     body {
         background-color: #0c141c;
     }
-    
+
     #texture {
         mix-blend-mode: overlay;
     }
@@ -81,7 +81,7 @@ body {
         grid-area: 4 / 1 / 4 / 3;
     }
 
-    @media all and (max-width: $fullPageWidth) {
+    @media all and (max-width: $pageWidth) {
         display: flex !important;
     }
 }

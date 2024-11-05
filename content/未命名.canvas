@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"1e71764353940116","type":"file","file":"Diary/2024-10-28.md","x":-60,"y":-560,"width":286,"height":332},
+		{"id":"9ddb36dd10cad2e9","type":"text","text":"本周日程","x":-99,"y":60,"width":250,"height":60,"color":"4"},
+		{"id":"739b1921207ecc0a","x":226,"y":-560,"width":286,"height":332,"type":"file","file":"Diary/2024-10-30.md"}
+	],
+	"edges":[
+		{"id":"2616120dfc3a3de8","fromNode":"9ddb36dd10cad2e9","fromSide":"top","toNode":"1e71764353940116","toSide":"bottom"},
+		{"id":"69e5453757a52b55","fromNode":"9ddb36dd10cad2e9","fromSide":"bottom","toNode":"739b1921207ecc0a","toSide":"top"}
+	]
+}

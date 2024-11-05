@@ -2,10 +2,10 @@
 title: 2-如何用 AI 重塑我们的信息获取流程？@annote
 aliases: ["srAnnote@如何用 AI 重塑我们的信息获取流程？"]
 uid: 
-author: 不孤独的二向箔
+author: {{author}}
 description: 前言在这个数字时代，我们有很多信息来源：多媒体：新闻网站、Medium、电子书、研报、在线期刊社交媒体：Twitter、Instagram、Facebook、LinkedIn 流媒体：YouTube、T ......
-date-created: 2024-09-16 10:59
-date-modified: 2024-09-17 23:02
+date-created: 2024-10-27
+date-modified: 2024-10-29
 status: 
 type: Simpread
 tags: []
@@ -14,11 +14,11 @@ int_uil: http://localhost:7026/reading/2
 ---
 
 > [!md] Metadata
-> 🙇‍♂作者信息：不孤独的二向箔
-> 🌱文档状态：{{status}}
-> 📅创建日期：2024 年 09 月 15 日 07:59:17
-> 🔗反向链接：
-> 🖋 标签列表：
+> 🙇‍♂作者信息：{{author}}
+> 🌱文档状态：YCTODO
+> 📅创建日期：2024-09-15
+> 🔗原文链接：https://sspai.com/post/90423
+> 🖋标签列表：
 
 > [!summary] 描述
 > 前言在这个数字时代，我们有很多信息来源：多媒体：新闻网站、Medium、电子书、研报、在线期刊社交媒体：Twitter、Instagram、Facebook、LinkedIn 流媒体：YouTube、T ……

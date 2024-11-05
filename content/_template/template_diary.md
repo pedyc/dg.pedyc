@@ -22,19 +22,18 @@ await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
 > [!quote] 一言<br/>
  <% 一言 %> —— 《<% 来源 %>》 · <% 作者 %>
 
-## 今日要做什么？
-
-### 今日计划
+## ☁行云（今日要做什么？）
 - TODO
 - TODO
 
-### 习惯养成
-- TODO
-- TODO
-
-## 今日做了什么？
+## :LiFootprints:跬步（今日做了什么？）
 - DONE
 - DONE
 
-> [!NOTE] 复盘<br/>
+## ☀日新（习惯养成）
+- TODO
+- DONE
+
+## :LiSunMoon:温故（每日总结）
+> [!NOTE] 今日复盘
 > NOTE

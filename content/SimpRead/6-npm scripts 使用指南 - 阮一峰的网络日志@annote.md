@@ -1,18 +1,19 @@
 ---
 title: "srAnnote@npm scripts 使用指南 - 阮一峰的网络日志"
 aliases: ["srAnnote@npm scripts 使用指南 - 阮一峰的网络日志"]
-author: ruanyifeng.com
+author: {{author}}
 description: Node 开发离不开 npm，而脚本功能是 npm 最强大、最常用的功能之一。
 type: Simpread
 tags: 
 url: https://ruanyifeng.com/blog/2016/10/npm_scripts.html
 int_uil: http://localhost:7026/reading/6
 ---
-> [!md] Metadata  
-> **标题**:: "npm scripts 使用指南 - 阮一峰的网络日志"  
-> **日期**:: [[2024-09-17]]  
-> **外部链接**:: [[6-npm scripts 使用指南 - 阮一峰的网络日志]]
-
+> [!md] Metadata
+> 🙇‍♂作者信息：{{author}}
+> 🌱文档状态：YCTODO
+> 📅创建日期：2024-09-17
+> 🔗原文链接：https://ruanyifeng.com/blog/2016/10/npm_scripts.html
+> 🖋标签列表： 
 
 > [!summary] 描述  
 > Node 开发离不开 npm，而脚本功能是 npm 最强大、最常用的功能之一。
@@ -25,6 +26,19 @@ int_uil: http://localhost:7026/reading/6
 
 > [📌](<http://localhost:7026/reading/6#id=1726549031027>) <mark style="background-color: #ffeb3b">Highlight</mark> 
 > 比较特别的是，`npm run`新建的这个 Shell，会将当前目录的`node_modules/.bin`子目录加入`PATH`变量，执行结束后，再将`PATH`变量恢复原样。
+
+
+> [📌](<http://localhost:7026/reading/6#id=1726564562289>) <mark style="background-color: #ffeb3b">Highlight</mark> 
+> ```
+>   
+> 
+> ```
+> 
+> 用户执行`npm run build`的时候，会自动按照下面的顺序执行。
+> 
+> ```
+> npm run prebuild && np
+> ```
 
 
 

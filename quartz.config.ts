@@ -22,6 +22,7 @@ const config: QuartzConfig = {
       "_resources",
       "_template",
       "_scripts",
+      // "Diary",
       "Private",
     ],
     defaultDateType: "created",

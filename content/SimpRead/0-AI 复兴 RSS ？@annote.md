@@ -2,10 +2,10 @@
 title: 0-AI 复兴 RSS ？@annote
 aliases: ["srAnnote@AI 复兴 RSS ？"]
 uid: 
-author: 潦草学者
+author: {{author}}
 description: RSS 是什么？根据维基百科的定义，RSS 的全称是 RDFSiteSummary(RDF 站点摘要) 或 ReallySimpleSyndication(简易信息聚合)，RSS 是一种消息来源的格式规范，用来同步 ......
-date-created: 2024-09-16 10:59
-date-modified: 2024-09-18 00:44
+date-created: 2024-10-27
+date-modified: 2024-10-29
 status: 
 type: Simpread
 tags: []
@@ -14,7 +14,7 @@ int_uil: http://localhost:7026/reading/0
 ---
 
 > [!md] Metadata
-> 🙇‍♂作者信息：潦草学者
+> 🙇‍♂作者信息：{{author}}
 > 🌱文档状态：YCTODO
 > 📅创建日期：2024-09-14
 > 🔗原文链接：https://sspai.com/post/89494

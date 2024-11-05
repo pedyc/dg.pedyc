@@ -4,13 +4,13 @@ aliases:
 uid: 
 author: 
 description: 
-date-created: 2024-09-23
-date-modified: 2024-10-06
+date-created: 2024-10-29
+date-modified: 2024-10-29
 status: 
 tags: 
 url: https://dev.to/dipakahirav/top-20-javascript-tricks-and-tips-for-every-developer-3apb?ref=dailydev
 tag: []
-banner: "https://media.dev.to/cdn-cgi/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frza0kkcqa2axpmhxzdro.jpg"
+banner: "https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frza0kkcqa2axpmhxzdro.jpg"
 banner_icon: 🔖
 ---
 
@@ -28,8 +28,7 @@ Avoid using `var` to declare variables. Instead, use `let` and `const` to ensure
 let name = 'John';
 const age = 30;
 
-let name = 'John';
-const age = 30; “let name = 'John';const age = 30;”这句话不是一个完整的句子，不好翻译其确切意思，建议你提供完整的语句以便更好地进行翻译。如果只就字面直译，可能是“让 name（名字）等于'约翰'；常量 age（年龄）等于 30”。不过这种翻译比较生硬，不太能准确传达其在特定代码语境中的含义。
+
 ```
 
 ## [](#2-destructuring-assignment)2. Destructuring Assignment 🌟
@@ -376,7 +375,7 @@ If you're new to JavaScript or want a refresher, visit my blog on BuyMeACoffee t
 
 If you enjoy my content and want to support my work, consider buying me a coffee! Your support helps me continue creating valuable content for the developer community.
 
-[![[SimpRead/_resources/10-Top 20 JavaScript Tricks and Tips for Every Developer 🚀 - DEV Community/f7753cdacf285628af2079b14b067020_MD5.png]]](https://www.buymeacoffee.com/dipakahirav)
+[![](https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fimg.buymeacoffee.com%2Fbutton-api%2F%3Ftext%3DBuy%2520me%2520a%2520coffee%26emoji%3D%25E2%2598%2595%26slug%3Ddipakahirav%26button_colour%3DFFDD00%26font_colour%3D000000%26font_family%3DCookie%26outline_colour%3D000000%26coffee_colour%3Dffffff)](https://www.buymeacoffee.com/dipakahirav)
 
 ## [](#series-index)Series Index
 

@@ -1,11 +1,11 @@
 ---
 title: DNS
 aliases: []
-uid: 202408172046
+uid: "202408172046"
 author: ped_yc
 description: 
-date-created: 2024-08-17 20:46
-date-modified: 2024-09-17 16:57
+date-created: 2024-08-17
+date-modified: 2024-10-29
 status: 
 type: [term]
 tags: [term]

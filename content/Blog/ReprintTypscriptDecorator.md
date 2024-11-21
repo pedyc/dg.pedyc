@@ -1,11 +1,11 @@
 ---
 title: ReprintTypscriptDecorator
-aliases: 
+aliases: []
 uid: 
 author: 
 description: 
 date-created: 2024-09-16
-date-modified: 2024-10-06
+date-modified: 2024-11-19
 status: 
 type: 
 url: https://mirone.me/zh-hans/a-complete-guide-to-typescript-decorator/

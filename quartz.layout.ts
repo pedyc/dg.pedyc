@@ -13,7 +13,7 @@ export const sharedPageComponents: SharedLayout = {
         repoId: "R_kgDOMwI1yg",
         category: "Announcements",
         categoryId: "DIC_kwDOMwI1ys4Civ4e",
-        themeUrl: "https://dg.ped-yc.site/static/giscus",
+        themeUrl: "https://example.com/static/giscus",
         lightTheme: "light",
         darkTheme: "dark",
       },

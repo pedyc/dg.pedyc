@@ -1,12 +1,15 @@
 ---
 title: <% tp.file.title %>
+question_number: <% tp.file.title.split(',')[0] %>
 uid: <% tp.file.creation_date("YYYYMMDDHHmm").toString() %>
 author: ped_yc
 status:
   - YCTODO
+difficulty: 
 tags:
-  - article
 ---
+keywords:
+
 ## 前言
 
 ## 文章内容

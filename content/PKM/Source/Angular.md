@@ -5,13 +5,11 @@ uid:
 author: 
 description: 
 date-created: 2024-08-15
-date-modified: 2024-11-18
+date-modified: 2024-11-21
 status: 
 type: 
 tags: [angular]
 ---
-
-## 内链
 
 [[Roadmap for Angular|Angular知识地图]]
 [[Angular.json|Angular配置]]

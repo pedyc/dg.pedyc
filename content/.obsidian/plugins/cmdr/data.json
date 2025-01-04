@@ -1,0 +1,63 @@
+{
+  "confirmDeletion": false,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [
+    {
+      "id": "daily-notes",
+      "icon": "lucide-calendar-days",
+      "name": "日记: 打开/创建今天的日记",
+      "mode": "any"
+    }
+  ],
+  "fileMenu": [
+    {
+      "id": "daily-notes",
+      "icon": "lucide-calendar-days",
+      "name": "日记: 打开/创建今天的日记",
+      "mode": "any",
+      "color": "#f01919"
+    }
+  ],
+  "leftRibbon": [],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [
+    {
+      "id": "obsidian-local-images-plus:download-images",
+      "icon": "arrow-down-circle",
+      "name": "Local Images Plus: Localize attachments for the current note (plugin folder)",
+      "mode": "any"
+    },
+    {
+      "id": "templater-obsidian:insert-templater",
+      "icon": "templater-icon",
+      "name": "Templater: Open insert template modal",
+      "mode": "any"
+    },
+    {
+      "id": "daily-notes",
+      "icon": "lucide-calendar-days",
+      "name": "日记: 打开/创建今天的日记",
+      "mode": "any"
+    }
+  ],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

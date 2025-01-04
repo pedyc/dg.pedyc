@@ -1,0 +1,20 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "promptDelete": false,
+  "fileSortOrder": "alphabetical",
+  "showRibbon": false,
+  "vimMode": true,
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "showLineNumber": false,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "./_resources",
+  "newFileLocation": "current",
+  "showUnsupportedFiles": true,
+  "tabSize": 2
+}

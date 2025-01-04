@@ -1,0 +1,32 @@
+{
+  "dateHighlightedFormat": "yyyy-MM-dd HH:mm:ss",
+  "dateSavedFormat": "yyyy-MM-dd HH:mm:ss",
+  "apiKey": "4927d0dd-b455-4b7a-99a8-6d4c044cb3f0",
+  "filter": "ALL",
+  "syncAt": "2025-01-04T10:55:54",
+  "customQuery": "in:all",
+  "template": "---\nid: {{{id}}}\ntitle: >\n  {{{title}}}\n{{#author}}\nauthor: >\n  {{{author}}}\n{{/author}}\n{{#labels.length}}\ntags:\n{{#labels}} - {{{name}}}\n{{/labels}}\n{{/labels.length}}\ndate_saved: {{{dateSaved}}}\n{{#datePublished}}\ndate_published: {{{datePublished}}}\n{{/datePublished}}\n---\n\n# {{{title}}}\n#Omnivore\n\n[Read on Omnivore]({{{omnivoreUrl}}})\n[Read Original]({{{originalUrl}}})\n\n{{{ content }}}\n\n",
+  "highlightOrder": "LOCATION",
+  "syncing": false,
+  "folder": "Omnivore/{{{date}}}",
+  "folderDateFormat": "yyyy-MM-dd",
+  "endpoint": "https://api-prod.omnivore.app/api/graphql",
+  "filename": "{{{title}}}",
+  "filenameDateFormat": "yyyy-MM-dd",
+  "attachmentFolder": "Omnivore/attachments",
+  "version": "1.10.4",
+  "isSingleFile": true,
+  "frequency": 0,
+  "intervalId": 0,
+  "frontMatterVariables": [],
+  "frontMatterTemplate": "",
+  "syncOnStart": true,
+  "enableHighlightColorRender": true,
+  "highlightManagerId": "hltr",
+  "highlightColorMapping": {
+    "yellow": "#fff3a3",
+    "red": "#ff5582",
+    "blue": "#adccff",
+    "green": "#bbfabb"
+  }
+}

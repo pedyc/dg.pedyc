@@ -1,14 +1,14 @@
 ---
 title: Baba is you
-aliases: []
 uid: 202410300030
+aliases: []
 author: ped_yc
 description: 
-date-created: 2024-10-30
-date-modified: 2024-11-10
+tags: [game, 解谜游戏]
+date-created: 2024-10-29 16:00
+date-modified: 2025-01-04 02:58
 status: [YCTODO]
 type: [blog]
-tags: [game, 解谜游戏]
 ---
 
 ⬆[[占位符]]

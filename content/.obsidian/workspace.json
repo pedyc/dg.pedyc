@@ -1,0 +1,324 @@
+{
+  "main": {
+    "id": "4d4271020f377299",
+    "type": "split",
+    "children": [
+      {
+        "id": "738d48457ff71e50",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b5a4cb01bba4c92",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ACCESS 笔记组织法.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ACCESS 笔记组织法"
+            }
+          },
+          {
+            "id": "5621e0ade72ffb1a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1df13da7a6572377",
+    "type": "split",
+    "children": [
+      {
+        "id": "2bf10628ba3bdd8f",
+        "type": "tabs",
+        "dimension": 57.89129011132941,
+        "children": [
+          {
+            "id": "62b03965a1dba250",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          }
+        ]
+      },
+      {
+        "id": "023c80dc7ec29594",
+        "type": "tabs",
+        "dimension": 18.664047151277014,
+        "children": [
+          {
+            "id": "879b188741312bfb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "ACCESS 笔记组织法.md"
+              },
+              "icon": "lucide-list",
+              "title": "ACCESS 笔记组织法 的大纲"
+            }
+          },
+          {
+            "id": "aabfe4df13d030e9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#diary",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "05f33a7cf3f2ca7c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          },
+          {
+            "id": "9879e4e35cb586a9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          }
+        ]
+      },
+      {
+        "id": "a55ae7590743ec78",
+        "type": "tabs",
+        "dimension": 23.444662737393585,
+        "children": [
+          {
+            "id": "5d52ca6efedfee5c",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "67fce44427db47bb",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "ACCESS 笔记组织法.md",
+                "options": {
+                  "collapse-filter": false,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": true,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "ACCESS 笔记组织法 的关系图"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 280.5
+  },
+  "right": {
+    "id": "ff01a1db19d5896b",
+    "type": "split",
+    "children": [
+      {
+        "id": "82e15f1192309d75",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "65a2e6552e6c7caf",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "ACCESS 笔记组织法.md",
+                "collapseAll": false,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "ACCESS 笔记组织法 的反向链接列表"
+            }
+          },
+          {
+            "id": "e47084aa7e6bca64",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "ACCESS 笔记组织法.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "ACCESS 笔记组织法 的出链列表"
+            }
+          },
+          {
+            "id": "84221092fe4a2702",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "ACCESS 笔记组织法.md"
+              },
+              "icon": "lucide-info",
+              "title": "ACCESS 笔记组织法的笔记属性"
+            }
+          },
+          {
+            "id": "b90426e6ec67b7cc",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 494.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "obsidian42-brat:BRAT": false,
+      "obsidian-omnivore:Omnivore": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-local-images-plus:Local Images Plus  0.15.9\r\nLocalize attachments (plugin folder)": false,
+      "templater-obsidian:Templater": false,
+      "publish:发布更改": false,
+      "obsidian-local-images-plus:Local Images Plus  0.16.0\r\nLocalize attachments (plugin folder)": false
+    }
+  },
+  "active": "9b5a4cb01bba4c92",
+  "lastOpenFiles": [
+    "Baba is you.md",
+    "本库名词解释.md",
+    "ClippingVault",
+    "新建文件夹",
+    "习惯养成.md",
+    "积分系统.md",
+    "Tools/AHK.md",
+    "_template/template_article.md",
+    "_template/template_diary.md",
+    "_template/template_habbits.md",
+    "_template/未命名.md",
+    "decorator.md",
+    "Typescript.md",
+    "清单.md",
+    "Angular.md",
+    "[Angular.md",
+    "Roadmap for Angular.md",
+    "Angular.json.md",
+    "Tools/工具清单.md",
+    "_resources/Roadmap for Angular/97a5e5ae630a256acb3e88ff787459da_MD5.jpeg",
+    "_resources/Roadmap for Angular",
+    "_resources/Pasted image 20240815141245.png",
+    "SimpRead/backup/simpread_config@20240815133258.json",
+    "SimpRead/backup/simpread_config@20240815133255.json",
+    "SimpRead/27-How does the Internet Work？ - cs_fyi@annote.md",
+    "Diary/_resources",
+    "Diary/2024-08-15.md",
+    "output/21-(14) javascript - 【转载】深入理解Proxy和defineProperty - 个人文章 - SegmentFault 思否.html",
+    "output/21-(14) javascript - 【转载】深入理解Proxy和defineProperty - 个人文章 - SegmentFault 思否.md",
+    "output/_resources/25-How to review code effectively- A GitHub staff engineer’s philosophy - The GitHub Blog/5a27565b48733ad8c42af45886f1113c_MD5.jpg",
+    "output/_resources/25-How to review code effectively- A GitHub staff engineer’s philosophy - The GitHub Blog",
+    "output/25-How to review code effectively- A GitHub staff engineer’s philosophy - The GitHub Blog.md",
+    "output/25-How to review code effectively- A GitHub staff engineer’s philosophy - The GitHub Blog.html",
+    "output/_resources/26-Angular-深入了解NgRx的优势/9f99cfdaec2a8816ca53b7b1bd42556d_MD5.png",
+    "output/_resources/26-Angular-深入了解NgRx的优势/f81b8b211401fdd9c30d95d2a5a8901c_MD5.png",
+    "output/_resources/26-Angular-深入了解NgRx的优势/a2017a9d4245b4d81f910a6f04fa0639_MD5.png",
+    "output/_resources/26-Angular-深入了解NgRx的优势/9c0d74d394a9fa696b60206e1e073035_MD5.png",
+    "output/_resources/26-Angular-深入了解NgRx的优势/55c08ce2870d1c64ae238c3088011516_MD5.png",
+    "output/_resources/26-Angular-深入了解NgRx的优势/ec8ede9b739bcef2da6190ca227d18e9_MD5.gif",
+    "SimpRead/backup/simpread_config@20240814005246.json",
+    "output/_resources/26-Angular-深入了解NgRx的优势/13cad097f99b695eb247ace1c6496076_MD5.png",
+    "output/28-再次折腾 RSS 之搭建 FreshRSS 服务@annote.md",
+    "output/28-再次折腾 RSS 之搭建 FreshRSS 服务.md",
+    "output/26-Angular-深入了解NgRx的优势.md",
+    "output/27-How does the Internet Work？ - cs_fyi.md",
+    "Diary/2024-08-16.md",
+    "Tools/看板.canvas"
+  ]
+}

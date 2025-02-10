@@ -1,13 +1,12 @@
 .DS_Store
 .gitignore
+.quartz-cache
+.replit
 node_modules
 public
 prof
+Private
 tsconfig.tsbuildinfo
-# .obsidian
-.quartz-cache
-Private/
-.replit
 replit.nix
 **/Simpread/backup
 **/Simpread/log

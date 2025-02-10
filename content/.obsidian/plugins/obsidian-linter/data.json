@@ -12,7 +12,7 @@
     },
     "escape-yaml-special-characters": {
       "enabled": true,
-      "try-to-escape-single-line-arrays": false
+      "try-to-escape-single-line-arrays": true
     },
     "force-yaml-escape": {
       "enabled": false,
@@ -63,16 +63,16 @@
       "date-created-key": "date-created",
       "date-modified": true,
       "date-modified-key": "date-modified",
-      "format": "YYYY-MM-DD HH:mm",
+      "format": "YYYY-MM-DD",
       "convert-to-utc": true,
       "date-created-source-of-truth": "frontmatter",
       "date-modified-source-of-truth": "file system",
-      "update-on-file-contents-updated": "never"
+      "update-on-file-contents-updated": "after 30 seconds"
     },
     "yaml-title": {
       "enabled": true,
       "title-key": "title",
-      "mode": "filename"
+      "mode": "first-h1-or-filename-if-h1-missing"
     },
     "yaml-title-alias": {
       "enabled": false,

@@ -1,6 +1,7 @@
 ---
 title: index
-aliases: [Welcome!]
+aliases:
+  - Welcome!
 uid: 202408232037
 author: ped_yc
 description: 
@@ -9,6 +10,7 @@ date-modified: 2024-11-07
 status: 
 type: 
 tags: []
+sticker: lucide//file
 ---
 
 ![banner](./banner.svg)

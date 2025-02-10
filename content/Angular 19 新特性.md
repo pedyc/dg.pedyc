@@ -1,14 +1,14 @@
 ---
 title: Angular 19 新特性
-aliases: []
 uid: 202411172351
+aliases: []
 author: ped_yc
 description: 
-date-created: 2024-11-17
-date-modified: 2024-11-18
+tags: [web, angular]
+date-created: 2024-11-15
+date-modified: 2025-02-09
 status: [YCTODO]
 type: [blog]
-tags: [web, angular]
 ---
 
 > [!md] Metadata

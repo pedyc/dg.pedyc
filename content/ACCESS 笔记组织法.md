@@ -1,13 +1,14 @@
 ---
 title: ACCESS 笔记组织法
-aliases: []
 uid: 202409191806
+aliases: []
 author: ped_yc
 description: 
-date-created: 2024-09-19
-date-modified: 2024-10-27
-status: [YCTODO]
-tags: []
+tags: [待办/某天]
+date-created: 2024-09-18 16:00
+date-modified: 2025-02-09 17:10
+status:
+  - YCTODO
 ---
 
 > [!md] Metadata

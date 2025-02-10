@@ -6,5 +6,6 @@
   "monospaceFontFamily": "LXGW WenKai Mono GB Screen",
   "enabledCssSnippets": [
     "index"
-  ]
+  ],
+  "showRibbon": false
 }

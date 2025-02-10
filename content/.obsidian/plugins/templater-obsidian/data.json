@@ -19,12 +19,19 @@
       "template": "Template/template_diary.md"
     }
   ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
+    }
+  ],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
     "_template/template_article.md"
   ],
   "startup_templates": [
-    ""
+    "_template/template_flower.md"
   ]
 }

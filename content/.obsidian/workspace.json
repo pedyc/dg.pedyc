@@ -8,28 +8,99 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9b5a4cb01bba4c92",
+            "id": "1897f71037867b24",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ACCESS 笔记组织法.md",
+                "file": "PKM/Source/我的工作流.md",
                 "mode": "source",
+                "source": false,
                 "backlinks": true,
-                "source": false
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
-              "title": "ACCESS 笔记组织法"
+              "title": "我的工作流"
             }
           },
           {
-            "id": "5621e0ade72ffb1a",
+            "id": "d2ce7781a0add672",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "本库设计中碰到的问题.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "本库设计中碰到的问题"
+            }
+          },
+          {
+            "id": "305301b8a58c14fc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/Source/知识聚合工作流.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "知识聚合工作流"
+            }
+          },
+          {
+            "id": "99cca934697d3335",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/Source/WSL + SSH + Zellij + NeoVim 工作流.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "WSL + SSH + Zellij + NeoVim 工作流"
             }
           }
         ]
@@ -44,7 +115,7 @@
       {
         "id": "2bf10628ba3bdd8f",
         "type": "tabs",
-        "dimension": 57.89129011132941,
+        "dimension": 57.8912901113294,
         "children": [
           {
             "id": "62b03965a1dba250",
@@ -52,10 +123,21 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
+            }
+          },
+          {
+            "id": "df69c47d9bf72725",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {},
+              "icon": "layout-grid",
+              "title": "Navigator"
             }
           }
         ]
@@ -63,7 +145,7 @@
       {
         "id": "023c80dc7ec29594",
         "type": "tabs",
-        "dimension": 18.664047151277014,
+        "dimension": 18.66404715127701,
         "children": [
           {
             "id": "879b188741312bfb",
@@ -71,10 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ACCESS 笔记组织法.md"
+                "file": "PKM/Source/我的工作流.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "ACCESS 笔记组织法 的大纲"
+              "title": "我的工作流 的大纲"
             }
           },
           {
@@ -83,7 +168,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#diary",
+                "query": "tag:#YCTODO",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -111,13 +196,16 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": false
+                "useHierarchy": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "标签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "a55ae7590743ec78",
@@ -140,7 +228,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "ACCESS 笔记组织法.md",
+                "file": "PKM/Source/我的工作流.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -168,14 +256,14 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "ACCESS 笔记组织法 的关系图"
+              "title": "我的工作流 的关系图"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 280.5
+    "width": 268.5
   },
   "right": {
     "id": "ff01a1db19d5896b",
@@ -224,10 +312,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "ACCESS 笔记组织法.md"
+                "file": "PKM/Source/我的工作流.md"
               },
               "icon": "lucide-info",
-              "title": "ACCESS 笔记组织法的笔记属性"
+              "title": "我的工作流的笔记属性"
             }
           },
           {
@@ -260,65 +348,63 @@
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
       "obsidian42-brat:BRAT": false,
-      "obsidian-omnivore:Omnivore": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-local-images-plus:Local Images Plus  0.15.9\r\nLocalize attachments (plugin folder)": false,
       "templater-obsidian:Templater": false,
       "publish:发布更改": false,
-      "obsidian-local-images-plus:Local Images Plus  0.16.0\r\nLocalize attachments (plugin folder)": false
+      "obsidian-local-images-plus:Local Images Plus  0.16.3\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "9b5a4cb01bba4c92",
+  "active": "1897f71037867b24",
   "lastOpenFiles": [
-    "Baba is you.md",
-    "本库名词解释.md",
+    "PKM/Source/我的工作流.md",
+    "本库设计中碰到的问题.md",
+    "PKM/Source/知识聚合工作流.md",
+    "本库设计理念.md",
+    "PKM/Source/ACCESS笔记组织法.md",
+    "Diary/2025-02-10.md",
+    "_template/template_diary.md",
+    "Diary/2024-09-W38.md",
+    "Diary/今日待办.md",
+    "Angular 19 新特性.md",
+    "Diary/2025-02-09.md",
+    "PKM/Source/随笔工作流.md",
+    "PKM/Source/Untitled.md",
+    "PKM/关于本库/🧰 本库指南/Tutorials/» 本库计划与回顾工作流.md",
+    "_template/template_term.md",
+    "_template/template_week.md",
+    "_template/template_meta.md",
+    "_template/template_startup.md",
+    "_template/template_flower.md",
+    "_template/template_blog.md",
+    "_template/template_article.md",
+    "_resources/_resources.md",
+    "_scripts/_scripts.md",
+    "Diary/2024-08-16.md",
+    "_template/_template.md",
+    "PKM/Source/工具及配置.md",
+    "Tags",
+    "Tags/#workflow",
+    "_scripts/moveArticle.js",
+    "banner.svg",
+    "工作流",
+    "Tags/#diary",
+    "Diary/_resources",
     "ClippingVault",
     "新建文件夹",
-    "习惯养成.md",
-    "积分系统.md",
-    "Tools/AHK.md",
-    "_template/template_article.md",
-    "_template/template_diary.md",
-    "_template/template_habbits.md",
-    "_template/未命名.md",
-    "decorator.md",
-    "Typescript.md",
-    "清单.md",
-    "Angular.md",
-    "[Angular.md",
-    "Roadmap for Angular.md",
-    "Angular.json.md",
-    "Tools/工具清单.md",
     "_resources/Roadmap for Angular/97a5e5ae630a256acb3e88ff787459da_MD5.jpeg",
     "_resources/Roadmap for Angular",
     "_resources/Pasted image 20240815141245.png",
     "SimpRead/backup/simpread_config@20240815133258.json",
-    "SimpRead/backup/simpread_config@20240815133255.json",
-    "SimpRead/27-How does the Internet Work？ - cs_fyi@annote.md",
-    "Diary/_resources",
-    "Diary/2024-08-15.md",
-    "output/21-(14) javascript - 【转载】深入理解Proxy和defineProperty - 个人文章 - SegmentFault 思否.html",
-    "output/21-(14) javascript - 【转载】深入理解Proxy和defineProperty - 个人文章 - SegmentFault 思否.md",
     "output/_resources/25-How to review code effectively- A GitHub staff engineer’s philosophy - The GitHub Blog/5a27565b48733ad8c42af45886f1113c_MD5.jpg",
-    "output/_resources/25-How to review code effectively- A GitHub staff engineer’s philosophy - The GitHub Blog",
-    "output/25-How to review code effectively- A GitHub staff engineer’s philosophy - The GitHub Blog.md",
-    "output/25-How to review code effectively- A GitHub staff engineer’s philosophy - The GitHub Blog.html",
     "output/_resources/26-Angular-深入了解NgRx的优势/9f99cfdaec2a8816ca53b7b1bd42556d_MD5.png",
     "output/_resources/26-Angular-深入了解NgRx的优势/f81b8b211401fdd9c30d95d2a5a8901c_MD5.png",
     "output/_resources/26-Angular-深入了解NgRx的优势/a2017a9d4245b4d81f910a6f04fa0639_MD5.png",
     "output/_resources/26-Angular-深入了解NgRx的优势/9c0d74d394a9fa696b60206e1e073035_MD5.png",
     "output/_resources/26-Angular-深入了解NgRx的优势/55c08ce2870d1c64ae238c3088011516_MD5.png",
     "output/_resources/26-Angular-深入了解NgRx的优势/ec8ede9b739bcef2da6190ca227d18e9_MD5.gif",
-    "SimpRead/backup/simpread_config@20240814005246.json",
-    "output/_resources/26-Angular-深入了解NgRx的优势/13cad097f99b695eb247ace1c6496076_MD5.png",
-    "output/28-再次折腾 RSS 之搭建 FreshRSS 服务@annote.md",
-    "output/28-再次折腾 RSS 之搭建 FreshRSS 服务.md",
-    "output/26-Angular-深入了解NgRx的优势.md",
-    "output/27-How does the Internet Work？ - cs_fyi.md",
-    "Diary/2024-08-16.md",
     "Tools/看板.canvas"
   ]
 }

@@ -5,14 +5,17 @@
   "dataview",
   "highlightr-plugin",
   "obsidian-style-settings",
-  "obsidian-omnivore",
   "cmdr",
   "calendar",
   "obsidian-tasks-plugin",
   "obsidian-excalidraw-plugin",
   "table-editor-obsidian",
   "obsidian-linter",
-  "markdown-prettifier",
   "obsidian-local-images-plus",
-  "templater-obsidian"
+  "templater-obsidian",
+  "obsidian-minimal-settings",
+  "make-md",
+  "obsidian-icon-folder",
+  "virtual-linker",
+  "quickadd"
 ]

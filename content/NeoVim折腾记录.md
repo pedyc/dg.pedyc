@@ -1,13 +1,13 @@
 ---
 title: NeoVim折腾记录
-aliases: []
 uid: 202411072212
+aliases: []
 author: ped_yc
 description: 
-date-created: 2024-11-07
-date-modified: 2024-11-09
-status: [YCTODO]
 tags: []
+date-created: 2024-11-06 16:00
+date-modified: 2025-02-09 17:14
+status: [YCTODO]
 keywords: [tools]
 ---
 

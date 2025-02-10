@@ -3,7 +3,6 @@
   "livePreview": true,
   "promptDelete": false,
   "fileSortOrder": "alphabetical",
-  "showRibbon": false,
   "vimMode": true,
   "pdfExportSettings": {
     "pageSize": "Letter",
@@ -16,5 +15,6 @@
   "attachmentFolderPath": "./_resources",
   "newFileLocation": "current",
   "showUnsupportedFiles": true,
-  "tabSize": 2
+  "tabSize": 2,
+  "propertiesInDocument": "hidden"
 }

@@ -49,7 +49,7 @@
     }
   ],
   "file-explorer:new-file": [],
-  "templater-obsidian:_template/template_article.md": [
+  "templater-obsidian:create-_template/template_article.md": [
     {
       "modifiers": [
         "Mod"

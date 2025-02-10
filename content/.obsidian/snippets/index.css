@@ -1,0 +1,8 @@
+.virtual-link {
+    color: #fb9026;
+    text-decoration: none;
+}
+
+.virtual-link:hover {
+    text-decoration: underline;
+}

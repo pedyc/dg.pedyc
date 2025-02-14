@@ -16,5 +16,5 @@
   "newFileLocation": "current",
   "showUnsupportedFiles": true,
   "tabSize": 2,
-  "propertiesInDocument": "hidden"
+  "propertiesInDocument": "visible"
 }

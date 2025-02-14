@@ -1,16 +1,16 @@
 ---
 title: » 本库笔记的emoji符号记录
-aliases: 
 uid: 
+aliases: []
 author: 
 description: 
-date-created: 2024-08-17 20:45
-date-modified: 2024-09-19 18:12
+tags: [本库教程]
+date-created: 2024-08-16
+date-modified: 2025-02-12
 status: 
-type: 
 date created: 2022-08-05
 date modified: 2022-08-24
-tags: [本库教程]
+type: 
 ---
 
 ## 为什么要给文件名引入 emoji

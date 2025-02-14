@@ -30,15 +30,5 @@
     "lucideIconPackType": "native",
     "debugMode": false,
     "useInternalPlugins": false
-  },
-  "_resources": "LiFolder",
-  "_scripts": "LiFolder",
-  "_template": "LiFolder",
-  "Blog": "LiFolder",
-  "Diary": "LiFolder",
-  "Excalidraw": "LiFolder",
-  "Follow": "LiFolder",
-  "PKM": "LiFolder",
-  "SimpRead": "LiFolder",
-  "Tags": "LiFolder"
+  }
 }

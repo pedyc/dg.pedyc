@@ -5,10 +5,14 @@ aliases: []
 author: ped_yc
 description: 
 tags: [game, 解谜游戏]
-date-created: 2024-10-29 16:00
-date-modified: 2025-02-08 16:27
-status: [YCTODO]
-type: [blog]
+date-created: 2024-10-28
+date-modified: 2025-02-12
+status:
+  - YCTODO
+type:
+  - blog
+words:
+  2025-02-11: 25
 ---
 
 ⬆[[占位符]]

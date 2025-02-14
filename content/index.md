@@ -1,16 +1,15 @@
 ---
 title: index
-aliases:
-  - Welcome!
 uid: 202408232037
+aliases: [Welcome!]
 author: ped_yc
 description: 
-date-created: 2024-08-23
-date-modified: 2024-11-07
-status: 
-type: 
 tags: []
+date-created: 2024-08-23
+date-modified: 2025-02-11
+status: 
 sticker: lucide//file
+type: 
 ---
 
 ![banner](./banner.svg)
@@ -19,7 +18,7 @@ sticker: lucide//file
 
 这里是我延展思维的空间，我利用这个花园来捕捉灵感，整合观点。
 
-也欢迎来此花园的朋友四处逛逛，如果有对您有益的内容，我也不胜欢喜。
+也欢迎来此花园的朋友四处逛逛，如果有对您有益的内容，*我也不胜欢喜*。
 
 您可以将鼠标移动到高亮链接上预览内容，也可以点击*查看*。
 

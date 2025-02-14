@@ -5,8 +5,8 @@ aliases: []
 author: 
 description: 
 tags: [tools, blog, workflow]
-date-created: 2025-02-09 17:06
-date-modified: 2025-02-09 17:43
+date-created: 2025-02-08
+date-modified: 2025-02-10
 status: 
 ---
 
@@ -74,10 +74,6 @@ status:
 #### 4. NeoVim：代码炼金术士的工作台
 
 - **现代化升级**：
-  - 内置 LSP 支持
-  - 异步插件系统
-  - 树状文件导航（Nvim-tree）
-- **配置亮点**：
 
   ```lua
   -- 智能代码补全

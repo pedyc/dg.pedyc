@@ -1,14 +1,15 @@
 ---
 title: vscode配置
-alias: vscode配置
 uid: 202409090005
+aliases: []
 author: ped_yc
 description: 
-date-created: 2024-09-09 00:05
-date-modified: 2024-09-13 11:31
-type: 
-aliases: []
 tags: [config]
+date-created: 2024-09-08
+date-modified: 2025-02-11
+status: 
+alias: [vscode配置]
+type: 
 ---
 
 ::up::[[工具及配置]]

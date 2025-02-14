@@ -6,7 +6,7 @@ author: ped_yc
 description: 
 tags: [web, angular]
 date-created: 2024-11-15
-date-modified: 2025-02-09
+date-modified: 2025-02-11
 status: [YCTODO]
 type: [blog]
 ---

@@ -1,21 +1,15 @@
 [
-  "obsidian42-brat",
   "simpread",
-  "obsidian-banners",
   "dataview",
   "highlightr-plugin",
   "obsidian-style-settings",
   "cmdr",
   "calendar",
-  "obsidian-tasks-plugin",
-  "obsidian-excalidraw-plugin",
-  "table-editor-obsidian",
   "obsidian-linter",
   "obsidian-local-images-plus",
   "templater-obsidian",
   "obsidian-minimal-settings",
-  "make-md",
   "obsidian-icon-folder",
-  "virtual-linker",
-  "quickadd"
+  "quickadd",
+  "lazy-plugins"
 ]

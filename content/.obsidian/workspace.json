@@ -293,9 +293,7 @@
       "publish:发布更改": false,
       "cmdr:堆叠/取消堆叠标签页": false,
       "obsidian-local-images-plus:Local Images Plus  0.16.3\r\nLocalize attachments (plugin folder)": false,
-      "templater-obsidian:Templater": false,
-      "obsidian42-brat:BRAT": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "templater-obsidian:Templater": false
     }
   },
   "active": "fc04470e5ea1e529",

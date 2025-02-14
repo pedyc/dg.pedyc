@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "738d48457ff71e50",
+        "id": "b40c0648f97c5704",
         "type": "tabs",
         "children": [
           {
-            "id": "1897f71037867b24",
+            "id": "fc04470e5ea1e529",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/Source/我的工作流.md",
+                "file": "PKM/Diary/2025-02-14.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,79 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "我的工作流"
-            }
-          },
-          {
-            "id": "d2ce7781a0add672",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "本库设计中碰到的问题.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "本库设计中碰到的问题"
-            }
-          },
-          {
-            "id": "305301b8a58c14fc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/Source/知识聚合工作流.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "知识聚合工作流"
-            }
-          },
-          {
-            "id": "99cca934697d3335",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/Source/WSL + SSH + Zellij + NeoVim 工作流.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "WSL + SSH + Zellij + NeoVim 工作流"
+              "title": "2025-02-14"
             }
           }
         ]
@@ -115,7 +43,7 @@
       {
         "id": "2bf10628ba3bdd8f",
         "type": "tabs",
-        "dimension": 57.8912901113294,
+        "dimension": 53.18327974276528,
         "children": [
           {
             "id": "62b03965a1dba250",
@@ -129,46 +57,21 @@
               "icon": "lucide-folder-closed",
               "title": "文件列表"
             }
-          },
-          {
-            "id": "df69c47d9bf72725",
-            "type": "leaf",
-            "state": {
-              "type": "mk-path-view",
-              "state": {},
-              "icon": "layout-grid",
-              "title": "Navigator"
-            }
           }
         ]
       },
       {
         "id": "023c80dc7ec29594",
         "type": "tabs",
-        "dimension": 18.66404715127701,
+        "dimension": 22.958199356913184,
         "children": [
-          {
-            "id": "879b188741312bfb",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "PKM/Source/我的工作流.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "我的工作流 的大纲"
-            }
-          },
           {
             "id": "aabfe4df13d030e9",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#YCTODO",
+                "query": "tag:#待办",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -204,13 +107,12 @@
               "title": "标签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "a55ae7590743ec78",
         "type": "tabs",
-        "dimension": 23.444662737393585,
+        "dimension": 23.85852090032154,
         "children": [
           {
             "id": "5d52ca6efedfee5c",
@@ -228,7 +130,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "PKM/Source/我的工作流.md",
+                "file": "_template/template_diary.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -256,14 +158,14 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "我的工作流 的关系图"
+              "title": "template_diary 的关系图"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 268.5
+    "width": 233.5
   },
   "right": {
     "id": "ff01a1db19d5896b",
@@ -331,6 +233,21 @@
               "icon": "lucide-archive",
               "title": "添加笔记属性"
             }
+          },
+          {
+            "id": "3d6eaac8f088e7f1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "如何拥有一个无限制、可联网、带本地知识库 的大纲"
+            }
           }
         ],
         "currentTab": 2
@@ -347,64 +264,65 @@
       "canvas:新建白板": false,
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
-      "obsidian42-brat:BRAT": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false,
       "publish:发布更改": false,
-      "obsidian-local-images-plus:Local Images Plus  0.16.3\r\nLocalize attachments (plugin folder)": false
+      "obsidian-local-images-plus:Local Images Plus  0.16.3\r\nLocalize attachments (plugin folder)": false,
+      "cmdr:堆叠/取消堆叠标签页": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian42-brat:BRAT": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "1897f71037867b24",
+  "active": "fc04470e5ea1e529",
   "lastOpenFiles": [
-    "PKM/Source/我的工作流.md",
-    "本库设计中碰到的问题.md",
-    "PKM/Source/知识聚合工作流.md",
-    "本库设计理念.md",
-    "PKM/Source/ACCESS笔记组织法.md",
-    "Diary/2025-02-10.md",
-    "_template/template_diary.md",
-    "Diary/2024-09-W38.md",
-    "Diary/今日待办.md",
+    "SimpRead/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队.md",
+    "PKM/Diary/2025-02-14.md",
+    "SimpRead/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队@annote.md",
+    "SimpRead/output/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队@annote.html",
+    "SimpRead/backup/simpread_config@20250212143142.json",
+    "SimpRead/backup/simpread_config@20250212142810.json",
+    "SimpRead/backup/simpread_config@20250212142751.json",
+    "SimpRead/backup/simpread_config@20250212142750.json",
+    "SimpRead/backup/simpread_config@20250212142749.json",
+    "SimpRead/backup/simpread_config@20250212142748.json",
+    "SimpRead/5-GitHub Actions 入门教程 - 阮一峰的网络日志@annote.md",
+    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/e97eb4c381700a393adc076ac14140d8_MD5.jpg",
+    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/f58162644b240ef47c44ec93d1405e1a_MD5.jpg",
+    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/5b7683207f1f5eab7c54b41a96effcb2_MD5.jpg",
+    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/934a1bed7975d1d10021cabf7b26c090_MD5.jpg",
+    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/b7c987b87e335113667e1ef4062dedc2_MD5.jpg",
+    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/4fd5458536401482e5bfc2e761def3af_MD5.jpg",
+    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/297643c849993d9dff4594c06b836185_MD5.jpg",
+    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/46e5933c90d42a9c170accd762c8a054_MD5.jpg",
+    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/fce9926c252285acda5498c81ef51f00_MD5.jpg",
+    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/472abd28290c63effc8950d6b92b4342_MD5.jpg",
+    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队",
+    "SimpRead/backup/simpread_config@20250212142514.json",
+    "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
+    "Follow/科技爱好者周刊（第 336 期）：面对 .md",
+    "Follow/科技爱好者周刊（第 325 期）：VS .md",
+    "PKM/Blog/我的工具集.md",
+    "PKM/Blog/黑神话悟空歌词赏析——戒网.md",
     "Angular 19 新特性.md",
-    "Diary/2025-02-09.md",
-    "PKM/Source/随笔工作流.md",
-    "PKM/Source/Untitled.md",
-    "PKM/关于本库/🧰 本库指南/Tutorials/» 本库计划与回顾工作流.md",
-    "_template/template_term.md",
-    "_template/template_week.md",
-    "_template/template_meta.md",
-    "_template/template_startup.md",
-    "_template/template_flower.md",
-    "_template/template_blog.md",
-    "_template/template_article.md",
-    "_resources/_resources.md",
-    "_scripts/_scripts.md",
-    "Diary/2024-08-16.md",
-    "_template/_template.md",
+    "ACCESS 笔记组织法.md",
+    "Baba is you.md",
+    "Follow/_resources/如何拥有一个无限制、可联网、带本地知识库",
+    "_template/template_diary.md",
+    "Follow/Meet Angular v19.md",
+    "PKM/Diary/2025-02-12.md",
+    "Diary/2025-02-12.md",
+    "PKM/关于本库/🧰 本库指南/Tutorials/» 本库笔记的emoji符号记录.md",
+    "PKM/关于本库/🧰 本库指南/Tutorials/» 本库 PARA 笔记组织法工作流.md",
     "PKM/Source/工具及配置.md",
-    "Tags",
-    "Tags/#workflow",
-    "_scripts/moveArticle.js",
-    "banner.svg",
-    "工作流",
-    "Tags/#diary",
-    "Diary/_resources",
-    "ClippingVault",
-    "新建文件夹",
-    "_resources/Roadmap for Angular/97a5e5ae630a256acb3e88ff787459da_MD5.jpeg",
-    "_resources/Roadmap for Angular",
-    "_resources/Pasted image 20240815141245.png",
-    "SimpRead/backup/simpread_config@20240815133258.json",
-    "output/_resources/25-How to review code effectively- A GitHub staff engineer’s philosophy - The GitHub Blog/5a27565b48733ad8c42af45886f1113c_MD5.jpg",
-    "output/_resources/26-Angular-深入了解NgRx的优势/9f99cfdaec2a8816ca53b7b1bd42556d_MD5.png",
-    "output/_resources/26-Angular-深入了解NgRx的优势/f81b8b211401fdd9c30d95d2a5a8901c_MD5.png",
-    "output/_resources/26-Angular-深入了解NgRx的优势/a2017a9d4245b4d81f910a6f04fa0639_MD5.png",
-    "output/_resources/26-Angular-深入了解NgRx的优势/9c0d74d394a9fa696b60206e1e073035_MD5.png",
-    "output/_resources/26-Angular-深入了解NgRx的优势/55c08ce2870d1c64ae238c3088011516_MD5.png",
-    "output/_resources/26-Angular-深入了解NgRx的优势/ec8ede9b739bcef2da6190ca227d18e9_MD5.gif",
+    "PKM/Source/vscode配置.md",
+    "PKM/Source/标准化内容.md",
+    "PKM/Source/Untitled.md",
+    "_template/template_meta.md",
+    "index.md",
+    "todos.md",
+    "NeoVim折腾记录.md",
     "Tools/看板.canvas"
   ]
 }

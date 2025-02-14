@@ -1,16 +1,16 @@
 ---
 title: » 本库 PARA 笔记组织法工作流
-aliases: []
 uid: 
+aliases: []
 author: 
 description: 
-date-created: 2024-08-17 20:45
-date-modified: 2024-09-19 18:08
+tags: [本库教程]
+date-created: 2024-08-16
+date-modified: 2025-02-11
 status: 
-type: 
 date created: 2022-08-04
 date modified: 2022-08-25
-tags: [本库教程]
+type: 
 ---
 
 x:: [[PARA笔记组织法]], [[∑ Building a Second Brain 翻译和读书笔记]]

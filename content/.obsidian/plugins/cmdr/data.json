@@ -2,44 +2,55 @@
   "confirmDeletion": false,
   "showAddCommand": true,
   "debug": false,
-  "editorMenu": [
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [
     {
-      "id": "daily-notes",
-      "icon": "lucide-calendar-days",
-      "name": "日记: 打开/创建今天的日记",
+      "id": "workspace:toggle-stacked-tabs",
+      "icon": "lucide-layers",
+      "name": "堆叠/取消堆叠标签页",
       "mode": "any"
     }
   ],
-  "fileMenu": [
-    {
-      "id": "daily-notes",
-      "icon": "lucide-calendar-days",
-      "name": "日记: 打开/创建今天的日记",
-      "mode": "any",
-      "color": "#f01919"
-    }
-  ],
-  "leftRibbon": [],
   "rightRibbon": [],
   "titleBar": [],
-  "statusBar": [],
-  "pageHeader": [
+  "statusBar": [
     {
-      "id": "obsidian-local-images-plus:download-images",
-      "icon": "arrow-down-circle",
-      "name": "Local Images Plus: Localize attachments for the current note (plugin folder)",
+      "id": "workspace:copy-url",
+      "icon": "lucide-copy",
+      "name": "复制 Obsidian URI",
       "mode": "any"
     },
     {
+      "id": "theme:use-light",
+      "icon": "lucide-sun",
+      "name": "使用浅色模式",
+      "mode": "any"
+    },
+    {
+      "id": "theme:use-dark",
+      "icon": "lucide-moon-star",
+      "name": "使用深色模式",
+      "mode": "any"
+    }
+  ],
+  "pageHeader": [
+    {
       "id": "templater-obsidian:insert-templater",
-      "icon": "templater-icon",
+      "icon": "lucide-arrow-down-to-dot",
       "name": "Templater: Open insert template modal",
       "mode": "any"
     },
     {
-      "id": "daily-notes",
-      "icon": "lucide-calendar-days",
-      "name": "日记: 打开/创建今天的日记",
+      "id": "open-with-default-app:show",
+      "icon": "lucide-files",
+      "name": "在系统资源管理器中显示",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-local-images-plus:download-images-def",
+      "icon": "lucide-image-down",
+      "name": "Local Images Plus: Localize attachments for the current note (Obsidian folder)",
       "mode": "any"
     }
   ],

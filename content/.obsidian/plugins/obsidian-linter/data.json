@@ -41,7 +41,7 @@
     },
     "remove-yaml-keys": {
       "enabled": true,
-      "yaml-keys-to-remove": "date\n"
+      "yaml-keys-to-remove": "date\ntag\ncreated"
     },
     "sort-yaml-array-values": {
       "enabled": false,

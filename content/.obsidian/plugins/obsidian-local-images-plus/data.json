@@ -12,14 +12,17 @@
   "realTimeUpdateInterval": 5,
   "addNameOfFile": true,
   "showNotifications": true,
-  "include": ".*\\.md",
+  "includeps": "md|canvas",
+  "includepattern": "(?<md>.*\\.md)|(?<canvas>.*\\.canvas)",
   "mediaRootDir": "_resources/${notename}",
   "disAddCom": false,
   "useMD5ForNewAtt": true,
   "removeMediaFolder": true,
   "removeOrphansCompl": false,
-  "PngToJpeg": false,
+  "PngToJpeg": true,
   "PngToJpegLocal": true,
   "JpegQuality": 80,
-  "DoNotCreateObsFolder": false
+  "DoNotCreateObsFolder": false,
+  "DateFormat": "YYYY MM DD",
+  "include": ".*\\.md"
 }

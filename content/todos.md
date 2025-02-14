@@ -1,13 +1,13 @@
 ---
 title: todos
-aliases: []
 uid: 202409201339
+aliases: []
 author: ped_yc
 description: 
-date-created: 2024-09-20
-date-modified: 2024-10-27
-status: [YCTODO]
 tags: []
+date-created: 2024-09-20
+date-modified: 2025-02-11
+status: [YCTODO]
 ---
 
 ```dataview

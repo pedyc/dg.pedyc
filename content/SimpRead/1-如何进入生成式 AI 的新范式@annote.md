@@ -1,16 +1,16 @@
 ---
 title: 1-如何进入生成式 AI 的新范式@annote
-aliases: ["srAnnote@如何进入生成式 AI 的新范式"]
 uid: 
+aliases: ["srAnnote@如何进入生成式 AI 的新范式"]
 author: {{author}}
 description: 不学习 AI 会不会被落下、AI 可以给我带来哪些帮助、想要学习 AI 应该从何开始…… 这些问题，最终变成了信息焦虑。
-date-created: 2024-10-27
-date-modified: 2024-10-29
-status: 
-type: Simpread
 tags: []
-url: https://sspai.com/post/88960
+date-created: 2024-10-27
+date-modified: 2025-02-11
+status: 
 int_uil: http://localhost:7026/reading/1
+type: Simpread
+url: https://sspai.com/post/88960
 ---
 
 > [!md] Metadata

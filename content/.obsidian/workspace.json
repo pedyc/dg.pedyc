@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
+                "file": "Angular 19 新特性.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "如何拥有一个无限制、可联网、带本地知识库"
+              "title": "Angular 19 新特性"
             }
           },
           {
@@ -67,7 +67,7 @@
       {
         "id": "2bf10628ba3bdd8f",
         "type": "tabs",
-        "dimension": 47.451274362818594,
+        "dimension": 47.45127436281859,
         "children": [
           {
             "id": "62b03965a1dba250",
@@ -97,7 +97,7 @@
       {
         "id": "3b21062118b7d174",
         "type": "tabs",
-        "dimension": 24.737631184407796,
+        "dimension": 24.737631184407793,
         "children": [
           {
             "id": "3d6eaac8f088e7f1",
@@ -105,13 +105,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
+                "file": "Angular 19 新特性.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "如何拥有一个无限制、可联网、带本地知识库 的大纲"
+              "title": "Angular 19 新特性 的大纲"
             }
           },
           {
@@ -151,7 +151,7 @@
       {
         "id": "a55ae7590743ec78",
         "type": "tabs",
-        "dimension": 27.811094452773617,
+        "dimension": 27.811094452773613,
         "children": [
           {
             "id": "5d52ca6efedfee5c",
@@ -284,26 +284,24 @@
   "left-ribbon": {
     "hiddenItems": {
       "graph:查看关系图谱": false,
-      "obsidian-day-planner:Open Multi-Day View": false,
-      "obsidian-day-planner:Open Timeline": false,
       "switcher:打开快速切换": false,
       "canvas:新建白板": false,
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "templater-obsidian:Templater": false,
       "publish:发布更改": false,
-      "obsidian-local-images-plus:Local Images Plus  0.16.3\r\nLocalize attachments (plugin folder)": false,
       "cmdr:堆叠/取消堆叠标签页": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian42-brat:BRAT": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "workspaces:管理工作区布局": false
+      "obsidian-local-images-plus:Local Images Plus  0.16.3\r\nLocalize attachments (plugin folder)": false,
+      "templater-obsidian:Templater": false
     }
   },
   "active": "fc04470e5ea1e529",
   "lastOpenFiles": [
+    "ACCESS 笔记组织法.md",
+    "Angular 19 新特性.md",
+    "PKM/Blog/我的工具集.md",
+    "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
     "PKM/关于我/Untitled.md",
     "PKM/关于我/我的项目.md",
     "PKM/Blog/JS模块化梳理.md",
@@ -314,7 +312,6 @@
     "banner.svg",
     "Follow/科技爱好者周刊（第 336 期）：面对 .md",
     "PKM/Blog/黑神话悟空歌词赏析——戒网.md",
-    "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
     "PKM/关于我/dg.pedyc.md",
     "PKM/Diary/2025-02-14.md",
     "PKM/关于我/我的网站.md",
@@ -329,7 +326,6 @@
     "PKM/Diary/2025-02-12.md",
     "PKM/Source/【记录】将个人博客部署到Netlify.md",
     "SimpRead/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队.md",
-    "SimpRead/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队@annote.md",
     "SimpRead/output/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队@annote.html",
     "SimpRead/backup/simpread_config@20250212143142.json",
     "SimpRead/backup/simpread_config@20250212142810.json",
@@ -337,7 +333,6 @@
     "SimpRead/backup/simpread_config@20250212142750.json",
     "SimpRead/backup/simpread_config@20250212142749.json",
     "SimpRead/backup/simpread_config@20250212142748.json",
-    "SimpRead/5-GitHub Actions 入门教程 - 阮一峰的网络日志@annote.md",
     "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/e97eb4c381700a393adc076ac14140d8_MD5.jpg",
     "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/f58162644b240ef47c44ec93d1405e1a_MD5.jpg",
     "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/5b7683207f1f5eab7c54b41a96effcb2_MD5.jpg",
@@ -349,7 +344,6 @@
     "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/fce9926c252285acda5498c81ef51f00_MD5.jpg",
     "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队",
     "SimpRead/backup/simpread_config@20250212142514.json",
-    "Follow/科技爱好者周刊（第 325 期）：VS .md",
     "Tools/看板.canvas"
   ]
 }

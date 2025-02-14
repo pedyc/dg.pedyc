@@ -64,6 +64,12 @@
       },
       "virtual-linker": {
         "startupType": "short"
+      },
+      "floating-toc": {
+        "startupType": "short"
+      },
+      "obsidian-vimrc-support": {
+        "startupType": "short"
       }
     }
   }

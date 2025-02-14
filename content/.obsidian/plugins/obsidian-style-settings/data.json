@@ -49,5 +49,14 @@
   "Blue-Topaz-Codebox-Highlight@@blur-codebox-frosted-glass": 2,
   "blue-topaz-theme@@clutter-free-headings": true,
   "blue-topaz-theme@@background-primary-alt-bg-4-bt@@light": "#FFF9F900",
-  "blue-topaz-theme@@remove-heading-indicator": false
+  "blue-topaz-theme@@remove-heading-indicator": false,
+  "floating-toc-styles@@enable-bar-icon": true,
+  "floating-toc-styles@@floating-toc-remove-heading-indicator": false,
+  "floating-toc-styles@@toggle-floating-toc-header-color": true,
+  "floating-toc-styles@@floating-toc-position": 100,
+  "floating-toc-styles@@indicator-bar-position": 0,
+  "floating-toc-styles@@enable-outline-style": "default-outline-style",
+  "floating-toc-styles@@enable-heading-nowrap": true,
+  "floating-toc-styles@@floating-toc-line-height": 2,
+  "floating-toc-styles@@enable-background-blur-dept": false
 }

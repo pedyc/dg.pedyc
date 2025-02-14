@@ -8,7 +8,6 @@ prof
 Private
 tsconfig.tsbuildinfo
 replit.nix
-**/Simpread/backup
 **/Simpread/log
 **/Simpread/output
 simpread_config.json

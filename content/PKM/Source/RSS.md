@@ -1,13 +1,15 @@
 ---
-title: RSS 
-alias: RSS
+title: RSS
 uid: 202409132240
+aliases: 
 author: ped_yc
 description: 
-date-created: 2024-09-13 22:40
-date-modified: 2024-09-14 00:06
-type: 
 tags: []
+date-created: 2024-09-12
+date-modified: 2025-02-14
+status: 
+alias: [RSS]
+type: 
 ---
 
 ::up::[[PKM]]

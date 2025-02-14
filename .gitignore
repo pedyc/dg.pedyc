@@ -10,4 +10,5 @@ tsconfig.tsbuildinfo
 replit.nix
 **/Simpread/log
 **/Simpread/output
+**/Simpread/backup
 simpread_config.json

@@ -8,6 +8,4 @@ prof
 Private
 tsconfig.tsbuildinfo
 replit.nix
-**/Simpread/log
-**/Simpread/output
-simpread_config.json
+SimpRead

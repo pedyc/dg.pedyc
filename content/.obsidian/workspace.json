@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/Diary/2025-02-14.md",
+                "file": "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-02-14"
+              "title": "如何拥有一个无限制、可联网、带本地知识库"
+            }
+          },
+          {
+            "id": "b4957ee32d615181",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/Blog/JS模块化梳理.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "JS模块化梳理"
             }
           }
         ]
@@ -43,7 +67,7 @@
       {
         "id": "2bf10628ba3bdd8f",
         "type": "tabs",
-        "dimension": 53.18327974276528,
+        "dimension": 47.451274362818594,
         "children": [
           {
             "id": "62b03965a1dba250",
@@ -57,30 +81,6 @@
               "icon": "lucide-folder-closed",
               "title": "文件列表"
             }
-          }
-        ]
-      },
-      {
-        "id": "023c80dc7ec29594",
-        "type": "tabs",
-        "dimension": 22.958199356913184,
-        "children": [
-          {
-            "id": "aabfe4df13d030e9",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "tag:#待办",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "搜索"
-            }
           },
           {
             "id": "05f33a7cf3f2ca7c",
@@ -90,6 +90,45 @@
               "state": {},
               "icon": "lucide-bookmark",
               "title": "书签"
+            }
+          }
+        ]
+      },
+      {
+        "id": "3b21062118b7d174",
+        "type": "tabs",
+        "dimension": 24.737631184407796,
+        "children": [
+          {
+            "id": "3d6eaac8f088e7f1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
+                "followCursor": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "如何拥有一个无限制、可联网、带本地知识库 的大纲"
+            }
+          },
+          {
+            "id": "aabfe4df13d030e9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "我的网站",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           },
           {
@@ -112,7 +151,7 @@
       {
         "id": "a55ae7590743ec78",
         "type": "tabs",
-        "dimension": 23.85852090032154,
+        "dimension": 27.811094452773617,
         "children": [
           {
             "id": "5d52ca6efedfee5c",
@@ -130,7 +169,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "_template/template_diary.md",
+                "file": "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -158,14 +197,14 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "template_diary 的关系图"
+              "title": "如何拥有一个无限制、可联网、带本地知识库 的关系图"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 233.5
+    "width": 227.5
   },
   "right": {
     "id": "ff01a1db19d5896b",
@@ -200,12 +239,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ACCESS 笔记组织法.md",
+                "file": "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "ACCESS 笔记组织法 的出链列表"
+              "title": "如何拥有一个无限制、可联网、带本地知识库 的出链列表"
             }
           },
           {
@@ -214,10 +253,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "PKM/Source/我的工作流.md"
+                "file": "Follow/如何拥有一个无限制、可联网、带本地知识库.md"
               },
               "icon": "lucide-info",
-              "title": "我的工作流的笔记属性"
+              "title": "如何拥有一个无限制、可联网、带本地知识库的笔记属性"
             }
           },
           {
@@ -233,21 +272,6 @@
               "icon": "lucide-archive",
               "title": "添加笔记属性"
             }
-          },
-          {
-            "id": "3d6eaac8f088e7f1",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "如何拥有一个无限制、可联网、带本地知识库 的大纲"
-            }
           }
         ],
         "currentTab": 2
@@ -259,8 +283,10 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
+      "obsidian-day-planner:Open Multi-Day View": false,
+      "obsidian-day-planner:Open Timeline": false,
+      "switcher:打开快速切换": false,
       "canvas:新建白板": false,
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
@@ -272,13 +298,37 @@
       "cmdr:堆叠/取消堆叠标签页": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian42-brat:BRAT": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "workspaces:管理工作区布局": false
     }
   },
   "active": "fc04470e5ea1e529",
   "lastOpenFiles": [
-    "SimpRead/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队.md",
+    "PKM/关于我/Untitled.md",
+    "PKM/关于我/我的项目.md",
+    "PKM/Blog/JS模块化梳理.md",
+    "index.md",
+    "NeoVim折腾记录.md",
+    "todos.md",
+    "Baba is you.md",
+    "banner.svg",
+    "Follow/科技爱好者周刊（第 336 期）：面对 .md",
+    "PKM/Blog/黑神话悟空歌词赏析——戒网.md",
+    "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
+    "PKM/关于我/dg.pedyc.md",
     "PKM/Diary/2025-02-14.md",
+    "PKM/关于我/我的网站.md",
+    "PKM/关于我/我的工作流.md",
+    "PKM/Source/WSL + SSH + Zellij + NeoVim 工作流.md",
+    "PKM/Source/vscode配置.md",
+    "PKM/Source/RSS.md",
+    "PKM/Source/PKM.md",
+    "PKM/Source/知识地图.md",
+    "PKM/Source/知识地图 1.md",
+    "PKM/关于我",
+    "PKM/Diary/2025-02-12.md",
+    "PKM/Source/【记录】将个人博客部署到Netlify.md",
+    "SimpRead/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队.md",
     "SimpRead/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队@annote.md",
     "SimpRead/output/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队@annote.html",
     "SimpRead/backup/simpread_config@20250212143142.json",
@@ -297,32 +347,9 @@
     "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/297643c849993d9dff4594c06b836185_MD5.jpg",
     "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/46e5933c90d42a9c170accd762c8a054_MD5.jpg",
     "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/fce9926c252285acda5498c81ef51f00_MD5.jpg",
-    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/472abd28290c63effc8950d6b92b4342_MD5.jpg",
     "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队",
     "SimpRead/backup/simpread_config@20250212142514.json",
-    "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
-    "Follow/科技爱好者周刊（第 336 期）：面对 .md",
     "Follow/科技爱好者周刊（第 325 期）：VS .md",
-    "PKM/Blog/我的工具集.md",
-    "PKM/Blog/黑神话悟空歌词赏析——戒网.md",
-    "Angular 19 新特性.md",
-    "ACCESS 笔记组织法.md",
-    "Baba is you.md",
-    "Follow/_resources/如何拥有一个无限制、可联网、带本地知识库",
-    "_template/template_diary.md",
-    "Follow/Meet Angular v19.md",
-    "PKM/Diary/2025-02-12.md",
-    "Diary/2025-02-12.md",
-    "PKM/关于本库/🧰 本库指南/Tutorials/» 本库笔记的emoji符号记录.md",
-    "PKM/关于本库/🧰 本库指南/Tutorials/» 本库 PARA 笔记组织法工作流.md",
-    "PKM/Source/工具及配置.md",
-    "PKM/Source/vscode配置.md",
-    "PKM/Source/标准化内容.md",
-    "PKM/Source/Untitled.md",
-    "_template/template_meta.md",
-    "index.md",
-    "todos.md",
-    "NeoVim折腾记录.md",
     "Tools/看板.canvas"
   ]
 }

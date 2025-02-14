@@ -2,7 +2,11 @@ module.exports = async (params) => {
   const {
     quickAddApi: { inputPrompt, suggester },
   } = params;
-  const { update, getPropertiesInFile } = app.plugins.plugins["metaedit"].api;
+  const metaeditPlugin = app.plugins.plugins.metaedit;
+  if (!metaeditPlugin) {
+    throw new Error("MetaEdit 插件未安装或未启用");
+  }
+  const { update, getPropertiesInFile } = metaeditPlugin.api;
   const date = window.moment().format("gggg-MM-DD - ddd MMM D");
   const dailyJournalFilePath = `bins/daily/${date}.md`;
 

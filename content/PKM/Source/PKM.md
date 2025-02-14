@@ -1,14 +1,14 @@
 ---
 title: PKM
-aliases: [个人知识管理, Personal Knowledge Manager]
 uid: 202408181751
+aliases: [个人知识管理, Personal Knowledge Manager]
 author: ped_yc
 description: 
+tags: [PKM]
 date-created: 2024-08-18
-date-modified: 2024-11-07
+date-modified: 2025-02-14
 status: 
 type: [概念]
-tags: [PKM]
 ---
 
 ⬆[[数字花园]]

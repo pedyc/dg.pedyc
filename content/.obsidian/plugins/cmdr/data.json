@@ -32,6 +32,12 @@
       "icon": "lucide-moon-star",
       "name": "使用深色模式",
       "mode": "any"
+    },
+    {
+      "id": "app:toggle-ribbon",
+      "icon": "lucide-arrow-left-right",
+      "name": "显示/隐藏功能区",
+      "mode": "any"
     }
   ],
   "pageHeader": [

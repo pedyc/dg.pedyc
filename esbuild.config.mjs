@@ -2,12 +2,13 @@ import esbuild from "esbuild";
 import { cacheFile, fp } from "./quartz/cli/constants.js";
 import { sassPlugin } from "esbuild-sass-plugin";
 import { promises } from "fs";
+import { visualizer } from "esbuild-visualizer";
 import path from "path";
 
 const esConfig = {
   entryPoints: [fp],
-  // outdir: "dist",
-  outfile: cacheFile,
+  outdir: "dist",
+  // outfile: cacheFile,
   platform: "node",
   format: "esm",
   jsx: "automatic",
@@ -16,10 +17,10 @@ const esConfig = {
   sourcemap: true,
   sourcesContent: false,
   bundle: true,
-  // splitting: true, // 代码分片
+  splitting: true, // 代码分片
+  chunkNames: "chunk-[name]-[hash]",
   keepNames: true,
-  minifyWhitespace: true,
-  minifySyntax: true,
+  minify: true,
   metafile: true,
   plugins: [
     sassPlugin({
@@ -54,6 +55,7 @@ const esConfig = {
             bundle: true,
             minify: true,
             treeShaking: true,
+            target: "esnext",
             platform: "browser",
             format: "esm",
           });
@@ -65,7 +67,21 @@ const esConfig = {
         });
       },
     },
+    // visualizer()
   ],
 };
+
+// const isProduction = process.argv.includes('build') && !process.argv.includes('--serve')
+
+// if (isProduction) {
+//   esConfig.plugins.push({
+//     name: "bundle-visualizer",
+//     ...visualizer({
+//       filename: 'bundle-analysis.html',
+//       gzipSize: true,
+//       metadata: true
+//     })
+//   })
+// }
 
 export default esConfig;

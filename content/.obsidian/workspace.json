@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular 19 新特性.md",
+                "file": "PKM/Diary/2025-02-16.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Angular 19 新特性"
+              "title": "2025-02-16"
+            }
+          },
+          {
+            "id": "8edbd3616edb4d65",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/Source/【记录】数字花园项目的图片懒加载.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "【记录】数字花园项目的图片懒加载"
             }
           },
           {
@@ -55,7 +79,8 @@
               "title": "JS模块化梳理"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -67,7 +92,7 @@
       {
         "id": "2bf10628ba3bdd8f",
         "type": "tabs",
-        "dimension": 47.45127436281859,
+        "dimension": 47.459807073954984,
         "children": [
           {
             "id": "62b03965a1dba250",
@@ -97,7 +122,7 @@
       {
         "id": "3b21062118b7d174",
         "type": "tabs",
-        "dimension": 24.737631184407793,
+        "dimension": 28.681672025723472,
         "children": [
           {
             "id": "3d6eaac8f088e7f1",
@@ -105,13 +130,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular 19 新特性.md",
+                "file": "PKM/Source/【记录】数字花园项目的图片懒加载.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Angular 19 新特性 的大纲"
+              "title": "【记录】数字花园项目的图片懒加载 的大纲"
             }
           },
           {
@@ -120,7 +145,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "我的网站",
+                "query": "tag:#记录",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -139,19 +164,20 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": false,
-                "showSearch": false,
-                "searchQuery": ""
+                "showSearch": true,
+                "searchQuery": "记录"
               },
               "icon": "lucide-tags",
               "title": "标签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "a55ae7590743ec78",
         "type": "tabs",
-        "dimension": 27.811094452773613,
+        "dimension": 23.85852090032154,
         "children": [
           {
             "id": "5d52ca6efedfee5c",
@@ -293,13 +319,24 @@
       "publish:发布更改": false,
       "cmdr:堆叠/取消堆叠标签页": false,
       "obsidian-local-images-plus:Local Images Plus  0.16.3\r\nLocalize attachments (plugin folder)": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "obsidian42-brat:BRAT": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "fc04470e5ea1e529",
+  "active": "8edbd3616edb4d65",
   "lastOpenFiles": [
-    "ACCESS 笔记组织法.md",
+    "PKM/Source/【记录】建站.md",
+    "PKM/Source/【记录】数字花园项目的图片懒加载.md",
+    "PKM/Source/【记录】将个人博客部署到Netlify.md",
+    "PKM/Diary/今日待办.md",
+    "PKM/Diary/2025-02-16.md",
+    "PKM/Diary/2025-02-15.md",
+    "PKM/Diary/数字花园优化记录.md",
+    "PKM/Diary/2025-02-14.md",
+    "PKM/Diary/_resources",
     "Angular 19 新特性.md",
+    "ACCESS 笔记组织法.md",
     "PKM/Blog/我的工具集.md",
     "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
     "PKM/关于我/Untitled.md",
@@ -313,19 +350,11 @@
     "Follow/科技爱好者周刊（第 336 期）：面对 .md",
     "PKM/Blog/黑神话悟空歌词赏析——戒网.md",
     "PKM/关于我/dg.pedyc.md",
-    "PKM/Diary/2025-02-14.md",
     "PKM/关于我/我的网站.md",
     "PKM/关于我/我的工作流.md",
     "PKM/Source/WSL + SSH + Zellij + NeoVim 工作流.md",
     "PKM/Source/vscode配置.md",
-    "PKM/Source/RSS.md",
-    "PKM/Source/PKM.md",
-    "PKM/Source/知识地图.md",
-    "PKM/Source/知识地图 1.md",
     "PKM/关于我",
-    "PKM/Diary/2025-02-12.md",
-    "PKM/Source/【记录】将个人博客部署到Netlify.md",
-    "SimpRead/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队.md",
     "SimpRead/output/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队@annote.html",
     "SimpRead/backup/simpread_config@20250212143142.json",
     "SimpRead/backup/simpread_config@20250212142810.json",
@@ -343,7 +372,6 @@
     "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/46e5933c90d42a9c170accd762c8a054_MD5.jpg",
     "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/fce9926c252285acda5498c81ef51f00_MD5.jpg",
     "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队",
-    "SimpRead/backup/simpread_config@20250212142514.json",
     "Tools/看板.canvas"
   ]
 }

@@ -15,11 +15,12 @@
     "quartz": "./quartz/bootstrap-cli.mjs",
     "docs": "npx quartz build --serve -d docs",
     "server": "npx quartz build --serve",
+    "build": "npx quartz build",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
     "test": "tsx ./quartz/util/path.test.ts && tsx ./quartz/depgraph.test.ts",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
-    "postinstall": "patch-package"
+    "serve": "npx quartz serve"
   },
   "engines": {
     "npm": ">=9.3.1",
@@ -110,6 +111,7 @@
     "@types/ws": "^8.5.14",
     "@types/yargs": "^17.0.33",
     "esbuild": "^0.25.0",
+    "esbuild-visualizer": "^0.7.0",
     "prettier": "^3.5.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3"

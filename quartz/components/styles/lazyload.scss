@@ -1,0 +1,25 @@
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    &.loaded {
+        opacity: 1;
+    }
+
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+}
+
+.lazyload {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.lazyload.loaded {
+    opacity: 1;
+}
+
+.lazyload.error {
+    border: 1px solid #ff000033;
+}

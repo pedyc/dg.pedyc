@@ -1,13 +1,13 @@
 ---
 title: vueSourceCodeStudy02
-aliases: 
 uid: 
+aliases: []
 author: 
 description: 
-date-created: 2024-10-27
-date-modified: 2024-10-31
-status: 
 tags: [vue, sourceCode]
+date-created: 2024-10-27
+date-modified: 2025-02-16
+status: 
 categories: [源码]
 ---
 

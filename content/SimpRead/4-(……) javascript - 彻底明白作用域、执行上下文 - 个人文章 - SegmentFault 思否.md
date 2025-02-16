@@ -6,10 +6,10 @@ author:
 description: 
 tags: []
 date-created: 2025-02-11
-date-modified: 2025-02-11
+date-modified: 2025-02-16
 status: 
 banner: "https://images.unsplash.com/photo-1725161650998-6b5f9a806df6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Njc1ODd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzkyNDAwNTV8&ixlib=rb-4.0.3&q=85&fit=crop&w=880&max-h=540"
-banner_icon: 🔖
+banner_x: 0.48671
 url: https://segmentfault.com/a/1190000013915935
 ---
 

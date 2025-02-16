@@ -6,11 +6,9 @@ author: ped_yc
 description: 
 tags: [game, 解谜游戏]
 date-created: 2024-10-28
-date-modified: 2025-02-12
-status:
-  - YCTODO
-type:
-  - blog
+date-modified: 2025-02-16
+status: [YCTODO]
+type: [blog]
 words:
   2025-02-11: 25
 ---

@@ -12,6 +12,9 @@
 > <%* if(tp.frontmatter.tags){ %>
 > :LiTags:标签列表：#<% tp.frontmatter.tags %>
 > <%* } %>
+> <%* if(tp.frontmatter.keywords){ %>
+> :LiKeyRound::关键词列表：#<% tp.frontmatter.keywords %>
+> <%* } %>
 > <%* if(tp.frontmatter.description){ %>
 > :LiBook:描述信息： #<% tp.frontmatter.description %>
 > <%* } %>

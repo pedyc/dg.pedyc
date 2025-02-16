@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/Diary/2025-02-16.md",
+                "file": "_template/template_meta.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,31 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-02-16"
-            }
-          },
-          {
-            "id": "8edbd3616edb4d65",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/Source/【记录】数字花园项目的图片懒加载.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "【记录】数字花园项目的图片懒加载"
+              "title": "template_meta"
             }
           },
           {
@@ -79,8 +55,7 @@
               "title": "JS模块化梳理"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -92,7 +67,7 @@
       {
         "id": "2bf10628ba3bdd8f",
         "type": "tabs",
-        "dimension": 47.459807073954984,
+        "dimension": 47.45980707395498,
         "children": [
           {
             "id": "62b03965a1dba250",
@@ -130,13 +105,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PKM/Source/【记录】数字花园项目的图片懒加载.md",
+                "file": "PKM/Source/【记录】数字花园项目优化.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "【记录】数字花园项目的图片懒加载 的大纲"
+              "title": "【记录】数字花园项目优化 的大纲"
             }
           },
           {
@@ -177,7 +152,7 @@
       {
         "id": "a55ae7590743ec78",
         "type": "tabs",
-        "dimension": 23.85852090032154,
+        "dimension": 23.858520900321547,
         "children": [
           {
             "id": "5d52ca6efedfee5c",
@@ -230,7 +205,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 227.5
+    "width": 305.5
   },
   "right": {
     "id": "ff01a1db19d5896b",
@@ -324,54 +299,54 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "8edbd3616edb4d65",
+  "active": "fc04470e5ea1e529",
   "lastOpenFiles": [
-    "PKM/Source/【记录】建站.md",
-    "PKM/Source/【记录】数字花园项目的图片懒加载.md",
-    "PKM/Source/【记录】将个人博客部署到Netlify.md",
-    "PKM/Diary/今日待办.md",
-    "PKM/Diary/2025-02-16.md",
-    "PKM/Diary/2025-02-15.md",
-    "PKM/Diary/数字花园优化记录.md",
-    "PKM/Diary/2025-02-14.md",
-    "PKM/Diary/_resources",
-    "Angular 19 新特性.md",
-    "ACCESS 笔记组织法.md",
-    "PKM/Blog/我的工具集.md",
-    "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
-    "PKM/关于我/Untitled.md",
-    "PKM/关于我/我的项目.md",
-    "PKM/Blog/JS模块化梳理.md",
-    "index.md",
-    "NeoVim折腾记录.md",
-    "todos.md",
+    "SimpRead/backup/simpread_config@20250216223119.json",
+    "SimpRead/7-五大基本算法之动态规划算法 DP dynamic programming _ Echo Blog.md",
+    "SimpRead/7-五大基本算法之动态规划算法 DP dynamic programming _ Echo Blog@annote.md",
+    "SimpRead/_resources/7-五大基本算法之动态规划算法 DP dynamic programming _ Echo Blog/24cbcc85c527d9ae6eeb27e32b75b095_MD5.jpg",
+    "SimpRead/_resources/7-五大基本算法之动态规划算法 DP dynamic programming _ Echo Blog/9cb2f940db05d6e2e73726cd51396ff2_MD5.jpg",
+    "SimpRead/_resources/7-五大基本算法之动态规划算法 DP dynamic programming _ Echo Blog/b524dabfdc808da54750c02367c625f1_MD5.jpg",
+    "SimpRead/_resources/7-五大基本算法之动态规划算法 DP dynamic programming _ Echo Blog/4ea36b8cadc689d15edb92bf1be9900d_MD5.jpg",
+    "SimpRead/_resources/7-五大基本算法之动态规划算法 DP dynamic programming _ Echo Blog",
+    "SimpRead/6-从 Element UI 源码的构建流程来看前端 UI 库设计@annote.md",
+    "SimpRead/output/7-五大基本算法之动态规划算法 DP dynamic programming - Echo Blog@annote.html",
+    "SimpRead/output/7-五大基本算法之动态规划算法 DP dynamic programming - Echo Blog.html",
+    "SimpRead/backup/simpread_config@20250216130435.json",
+    "SimpRead/backup/simpread_config@20250216130305.json",
+    "SimpRead/backup/simpread_config@20250216130144.json",
+    "SimpRead/backup/simpread_config@20250216130134.json",
+    "SimpRead/backup/simpread_config@20250216130106.json",
+    "SimpRead/backup/simpread_config@20250216130053.json",
+    "SimpRead/backup/simpread_config@20250216130048.json",
+    "SimpRead/6-从 Element UI 源码的构建流程来看前端 UI 库设计.md",
+    "SimpRead/4-(……) javascript - 彻底明白作用域、执行上下文 - 个人文章 - SegmentFault 思否@annote.md",
+    "SimpRead/_resources/6-从 Element UI 源码的构建流程来看前端 UI 库设计/4441c613b0bb19947da07f7886680c7a_MD5.webp",
+    "SimpRead/_resources/6-从 Element UI 源码的构建流程来看前端 UI 库设计/89cc3a430433d0a616f4315fe195feb1_MD5.webp",
+    "SimpRead/_resources/6-从 Element UI 源码的构建流程来看前端 UI 库设计/7c84d98dafd411c4e1e879735e07883d_MD5.webp",
+    "SimpRead/_resources/6-从 Element UI 源码的构建流程来看前端 UI 库设计/fb34638758af34108695dc26de38fbac_MD5.webp",
+    "SimpRead/_resources/6-从 Element UI 源码的构建流程来看前端 UI 库设计/4de2c735c055dfc7a16a489dd52721f6_MD5.webp",
+    "SimpRead/_resources/6-从 Element UI 源码的构建流程来看前端 UI 库设计/5f3e15d79bd1a3135a336eb9c7a00a6c_MD5.webp",
+    "SimpRead/4-(……) javascript - 彻底明白作用域、执行上下文 - 个人文章 - SegmentFault 思否.md",
+    "SimpRead/3-「浏览器工作原理」写给女友的秘籍 - 浏览器组成 & 网络请求篇（1_2W 字)@annote.md",
+    "SimpRead/3-「浏览器工作原理」写给女友的秘籍 - 浏览器组成 & 网络请求篇（1_2W 字).md",
+    "SimpRead/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队@annote.md",
+    "SimpRead/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队.md",
+    "SimpRead/从 Element UI 源码的构建流程来看前端 UI 库设计.md",
     "Baba is you.md",
-    "banner.svg",
-    "Follow/科技爱好者周刊（第 336 期）：面对 .md",
-    "PKM/Blog/黑神话悟空歌词赏析——戒网.md",
-    "PKM/关于我/dg.pedyc.md",
-    "PKM/关于我/我的网站.md",
-    "PKM/关于我/我的工作流.md",
-    "PKM/Source/WSL + SSH + Zellij + NeoVim 工作流.md",
-    "PKM/Source/vscode配置.md",
-    "PKM/关于我",
-    "SimpRead/output/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队@annote.html",
-    "SimpRead/backup/simpread_config@20250212143142.json",
-    "SimpRead/backup/simpread_config@20250212142810.json",
-    "SimpRead/backup/simpread_config@20250212142751.json",
-    "SimpRead/backup/simpread_config@20250212142750.json",
-    "SimpRead/backup/simpread_config@20250212142749.json",
-    "SimpRead/backup/simpread_config@20250212142748.json",
-    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/e97eb4c381700a393adc076ac14140d8_MD5.jpg",
-    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/f58162644b240ef47c44ec93d1405e1a_MD5.jpg",
-    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/5b7683207f1f5eab7c54b41a96effcb2_MD5.jpg",
-    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/934a1bed7975d1d10021cabf7b26c090_MD5.jpg",
-    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/b7c987b87e335113667e1ef4062dedc2_MD5.jpg",
-    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/4fd5458536401482e5bfc2e761def3af_MD5.jpg",
-    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/297643c849993d9dff4594c06b836185_MD5.jpg",
-    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/46e5933c90d42a9c170accd762c8a054_MD5.jpg",
-    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队/fce9926c252285acda5498c81ef51f00_MD5.jpg",
-    "SimpRead/_resources/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队",
+    "PKM/Source/【记录】数字花园项目优化.md",
+    "PKM/Blog/JS模块化梳理.md",
+    "_template/template_meta.md",
+    "PKM/Diary/2025-02-14.md",
+    "PKM/关于我/Untitled 1.md",
+    "PKM/关于我/我的项目.md",
+    "PKM/Diary/2025-02-15.md",
+    "PKM/Diary/2025-02-13.md",
+    "PKM/Diary/2025-02-12.md",
+    "PKM/Diary/2025-02-11.md",
+    "PKM/Diary/2025-02-09.md",
+    "PKM/Source/【记录】数字花园项目的图片懒加载.md",
+    "PKM/Diary/2025-02-16.md",
     "Tools/看板.canvas"
   ]
 }

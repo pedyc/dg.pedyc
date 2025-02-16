@@ -6,7 +6,7 @@ author: soulteary@gmail.com
 description: 长久以来，容器要实现动态化和双端复用，难免要牺牲掉一些性能。有没有办法让动态化容器的性能尽可能接近原生？美团金服大前端团队给出了一种解决方案，尝试突破动态化容器的天花板。
 tags: []
 date-created: 2025-02-12
-date-modified: 2025-02-12
+date-modified: 2025-02-16
 status: 
 alias: ["srAnnote@大前端：如何突破动态化容器的天花板？ - 美团技术团队"]
 ---

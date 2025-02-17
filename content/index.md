@@ -15,9 +15,8 @@ type:
 <img 
   src="./banner.svg" 
   alt="banner"
-  loading="lazy"
-  decoding="async"
-  style="width: 100%">
+  class="nolazy"
+  style="width: 100%" />
 
 ✌Hello，我是 pedyc，欢迎来到我的 [[数字花园]]。
 

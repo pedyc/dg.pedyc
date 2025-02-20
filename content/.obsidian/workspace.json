@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fc04470e5ea1e529",
+            "id": "3835bc96c640a5a9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/Source/【记录】数字花园项目的图片懒加载.md",
+                "file": "PKM/Diary/2025-02-18.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "【记录】数字花园项目的图片懒加载"
+              "title": "2025-02-18"
             }
           },
           {
-            "id": "b4957ee32d615181",
+            "id": "b899a2f973ec79b6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/Blog/JS模块化梳理.md",
+                "file": "_template/template_meta.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,10 +52,119 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "JS模块化梳理"
+              "title": "template_meta"
+            }
+          },
+          {
+            "id": "bec9b629c4307d04",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/How do you organize your notes.excalidraw"
+              },
+              "icon": "lucide-file",
+              "title": "插件不再活动"
+            }
+          },
+          {
+            "id": "475305bb9419e304",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/Diary/2025-02-19.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025-02-19"
+            }
+          },
+          {
+            "id": "de9df63b115418a4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/Topics/前端工程化/目录结构设计.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "目录结构设计"
+            }
+          },
+          {
+            "id": "63c1848cb794cad4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/Source/【记录】WSL2配置代理.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "【记录】WSL2配置代理"
+            }
+          },
+          {
+            "id": "a07bf707a0abb645",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/Source/PKM.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "PKM"
             }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -105,13 +214,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PKM/Source/【记录】数字花园项目优化.md",
-                "followCursor": true,
+                "file": "PKM/Source/PKM.md",
+                "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "【记录】数字花园项目优化 的大纲"
+              "title": "PKM 的大纲"
             }
           },
           {
@@ -120,7 +229,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#记录",
+                "query": "topics",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -146,8 +255,7 @@
               "title": "标签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "a55ae7590743ec78",
@@ -170,7 +278,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
+                "file": "PKM/Topics/【方法论】怎样组织笔记.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -198,14 +306,14 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "如何拥有一个无限制、可联网、带本地知识库 的关系图"
+              "title": "【方法论】怎样组织笔记 的关系图"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 305.5
+    "width": 323.5
   },
   "right": {
     "id": "ff01a1db19d5896b",
@@ -299,54 +407,55 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "fc04470e5ea1e529",
+  "active": "a07bf707a0abb645",
   "lastOpenFiles": [
-    "PKM/Diary/2025-02-16.md",
-    "PKM/Diary/2025-02-17.md",
-    "PKM/Blog/_resources/ReprintVueCompositionAPI/16157b8905599b6328dd244c0827ac6c_MD5.jpg",
-    "PKM/Blog/_resources/ReprintVueCompositionAPI/09586ab598728b14404b37517047fb16_MD5.jpg",
-    "PKM/Blog/_resources/ReprintVueCompositionAPI/822bbb12360786b0e266b486f85fac78_MD5.jpg",
-    "PKM/Blog/_resources/ReprintVueCompositionAPI/09d2e05dba59f0ee4e1a9ab31da6b7cf_MD5.jpg",
-    "PKM/Blog/_resources/ReprintVueCompositionAPI/7e1684a96ac2e3ab2dd48cc8e6d5c8a4_MD5.jpg",
-    "PKM/Blog/_resources/ReprintVueCompositionAPI/3f2129d68252c439851c5c1d2d35233c_MD5.jpg",
-    "PKM/Blog/vueSourceCodeStudy01.md",
-    "PKM/Blog/vueSourceCodeStudy02.md",
-    "_template/template_meta.md",
-    "SimpRead/backup/simpread_config@20250216223119.json",
-    "SimpRead/7-五大基本算法之动态规划算法 DP dynamic programming _ Echo Blog.md",
-    "SimpRead/7-五大基本算法之动态规划算法 DP dynamic programming _ Echo Blog@annote.md",
-    "SimpRead/_resources/7-五大基本算法之动态规划算法 DP dynamic programming _ Echo Blog/24cbcc85c527d9ae6eeb27e32b75b095_MD5.jpg",
-    "SimpRead/_resources/7-五大基本算法之动态规划算法 DP dynamic programming _ Echo Blog/9cb2f940db05d6e2e73726cd51396ff2_MD5.jpg",
-    "SimpRead/_resources/7-五大基本算法之动态规划算法 DP dynamic programming _ Echo Blog/b524dabfdc808da54750c02367c625f1_MD5.jpg",
-    "SimpRead/_resources/7-五大基本算法之动态规划算法 DP dynamic programming _ Echo Blog/4ea36b8cadc689d15edb92bf1be9900d_MD5.jpg",
-    "SimpRead/_resources/7-五大基本算法之动态规划算法 DP dynamic programming _ Echo Blog",
-    "SimpRead/6-从 Element UI 源码的构建流程来看前端 UI 库设计@annote.md",
-    "SimpRead/output/7-五大基本算法之动态规划算法 DP dynamic programming - Echo Blog@annote.html",
-    "SimpRead/output/7-五大基本算法之动态规划算法 DP dynamic programming - Echo Blog.html",
-    "SimpRead/backup/simpread_config@20250216130435.json",
-    "SimpRead/backup/simpread_config@20250216130305.json",
-    "SimpRead/backup/simpread_config@20250216130144.json",
-    "SimpRead/backup/simpread_config@20250216130134.json",
-    "SimpRead/backup/simpread_config@20250216130106.json",
-    "SimpRead/backup/simpread_config@20250216130053.json",
-    "SimpRead/6-从 Element UI 源码的构建流程来看前端 UI 库设计.md",
-    "SimpRead/4-(……) javascript - 彻底明白作用域、执行上下文 - 个人文章 - SegmentFault 思否@annote.md",
+    "PKM/Topics/方法论汇总.md",
+    "PKM/Topics/【方法论】怎样组织笔记.md",
+    "PKM/Diary/2025-02-19.md",
+    "PKM/Diary/2025-02-20.md",
+    "PKM/Source/【记录】WSL2配置代理.md",
+    "SimpRead/4-Architectures of modern Front-end applications _ Medium _ BRACKETS.md",
+    "SimpRead/4-Architectures of modern Front-end applications _ Medium _ BRACKETS@annote.md",
+    "SimpRead/5-javascript - 彻底明白作用域、执行上下文 - 个人文章 - SegmentFault 思否网.md",
+    "SimpRead/backup/simpread_config@20250220100750.json",
+    "SimpRead/5-javascript - 彻底明白作用域、执行上下文 - 个人文章 - SegmentFault 思否网@annote.md",
+    "SimpRead/3-美团到店终端从标准化到数字化的演进之路 - 美团技术团队@annote.md",
     "SimpRead/4-(……) javascript - 彻底明白作用域、执行上下文 - 个人文章 - SegmentFault 思否.md",
-    "SimpRead/3-「浏览器工作原理」写给女友的秘籍 - 浏览器组成 & 网络请求篇（1_2W 字)@annote.md",
-    "SimpRead/3-「浏览器工作原理」写给女友的秘籍 - 浏览器组成 & 网络请求篇（1_2W 字).md",
-    "SimpRead/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队@annote.md",
     "SimpRead/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队.md",
-    "SimpRead/从 Element UI 源码的构建流程来看前端 UI 库设计.md",
-    "Baba is you.md",
-    "PKM/Source/【记录】数字花园项目优化.md",
-    "PKM/Blog/JS模块化梳理.md",
-    "PKM/Diary/2025-02-14.md",
-    "PKM/关于我/Untitled 1.md",
-    "PKM/关于我/我的项目.md",
-    "PKM/Diary/2025-02-15.md",
-    "PKM/Diary/2025-02-13.md",
-    "PKM/Diary/2025-02-12.md",
-    "PKM/Diary/2025-02-11.md",
+    "SimpRead/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队@annote.md",
+    "SimpRead/output/5-javascript - 彻底明白作用域、执行上下文 - 个人文章 - SegmentFault 思否网.html",
+    "SimpRead/backup/simpread_config@20250220100634.json",
+    "SimpRead/4-(……) javascript - 彻底明白作用域、执行上下文 - 个人文章 - SegmentFault 思否@annote.md",
+    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/ea682159547cdd41697dbd24f3ba8369_MD5.jpg",
+    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/04a7c046b07f467b87531225636cd16d_MD5.jpg",
+    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/fec2a2ebb8bafaec12c660cec6b10876_MD5.jpg",
+    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/8d4a09c6d9a704c98c331a427d8c4380_MD5.jpg",
+    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/c3e3c0628a1e985380b264ec34c8dfa0_MD5.jpg",
+    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/6d428bd5119de332a5704a1061eadca4_MD5.jpg",
+    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/00b89d1938c9cbcf786779d207a758fc_MD5.jpg",
+    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/8c235bece0bf3d31da193bd7789bcd9b_MD5.jpg",
+    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/5a41dba75f20de61c11a4e02c41cffd8_MD5.jpg",
+    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/3b09312b4e9e4e12ce72c71df6eeded8_MD5.jpg",
+    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS",
+    "SimpRead/output/4-Architectures of modern Front-end applications - Medium - BRACKETS.html",
+    "SimpRead/backup/simpread_config@20250220100443.json",
+    "SimpRead/backup/simpread_config@20250220100318.json",
+    "SimpRead/backup/simpread_config@20250220100312.json",
+    "SimpRead/backup/simpread_config@20250219004154.json",
+    "PKM/Topics/前端工程化/Drawing 2025-02-19 17.21.02.excalidraw.md",
+    "Excalidraw/Scripts/Downloaded/_resources/Add Connector Point",
+    "Excalidraw/Scripts/Downloaded/Add Connector Point.md",
+    "PKM/Topics/前端工程化/目录结构设计.md",
+    "PKM/Topics/前端工程化/DevOps工作流.md",
+    "PKM/Topics/前端工程化/前端工程化.md",
+    "PKM/Topics/前端工程化/前端工程化.canvas",
+    "PKM/Diary/2024-11-01.md",
+    "Clippings/彻底明白作用域、执行上下文.md",
+    "_template/template_meta.md",
+    "PKM/Diary/2025-02-18.md",
+    "PKM/Source/【记录】重构GTD OS.md",
+    "PKM/Diary/Untitled.md",
+    "PKM/Topics/Untitled.md",
     "Tools/看板.canvas"
   ]
 }

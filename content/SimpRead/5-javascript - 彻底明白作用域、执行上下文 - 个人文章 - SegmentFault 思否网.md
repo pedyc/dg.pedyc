@@ -1,0 +1,337 @@
+---
+title: 5-javascript - 彻底明白作用域、执行上下文 - 个人文章 - SegmentFault 思否网
+uid: 
+aliases: []
+author: 
+description: 
+tags: []
+date-created: 2025-02-20
+date-modified: 2025-02-20
+status: 
+banner: "undefined"
+url: https://segmentfault.com/a/1190000013915935
+---
+
+好久没更新文章了，这一憋就是一个大的。
+说起 js 中的概念，执行上下文和作用域应该是大家最容易混淆的，你说混淆就混淆吧，其实大多数人在开发的时候不是很关注这两个名词，但是这里面偏偏还夹杂好多其他的概念 -- 变量提升啊，闭包啊，this 啊！
+因此，搞明白这两者的关系对深入 javascript 至关重要
+
+## 执行上下文
+
+JavaScript 代码的整个执行过程，分为两个阶段，代码编译阶段与代码执行阶段。编译阶段由编译器完成，将代码翻译成可执行代码，这个阶段作用域规则会确定。执行阶段由引擎完成，**主要任务是执行可执行代码，执行上下文在这个阶段创建**。
+
+上面提到的可执行代码，那么什么是可执行代码呢？
+其实很简单，就三种，全局代码、函数代码、eval 代码。
+其中 eval 代码大家可以忽略，毕竟实际开发中处于性能考虑基本不会用到，所以接下来我们重点关注的就是全局代码、函数代码
+
+在庞大的代码里必然不会只有一两个函数，那么如何管理每次执行函数时候创建的上下文呢
+
+js 引擎创建了执行上下文栈（Execution context stack，ECS）来管理执行上下文
+
+为了模拟执行上下文栈的行为，让我们定义执行上下文栈是一个数组：
+
+```Javascript
+ECStack = [];
+```
+
+试想当 js 开始要解释执行代码的时候，最先遇到的就是全局代码，所以初始化的时候首先就会向执行上下文栈压入一个全局执行上下文，我们用 globalContext 表示它，并且只有当整个应用程序结束的时候，ECStack 才会被清空，所以 ECStack 最底部永远有个 globalContext：
+
+```Javascript
+ECStack = [
+    globalContext
+];
+```
+
+举个?：
+
+```Javascript
+function out(){
+    function inner(){}
+    inner()
+}
+out()
+```
+
+那么这个函数的执行上下文栈会经历以下过程：
+
+```Javascript
+ECStack.push(globalContext)
+ECStack.push(outContext)
+ECStack.push(innerContext)
+ECStack.pop(innerContext)
+ECStack.pop(outContext)
+ECStack.pop(globalContext)
+```
+
+再来看一个闭包的?：
+
+```Javascript
+function f1(){
+    var n=999;
+    function f2(){
+        console.log(n)
+    }
+    return f2;
+}
+var result=f1();
+result(); // 999
+```
+
+该函数的执行上下文栈会经历以下过程：
+
+```Javascript
+ECStack.push(globalContext)
+ECStack.push(f1Context)
+ECStack.pop(f1Context)
+ECStack.push(resultContext)
+ECStack.pop(resultContext)
+ECStack.pop(globalContext)
+```
+
+大家自行感受一下对比，**一定要记住上下文是在函数调用的时候才会生产**
+既然调用一个函数时一个新的执行上下文会被创建。那执行上下文的生命周期同样可以分为两个阶段。
+
+* 创建阶段
+    在这个阶段中，执行上下文会分别创建变量对象，建立作用域链，以及确定 this 的指向。
+* 代码执行阶段
+    在这个阶段会生成三个重要的东西
+    a. 变量对象 (Variable object，VO)
+    b. 作用域链 (Scope chain)
+    c.this
+
+**变量对象**
+
+在函数上下文中，我们用活动对象 (activation object, AO) 来表示变量对象。
+
+活动对象其实就是被激活的变量对象，只是变量对象是规范上的或者说是引擎实现上的，不可在 JavaScript 环境中访问，只有到当进入一个执行上下文中，这个执行上下文的变量对象才会被激活，所以才叫 activation object，而只有活动对象上的各种属性才能被访问。
+
+执行上下文的代码会分成两个阶段进行处理：分析（进入）和执行
+
+1. 进入执行上下文
+
+当进入执行上下文时，这时候还没有执行代码，
+
+变量对象会包括：
+
+* 函数的所有形参 (如果是函数上下文)
+
+    a. 由名称和对应值组成的一个变量对象的属性被创建
+    b. 没有实参，属性值设为 undefined
+
+* 函数声明
+
+    a. 由名称和对应值（函数对象 (function-object)）组成一个变量对象的属性被创建
+    b. 如果变量对象已经存在相同名称的属性，则完全替换这个属性
+
+* 变量声明
+
+    a. 由名称和对应值（undefined）组成一个变量对象的属性被创建；
+    b. 如果变量名称跟已经声明的形式参数或函数相同，则变量声明不会干扰已经存在的这类属性
+
+根据这个规则，理解变量提升就变得十分简单了
+举个? 分析下，看下面的代码：
+
+```Javascript
+function foo(a) {
+  console.log(b)
+  console.log(c)
+  var b = 2;
+  function c() {}
+  var d = function() {};
+
+  b = 3;
+
+}
+
+foo(1);
+```
+
+在进入执行上下文后，这时候的 AO 是：
+
+```Javascript
+AO = {
+    arguments: {
+        0: 1,
+        length: 1
+    },
+    a: 1,
+    b: undefined,
+    c: reference to function c(){},
+    d: undefined
+}
+```
+
+1. 代码执行
+
+在代码执行阶段，会顺序执行代码，根据代码，修改变量对象的值
+
+还是上面的例子，当代码执行完后，这时候的 AO 是：
+
+```Javascript
+AO = {
+    arguments: {
+        0: 1,
+        length: 1
+    },
+    a: 1,
+    b: 3,
+    c: reference to function c(){},
+    d: reference to FunctionExpression "d"
+}
+```
+
+因此，这个例子代码执行顺序就是这样的
+
+```Javascript
+function foo(a) {
+  var b
+  function c() {}
+  var d
+  console.log(b)
+  console.log(c)
+  b = 2;
+  function c() {}
+  d = function() {};
+
+  b = 3;
+
+}
+```
+
+## 作用域
+
+作用域规定了如何查找变量，也就是确定当前执行代码对变量的访问权限。
+JavaScript 采用词法作用域 (lexical scoping)，也就是静态作用域。
+
+因为 JavaScript 采用的是词法作用域，函数的作用域在函数定义的时候就决定了。
+而与词法作用域相对的是动态作用域，函数的作用域是在函数调用的时候才决定的。
+
+经典的一道面试题
+
+```Javascript
+var a = 1
+function out(){
+    var a = 2
+    inner()
+}
+function inner(){
+    console.log(a)
+}
+out()  //====>  1
+```
+
+## 作用域链
+
+当查找变量的时候，会先从当前上下文的变量对象中查找，如果没有找到，就会从父级 (词法层面上的父级) 执行上下文的变量对象中查找，一直找到全局上下文的变量对象，也就是全局对象。这样由多个执行上下文的变量对象构成的链表就叫做作用域链
+
+下面，让我们以一个函数的创建和激活两个时期来讲解作用域链是如何创建和变化的。
+
+上面讲到函数作用域是在创建的阶段确定
+这是因为函数有一个内部属性 [[scope]]，当函数创建的时候，就会保存所有父变量对象到其中，你可以理解 [[scope]] 就是所有父变量对象的层级链，但是注意：[[scope]] 并不代表完整的作用域链！
+
+举个?
+
+```Javascript
+function out() {
+    function inner() {
+        ...
+    }
+}
+```
+
+函数创建时，各自的 [[scope]] 为：
+
+```Javascript
+out.[[scope]] = [
+  globalContext.VO
+];
+
+inner.[[scope]] = [
+    outContext.AO,
+    globalContext.VO
+];
+```
+
+当函数激活时，进入函数上下文，创建 AO 后，就会将活动对象添加到作用链的前端。
+这时候执行上下文的作用域链，我们命名为 Scope：
+
+```Javascript
+Scope = [AO].concat([[Scope]]);
+```
+
+至此，作用域链创建完毕。
+
+最后我们用一个代码完整的说明下整个过程
+
+```Javascript
+var scope = "global scope";
+function checkscope(){
+    var scope2 = 'local scope';
+    return scope2;
+}
+checkscope();
+```
+
+执行过程如下：
+1.checkscope 函数被创建，保存作用域链到 内部属性 [[scope]]
+
+```Javascript
+checkscope.[[scope]] = [
+    globalContext.VO
+];
+```
+
+1. 执行 checkscope 函数，创建 checkscope 函数执行上下文，checkscope 函数执行上下文被压入执行上下文栈
+
+```Javascript
+ECStack = [
+    checkscopeContext,
+    globalContext
+];
+```
+
+3.checkscope 函数并不立刻执行，开始做准备工作，第一步：复制函数 [[scope]] 属性创建作用域链
+
+```Javascript
+checkscopeContext = {
+    Scope: checkscope.[[scope]],
+}
+```
+
+1. 第二步：用 arguments 创建活动对象，随后初始化活动对象，加入形参、函数声明、变量声明
+
+```Javascript
+checkscopeContext = {
+    AO: {
+        arguments: {
+            length: 0
+        },
+        scope2: undefined
+    }，
+    Scope: checkscope.[[scope]],
+}
+```
+
+1. 第三步：将活动对象压入 checkscope 作用域链顶端
+
+```Javascript
+checkscopeContext = {
+    AO: {
+        arguments: {
+            length: 0
+        },
+        scope2: undefined
+    },
+    Scope: [AO, [[Scope]]]
+}
+```
+
+1. 准备工作做完，开始执行函数，随着函数的执行，修改 AO 的属性值
+
+```Javascript
+ECStack = [
+    globalContext
+];
+```
+
+至此，关于作用域和执行上下文的介绍就到这里，希望大家多消化，有问题请在评论中及时指出

@@ -4,7 +4,8 @@
 .replit
 node_modules
 public
-dist 
+dist/
+output
 prof
 Private
 tsconfig.tsbuildinfo

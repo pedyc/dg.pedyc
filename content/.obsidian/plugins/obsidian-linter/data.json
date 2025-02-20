@@ -139,7 +139,8 @@
     "ordered-list-style": {
       "enabled": true,
       "number-style": "ascending",
-      "list-end-style": "."
+      "list-end-style": ".",
+      "preserve-start": true
     },
     "proper-ellipsis": {
       "enabled": true
@@ -281,7 +282,13 @@
     "_resources",
     "_scripts"
   ],
-  "filesToIgnore": [],
+  "filesToIgnore": [
+    {
+      "label": "排除绘图文件",
+      "match": "(.excaldraw)$",
+      "flags": "i"
+    }
+  ],
   "linterLocale": "system-default",
   "logLevel": "ERROR",
   "lintCommands": [],

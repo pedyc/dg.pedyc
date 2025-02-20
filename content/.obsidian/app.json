@@ -16,5 +16,6 @@
   "newFileLocation": "current",
   "showUnsupportedFiles": true,
   "tabSize": 2,
-  "propertiesInDocument": "visible"
+  "propertiesInDocument": "visible",
+  "uriCallbacks": true
 }

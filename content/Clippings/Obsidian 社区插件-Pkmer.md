@@ -2,14 +2,12 @@
 title: Obsidian 社区插件-Pkmer
 uid: 
 aliases: []
-author:
-  - "[[OS]]"
+author: ["[[OS]]"]
 description: "Obsidian 社区插件推荐，优秀插件介绍和使用方法——Obsidian 允许其他开发者编写第三方插件来扩展 Obsidian 的功能。你可以把这点理解城 Chrome 或者 Edge 浏览器一样的扩展。Obsidi..."
 tags: ["clippings", YCTODO]
 date-created: 2025-02-11
-date-modified: 2025-02-11
+date-modified: 2025-02-18
 status: 
-created: 2025-02-11
 published: 
 source: "https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92%E4%BB%B6/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92%E4%BB%B6/"
 ---

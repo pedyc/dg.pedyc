@@ -43,7 +43,7 @@
   "templater-obsidian:create-new-note-from-template": [
     {
       "modifiers": [
-        "Alt"
+        "Mod"
       ],
       "key": "N"
     }
@@ -64,6 +64,22 @@
         "Shift"
       ],
       "key": "O"
+    }
+  ],
+  "global-search:open": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Q"
+    }
+  ],
+  "templater-obsidian:_template/template_meta.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "N"
     }
   ]
 }

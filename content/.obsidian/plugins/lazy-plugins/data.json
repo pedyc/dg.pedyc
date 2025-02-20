@@ -70,6 +70,9 @@
       },
       "obsidian-vimrc-support": {
         "startupType": "short"
+      },
+      "obsidian-kanban": {
+        "startupType": "short"
       }
     }
   }

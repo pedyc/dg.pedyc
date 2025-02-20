@@ -6,7 +6,7 @@ author: juejin.cn
 description: 由于业务需要，近期团队要搞一套自己的UI组件库，框架方面还是Vue。而业界已经有比较成熟的一些UI库了，比如ElementUI、AntDesign、Vant等。 结合框架Vue，我们选择在ElementUI基础上进行改造。但造轮子绝非易事，首先需要先去了解它整个但构建流程、目录…
 tags: []
 date-created: 2025-02-16
-date-modified: 2025-02-16
+date-modified: 2025-02-17
 status: 
 alias: ["srAnnote@从 Element UI 源码的构建流程来看前端 UI 库设计"]
 ---

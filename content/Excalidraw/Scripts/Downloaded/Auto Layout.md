@@ -1,3 +1,15 @@
+---
+title: Auto Layout
+uid: 
+aliases: []
+author: 
+description: 
+tags: []
+date-created: 2025-02-14
+date-modified: 2025-02-18
+status: 
+---
+
 /*
 
 ![[Excalidraw/Scripts/Downloaded/_resources/Auto Layout/7c3494c75f147da245e57eab81682b24_MD5.jpg]]
@@ -7,7 +19,6 @@ Download this file and save to your Obsidian Vault including the first line, or 
 ![[Excalidraw/Scripts/Downloaded/_resources/Auto Layout/e44f3331845f32889f9d91337e803778_MD5.png]]
 
 This script performs automatic layout for the selected top-level grouping objects. It is powered by [elkjs](https://github.com/kieler/elkjs) and needs to be connected to the Internet.
-
 
 See documentation for more details:
 https://zsviczian.github.io/obsidian-excalidraw-plugin/ExcalidrawScriptsEngine.html

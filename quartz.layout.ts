@@ -6,18 +6,18 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
-    // Component.Comments({
-    //   provider: "giscus",
-    //   options: {
-    //     repo: "ped-yc/dg.pedyc",
-    //     repoId: "R_kgDOMwI1yg",
-    //     category: "Announcements",
-    //     categoryId: "DIC_kwDOMwI1ys4Civ4e",
-    //     themeUrl: "https://example.com/static/giscus",
-    //     lightTheme: "light",
-    //     darkTheme: "dark",
-    //   },
-    // }),
+    Component.Comments({
+      provider: "giscus",
+      options: {
+        repo: "ped-yc/dg.pedyc",
+        repoId: "R_kgDOMwI1yg",
+        category: "Announcements",
+        categoryId: "DIC_kwDOMwI1ys4Civ4e",
+        themeUrl: "https://example.com/static/giscus",
+        lightTheme: "light",
+        darkTheme: "dark",
+      },
+    }),
   ],
   footer: Component.Footer({
     links: {

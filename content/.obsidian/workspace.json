@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/Diary/2025-02-18.md",
+                "file": "PKM/Source/数字花园.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,143 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-02-18"
-            }
-          },
-          {
-            "id": "b899a2f973ec79b6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_template/template_meta.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "template_meta"
-            }
-          },
-          {
-            "id": "bec9b629c4307d04",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/How do you organize your notes.excalidraw"
-              },
-              "icon": "lucide-file",
-              "title": "插件不再活动"
-            }
-          },
-          {
-            "id": "475305bb9419e304",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/Diary/2025-02-19.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2025-02-19"
-            }
-          },
-          {
-            "id": "de9df63b115418a4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/Topics/前端工程化/目录结构设计.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "目录结构设计"
-            }
-          },
-          {
-            "id": "63c1848cb794cad4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/Source/【记录】WSL2配置代理.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "【记录】WSL2配置代理"
-            }
-          },
-          {
-            "id": "a07bf707a0abb645",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/Source/PKM.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "PKM"
+              "title": "数字花园"
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -214,13 +81,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PKM/Source/PKM.md",
+                "file": "_template/template_meta.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "PKM 的大纲"
+              "title": "template_meta 的大纲"
             }
           },
           {
@@ -255,7 +122,8 @@
               "title": "标签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "a55ae7590743ec78",
@@ -278,7 +146,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "PKM/Topics/【方法论】怎样组织笔记.md",
+                "file": "_template/template_meta.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -306,14 +174,14 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "【方法论】怎样组织笔记 的关系图"
+              "title": "template_meta 的关系图"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 271.5
   },
   "right": {
     "id": "ff01a1db19d5896b",
@@ -407,55 +275,55 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "a07bf707a0abb645",
+  "active": "3835bc96c640a5a9",
   "lastOpenFiles": [
-    "PKM/Topics/方法论汇总.md",
-    "PKM/Topics/【方法论】怎样组织笔记.md",
-    "PKM/Diary/2025-02-19.md",
-    "PKM/Diary/2025-02-20.md",
-    "PKM/Source/【记录】WSL2配置代理.md",
-    "SimpRead/4-Architectures of modern Front-end applications _ Medium _ BRACKETS.md",
-    "SimpRead/4-Architectures of modern Front-end applications _ Medium _ BRACKETS@annote.md",
-    "SimpRead/5-javascript - 彻底明白作用域、执行上下文 - 个人文章 - SegmentFault 思否网.md",
-    "SimpRead/backup/simpread_config@20250220100750.json",
-    "SimpRead/5-javascript - 彻底明白作用域、执行上下文 - 个人文章 - SegmentFault 思否网@annote.md",
-    "SimpRead/3-美团到店终端从标准化到数字化的演进之路 - 美团技术团队@annote.md",
-    "SimpRead/4-(……) javascript - 彻底明白作用域、执行上下文 - 个人文章 - SegmentFault 思否.md",
-    "SimpRead/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队.md",
-    "SimpRead/5-大前端：如何突破动态化容器的天花板？ - 美团技术团队@annote.md",
-    "SimpRead/output/5-javascript - 彻底明白作用域、执行上下文 - 个人文章 - SegmentFault 思否网.html",
-    "SimpRead/backup/simpread_config@20250220100634.json",
-    "SimpRead/4-(……) javascript - 彻底明白作用域、执行上下文 - 个人文章 - SegmentFault 思否@annote.md",
-    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/ea682159547cdd41697dbd24f3ba8369_MD5.jpg",
-    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/04a7c046b07f467b87531225636cd16d_MD5.jpg",
-    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/fec2a2ebb8bafaec12c660cec6b10876_MD5.jpg",
-    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/8d4a09c6d9a704c98c331a427d8c4380_MD5.jpg",
-    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/c3e3c0628a1e985380b264ec34c8dfa0_MD5.jpg",
-    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/6d428bd5119de332a5704a1061eadca4_MD5.jpg",
-    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/00b89d1938c9cbcf786779d207a758fc_MD5.jpg",
-    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/8c235bece0bf3d31da193bd7789bcd9b_MD5.jpg",
-    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/5a41dba75f20de61c11a4e02c41cffd8_MD5.jpg",
-    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS/3b09312b4e9e4e12ce72c71df6eeded8_MD5.jpg",
-    "SimpRead/_resources/4-Architectures of modern Front-end applications _ Medium _ BRACKETS",
-    "SimpRead/output/4-Architectures of modern Front-end applications - Medium - BRACKETS.html",
-    "SimpRead/backup/simpread_config@20250220100443.json",
-    "SimpRead/backup/simpread_config@20250220100318.json",
-    "SimpRead/backup/simpread_config@20250220100312.json",
-    "SimpRead/backup/simpread_config@20250219004154.json",
-    "PKM/Topics/前端工程化/Drawing 2025-02-19 17.21.02.excalidraw.md",
-    "Excalidraw/Scripts/Downloaded/_resources/Add Connector Point",
-    "Excalidraw/Scripts/Downloaded/Add Connector Point.md",
-    "PKM/Topics/前端工程化/目录结构设计.md",
-    "PKM/Topics/前端工程化/DevOps工作流.md",
-    "PKM/Topics/前端工程化/前端工程化.md",
-    "PKM/Topics/前端工程化/前端工程化.canvas",
-    "PKM/Diary/2024-11-01.md",
-    "Clippings/彻底明白作用域、执行上下文.md",
+    "PKM/Source/随笔工作流.md",
+    "PKM/Source/数字花园.md",
+    "PKM/Source/积分系统.md",
+    "SimpRead/1-如何进入生成式 AI 的新范式.md",
+    "SimpRead/1-如何进入生成式 AI 的新范式@annote.md",
+    "SimpRead/backup/simpread_config@20250220164904.json",
+    "SimpRead/backup/simpread_config@20250220164839.json",
+    "SimpRead/_resources/1-如何进入生成式 AI 的新范式",
+    "SimpRead/backup/simpread_config@20250220164715.json",
+    "SimpRead/0-AI 复兴 RSS ？.md",
+    "SimpRead/output/1-如何进入生成式 AI 的新范式@annote.html",
+    "SimpRead/output/1-如何进入生成式 AI 的新范式.html",
+    "SimpRead/_resources/0-AI 复兴 RSS ？",
+    "SimpRead/0-AI 复兴 RSS ？@annote.md",
+    "SimpRead/backup/simpread_config@20250220155233.json",
+    "SimpRead/backup/simpread_config@20250220155044.json",
+    "SimpRead/backup/simpread_config@20250220155042.json",
+    "SimpRead/8-深入理解函数式编程（上） - 美团技术团队.md",
+    "SimpRead/8-深入理解函数式编程（上） - 美团技术团队@annote.md",
+    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/54301469ad9c46a5272a22a7009d7b24_MD5.jpg",
+    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/6ed952c09fe89e93f80df4da4cdbe577_MD5.jpg",
+    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/f8c81512ac53b1e9cce7f54aae63ae90_MD5.jpg",
+    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/703c80e6fee3820843f61d6889524a34_MD5.jpg",
+    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/ac549e2bf24eb34ab16b297762c8dd2d_MD5.jpg",
+    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/ae328ab7cc91bfc2cfb8b9278596056b_MD5.jpg",
+    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/db31736bffe8c5f05ac4ace3a9752254_MD5.jpg",
+    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/52876e003f6bf2a613913e396e6cb7db_MD5.jpg",
+    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/05c1e3b901df4ed9ea32eab272e5ea45_MD5.jpg",
+    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/2c2566fc81194084dd792158d1c5ec17_MD5.jpg",
     "_template/template_meta.md",
+    "SimpRead/0-深入理解函数式编程（上） - 美团技术团队.md",
+    "PKM/Diary/2025-02-20.md",
+    "PKM/Source/【记录】简悦使用记录.md",
+    "SimpRead/1-深入理解函数式编程（下） - 美团技术团队.md",
+    "SimpRead/output/深入理解函数式编程（上） - 美团技术团队.md",
+    "SimpRead/output/深入理解函数式编程（上） - 美团技术团队@annote.md",
+    "SimpRead/深入理解函数式编程（上） - 美团技术团队.md",
+    "SimpRead/output/0-深入理解函数式编程（上） - 美团技术团队/0-深入理解函数式编程（上） - 美团技术团队.md",
+    "SimpRead/6-npm scripts 使用指南 - 阮一峰的网络日志@annote.md",
+    "SimpRead/0-Can LLMs write better code if you keep asking them to “write better code”？ _ Max Woolf's Blog.md",
+    "SimpRead/1-大前端：如何突破动态化容器的天花板？ - 美团技术团队.md",
+    "SimpRead/2-美团前端研发框架 Rome 实践和演进趋势 - 美团技术团队.md",
+    "SimpRead/0-Can LLMs write better code if you keep asking them to “write better code”？ _ Max Woolf's Blog@annote.md",
+    "SimpRead/1-大前端：如何突破动态化容器的天花板？ - 美团技术团队@annote.md",
     "PKM/Diary/2025-02-18.md",
-    "PKM/Source/【记录】重构GTD OS.md",
-    "PKM/Diary/Untitled.md",
-    "PKM/Topics/Untitled.md",
+    "SimpRead/5-美团高性能终端实时日志系统建设实践 - 美团技术团队@annote.md",
+    "PKM/Topics/前端工程化/前端工程化.canvas",
     "Tools/看板.canvas"
   ]
 }

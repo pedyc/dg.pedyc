@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b40c0648f97c5704",
+        "id": "4e290e8269e0f8e6",
         "type": "tabs",
         "children": [
           {
-            "id": "3835bc96c640a5a9",
+            "id": "6d6f4790ecb07837",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/Source/数字花园.md",
+                "file": "_template/template_diary.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,203 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "数字花园"
+              "title": "template_diary"
+            }
+          },
+          {
+            "id": "ec91ddef7c289ab9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/AREAS/知识管理/PKM.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "PKM"
+            }
+          },
+          {
+            "id": "3678e59c81f20251",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/PROJECTS/关于本库/本库主题汇总.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "本库主题汇总"
+            }
+          },
+          {
+            "id": "f284aea0b696740d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/PROJECTS/关于本库/本库工作流汇总.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "本库工作流汇总"
+            }
+          },
+          {
+            "id": "e9e29b2671062a9c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/AREAS/知识管理/PKM.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "PKM"
+            }
+          },
+          {
+            "id": "5615c3e9b2788689",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/Source/数字花园概述.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "数字花园概述"
+            }
+          },
+          {
+            "id": "0a8996aa013ccf72",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/主题汇总/前端工程化/目录结构设计.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "目录结构设计"
+            }
+          },
+          {
+            "id": "57816bffe2680ae9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/主题汇总/知识管理.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "知识管理"
+            }
+          },
+          {
+            "id": "d2cff97b88e2b869",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/Source/数字花园概述.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "数字花园概述"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -81,13 +274,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_template/template_meta.md",
+                "file": "PKM/PROJECTS/关于本库/本库主题汇总.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "template_meta 的大纲"
+              "title": "本库主题汇总 的大纲"
             }
           },
           {
@@ -96,7 +289,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "topics",
+                "query": "tag:#方法论",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -122,8 +315,7 @@
               "title": "标签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "a55ae7590743ec78",
@@ -146,7 +338,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "_template/template_meta.md",
+                "file": "PKM/AREAS/知识管理/知识管理工作流.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -169,12 +361,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1,
+                  "scale": 0.8502830004171944,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "template_meta 的关系图"
+              "title": "知识管理工作流 的关系图"
             }
           }
         ]
@@ -197,7 +389,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ACCESS 笔记组织法.md",
+                "file": "Excalidraw/How do you organize your notes.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -207,7 +399,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "ACCESS 笔记组织法 的反向链接列表"
+              "title": "How do you organize your notes.excalidraw 的反向链接列表"
             }
           },
           {
@@ -230,10 +422,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Follow/如何拥有一个无限制、可联网、带本地知识库.md"
+                "file": "Excalidraw/How do you organize your notes.excalidraw.md"
               },
               "icon": "lucide-info",
-              "title": "如何拥有一个无限制、可联网、带本地知识库的笔记属性"
+              "title": "How do you organize your notes.excalidraw的笔记属性"
             }
           },
           {
@@ -250,8 +442,7 @@
               "title": "添加笔记属性"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -275,54 +466,53 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "3835bc96c640a5a9",
+  "active": "3678e59c81f20251",
   "lastOpenFiles": [
-    "PKM/Source/随笔工作流.md",
-    "PKM/Source/数字花园.md",
-    "PKM/Source/积分系统.md",
-    "SimpRead/1-如何进入生成式 AI 的新范式.md",
-    "SimpRead/1-如何进入生成式 AI 的新范式@annote.md",
-    "SimpRead/backup/simpread_config@20250220164904.json",
-    "SimpRead/backup/simpread_config@20250220164839.json",
-    "SimpRead/_resources/1-如何进入生成式 AI 的新范式",
-    "SimpRead/backup/simpread_config@20250220164715.json",
-    "SimpRead/0-AI 复兴 RSS ？.md",
-    "SimpRead/output/1-如何进入生成式 AI 的新范式@annote.html",
-    "SimpRead/output/1-如何进入生成式 AI 的新范式.html",
-    "SimpRead/_resources/0-AI 复兴 RSS ？",
-    "SimpRead/0-AI 复兴 RSS ？@annote.md",
-    "SimpRead/backup/simpread_config@20250220155233.json",
-    "SimpRead/backup/simpread_config@20250220155044.json",
-    "SimpRead/backup/simpread_config@20250220155042.json",
-    "SimpRead/8-深入理解函数式编程（上） - 美团技术团队.md",
-    "SimpRead/8-深入理解函数式编程（上） - 美团技术团队@annote.md",
-    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/54301469ad9c46a5272a22a7009d7b24_MD5.jpg",
-    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/6ed952c09fe89e93f80df4da4cdbe577_MD5.jpg",
-    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/f8c81512ac53b1e9cce7f54aae63ae90_MD5.jpg",
-    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/703c80e6fee3820843f61d6889524a34_MD5.jpg",
-    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/ac549e2bf24eb34ab16b297762c8dd2d_MD5.jpg",
-    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/ae328ab7cc91bfc2cfb8b9278596056b_MD5.jpg",
-    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/db31736bffe8c5f05ac4ace3a9752254_MD5.jpg",
-    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/52876e003f6bf2a613913e396e6cb7db_MD5.jpg",
-    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/05c1e3b901df4ed9ea32eab272e5ea45_MD5.jpg",
-    "SimpRead/_resources/8-深入理解函数式编程（上） - 美团技术团队/2c2566fc81194084dd792158d1c5ec17_MD5.jpg",
+    "index.md",
+    "banner.svg",
+    "Clippings/【记录】Grok对政经问题的回答.md",
+    "Clippings/_resources/Grok/6da80c13a5dc86939bcb2d7e37351f9a_MD5.jpg",
+    "Clippings/_resources/Grok",
+    "PKM/ARCHIVES/政治经济/【记录】Grok3 对政经问题的回答.md",
+    "PKM/AREAS/知识管理/_resources",
+    "PKM/AREAS/知识管理/知识管理工作流.md",
+    "PKM/ARCHIVES/政治经济",
+    "PKM/AREAS/知识管理/PKM.md",
+    "PKM/PROJECTS/关于本库/方法论汇总.md",
+    "PKM/PROJECTS/关于本库/本库工作流汇总.md",
+    "PKM/PROJECTS/关于本库/关于本库.md",
+    "PKM/ARCHIVES/主题汇总/工具及配置.md",
+    "PKM/AREAS/知识管理/知识管理.md",
+    "PKM/PROJECTS/Diary/2025-02-21.md",
+    "PKM/ARCHIVES/主题汇总/前端工程化/前端工程化.md",
+    "_template/template_diary.md",
     "_template/template_meta.md",
-    "SimpRead/0-深入理解函数式编程（上） - 美团技术团队.md",
-    "PKM/Diary/2025-02-20.md",
-    "PKM/Source/【记录】简悦使用记录.md",
-    "SimpRead/1-深入理解函数式编程（下） - 美团技术团队.md",
-    "SimpRead/output/深入理解函数式编程（上） - 美团技术团队.md",
-    "SimpRead/output/深入理解函数式编程（上） - 美团技术团队@annote.md",
-    "SimpRead/深入理解函数式编程（上） - 美团技术团队.md",
-    "SimpRead/output/0-深入理解函数式编程（上） - 美团技术团队/0-深入理解函数式编程（上） - 美团技术团队.md",
-    "SimpRead/6-npm scripts 使用指南 - 阮一峰的网络日志@annote.md",
-    "SimpRead/0-Can LLMs write better code if you keep asking them to “write better code”？ _ Max Woolf's Blog.md",
-    "SimpRead/1-大前端：如何突破动态化容器的天花板？ - 美团技术团队.md",
-    "SimpRead/2-美团前端研发框架 Rome 实践和演进趋势 - 美团技术团队.md",
-    "SimpRead/0-Can LLMs write better code if you keep asking them to “write better code”？ _ Max Woolf's Blog@annote.md",
-    "SimpRead/1-大前端：如何突破动态化容器的天花板？ - 美团技术团队@annote.md",
-    "PKM/Diary/2025-02-18.md",
-    "SimpRead/5-美团高性能终端实时日志系统建设实践 - 美团技术团队@annote.md",
+    "_template/template_flower.md",
+    "_template/template_flashcard.md",
+    "PKM/PROJECTS/Diary/2025-02-20.md",
+    "PKM/PROJECTS/Diary/2025-02-23.md",
+    "PKM/PROJECTS/Diary/2025-02-24.md",
+    "PKM/PROJECTS/Diary/2025-02-25.md",
+    "PKM/PROJECTS/Diary/2025-02-22.md",
+    "PKM/ARCHIVES/Source/数字花园概述.md",
+    "PKM/PROJECTS/关于本库/本库设计概述.md",
+    "PKM/PROJECTS/关于本库/本库设计理念.md",
+    "SimpRead/backup/simpread_config@20250221165507.json",
+    "SimpRead/backup/simpread_config@20250221165504.json",
+    "SimpRead/backup/simpread_config@20250221165502.json",
+    "SimpRead/backup/simpread_config@20250221165459.json",
+    "SimpRead/backup/simpread_config@20250221165456.json",
+    "PKM/ARCHIVES/主题汇总/怎样组织笔记.md",
+    "PKM/AREAS/知识管理",
+    "PKM/ARCHIVES",
+    "SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息/04bd2b299b1acef502ccff31dae57325_MD5.jpg",
+    "SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息/9b3a310711eadbdae35074fe0d35db39_MD5.jpg",
+    "Clippings/_resources/知识组织-Pkmer/67a28fa69efbcc7e4df794394bb69d4d_MD5.jpg",
+    "SimpRead/_resources/3-PKMer_知识组织/67a28fa69efbcc7e4df794394bb69d4d_MD5.jpg",
+    "SimpRead/_resources/2-PKMer_知识组织/67a28fa69efbcc7e4df794394bb69d4d_MD5.jpg",
+    "SimpRead/_resources/PKMer_知识组织/67a28fa69efbcc7e4df794394bb69d4d_MD5.jpg",
+    "PKM/ARCHIVES/Source/_resources/知识管理/7d25f1ed57357410442f092da56e29cc_MD5.jpeg",
+    "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.svg",
     "PKM/Topics/前端工程化/前端工程化.canvas",
     "Tools/看板.canvas"
   ]

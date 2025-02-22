@@ -4,13 +4,10 @@
 .replit
 node_modules
 public
-dist/
+dist
 output
 prof
 Private
 tsconfig.tsbuildinfo
 replit.nix
-**/Simpread/log
-**/Simpread/output
-**/Simpread/backup
-simpread_config.json
+Simpread

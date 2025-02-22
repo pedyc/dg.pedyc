@@ -47,6 +47,7 @@
     "TQ_show_tree": "checkbox",
     "TQ_show_urgency": "checkbox",
     "topics": "multitext",
-    "author": "text"
+    "author": "text",
+    "flower-type": "multitext"
   }
 }

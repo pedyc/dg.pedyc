@@ -24,14 +24,6 @@
       "key": "F"
     }
   ],
-  "highlightr-plugin:Red": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "H"
-    }
-  ],
   "properties:open-local": [
     {
       "modifiers": [
@@ -80,6 +72,23 @@
         "Alt"
       ],
       "key": "N"
+    }
+  ],
+  "editor:toggle-highlight": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "H"
+    }
+  ],
+  "editor:save-file": [],
+  "highlightr-plugin:Red": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "R"
     }
   ]
 }

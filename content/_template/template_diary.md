@@ -1,8 +1,16 @@
 ---
-title: <% tp.file.creation_date() %>
+topics:
+  - 个人成长
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+title: template_diary
+aliases: 
+author: 
+description: 
 tags:
   - diary
+date-created: 2025-02-22
+date-modified: 2025-02-23
+status:
 ---
 
 <%*
@@ -19,25 +27,30 @@ await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
 })
 -%>
 
-> [!quote] 一言<br/>
+> [!quote] 一言
  <% 一言 %> —— 《<% 来源 %>》 · <% 作者 %>
 
-## ☁行云（闪念，突然想到了什么？）
+## 💡行云（闪念，突然想到了什么？）
+
 - TODO
 - TODO
 
-## :LiFootprints:跬步（今日要做什么？）
+## 🦶跬步（今日要做什么？）
+
 - TODO
 - TODO
 
-## :LiSun:日新（今日状态如何？）
+## 🌞日新（今日状态如何？）
+
 - 状态：:LiSmilePlus:
 
-## :LiMoon:温故（每日总结）
+## 🌙温故（每日总结）
+
 ```dataview
 TABLE file.mtime AS "最后修改时间"
 WHERE file.mtime >= date("{{date:YYYY-MM-DD}}") AND file.mtime < date("{{date:YYYY-MM-DD}}") + dur(1 day)
 SORT file.mtime DESC
 ```
+
 > [!NOTE] 今日复盘
 > NOTE

@@ -7,7 +7,7 @@ public
 dist
 output
 prof
-Private
 tsconfig.tsbuildinfo
 replit.nix
-Simpread
+**/SimpRead/backup
+simpread_config.json

@@ -16,7 +16,7 @@
   "useMarkdownLinks": false,
   "linkFormat": "shortest",
   "defaultLinkFormat": "shortest",
-  "useDefaultLinkStyleForConversion": true,
+  "useDefaultLinkStyleForConversion": false,
   "applyDefaultLinkStyling": false,
   "includeHeaders": true,
   "matchCaseSensitive": false,

@@ -7,7 +7,7 @@ author: 潦草学者
 description: RSS 是什么？根据维基百科的定义，RSS 的全称是 RDFSiteSummary(RDF 站点摘要) 或 ReallySimpleSyndication(简易信息聚合)，RSS 是一种消息来源的格式规范，用来同步 ......
 tags: []
 date-created: 2025-02-20
-date-modified: 2025-02-20
+date-modified: 2025-02-22
 status: 
 alias: ["srAnnote@AI 复兴 RSS ？"]
 ---

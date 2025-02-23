@@ -1,59 +1,41 @@
 " 基本设置
-set number              " 显示行号
-set relativenumber      " 显示相对行号（方便导航）
-set cursorline          " 高亮当前行
-; syntax on               " 语法高亮
-set tabstop=2           " Tab显示为2个空格
-set shiftwidth=2        " 自动缩进使用2个空格
-set expandtab           " 将Tab转换为空格
-set smartindent         " 智能缩进
-set ignorecase          " 搜索忽略大小写
-set smartcase           " 智能大小写（包含大写时区分大小写）
-set incsearch           " 实时搜索高亮
-set hlsearch            " 高亮搜索结果
-set mouse=a             " 启用鼠标支持
+" syntax on               " 语法高亮
+" call plug#begin('~/.vim/plugged')
+" Plug 'morhetz/gruvbox'          " 配色方案
+" Plug 'vim-airline/vim-airline'  " 状态栏
+" Plug 'preservim/nerdtree'       " 文件浏览器
+" Plug 'neoclide/coc.nvim', {'branch': 'release'} " 代码补全
+" call plug#end() 
 
-" 文件编码
-set encoding=utf-8
-set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+" 在文件末尾添加这些设置
+set clipboard=unnamed   " 使用系统剪贴板
+set wrap               " 自动换行
+set linebreak         " 不会在单词内部换行
+set showmatch         " 显示匹配的括号
+set wildmenu          " 命令行自动补全 
 
-" 备份设置
-set nobackup            " 不生成备份文件
-set nowritebackup
-set noswapfile          " 不生成交换文件
+" 在键位映射部分添加
+" 快速复制到行末
+nnoremap Y y$
+" 居中显示搜索结果
+nnoremap n nzz
+nnoremap N Nzz
+" 取消搜索高亮
+nnoremap <leader>nh :nohl<CR>
 
-" 键位映射
-let mapleader = " "     " 设置Leader键为空格
-noremap <leader>w :w<CR> " 快速保存
-noremap <leader>q :q<CR> " 快速退出
+nmap H ^
+nmap L $
 
-" 行移动（支持普通模式和可视模式）
-nnoremap <C-Up> :<C-u>silent! move-2<CR>==
-nnoremap <C-Down> :<C-u>silent! move+<CR>==
-vnoremap <C-Up> :<C-u>silent! '<,'>move-2<CR>gv=gv
-vnoremap <C-Down> :<C-u>silent! '<,'>move'>+<CR>gv=gv
 
-" 窗口导航
-map <C-h> <C-w>h       " Ctrl+h 切换到左侧窗口
-map <C-j> <C-w>j       " Ctrl+j 切换到下方窗口
-map <C-k> <C-w>k       " Ctrl+k 切换到上方窗口
-map <C-l> <C-w>l       " Ctrl+l 切换到右侧窗口
+" Alt + 上下箭头移动当前行
+nnoremap <A-Up> :m-2<CR>
+nnoremap <A-Down> :m+<CR>
+" 在可视模式下也启用这个功能
+vnoremap <A-Up> :m'<-2<CR>gv=gv
+vnoremap <A-Down> :m'>+1<CR>gv=gv 
 
-" 插件管理（使用vim-plug）
-; call plug#begin('~/.vim/plugged')
-; Plug 'morhetz/gruvbox'          " 配色方案
-; Plug 'vim-airline/vim-airline'  " 状态栏
-; Plug 'preservim/nerdtree'       " 文件浏览器
-; Plug 'neoclide/coc.nvim', {'branch': 'release'} " 代码补全
-; call plug#end()
-
-" 颜色主题
-set termguicolors     " 启用真彩色
-colorscheme gruvbox   " 使用gruvbox配色
-set background=dark   " 深色模式
-
-" 其他优化
-set autochdir         " 自动切换工作目录到当前文件
-set scrolloff=5       " 保持光标距离顶部/底部5行
-set signcolumn=yes    " 侧边栏显示标记（用于LSP错误提示）
-set updatetime=300    " 更快的更新间隔（用于插件响应）
+" Ctrl + 左右箭头控制缩进
+nnoremap <A-Left> <<
+nnoremap <A-Right> >>
+vnoremap <A-Left> <gv
+vnoremap <A-Right> >gv

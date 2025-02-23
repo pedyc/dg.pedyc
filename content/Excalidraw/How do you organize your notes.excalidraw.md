@@ -2,12 +2,12 @@
 topics: 
 uid: 
 title: How do you organize your notes.excalidraw
-aliases: 
+aliases: []
 author: 
 description: 
-tags: 
+tags: []
 date-created: 2025-02-21
-date-modified: 2025-02-21
+date-modified: 2025-02-23
 status: 
 ---
 

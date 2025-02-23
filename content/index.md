@@ -7,7 +7,7 @@ author: ped_yc
 description: 
 tags: []
 date-created: 2024-08-23
-date-modified: 2025-02-21
+date-modified: 2025-02-23
 status: 
 sticker: lucide//file
 type: 
@@ -26,8 +26,6 @@ type:
 也欢迎来此花园的朋友四处逛逛，如果有对您有益的内容，*我也不胜欢喜*。
 
 您可以将鼠标移动到高亮链接上预览内容，也可以点击*查看*。
-
-这里是一张地图：[[🍀 花园导览]]，其中聚合了一些主题。
 
 这里是我最近发布的内容：
 

@@ -32,6 +32,6 @@
     "_template/template_meta.md"
   ],
   "startup_templates": [
-    "_template/template_meta.md"
+    "_template/template_flower.md"
   ]
 }

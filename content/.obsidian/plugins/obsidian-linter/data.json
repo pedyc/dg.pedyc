@@ -126,7 +126,7 @@
     },
     "default-language-for-code-fences": {
       "enabled": true,
-      "default-language": "javascript"
+      "default-language": "text"
     },
     "emphasis-style": {
       "enabled": true,

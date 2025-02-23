@@ -1,18 +1,19 @@
 ---
-title: RSS
+topics: 
 uid: 202409132240
+title: RSS
 aliases: 
 author: ped_yc
 description: 
 tags: []
 date-created: 2024-09-12
-date-modified: 2025-02-14
+date-modified: 2025-02-23
 status: 
 alias: [RSS]
 type: 
 ---
 
-::up::[[PKM]]
+::up::[[知识管理概述]]
 
 ## RSS 信息源
 

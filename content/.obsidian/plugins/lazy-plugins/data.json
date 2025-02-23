@@ -69,7 +69,7 @@
         "startupType": "short"
       },
       "obsidian-vimrc-support": {
-        "startupType": "short"
+        "startupType": "instant"
       },
       "obsidian-kanban": {
         "startupType": "short"

@@ -7,8 +7,7 @@ import path from "path";
 
 const esConfig = {
   entryPoints: [fp],
-  outdir: "dist",
-  // outfile: cacheFile,
+  outfile: cacheFile,
   platform: "node",
   format: "esm",
   jsx: "automatic",
@@ -17,7 +16,7 @@ const esConfig = {
   sourcemap: true,
   sourcesContent: false,
   bundle: true,
-  splitting: true, // 代码分片
+  // splitting: true, // 代码分片
   chunkNames: "chunk-[name]-[hash]",
   keepNames: true,
   minify: true,
@@ -71,17 +70,17 @@ const esConfig = {
   ],
 };
 
-// const isProduction = process.argv.includes('build') && !process.argv.includes('--serve')
+const isProduction = process.argv.includes('build') && !process.argv.includes('--serve')
 
-// if (isProduction) {
-//   esConfig.plugins.push({
-//     name: "bundle-visualizer",
-//     ...visualizer({
-//       filename: 'bundle-analysis.html',
-//       gzipSize: true,
-//       metadata: true
-//     })
-//   })
-// }
+if (isProduction) {
+  esConfig.plugins.push({
+    name: "bundle-visualizer",
+    ...visualizer({
+      filename: 'bundle-analysis.html',
+      gzipSize: true,
+      metadata: true
+    })
+  })
+}
 
 export default esConfig;

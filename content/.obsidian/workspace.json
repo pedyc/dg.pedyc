@@ -4,227 +4,109 @@
     "type": "split",
     "children": [
       {
-        "id": "4e290e8269e0f8e6",
-        "type": "tabs",
+        "id": "a977d684f58e0208",
+        "type": "split",
         "children": [
           {
-            "id": "6d6f4790ecb07837",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_template/template_diary.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
+            "id": "42e584d4096edf20",
+            "type": "tabs",
+            "dimension": 61.5,
+            "children": [
+              {
+                "id": "b0f5ea33a72f3471",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PKM/AREAS/Diary/2025-02-23.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "2025-02-23"
                 }
               },
-              "icon": "lucide-file",
-              "title": "template_diary"
-            }
+              {
+                "id": "2885145f10ad86fa",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PKM/AREAS/Diary/2025-02-22.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "2025-02-22"
+                }
+              }
+            ]
           },
           {
-            "id": "ec91ddef7c289ab9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/AREAS/知识管理/PKM.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
+            "id": "cf4e39fc18e66bab",
+            "type": "tabs",
+            "dimension": 38.5,
+            "children": [
+              {
+                "id": "67fce44427db47bb",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "options": {
+                      "collapse-filter": false,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": true,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 0.27229554996146776,
+                      "close": true
+                    }
+                  },
+                  "icon": "lucide-git-fork",
+                  "title": "关系图谱"
                 }
-              },
-              "icon": "lucide-file",
-              "title": "PKM"
-            }
-          },
-          {
-            "id": "3678e59c81f20251",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/PROJECTS/关于本库/本库主题汇总.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "本库主题汇总"
-            }
-          },
-          {
-            "id": "f284aea0b696740d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/PROJECTS/关于本库/本库工作流汇总.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "本库工作流汇总"
-            }
-          },
-          {
-            "id": "e9e29b2671062a9c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/AREAS/知识管理/PKM.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "PKM"
-            }
-          },
-          {
-            "id": "5615c3e9b2788689",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/Source/数字花园概述.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "数字花园概述"
-            }
-          },
-          {
-            "id": "0a8996aa013ccf72",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/主题汇总/前端工程化/目录结构设计.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "目录结构设计"
-            }
-          },
-          {
-            "id": "57816bffe2680ae9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/主题汇总/知识管理.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "知识管理"
-            }
-          },
-          {
-            "id": "d2cff97b88e2b869",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/Source/数字花园概述.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "数字花园概述"
-            }
+              }
+            ]
           }
         ],
-        "currentTab": 2
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -274,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PKM/PROJECTS/关于本库/本库主题汇总.md",
+                "file": "SimpRead/4-Breaking the Frontend Ceiling _ Frontend at Scale.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "本库主题汇总 的大纲"
+              "title": "4-Breaking the Frontend Ceiling _ Frontend at Scale 的大纲"
             }
           },
           {
@@ -289,7 +171,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#方法论",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -331,49 +213,12 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
-          },
-          {
-            "id": "67fce44427db47bb",
-            "type": "leaf",
-            "state": {
-              "type": "localgraph",
-              "state": {
-                "file": "PKM/AREAS/知识管理/知识管理工作流.md",
-                "options": {
-                  "collapse-filter": false,
-                  "search": "",
-                  "localJumps": 1,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": false,
-                  "showTags": true,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
-                  "collapse-display": true,
-                  "showArrow": false,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 0.8502830004171944,
-                  "close": true
-                }
-              },
-              "icon": "lucide-git-fork",
-              "title": "知识管理工作流 的关系图"
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 271.5
+    "width": 257.5
   },
   "right": {
     "id": "ff01a1db19d5896b",
@@ -466,53 +311,54 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "3678e59c81f20251",
+  "active": "62b03965a1dba250",
   "lastOpenFiles": [
-    "index.md",
-    "banner.svg",
-    "Clippings/【记录】Grok对政经问题的回答.md",
-    "Clippings/_resources/Grok/6da80c13a5dc86939bcb2d7e37351f9a_MD5.jpg",
-    "Clippings/_resources/Grok",
-    "PKM/ARCHIVES/政治经济/【记录】Grok3 对政经问题的回答.md",
-    "PKM/AREAS/知识管理/_resources",
-    "PKM/AREAS/知识管理/知识管理工作流.md",
-    "PKM/ARCHIVES/政治经济",
-    "PKM/AREAS/知识管理/PKM.md",
-    "PKM/PROJECTS/关于本库/方法论汇总.md",
-    "PKM/PROJECTS/关于本库/本库工作流汇总.md",
-    "PKM/PROJECTS/关于本库/关于本库.md",
-    "PKM/ARCHIVES/主题汇总/工具及配置.md",
-    "PKM/AREAS/知识管理/知识管理.md",
-    "PKM/PROJECTS/Diary/2025-02-21.md",
-    "PKM/ARCHIVES/主题汇总/前端工程化/前端工程化.md",
-    "_template/template_diary.md",
-    "_template/template_meta.md",
-    "_template/template_flower.md",
-    "_template/template_flashcard.md",
-    "PKM/PROJECTS/Diary/2025-02-20.md",
-    "PKM/PROJECTS/Diary/2025-02-23.md",
-    "PKM/PROJECTS/Diary/2025-02-24.md",
-    "PKM/PROJECTS/Diary/2025-02-25.md",
-    "PKM/PROJECTS/Diary/2025-02-22.md",
-    "PKM/ARCHIVES/Source/数字花园概述.md",
-    "PKM/PROJECTS/关于本库/本库设计概述.md",
-    "PKM/PROJECTS/关于本库/本库设计理念.md",
-    "SimpRead/backup/simpread_config@20250221165507.json",
-    "SimpRead/backup/simpread_config@20250221165504.json",
-    "SimpRead/backup/simpread_config@20250221165502.json",
-    "SimpRead/backup/simpread_config@20250221165459.json",
-    "SimpRead/backup/simpread_config@20250221165456.json",
-    "PKM/ARCHIVES/主题汇总/怎样组织笔记.md",
-    "PKM/AREAS/知识管理",
-    "PKM/ARCHIVES",
-    "SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息/04bd2b299b1acef502ccff31dae57325_MD5.jpg",
-    "SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息/9b3a310711eadbdae35074fe0d35db39_MD5.jpg",
-    "Clippings/_resources/知识组织-Pkmer/67a28fa69efbcc7e4df794394bb69d4d_MD5.jpg",
-    "SimpRead/_resources/3-PKMer_知识组织/67a28fa69efbcc7e4df794394bb69d4d_MD5.jpg",
-    "SimpRead/_resources/2-PKMer_知识组织/67a28fa69efbcc7e4df794394bb69d4d_MD5.jpg",
-    "SimpRead/_resources/PKMer_知识组织/67a28fa69efbcc7e4df794394bb69d4d_MD5.jpg",
-    "PKM/ARCHIVES/Source/_resources/知识管理/7d25f1ed57357410442f092da56e29cc_MD5.jpeg",
-    "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.svg",
+    "SimpRead/4-Breaking the Frontend Ceiling _ Frontend at Scale@annote.md",
+    "SimpRead/4-Breaking the Frontend Ceiling _ Frontend at Scale.md",
+    "SimpRead/_resources/0-AI 复兴 RSS ？",
+    "PKM/RESOURCES/知识管理升级路线图.md",
+    "PKM/RESOURCES/关于本库/本库诊断报告.md",
+    "PKM/RESOURCES/关于本库/本库设计理念.md",
+    "PKM/RESOURCES/关于本库/本库设计概述.md",
+    "PKM/RESOURCES/关于本库/本库设计中碰到的问题.md",
+    "PKM/RESOURCES/关于本库/本库组织方案.md",
+    "PKM/RESOURCES/关于本库/本库方法论汇总.md",
+    "PKM/RESOURCES/关于本库/本库文章状态.md",
+    "PKM/RESOURCES/关于本库/本库工作流汇总.md",
+    "PKM/RESOURCES/关于本库/本库名词解释.md",
+    "PKM/RESOURCES/关于本库/本库元数据解析.md",
+    "PKM/RESOURCES/关于本库/本库主题汇总.md",
+    "PKM/RESOURCES/关于本库/本库中的AI.md",
+    "PKM/RESOURCES/关于本库/日记聚合工作流.md",
+    "PKM/RESOURCES/关于本库/数字花园相关设计.md",
+    "PKM/RESOURCES/关于本库/关于本库.md",
+    "PKM/RESOURCES/关于本库/PKM降噪处理.md",
+    "PKM/RESOURCES/关于我/我的网站.md",
+    "PKM/RESOURCES/关于我/我的项目.md",
+    "PKM/RESOURCES/关于我/我的工作流.md",
+    "PKM/RESOURCES/关于我/dg.pedyc.md",
+    "PKM/RESOURCES/关于我",
+    "PKM/AREAS/Diary/2025-02-08.md",
+    "PKM/AREAS/Diary/2024-11-24.md",
+    "PKM/AREAS/Diary/2024-11-21.md",
+    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/e85a574a52c9731775708dba9ed68514_MD5.jpg",
+    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/e34f2c9c81679c0a4608d19b2abc1eb7_MD5.jpg",
+    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/c4cc038c7dc7ec07479e6352ad370a52_MD5.jpg",
+    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/c2feb22b89554490d500cb159c2e8245_MD5.jpg",
+    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/afce9d56ed243752cb0619feb354e7b1_MD5.jpg",
+    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/a85df45b481c12dd1667818843f47758_MD5.jpg",
+    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/8a5ece7e28cfdeea75ddf13e7b40baf5_MD5.jpg",
+    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/850b7671194ce2e0735199a33caf387c_MD5.jpg",
+    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/822bbb12360786b0e266b486f85fac78_MD5.jpg",
+    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/7e1684a96ac2e3ab2dd48cc8e6d5c8a4_MD5.jpg",
+    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI",
+    "PKM/AREAS/Blog/_resources",
+    "PKM/AREAS/Blog",
+    "Excalidraw/Scripts/Downloaded/_resources/Expand rectangles horizontally keep text centered",
+    "PKM/ARCHIVES/政治经济/_resources",
+    "PKM/AREAS/知识管理/_resources/知识管理工作流",
+    "PKM/ARCHIVES/主题汇总/前端工程化/_resources/目录结构设计",
+    "PKM/ARCHIVES/主题汇总/前端工程化/_resources",
     "PKM/Topics/前端工程化/前端工程化.canvas",
     "Tools/看板.canvas"
   ]

@@ -1,6 +1,6 @@
 ---
 topics:
-  - 个人成长
+  - 个人成长/日记
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: template_diary
 aliases: 
@@ -47,7 +47,7 @@ await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
 ## 🌙温故（每日总结）
 
 ```dataview
-TABLE file.mtime AS "最后修改时间"
+TABLE file.ctime AS "创建时间", file.mtime AS "最后修改时间"
 WHERE file.mtime >= date("{{date:YYYY-MM-DD}}") AND file.mtime < date("{{date:YYYY-MM-DD}}") + dur(1 day)
 SORT file.mtime DESC
 ```

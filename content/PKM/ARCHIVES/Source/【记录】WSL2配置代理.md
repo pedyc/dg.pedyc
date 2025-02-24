@@ -1,14 +1,16 @@
 ---
-topics: [记录]
-uid: 
+uid: null
 title: 【记录】WSL2配置代理
 aliases: []
-author: 
-description: 
-tags: [记录, WSL, Linux]
-date-created: 2025-02-20
-date-modified: 2025-02-20
-status: 
+author: null
+description: null
+tags:
+  - 记录
+  - WSL
+  - Linux
+date-created: 2025-02-20T00:00:00.000Z
+date-modified: 2025-02-24T00:00:00.000Z
+status: null
 ---
 
 > [!md] Metadata

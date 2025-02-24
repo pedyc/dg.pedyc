@@ -1,13 +1,15 @@
 ---
-title: patch-package
+topics: 
 uid: 202408162330
+title: patch-package
+aliases: []
 author: ped_yc
 description: 
-date-created: 2024-08-16 23:30
-date-modified: 2024-09-16 21:02
+tags: [npm]
+date-created: 2024-08-15
+date-modified: 2025-02-24
 status: [YCTODO]
 type: 
-tags: [npm]
 ---
 
 ⬆[[npm]]

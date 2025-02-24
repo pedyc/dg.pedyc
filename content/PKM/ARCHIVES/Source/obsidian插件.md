@@ -1,13 +1,14 @@
 ---
+topics: 
+uid: 202409171609
 title: obsidian插件
 aliases: []
-uid: 202409171609
 author: ped_yc
 description: 
-date-created: 2024-09-17 16:09
-date-modified: 2024-09-17 17:01
-status: [YCTODO]
 tags: []
+date-created: 2024-09-16
+date-modified: 2025-02-24
+status: [YCTODO]
 ---
 
 ⬆[[占位符]]

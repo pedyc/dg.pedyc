@@ -1,14 +1,15 @@
 ---
+topics: 
+uid: 
 title: Obsidian
 aliases: []
-uid: 
 author: ped_yc
 description: 
+tags: [tools]
 date-created: 2024-08-14
-date-modified: 2024-09-21
+date-modified: 2025-02-24
 status: [YCTODO]
 type: [记录]
-tags: [tools]
 ---
 
 ## Obsidian 设置

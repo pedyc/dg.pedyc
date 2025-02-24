@@ -1,13 +1,14 @@
 ---
-topics: [前端工程化]
-uid: 
+uid: null
 title: DevOps工作流
 aliases: []
-author: 
-description: 
-tags: [工作流]
-date-created: 2025-02-18
-date-modified: 2025-02-22
+author: null
+description: null
+tags:
+  - 工作流
+  - areas/前端开发/前端工程化
+date-created: 2025-02-18T00:00:00.000Z
+date-modified: 2025-02-24T00:00:00.000Z
 status: YCTODO
 ---
 

@@ -1,12 +1,13 @@
 ---
-title: WSL + SSH + Zellij + NeoVim 工作流
+topics: 
 uid: 
+title: WSL + SSH + Zellij + NeoVim 工作流
 aliases: []
 author: 
 description: 
 tags: [tools, blog, workflow]
 date-created: 2025-02-08
-date-modified: 2025-02-10
+date-modified: 2025-02-24
 status: 
 ---
 
@@ -24,12 +25,12 @@ status:
 
 - **核心价值**：在 Windows 系统上获得原生 Linux 开发体验
 - **典型场景**：
-  - 直接运行 Docker 容器编排服务
-  - 编译 Linux 原生二进制文件
-  - 使用 apt 管理开发依赖包
+	- 直接运行 Docker 容器编排服务
+	- 编译 Linux 原生二进制文件
+	- 使用 apt 管理开发依赖包
 - **配置示例**：
 
-  ```bash
+	```bash
   # 启用WSL功能
   dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
   wsl --set-default-version 2
@@ -38,12 +39,12 @@ status:
 #### 2. SSH：穿越服务器的任意门
 
 - **进阶用法**：
-  - 多因子认证增强安全性
-  - SSH config 管理多环境配置
-  - 端口转发实现内网穿透
+	- 多因子认证增强安全性
+	- SSH config 管理多环境配置
+	- 端口转发实现内网穿透
 - **配置示例**：
 
-  ```bash
+	```bash
   # ~/.ssh/config
   Host prod-server
     HostName 192.168.1.100
@@ -56,12 +57,12 @@ status:
 #### 3. Zellij：终端的乐高积木
 
 - **革命性功能**：
-  - 可视化布局构建器
-  - 会话持久化与状态恢复
-  - 插件系统扩展能力
+	- 可视化布局构建器
+	- 会话持久化与状态恢复
+	- 插件系统扩展能力
 - **实战技巧**：
 
-  ```bash
+	```bash
   # 创建开发面板布局
   zellij setup --layout my-dev
 
@@ -75,7 +76,7 @@ status:
 
 - **现代化升级**：
 
-  ```lua
+	```lua
   -- 智能代码补全
   local cmp = require'cmp'
   cmp.setup({
@@ -93,13 +94,13 @@ status:
 #### 典型开发场景
 
 1. **本地开发阶段**
-   WSL 中启动 Zellij，创建三面板布局：左边 NeoVim 写代码，中间运行测试，右边监控日志。
+	 WSL 中启动 Zellij，创建三面板布局：左边 NeoVim 写代码，中间运行测试，右边监控日志。
 
 2. **跨环境调试**
-   通过 SSH 隧道将本地端口映射到云服务器，实时调试远程 API。
+	 通过 SSH 隧道将本地端口映射到云服务器，实时调试远程 API。
 
 3. **协同作战**
-   Zellij 会话共享功能让结对编程变得轻松，团队成员可实时查看同一终端环境。
+	 Zellij 会话共享功能让结对编程变得轻松，团队成员可实时查看同一终端环境。
 
 ---
 
@@ -122,17 +123,17 @@ status:
 ### 避坑指南
 
 1. **文件系统性能**
-   WSL 跨系统文件操作较慢，建议将项目放在 Linux 文件系统中
+	 WSL 跨系统文件操作较慢，建议将项目放在 Linux 文件系统中
 
 2. **终端编码**
-   统一配置 UTF-8 编码防止乱码：
+	 统一配置 UTF-8 编码防止乱码：
 
-   ```bash
+	 ```bash
    export LANG=C.UTF-8
    ```
 
 3. **剪贴板同步**
-   安装 win32yank 实现 NeoVim 与 Windows 剪贴板互通
+	 安装 win32yank 实现 NeoVim 与 Windows 剪贴板互通
 
 ---
 

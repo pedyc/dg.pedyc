@@ -2,7 +2,7 @@ import esbuild from "esbuild";
 import { cacheFile, fp } from "./quartz/cli/constants.js";
 import { sassPlugin } from "esbuild-sass-plugin";
 import { promises } from "fs";
-import { visualizer } from "esbuild-visualizer";
+// import { visualizer } from "esbuild-visualizer";
 import path from "path";
 
 const esConfig = {
@@ -70,17 +70,17 @@ const esConfig = {
   ],
 };
 
-const isProduction = process.argv.includes('build') && !process.argv.includes('--serve')
+// const isProduction = process.argv.includes('build') && !process.argv.includes('--serve')
 
-if (isProduction) {
-  esConfig.plugins.push({
-    name: "bundle-visualizer",
-    ...visualizer({
-      filename: 'bundle-analysis.html',
-      gzipSize: true,
-      metadata: true
-    })
-  })
-}
+// if (isProduction) {
+//   esConfig.plugins.push({
+//     name: "bundle-visualizer",
+//     ...visualizer({
+//       filename: 'bundle-analysis.html',
+//       gzipSize: true,
+//       metadata: true
+//     })
+//   })
+// }
 
 export default esConfig;

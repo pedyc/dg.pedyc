@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/PROJECTS/Diary/2025-02-25.md",
+                "file": "PKM/RESOURCES/关于我/我的项目.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-02-25"
+              "title": "我的项目"
             }
           },
           {
-            "id": "54bbba341275a6da",
+            "id": "db45473dc521e08a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/PROJECTS/Diary/2025-02-25.md",
+                "file": "PKM/RESOURCES/关于我/我的项目.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +52,89 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-02-25"
+              "title": "我的项目"
+            }
+          },
+          {
+            "id": "dd1fb083e0127702",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/RESOURCES/关于我/NexLattice.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "NexLattice"
+            }
+          },
+          {
+            "id": "e9ffe4b30bfd3045",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_template/template_meta.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "template_meta"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
+      },
+      {
+        "id": "ae82369976daf28c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c49f1542a6ad251d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/RESOURCES/AI前端自检.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "AI前端自检"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,13 +184,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PKM/PROJECTS/Diary/2025-02-25.md",
+                "file": "PKM/RESOURCES/关于我/NexLattice.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025-02-25 的大纲"
+              "title": "NexLattice 的大纲"
             }
           },
           {
@@ -298,35 +376,35 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "54bbba341275a6da",
+  "active": "dd1fb083e0127702",
   "lastOpenFiles": [
     "PKM/RESOURCES/关于我/我的项目.md",
+    "PKM/RESOURCES/关于我/NexLattice.md",
     "PKM/PROJECTS/2025Q1-职业发展思考.md",
+    "_template/template_meta.md",
     "PKM/PROJECTS/2025Q1-找工作专项.md",
     "PKM/PROJECTS/Diary/2025-02-25.md",
+    "PKM/RESOURCES/AI前端自检.md",
+    "PKM/PROJECTS/2025Q1-清理待办列表.md",
+    "PKM/RESOURCES/关于本库/本库方法论汇总.md",
+    "PKM/RESOURCES/关于本库/本库标签汇总.md",
+    "PKM/PROJECTS/2025Q1-PARA重构PKM.md",
+    "PKM/PROJECTS/Diary/2025-02-21.md",
+    "PKM/RESOURCES/关于本库/日记聚合工作流.md",
+    "PKM/RESOURCES/关于本库/关于本库.md",
+    "PKM/AREAS/知识管理/知识组织/PARA/PARA疑难解答.md",
+    "PKM/PROJECTS/2025Q1-构建信息分片引擎.md",
+    "PKM/ARCHIVES/Source/清单.md",
+    "_template/template_flashcard.md",
+    "PKM/PROJECTS/2025Q1-模拟面试复盘01.md",
+    "PKM/ARCHIVES/2025Q1-构建一个cli工具.md",
+    "PKM/PROJECTS/2025Q1-《看见》歌词赏析.md",
+    "PKM/PROJECTS/2025Q1-《未竟》歌词赏析.md",
+    "PKM/RESOURCES/API/ResizeObserver.md",
     "PKM/RESOURCES/API/requestIdleCallback.md",
     "PKM/RESOURCES/API/Element.closet().md",
     "PKM/PROJECTS/Diary/2025-02-18.md",
-    "PKM/PROJECTS/Diary/2025-02-19.md",
-    "PKM/PROJECTS/Diary/2025-02-20.md",
-    "PKM/PROJECTS/Diary/2025-02-21.md",
-    "PKM/PROJECTS/Diary/2025-02-22.md",
-    "PKM/PROJECTS/Diary/2025-02-23.md",
-    "PKM/PROJECTS/Diary/2025-02-24.md",
-    "PKM/RESOURCES/API/AbortController.md",
-    "PKM/RESOURCES/API/Intersection Observer API.md",
-    "PKM/RESOURCES/API/ResizeObserver.md",
-    "PKM/RESOURCES/AI前端自检.md",
-    "PKM/RESOURCES/关于本库/关于本库.md",
-    "_template/template_meta.md",
-    "_template/template_diary.md",
-    "_template/template_flower.md",
     "PKM/RESOURCES/API",
-    "PKM/PROJECTS/2025Q1-构建一个cli工具.md",
-    "PKM/AREAS/知识管理/知识管理工作流.md",
-    "PKM/AREAS/知识管理/知识组织/我的知识组织方案.md",
-    "PKM/PROJECTS/2025Q1-完成我的知识管理方案.md",
-    "PKM/PROJECTS/2025Q1-《看见》歌词赏析.md",
     "_template/_scripts",
     "PKM/AREAS/前端开发/前端工程化",
     "_scripts/mergeTopicsToTags.js",

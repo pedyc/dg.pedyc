@@ -1,13 +1,14 @@
 ---
-uid: null
+topic: [知识管理/知识组织]
+uid: 
 title: 2025Q1-PARA重构PKM
 aliases: []
-author: null
-description: null
+author: 
+description: 
 tags: [知识管理/知识组织]
 date-created: 2025-02-22
-date-modified: 2025-02-24
-status: null
+date-modified: 2025-02-25
+status: 
 ---
 
 方法论参见：[[PARA笔记组织法]]

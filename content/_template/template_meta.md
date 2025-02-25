@@ -1,6 +1,5 @@
 ---
-topic:
-  - 个人成长/日记
+topic: []
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 author: ped_yc
 status: YCTODO

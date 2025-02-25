@@ -1,5 +1,4 @@
 ---
-topics: 
 uid: 202408232037
 title: index
 aliases: [Welcome!]
@@ -16,7 +15,7 @@ type:
 <img
 	src="./banner.svg"
 	alt="banner"
-	class="nolazy"
+	noLazy
 	style="width: 100%" />
 
 ✌Hello，我是 pedyc，欢迎来到我的 [[数字花园概述|数字花园]]。

@@ -4,11 +4,9 @@ title: PARA核心原则
 aliases: []
 author: null
 description: null
-tags:
-  - 原则
-  - PARA
-date-created: 2025-02-23T00:00:00.000Z
-date-modified: 2025-02-24T00:00:00.000Z
+tags: [原则, PARA]
+date-created: 2025-02-22
+date-modified: 2025-02-24
 status: null
 ---
 

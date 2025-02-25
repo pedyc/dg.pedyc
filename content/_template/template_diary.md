@@ -1,16 +1,15 @@
 ---
-topics:
-  - 个人成长/日记
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: template_diary
 aliases: 
 author: 
 description: 
 tags:
-  - diary
+  - 个人成长/diary
 date-created: 2025-02-22
 date-modified: 2025-02-23
-status:
+status: 
+topic:
 ---
 
 <%*
@@ -21,14 +20,15 @@ let 作者 = ""
 await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
 .then(response => response.json())
 .then(data => {
-	一言 = data.hitokoto
-	来源 = data.from
-	作者 = data.from_who === null ? ' 佚名 ' : data.from_who
+    一言 = data.hitokoto
+    来源 = data.from
+    作者 = data.from_who === null ? ' 佚名 ' : data.from_who
 })
 -%>
 
 > [!quote] 一言
- <% 一言 %> —— 《<% 来源 %>》 · <% 作者 %>
+ <% 一言 %> —— 《<% 来源 %>》 · <% 作者 %>
+
 
 ## 💡行云（闪念，突然想到了什么？）
 

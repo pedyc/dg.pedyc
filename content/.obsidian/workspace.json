@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "76e4e8cb7f94bd33",
+            "id": "6f0a9a9e89a7d6bb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/RESOURCES/关于本库/本库标签汇总.md",
+                "file": "PKM/PROJECTS/Diary/2025-02-25.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "本库标签汇总"
+              "title": "2025-02-25"
+            }
+          },
+          {
+            "id": "54bbba341275a6da",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/PROJECTS/Diary/2025-02-25.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025-02-25"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -43,7 +68,7 @@
       {
         "id": "2bf10628ba3bdd8f",
         "type": "tabs",
-        "dimension": 63.32691072575466,
+        "dimension": 55.205655526992295,
         "children": [
           {
             "id": "62b03965a1dba250",
@@ -73,7 +98,7 @@
       {
         "id": "3b21062118b7d174",
         "type": "tabs",
-        "dimension": 12.845215157353888,
+        "dimension": 20.95115681233933,
         "children": [
           {
             "id": "3d6eaac8f088e7f1",
@@ -81,13 +106,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PKM/RESOURCES/关于本库/本库标签汇总.md",
+                "file": "PKM/PROJECTS/Diary/2025-02-25.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "本库标签汇总 的大纲"
+              "title": "2025-02-25 的大纲"
             }
           },
           {
@@ -111,7 +136,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#知识管理",
+                "query": "[\"topics\":",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -127,7 +152,7 @@
       {
         "id": "2e8c3d745c458fc4",
         "type": "tabs",
-        "dimension": 23.827874116891458,
+        "dimension": 23.84318766066838,
         "children": [
           {
             "id": "5d52ca6efedfee5c",
@@ -145,7 +170,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "PKM/RESOURCES/关于本库/本库标签汇总.md",
+                "file": "PKM/AREAS/Diary/2025-02-15.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -173,11 +198,10 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "本库标签汇总 的关系图"
+              "title": "2025-02-15 的关系图"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -274,35 +298,38 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "76e4e8cb7f94bd33",
+  "active": "54bbba341275a6da",
   "lastOpenFiles": [
+    "PKM/RESOURCES/关于我/我的项目.md",
+    "PKM/PROJECTS/2025Q1-职业发展思考.md",
+    "PKM/PROJECTS/2025Q1-找工作专项.md",
+    "PKM/PROJECTS/Diary/2025-02-25.md",
+    "PKM/RESOURCES/API/requestIdleCallback.md",
+    "PKM/RESOURCES/API/Element.closet().md",
+    "PKM/PROJECTS/Diary/2025-02-18.md",
+    "PKM/PROJECTS/Diary/2025-02-19.md",
+    "PKM/PROJECTS/Diary/2025-02-20.md",
+    "PKM/PROJECTS/Diary/2025-02-21.md",
+    "PKM/PROJECTS/Diary/2025-02-22.md",
+    "PKM/PROJECTS/Diary/2025-02-23.md",
+    "PKM/PROJECTS/Diary/2025-02-24.md",
+    "PKM/RESOURCES/API/AbortController.md",
+    "PKM/RESOURCES/API/Intersection Observer API.md",
+    "PKM/RESOURCES/API/ResizeObserver.md",
+    "PKM/RESOURCES/AI前端自检.md",
     "PKM/RESOURCES/关于本库/关于本库.md",
-    "PKM/RESOURCES/关于本库/本库主题汇总.md",
-    "PKM/AREAS/知识管理/知识管理概述.md",
-    "PKM/ARCHIVES/Source/数字花园概述.md",
     "_template/template_meta.md",
     "_template/template_diary.md",
-    "PKM/RESOURCES/关于本库/本库检索方案.md",
-    "_scripts/mergeTopicsToTags.js",
-    "index.md",
-    "PKM/AREAS/知识管理/知识组织/知识组织概述.md",
-    "PKM/AREAS/知识管理/知识组织/PARA/PARA笔记组织法.md",
-    "PKM/PROJECTS/2025Q1-构建信息分片引擎.md",
-    "PKM/PROJECTS/2025Q1-PARA重构PKM.md",
-    "PKM/PROJECTS/2025Q1-职业发展思考.md",
-    "PKM/PROJECTS/2025Q1-学习Github Actions.md",
-    "PKM/PROJECTS/2025Q1-完成我的知识管理方案.md",
-    "PKM/PROJECTS/2025Q1-清理待办列表.md",
-    "PKM/PROJECTS/2025Q1-面试复盘01.md",
+    "_template/template_flower.md",
+    "PKM/RESOURCES/API",
     "PKM/PROJECTS/2025Q1-构建一个cli工具.md",
-    "PKM/AREAS/Github/Github Actions.md",
-    "PKM/AREAS/Github/Github Issues.md",
-    "Clippings/「浏览器工作原理」写给女友的秘籍-浏览器组成&amp;网络请求篇（1.2W字).md",
-    "PKM/RESOURCES/关于本库/本库标签汇总.md",
-    "PKM/AREAS/Diary/2024-09-18.md",
-    "PKM/AREAS/Diary/2024-11-24.md",
-    "PKM/RESOURCES/关于本库/本库工作流汇总.md",
-    "PKM/RESOURCES/关于本库/本库方法论汇总.md",
+    "PKM/AREAS/知识管理/知识管理工作流.md",
+    "PKM/AREAS/知识管理/知识组织/我的知识组织方案.md",
+    "PKM/PROJECTS/2025Q1-完成我的知识管理方案.md",
+    "PKM/PROJECTS/2025Q1-《看见》歌词赏析.md",
+    "_template/_scripts",
+    "PKM/AREAS/前端开发/前端工程化",
+    "_scripts/mergeTopicsToTags.js",
     "PKM/AREAS/投资理财",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",
     "PKM/AREAS/CICD/未命名",
@@ -319,9 +346,6 @@
     "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/850b7671194ce2e0735199a33caf387c_MD5.jpg",
     "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/822bbb12360786b0e266b486f85fac78_MD5.jpg",
     "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI",
-    "PKM/AREAS/Blog/_resources",
-    "PKM/AREAS/Blog",
-    "Excalidraw/Scripts/Downloaded/_resources/Expand rectangles horizontally keep text centered",
     "PKM/Topics/前端工程化/前端工程化.canvas",
     "Tools/看板.canvas"
   ]

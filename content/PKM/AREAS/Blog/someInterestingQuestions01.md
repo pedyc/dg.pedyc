@@ -1,15 +1,20 @@
 ---
-title: 【一些有趣的问题】01，作用域与闭包
-date: 2021-02-23 9:30:54
-tags:
-  - JS
-  - 有趣的问题
-categories:
-  - 一些有趣的问题
+uid: 
+title: someInterestingQuestions01
+aliases: []
+author: 
+description: 
+tags: [JS, 有趣的问题]
+date-created: 2025-02-23
+date-modified: 2025-02-24
+status: 
+categories: [一些有趣的问题]
 ---
 
 ## 问题 1
+
 `以下语句会如何输出？`
+
 ```javascript
 for(var i=0;i<5;i++){
     console.log('i',i)
@@ -18,6 +23,7 @@ for(var i=0;i<5;i++){
     },1000)
 }
 ```
+
 `结果`：![结果](./someInterestingQuestions01/q1.png)
 
 `原因`：异步代码会在同步代码执行完毕后执行
@@ -25,6 +31,7 @@ for(var i=0;i<5;i++){
 `分析`：在执行 setTimeout 中的 console.log 打印变量 i 时，对标识符 i 进行 RHS 查询，因为在当前作用域找不到对应标识符，所以向上前往父级作用域寻找。所以打印的其实是 for 循环中声明的变量 i，而此时已经经过循环赋值变成了 5
 
 **解决方案一：**
+
 ```javascript
 for(var i=0;i<5;i++){
     (function(i){
@@ -34,11 +41,13 @@ for(var i=0;i<5;i++){
     })(i)
 }
 ```
-` 结果`：1 秒后连续打印 0 1 2 3 4 
+
+` 结果`：1 秒后连续打印 0 1 2 3 4
 
 `原因`：IIFE 使得对打印的标识符 i 的查询终止于当前作用域，不用向上继续查询 分析：console.log 打印变量 i 时，发现该标识符对应当前作用域中的形参，其值为传入的实参。所以每次执行 console.log 语句，变量 i 的值都会被覆盖，第一次为 0，第二次为 1，依次类推打印 0 1 2 3 4，而 for 循环中声明的变量 i，其值为 5
 
 **解决方案二：**
+
 ```javascript
 for(let i=0;i<5;i++){
   setTimeourt(function(){
@@ -46,6 +55,7 @@ for(let i=0;i<5;i++){
   },1000)
 }
 ```
+
 `结果`：1 秒后连续打印 0 1 2 3 4
 
 `原因`：let 声明不会产生变量提升，并且会绑定当前作用域。for 循环头部的 let 声明会有一个特殊的行为，这个行为指出变量在循环过程中不止被声明一次，每次迭代都会声明。随后的每个迭代都会使用上一个迭代结束时的值来初始化这个变量。
@@ -53,6 +63,7 @@ for(let i=0;i<5;i++){
 ---
 
 ## 问题 2
+
 ```javascript
 function Foo() {
     var i = 0;
@@ -66,6 +77,7 @@ var f1 = Foo(),
 f1();
 f2();
 ```
+
 `结果`：![结果](./someInterestingQuestions01/q2.png)
 
 `原因`：
@@ -76,8 +88,10 @@ f2();
 
 第一次调用函数 f2()：打印 0，因为函数 f1、f2 指向不同对象。
 
---- 
+---
+
 ## 问题 3
+
 ```javascript
 function Foo() {
   // 类变量 a
@@ -103,6 +117,7 @@ let obj = new Foo();
 obj.a();
 Foo.a();
 ```
+
 `结果`：![结果](./someInterestingQuestions01/q3.png)
 
 `原因`：

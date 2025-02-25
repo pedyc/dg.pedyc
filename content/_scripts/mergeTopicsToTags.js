@@ -1,3 +1,8 @@
+/**
+ * This script is used to merge the topics frontmatter into the tags frontmatter
+ * in all markdown files. This is useful for the Eleventy tag pages.
+ * usage: node mergeTopicsToTags.js
+ */
 import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';

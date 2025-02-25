@@ -152,6 +152,14 @@ function initializeLazyLoading() {
 
   const lazyImages = document.querySelectorAll('#quartz-body img[loading="lazy"]');
   lazyImages.forEach(img => {
+    if (img.hasAttribute('noLazy')) {
+      return
+    }
+    const article = img.closest('article');
+    if (article?.hasAttribute('noLazy')) {
+      return
+    }
+
     observer.observe(img);
     resizeObserver.observe(img); // 监控元素卸载
   });

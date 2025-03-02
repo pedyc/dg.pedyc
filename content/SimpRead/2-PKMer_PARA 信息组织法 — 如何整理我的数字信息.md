@@ -1,20 +1,16 @@
 ---
+topic: 
 uid: null
 title: 2-PKMer_PARA 信息组织法 — 如何整理我的数字信息
 aliases: []
 author: null
 description: null
-tags:
-  - PARA
-  - 知识管理
-  - 转载
-  - 知识管理/知识组织
-date-created: 2025-02-21T00:00:00.000Z
-date-modified: 2025-02-22T00:00:00.000Z
+tags: [PARA, 知识管理, 转载, 知识管理/知识组织]
+date-created: 2025-02-20
+date-modified: 2025-02-28
 status: null
 banner: /img/pkmer-avatar.png
 url: >-
-  https://pkmer.cn/Pkmer-Docs/02-%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/para%E4%BF%A1%E6%81%AF%E7%BB%84%E7%BB%87%E6%B3%95/para%E4%BF%A1%E6%81%AF%E7%BB%84%E7%BB%87%E6%B3%95-%E5%A6%82%E4%BD%95%E6%95%B4%E7%90%86%E6%88%91%E7%9A%84%E6%95%B0%E5%AD%97%E4%BF%A1%E6%81%AF/
 ---
 
 ## [](#para-%E4%BF%A1%E6%81%AF%E7%BB%84%E7%BB%87%E6%B3%95-%E5%A6%82%E4%BD%95%E6%95%B4%E7%90%86%E6%88%91%E7%9A%84%E6%95%B0%E5%AD%97%E4%BF%A1%E6%81%AF)PARA 信息组织法 — 如何整理我的数字信息

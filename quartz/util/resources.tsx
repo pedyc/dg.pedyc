@@ -5,19 +5,16 @@ export type JSResource = {
   loadTime: "beforeDOMReady" | "afterDOMReady"
   moduleType?: "module"
   spaPreserve?: boolean
-  async?: boolean
-  defer?: boolean
-  preload?: boolean
 } & (
-    | {
+  | {
       src: string
       contentType: "external"
     }
-    | {
+  | {
       script: string
       contentType: "inline"
     }
-  )
+)
 
 export type CSSResource = {
   content: string
@@ -28,35 +25,17 @@ export type CSSResource = {
 export function JSResourceToScriptElement(resource: JSResource, preserve?: boolean): JSX.Element {
   const scriptType = resource.moduleType ?? "application/javascript"
   const spaPreserve = preserve ?? resource.spaPreserve
-  const commonProps = {
-    type: scriptType,
-    "spa-preserve": spaPreserve,
-    async: resource.async,
-    defer: resource.defer
-  }
-
   if (resource.contentType === "external") {
-    // 如果设置了 preload，添加 preload link
-    if (resource.preload) {
-      return (
-        <>
-          <link
-            rel="preload"
-            href={resource.src}
-            as="script"
-            key={`preload-${resource.src}`}
-          />
-          <script key={resource.src} src={resource.src} {...commonProps} />
-        </>
-      )
-    }
-    return <script key={resource.src} src={resource.src} {...commonProps} />
+    return (
+      <script key={resource.src} src={resource.src} type={scriptType} spa-preserve={spaPreserve} />
+    )
   } else {
     const content = resource.script
     return (
       <script
         key={randomUUID()}
-        {...commonProps}
+        type={scriptType}
+        spa-preserve={spaPreserve}
         dangerouslySetInnerHTML={{ __html: content }}
       ></script>
     )

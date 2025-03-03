@@ -1,13 +1,13 @@
 ---
-topics: 
+topic: 
 uid: 
 title: 3-Notion 中 GTD 系统的任务整合方法 - Grok
-aliases: 
+aliases: []
 author: 
 description: 
 tags: []
 date-created: 2025-02-22
-date-modified: 2025-02-22
+date-modified: 2025-02-28
 status: 
 banner: "https://grok.com/opengraph-image.png?e8d593eb60fd5bd1"
 url: https://grok.com/chat/0193ea5e-cd32-4bc5-83bc-ab21f1eafb43

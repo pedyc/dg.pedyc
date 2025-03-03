@@ -7,11 +7,11 @@ author: ped_yc
 description: 
 tags: []
 date-created: 2025-02-25
-date-modified: 2025-02-25
+date-modified: 2025-02-26
 status: YCTODO
 ---
 
-> [hint]
+> [!hint]
 > DeepSeek 的建议：https://chat.deepseek.com/a/chat/s/19ccca5f-3ea4-4c5b-81ab-ee732561746a
 
 ## 项目介绍

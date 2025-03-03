@@ -16,8 +16,6 @@ const esConfig = {
   sourcemap: true,
   sourcesContent: false,
   bundle: true,
-  // splitting: true, // 代码分片
-  chunkNames: "chunk-[name]-[hash]",
   keepNames: true,
   minify: true,
   metafile: true,

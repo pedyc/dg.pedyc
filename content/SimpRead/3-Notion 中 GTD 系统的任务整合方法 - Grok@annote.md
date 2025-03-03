@@ -1,5 +1,5 @@
 ---
-topics: 
+topic: 
 uid: 
 title: 3-Notion 中 GTD 系统的任务整合方法 - Grok@annote
 aliases: 
@@ -7,7 +7,7 @@ author: grok.com
 description: Grok is a free AI assistant designed by xAI to maximize truth and objectivity. Grok offers real-time ......
 tags: []
 date-created: 2025-02-22
-date-modified: 2025-02-22
+date-modified: 2025-02-28
 status: 
 alias: ["srAnnote@Notion 中 GTD 系统的任务整合方法 - Grok"]
 ---

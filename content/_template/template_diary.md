@@ -1,15 +1,10 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: template_diary
-aliases: 
-author: 
-description: 
 tags:
   - 个人成长/diary
-date-created: 2025-02-22
-date-modified: 2025-02-23
-status: 
 topic:
+  - 个人成长/日记
 ---
 
 <%*

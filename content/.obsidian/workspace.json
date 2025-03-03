@@ -56,30 +56,6 @@
             }
           },
           {
-            "id": "dd1fb083e0127702",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/RESOURCES/关于我/NexLattice.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "NexLattice"
-            }
-          },
-          {
             "id": "e9ffe4b30bfd3045",
             "type": "leaf",
             "state": {
@@ -104,7 +80,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "ae82369976daf28c",
@@ -376,8 +352,13 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "dd1fb083e0127702",
+  "active": "5d52ca6efedfee5c",
   "lastOpenFiles": [
+    "_template/_resources",
+    "SimpRead/4-详解 JavaScript 的内存空间、赋值和深浅拷贝 - 简书@annote.md",
+    "PKM/AREAS/前端开发/dg.pedyc.md",
+    "PKM/AREAS/前端开发/NexLattice.md",
+    "Clippings/链接类型：preload - HTML（超文本标记语言）  MDN.md",
     "PKM/RESOURCES/关于我/我的项目.md",
     "PKM/RESOURCES/关于我/NexLattice.md",
     "PKM/PROJECTS/2025Q1-职业发展思考.md",
@@ -399,11 +380,6 @@
     "PKM/PROJECTS/2025Q1-模拟面试复盘01.md",
     "PKM/ARCHIVES/2025Q1-构建一个cli工具.md",
     "PKM/PROJECTS/2025Q1-《看见》歌词赏析.md",
-    "PKM/PROJECTS/2025Q1-《未竟》歌词赏析.md",
-    "PKM/RESOURCES/API/ResizeObserver.md",
-    "PKM/RESOURCES/API/requestIdleCallback.md",
-    "PKM/RESOURCES/API/Element.closet().md",
-    "PKM/PROJECTS/Diary/2025-02-18.md",
     "PKM/RESOURCES/API",
     "_template/_scripts",
     "PKM/AREAS/前端开发/前端工程化",

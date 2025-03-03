@@ -12,6 +12,7 @@ import { i18n } from "../i18n"
 import mermaidScript from "./scripts/mermaid.inline"
 import mermaidStyle from "./styles/mermaid.inline.scss"
 import { QuartzPluginData } from "../plugins/vfile"
+import { join } from "node:path"
 
 interface RenderComponents {
   head: QuartzComponent
@@ -33,12 +34,12 @@ export function pageResources(
   const contentIndexPath = joinSegments(baseDir, "static/contentIndex.json")
   const contentIndexScript = `const fetchData = fetch("${contentIndexPath}").then(data => data.json())`
 
+  // 初始化基础资源
   const resources: StaticResources = {
     css: [
       {
         content: joinSegments(baseDir, "index.css"),
       },
-      ...staticResources.css,
     ],
     js: [
       {
@@ -47,15 +48,35 @@ export function pageResources(
         contentType: "external",
       },
       {
-        loadTime: "beforeDOMReady",
-        contentType: "inline",
-        spaPreserve: true,
-        script: contentIndexScript,
+        src: joinSegments(baseDir, "static/chunk-core.js"),
+        loadTime: "afterDOMReady",
+        moduleType: "module",
+        contentType: "external",
+        defer: true
       },
-      ...staticResources.js,
+      {
+        src: joinSegments(baseDir, "static/chunk-features.js"),
+        loadTime: "afterDOMReady",
+        moduleType: "module",
+        contentType: "external",
+        defer: true
+      }
     ],
   }
 
+  // 添加内联的 contentIndex 脚本
+  resources.js.push({
+    loadTime: "beforeDOMReady",
+    contentType: "inline",
+    spaPreserve: true,
+    script: contentIndexScript,
+  })
+
+  // 合并静态资源
+  resources.css.push(...staticResources.css)
+  resources.js.push(...staticResources.js)
+
+  // 按需添加 Mermaid 相关资源
   if (fileData.hasMermaidDiagram) {
     resources.js.push({
       script: mermaidScript,
@@ -65,14 +86,6 @@ export function pageResources(
     })
     resources.css.push({ content: mermaidStyle, inline: true })
   }
-
-  // NOTE: we have to put this last to make sure spa.inline.ts is the last item.
-  resources.js.push({
-    src: joinSegments(baseDir, "postscript.js"),
-    loadTime: "afterDOMReady",
-    moduleType: "module",
-    contentType: "external",
-  })
 
   return resources
 }

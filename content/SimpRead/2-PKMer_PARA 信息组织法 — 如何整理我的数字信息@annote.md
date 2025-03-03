@@ -1,5 +1,5 @@
 ---
-topic: 
+topics: 
 uid: 
 title: 2-PKMer_PARA 信息组织法 — 如何整理我的数字信息@annote
 aliases: 
@@ -7,7 +7,7 @@ author: OS
 description: PARA 方法论 — 如何整理我的数字信息——多年来，我们一直在苦苦寻找一个可以满足所有需求的数字信息整理系统。
 tags: []
 date-created: 2025-02-22
-date-modified: 2025-02-28
+date-modified: 2025-02-22
 status: 
 alias: ["srAnnote@PKMer_PARA 信息组织法 — 如何整理我的数字信息"]
 ---

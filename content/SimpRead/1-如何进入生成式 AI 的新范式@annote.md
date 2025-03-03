@@ -1,5 +1,5 @@
 ---
-topic: 
+topics: 
 uid: 
 title: 1-如何进入生成式 AI 的新范式@annote
 aliases: 
@@ -7,7 +7,7 @@ author: 潦草学者
 description: 不学习 AI 会不会被落下、AI 可以给我带来哪些帮助、想要学习 AI 应该从何开始…… 这些问题，最终变成了信息焦虑。
 tags: []
 date-created: 2025-02-20
-date-modified: 2025-02-28
+date-modified: 2025-02-22
 status: 
 alias: ["srAnnote@如何进入生成式 AI 的新范式"]
 ---

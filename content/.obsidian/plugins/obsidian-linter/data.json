@@ -244,28 +244,28 @@
       "twp-space-line-break": false
     },
     "add-blockquote-indentation-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "prevent-double-checklist-indicator-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "prevent-double-list-item-indicator-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "proper-ellipsis-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "remove-hyphens-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "remove-leading-or-trailing-whitespace-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "remove-leftover-footnotes-from-quote-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "remove-multiple-blank-lines-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "empty-line-around-horizontal-rules": {
       "enabled": false

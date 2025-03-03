@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/PROJECTS/Diary/2025-02-26.md",
+                "file": "PKM/RESOURCES/关于我/我的项目.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-02-26"
+              "title": "我的项目"
             }
           },
           {
-            "id": "466b7ee985b16e32",
+            "id": "dd1fb083e0127702",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/AREAS/知识管理/知识管理概述.md",
+                "file": "PKM/RESOURCES/关于我/NexLattice.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,45 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "知识管理概述"
-            }
-          },
-          {
-            "id": "151ce7bcd5f7af05",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/PROJECTS/2025Q1-职业发展思考.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2025Q1-职业发展思考"
-            }
-          },
-          {
-            "id": "859d6ac439dc7b57",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://html.spec.whatwg.org/multipage/links.html#link-type-preload",
-                "title": "HTML Standard",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "HTML Standard"
+              "title": "NexLattice"
             }
           },
           {
@@ -143,6 +105,36 @@
           }
         ],
         "currentTab": 2
+      },
+      {
+        "id": "ae82369976daf28c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c49f1542a6ad251d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/RESOURCES/AI前端自检.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "AI前端自检"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -192,13 +184,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PKM/PROJECTS/Diary/2025-02-27.md",
+                "file": "PKM/RESOURCES/关于我/NexLattice.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025-02-27 的大纲"
+              "title": "NexLattice 的大纲"
             }
           },
           {
@@ -233,8 +225,7 @@
               "title": "搜索"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "2e8c3d745c458fc4",
@@ -292,7 +283,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 307.5
+    "width": 257.5
   },
   "right": {
     "id": "ff01a1db19d5896b",
@@ -385,46 +376,44 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "466b7ee985b16e32",
+  "active": "dd1fb083e0127702",
   "lastOpenFiles": [
-    "PKM/PROJECTS/2025Q1-职业发展思考.md",
-    "PKM/PROJECTS/2025Q1-PARA重构PKM.md",
-    "PKM/PROJECTS/Diary/2025-02-27.md",
-    "PKM/PROJECTS/2025Q1-找工作专项.md",
-    "PKM/PROJECTS/2025Q1-优化dg.pedyc.md",
-    "PKM/PROJECTS/2025Q1-学习Github Actions.md",
-    "PKM/PROJECTS/2025Q1-完成我的知识管理方案.md",
-    "PKM/PROJECTS/2025Q1-清理待办列表.md",
-    "PKM/PROJECTS/2025Q1-模拟面试复盘01.md",
-    "PKM/PROJECTS/2025Q1-构建一个cli工具.md",
-    "PKM/PROJECTS/2025Q1-构建信息分片引擎.md",
-    "PKM/PROJECTS/Diary/2025-02-24.md",
-    "PKM/PROJECTS/Diary/2025-02-25.md",
-    "PKM/AREAS/前端开发/dg.pedyc.md",
-    "PKM/PROJECTS/Diary/2025-02-26.md",
-    "PKM/PROJECTS/Diary/2025-02-28.md",
-    "PKM/PROJECTS/Diary/2025-03-01.md",
-    "SimpRead/_resources/1-如何进入生成式 AI 的新范式",
-    "SimpRead/1-如何进入生成式 AI 的新范式.md",
-    "SimpRead/output/1-如何进入生成式 AI 的新范式@annote.html",
-    "SimpRead/output/1-如何进入生成式 AI 的新范式.html",
-    "SimpRead/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息@annote.md",
-    "SimpRead/backup/simpread_config@20250228015024.json",
-    "SimpRead/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息.md",
-    "SimpRead/1-如何进入生成式 AI 的新范式@annote.md",
-    "SimpRead/4-详解 JavaScript 的内存空间、赋值和深浅拷贝 - 简书@annote.md",
     "PKM/RESOURCES/关于我/我的项目.md",
-    "SimpRead/3-Notion 中 GTD 系统的任务整合方法 - Grok@annote.md",
-    "SimpRead/3-Notion 中 GTD 系统的任务整合方法 - Grok.md",
+    "PKM/RESOURCES/关于我/NexLattice.md",
+    "PKM/PROJECTS/2025Q1-职业发展思考.md",
+    "_template/template_meta.md",
+    "PKM/PROJECTS/2025Q1-找工作专项.md",
+    "PKM/PROJECTS/Diary/2025-02-25.md",
+    "PKM/RESOURCES/AI前端自检.md",
+    "PKM/PROJECTS/2025Q1-清理待办列表.md",
+    "PKM/RESOURCES/关于本库/本库方法论汇总.md",
+    "PKM/RESOURCES/关于本库/本库标签汇总.md",
+    "PKM/PROJECTS/2025Q1-PARA重构PKM.md",
+    "PKM/PROJECTS/Diary/2025-02-21.md",
+    "PKM/RESOURCES/关于本库/日记聚合工作流.md",
+    "PKM/RESOURCES/关于本库/关于本库.md",
+    "PKM/AREAS/知识管理/知识组织/PARA/PARA疑难解答.md",
+    "PKM/PROJECTS/2025Q1-构建信息分片引擎.md",
+    "PKM/ARCHIVES/Source/清单.md",
     "_template/template_flashcard.md",
-    "SimpRead/backup/simpread_config@20250228120036.json",
-    "SimpRead/backup/simpread_config@20250228120031.json",
-    "SimpRead/backup/simpread_config@20250228120027.json",
-    "SimpRead/backup/simpread_config@20250228115949.json",
-    "SimpRead/backup/simpread_config@20250228115941.json",
-    "SimpRead/backup/simpread_config@20250228115748.json",
-    "PKM/AREAS/人工智能/提示词工程/提示词Prompt.png",
+    "PKM/PROJECTS/2025Q1-模拟面试复盘01.md",
+    "PKM/ARCHIVES/2025Q1-构建一个cli工具.md",
+    "PKM/PROJECTS/2025Q1-《看见》歌词赏析.md",
+    "PKM/PROJECTS/2025Q1-《未竟》歌词赏析.md",
+    "PKM/RESOURCES/API/ResizeObserver.md",
+    "PKM/RESOURCES/API/requestIdleCallback.md",
+    "PKM/RESOURCES/API/Element.closet().md",
+    "PKM/PROJECTS/Diary/2025-02-18.md",
+    "PKM/RESOURCES/API",
+    "_template/_scripts",
+    "PKM/AREAS/前端开发/前端工程化",
+    "_scripts/mergeTopicsToTags.js",
+    "PKM/AREAS/投资理财",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",
+    "PKM/AREAS/CICD/未命名",
+    "PKM/AREAS/Github",
+    "SimpRead/_resources/0-AI 复兴 RSS ？",
+    "PKM/RESOURCES/关于我",
     "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/e85a574a52c9731775708dba9ed68514_MD5.jpg",
     "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/e34f2c9c81679c0a4608d19b2abc1eb7_MD5.jpg",
     "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/c4cc038c7dc7ec07479e6352ad370a52_MD5.jpg",
@@ -433,6 +422,8 @@
     "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/a85df45b481c12dd1667818843f47758_MD5.jpg",
     "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/8a5ece7e28cfdeea75ddf13e7b40baf5_MD5.jpg",
     "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/850b7671194ce2e0735199a33caf387c_MD5.jpg",
+    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/822bbb12360786b0e266b486f85fac78_MD5.jpg",
+    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI",
     "PKM/Topics/前端工程化/前端工程化.canvas",
     "Tools/看板.canvas"
   ]

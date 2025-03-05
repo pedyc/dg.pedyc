@@ -1,20 +1,9 @@
-module.exports = async (params) => {
-  const { moment, app } = params;
-  const fs = app.vault.adapter;
-  const DAILY_JOURNAL_PATH = "bins/daily";
-  const ARTICLE_PATH = "bins/pkm/source";
-
-  // 获取标准化日期格式
-  const getFormattedDate = () => moment.format("YYYY-MM-DD");
-
-  // 生成文章链接
-  const generateArticleLink = async (articles) => {
-    let content = "\n## 今日关联文章\n";
-    for (const file of articles) {
-      const satats = await fs.stat(file.path);
-    }
-  };
-};
+/**
+ * 文章聚合
+ * 1. 遍历所有文章，找到今日的文章
+ * 2. 将今日的文章添加到日记中
+ * 3. 如果不使用dataview插件做聚合的话可以使用这个脚本
+ */
 
 module.exports = async (params) => {
   const { moment, app } = params;

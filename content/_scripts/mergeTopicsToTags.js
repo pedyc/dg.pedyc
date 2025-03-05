@@ -2,6 +2,10 @@
  * This script is used to merge the topics frontmatter into the tags frontmatter
  * in all markdown files. This is useful for the Eleventy tag pages.
  * usage: node mergeTopicsToTags.js
+ * 
+ * 此脚本用于将所有 Markdown 文件中的 topics frontmatter 合并到 tags frontmatter 中。
+ * 这对于 Eleventy 标签页面很有用。
+ * 使用方法: node mergeTopicsToTags.js
  */
 import fs from 'fs';
 import path from 'path';

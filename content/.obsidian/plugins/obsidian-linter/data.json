@@ -31,7 +31,7 @@
       "force-multi-line-array-style": ""
     },
     "insert-yaml-attributes": {
-      "enabled": true,
+      "enabled": false,
       "text-to-insert": "topic:\nuid:\ntitle:\naliases: \nauthor:\ndescription:\ntags: \ndate-created:\ndate-modified:\nstatus:"
     },
     "move-tags-to-yaml": {
@@ -40,7 +40,7 @@
       "tags-to-ignore": ""
     },
     "remove-yaml-keys": {
-      "enabled": true,
+      "enabled": false,
       "yaml-keys-to-remove": "date\ntag\ncreated\ntopics"
     },
     "sort-yaml-array-values": {
@@ -138,9 +138,9 @@
     },
     "ordered-list-style": {
       "enabled": true,
-      "number-style": "ascending",
+      "number-style": "preserve",
       "list-end-style": ".",
-      "preserve-start": true
+      "preserve-start": false
     },
     "proper-ellipsis": {
       "enabled": true

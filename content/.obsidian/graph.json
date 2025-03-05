@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "[\"topics\":知识管理",
+  "search": "",
   "showTags": true,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -17,6 +17,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.10745424220086394,
+  "scale": 0.18202967869707662,
   "close": true
 }

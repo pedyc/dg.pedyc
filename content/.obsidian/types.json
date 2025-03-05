@@ -49,6 +49,9 @@
     "topics": "multitext",
     "author": "text",
     "flower-type": "multitext",
-    "topic": "multitext"
+    "topic": "multitext",
+    "area": "multitext",
+    "source": "multitext",
+    "rating": "multitext"
   }
 }

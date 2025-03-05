@@ -12,26 +12,17 @@
   "enable_system_commands": true,
   "shell_path": "",
   "user_scripts_folder": "",
-  "enable_folder_templates": false,
+  "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "PKM/Diary",
+      "folder": "PKM/10-PROJECTS/Diary",
       "template": "Template/template_diary.md"
     }
   ],
-  "enable_file_templates": true,
-  "file_templates": [
-    {
-      "regex": ".*",
-      "template": "_template/template_meta.md"
-    }
-  ],
+  "enable_file_templates": false,
+  "file_templates": [],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
-  "enabled_templates_hotkeys": [
-    "_template/template_meta.md"
-  ],
-  "startup_templates": [
-    "_template/template_flower.md"
-  ]
+  "enabled_templates_hotkeys": [],
+  "startup_templates": []
 }

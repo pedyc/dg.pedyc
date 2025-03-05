@@ -1,6 +1,7 @@
 /**
- * This script is used to move expire diary to the archive folder.
+ * This script is used to move expire file to the target folder.
  * Usage: node cleanExpireDiary.js
+ * 这个脚本用于将过期的文件移动到归档目标目录。
  */
 import fs from 'fs';
 import path from 'path';
@@ -58,7 +59,7 @@ function cleanExpireFolder(oriDir, tarDir, expireDays) {
 }
 
 // 设置需要处理的目录
-const oriDir = path.join(__dirname, '../PKM/PROJECTS/Diary/')
-const tarDir = path.join(__dirname, '../PKM/ARCHIVES/Diary/')
+const oriDir = path.join(__dirname, '../PKM/10-PROJECTS/Diary/')
+const tarDir = path.join(__dirname, '../PKM/40-ARCHIVES/Diary/')
 const expireDays = 30;
 cleanExpireFolder(oriDir, tarDir, expireDays)

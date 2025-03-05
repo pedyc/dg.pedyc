@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "bad97630bbe7f859",
+        "id": "12f3aacb4741d136",
         "type": "tabs",
         "children": [
           {
-            "id": "6f0a9a9e89a7d6bb",
+            "id": "f0e6332174b851c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/RESOURCES/关于我/我的项目.md",
+                "file": "PKM/20-AREAS/Diary/2025-03-05.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "我的项目"
+              "title": "2025-03-05"
             }
           },
           {
-            "id": "db45473dc521e08a",
+            "id": "4161c6c5590b2c9a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/RESOURCES/关于我/我的项目.md",
+                "file": "PKM/10-PROJECTS/2025Q1-使用PARA笔记法重构PKM.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "我的项目"
+              "title": "2025Q1-使用PARA笔记法重构PKM"
             }
           },
           {
-            "id": "e9ffe4b30bfd3045",
+            "id": "7843747ffae3dfdb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_template/template_meta.md",
+                "file": "PKM/30-RESOURCES/知识管理/战略工具/知识管理实施路线图.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,23 +76,23 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "template_meta"
+              "title": "知识管理实施路线图"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
-        "id": "ae82369976daf28c",
+        "id": "8961e089aaa9d12e",
         "type": "tabs",
         "children": [
           {
-            "id": "c49f1542a6ad251d",
+            "id": "1035dd87b7508a02",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/RESOURCES/AI前端自检.md",
+                "file": "PKM/30-RESOURCES/知识管理/工作流/知识管理工作流.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -107,7 +107,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "AI前端自检"
+              "title": "知识管理工作流"
             }
           }
         ]
@@ -122,7 +122,7 @@
       {
         "id": "2bf10628ba3bdd8f",
         "type": "tabs",
-        "dimension": 55.205655526992295,
+        "dimension": 50.482315112540185,
         "children": [
           {
             "id": "62b03965a1dba250",
@@ -152,7 +152,7 @@
       {
         "id": "3b21062118b7d174",
         "type": "tabs",
-        "dimension": 20.95115681233933,
+        "dimension": 26.559485530546624,
         "children": [
           {
             "id": "3d6eaac8f088e7f1",
@@ -160,13 +160,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PKM/RESOURCES/关于我/NexLattice.md",
+                "file": "PKM/30-RESOURCES/知识管理/战略工具/知识管理实施路线图.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "NexLattice 的大纲"
+              "title": "知识管理实施路线图 的大纲"
             }
           },
           {
@@ -190,7 +190,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "[\"topics\":",
+                "query": "tag:AREAS/PARA",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -201,12 +201,13 @@
               "title": "搜索"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "2e8c3d745c458fc4",
         "type": "tabs",
-        "dimension": 23.84318766066838,
+        "dimension": 22.958199356913184,
         "children": [
           {
             "id": "5d52ca6efedfee5c",
@@ -217,49 +218,12 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
-          },
-          {
-            "id": "67fce44427db47bb",
-            "type": "leaf",
-            "state": {
-              "type": "localgraph",
-              "state": {
-                "file": "PKM/AREAS/Diary/2025-02-15.md",
-                "options": {
-                  "collapse-filter": false,
-                  "search": "",
-                  "localJumps": 1,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": false,
-                  "showTags": true,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
-                  "collapse-display": true,
-                  "showArrow": false,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 0.7920407494526447,
-                  "close": true
-                }
-              },
-              "icon": "lucide-git-fork",
-              "title": "2025-02-15 的关系图"
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 257.5
+    "width": 332.5
   },
   "right": {
     "id": "ff01a1db19d5896b",
@@ -352,54 +316,54 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "5d52ca6efedfee5c",
+  "active": "aabfe4df13d030e9",
   "lastOpenFiles": [
-    "_template/_resources",
-    "SimpRead/4-详解 JavaScript 的内存空间、赋值和深浅拷贝 - 简书@annote.md",
-    "PKM/AREAS/前端开发/dg.pedyc.md",
-    "PKM/AREAS/前端开发/NexLattice.md",
-    "Clippings/链接类型：preload - HTML（超文本标记语言）  MDN.md",
-    "PKM/RESOURCES/关于我/我的项目.md",
-    "PKM/RESOURCES/关于我/NexLattice.md",
-    "PKM/PROJECTS/2025Q1-职业发展思考.md",
+    "PKM/10-PROJECTS/2025Q1-使用PARA笔记法重构PKM.md",
+    "PKM/20-AREAS/Diary/2025-03-06.md",
+    "PKM/30-RESOURCES/00资源总览.md",
+    "PKM/30-RESOURCES/01资源保鲜度.md",
+    "_template/template_resource.md",
+    "PKM/20-AREAS/Diary/2025-03-05.md",
+    "PKM/30-RESOURCES/知识管理/工作流/知识管理工作流.md",
+    "PKM/30-RESOURCES/知识管理/工作流/PARA笔记转化工作流.md",
+    "_template/template_project.md",
+    "PKM/20-AREAS/专业技术/00专业技术.md",
+    "PKM/20-AREAS/职业规划/00职业规划.md",
+    "PKM/10-PROJECTS/2025Q1-前端框架对比.md",
+    "PKM/10-PROJECTS/2025Q1-求职前端岗位.md",
+    "PKM/20-AREAS/Diary/2025Q1-求职项目.md",
+    "PKM/30-RESOURCES/知识管理/工作流/PARA实施工作流.md",
+    "PKM/20-AREAS/专业技术/目录结构设计.md",
     "_template/template_meta.md",
-    "PKM/PROJECTS/2025Q1-找工作专项.md",
-    "PKM/PROJECTS/Diary/2025-02-25.md",
-    "PKM/RESOURCES/AI前端自检.md",
-    "PKM/PROJECTS/2025Q1-清理待办列表.md",
-    "PKM/RESOURCES/关于本库/本库方法论汇总.md",
-    "PKM/RESOURCES/关于本库/本库标签汇总.md",
-    "PKM/PROJECTS/2025Q1-PARA重构PKM.md",
-    "PKM/PROJECTS/Diary/2025-02-21.md",
-    "PKM/RESOURCES/关于本库/日记聚合工作流.md",
-    "PKM/RESOURCES/关于本库/关于本库.md",
-    "PKM/AREAS/知识管理/知识组织/PARA/PARA疑难解答.md",
-    "PKM/PROJECTS/2025Q1-构建信息分片引擎.md",
-    "PKM/ARCHIVES/Source/清单.md",
-    "_template/template_flashcard.md",
-    "PKM/PROJECTS/2025Q1-模拟面试复盘01.md",
-    "PKM/ARCHIVES/2025Q1-构建一个cli工具.md",
-    "PKM/PROJECTS/2025Q1-《看见》歌词赏析.md",
-    "PKM/RESOURCES/API",
-    "_template/_scripts",
-    "PKM/AREAS/前端开发/前端工程化",
-    "_scripts/mergeTopicsToTags.js",
-    "PKM/AREAS/投资理财",
+    "PKM/20-AREAS/知识管理/00知识管理领域看板.md",
+    "PKM/10-PROJECTS/2025Q1-实现Obsidian插件PARA.md",
+    "PKM/30-RESOURCES/知识管理/FAQ库/PARA实施常见问题集.md",
+    "PKM/20-AREAS/知识管理/方法论/PARA笔记组织法.md",
+    "PKM/20-AREAS/知识管理/方法论/知识组织概述.md",
+    "PKM/20-AREAS/知识管理/方法论/知识管理概述.md",
+    "PKM/30-RESOURCES/技术资产/信息拆分技术规范.md",
+    "PKM/20-AREAS/知识管理/方法论/知识管理核心原则.md",
+    "PKM/20-AREAS/知识管理/架构设计/知识组织方案.md",
+    "PKM/20-AREAS/知识管理/架构设计",
+    "PKM/30-RESOURCES/知识管理/战略工具",
+    "PKM/30-RESOURCES/知识管理/FAQ库",
+    "PKM/30-RESOURCES/知识管理/工作流",
+    "PKM/30-RESOURCES/知识管理/PARA工具包",
+    "PKM/30-RESOURCES/知识管理",
+    "RESOURCES",
+    "PKM/20-AREAS/知识管理/实践指南",
+    "PKM/20-AREAS/知识管理/方法论",
+    "PKM/30-RESOURCES/未命名",
+    "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.svg",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",
-    "PKM/AREAS/CICD/未命名",
-    "PKM/AREAS/Github",
-    "SimpRead/_resources/0-AI 复兴 RSS ？",
-    "PKM/RESOURCES/关于我",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/e85a574a52c9731775708dba9ed68514_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/e34f2c9c81679c0a4608d19b2abc1eb7_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/c4cc038c7dc7ec07479e6352ad370a52_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/c2feb22b89554490d500cb159c2e8245_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/afce9d56ed243752cb0619feb354e7b1_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/a85df45b481c12dd1667818843f47758_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/8a5ece7e28cfdeea75ddf13e7b40baf5_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/850b7671194ce2e0735199a33caf387c_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/822bbb12360786b0e266b486f85fac78_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI",
+    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/e85a574a52c9731775708dba9ed68514_MD5.jpg",
+    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/e34f2c9c81679c0a4608d19b2abc1eb7_MD5.jpg",
+    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/c4cc038c7dc7ec07479e6352ad370a52_MD5.jpg",
+    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/c2feb22b89554490d500cb159c2e8245_MD5.jpg",
+    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/afce9d56ed243752cb0619feb354e7b1_MD5.jpg",
+    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/a85df45b481c12dd1667818843f47758_MD5.jpg",
+    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/8a5ece7e28cfdeea75ddf13e7b40baf5_MD5.jpg",
+    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/850b7671194ce2e0735199a33caf387c_MD5.jpg",
     "PKM/Topics/前端工程化/前端工程化.canvas",
     "Tools/看板.canvas"
   ]

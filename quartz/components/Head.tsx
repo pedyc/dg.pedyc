@@ -127,7 +127,7 @@ export default (() => {
       }
     }
 
-    const { css, js } = externalResources
+    const { css, js, additionalHead } = externalResources
 
     const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`);
     const path = url.pathname as FullSlug;
@@ -221,6 +221,13 @@ export default (() => {
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
           .map((res) => JSResourceToScriptElement(res, true))}
+        {additionalHead.map((resource) => {
+          if (typeof resource === "function") {
+            return resource(fileData)
+          } else {
+            return resource
+          }
+        })}
       </head>
     );
   };

@@ -414,7 +414,7 @@ export async function handleBuild(argv) {
         });
         console.log(
           chalk.yellow("[302]") +
-            chalk.grey(` ${argv.baseDir}${req.url} -> ${newFp}`)
+          chalk.grey(` ${argv.baseDir}${req.url} -> ${newFp}`)
         );
         res.end();
       };
@@ -461,7 +461,7 @@ export async function handleBuild(argv) {
       return serve();
     });
     server.listen(argv.port);
-    const wss = new WebSocketServer({ port: argv.wsPort });
+    wss = new WebSocketServer({ port: argv.wsPort }); // 去除 const 声明
     wss.on("connection", (ws) => connections.push(ws));
     console.log(
       chalk.cyan(
@@ -481,7 +481,7 @@ export async function handleBuild(argv) {
       .on("change", () => build(clientRefresh))
       .on("unlink", () => build(clientRefresh));
   } else {
-    await build(() => {});
+    await build(() => { });
     ctx.dispose();
   }
 }
@@ -629,3 +629,24 @@ export async function handleSync(argv) {
 
   console.log(chalk.green("Done!"));
 }
+
+// 在文件顶部添加模块级变量声明
+let wss = null
+
+process.on('uncaughtException', (err) => {
+  if (err.code === 'EACCES') {
+    console.log('端口访问被拒绝，尝试备用端口...')
+    if (wss) {
+      const currentPort = wss.options.port
+      const newPort = currentPort + Math.floor(Math.random() * 50) + 100
+
+      // 关闭旧服务器
+      wss.close()
+
+      // 修复连接事件监听（补充回调函数）
+      wss = new WebSocketServer({ port: newPort })
+      wss.on("connection", (ws) => connections.push(ws)) // 添加回调函数
+      console.log(chalk.yellow(`WebSocket 端口已切换至: ${newPort}`))
+    }
+  }
+});

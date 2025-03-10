@@ -1,8 +1,6 @@
 ---
 title: template_resource
 tags: [工具模板, 案例参考]
-date-created: 2025-03-05
-date-modified: 2025-03-05
 category: 分类标签（如 #前端开发 #薪酬谈判）
 rating: ★★★☆☆（价值评分）
 source: ["[[来源项目/领域]]"]

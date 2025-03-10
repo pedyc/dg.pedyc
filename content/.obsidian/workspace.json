@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f0e6332174b851c3",
+            "id": "cf1183ae36641f0c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/20-AREAS/Diary/2025-03-05.md",
+                "file": "PKM/20-AREAS/Diary/2025-03-06.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-03-05"
+              "title": "2025-03-06"
             }
           },
           {
-            "id": "4161c6c5590b2c9a",
+            "id": "4b5205526a7e6619",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/10-PROJECTS/2025Q1-使用PARA笔记法重构PKM.md",
+                "file": "PKM/20-AREAS/Diary/2025-03-06.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025Q1-使用PARA笔记法重构PKM"
+              "title": "2025-03-06"
             }
           },
           {
-            "id": "7843747ffae3dfdb",
+            "id": "677452aa0a27b500",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/30-RESOURCES/知识管理/战略工具/知识管理实施路线图.md",
+                "file": "PKM/20-AREAS/Diary/2025-03-07.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,41 +76,285 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "知识管理实施路线图"
+              "title": "2025-03-07"
+            }
+          },
+          {
+            "id": "639f51a6006f7230",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/10-PROJECTS/2025Q1-实现Obsidian插件CortexFlow.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025Q1-实现Obsidian插件CortexFlow"
+            }
+          },
+          {
+            "id": "085b6dd0cfd06a52",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SimpRead/5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件@annote.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件@annote"
+            }
+          },
+          {
+            "id": "24c397e49ddda69e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/10-PROJECTS/2025Q1-求职前端岗位.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025Q1-求职前端岗位"
+            }
+          },
+          {
+            "id": "91d68a3ca0eb3d61",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/职业规划/00职业规划领域.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00职业规划领域"
+            }
+          },
+          {
+            "id": "7c02e6f75ee904f0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/知识管理/方法论/知识管理概述.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "知识管理概述"
+            }
+          },
+          {
+            "id": "f4e2a8f5cf7a2e4f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/00-META/关于本库.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "关于本库"
+            }
+          },
+          {
+            "id": "94f113a953156785",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          },
+          {
+            "id": "be970eb3f5cb1b1e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/个人成长/个人品牌构建/个人品牌构建.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "个人品牌构建"
+            }
+          },
+          {
+            "id": "f15e18867ab9a62b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/个人成长/个人品牌构建/个人品牌构建.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "个人品牌构建"
+            }
+          },
+          {
+            "id": "e93b4aa344b010e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/个人成长/个人品牌构建/个人品牌构建.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "个人品牌构建"
+            }
+          },
+          {
+            "id": "f622ce4d145f777e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SimpRead/5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件@annote.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件@annote"
+            }
+          },
+          {
+            "id": "b79ec32d48411b07",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SimpRead/5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件@annote.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件@annote"
             }
           }
         ],
-        "currentTab": 2
-      },
-      {
-        "id": "8961e089aaa9d12e",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "1035dd87b7508a02",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/30-RESOURCES/知识管理/工作流/知识管理工作流.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "知识管理工作流"
-            }
-          }
-        ]
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -152,7 +396,7 @@
       {
         "id": "3b21062118b7d174",
         "type": "tabs",
-        "dimension": 26.559485530546624,
+        "dimension": 26.559485530546628,
         "children": [
           {
             "id": "3d6eaac8f088e7f1",
@@ -160,13 +404,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PKM/30-RESOURCES/知识管理/战略工具/知识管理实施路线图.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "知识管理实施路线图 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -190,7 +433,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:AREAS/PARA",
+                "query": "tag:DevOps",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -223,7 +466,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 332.5
+    "width": 276.5
   },
   "right": {
     "id": "ff01a1db19d5896b",
@@ -271,11 +514,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "Excalidraw/How do you organize your notes.excalidraw.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "How do you organize your notes.excalidraw的笔记属性"
+              "title": "笔记属性"
             }
           },
           {
@@ -292,7 +533,8 @@
               "title": "添加笔记属性"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -316,54 +558,54 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "aabfe4df13d030e9",
+  "active": "94f113a953156785",
   "lastOpenFiles": [
-    "PKM/10-PROJECTS/2025Q1-使用PARA笔记法重构PKM.md",
-    "PKM/20-AREAS/Diary/2025-03-06.md",
-    "PKM/30-RESOURCES/00资源总览.md",
-    "PKM/30-RESOURCES/01资源保鲜度.md",
-    "_template/template_resource.md",
-    "PKM/20-AREAS/Diary/2025-03-05.md",
-    "PKM/30-RESOURCES/知识管理/工作流/知识管理工作流.md",
-    "PKM/30-RESOURCES/知识管理/工作流/PARA笔记转化工作流.md",
-    "_template/template_project.md",
-    "PKM/20-AREAS/专业技术/00专业技术.md",
-    "PKM/20-AREAS/职业规划/00职业规划.md",
-    "PKM/10-PROJECTS/2025Q1-前端框架对比.md",
-    "PKM/10-PROJECTS/2025Q1-求职前端岗位.md",
-    "PKM/20-AREAS/Diary/2025Q1-求职项目.md",
-    "PKM/30-RESOURCES/知识管理/工作流/PARA实施工作流.md",
-    "PKM/20-AREAS/专业技术/目录结构设计.md",
-    "_template/template_meta.md",
-    "PKM/20-AREAS/知识管理/00知识管理领域看板.md",
-    "PKM/10-PROJECTS/2025Q1-实现Obsidian插件PARA.md",
-    "PKM/30-RESOURCES/知识管理/FAQ库/PARA实施常见问题集.md",
-    "PKM/20-AREAS/知识管理/方法论/PARA笔记组织法.md",
+    "PKM/30-RESOURCES/个人成长/技能矩阵.md",
     "PKM/20-AREAS/知识管理/方法论/知识组织概述.md",
+    "PKM/00-META/关于本库.md",
+    "PKM/00-META/本库设计概述.md",
+    "PKM/40-ARCHIVES/Source/数字花园概述.md",
+    "PKM/20-AREAS/个人成长/个人品牌构建/个人品牌构建.md",
+    "PKM/00-META/数字花园相关设计.md",
+    "PKM/00-META/PKM降噪处理.md",
+    "PKM/20-AREAS/专业技术/前端开发/前端工程化.md",
+    "PKM/20-AREAS/专业技术/前端开发/前端框架与生态.md",
+    "PKM/20-AREAS/专业技术/前端开发",
+    "PKM/20-AREAS/专业技术/DevOps工作流.md",
+    "PKM/30-RESOURCES/技术资产/目录结构设计.md",
+    "PKM/20-AREAS/专业技术/前端工程化",
+    "PKM/20-AREAS/专业技术/00专业技术领域.md",
+    "PKM/20-AREAS/专业技术/专业技能评估.md",
+    "PKM/00-META/笔记命名规范.md",
     "PKM/20-AREAS/知识管理/方法论/知识管理概述.md",
-    "PKM/30-RESOURCES/技术资产/信息拆分技术规范.md",
     "PKM/20-AREAS/知识管理/方法论/知识管理核心原则.md",
     "PKM/20-AREAS/知识管理/架构设计/知识组织方案.md",
-    "PKM/20-AREAS/知识管理/架构设计",
-    "PKM/30-RESOURCES/知识管理/战略工具",
-    "PKM/30-RESOURCES/知识管理/FAQ库",
-    "PKM/30-RESOURCES/知识管理/工作流",
-    "PKM/30-RESOURCES/知识管理/PARA工具包",
-    "PKM/30-RESOURCES/知识管理",
-    "RESOURCES",
-    "PKM/20-AREAS/知识管理/实践指南",
-    "PKM/20-AREAS/知识管理/方法论",
-    "PKM/30-RESOURCES/未命名",
+    "PKM/30-RESOURCES/知识管理/工作流/知识管理工作流.md",
+    "PKM/10-PROJECTS/2025Q1-学习Docker.md",
+    "PKM/10-PROJECTS/2025Q1-前端框架对比.md",
+    "PKM/20-AREAS/Blog/博客选题列表.md",
+    "_template/template_resource.md",
+    "_template/template_project.md",
+    "_template/template_archive.md",
+    "_template/templage_area.md",
+    "PKM/20-AREAS/Diary/_resources",
+    "SimpRead/_resources/15-知乎-债务转移/c3fc2373932cc327a62c1ce02e42695f_MD5.jpg",
+    "SimpRead/_resources/15-知乎-债务转移",
+    "SimpRead/backup/simpread_config@20250310135220.json",
+    "SimpRead/backup/simpread_config@20250310135159.json",
+    "SimpRead/output/15-知乎-债务转移@annote.html",
+    "SimpRead/backup/simpread_config@20250310135127.json",
+    "SimpRead/output/15-知乎-债务转移.html",
+    "SimpRead/backup/simpread_config@20250310135114.json",
+    "SimpRead/_resources/15-(89 条消息) 为啥发达国家中只有美国的人均 GDP 没有停滞和失去？ - 知乎/c3fc2373932cc327a62c1ce02e42695f_MD5.jpg",
+    "SimpRead/_resources/15-(89 条消息) 为啥发达国家中只有美国的人均 GDP 没有停滞和失去？ - 知乎/bde43ffb53031ee84c13e8966a8345a1_MD5.jpg",
     "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.svg",
-    "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",
-    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/e85a574a52c9731775708dba9ed68514_MD5.jpg",
-    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/e34f2c9c81679c0a4608d19b2abc1eb7_MD5.jpg",
-    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/c4cc038c7dc7ec07479e6352ad370a52_MD5.jpg",
-    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/c2feb22b89554490d500cb159c2e8245_MD5.jpg",
-    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/afce9d56ed243752cb0619feb354e7b1_MD5.jpg",
-    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/a85df45b481c12dd1667818843f47758_MD5.jpg",
-    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/8a5ece7e28cfdeea75ddf13e7b40baf5_MD5.jpg",
-    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/850b7671194ce2e0735199a33caf387c_MD5.jpg",
+    "SimpRead/_resources/9-我如何夺冠新加坡首届 GPT-4 提示工程大赛 【译】 _ 宝玉的分享/5bd12fbf3d59a39cba358ce21c4c11b0_MD5.webp",
+    "SimpRead/_resources/9-我如何夺冠新加坡首届 GPT-4 提示工程大赛 【译】 _ 宝玉的分享/9c092e7705a51dcef047376e2d739e53_MD5.webp",
+    "SimpRead/_resources/9-我如何夺冠新加坡首届 GPT-4 提示工程大赛 【译】 _ 宝玉的分享/d75d95c3b802a39dc6f258c864083af4_MD5.webp",
+    "SimpRead/_resources/9-我如何夺冠新加坡首届 GPT-4 提示工程大赛 【译】 _ 宝玉的分享/a92435ecbd40a0c267ab94b7e8b7a508_MD5.webp",
+    "SimpRead/_resources/9-我如何夺冠新加坡首届 GPT-4 提示工程大赛 【译】 _ 宝玉的分享/236016fa9da547ec884b5b5e1c653196_MD5.webp",
+    "SimpRead/_resources/9-我如何夺冠新加坡首届 GPT-4 提示工程大赛 【译】 _ 宝玉的分享/acd9730b9b3f1f197fa4772bef71c167_MD5.webp",
     "PKM/Topics/前端工程化/前端工程化.canvas",
     "Tools/看板.canvas"
   ]

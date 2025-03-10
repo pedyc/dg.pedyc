@@ -7,7 +7,7 @@ author: jianshu.com
 description: JavaScript的内存空间 在JavaScript中，每一个数据都需要一个内存空间。内存空间分为两种，栈内存（stack）与堆内存（heap） 栈是系统自动分配的内存空间...
 tags: []
 date-created: 2025-02-28
-date-modified: 2025-02-28
+date-modified: 2025-03-08
 status: 
 alias: ["srAnnote@详解 JavaScript 的内存空间、赋值和深浅拷贝 - 简书"]
 ---

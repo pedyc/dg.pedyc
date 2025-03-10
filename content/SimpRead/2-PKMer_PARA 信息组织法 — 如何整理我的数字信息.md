@@ -7,7 +7,7 @@ author: null
 description: null
 tags: [PARA, 知识管理, 转载, 知识管理/知识组织]
 date-created: 2025-02-20
-date-modified: 2025-02-28
+date-modified: 2025-03-08
 status: null
 banner: /img/pkmer-avatar.png
 url: >-

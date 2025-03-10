@@ -43,7 +43,7 @@ await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
 
 ```dataview
 TABLE file.ctime AS "创建时间", file.mtime AS "最后修改时间"
-WHERE file.mtime >= date("{{date:YYYY-MM-DD}}") AND file.mtime < date("{{date:YYYY-MM-DD}}") + dur(1 day)
+WHERE file.mtime >= date("{{date:YYYY-MM-DD}}") AND file.mtime < date("{{date:YYYY-MM-DD}}") + dur(1 day) OR file.ctime = date("{{date:YYYY-MM-DD}}")
 SORT file.mtime DESC
 ```
 

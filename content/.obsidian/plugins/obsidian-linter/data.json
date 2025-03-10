@@ -126,7 +126,7 @@
     },
     "default-language-for-code-fences": {
       "enabled": true,
-      "default-language": "text"
+      "default-language": "bash"
     },
     "emphasis-style": {
       "enabled": true,
@@ -227,7 +227,7 @@
       "other-symbols": ""
     },
     "remove-space-before-or-after-characters": {
-      "enabled": false,
+      "enabled": true,
       "characters-to-remove-space-before": ",!?;:).’”]",
       "characters-to-remove-space-after": "¿¡‘“(["
     },
@@ -262,7 +262,7 @@
       "enabled": true
     },
     "remove-leftover-footnotes-from-quote-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "remove-multiple-blank-lines-on-paste": {
       "enabled": true

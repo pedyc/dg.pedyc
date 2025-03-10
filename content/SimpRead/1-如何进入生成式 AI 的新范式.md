@@ -2,12 +2,12 @@
 topic: 
 uid: 
 title: 1-如何进入生成式 AI 的新范式
-aliases: 
+aliases: []
 author: 
 description: 
 tags: []
 date-created: 2025-02-23
-date-modified: 2025-03-01
+date-modified: 2025-03-08
 status: 
 banner: "https://cdnfile.sspai.com/"
 url: https://sspai.com/post/88960

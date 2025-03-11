@@ -20,6 +20,7 @@ import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
+import Flex from "./Flex"
 
 export {
   ArticleTitle,
@@ -46,4 +47,5 @@ export {
   NotFound,
   Breadcrumbs,
   Comments,
+  Flex,
 }

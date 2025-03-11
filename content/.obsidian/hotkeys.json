@@ -8,14 +8,6 @@
     }
   ],
   "workspace:new-tab": [],
-  "bookmarks:bookmark-current-view": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "M"
-    }
-  ],
   "editor:open-search-replace": [
     {
       "modifiers": [
@@ -97,6 +89,71 @@
         "Alt"
       ],
       "key": "S"
+    }
+  ],
+  "file-explorer:move-file": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "M"
+    }
+  ],
+  "insert-template": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "O"
+    }
+  ],
+  "editor:table-col-right": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "ArrowRight"
+    }
+  ],
+  "editor:table-col-left": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "ArrowLeft"
+    }
+  ],
+  "obsidian-to-anki-plugin:anki-scan-vault": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "E"
+    }
+  ],
+  "editor:swap-line-up": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "ArrowUp"
+    }
+  ],
+  "editor:swap-line-down": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "ArrowDown"
+    }
+  ],
+  "templater-obsidian:_template/template_project.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "N"
     }
   ]
 }

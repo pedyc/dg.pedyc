@@ -73,6 +73,9 @@
       },
       "obsidian-kanban": {
         "startupType": "short"
+      },
+      "obsidian-footnotes": {
+        "startupType": "short"
       }
     }
   }

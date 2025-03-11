@@ -48,6 +48,10 @@
     "TQ_show_urgency": "checkbox",
     "topics": "multitext",
     "author": "text",
-    "flower-type": "multitext"
+    "flower-type": "multitext",
+    "topic": "multitext",
+    "area": "multitext",
+    "source": "multitext",
+    "rating": "multitext"
   }
 }

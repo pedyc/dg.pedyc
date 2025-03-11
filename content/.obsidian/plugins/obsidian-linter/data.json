@@ -31,8 +31,8 @@
       "force-multi-line-array-style": ""
     },
     "insert-yaml-attributes": {
-      "enabled": true,
-      "text-to-insert": "topics:\nuid:\ntitle:\naliases: \nauthor:\ndescription:\ntags: \ndate-created:\ndate-modified:\nstatus:"
+      "enabled": false,
+      "text-to-insert": "topic:\nuid:\ntitle:\naliases: \nauthor:\ndescription:\ntags: \ndate-created:\ndate-modified:\nstatus:"
     },
     "move-tags-to-yaml": {
       "enabled": false,
@@ -40,8 +40,8 @@
       "tags-to-ignore": ""
     },
     "remove-yaml-keys": {
-      "enabled": true,
-      "yaml-keys-to-remove": "date\ntag\ncreated\ntopic"
+      "enabled": false,
+      "yaml-keys-to-remove": "date\ntag\ncreated\ntopics"
     },
     "sort-yaml-array-values": {
       "enabled": false,
@@ -53,7 +53,7 @@
     },
     "yaml-key-sort": {
       "enabled": true,
-      "yaml-key-priority-sort-order": "topics:\nuid:\ntitle:\naliases: \nauthor:\ndescription:\ntags: \ndate-created:\ndate-modified:\nstatus:",
+      "yaml-key-priority-sort-order": "topic:\nuid:\ntitle:\naliases: \nauthor:\ndescription:\ntags: \ndate-created:\ndate-modified:\nstatus:",
       "priority-keys-at-start-of-yaml": true,
       "yaml-sort-order-for-other-keys": "Ascending Alphabetical"
     },
@@ -126,7 +126,7 @@
     },
     "default-language-for-code-fences": {
       "enabled": true,
-      "default-language": "text"
+      "default-language": "bash"
     },
     "emphasis-style": {
       "enabled": true,
@@ -138,9 +138,9 @@
     },
     "ordered-list-style": {
       "enabled": true,
-      "number-style": "ascending",
+      "number-style": "preserve",
       "list-end-style": ".",
-      "preserve-start": true
+      "preserve-start": false
     },
     "proper-ellipsis": {
       "enabled": true
@@ -227,7 +227,7 @@
       "other-symbols": ""
     },
     "remove-space-before-or-after-characters": {
-      "enabled": false,
+      "enabled": true,
       "characters-to-remove-space-before": ",!?;:).’”]",
       "characters-to-remove-space-after": "¿¡‘“(["
     },
@@ -244,28 +244,28 @@
       "twp-space-line-break": false
     },
     "add-blockquote-indentation-on-paste": {
-      "enabled": false
+      "enabled": true
     },
     "prevent-double-checklist-indicator-on-paste": {
-      "enabled": false
+      "enabled": true
     },
     "prevent-double-list-item-indicator-on-paste": {
-      "enabled": false
+      "enabled": true
     },
     "proper-ellipsis-on-paste": {
-      "enabled": false
+      "enabled": true
     },
     "remove-hyphens-on-paste": {
-      "enabled": false
+      "enabled": true
     },
     "remove-leading-or-trailing-whitespace-on-paste": {
-      "enabled": false
+      "enabled": true
     },
     "remove-leftover-footnotes-from-quote-on-paste": {
       "enabled": false
     },
     "remove-multiple-blank-lines-on-paste": {
-      "enabled": false
+      "enabled": true
     },
     "empty-line-around-horizontal-rules": {
       "enabled": false

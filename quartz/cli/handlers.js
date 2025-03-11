@@ -35,16 +35,25 @@ import {
 import { pathToFileURL } from "url";
 
 /**
+ * Resolve content directory path
+ * @param contentPath path to resolve
+ */
+function resolveContentPath(contentPath) {
+  if (path.isAbsolute(contentPath)) return path.relative(cwd, contentPath)
+  return path.join(cwd, contentPath)
+}
+
+/**
  * Handles `npx quartz create`
  * @param {*} argv arguments for `create`
  */
 export async function handleCreate(argv) {
-  console.log();
-  intro(chalk.bgGreen.black(` Quartz v${version} `));
-  const contentFolder = path.join(cwd, argv.directory);
-  let setupStrategy = argv.strategy?.toLowerCase();
-  let linkResolutionStrategy = argv.links?.toLowerCase();
-  const sourceDirectory = argv.source;
+  console.log()
+  intro(chalk.bgGreen.black(` Quartz v${version} `))
+  const contentFolder = resolveContentPath(argv.directory)
+  let setupStrategy = argv.strategy?.toLowerCase()
+  let linkResolutionStrategy = argv.links?.toLowerCase()
+  const sourceDirectory = argv.source
 
   // If all cmd arguments were provided, check if they're valid
   if (setupStrategy && linkResolutionStrategy) {
@@ -405,7 +414,7 @@ export async function handleBuild(argv) {
         });
         console.log(
           chalk.yellow("[302]") +
-            chalk.grey(` ${argv.baseDir}${req.url} -> ${newFp}`)
+          chalk.grey(` ${argv.baseDir}${req.url} -> ${newFp}`)
         );
         res.end();
       };
@@ -452,7 +461,7 @@ export async function handleBuild(argv) {
       return serve();
     });
     server.listen(argv.port);
-    const wss = new WebSocketServer({ port: argv.wsPort });
+    wss = new WebSocketServer({ port: argv.wsPort }); // 去除 const 声明
     wss.on("connection", (ws) => connections.push(ws));
     console.log(
       chalk.cyan(
@@ -472,7 +481,7 @@ export async function handleBuild(argv) {
       .on("change", () => build(clientRefresh))
       .on("unlink", () => build(clientRefresh));
   } else {
-    await build(() => {});
+    await build(() => { });
     ctx.dispose();
   }
 }
@@ -482,9 +491,9 @@ export async function handleBuild(argv) {
  * @param {*} argv arguments for `update`
  */
 export async function handleUpdate(argv) {
-  const contentFolder = path.join(cwd, argv.directory);
-  console.log(chalk.bgGreen.black(`\n Quartz v${version} \n`));
-  console.log("Backing up your content");
+  const contentFolder = resolveContentPath(argv.directory)
+  console.log(chalk.bgGreen.black(`\n Quartz v${version} \n`))
+  console.log("Backing up your content")
   execSync(
     `git remote show upstream || git remote add upstream https://github.com/jackyzha0/quartz.git`
   );
@@ -536,8 +545,8 @@ export async function handleUpdate(argv) {
  * @param {*} argv arguments for `restore`
  */
 export async function handleRestore(argv) {
-  const contentFolder = path.join(cwd, argv.directory);
-  await popContentFolder(contentFolder);
+  const contentFolder = resolveContentPath(argv.directory)
+  await popContentFolder(contentFolder)
 }
 
 /**
@@ -545,9 +554,9 @@ export async function handleRestore(argv) {
  * @param {*} argv arguments for `sync`
  */
 export async function handleSync(argv) {
-  const contentFolder = path.join(cwd, argv.directory);
-  console.log(chalk.bgGreen.black(`\n Quartz v${version} \n`));
-  console.log("Backing up your content");
+  const contentFolder = resolveContentPath(argv.directory)
+  console.log(chalk.bgGreen.black(`\n Quartz v${version} \n`))
+  console.log("Backing up your content")
 
   if (argv.commit) {
     const contentStat = await fs.promises.lstat(contentFolder);
@@ -620,3 +629,24 @@ export async function handleSync(argv) {
 
   console.log(chalk.green("Done!"));
 }
+
+// 在文件顶部添加模块级变量声明
+let wss = null
+
+process.on('uncaughtException', (err) => {
+  if (err.code === 'EACCES') {
+    console.log('端口访问被拒绝，尝试备用端口...')
+    if (wss) {
+      const currentPort = wss.options.port
+      const newPort = currentPort + Math.floor(Math.random() * 50) + 100
+
+      // 关闭旧服务器
+      wss.close()
+
+      // 修复连接事件监听（补充回调函数）
+      wss = new WebSocketServer({ port: newPort })
+      wss.on("connection", (ws) => connections.push(ws)) // 添加回调函数
+      console.log(chalk.yellow(`WebSocket 端口已切换至: ${newPort}`))
+    }
+  }
+});

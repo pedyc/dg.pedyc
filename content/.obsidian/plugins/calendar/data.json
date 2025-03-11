@@ -4,7 +4,7 @@
   "wordsPerDot": 250,
   "showWeeklyNote": true,
   "weeklyNoteFormat": "gggg-[W]ww",
-  "weeklyNoteTemplate": "template/template_week",
-  "weeklyNoteFolder": "PKM/AREAS/Diary",
+  "weeklyNoteTemplate": "_template/temlate_diary",
+  "weeklyNoteFolder": "PKM/20-AREAS/Diary",
   "localeOverride": "system-default"
 }

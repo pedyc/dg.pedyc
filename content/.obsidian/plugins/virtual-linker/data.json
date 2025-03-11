@@ -17,7 +17,7 @@
   "linkFormat": "shortest",
   "defaultLinkFormat": "shortest",
   "useDefaultLinkStyleForConversion": false,
-  "applyDefaultLinkStyling": false,
+  "applyDefaultLinkStyling": true,
   "includeHeaders": true,
   "matchCaseSensitive": false,
   "capitalLetterProportionForAutomaticMatchCase": 0.75,

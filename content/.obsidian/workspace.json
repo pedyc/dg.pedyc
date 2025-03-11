@@ -4,109 +4,357 @@
     "type": "split",
     "children": [
       {
-        "id": "a977d684f58e0208",
-        "type": "split",
+        "id": "12f3aacb4741d136",
+        "type": "tabs",
         "children": [
           {
-            "id": "42e584d4096edf20",
-            "type": "tabs",
-            "dimension": 61.5,
-            "children": [
-              {
-                "id": "b0f5ea33a72f3471",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PKM/AREAS/Diary/2025-02-23.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
-                  "icon": "lucide-file",
-                  "title": "2025-02-23"
+            "id": "cf1183ae36641f0c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/Diary/2025-03-06.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
                 }
               },
-              {
-                "id": "2885145f10ad86fa",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PKM/AREAS/Diary/2025-02-22.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
-                  "icon": "lucide-file",
-                  "title": "2025-02-22"
-                }
-              }
-            ]
+              "icon": "lucide-file",
+              "title": "2025-03-06"
+            }
           },
           {
-            "id": "cf4e39fc18e66bab",
-            "type": "tabs",
-            "dimension": 38.5,
-            "children": [
-              {
-                "id": "67fce44427db47bb",
-                "type": "leaf",
-                "state": {
-                  "type": "localgraph",
-                  "state": {
-                    "options": {
-                      "collapse-filter": false,
-                      "search": "",
-                      "localJumps": 1,
-                      "localBacklinks": true,
-                      "localForelinks": true,
-                      "localInterlinks": false,
-                      "showTags": true,
-                      "showAttachments": false,
-                      "hideUnresolved": false,
-                      "collapse-color-groups": true,
-                      "colorGroups": [],
-                      "collapse-display": true,
-                      "showArrow": false,
-                      "textFadeMultiplier": 0,
-                      "nodeSizeMultiplier": 1,
-                      "lineSizeMultiplier": 1,
-                      "collapse-forces": true,
-                      "centerStrength": 0.518713248970312,
-                      "repelStrength": 10,
-                      "linkStrength": 1,
-                      "linkDistance": 250,
-                      "scale": 0.27229554996146776,
-                      "close": true
-                    }
-                  },
-                  "icon": "lucide-git-fork",
-                  "title": "关系图谱"
+            "id": "4b5205526a7e6619",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/Diary/2025-03-06.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
                 }
-              }
-            ]
+              },
+              "icon": "lucide-file",
+              "title": "2025-03-06"
+            }
+          },
+          {
+            "id": "677452aa0a27b500",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/Diary/2025-03-07.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025-03-07"
+            }
+          },
+          {
+            "id": "639f51a6006f7230",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/10-PROJECTS/2025Q1-实现Obsidian插件CortexFlow.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025Q1-实现Obsidian插件CortexFlow"
+            }
+          },
+          {
+            "id": "085b6dd0cfd06a52",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SimpRead/5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件@annote.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件@annote"
+            }
+          },
+          {
+            "id": "24c397e49ddda69e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/10-PROJECTS/2025Q1-求职前端岗位.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025Q1-求职前端岗位"
+            }
+          },
+          {
+            "id": "91d68a3ca0eb3d61",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/职业规划/00职业规划领域.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00职业规划领域"
+            }
+          },
+          {
+            "id": "7c02e6f75ee904f0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/知识管理/方法论/知识管理概述.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "知识管理概述"
+            }
+          },
+          {
+            "id": "f4e2a8f5cf7a2e4f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/00-META/关于本库.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "关于本库"
+            }
+          },
+          {
+            "id": "94f113a953156785",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          },
+          {
+            "id": "be970eb3f5cb1b1e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/个人成长/个人品牌构建/个人品牌构建.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "个人品牌构建"
+            }
+          },
+          {
+            "id": "f15e18867ab9a62b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/个人成长/个人品牌构建/个人品牌构建.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "个人品牌构建"
+            }
+          },
+          {
+            "id": "e93b4aa344b010e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/个人成长/个人品牌构建/个人品牌构建.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "个人品牌构建"
+            }
+          },
+          {
+            "id": "f622ce4d145f777e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SimpRead/5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件@annote.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件@annote"
+            }
+          },
+          {
+            "id": "b79ec32d48411b07",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SimpRead/5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件@annote.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件@annote"
+            }
           }
         ],
-        "direction": "horizontal"
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -118,7 +366,7 @@
       {
         "id": "2bf10628ba3bdd8f",
         "type": "tabs",
-        "dimension": 47.45980707395498,
+        "dimension": 50.482315112540185,
         "children": [
           {
             "id": "62b03965a1dba250",
@@ -148,7 +396,7 @@
       {
         "id": "3b21062118b7d174",
         "type": "tabs",
-        "dimension": 28.681672025723472,
+        "dimension": 26.559485530546628,
         "children": [
           {
             "id": "3d6eaac8f088e7f1",
@@ -156,30 +404,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SimpRead/4-Breaking the Frontend Ceiling _ Frontend at Scale.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "4-Breaking the Frontend Ceiling _ Frontend at Scale 的大纲"
-            }
-          },
-          {
-            "id": "aabfe4df13d030e9",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": true,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "搜索"
+              "title": "大纲"
             }
           },
           {
@@ -191,18 +421,36 @@
                 "sortOrder": "frequency",
                 "useHierarchy": false,
                 "showSearch": true,
-                "searchQuery": "记录"
+                "searchQuery": "知识"
               },
               "icon": "lucide-tags",
               "title": "标签"
             }
+          },
+          {
+            "id": "aabfe4df13d030e9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:DevOps",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
-        "id": "a55ae7590743ec78",
+        "id": "2e8c3d745c458fc4",
         "type": "tabs",
-        "dimension": 23.858520900321547,
+        "dimension": 22.958199356913184,
         "children": [
           {
             "id": "5d52ca6efedfee5c",
@@ -218,7 +466,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 257.5
+    "width": 276.5
   },
   "right": {
     "id": "ff01a1db19d5896b",
@@ -266,11 +514,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "Excalidraw/How do you organize your notes.excalidraw.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "How do you organize your notes.excalidraw的笔记属性"
+              "title": "笔记属性"
             }
           },
           {
@@ -287,7 +533,8 @@
               "title": "添加笔记属性"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -313,52 +560,52 @@
   },
   "active": "62b03965a1dba250",
   "lastOpenFiles": [
-    "SimpRead/4-Breaking the Frontend Ceiling _ Frontend at Scale@annote.md",
-    "SimpRead/4-Breaking the Frontend Ceiling _ Frontend at Scale.md",
-    "SimpRead/_resources/0-AI 复兴 RSS ？",
-    "PKM/RESOURCES/知识管理升级路线图.md",
-    "PKM/RESOURCES/关于本库/本库诊断报告.md",
-    "PKM/RESOURCES/关于本库/本库设计理念.md",
-    "PKM/RESOURCES/关于本库/本库设计概述.md",
-    "PKM/RESOURCES/关于本库/本库设计中碰到的问题.md",
-    "PKM/RESOURCES/关于本库/本库组织方案.md",
-    "PKM/RESOURCES/关于本库/本库方法论汇总.md",
-    "PKM/RESOURCES/关于本库/本库文章状态.md",
-    "PKM/RESOURCES/关于本库/本库工作流汇总.md",
-    "PKM/RESOURCES/关于本库/本库名词解释.md",
-    "PKM/RESOURCES/关于本库/本库元数据解析.md",
-    "PKM/RESOURCES/关于本库/本库主题汇总.md",
-    "PKM/RESOURCES/关于本库/本库中的AI.md",
-    "PKM/RESOURCES/关于本库/日记聚合工作流.md",
-    "PKM/RESOURCES/关于本库/数字花园相关设计.md",
-    "PKM/RESOURCES/关于本库/关于本库.md",
-    "PKM/RESOURCES/关于本库/PKM降噪处理.md",
-    "PKM/RESOURCES/关于我/我的网站.md",
-    "PKM/RESOURCES/关于我/我的项目.md",
-    "PKM/RESOURCES/关于我/我的工作流.md",
-    "PKM/RESOURCES/关于我/dg.pedyc.md",
-    "PKM/RESOURCES/关于我",
-    "PKM/AREAS/Diary/2025-02-08.md",
-    "PKM/AREAS/Diary/2024-11-24.md",
-    "PKM/AREAS/Diary/2024-11-21.md",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/e85a574a52c9731775708dba9ed68514_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/e34f2c9c81679c0a4608d19b2abc1eb7_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/c4cc038c7dc7ec07479e6352ad370a52_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/c2feb22b89554490d500cb159c2e8245_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/afce9d56ed243752cb0619feb354e7b1_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/a85df45b481c12dd1667818843f47758_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/8a5ece7e28cfdeea75ddf13e7b40baf5_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/850b7671194ce2e0735199a33caf387c_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/822bbb12360786b0e266b486f85fac78_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI/7e1684a96ac2e3ab2dd48cc8e6d5c8a4_MD5.jpg",
-    "PKM/AREAS/Blog/_resources/ReprintVueCompositionAPI",
-    "PKM/AREAS/Blog/_resources",
-    "PKM/AREAS/Blog",
-    "Excalidraw/Scripts/Downloaded/_resources/Expand rectangles horizontally keep text centered",
-    "PKM/ARCHIVES/政治经济/_resources",
-    "PKM/AREAS/知识管理/_resources/知识管理工作流",
-    "PKM/ARCHIVES/主题汇总/前端工程化/_resources/目录结构设计",
-    "PKM/ARCHIVES/主题汇总/前端工程化/_resources",
+    "PKM/20-AREAS/职业规划/00职业规划领域.md",
+    "PKM/20-AREAS/个人成长/00个人成长领域.md",
+    "SimpRead/8-闭包 - JavaScript _ MDN@annote.md",
+    "SimpRead/8-闭包 - JavaScript _ MDN.md",
+    "SimpRead/7-深入理解函数式编程（下） - 美团技术团队@annote.md",
+    "PKM/20-AREAS/Blog/债务转移的一点思考.md",
+    "SimpRead/7-深入理解函数式编程（下） - 美团技术团队.md",
+    "SimpRead/6-深入理解函数式编程（上） - 美团技术团队@annote.md",
+    "SimpRead/6-深入理解函数式编程（上） - 美团技术团队.md",
+    "SimpRead/5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件@annote.md",
+    "SimpRead/5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件.md",
+    "PKM/10-PROJECTS/2025Q2-启动颜文字项目.md",
+    "PKM/10-PROJECTS/2025Q2-启动信息分片引擎项目.md",
+    "PKM/10-PROJECTS/2025Q1-推进个人品牌构建.md",
+    "PKM/10-PROJECTS/2025Q1-实现Obsidian插件CortexFlow.md",
+    "PKM/10-PROJECTS/2025Q1-学习Docker.md",
+    "PKM/00-META/笔记命名规范.md",
+    "SimpRead/15-知乎-债务转移@annote.md",
+    "SimpRead/15-知乎-债务转移.md",
+    "SimpRead/14-DeepSeek - Docker基础概念@annote.md",
+    "SimpRead/14-DeepSeek - Docker基础概念.md",
+    "SimpRead/13-DeepSeek - 颜文字项目@annote.md",
+    "SimpRead/13-DeepSeek - 颜文字项目.md",
+    "SimpRead/12-DeepSeek - 学习NLP和机器学习的必要性讨论@annote.md",
+    "SimpRead/12-DeepSeek - 学习NLP和机器学习的必要性讨论.md",
+    "SimpRead/11-为什么现在的事件局势如此严峻？@annote.md",
+    "PKM/30-RESOURCES/个人成长",
+    "PKM/30-RESOURCES/技术资产/面试真题",
+    "PKM/30-RESOURCES/技术资产/项目矩阵",
+    "PKM/20-AREAS/个人成长/个人品牌构建",
+    "_template/_resources",
+    "SimpRead/_resources/深入理解函数式编程（上） - 美团技术团队/fb1f582820a2c9e6ef8fab1b78241cde_MD5.jpg",
+    "SimpRead/_resources/深入理解函数式编程（上） - 美团技术团队/f8c81512ac53b1e9cce7f54aae63ae90_MD5.jpg",
+    "SimpRead/_resources/深入理解函数式编程（上） - 美团技术团队/f7c455844961643128661d3c9ed212d6_MD5.jpg",
+    "SimpRead/_resources/深入理解函数式编程（上） - 美团技术团队/f73a7763f205ceebe45c39ffb437251a_MD5.jpg",
+    "SimpRead/_resources/深入理解函数式编程（上） - 美团技术团队/f48e041175aadef909af98feffbf57ab_MD5.jpg",
+    "SimpRead/_resources/深入理解函数式编程（上） - 美团技术团队/e20c4fe296c02a71c30ce9232d8fba02_MD5.jpg",
+    "SimpRead/_resources/深入理解函数式编程（上） - 美团技术团队/f41176526265f53bbb67987859fd7557_MD5.jpg",
+    "SimpRead/_resources/深入理解函数式编程（上） - 美团技术团队/dcbd496a542c2ff4db6b691591778751_MD5.jpg",
+    "SimpRead/_resources/深入理解函数式编程（上） - 美团技术团队/db31736bffe8c5f05ac4ace3a9752254_MD5.jpg",
+    "SimpRead/_resources/深入理解函数式编程（上） - 美团技术团队/d5f74d3e6a1be01390bc2a3bc39c3fc6_MD5.jpg",
+    "SimpRead/_resources/深入理解函数式编程（上） - 美团技术团队",
+    "SimpRead/_resources/9-我如何夺冠新加坡首届 GPT-4 提示工程大赛 【译】 _ 宝玉的分享",
+    "SimpRead/_resources/7-深入理解函数式编程（下） - 美团技术团队",
+    "SimpRead/_resources/6-深入理解函数式编程（上） - 美团技术团队",
+    "PKM/20-AREAS/专业技术/前端开发",
     "PKM/Topics/前端工程化/前端工程化.canvas",
     "Tools/看板.canvas"
   ]

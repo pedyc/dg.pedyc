@@ -1,13 +1,13 @@
 ---
-topics: 
+topic: 
 uid: 
 title: 1-如何进入生成式 AI 的新范式
 aliases: []
 author: 
 description: 
 tags: []
-date-created: 2025-02-20
-date-modified: 2025-02-22
+date-created: 2025-02-23
+date-modified: 2025-03-08
 status: 
 banner: "https://cdnfile.sspai.com/"
 url: https://sspai.com/post/88960
@@ -102,7 +102,7 @@ AI 的发展速度实在是太快了，每天、每个月都有大量新的信�
 * 使用 Midjourney 生成图片
 * 如何使用 Stable Diffusion 画图
 
-![](https://cdnfile.sspai.com/2024/05/21/article/07018d856807489f8681f537d6415405.png?imageView2/2/format/webp)
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACbklEQVRoQ+2aMU4dMRCGZw6RC1CSSyQdLZJtKQ2REgoiRIpQkCYClCYpkgIESQFIpIlkW+IIcIC0gUNwiEFGz+hlmbG9b1nesvGW++zxfP7H4/H6IYzkwZFwQAUZmpJVkSeniFJKA8ASIi7MyfkrRPxjrT1JjZ8MLaXUDiJuzwngn2GJaNd7vyP5IoIYY94Q0fEQIKIPRGS8947zSQTRWh8CwLuBgZx479+2BTkHgBdDAgGAC+fcywoyIFWqInWN9BSONbTmFVp/AeA5o+rjKRJ2XwBYRsRXM4ZXgAg2LAPzOCDTJYQx5pSIVlrC3EI45y611osMTHuQUPUiYpiVooerg7TWRwDAlhSM0TuI+BsD0x4kGCuFSRVzSqkfiLiWmY17EALMbCAlMCmI6IwxZo+INgQYEYKBuW5da00PKikjhNNiiPGm01rrbwDwofGehQjjNcv1SZgddALhlJEgwgJFxDNr7acmjFLqCyJuTd6LEGFttpmkYC91Hrk3s1GZFERMmUT01Xv/sQljjPlMRMsxO6WULwnb2D8FEs4j680wScjO5f3vzrlNJszESWq2LYXJgTzjZm56MCHf3zVBxH1r7ftU1splxxKYHEgoUUpTo+grEf303rPH5hxENJqDKQEJtko2q9zGeeycWy3JhpKhWT8+NM/sufIhBwKI+Mta+7pkfxKMtd8Qtdbcx4dUQZcFCQ2I6DcAnLUpf6YMPxhIDDOuxC4C6djoQUE6+tKpewWZ1wlRkq0qUhXptKTlzv93aI3jWmE0Fz2TeujpX73F9TaKy9CeMk8vZusfBnqZ1g5GqyIdJq+XrqNR5AahKr9CCcxGSwAAAABJRU5ErkJggg==)
 
 ### 新手村的打怪任务
 
@@ -122,7 +122,7 @@ AI 的发展速度实在是太快了，每天、每个月都有大量新的信�
 
 现在大语言模型的选择非常多了，国内的有文心一言、通义千问、KimiChat、豆包…… 国外的有 ChatGPT、Claude、Gemini…… 打开这些大模型应用的网站或者 APP，发出你的第一条指令吧。由此进入这个生成式 AI 一问一答的新范式。
 
-![](https://cdnfile.sspai.com/2024/05/21/article/de83ff70be29be02489fd7e691bebe4a.jpeg?imageView2/2/format/webp)
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACbklEQVRoQ+2aMU4dMRCGZw6RC1CSSyQdLZJtKQ2REgoiRIpQkCYClCYpkgIESQFIpIlkW+IIcIC0gUNwiEFGz+hlmbG9b1nesvGW++zxfP7H4/H6IYzkwZFwQAUZmpJVkSeniFJKA8ASIi7MyfkrRPxjrT1JjZ8MLaXUDiJuzwngn2GJaNd7vyP5IoIYY94Q0fEQIKIPRGS8947zSQTRWh8CwLuBgZx479+2BTkHgBdDAgGAC+fcywoyIFWqInWN9BSONbTmFVp/AeA5o+rjKRJ2XwBYRsRXM4ZXgAg2LAPzOCDTJYQx5pSIVlrC3EI45y611osMTHuQUPUiYpiVooerg7TWRwDAlhSM0TuI+BsD0x4kGCuFSRVzSqkfiLiWmY17EALMbCAlMCmI6IwxZo+INgQYEYKBuW5da00PKikjhNNiiPGm01rrbwDwofGehQjjNcv1SZgddALhlJEgwgJFxDNr7acmjFLqCyJuTd6LEGFttpmkYC91Hrk3s1GZFERMmUT01Xv/sQljjPlMRMsxO6WULwnb2D8FEs4j680wScjO5f3vzrlNJszESWq2LYXJgTzjZm56MCHf3zVBxH1r7ftU1splxxKYHEgoUUpTo+grEf303rPH5hxENJqDKQEJtko2q9zGeeycWy3JhpKhWT8+NM/sufIhBwKI+Mta+7pkfxKMtd8Qtdbcx4dUQZcFCQ2I6DcAnLUpf6YMPxhIDDOuxC4C6djoQUE6+tKpewWZ1wlRkq0qUhXptKTlzv93aI3jWmE0Fz2TeujpX73F9TaKy9CeMk8vZusfBnqZ1g5GqyIdJq+XrqNR5AahKr9CCcxGSwAAAABJRU5ErkJggg==)
 
 #### 结构化 prompt 能力学习
 
@@ -138,7 +138,7 @@ prompt 就是提示词的意思，这个词以后会经常用到，在文生图�
 
 在 Midjourney 中输入一些关键词，就可以生成好看的图片。例如我的红包封面的 prompt：
 
-```Javascript
+```text
 chinese dragon, cute, anime, flying， chinese spring festival atmosphere,chinese dragon, cute, anime, flying， chinese spring festival atmosphere --ar 3:4 --niji 5
 ```
 

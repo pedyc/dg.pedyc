@@ -11,27 +11,15 @@
   "auto_jump_to_cursor": false,
   "enable_system_commands": true,
   "shell_path": "",
-  "user_scripts_folder": "_scripts",
-  "enable_folder_templates": false,
-  "folder_templates": [
-    {
-      "folder": "PKM/Diary",
-      "template": "Template/template_diary.md"
-    }
-  ],
-  "enable_file_templates": true,
-  "file_templates": [
-    {
-      "regex": ".*",
-      "template": "_template/template_meta.md"
-    }
-  ],
+  "user_scripts_folder": "",
+  "enable_folder_templates": true,
+  "folder_templates": [],
+  "enable_file_templates": false,
+  "file_templates": [],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
-    "_template/template_meta.md"
+    "_template/template_project.md"
   ],
-  "startup_templates": [
-    "_template/template_flower.md"
-  ]
+  "startup_templates": []
 }

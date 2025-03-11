@@ -3,7 +3,7 @@
   "livePreview": true,
   "promptDelete": false,
   "fileSortOrder": "alphabetical",
-  "vimMode": true,
+  "vimMode": false,
   "pdfExportSettings": {
     "pageSize": "Letter",
     "landscape": false,

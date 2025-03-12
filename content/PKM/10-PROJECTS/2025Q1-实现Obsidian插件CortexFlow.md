@@ -2,12 +2,11 @@
 title: 2025Q1-实现Obsidian插件CortexFlow
 tags: []
 date-created: 2025-03-05
-date-modified: 2025-03-08
+date-modified: 2025-03-11
 status: 进行中
 area: "[[00专业技术领域]]"
 cycle: 2025/03/01 - 2025/03/31
-type:
-  - project
+type: [project]
 ---
 
 ## 项目名称（动词开头）

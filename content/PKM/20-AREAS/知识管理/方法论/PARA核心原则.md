@@ -7,11 +7,11 @@ author: null
 description: null
 tags: [原则, PARA]
 date-created: 2025-02-22
-date-modified: 2025-03-05
+date-modified: 2025-03-11
 status: null
 ---
 
-> [!success]
+> [!success] 核心
 > PARA 笔记组织法聚焦于 " 以笔记驱动行动 " 而不是 " 笔记分类 "，知识管理的目的并非整理过去，而是面向未来
 
 ## 1. 行动导向原则

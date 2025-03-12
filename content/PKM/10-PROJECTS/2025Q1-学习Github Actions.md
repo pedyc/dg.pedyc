@@ -2,7 +2,7 @@
 title: 2025Q1-学习Github Actions
 tags: [DevOps, CI/CD]
 date-created: 2025-01-01
-date-modified: 2025-03-10
+date-modified: 2025-03-11
 status: 进行中
 area: ["[[00专业技术领域]]"]
 cycle: 2025/01/01 - 2025/03/31
@@ -30,19 +30,20 @@ type: [project]
 
 ## 🛠️ 执行引擎
 
-### 阶段一：准备期（2025/01/01 - 2025/01/10）
+### 阶段一：学习 GithubActions 基础（2025/01/01 - 2025/01/10）
 
-- [ ] 创建 [[学习路径脑图]]（涵盖 Secret 管理、Matrix 策略等）
+- [ ] Github Actions 的工作流程 👉[[16-关于工作流程 - GitHub 文档@annote|srAnnote@关于工作流程 - GitHub 文档]]
+- [ ] 缓存工作流👉[[17-缓存依赖项以加快工作流程 - GitHub 文档@annote|srAnnote@缓存依赖项以加快工作流程 - GitHub 文档]]
 - [ ] 收集 [[范例工作流库]]（精选社区 Top20 案例）
 
-### 阶段二：攻坚期（2025/01/11 - 2025/03/25）
+### 阶段二：Github Actions 实战（2025/01/11 - 2025/03/25）
 
 - [ ] **每日固定动作**：Review 一个复杂工作流并注释原理
 - [ ] **关键里程碑**：
 	- 2025/02/10：为 React 项目实现自动 Lint+Build+Deploy（链接到 [[项目1-前端流水线]]）
 	- 2025/03/15：通过 Matrix 策略实现多版本 Python 测试（链接到 [[压力测试报告]]）
 
-### 阶段三：收尾期（2025/03/26 - 2025/03/31）
+### 阶段三：Github Actions 进阶（2025/03/26 - 2025/03/31）
 
 - [ ] 封装 [[自定义Composite Action模板]]
 - [ ] 归档所有工作流配置至 [[GitHub-Actions-Playbook]]
@@ -51,12 +52,13 @@ type: [project]
 
 ## 📦 关联资源
 
-- [[GitHub官方指南]] 📚 核心工具（场景：YAML 语法/环境变量）
+- [Github官方指南](https://docs.github.com/en/actions) 📚 核心工具（场景：YAML 语法/环境变量）
 - 《GitHub Actions: Beyond the Basics》📘 书籍（推荐指数★★★★☆）
 - [[StackOverflow-GHA标签]] 💬 应急预案（触发条件：工作流报错排查）
 
 ## 🧩 成果与交付物
 
+- [[Github Actions新手指南]]
 - [[自动化流水线设计文档]]💎
 - [[可复用Action模板库]]💎
 - [[多环境部署checklist]]💎

@@ -21,9 +21,7 @@ export const AliasRedirects: QuartzEmitterPlugin = () => ({
 
     return graph
   },
-  async emit(ctx, content, _resources): Promise<FilePath[]> {
-    const fps: FilePath[] = []
-
+  async *emit(ctx, content, _resources) {
     for (const [_tree, file] of content) {
       const ogSlug = simplifySlug(file.data.slug!)
 
@@ -48,10 +46,7 @@ export const AliasRedirects: QuartzEmitterPlugin = () => ({
           slug: safeSlug as FullSlug,
           ext: ".html",
         })
-
-        fps.push(fp)
       }
     }
-    return fps
   },
 })

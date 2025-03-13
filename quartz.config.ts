@@ -26,7 +26,6 @@ const config: QuartzConfig = {
       "Private",
     ],
     defaultDateType: "created",
-    generateSocialImages: true,
     theme: {
       fontOrigin: "local",
       cdnCaching: true,
@@ -96,6 +95,7 @@ const config: QuartzConfig = {
       Plugin.Assets(),
       Plugin.Static(),
       Plugin.NotFoundPage(),
+      Plugin.CustomOgImages(),
     ],
   },
 };

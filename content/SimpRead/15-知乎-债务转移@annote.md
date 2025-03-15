@@ -1,14 +1,14 @@
 ---
 title: 15-知乎-债务转移@annote
 date-created: 2025-03-10
-date-modified: 2025-03-10
+date-modified: 2025-03-12
 alias: ["srAnnote@知乎-债务转移"]
 index: 15
 type: Simpread
 UID: 20250310134947
 ---
 
-## 知乎 - 债务转移
+## [[15-知乎-债务转移]]
 
 > [!timeline]+ 简介
 >
@@ -37,3 +37,11 @@ UID: 20250310134947
 > [!abstract]+ <mark style="background-color: #ffeb3b">Highlight</mark> [🧷](<http://localhost:7026/reading/15#id=1741585940634>)
 > 政府在汽车产业过剩之后必然会全面走向第三产业，即完成第三次经济转型，第三次经济转型的目的是通过第三产业实现债务外转。
 ^sran-1741585940634
+
+> [!abstract]+ <mark style="background-color: #ffeb3b">Highlight</mark> [🧷](<http://localhost:7026/reading/15#id=1741769314305>)
+> 因为美国去工业化完成以后，既不会有产能过剩危机，同时也失去了工业持续进步的基础，其依赖于工业经济模式的军事科技发展是不可能永远遥遥领先的。
+^sran-1741769314305
+
+> [!abstract]+ <mark style="background-color: #ffeb3b">Highlight</mark> [🧷](<http://localhost:7026/reading/15#id=1741769411061>)
+> 债务转移理论是基于 " 劳动价值 " 理论，结合凯恩斯货币经济学理论融合而生的经济发展规律性研究，我认为资本主义奖励机制（" 有限责任 " 与 " 私有财产神圣不可侵犯 "）对于生产力的发展有不可替代的作用，不宜单纯用剥削来评价劳动成果的不等价交换，应当以发展与分配之间的对立统一关系来客观看待社会经济发展规律。
+^sran-1741769411061

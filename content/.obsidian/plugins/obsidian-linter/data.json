@@ -285,8 +285,8 @@
   "filesToIgnore": [
     {
       "label": "排除绘图文件",
-      "match": "(.excaldraw)$",
-      "flags": "i"
+      "match": ".excalidraw",
+      "flags": "g"
     }
   ],
   "linterLocale": "system-default",

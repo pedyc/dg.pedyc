@@ -15,6 +15,7 @@ body {
 }
 
 [saved-theme="dark"] {
+
     // 黑暗模式背景色
     body {
         background-color: #0c141c;
@@ -32,12 +33,14 @@ body {
 
 // 黑暗模式高亮
 [saved-theme="dark"] mark {
-    /* background-color: hsla(57, 40%, 38%, 0.541); */ /* color: linear-gradient(120deg, #43d3ff 0%, #baaaff 80%); */
+    /* background-color: hsla(57, 40%, 38%, 0.541); */
+    /* color: linear-gradient(120deg, #43d3ff 0%, #baaaff 80%); */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-color: #f55454;
     background-image: linear-gradient(120deg, #43d3ff 0%, #baaaff 80%);
 }
+
 // 明亮模式高亮
 [saved-theme="light"] mark {
     background-color: unset;
@@ -88,6 +91,7 @@ body {
 
 // 标题
 .center {
+
     h1,
     h2,
     h3,
@@ -141,18 +145,22 @@ body[data-slug="thoughts/craft"] {
     & li:has(> img, > video) {
         list-style-type: none;
 
-        & > img,
-        & > video {
+        &>img,
+        &>video {
             margin: 1rem 0;
         }
     }
 
-    article > ul {
+    article>ul {
         padding-left: 0;
 
-        & > li {
+        &>li {
             list-style-type: none;
             margin: 1rem 0;
         }
     }
+}
+
+.explorer {
+    max-height: 80vh;
 }

@@ -19,6 +19,7 @@ export interface D3Config {
   showTags: boolean
   focusOnHover?: boolean
   enableRadial?: boolean
+  highlightBrowsingPath?: boolean
 }
 
 interface GraphOptions {
@@ -36,11 +37,12 @@ const defaultOptions: GraphOptions = {
     centerForce: 0.3,
     linkDistance: 30,
     fontSize: 0.6,
-    opacityScale: 1,
+    opacityScale: 1.5, // 增加透明度缩放系数
     showTags: true,
     removeTags: [],
     focusOnHover: false,
     enableRadial: false,
+    highlightBrowsingPath: false,
   },
   globalGraph: {
     drag: true,
@@ -51,11 +53,12 @@ const defaultOptions: GraphOptions = {
     centerForce: 0.3,
     linkDistance: 30,
     fontSize: 0.6,
-    opacityScale: 1,
+    opacityScale: 1.5, // 增加透明度缩放系数
     showTags: true,
     removeTags: [],
     focusOnHover: true,
     enableRadial: true,
+    highlightBrowsingPath: true,
   },
 }
 

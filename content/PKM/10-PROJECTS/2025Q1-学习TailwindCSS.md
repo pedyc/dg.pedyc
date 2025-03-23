@@ -1,13 +1,17 @@
 ---
-title: 2025Q2-启动颜文字项目
-tags: []
-date-created: 2025-03-04
-date-modified: 2025-03-22
-status: 规划中
+title: 2025Q1-学习TailwindCSS
+date-created: 2025-03-23
+date-modified: 2025-03-23
+status: 进行中｜已暂停｜已完成
 area: ["[[00-看板]]"]
 cycle: YYYY/MM/DD - YYYY/MM/DD
 type: [project]
 ---
+
+## 🔗依赖项目
+
+- [TailwindCSS中文文档 | TailwindCSS中文网](https://www.tailwindcss.cn/docs/installation)
+- 依赖项目 2
 
 ## 🎯 核心靶心（项目的主要目标）
 

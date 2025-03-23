@@ -68,6 +68,31 @@ type TweenNode = {
   stop: () => void
 }
 
+// 创建并管理tween动画组
+function createTweenGroup(): TweenNode {
+  const tweenGroup = new TweenGroup()
+
+  return {
+    update: tweenGroup.update.bind(tweenGroup),
+    stop() {
+      tweenGroup.getAll().forEach((tw) => tw.stop())
+    },
+  }
+}
+
+// 添加tween到组并启动
+function addTweenToGroup<T>(group: TweenGroup | TweenNode, target: T, props: Partial<T>, duration: number) {
+  // 使用新的推荐语法创建tween动画
+  const tween = new Tweened(target, true).to(props, duration)
+  if (group instanceof TweenGroup) {
+    group.add(tween)
+  } else if (typeof group === 'object' && group !== null) {
+    // 如果是TweenNode对象，不需要调用add方法
+    // TweenNode只有update和stop方法，不需要手动添加tween
+  }
+  return tween
+}
+
 async function renderGraph(container: string, fullSlug: FullSlug) {
   const slug = simplifySlug(fullSlug)
   const visited = getVisited()
@@ -255,7 +280,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
 
   function renderLinks() {
     tweens.get("link")?.stop()
-    const tweenGroup = new TweenGroup()
+    const tweenGroup = createTweenGroup()
 
     for (const l of linkRenderData) {
       let alpha = 1
@@ -267,21 +292,15 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
       }
 
       l.color = l.active ? computedStyleMap["--gray"] : computedStyleMap["--lightgray"]
-      tweenGroup.add(new Tweened<LinkRenderData>(l).to({ alpha }, 200))
+      addTweenToGroup(tweenGroup, l, { alpha }, 200).start()
     }
 
-    tweenGroup.getAll().forEach((tw) => tw.start())
-    tweens.set("link", {
-      update: tweenGroup.update.bind(tweenGroup),
-      stop() {
-        tweenGroup.getAll().forEach((tw) => tw.stop())
-      },
-    })
+    tweens.set("link", tweenGroup)
   }
 
   function renderLabels() {
     tweens.get("label")?.stop()
-    const tweenGroup = new TweenGroup()
+    const tweenGroup = createTweenGroup()
 
     const defaultScale = 1 / scale
     const activeScale = defaultScale * 1.1
@@ -289,41 +308,35 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
       const nodeId = n.simulationData.id
 
       if (hoveredNodeId === nodeId) {
-        tweenGroup.add(
-          new Tweened<Text>(n.label).to(
-            {
-              alpha: 1,
-              scale: { x: activeScale, y: activeScale },
-            },
-            100,
-          ),
-        )
+        addTweenToGroup(
+          tweenGroup,
+          n.label,
+          {
+            alpha: 1,
+            scale: { x: activeScale, y: activeScale },
+          },
+          100
+        ).start()
       } else {
-        tweenGroup.add(
-          new Tweened<Text>(n.label).to(
-            {
-              alpha: n.label.alpha,
-              scale: { x: defaultScale, y: defaultScale },
-            },
-            100,
-          ),
-        )
+        addTweenToGroup(
+          tweenGroup,
+          n.label,
+          {
+            alpha: n.label.alpha,
+            scale: { x: defaultScale, y: defaultScale },
+          },
+          100
+        ).start()
       }
     }
 
-    tweenGroup.getAll().forEach((tw) => tw.start())
-    tweens.set("label", {
-      update: tweenGroup.update.bind(tweenGroup),
-      stop() {
-        tweenGroup.getAll().forEach((tw) => tw.stop())
-      },
-    })
+    tweens.set("label", tweenGroup)
   }
 
   function renderNodes() {
     tweens.get("hover")?.stop()
 
-    const tweenGroup = new TweenGroup()
+    const tweenGroup = createTweenGroup()
     for (const n of nodeRenderData) {
       let alpha = 1
 
@@ -332,16 +345,10 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
         alpha = n.active ? 1 : 0.2
       }
 
-      tweenGroup.add(new Tweened<Graphics>(n.gfx, tweenGroup).to({ alpha }, 200))
+      addTweenToGroup(tweenGroup, n.gfx, { alpha }, 200).start()
     }
 
-    tweenGroup.getAll().forEach((tw) => tw.start())
-    tweens.set("hover", {
-      update: tweenGroup.update.bind(tweenGroup),
-      stop() {
-        tweenGroup.getAll().forEach((tw) => tw.stop())
-      },
-    })
+    tweens.set("hover", tweenGroup)
   }
 
   function renderPixiFromD3() {
@@ -382,10 +389,10 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
       interactive: false,
       eventMode: "none",
       text: n.text,
-      alpha: 0,
+      alpha: 0.3, // 修改初始透明度，使字体默认可见
       anchor: { x: 0.5, y: 1.2 },
       style: {
-        fontSize: fontSize * 15,
+        fontSize: fontSize * 12, // 减小字体大小系数，避免放大时过大
         fill: computedStyleMap["--dark"],
         fontFamily: computedStyleMap["--bodyFont"],
       },
@@ -512,7 +519,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
 
           // zoom adjusts opacity of labels too
           const scale = transform.k * opacityScale
-          let scaleOpacity = Math.max((scale - 1) / 3.75, 0)
+          let scaleOpacity = Math.max(Math.min((scale - 0.5) / 2, 1), 0.3) // 修改透明度计算，确保最小值为0.3，最大值为1
           const activeNodes = nodeRenderData.filter((n) => n.active).flatMap((n) => n.label)
 
           for (const label of labelsContainer.children) {
@@ -523,6 +530,8 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
         }),
     )
   }
+
+  let animationFrameId: number | null = null
 
   function animate(time: number) {
     for (const n of nodeRenderData) {
@@ -545,11 +554,16 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
 
     tweens.forEach((t) => t.update(time))
     app.renderer.render(stage)
-    requestAnimationFrame(animate)
+    animationFrameId = requestAnimationFrame(animate)
   }
 
-  const graphAnimationFrameHandle = requestAnimationFrame(animate)
-  window.addCleanup(() => cancelAnimationFrame(graphAnimationFrameHandle))
+  animationFrameId = requestAnimationFrame(animate)
+  window.addCleanup(() => {
+    if (animationFrameId !== null) {
+      cancelAnimationFrame(animationFrameId)
+      animationFrameId = null
+    }
+  })
 }
 
 document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {

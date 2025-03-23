@@ -1,16 +1,16 @@
 ---
+uid: 
 title: ReprintTypscriptDecorator
 aliases: []
-uid: 
 author: 
 description: 
+tags: [TS]
 date-created: 2024-09-16
-date-modified: 2024-11-19
+date-modified: 2025-03-17
 status: 
+categories: [算法]
 type: 
 url: https://mirone.me/zh-hans/a-complete-guide-to-typescript-decorator/
-tags: [TS]
-categories: [算法]
 ---
 
 > 原文转自：https://mirone.me/zh-hans/a-complete-guide-to-typescript-decorator/
@@ -226,9 +226,9 @@ type ClassDecorator = <TFunction extends Function>
 ```
 
 * @参数：
-    1. `target`: 类的构造器。
+		1. `target`: 类的构造器。
 * @返回：
-    如果类装饰器返回了一个值，她将会被用来代替原有的类构造器的声明。
+		如果类装饰器返回了一个值，她将会被用来代替原有的类构造器的声明。
 
 因此，类装饰器适合用于继承一个现有类并添加一些属性和方法。
 
@@ -302,10 +302,10 @@ type PropertyDecorator =
 ```
 
 * @参数：
-    1. `target`: 对于静态成员来说是类的构造器，对于实例成员来说是类的原型链。
-    2. `propertyKey`: 属性的名称。
+		1. `target`: 对于静态成员来说是类的构造器，对于实例成员来说是类的原型链。
+		2. `propertyKey`: 属性的名称。
 * @返回：
-    返回的结果将被忽略。
+		返回的结果将被忽略。
 
 除了用于收集信息外，属性装饰器也可以用来给类添加额外的方法和属性。 例如我们可以写一个装饰器来给某些属性添加监听器。
 
@@ -364,9 +364,9 @@ type MethodDecorator = <T>(
 ```
 
 * @参数：
-    1. `target`: 对于静态成员来说是类的构造器，对于实例成员来说是类的原型链。
-    2. `propertyKey`: 属性的名称。
-    3. `descriptor`: 属性的 [描述器](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)。
+		1. `target`: 对于静态成员来说是类的构造器，对于实例成员来说是类的原型链。
+		2. `propertyKey`: 属性的名称。
+		3. `descriptor`: 属性的 [描述器](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)。
 * @返回： 如果返回了值，它会被用于替代属性的描述器。
 
 方法装饰器不同于属性装饰器的地方在于 `descriptor` 参数。 通过这个参数我们可以修改方法原本的实现，添加一些共用逻辑。 例如我们可以给一些方法添加打印输入与输出的能力：
@@ -459,11 +459,11 @@ type ParameterDecorator = (
 ```
 
 * @参数：
-    1. `target`: 对于静态成员来说是类的构造器，对于实例成员来说是类的原型链。
-    2. `propertyKey`: 属性的名称 （注意是方法的名称，而不是参数的名称）。
-    3. `parameterIndex`: 参数在方法中所处的位置的下标。
+		1. `target`: 对于静态成员来说是类的构造器，对于实例成员来说是类的原型链。
+		2. `propertyKey`: 属性的名称 （注意是方法的名称，而不是参数的名称）。
+		3. `parameterIndex`: 参数在方法中所处的位置的下标。
 * @返回：
-    返回的值将会被忽略。
+		返回的值将会被忽略。
 
 单独的参数装饰器能做的事情很有限，它一般都被用于记录可被其它装饰器使用的信息。
 

@@ -7,14 +7,14 @@ author: ped_yc
 description: 
 tags: []
 date-created: 2025-02-25
-date-modified: 2025-03-08
+date-modified: 2025-03-15
 status: YCTODO
 ---
 
 > [!hint]
 > DeepSeek 的建议：https://chat.deepseek.com/a/chat/s/19ccca5f-3ea4-4c5b-81ab-ee732561746a
 
-## 项目介绍
+## 💬项目介绍
 
 ### 命名
 
@@ -39,12 +39,12 @@ status: YCTODO
 | **前端** | React + ECharts（数据展示） + Cytoscape.js（知识图谱交互）        |
 | **部署** | Docker 容器化 + AWS EC2（服务器部署）                         |
 
-## 分阶段学习路径
+## 📖分阶段学习路径
 
 1. 第一阶段：基础开发能力
 
 	- 学习 Python 和 JavaScript 语法，掌握 HTTP 接口和数据库基本操作。
-	- 实践：用 Flask/FastAPI 搭建一个简单的文本上传和分片接口。
+	- 实践：用 Flask/[FastAPI](https://fastapi.tiangolo.com/zh/learn/) 搭建一个简单的文本上传和分片接口。
 
 2. 第二阶段：NLP 与数据处理
 
@@ -67,7 +67,7 @@ status: YCTODO
 	- 结合 Docker 封装前后端服务，部署到云服务器。
 	- 优化分片算法和检索速度（如引入缓存、异步处理）。
 
-## 项目实施
+## 🚧项目实施
 
 ### 目录结构
 

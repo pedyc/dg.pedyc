@@ -11,11 +11,11 @@ export const sharedPageComponents: SharedLayout = {
     Component.Comments({
       provider: "giscus",
       options: {
-        repo: "ped-yc/dg.pedyc",
+        repo: "pedyc/dg.pedyc",
         repoId: "R_kgDOMwI1yg",
         category: "Announcements",
         categoryId: "DIC_kwDOMwI1ys4Civ4e",
-        themeUrl: "https://example.com/static/giscus",
+        themeUrl: "https://dg.pedyc.site/static/giscus",
         lightTheme: "light",
         darkTheme: "dark",
       },
@@ -23,7 +23,7 @@ export const sharedPageComponents: SharedLayout = {
   ],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
+      GitHub: "https://github.com/pedyc/dg.pedyc",
       "Discord Community": "https://discord.gg/cRFFHYye7t",
     },
   }),
@@ -32,16 +32,19 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.Breadcrumbs(),
+    Component.ConditionalRender({
+      component: Component.Breadcrumbs(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
-    Component.Darkmode(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
+    Component.Darkmode(), // Darkmode keeps its natural size
     Component.Explorer(),
   ],
 
@@ -61,8 +64,15 @@ export const defaultListPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
-    Component.Darkmode(),
+    Component.Flex({
+      components: [
+        {
+          Component: Component.Search(),
+          grow: true,
+        },
+        { Component: Component.Darkmode() },
+      ],
+    }),
     Component.Explorer(),
   ],
   right: [],

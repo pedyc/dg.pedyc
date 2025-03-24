@@ -20,6 +20,13 @@ import { registerEscapeHandler, removeAllChildren } from "./util"
 import { FullSlug, SimpleSlug, getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
 import { D3Config } from "../Graph"
 
+
+
+// 全局变量定义
+let stopAnimation = false
+const localGraphCleanups: (() => void)[] = []
+const globalGraphCleanups: (() => void)[] = []
+
 type GraphicsInfo = {
   color: string
   gfx: Graphics
@@ -86,19 +93,21 @@ function addTweenToGroup<T>(group: TweenGroup | TweenNode, target: T, props: Par
   const tween = new Tweened(target, true).to(props, duration)
   if (group instanceof TweenGroup) {
     group.add(tween)
-  } else if (typeof group === 'object' && group !== null) {
+  } else if (typeof group === 'object' && group !== null && 'update' in group && 'stop' in group) {
     // 如果是TweenNode对象，不需要调用add方法
     // TweenNode只有update和stop方法，不需要手动添加tween
+    // 但我们需要确保tween会被正确更新，所以这里不需要额外操作
   }
   return tween
 }
 
-async function renderGraph(container: string, fullSlug: FullSlug) {
+async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<() => void> {
+  // 重置stopAnimation为false，确保新的渲染可以正常进行
+  stopAnimation = false
+
   const slug = simplifySlug(fullSlug)
   const visited = getVisited()
-  const graph = document.getElementById(container)
-  if (!graph) return
-  removeAllChildren(graph)
+  removeAllChildren(container)
 
   let {
     drag: enableDrag,
@@ -114,7 +123,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     showTags,
     focusOnHover,
     enableRadial,
-  } = JSON.parse(graph.dataset["cfg"]!) as D3Config
+  } = JSON.parse(container.dataset["cfg"]!) as D3Config
 
   const data: Map<SimpleSlug, ContentDetails> = new Map(
     Object.entries<ContentDetails>(await fetchData).map(([k, v]) => [
@@ -188,20 +197,18 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
       })),
   }
 
-  const width = graph.offsetWidth
-  const height = Math.max(graph.offsetHeight, 250)
+  const width = container.offsetWidth
+  const height = Math.max(container.offsetHeight, 250)
 
   // we virtualize the simulation and use pixi to actually render it
-  // Calculate the radius of the container circle
-  const radius = Math.min(width, height) / 2 - 40 // 40px padding
   const simulation: Simulation<NodeData, LinkData> = forceSimulation<NodeData>(graphData.nodes)
     .force("charge", forceManyBody().strength(-100 * repelForce))
     .force("center", forceCenter().strength(centerForce))
     .force("link", forceLink(graphData.links).distance(linkDistance))
     .force("collide", forceCollide<NodeData>((n) => nodeRadius(n)).iterations(3))
 
-  if (enableRadial)
-    simulation.force("radial", forceRadial(radius * 0.8, width / 2, height / 2).strength(0.3))
+  const radius = (Math.min(width, height) / 2) * 0.8
+  if (enableRadial) simulation.force("radial", forceRadial(radius).strength(0.2))
 
   // precompute style prop strings as pixi doesn't support css variables
   const cssVars = [
@@ -308,6 +315,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
       const nodeId = n.simulationData.id
 
       if (hoveredNodeId === nodeId) {
+        // 悬停时始终显示文字
         addTweenToGroup(
           tweenGroup,
           n.label,
@@ -318,6 +326,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
           100
         ).start()
       } else {
+        // 非悬停时保持当前透明度
         addTweenToGroup(
           tweenGroup,
           n.label,
@@ -372,7 +381,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     resolution: window.devicePixelRatio,
     eventMode: "static",
   })
-  graph.appendChild(app.canvas)
+  container.appendChild(app.canvas)
 
   const stage = app.stage
   stage.interactive = false
@@ -389,7 +398,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
       interactive: false,
       eventMode: "none",
       text: n.text,
-      alpha: 0.3, // 修改初始透明度，使字体默认可见
+      alpha: 0, // 设置初始透明度为0，默认不显示文字
       anchor: { x: 0.5, y: 1.2 },
       style: {
         fontSize: fontSize * 12, // 减小字体大小系数，避免放大时过大
@@ -411,7 +420,6 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     })
       .circle(0, 0, nodeRadius(n))
       .fill({ color: isTagNode ? computedStyleMap["--light"] : color(n) })
-      .stroke({ width: isTagNode ? 2 : 0, color: color(n) })
       .on("pointerover", (e) => {
         updateHoverInfo(e.target.label)
         oldLabelOpacity = label.alpha
@@ -426,6 +434,10 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
           renderPixiFromD3()
         }
       })
+
+    if (isTagNode) {
+      gfx.stroke({ width: 2, color: computedStyleMap["--tertiary"] })
+    }
 
     nodesContainer.addChild(gfx)
     labelsContainer.addChild(label)
@@ -519,7 +531,9 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
 
           // zoom adjusts opacity of labels too
           const scale = transform.k * opacityScale
-          let scaleOpacity = Math.max(Math.min((scale - 0.5) / 2, 1), 0.3) // 修改透明度计算，确保最小值为0.3，最大值为1
+          // 设置缩放阈值，只有当缩放级别超过阈值时才显示文字
+          const zoomThreshold = 1.2
+          let scaleOpacity = transform.k < zoomThreshold ? 0 : Math.max(Math.min((scale - 0.5) / 2, 1), 0.3)
           const activeNodes = nodeRenderData.filter((n) => n.active).flatMap((n) => n.label)
 
           for (const label of labelsContainer.children) {
@@ -534,6 +548,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
   let animationFrameId: number | null = null
 
   function animate(time: number) {
+    if (stopAnimation) return
     for (const n of nodeRenderData) {
       const { x, y } = n.simulationData
       if (!x || !y) continue
@@ -558,65 +573,115 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
   }
 
   animationFrameId = requestAnimationFrame(animate)
-  window.addCleanup(() => {
+
+  // 返回清理函数
+  return () => {
+    // 停止动画
+    stopAnimation = true
+
+    // 清理动画帧
     if (animationFrameId !== null) {
       cancelAnimationFrame(animationFrameId)
       animationFrameId = null
     }
-  })
+
+    // 停止所有tween动画
+    tweens.forEach((tween) => tween.stop())
+    tweens.clear()
+
+    // 移除canvas
+    if (app.canvas && app.canvas.parentNode) {
+      app.canvas.parentNode.removeChild(app.canvas)
+    }
+
+    // 销毁应用
+    app.destroy(true, { children: true })
+  }
 }
 
 document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
   const slug = e.detail.url
   addToVisited(simplifySlug(slug))
-  await renderGraph("graph-container", slug)
 
-  // Function to re-render the graph when the theme changes
-  const handleThemeChange = () => {
-    renderGraph("graph-container", slug)
+  // 清理本地图形的函数
+  function cleanupLocalGraphs() {
+    localGraphCleanups.forEach((cleanup) => cleanup())
+    localGraphCleanups.length = 0
   }
 
-  // event listener for theme change
-  document.addEventListener("themechange", handleThemeChange)
+  // 清理全局图形的函数
+  function cleanupGlobalGraphs() {
+    globalGraphCleanups.forEach((cleanup) => cleanup())
+    globalGraphCleanups.length = 0
+  }
 
-  // cleanup for the event listener
+  async function renderLocalGraph() {
+    cleanupLocalGraphs()
+    const localGraphContainers = document.getElementsByClassName("graph-container")
+    for (const container of localGraphContainers) {
+      localGraphCleanups.push(await renderGraph(container as HTMLElement, slug))
+    }
+  }
+
+  await renderLocalGraph()
+  const handleThemeChange = () => {
+    void renderLocalGraph()
+  }
+
+  document.addEventListener("themechange", handleThemeChange)
   window.addCleanup(() => {
     document.removeEventListener("themechange", handleThemeChange)
   })
 
-  const container = document.getElementById("global-graph-outer")
-  const sidebar = container?.closest(".sidebar") as HTMLElement
-
-  function renderGlobalGraph() {
+  const containers = [...document.getElementsByClassName("global-graph-outer")] as HTMLElement[]
+  async function renderGlobalGraph() {
     const slug = getFullSlug(window)
-    container?.classList.add("active")
-    if (sidebar) {
-      sidebar.style.zIndex = "1"
-    }
+    for (const container of containers) {
+      container.classList.add("active")
+      const sidebar = container.closest(".sidebar") as HTMLElement
+      if (sidebar) {
+        sidebar.style.zIndex = "1"
+      }
 
-    renderGraph("global-graph-container", slug)
-    registerEscapeHandler(container, hideGlobalGraph)
+      const graphContainer = container.querySelector(".global-graph-container") as HTMLElement
+      registerEscapeHandler(container, hideGlobalGraph)
+      if (graphContainer) {
+        globalGraphCleanups.push(await renderGraph(graphContainer, slug))
+      }
+    }
   }
 
   function hideGlobalGraph() {
-    container?.classList.remove("active")
-    if (sidebar) {
-      sidebar.style.zIndex = ""
+    cleanupGlobalGraphs()
+    for (const container of containers) {
+      container.classList.remove("active")
+      const sidebar = container.closest(".sidebar") as HTMLElement
+      if (sidebar) {
+        sidebar.style.zIndex = ""
+      }
     }
   }
 
   async function shortcutHandler(e: HTMLElementEventMap["keydown"]) {
     if (e.key === "g" && (e.ctrlKey || e.metaKey) && !e.shiftKey) {
       e.preventDefault()
-      const globalGraphOpen = container?.classList.contains("active")
-      globalGraphOpen ? hideGlobalGraph() : renderGlobalGraph()
+      const anyGlobalGraphOpen = containers.some((container) =>
+        container.classList.contains("active"),
+      )
+      anyGlobalGraphOpen ? hideGlobalGraph() : renderGlobalGraph()
     }
   }
 
-  const containerIcon = document.getElementById("global-graph-icon")
-  containerIcon?.addEventListener("click", renderGlobalGraph)
-  window.addCleanup(() => containerIcon?.removeEventListener("click", renderGlobalGraph))
+  const containerIcons = document.getElementsByClassName("global-graph-icon")
+  Array.from(containerIcons).forEach((icon) => {
+    icon.addEventListener("click", renderGlobalGraph)
+    window.addCleanup(() => icon.removeEventListener("click", renderGlobalGraph))
+  })
 
   document.addEventListener("keydown", shortcutHandler)
-  window.addCleanup(() => document.removeEventListener("keydown", shortcutHandler))
+  window.addCleanup(() => {
+    document.removeEventListener("keydown", shortcutHandler)
+    cleanupLocalGraphs()
+    cleanupGlobalGraphs()
+  })
 })

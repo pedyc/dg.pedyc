@@ -14,7 +14,7 @@
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
     "docs": "npx quartz build --serve -d docs",
-    "server": "npx quartz build --serve -d content --port 8081 --wsPort 3012",
+    "server": "npx quartz build --serve -d content --port 8081 --wsPort 3000",
     "build": "npx quartz build",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",

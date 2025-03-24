@@ -232,6 +232,14 @@ See the [documentation](https://quartz.jzhao.xyz) for how to get started.
  * @param {*} argv arguments for `build`
  */
 export async function handleBuild(argv) {
+  console.log('argv', argv)
+  console.log(chalk.bgGreen.black(`\n Quartz v${version} \n`));
+
+  const esConfigPath = path.join(cwd, "./esbuild.config.mjs");
+  const esConfigUrl = pathToFileURL(esConfigPath).href;
+  const { default: esConfig } = await import(esConfigUrl);
+
+  await esbuild.build(esConfig);
   if (argv.serve) {
     argv.watch = true
   }
@@ -350,7 +358,7 @@ export async function handleBuild(argv) {
     clientRefresh();
   };
 
-  let clientRefresh = () => {}
+  let clientRefresh = () => { }
   if (argv.serve) {
     const connections = []
     clientRefresh = () => connections.forEach((conn) => conn.send("rebuild"))
@@ -360,7 +368,8 @@ export async function handleBuild(argv) {
     }
 
     await build(clientRefresh);
-    const server = http.createServer(async (req, res) => {
+    // 创建请求处理函数
+    const requestHandler = async (req, res) => {
       if (argv.baseDir && !req.url?.startsWith(argv.baseDir)) {
         console.log(
           chalk.red(
@@ -456,12 +465,22 @@ export async function handleBuild(argv) {
         }
       }
 
-      return serve()
-    })
+      return serve();
+    };
 
-    server.listen(argv.port)
-    const wss = new WebSocketServer({ port: argv.wsPort })
-    wss.on("connection", (ws) => connections.push(ws))
+    // 保存服务器配置
+    currentServerConfig = {
+      port: argv.port,
+      requestHandler: requestHandler
+    };
+
+    // 创建并启动HTTP服务器
+    serverInstance = http.createServer(requestHandler);
+    serverInstance.listen(argv.port);
+
+    // 创建WebSocket服务器
+    wss = new WebSocketServer({ port: argv.wsPort });
+    wss.on("connection", (ws) => connections.push(ws));
     console.log(
       chalk.cyan(
         `Started a Quartz server listening at http://localhost:${argv.port}${argv.baseDir}`,
@@ -638,20 +657,49 @@ export async function handleSync(argv) {
 // 在文件顶部添加模块级变量声明
 let wss = null
 
+// 用于存储当前的HTTP服务器实例和配置
+let serverInstance = null
+let currentServerConfig = null
+
 process.on('uncaughtException', (err) => {
   if (err.code === 'EACCES') {
-    console.log('端口访问被拒绝，尝试备用端口...')
-    if (wss) {
+    console.log(chalk.red('端口访问被拒绝，尝试备用端口...'))
+    if (wss && serverInstance && currentServerConfig) {
       const currentPort = wss.options.port
-      const newPort = currentPort + Math.floor(Math.random() * 50) + 100
+      const newWsPort = currentPort + Math.floor(Math.random() * 50) + 100
+      const currentHttpPort = currentServerConfig.port || 8080
+      const newHttpPort = currentHttpPort + Math.floor(Math.random() * 50) + 100
+      const connections = []
 
-      // 关闭旧服务器
-      wss.close()
+      // 关闭旧WebSocket服务器
+      wss.close(() => {
+        console.log(chalk.yellow(`旧WebSocket服务器已关闭`))
+      })
 
-      // 修复连接事件监听（补充回调函数）
-      wss = new WebSocketServer({ port: newPort })
-      wss.on("connection", (ws) => connections.push(ws)) // 添加回调函数
-      console.log(chalk.yellow(`WebSocket 端口已切换至: ${newPort}`))
+      // 关闭旧HTTP服务器
+      serverInstance.close(() => {
+        console.log(chalk.yellow(`旧HTTP服务器已关闭`))
+
+        // 创建新的HTTP服务器
+        serverInstance = http.createServer(currentServerConfig.requestHandler)
+        serverInstance.listen(newHttpPort)
+
+        // 创建新的WebSocket服务器
+        wss = new WebSocketServer({ port: newWsPort })
+        wss.on("connection", (ws) => connections.push(ws))
+
+        // 更新当前配置
+        currentServerConfig.port = newHttpPort
+
+        console.log(chalk.yellow(`WebSocket 端口已切换至: ${newWsPort}`))
+        console.log(chalk.cyan(`Quartz 服务器已重新启动，监听端口: http://localhost:${newHttpPort}`))
+      })
+    } else {
+      console.log(chalk.red(`无法重新启动服务器，服务器实例未初始化`))
     }
+  } else {
+    console.error(chalk.red(`未处理的异常: ${err.message}`))
+    console.error(err.stack)
   }
 });
+

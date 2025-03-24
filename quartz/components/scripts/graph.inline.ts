@@ -93,19 +93,21 @@ function addTweenToGroup<T>(group: TweenGroup | TweenNode, target: T, props: Par
   const tween = new Tweened(target, true).to(props, duration)
   if (group instanceof TweenGroup) {
     group.add(tween)
-  } else if (typeof group === 'object' && group !== null) {
+  } else if (typeof group === 'object' && group !== null && 'update' in group && 'stop' in group) {
     // 如果是TweenNode对象，不需要调用add方法
     // TweenNode只有update和stop方法，不需要手动添加tween
+    // 但我们需要确保tween会被正确更新，所以这里不需要额外操作
   }
   return tween
 }
 
-async function renderGraph(container: string, fullSlug: FullSlug) {
+async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<() => void> {
+  // 重置stopAnimation为false，确保新的渲染可以正常进行
+  stopAnimation = false
+
   const slug = simplifySlug(fullSlug)
   const visited = getVisited()
-  const graph = document.getElementById(container)
-  if (!graph) return
-  removeAllChildren(graph)
+  removeAllChildren(container)
 
   let {
     drag: enableDrag,
@@ -313,6 +315,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
       const nodeId = n.simulationData.id
 
       if (hoveredNodeId === nodeId) {
+        // 悬停时始终显示文字
         addTweenToGroup(
           tweenGroup,
           n.label,
@@ -323,6 +326,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
           100
         ).start()
       } else {
+        // 非悬停时保持当前透明度
         addTweenToGroup(
           tweenGroup,
           n.label,
@@ -394,7 +398,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
       interactive: false,
       eventMode: "none",
       text: n.text,
-      alpha: 0.3, // 修改初始透明度，使字体默认可见
+      alpha: 0, // 设置初始透明度为0，默认不显示文字
       anchor: { x: 0.5, y: 1.2 },
       style: {
         fontSize: fontSize * 12, // 减小字体大小系数，避免放大时过大
@@ -527,7 +531,9 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
 
           // zoom adjusts opacity of labels too
           const scale = transform.k * opacityScale
-          let scaleOpacity = Math.max(Math.min((scale - 0.5) / 2, 1), 0.3) // 修改透明度计算，确保最小值为0.3，最大值为1
+          // 设置缩放阈值，只有当缩放级别超过阈值时才显示文字
+          const zoomThreshold = 1.2
+          let scaleOpacity = transform.k < zoomThreshold ? 0 : Math.max(Math.min((scale - 0.5) / 2, 1), 0.3)
           const activeNodes = nodeRenderData.filter((n) => n.active).flatMap((n) => n.label)
 
           for (const label of labelsContainer.children) {
@@ -567,20 +573,57 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
   }
 
   animationFrameId = requestAnimationFrame(animate)
-  window.addCleanup(() => {
+
+  // 返回清理函数
+  return () => {
+    // 停止动画
+    stopAnimation = true
+
+    // 清理动画帧
     if (animationFrameId !== null) {
       cancelAnimationFrame(animationFrameId)
       animationFrameId = null
     }
-  })
+
+    // 停止所有tween动画
+    tweens.forEach((tween) => tween.stop())
+    tweens.clear()
+
+    // 移除canvas
+    if (app.canvas && app.canvas.parentNode) {
+      app.canvas.parentNode.removeChild(app.canvas)
+    }
+
+    // 销毁应用
+    app.destroy(true, { children: true })
+  }
 }
 
 document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
   const slug = e.detail.url
   addToVisited(simplifySlug(slug))
-  await renderGraph("graph-container", slug)
 
-  // Function to re-render the graph when the theme changes
+  // 清理本地图形的函数
+  function cleanupLocalGraphs() {
+    localGraphCleanups.forEach((cleanup) => cleanup())
+    localGraphCleanups.length = 0
+  }
+
+  // 清理全局图形的函数
+  function cleanupGlobalGraphs() {
+    globalGraphCleanups.forEach((cleanup) => cleanup())
+    globalGraphCleanups.length = 0
+  }
+
+  async function renderLocalGraph() {
+    cleanupLocalGraphs()
+    const localGraphContainers = document.getElementsByClassName("graph-container")
+    for (const container of localGraphContainers) {
+      localGraphCleanups.push(await renderGraph(container as HTMLElement, slug))
+    }
+  }
+
+  await renderLocalGraph()
   const handleThemeChange = () => {
     void renderLocalGraph()
   }

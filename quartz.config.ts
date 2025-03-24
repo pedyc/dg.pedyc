@@ -26,8 +26,9 @@ const config: QuartzConfig = {
       "Private",
     ],
     defaultDateType: "created",
+    generateSocialImages: false,
     theme: {
-      fontOrigin: "local",
+      fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
         header: "LXGW WenKai GB Screen",
@@ -95,8 +96,8 @@ const config: QuartzConfig = {
       Plugin.Assets(),
       Plugin.Static(),
       Plugin.NotFoundPage(),
-      // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      // Comment out CustomOgImages to speed up build time and avoid font loading issues
+      // Plugin.CustomOgImages(),
     ],
   },
 };

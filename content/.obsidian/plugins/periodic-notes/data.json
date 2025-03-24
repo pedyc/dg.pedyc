@@ -1,0 +1,31 @@
+{
+  "showGettingStartedBanner": true,
+  "hasMigratedDailyNoteSettings": true,
+  "hasMigratedWeeklyNoteSettings": true,
+  "daily": {
+    "folder": "PKM/20-AREAS/Diary",
+    "template": "_template/template_diary",
+    "enabled": true
+  },
+  "weekly": {
+    "format": "gggg-[W]ww",
+    "folder": "PKM/20-AREAS/Diary",
+    "template": "_template/template_week",
+    "enabled": true
+  },
+  "monthly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  },
+  "quarterly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  },
+  "yearly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  }
+}

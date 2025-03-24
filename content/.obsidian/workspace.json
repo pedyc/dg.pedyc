@@ -38,78 +38,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/20-AREAS/专业技术/00专业技术领域.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "00专业技术领域"
-            }
-          },
-          {
-            "id": "89ec5b6906ec1bf6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/10-PROJECTS/2025Q1-求职前端岗位.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2025Q1-求职前端岗位"
-            }
-          },
-          {
-            "id": "3a163f67661d26b7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PKM/30-RESOURCES/个人成长/技能矩阵.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "技能矩阵"
-            }
-          },
-          {
-            "id": "908c07e645efe239",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "PKM/10-PROJECTS/2025Q1-学习TailwindCSS.md",
                 "mode": "source",
                 "source": false,
@@ -126,6 +54,54 @@
               },
               "icon": "lucide-file",
               "title": "2025Q1-学习TailwindCSS"
+            }
+          },
+          {
+            "id": "ddc0927751cedeb6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/10-PROJECTS/2025Q1-学习node.js.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025Q1-学习node.js"
+            }
+          },
+          {
+            "id": "89ec5b6906ec1bf6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/Diary/2025-W12.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025-W12"
             }
           },
           {
@@ -153,7 +129,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       },
       {
         "id": "d965b11c15133649",
@@ -166,7 +142,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "PKM/10-PROJECTS/2025Q1-学习TailwindCSS.md",
+                "file": "PKM/10-PROJECTS/2025Q1-学习node.js.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -180,21 +156,21 @@
                   "collapse-color-groups": true,
                   "colorGroups": [],
                   "collapse-display": false,
-                  "showArrow": false,
-                  "textFadeMultiplier": -0.6,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
+                  "showArrow": true,
+                  "textFadeMultiplier": -2,
+                  "nodeSizeMultiplier": 1.2484375,
+                  "lineSizeMultiplier": 2.0140625,
                   "collapse-forces": true,
                   "centerStrength": 0.518713248970312,
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.5280271663017599,
-                  "close": true
+                  "scale": 1.373846314171142,
+                  "close": false
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "2025Q1-学习TailwindCSS 的关系图"
+              "title": "2025Q1-学习node.js 的关系图"
             }
           }
         ]
@@ -247,13 +223,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PKM/10-PROJECTS/2025Q1-学习Jest.md",
+                "file": "PKM/10-PROJECTS/2025Q1-学习node.js.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025Q1-学习Jest 的大纲"
+              "title": "2025Q1-学习node.js 的大纲"
             }
           },
           {
@@ -265,7 +241,7 @@
                 "sortOrder": "frequency",
                 "useHierarchy": false,
                 "showSearch": true,
-                "searchQuery": "知识"
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "标签"
@@ -277,7 +253,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "folder",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -288,8 +264,7 @@
               "title": "搜索"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "2e8c3d745c458fc4",
@@ -398,53 +373,51 @@
       "cmdr:堆叠/取消堆叠标签页": false,
       "obsidian-local-images-plus:Local Images Plus  0.16.3\r\nLocalize attachments (plugin folder)": false,
       "templater-obsidian:Templater": false,
-      "obsidian42-brat:BRAT": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "obsidian-projects:打开项目": false
     }
   },
-  "active": "908c07e645efe239",
+  "active": "3d6eaac8f088e7f1",
   "lastOpenFiles": [
-    "PKM/10-PROJECTS/2025Q2-启动颜文字项目.md",
-    "PKM/10-PROJECTS/2025Q1-学习TailwindCSS.md",
-    "PKM/30-RESOURCES/个人成长/技能矩阵.md",
-    "PKM/10-PROJECTS/2025Q1-求职前端岗位.md",
-    "SimpRead/backup/simpread_config@20250323162303.json",
-    "PKM/20-AREAS/Diary/2025-03-23.md",
-    "PKM/10-PROJECTS/2025Q1-学习Github Actions.md",
     "PKM/20-AREAS/专业技术/00专业技术领域.md",
+    "PKM/10-PROJECTS/2025Q1-学习TailwindCSS.md",
+    "PKM/30-RESOURCES/技术资产/TailwindCSS学习指南.md",
+    "SimpRead/backup/simpread_config@20250324164510.json",
+    "SimpRead/backup/simpread_config@20250324164323.json",
+    "SimpRead/backup/simpread_config@20250324163923.json",
+    "SimpRead/backup/simpread_config@20250324163710.json",
+    "SimpRead/backup/simpread_config@20250324163707.json",
+    "SimpRead/backup/simpread_config@20250324163700.json",
+    "SimpRead/backup/simpread_config@20250324163649.json",
+    "SimpRead/backup/simpread_config@20250324163647.json",
+    "PKM/20-AREAS/Diary/2025-03-24.md",
+    "PKM/20-AREAS/Diary/2025-W12.md",
+    "PKM/30-RESOURCES/个人成长/技能矩阵.md",
+    "_template/template_week.md",
+    "PKM/20-AREAS/Diary/2025-W13.md",
+    "PKM/10-PROJECTS/2025Q1-求职前端岗位.md",
+    "PKM/20-AREAS/Diary/2025-03-23.md",
+    "_template/template_resource.md",
+    "_template/template_project.md",
+    "PKM/20-AREAS/Diary/2025-W10.md",
+    "PKM/20-AREAS/Diary/2025-W11.md",
+    "_template/template_diary.md",
+    "_template/template_meta.md",
+    "_template/template_archive.md",
+    "PKM/10-PROJECTS/2025Q2-启动颜文字项目.md",
+    "SimpRead/backup/simpread_config@20250323162303.json",
+    "PKM/10-PROJECTS/2025Q1-学习Github Actions.md",
     "PKM/10-PROJECTS/2025Q1-前端框架对比.md",
     "PKM/10-PROJECTS/2025Q1-学习node.js.md",
     "PKM/10-PROJECTS/2025Q1-学习Jest.md",
     "PKM/10-PROJECTS/2025Q1-学习Docker.md",
     "PKM/10-PROJECTS/2025Q1-清理待办列表.md",
     "PKM/20-AREAS/Diary/2025-03-22.md",
-    "SimpRead/20-🚀 My 2025 Stack： A Modern and Optimized Setup _ by Alexandre Lebailly _ Jan_ 2025 _ Medium.md",
-    "PKM/20-AREAS/Diary/2025-03-21.md",
-    "PKM/20-AREAS/Diary/2025-03-20.md",
     "SimpRead/_resources/20-🚀 My 2025 Stack： A Modern and Optimized Setup _ by Alexandre Lebailly _ Jan_ 2025 _ Medium/7bf942d4dcc65c455f651b333b4edf8a_MD5.jpg",
     "SimpRead/_resources/20-🚀 My 2025 Stack： A Modern and Optimized Setup _ by Alexandre Lebailly _ Jan_ 2025 _ Medium/62797cd9faa082ceca5716375b619b0f_MD5.jpg",
     "SimpRead/_resources/20-🚀 My 2025 Stack： A Modern and Optimized Setup _ by Alexandre Lebailly _ Jan_ 2025 _ Medium",
-    "PKM/20-AREAS/Diary/2025-03-19.md",
-    "PKM/20-AREAS/Blog/“历史是螺旋上升的”应该怎么解读？.md",
-    "SimpRead/backup/simpread_config@20250318150346.json",
-    "PKM/20-AREAS/Diary/2025-03-18.md",
-    "PKM/20-AREAS/Diary/_resources",
-    "PKM/20-AREAS/Diary/2025-03-17.md",
-    "PKM/20-AREAS/Diary/2025-03-15.md",
-    "PKM/20-AREAS/Diary/2025-03-16.md",
-    "PKM/20-AREAS/Blog/博客选题列表.md",
-    "PKM/20-AREAS/Blog/ReprintTypscriptDecorator.md",
-    "PKM/20-AREAS/Blog/我的知识管理方法.md",
-    "PKM/20-AREAS/Blog/JS模块化梳理.md",
-    "SimpRead/backup/simpread_config@20250316203205.json",
     "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.svg",
-    "_resources/index",
     "banner.svg",
-    "Excalidraw/Lib/simple-sticky-notes.excalidrawlib",
     "Excalidraw/Scripts/Downloaded/Add Connector Point.svg",
-    "SimpRead/backup/simpread_config@20250315115942.json",
-    "SimpRead/backup/simpread_config@20250315115940.json",
-    "SimpRead/backup/simpread_config@20250315115937.json",
     "SimpRead/_resources/19-JavaScript 中各种源码实现 - JavaScript 进阶之路 - SegmentFault 思否/b7b8b0a80f493763b6097635e59de867_MD5.jpg",
     "SimpRead/_resources/19-重新使用工作流 - GitHub 文档/b23fbd9db0bf05696a654678cef75453_MD5.jpg",
     "SimpRead/_resources/18-重新使用工作流 - GitHub 文档/b23fbd9db0bf05696a654678cef75453_MD5.jpg",

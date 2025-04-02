@@ -20,7 +20,8 @@
     "format": "npx prettier . --write",
     "test": "tsx ./quartz/util/path.test.ts && tsx ./quartz/depgraph.test.ts",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
-    "serve": "npx quartz serve"
+    "serve": "npx quartz serve",
+    "preinstall": "npm install --no-save @napi-rs/simple-git@latest"
   },
   "engines": {
     "npm": ">=9.3.1",
@@ -36,6 +37,9 @@
   ],
   "bin": {
     "quartz": "./quartz/bootstrap-cli.mjs"
+  },
+  "optionalDependencies": {
+    "@napi-rs/simple-git-linux-x64-gnu": "0.1.19"
   },
   "dependencies": {
     "@clack/prompts": "^0.10.0",

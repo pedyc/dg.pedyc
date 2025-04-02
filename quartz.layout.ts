@@ -6,7 +6,6 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
-    Component.Graph(),
     Component.Backlinks(),
     Component.Comments({
       provider: "giscus",
@@ -64,15 +63,8 @@ export const defaultListPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-      ],
-    }),
+    Component.Search(),
+    Component.Darkmode(), // Darkmode keeps its natural size
     Component.Explorer(),
   ],
   right: [],

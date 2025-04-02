@@ -6,7 +6,7 @@
       {
         "id": "f6d3f15ace6e2110",
         "type": "tabs",
-        "dimension": 60.32977691561591,
+        "dimension": 68.89830508474576,
         "children": [
           {
             "id": "5a2702a2fb21418a",
@@ -62,7 +62,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKM/10-PROJECTS/2025Q1-学习node.js.md",
+                "file": "PKM/10-PROJECTS/2025Q1-求职前端岗位.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -77,7 +77,325 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025Q1-学习node.js"
+              "title": "2025Q1-求职前端岗位"
+            }
+          },
+          {
+            "id": "fd67a0de256cee64",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/30-RESOURCES/技术资产/算法真题/算法真题库.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "算法真题库"
+            }
+          },
+          {
+            "id": "c2cb36088a13a577",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/30-RESOURCES/技术资产/算法真题/算法真题库.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "算法真题库"
+            }
+          },
+          {
+            "id": "1dc0d105cd7349db",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00算法真题库"
+            }
+          },
+          {
+            "id": "8829c7836c1902cb",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.svg"
+              },
+              "icon": "lucide-image",
+              "title": "Storyboard - Compare link-based DNP-based and list based PKM"
+            }
+          },
+          {
+            "id": "0b8e5712a2b4da01",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00算法真题库"
+            }
+          },
+          {
+            "id": "b41863d1be634d66",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00算法真题库"
+            }
+          },
+          {
+            "id": "01ff03a5c1d1b820",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00算法真题库"
+            }
+          },
+          {
+            "id": "71cee4cc2be0321f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00算法真题库"
+            }
+          },
+          {
+            "id": "40991569d402ae67",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00算法真题库"
+            }
+          },
+          {
+            "id": "7417a88895a89d31",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/Diary/2025-04-02.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025-04-02"
+            }
+          },
+          {
+            "id": "3be4bc169d673a3b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/20-AREAS/Diary/2025-04-02.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025-04-02"
+            }
+          },
+          {
+            "id": "4597faa02809309d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00算法真题库"
+            }
+          },
+          {
+            "id": "ba76757244dc13d0",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://leetcode.cn/problems/rotate-image/solutions/1228078/48-xuan-zhuan-tu-xiang-fu-zhu-ju-zhen-yu-jobi/",
+                "title": "48. 旋转图像 - 力扣（LeetCode）",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "48. 旋转图像 - 力扣（LeetCode）"
+            }
+          },
+          {
+            "id": "5f1579e57c10842b",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://libraries.excalidraw.com/?target=_blank&referrer=app%3A%2F%2Fobsidian.md&useHash=true&token=kZJp6HIT7g80HCoTaEvLa&theme=dark&version=2&sort=default",
+                "title": "Excalidraw Libraries",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Excalidraw Libraries"
+            }
+          },
+          {
+            "id": "a36c97e952cb20b4",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://libraries.excalidraw.com/?target=_blank&referrer=app%3A%2F%2Fobsidian.md&useHash=true&token=kZJp6HIT7g80HCoTaEvLa&theme=dark&version=2&sort=default",
+                "title": "Excalidraw Libraries",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Excalidraw Libraries"
             }
           },
           {
@@ -129,12 +447,12 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 14
       },
       {
         "id": "d965b11c15133649",
         "type": "tabs",
-        "dimension": 39.67022308438409,
+        "dimension": 31.101694915254235,
         "children": [
           {
             "id": "2e7c63e0f24e6efa",
@@ -142,15 +460,15 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "PKM/10-PROJECTS/2025Q1-学习node.js.md",
+                "file": "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库.md",
                 "options": {
-                  "collapse-filter": true,
+                  "collapse-filter": false,
                   "search": "",
                   "localJumps": 1,
                   "localBacklinks": true,
                   "localForelinks": true,
                   "localInterlinks": false,
-                  "showTags": false,
+                  "showTags": true,
                   "showAttachments": false,
                   "hideUnresolved": false,
                   "collapse-color-groups": true,
@@ -158,19 +476,19 @@
                   "collapse-display": false,
                   "showArrow": true,
                   "textFadeMultiplier": -2,
-                  "nodeSizeMultiplier": 1.2484375,
-                  "lineSizeMultiplier": 2.0140625,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
+                  "nodeSizeMultiplier": 0.6359375,
+                  "lineSizeMultiplier": 1.22291666666667,
+                  "collapse-forces": false,
+                  "centerStrength": 0.463541666666667,
+                  "repelStrength": 4.79166666666667,
+                  "linkStrength": 0.380208333333333,
                   "linkDistance": 250,
-                  "scale": 1.373846314171142,
+                  "scale": 0.986575420724915,
                   "close": false
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "2025Q1-学习node.js 的关系图"
+              "title": "00算法真题库 的关系图"
             }
           }
         ]
@@ -223,13 +541,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PKM/10-PROJECTS/2025Q1-学习node.js.md",
+                "file": "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025Q1-学习node.js 的大纲"
+              "title": "00算法真题库 的大纲"
             }
           },
           {
@@ -253,8 +571,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
-                "matchingCase": true,
+                "query": "tag:#yctodo",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -373,56 +691,58 @@
       "cmdr:堆叠/取消堆叠标签页": false,
       "obsidian-local-images-plus:Local Images Plus  0.16.3\r\nLocalize attachments (plugin folder)": false,
       "templater-obsidian:Templater": false,
-      "obsidian-projects:打开项目": false
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "3d6eaac8f088e7f1",
+  "active": "4597faa02809309d",
   "lastOpenFiles": [
-    "PKM/20-AREAS/专业技术/00专业技术领域.md",
-    "PKM/10-PROJECTS/2025Q1-学习TailwindCSS.md",
-    "PKM/30-RESOURCES/技术资产/TailwindCSS学习指南.md",
-    "SimpRead/backup/simpread_config@20250324164510.json",
-    "SimpRead/backup/simpread_config@20250324164323.json",
-    "SimpRead/backup/simpread_config@20250324163923.json",
-    "SimpRead/backup/simpread_config@20250324163710.json",
-    "SimpRead/backup/simpread_config@20250324163707.json",
-    "SimpRead/backup/simpread_config@20250324163700.json",
-    "SimpRead/backup/simpread_config@20250324163649.json",
-    "SimpRead/backup/simpread_config@20250324163647.json",
-    "PKM/20-AREAS/Diary/2025-03-24.md",
-    "PKM/20-AREAS/Diary/2025-W12.md",
-    "PKM/30-RESOURCES/个人成长/技能矩阵.md",
-    "_template/template_week.md",
-    "PKM/20-AREAS/Diary/2025-W13.md",
-    "PKM/10-PROJECTS/2025Q1-求职前端岗位.md",
-    "PKM/20-AREAS/Diary/2025-03-23.md",
-    "_template/template_resource.md",
-    "_template/template_project.md",
+    "PKM/20-AREAS/Diary/2025-04-01.md",
+    "PKM/20-AREAS/Diary/2025-04-02.md",
+    "PKM/30-RESOURCES/技术资产/算法真题/2873. 有序三元组中的最大值 I.md",
+    "PKM/30-RESOURCES/技术资产/算法真题/对角线遍历.md",
+    "PKM/20-AREAS/专业技术/算法与数据结构/每日一题.md",
+    "PKM/20-AREAS/Diary/2025-02-01.md",
+    "PKM/20-AREAS/Diary/2025-02-02.md",
+    "PKM/20-AREAS/Diary/2025-02-03.md",
+    "PKM/20-AREAS/Diary/2025-02-04.md",
+    "PKM/20-AREAS/Diary/2025-02-05.md",
+    "PKM/20-AREAS/Diary/2025-02-06.md",
+    "PKM/20-AREAS/Diary/2025-02-07.md",
+    "PKM/20-AREAS/Diary/2025-02-13.md",
+    "PKM/20-AREAS/Diary/2025-02-11.md",
+    "PKM/20-AREAS/Diary/2025-02-10.md",
+    "PKM/20-AREAS/Diary/2025-02-09.md",
+    "PKM/20-AREAS/Diary/2025-02-08.md",
     "PKM/20-AREAS/Diary/2025-W10.md",
-    "PKM/20-AREAS/Diary/2025-W11.md",
-    "_template/template_diary.md",
-    "_template/template_meta.md",
-    "_template/template_archive.md",
-    "PKM/10-PROJECTS/2025Q2-启动颜文字项目.md",
-    "SimpRead/backup/simpread_config@20250323162303.json",
-    "PKM/10-PROJECTS/2025Q1-学习Github Actions.md",
-    "PKM/10-PROJECTS/2025Q1-前端框架对比.md",
-    "PKM/10-PROJECTS/2025Q1-学习node.js.md",
-    "PKM/10-PROJECTS/2025Q1-学习Jest.md",
-    "PKM/10-PROJECTS/2025Q1-学习Docker.md",
-    "PKM/10-PROJECTS/2025Q1-清理待办列表.md",
-    "PKM/20-AREAS/Diary/2025-03-22.md",
-    "SimpRead/_resources/20-🚀 My 2025 Stack： A Modern and Optimized Setup _ by Alexandre Lebailly _ Jan_ 2025 _ Medium/7bf942d4dcc65c455f651b333b4edf8a_MD5.jpg",
-    "SimpRead/_resources/20-🚀 My 2025 Stack： A Modern and Optimized Setup _ by Alexandre Lebailly _ Jan_ 2025 _ Medium/62797cd9faa082ceca5716375b619b0f_MD5.jpg",
-    "SimpRead/_resources/20-🚀 My 2025 Stack： A Modern and Optimized Setup _ by Alexandre Lebailly _ Jan_ 2025 _ Medium",
+    "PKM/30-RESOURCES/技术资产/算法真题/旋转矩阵.md",
+    "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库.md",
+    "PKM/30-RESOURCES/技术资产/算法真题/最长回文字符串.md",
+    "PKM/30-RESOURCES/技术资产/算法真题/最长公共前缀.md",
+    "PKM/30-RESOURCES/技术资产/算法真题/用最精炼的代码实现数组非零非负最小值.md",
+    "PKM/30-RESOURCES/技术资产/算法真题/零矩阵.md",
+    "PKM/30-RESOURCES/技术资产/算法真题/01算法真题库看板.canvas",
+    "Excalidraw/对角线遍历.excalidraw.md",
     "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.svg",
-    "banner.svg",
-    "Excalidraw/Scripts/Downloaded/Add Connector Point.svg",
-    "SimpRead/_resources/19-JavaScript 中各种源码实现 - JavaScript 进阶之路 - SegmentFault 思否/b7b8b0a80f493763b6097635e59de867_MD5.jpg",
-    "SimpRead/_resources/19-重新使用工作流 - GitHub 文档/b23fbd9db0bf05696a654678cef75453_MD5.jpg",
-    "SimpRead/_resources/18-重新使用工作流 - GitHub 文档/b23fbd9db0bf05696a654678cef75453_MD5.jpg",
-    "SimpRead/_resources/17-缓存依赖项以加快工作流程 - GitHub 文档/d88ba8d4a85a163be5cdfde7b499d00c_MD5.jpg",
-    "SimpRead/_resources/17-缓存依赖项以加快工作流程 - GitHub 文档/982d5711cb08e1b5097167402845b2b0_MD5.jpg",
+    "Excalidraw/Drawing 2025-03-15 18.06.25.excalidraw.md",
+    "Excalidraw/Lib/algorithms-and-data-structures-arrays-matrices-trees.excalidrawlib",
+    "PKM/30-RESOURCES/技术资产/算法真题/_resources/旋转矩阵/0b123d4c54b867794d218664fe863638_MD5.jpg",
+    "PKM/30-RESOURCES/技术资产/算法真题/_resources/旋转矩阵/51fb9e5c22fcaca8a09919a056d29c1c_MD5.jpg",
+    "PKM/30-RESOURCES/技术资产/算法真题/_resources/旋转矩阵",
+    "PKM/30-RESOURCES/技术资产/算法真题/_resources",
+    "Follow/_resources/前端框架新格局：从过去一年的演进看未来趋/bd4dc04e817d635fb949d11eacbf8cdd_MD5.jpg",
+    "Follow/_resources/前端框架新格局：从过去一年的演进看未来趋/8aed0b2ecb0d52c51e46f3fc2944e583_MD5.jpg",
+    "Follow/_resources/前端框架新格局：从过去一年的演进看未来趋/80d60d59b9c945837dfbd184ef429f25_MD5.webp",
+    "Follow/_resources/前端框架新格局：从过去一年的演进看未来趋/35443a46181e8aecf2f94d9927ea7d5b_MD5.jpg",
+    "Follow/_resources/前端框架新格局：从过去一年的演进看未来趋/ace630d6259cb16dbe3f4fef74d9be97_MD5.jpg",
+    "Follow/_resources/前端框架新格局：从过去一年的演进看未来趋/9815d341ddb2e60519eccaad2e472f06_MD5.jpg",
+    "Follow/_resources/前端框架新格局：从过去一年的演进看未来趋/4a4234c194ace10684c9e07370482a5c_MD5.jpg",
+    "Follow/_resources/前端框架新格局：从过去一年的演进看未来趋",
+    "_resources/Build AI-Powered App",
+    "PKM/30-RESOURCES/技术资产/算法真题",
+    "PKM/20-AREAS/专业技术/算法与数据结构",
+    "PKM/30-RESOURCES/技术资产/面试真题/_resources",
+    "PKM/20-AREAS/Diary/_resources",
+    "PKM/10-PROJECTS/_resources",
     "PKM/Topics/前端工程化/前端工程化.canvas",
     "Tools/看板.canvas"
   ]

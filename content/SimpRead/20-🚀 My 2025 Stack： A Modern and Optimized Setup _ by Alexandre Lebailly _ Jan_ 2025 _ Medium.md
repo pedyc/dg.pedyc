@@ -3,7 +3,7 @@ title: 20-🚀 My 2025 Stack： A Modern and Optimized Setup _ by Alexandre Leba
 aliases: ['"🚀 My 2025 Stack: A Modern and Optimized Setup | by Alexandre Lebailly | Jan', '2025 | Medium"']
 tags: []
 date-created: 2025-03-21
-date-modified: 2025-03-22
+date-modified: 2025-03-30
 desc: In 2025, I completely reinvented my stack to suit my daily needs, whether for development, tool manag......
 url: https://medium.com/@a-lebailly/my-2025-stack-a-modern-and-optimized-setup-06533ba67bc9
 ---

@@ -11,5 +11,8 @@
   "obsidian-minimal-settings",
   "obsidian-icon-folder",
   "quickadd",
-  "obsidian-vimrc-support"
+  "obsidian-vimrc-support",
+  "obsidian-excalidraw-plugin",
+  "obsidian-tasks-plugin",
+  "obsidian-latex-suite"
 ]

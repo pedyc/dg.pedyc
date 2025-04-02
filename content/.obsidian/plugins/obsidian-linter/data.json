@@ -280,7 +280,8 @@
   "foldersToIgnore": [
     "_template",
     "_resources",
-    "_scripts"
+    "_scripts",
+    "Excalidraw"
   ],
   "filesToIgnore": [
     {

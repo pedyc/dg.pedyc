@@ -20,7 +20,8 @@
     "format": "npx prettier . --write",
     "test": "tsx ./quartz/util/path.test.ts && tsx ./quartz/depgraph.test.ts",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
-    "serve": "npx quartz serve"
+    "serve": "npx quartz serve",
+    "preinstall": "npm install --no-save @napi-rs/simple-git@latest @myriaddreamin/typst-ts-node-compiler@latest sharp@latest lightningcss@latest"
   },
   "engines": {
     "npm": ">=9.3.1",
@@ -36,6 +37,12 @@
   ],
   "bin": {
     "quartz": "./quartz/bootstrap-cli.mjs"
+  },
+  "optionalDependencies": {
+    "@napi-rs/simple-git-linux-x64-gnu": "0.1.19",
+    "@myriaddreamin/typst-ts-node-compiler-linux-x64-gnu": "^0.5.4",
+    "sharp-linux-x64": "^0.33.5",
+    "lightningcss-linux-x64-gnu": "^1.29.3"
   },
   "dependencies": {
     "@clack/prompts": "^0.10.0",

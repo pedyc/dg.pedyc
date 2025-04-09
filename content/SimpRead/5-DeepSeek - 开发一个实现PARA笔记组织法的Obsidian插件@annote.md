@@ -1,7 +1,7 @@
 ---
 title: 5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件@annote
 date-created: 2025-03-08
-date-modified: 2025-03-11
+date-modified: 2025-04-04
 alias: ["srAnnote@DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件"]
 index: 5
 type: Simpread

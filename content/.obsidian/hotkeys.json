@@ -99,14 +99,6 @@
       "key": "M"
     }
   ],
-  "insert-template": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "O"
-    }
-  ],
   "editor:table-col-right": [
     {
       "modifiers": [
@@ -149,6 +141,14 @@
     }
   ],
   "templater-obsidian:_template/template_project.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "N"
+    }
+  ],
+  "insert-template": [
     {
       "modifiers": [
         "Alt"

@@ -4,7 +4,7 @@
   "blue-topaz-theme@@background-notebook-liked-switch": true,
   "blue-topaz-theme@@notebook-liked-markdown-page-options": "notebook-liked-markdown-page-dotted-notebook-2",
   "Blue-Topaz-Codebox-Highlight@@code-theme-selection": "code-theme-monokai",
-  "Blue-Topaz-Codebox-Highlight@@code-line-number": false,
+  "Blue-Topaz-Codebox-Highlight@@code-line-number": true,
   "Blue-Topaz-Codebox-Highlight@@code-box-style-option": "codebox-default-style",
   "blue-topaz-theme@@toggle-header-bottom-line": true,
   "blue-topaz-theme@@toggle-divider-lines": true,
@@ -63,5 +63,6 @@
   "blue-topaz-theme@@loading-page-style-option": "loading-add-icons",
   "blue-topaz-theme@@blockquote-style-change-options": "blockquote-style-default",
   "Blue-Topaz-Codebox-Highlight@@font-weight-inline-code": "regular",
-  "blue-topaz-theme@@resizable-mermaid": true
+  "blue-topaz-theme@@resizable-mermaid": true,
+  "Blue-Topaz-Codebox-Highlight@@background-code-2@@light": "#721919"
 }

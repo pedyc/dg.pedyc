@@ -3,8 +3,6 @@ uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: template_diary
 tags:
   - 个人成长/diary
-topic:
-  - 个人成长/日记
 ---
 
 <%*
@@ -17,13 +15,12 @@ await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
 .then(data => {
     一言 = data.hitokoto
     来源 = data.from
-    作者 = data.from_who === null ? ' 佚名 ' : data.from_who
+    作者 = data.from_who === null? ' 佚名 ': data.from_who
 })
 -%>
 
 > [!quote] 一言
-> <% 一言 %> —— 《<% 来源 %>》 · <% 作者 %>
-
+>  <% 一言 %> —— 《<% 来源 %>》 · <% 作者 %>
 
 ## 💡行云（闪念，突然想到了什么？）
 
@@ -41,11 +38,11 @@ await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
 
 ## 🌙温故（每日总结）
 
+> [!NOTE] 今日复盘
+> NOTE
+
 ```dataview
 TABLE file.ctime AS "创建时间", file.mtime AS "最后修改时间"
 WHERE file.mtime >= date("{{date:YYYY-MM-DD}}") AND file.mtime < date("{{date:YYYY-MM-DD}}") + dur(1 day) OR file.ctime = date("{{date:YYYY-MM-DD}}")
 SORT file.mtime DESC
 ```
-
-> [!NOTE] 今日复盘
-> NOTE

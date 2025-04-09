@@ -3,7 +3,7 @@ title: 5-DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件
 aliases: [DeepSeek - 开发一个实现PARA笔记组织法的Obsidian插件]
 tags: []
 date-created: 2025-03-08
-date-modified: 2025-03-08
+date-modified: 2025-04-08
 desc: Chat with DeepSeek AI.
 url: https://chat.deepseek.com/a/chat/s/f105e602-79e2-49a1-b4e8-7099e57ca493
 ---

@@ -1,0 +1,58 @@
+---
+title: template_alg
+tags: [数组]
+date-created: 2025-04-04
+date-modified: 2025-04-07
+---
+
+## 题目
+
+https://leetcode.cn/leetbook/read/array-and-string/conm7/
+
+给你一个字符串 `s`，找到 `s` 中最长的 回文 子串。
+
+## 实现
+
+思路：遍历每个字符作为回文中心，向左右扩展寻找最长回文。
+注意：奇偶情况
+
+> [!hint] 复杂度分析
+> - 时间复杂度：$O(n^2)$
+> - 空间复杂度：$O(1)$
+
+```javascript
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var longestPalindrome = function(s) {
+    if (s.length < 2) return s;
+    
+    let start = 0, maxLength = 1;
+    
+    // 中心扩展函数
+    const expandAroundCenter = (left, right) => {
+        while (left >= 0 && right < s.length && s[left] === s[right]) {
+            const currentLength = right - left + 1;
+            if (currentLength > maxLength) {
+                maxLength = currentLength;
+                start = left;
+            }
+            left--;
+            right++;
+        }
+    };
+    
+    for (let i = 0; i < s.length; i++) {
+        expandAroundCenter(i, i);    // 奇数长度回文（中心为单个字符）
+        expandAroundCenter(i, i + 1); // 偶数长度回文（中心为两个字符）
+    }
+    
+    return s.slice(start, start + maxLength);
+};
+
+// 辅助函数：判断是否为回文（修正版）
+var isPalindrome = function(s) {
+    return s === s.split('').reverse().join('');
+};
+```

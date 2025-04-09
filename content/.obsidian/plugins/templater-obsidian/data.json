@@ -13,13 +13,19 @@
   "shell_path": "",
   "user_scripts_folder": "",
   "enable_folder_templates": true,
-  "folder_templates": [],
+  "folder_templates": [
+    {
+      "folder": "PKM/30-RESOURCES/技术资产/算法真题",
+      "template": "_template/template_alg.md"
+    }
+  ],
   "enable_file_templates": false,
   "file_templates": [],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
-    "_template/template_project.md"
+    ""
   ],
-  "startup_templates": []
+  "startup_templates": [],
+  "intellisense_render": 1
 }

@@ -1,7 +1,7 @@
 ---
 title: 19-JavaScript 中各种源码实现 - JavaScript 进阶之路 - SegmentFault 思否@annote
 date-created: 2025-03-15
-date-modified: 2025-03-30
+date-modified: 2025-04-03
 alias: ["srAnnote@JavaScript 中各种源码实现 - JavaScript 进阶之路 - SegmentFault 思否"]
 index: 19
 type: Simpread

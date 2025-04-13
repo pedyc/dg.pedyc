@@ -65,6 +65,13 @@
       "icon": "lucide-image-down",
       "name": "Local Images Plus: Localize attachments for the current note (Obsidian folder)",
       "mode": "any"
+    },
+    {
+      "id": "file-explorer:reveal-active-file",
+      "icon": "lucide-navigation",
+      "name": "文件列表: 在文件列表中显示当前文件",
+      "mode": "any",
+      "color": "#22d889"
     }
   ],
   "macros": [],

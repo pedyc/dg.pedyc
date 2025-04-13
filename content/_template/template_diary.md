@@ -22,24 +22,26 @@ await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
 > [!quote] 一言
 >  <% 一言 %> —— 《<% 来源 %>》 · <% 作者 %>
 
-## 💡行云（闪念，突然想到了什么？）
+## 💡行云（今日要做什么？）
 
 - TODO
 - TODO
 
-## 🦶跬步（今日要做什么？）
+## 🦶跬步（今日做了什么？）
 
 - TODO
 - TODO
 
 ## 🌞日新（今日状态如何？）
 
-- 状态：:LiSmilePlus:
+- 状态：😼
 
 ## 🌙温故（每日总结）
 
 > [!NOTE] 今日复盘
-> NOTE
+> - 今天最大的收获是什么？
+> - 今天遇到的挑战是什么？
+> - 明天可以改进的地方是什么？
 
 ```dataview
 TABLE file.ctime AS "创建时间", file.mtime AS "最后修改时间"

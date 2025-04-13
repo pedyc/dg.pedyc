@@ -57,7 +57,7 @@ type: [project]
 
 ## 🪧交付产物
 
-- [[面试真题集|面试题库#React]]
+- [[00前端面试真题库|面试题库#React]]
 - [[Obsidian-CortexFlow]]
 
 ### 💡 项目总结

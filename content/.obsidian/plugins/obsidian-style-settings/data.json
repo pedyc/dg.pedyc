@@ -63,6 +63,5 @@
   "blue-topaz-theme@@loading-page-style-option": "loading-add-icons",
   "blue-topaz-theme@@blockquote-style-change-options": "blockquote-style-default",
   "Blue-Topaz-Codebox-Highlight@@font-weight-inline-code": "regular",
-  "blue-topaz-theme@@resizable-mermaid": true,
-  "Blue-Topaz-Codebox-Highlight@@background-code-2@@light": "#721919"
+  "blue-topaz-theme@@resizable-mermaid": true
 }

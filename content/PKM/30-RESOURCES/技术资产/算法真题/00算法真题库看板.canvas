@@ -1,9 +1,0 @@
-{
-	"nodes":[
-		{"id":"279c6a31728cc666","type":"file","file":"PKM/30-RESOURCES/技术资产/算法真题/对角线遍历.md","x":361,"y":-525,"width":400,"height":400,"color":"4"},
-		{"id":"a016d4b4045fe13b","type":"file","file":"PKM/30-RESOURCES/技术资产/算法真题/00算法真题库.md","x":-260,"y":-320,"width":400,"height":400}
-	],
-	"edges":[
-		{"id":"594d8bc10ed6060d","fromNode":"a016d4b4045fe13b","fromSide":"right","toNode":"279c6a31728cc666","toSide":"left"}
-	]
-}

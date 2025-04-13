@@ -17,6 +17,10 @@
     {
       "folder": "PKM/30-RESOURCES/技术资产/算法真题",
       "template": "_template/template_alg.md"
+    },
+    {
+      "folder": "PKM/30-RESOURCES/技术资产/面试真题",
+      "template": "_template/template_alg.md"
     }
   ],
   "enable_file_templates": false,

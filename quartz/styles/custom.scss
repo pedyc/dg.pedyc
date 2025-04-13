@@ -158,9 +158,15 @@ body[data-slug="thoughts/craft"] {
             list-style-type: none;
             margin: 1rem 0;
         }
+
+        
     }
 }
 
 .explorer {
     max-height: 80vh;
+}
+
+div:has(>.overflow) {
+    overflow-y: auto !important;
 }

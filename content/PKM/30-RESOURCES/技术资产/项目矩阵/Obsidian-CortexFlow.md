@@ -1,7 +1,7 @@
 ---
 title: Obsidian-CortexFlow
 date-created: 2025-03-06
-date-modified: 2025-04-10
+date-modified: 2025-04-14
 ---
 
 > [!hint]
@@ -9,13 +9,13 @@ date-modified: 2025-04-10
 
 ## 项目介绍
 
-### 目标
+### 功能
 
 实现一个 Obsidian 插件，用于创建和管理一个符合 PARA 原则的笔记仓库，并且具备关联的网页版本。
 
 ### 命名
 
-CortexFlow：大脑皮层（Cortex）的信息流动
+CortexFlow：大脑皮层（Cortex）的信息流动（Flow）
 
 ### 技术栈
 

@@ -7,7 +7,7 @@ author: ped_yc
 description: 
 tags: []
 date-created: 2025-02-25
-date-modified: 2025-03-15
+date-modified: 2025-04-13
 status: YCTODO
 ---
 
@@ -16,17 +16,18 @@ status: YCTODO
 
 ## 💬项目介绍
 
-### 命名
-
-- 灵感："Nexus"（连接点） + "Lattice"（晶格/网状结构）。
-- 寓意: 通过网状关联增强知识的耦合度。
-
 ### 需求/功能
 
+实现一个可视化的信息组织引擎，需求如下：
 - 信息分片
 - 语义分析
 - 概念重组
 - 可视化
+
+### 命名
+
+- 灵感："Nexus"（连接点） + "Lattice"（晶格/网状结构）。
+- 寓意: 通过网状关联增强知识的耦合度。
 
 ### 技术选型
 

@@ -1,7 +1,7 @@
 ---
 title: 为什么使用SSR（服务端渲染）？
 date-created: 2025-03-11
-date-modified: 2025-04-09
+date-modified: 2025-04-15
 ---
 
 ==概述：服务端渲染（Server-Side Rendering，SSR）是一种将网页内容在服务器端生成完整 HTML 页面后返回给客户端的技术。它与客户端渲染（Client-Side Rendering，CSR）形成对比（如 React、Vue 等 SPA 框架默认渲染方式）。==

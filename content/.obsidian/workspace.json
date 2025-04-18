@@ -13,74 +13,12 @@
             "dimension": 56.401384083044974,
             "children": [
               {
-                "id": "515aade5a19b8b11",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PKM/30-RESOURCES/技术资产/算法真题/快速幂Pow(x,n).md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
-                  "icon": "lucide-file",
-                  "title": "快速幂Pow(x,n)"
-                }
-              },
-              {
-                "id": "7e1acf3c4c79dec1",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://cplusplus.com/reference/valarray/pow/",
-                    "title": "cplusplus.com/reference/valarray/pow/",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "cplusplus.com/reference/valarray/pow/"
-                }
-              },
-              {
-                "id": "cdc677d6f84bca88",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PKM/30-RESOURCES/技术资产/面试真题/统计某一字符或字符串在另一个字符串中出现的次数.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
-                  "icon": "lucide-file",
-                  "title": "统计某一字符或字符串在另一个字符串中出现的次数"
-                }
-              },
-              {
                 "id": "67b2685b4d82639a",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库.md",
+                    "file": "PKM/30-RESOURCES/个人信息/技能矩阵.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -95,16 +33,16 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "00算法真题库"
+                  "title": "技能矩阵"
                 }
               },
               {
-                "id": "e4d3d6aae8d8113b",
+                "id": "35d44c68f04192e7",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "PKM/20-AREAS/Diary/2025-04-13.md",
+                    "file": "PKM/20-AREAS/Diary/2025-04-14.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -119,7 +57,79 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "2025-04-13"
+                  "title": "2025-04-14"
+                }
+              },
+              {
+                "id": "528b80587b35bc82",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PKM/20-AREAS/Diary/2025-04-14.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "2025-04-14"
+                }
+              },
+              {
+                "id": "65121cadfb1ee10e",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PKM/20-AREAS/Diary/2025-04-18.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "2025-04-18"
+                }
+              },
+              {
+                "id": "cab5f020e40aa654",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PKM/30-RESOURCES/政治经济/我对赢学的一些总结与思考 0.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "我对赢学的一些总结与思考 0"
                 }
               },
               {
@@ -128,7 +138,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "PKM/30-RESOURCES/技术资产/面试真题/写一个方法把下划线命名转成大驼峰命名.md",
+                    "file": "PKM/10-PROJECTS/2025Q2-学习D3.js.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -143,7 +153,31 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "写一个方法把下划线命名转成大驼峰命名"
+                  "title": "2025Q2-学习D3.js"
+                }
+              },
+              {
+                "id": "c13c0ef8a32b0866",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PKM/10-PROJECTS/2025Q2-学习D3.js.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "2025Q2-学习D3.js"
                 }
               },
               {
@@ -195,7 +229,7 @@
                 }
               }
             ],
-            "currentTab": 4
+            "currentTab": 3
           },
           {
             "id": "1819cf88de5b7583",
@@ -235,13 +269,13 @@
                         "state": {
                           "type": "outline",
                           "state": {
-                            "file": "PKM/20-AREAS/Diary/2025-04-13.md",
+                            "file": "PKM/20-AREAS/Diary/2025-04-18.md",
                             "followCursor": false,
                             "showSearch": false,
                             "searchQuery": ""
                           },
                           "icon": "lucide-list",
-                          "title": "2025-04-13 的大纲"
+                          "title": "Outline of 2025-04-18"
                         }
                       }
                     ]
@@ -257,7 +291,7 @@
                         "state": {
                           "type": "localgraph",
                           "state": {
-                            "file": "PKM/20-AREAS/Diary/2025-04-13.md",
+                            "file": "PKM/20-AREAS/Diary/2025-04-18.md",
                             "options": {
                               "collapse-filter": true,
                               "search": "",
@@ -285,7 +319,7 @@
                             }
                           },
                           "icon": "lucide-git-fork",
-                          "title": "2025-04-13 的关系图"
+                          "title": "Graph of 2025-04-18"
                         }
                       }
                     ]
@@ -321,7 +355,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
@@ -353,7 +387,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "标签"
+              "title": "Tags"
             }
           },
           {
@@ -362,7 +396,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:排序",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -373,8 +407,7 @@
               "title": "搜索"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "2e8c3d745c458fc4",
@@ -474,73 +507,73 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "graph:查看关系图谱": false,
-      "switcher:打开快速切换": false,
-      "canvas:新建白板": false,
-      "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "publish:发布更改": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "publish:Publish changes...": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
       "cmdr:堆叠/取消堆叠标签页": false,
       "obsidian-local-images-plus:Local Images Plus  0.16.3\r\nLocalize attachments (plugin folder)": false,
       "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "e4d3d6aae8d8113b",
+  "active": "65121cadfb1ee10e",
   "lastOpenFiles": [
-    "PKM/30-RESOURCES/技术资产/算法真题/20题解收藏夹.md",
-    "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库.md",
-    "PKM/30-RESOURCES/技术资产/算法真题/统计好数字的数目.md",
-    "Clippings/分享丨模运算的世界：当加减乘除遇上取模（模运算恒等式 - 费马小定理 - 组合数）- 讨论 - 力扣（LeetCode）.md",
-    "Clippings/_resources/分享丨模运算的世界：当加减乘除遇上取模（模运算恒等式 - 费马小定理 - 组合数）- 讨论 - 力扣（LeetCode）/bd58baa2f4cfaa2f7614234d32e4c52f_MD5.jpg",
-    "Clippings/_resources/分享丨模运算的世界：当加减乘除遇上取模（模运算恒等式 - 费马小定理 - 组合数）- 讨论 - 力扣（LeetCode）",
-    "PKM/30-RESOURCES/技术资产/算法真题/快速幂Pow(x,n).md",
+    "PKM/20-AREAS/Diary/2025-04-17.md",
+    "PKM/20-AREAS/Diary/2025-04-18.md",
+    "PKM/20-AREAS/Diary/2025-04-14.md",
+    "PKM/20-AREAS/Diary/2025-04-15.md",
+    "PKM/20-AREAS/Diary/2025-04-16.md",
+    "PKM/20-AREAS/政治经济/性别对立的经济逻辑.md",
+    "PKM/20-AREAS/政治经济/00政治经济领域.md",
+    "PKM/30-RESOURCES/政治经济/我对赢学的一些总结与思考 0.md",
+    "PKM/30-RESOURCES/政治经济/我对赢学的一些总结与思考.md",
+    "PKM/30-RESOURCES/政治经济/解构下为什么美国玩不下去“日耳蛮赢学”了.md",
+    "PKM/30-RESOURCES/政治经济/阿拉伯世界没落的原因是什么.md",
+    "PKM/20-AREAS/个人成长/00个人成长领域.md",
+    "PKM/30-RESOURCES/政治经济/深度解读全球化调整期与中国的战略新机遇.md",
+    "PKM/30-RESOURCES/技术资产/面试真题/12js基础.md",
+    "PKM/20-AREAS/政治经济",
     "PKM/30-RESOURCES/技术资产/面试真题/10js题单.md",
-    "PKM/30-RESOURCES/技术资产/算法真题/10经典问题题单.md",
-    "PKM/20-AREAS/Diary/_resources",
-    "PKM/30-RESOURCES/技术资产/算法真题/每日一题题单.md",
-    "PKM/20-AREAS/Diary/2025-04-13.md",
-    "PKM/20-AREAS/Blog/正视平庸.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/11JS挑战.md",
-    "SimpRead/backup/simpread_config@20250412010524.json",
-    "SimpRead/backup/simpread_config@20250412010519.json",
-    "SimpRead/backup/simpread_config@20250412010513.json",
-    "SimpRead/output/21-用 AI 重构知识管理：重塑 Obsidian 工作流的三层进阶指南@annote.html",
-    "SimpRead/backup/simpread_config@20250412010509.json",
-    "SimpRead/backup/simpread_config@20250412010439.json",
-    "SimpRead/backup/simpread_config@20250412010424.json",
-    "PKM/30-RESOURCES/技术资产/面试真题/00前端面试真题库.md",
-    "PKM/30-RESOURCES/技术资产/算法真题/13高级算法题单.md",
-    "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库看板.canvas",
-    "PKM/30-RESOURCES/技术资产/算法真题/11初级算法题单.md",
-    "PKM/30-RESOURCES/技术资产/算法真题/12中级算法题单.md",
-    "PKM/20-AREAS/Diary/2025-04-12.md",
-    "PKM/20-AREAS/Diary/2025-04-11.md",
-    "PKM/20-AREAS/Diary/2025-W14.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/写一个加密字符串的方法.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/统计某一字符或字符串在另一个字符串中出现的次数.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/_resources",
-    "PKM/30-RESOURCES/技术资产/面试真题/去除字符串中最后一个指定的字符.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/写一个方法把下划线命名转成大驼峰命名.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/写一个方法去掉字符串间的空格.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/写一个去除制表符和换行符的方法.md",
     "PKM/30-RESOURCES/技术资产/面试真题/用递归算法实现数组长度为5且元素的随机数在2-32间不重复的值.md",
+    "PKM/30-RESOURCES/技术资产/面试真题/写一个去除制表符和换行符的方法.md",
+    "PKM/30-RESOURCES/技术资产/面试真题/写一个加密字符串的方法.md",
+    "PKM/30-RESOURCES/技术资产/面试真题/写一个方法去掉字符串间的空格.md",
+    "PKM/30-RESOURCES/技术资产/面试真题/写一个方法把下划线命名转成大驼峰命名.md",
     "PKM/30-RESOURCES/技术资产/面试真题/写一个把字符串大小切换的方法.md",
-    "PKM/20-AREAS/01领域看板.canvas",
-    "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.svg",
-    "PKM/20-AREAS/专业技术/算法与数据结构/_resources/快速排序/22f991dc0841a4c05cc59bccc3a84c90_MD5.jpeg",
-    "PKM/20-AREAS/专业技术/算法与数据结构/_resources/Pasted image 20250408215422.png",
-    "PKM/20-AREAS/专业技术/算法与数据结构/_resources/基础数据结构及常用算法汇总/22f991dc0841a4c05cc59bccc3a84c90_MD5.jpeg",
-    "PKM/20-AREAS/专业技术/算法与数据结构/_resources/Pasted image 20250408215403.png",
-    "PKM/30-RESOURCES/技术资产/算法真题/未命名.canvas",
-    "SimpRead/_resources/21-顶级白嫖指南，教你低成本用上最好的 AI 模型，再加加上 AI 搜索和推理/445860bafc3e0b7bbd127fbcb90d555a_MD5.jpg",
-    "SimpRead/_resources/21-顶级白嫖指南，教你低成本用上最好的 AI 模型，再加加上 AI 搜索和推理/1eab21d228d8fb78fdccc4e1702b397f_MD5.jpg",
-    "SimpRead/_resources/21-顶级白嫖指南，教你低成本用上最好的 AI 模型，再加加上 AI 搜索和推理/af410c214b44c5c6ecc70603c8b3e4da_MD5.jpg",
-    "SimpRead/_resources/21-顶级白嫖指南，教你低成本用上最好的 AI 模型，再加加上 AI 搜索和推理/c8ebae49a63e405f9f0b536c619b2756_MD5.jpg",
+    "PKM/30-RESOURCES/技术资产/面试真题/为什么使用SSR（服务端渲染）？.md",
+    "PKM/30-RESOURCES/技术资产/面试真题/统计某一字符或字符串在另一个字符串中出现的次数.md",
+    "PKM/30-RESOURCES/技术资产/面试真题/去除字符串中最后一个指定的字符.md",
+    "PKM/30-RESOURCES/技术资产/面试真题/00前端面试真题库.md",
+    "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库.md",
+    "PKM/10-PROJECTS/_resources",
     "主题看板.canvas",
+    "copilot-conversations",
+    "PKM/20-AREAS/01领域看板.canvas",
+    "SimpRead/SimpRead/_resources/0-AI 复兴 RSS ？",
+    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/ed48906235c106ffa823f9852f538c16_MD5.webp",
+    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/cdcae7b8a0b288b79e44ee717e437984_MD5.webp",
+    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/b508ae6abf83d03fdb16aadcc1dd0df3_MD5.webp",
+    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/b23ef26a9492e2430732e9fd7b1eae9d_MD5.webp",
+    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/a8919736f0f2dfd359526dcf7eb3bed6_MD5.webp",
+    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/7841b0fb3f18076a5a80b7319a4943aa_MD5.webp",
+    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/7a4e336a83d32702b1d8313e0d63eadb_MD5.webp",
+    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/72ece1360ec8943f8985865b478fc8e1_MD5.webp",
+    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/695c17c460b380dde2b0d2348b1299fe_MD5.webp",
+    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/693a45c19f3bb7d0ac11c897ee31896f_MD5.webp",
+    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式",
+    "SimpRead/SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息",
+    "SimpRead/SimpRead/log/simpred_sync.log",
+    "SimpRead/SimpRead/_resources",
+    "SimpRead/SimpRead/log",
+    "SimpRead/SimpRead",
+    "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库看板.canvas",
+    "PKM/30-RESOURCES/技术资产/算法真题/未命名.canvas",
     "PKM/Topics/前端工程化/前端工程化.canvas",
     "Tools/看板.canvas"
   ]

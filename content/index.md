@@ -6,7 +6,7 @@ author: ped_yc
 description: 
 tags: []
 date-created: 2024-08-23
-date-modified: 2025-04-13
+date-modified: 2025-04-23
 status: 
 sticker: lucide//file
 type: 
@@ -38,9 +38,9 @@ LIMIT 10
 ```
 
 > [!hint] 小提示
-> 如果你希望对本库有更多的了解，欢迎查看 [[关于本库]]。
+> 如果你希望对本库有更多的了解，欢迎查看 [[00关于本库]]。
 >
-> 纵览本库主题：[[本库主题汇总]]
+> 纵览本库主题：[[00领域指南]]
 >
 > 这里是我的博客地址：[ped-Yc's Blog](https://blog.ped-yc.site/)
 >

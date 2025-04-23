@@ -101,6 +101,15 @@ function addTweenToGroup<T>(group: TweenGroup | TweenNode, target: T, props: Par
   return tween
 }
 
+async function determineGraphicsAPI(): Promise<"webgpu" | "webgl"> {
+  const adapter = await navigator.gpu?.requestAdapter().catch(() => null)
+  if (!adapter) {
+    return "webgl"
+  }
+  // Devices with WebGPU but no float32-blendable feature fail to render the graph
+  return adapter.features.has("float32-blendable") ? "webgpu" : "webgl"
+}
+
 async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<() => void> {
   // 重置stopAnimation为false，确保新的渲染可以正常进行
   stopAnimation = false
@@ -369,6 +378,7 @@ async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<
   tweens.forEach((tween) => tween.stop())
   tweens.clear()
 
+  const pixiPreference = await determineGraphicsAPI()
   const app = new Application()
   await app.init({
     width,
@@ -377,7 +387,7 @@ async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<
     autoStart: false,
     autoDensity: true,
     backgroundAlpha: 0,
-    preference: "webgpu",
+    preference: pixiPreference,
     resolution: window.devicePixelRatio,
     eventMode: "static",
   })

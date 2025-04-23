@@ -5,6 +5,6 @@
   "showWeeklyNote": true,
   "weeklyNoteFormat": "gggg-[W]ww",
   "weeklyNoteTemplate": "_template/temlate_week",
-  "weeklyNoteFolder": "PKM/20-AREAS/Diary",
+  "weeklyNoteFolder": "Diary",
   "localeOverride": "system-default"
 }

@@ -4,334 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "aa00adedfb014ede",
-        "type": "split",
+        "id": "d0f82b012c3e67e1",
+        "type": "tabs",
         "children": [
           {
-            "id": "5609735912cfb9d0",
-            "type": "tabs",
-            "dimension": 56.401384083044974,
-            "children": [
-              {
-                "id": "67b2685b4d82639a",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PKM/30-RESOURCES/个人信息/技能矩阵.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
-                  "icon": "lucide-file",
-                  "title": "技能矩阵"
+            "id": "9f643c32302f47f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/20-AREAS/00领域指南.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
                 }
               },
-              {
-                "id": "35d44c68f04192e7",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PKM/20-AREAS/Diary/2025-04-14.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
-                  "icon": "lucide-file",
-                  "title": "2025-04-14"
-                }
-              },
-              {
-                "id": "528b80587b35bc82",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PKM/20-AREAS/Diary/2025-04-14.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
-                  "icon": "lucide-file",
-                  "title": "2025-04-14"
-                }
-              },
-              {
-                "id": "65121cadfb1ee10e",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PKM/20-AREAS/Diary/2025-04-18.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
-                  "icon": "lucide-file",
-                  "title": "2025-04-18"
-                }
-              },
-              {
-                "id": "cab5f020e40aa654",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PKM/30-RESOURCES/政治经济/我对赢学的一些总结与思考 0.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
-                  "icon": "lucide-file",
-                  "title": "我对赢学的一些总结与思考 0"
-                }
-              },
-              {
-                "id": "30bb0c95a17e94a4",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PKM/10-PROJECTS/2025Q2-学习D3.js.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
-                  "icon": "lucide-file",
-                  "title": "2025Q2-学习D3.js"
-                }
-              },
-              {
-                "id": "c13c0ef8a32b0866",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PKM/10-PROJECTS/2025Q2-学习D3.js.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
-                  "icon": "lucide-file",
-                  "title": "2025Q2-学习D3.js"
-                }
-              },
-              {
-                "id": "27665c2f10ee5f0f",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PKM/30-RESOURCES/技术资产/算法真题/统计好整数的数目.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
-                  "icon": "lucide-file",
-                  "title": "统计好整数的数目"
-                }
-              },
-              {
-                "id": "66d05fcc8a416d89",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PKM/30-RESOURCES/技术资产/算法真题/统计对称整数的数目.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
-                  "icon": "lucide-file",
-                  "title": "统计对称整数的数目"
-                }
-              }
-            ],
-            "currentTab": 3
-          },
-          {
-            "id": "1819cf88de5b7583",
-            "type": "split",
-            "dimension": 43.598615916955026,
-            "children": [
-              {
-                "id": "b0ee9e635513b991",
-                "type": "tabs",
-                "dimension": 73.84230287859825,
-                "children": [
-                  {
-                    "id": "4b0cc3b70eb3ed6d",
-                    "type": "leaf",
-                    "state": {
-                      "type": "copilot-chat-view",
-                      "state": {},
-                      "icon": "message-square",
-                      "title": "Copilot"
-                    }
-                  }
-                ]
-              },
-              {
-                "id": "3f1fea7caa7bb060",
-                "type": "split",
-                "dimension": 26.157697121401753,
-                "children": [
-                  {
-                    "id": "0aacd8ef50964d8e",
-                    "type": "tabs",
-                    "dimension": 24.39446366782007,
-                    "children": [
-                      {
-                        "id": "83c602ca4a865aae",
-                        "type": "leaf",
-                        "state": {
-                          "type": "outline",
-                          "state": {
-                            "file": "PKM/20-AREAS/Diary/2025-04-18.md",
-                            "followCursor": false,
-                            "showSearch": false,
-                            "searchQuery": ""
-                          },
-                          "icon": "lucide-list",
-                          "title": "Outline of 2025-04-18"
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "id": "9313342a24600c38",
-                    "type": "tabs",
-                    "dimension": 75.60553633217994,
-                    "children": [
-                      {
-                        "id": "8f8fa2e05df4d3ba",
-                        "type": "leaf",
-                        "state": {
-                          "type": "localgraph",
-                          "state": {
-                            "file": "PKM/20-AREAS/Diary/2025-04-18.md",
-                            "options": {
-                              "collapse-filter": true,
-                              "search": "",
-                              "localJumps": 1,
-                              "localBacklinks": true,
-                              "localForelinks": true,
-                              "localInterlinks": false,
-                              "showTags": false,
-                              "showAttachments": false,
-                              "hideUnresolved": false,
-                              "collapse-color-groups": true,
-                              "colorGroups": [],
-                              "collapse-display": true,
-                              "showArrow": false,
-                              "textFadeMultiplier": 0,
-                              "nodeSizeMultiplier": 1,
-                              "lineSizeMultiplier": 1,
-                              "collapse-forces": true,
-                              "centerStrength": 0.518713248970312,
-                              "repelStrength": 10,
-                              "linkStrength": 1,
-                              "linkDistance": 250,
-                              "scale": 1.2372227893448207,
-                              "close": true
-                            }
-                          },
-                          "icon": "lucide-git-fork",
-                          "title": "Graph of 2025-04-18"
-                        }
-                      }
-                    ]
-                  }
-                ],
-                "direction": "vertical"
-              }
-            ],
-            "direction": "horizontal"
+              "icon": "lucide-file",
+              "title": "00领域指南"
+            }
           }
-        ],
-        "direction": "vertical"
+        ]
       }
     ],
     "direction": "vertical"
@@ -343,7 +43,7 @@
       {
         "id": "2bf10628ba3bdd8f",
         "type": "tabs",
-        "dimension": 50.482315112540185,
+        "dimension": 60.578778135048225,
         "children": [
           {
             "id": "62b03965a1dba250",
@@ -373,7 +73,7 @@
       {
         "id": "3b21062118b7d174",
         "type": "tabs",
-        "dimension": 26.559485530546628,
+        "dimension": 21.54340836012862,
         "children": [
           {
             "id": "9879e4e35cb586a9",
@@ -384,7 +84,7 @@
                 "sortOrder": "frequency",
                 "useHierarchy": false,
                 "showSearch": true,
-                "searchQuery": ""
+                "searchQuery": "算法"
               },
               "icon": "lucide-tags",
               "title": "Tags"
@@ -396,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#重要",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -404,15 +104,16 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "搜索"
+              "title": "Search"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "2e8c3d745c458fc4",
         "type": "tabs",
-        "dimension": 22.958199356913184,
+        "dimension": 17.877813504823152,
         "children": [
           {
             "id": "5d52ca6efedfee5c",
@@ -428,7 +129,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 248.5
+    "width": 287.5
   },
   "right": {
     "id": "ff01a1db19d5896b",
@@ -496,6 +197,21 @@
               "icon": "lucide-archive",
               "title": "添加笔记属性"
             }
+          },
+          {
+            "id": "57c78920fb003c94",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "PARA/20-AREAS/00领域指南.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 00领域指南"
+            }
           }
         ],
         "currentTab": 3
@@ -522,56 +238,56 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "65121cadfb1ee10e",
+  "active": "9f643c32302f47f7",
   "lastOpenFiles": [
-    "PKM/20-AREAS/Diary/2025-04-17.md",
-    "PKM/20-AREAS/Diary/2025-04-18.md",
-    "PKM/20-AREAS/Diary/2025-04-14.md",
-    "PKM/20-AREAS/Diary/2025-04-15.md",
-    "PKM/20-AREAS/Diary/2025-04-16.md",
-    "PKM/20-AREAS/政治经济/性别对立的经济逻辑.md",
-    "PKM/20-AREAS/政治经济/00政治经济领域.md",
-    "PKM/30-RESOURCES/政治经济/我对赢学的一些总结与思考 0.md",
-    "PKM/30-RESOURCES/政治经济/我对赢学的一些总结与思考.md",
-    "PKM/30-RESOURCES/政治经济/解构下为什么美国玩不下去“日耳蛮赢学”了.md",
-    "PKM/30-RESOURCES/政治经济/阿拉伯世界没落的原因是什么.md",
-    "PKM/20-AREAS/个人成长/00个人成长领域.md",
-    "PKM/30-RESOURCES/政治经济/深度解读全球化调整期与中国的战略新机遇.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/12js基础.md",
-    "PKM/20-AREAS/政治经济",
-    "PKM/30-RESOURCES/技术资产/面试真题/10js题单.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/用递归算法实现数组长度为5且元素的随机数在2-32间不重复的值.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/写一个去除制表符和换行符的方法.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/写一个加密字符串的方法.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/写一个方法去掉字符串间的空格.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/写一个方法把下划线命名转成大驼峰命名.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/写一个把字符串大小切换的方法.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/为什么使用SSR（服务端渲染）？.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/统计某一字符或字符串在另一个字符串中出现的次数.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/去除字符串中最后一个指定的字符.md",
-    "PKM/30-RESOURCES/技术资产/面试真题/00前端面试真题库.md",
-    "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库.md",
-    "PKM/10-PROJECTS/_resources",
+    "PARA/20-AREAS/01领域看板.canvas",
+    "PARA/20-AREAS/00领域指南.md",
+    "index.md",
+    "PARA/20-AREAS/知识管理/00知识管理领域.md",
+    "PARA/20-AREAS/知识管理/_resources/00知识管理领域/57f0f1e5b6fa22ab83de5f7dab87cca4_MD5.jpeg",
+    "PARA/20-AREAS/知识管理/_resources/00知识管理领域",
+    "PARA/20-AREAS/知识管理/_resources/Pasted image 20250424033632.png",
+    "PARA/20-AREAS/知识管理/00-CORE/知识管理概述.md",
+    "PARA/20-AREAS/知识管理/01知识管理看板.excalidraw.md",
+    "PARA/30-RESOURCES/算法真题/分割等合子集.md",
+    "PARA/30-RESOURCES/算法真题/二叉树的最近公共祖先.md",
+    "PARA/30-RESOURCES/算法真题/对角线遍历.md",
+    "PARA/30-RESOURCES/算法真题/20题解收藏夹.md",
+    "PARA/30-RESOURCES/算法真题/13高级算法题单.md",
+    "PARA/30-RESOURCES/算法真题/12中级算法题单.md",
+    "PARA/30-RESOURCES/算法真题/11初级算法题单.md",
+    "PARA/30-RESOURCES/算法真题/10经典问题题单.md",
+    "PARA/30-RESOURCES/算法真题/00算法真题库.md",
+    "PARA/20-AREAS/算法与数据结构/00算法领域.md",
+    "PARA/20-AREAS/算法与数据结构/00-CORE/常用设计模式汇总.md",
+    "PARA/20-AREAS/前端工程/00前端工程领域.md",
+    "PARA/20-AREAS/知识管理/实践指南/PARA进阶技巧.md",
+    "PARA/20-AREAS/知识管理/实践指南/知识管理实施路线图.md",
+    "PARA/20-AREAS/知识管理/00-CORE/知识组织概述.md",
+    "PARA/20-AREAS/知识管理/知识组织方案.md",
+    "PARA/20-AREAS/知识管理/00-CORE/视觉工具选取原则.md",
+    "PARA/20-AREAS/知识管理/00-CORE/视觉思维概述.md",
+    "PARA/20-AREAS/知识管理/RESOURCES",
+    "PARA/20-AREAS/前端工程/DevOps工作流/Github Issues.md",
+    "PARA/20-AREAS/前端工程/性能优化/前端性能优化概述.md",
+    "PARA/20-AREAS/前端工程/DevOps工作流",
+    "PARA/20-AREAS/前端工程/性能优化",
+    "PARA/20-AREAS/前端工程/前端性能优化",
+    "PARA/20-AREAS/前端工程",
+    "PARA/20-AREAS/前端工程化",
+    "PARA/30-RESOURCES/前端技术/源码解析/assets/vueSourceCodeStudy02",
+    "PARA/30-RESOURCES/前端技术/源码解析/assets",
+    "PARA/30-RESOURCES/前端技术/源码解析",
+    "PARA/20-AREAS/知识管理/视觉思维/_resources/视觉思维概述/56cbaa4dfff0adb486d7a1e8626768d2_MD5.jpeg",
+    "PKM/20-AREAS/知识管理/视觉思维/_resources/Pasted image 20250424002635.png",
+    "PKM/20-AREAS/知识管理/01知识管理看板.canvas",
     "主题看板.canvas",
-    "copilot-conversations",
-    "PKM/20-AREAS/01领域看板.canvas",
-    "SimpRead/SimpRead/_resources/0-AI 复兴 RSS ？",
     "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/ed48906235c106ffa823f9852f538c16_MD5.webp",
     "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/cdcae7b8a0b288b79e44ee717e437984_MD5.webp",
     "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/b508ae6abf83d03fdb16aadcc1dd0df3_MD5.webp",
     "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/b23ef26a9492e2430732e9fd7b1eae9d_MD5.webp",
     "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/a8919736f0f2dfd359526dcf7eb3bed6_MD5.webp",
     "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/7841b0fb3f18076a5a80b7319a4943aa_MD5.webp",
-    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/7a4e336a83d32702b1d8313e0d63eadb_MD5.webp",
-    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/72ece1360ec8943f8985865b478fc8e1_MD5.webp",
-    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/695c17c460b380dde2b0d2348b1299fe_MD5.webp",
-    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/693a45c19f3bb7d0ac11c897ee31896f_MD5.webp",
-    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式",
-    "SimpRead/SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息",
-    "SimpRead/SimpRead/log/simpred_sync.log",
-    "SimpRead/SimpRead/_resources",
-    "SimpRead/SimpRead/log",
-    "SimpRead/SimpRead",
     "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库看板.canvas",
     "PKM/30-RESOURCES/技术资产/算法真题/未命名.canvas",
     "PKM/Topics/前端工程化/前端工程化.canvas",

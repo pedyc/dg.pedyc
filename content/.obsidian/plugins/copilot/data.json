@@ -53,6 +53,56 @@
       ]
     },
     {
+      "name": "gpt-4.1",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ]
+    },
+    {
+      "name": "gpt-4.1-mini",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ]
+    },
+    {
+      "name": "gpt-4.1-nano",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ]
+    },
+    {
+      "name": "o4-mini",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "reasoning"
+      ]
+    },
+    {
+      "name": "claude-3-5-sonnet-latest",
+      "provider": "anthropic",
+      "enabled": false,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ]
+    },
+    {
       "name": "gpt-4o",
       "provider": "openai",
       "enabled": false,
@@ -65,16 +115,6 @@
     {
       "name": "gpt-4o-mini",
       "provider": "openai",
-      "enabled": false,
-      "isBuiltIn": true,
-      "core": true,
-      "capabilities": [
-        "vision"
-      ]
-    },
-    {
-      "name": "claude-3-5-sonnet-latest",
-      "provider": "anthropic",
       "enabled": false,
       "isBuiltIn": true,
       "core": true,
@@ -306,5 +346,8 @@
       "prompt": "<instruction>Transform the text below into a professional press release:\n    1. Use formal, journalistic style\n    2. Include headline and dateline\n    3. Follow inverted pyramid structure\n    Return only the press release format.</instruction>\n\n<text>{copilot-selection}</text>",
       "showInContextMenu": false
     }
-  ]
+  ],
+  "userId": "f18f0171-ec1a-4c66-b24d-f97f2035f5ce",
+  "passMarkdownImages": true,
+  "enableCustomPromptTemplating": true
 }

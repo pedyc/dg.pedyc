@@ -284,7 +284,7 @@
     {
       "name": "Translate to Chinese",
       "prompt": "<instruction>Translate the text below into Chinese:\n    1. Preserve the meaning and tone\n    2. Maintain appropriate cultural context\n    3. Keep formatting and structure\n    Return only the translated text.</instruction>\n\n<text>{copilot-selection}</text>",
-      "showInContextMenu": true
+      "showInContextMenu": false
     },
     {
       "name": "Summarize",
@@ -304,12 +304,12 @@
     {
       "name": "Make shorter",
       "prompt": "<instruction>Reduce the text below to half its length while preserving these elements:\n    1. Main ideas and key points\n    2. Essential details\n    3. Original tone and style\n    Return only the shortened text.</instruction>\n\n<text>{copilot-selection}</text>",
-      "showInContextMenu": true
+      "showInContextMenu": false
     },
     {
       "name": "Make longer",
       "prompt": "<instruction>Expand the text below to twice its length by:\n    1. Adding relevant details and examples\n    2. Elaborating on key points\n    3. Maintaining the original tone and style\n    Return only the expanded text.</instruction>\n\n<text>{copilot-selection}</text>",
-      "showInContextMenu": true
+      "showInContextMenu": false
     },
     {
       "name": "Generate table of contents",

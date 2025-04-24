@@ -6,6 +6,7 @@
       {
         "id": "d0f82b012c3e67e1",
         "type": "tabs",
+        "dimension": 41.88351920693928,
         "children": [
           {
             "id": "9f643c32302f47f7",
@@ -13,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/20-AREAS/00领域指南.md",
+                "file": "PARA/00-META/本库设计方案.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +29,150 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00领域指南"
+              "title": "本库设计方案"
+            }
+          },
+          {
+            "id": "83f4c013d7318097",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/30-RESOURCES/效率工具/PARA工具包/PARA通用笔记模板.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "PARA通用笔记模板"
+            }
+          },
+          {
+            "id": "30121738fb571847",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/20-AREAS/前端工程/01-METHODS/前端工程化方法论.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "前端工程化方法论"
+            }
+          },
+          {
+            "id": "0547ba786dec1983",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/30-RESOURCES/PARA工具包/PARA实施指南.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "PARA实施指南"
             }
           }
-        ]
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "85411baba5042d3f",
+        "type": "split",
+        "dimension": 58.116480793060724,
+        "children": [
+          {
+            "id": "5bc3f057dc85b1f4",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "5d6524db2403dfdd",
+                "type": "leaf",
+                "state": {
+                  "type": "copilot-chat-view",
+                  "state": {},
+                  "icon": "message-square",
+                  "title": "Copilot"
+                }
+              }
+            ]
+          },
+          {
+            "id": "34e4da7b7fdb37cd",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "12f4fcbd3cdca1b1",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "PARA/20-AREAS/前端工程/01-METHODS/前端工程化方法论.md",
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 0.7840526816831163,
+                      "close": false
+                    }
+                  },
+                  "icon": "lucide-git-fork",
+                  "title": "Graph of 前端工程化方法论"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -129,7 +270,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287.5
+    "width": 270.5
   },
   "right": {
     "id": "ff01a1db19d5896b",
@@ -238,54 +379,53 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "9f643c32302f47f7",
+  "active": "62b03965a1dba250",
   "lastOpenFiles": [
+    "PARA/20-AREAS/前端工程/00前端工程领域.md",
+    "PARA/20-AREAS/知识管理/00知识管理领域.md",
+    "PARA/20-AREAS/前端工程/01-METHODS",
+    "PARA/20-AREAS/知识管理/00-CORE/视觉思维概述.md",
+    "PARA/20-AREAS/知识管理/02-WORKFLOWS/知识管理工作流.md",
+    "PARA/20-AREAS/知识管理/02-WORKFLOWS/知识管理实施路线图.md",
+    "PARA/10-PROJECTS/搁置/2025Q1-使用PARA笔记法重构PKM.md",
+    "PARA/20-AREAS/知识管理/01-METHODS/PARA笔记组织法.md",
+    "PARA/20-AREAS/知识管理/01-METHODS",
+    "PARA/20-AREAS/前端工程/00-CORE/前端工程化概述.md",
+    "PARA/20-AREAS/前端工程/00-CORE/前端性能优化概述.md",
+    "PARA/20-AREAS/前端工程/01-METHODS/前端工程化方法论.md",
+    "PARA/20-AREAS/前端工程/01-METHODS/模块化与组件化开发.md",
+    "PARA/20-AREAS/前端工程/01-METHODS/代码规范与质量保证.md",
+    "PARA/20-AREAS/前端工程/DevOps工作流/Github Issues.md",
+    "copilot-conversations/What's_the_longest_river_in_the_world@20250424_113658.md",
+    "PARA/20-AREAS/前端工程/01DevOps工作流领域.md",
+    "Blog/JavaScript模块化系统解析.md",
+    "Blog/博客选题列表.md",
+    "Blog/JS模块化梳理.md",
+    "PARA/10-PROJECTS/2025Q1-学习Docker.md",
+    "PARA/30-RESOURCES/效率工具/PARA工具包/PARA通用笔记模板.md",
+    "PARA/00-META/本库设计方案.md",
+    "PARA/30-RESOURCES/PARA工具包/PARA进阶技巧.md",
+    "PARA/20-AREAS/知识管理/视觉思维/Gestalt视觉法则.md",
+    "PARA/20-AREAS/知识管理/视觉思维/隐喻思维及信息图.md",
+    "PARA/20-AREAS/知识管理/视觉思维/线性思维及流程图.md",
+    "PARA/20-AREAS/前端工程/02-WORKFLOWS",
+    "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.svg",
+    "PARA/20-AREAS/前端工程/00-CORE",
+    "PARA/20-AREAS/知识管理/02-WORKFLOWS",
+    "PARA/20-AREAS/知识管理/00-CORE",
+    "PARA/20-AREAS/前端工程/00-CORE",
+    "PARA/20-AREAS/前端工程/ESLint",
     "PARA/40-ARCHIVES/Source/_resources/知识管理/7d25f1ed57357410442f092da56e29cc_MD5.jpeg",
     "PARA/40-ARCHIVES/Source/_resources/知识管理",
     "PARA/40-ARCHIVES/Source/_resources/Pasted image 20240823221714.png",
-    "PARA/40-ARCHIVES/Source/随笔工作流.md",
-    "PARA/40-ARCHIVES/Source/过秦论.md",
-    "PARA/40-ARCHIVES/Source/积分系统.md",
-    "PARA/40-ARCHIVES/Source/知识地图.md",
-    "PARA/40-ARCHIVES/Source/清单.md",
-    "PARA/40-ARCHIVES/Source/标准化内容.md",
-    "PARA/40-ARCHIVES/Source/数字花园概述.md",
-    "PARA/40-ARCHIVES/Source/信息源.md",
-    "PARA/40-ARCHIVES/Source/习惯养成.md",
-    "PARA/40-ARCHIVES/Source/【记录】重构GTD OS.md",
-    "PARA/40-ARCHIVES/Source/【记录】数字花园项目的图片懒加载.md",
-    "PARA/40-ARCHIVES/Source/【记录】数字花园项目优化.md",
-    "PARA/40-ARCHIVES/Source/【记录】建站.md",
-    "PARA/40-ARCHIVES/Source/【记录】将个人博客部署到Netlify.md",
-    "PARA/40-ARCHIVES/Source/【记录】WSL2配置代理.md",
     "PARA/40-ARCHIVES/Source/_resources",
-    "PARA/40-ARCHIVES/Source/WSL + SSH + Zellij + NeoVim 工作流.md",
-    "PARA/40-ARCHIVES/Source/vscode配置.md",
-    "PARA/40-ARCHIVES/Source/RSS.md",
-    "PARA/40-ARCHIVES/Source/patch-package.md",
-    "PARA/40-ARCHIVES/Source/obsidian插件.md",
-    "PARA/40-ARCHIVES/Source/Obsidian.md",
-    "PARA/40-ARCHIVES/Source",
-    "PARA/40-ARCHIVES",
     "PARA/30-RESOURCES/算法真题/_resources/旋转矩阵/51fb9e5c22fcaca8a09919a056d29c1c_MD5.jpg",
     "PARA/30-RESOURCES/算法真题/_resources/旋转矩阵/0b123d4c54b867794d218664fe863638_MD5.jpg",
-    "PARA/30-RESOURCES/前端技术/源码解析/assets/vueSourceCodeStudy02",
-    "PARA/30-RESOURCES/算法真题/_resources/旋转矩阵",
-    "PARA/30-RESOURCES/效率工具/PARA工具包/PARA通用笔记模板.md",
-    "PARA/30-RESOURCES/前端技术/源码解析/01Vue源码解析-运行时篇.md",
-    "PARA/30-RESOURCES/前端技术/源码解析/assets",
-    "PARA/30-RESOURCES/项目矩阵/Obsidian-CortexFlow.md",
-    "PARA/30-RESOURCES/项目矩阵/项目矩阵.md",
-    "PARA/30-RESOURCES/算法真题/_resources",
-    "PARA/30-RESOURCES/效率工具/PARA工具包",
-    "PARA/30-RESOURCES/前端技术/源码解析",
     "PKM/30-RESOURCES/技术资产/算法真题/_resources/旋转矩阵/51fb9e5c22fcaca8a09919a056d29c1c_MD5.jpg",
     "PKM/30-RESOURCES/技术资产/算法真题/_resources/旋转矩阵/0b123d4c54b867794d218664fe863638_MD5.jpg",
     "PKM/20-AREAS/专业技术/算法与数据结构/_resources/快速排序/22f991dc0841a4c05cc59bccc3a84c90_MD5.jpeg",
     "PKM/20-AREAS/专业技术/算法与数据结构/_resources/基础数据结构及常用算法汇总/22f991dc0841a4c05cc59bccc3a84c90_MD5.jpeg",
     "PKM/40-ARCHIVES/Source/_resources/知识管理/7d25f1ed57357410442f092da56e29cc_MD5.jpeg",
-    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/e85a574a52c9731775708dba9ed68514_MD5.jpg",
-    "PKM/20-AREAS/Blog/_resources/ReprintVueCompositionAPI/e34f2c9c81679c0a4608d19b2abc1eb7_MD5.jpg",
     "PKM/20-AREAS/01领域看板.canvas",
     "PARA/20-AREAS/01领域看板.canvas",
     "PKM/20-AREAS/知识管理/01知识管理看板.canvas",

@@ -1,16 +1,12 @@
 ---
 title: 2025Q1-学习Docker
-tags:
-  - DevOps
-  - CI/CD
+tags: [DevOps, CI/CD]
 date-created: 2025-03-10
-date-modified: 2025-04-14
+date-modified: 2025-04-24
 status: 进行中
-area:
-  - "[[00算法领域]]"
+area: ["[[00算法领域]]"]
 cycle: 2025/03/10 - 2025/03/31
-type:
-  - project
+type: [project]
 ---
 
 ## 🔗依赖项目

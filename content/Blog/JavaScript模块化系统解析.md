@@ -1,12 +1,12 @@
 ---
 uid: 
-title: JS模块化梳理
+title: JavaScript模块化系统解析
 aliases: []
 author: ped_yc
 description: 
 tags: [JS, 模块化, 前端工程化]
 date-created: 2024-09-16
-date-modified: 2025-03-17
+date-modified: 2025-04-24
 status: [YCDONE]
 categories: [方法论]
 type: [blog]

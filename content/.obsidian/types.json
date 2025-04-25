@@ -52,6 +52,7 @@
     "topic": "multitext",
     "area": "multitext",
     "source": "multitext",
-    "rating": "multitext"
+    "rating": "multitext",
+    "related": "multitext"
   }
 }

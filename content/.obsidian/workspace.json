@@ -6,87 +6,15 @@
       {
         "id": "d0f82b012c3e67e1",
         "type": "tabs",
-        "dimension": 41.88351920693928,
+        "dimension": 43.275109170305676,
         "children": [
-          {
-            "id": "9f643c32302f47f7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/00-META/本库设计方案.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "本库设计方案"
-            }
-          },
-          {
-            "id": "83f4c013d7318097",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/30-RESOURCES/效率工具/PARA工具包/PARA通用笔记模板.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "PARA通用笔记模板"
-            }
-          },
-          {
-            "id": "30121738fb571847",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/前端工程/01-METHODS/前端工程化方法论.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "前端工程化方法论"
-            }
-          },
           {
             "id": "0547ba786dec1983",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/30-RESOURCES/PARA工具包/PARA实施指南.md",
+                "file": "PARA/20-AREAS/政治经济/阿拉伯世界没落的原因是什么.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -101,20 +29,20 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "PARA实施指南"
+              "title": "阿拉伯世界没落的原因是什么"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "85411baba5042d3f",
         "type": "split",
-        "dimension": 58.116480793060724,
+        "dimension": 56.72489082969432,
         "children": [
           {
             "id": "5bc3f057dc85b1f4",
             "type": "tabs",
+            "dimension": 56.69586983729662,
             "children": [
               {
                 "id": "5d6524db2403dfdd",
@@ -131,6 +59,7 @@
           {
             "id": "34e4da7b7fdb37cd",
             "type": "tabs",
+            "dimension": 43.30413016270338,
             "children": [
               {
                 "id": "12f4fcbd3cdca1b1",
@@ -138,7 +67,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "PARA/20-AREAS/前端工程/01-METHODS/前端工程化方法论.md",
+                    "file": "PARA/20-AREAS/政治经济/阿拉伯世界没落的原因是什么.md",
                     "options": {
                       "collapse-filter": true,
                       "search": "",
@@ -161,12 +90,12 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.7840526816831163,
+                      "scale": 0.6849331060424786,
                       "close": false
                     }
                   },
                   "icon": "lucide-git-fork",
-                  "title": "Graph of 前端工程化方法论"
+                  "title": "Graph of 阿拉伯世界没落的原因是什么"
                 }
               }
             ]
@@ -379,53 +308,54 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "62b03965a1dba250",
+  "active": "0547ba786dec1983",
   "lastOpenFiles": [
-    "PARA/20-AREAS/前端工程/00前端工程领域.md",
-    "PARA/20-AREAS/知识管理/00知识管理领域.md",
+    "PARA/20-AREAS/政治经济/阿拉伯世界没落的原因是什么@ds.md",
+    "copilot-conversations/[[权力_(Power)]]完善此笔记@20250425_212601.md",
+    "PARA/20-AREAS/政治经济/阿拉伯世界没落的原因是什么.md",
+    "PARA/20-AREAS/政治经济/深度解读全球化调整期与中国的战略新机遇.md",
+    "PARA/20-AREAS/政治经济/我对赢学的一些总结与思考.md",
+    "PARA/20-AREAS/政治经济/解构下为什么美国玩不下去“日耳蛮赢学”了.md",
+    "PARA/20-AREAS/政治经济/00政治经济领域.md",
+    "PARA/30-RESOURCES/术语表/国家 (State).md",
+    "PARA/30-RESOURCES/术语表/阶级 (Class).md",
+    "PARA/30-RESOURCES/术语表/意识形态 (Ideology).md",
+    "PARA/20-AREAS/政治经济/00-CORE/经济学基础.md",
+    "PARA/30-RESOURCES/术语表/权力 (Power).md",
+    "PARA/30-RESOURCES/术语表/制度 (Institutions).md",
+    "PARA/30-RESOURCES/术语表/市场 (Market).md",
+    "PARA/20-AREAS/政治经济/_resources",
+    "index.md",
+    "_template/templage_area.md",
+    "_template/template_diary.md",
+    "PARA/00-META/笔记命名规范.md",
+    "PARA/30-RESOURCES/项目矩阵/项目矩阵汇总.md",
+    "PARA/30-RESOURCES/提示词/个人知识管理助手.md",
+    "PARA/30-RESOURCES/提示词/前端自检提示词.md",
+    "PARA/30-RESOURCES/提示词/提示词Prompt.png",
+    "PARA/30-RESOURCES/术语表/稀缺性 (Scarcity).md",
+    "PARA/30-RESOURCES/术语表",
+    "PARA/30-RESOURCES/PARA工具包/PARA实施指南.md",
+    "PARA/20-AREAS/政治经济/00-CORE",
+    "PARA/20-AREAS/职业规划/00职业规划领域.md",
+    "PARA/20-AREAS/职业规划/00-CORE/职业发展思考.md",
+    "PARA/20-AREAS/职业规划/00-CORE",
+    "PARA/20-AREAS/00领域指南.md",
+    "PARA/30-RESOURCES/提示词",
+    "PARA/20-AREAS/人工智能/01-METHODS",
+    "PARA/20-AREAS/人工智能/00-CORE",
+    "PARA/20-AREAS/个人成长/00-CORE",
+    "持续集成与持续部署 (CI",
     "PARA/20-AREAS/前端工程/01-METHODS",
-    "PARA/20-AREAS/知识管理/00-CORE/视觉思维概述.md",
-    "PARA/20-AREAS/知识管理/02-WORKFLOWS/知识管理工作流.md",
-    "PARA/20-AREAS/知识管理/02-WORKFLOWS/知识管理实施路线图.md",
-    "PARA/10-PROJECTS/搁置/2025Q1-使用PARA笔记法重构PKM.md",
-    "PARA/20-AREAS/知识管理/01-METHODS/PARA笔记组织法.md",
-    "PARA/20-AREAS/知识管理/01-METHODS",
-    "PARA/20-AREAS/前端工程/00-CORE/前端工程化概述.md",
-    "PARA/20-AREAS/前端工程/00-CORE/前端性能优化概述.md",
-    "PARA/20-AREAS/前端工程/01-METHODS/前端工程化方法论.md",
-    "PARA/20-AREAS/前端工程/01-METHODS/模块化与组件化开发.md",
-    "PARA/20-AREAS/前端工程/01-METHODS/代码规范与质量保证.md",
-    "PARA/20-AREAS/前端工程/DevOps工作流/Github Issues.md",
-    "copilot-conversations/What's_the_longest_river_in_the_world@20250424_113658.md",
-    "PARA/20-AREAS/前端工程/01DevOps工作流领域.md",
-    "Blog/JavaScript模块化系统解析.md",
-    "Blog/博客选题列表.md",
-    "Blog/JS模块化梳理.md",
-    "PARA/10-PROJECTS/2025Q1-学习Docker.md",
-    "PARA/30-RESOURCES/效率工具/PARA工具包/PARA通用笔记模板.md",
-    "PARA/00-META/本库设计方案.md",
-    "PARA/30-RESOURCES/PARA工具包/PARA进阶技巧.md",
-    "PARA/20-AREAS/知识管理/视觉思维/Gestalt视觉法则.md",
-    "PARA/20-AREAS/知识管理/视觉思维/隐喻思维及信息图.md",
-    "PARA/20-AREAS/知识管理/视觉思维/线性思维及流程图.md",
-    "PARA/20-AREAS/前端工程/02-WORKFLOWS",
     "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.svg",
-    "PARA/20-AREAS/前端工程/00-CORE",
-    "PARA/20-AREAS/知识管理/02-WORKFLOWS",
-    "PARA/20-AREAS/知识管理/00-CORE",
-    "PARA/20-AREAS/前端工程/00-CORE",
-    "PARA/20-AREAS/前端工程/ESLint",
-    "PARA/40-ARCHIVES/Source/_resources/知识管理/7d25f1ed57357410442f092da56e29cc_MD5.jpeg",
-    "PARA/40-ARCHIVES/Source/_resources/知识管理",
-    "PARA/40-ARCHIVES/Source/_resources/Pasted image 20240823221714.png",
-    "PARA/40-ARCHIVES/Source/_resources",
+    "PARA/40-ARCHIVES/_resources/知识管理/7d25f1ed57357410442f092da56e29cc_MD5.jpeg",
+    "PARA/40-ARCHIVES/_resources/Pasted image 20240823221714.png",
     "PARA/30-RESOURCES/算法真题/_resources/旋转矩阵/51fb9e5c22fcaca8a09919a056d29c1c_MD5.jpg",
     "PARA/30-RESOURCES/算法真题/_resources/旋转矩阵/0b123d4c54b867794d218664fe863638_MD5.jpg",
     "PKM/30-RESOURCES/技术资产/算法真题/_resources/旋转矩阵/51fb9e5c22fcaca8a09919a056d29c1c_MD5.jpg",
     "PKM/30-RESOURCES/技术资产/算法真题/_resources/旋转矩阵/0b123d4c54b867794d218664fe863638_MD5.jpg",
     "PKM/20-AREAS/专业技术/算法与数据结构/_resources/快速排序/22f991dc0841a4c05cc59bccc3a84c90_MD5.jpeg",
     "PKM/20-AREAS/专业技术/算法与数据结构/_resources/基础数据结构及常用算法汇总/22f991dc0841a4c05cc59bccc3a84c90_MD5.jpeg",
-    "PKM/40-ARCHIVES/Source/_resources/知识管理/7d25f1ed57357410442f092da56e29cc_MD5.jpeg",
     "PKM/20-AREAS/01领域看板.canvas",
     "PARA/20-AREAS/01领域看板.canvas",
     "PKM/20-AREAS/知识管理/01知识管理看板.canvas",

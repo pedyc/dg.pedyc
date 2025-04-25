@@ -1,7 +1,8 @@
 ---
 title: Zettelkasten (卡片盒笔记法)
+aliases: [卢曼卡片盒笔记法, 卡片盒笔记法]
 date-created: 2025-04-24
-date-modified: 2025-04-24
+date-modified: 2025-04-25
 ---
 
 ## Zettelkasten (卡片盒笔记法)

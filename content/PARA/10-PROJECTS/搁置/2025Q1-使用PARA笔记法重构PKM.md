@@ -6,8 +6,8 @@ aliases: []
 author: pedyc
 tags: [知识管理/PARA]
 date-created: 2025-02-22
-date-modified: 2025-04-24
-status: 已完成
+date-modified: 2025-04-25
+status: 已暂停
 area: ["[[00知识管理领域]]"]
 type: [project]
 ---

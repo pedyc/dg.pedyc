@@ -1,12 +1,15 @@
 ---
 title: PARA笔记转化工作流
-tags: [知识管理/PARA]
+tags:
+  - 知识管理/PARA
 date-created: 2025-03-05
 date-modified: 2025-04-23
 category: 知识管理/PARA
 rating: ★★★★☆
-source: ["[[00知识管理领域]]"]
-type: [resource]
+source:
+  - "[[08知识管理领域]]"
+type:
+  - resource
 ---
 
 ## 🧰 核心价值

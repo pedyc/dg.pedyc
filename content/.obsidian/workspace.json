@@ -6,15 +6,15 @@
       {
         "id": "d0f82b012c3e67e1",
         "type": "tabs",
-        "dimension": 43.275109170305676,
+        "dimension": 46.88057040998218,
         "children": [
           {
-            "id": "0547ba786dec1983",
+            "id": "e49f26df523e329c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/20-AREAS/政治经济/阿拉伯世界没落的原因是什么.md",
+                "file": "PARA/20-AREAS/知识管理/0803PKM工具领域.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,7 +29,55 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "阿拉伯世界没落的原因是什么"
+              "title": "0803PKM工具领域"
+            }
+          },
+          {
+            "id": "0b199e0359d860ac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/20-AREAS/个人成长/01个人成长领域.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "01个人成长领域"
+            }
+          },
+          {
+            "id": "510a2752f6ee3d1d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Blog/自由、宇宙与猫：《SOMA》游玩有感0.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "自由、宇宙与猫：《SOMA》游玩有感0"
             }
           }
         ]
@@ -37,7 +85,7 @@
       {
         "id": "85411baba5042d3f",
         "type": "split",
-        "dimension": 56.72489082969432,
+        "dimension": 53.11942959001782,
         "children": [
           {
             "id": "5bc3f057dc85b1f4",
@@ -67,7 +115,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "PARA/20-AREAS/政治经济/阿拉伯世界没落的原因是什么.md",
+                    "file": "PARA/20-AREAS/知识管理/0803PKM工具领域.md",
                     "options": {
                       "collapse-filter": true,
                       "search": "",
@@ -90,12 +138,12 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.6849331060424786,
+                      "scale": 0.7264683601694676,
                       "close": false
                     }
                   },
                   "icon": "lucide-git-fork",
-                  "title": "Graph of 阿拉伯世界没落的原因是什么"
+                  "title": "Graph of 0803PKM工具领域"
                 }
               }
             ]
@@ -166,7 +214,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#重要",
+                "query": "tag:Q&A",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -199,7 +247,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 270.5
+    "width": 315.5
   },
   "right": {
     "id": "ff01a1db19d5896b",
@@ -308,45 +356,45 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "0547ba786dec1983",
+  "active": "e49f26df523e329c",
   "lastOpenFiles": [
-    "PARA/20-AREAS/政治经济/阿拉伯世界没落的原因是什么@ds.md",
-    "copilot-conversations/[[权力_(Power)]]完善此笔记@20250425_212601.md",
-    "PARA/20-AREAS/政治经济/阿拉伯世界没落的原因是什么.md",
-    "PARA/20-AREAS/政治经济/深度解读全球化调整期与中国的战略新机遇.md",
-    "PARA/20-AREAS/政治经济/我对赢学的一些总结与思考.md",
-    "PARA/20-AREAS/政治经济/解构下为什么美国玩不下去“日耳蛮赢学”了.md",
-    "PARA/20-AREAS/政治经济/00政治经济领域.md",
-    "PARA/30-RESOURCES/术语表/国家 (State).md",
-    "PARA/30-RESOURCES/术语表/阶级 (Class).md",
-    "PARA/30-RESOURCES/术语表/意识形态 (Ideology).md",
-    "PARA/20-AREAS/政治经济/00-CORE/经济学基础.md",
-    "PARA/30-RESOURCES/术语表/权力 (Power).md",
-    "PARA/30-RESOURCES/术语表/制度 (Institutions).md",
-    "PARA/30-RESOURCES/术语表/市场 (Market).md",
-    "PARA/20-AREAS/政治经济/_resources",
-    "index.md",
+    "PARA/20-AREAS/知识管理/08知识管理领域.md",
+    "PARA/20-AREAS/知识管理/0802知识内化领域.md",
+    "PARA/20-AREAS/知识管理/0801知识组织领域.md",
+    "PARA/20-AREAS/知识管理/知识管理看板.excalidraw.md",
+    "PARA/20-AREAS/哲学/06哲学领域.md",
+    "PARA/20-AREAS/哲学/0602逻辑学领域.md",
+    "PARA/20-AREAS/哲学/0601知识论领域.md",
+    "PARA/20-AREAS/前端工程/0203Monorepo领域.md",
+    "PARA/20-AREAS/前端工程/0202DevOps领域.md",
+    "PARA/20-AREAS/前端工程/0201性能优化领域.md",
+    "PARA/20-AREAS/前端工程/02前端工程领域.md",
+    "PARA/00-META/本库领域索引.md",
+    "PARA/20-AREAS/个人成长/0102职业规划领域.md",
+    "PARA/20-AREAS/个人成长/0101心流体验领域.md",
+    "PARA/20-AREAS/政治经济/07政治经济领域.md",
+    "PARA/20-AREAS/算法与数据结构/05算法与数据结构领域.md",
+    "PARA/20-AREAS/人工智能/04人工智能领域.md",
+    "PARA/20-AREAS/前端生态/03前端生态领域.md",
+    "PARA/20-AREAS/个人成长/01个人成长领域.md",
+    "PARA/00-META/领域命名规范.md",
+    "PARA/00-META/本库命名规范.md",
+    "PARA/00-META/Untitled",
+    "Diary/2025-04-30.md",
+    "Diary/2025-04-28.md",
     "_template/templage_area.md",
-    "_template/template_diary.md",
-    "PARA/00-META/笔记命名规范.md",
-    "PARA/30-RESOURCES/项目矩阵/项目矩阵汇总.md",
-    "PARA/30-RESOURCES/提示词/个人知识管理助手.md",
-    "PARA/30-RESOURCES/提示词/前端自检提示词.md",
+    "copilot-conversations/[[Git命令与工作流速查]]完善此笔记@20250429_154738.md",
+    "Blog/正视平庸：记录一次早餐时的思考0.md",
+    "PARA/20-AREAS/知识管理/02-WORKFLOWS",
+    "Diary/_resources",
+    "PARA/20-AREAS/前端工程/_resources",
+    "PARA/20-AREAS/前端工程/03-RESOURCES",
+    "PARA/20-AREAS/哲学/00-CORE",
+    "PARA/20-AREAS/哲学",
+    "PARA/30-RESOURCES/心流记录",
+    "PARA/20-AREAS/心得体验",
+    "PARA/20-AREAS/前端生态",
     "PARA/30-RESOURCES/提示词/提示词Prompt.png",
-    "PARA/30-RESOURCES/术语表/稀缺性 (Scarcity).md",
-    "PARA/30-RESOURCES/术语表",
-    "PARA/30-RESOURCES/PARA工具包/PARA实施指南.md",
-    "PARA/20-AREAS/政治经济/00-CORE",
-    "PARA/20-AREAS/职业规划/00职业规划领域.md",
-    "PARA/20-AREAS/职业规划/00-CORE/职业发展思考.md",
-    "PARA/20-AREAS/职业规划/00-CORE",
-    "PARA/20-AREAS/00领域指南.md",
-    "PARA/30-RESOURCES/提示词",
-    "PARA/20-AREAS/人工智能/01-METHODS",
-    "PARA/20-AREAS/人工智能/00-CORE",
-    "PARA/20-AREAS/个人成长/00-CORE",
-    "持续集成与持续部署 (CI",
-    "PARA/20-AREAS/前端工程/01-METHODS",
     "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.svg",
     "PARA/40-ARCHIVES/_resources/知识管理/7d25f1ed57357410442f092da56e29cc_MD5.jpeg",
     "PARA/40-ARCHIVES/_resources/Pasted image 20240823221714.png",

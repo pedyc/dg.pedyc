@@ -6,7 +6,7 @@ author: ped_yc
 description: 
 tags: [观后感, 解谜游戏, SOMA, 存在主义, 虚无主义]
 date-created: 2024-11-19
-date-modified: 2025-04-28
+date-modified: 2025-04-30
 status: [YCTODO]
 type: [blog]
 ---

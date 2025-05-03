@@ -2,7 +2,7 @@
 title: Zettelkasten (卡片盒笔记法)
 aliases: [卢曼卡片盒笔记法, 卡片盒笔记法]
 date-created: 2025-04-24
-date-modified: 2025-04-25
+date-modified: 2025-05-03
 ---
 
 ## Zettelkasten (卡片盒笔记法)
@@ -31,6 +31,7 @@ date-modified: 2025-04-25
 
 ### 工作流程概要
 
+参见 [[卡片盒笔记法实施工作流]]
 1. **捕捉**: 随时记录闪念笔记和文献笔记。
 2. **处理**: 定期回顾闪念和文献笔记。
 3. **提炼**: 将有价值的想法转化为永久笔记，遵循原子性、自主性原则，用自己的话写。
@@ -50,7 +51,15 @@ date-modified: 2025-04-25
 * **物理**: 索引卡片、笔、卡片盒。
 * **数字**: Obsidian, Roam Research, Logseq, Zettlr, The Archive 等支持双向链接和标签的笔记软件。
 
-Zettelkasten 不仅仅是一种笔记方法，更是一种**思考和学习的工具**，通过持续实践，可以极大地提升知识内化和创造力。
+### 视觉化
 
 ---
-**关联:** [[知识管理概述]], [[PARA笔记组织法]], [[双向链接]], [[渐进式总结]]
+
+> Zettelkasten 不仅仅是一种笔记方法，更是一种**思考和学习的工具**，通过持续实践，可以极大地提升知识内化和创造力。
+
+## 参考
+
+* *https://zettelkasten.de/introduction/zh/
+* [Visual Zettelkasten](https://www.youtube.com/watch?v=uoNHkCLsp3g&list=PL6mqgtMZ4NP3jkOocwq7ha1Ur2TmCs2lY&index=6)
+* [[知识管理概述]]
+* [[PARA笔记组织法]]

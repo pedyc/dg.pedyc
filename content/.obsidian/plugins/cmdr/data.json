@@ -49,29 +49,23 @@
   ],
   "pageHeader": [
     {
-      "id": "templater-obsidian:insert-templater",
-      "icon": "lucide-arrow-down-to-dot",
-      "name": "Templater: Open insert template modal",
-      "mode": "any"
-    },
-    {
       "id": "open-with-default-app:show",
-      "icon": "lucide-files",
+      "icon": "lucide-app-window",
       "name": "在系统资源管理器中显示",
       "mode": "any"
     },
     {
-      "id": "obsidian-local-images-plus:download-images-def",
-      "icon": "lucide-image-down",
-      "name": "Local Images Plus: Localize attachments for the current note (Obsidian folder)",
-      "mode": "any"
-    },
-    {
       "id": "file-explorer:reveal-active-file",
-      "icon": "lucide-navigation",
+      "icon": "lucide-arrow-up-right-from-circle",
       "name": "文件列表: 在文件列表中显示当前文件",
       "mode": "any",
       "color": "#22d889"
+    },
+    {
+      "id": "excalibrain:excalibrain-start",
+      "icon": "lucide-paw-print",
+      "name": "ExcaliBrain: ExcaliBrain Normal",
+      "mode": "any"
     }
   ],
   "macros": [],

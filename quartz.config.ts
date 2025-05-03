@@ -22,7 +22,6 @@ const config: QuartzConfig = {
       "_resources",
       "_template",
       "_scripts",
-      "Excalidraw",
       "Private",
     ],
     defaultDateType: "created",

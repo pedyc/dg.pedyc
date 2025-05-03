@@ -155,5 +155,14 @@
       ],
       "key": "N"
     }
+  ],
+  "oz-image-plugin:toggle-render-images": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "I"
+    }
   ]
 }

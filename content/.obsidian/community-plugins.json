@@ -15,6 +15,7 @@
   "obsidian-excalidraw-plugin",
   "obsidian-tasks-plugin",
   "obsidian-latex-suite",
-  "table-extended",
-  "copilot"
+  "copilot",
+  "obsidian-image-toolkit",
+  "excalibrain"
 ]

@@ -1,20 +1,20 @@
 {
   "main": {
-    "id": "4d4271020f377299",
+    "id": "c045ca460385c05f",
     "type": "split",
     "children": [
       {
-        "id": "d0f82b012c3e67e1",
+        "id": "db8c20a9047852c9",
         "type": "tabs",
-        "dimension": 46.88057040998218,
+        "dimension": 54.88454706927176,
         "children": [
           {
-            "id": "e49f26df523e329c",
+            "id": "49c3111da0b4be62",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/20-AREAS/知识管理/0803PKM工具领域.md",
+                "file": "PARA/00-META/00关于本库.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,16 +29,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "0803PKM工具领域"
+              "title": "00关于本库"
             }
           },
           {
-            "id": "0b199e0359d860ac",
+            "id": "0b45224877460563",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/20-AREAS/个人成长/01个人成长领域.md",
+                "file": "PARA/20-AREAS/知识管理/00-CORE/知识组织概述.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -53,47 +53,36 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01个人成长领域"
+              "title": "知识组织概述"
             }
           },
           {
-            "id": "510a2752f6ee3d1d",
+            "id": "af6c4f7061fff724",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Blog/自由、宇宙与猫：《SOMA》游玩有感0.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "PARA/20-AREAS/知识管理/03-RESOURCES/draw_workflow_KM.excalidraw.svg"
               },
-              "icon": "lucide-file",
-              "title": "自由、宇宙与猫：《SOMA》游玩有感0"
+              "icon": "lucide-image",
+              "title": "draw_workflow_KM.excalidraw"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
-        "id": "85411baba5042d3f",
+        "id": "d2363637f8aff47f",
         "type": "split",
-        "dimension": 53.11942959001782,
+        "dimension": 45.11545293072824,
         "children": [
           {
-            "id": "5bc3f057dc85b1f4",
+            "id": "2365abd5a8c86a08",
             "type": "tabs",
-            "dimension": 56.69586983729662,
+            "dimension": 66.08260325406758,
             "children": [
               {
-                "id": "5d6524db2403dfdd",
+                "id": "69750c6d9457b4a6",
                 "type": "leaf",
                 "state": {
                   "type": "copilot-chat-view",
@@ -101,52 +90,119 @@
                   "icon": "message-square",
                   "title": "Copilot"
                 }
-              }
-            ]
-          },
-          {
-            "id": "34e4da7b7fdb37cd",
-            "type": "tabs",
-            "dimension": 43.30413016270338,
-            "children": [
+              },
               {
-                "id": "12f4fcbd3cdca1b1",
+                "id": "04b6cf99a8beecd7",
                 "type": "leaf",
                 "state": {
-                  "type": "localgraph",
+                  "type": "excalidraw",
                   "state": {
-                    "file": "PARA/20-AREAS/知识管理/0803PKM工具领域.md",
-                    "options": {
-                      "collapse-filter": true,
-                      "search": "",
-                      "localJumps": 1,
-                      "localBacklinks": true,
-                      "localForelinks": true,
-                      "localInterlinks": false,
-                      "showTags": false,
-                      "showAttachments": false,
-                      "hideUnresolved": false,
-                      "collapse-color-groups": true,
-                      "colorGroups": [],
-                      "collapse-display": true,
-                      "showArrow": false,
-                      "textFadeMultiplier": 0,
-                      "nodeSizeMultiplier": 1,
-                      "lineSizeMultiplier": 1,
-                      "collapse-forces": true,
-                      "centerStrength": 0.518713248970312,
-                      "repelStrength": 10,
-                      "linkStrength": 1,
-                      "linkDistance": 250,
-                      "scale": 0.7264683601694676,
-                      "close": false
+                    "file": "excalibrain.md"
+                  },
+                  "icon": "excalidraw-icon",
+                  "title": "excalibrain"
+                }
+              },
+              {
+                "id": "441ec200cbfe22fe",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PARA/20-AREAS/知识管理/01-METHODS/Zettelkasten (卡片盒笔记法).md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
                     }
                   },
-                  "icon": "lucide-git-fork",
-                  "title": "Graph of 0803PKM工具领域"
+                  "icon": "lucide-file",
+                  "title": "Zettelkasten (卡片盒笔记法)"
                 }
               }
-            ]
+            ],
+            "currentTab": 1
+          },
+          {
+            "id": "213c9e9316173929",
+            "type": "split",
+            "dimension": 33.917396745932415,
+            "children": [
+              {
+                "id": "acc9a141859d8da0",
+                "type": "tabs",
+                "dimension": 29.24693520140105,
+                "children": [
+                  {
+                    "id": "fe8c139c8b6b0638",
+                    "type": "leaf",
+                    "state": {
+                      "type": "outline",
+                      "state": {
+                        "file": "PARA/20-AREAS/知识管理/00-CORE/知识组织概述.md",
+                        "followCursor": false,
+                        "showSearch": false,
+                        "searchQuery": ""
+                      },
+                      "icon": "lucide-list",
+                      "title": "Outline of 知识组织概述"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "c835f858e276f0fa",
+                "type": "tabs",
+                "dimension": 70.75306479859894,
+                "children": [
+                  {
+                    "id": "dfebbf521b0b73ce",
+                    "type": "leaf",
+                    "state": {
+                      "type": "localgraph",
+                      "state": {
+                        "file": "PARA/20-AREAS/知识管理/00-CORE/知识组织概述.md",
+                        "options": {
+                          "collapse-filter": true,
+                          "search": "",
+                          "localJumps": 1,
+                          "localBacklinks": true,
+                          "localForelinks": true,
+                          "localInterlinks": false,
+                          "showTags": false,
+                          "showAttachments": false,
+                          "hideUnresolved": false,
+                          "collapse-color-groups": true,
+                          "colorGroups": [],
+                          "collapse-display": true,
+                          "showArrow": false,
+                          "textFadeMultiplier": 0,
+                          "nodeSizeMultiplier": 1,
+                          "lineSizeMultiplier": 1,
+                          "collapse-forces": true,
+                          "centerStrength": 0.518713248970312,
+                          "repelStrength": 10,
+                          "linkStrength": 1,
+                          "linkDistance": 250,
+                          "scale": 1,
+                          "close": true
+                        }
+                      },
+                      "icon": "lucide-git-fork",
+                      "title": "Graph of 知识组织概述"
+                    }
+                  }
+                ]
+              }
+            ],
+            "direction": "vertical"
           }
         ],
         "direction": "horizontal"
@@ -155,16 +211,16 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "1df13da7a6572377",
+    "id": "7b26de4fecaee6fd",
     "type": "split",
     "children": [
       {
-        "id": "2bf10628ba3bdd8f",
+        "id": "e31579f7aa38d74b",
         "type": "tabs",
-        "dimension": 60.578778135048225,
+        "dimension": 76.84887459807074,
         "children": [
           {
-            "id": "62b03965a1dba250",
+            "id": "3dfca4b5c072d131",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -175,46 +231,41 @@
               "icon": "lucide-folder-closed",
               "title": "Files"
             }
+          }
+        ]
+      },
+      {
+        "id": "5e0950099d64d5f6",
+        "type": "tabs",
+        "dimension": 23.151125401929264,
+        "children": [
+          {
+            "id": "d97f169839e60d66",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
           },
           {
-            "id": "05f33a7cf3f2ca7c",
+            "id": "72e989063b9157ff",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "书签"
-            }
-          }
-        ]
-      },
-      {
-        "id": "3b21062118b7d174",
-        "type": "tabs",
-        "dimension": 21.54340836012862,
-        "children": [
-          {
-            "id": "9879e4e35cb586a9",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": false,
-                "showSearch": true,
-                "searchQuery": "算法"
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "Bookmarks"
             }
           },
           {
-            "id": "aabfe4df13d030e9",
+            "id": "060ef919fc54c6f9",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:Q&A",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -224,86 +275,24 @@
               "icon": "lucide-search",
               "title": "Search"
             }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "2e8c3d745c458fc4",
-        "type": "tabs",
-        "dimension": 17.877813504823152,
-        "children": [
+          },
           {
-            "id": "5d52ca6efedfee5c",
+            "id": "0dac9794e58d9572",
             "type": "leaf",
             "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
-            }
-          }
-        ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 315.5
-  },
-  "right": {
-    "id": "ff01a1db19d5896b",
-    "type": "split",
-    "children": [
-      {
-        "id": "82e15f1192309d75",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "65a2e6552e6c7caf",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
+              "type": "tag",
               "state": {
-                "file": "Excalidraw/How do you organize your notes.excalidraw.md",
-                "collapseAll": false,
-                "extraContext": true,
-                "sortOrder": "alphabetical",
+                "sortOrder": "frequency",
+                "useHierarchy": true,
                 "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "searchQuery": ""
               },
-              "icon": "links-coming-in",
-              "title": "How do you organize your notes.excalidraw 的反向链接列表"
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
-            "id": "e47084aa7e6bca64",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Follow/如何拥有一个无限制、可联网、带本地知识库.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "如何拥有一个无限制、可联网、带本地知识库 的出链列表"
-            }
-          },
-          {
-            "id": "84221092fe4a2702",
-            "type": "leaf",
-            "state": {
-              "type": "file-properties",
-              "state": {
-                "file": "Follow/前端框架新格局：从过去一年的演进看未来趋.md"
-              },
-              "icon": "lucide-info",
-              "title": "前端框架新格局：从过去一年的演进看未来趋的笔记属性"
-            }
-          },
-          {
-            "id": "b90426e6ec67b7cc",
+            "id": "60011dc7fd9da14a",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -313,30 +302,62 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "添加笔记属性"
-            }
-          },
-          {
-            "id": "57c78920fb003c94",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "PARA/20-AREAS/00领域指南.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of 00领域指南"
+              "title": "All properties"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 494.5,
+    "width": 307.5
+  },
+  "right": {
+    "id": "6f965a0263edffe0",
+    "type": "split",
+    "children": [
+      {
+        "id": "c8dd81782f60cc9f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "82d310b6843f6e6e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Diary/2025-05-02.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2025-05-02"
+            }
+          },
+          {
+            "id": "b1ad71e698b9ad0c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Diary/2025-05-03.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2025-05-03"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
@@ -349,68 +370,53 @@
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
       "publish:Publish changes...": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
       "cmdr:堆叠/取消堆叠标签页": false,
       "obsidian-local-images-plus:Local Images Plus  0.16.3\r\nLocalize attachments (plugin folder)": false,
       "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "e49f26df523e329c",
+  "active": "0b45224877460563",
   "lastOpenFiles": [
+    "PARA/20-AREAS/知识管理/0802知识组织领域.md",
+    "PARA/20-AREAS/知识管理/01-METHODS/Zettelkasten (卡片盒笔记法).md",
+    "PARA/00-META/00关于本库.md",
+    "Excalidraw/draw_visual_thinking.excalidraw.md",
+    "Excalidraw/draw_how_to_organize_your_note.excalidraw",
+    "excalibrain.md",
+    "Excalidraw/Drawing 2025-05-03 21.41.08.excalidraw.md",
+    "Excalidraw/draw_8_thinking_map.excalidraw.md",
+    "PARA/20-AREAS/知识管理/03-RESOURCES/draw_workflow_KM.excalidraw.svg",
+    "PARA/20-AREAS/知识管理/03-RESOURCES/Storyboard - Compare link-based DNP-based and list based PKM.svg",
+    "PARA/20-AREAS/知识管理/01-METHODS/Drawing 2025-05-03 11.26.03.excalidraw.md",
+    "Excalidraw/draw_PKM_Processes.excalidraw.md",
+    "Excalidraw/draw_workflow_KM.excalidraw.md",
+    "index.md",
+    "excalibrain 1.md",
+    "PARA/00-META/02-WORKFLOWS/本库组织方案.md",
+    "Diary/2025-05-03.md",
+    "PARA/20-AREAS/知识管理/00-CORE/知识组织概述.md",
+    "PARA/30-RESOURCES/效率工具/PARA工具包/PARA通用笔记模板.md",
+    "_template/template_project.md",
+    "PARA/20-AREAS/知识管理/00-CORE/知识管理概述.md",
     "PARA/20-AREAS/知识管理/08知识管理领域.md",
-    "PARA/20-AREAS/知识管理/0802知识内化领域.md",
-    "PARA/20-AREAS/知识管理/0801知识组织领域.md",
+    "PARA/20-AREAS/知识管理/02-WORKFLOWS/draw_PKM_Processes.excalidraw.svg",
+    "PARA/20-AREAS/知识管理/03-RESOURCES",
+    "PARA/20-AREAS/知识管理/0801知识获取领域.md",
+    "PARA/20-AREAS/知识管理/02-WORKFLOWS/知识管理工作流.md",
+    "PARA/20-AREAS/知识管理/知识卡片模板.md",
     "PARA/20-AREAS/知识管理/知识管理看板.excalidraw.md",
-    "PARA/20-AREAS/哲学/06哲学领域.md",
-    "PARA/20-AREAS/哲学/0602逻辑学领域.md",
-    "PARA/20-AREAS/哲学/0601知识论领域.md",
-    "PARA/20-AREAS/前端工程/0203Monorepo领域.md",
-    "PARA/20-AREAS/前端工程/0202DevOps领域.md",
-    "PARA/20-AREAS/前端工程/0201性能优化领域.md",
-    "PARA/20-AREAS/前端工程/02前端工程领域.md",
+    "Excalidraw/_resources/Pasted Image 20250502215925_999.svg",
+    "Excalidraw/_resources",
+    "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.excalidraw",
     "PARA/00-META/本库领域索引.md",
-    "PARA/20-AREAS/个人成长/0102职业规划领域.md",
-    "PARA/20-AREAS/个人成长/0101心流体验领域.md",
-    "PARA/20-AREAS/政治经济/07政治经济领域.md",
-    "PARA/20-AREAS/算法与数据结构/05算法与数据结构领域.md",
-    "PARA/20-AREAS/人工智能/04人工智能领域.md",
-    "PARA/20-AREAS/前端生态/03前端生态领域.md",
-    "PARA/20-AREAS/个人成长/01个人成长领域.md",
-    "PARA/00-META/领域命名规范.md",
-    "PARA/00-META/本库命名规范.md",
-    "PARA/00-META/Untitled",
-    "Diary/2025-04-30.md",
-    "Diary/2025-04-28.md",
-    "_template/templage_area.md",
-    "copilot-conversations/[[Git命令与工作流速查]]完善此笔记@20250429_154738.md",
-    "Blog/正视平庸：记录一次早餐时的思考0.md",
-    "PARA/20-AREAS/知识管理/02-WORKFLOWS",
-    "Diary/_resources",
-    "PARA/20-AREAS/前端工程/_resources",
-    "PARA/20-AREAS/前端工程/03-RESOURCES",
-    "PARA/20-AREAS/哲学/00-CORE",
-    "PARA/20-AREAS/哲学",
-    "PARA/30-RESOURCES/心流记录",
-    "PARA/20-AREAS/心得体验",
-    "PARA/20-AREAS/前端生态",
-    "PARA/30-RESOURCES/提示词/提示词Prompt.png",
-    "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.svg",
-    "PARA/40-ARCHIVES/_resources/知识管理/7d25f1ed57357410442f092da56e29cc_MD5.jpeg",
-    "PARA/40-ARCHIVES/_resources/Pasted image 20240823221714.png",
-    "PARA/30-RESOURCES/算法真题/_resources/旋转矩阵/51fb9e5c22fcaca8a09919a056d29c1c_MD5.jpg",
-    "PARA/30-RESOURCES/算法真题/_resources/旋转矩阵/0b123d4c54b867794d218664fe863638_MD5.jpg",
-    "PKM/30-RESOURCES/技术资产/算法真题/_resources/旋转矩阵/51fb9e5c22fcaca8a09919a056d29c1c_MD5.jpg",
-    "PKM/30-RESOURCES/技术资产/算法真题/_resources/旋转矩阵/0b123d4c54b867794d218664fe863638_MD5.jpg",
-    "PKM/20-AREAS/专业技术/算法与数据结构/_resources/快速排序/22f991dc0841a4c05cc59bccc3a84c90_MD5.jpeg",
-    "PKM/20-AREAS/专业技术/算法与数据结构/_resources/基础数据结构及常用算法汇总/22f991dc0841a4c05cc59bccc3a84c90_MD5.jpeg",
-    "PKM/20-AREAS/01领域看板.canvas",
-    "PARA/20-AREAS/01领域看板.canvas",
-    "PKM/20-AREAS/知识管理/01知识管理看板.canvas",
-    "主题看板.canvas",
-    "PKM/30-RESOURCES/技术资产/算法真题/00算法真题库看板.canvas",
-    "PKM/30-RESOURCES/技术资产/算法真题/未命名.canvas",
-    "PKM/Topics/前端工程化/前端工程化.canvas",
-    "Tools/看板.canvas"
+    "Diary/2025-05-02.md",
+    "Untitled.canvas",
+    "Diary/Untitled.canvas",
+    "PARA/20-AREAS/知识管理/00-CORE/_resources/视觉思维概述",
+    "PARA/20-AREAS/知识管理/_resources/08知识管理领域/fa545b9686cb506c5b3dae7f8217ee4f_MD5.jpeg",
+    "PARA/20-AREAS/知识管理/_resources/08知识管理领域/f1682794a0227c1a0c5065bd634e8808_MD5.jpeg",
+    "PARA/20-AREAS/知识管理/_resources/Pasted image 20250502172944.png"
   ]
 }

@@ -1,7 +1,7 @@
 ---
 title: Gestalt视觉法则
 date-created: 2025-04-23
-date-modified: 2025-04-24
+date-modified: 2025-04-30
 ---
 
 ## Gestalt 视觉法则：人类如何自动组织视觉信息？

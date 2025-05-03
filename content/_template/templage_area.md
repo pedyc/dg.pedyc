@@ -8,6 +8,8 @@ keywords:
 refresh: 月度｜季度
 type:
   - area
+para: 领域
+zettel: 永久笔记
 ---
 
 ## 🔗 活跃连接

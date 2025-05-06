@@ -1,5 +1,7 @@
 ---
 title: templage_area
+aliases:
+  - 领域别名
 description: 领域笔记通用模板，用于定义和管理特定领域的知识
 tags:
   - area/core

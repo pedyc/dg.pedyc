@@ -6,15 +6,15 @@
       {
         "id": "db8c20a9047852c9",
         "type": "tabs",
-        "dimension": 54.88454706927176,
+        "dimension": 49.627682873412176,
         "children": [
           {
-            "id": "49c3111da0b4be62",
+            "id": "f9e7d9c7119f42d5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/00-META/00关于本库.md",
+                "file": "Diary/2025-05-05.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,16 +29,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00关于本库"
+              "title": "2025-05-05"
             }
           },
           {
-            "id": "0b45224877460563",
+            "id": "8ad2900c5ba1499a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/20-AREAS/知识管理/00-CORE/知识组织概述.md",
+                "file": "PARA/20-AREAS/前端工程/02前端工程领域.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -53,19 +53,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "知识组织概述"
-            }
-          },
-          {
-            "id": "af6c4f7061fff724",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "PARA/20-AREAS/知识管理/03-RESOURCES/draw_workflow_KM.excalidraw.svg"
-              },
-              "icon": "lucide-image",
-              "title": "draw_workflow_KM.excalidraw"
+              "title": "02前端工程领域"
             }
           }
         ],
@@ -74,7 +62,7 @@
       {
         "id": "d2363637f8aff47f",
         "type": "split",
-        "dimension": 45.11545293072824,
+        "dimension": 50.37231712658782,
         "children": [
           {
             "id": "2365abd5a8c86a08",
@@ -90,45 +78,8 @@
                   "icon": "message-square",
                   "title": "Copilot"
                 }
-              },
-              {
-                "id": "04b6cf99a8beecd7",
-                "type": "leaf",
-                "state": {
-                  "type": "excalidraw",
-                  "state": {
-                    "file": "excalibrain.md"
-                  },
-                  "icon": "excalidraw-icon",
-                  "title": "excalibrain"
-                }
-              },
-              {
-                "id": "441ec200cbfe22fe",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "PARA/20-AREAS/知识管理/01-METHODS/Zettelkasten (卡片盒笔记法).md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
-                  "icon": "lucide-file",
-                  "title": "Zettelkasten (卡片盒笔记法)"
-                }
               }
-            ],
-            "currentTab": 1
+            ]
           },
           {
             "id": "213c9e9316173929",
@@ -146,13 +97,13 @@
                     "state": {
                       "type": "outline",
                       "state": {
-                        "file": "PARA/20-AREAS/知识管理/00-CORE/知识组织概述.md",
+                        "file": "PARA/20-AREAS/前端工程/02前端工程领域.md",
                         "followCursor": false,
                         "showSearch": false,
                         "searchQuery": ""
                       },
                       "icon": "lucide-list",
-                      "title": "Outline of 知识组织概述"
+                      "title": "Outline of 02前端工程领域"
                     }
                   }
                 ]
@@ -168,7 +119,7 @@
                     "state": {
                       "type": "localgraph",
                       "state": {
-                        "file": "PARA/20-AREAS/知识管理/00-CORE/知识组织概述.md",
+                        "file": "PARA/20-AREAS/前端工程/02前端工程领域.md",
                         "options": {
                           "collapse-filter": true,
                           "search": "",
@@ -196,7 +147,7 @@
                         }
                       },
                       "icon": "lucide-git-fork",
-                      "title": "Graph of 知识组织概述"
+                      "title": "Graph of 02前端工程领域"
                     }
                   }
                 ]
@@ -265,7 +216,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:知识管理",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -309,7 +260,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 307.5
+    "width": 276.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -377,46 +328,56 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "0b45224877460563",
+  "active": "8ad2900c5ba1499a",
   "lastOpenFiles": [
-    "PARA/20-AREAS/知识管理/0802知识组织领域.md",
-    "PARA/20-AREAS/知识管理/01-METHODS/Zettelkasten (卡片盒笔记法).md",
-    "PARA/00-META/00关于本库.md",
-    "Excalidraw/draw_visual_thinking.excalidraw.md",
-    "Excalidraw/draw_how_to_organize_your_note.excalidraw",
-    "excalibrain.md",
-    "Excalidraw/Drawing 2025-05-03 21.41.08.excalidraw.md",
-    "Excalidraw/draw_8_thinking_map.excalidraw.md",
-    "PARA/20-AREAS/知识管理/03-RESOURCES/draw_workflow_KM.excalidraw.svg",
-    "PARA/20-AREAS/知识管理/03-RESOURCES/Storyboard - Compare link-based DNP-based and list based PKM.svg",
-    "PARA/20-AREAS/知识管理/01-METHODS/Drawing 2025-05-03 11.26.03.excalidraw.md",
-    "Excalidraw/draw_PKM_Processes.excalidraw.md",
-    "Excalidraw/draw_workflow_KM.excalidraw.md",
-    "index.md",
-    "excalibrain 1.md",
-    "PARA/00-META/02-WORKFLOWS/本库组织方案.md",
-    "Diary/2025-05-03.md",
-    "PARA/20-AREAS/知识管理/00-CORE/知识组织概述.md",
-    "PARA/30-RESOURCES/效率工具/PARA工具包/PARA通用笔记模板.md",
-    "_template/template_project.md",
-    "PARA/20-AREAS/知识管理/00-CORE/知识管理概述.md",
-    "PARA/20-AREAS/知识管理/08知识管理领域.md",
-    "PARA/20-AREAS/知识管理/02-WORKFLOWS/draw_PKM_Processes.excalidraw.svg",
-    "PARA/20-AREAS/知识管理/03-RESOURCES",
-    "PARA/20-AREAS/知识管理/0801知识获取领域.md",
-    "PARA/20-AREAS/知识管理/02-WORKFLOWS/知识管理工作流.md",
-    "PARA/20-AREAS/知识管理/知识卡片模板.md",
-    "PARA/20-AREAS/知识管理/知识管理看板.excalidraw.md",
-    "Excalidraw/_resources/Pasted Image 20250502215925_999.svg",
-    "Excalidraw/_resources",
-    "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.excalidraw",
+    "PARA/20-AREAS/前端工程/02-WORKFLOWS/前端工程化最佳实践.md",
+    "PARA/20-AREAS/前端工程/02前端工程领域.md",
+    "PARA/20-AREAS/前端工程/02-WORKFLOWS/高效开发环境搭建实践.md",
+    "PARA/20-AREAS/前端工程/00-CORE/前端工程化概述.md",
+    "PARA/20-AREAS/前端工程/03-RESOURCES/核心Web指标(Core Web Vitals).md",
+    "Diary/2025-05-05.md",
+    "_template/template_week.md",
+    "PARA/20-AREAS/AI大模型/03-RESOURCES/Google_Prompt Engineering_v7.pdf",
+    "Diary/2025-W19.md",
+    "Diary/2025-05-06.md",
+    "PARA/20-AREAS/AI大模型/04AI大模型领域.md",
+    "PARA/20-AREAS/AI大模型/0401提示词工程领域.md",
+    "PARA/20-AREAS/AI大模型/00-CORE/LLM概述.md",
+    "PARA/20-AREAS/AI大模型/03-RESOURCES/前端开发助手提示词.md",
+    "PARA/20-AREAS/AI大模型/03-RESOURCES/知识管理大师提示词.md",
+    "PARA/30-RESOURCES/术语表/首次输入延迟（First Input Delay，FID）.md",
+    "PARA/20-AREAS/前端工程/03-RESOURCES/累计布局偏移 (Cumulative Layout Shift, CLS).md",
+    "PARA/30-RESOURCES/术语表/最大内容渲染时间（Largest Contentful Paint，LCP）.md",
     "PARA/00-META/本库领域索引.md",
-    "Diary/2025-05-02.md",
+    "excalibrain.md",
+    "PARA/20-AREAS/AI大模型/03-RESOURCES/知识管理大师提示词 1.md",
+    "PARA/30-RESOURCES/术语表/权力 (Power).md",
+    "PARA/30-RESOURCES/术语表/存在 (Being).md",
+    "PARA/30-RESOURCES/术语表/_resources",
+    "PARA/30-RESOURCES/术语表/存在主义(Existentialism).md",
+    "PARA/20-AREAS/AI大模型/03-RESOURCES",
+    "PARA/20-AREAS/AI大模型/01-METHODS/提示词工程.md",
+    "PARA/30-RESOURCES/术语表/市场 (Market).md",
+    "PARA/30-RESOURCES/术语表/术语模板.md",
+    "Excalidraw/_resources/Pasted Image 20250506104448_547.svg",
+    "Excalidraw/_resources/Pasted Image 20250506104448_524.jpg",
+    "Excalidraw/_resources/Pasted Image 20250506104448_504.png",
+    "Excalidraw/_resources/Pasted Image 20250506104448_296.svg",
+    "Excalidraw/_resources/Pasted Image 20250506104448_235.svg",
+    "Excalidraw/_resources/Pasted Image 20250506104448_191.svg",
+    "Excalidraw/_resources/Pasted Image 20250506104448_148.svg",
+    "Excalidraw/_resources/Pasted Image 20250506104448_102.svg",
+    "Excalidraw/_resources/Pasted Image 20250506104448_039.svg",
+    "Excalidraw/_resources/Pasted Image 20250506104447_962.svg",
+    "Excalidraw/_resources",
+    "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw",
+    "Excalidraw/Scripts/Downloaded/_resources/Add Link to Existing File and Open",
+    "PARA/20-AREAS/知识管理/_resources/0803知识内化领域",
+    "PARA/20-AREAS/知识管理/03-RESOURCES/_resources/艾宾浩斯记忆曲线",
+    "PARA/20-AREAS/知识管理/03-RESOURCES/_resources",
+    "PARA/20-AREAS/知识管理/03-RESOURCES",
+    "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas",
-    "Diary/Untitled.canvas",
-    "PARA/20-AREAS/知识管理/00-CORE/_resources/视觉思维概述",
-    "PARA/20-AREAS/知识管理/_resources/08知识管理领域/fa545b9686cb506c5b3dae7f8217ee4f_MD5.jpeg",
-    "PARA/20-AREAS/知识管理/_resources/08知识管理领域/f1682794a0227c1a0c5065bd634e8808_MD5.jpeg",
-    "PARA/20-AREAS/知识管理/_resources/Pasted image 20250502172944.png"
+    "Diary/Untitled.canvas"
   ]
 }

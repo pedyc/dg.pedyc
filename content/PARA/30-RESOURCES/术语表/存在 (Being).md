@@ -3,7 +3,7 @@ title: 存在 (Being)
 description: 在哲学中，“存在”是最基本、最普遍的概念之一。它指的是事物具有现实性、客观性或真实性的状态。对“存在”的探讨构成了本体论的核心。
 tags: [哲学, 存在, 本体论, 形而上学]
 date-created: 2025-04-27
-date-modified: 2025-04-28
+date-modified: 2025-05-06
 keywords: [存在, 存在者, 本质, 虚无, 生成]
 para: Resource
 related: ["[[哲学(Philosophy)]]", "[[本体论]]", "[[虚无主义]]", "[[存在主义]]", "[[虚无]]"]

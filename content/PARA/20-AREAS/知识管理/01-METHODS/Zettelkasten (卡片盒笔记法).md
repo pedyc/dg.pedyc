@@ -2,8 +2,11 @@
 title: Zettelkasten (卡片盒笔记法)
 aliases: [卢曼卡片盒笔记法, 卡片盒笔记法]
 date-created: 2025-04-24
-date-modified: 2025-05-03
+date-modified: 2025-05-04
 ---
+
+> [!hint]
+> 关联：[[PARA笔记组织法]]，[[本库组织方案]]
 
 ## Zettelkasten (卡片盒笔记法)
 
@@ -50,10 +53,6 @@ date-modified: 2025-05-03
 
 * **物理**: 索引卡片、笔、卡片盒。
 * **数字**: Obsidian, Roam Research, Logseq, Zettlr, The Archive 等支持双向链接和标签的笔记软件。
-
-### 视觉化
-
----
 
 > Zettelkasten 不仅仅是一种笔记方法，更是一种**思考和学习的工具**，通过持续实践，可以极大地提升知识内化和创造力。
 

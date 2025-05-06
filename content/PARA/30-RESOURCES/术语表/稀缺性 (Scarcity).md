@@ -3,7 +3,7 @@ title: 稀缺性 (Scarcity)
 description: 定义经济学的核心概念“稀缺性”，即有限资源与无限欲望之间的矛盾，及其对选择、权衡和经济活动的基本影响。
 tags: [economics, foundational_concept, resource_allocation, choice, trade-offs, core_economic_problem]
 date-created: 2025-04-25
-date-modified: 2025-04-25
+date-modified: 2025-05-06
 keywords: [稀缺性, 有限资源, 无限欲望, 选择, 权衡, 机会成本, 经济学基本问题, 资源分配]
 para: Resource
 related: ["[[经济学基础]]", "[[机会成本]]", "[[选择]]", "[[权衡]]", "[[资源分配]]", "[[经济体系]]"]

@@ -3,7 +3,7 @@ title: 前端工程化常见问题FQA
 description: 前端工程化常见问题的 Q&A，帮助开发者快速解决实际问题。
 tags: [前端工程化, 问题, 解决方案, 前端开发, FAQ]
 date-created: 2025-04-29
-date-modified: 2025-04-29
+date-modified: 2025-05-06
 keywords: [前端工程化, 常见问题, 解决方案, 构建工具, 模块化]
 para: Area
 related: ["[[前端工程化]]", "[[构建工具]]", "[[模块化]]"]

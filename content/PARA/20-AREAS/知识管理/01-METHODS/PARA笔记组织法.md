@@ -7,7 +7,7 @@ author: ped_yc
 description: null
 tags: [PARA, 方法论, 知识管理/知识组织, 领域]
 date-created: 2024-08-21
-date-modified: 2025-04-30
+date-modified: 2025-05-04
 status: null
 type: null
 ---
@@ -15,6 +15,7 @@ type: null
 > [!hint]
 > DeepSeek 对 PARA 笔记组织法的相关讨论
 > https://chat.deepseek.com/a/chat/s/1cbe59cc-8aa5-4717-a519-73b8a6259904
+> 关联：[[Zettelkasten (卡片盒笔记法)|卡片盒笔记法]]
 
 ## 前言
 

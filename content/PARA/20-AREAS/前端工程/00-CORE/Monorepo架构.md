@@ -3,7 +3,7 @@ title: Monorepo架构
 description: "Monorepo 架构的详细介绍，包括概念、优点、缺点、适用场景和常用工具。"
 tags: ["Monorepo", "架构", "前端工程化", "代码管理", "项目管理"]
 date-created: 2025-04-29
-date-modified: 2025-04-29
+date-modified: 2025-05-06
 keywords: [Monorepo, 多仓库, 代码共享, 依赖管理, 构建优化]
 para: "Area"
 related: ["[[代码管理]]", "[[项目管理]]", "[[前端工程化]]"]

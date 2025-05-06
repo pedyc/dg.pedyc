@@ -288,6 +288,11 @@
       "label": "排除绘图文件",
       "match": ".excalidraw",
       "flags": "g"
+    },
+    {
+      "label": "排除绘图文件1",
+      "match": "excalibrain",
+      "flags": "g"
     }
   ],
   "linterLocale": "system-default",

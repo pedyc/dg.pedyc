@@ -3,7 +3,7 @@ title: 国家 (State)
 description: 对“国家”这一核心政治和社会概念的定义、要素、起源、形式及功能的探讨。
 tags: [政治学, 社会学, 国际关系, 术语, 概念]
 date-created: 2025-04-25
-date-modified: 2025-04-25
+date-modified: 2025-05-06
 keywords: [国家, State, 主权, 政府, 领土, 人口]
 para: Resources
 related: ["[[主权 (Sovereignty)]]", "[[政府 (Government)]]", "[[民族 (Nation)]]", "[[国际体系 (International System)]]"]

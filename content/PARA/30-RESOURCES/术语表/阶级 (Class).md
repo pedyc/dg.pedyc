@@ -3,7 +3,7 @@ title: 阶级 (Class)
 description: 阶级是指在生产方式中处于不同地位的群体，他们之间的关系受到生产资料所有制的影响，并可能导致阶级斗争。
 tags: [政治经济, 社会学, 权力, 不平等]
 date-created: 2025-04-25
-date-modified: 2025-04-25
+date-modified: 2025-05-06
 keywords: [阶级, 阶级斗争, 生产资料, 剥削]
 para: Resource
 related: [社会分层, 收入分配, 权力结构]

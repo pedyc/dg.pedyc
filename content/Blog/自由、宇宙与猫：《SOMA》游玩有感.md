@@ -6,9 +6,10 @@ author: ped_yc
 description: 
 tags: [观后感, 解谜游戏, SOMA, 存在主义, 虚无主义]
 date-created: 2024-11-19
-date-modified: 2025-04-28
+date-modified: 2025-05-10
 status: [YCTODO]
 type: [blog]
+zettel: permanent
 ---
 
 ## 前言：雨夜诊疗室
@@ -95,3 +96,8 @@ type: [blog]
 
 > " 存在先于本质？不，亲爱的朋友，
 > 我们只是终端故障时溢出的错误日志。"
+
+## 参考
+
+- 游戏：《SOMA》
+- 视频： [人类找到了【新活法】，我只感到窒息](https://www.bilibili.com/video/BV1YD421g7uQ/?share_source=copy_web&vd_source=36314fa22feedfc30d571657fd7e6485)

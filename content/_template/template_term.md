@@ -2,13 +2,12 @@
 title: "{术语名称}"
 description: "{术语的简要描述}"
 tags:
-  - "{领域}"
-  - "术语"
+  - 术语
 keywords:
   - "{关键词1}"
   - "{关键词2}"
-para: "Resources"
-zettel: "术语表"
+para: resource
+zettel: literature
 related:
   - "[[相关概念1]]"
   - "[[相关概念2]]"

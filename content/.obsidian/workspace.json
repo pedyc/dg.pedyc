@@ -6,15 +6,15 @@
       {
         "id": "db8c20a9047852c9",
         "type": "tabs",
-        "dimension": 49.627682873412176,
+        "dimension": 50.7227332457293,
         "children": [
           {
-            "id": "f9e7d9c7119f42d5",
+            "id": "f1c6ec2481532d37",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Diary/2025-05-05.md",
+                "file": "Diary/2025-05-10.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,16 +29,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-05-05"
+              "title": "2025-05-10"
             }
           },
           {
-            "id": "8ad2900c5ba1499a",
+            "id": "732276151ff0ae57",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/20-AREAS/前端工程/02前端工程领域.md",
+                "file": "PARA/10-PROJECTS/完成/2025Q1-优化前端项目dg.pedyc.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -53,16 +53,100 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "02前端工程领域"
+              "title": "2025Q1-优化前端项目dg.pedyc"
+            }
+          },
+          {
+            "id": "609ffb881e62c82d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/20-AREAS/08知识管理/PARA笔记法.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "PARA笔记法"
+            }
+          },
+          {
+            "id": "4461ef17269f08b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/20-AREAS/04AI大模型/前端开发助手提示词.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "前端开发助手提示词"
+            }
+          },
+          {
+            "id": "97e0e0d021aa4a25",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/00-META/00关于本库.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00关于本库"
+            }
+          },
+          {
+            "id": "864df21d07e5ff85",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "PARA/00-META/本库架构指南.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "本库架构指南.excalidraw"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       },
       {
         "id": "d2363637f8aff47f",
         "type": "split",
-        "dimension": 50.37231712658782,
+        "dimension": 49.2772667542707,
         "children": [
           {
             "id": "2365abd5a8c86a08",
@@ -97,13 +181,13 @@
                     "state": {
                       "type": "outline",
                       "state": {
-                        "file": "PARA/20-AREAS/前端工程/02前端工程领域.md",
+                        "file": "PARA/20-AREAS/04AI大模型/前端开发助手提示词.md",
                         "followCursor": false,
                         "showSearch": false,
                         "searchQuery": ""
                       },
                       "icon": "lucide-list",
-                      "title": "Outline of 02前端工程领域"
+                      "title": "Outline of 前端开发助手提示词"
                     }
                   }
                 ]
@@ -119,7 +203,7 @@
                     "state": {
                       "type": "localgraph",
                       "state": {
-                        "file": "PARA/20-AREAS/前端工程/02前端工程领域.md",
+                        "file": "PARA/20-AREAS/04AI大模型/前端开发助手提示词.md",
                         "options": {
                           "collapse-filter": true,
                           "search": "",
@@ -142,12 +226,12 @@
                           "repelStrength": 10,
                           "linkStrength": 1,
                           "linkDistance": 250,
-                          "scale": 1,
+                          "scale": 0.8262238443544508,
                           "close": true
                         }
                       },
                       "icon": "lucide-git-fork",
-                      "title": "Graph of 02前端工程领域"
+                      "title": "Graph of 前端开发助手提示词"
                     }
                   }
                 ]
@@ -168,7 +252,7 @@
       {
         "id": "e31579f7aa38d74b",
         "type": "tabs",
-        "dimension": 76.84887459807074,
+        "dimension": 59.42122186495177,
         "children": [
           {
             "id": "3dfca4b5c072d131",
@@ -188,7 +272,7 @@
       {
         "id": "5e0950099d64d5f6",
         "type": "tabs",
-        "dimension": 23.151125401929264,
+        "dimension": 40.57877813504823,
         "children": [
           {
             "id": "d97f169839e60d66",
@@ -216,7 +300,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:知识管理",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -276,7 +360,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Diary/2025-05-02.md",
+                "file": "Excalidraw/前端框架对比：Vue&React.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -286,7 +370,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2025-05-02"
+              "title": "Backlinks for 前端框架对比：Vue&React.excalidraw"
             }
           },
           {
@@ -295,16 +379,15 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Diary/2025-05-03.md",
+                "file": "PARA/00-META/本库构建指南.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2025-05-03"
+              "title": "Outgoing links from 本库构建指南.excalidraw"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -325,57 +408,57 @@
       "obsidian-local-images-plus:Local Images Plus  0.16.3\r\nLocalize attachments (plugin folder)": false,
       "templater-obsidian:Templater": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "copilot:Open Copilot Chat": false
+      "copilot:Open Copilot Chat": false,
+      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "8ad2900c5ba1499a",
+  "active": "4461ef17269f08b8",
   "lastOpenFiles": [
-    "PARA/20-AREAS/前端工程/02-WORKFLOWS/前端工程化最佳实践.md",
-    "PARA/20-AREAS/前端工程/02前端工程领域.md",
-    "PARA/20-AREAS/前端工程/02-WORKFLOWS/高效开发环境搭建实践.md",
-    "PARA/20-AREAS/前端工程/00-CORE/前端工程化概述.md",
-    "PARA/20-AREAS/前端工程/03-RESOURCES/核心Web指标(Core Web Vitals).md",
-    "Diary/2025-05-05.md",
-    "_template/template_week.md",
-    "PARA/20-AREAS/AI大模型/03-RESOURCES/Google_Prompt Engineering_v7.pdf",
-    "Diary/2025-W19.md",
-    "Diary/2025-05-06.md",
-    "PARA/20-AREAS/AI大模型/04AI大模型领域.md",
-    "PARA/20-AREAS/AI大模型/0401提示词工程领域.md",
-    "PARA/20-AREAS/AI大模型/00-CORE/LLM概述.md",
-    "PARA/20-AREAS/AI大模型/03-RESOURCES/前端开发助手提示词.md",
-    "PARA/20-AREAS/AI大模型/03-RESOURCES/知识管理大师提示词.md",
-    "PARA/30-RESOURCES/术语表/首次输入延迟（First Input Delay，FID）.md",
-    "PARA/20-AREAS/前端工程/03-RESOURCES/累计布局偏移 (Cumulative Layout Shift, CLS).md",
-    "PARA/30-RESOURCES/术语表/最大内容渲染时间（Largest Contentful Paint，LCP）.md",
+    "PARA/20-AREAS/06哲学/存在—概念笔记.md",
+    "PARA/00-META/本库架构指南.excalidraw.md",
+    "PARA/00-META/本库架构指南.excalidraw.svg",
+    "PARA/00-META/本库架构指南.excalidraw.png",
+    "PARA/00-META/00关于本库.md",
+    "PARA/20-AREAS/04AI大模型/知识管理大师提示词v4 动态重构版本.md",
+    "PARA/20-AREAS/08知识管理/PARA笔记法.md",
+    "Diary/2025-05-10.md",
+    "PARA/10-PROJECTS/完成/2025Q1-优化前端项目dg.pedyc.md",
+    "PARA/30-RESOURCES/项目矩阵/dg.pedyc.md",
+    "PARA/10-PROJECTS/2025Q1-学习Docker.md",
+    "PARA/20-AREAS/04AI大模型/知识管理大师提示词v3.md",
+    "PARA/00-META/本库笔记分类与内容模板.md",
+    "_template/template_method.md",
+    "PARA/00-META/本库目录设计.md",
+    "Blog/自由、宇宙与猫：《SOMA》游玩有感.md",
+    "PARA/30-RESOURCES/术语表/线性思维（Linear Thinking）.md",
+    "PARA/00-META/本库设计方案.md",
+    "PARA/00-META/本库设计理念.md",
+    "PARA/00-META/本库命名规范.md",
+    "PARA/00-META/本库领域索引.excalidraw.md",
     "PARA/00-META/本库领域索引.md",
-    "excalibrain.md",
-    "PARA/20-AREAS/AI大模型/03-RESOURCES/知识管理大师提示词 1.md",
-    "PARA/30-RESOURCES/术语表/权力 (Power).md",
-    "PARA/30-RESOURCES/术语表/存在 (Being).md",
+    "PARA/00-META/本库检索方案.md",
+    "PARA/00-META/本库工作流汇总.md",
+    "PARA/00-META/本库方法论汇总.md",
+    "PARA/00-META/本库标签汇总.md",
+    "PARA/00-META/PKM降噪处理.md",
+    "PARA/20-AREAS/06哲学",
+    "PARA/20-AREAS/03视觉思维/_resources",
+    "Flashcard",
+    "PARA/20-AREAS/08知识管理/draw_PKM_methods.svg",
+    "PARA/20-AREAS/08知识管理/draw_PKM_Processes.excalidraw.svg",
+    "PARA/20-AREAS/03视觉思维",
+    "Diary/_resources",
+    "PARA/10-PROJECTS/_resources",
+    "PARA/20-AREAS/08知识管理/_resources/draw_workflow_KM.excalidraw.svg",
+    "PARA/00-META/_resources",
+    "PARA/20-AREAS/04AI大模型/提示词Prompt.png",
+    "PARA/20-AREAS/04AI大模型/Google_Prompt Engineering_v7.pdf",
     "PARA/30-RESOURCES/术语表/_resources",
-    "PARA/30-RESOURCES/术语表/存在主义(Existentialism).md",
-    "PARA/20-AREAS/AI大模型/03-RESOURCES",
-    "PARA/20-AREAS/AI大模型/01-METHODS/提示词工程.md",
-    "PARA/30-RESOURCES/术语表/市场 (Market).md",
-    "PARA/30-RESOURCES/术语表/术语模板.md",
+    "PARA/20-AREAS/03AI大模型/03-RESOURCES",
     "Excalidraw/_resources/Pasted Image 20250506104448_547.svg",
     "Excalidraw/_resources/Pasted Image 20250506104448_524.jpg",
     "Excalidraw/_resources/Pasted Image 20250506104448_504.png",
     "Excalidraw/_resources/Pasted Image 20250506104448_296.svg",
-    "Excalidraw/_resources/Pasted Image 20250506104448_235.svg",
-    "Excalidraw/_resources/Pasted Image 20250506104448_191.svg",
-    "Excalidraw/_resources/Pasted Image 20250506104448_148.svg",
-    "Excalidraw/_resources/Pasted Image 20250506104448_102.svg",
-    "Excalidraw/_resources/Pasted Image 20250506104448_039.svg",
-    "Excalidraw/_resources/Pasted Image 20250506104447_962.svg",
-    "Excalidraw/_resources",
-    "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw",
-    "Excalidraw/Scripts/Downloaded/_resources/Add Link to Existing File and Open",
-    "PARA/20-AREAS/知识管理/_resources/0803知识内化领域",
-    "PARA/20-AREAS/知识管理/03-RESOURCES/_resources/艾宾浩斯记忆曲线",
-    "PARA/20-AREAS/知识管理/03-RESOURCES/_resources",
-    "PARA/20-AREAS/知识管理/03-RESOURCES",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas",
     "Diary/Untitled.canvas"

@@ -6,19 +6,9 @@ author:
 description: 
 tags: [记录, 方法论]
 date-created: 2025-02-17
-date-modified: 2025-04-25
+date-modified: 2025-05-10
 status: YCTODO
 ---
-
-> [!md] Metadata
->
->
-> :LiFlag: 文档状态：YCTODO
->
-> :LiCalendarDays: 创建日期：[[2025-02-18]]
->
->
-> :LiTags: 标签列表：#记录,方法论
 
 ## 前言
 

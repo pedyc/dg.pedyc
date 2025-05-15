@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Diary/2025-05-10.md",
+                "file": "PARA/20-AREAS/07政治经济/机会成本.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,10 +29,215 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-05-10"
+              "title": "机会成本"
+            }
+          },
+          {
+            "id": "918e17f9ca651966",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/00-META/本库领域索引.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "本库领域索引"
+            }
+          },
+          {
+            "id": "a020bffaa7c66646",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/00-META/本库组织方案.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "本库组织方案"
+            }
+          },
+          {
+            "id": "6c6e2cef2753686a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/00-META/本库组织方案.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "本库组织方案"
+            }
+          },
+          {
+            "id": "9ee742e9ed9d08c7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/20-AREAS/02前端/模块化与组件化开发.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "模块化与组件化开发"
+            }
+          },
+          {
+            "id": "e47d67922fdaabe0",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/知识组织方法.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "知识组织方法.excalidraw"
+            }
+          },
+          {
+            "id": "0218bbe7a40f8f9e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/00-META/本库文件结构设计.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "本库文件结构设计"
+            }
+          },
+          {
+            "id": "a958f65976ab471b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/20-AREAS/08知识管理/费曼技巧.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "费曼技巧"
+            }
+          },
+          {
+            "id": "f36288ebb4ea41bc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/20-AREAS/08知识管理/知识卡片制作原则.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "知识卡片制作原则"
+            }
+          },
+          {
+            "id": "8904f98889362e3d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Clippings/回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "d2363637f8aff47f",
@@ -72,13 +277,13 @@
                     "state": {
                       "type": "outline",
                       "state": {
-                        "file": "Diary/2025-05-10.md",
+                        "file": "PARA/00-META/本库领域索引.md",
                         "followCursor": false,
                         "showSearch": false,
                         "searchQuery": ""
                       },
                       "icon": "lucide-list",
-                      "title": "Outline of 2025-05-10"
+                      "title": "Outline of 本库领域索引"
                     }
                   }
                 ]
@@ -94,7 +299,7 @@
                     "state": {
                       "type": "localgraph",
                       "state": {
-                        "file": "Diary/2025-05-10.md",
+                        "file": "PARA/00-META/本库领域索引.md",
                         "options": {
                           "collapse-filter": true,
                           "search": "",
@@ -122,7 +327,7 @@
                         }
                       },
                       "icon": "lucide-git-fork",
-                      "title": "Graph of 2025-05-10"
+                      "title": "Graph of 本库领域索引"
                     }
                   }
                 ]
@@ -191,7 +396,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "待增强",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -231,11 +436,12 @@
               "title": "All properties"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 276.5
+    "width": 274.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -251,7 +457,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Diary/2025-05-10.md",
+                "file": "PARA/20-AREAS/08知识管理/知识卡片.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -261,7 +467,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2025-05-10"
+              "title": "Backlinks for 知识卡片"
             }
           },
           {
@@ -299,58 +505,57 @@
       "obsidian-local-images-plus:Local Images Plus  0.16.3\r\nLocalize attachments (plugin folder)": false,
       "templater-obsidian:Templater": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "copilot:Open Copilot Chat": false,
-      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
+      "copilot:Open Copilot Chat": false
     }
   },
-  "active": "97e0e0d021aa4a25",
+  "active": "918e17f9ca651966",
   "lastOpenFiles": [
-    "Diary/2025-05-11.md",
-    "Diary/2025-05-10.md",
+    "PARA/00-META/本库领域看板.excalidraw.md",
     "PARA/00-META/本库领域索引.md",
-    "Blog/反者道之动.md",
-    "PARA/30-RESOURCES/术语表/类比思维（Metaphorical Thinking）.md",
     "index.md",
-    "PARA/00-META/00关于本库.md",
-    "PARA/20-AREAS/04AI大模型/知识管理大师提示词v4 动态重构版本.md",
-    "PARA/20-AREAS/03视觉思维/常用视觉工具.excalidraw.md",
-    "PARA/20-AREAS/03视觉思维/常用思维方式.excalidraw.md",
-    "PARA/20-AREAS/03视觉思维/常用视觉工具.excalidraw.svg",
-    "PARA/20-AREAS/03视觉思维/收敛思维.md",
-    "PARA/20-AREAS/03视觉思维/批判性思维.md",
-    "PARA/20-AREAS/03视觉思维/思维分类及视觉工具.md",
-    "PARA/20-AREAS/03视觉思维/常用思维方式.excalidraw.svg",
-    "PARA/20-AREAS/03视觉思维/发散思维.md",
-    "PARA/20-AREAS/03视觉思维/Untitled.md",
-    "PARA/20-AREAS/03视觉思维/系统思维.md",
-    "PARA/20-AREAS/03视觉思维/思维分类及视觉工具.excalidraw.md",
-    "PARA/20-AREAS/03视觉思维/视觉思维工作流.md",
-    "PARA/20-AREAS/03视觉思维/视觉思维概述.md",
-    "PARA/20-AREAS/03视觉思维/视觉设计原则.md",
-    "PARA/20-AREAS/03视觉思维/视觉工具选取原则.md",
-    "PARA/20-AREAS/03视觉思维/设计思维.md",
-    "PARA/20-AREAS/03视觉思维/类比思维.md",
-    "PARA/20-AREAS/03视觉思维/_resources/类比思维/f594e15d56e5b4662c99517c01c78b53_MD5.jpeg",
-    "PARA/20-AREAS/03视觉思维/_resources/类比思维",
-    "PARA/20-AREAS/03视觉思维/_resources/Pasted image 20250510231718.png",
-    "PARA/20-AREAS/03视觉思维/双重气泡图.md",
-    "术语表",
-    "PARA/20-AREAS/03视觉思维/线性思维.md",
-    "PARA/20-AREAS/03视觉思维/认知负荷理论.md",
-    "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",
-    "Excalidraw/前端框架对比：Vue&React.excalidraw.svg",
-    "PARA/20-AREAS/08知识管理/知识管理工作流.excalidraw.svg",
-    "PARA/20-AREAS/03视觉思维/思维分类及视觉工具.excalidraw.svg",
-    "PARA/20-AREAS/02前端工程/前端工程化与前端开发生命周期.excalidraw.svg",
-    "PARA/00-META/本库项目看板.excalidraw.svg",
-    "PARA/20-AREAS/04AI大模型/_resources",
-    "PARA/20-AREAS/06哲学",
-    "PARA/20-AREAS/03视觉思维/_resources",
-    "Flashcard",
-    "PARA/20-AREAS/03视觉思维",
+    "PARA/20-AREAS/0200前端领域.md",
+    "PARA/20-AREAS/0201a性能优化领域.md",
+    "PARA/30-RESOURCES/技能矩阵/技能矩阵.md",
+    "PARA/30-RESOURCES/技能矩阵/AI前端自检.md",
+    "PARA/20-AREAS/02前端/性能优化方法.md",
+    "PARA/20-AREAS/0201前端工程领域.md",
+    "PARA/20-AREAS/02前端/高效开发环境搭建实践.md",
+    "PARA/20-AREAS/02前端/前端构建工具对比.md",
+    "PARA/20-AREAS/0203数学应用领域.md",
+    "PARA/20-AREAS/0202算法应用领域.md",
+    "PARA/20-AREAS/0201cMonorepo领域.md",
+    "PARA/20-AREAS/0201bDevOps领域.md",
+    "PARA/20-AREAS/02前端/模块化与组件化开发.md",
+    "Blog/JavaScript模块化系统解析.md",
+    "PARA/00-META/本库组织方案.md",
+    "PARA/20-AREAS/02前端/核心Web指标(Core Web Vitals).md",
+    "PARA/20-AREAS/07政治经济/机会成本.md",
+    "Diary/2025-05-15.md",
     "Diary/_resources",
-    "PARA/10-PROJECTS/_resources",
-    "PARA/00-META/_resources",
+    "PARA/20-AREAS/08知识管理/知识卡片.md",
+    "PARA/20-AREAS/08知识管理/知识卡片制作原则.md",
+    "Card/浏览器渲染过程.md",
+    "PARA/20-AREAS/08知识管理/费曼技巧.md",
+    "Clippings/回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？.md",
+    "SimpRead/output/17-缓存依赖项以加快工作流程 - GitHub 文档@annote.html",
+    "SimpRead/output/17-缓存依赖项以加快工作流程 - GitHub 文档.html",
+    "SimpRead/backup/simpread_config@20250514102801.json",
+    "SimpRead/output/22-回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？｜ExplainThis.html",
+    "SimpRead/backup/simpread_config@20250514102452.json",
+    "Card",
+    "Clippings/_resources/回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？/5228904c1cf75f3fa519d6c277c38dda_MD5.jpg",
+    "Clippings/_resources/回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？/6529496547adefc310e2f136a0ab8363_MD5.jpg",
+    "Clippings/_resources/回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？",
+    "PARA/00-META/本库架构指南.excalidraw.svg",
+    "PARA/00-META/本库领域索引.excalidraw.svg",
+    "PARA/20-AREAS/02前端/数学在前端开发中的应用.excalidraw.svg",
+    "PARA/30-RESOURCES/前端案例拆解",
+    "SimpRead/backup/simpread_config@20250511232226.json",
+    "PARA/20-AREAS/03视觉思维/常用视觉工具.excalidraw.svg",
+    "PARA/20-AREAS/03视觉思维/常用思维方式.excalidraw.svg",
+    "PARA/20-AREAS/03视觉思维/_resources/类比思维/f594e15d56e5b4662c99517c01c78b53_MD5.jpeg",
+    "PARA/20-AREAS/03视觉思维/_resources/Pasted image 20250510231718.png",
+    "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas",
     "Diary/Untitled.canvas"

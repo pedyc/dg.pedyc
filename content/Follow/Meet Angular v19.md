@@ -6,7 +6,7 @@ author: Minko Gechev
 description: 
 tags: []
 date-created: 2025-01-03
-date-modified: 2025-03-30
+date-modified: 2025-05-12
 status: 
 publishedAt: 2024-11-19T16:58:05.350Z
 url: https://blog.angular.dev/meet-angular-v19-7b29dfd05b84?source=rss----447683c3d9a3---4

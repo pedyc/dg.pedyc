@@ -1,7 +1,7 @@
 ---
 title: 21-用 AI 重构知识管理：重塑 Obsidian 工作流的三层进阶指南@annote
 date-created: 2025-04-10
-date-modified: 2025-04-10
+date-modified: 2025-05-14
 alias: ["srAnnote@用 AI 重构知识管理：重塑 Obsidian 工作流的三层进阶指南"]
 index: 21
 type: Simpread

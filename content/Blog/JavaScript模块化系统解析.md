@@ -6,7 +6,7 @@ author: ped_yc
 description: 
 tags: [JS, 模块化, 前端工程化]
 date-created: 2024-09-16
-date-modified: 2025-04-24
+date-modified: 2025-05-15
 status: [YCDONE]
 categories: [方法论]
 type: [blog]
@@ -56,26 +56,26 @@ function name(){
 
 *解决方案*
 
-解决方法之一是使用自执行函数包裹：
+解决方法之一是使用自执行函数包裹（IIFE）：
 
 ```javascript
-myModule = function(){
-	var id = 'user_id'
-	...
-}()
+var Module = (function () {
+    var _private = 0;
+    function getPrivate() {
+        return _private;
+    }
 
+    return {
+        _public: 1,
+        getPrivate: getPrivate
+    }
+})()
 
-这种方式解决了全局变量污染的问题，但仍暴露了一个全局函数在全局，仍可能存在命名冲突，并且有时需定义许多个这种类型的函数，不够优雅。
+Module._private;//undefined
+Module.getPrivate();//0
+Module._public;//1
 
-1. `函数命名冲突`
-我们经常将一些功能性的函数抽离出来，放在同一个功能文件中，例如 utils.js 文件下放了一个 format 方法，这时同事需要一个不同的 format 方法，他就只能新建一个 format2 或者其他名字的方法，类似的事情很多。
-
-*解决方案*
-
-解决方法之一是使用命名空间，构造类似 java 的方式，于是代码变成了这样：
-
-```javascript
-obj.MyNameSpace.Utils.format()
+//这种方式解决了全局变量污染的问题，但仍暴露了一个全局函数在全局，仍可能存在命名冲突，并且有时需定义许多个这种类型的函数，不够优雅。
 ```
 
 这种类型的代码确实有用，但大大增加了书写的负担，你只想调用一个方法，却不得不写一长串的前缀。

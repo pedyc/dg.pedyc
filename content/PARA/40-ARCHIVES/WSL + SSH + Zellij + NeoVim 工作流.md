@@ -1,5 +1,4 @@
 ---
-topics: 
 uid: 
 title: WSL + SSH + Zellij + NeoVim 工作流
 aliases: []
@@ -7,8 +6,9 @@ author:
 description: 
 tags: [tools, blog, workflow]
 date-created: 2025-02-08
-date-modified: 2025-02-24
-status: 
+date-modified: 2025-05-13
+content-type: record
+topics: 
 ---
 
 ## 用 WSL+SSH+Zellij+NeoVim 构建高效开发工作流

@@ -1,7 +1,7 @@
 ---
 title: 线性思维（Linear Thinking）
 date-created: 2025-04-23
-date-modified: 2025-05-09
+date-modified: 2025-05-13
 ---
 
 ## 线性思维（Linear Thinking）

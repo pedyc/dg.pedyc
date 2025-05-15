@@ -2,7 +2,7 @@
 title: Build AI-Powered App
 author: Angular
 date-created: 2025-03-30
-date-modified: 2025-03-30
+date-modified: 2025-05-13
 publishedAt: 2025-03-18T03:15:07.735Z
 url: https://blog.angular.dev/build-ai-powered-apps-with-genkit-and-angular-707db8918c3a?source=rss----447683c3d9a3---4
 ---

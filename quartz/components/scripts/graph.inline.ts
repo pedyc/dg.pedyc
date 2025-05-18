@@ -20,13 +20,6 @@ import { registerEscapeHandler, removeAllChildren } from "./util"
 import { FullSlug, SimpleSlug, getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
 import { D3Config } from "../Graph"
 
-
-
-// 全局变量定义
-let stopAnimation = false
-const localGraphCleanups: (() => void)[] = []
-const globalGraphCleanups: (() => void)[] = []
-
 type GraphicsInfo = {
   color: string
   gfx: Graphics
@@ -75,62 +68,19 @@ type TweenNode = {
   stop: () => void
 }
 
-// 创建并管理tween动画组
-function createTweenGroup(): TweenNode {
-  const tweenGroup = new TweenGroup()
-
-  return {
-    update: tweenGroup.update.bind(tweenGroup),
-    stop() {
-      tweenGroup.getAll().forEach((tw) => tw.stop())
-    },
-  }
-}
-
-// 添加tween到组并启动
-function addTweenToGroup<T>(group: TweenGroup | TweenNode, target: T, props: Partial<T>, duration: number) {
-  // 使用新的推荐语法创建tween动画
-  const tween = new Tweened(target, true).to(props, duration)
-  if (group instanceof TweenGroup) {
-    group.add(tween)
-  } else if (typeof group === 'object' && group !== null && 'update' in group && 'stop' in group) {
-    // 如果是TweenNode对象，不需要调用add方法
-    // TweenNode只有update和stop方法，不需要手动添加tween
-    // 但我们需要确保tween会被正确更新，所以这里不需要额外操作
-  }
-  return tween
-}
-
 async function determineGraphicsAPI(): Promise<"webgpu" | "webgl"> {
   const adapter = await navigator.gpu?.requestAdapter().catch(() => null)
-  const device = adapter && (await adapter.requestDevice().catch(() => null))
-  if (!device) {
+  if (!adapter) {
     return "webgl"
   }
-
-  const canvas = document.createElement("canvas")
-  const gl =
-    (canvas.getContext("webgl2") as WebGL2RenderingContext | null) ??
-    (canvas.getContext("webgl") as WebGLRenderingContext | null)
-
-  // we have to return webgl so pixijs automatically falls back to canvas
-  if (!gl) {
-    return "webgl"
-  }
-
-  const webglMaxTextures = gl.getParameter(gl.MAX_TEXTURE_IMAGE_UNITS)
-  const webgpuMaxTextures = device.limits.maxSampledTexturesPerShaderStage
-
-  return webglMaxTextures === webgpuMaxTextures ? "webgpu" : "webgl"
+  // Devices with WebGPU but no float32-blendable feature fail to render the graph
+  return adapter.features.has("float32-blendable") ? "webgpu" : "webgl"
 }
 
-async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<() => void> {
-  // 重置stopAnimation为false，确保新的渲染可以正常进行
-  stopAnimation = false
-
+async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const slug = simplifySlug(fullSlug)
   const visited = getVisited()
-  removeAllChildren(container)
+  removeAllChildren(graph)
 
   let {
     drag: enableDrag,
@@ -146,7 +96,7 @@ async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<
     showTags,
     focusOnHover,
     enableRadial,
-  } = JSON.parse(container.dataset["cfg"]!) as D3Config
+  } = JSON.parse(graph.dataset["cfg"]!) as D3Config
 
   const data: Map<SimpleSlug, ContentDetails> = new Map(
     Object.entries<ContentDetails>(await fetchData).map(([k, v]) => [
@@ -220,8 +170,8 @@ async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<
       })),
   }
 
-  const width = container.offsetWidth
-  const height = Math.max(container.offsetHeight, 250)
+  const width = graph.offsetWidth
+  const height = Math.max(graph.offsetHeight, 250)
 
   // we virtualize the simulation and use pixi to actually render it
   const simulation: Simulation<NodeData, LinkData> = forceSimulation<NodeData>(graphData.nodes)
@@ -310,7 +260,7 @@ async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<
 
   function renderLinks() {
     tweens.get("link")?.stop()
-    const tweenGroup = createTweenGroup()
+    const tweenGroup = new TweenGroup()
 
     for (const l of linkRenderData) {
       let alpha = 1
@@ -322,15 +272,21 @@ async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<
       }
 
       l.color = l.active ? computedStyleMap["--gray"] : computedStyleMap["--lightgray"]
-      addTweenToGroup(tweenGroup, l, { alpha }, 200).start()
+      tweenGroup.add(new Tweened<LinkRenderData>(l).to({ alpha }, 200))
     }
 
-    tweens.set("link", tweenGroup)
+    tweenGroup.getAll().forEach((tw) => tw.start())
+    tweens.set("link", {
+      update: tweenGroup.update.bind(tweenGroup),
+      stop() {
+        tweenGroup.getAll().forEach((tw) => tw.stop())
+      },
+    })
   }
 
   function renderLabels() {
     tweens.get("label")?.stop()
-    const tweenGroup = createTweenGroup()
+    const tweenGroup = new TweenGroup()
 
     const defaultScale = 1 / scale
     const activeScale = defaultScale * 1.1
@@ -338,37 +294,41 @@ async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<
       const nodeId = n.simulationData.id
 
       if (hoveredNodeId === nodeId) {
-        // 悬停时始终显示文字
-        addTweenToGroup(
-          tweenGroup,
-          n.label,
-          {
-            alpha: 1,
-            scale: { x: activeScale, y: activeScale },
-          },
-          100
-        ).start()
+        tweenGroup.add(
+          new Tweened<Text>(n.label).to(
+            {
+              alpha: 1,
+              scale: { x: activeScale, y: activeScale },
+            },
+            100,
+          ),
+        )
       } else {
-        // 非悬停时保持当前透明度
-        addTweenToGroup(
-          tweenGroup,
-          n.label,
-          {
-            alpha: n.label.alpha,
-            scale: { x: defaultScale, y: defaultScale },
-          },
-          100
-        ).start()
+        tweenGroup.add(
+          new Tweened<Text>(n.label).to(
+            {
+              alpha: n.label.alpha,
+              scale: { x: defaultScale, y: defaultScale },
+            },
+            100,
+          ),
+        )
       }
     }
 
-    tweens.set("label", tweenGroup)
+    tweenGroup.getAll().forEach((tw) => tw.start())
+    tweens.set("label", {
+      update: tweenGroup.update.bind(tweenGroup),
+      stop() {
+        tweenGroup.getAll().forEach((tw) => tw.stop())
+      },
+    })
   }
 
   function renderNodes() {
     tweens.get("hover")?.stop()
 
-    const tweenGroup = createTweenGroup()
+    const tweenGroup = new TweenGroup()
     for (const n of nodeRenderData) {
       let alpha = 1
 
@@ -377,10 +337,16 @@ async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<
         alpha = n.active ? 1 : 0.2
       }
 
-      addTweenToGroup(tweenGroup, n.gfx, { alpha }, 200).start()
+      tweenGroup.add(new Tweened<Graphics>(n.gfx, tweenGroup).to({ alpha }, 200))
     }
 
-    tweens.set("hover", tweenGroup)
+    tweenGroup.getAll().forEach((tw) => tw.start())
+    tweens.set("hover", {
+      update: tweenGroup.update.bind(tweenGroup),
+      stop() {
+        tweenGroup.getAll().forEach((tw) => tw.stop())
+      },
+    })
   }
 
   function renderPixiFromD3() {
@@ -405,7 +371,7 @@ async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<
     resolution: window.devicePixelRatio,
     eventMode: "static",
   })
-  container.appendChild(app.canvas)
+  graph.appendChild(app.canvas)
 
   const stage = app.stage
   stage.interactive = false
@@ -422,10 +388,10 @@ async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<
       interactive: false,
       eventMode: "none",
       text: n.text,
-      alpha: 0, // 设置初始透明度为0，默认不显示文字
+      alpha: 0,
       anchor: { x: 0.5, y: 1.2 },
       style: {
-        fontSize: fontSize * 12, // 减小字体大小系数，避免放大时过大
+        fontSize: fontSize * 15,
         fill: computedStyleMap["--dark"],
         fontFamily: computedStyleMap["--bodyFont"],
       },
@@ -555,9 +521,7 @@ async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<
 
           // zoom adjusts opacity of labels too
           const scale = transform.k * opacityScale
-          // 设置缩放阈值，只有当缩放级别超过阈值时才显示文字
-          const zoomThreshold = 1.2
-          let scaleOpacity = transform.k < zoomThreshold ? 0 : Math.max(Math.min((scale - 0.5) / 2, 1), 0.3)
+          let scaleOpacity = Math.max((scale - 1) / 3.75, 0)
           const activeNodes = nodeRenderData.filter((n) => n.active).flatMap((n) => n.label)
 
           for (const label of labelsContainer.children) {
@@ -569,8 +533,7 @@ async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<
     )
   }
 
-  let animationFrameId: number | null = null
-
+  let stopAnimation = false
   function animate(time: number) {
     if (stopAnimation) return
     for (const n of nodeRenderData) {
@@ -593,51 +556,36 @@ async function renderGraph(container: HTMLElement, fullSlug: FullSlug): Promise<
 
     tweens.forEach((t) => t.update(time))
     app.renderer.render(stage)
-    animationFrameId = requestAnimationFrame(animate)
+    requestAnimationFrame(animate)
   }
 
-  animationFrameId = requestAnimationFrame(animate)
-
-  // 返回清理函数
+  requestAnimationFrame(animate)
   return () => {
-    // 停止动画
     stopAnimation = true
-
-    // 清理动画帧
-    if (animationFrameId !== null) {
-      cancelAnimationFrame(animationFrameId)
-      animationFrameId = null
-    }
-
-    // 停止所有tween动画
-    tweens.forEach((tween) => tween.stop())
-    tweens.clear()
-
-    // 移除canvas
-    if (app.canvas && app.canvas.parentNode) {
-      app.canvas.parentNode.removeChild(app.canvas)
-    }
-
-    // 销毁应用
-    app.destroy(true, { children: true })
+    app.destroy()
   }
+}
+
+let localGraphCleanups: (() => void)[] = []
+let globalGraphCleanups: (() => void)[] = []
+
+function cleanupLocalGraphs() {
+  for (const cleanup of localGraphCleanups) {
+    cleanup()
+  }
+  localGraphCleanups = []
+}
+
+function cleanupGlobalGraphs() {
+  for (const cleanup of globalGraphCleanups) {
+    cleanup()
+  }
+  globalGraphCleanups = []
 }
 
 document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
   const slug = e.detail.url
   addToVisited(simplifySlug(slug))
-
-  // 清理本地图形的函数
-  function cleanupLocalGraphs() {
-    localGraphCleanups.forEach((cleanup) => cleanup())
-    localGraphCleanups.length = 0
-  }
-
-  // 清理全局图形的函数
-  function cleanupGlobalGraphs() {
-    globalGraphCleanups.forEach((cleanup) => cleanup())
-    globalGraphCleanups.length = 0
-  }
 
   async function renderLocalGraph() {
     cleanupLocalGraphs()

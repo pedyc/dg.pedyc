@@ -7,7 +7,7 @@ date-modified: 2025-04-23
 category: 知识管理/PARA
 rating: ★★★★☆
 source:
-  - "[[0800知识管理领域]]"
+  - "[[0800知识管理]]"
 type:
   - resource
 ---

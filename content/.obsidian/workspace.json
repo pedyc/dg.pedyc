@@ -6,39 +6,15 @@
       {
         "id": "db8c20a9047852c9",
         "type": "tabs",
-        "dimension": 50.7227332457293,
+        "dimension": 55.7742782152231,
         "children": [
-          {
-            "id": "97e0e0d021aa4a25",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/07政治经济/机会成本.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "机会成本"
-            }
-          },
           {
             "id": "918e17f9ca651966",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/00-META/本库领域索引.md",
+                "file": "PARA/10-PROJECTS/完成/2025Q1-使用PARA笔记法重构PKM.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -53,16 +29,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "本库领域索引"
+              "title": "2025Q1-使用PARA笔记法重构PKM"
             }
           },
           {
-            "id": "a020bffaa7c66646",
+            "id": "79a77ac114d9b0fe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/00-META/本库组织方案.md",
+                "file": "PARA/30-RESOURCES/算法真题/00算法真题库.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -77,172 +53,15 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "本库组织方案"
-            }
-          },
-          {
-            "id": "6c6e2cef2753686a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/00-META/本库组织方案.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "本库组织方案"
-            }
-          },
-          {
-            "id": "9ee742e9ed9d08c7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/02前端/模块化与组件化开发.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "模块化与组件化开发"
-            }
-          },
-          {
-            "id": "e47d67922fdaabe0",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/知识组织方法.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "知识组织方法.excalidraw"
-            }
-          },
-          {
-            "id": "0218bbe7a40f8f9e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/00-META/本库文件结构设计.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "本库文件结构设计"
-            }
-          },
-          {
-            "id": "a958f65976ab471b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/08知识管理/费曼技巧.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "费曼技巧"
-            }
-          },
-          {
-            "id": "f36288ebb4ea41bc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/08知识管理/知识卡片制作原则.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "知识卡片制作原则"
-            }
-          },
-          {
-            "id": "8904f98889362e3d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Clippings/回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？"
+              "title": "00算法真题库"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "d2363637f8aff47f",
         "type": "split",
-        "dimension": 49.2772667542707,
+        "dimension": 44.2257217847769,
         "children": [
           {
             "id": "2365abd5a8c86a08",
@@ -257,6 +76,18 @@
                   "state": {},
                   "icon": "message-square",
                   "title": "Copilot"
+                }
+              },
+              {
+                "id": "bdc1b509167c1efa",
+                "type": "leaf",
+                "state": {
+                  "type": "excalidraw",
+                  "state": {
+                    "file": "excalibrain.md"
+                  },
+                  "icon": "excalidraw-icon",
+                  "title": "excalibrain"
                 }
               }
             ]
@@ -277,13 +108,13 @@
                     "state": {
                       "type": "outline",
                       "state": {
-                        "file": "PARA/00-META/本库领域索引.md",
+                        "file": "PARA/10-PROJECTS/完成/2025Q1-使用PARA笔记法重构PKM.md",
                         "followCursor": false,
                         "showSearch": false,
                         "searchQuery": ""
                       },
                       "icon": "lucide-list",
-                      "title": "Outline of 本库领域索引"
+                      "title": "Outline of 2025Q1-使用PARA笔记法重构PKM"
                     }
                   }
                 ]
@@ -299,7 +130,7 @@
                     "state": {
                       "type": "localgraph",
                       "state": {
-                        "file": "PARA/00-META/本库领域索引.md",
+                        "file": "PARA/10-PROJECTS/完成/2025Q1-使用PARA笔记法重构PKM.md",
                         "options": {
                           "collapse-filter": true,
                           "search": "",
@@ -322,12 +153,12 @@
                           "repelStrength": 10,
                           "linkStrength": 1,
                           "linkDistance": 250,
-                          "scale": 0.8262238443544508,
+                          "scale": 0.7390479694094332,
                           "close": true
                         }
                       },
                       "icon": "lucide-git-fork",
-                      "title": "Graph of 本库领域索引"
+                      "title": "Graph of 2025Q1-使用PARA笔记法重构PKM"
                     }
                   }
                 ]
@@ -348,7 +179,7 @@
       {
         "id": "e31579f7aa38d74b",
         "type": "tabs",
-        "dimension": 59.42122186495177,
+        "dimension": 76.07717041800643,
         "children": [
           {
             "id": "3dfca4b5c072d131",
@@ -368,7 +199,7 @@
       {
         "id": "5e0950099d64d5f6",
         "type": "tabs",
-        "dimension": 40.57877813504823,
+        "dimension": 23.922829581993568,
         "children": [
           {
             "id": "d97f169839e60d66",
@@ -396,7 +227,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "待增强",
+                "query": "tag:#个人成长/diary",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -441,7 +272,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 321.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -510,54 +341,54 @@
   },
   "active": "918e17f9ca651966",
   "lastOpenFiles": [
-    "PARA/00-META/本库领域看板.excalidraw.md",
-    "PARA/00-META/本库领域索引.md",
     "index.md",
-    "PARA/20-AREAS/0200前端领域.md",
-    "PARA/20-AREAS/0201a性能优化领域.md",
-    "PARA/30-RESOURCES/技能矩阵/技能矩阵.md",
-    "PARA/30-RESOURCES/技能矩阵/AI前端自检.md",
-    "PARA/20-AREAS/02前端/性能优化方法.md",
-    "PARA/20-AREAS/0201前端工程领域.md",
-    "PARA/20-AREAS/02前端/高效开发环境搭建实践.md",
-    "PARA/20-AREAS/02前端/前端构建工具对比.md",
-    "PARA/20-AREAS/0203数学应用领域.md",
-    "PARA/20-AREAS/0202算法应用领域.md",
-    "PARA/20-AREAS/0201cMonorepo领域.md",
-    "PARA/20-AREAS/0201bDevOps领域.md",
-    "PARA/20-AREAS/02前端/模块化与组件化开发.md",
-    "Blog/JavaScript模块化系统解析.md",
-    "PARA/00-META/本库组织方案.md",
-    "PARA/20-AREAS/02前端/核心Web指标(Core Web Vitals).md",
-    "PARA/20-AREAS/07政治经济/机会成本.md",
-    "Diary/2025-05-15.md",
-    "Diary/_resources",
-    "PARA/20-AREAS/08知识管理/知识卡片.md",
-    "PARA/20-AREAS/08知识管理/知识卡片制作原则.md",
-    "Card/浏览器渲染过程.md",
-    "PARA/20-AREAS/08知识管理/费曼技巧.md",
-    "Clippings/回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？.md",
-    "SimpRead/output/17-缓存依赖项以加快工作流程 - GitHub 文档@annote.html",
-    "SimpRead/output/17-缓存依赖项以加快工作流程 - GitHub 文档.html",
-    "SimpRead/backup/simpread_config@20250514102801.json",
-    "SimpRead/output/22-回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？｜ExplainThis.html",
-    "SimpRead/backup/simpread_config@20250514102452.json",
-    "Card",
-    "Clippings/_resources/回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？/5228904c1cf75f3fa519d6c277c38dda_MD5.jpg",
-    "Clippings/_resources/回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？/6529496547adefc310e2f136a0ab8363_MD5.jpg",
-    "Clippings/_resources/回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？",
-    "PARA/00-META/本库架构指南.excalidraw.svg",
-    "PARA/00-META/本库领域索引.excalidraw.svg",
-    "PARA/20-AREAS/02前端/数学在前端开发中的应用.excalidraw.svg",
-    "PARA/30-RESOURCES/前端案例拆解",
-    "SimpRead/backup/simpread_config@20250511232226.json",
-    "PARA/20-AREAS/03视觉思维/常用视觉工具.excalidraw.svg",
-    "PARA/20-AREAS/03视觉思维/常用思维方式.excalidraw.svg",
-    "PARA/20-AREAS/03视觉思维/_resources/类比思维/f594e15d56e5b4662c99517c01c78b53_MD5.jpeg",
-    "PARA/20-AREAS/03视觉思维/_resources/Pasted image 20250510231718.png",
-    "Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",
+    "PARA/00-META/00关于本库.md",
+    "PARA/00-META/本库项目看板.excalidraw.svg",
+    "PARA/20-AREAS/0200前端.md",
+    "_template/templage_area.md",
+    "PARA/30-RESOURCES/算法真题/00算法真题库.md",
+    "PARA/20-AREAS/0202算法应用.md",
+    "PARA/20-AREAS/05算法与数据结构/常用算法汇总.md",
+    "PARA/20-AREAS/05算法与数据结构/递归算法要点总结.md",
+    "PARA/20-AREAS/05算法与数据结构/前端场景下的算法优先级.md",
+    "PARA/30-RESOURCES/面试真题/00前端面试真题库.md",
+    "PARA/30-RESOURCES/前端技术/源码解析/01Vue源码解析-运行时篇.md",
+    "PARA/30-RESOURCES/面试真题/JS挑战.md",
+    "PARA/30-RESOURCES/面试真题/JS题单.md",
+    "PARA/30-RESOURCES/面试真题/JS基础.md",
+    "SimpRead/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否.md",
+    "PARA/20-AREAS/02前端/深拷贝和浅拷贝.md",
+    "PARA/20-AREAS/02前端/Map与WeakMap.md",
+    "PARA/20-AREAS/0201前端工程.md",
+    "PARA/20-AREAS/0800知识管理.md",
+    "PARA/20-AREAS/02前端/JS执行机制.md",
+    "SimpRead/output/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否@annote.html",
+    "SimpRead/backup/simpread_config@20250517160125.json",
+    "SimpRead/backup/simpread_config@20250517155951.json",
+    "SimpRead/backup/simpread_config@20250517155949.json",
+    "SimpRead/_resources/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否/6f21fb1743c9b201908c9f7f6eb2258d_MD5.jpg",
+    "SimpRead/_resources/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否/6e293aaf084896aad301bfa8d3bb4a0d_MD5.gif",
+    "SimpRead/_resources/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否/54bcc1a49138a151212ad210d55fd245_MD5.jpg",
+    "SimpRead/_resources/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否",
+    "SimpRead/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否@annote.md",
+    "SimpRead/output/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否.html",
+    "SimpRead/backup/simpread_config@20250517155927.json",
+    "PARA/20-AREAS/02前端/_resources/深拷贝和浅拷贝",
+    "PARA/20-AREAS/02前端/_resources",
+    "SimpRead/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客.md",
+    "SimpRead/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客@annote.md",
+    "PARA/20-AREAS/0104热点关注.md",
+    "PARA/00-META/本库项目看板.excalidraw.md",
+    "PARA/30-RESOURCES/面试真题/题目/解释 JavaScript 的事件循环机制.md",
+    "SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/8ec600c0c7097d0ca0cbd0b425db68a2_MD5.jpg",
+    "SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/be65bac4b664014eeff9ee02a87d0747_MD5.jpg",
+    "SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/2cf3152bc3f7d2bb7ef48e8900495fa0_MD5.jpg",
+    "SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/540a2eef172906bd1b685141ed942db7_MD5.jpg",
+    "SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/aebe67c234ebc7ef9193718ff1192c5a_MD5.jpg",
+    "SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/dec652c4d24ba72954a2ae3e33ba7334_MD5.jpg",
+    "SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客",
+    "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
-    "Untitled.canvas",
-    "Diary/Untitled.canvas"
+    "Untitled.canvas"
   ]
 }

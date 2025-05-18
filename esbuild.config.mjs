@@ -14,7 +14,7 @@ const esConfig = {
   jsxImportSource: "preact",
   packages: "external",
   sourcemap: true,
-  sourcesContent: false,
+  sourcesContent: true,
   bundle: true,
   keepNames: true,
   minify: true,

@@ -11,7 +11,7 @@ date-created: 2025-02-22
 date-modified: 2025-04-25
 status: 已暂停
 area:
-  - "[[0800知识管理领域]]"
+  - "[[0800知识管理]]"
 type:
   - project
 ---

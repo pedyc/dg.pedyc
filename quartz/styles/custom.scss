@@ -159,12 +159,16 @@ body[data-slug="thoughts/craft"] {
             margin: 1rem 0;
         }
 
-        
+
     }
 }
 
 .explorer {
     max-height: 80vh;
+}
+
+em {
+    color: #5fa915;
 }
 
 div:has(>.overflow) {

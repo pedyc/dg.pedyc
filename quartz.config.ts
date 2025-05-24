@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins";
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 ped-Yc's Garden",
+    pageTitle: "🪴 pedyc's Garden",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
@@ -19,9 +19,6 @@ const config: QuartzConfig = {
     ignorePatterns: [
       ".obsidian",
       ".trash",
-      "_resources",
-      "_template",
-      "_scripts",
       "Private",
     ],
     defaultDateType: "created",

@@ -13,11 +13,11 @@ img[loading="lazy"] {
     width: 100%;
     height: auto;
     min-height: 100px;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
 
     &.loading {
-        opacity: 0.2;
+        opacity: 1;
     }
 
     &.loaded {

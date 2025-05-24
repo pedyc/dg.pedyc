@@ -1,3 +1,10 @@
+// 在文件顶部添加类型声明
+declare global {
+  interface Window {
+    cleanup: () => void;
+  }
+}
+
 import { computePosition, flip, inline, shift } from "@floating-ui/dom"
 import { normalizeRelativeURLs } from "../../util/path"
 import { fetchCanonical } from "./util"
@@ -57,6 +64,15 @@ async function preloadLinkContent(url: URL, isPriority: boolean = false) {
         break
       default: // html
         const contents = await response.text()
+        // 将原始 HTML 文本存入 sessionStorage，用于页面跳转时复用
+        try {
+          sessionStorage.setItem(cacheKey, contents)
+        } catch (e) {
+          console.warn(`Failed to save content to sessionStorage for ${cacheKey}:`, e)
+          // 如果 sessionStorage 满了或者其他原因导致存储失败，可以考虑清理旧的缓存项
+          // 例如：sessionStorage.clear(); 或者实现一个更智能的 LRU 清理策略
+        }
+
         const html = p.parseFromString(contents, "text/html")
         normalizeRelativeURLs(html, new URL(url.pathname, url.origin))
         html.querySelectorAll("[id]").forEach((el) => {
@@ -263,9 +279,158 @@ document.addEventListener("nav", () => {
   for (const link of links) {
     link.addEventListener("mouseenter", mouseEnterHandler)
     link.addEventListener("mouseleave", clearActivePopover)
+
+    /**
+    * 处理内部链接点击事件，尝试从 sessionStorage 加载内容。
+    * @param event 点击事件对象
+    */
+    const wikilinkClickHandler = async (event: MouseEvent) => {
+      event.preventDefault(); // 阻止默认跳转
+
+      const anchorElement = event.currentTarget as HTMLAnchorElement;
+      const targetUrl = new URL(anchorElement.href);
+      // 通常，用于缓存和内容获取的键可能不需要包含 search params 或 hash
+      // 但如果它们影响内容，则保留。这里假设pathname和origin足以标识内容。
+      const contentUrl = new URL(targetUrl.pathname, targetUrl.origin);
+      const cacheKey = contentUrl.toString();
+
+      const cachedContent = sessionStorage.getItem(cacheKey);
+
+      if (cachedContent) {
+        console.log(`Loading from sessionStorage: ${cacheKey}`);
+        const newDoc = p.parseFromString(cachedContent, "text/html");
+
+        // 检查解析是否成功，以及 body 和 head 是否存在
+        if (!newDoc || !newDoc.body || !newDoc.head) {
+          console.error("Failed to parse cached content or document structure is invalid.");
+          window.location.assign(targetUrl.toString()); // 解析失败，回退到普通跳转
+          return;
+        }
+
+        // 替换文档内容
+        if (document.body) {
+          document.documentElement.replaceChild(newDoc.body, document.body);
+        } else {
+          document.documentElement.appendChild(newDoc.body);
+        }
+
+        // 更新 head (这是一个复杂的操作，简化处理可能不完美)
+        // 简单的替换 title:
+        const newTitle = newDoc.querySelector('head > title');
+        const oldTitle = document.head.querySelector('title');
+        if (newTitle && oldTitle) {
+          oldTitle.textContent = newTitle.textContent;
+        } else if (newTitle) {
+          document.head.appendChild(newTitle.cloneNode(true));
+        }
+        // 注意：更复杂的 head 更新需要更细致的逻辑来处理 stylesheets, scripts, meta tags 等。
+        // 直接替换 document.head 是有问题的。可以考虑遍历 newDoc.head 的子元素并更新或添加到当前的 document.head。
+        // 例如，更新或添加 meta description, canonical link 等。
+        // 简单的 innerHTML 替换，但要小心脚本：
+        // document.head.innerHTML = newDoc.head.innerHTML; // 可能导致脚本不执行或样式闪烁
+
+        // 优化 head 更新逻辑：更精细地处理 title, meta, link 标签
+        // 更新或添加 title
+        const newTitleElement = newDoc.head.querySelector('title');
+        const currentTitleElement = document.head.querySelector('title');
+        if (newTitleElement) {
+          if (currentTitleElement) {
+            currentTitleElement.textContent = newTitleElement.textContent;
+          } else {
+            document.head.appendChild(newTitleElement.cloneNode(true));
+          }
+        } else if (currentTitleElement) {
+          // 如果新文档没有 title 但当前文档有，可以考虑移除旧的 title
+          // currentTitleElement.remove();
+        }
+
+        // 更新或添加重要的 meta 标签 (例如 description, keywords, og:*)，忽略 charset 和 viewport
+        const importantMetaNames = ['description', 'keywords'];
+        const importantMetaProperties = ['og:title', 'og:description', 'og:image', 'og:url'];
+        const importantMetaItemprops = ['name', 'property', 'itemprop'];
+
+        newDoc.head.querySelectorAll('meta').forEach(newMeta => {
+          const isImportant = importantMetaItemprops.some(attr => {
+            const value = newMeta.getAttribute(attr);
+            if (!value) return false;
+            return importantMetaNames.includes(value) || importantMetaProperties.includes(value);
+          });
+
+          if (isImportant) {
+            const attrToMatch = importantMetaItemprops.find(attr => newMeta.hasAttribute(attr));
+            if (attrToMatch) {
+              const valueToMatch = newMeta.getAttribute(attrToMatch);
+              const existingMeta = document.head.querySelector(`meta[${attrToMatch}="${valueToMatch}"]`);
+              if (existingMeta) {
+                // 更新现有 meta 标签的 content 属性
+                existingMeta.setAttribute('content', newMeta.getAttribute('content') || '');
+              } else {
+                // 添加新的 meta 标签
+                document.head.appendChild(newMeta.cloneNode(true));
+              }
+            }
+          }
+        });
+
+        // 更新或添加重要的 link 标签 (例如 canonical, alternate, preconnect, preload, prefetch)
+        const importantLinkRels = ['canonical', 'alternate', 'preconnect', 'preload', 'prefetch'];
+
+        newDoc.head.querySelectorAll('link').forEach(newLink => {
+          const rel = newLink.getAttribute('rel');
+          if (rel && importantLinkRels.includes(rel)) {
+            // 对于 canonical 和 alternate，通常只有一个，可以直接替换或更新 href
+            if (rel === 'canonical' || rel === 'alternate') {
+              const existingLink = document.head.querySelector(`link[rel="${rel}"]`);
+              if (existingLink) {
+                existingLink.setAttribute('href', newLink.getAttribute('href') || '');
+              } else {
+                document.head.appendChild(newLink.cloneNode(true));
+              }
+            } else { // 对于 preconnect, preload, prefetch 等，可能需要添加新的
+              // 简单的添加，更复杂的逻辑可能需要检查是否已存在相同的 href
+              document.head.appendChild(newLink.cloneNode(true));
+            }
+          }
+        });
+
+        // 注意：脚本和样式表的处理更为复杂，直接添加可能导致重复加载或执行问题。
+        // 对于样式表，可以考虑动态创建 <link> 或 <style> 标签并添加到 head，但需要管理移除旧的。
+        // 对于脚本，通常不应该在页面内容替换后重新执行，除非它们是动态加载且设计为可重复执行的。
+        // 当前方案依赖于 nav 事件触发后的重新初始化逻辑来处理脚本和样式。
+
+        // 更新浏览器历史记录和地址栏
+        history.pushState({}, "", targetUrl.toString());
+
+        clearActivePopover();
+
+        const oldCleanup = window.cleanup;
+        if (typeof oldCleanup === 'function') {
+          oldCleanup();
+        }
+
+        document.dispatchEvent(new CustomEvent("nav", { detail: { url: targetUrl.pathname } })); // 触发 nav 事件以重新绑定事件和初始化组件
+
+        // 如果有 hash，尝试滚动到对应元素
+        if (targetUrl.hash) {
+          const element = document.getElementById(targetUrl.hash.substring(1));
+          if (element) {
+            element.scrollIntoView();
+          }
+        }
+
+      } else {
+        // 如果 sessionStorage 中没有，则执行默认跳转（或者可以考虑 fetch 后缓存）
+        console.log(`Not found in sessionStorage, navigating to: ${targetUrl.toString()}`);
+        window.location.assign(targetUrl.toString());
+      }
+    };
+
+    link.addEventListener("click", wikilinkClickHandler)
+
     window.addCleanup(() => {
       link.removeEventListener("mouseenter", mouseEnterHandler)
       link.removeEventListener("mouseleave", clearActivePopover)
+      link.removeEventListener("click", wikilinkClickHandler) // 清理 click 监听器
     })
   }
 

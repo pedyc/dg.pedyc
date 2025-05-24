@@ -63,5 +63,11 @@
   "blue-topaz-theme@@loading-page-style-option": "loading-add-icons",
   "blue-topaz-theme@@blockquote-style-change-options": "blockquote-style-default",
   "Blue-Topaz-Codebox-Highlight@@font-weight-inline-code": "regular",
-  "blue-topaz-theme@@resizable-mermaid": true
+  "blue-topaz-theme@@resizable-mermaid": true,
+  "blue-topaz-theme@@link-underline-internal": true,
+  "blue-topaz-theme@@colorful-link-animation": true,
+  "blue-topaz-theme@@remove-external-link-icon": false,
+  "blue-topaz-theme@@internal-link-color@@light": "#2118A100",
+  "blue-topaz-theme@@outline-style": "logseq-outline-style",
+  "blue-topaz-theme@@nowrap-outline": true
 }

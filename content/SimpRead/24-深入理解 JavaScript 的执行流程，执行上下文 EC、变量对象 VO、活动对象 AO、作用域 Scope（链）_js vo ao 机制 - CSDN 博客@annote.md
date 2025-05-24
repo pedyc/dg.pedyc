@@ -1,7 +1,7 @@
 ---
 title: 24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客@annote
 date-created: 2025-05-16
-date-modified: 2025-05-17
+date-modified: 2025-05-21
 alias: ["srAnnote@深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客"]
 index: 24
 type: Simpread

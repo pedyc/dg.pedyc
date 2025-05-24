@@ -3,10 +3,18 @@
   "search": "",
   "showTags": true,
   "showAttachments": false,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": true,
   "collapse-color-groups": false,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "file:/^[0-9]{4}([^\\-]|[u4e00-u9fa5]+)/",
+      "color": {
+        "a": 1,
+        "rgb": 13815387
+      }
+    }
+  ],
   "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
@@ -17,6 +25,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.10757751789927752,
+  "scale": 0.1458108910757418,
   "close": false
 }

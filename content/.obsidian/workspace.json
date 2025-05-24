@@ -6,15 +6,15 @@
       {
         "id": "db8c20a9047852c9",
         "type": "tabs",
-        "dimension": 55.7742782152231,
+        "dimension": 55.774278215223106,
         "children": [
           {
-            "id": "918e17f9ca651966",
+            "id": "4f5029adde205436",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/10-PROJECTS/完成/2025Q1-使用PARA笔记法重构PKM.md",
+                "file": "PARA/20-AREAS/02前端/JavaScript.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,16 +29,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025Q1-使用PARA笔记法重构PKM"
+              "title": "JavaScript"
             }
           },
           {
-            "id": "79a77ac114d9b0fe",
+            "id": "d22941646a060407",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/30-RESOURCES/算法真题/00算法真题库.md",
+                "file": "PARA/20-AREAS/02前端/浏览器安全机制.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -53,23 +53,72 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00算法真题库"
+              "title": "浏览器安全机制"
+            }
+          },
+          {
+            "id": "32be29e2a483f1ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/20-AREAS/02前端/0200前端.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "0200前端"
+            }
+          },
+          {
+            "id": "44524e74c55f7058",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/20-AREAS/02前端/浏览器兼容性.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "浏览器兼容性"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
-        "id": "d2363637f8aff47f",
+        "id": "439dd778f02942ac",
         "type": "split",
-        "dimension": 44.2257217847769,
+        "dimension": 44.225721784776894,
         "children": [
           {
-            "id": "2365abd5a8c86a08",
+            "id": "acc9a141859d8da0",
             "type": "tabs",
             "dimension": 66.08260325406758,
             "children": [
               {
-                "id": "69750c6d9457b4a6",
+                "id": "a4c6fb730f39dbca",
                 "type": "leaf",
                 "state": {
                   "type": "copilot-chat-view",
@@ -77,30 +126,18 @@
                   "icon": "message-square",
                   "title": "Copilot"
                 }
-              },
-              {
-                "id": "bdc1b509167c1efa",
-                "type": "leaf",
-                "state": {
-                  "type": "excalidraw",
-                  "state": {
-                    "file": "excalibrain.md"
-                  },
-                  "icon": "excalidraw-icon",
-                  "title": "excalibrain"
-                }
               }
             ]
           },
           {
-            "id": "213c9e9316173929",
+            "id": "5c6057f82baca4c5",
             "type": "split",
             "dimension": 33.917396745932415,
             "children": [
               {
-                "id": "acc9a141859d8da0",
+                "id": "ad7b3ded7395436d",
                 "type": "tabs",
-                "dimension": 29.24693520140105,
+                "dimension": 24.646464646464647,
                 "children": [
                   {
                     "id": "fe8c139c8b6b0638",
@@ -108,21 +145,21 @@
                     "state": {
                       "type": "outline",
                       "state": {
-                        "file": "PARA/10-PROJECTS/完成/2025Q1-使用PARA笔记法重构PKM.md",
+                        "file": "PARA/20-AREAS/02前端/浏览器兼容性.md",
                         "followCursor": false,
                         "showSearch": false,
                         "searchQuery": ""
                       },
                       "icon": "lucide-list",
-                      "title": "Outline of 2025Q1-使用PARA笔记法重构PKM"
+                      "title": "Outline of 浏览器兼容性"
                     }
                   }
                 ]
               },
               {
-                "id": "c835f858e276f0fa",
+                "id": "e44838186eea52ae",
                 "type": "tabs",
-                "dimension": 70.75306479859894,
+                "dimension": 75.35353535353535,
                 "children": [
                   {
                     "id": "dfebbf521b0b73ce",
@@ -130,7 +167,7 @@
                     "state": {
                       "type": "localgraph",
                       "state": {
-                        "file": "PARA/10-PROJECTS/完成/2025Q1-使用PARA笔记法重构PKM.md",
+                        "file": "PARA/20-AREAS/02前端/浏览器兼容性.md",
                         "options": {
                           "collapse-filter": true,
                           "search": "",
@@ -153,12 +190,12 @@
                           "repelStrength": 10,
                           "linkStrength": 1,
                           "linkDistance": 250,
-                          "scale": 0.7390479694094332,
+                          "scale": 0.8096422467401264,
                           "close": true
                         }
                       },
                       "icon": "lucide-git-fork",
-                      "title": "Graph of 2025Q1-使用PARA笔记法重构PKM"
+                      "title": "Graph of 浏览器兼容性"
                     }
                   }
                 ]
@@ -227,7 +264,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#个人成长/diary",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -267,8 +304,7 @@
               "title": "All properties"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -288,7 +324,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PARA/20-AREAS/08知识管理/知识卡片.md",
+                "file": "PARA/30-RESOURCES/面试真题/00前端面试真题库.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -298,7 +334,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 知识卡片"
+              "title": "Backlinks for 00前端面试真题库"
             }
           },
           {
@@ -339,54 +375,54 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "918e17f9ca651966",
+  "active": "d97f169839e60d66",
   "lastOpenFiles": [
-    "index.md",
-    "PARA/00-META/00关于本库.md",
-    "PARA/00-META/本库项目看板.excalidraw.svg",
-    "PARA/20-AREAS/0200前端.md",
-    "_template/templage_area.md",
+    "PARA/20-AREAS/02前端/Web标准.md",
+    "PARA/20-AREAS/02前端/0200前端.md",
+    "PARA/20-AREAS/02前端/浏览器兼容性.md",
+    "PARA/20-AREAS/02前端/浏览器核心架构.md",
+    "PARA/20-AREAS/02前端/浏览器.md",
+    "PARA/20-AREAS/02前端/Web通信.md",
+    "PARA/20-AREAS/02前端/跨域解决方案.md",
+    "PARA/20-AREAS/02前端/CORS.md",
+    "PARA/20-AREAS/02前端/Web API.md",
+    "PARA/20-AREAS/02前端/浏览器安全机制.md",
+    "PARA/20-AREAS/02前端/Web Storage API.md",
+    "PARA/20-AREAS/02前端/跨域.md",
+    "PARA/20-AREAS/02前端/同源策略.md",
+    "PARA/20-AREAS/02前端/CSP.md",
+    "PARA/20-AREAS/02前端/CSP 配置示例.md",
+    "PARA/20-AREAS/02前端/使用 localStorage 存储用户偏好设置.md",
+    "PARA/20-AREAS/02前端/XSS.md",
+    "PARA/20-AREAS/02前端/CSRF.md",
+    "PARA/20-AREAS/02前端/JavaScript.md",
+    "PARA/20-AREAS/02前端/Web安全.md",
+    "PARA/20-AREAS/02前端/Clickjacking.md",
+    "PARA/20-AREAS/02前端/CORS 配置示例.md",
+    "PARA/20-AREAS/02前端/HTTP.md",
+    "PARA/20-AREAS/02前端/网络协议.md",
+    "PARA/30-RESOURCES/算法真题/三数之和.md",
     "PARA/30-RESOURCES/算法真题/00算法真题库.md",
-    "PARA/20-AREAS/0202算法应用.md",
-    "PARA/20-AREAS/05算法与数据结构/常用算法汇总.md",
-    "PARA/20-AREAS/05算法与数据结构/递归算法要点总结.md",
-    "PARA/20-AREAS/05算法与数据结构/前端场景下的算法优先级.md",
-    "PARA/30-RESOURCES/面试真题/00前端面试真题库.md",
-    "PARA/30-RESOURCES/前端技术/源码解析/01Vue源码解析-运行时篇.md",
-    "PARA/30-RESOURCES/面试真题/JS挑战.md",
-    "PARA/30-RESOURCES/面试真题/JS题单.md",
-    "PARA/30-RESOURCES/面试真题/JS基础.md",
-    "SimpRead/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否.md",
-    "PARA/20-AREAS/02前端/深拷贝和浅拷贝.md",
-    "PARA/20-AREAS/02前端/Map与WeakMap.md",
-    "PARA/20-AREAS/0201前端工程.md",
-    "PARA/20-AREAS/0800知识管理.md",
-    "PARA/20-AREAS/02前端/JS执行机制.md",
-    "SimpRead/output/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否@annote.html",
-    "SimpRead/backup/simpread_config@20250517160125.json",
-    "SimpRead/backup/simpread_config@20250517155951.json",
-    "SimpRead/backup/simpread_config@20250517155949.json",
-    "SimpRead/_resources/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否/6f21fb1743c9b201908c9f7f6eb2258d_MD5.jpg",
-    "SimpRead/_resources/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否/6e293aaf084896aad301bfa8d3bb4a0d_MD5.gif",
-    "SimpRead/_resources/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否/54bcc1a49138a151212ad210d55fd245_MD5.jpg",
-    "SimpRead/_resources/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否",
-    "SimpRead/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否@annote.md",
-    "SimpRead/output/25-javascript - WeakMap 和 Map 的区别，WeakMap 原理，为什么能被 GC？ - 个人文章 - SegmentFault 思否.html",
-    "SimpRead/backup/simpread_config@20250517155927.json",
-    "PARA/20-AREAS/02前端/_resources/深拷贝和浅拷贝",
+    "_resources/webkit-main-flow-b779d50c0cf28_856.png",
+    "_resources/browser-components-9cd8ff834cc9c_856.png",
+    "Diary/_resources",
+    "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否/aa39b161b5580788f4015aa7e97abe2c_MD5.jpg",
+    "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否/be92cddf934a31fc299c9cc3b06d26ab_MD5.jpg",
+    "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否/a0aa2ef4f7493a39d3575b10c9fcefa2_MD5.jpg",
+    "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否/df8f9f6f773bf9725dbae2756fa03306_MD5.jpg",
+    "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否/de969490302d29b39f24784979a98ec0_MD5.jpg",
+    "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否/f761fe782555858eae62d4818be01199_MD5.jpg",
+    "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否/09b4b1d790c038ff59935fb8bfac73f5_MD5.jpg",
+    "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否/ff437863a641060dff065cb6e1fc5240_MD5.jpg",
+    "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否",
+    "SimpRead/output/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否.html",
+    "SimpRead/backup/simpread_config@20250521211255.json",
+    "SimpRead/backup/simpread_config@20250521211229.json",
+    "SimpRead/backup/simpread_config@20250521211221.json",
+    "SimpRead/backup/simpread_config@20250521211032.json",
     "PARA/20-AREAS/02前端/_resources",
-    "SimpRead/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客.md",
-    "SimpRead/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客@annote.md",
-    "PARA/20-AREAS/0104热点关注.md",
-    "PARA/00-META/本库项目看板.excalidraw.md",
-    "PARA/30-RESOURCES/面试真题/题目/解释 JavaScript 的事件循环机制.md",
-    "SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/8ec600c0c7097d0ca0cbd0b425db68a2_MD5.jpg",
-    "SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/be65bac4b664014eeff9ee02a87d0747_MD5.jpg",
-    "SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/2cf3152bc3f7d2bb7ef48e8900495fa0_MD5.jpg",
-    "SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/540a2eef172906bd1b685141ed942db7_MD5.jpg",
-    "SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/aebe67c234ebc7ef9193718ff1192c5a_MD5.jpg",
-    "SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/dec652c4d24ba72954a2ae3e33ba7334_MD5.jpg",
-    "SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客",
+    "SimpRead/_resources/26-「浏览器工作原理」写给女友的秘籍 - 浏览器组成 & 网络请求篇（1_2W 字)",
+    "SimpRead/output/26-「浏览器工作原理」写给女友的秘籍 - 浏览器组成 & 网络请求篇（1_2W 字).html",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

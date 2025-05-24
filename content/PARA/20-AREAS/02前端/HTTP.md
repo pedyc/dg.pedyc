@@ -1,7 +1,7 @@
 ---
 title: HTTP
 date-created: 2025-05-16
-date-modified: 2025-05-16
+date-modified: 2025-05-21
 content-type: concept
 zettel: permanent
 ---
@@ -23,9 +23,9 @@ HTTP（Hypertext Transfer Protocol，超文本传输协议）是一种用于在 
 
 - HTTP/0.9：只支持 GET 方法，不支持头部。
 - HTTP/1.0：引入了头部、状态码等概念。
-- HTTP/1.1：引入了持久连接、管道化等优化。
-- HTTP/2：使用多路复用、头部压缩等技术，提高了性能。
-- HTTP/3：基于 QUIC 协议，进一步提高了性能和安全性。
+- [[HTTP/1.1]]：引入了持久连接、管道化等优化。
+- [[HTTP/2]]：使用多路复用、头部压缩等技术，提高了性能。
+- [[HTTP/3]]：基于 QUIC 协议，进一步提高了性能和安全性。
 
 ## 工作原理
 

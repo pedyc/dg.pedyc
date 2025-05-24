@@ -1,19 +1,15 @@
 ---
-topic:
-  - 知识管理
+topic: [知识管理]
 uid: 
 title: 2025Q1-使用PARA笔记法重构PKM
 aliases: []
 author: pedyc
-tags:
-  - 知识管理/PARA
+tags: [知识管理/PARA]
 date-created: 2025-02-22
-date-modified: 2025-04-25
+date-modified: 2025-05-19
 status: 已暂停
-area:
-  - "[[0800知识管理]]"
-type:
-  - project
+area: ["[[0800知识管理]]"]
+type: [project]
 ---
 
 ## 🚀核心目标

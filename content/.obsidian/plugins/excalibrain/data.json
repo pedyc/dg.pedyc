@@ -227,7 +227,6 @@
     "Next": {}
   },
   "navigationHistory": [
-    "PARA/20-AREAS/知识管理/00-CORE/知识管理概述.md",
     "PARA/20-AREAS/知识管理/0804知识生产领域.md",
     "PARA/20-AREAS/知识管理/00-CORE/知识卡片.md",
     "_template/Untitled.md",
@@ -276,7 +275,8 @@
     "PARA/10-PROJECTS/2025Q2-视觉化PKM.md",
     "PARA/20-AREAS/03视觉思维/思维分类及视觉工具.md",
     "PARA/20-AREAS/03视觉思维/Drawing 2025-05-08 23.00.23.excalidraw.md",
-    "PARA/20-AREAS/03视觉思维/视觉工具.excalidraw.md"
+    "PARA/20-AREAS/03视觉思维/视觉工具.excalidraw.md",
+    "Diary/2025-05-21.md"
   ],
   "allowOntologySuggester": true,
   "ontologySuggesterParentTrigger": "::p",

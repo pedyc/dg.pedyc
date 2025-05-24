@@ -22,7 +22,6 @@ const config: QuartzConfig = {
       "Private",
     ],
     defaultDateType: "created",
-    generateSocialImages: false,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,

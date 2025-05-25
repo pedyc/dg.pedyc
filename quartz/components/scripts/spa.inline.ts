@@ -14,7 +14,7 @@ const isLocalUrl = (href: string) => {
     if (window.location.origin === url.origin) {
       return true
     }
-  } catch (e) {}
+  } catch (e) { }
   return false
 }
 
@@ -62,18 +62,45 @@ async function _navigate(url: URL, isBack: boolean = false) {
   isNavigating = true
   startLoading()
   p = p || new DOMParser()
-  const contents = await fetchCanonical(url)
-    .then((res) => {
-      const contentType = res.headers.get("content-type")
-      if (contentType?.startsWith("text/html")) {
-        return res.text()
-      } else {
+
+  // 构建 sessionStorage 的键
+  const cacheKey = url.toString()
+  let contents: string | undefined | null = null
+
+  // 尝试从 sessionStorage 获取缓存
+  const cachedContent = sessionStorage.getItem(cacheKey)
+  if (cachedContent) {
+    contents = cachedContent
+  }
+
+  // 如果没有缓存，则发起网络请求
+  if (contents === null) {
+    contents = await fetchCanonical(url)
+      .then((res) => {
+        const contentType = res.headers.get("content-type")
+        if (contentType?.startsWith("text/html")) {
+          return res.text()
+        } else {
+          window.location.assign(url)
+          return null // 明确返回 null，避免后续处理
+        }
+      })
+      .catch(() => {
         window.location.assign(url)
+        return null // 明确返回 null
+      })
+
+    // 如果成功获取内容并且不是回退操作，则存入 sessionStorage
+    if (contents && !isBack) {
+      try {
+        sessionStorage.setItem(cacheKey, contents)
+      } catch (e) {
+        console.warn("Failed to cache content in sessionStorage:", e)
+        // 如果存储失败（例如超出大小限制），可以考虑清除一些旧的缓存项
+        // sessionStorage.clear(); // 或者更精细的清除策略
       }
-    })
-    .catch(() => {
-      window.location.assign(url)
-    })
+    }
+  }
 
   if (!contents) return
 

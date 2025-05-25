@@ -298,7 +298,6 @@ document.addEventListener("nav", () => {
       const cacheKey = contentUrl.toString();
 
       // 构建用于浏览器导航的最终URL
-      // 它应该基于正确的 cacheKey (路径部分) 并附加上 originalTargetUrl 的 hash
       const urlForBrowser = new URL(cacheKey);
       if (originalTargetUrl.hash) {
         urlForBrowser.hash = originalTargetUrl.hash;
@@ -308,11 +307,8 @@ document.addEventListener("nav", () => {
         console.log(`Loading from sessionStorage: ${cacheKey}`);
         const newDoc = p.parseFromString(cachedContent, "text/html");
 
-        // 使用 urlForBrowser 作为基准 URL 来规范化 newDoc 中的相对路径
         normalizeRelativeURLs(newDoc, urlForBrowser);
 
-        // 替换当前页面的 body 内容为新文档的 body 内容
-        // 注意：直接替换 innerHTML 可能会丢失事件监听器，更健壮的方法是逐个替换子元素或使用更高级的 DOM Diffing 库
         document.body.innerHTML = newDoc.body.innerHTML;
 
         // 更新 head (这是一个复杂的操作，简化处理可能不完美)
@@ -341,8 +337,7 @@ document.addEventListener("nav", () => {
             document.head.appendChild(newTitleElement.cloneNode(true));
           }
         } else if (currentTitleElement) {
-          // 如果新文档没有 title 但当前文档有，可以考虑移除旧的 title
-          // currentTitleElement.remove();
+          // currentTitleElement.remove(); // 可选：如果新页面无标题，移除旧标题
         }
 
         // 更新或添加重要的 meta 标签 (例如 description, keywords, og:*)，忽略 charset 和 viewport
@@ -410,11 +405,16 @@ document.addEventListener("nav", () => {
           oldCleanup();
         }
 
-        document.dispatchEvent(new CustomEvent("nav", { detail: { url: urlForBrowser.pathname } })); // 触发 nav 事件以重新绑定事件和初始化组件
+        // 派发 nav 事件，让其他依赖导航的组件重新初始化
+        document.dispatchEvent(new CustomEvent("nav", { detail: { url: urlForBrowser.pathname } }));
+        
+        // 派发自定义事件以重新初始化图谱
+        // 使用 requestAnimationFrame 确保 DOM 更新已基本完成
+        requestAnimationFrame(() => {
+          console.log("Dispatching reinit-graph event from popover.");
+          document.dispatchEvent(new CustomEvent("reinit-graph", { detail: {} }));
+        });
 
-        // 如果有 hash，尝试滚动到对应元素
-        // if (targetUrl.hash) { // 旧代码
-        //   const element = document.getElementById(targetUrl.hash.substring(1));
         if (urlForBrowser.hash) {
           const element = document.getElementById(urlForBrowser.hash.substring(1));
           if (element) {
@@ -423,15 +423,10 @@ document.addEventListener("nav", () => {
         }
 
       } else {
-        // 如果 sessionStorage 中没有，则执行默认跳转（或者可以考虑 fetch 后缓存）
-        // console.log(`Not found in sessionStorage, navigating to: ${targetUrl.toString()}`); // 旧代码
         console.log(`Not found in sessionStorage, navigating to: ${urlForBrowser.toString()}`);
-        // window.location.assign(targetUrl.toString()); // 旧代码
         window.location.assign(urlForBrowser.toString());
       }
     };
-
-    link.addEventListener("click", wikilinkClickHandler)
 
     window.addCleanup(() => {
       link.removeEventListener("mouseenter", mouseEnterHandler)

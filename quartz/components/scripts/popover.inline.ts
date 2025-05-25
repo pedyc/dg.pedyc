@@ -64,6 +64,9 @@ async function preloadLinkContent(url: URL, isPriority: boolean = false) {
         break
       default: // html
         const contents = await response.text()
+
+        const html = p.parseFromString(contents, "text/html")
+
         // 将原始 HTML 文本存入 sessionStorage，用于页面跳转时复用
         try {
           sessionStorage.setItem(cacheKey, contents)
@@ -73,7 +76,6 @@ async function preloadLinkContent(url: URL, isPriority: boolean = false) {
           // 例如：sessionStorage.clear(); 或者实现一个更智能的 LRU 清理策略
         }
 
-        const html = p.parseFromString(contents, "text/html")
         normalizeRelativeURLs(html, new URL(url.pathname, url.origin))
         html.querySelectorAll("[id]").forEach((el) => {
           el.id = `popover-internal-${el.id}`
@@ -288,31 +290,30 @@ document.addEventListener("nav", () => {
       event.preventDefault(); // 阻止默认跳转
 
       const anchorElement = event.currentTarget as HTMLAnchorElement;
-      const targetUrl = new URL(anchorElement.href);
-      // 通常，用于缓存和内容获取的键可能不需要包含 search params 或 hash
-      // 但如果它们影响内容，则保留。这里假设pathname和origin足以标识内容。
-      const contentUrl = new URL(targetUrl.pathname, targetUrl.origin);
+      const originalTargetUrl = new URL(anchorElement.href); // 保留原始解析的URL，主要为了获取hash
+
+      // contentUrl 用于 sessionStorage key，通常是 clean URL (无 hash, 有时无 search)
+      const contentUrl = new URL(originalTargetUrl.pathname, originalTargetUrl.origin);
+      if (originalTargetUrl.search) contentUrl.search = originalTargetUrl.search; // 保留查询参数
       const cacheKey = contentUrl.toString();
 
+      // 构建用于浏览器导航的最终URL
+      // 它应该基于正确的 cacheKey (路径部分) 并附加上 originalTargetUrl 的 hash
+      const urlForBrowser = new URL(cacheKey);
+      if (originalTargetUrl.hash) {
+        urlForBrowser.hash = originalTargetUrl.hash;
+      }
       const cachedContent = sessionStorage.getItem(cacheKey);
-
       if (cachedContent) {
         console.log(`Loading from sessionStorage: ${cacheKey}`);
         const newDoc = p.parseFromString(cachedContent, "text/html");
 
-        // 检查解析是否成功，以及 body 和 head 是否存在
-        if (!newDoc || !newDoc.body || !newDoc.head) {
-          console.error("Failed to parse cached content or document structure is invalid.");
-          window.location.assign(targetUrl.toString()); // 解析失败，回退到普通跳转
-          return;
-        }
+        // 使用 urlForBrowser 作为基准 URL 来规范化 newDoc 中的相对路径
+        normalizeRelativeURLs(newDoc, urlForBrowser);
 
-        // 替换文档内容
-        if (document.body) {
-          document.documentElement.replaceChild(newDoc.body, document.body);
-        } else {
-          document.documentElement.appendChild(newDoc.body);
-        }
+        // 替换当前页面的 body 内容为新文档的 body 内容
+        // 注意：直接替换 innerHTML 可能会丢失事件监听器，更健壮的方法是逐个替换子元素或使用更高级的 DOM Diffing 库
+        document.body.innerHTML = newDoc.body.innerHTML;
 
         // 更新 head (这是一个复杂的操作，简化处理可能不完美)
         // 简单的替换 title:
@@ -399,7 +400,8 @@ document.addEventListener("nav", () => {
         // 当前方案依赖于 nav 事件触发后的重新初始化逻辑来处理脚本和样式。
 
         // 更新浏览器历史记录和地址栏
-        history.pushState({}, "", targetUrl.toString());
+        // history.pushState({}, "", targetUrl.toString()); // 旧代码
+        history.pushState({}, "");
 
         clearActivePopover();
 
@@ -408,11 +410,13 @@ document.addEventListener("nav", () => {
           oldCleanup();
         }
 
-        document.dispatchEvent(new CustomEvent("nav", { detail: { url: targetUrl.pathname } })); // 触发 nav 事件以重新绑定事件和初始化组件
+        document.dispatchEvent(new CustomEvent("nav", { detail: { url: urlForBrowser.pathname } })); // 触发 nav 事件以重新绑定事件和初始化组件
 
         // 如果有 hash，尝试滚动到对应元素
-        if (targetUrl.hash) {
-          const element = document.getElementById(targetUrl.hash.substring(1));
+        // if (targetUrl.hash) { // 旧代码
+        //   const element = document.getElementById(targetUrl.hash.substring(1));
+        if (urlForBrowser.hash) {
+          const element = document.getElementById(urlForBrowser.hash.substring(1));
           if (element) {
             element.scrollIntoView();
           }
@@ -420,8 +424,10 @@ document.addEventListener("nav", () => {
 
       } else {
         // 如果 sessionStorage 中没有，则执行默认跳转（或者可以考虑 fetch 后缓存）
-        console.log(`Not found in sessionStorage, navigating to: ${targetUrl.toString()}`);
-        window.location.assign(targetUrl.toString());
+        // console.log(`Not found in sessionStorage, navigating to: ${targetUrl.toString()}`); // 旧代码
+        console.log(`Not found in sessionStorage, navigating to: ${urlForBrowser.toString()}`);
+        // window.location.assign(targetUrl.toString()); // 旧代码
+        window.location.assign(urlForBrowser.toString());
       }
     };
 

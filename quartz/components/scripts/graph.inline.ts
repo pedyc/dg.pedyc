@@ -77,6 +77,11 @@ async function determineGraphicsAPI(): Promise<"webgpu" | "webgl"> {
   return adapter.features.has("float32-blendable") ? "webgpu" : "webgl"
 }
 
+/**
+ * 渲染图谱的核心函数
+ * @param graph 图谱的容器 HTMLElement
+ * @param fullSlug 当前页面的 FullSlug
+ */
 async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const slug = simplifySlug(fullSlug)
   const visited = getVisited()
@@ -657,3 +662,33 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
     cleanupGlobalGraphs()
   })
 })
+
+/**
+ * 初始化或重新初始化图谱。
+ * 会查找图谱容器并调用 renderGraph。
+ */
+async function initializeOrReinitializeGraph() {
+  // 假设图谱的容器元素有一个特定的 data 属性或者 ID，例如 'graph-canvas'
+  // 请根据您的实际 HTML 结构调整选择器
+  const graphElement = document.getElementById('graph-canvas') as HTMLElement ?? document.querySelector<HTMLElement>('[data-el="graph-canvas"]');
+  if (graphElement) {
+    const currentFullSlug = getFullSlug(window); // 获取当前页面的 slug
+    await renderGraph(graphElement, currentFullSlug);
+    console.log("Graph re-initialized/rendered for", currentFullSlug);
+  } else {
+    console.warn("Graph container not found for re-initialization.");
+  }
+}
+
+// 初始加载时执行图谱渲染
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializeOrReinitializeGraph);
+} else {
+  initializeOrReinitializeGraph(); // DOMContentLoaded 已经发生
+}
+
+// 监听自定义事件以重新初始化图谱
+document.addEventListener("reinit-graph", () => {
+  console.log("Received reinit-graph event.");
+  initializeOrReinitializeGraph();
+});

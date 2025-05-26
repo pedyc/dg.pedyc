@@ -23,12 +23,12 @@ const config: QuartzConfig = {
     ],
     defaultDateType: "created",
     theme: {
-      fontOrigin: "googleFonts",
+      fontOrigin: "local",
       cdnCaching: true,
       typography: {
-        header: "LXGW WenKai GB Screen",
-        body: "LXGW WenKai GB Screen",
-        code: "LXGW WenKai Mono TC",
+        header: "LXGW WenKai",
+        body: "LXGW WenKai",
+        code: "LXGW WenKai",
       },
       colors: {
         lightMode: {

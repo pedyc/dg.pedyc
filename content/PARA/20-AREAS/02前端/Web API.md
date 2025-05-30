@@ -1,7 +1,7 @@
 ---
 title: Web API
 date-created: 2025-05-19
-date-modified: 2025-05-23
+date-modified: 2025-05-27
 ---
 
 ## 浏览器 API
@@ -9,6 +9,7 @@ date-modified: 2025-05-23
 - 操作文档
 	- [[DOM API]]
 - 从服务器获取数据
+	- [[XHR]]
 	- [[Fetch API]]
 - 绘制和操作图形
 	- [[Canvas]]
@@ -18,8 +19,13 @@ date-modified: 2025-05-23
 	- [[Web RTC]]
 - 客户端存储
 	- [[Web Storage API]]
-	- [[IndexedDB API]]
-	- [[Cookie Store API]]
+	- [[Cookie Storage API]]
+	- [[IndexedDB]]
+	- [[Cache API]]
+- Web Worker
+	- [[Web Worker API]]
+	- [[Shared Worker]]
+	- [[Service Worker]]
 
 ## 常见第三方 API
 

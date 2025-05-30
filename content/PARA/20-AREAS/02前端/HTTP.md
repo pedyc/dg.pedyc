@@ -1,7 +1,7 @@
 ---
 title: HTTP
 date-created: 2025-05-16
-date-modified: 2025-05-21
+date-modified: 2025-05-29
 content-type: concept
 zettel: permanent
 ---

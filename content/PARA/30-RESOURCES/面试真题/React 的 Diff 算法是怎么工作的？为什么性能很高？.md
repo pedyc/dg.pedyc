@@ -1,7 +1,7 @@
 ---
 title: React 的 Diff 算法是怎么工作的？为什么性能很高？
 date-created: 2025-05-21
-date-modified: 2025-05-21
+date-modified: 2025-05-28
 ---
 
 ## React 的 Diff 算法是怎么工作的？为什么性能很高？

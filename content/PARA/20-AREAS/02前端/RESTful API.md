@@ -3,7 +3,7 @@ title: RESTful API
 description: RESTful API 是一种设计风格，用于构建可扩展的 Web 服务。
 tags: [前端, 后端, API, REST]
 date-created: 2025-05-21
-date-modified: 2025-05-21
+date-modified: 2025-05-26
 content-type: concept
 keywords: [RESTful API, REST, API, Web API]
 para: area

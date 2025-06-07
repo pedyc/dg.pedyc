@@ -1,7 +1,7 @@
 ---
 title: 预构建机制（Vite）
 date-created: 2025-05-29
-date-modified: 2025-05-29
+date-modified: 2025-06-02
 ---
 
 ## 核心概念

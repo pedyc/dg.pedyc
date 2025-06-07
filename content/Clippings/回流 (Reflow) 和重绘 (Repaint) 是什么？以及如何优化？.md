@@ -1,7 +1,7 @@
 ---
 title: 回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？
 date-created: 2025-05-14
-date-modified: 2025-05-21
+date-modified: 2025-06-02
 ---
 
 ==回流 (Reflow) 是指网页渲染引擎根据元素的尺寸、位置和显示属性来重新计算页面的排版和布局，是网页渲染过程中的一个重要步骤。重绘 (Repaint) 是指网页渲染引擎根据显示属性 (如颜色、文字大小等) 重新绘制页面元素，不影响元素的位置和尺寸。==
@@ -59,14 +59,17 @@ date-modified: 2025-05-21
 
 以下提供几个方法:
 
-- 移动调整元素时，使用  `transform`
-- 使用  `opacity`  来改变元素的能见度
-- 如果需要频繁重绘或回流的节点，可以透过  `will-change`  设定成独立的图层，因为独立的图层可以避免该节点渲染行为影像到其他节点。
+| 技术手段                                 | 原因说明                                                       |
+| ------------------------------------ | ---------------------------------------------------------- |
+| 批量操作 DOM                             | 避免多次触发 reflow，使用 `DocumentFragment` 或 `display: none` 批量修改 |
+| 使用 class 替代 style 多次修改               | 改 class 一次触发一次重排，style 连续改多次可能连续触发重排                       |
+| 避免频繁读写 layout 属性混用                   | 如：连续读取 `offsetTop` 然后设置 `style.top`，中间会插入 layout 计算流程      |
+| 使用 transform / opacity 替代 top / left | transform 不会触发重排，只会触发合成层变化（GPU 加速）                         |
+| 使用虚拟列表                               | 减少页面中渲染节点数量                                                |
+| 使用 will-change 属性                    | 告诉浏览器元素将来的变化                                               |
 
-```bash
-	body >.sidebar {  
-		will-change: transform;  
-	}
+```css
+body >.sidebar {  
+	will-change: transform;  
+}
 ```
-
-- 避免频繁用 JavaScript 操作 DOM 节点

@@ -1,7 +1,7 @@
 ---
 title: Clickjacking
 date-created: 2025-05-23
-date-modified: 2025-05-26
+date-modified: 2025-06-02
 ---
 
 ## Clickjacking (点击劫持)
@@ -29,7 +29,7 @@ Clickjacking 是一种恶意技术，攻击者通过在网页上覆盖一层透�
 		- `DENY`：表示该页面不允许在任何 iframe 中展示。
 		- `SAMEORIGIN`：表示该页面只能在相同域名的 iframe 中展示。
 		- `ALLOW-FROM uri`：表示该页面可以在指定 uri 的 iframe 中展示（不推荐使用，因为兼容性问题）。
-- **Content Security Policy (CSP)**：使用 CSP 的 `frame-ancestors` 指令，指定允许嵌入当前页面的域名。
+- **Content Security Policy (CSP)**：使用 CSP 的 `frame-src` 指令，指定允许嵌入当前页面的域名。
 - **JavaScript 防御**：使用 JavaScript 代码检测当前页面是否被嵌入到 iframe 中，如果是，则阻止页面的加载。
 
 ### 参考资料

@@ -3,7 +3,7 @@ title: WebSocket
 description: WebSocket 是一种在客户端和服务器之间提供持久连接的协议，用于实现实时双向数据传输。
 tags: [前端, 网络协议]
 date-created: 2024-07-03
-date-modified: 2025-05-29
+date-modified: 2025-06-02
 content-type: concept
 keywords: [WebSocket, 实时通信, 双向通信]
 para: AREAS
@@ -73,7 +73,7 @@ WebSocket 是一种网络通信协议，可在单个 TCP 连接上提供全双�
 - **Q: WebSocket 是什么？**
 		- A: 一种在客户端和服务器之间提供持久连接的协议，用于实现实时双向数据传输。
 - **Q: WebSocket 和 HTTP 有什么区别？**
-		- A: WebSocket 是全双工通信，而 HTTP 是半双工通信。WebSocket 建立一次连接后保持打开状态，而 HTTP 每次请求都需要建立新的 TCP 连接。tle: WebSocket
+		- A: WebSocket 是全双工通信，而 HTTP 是半双工通信。WebSocket 建立一次连接后保持打开状态，而 HTTP 每次请求都需要建立新的 TCP 连接。
 
 ## 参考资料
 

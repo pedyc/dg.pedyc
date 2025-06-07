@@ -3,7 +3,7 @@ title: Web通信
 description: 前端工程师需要掌握的各种 Web 通信方式，包括 HTTP 通信、跨域通信、持久连接、客户端内通信和服务端通信等。
 tags: [前端, 网络, 通信]
 date-created: 2025-05-19
-date-modified: 2025-05-29
+date-modified: 2025-06-02
 content-type: concept
 keywords: [Web通信, HTTP, WebSocket, CORS]
 para: AREA
@@ -35,7 +35,7 @@ zettel: permanent
 - 描述： 基于 `XHR` 封装，提供更强的功能（拦截器、自动转换 JSON、取消请求等）。
 - 要点： 项目中非常常用，很多公司默认用它。
 
-### 二、[[CORS]] 通信 (CORS 关键词)
+### 二、[[跨域]] 通信
 
  1. [[同源策略]] & CORS ✅
 
@@ -64,7 +64,7 @@ zettel: permanent
 - 描述： 单向通信（服务器 -> 客户端）。
 - 要点： 实现简单，但兼容性和灵活性不如 WebSocket。
 
-3. [[HTTP/2]] Push (了解即可)
+3. [[HTTP~2]] Server Push (了解即可)
 
 - 描述： 服务器主动推送资源，但前端控制能力有限，应用场景少。
 - 要点： 了解即可。
@@ -121,8 +121,6 @@ zettel: permanent
 | WebRTC        |      |      | ✅    |
 | EventEmitter  | ✅    |      |      |
 | CustomEvent   | ✅    |      |      |
-
-i
 
 ## ❓问答卡片
 

@@ -1,7 +1,7 @@
 ---
 title: 环境变量（Vite）
 date-created: 2025-05-29
-date-modified: 2025-05-29
+date-modified: 2025-06-02
 ---
 
 Vite 支持使用 `.env` 文件来管理不同模式下的环境变量。

@@ -1,13 +1,15 @@
 ---
 title: Web API
 date-created: 2025-05-19
-date-modified: 2025-05-27
+date-modified: 2025-06-02
 ---
 
 ## 浏览器 API
 
 - 操作文档
-	- [[DOM API]]
+	- [[DOM]]
+- 操作浏览器
+	- [[BOM]]
 - 从服务器获取数据
 	- [[XHR]]
 	- [[Fetch API]]

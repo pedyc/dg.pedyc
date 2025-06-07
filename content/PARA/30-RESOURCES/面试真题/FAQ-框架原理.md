@@ -1,7 +1,7 @@
 ---
 title: FAQ-框架原理
 date-created: 2025-05-21
-date-modified: 2025-05-30
+date-modified: 2025-06-04
 ---
 
 ## FAQ-React
@@ -41,14 +41,16 @@ date-modified: 2025-05-30
 
 - 基础
 
-| 示例题目                                   | 模块         | 知识点                                 |
-| -------------------------------------- | ---------- | ----------------------------------- |
-| [[Vue2 是如何实现响应式的？Vue3 响应式的原理是？]]       | Vue 响应式系统  | Object.defineProperty vs Proxy、依赖收集 |
-| [[v-if 和 v-show 区别？v-model 原理是什么？]]    | 模板语法 & 指令  | v-if、v-for、v-model、v-bind、v-on      |
-| [[Vue3 生命周期有哪些？适合做哪些事情？]]              | 生命周期       | 各个生命周期的作用                           |
-| [[父子组件如何通信？跨层通信如何处理？]]                 | 组件通信       | props、emit、v-model、provide/inject   |
-| [[computed 和 watch 有什么区别？使用场景？]]       | 计算属性 & 侦听器 | computed vs watch                   |
-| [[如何监听组件内部的自定义事件？.stop 和.prevent 区别？]] | 事件机制       | 自定义事件、事件修饰符                         |
+| 示例题目                                                  | 模块         | 知识点                                 |
+| ----------------------------------------------------- | ---------- | ----------------------------------- |
+| [[Vue2 是如何实现响应式的？Vue3 响应式的原理是？]]                      | Vue 响应式系统  | Object.defineProperty vs Proxy、依赖收集 |
+| [[v-if 和 v-show 区别？v-model 原理是什么？]]                   | 模板语法 & 指令  | v-if、v-for、v-model、v-bind、v-on      |
+| [[Vue3 生命周期有哪些？适合做哪些事情？]]                             | 生命周期       | 各个生命周期的作用                           |
+| [[父子组件如何通信？跨层通信如何处理？]]                                | 组件通信       | props、emit、v-model、provide/inject   |
+| [[computed 和 watch 有什么区别？使用场景？]]                      | 计算属性 & 侦听器 | computed vs watch                   |
+| [[如何监听组件内部的自定义事件？.stop 和.prevent 区别？]]                | 事件机制       | 自定义事件、事件修饰符                         |
+| [[在 Vue 组件中，模板是否必须有一个根节点包裹？Vue 2 和 Vue 3 在这方面有什么区别？]] | 渲染机制       | 模板渲染                                |
+| [[watch 和 watchEffect 有什么区别？]]                        |            |                                     |
 
 - 进阶
 

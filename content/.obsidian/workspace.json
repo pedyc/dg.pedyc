@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Diary/2025-05-30.md",
+                "file": "PARA/20-AREAS/02前端/TreeWalker API.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,11 +29,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-05-30"
+              "title": "TreeWalker API"
             }
           },
           {
-            "id": "308cb482311fab92",
+            "id": "1b1888615768a9a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/20-AREAS/02前端/Range API.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Range API"
+            }
+          },
+          {
+            "id": "9b2069d06a2c0fa3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -55,222 +79,6 @@
               "icon": "lucide-file",
               "title": "00前端面试真题库"
             }
-          },
-          {
-            "id": "92a44ffb4bc6fe3e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/30-RESOURCES/面试真题/FAQ-JS&TS.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "FAQ-JS&TS"
-            }
-          },
-          {
-            "id": "daaa92d7fd393a05",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/30-RESOURCES/面试真题/FAQ-浏览器原理与运行机制.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "FAQ-浏览器原理与运行机制"
-            }
-          },
-          {
-            "id": "d7b1a733d8d3cdf5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/02前端/Web安全.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Web安全"
-            }
-          },
-          {
-            "id": "dbec075e41012b58",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/30-RESOURCES/面试真题/FAQ-框架原理.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "FAQ-框架原理"
-            }
-          },
-          {
-            "id": "95cd2ff998dabc86",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/30-RESOURCES/面试真题/有哪些网络通信协议？说一说你对它们的理解.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "有哪些网络通信协议？说一说你对它们的理解"
-            }
-          },
-          {
-            "id": "c57a3f040feeaac6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/02前端/自动化构建与打包.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "自动化构建与打包"
-            }
-          },
-          {
-            "id": "fb89d5634aa44058",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/02前端/构建分析与优化（Vite）.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "构建分析与优化（Vite）"
-            }
-          },
-          {
-            "id": "4794740a4390fcd5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/02前端/预构建机制（Vite）.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "预构建机制（Vite）"
-            }
-          },
-          {
-            "id": "9139b33021082aa5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/02前端/环境变量（Vite）.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "环境变量（Vite）"
-            }
           }
         ],
         "currentTab": 2
@@ -283,7 +91,7 @@
           {
             "id": "acc9a141859d8da0",
             "type": "tabs",
-            "dimension": 66.08260325406758,
+            "dimension": 60.63829787234043,
             "children": [
               {
                 "id": "a4c6fb730f39dbca",
@@ -300,7 +108,7 @@
           {
             "id": "5c6057f82baca4c5",
             "type": "split",
-            "dimension": 33.917396745932415,
+            "dimension": 39.361702127659576,
             "children": [
               {
                 "id": "ad7b3ded7395436d",
@@ -313,13 +121,13 @@
                     "state": {
                       "type": "outline",
                       "state": {
-                        "file": "PARA/30-RESOURCES/面试真题/FAQ-JS&TS.md",
+                        "file": "PARA/30-RESOURCES/面试真题/00前端面试真题库.md",
                         "followCursor": false,
                         "showSearch": false,
                         "searchQuery": ""
                       },
                       "icon": "lucide-list",
-                      "title": "Outline of FAQ-JS&TS"
+                      "title": "Outline of 00前端面试真题库"
                     }
                   }
                 ]
@@ -335,7 +143,7 @@
                     "state": {
                       "type": "localgraph",
                       "state": {
-                        "file": "PARA/30-RESOURCES/面试真题/FAQ-JS&TS.md",
+                        "file": "PARA/30-RESOURCES/面试真题/00前端面试真题库.md",
                         "options": {
                           "collapse-filter": true,
                           "search": "",
@@ -358,12 +166,12 @@
                           "repelStrength": 10,
                           "linkStrength": 1,
                           "linkDistance": 250,
-                          "scale": 0.7748481639679745,
+                          "scale": 0.6930929990632068,
                           "close": true
                         }
                       },
                       "icon": "lucide-git-fork",
-                      "title": "Graph of FAQ-JS&TS"
+                      "title": "Graph of 00前端面试真题库"
                     }
                   }
                 ]
@@ -543,40 +351,43 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "92a44ffb4bc6fe3e",
+  "active": "9b2069d06a2c0fa3",
   "lastOpenFiles": [
-    "PARA/30-RESOURCES/面试真题/FAQ-浏览器原理与运行机制.md",
-    "PARA/20-AREAS/02前端/Web安全.md",
-    "PARA/30-RESOURCES/面试真题/FAQ-JS&TS.md",
-    "PARA/30-RESOURCES/面试真题/00前端面试真题库.md",
-    "PARA/10-PROJECTS/2025Q2-面试提升专项.md",
     "PARA/30-RESOURCES/面试真题/FAQ-框架原理.md",
-    "Diary/2025-05-30.md",
+    "PARA/30-RESOURCES/面试真题/00前端面试真题库.md",
+    "PARA/30-RESOURCES/面试真题/FAQ-浏览器原理与运行机制.md",
+    "PARA/30-RESOURCES/面试真题/FAQ-CSS相关.md",
     "PARA/30-RESOURCES/面试真题/FAQ-Web安全.md",
     "PARA/30-RESOURCES/面试真题/FAQ-Web通信.md",
-    "PARA/10-PROJECTS/_resources/前端面试.png",
+    "PARA/10-PROJECTS/2025Q2-面试提升专项.md",
+    "PARA/20-AREAS/02前端/CSS.md",
+    "Diary/2025-06-05.md",
+    "Diary/2025-06-04.md",
     "PARA/20-AREAS/02前端/Vue.md",
-    "PARA/20-AREAS/02前端/组件系统（Vue）.md",
-    "PARA/20-AREAS/02前端/响应式系统（Vue）.md",
-    "PARA/30-RESOURCES/面试真题/v-if 和 v-show 区别？v-model 原理是什么？.md",
-    "PARA/20-AREAS/02前端/浏览器工作原理.md",
-    "PARA/20-AREAS/02前端/浏览器.md",
-    "PARA/20-AREAS/02前端/事件循环.md",
-    "PARA/30-RESOURCES/面试真题/有哪些网络通信协议？说一说你对它们的理解.md",
-    "PARA/20-AREAS/02前端/WebSocket.md",
-    "_template/templage_area.md",
-    "PARA/20-AREAS/02前端/React.md",
-    "PARA/20-AREAS/04AI大模型/知识管理大师提示词v4 动态重构版本.md",
-    "PARA/20-AREAS/02前端/前端框架.md",
-    "PARA/20-AREAS/02前端/Web通信.md",
-    "PARA/20-AREAS/02前端/前端工程.md",
-    "PARA/30-RESOURCES/面试真题/FAQ-构建打包.md",
-    "PARA/20-AREAS/02前端/0200前端.md",
+    "PARA/30-RESOURCES/面试真题/在 Vue 组件中，模板是否必须有一个根节点包裹？Vue 2 和 Vue 3 在这方面有什么区别？.md",
+    "Diary/_resources",
+    "Diary/2025-06-03.md",
+    "Diary/2025-06-02.md",
+    "PARA/20-AREAS/02前端/TreeWalker API.md",
+    "PARA/30-RESOURCES/面试真题/怎样实现一个文本高亮功能？.md",
+    "PARA/30-RESOURCES/面试真题/FAQ-前端场景实践.md",
+    "PARA/30-RESOURCES/面试真题/_resources",
+    "PARA/20-AREAS/02前端/Web API.md",
+    "PARA/20-AREAS/02前端/Range API.md",
+    "Diary/2025-06-01.md",
+    "PARA/20-AREAS/02前端/DOM.md",
+    "PARA/30-RESOURCES/API/AbortController API.md",
+    "PARA/30-RESOURCES/API/Intersection Observer API.md",
+    "Clippings/回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？.md",
+    "PARA/20-AREAS/02前端/层叠上下文.md",
+    "PARA/20-AREAS/02前端/BFC.md",
+    "SimpRead/backup/simpread_config@20250602214508.json",
+    "HTTP",
+    "PARA/20-AREAS/02前端/_resources",
+    "PARA/10-PROJECTS/_resources/前端面试.png",
     "PARA/10-PROJECTS/_resources/Drawing 2025-05-29 16.11.38.excalidraw.svg",
     "PARA/10-PROJECTS/_resources",
     "PARA/20-AREAS/00看板/02前端领域看板.excalidraw.svg",
-    "Diary/_resources",
-    "PARA/20-AREAS/02前端/_resources",
     "PARA/20-AREAS/08知识管理/_resources/知识内化",
     "PARA/20-AREAS/02前端/_resources/0200前端",
     "_resources/webkit-main-flow-b779d50c0cf28_856.png",
@@ -588,9 +399,6 @@
     "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否/de969490302d29b39f24784979a98ec0_MD5.jpg",
     "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否",
     "SimpRead/output/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否.html",
-    "SimpRead/backup/simpread_config@20250521211255.json",
-    "SimpRead/backup/simpread_config@20250521211229.json",
-    "SimpRead/backup/simpread_config@20250521211221.json",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

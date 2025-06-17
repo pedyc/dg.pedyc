@@ -1,7 +1,7 @@
 ---
 title: Vite
 date-created: 2025-05-29
-date-modified: 2025-05-29
+date-modified: 2025-06-16
 ---
 
 ## 定义
@@ -38,12 +38,6 @@ Vite 是一个由 Evan You（尤雨溪）开发的现代化的前端构建工具
 	- 👉参见 [[构建分析与优化（Vite）]]
 3. 静态资源压缩：打包后的代码会生成静态资源文件，可以直接部署到服务器
 
-## 应用
-
-- **快速原型开发**: 快速启动项目，验证想法。
-- **中小型项目**: 提供高效的开发体验。
-- **大型项目**: 通过优化构建流程，提高开发效率。
-
 ## 优缺点
 
 - **优点**:
@@ -57,18 +51,19 @@ Vite 是一个由 Evan You（尤雨溪）开发的现代化的前端构建工具
 ## 相关概念
 
 - [[Rollup]]: 一个 JavaScript 打包工具，Vite 在生产环境中使用它。
-- ESM (ES Modules): JavaScript 的模块化标准，Vite 利用它实现按需加载。
+- [[Webpack]]
+- [[ESM]] (ES Modules): JavaScript 的模块化标准，Vite 利用它实现按需加载。
 - [[HMR原理（Vite）]] (Hot Module Replacement): 热模块替换，允许在运行时更新模块，而无需完全刷新页面。
 - [[环境变量（Vite）]]
 - [[预构建机制（Vite）]]
 - [[构建分析与优化（Vite）]]
 - [[插件系统及生命周期（Vite）]]
 
+## 知识卡片
+
+- ![[FAQ-Vite]]
+
 ## 参考资料
 
 - [Vite 官方文档](https://vitejs.dev/)
 - [Rollup 官方文档](https://rollupjs.org/)
-
-## 知识卡片
-
-- [[FAQ-构建打包#FAQ-Vite]]

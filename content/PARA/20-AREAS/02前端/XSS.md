@@ -1,7 +1,7 @@
 ---
 title: XSS
 date-created: 2025-05-23
-date-modified: 2025-06-02
+date-modified: 2025-06-15
 ---
 
 ## 定义

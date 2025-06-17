@@ -3,7 +3,7 @@ title: Monorepo
 aliases: [Monorepo, 单代码仓库]
 tags: [area/前端工程, area/Monorepo]
 date-created: 2025-04-29
-date-modified: 2025-05-21
+date-modified: 2025-06-11
 refresh: 月度｜季度
 type: [area]
 ---
@@ -11,17 +11,13 @@ type: [area]
 ## 🧱 核心组件 (Core Components)
 
 - **[[Monorepo架构]]**: 包含 Monorepo 的概念、优点、缺点、适用场景和常用工具。
-- **[[Monorepo工具]]**:
-		- [[Lerna]]
-		- [[Yarn Workspaces]]
-		- [[Nx]]
-		- [[Bazel]]
-- **[[Monorepo实践案例]]**:
-		- [[Google Monorepo]]
-		- [[Facebook Monorepo]]
-		- [[Twitter Monorepo]]
-		- [[Microsoft Monorepo]]
-- **[[Monorepo最佳实践]]**:
+- **Monorepo 工具**:
+	- [[pnpm]]
+	- [[Lerna]]
+	- [[Yarn Workspaces]]
+	- [[Nx]]
+	- [[Bazel]]
+- **Monorepo 最佳实践**:
 		- [[Monorepo代码组织策略]]
 		- [[Monorepo依赖管理策略]]
 		- [[Monorepo构建优化策略]]
@@ -30,12 +26,6 @@ type: [area]
 		- [[Monorepo发布策略]]
 
 ## 🔄 活跃连接 (Active Connections)
-
-### 进行中项目
-
-- [[项目D: 将现有 Multi-repo 项目迁移到 Monorepo 架构]] (贡献组件：[[Monorepo迁移评估模型]])
-- [[项目E: 搭建 Monorepo 项目的标准化脚手架]] (产出物：[[Monorepo项目脚手架模板]])
-- [[项目F: 优化 Monorepo 项目的构建速度]] (产出物：[[Monorepo构建优化方案]])
 
 ### 关联领域
 

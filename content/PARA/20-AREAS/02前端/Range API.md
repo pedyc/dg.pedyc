@@ -3,7 +3,7 @@ title: Range API
 description: Range 接口表示 HTML 文档或 XML 文档文档片段中连续的范围区域。
 tags: [前端开发, DOM]
 date-created: 2025-06-02
-date-modified: 2025-06-02
+date-modified: 2025-06-12
 content-type: concept
 keywords: [Range, DOM API]
 para: AREA

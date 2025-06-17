@@ -1,7 +1,7 @@
 ---
 title: 什么是 Tree-shaking？它的前提条件是什么？在哪些情况下会失效？
 date-created: 2025-05-28
-date-modified: 2025-05-28
+date-modified: 2025-06-16
 ---
 
 - 什么是 [[Tree-shaking]]?

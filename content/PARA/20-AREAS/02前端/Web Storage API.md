@@ -2,7 +2,7 @@
 title: Web Storage API
 aliases: [Web 存储]
 date-created: 2025-05-21
-date-modified: 2025-05-23
+date-modified: 2025-06-16
 ---
 
 ## Web Storage API
@@ -48,7 +48,7 @@ Web Storage API 是一种在浏览器中存储键值对数据的机制，它提�
 
 ## 相关概念
 
-- [[Cookie]]: 4KB 大小限制，跟随请求一同发送
+- [[Cookie Storage API]]: 4KB 大小限制，跟随请求一同发送
 - [[IndexedDB API]]：存储结构化数据
 
 ## 案例（可选）

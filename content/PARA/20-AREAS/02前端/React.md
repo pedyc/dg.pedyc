@@ -4,7 +4,7 @@ aliases: [React.js, ReactJS]
 description: React 是一个用于构建用户界面的 JavaScript 库，它采用组件化的开发模式，能够高效地更新和渲染视图。
 tags: [前端, JavaScript, 框架]
 date-created: 2025-05-21
-date-modified: 2025-05-29
+date-modified: 2025-06-16
 content-type: concept
 keywords: [React, React.js, JavaScript, UI, 组件化, Virtual DOM]
 para: area
@@ -24,21 +24,37 @@ React 是一个用于构建用户界面的 JavaScript 库，由 Facebook 开发�
 - [[模块化与组件化开发]]：「React 采用组件化的开发模式。」
 - [[状态管理]]：「React 中需要进行状态管理，例如使用 Redux 或 Context API。」
 
+### 相关概念
+
+- [[Vue]]：「选项式 API，基于响应式系统」
+- [[Next.js]]：「基于 React 构建的全栈框架」
+
 ## 🧱 关键要素
+
+### 概述
 
 - [[组件 (React)]]：「React 的核心概念，用于构建 UI 的基本单元。」
 - [[JSX]]：「React 的语法扩展，允许在 JavaScript 代码中编写 HTML 结构。」
 - [[Virtual DOM]]：「React 的核心技术，用于高效地更新和渲染视图。」
+
+### 设计理念
+
+- [[组件化]]：「React 将用户界面拆分为独立的、可复用的组件。」
+- [[声明式]]：「React 采用声明式编程范式，开发者只需要描述 UI 的最终状态。」
+- [[函数式]]：「React 推崇函数式编程思想，组件可以看作是接收 props 并返回 UI 的纯函数。」
+- [[Virtual DOM]]：「React 使用 Virtual DOM 技术，提高 UI 的更新效率。」
+- [[单向数据流]]：「React 采用单向数据流，使得数据流动更可控。」
+- [[Learn Once, Write Anywhere]]：「React 的设计目标是让开发者学习一次，就可以在任何地方编写代码。」
+
+### 状态管理
+
 - [[状态管理 (React)]]：「React 中管理组件状态的方式，例如使用 useState、useReducer 等 Hook。」
-- [[生命周期 (React)]]：「React 组件的生命周期，包括挂载、更新和卸载等阶段。」
 - [[Hook (React)]]：「React 16.8 引入的新特性，允许在函数组件中使用状态和其他 React 特性。」
-- [[React Router]]：「React 的路由库，用于构建单页面应用。」
 - [[Redux]]：「React 的状态管理库，用于管理复杂应用的状态。」
 
-## 🔖相关概念
+### 路由
 
-- [[Vue]]
-- [[Next.js]]
+- [[React Router]]：「React 的路由库，用于构建单页面应用。」
 
 ## 📚 核心资源
 

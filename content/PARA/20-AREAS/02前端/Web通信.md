@@ -1,113 +1,115 @@
 ---
 title: Web通信
-description: 前端工程师需要掌握的各种 Web 通信方式，包括 HTTP 通信、跨域通信、持久连接、客户端内通信和服务端通信等。
-tags: [前端, 网络, 通信]
-date-created: 2025-05-19
-date-modified: 2025-06-02
-content-type: concept
-keywords: [Web通信, HTTP, WebSocket, CORS]
-para: AREA
-zettel: permanent
+date-created: 2025-06-07
+date-modified: 2025-06-15
 ---
 
-## 🔎概述
+## 定义
 
-前端开发工程师在现代 Web 应用中需要频繁与后端、第三方服务、甚至其他客户端通信，因此掌握各种通信方式是必不可少的技能之一。
+Web 通信是指 Web 应用程序与服务器、第三方服务或其他客户端之间进行数据交换的过程。前端工程师需要掌握各种 Web 通信方式，以实现动态和交互式的用户界面。
 
-## Web 通信方式
+## 核心特点
 
-### 一、[[HTTP]] 通信方式（基础 & 常用）
+- **多样性**: 存在多种 Web 通信方式，如 HTTP、WebSocket、CORS 等。
+- **异步性**: 大部分 Web 通信是异步的，不会阻塞主线程。
+- **跨域性**: 涉及到跨域通信时，需要考虑安全性和兼容性问题。
 
- 1. [[XHR]]（XMLHttpRequest）
+## 分类
 
-- 描述： 古老但仍在使用的 API，尤其是在老项目中。
-- 要点： 熟悉其回调地狱问题，有助于理解现代 API 的进化。
+- **HTTP 通信**:
+	- `fetch`: 现代 Web API，用于发起 HTTP 请求。
+	- `axios`: 基于 Promise 的 HTTP 客户端，支持更多高级特性。
+	- `REST API`: 一种设计风格，用于构建可扩展的网络服务。
+- **持久连接**:
+	- `WebSocket`: 一种全双工通信协议，允许服务器主动向客户端推送数据。
+	- `Server-Sent Events (SSE)`: 一种单向通信协议，允许服务器向客户端推送数据。
+- **跨域通信**:
+	- `CORS (Cross-Origin Resource Sharing)`: 一种安全机制，允许跨域请求。
+	- `JSONP (JSON with Padding)`: 一种古老的跨域解决方案，利用 `<script>` 标签的跨域特性。
+- **客户端内通信**:
+	- `postMessage`: 允许不同源的窗口之间进行通信。
+	- `Broadcast Channel API`: 允许同一浏览器的不同窗口或标签页之间进行通信。
+	- `EventEmitter`: 一种发布/订阅模式的实现，用于组件之间的通信。
+	- `CustomEvent`: 一种自定义事件，用于组件之间的通信。
+- **服务端通信**:
+	- `WebRTC (Web Real-Time Communication)`: 允许浏览器之间进行点对点通信。
+	- `GraphQL`: 一种查询语言，用于从服务器获取数据。
 
-2. [[Fetch API]] ✅
+> 参见：[[Web通信方式]]
 
-- 描述： 现代浏览器标准，Promise 风格更优雅。
-- 要点：
-		- 支持 `AbortController` 中断请求。
-		- 对错误处理要熟练掌握（HTTP 错误不会 throw）。
+## 应用
 
-3. [[Axios]] (第三方库) ✅
+- **数据获取**: 从服务器获取数据，用于渲染页面或更新用户界面。
+- **实时通信**: 实现实时聊天、在线游戏等功能。
+- **跨域访问**: 访问第三方 API 或服务。
+- **组件通信**: 在不同的组件之间传递数据或触发事件。
 
-- 描述： 基于 `XHR` 封装，提供更强的功能（拦截器、自动转换 JSON、取消请求等）。
-- 要点： 项目中非常常用，很多公司默认用它。
+## 优缺点
 
-### 二、[[跨域]] 通信
+- 优点:
+	- **灵活性**: 多种 Web 通信方式可供选择，适用于不同的场景。
+	- **可扩展性**: 可以构建可扩展的网络服务。
+	- **实时性**: 可以实现实时通信功能。
+- 缺点:
+	- **复杂性**: 需要掌握多种 Web 通信方式的细节和用法。
+	- **安全性**: 需要考虑跨域安全问题。
+	- **兼容性**: 需要考虑不同浏览器的兼容性问题。
 
- 1. [[同源策略]] & CORS ✅
+## 相关概念
 
-- 描述： 理解浏览器为什么阻止跨域请求，掌握 CORS 的配置方式（尤其是前后端分离项目）。
-- 要点： 掌握 CORS 的配置方式（尤其是前后端分离项目）。
+- [[HTTP]]: 一种用于传输超文本的协议。
+- [[WebSocket]]: 一种全双工通信协议。
+- [[CORS]]: 一种安全机制，允许跨域请求。
 
-2. JSONP (历史遗留) 🔧
+## 案例
 
-- 描述： 只支持 `GET` 请求，几乎被淘汰，但面试可能问，理解其绕过同源策略的原理。
-- 要点： 理解其绕过同源策略的原理。
+- **使用 `fetch` 获取用户数据**:
 
-3. iframe 通信：[[postMessage]] ✅
+	```javascript
+  fetch('/api/users')
+    .then(response => response.json())
+    .then(data => console.log(data));
+  ```
 
-- 描述： 在不同源的 iframe 与主页面之间通信。
-- 要点： 必须熟悉安全性（验证 origin）。
+- **使用 `WebSocket` 实现实时聊天**:
 
-### 三、持久连接类 (实时通信场景)
+	```javascript
+  const socket = new WebSocket('ws://example.com/chat');
+  socket.addEventListener('message', event => {
+    console.log('Message from server ', event.data);
+  });
+  ```
 
-1. [[WebSocket]] ✅✅
+- **使用 `postMessage` 进行跨域通信**:
 
-- 描述： 双向通信，适合聊天、游戏、股票行情等实时场景。
-- 要点： 前端需掌握连接、断线重连、心跳检测等机制。
+	```javascript
+  // 在 A 页面中
+  const otherWindow = document.getElementById('iframe').contentWindow;
+  otherWindow.postMessage('Hello from A', 'http://example.com');
 
-2. [[SSE]]（Server-Sent Event）
+  // 在 B 页面中 (http://example.com)
+  window.addEventListener('message', event => {
+    if (event.origin !== 'http://example.com') return;
+    console.log('Message from A: ', event.data);
+  });
+  ```
 
-- 描述： 单向通信（服务器 -> 客户端）。
-- 要点： 实现简单，但兼容性和灵活性不如 WebSocket。
+## 问答卡片
 
-3. [[HTTP~2]] Server Push (了解即可)
+> 参见：[[FAQ-Web通信]]
 
-- 描述： 服务器主动推送资源，但前端控制能力有限，应用场景少。
-- 要点： 了解即可。
+- Q1：什么是 CORS？如何解决跨域问题？
+- A：CORS (Cross-Origin Resource Sharing) 是一种安全机制，用于控制跨域请求。可以通过配置服务器的 HTTP 响应头来允许跨域请求。
+- Q2：WebSocket 和 HTTP 有什么区别？
+- A：HTTP 是一种请求/响应协议，客户端发起请求，服务器返回响应。WebSocket 是一种全双工通信协议，允许服务器主动向客户端推送数据。
 
-### 四、客户端内通信 (页面内部模块通信)
+## 参考资料
 
- 1. EventEmitter / 发布 - 订阅模式
+- [MDN Web 开发者指南 - Web 技术](https://developer.mozilla.org/zh-CN/docs/Web/Guide/Web_Technology)
+- [HTTP 协议](https://developer.mozilla.org/zh-CN/docs/Web/HTTP)
+- [WebSocket 协议](https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket)
 
-- 描述： Vue、React 组件间通信时常用。
-- 要点： 对状态管理方案有一定依赖。
-
- 2. CustomEvent / dispatchEvent / addEventListener
-
-- 描述： 原生 DOM 事件系统，组件或模块间的松耦合通信方式。
-- 要点： 组件或模块间的松耦合通信方式。
-
-### 五、服务端通信相关协议 (了解层面)
-
-1. [[RESTful API]] ✅
-
-- 描述： HTTP 动词语义明确，资源导向，是前端通信的主流方式。
-- 要点： 是前端通信的主流方式。
-
- 2. [[GraphQL]]
-
-- 描述： 更灵活的数据查询方式。
-- 要点： 需了解其请求结构和客户端库（如 Apollo Client）。
-
- 3. gRPC (Web 支持中等)
-
-- 描述： 基于 HTTP/2 的高效通信协议。
-- 要点： 了解其与 REST/GraphQL 的差异，特别是在大型项目或与移动端协作中。
-
-### 六、P2P 通信 (了解即可)
-
- 1. WebRTC (音视频传输、文件分享)
-
-- 描述： 前端实现音视频通话的核心技术。
-- 要点： 涉及较多底层知识，如 STUN/TURN、ICE 等。
-
-## 🎯 总结
-
-### 前端优先级
+## 前端优先级
 
 | 通信方式          | 必须掌握 | 推荐掌握 | 了解即可 |
 | ------------- | ---- | ---- | ---- |
@@ -121,7 +123,3 @@ zettel: permanent
 | WebRTC        |      |      | ✅    |
 | EventEmitter  | ✅    |      |      |
 | CustomEvent   | ✅    |      |      |
-
-## ❓问答卡片
-
-![[FAQ-Web通信]]

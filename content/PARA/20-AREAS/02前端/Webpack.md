@@ -1,69 +1,55 @@
 ---
 title: Webpack
+aliases: [模块打包器]
+description: 一个开源的 JavaScript 模块打包器，用于将各种资源打包成浏览器可以识别和加载的静态资源。
 date-created: 2025-05-29
-date-modified: 2025-05-29
+date-modified: 2025-06-16
+status: active
+para: area
+related: ["[[前端构建与打包]]", "[[Vite]]"]
+zettel: moc
 ---
 
-## 定义
+## 🔎描述
 
 Webpack 是一个开源的 JavaScript 模块打包器。它将项目中的各种资源（JavaScript, CSS, 图片等）视为模块，通过分析模块间的依赖关系，将它们打包成浏览器可以识别和加载的静态资源。
 
-## 核心特点
+## 🔗 活跃连接
 
-- **模块化**: 支持各种模块化规范（CommonJS, AMD, ES Modules）。
-- **代码转换**: 通过 Loader 转换各种类型的文件，例如将 Sass 转换为 CSS，将 ES6 转换为 ES5。
-- **代码优化**: 通过 Plugin 优化打包后的代码，例如代码压缩、分割、Tree Shaking 等。
-- **插件化**: 拥有丰富的插件生态系统，可以扩展其功能。
-- **代码分割**: 将代码分割成小块，实现按需加载，提高页面加载速度。
+- 相关领域
+	- [[前端构建与打包]]: 「Webpack 是前端构建与打包的核心工具」
+	- [[Vite]]: 「Vite 是 Webpack 的替代方案，提供了更快的构建速度」
+- 相关概念
+	- [[Loader]]: 「Webpack 使用 Loader 转换各种类型的文件」
+	- [[Plugin]]: 「Webpack 使用 Plugin 扩展其功能」
 
-## 分类
+## 🧱 关键要素
 
-- **模块打包器**: 将各种资源打包成模块。
-- **资源管理器**: 管理项目中的各种资源。
+- 概述
+	- [[Webpack 的定义]]: 「一个开源的 JavaScript 模块打包器」
+- 方法论
+	- [[Loader 的使用]]: 「使用 Loader 转换各种类型的文件」
+	- [[Plugin 的使用]]: 「使用 Plugin 扩展 Webpack 的功能」
+- 工作流
+	- [[Webpack 的工作流程]]: 「Webpack 读取配置文件，构建 Compiler 对象，递归解析模块的依赖关系，使用 Loader 进行转换，使用 Plugin 进行优化，输出最终的 Bundle」
+	- [[splitChunks]]
 
-## 工作流程
+## 📚 核心资源
 
-1. 初始化: Webpack 读取配置文件（通常是 `webpack.config.js`），构建 Compiler 对象，Compiler 对象包含了 Webpack 运行时的所有信息。
-2. 模块加载: 从配置的 Entry 开始，==递归解析==模块的依赖关系，遇到不同的文件类型，使用对应的 Loader 进行转换。
-3. 模块转换: Loader 将各种类型的资源转换成 JavaScript 模块。
-4. 模块打包: Webpack 将转换后的模块打包成 Chunk。
-5. 代码优化: Webpack 使用 Plugin 对 Chunk 进行优化，例如代码压缩、分割、Tree Shaking 等。
-6. 输出: Webpack 将优化后的 Chunk 输出到指定目录，生成最终的 Bundle。
+### 官方资源
 
-## 应用
+- [Webpack 官方文档](https://www.webpackjs.com/): 「最权威的 Webpack 学习资料，包含了 Webpack 的所有 API 和配置选项」
 
-- **单页面应用 (SPA)**: 构建大型单页面应用。
-- **多页面应用 (MPA)**: 构建传统的多页面应用。
-- **组件库**: 打包和发布组件库。
+### 学习资源
 
-## 优缺点
+- [[Webpack 入门教程]]: 「一个 Webpack 入门教程，介绍了 Webpack 的基本概念和使用方法」
+- [[Webpack 实战]]: 「一本 Webpack 实战书籍，介绍了 Webpack 在实际项目中的应用」
 
-- **优点**:
-		- 强大的模块化支持。
-		- 灵活的配置选项。
-		- 丰富的插件生态系统。
-- **缺点**:
-		- 配置复杂，学习曲线陡峭。
-		- 打包速度可能较慢，尤其是在大型项目中。
+### 知识卡片
 
-## 相关概念
+![[FAQ-Webpack]]
 
-- Loader: 用于转换各种类型的文件。
-- Plugin: 用于扩展 Webpack 的功能。
-- Module: 指项目中的各种资源，例如 JavaScript, CSS, 图片等。
-- Chunk: 指 Webpack 打包后的代码块。
-- Bundle: 指最终生成的静态资源文件。
+## ⚠️ 挑战与问题
 
-## 案例
-
-- 使用 Webpack 构建一个 React 项目。
-- 使用 Webpack 构建一个 Vue 项目。
-
-## 参考资料
-
-- [Webpack 官方文档](https://webpack.js.org/)
-- [Webpack 中文文档](https://www.webpackjs.com/)
-
-## 知识卡片
-
-- [[FAQ-构建打包#FAQ-Webpack]]
+- [[Webpack 配置复杂]]: 「Webpack 的配置非常复杂，需要一定的学习成本，参考 Webpack 配置指南」
+- [[Webpack 打包速度慢]]: 「Webpack 在大型项目中打包速度可能较慢，需要进行优化，参考 Webpack 性能优化策略」

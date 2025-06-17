@@ -1,33 +1,33 @@
 ---
 title: Web API
 date-created: 2025-05-19
-date-modified: 2025-06-02
+date-modified: 2025-06-15
 ---
 
-## 浏览器 API
+## Web API
 
 - 操作文档
-	- [[DOM]]
+		- [[DOM]]：用于操作 HTML 文档的 API。
 - 操作浏览器
-	- [[BOM]]
-- 从服务器获取数据
-	- [[XHR]]
-	- [[Fetch API]]
+		- [[BOM]]：用于操作浏览器窗口的 API。
+- 网络
+		- [[XHR]]：用于发起 HTTP 请求的 API（较旧的方式）。
+		- [[Fetch API]]：用于发起 HTTP 请求的 API（较新的方式）。
 - 绘制和操作图形
-	- [[Canvas]]
-	- [[WebGL]]
-- 音频和视频相关
-	- [[Web Audio API]]
-	- [[Web RTC]]
+		- [[Canvas]]：用于绘制 2D 图形的 API。
+		- [[WebGL]]：用于绘制 3D 图形的 API。
+- 多媒体
+		- [[Web Audio API]]：用于处理音频的 API。
+		- [[Web RTC]]：用于实时音视频通信的 API。
 - 客户端存储
-	- [[Web Storage API]]
-	- [[Cookie Storage API]]
-	- [[IndexedDB]]
-	- [[Cache API]]
+		- [[Web Storage API]]：用于存储少量键值对数据的 API。
+		- [[Cookie Storage API]]：用于存储 Cookie 数据的 API。
+		- [[IndexedDB]]：用于存储大量结构化数据的 API。
+		- [[Cache API]]：用于缓存网络请求的响应的 API。
 - Web Worker
-	- [[Web Worker API]]
-	- [[Shared Worker]]
-	- [[Service Worker]]
+		- [[Web Worker API]]：用于在后台运行 JavaScript 代码的 API。
+		- [[Shared Worker]]：用于在多个窗口或标签页之间共享 JavaScript 代码的 API。
+		- [[Service Worker API]]：用于实现离线访问、推送通知等功能的 API。
 
 ## 常见第三方 API
 

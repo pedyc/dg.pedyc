@@ -1,12 +1,12 @@
 {
-  "name": "@jackyzha0/quartz",
+  "name": "@pedyc/dg.pedyc",
   "description": "🌱 publish your digital garden and notes as a website",
   "private": true,
   "version": "4.5.1",
   "type": "module",
-  "author": "ped-Yc",
+  "author": "pedyc",
   "license": "MIT",
-  "homepage": "https://ped-yc.site",
+  "homepage": "https://dg.ped-yc.site",
   "repository": {
     "type": "git",
     "url": "https://github.com/ped-y/quartz.git"

@@ -101,8 +101,8 @@ export default (() => {
           }
         })}
       </head>
-    );
-  };
+    )
+  }
 
-  return Head;
-}) satisfies QuartzComponentConstructor;
+  return Head
+}) satisfies QuartzComponentConstructor

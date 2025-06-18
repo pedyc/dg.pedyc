@@ -1,5 +1,5 @@
-import { PageLayout, SharedLayout } from "./quartz/cfg";
-import * as Component from "./quartz/components";
+import { PageLayout, SharedLayout } from "./quartz/cfg"
+import * as Component from "./quartz/components"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -26,7 +26,7 @@ export const sharedPageComponents: SharedLayout = {
       "Discord Community": "https://discord.gg/cRFFHYye7t",
     },
   }),
-};
+}
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
@@ -46,12 +46,12 @@ export const defaultContentPageLayout: PageLayout = {
       components: [
         {
           Component: Component.Search(),
-          grow: true
+          grow: true,
         },
         {
           Component: Component.Darkmode(), // Darkmode keeps its natural size
-        }
-      ]
+        },
+      ],
     }),
     Component.Explorer(),
   ],
@@ -61,15 +61,11 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Graph(),
     Component.RecentNotes(),
   ],
-};
+}
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [
-    Component.Breadcrumbs(),
-    Component.ArticleTitle(),
-    Component.ContentMeta(),
-  ],
+  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
@@ -78,4 +74,4 @@ export const defaultListPageLayout: PageLayout = {
     Component.Explorer(),
   ],
   right: [],
-};
+}

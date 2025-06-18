@@ -49,9 +49,9 @@ function toggleFolder(evt: MouseEvent) {
   const folderContainer = (
     isSvg
       ? // svg -> div.folder-container
-      target.parentElement
+        target.parentElement
       : // button.folder-button -> div -> div.folder-container
-      target.parentElement?.parentElement
+        target.parentElement?.parentElement
   ) as MaybeHTMLElement
   if (!folderContainer) return
   const childFolderContainer = folderContainer.nextElementSibling as MaybeHTMLElement

@@ -49,9 +49,9 @@ function toggleFolder(evt: MouseEvent) {
   const folderContainer = (
     isSvg
       ? // svg -> div.folder-container
-        target.parentElement
+      target.parentElement
       : // button.folder-button -> div -> div.folder-container
-        target.parentElement?.parentElement
+      target.parentElement?.parentElement
   ) as MaybeHTMLElement
   if (!folderContainer) return
   const childFolderContainer = folderContainer.nextElementSibling as MaybeHTMLElement
@@ -62,6 +62,11 @@ function toggleFolder(evt: MouseEvent) {
   // Collapse folder container
   const isCollapsed = !childFolderContainer.classList.contains("open")
   setFolderState(childFolderContainer, isCollapsed)
+
+  // If folder is opened and not in view, scroll to it
+  if (!isCollapsed) {
+    childFolderContainer.scrollIntoView({ behavior: "smooth", block: "center" })
+  }
 
   const currentFolderState = currentExplorerState.find(
     (item) => item.path === folderContainer.dataset.folderpath,
@@ -150,6 +155,18 @@ function createFolderNode(
   return li
 }
 
+/**
+ * Initializes and sets up the file explorer. This function handles:
+ * 1. Parsing explorer options from data attributes.
+ * 2. Loading and applying saved folder states from local storage.
+ * 3. Processing file data using filter, map, and sort functions.
+ * 4. Building the explorer tree structure.
+ * 5. Restoring the scroll position of the explorer.
+ * 6. Setting up event listeners for explorer toggles and folder interactions.
+ * 7. Scrolling the active file/folder into view.
+ *
+ * @param currentSlug The slug of the currently active page, used to highlight the active item in the explorer.
+ */
 async function setupExplorer(currentSlug: FullSlug) {
   const allExplorers = document.querySelectorAll("div.explorer") as NodeListOf<HTMLElement>
 
@@ -168,6 +185,10 @@ async function setupExplorer(currentSlug: FullSlug) {
     // Get folder state from local storage
     const storageTree = localStorage.getItem("fileTree")
     const serializedExplorerState = storageTree && opts.useSavedState ? JSON.parse(storageTree) : []
+
+    // Clear currentExplorerState to ensure all folders are collapsed on page navigation
+    currentExplorerState = []
+
     const oldIndex = new Map<string, boolean>(
       serializedExplorerState.map((entry: FolderState) => [entry.path, entry.collapsed]),
     )
@@ -220,12 +241,6 @@ async function setupExplorer(currentSlug: FullSlug) {
     const scrollTop = sessionStorage.getItem("explorerScrollTop")
     if (scrollTop) {
       explorerUl.scrollTop = parseInt(scrollTop)
-    } else {
-      // try to scroll to the active element if it exists
-      const activeElement = explorerUl.querySelector(".active")
-      if (activeElement) {
-        activeElement.scrollIntoView({ behavior: "smooth" })
-      }
     }
 
     // Set up event handlers
@@ -254,6 +269,12 @@ async function setupExplorer(currentSlug: FullSlug) {
     for (const icon of folderIcons) {
       icon.addEventListener("click", toggleFolder)
       window.addCleanup(() => icon.removeEventListener("click", toggleFolder))
+    }
+
+    // 尝试滚动到活动元素，如果它存在且不在当前视图中
+    const activeElement = explorerUl.querySelector(".active")
+    if (activeElement) {
+      activeElement.scrollIntoView({ behavior: "smooth", block: "center" })
     }
   }
 }

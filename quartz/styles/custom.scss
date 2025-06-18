@@ -44,6 +44,16 @@ body[data-slug="thoughts/craft"] {
     }
 }
 
+code[data-theme*=" "] {
+    opacity: 0.8;
+    background-color: #d3dbdf;
+}
+
+[saved-theme="dark"] code[data-theme*=" "] {
+    opacity: 0.8 !important;
+    background-color: #0a181e;
+}
+
 .graph>.graph-outer {
     border: 1px solid #000;
 }

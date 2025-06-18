@@ -1,0 +1,30 @@
+/* giscus-dark.scss */
+
+:root {
+  --color-prettylights-syntax-comment: var(--gray);
+  --color-prettylights-syntax-constant: var(--tertiary);
+  --color-prettylights-syntax-entity: var(--secondary);
+  --color-prettylights-syntax-storage-modifier-import: var(--darkgray);
+  --color-prettylights-syntax-string: var(--dark);
+  --color-prettylights-syntax-variable: var(--darkgray);
+  --color-btn-bg: var(--lightgray);
+  --color-btn-border: var(--lightgray);
+  --color-btn-hover-bg: var(--gray);
+  --color-btn-hover-border: var(--gray);
+  --color-btn-active-bg: var(--gray);
+  --color-btn-active-border: var(--gray);
+  --color-btn-selected-bg: var(--gray);
+  --color-fg-default: var(--darkgray);
+  --color-fg-muted: var(--gray);
+  --color-fg-subtle: var(--lightgray);
+  --color-border-default: var(--lightgray);
+  --color-border-muted: var(--lightgray);
+  --color-neutral-muted: var(--lightgray);
+  --color-accent-fg: var(--secondary);
+  --color-accent-emphasis: var(--secondary);
+  --color-canvas-default: var(--light);
+  --color-canvas-subtle: var(--light);
+  --color-canvas-inset: var(--light);
+  --color-scale-gray-7: var(--gray);
+  --color-social-reaction-bg: var(--lightgray);
+}

@@ -19,5 +19,5 @@
     
   },
   "include": ["**/*.ts", "**/*.tsx", "./package.json", "esbuild.config.mjs"],
-  "exclude": ["build/**/*.d.ts"]
+  "exclude": ["build/**/*.d.ts", "content"]
 }

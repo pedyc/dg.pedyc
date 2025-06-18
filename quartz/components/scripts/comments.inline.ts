@@ -13,7 +13,8 @@ const changeTheme = (e: CustomEventMap["themechange"]) => {
     {
       giscus: {
         setConfig: {
-          theme: getThemeUrl(getThemeName(theme)),
+          theme: theme,
+          theme_url: getThemeUrl(getThemeName(theme)),
         },
       },
     },
@@ -21,10 +22,12 @@ const changeTheme = (e: CustomEventMap["themechange"]) => {
   )
 }
 
+/**
+ * 获取 Giscus 主题名称
+ * @param theme 当前主题（light/dark）
+ * @returns Giscus 主题名称
+ */
 const getThemeName = (theme: string) => {
-  if (theme !== "dark" && theme !== "light") {
-    return theme
-  }
   const giscusContainer = document.querySelector(".giscus") as GiscusElement
   if (!giscusContainer) {
     return theme
@@ -34,12 +37,22 @@ const getThemeName = (theme: string) => {
   return theme === "dark" ? darkGiscus : lightGiscus
 }
 
-const getThemeUrl = (theme: string) => {
+/**
+ * 获取 Giscus 主题 URL
+ * @param themeName Giscus 主题名称
+ * @returns Giscus 主题 URL
+ */
+const getThemeUrl = (themeName: string) => {
   const giscusContainer = document.querySelector(".giscus") as GiscusElement
   if (!giscusContainer) {
-    return `https://giscus.app/themes/${theme}.css`
+    return `https://giscus.app/themes/${themeName}.css`
   }
-  return `${giscusContainer.dataset.themeUrl ?? "https://giscus.app/themes"}/${theme}.css`
+  // 如果 themeUrl 存在，则使用 themeUrl + themeName
+  if (giscusContainer.dataset.themeUrl) {
+    return `${giscusContainer.dataset.themeUrl}/${themeName}.css`
+  }
+  // 否则使用默认的 giscus.app 主题路径
+  return `https://giscus.app/themes/${themeName}`
 }
 
 type GiscusElement = Omit<HTMLElement, "dataset"> & {
@@ -81,8 +94,15 @@ document.addEventListener("nav", () => {
   giscusScript.setAttribute("data-input-position", giscusContainer.dataset.inputPosition)
   giscusScript.setAttribute("data-lang", giscusContainer.dataset.lang)
   const theme = document.documentElement.getAttribute("saved-theme")
+  /**
+   * 设置 Giscus 主题
+   * 根据当前主题（亮色/暗色）获取对应的 Giscus 主题名称和 URL，并设置到 script 标签的 data-theme 属性上。
+   */
   if (theme) {
-    giscusScript.setAttribute("data-theme", getThemeUrl(getThemeName(theme)))
+    const giscusThemeName = getThemeName(theme);
+    const giscusThemeUrl = getThemeUrl(giscusThemeName);
+    giscusScript.setAttribute("data-theme", theme);
+    giscusScript.setAttribute("data-theme-url", giscusThemeUrl);
   }
 
   giscusContainer.appendChild(giscusScript)

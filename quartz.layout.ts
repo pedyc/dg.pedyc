@@ -14,6 +14,9 @@ export const sharedPageComponents: SharedLayout = {
         repoId: "R_kgDOMwI1yg",
         category: "Announcements",
         categoryId: "DIC_kwDOMwI1ys4Civ4e",
+        themeUrl: "/static/giscus",
+        lightTheme: "giscus-light",
+        darkTheme: "giscus-dark",
       },
     }),
   ],
@@ -39,8 +42,17 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
-    Component.Darkmode(), // Darkmode keeps its natural size
+    Component.Flex({
+      components: [
+        {
+          Component: Component.Search(),
+          grow: true
+        },
+        {
+          Component: Component.Darkmode(), // Darkmode keeps its natural size
+        }
+      ]
+    }),
     Component.Explorer(),
   ],
 

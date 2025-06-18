@@ -17,7 +17,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "PARA/20-AREAS/08知识管理/知识管理概述.md",
+                    "file": "PARA/20-AREAS/08知识管理/卡片盒笔记法实施工作流.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -32,7 +32,7 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "知识管理概述"
+                  "title": "卡片盒笔记法实施工作流"
                 }
               }
             ]
@@ -74,13 +74,13 @@
                         "state": {
                           "type": "outline",
                           "state": {
-                            "file": "PARA/20-AREAS/08知识管理/知识管理概述.md",
+                            "file": "PARA/20-AREAS/08知识管理/卡片盒笔记法实施工作流.md",
                             "followCursor": false,
                             "showSearch": false,
                             "searchQuery": ""
                           },
                           "icon": "lucide-list",
-                          "title": "Outline of 知识管理概述"
+                          "title": "Outline of 卡片盒笔记法实施工作流"
                         }
                       }
                     ]
@@ -96,7 +96,7 @@
                         "state": {
                           "type": "localgraph",
                           "state": {
-                            "file": "PARA/20-AREAS/08知识管理/知识管理概述.md",
+                            "file": "PARA/20-AREAS/08知识管理/卡片盒笔记法实施工作流.md",
                             "options": {
                               "collapse-filter": true,
                               "search": "",
@@ -124,7 +124,7 @@
                             }
                           },
                           "icon": "lucide-git-fork",
-                          "title": "Graph of 知识管理概述"
+                          "title": "Graph of 卡片盒笔记法实施工作流"
                         }
                       }
                     ]
@@ -317,11 +317,11 @@
   },
   "active": "5161891edc96f818",
   "lastOpenFiles": [
-    "PARA/20-AREAS/08知识管理/知识管理核心原则.md",
+    "Diary/2025-06-18.md",
     "PARA/20-AREAS/08知识管理/知识管理概述.md",
+    "PARA/20-AREAS/08知识管理/知识管理核心原则.md",
     "PARA/40-ARCHIVES/数字花园概述.md",
     "index.md",
-    "Diary/2025-06-18.md",
     "Diary/2025-06-17.md",
     "Diary/_resources",
     "PARA/20-AREAS/02前端/Service Worker API.md",

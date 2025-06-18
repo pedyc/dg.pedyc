@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'LXGW WenKai';
-    src: url('./lxgw.subset.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "LXGW WenKai";
+  src: url("./lxgw.subset.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-    font-family: 'LXGW WenKai', sans-serif;
+  font-family: "LXGW WenKai", sans-serif;
 }

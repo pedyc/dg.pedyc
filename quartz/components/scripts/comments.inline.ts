@@ -99,10 +99,10 @@ document.addEventListener("nav", () => {
    * 根据当前主题（亮色/暗色）获取对应的 Giscus 主题名称和 URL，并设置到 script 标签的 data-theme 属性上。
    */
   if (theme) {
-    const giscusThemeName = getThemeName(theme);
-    const giscusThemeUrl = getThemeUrl(giscusThemeName);
-    giscusScript.setAttribute("data-theme", theme);
-    giscusScript.setAttribute("data-theme-url", giscusThemeUrl);
+    const giscusThemeName = getThemeName(theme)
+    const giscusThemeUrl = getThemeUrl(giscusThemeName)
+    giscusScript.setAttribute("data-theme", theme)
+    giscusScript.setAttribute("data-theme-url", giscusThemeUrl)
   }
 
   giscusContainer.appendChild(giscusScript)

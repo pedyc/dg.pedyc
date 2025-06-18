@@ -25,7 +25,7 @@
   top: 0;
   will-change: transform;
 
-  &>.popover-inner {
+  & > .popover-inner {
     position: relative;
     width: 30rem;
     max-height: 20rem;
@@ -50,8 +50,7 @@
     }
   }
 
-  &>.popover-inner[data-content-type] {
-
+  & > .popover-inner[data-content-type] {
     &[data-content-type*="pdf"],
     &[data-content-type*="image"] {
       padding: 0;
@@ -79,8 +78,9 @@
 
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.3s ease,
-  visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 
   @media all and ($mobile) {
     display: none !important;

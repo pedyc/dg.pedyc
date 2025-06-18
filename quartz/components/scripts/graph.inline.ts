@@ -670,25 +670,27 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
 async function initializeOrReinitializeGraph() {
   // 假设图谱的容器元素有一个特定的 data 属性或者 ID，例如 'graph-canvas'
   // 请根据您的实际 HTML 结构调整选择器
-  const graphElement = document.getElementById('graph-canvas') as HTMLElement ?? document.querySelector<HTMLElement>('[data-el="graph-canvas"]');
+  const graphElement =
+    (document.getElementById("graph-canvas") as HTMLElement) ??
+    document.querySelector<HTMLElement>('[data-el="graph-canvas"]')
   if (graphElement) {
-    const currentFullSlug = getFullSlug(window); // 获取当前页面的 slug
-    await renderGraph(graphElement, currentFullSlug);
-    console.log("Graph re-initialized/rendered for", currentFullSlug);
+    const currentFullSlug = getFullSlug(window) // 获取当前页面的 slug
+    await renderGraph(graphElement, currentFullSlug)
+    console.log("Graph re-initialized/rendered for", currentFullSlug)
   } else {
-    console.warn("Graph container not found for re-initialization.");
+    console.warn("Graph container not found for re-initialization.")
   }
 }
 
 // 初始加载时执行图谱渲染
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initializeOrReinitializeGraph);
+  document.addEventListener("DOMContentLoaded", initializeOrReinitializeGraph)
 } else {
-  initializeOrReinitializeGraph(); // DOMContentLoaded 已经发生
+  initializeOrReinitializeGraph() // DOMContentLoaded 已经发生
 }
 
 // 监听自定义事件以重新初始化图谱
 document.addEventListener("reinit-graph", () => {
-  console.log("Received reinit-graph event.");
-  initializeOrReinitializeGraph();
-});
+  console.log("Received reinit-graph event.")
+  initializeOrReinitializeGraph()
+})

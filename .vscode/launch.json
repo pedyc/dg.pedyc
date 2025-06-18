@@ -1,35 +1,28 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Launch Edge",
-            "request": "launch",
-            "type": "msedge",
-            "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}/quartz/bootstrap-cli.mjs",
-            "args": [
-                "build",
-                "--serve"
-            ],
-            "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ]
-        },
-        {
-            "type": "node-terminal",
-            "name": "Run Script: quartz",
-            "request": "launch",
-            "command": "npm run quartz",
-            "cwd": "${workspaceFolder}"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Edge",
+      "request": "launch",
+      "type": "msedge",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/quartz/bootstrap-cli.mjs",
+      "args": ["build", "--serve"],
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    },
+    {
+      "type": "node-terminal",
+      "name": "Run Script: quartz",
+      "request": "launch",
+      "command": "npm run quartz",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
 }

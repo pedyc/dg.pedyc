@@ -22,7 +22,7 @@ import {
   gitPull,
   popContentFolder,
   stashContentFolder,
-} from "./helpers.js";
+} from "./helpers.js"
 import {
   UPSTREAM_NAME,
   QUARTZ_SOURCE_BRANCH,
@@ -31,8 +31,8 @@ import {
   fp,
   cacheFile,
   cwd,
-} from "./constants.js";
-import { pathToFileURL } from "url";
+} from "./constants.js"
+import { pathToFileURL } from "url"
 
 /**
  * Resolve content directory path
@@ -123,25 +123,25 @@ export async function handleCreate(argv) {
             hint: "don't select this unless you know what you are doing!",
           },
         ],
-      })
-    );
+      }),
+    )
   }
 
   async function rmContentFolder() {
-    const contentStat = await fs.promises.lstat(contentFolder);
+    const contentStat = await fs.promises.lstat(contentFolder)
     if (contentStat.isSymbolicLink()) {
-      await fs.promises.unlink(contentFolder);
+      await fs.promises.unlink(contentFolder)
     } else {
       await rm(contentFolder, { recursive: true, force: true })
     }
   }
 
-  const gitkeepPath = path.join(contentFolder, ".gitkeep");
+  const gitkeepPath = path.join(contentFolder, ".gitkeep")
   if (fs.existsSync(gitkeepPath)) {
-    await fs.promises.unlink(gitkeepPath);
+    await fs.promises.unlink(gitkeepPath)
   }
   if (setupStrategy === "copy" || setupStrategy === "symlink") {
-    let originalFolder = sourceDirectory;
+    let originalFolder = sourceDirectory
 
     // If input directory was not passed, use cli
     if (!sourceDirectory) {
@@ -152,26 +152,26 @@ export async function handleCreate(argv) {
             placeholder:
               "On most terminal emulators, you can drag and drop a folder into the window and it will paste the full path",
             validate(fp) {
-              const fullPath = escapePath(fp);
+              const fullPath = escapePath(fp)
               if (!fs.existsSync(fullPath)) {
-                return "The given path doesn't exist";
+                return "The given path doesn't exist"
               } else if (!fs.lstatSync(fullPath).isDirectory()) {
-                return "The given path is not a folder";
+                return "The given path is not a folder"
               }
             },
-          })
-        )
-      );
+          }),
+        ),
+      )
     }
 
-    await rmContentFolder();
+    await rmContentFolder()
     if (setupStrategy === "copy") {
       await fs.promises.cp(originalFolder, contentFolder, {
         recursive: true,
         preserveTimestamps: true,
-      });
+      })
     } else if (setupStrategy === "symlink") {
-      await fs.promises.symlink(originalFolder, contentFolder, "dir");
+      await fs.promises.symlink(originalFolder, contentFolder, "dir")
     }
   } else if (setupStrategy === "new") {
     await fs.promises.writeFile(
@@ -182,8 +182,8 @@ title: Welcome to Quartz
 
 This is a blank Quartz installation.
 See the [documentation](https://quartz.jzhao.xyz) for how to get started.
-`
-    );
+`,
+    )
   }
 
   // Use cli process if cmd args werent provided
@@ -207,32 +207,32 @@ See the [documentation](https://quartz.jzhao.xyz) for how to get started.
             label: "Treat links as relative paths",
           },
         ],
-      })
-    );
+      }),
+    )
   }
 
   // now, do config changes
-  const configFilePath = path.join(cwd, "quartz.config.ts");
+  const configFilePath = path.join(cwd, "quartz.config.ts")
   let configContent = await fs.promises.readFile(configFilePath, {
     encoding: "utf-8",
-  });
+  })
   configContent = configContent.replace(
     /markdownLinkResolution: '(.+)'/,
-    `markdownLinkResolution: '${linkResolutionStrategy}'`
-  );
-  await fs.promises.writeFile(configFilePath, configContent);
+    `markdownLinkResolution: '${linkResolutionStrategy}'`,
+  )
+  await fs.promises.writeFile(configFilePath, configContent)
 
   // setup remote
   execSync(
     `git remote show upstream || git remote add upstream https://github.com/jackyzha0/quartz.git`,
-    { stdio: "ignore" }
-  );
+    { stdio: "ignore" },
+  )
 
   outro(`You're all set! Not sure what to do next? Try:
   • Customizing Quartz a bit more by editing \`quartz.config.ts\`
   • Running \`npx quartz build --serve\` to preview your Quartz locally
   • Hosting your Quartz online (see: https://quartz.jzhao.xyz/hosting)
-`);
+`)
 }
 
 /**
@@ -240,11 +240,11 @@ See the [documentation](https://quartz.jzhao.xyz) for how to get started.
  * @param {*} argv arguments for `build`
  */
 export async function handleBuild(argv) {
-  const esConfigPath = path.join(cwd, "./esbuild.config.mjs");
-  const esConfigUrl = pathToFileURL(esConfigPath).href;
-  const { default: esConfig } = await import(esConfigUrl);
+  const esConfigPath = path.join(cwd, "./esbuild.config.mjs")
+  const esConfigUrl = pathToFileURL(esConfigPath).href
+  const { default: esConfig } = await import(esConfigUrl)
 
-  await esbuild.build(esConfig);
+  await esbuild.build(esConfig)
   if (argv.serve) {
     argv.watch = true
   }
@@ -279,14 +279,14 @@ export async function handleBuild(argv) {
         name: "inline-script-loader",
         setup(build) {
           build.onLoad({ filter: /\.inline\.(ts|js)$/ }, async (args) => {
-            let text = await promises.readFile(args.path, "utf8");
+            let text = await promises.readFile(args.path, "utf8")
 
             // remove default exports that we manually inserted
-            text = text.replace("export default", "");
-            text = text.replace("export", "");
+            text = text.replace("export default", "")
+            text = text.replace("export", "")
 
-            const sourcefile = path.relative(path.resolve("."), args.path);
-            const resolveDir = path.dirname(sourcefile);
+            const sourcefile = path.relative(path.resolve("."), args.path)
+            const resolveDir = path.dirname(sourcefile)
             const transpiled = await esbuild.build({
               stdin: {
                 contents: text,
@@ -299,28 +299,28 @@ export async function handleBuild(argv) {
               minify: true,
               platform: "browser",
               format: "esm",
-            });
-            const rawMod = transpiled.outputFiles[0].text;
+            })
+            const rawMod = transpiled.outputFiles[0].text
             return {
               contents: rawMod,
               loader: "text",
-            };
-          });
+            }
+          })
         },
       },
     ],
-  });
+  })
 
-  const buildMutex = new Mutex();
-  let lastBuildMs = 0;
-  let cleanupBuild = null;
+  const buildMutex = new Mutex()
+  let lastBuildMs = 0
+  let cleanupBuild = null
   const build = async (clientRefresh) => {
-    const buildStart = new Date().getTime();
-    lastBuildMs = buildStart;
-    const release = await buildMutex.acquire();
+    const buildStart = new Date().getTime()
+    lastBuildMs = buildStart
+    const release = await buildMutex.acquire()
     if (lastBuildMs > buildStart) {
-      release();
-      return;
+      release()
+      return
     }
 
     if (cleanupBuild) {
@@ -336,39 +336,35 @@ export async function handleBuild(argv) {
     release()
 
     if (argv.bundleInfo) {
-      const outputFileName = "quartz/.quartz-cache/transpiled-build.mjs";
-      const meta = result.metafile.outputs[outputFileName];
+      const outputFileName = "quartz/.quartz-cache/transpiled-build.mjs"
+      const meta = result.metafile.outputs[outputFileName]
       console.log(
         `Successfully transpiled ${Object.keys(meta.inputs).length} files (${prettyBytes(
-          meta.bytes
-        )})`
-      );
-      console.log(
-        await esbuild.analyzeMetafile(result.metafile, { color: true })
-      );
+          meta.bytes,
+        )})`,
+      )
+      console.log(await esbuild.analyzeMetafile(result.metafile, { color: true }))
     }
 
     // bypass module cache
     // https://github.com/nodejs/modules/issues/307
-    const { default: buildQuartz } = await import(
-      `../../${cacheFile}?update=${randomUUID()}`
-    );
+    const { default: buildQuartz } = await import(`../../${cacheFile}?update=${randomUUID()}`)
     // ^ this import is relative, so base "cacheFile" path can't be used
 
-    cleanupBuild = await buildQuartz(argv, buildMutex, clientRefresh);
-    clientRefresh();
-  };
+    cleanupBuild = await buildQuartz(argv, buildMutex, clientRefresh)
+    clientRefresh()
+  }
 
-  let clientRefresh = () => { }
+  let clientRefresh = () => {}
   if (argv.serve) {
     const connections = []
     clientRefresh = () => connections.forEach((conn) => conn.send("rebuild"))
 
     if (argv.baseDir !== "" && !argv.baseDir.startsWith("/")) {
-      argv.baseDir = "/" + argv.baseDir;
+      argv.baseDir = "/" + argv.baseDir
     }
 
-    await build(clientRefresh);
+    await build(clientRefresh)
     // 创建请求处理函数
     const requestHandler = async (req, res) => {
       if (argv.baseDir && !req.url?.startsWith(argv.baseDir)) {
@@ -384,10 +380,10 @@ export async function handleBuild(argv) {
       }
 
       // strip baseDir prefix
-      req.url = req.url?.slice(argv.baseDir.length);
+      req.url = req.url?.slice(argv.baseDir.length)
 
       const serve = async () => {
-        const release = await buildMutex.acquire();
+        const release = await buildMutex.acquire()
         await serveHandler(req, res, {
           public: argv.output,
           directoryListing: false,
@@ -406,8 +402,8 @@ export async function handleBuild(argv) {
               headers: [{ key: "Content-Type", value: "image/avif" }],
             },
           ],
-        });
-        const status = res.statusCode;
+        })
+        const status = res.statusCode
         const statusString =
           status >= 200 && status < 300
             ? styleText("green", `[${status}]`)
@@ -417,72 +413,72 @@ export async function handleBuild(argv) {
       }
 
       const redirect = (newFp) => {
-        newFp = argv.baseDir + newFp;
+        newFp = argv.baseDir + newFp
         res.writeHead(302, {
           Location: newFp,
         })
         console.log(
           styleText("yellow", "[302]") +
-          styleText("grey", ` ${argv.baseDir}${req.url} -> ${newFp}`),
+            styleText("grey", ` ${argv.baseDir}${req.url} -> ${newFp}`),
         )
         res.end()
       }
 
-      let fp = req.url?.split("?")[0] ?? "/";
+      let fp = req.url?.split("?")[0] ?? "/"
 
       // handle redirects
       if (fp.endsWith("/")) {
         // /trailing/
         // does /trailing/index.html exist? if so, serve it
-        const indexFp = path.posix.join(fp, "index.html");
+        const indexFp = path.posix.join(fp, "index.html")
         if (fs.existsSync(path.posix.join(argv.output, indexFp))) {
-          req.url = fp;
-          return serve();
+          req.url = fp
+          return serve()
         }
 
         // does /trailing.html exist? if so, redirect to /trailing
-        let base = fp.slice(0, -1);
+        let base = fp.slice(0, -1)
         if (path.extname(base) === "") {
-          base += ".html";
+          base += ".html"
         }
         if (fs.existsSync(path.posix.join(argv.output, base))) {
-          return redirect(fp.slice(0, -1));
+          return redirect(fp.slice(0, -1))
         }
       } else {
         // /regular
         // does /regular.html exist? if so, serve it
-        let base = fp;
+        let base = fp
         if (path.extname(base) === "") {
-          base += ".html";
+          base += ".html"
         }
         if (fs.existsSync(path.posix.join(argv.output, base))) {
-          req.url = fp;
-          return serve();
+          req.url = fp
+          return serve()
         }
 
         // does /regular/index.html exist? if so, redirect to /regular/
-        let indexFp = path.posix.join(fp, "index.html");
+        let indexFp = path.posix.join(fp, "index.html")
         if (fs.existsSync(path.posix.join(argv.output, indexFp))) {
-          return redirect(fp + "/");
+          return redirect(fp + "/")
         }
       }
 
-      return serve();
-    };
+      return serve()
+    }
 
     // 保存服务器配置
     currentServerConfig = {
       port: argv.port,
-      requestHandler: requestHandler
-    };
+      requestHandler: requestHandler,
+    }
 
     // 创建并启动HTTP服务器
-    serverInstance = http.createServer(requestHandler);
-    serverInstance.listen(argv.port);
+    serverInstance = http.createServer(requestHandler)
+    serverInstance.listen(argv.port)
 
     // 创建WebSocket服务器
-    wss = new WebSocketServer({ port: argv.wsPort });
-    wss.on("connection", (ws) => connections.push(ws));
+    wss = new WebSocketServer({ port: argv.wsPort })
+    wss.on("connection", (ws) => connections.push(ws))
     console.log(
       styleText(
         "cyan",
@@ -522,23 +518,23 @@ export async function handleUpdate(argv) {
   console.log(`\n${styleText(["bgGreen", "black"], ` Quartz v${version} `)} \n`)
   console.log("Backing up your content")
   execSync(
-    `git remote show upstream || git remote add upstream https://github.com/jackyzha0/quartz.git`
-  );
-  await stashContentFolder(contentFolder);
+    `git remote show upstream || git remote add upstream https://github.com/jackyzha0/quartz.git`,
+  )
+  await stashContentFolder(contentFolder)
   console.log(
-    "Pulling updates... you may need to resolve some `git` conflicts if you've made changes to components or plugins."
-  );
+    "Pulling updates... you may need to resolve some `git` conflicts if you've made changes to components or plugins.",
+  )
 
   try {
-    gitPull(UPSTREAM_NAME, QUARTZ_SOURCE_BRANCH);
+    gitPull(UPSTREAM_NAME, QUARTZ_SOURCE_BRANCH)
   } catch {
     console.log(styleText("red", "An error occurred above while pulling updates."))
     await popContentFolder(contentFolder)
     return
   }
 
-  await popContentFolder(contentFolder);
-  console.log("Ensuring dependencies are up to date");
+  await popContentFolder(contentFolder)
+  console.log("Ensuring dependencies are up to date")
 
   /*
   On Windows, if the command `npm` is really `npm.cmd', this call fails
@@ -552,12 +548,12 @@ export async function handleUpdate(argv) {
   See: https://nodejs.org/api/child_process.html#spawning-bat-and-cmd-files-on-windows
   */
 
-  const opts = { stdio: "inherit" };
+  const opts = { stdio: "inherit" }
   if (process.platform === "win32") {
-    opts.shell = true;
+    opts.shell = true
   }
 
-  const res = spawnSync("npm", ["i"], opts);
+  const res = spawnSync("npm", ["i"], opts)
   if (res.status === 0) {
     console.log(styleText("green", "Done!"))
   } else {
@@ -584,43 +580,43 @@ export async function handleSync(argv) {
   console.log("Backing up your content")
 
   if (argv.commit) {
-    const contentStat = await fs.promises.lstat(contentFolder);
+    const contentStat = await fs.promises.lstat(contentFolder)
     if (contentStat.isSymbolicLink()) {
       const linkTarg = await fs.promises.readlink(contentFolder)
       console.log(styleText("yellow", "Detected symlink, trying to dereference before committing"))
 
       // stash symlink file
-      await stashContentFolder(contentFolder);
+      await stashContentFolder(contentFolder)
 
       // follow symlink and copy content
       await fs.promises.cp(linkTarg, contentFolder, {
         recursive: true,
         preserveTimestamps: true,
-      });
+      })
     }
 
     const currentTimestamp = new Date().toLocaleString("en-US", {
       dateStyle: "medium",
       timeStyle: "short",
-    });
-    const commitMessage = argv.message ?? `Quartz sync: ${currentTimestamp}`;
-    spawnSync("git", ["add", "."], { stdio: "inherit" });
-    spawnSync("git", ["commit", "-m", commitMessage], { stdio: "inherit" });
+    })
+    const commitMessage = argv.message ?? `Quartz sync: ${currentTimestamp}`
+    spawnSync("git", ["add", "."], { stdio: "inherit" })
+    spawnSync("git", ["commit", "-m", commitMessage], { stdio: "inherit" })
 
     if (contentStat.isSymbolicLink()) {
       // put symlink back
-      await popContentFolder(contentFolder);
+      await popContentFolder(contentFolder)
     }
   }
 
-  await stashContentFolder(contentFolder);
+  await stashContentFolder(contentFolder)
 
   if (argv.pull) {
     console.log(
-      "Pulling updates from your repository. You may need to resolve some `git` conflicts if you've made changes to components or plugins."
-    );
+      "Pulling updates from your repository. You may need to resolve some `git` conflicts if you've made changes to components or plugins.",
+    )
     try {
-      gitPull(ORIGIN_NAME, QUARTZ_SOURCE_BRANCH);
+      gitPull(ORIGIN_NAME, QUARTZ_SOURCE_BRANCH)
     } catch {
       console.log(styleText("red", "An error occurred above while pulling updates."))
       await popContentFolder(contentFolder)
@@ -628,7 +624,7 @@ export async function handleSync(argv) {
     }
   }
 
-  await popContentFolder(contentFolder);
+  await popContentFolder(contentFolder)
   if (argv.push) {
     console.log("Pushing your changes")
     const currentBranch = execSync("git rev-parse --abbrev-ref HEAD").toString().trim()
@@ -653,9 +649,9 @@ let wss = null
 let serverInstance = null
 let currentServerConfig = null
 
-process.on('uncaughtException', (err) => {
-  if (err.code === 'EACCES') {
-    console.log(chalk.red('端口访问被拒绝，尝试备用端口...'))
+process.on("uncaughtException", (err) => {
+  if (err.code === "EACCES") {
+    console.log(chalk.red("端口访问被拒绝，尝试备用端口..."))
     if (wss && serverInstance && currentServerConfig) {
       const currentPort = wss.options.port
       const newWsPort = currentPort + Math.floor(Math.random() * 50) + 100
@@ -684,7 +680,9 @@ process.on('uncaughtException', (err) => {
         currentServerConfig.port = newHttpPort
 
         console.log(chalk.yellow(`WebSocket 端口已切换至: ${newWsPort}`))
-        console.log(chalk.cyan(`Quartz 服务器已重新启动，监听端口: http://localhost:${newHttpPort}`))
+        console.log(
+          chalk.cyan(`Quartz 服务器已重新启动，监听端口: http://localhost:${newHttpPort}`),
+        )
       })
     } else {
       console.log(chalk.red(`无法重新启动服务器，服务器实例未初始化`))
@@ -693,5 +691,4 @@ process.on('uncaughtException', (err) => {
     console.error(chalk.red(`未处理的异常: ${err.message}`))
     console.error(err.stack)
   }
-});
-
+})

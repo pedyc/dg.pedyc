@@ -1,7 +1,7 @@
 // 在文件顶部添加类型声明
 declare global {
   interface Window {
-    cleanup: () => void;
+    cleanup: () => void
   }
 }
 
@@ -83,9 +83,11 @@ async function preloadLinkContent(url: URL, isPriority: boolean = false) {
         const popoverHintElements = [...html.getElementsByClassName("popover-hint")]
         const fragment = document.createDocumentFragment()
         if (popoverHintElements.length > 0) {
-          popoverHintElements.forEach(el => fragment.appendChild(el.cloneNode(true)))
+          popoverHintElements.forEach((el) => fragment.appendChild(el.cloneNode(true)))
         } else if (html.body) {
-          Array.from(html.body.children).forEach(child => fragment.appendChild(child.cloneNode(true)))
+          Array.from(html.body.children).forEach((child) =>
+            fragment.appendChild(child.cloneNode(true)),
+          )
         }
         dataToCache = fragment
         cacheType = "html"
@@ -139,9 +141,13 @@ async function mouseEnterHandler(
 
     if (targetHash !== "") {
       const targetAnchor = `#popover-internal-${targetHash.slice(1)}`
-      const heading = popoverElement.querySelector(".popover-inner")?.querySelector(targetAnchor) as HTMLElement | null
+      const heading = popoverElement
+        .querySelector(".popover-inner")
+        ?.querySelector(targetAnchor) as HTMLElement | null
       if (heading) {
-        popoverElement.querySelector(".popover-inner")!.scroll({ top: heading.offsetTop - 12, behavior: "instant" })
+        popoverElement
+          .querySelector(".popover-inner")!
+          .scroll({ top: heading.offsetTop - 12, behavior: "instant" })
       }
     }
   }
@@ -151,7 +157,7 @@ async function mouseEnterHandler(
   const contentUrl = new URL(targetUrl.pathname, targetUrl.origin)
   const cacheKey = contentUrl.toString()
   const popoverIdSuffix = originalHash ? originalHash.slice(1) : "root"
-  const popoverId = `popover-${link.pathname.replace(/[^a-zA-Z0-9-_]/g, '-')}-${popoverIdSuffix}`
+  const popoverId = `popover-${link.pathname.replace(/[^a-zA-Z0-9-_]/g, "-")}-${popoverIdSuffix}`
 
   const prevPopoverElement = document.getElementById(popoverId)
   if (prevPopoverElement) {
@@ -184,7 +190,7 @@ async function mouseEnterHandler(
         break
       case "html":
         popoverInner.appendChild((cachedItem.data as DocumentFragment).cloneNode(true))
-        break;
+        break
     }
   } else {
     // 如果缓存未命中，则立即 fetch (作为优先加载)
@@ -208,17 +214,17 @@ async function mouseEnterHandler(
           break
         case "html":
           popoverInner.appendChild((cachedItem.data as DocumentFragment).cloneNode(true))
-          break;
+          break
       }
     } else {
       // 如果 fetch 后仍然没有缓存（例如请求失败），可以显示错误或不显示弹窗
       console.warn(`Content for ${cacheKey} could not be loaded for popover.`)
-      return; // 或者创建一个提示信息
+      return // 或者创建一个提示信息
     }
   }
 
   if (document.getElementById(popoverId)) {
-    return;
+    return
   }
 
   document.body.appendChild(popoverElement)
@@ -251,22 +257,25 @@ function initializeViewportPreloading() {
     return
   }
 
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const link = entry.target as HTMLAnchorElement
-        const targetUrl = new URL(link.href)
-        const contentUrl = new URL(targetUrl.pathname, targetUrl.origin)
-        preloadLinkContent(contentUrl) // 开始预加载
-        obs.unobserve(link) // 预加载后停止观察该链接，避免重复触发
-      }
-    })
-  }, {
-    rootMargin: "200px 0px", // 预加载视口下方 200px 内的链接
-    threshold: 0.01 // 元素有 1% 进入视口即触发
-  })
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const link = entry.target as HTMLAnchorElement
+          const targetUrl = new URL(link.href)
+          const contentUrl = new URL(targetUrl.pathname, targetUrl.origin)
+          preloadLinkContent(contentUrl) // 开始预加载
+          obs.unobserve(link) // 预加载后停止观察该链接，避免重复触发
+        }
+      })
+    },
+    {
+      rootMargin: "200px 0px", // 预加载视口下方 200px 内的链接
+      threshold: 0.01, // 元素有 1% 进入视口即触发
+    },
+  )
 
-  links.forEach(link => {
+  links.forEach((link) => {
     observer.observe(link)
   })
 
@@ -283,42 +292,42 @@ document.addEventListener("nav", () => {
     link.addEventListener("mouseleave", clearActivePopover)
 
     /**
-    * 处理内部链接点击事件，尝试从 sessionStorage 加载内容。
-    * @param event 点击事件对象
-    */
+     * 处理内部链接点击事件，尝试从 sessionStorage 加载内容。
+     * @param event 点击事件对象
+     */
     const wikilinkClickHandler = async (event: MouseEvent) => {
-      event.preventDefault(); // 阻止默认跳转
+      event.preventDefault() // 阻止默认跳转
 
-      const anchorElement = event.currentTarget as HTMLAnchorElement;
-      const originalTargetUrl = new URL(anchorElement.href); // 保留原始解析的URL，主要为了获取hash
+      const anchorElement = event.currentTarget as HTMLAnchorElement
+      const originalTargetUrl = new URL(anchorElement.href) // 保留原始解析的URL，主要为了获取hash
 
       // contentUrl 用于 sessionStorage key，通常是 clean URL (无 hash, 有时无 search)
-      const contentUrl = new URL(originalTargetUrl.pathname, originalTargetUrl.origin);
-      if (originalTargetUrl.search) contentUrl.search = originalTargetUrl.search; // 保留查询参数
-      const cacheKey = contentUrl.toString();
+      const contentUrl = new URL(originalTargetUrl.pathname, originalTargetUrl.origin)
+      if (originalTargetUrl.search) contentUrl.search = originalTargetUrl.search // 保留查询参数
+      const cacheKey = contentUrl.toString()
 
       // 构建用于浏览器导航的最终URL
-      const urlForBrowser = new URL(cacheKey);
+      const urlForBrowser = new URL(cacheKey)
       if (originalTargetUrl.hash) {
-        urlForBrowser.hash = originalTargetUrl.hash;
+        urlForBrowser.hash = originalTargetUrl.hash
       }
-      const cachedContent = sessionStorage.getItem(cacheKey);
+      const cachedContent = sessionStorage.getItem(cacheKey)
       if (cachedContent) {
-        console.log(`Loading from sessionStorage: ${cacheKey}`);
-        const newDoc = p.parseFromString(cachedContent, "text/html");
+        console.log(`Loading from sessionStorage: ${cacheKey}`)
+        const newDoc = p.parseFromString(cachedContent, "text/html")
 
-        normalizeRelativeURLs(newDoc, urlForBrowser);
+        normalizeRelativeURLs(newDoc, urlForBrowser)
 
-        document.body.innerHTML = newDoc.body.innerHTML;
+        document.body.innerHTML = newDoc.body.innerHTML
 
         // 更新 head (这是一个复杂的操作，简化处理可能不完美)
         // 简单的替换 title:
-        const newTitle = newDoc.querySelector('head > title');
-        const oldTitle = document.head.querySelector('title');
+        const newTitle = newDoc.querySelector("head > title")
+        const oldTitle = document.head.querySelector("title")
         if (newTitle && oldTitle) {
-          oldTitle.textContent = newTitle.textContent;
+          oldTitle.textContent = newTitle.textContent
         } else if (newTitle) {
-          document.head.appendChild(newTitle.cloneNode(true));
+          document.head.appendChild(newTitle.cloneNode(true))
         }
         // 注意：更复杂的 head 更新需要更细致的逻辑来处理 stylesheets, scripts, meta tags 等。
         // 直接替换 document.head 是有问题的。可以考虑遍历 newDoc.head 的子元素并更新或添加到当前的 document.head。
@@ -328,66 +337,69 @@ document.addEventListener("nav", () => {
 
         // 优化 head 更新逻辑：更精细地处理 title, meta, link 标签
         // 更新或添加 title
-        const newTitleElement = newDoc.head.querySelector('title');
-        const currentTitleElement = document.head.querySelector('title');
+        const newTitleElement = newDoc.head.querySelector("title")
+        const currentTitleElement = document.head.querySelector("title")
         if (newTitleElement) {
           if (currentTitleElement) {
-            currentTitleElement.textContent = newTitleElement.textContent;
+            currentTitleElement.textContent = newTitleElement.textContent
           } else {
-            document.head.appendChild(newTitleElement.cloneNode(true));
+            document.head.appendChild(newTitleElement.cloneNode(true))
           }
         } else if (currentTitleElement) {
           // currentTitleElement.remove(); // 可选：如果新页面无标题，移除旧标题
         }
 
         // 更新或添加重要的 meta 标签 (例如 description, keywords, og:*)，忽略 charset 和 viewport
-        const importantMetaNames = ['description', 'keywords'];
-        const importantMetaProperties = ['og:title', 'og:description', 'og:image', 'og:url'];
-        const importantMetaItemprops = ['name', 'property', 'itemprop'];
+        const importantMetaNames = ["description", "keywords"]
+        const importantMetaProperties = ["og:title", "og:description", "og:image", "og:url"]
+        const importantMetaItemprops = ["name", "property", "itemprop"]
 
-        newDoc.head.querySelectorAll('meta').forEach(newMeta => {
-          const isImportant = importantMetaItemprops.some(attr => {
-            const value = newMeta.getAttribute(attr);
-            if (!value) return false;
-            return importantMetaNames.includes(value) || importantMetaProperties.includes(value);
-          });
+        newDoc.head.querySelectorAll("meta").forEach((newMeta) => {
+          const isImportant = importantMetaItemprops.some((attr) => {
+            const value = newMeta.getAttribute(attr)
+            if (!value) return false
+            return importantMetaNames.includes(value) || importantMetaProperties.includes(value)
+          })
 
           if (isImportant) {
-            const attrToMatch = importantMetaItemprops.find(attr => newMeta.hasAttribute(attr));
+            const attrToMatch = importantMetaItemprops.find((attr) => newMeta.hasAttribute(attr))
             if (attrToMatch) {
-              const valueToMatch = newMeta.getAttribute(attrToMatch);
-              const existingMeta = document.head.querySelector(`meta[${attrToMatch}="${valueToMatch}"]`);
+              const valueToMatch = newMeta.getAttribute(attrToMatch)
+              const existingMeta = document.head.querySelector(
+                `meta[${attrToMatch}="${valueToMatch}"]`,
+              )
               if (existingMeta) {
                 // 更新现有 meta 标签的 content 属性
-                existingMeta.setAttribute('content', newMeta.getAttribute('content') || '');
+                existingMeta.setAttribute("content", newMeta.getAttribute("content") || "")
               } else {
                 // 添加新的 meta 标签
-                document.head.appendChild(newMeta.cloneNode(true));
+                document.head.appendChild(newMeta.cloneNode(true))
               }
             }
           }
-        });
+        })
 
         // 更新或添加重要的 link 标签 (例如 canonical, alternate, preconnect, preload, prefetch)
-        const importantLinkRels = ['canonical', 'alternate', 'preconnect', 'preload', 'prefetch'];
+        const importantLinkRels = ["canonical", "alternate", "preconnect", "preload", "prefetch"]
 
-        newDoc.head.querySelectorAll('link').forEach(newLink => {
-          const rel = newLink.getAttribute('rel');
+        newDoc.head.querySelectorAll("link").forEach((newLink) => {
+          const rel = newLink.getAttribute("rel")
           if (rel && importantLinkRels.includes(rel)) {
             // 对于 canonical 和 alternate，通常只有一个，可以直接替换或更新 href
-            if (rel === 'canonical' || rel === 'alternate') {
-              const existingLink = document.head.querySelector(`link[rel="${rel}"]`);
+            if (rel === "canonical" || rel === "alternate") {
+              const existingLink = document.head.querySelector(`link[rel="${rel}"]`)
               if (existingLink) {
-                existingLink.setAttribute('href', newLink.getAttribute('href') || '');
+                existingLink.setAttribute("href", newLink.getAttribute("href") || "")
               } else {
-                document.head.appendChild(newLink.cloneNode(true));
+                document.head.appendChild(newLink.cloneNode(true))
               }
-            } else { // 对于 preconnect, preload, prefetch 等，可能需要添加新的
+            } else {
+              // 对于 preconnect, preload, prefetch 等，可能需要添加新的
               // 简单的添加，更复杂的逻辑可能需要检查是否已存在相同的 href
-              document.head.appendChild(newLink.cloneNode(true));
+              document.head.appendChild(newLink.cloneNode(true))
             }
           }
-        });
+        })
 
         // 注意：脚本和样式表的处理更为复杂，直接添加可能导致重复加载或执行问题。
         // 对于样式表，可以考虑动态创建 <link> 或 <style> 标签并添加到 head，但需要管理移除旧的。
@@ -396,37 +408,36 @@ document.addEventListener("nav", () => {
 
         // 更新浏览器历史记录和地址栏
         // history.pushState({}, "", targetUrl.toString()); // 旧代码
-        history.pushState({}, "");
+        history.pushState({}, "")
 
-        clearActivePopover();
+        clearActivePopover()
 
-        const oldCleanup = window.cleanup;
-        if (typeof oldCleanup === 'function') {
-          oldCleanup();
+        const oldCleanup = window.cleanup
+        if (typeof oldCleanup === "function") {
+          oldCleanup()
         }
 
         // 派发 nav 事件，让其他依赖导航的组件重新初始化
-        document.dispatchEvent(new CustomEvent("nav", { detail: { url: urlForBrowser.pathname } }));
-        
+        document.dispatchEvent(new CustomEvent("nav", { detail: { url: urlForBrowser.pathname } }))
+
         // 派发自定义事件以重新初始化图谱
         // 使用 requestAnimationFrame 确保 DOM 更新已基本完成
         requestAnimationFrame(() => {
-          console.log("Dispatching reinit-graph event from popover.");
-          document.dispatchEvent(new CustomEvent("reinit-graph", { detail: {} }));
-        });
+          console.log("Dispatching reinit-graph event from popover.")
+          document.dispatchEvent(new CustomEvent("reinit-graph", { detail: {} }))
+        })
 
         if (urlForBrowser.hash) {
-          const element = document.getElementById(urlForBrowser.hash.substring(1));
+          const element = document.getElementById(urlForBrowser.hash.substring(1))
           if (element) {
-            element.scrollIntoView();
+            element.scrollIntoView()
           }
         }
-
       } else {
-        console.log(`Not found in sessionStorage, navigating to: ${urlForBrowser.toString()}`);
-        window.location.assign(urlForBrowser.toString());
+        console.log(`Not found in sessionStorage, navigating to: ${urlForBrowser.toString()}`)
+        window.location.assign(urlForBrowser.toString())
       }
-    };
+    }
 
     window.addCleanup(() => {
       link.removeEventListener("mouseenter", mouseEnterHandler)

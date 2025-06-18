@@ -9,14 +9,12 @@ async function* processFile(ctx: BuildCtx, file: VFile) {
   const ogSlug = simplifySlug(file.data.slug!)
 
   for (const aliasTarget of file.data.aliases ?? []) {
-    const aliasTargetSlug = (
-      (() => {
-        const sanitizedAliasTarget = aliasTarget.replace(/[<>:"|?*]/g, '')
-        return isRelativeURL(sanitizedAliasTarget)
-          ? path.normalize(path.join(ogSlug, "..", sanitizedAliasTarget))
-          : sanitizedAliasTarget
-      })()
-    ) as FullSlug
+    const aliasTargetSlug = (() => {
+      const sanitizedAliasTarget = aliasTarget.replace(/[<>:"|?*]/g, "")
+      return isRelativeURL(sanitizedAliasTarget)
+        ? path.normalize(path.join(ogSlug, "..", sanitizedAliasTarget))
+        : sanitizedAliasTarget
+    })() as FullSlug
 
     const redirUrl = resolveRelative(aliasTargetSlug, ogSlug)
     yield write({

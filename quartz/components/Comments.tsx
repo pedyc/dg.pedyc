@@ -48,9 +48,7 @@ export default ((opts: Options) => {
         data-input-position={opts.options.inputPosition ?? "bottom"}
         data-light-theme={opts.options.lightTheme ?? "light"}
         data-dark-theme={opts.options.darkTheme ?? "dark"}
-        data-theme-url={
-          opts.options.themeUrl ?? `https://${cfg.baseUrl ?? "example.com"}/static/giscus`
-        }
+        data-theme-url={cfg.baseUrl ? `${cfg.baseUrl}/static/giscus` : "https://example.com/static/giscus"}
         data-lang={opts.options.lang ?? "en"}
       ></div>
     )

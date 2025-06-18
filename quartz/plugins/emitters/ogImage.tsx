@@ -115,9 +115,17 @@ export const CustomOgImages: QuartzEmitterPlugin<Partial<SocialImageOptions>> = 
       const bodyFont = cfg.theme.typography.body
       const fonts = await getSatoriFonts(headerFont, bodyFont)
 
-      for (const [_tree, vfile] of content) {
-        if (vfile.data.frontmatter?.socialImage !== undefined) continue
-        yield processOgImage(ctx, vfile.data, fonts, fullOptions)
+      // Sort content by date to get the 10 most recent notes
+      const sortedContent = [...content].sort(([, a], [, b]) => {
+        const dateA = a.data.dates?.created?.getTime() ?? 0;
+        const dateB = b.data.dates?.created?.getTime() ?? 0;
+        return dateB - dateA;
+      });
+
+      // Process only the 10 most recent notes
+      for (const [_tree, vfile] of sortedContent.slice(0, 10)) {
+        if (vfile.data.frontmatter?.socialImage !== undefined) continue;
+        yield processOgImage(ctx, vfile.data, fonts, fullOptions);
       }
     },
     async *partialEmit(ctx, _content, _resources, changeEvents) {

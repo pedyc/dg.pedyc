@@ -17,7 +17,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Diary/2025-06-17.md",
+                    "file": "PARA/20-AREAS/08知识管理/知识管理概述.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -32,7 +32,7 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "2025-06-17"
+                  "title": "知识管理概述"
                 }
               }
             ]
@@ -74,13 +74,13 @@
                         "state": {
                           "type": "outline",
                           "state": {
-                            "file": "Diary/2025-06-17.md",
+                            "file": "PARA/20-AREAS/08知识管理/知识管理概述.md",
                             "followCursor": false,
                             "showSearch": false,
                             "searchQuery": ""
                           },
                           "icon": "lucide-list",
-                          "title": "Outline of 2025-06-17"
+                          "title": "Outline of 知识管理概述"
                         }
                       }
                     ]
@@ -96,7 +96,7 @@
                         "state": {
                           "type": "localgraph",
                           "state": {
-                            "file": "Diary/2025-06-17.md",
+                            "file": "PARA/20-AREAS/08知识管理/知识管理概述.md",
                             "options": {
                               "collapse-filter": true,
                               "search": "",
@@ -124,7 +124,7 @@
                             }
                           },
                           "icon": "lucide-git-fork",
-                          "title": "Graph of 2025-06-17"
+                          "title": "Graph of 知识管理概述"
                         }
                       }
                     ]
@@ -317,6 +317,13 @@
   },
   "active": "5161891edc96f818",
   "lastOpenFiles": [
+    "PARA/20-AREAS/08知识管理/知识管理核心原则.md",
+    "PARA/20-AREAS/08知识管理/知识管理概述.md",
+    "PARA/40-ARCHIVES/数字花园概述.md",
+    "index.md",
+    "Diary/2025-06-18.md",
+    "Diary/2025-06-17.md",
+    "Diary/_resources",
     "PARA/20-AREAS/02前端/Service Worker API.md",
     "PARA/20-AREAS/04AI/知识管理大师提示词v4 动态重构版本.md",
     "PARA/30-RESOURCES/面试真题/FAQ-Webpack.md",
@@ -325,7 +332,6 @@
     "Diary/2025-06-16.md",
     "PARA/30-RESOURCES/面试真题/FAQ-Vite.md",
     "PARA/20-AREAS/02前端/Vue 核心思想.md",
-    "Diary/2025-06-17.md",
     "PARA/20-AREAS/02前端/0200前端.md",
     "PARA/20-AREAS/02前端/CSS.md",
     "PARA/20-AREAS/02前端/如何处理 Ajax 请求在不同浏览器中的兼容性问题？.md",
@@ -338,16 +344,10 @@
     "PARA/20-AREAS/02前端/Webpack.md",
     "PARA/30-RESOURCES/面试真题/你了解哪些构建优化手段？如何提升构建速度和最终产物体积？.md",
     "PARA/30-RESOURCES/面试真题/FAQ-构建打包.md",
-    "PARA/20-AREAS/02前端/前端构建与打包.md",
-    "PARA/30-RESOURCES/面试真题/什么是 Tree-shaking？它的前提条件是什么？在哪些情况下会失效？.md",
-    "PARA/20-AREAS/02前端/Web Storage API.md",
-    "PARA/20-AREAS/02前端/前端工程.md",
-    "PARA/20-AREAS/02前端/Vite.md",
     "SimpRead/backup/simpread_config@20250616174335.json",
     "PARA/20-AREAS/02前端/_resources",
     "_resources/sw-lifecycle.svg",
     "PARA/00-META/_resources",
-    "Diary/_resources",
     "PARA/30-RESOURCES/面试真题/_resources",
     "SimpRead/backup/simpread_config@20250602214508.json",
     "HTTP",

@@ -63,11 +63,6 @@ function toggleFolder(evt: MouseEvent) {
   const isCollapsed = !childFolderContainer.classList.contains("open")
   setFolderState(childFolderContainer, isCollapsed)
 
-  // If folder is opened and not in view, scroll to it
-  if (!isCollapsed) {
-    childFolderContainer.scrollIntoView({ behavior: "smooth", block: "center" })
-  }
-
   const currentFolderState = currentExplorerState.find(
     (item) => item.path === folderContainer.dataset.folderpath,
   )
@@ -183,15 +178,14 @@ async function setupExplorer(currentSlug: FullSlug) {
     }
 
     // Get folder state from local storage
-    const storageTree = localStorage.getItem("fileTree")
-    const serializedExplorerState = storageTree && opts.useSavedState ? JSON.parse(storageTree) : []
+    // const storageTree = localStorage.getItem("fileTree")
+    // const serializedExplorerState = storageTree && opts.useSavedState ? JSON.parse(storageTree) : []
 
     // Clear currentExplorerState to ensure all folders are collapsed on page navigation
     currentExplorerState = []
 
-    const oldIndex = new Map<string, boolean>(
-      serializedExplorerState.map((entry: FolderState) => [entry.path, entry.collapsed]),
-    )
+    // Force oldIndex to be empty to ensure folders are collapsed on navigation
+    const oldIndex = new Map<string, boolean>()
 
     const data = await fetchData
     const entries = [...Object.entries(data)] as [FullSlug, ContentDetails][]
@@ -223,7 +217,7 @@ async function setupExplorer(currentSlug: FullSlug) {
       }
     })
 
-    const explorerUl = explorer.querySelector(".explorer-ul")
+    const explorerUl: HTMLElement | null = explorer.querySelector(".explorer-ul")
     if (!explorerUl) continue
 
     // Create and insert new content
@@ -272,9 +266,22 @@ async function setupExplorer(currentSlug: FullSlug) {
     }
 
     // 尝试滚动到活动元素，如果它存在且不在当前视图中
-    const activeElement = explorerUl.querySelector(".active")
+    const activeElement: HTMLElement | null = explorerUl.querySelector(".active")
+    // Custom scroll into view logic to prevent main panel scrolling
     if (activeElement) {
-      activeElement.scrollIntoView({ behavior: "smooth", block: "center" })
+      const explorerRect = explorerUl.getBoundingClientRect()
+      const activeRect = activeElement.getBoundingClientRect()
+
+      // Check if the active element is outside the visible area of the explorerUl
+      if (activeRect.top < explorerRect.top || activeRect.bottom > explorerRect.bottom) {
+        // Calculate the new scroll position
+        const newScrollTop =
+          activeElement.offsetTop -
+          explorerUl.offsetTop -
+          explorerRect.height / 2 +
+          activeRect.height / 2
+        explorerUl.scrollTo({ top: newScrollTop, behavior: "smooth" })
+      }
     }
   }
 }

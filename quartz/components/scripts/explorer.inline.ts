@@ -1,6 +1,7 @@
 import { FileTrieNode } from "../../util/fileTrie"
 import { FullSlug, resolveRelative, simplifySlug } from "../../util/path"
 import { ContentDetails } from "../../plugins/emitters/contentIndex"
+import { CacheKeyGenerator } from "./config/cache-config"
 
 type MaybeHTMLElement = HTMLElement | undefined
 
@@ -76,7 +77,8 @@ function toggleFolder(evt: MouseEvent) {
   }
 
   const stringifiedFileTree = JSON.stringify(currentExplorerState)
-  localStorage.setItem("fileTree", stringifiedFileTree)
+  const fileTreeKey = CacheKeyGenerator.user('fileTree', 'explorer_state')
+  localStorage.setItem(fileTreeKey, stringifiedFileTree)
 }
 
 function createFileNode(currentSlug: FullSlug, node: FileTrieNode): HTMLLIElement {
@@ -232,7 +234,8 @@ async function setupExplorer(currentSlug: FullSlug) {
     explorerUl.insertBefore(fragment, explorerUl.firstChild)
 
     // restore explorer scrollTop position if it exists
-    const scrollTop = sessionStorage.getItem("explorerScrollTop")
+    const scrollTopKey = CacheKeyGenerator.user('explorerScrollTop', 'scroll_position')
+    const scrollTop = sessionStorage.getItem(scrollTopKey)
     if (scrollTop) {
       explorerUl.scrollTop = parseInt(scrollTop)
     }
@@ -290,7 +293,8 @@ document.addEventListener("prenav", async () => {
   // save explorer scrollTop position
   const explorer = document.querySelector(".explorer-ul")
   if (!explorer) return
-  sessionStorage.setItem("explorerScrollTop", explorer.scrollTop.toString())
+  const scrollTopKey = CacheKeyGenerator.user('explorerScrollTop', 'scroll_position')
+  sessionStorage.setItem(scrollTopKey, explorer.scrollTop.toString())
 })
 
 document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {

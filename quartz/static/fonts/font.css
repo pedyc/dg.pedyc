@@ -3,9 +3,5 @@
   src: url("./lxgw.subset.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
-}
-
-body {
-  font-family: "LXGW WenKai", sans-serif;
+  /* font-display: swap; */
 }

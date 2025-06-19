@@ -1,7 +1,8 @@
 import FlexSearch from "flexsearch"
 import { ContentDetails } from "../../plugins/emitters/contentIndex"
-import { registerEscapeHandler, removeAllChildren } from "./util"
+import { registerEscapeHandler, removeAllChildren } from "./utils/util"
 import { FullSlug, normalizeRelativeURLs, resolveRelative } from "../../util/path"
+import { CacheKeyGenerator } from "./config/cache-config"
 
 interface Item {
   id: number
@@ -40,7 +41,7 @@ let index = new FlexSearch.Document<Item>({
 })
 
 const p = new DOMParser()
-const fetchContentCache: Map<FullSlug, Element[]> = new Map()
+const fetchContentCache: Map<string, Element[]> = new Map()
 const contextWindowWords = 30
 const numSearchResults = 8
 const numTagResults = 5
@@ -97,9 +98,8 @@ function highlight(searchTerm: string, text: string, trim?: boolean) {
     })
     .join(" ")
 
-  return `${startIndex === 0 ? "" : "..."}${slice}${
-    endIndex === tokenizedText.length - 1 ? "" : "..."
-  }`
+  return `${startIndex === 0 ? "" : "..."}${slice}${endIndex === tokenizedText.length - 1 ? "" : "..."
+    }`
 }
 
 function highlightHTML(searchTerm: string, el: HTMLElement) {
@@ -353,8 +353,9 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
   }
 
   async function fetchContent(slug: FullSlug): Promise<Element[]> {
-    if (fetchContentCache.has(slug)) {
-      return fetchContentCache.get(slug) as Element[]
+    const cacheKey = CacheKeyGenerator.search(slug)
+    if (fetchContentCache.has(cacheKey)) {
+      return fetchContentCache.get(cacheKey) as Element[]
     }
 
     const targetUrl = resolveUrl(slug).toString()
@@ -369,7 +370,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
         return [...html.getElementsByClassName("popover-hint")]
       })
 
-    fetchContentCache.set(slug, contents)
+    fetchContentCache.set(cacheKey, contents)
     return contents
   }
 

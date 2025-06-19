@@ -4,6 +4,178 @@ import { clone } from "./clone"
 
 // this file must be isomorphic so it can't use node libs (e.g. path)
 
+import { OptimizedCacheManager } from "../components/scripts/managers/OptimizedCacheManager"
+import { GlobalCacheConfig, CacheKeyGenerator } from "../components/scripts/config/cache-config"
+
+// 使用统一的缓存配置
+const urlCacheConfig = GlobalCacheConfig.URL_CACHE
+const urlCache = new OptimizedCacheManager<URL>({
+  maxSize: urlCacheConfig.capacity,
+  maxMemoryMB: 20,
+  defaultTTL: urlCacheConfig.ttl,
+  cleanupIntervalMs: 300000
+})
+
+
+/**
+ * 移除路径中的重复段
+ * @param path 路径字符串
+ * @returns 清理后的路径
+ */
+export function removeDuplicatePathSegments(path: string): string {
+  try {
+    // 如果是完整URL，解析它；否则作为路径处理
+    let pathname: string
+    let search = ''
+    let hash = ''
+
+    if (path.startsWith('http') || path.startsWith('/')) {
+      if (path.startsWith('http')) {
+        const url = new URL(path)
+        pathname = url.pathname
+        search = url.search
+        hash = url.hash
+      } else {
+        const parts = path.split('#')
+        const pathAndSearch = parts[0]
+        hash = parts[1] ? '#' + parts[1] : ''
+        const searchIndex = pathAndSearch.indexOf('?')
+        if (searchIndex !== -1) {
+          pathname = pathAndSearch.substring(0, searchIndex)
+          search = pathAndSearch.substring(searchIndex)
+        } else {
+          pathname = pathAndSearch
+        }
+      }
+    } else {
+      pathname = path
+    }
+
+    const segments = pathname.split('/').filter(segment => segment.length > 0)
+    const deduplicatedSegments: string[] = []
+
+    for (let i = 0; i < segments.length; i++) {
+      const segment = segments[i]
+
+      // 检查连续重复
+      const isConsecutiveDuplicate = deduplicatedSegments.length > 0 &&
+        deduplicatedSegments[deduplicatedSegments.length - 1] === segment
+
+      if (!isConsecutiveDuplicate) {
+        // 检查A/B/A模式和其他重复模式
+        const isDuplicatePattern = isDuplicatePathPattern(deduplicatedSegments, segment)
+
+        if (!isDuplicatePattern) {
+          deduplicatedSegments.push(segment)
+        }
+      }
+    }
+
+    const cleanedPath = deduplicatedSegments.length > 0 ? '/' + deduplicatedSegments.join('/') : '/'
+    return cleanedPath + search + hash
+  } catch (error) {
+    console.warn('Failed to clean duplicate path segments:', error)
+    return path
+  }
+}
+
+/**
+ * 检查是否为重复模式
+ * @param existingSegments 已存在的路径段
+ * @param newSegment 新的路径段
+ * @returns 是否为重复模式
+ */
+export function isDuplicatePathPattern(existingSegments: string[], newSegment: string): boolean {
+  if (existingSegments.length < 1) {
+    return false
+  }
+
+  // 检查是否形成重复序列模式（如 A/B/A/B）
+  const segmentCount = existingSegments.length
+  if (segmentCount >= 2) {
+    // 检查A/B/A模式
+    if (segmentCount >= 2 && existingSegments[segmentCount - 2] === newSegment) {
+      return true
+    }
+
+    // 检查更复杂的重复模式
+    for (let i = 0; i < segmentCount; i++) {
+      if (existingSegments[i] === newSegment) {
+        return true
+      }
+    }
+  }
+
+  return false
+}
+
+/**
+ * 创建URL对象，带缓存优化
+ * @param href URL字符串
+ * @returns URL对象
+ */
+export function createUrl(href: string): URL {
+  const cached = urlCache.get(href)
+  if (cached) {
+    return cached
+  }
+
+  const url = new URL(href)
+  urlCache.set(href, url)
+  return url
+}
+
+/**
+ * 获取用于内容缓存的URL（移除hash并去重路径）
+ * @param href URL字符串
+ * @returns 用于缓存的URL对象
+ */
+export function getContentUrl(href: string): URL {
+  const cacheKey = CacheKeyGenerator.content(href)
+  const cached = urlCache.get(cacheKey)
+  if (cached) {
+    return cached
+  }
+
+  const url = createUrl(href)
+  const processedUrl = processUrlPath(url)
+
+  // 缓存处理后的URL
+  urlCache.set(cacheKey, processedUrl)
+  return processedUrl
+}
+
+/**
+ * 处理URL路径，去除重复段
+ * @param url 原始URL对象
+ * @returns 处理后的URL对象
+ */
+function processUrlPath(url: URL): URL {
+  // 使用统一的路径去重函数
+  const cleanedPath = removeDuplicatePathSegments(url.pathname)
+
+  // 创建新的URL对象
+  const processedUrl = new URL(url.toString())
+  processedUrl.pathname = cleanedPath
+  processedUrl.hash = '' // 移除hash用于缓存
+
+  return processedUrl
+}
+
+/**
+ * 清空URL缓存
+ */
+export function clearUrlCache(): void {
+  urlCache.clear()
+}
+
+/**
+ * 获取URL缓存统计信息
+ */
+export function getUrlCacheStats(): any {
+  return urlCache.getStats()
+}
+
 export const QUARTZ = "quartz"
 
 /// Utility type to simulate nominal types in TypeScript
@@ -110,17 +282,57 @@ export function transformInternalLink(link: string): RelativeURL {
 
 // from micromorph/src/utils.ts
 // https://github.com/natemoo-re/micromorph/blob/main/src/utils.ts#L5
+/**
+ * 重新设置HTML元素的属性URL，避免重复路径
+ * @param el HTML元素
+ * @param attr 属性名（href或src）
+ * @param newBase 新的基础URL
+ */
 const _rebaseHtmlElement = (el: Element, attr: string, newBase: string | URL) => {
-  const rebased = new URL(el.getAttribute(attr)!, newBase)
-  el.setAttribute(attr, rebased.pathname + rebased.hash)
+  const originalValue = el.getAttribute(attr)
+  if (!originalValue) return
+
+  try {
+    const rebased = new URL(originalValue, newBase)
+    // 使用pathname而不是完整URL，避免重复路径问题
+    let finalPath = rebased.pathname
+
+    // 使用统一的路径去重逻辑
+    finalPath = removeDuplicatePathSegments(finalPath)
+    el.setAttribute(attr, finalPath + (rebased.hash || ''))
+  } catch (error) {
+    console.warn(`Failed to rebase ${attr} for element:`, error)
+  }
 }
+
+/**
+ * 标准化HTML文档中的相对URL，防止重复处理
+ * @param el HTML元素或文档
+ * @param destination 目标URL
+ */
 export function normalizeRelativeURLs(el: Element | Document, destination: string | URL) {
+  // 检查是否已经处理过，避免重复标准化
+  const processedAttr = 'data-urls-normalized'
+  if (el instanceof Element && el.hasAttribute(processedAttr)) {
+    return
+  }
+  if (el instanceof Document && el.documentElement?.hasAttribute(processedAttr)) {
+    return
+  }
+
   el.querySelectorAll('[href=""], [href^="./"], [href^="../"]').forEach((item) =>
     _rebaseHtmlElement(item, "href", destination),
   )
   el.querySelectorAll('[src=""], [src^="./"], [src^="../"]').forEach((item) =>
     _rebaseHtmlElement(item, "src", destination),
   )
+
+  // 标记为已处理
+  if (el instanceof Element) {
+    el.setAttribute(processedAttr, 'true')
+  } else if (el instanceof Document && el.documentElement) {
+    el.documentElement.setAttribute(processedAttr, 'true')
+  }
 }
 
 const _rebaseHastElement = (
@@ -156,9 +368,9 @@ export function normalizeHastElement(rawEl: HastElement, curBase: FullSlug, newB
 export function pathToRoot(slug: FullSlug): RelativeURL {
   let rootPath = slug
     .split("/")
-    .filter((x) => x !== "")
+    .filter((x: string) => x !== "")
     .slice(0, -1)
-    .map((_) => "..")
+    .map((_: string) => "..")
     .join("/")
 
   if (rootPath.length === 0) {

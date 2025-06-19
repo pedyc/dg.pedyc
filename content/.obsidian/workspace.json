@@ -17,7 +17,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "PARA/20-AREAS/08知识管理/卡片盒笔记法实施工作流.md",
+                    "file": "Diary/2025-06-19.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -32,7 +32,7 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "卡片盒笔记法实施工作流"
+                  "title": "2025-06-19"
                 }
               }
             ]
@@ -74,13 +74,13 @@
                         "state": {
                           "type": "outline",
                           "state": {
-                            "file": "PARA/20-AREAS/08知识管理/卡片盒笔记法实施工作流.md",
+                            "file": "Diary/2025-06-19.md",
                             "followCursor": false,
                             "showSearch": false,
                             "searchQuery": ""
                           },
                           "icon": "lucide-list",
-                          "title": "Outline of 卡片盒笔记法实施工作流"
+                          "title": "Outline of 2025-06-19"
                         }
                       }
                     ]
@@ -96,7 +96,7 @@
                         "state": {
                           "type": "localgraph",
                           "state": {
-                            "file": "PARA/20-AREAS/08知识管理/卡片盒笔记法实施工作流.md",
+                            "file": "Diary/2025-06-19.md",
                             "options": {
                               "collapse-filter": true,
                               "search": "",
@@ -124,7 +124,7 @@
                             }
                           },
                           "icon": "lucide-git-fork",
-                          "title": "Graph of 卡片盒笔记法实施工作流"
+                          "title": "Graph of 2025-06-19"
                         }
                       }
                     ]
@@ -317,8 +317,12 @@
   },
   "active": "5161891edc96f818",
   "lastOpenFiles": [
+    "PARA/30-RESOURCES/项目矩阵/dg.pedyc.md",
+    "Diary/_resources/2025-06-19",
+    "Diary/2025-06-19.md",
     "Diary/2025-06-18.md",
     "PARA/20-AREAS/08知识管理/知识管理概述.md",
+    "PARA/20-AREAS/08知识管理/卡片盒笔记法实施工作流.md",
     "PARA/20-AREAS/08知识管理/知识管理核心原则.md",
     "PARA/40-ARCHIVES/数字花园概述.md",
     "index.md",
@@ -341,9 +345,6 @@
     "PARA/20-AREAS/02前端/如何实现响应式布局，以适应不同屏幕尺寸的设备？.md",
     "PARA/20-AREAS/02前端/如何解决不同浏览器对 CSS 属性的支持差异？.md",
     "PARA/20-AREAS/02前端/浏览器.md",
-    "PARA/20-AREAS/02前端/Webpack.md",
-    "PARA/30-RESOURCES/面试真题/你了解哪些构建优化手段？如何提升构建速度和最终产物体积？.md",
-    "PARA/30-RESOURCES/面试真题/FAQ-构建打包.md",
     "SimpRead/backup/simpread_config@20250616174335.json",
     "PARA/20-AREAS/02前端/_resources",
     "_resources/sw-lifecycle.svg",
@@ -356,7 +357,6 @@
     "PARA/10-PROJECTS/_resources",
     "PARA/20-AREAS/00看板/02前端领域看板.excalidraw.svg",
     "PARA/20-AREAS/08知识管理/_resources/知识内化",
-    "PARA/20-AREAS/02前端/_resources/0200前端",
     "_resources/webkit-main-flow-b779d50c0cf28_856.png",
     "_resources/browser-components-9cd8ff834cc9c_856.png",
     "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否/aa39b161b5580788f4015aa7e97abe2c_MD5.jpg",

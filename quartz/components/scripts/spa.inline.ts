@@ -1,6 +1,10 @@
 import micromorph from "micromorph"
 import { FullSlug, RelativeURL, getFullSlug, normalizeRelativeURLs } from "../../util/path"
-import { fetchCanonical } from "./util"
+import { fetchCanonical } from "./utils/util"
+import { getContentUrl, clearUrlCache } from "../../util/path"
+
+// 清理URL处理器缓存以确保修复后的逻辑生效
+clearUrlCache()
 
 // adapted from `micromorph`
 // https://github.com/natemoo-re/micromorph
@@ -14,7 +18,7 @@ const isLocalUrl = (href: string) => {
     if (window.location.origin === url.origin) {
       return true
     }
-  } catch (e) {}
+  } catch (e) { }
   return false
 }
 
@@ -35,6 +39,10 @@ const getOpts = ({ target }: Event): { url: URL; scroll?: boolean } | undefined 
   return { url: new URL(href), scroll: "routerNoscroll" in a.dataset ? false : undefined }
 }
 
+/**
+ * 触发导航事件通知
+ * @param url 导航目标URL
+ */
 function notifyNav(url: FullSlug) {
   const event: CustomEventMap["nav"] = new CustomEvent("nav", { detail: { url } })
   document.dispatchEvent(event)
@@ -42,7 +50,14 @@ function notifyNav(url: FullSlug) {
 
 const cleanupFns: Set<(...args: any[]) => void> = new Set()
 window.addCleanup = (fn) => cleanupFns.add(fn)
+window.cleanup = () => {
+  cleanupFns.forEach((fn) => fn())
+  cleanupFns.clear()
+}
 
+/**
+ * 显示导航加载进度条
+ */
 function startLoading() {
   const loadingBar = document.createElement("div")
   loadingBar.className = "navigation-progress"
@@ -57,14 +72,34 @@ function startLoading() {
 }
 
 let isNavigating = false
-let p: DOMParser
+let domParser: DOMParser | null = null
+
+/**
+ * 获取DOM解析器实例（懒加载）
+ * @returns DOMParser实例
+ */
+function getDOMParser(): DOMParser {
+  if (!domParser) {
+    domParser = new DOMParser()
+  }
+  return domParser
+}
+
+
+
+/**
+ * 内部导航实现函数
+ * @param url 目标URL
+ * @param isBack 是否为后退操作（影响缓存策略和历史记录）
+ */
 async function _navigate(url: URL, isBack: boolean = false) {
   isNavigating = true
   startLoading()
-  p = p || new DOMParser()
+  const parser = getDOMParser()
 
-  // 构建 sessionStorage 的键
-  const cacheKey = url.toString()
+  // 使用统一的URL处理函数确保与popover系统缓存键一致
+  const processedUrl = getContentUrl(url.toString())
+  const cacheKey = processedUrl.toString()
   let contents: string | undefined | null = null
 
   // 尝试从 sessionStorage 获取缓存
@@ -75,7 +110,7 @@ async function _navigate(url: URL, isBack: boolean = false) {
 
   // 如果没有缓存，则发起网络请求
   if (contents === null) {
-    contents = await fetchCanonical(url)
+    contents = await fetchCanonical(processedUrl)
       .then((res) => {
         const contentType = res.headers.get("content-type")
         if (contentType?.startsWith("text/html")) {
@@ -112,8 +147,8 @@ async function _navigate(url: URL, isBack: boolean = false) {
   cleanupFns.forEach((fn) => fn())
   cleanupFns.clear()
 
-  const html = p.parseFromString(contents, "text/html")
-  normalizeRelativeURLs(html, url)
+  const html = parser.parseFromString(contents, "text/html")
+  normalizeRelativeURLs(html, processedUrl)
 
   let title = html.querySelector("title")?.textContent
   if (title) {
@@ -149,7 +184,8 @@ async function _navigate(url: URL, isBack: boolean = false) {
 
   // delay setting the url until now
   // at this point everything is loaded so changing the url should resolve to the correct addresses
-  if (!isBack) {
+  // 只有在非回退操作且不是同页面导航时才添加历史记录，避免重复的历史记录条目
+  if (!isBack && !isSamePage(url)) {
     history.pushState({}, "", url)
   }
 
@@ -157,13 +193,23 @@ async function _navigate(url: URL, isBack: boolean = false) {
   delete announcer.dataset.persist
 }
 
+/**
+ * 执行SPA导航
+ * @param url 目标URL
+ * @param isBack 是否为后退操作
+ */
 async function navigate(url: URL, isBack: boolean = false) {
   if (isNavigating) return
   isNavigating = true
   try {
     await _navigate(url, isBack)
-  } catch (e) {
-    console.error(e)
+  } catch (error) {
+    console.error('SPA Navigation failed:', {
+      url: url.toString(),
+      error: error instanceof Error ? error.message : String(error),
+      timestamp: new Date().toISOString(),
+      isBack
+    })
     window.location.assign(url)
   } finally {
     isNavigating = false
@@ -172,6 +218,10 @@ async function navigate(url: URL, isBack: boolean = false) {
 
 window.spaNavigate = navigate
 
+/**
+ * 创建并初始化SPA路由器
+ * @returns Router实例
+ */
 function createRouter() {
   if (typeof window !== "undefined") {
     window.addEventListener("click", async (event) => {
@@ -183,6 +233,8 @@ function createRouter() {
       if (isSamePage(url) && url.hash) {
         const el = document.getElementById(decodeURIComponent(url.hash.substring(1)))
         el?.scrollIntoView()
+        // 对于同页面的hash跳转，使用 pushState 创建正常的历史记录
+        // 这样用户可以正常使用浏览器的前进后退功能
         history.pushState({}, "", url)
         return
       }
@@ -190,11 +242,19 @@ function createRouter() {
       navigate(url, false)
     })
 
-    window.addEventListener("popstate", (event) => {
-      const { url } = getOpts(event) ?? {}
-      if (window.location.hash && window.location.pathname === url?.pathname) return
-      navigate(new URL(window.location.toString()), true)
-      return
+    window.addEventListener("popstate", () => {
+      // 对于 popstate 事件，直接使用当前 window.location
+      const currentUrl = new URL(window.location.toString())
+
+      // 如果是同页面的 hash 变化，只需要滚动，不需要重新导航
+      if (currentUrl.hash) {
+        const el = document.getElementById(decodeURIComponent(currentUrl.hash.substring(1)))
+        el?.scrollIntoView()
+        return
+      }
+
+      // 只有在真正需要加载新内容时才进行导航
+      navigate(currentUrl, true)
     })
   }
 

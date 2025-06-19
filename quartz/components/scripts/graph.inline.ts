@@ -16,8 +16,9 @@ import {
 } from "d3"
 import { Text, Graphics, Application, Container, Circle } from "pixi.js"
 import { Group as TweenGroup, Tween as Tweened } from "@tweenjs/tween.js"
-import { registerEscapeHandler, removeAllChildren } from "./util"
+import { registerEscapeHandler, removeAllChildren } from "./utils/util"
 import { FullSlug, SimpleSlug, getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
+import { CacheKeyGenerator } from "./config/cache-config"
 import { D3Config } from "../Graph"
 
 type GraphicsInfo = {
@@ -52,7 +53,8 @@ type NodeRenderData = GraphicsInfo & {
   label: Text
 }
 
-const localStorageKey = "graph-visited"
+const localStorageKey = CacheKeyGenerator.user('graph-visited', 'navigation_history')
+
 function getVisited(): Set<SimpleSlug> {
   return new Set(JSON.parse(localStorage.getItem(localStorageKey) ?? "[]"))
 }
@@ -668,11 +670,11 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
  * 会查找图谱容器并调用 renderGraph。
  */
 async function initializeOrReinitializeGraph() {
-  // 假设图谱的容器元素有一个特定的 data 属性或者 ID，例如 'graph-canvas'
-  // 请根据您的实际 HTML 结构调整选择器
+  // 查找图谱容器元素
   const graphElement =
-    (document.getElementById("graph-canvas") as HTMLElement) ??
-    document.querySelector<HTMLElement>('[data-el="graph-canvas"]')
+    document.querySelector<HTMLElement>('.graph-container') ??
+    document.querySelector<HTMLElement>('.global-graph-container')
+
   if (graphElement) {
     const currentFullSlug = getFullSlug(window) // 获取当前页面的 slug
     await renderGraph(graphElement, currentFullSlug)

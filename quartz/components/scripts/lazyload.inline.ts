@@ -1,3 +1,5 @@
+import { CacheKeyGenerator } from "./config/cache-config"
+
 export interface LazyloadConfig {
   preloadMargin: string
   maxConcurrent: number
@@ -28,7 +30,8 @@ function initializeLazyLoading() {
         const src = img.dataset.src || img.src
 
         // 优化1：添加缓存检查
-        if (loadedCache.has(src)) {
+        const cacheKey = CacheKeyGenerator.system(src, 'image_loaded')
+        if (loadedCache.has(cacheKey)) {
           observer.unobserve(img)
           return
         }
@@ -74,7 +77,8 @@ function initializeLazyLoading() {
 
   function loadImage(img: HTMLImageElement) {
     const src = img.dataset.src || img.src
-    if (loadedCache.has(src)) {
+    const cacheKey = CacheKeyGenerator.system(src, 'image_loaded')
+    if (loadedCache.has(cacheKey)) {
       activeloads--
       return scheduleLoading()
     }
@@ -98,7 +102,7 @@ function initializeLazyLoading() {
       const onLoad = () => {
         clearTimeout(timeout)
         console.log("Image loaded:", src)
-        loadedCache.add(src)
+        loadedCache.add(cacheKey)
 
         // 确保类名正确添加
         img.classList.remove("loading")

@@ -101,7 +101,7 @@ export class PreloadManager {
       return true
     } catch (error) {
       PopoverErrorHandler.handleError(error as Error, 'Preloading link content', cacheKey)
-      failedLinks.add(cacheKey)
+      FailedLinksManager.addFailedLink(cacheKey) // 使用 FailedLinksManager 持久化失败链接
       return false
     } finally {
       this.currentPreloads--

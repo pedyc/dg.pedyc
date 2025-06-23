@@ -1,10 +1,11 @@
-import { PopoverConfig } from './config';
-import { PopoverError } from './error-handler';
-import { normalizeRelativeURLs, removeDuplicatePathSegments } from '../../../util/path';
-import { updatePageHead } from '../utils/html-utils';
+import { PopoverConfig } from "./config"
+import { PopoverError } from "./error-handler"
+import { normalizeRelativeURLs, removeDuplicatePathSegments } from "../../../util/path"
+import { updatePageHead } from "../utils/html-utils"
+import { UnifiedStorageManager } from "../managers/UnifiedStorageManager"
 
 // 全局解析器实例
-const p = new DOMParser();
+const p = new DOMParser()
 
 /**
  * HTML内容处理器
@@ -18,38 +19,45 @@ export class HTMLContentProcessor {
    * @param cacheKey - 缓存键
    * @returns 处理后的文档片段
    */
-  static async processContent(contents: string, normalizeUrl: URL, cacheKey: string): Promise<DocumentFragment> {
-    if (!contents || typeof contents !== 'string') {
-      throw new PopoverError('Invalid HTML contents provided', cacheKey)
+  static async processContent(
+    contents: string,
+    normalizeUrl: URL,
+    cacheKey: string,
+    storeInSession: boolean = true,
+  ): Promise<DocumentFragment> {
+    if (!contents || typeof contents !== "string") {
+      throw new PopoverError("Invalid HTML contents provided", cacheKey)
     }
 
     const html = p.parseFromString(contents, "text/html")
 
-    // 将原始 HTML 文本存入 sessionStorage，用于页面跳转时复用
-    try {
-      sessionStorage.setItem(cacheKey, contents)
-    } catch (error) {
-      console.warn('Failed to cache processed content:', error)
+    if (storeInSession) {
+      try {
+        const storageManager = new UnifiedStorageManager()
+        await storageManager.setSessionItem(cacheKey, contents)
+      } catch (error) {
+        console.warn("Failed to cache processed content:", error)
+      }
     }
 
-    // 直接使用传入的normalizeUrl，避免重复处理
-    normalizeRelativeURLs(html, normalizeUrl);
-
-    // 额外检查和清理可能的重复路径
-    this.cleanupDuplicatePaths(html);
+    normalizeRelativeURLs(html, normalizeUrl)
+    this.cleanupDuplicatePaths(html)
     html.querySelectorAll("[id]").forEach((el) => {
       el.id = `${PopoverConfig.POPOVER_INTERNAL_PREFIX}${el.id}`
     })
 
-    const popoverHintElements = [...html.getElementsByClassName("popover-hint")]
     const fragment = document.createDocumentFragment()
+    const popoverHintElements = [...html.getElementsByClassName("popover-hint")]
 
     if (popoverHintElements.length > 0) {
       popoverHintElements.forEach((el) => fragment.appendChild(el.cloneNode(true)))
     } else if (html.body) {
+      // 使用 DocumentFragment 批量添加
+      const bodyFragment = document.createDocumentFragment()
       Array.from(html.body.children).forEach((child) =>
-        fragment.appendChild(child.cloneNode(true))
+        bodyFragment.appendChild(child.cloneNode(true)),
       )
+      fragment.appendChild(bodyFragment)
     }
 
     return fragment
@@ -62,36 +70,8 @@ export class HTMLContentProcessor {
    * @returns 处理后的DocumentFragment
    */
   static async parseStoredContent(contents: string, normalizeUrl: URL): Promise<DocumentFragment> {
-    if (!contents || typeof contents !== 'string') {
-      throw new PopoverError('Invalid HTML contents provided for parsing')
-    }
-
-    const html = p.parseFromString(contents, "text/html")
-
-    // 注意：这里不再调用sessionStorage.setItem，因为内容已经存储过了
-
-    // 直接使用传入的normalizeUrl，避免重复的URL处理
-    // 这样可以保留原始URL的hash等信息，确保相对链接正确解析
-    normalizeRelativeURLs(html, normalizeUrl);
-
-    // 额外检查和清理可能的重复路径
-    this.cleanupDuplicatePaths(html);
-    html.querySelectorAll("[id]").forEach((el) => {
-      el.id = `${PopoverConfig.POPOVER_INTERNAL_PREFIX}${el.id}`
-    })
-
-    const popoverHintElements = [...html.getElementsByClassName("popover-hint")]
-    const fragment = document.createDocumentFragment()
-
-    if (popoverHintElements.length > 0) {
-      popoverHintElements.forEach((el) => fragment.appendChild(el.cloneNode(true)))
-    } else if (html.body) {
-      Array.from(html.body.children).forEach((child) =>
-        fragment.appendChild(child.cloneNode(true))
-      )
-    }
-
-    return fragment
+    // 调用 processContent 并禁用 sessionStorage 存储
+    return this.processContent(contents, normalizeUrl, "", false)
   }
 
   /**
@@ -108,24 +88,24 @@ export class HTMLContentProcessor {
    */
   private static cleanupDuplicatePaths(html: Document): void {
     // 处理所有href属性
-    html.querySelectorAll('[href]').forEach((element) => {
-      const href = element.getAttribute('href')
-      if (href && href.startsWith('/')) {
+    html.querySelectorAll("[href]").forEach((element) => {
+      const href = element.getAttribute("href")
+      if (href && href.startsWith("/")) {
         const cleanedHref = removeDuplicatePathSegments(href)
         if (cleanedHref !== href) {
-          element.setAttribute('href', cleanedHref)
+          element.setAttribute("href", cleanedHref)
           console.log(`[HTMLProcessor] Cleaned duplicate path: ${href} -> ${cleanedHref}`)
         }
       }
     })
 
     // 处理所有src属性
-    html.querySelectorAll('[src]').forEach((element) => {
-      const src = element.getAttribute('src')
-      if (src && src.startsWith('/')) {
+    html.querySelectorAll("[src]").forEach((element) => {
+      const src = element.getAttribute("src")
+      if (src && src.startsWith("/")) {
         const cleanedSrc = removeDuplicatePathSegments(src)
         if (cleanedSrc !== src) {
-          element.setAttribute('src', cleanedSrc)
+          element.setAttribute("src", cleanedSrc)
           console.log(`[HTMLProcessor] Cleaned duplicate path: ${src} -> ${cleanedSrc}`)
         }
       }
@@ -139,10 +119,8 @@ export class HTMLContentProcessor {
    * @param newDoc 新文档
    */
   static updatePageHead(newDoc: Document): void {
-    updatePageHead(newDoc); // Call imported function
+    updatePageHead(newDoc) // Call imported function
   }
-
-
 
   /**
    * 渲染弹窗内容
@@ -151,59 +129,61 @@ export class HTMLContentProcessor {
    */
   static renderPopoverContent(container: HTMLElement, cachedItem: any): void {
     if (!cachedItem || !cachedItem.data) {
-      this.renderNotFoundContent(container, 'Unknown')
+      HTMLContentProcessor.renderNotFoundContent(container, "Unknown")
       return
     }
 
     container.dataset.contentType = cachedItem.type
 
     switch (cachedItem.type) {
-      case 'image':
-        const img = document.createElement('img')
+      case "image":
+        const img = document.createElement("img")
         img.src = cachedItem.data as string
         img.alt = new URL(cachedItem.data as string).pathname
         container.appendChild(img)
         break
-      case 'pdf':
-        const pdf = document.createElement('iframe')
+      case "pdf":
+        const pdf = document.createElement("iframe")
         pdf.src = cachedItem.data as string
         container.appendChild(pdf)
         break
-      case 'html':
+      case "html":
         // 检查 cachedItem.data 的类型并相应处理
-        if (cachedItem.data && typeof cachedItem.data.cloneNode === 'function') {
+        if (cachedItem.data && typeof cachedItem.data.cloneNode === "function") {
           // 如果是 DocumentFragment，直接克隆
           container.appendChild((cachedItem.data as DocumentFragment).cloneNode(true))
-        } else if (typeof cachedItem.data === 'string') {
+        } else if (typeof cachedItem.data === "string") {
           // 如果是 HTML 字符串，使用与 parseStoredContent 相同的逻辑处理
           try {
             const html = p.parseFromString(cachedItem.data as string, "text/html")
-            
+            const fragment = document.createDocumentFragment()
+
             // 查找 popover-hint 元素，如果没有则使用 body 内容
             const popoverHintElements = [...html.getElementsByClassName("popover-hint")]
-            
+
             if (popoverHintElements.length > 0) {
               // 如果有 popover-hint 元素，只使用这些元素
               popoverHintElements.forEach((el) => {
-                container.appendChild(el.cloneNode(true))
+                fragment.appendChild(el.cloneNode(true))
               })
             } else if (html.body) {
               // 如果没有 popover-hint 元素，使用 body 的所有子元素
               Array.from(html.body.children).forEach((child) => {
-                container.appendChild(child.cloneNode(true))
+                fragment.appendChild(child.cloneNode(true))
               })
             }
+            container.appendChild(fragment)
           } catch (error) {
-            console.warn('Failed to parse HTML string:', error)
-            this.renderNotFoundContent(container, 'Failed to parse content')
+            console.warn("Failed to parse HTML string:", error)
+            HTMLContentProcessor.renderNotFoundContent(container, "Failed to parse content")
           }
         } else {
-          console.warn('Invalid content data type:', typeof cachedItem.data, cachedItem.data)
-          this.renderNotFoundContent(container, 'Invalid content format')
+          console.warn("Invalid content data type:", typeof cachedItem.data, cachedItem.data)
+          HTMLContentProcessor.renderNotFoundContent(container, "Invalid content format")
         }
         break
       default:
-        this.renderNotFoundContent(container, 'Unknown content type')
+        HTMLContentProcessor.renderNotFoundContent(container, "Unknown content type")
         break
     }
   }
@@ -214,14 +194,12 @@ export class HTMLContentProcessor {
    * @param url 失败的URL
    */
   static renderNotFoundContent(container: HTMLElement, url: string): void {
-    const errorDiv = document.createElement('div')
-    errorDiv.className = 'popover-error'
+    const errorDiv = document.createElement("div")
+    errorDiv.className = "popover-error"
     errorDiv.innerHTML = `
       <p>无法加载内容</p>
       <p class="popover-error-url">${url}</p>
     `
     container.appendChild(errorDiv)
   }
-
-
 }

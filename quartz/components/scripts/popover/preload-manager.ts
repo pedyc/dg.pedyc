@@ -1,6 +1,15 @@
-import { PopoverConfig } from './config'
-import { PopoverErrorHandler } from './error-handler'
-import { getContentUrl } from '../../../util/path'
+/**
+ * 预加载管理器模块
+ */
+import { OptimizedCacheManager } from "../managers/OptimizedCacheManager"
+import { getCacheConfig } from "../config/cache-config"
+import { ICleanupManager } from "../managers/CleanupManager"
+import { globalResourceManager } from "../managers/index"
+import { PopoverConfig } from "./config"
+import { PopoverErrorHandler } from "./error-handler"
+import { getContentUrl } from "../../../util/path"
+
+const linkValidityCache = new OptimizedCacheManager<boolean>(getCacheConfig("LINK_VALIDITY_CACHE"))
 
 // 类型定义
 
@@ -12,17 +21,18 @@ interface PreloadQueueItem {
 
 // 全局状态
 const preloadingInProgress = new Set<string>()
-const failedLinks = new Set<string>()
 
 // 预加载缓存（从popover.inline导入）
-import { preloadedCache } from './cache'
-import { FailedLinksManager } from './failed-links-manager'
+import { preloadedCache } from "./cache"
+import { FailedLinksManager } from "./failed-links-manager"
+import { HTMLContentProcessor } from "./html-processor"
 
 /**
  * 预加载管理器
  * 管理链接内容的预加载，包括并发控制和队列管理
+ * 实现ICleanupManager接口，统一资源管理
  */
-export class PreloadManager {
+export class PreloadManager implements ICleanupManager {
   private static readonly MAX_CONCURRENT_PRELOADS = PopoverConfig.MAX_CONCURRENT_PRELOADS
   private static currentPreloads = 0
   private static preloadQueue: PreloadQueueItem[] = []
@@ -43,7 +53,7 @@ export class PreloadManager {
     }
 
     // 检查是否为失败链接
-    if (failedLinks.has(cacheKey)) {
+    if (FailedLinksManager.isFailedLink(cacheKey)) {
       return
     }
 
@@ -63,9 +73,43 @@ export class PreloadManager {
    * @param priority 优先级
    * @returns Promise<boolean> 是否成功预加载
    */
+  private static async isLinkValid(url: URL): Promise<boolean> {
+    const cacheKey = url.toString()
+
+    if (linkValidityCache.has(cacheKey)) {
+      return linkValidityCache.get(cacheKey) || false
+    }
+
+    try {
+      const controller = new AbortController()
+      const timeoutId = globalResourceManager.setTimeout(() => controller.abort(), 3000)
+
+      const response = await fetch(url.toString(), {
+        method: "HEAD",
+        signal: controller.signal,
+      })
+
+      clearTimeout(timeoutId)
+
+      const isValid = response.ok
+      linkValidityCache.set(cacheKey, isValid)
+
+      return isValid
+    } catch (error) {
+      linkValidityCache.set(cacheKey, false, 30 * 60 * 1000) // 30-minute TTL for failed links
+      return false
+    }
+  }
+
   private static async executePreload(href: string, _priority: number): Promise<boolean> {
     const contentUrl = getContentUrl(href)
     const cacheKey = contentUrl.toString()
+
+    // First, check if the link is valid
+    if (!(await this.isLinkValid(contentUrl))) {
+      FailedLinksManager.addFailedLink(cacheKey)
+      return false
+    }
 
     this.currentPreloads++
     preloadingInProgress.add(cacheKey)
@@ -73,34 +117,40 @@ export class PreloadManager {
     try {
       const response = await fetch(contentUrl.toString(), {
         headers: {
-          'X-Requested-With': 'XMLHttpRequest', // To identify AJAX requests on server-side if needed
+          "X-Requested-With": "XMLHttpRequest", // To identify AJAX requests on server-side if needed
         },
-      });
+      })
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`)
       }
 
-      const contentType = response.headers.get('content-type') || ''
+      const contentType = response.headers.get("content-type") || ""
 
-      if (contentType.includes('text/html')) {
+      if (contentType.includes("text/html")) {
         const html = await response.text()
-        preloadedCache.set(cacheKey, html, PopoverConfig.CACHE_TTL)
-      } else if (contentType.includes('image/')) {
+        const content = await HTMLContentProcessor.processContent(html, contentUrl, cacheKey)
+
+        if (!content.hasChildNodes()) {
+          throw new Error("无效的HTML内容：处理后内容为空")
+        }
+
+        // 将 DocumentFragment 转换为 HTML 字符串
+        const serializer = new XMLSerializer()
+        const htmlString = serializer.serializeToString(content)
+
+        preloadedCache.set(cacheKey, htmlString, PopoverConfig.CACHE_TTL)
+      } else if (contentType.includes("image/")) {
         preloadedCache.set(cacheKey, contentUrl.toString(), PopoverConfig.CACHE_TTL)
-      } else if (contentType.includes('application/pdf')) {
+      } else if (contentType.includes("application/pdf")) {
         preloadedCache.set(cacheKey, contentUrl.toString(), PopoverConfig.CACHE_TTL)
       } else {
         throw new Error(`Unsupported content type: ${contentType}`)
       }
       // 如果之前被标记为失败，现在成功了，就从失败列表中移除
-      if (failedLinks.has(cacheKey)) {
-        failedLinks.delete(cacheKey)
-      }
-      // 同时通知 FailedLinksManager 移除该链接
       FailedLinksManager.removeFailedLink(cacheKey)
       return true
     } catch (error) {
-      PopoverErrorHandler.handleError(error as Error, 'Preloading link content', cacheKey)
+      PopoverErrorHandler.handleError(error as Error, "Preloading link content", cacheKey)
       FailedLinksManager.addFailedLink(cacheKey) // 使用 FailedLinksManager 持久化失败链接
       return false
     } finally {
@@ -123,7 +173,14 @@ export class PreloadManager {
   }
 
   /**
-   * 清理预加载状态
+   * 清理预加载状态 - 实现ICleanupManager接口
+   */
+  cleanup(): void {
+    PreloadManager.cleanup()
+  }
+
+  /**
+   * 静态清理方法
    */
   static cleanup(): void {
     preloadingInProgress.clear()
@@ -144,10 +201,10 @@ export class PreloadManager {
       currentPreloads: this.currentPreloads,
       queueLength: this.preloadQueue.length,
       preloadingCount: preloadingInProgress.size,
-      failedLinksCount: failedLinks.size
+      failedLinksCount: FailedLinksManager.getStats().failedLinksCount,
     }
   }
 }
 
 // 导出全局状态供外部访问
-export { preloadingInProgress, failedLinks }
+export { preloadingInProgress }

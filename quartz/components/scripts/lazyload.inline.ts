@@ -30,7 +30,7 @@ function initializeLazyLoading() {
         const src = img.dataset.src || img.src
 
         // 优化1：添加缓存检查
-        const cacheKey = CacheKeyGenerator.system(src, 'image_loaded')
+        const cacheKey = CacheKeyGenerator.system(src, "image_loaded")
         if (loadedCache.has(cacheKey)) {
           observer.unobserve(img)
           return
@@ -77,7 +77,7 @@ function initializeLazyLoading() {
 
   function loadImage(img: HTMLImageElement) {
     const src = img.dataset.src || img.src
-    const cacheKey = CacheKeyGenerator.system(src, 'image_loaded')
+    const cacheKey = CacheKeyGenerator.system(src, "image_loaded")
     if (loadedCache.has(cacheKey)) {
       activeloads--
       return scheduleLoading()

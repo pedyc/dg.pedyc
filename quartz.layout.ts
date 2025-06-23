@@ -52,8 +52,8 @@ export const defaultContentPageLayout: PageLayout = {
           Component: Component.Darkmode(), // Darkmode keeps its natural size
         },
         {
-          Component: Component.ReaderMode()
-        }
+          Component: Component.ReaderMode(),
+        },
       ],
     }),
     Component.Explorer(),

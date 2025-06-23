@@ -10,12 +10,11 @@ import { GlobalCacheConfig, CacheKeyGenerator } from "../components/scripts/conf
 // 使用统一的缓存配置
 const urlCacheConfig = GlobalCacheConfig.URL_CACHE
 const urlCache = new OptimizedCacheManager<URL>({
-  maxSize: urlCacheConfig.capacity,
+  capacity: urlCacheConfig.capacity,
   maxMemoryMB: 20,
-  defaultTTL: urlCacheConfig.ttl,
-  cleanupIntervalMs: 300000
+  ttl: urlCacheConfig.ttl,
+  cleanupIntervalMs: 300000,
 })
-
 
 /**
  * 移除路径中的重复段
@@ -26,20 +25,20 @@ export function removeDuplicatePathSegments(path: string): string {
   try {
     // 如果是完整URL，解析它；否则作为路径处理
     let pathname: string
-    let search = ''
-    let hash = ''
+    let search = ""
+    let hash = ""
 
-    if (path.startsWith('http') || path.startsWith('/')) {
-      if (path.startsWith('http')) {
+    if (path.startsWith("http") || path.startsWith("/")) {
+      if (path.startsWith("http")) {
         const url = new URL(path)
         pathname = url.pathname
         search = url.search
         hash = url.hash
       } else {
-        const parts = path.split('#')
+        const parts = path.split("#")
         const pathAndSearch = parts[0]
-        hash = parts[1] ? '#' + parts[1] : ''
-        const searchIndex = pathAndSearch.indexOf('?')
+        hash = parts[1] ? "#" + parts[1] : ""
+        const searchIndex = pathAndSearch.indexOf("?")
         if (searchIndex !== -1) {
           pathname = pathAndSearch.substring(0, searchIndex)
           search = pathAndSearch.substring(searchIndex)
@@ -51,14 +50,15 @@ export function removeDuplicatePathSegments(path: string): string {
       pathname = path
     }
 
-    const segments = pathname.split('/').filter(segment => segment.length > 0)
+    const segments = pathname.split("/").filter((segment) => segment.length > 0)
     const deduplicatedSegments: string[] = []
 
     for (let i = 0; i < segments.length; i++) {
       const segment = segments[i]
 
       // 检查连续重复
-      const isConsecutiveDuplicate = deduplicatedSegments.length > 0 &&
+      const isConsecutiveDuplicate =
+        deduplicatedSegments.length > 0 &&
         deduplicatedSegments[deduplicatedSegments.length - 1] === segment
 
       if (!isConsecutiveDuplicate) {
@@ -71,10 +71,10 @@ export function removeDuplicatePathSegments(path: string): string {
       }
     }
 
-    const cleanedPath = deduplicatedSegments.length > 0 ? '/' + deduplicatedSegments.join('/') : '/'
+    const cleanedPath = deduplicatedSegments.length > 0 ? "/" + deduplicatedSegments.join("/") : "/"
     return cleanedPath + search + hash
   } catch (error) {
-    console.warn('Failed to clean duplicate path segments:', error)
+    console.warn("Failed to clean duplicate path segments:", error)
     return path
   }
 }
@@ -157,7 +157,7 @@ function processUrlPath(url: URL): URL {
   // 创建新的URL对象
   const processedUrl = new URL(url.toString())
   processedUrl.pathname = cleanedPath
-  processedUrl.hash = '' // 移除hash用于缓存
+  processedUrl.hash = "" // 移除hash用于缓存
 
   return processedUrl
 }
@@ -299,7 +299,7 @@ const _rebaseHtmlElement = (el: Element, attr: string, newBase: string | URL) =>
 
     // 使用统一的路径去重逻辑
     finalPath = removeDuplicatePathSegments(finalPath)
-    el.setAttribute(attr, finalPath + (rebased.hash || ''))
+    el.setAttribute(attr, finalPath + (rebased.hash || ""))
   } catch (error) {
     console.warn(`Failed to rebase ${attr} for element:`, error)
   }
@@ -312,7 +312,7 @@ const _rebaseHtmlElement = (el: Element, attr: string, newBase: string | URL) =>
  */
 export function normalizeRelativeURLs(el: Element | Document, destination: string | URL) {
   // 检查是否已经处理过，避免重复标准化
-  const processedAttr = 'data-urls-normalized'
+  const processedAttr = "data-urls-normalized"
   if (el instanceof Element && el.hasAttribute(processedAttr)) {
     return
   }
@@ -329,9 +329,9 @@ export function normalizeRelativeURLs(el: Element | Document, destination: strin
 
   // 标记为已处理
   if (el instanceof Element) {
-    el.setAttribute(processedAttr, 'true')
+    el.setAttribute(processedAttr, "true")
   } else if (el instanceof Document && el.documentElement) {
-    el.documentElement.setAttribute(processedAttr, 'true')
+    el.documentElement.setAttribute(processedAttr, "true")
   }
 }
 

@@ -1,19 +1,25 @@
-import { getContentUrl } from '../../../util/path'
-import { FailedLinksManager } from './failed-links-manager'
-import { PreloadManager } from './preload-manager'
-import { PopoverErrorHandler } from './error-handler'
-import { isLinkValid } from '../utils/util'
-import { preloadedCache } from './cache'
-import { PopoverConfig } from './config'
+import { getContentUrl } from "../../../util/path"
+import { FailedLinksManager } from "./failed-links-manager"
+import { PreloadManager } from "./preload-manager"
+import { PopoverErrorHandler } from "./error-handler"
+import { ICleanupManager } from "../managers/CleanupManager"
+import { globalResourceManager } from "../managers/index"
+
+import { preloadedCache } from "./cache"
+import { PopoverConfig } from "./config"
 
 // 全局状态
 const linkCheckInProgress = new Set<string>()
-const elementMetadata = new WeakMap<HTMLElement, { lastInteraction: number; preloadPriority: number }>()
+const elementMetadata = new WeakMap<
+  HTMLElement,
+  { lastInteraction: number; preloadPriority: number }
+>()
 
 /**
  * 优化的视口预加载管理器
+ * 实现ICleanupManager接口，统一资源管理
  */
-export class ViewportPreloadManager {
+export class ViewportPreloadManager implements ICleanupManager {
   private static observer: IntersectionObserver | null = null
   private static observedLinks = new Set<HTMLAnchorElement>()
 
@@ -29,42 +35,46 @@ export class ViewportPreloadManager {
     }
 
     if (links.length === 0) {
-      console.debug('No internal links found for viewport preloading')
+      console.debug("No internal links found for viewport preloading")
       return
     }
 
-    this.observer = new IntersectionObserver(
-      async (entries, obs) => {
-        const visibleLinks = entries
-          .filter(entry => entry.isIntersecting)
-          .map(entry => entry.target as HTMLAnchorElement)
+    this.observer = globalResourceManager.registerIntersectionObserver(
+      new IntersectionObserver(
+        async (entries, obs) => {
+          const visibleLinks = entries
+            .filter((entry) => entry.isIntersecting)
+            .map((entry) => entry.target as HTMLAnchorElement)
 
-        if (visibleLinks.length > 0) {
-          try {
-            // 批量检查可见链接并获取成功预加载的数量
-            const preloadedCount = await this.batchCheckLinks(visibleLinks)
+          if (visibleLinks.length > 0) {
+            try {
+              // 批量检查可见链接并获取成功预加载的数量
+              const preloadedCount = await this.batchCheckLinks(visibleLinks)
 
-            // 监控缓存大小
-            const cacheSize = preloadedCache.getStats().size
-            if (cacheSize > PopoverConfig.CACHE_WARNING_THRESHOLD) {
-              console.warn(`[Popover] Viewport preload cache warning: ${cacheSize}/${PopoverConfig.CACHE_SIZE}`)
+              // 监控缓存大小
+              const cacheSize = preloadedCache.getStats().size
+              if (cacheSize > PopoverConfig.CACHE_WARNING_THRESHOLD) {
+                console.warn(
+                  `[Popover] Viewport preload cache warning: ${cacheSize}/${PopoverConfig.CACHE_SIZE}`,
+                )
+              }
+
+              if (preloadedCount > 0) {
+                console.debug(`Successfully preloaded ${preloadedCount} links from viewport`)
+              }
+            } catch (error) {
+              console.warn("Error in batch link checking:", error)
             }
 
-            if (preloadedCount > 0) {
-              console.debug(`Successfully preloaded ${preloadedCount} links from viewport`)
-            }
-          } catch (error) {
-            console.warn('Error in batch link checking:', error)
+            // 停止观察已处理的链接
+            visibleLinks.forEach((link) => obs.unobserve(link))
           }
-
-          // 停止观察已处理的链接
-          visibleLinks.forEach(link => obs.unobserve(link))
-        }
-      },
-      {
-        rootMargin: PopoverConfig.VIEWPORT_MARGIN,
-        threshold: PopoverConfig.INTERSECTION_THRESHOLD,
-      }
+        },
+        {
+          rootMargin: PopoverConfig.VIEWPORT_MARGIN,
+          threshold: PopoverConfig.INTERSECTION_THRESHOLD,
+        },
+      ),
     )
 
     links.forEach((link) => {
@@ -94,25 +104,24 @@ export class ViewportPreloadManager {
         cacheKey = contentUrl.toString()
 
         // 避免重复检查
-        if (FailedLinksManager.isFailedLink(cacheKey) || preloadedCache.has(cacheKey) || linkCheckInProgress.has(cacheKey)) {
+        if (
+          FailedLinksManager.isFailedLink(cacheKey) ||
+          preloadedCache.has(cacheKey) ||
+          linkCheckInProgress.has(cacheKey)
+        ) {
           return null
         }
 
         // 记录元素交互信息
         elementMetadata.set(link, {
           lastInteraction: Date.now(),
-          preloadPriority: 1
+          preloadPriority: 1,
         })
 
         linkCheckInProgress.add(cacheKey)
         try {
-          const isValid = await isLinkValid(contentUrl)
-          if (isValid) {
-            return contentUrl
-          } else {
-            FailedLinksManager.addFailedLink(cacheKey)
-            return null
-          }
+          // The link validity check is now handled by PreloadManager
+          return contentUrl
         } finally {
           linkCheckInProgress.delete(cacheKey)
         }
@@ -120,33 +129,40 @@ export class ViewportPreloadManager {
         if (cacheKey) {
           FailedLinksManager.addFailedLink(cacheKey)
         }
-        PopoverErrorHandler.handleError(
-          error as Error,
-          'ViewportPreloadManager.batchCheckLinks'
-        )
+        PopoverErrorHandler.handleError(error as Error, "ViewportPreloadManager.batchCheckLinks")
         return null
       }
     })
 
     const validUrls = (await Promise.allSettled(checkPromises))
-      .filter((result): result is PromiseFulfilledResult<URL> => 
-        result.status === 'fulfilled' && result.value !== null
+      .filter(
+        (result): result is PromiseFulfilledResult<URL> =>
+          result.status === "fulfilled" && result.value !== null,
       )
-      .map(result => result.value)
+      .map((result) => result.value)
 
     // 委托给PreloadManager进行实际预加载，避免重复逻辑
-    const preloadPromises = validUrls.map(url => 
-      PreloadManager.preloadLinkContent(url.toString())
+    const preloadPromises = validUrls.map((url) =>
+      PreloadManager.preloadLinkContent(url.toString()),
     )
 
     const preloadResults = await Promise.allSettled(preloadPromises)
-    const successfulPreloads = preloadResults.filter(result => result.status === 'fulfilled').length
+    const successfulPreloads = preloadResults.filter(
+      (result) => result.status === "fulfilled",
+    ).length
 
     return successfulPreloads
   }
 
   /**
-   * 清理资源
+   * 清理资源 - 实现ICleanupManager接口
+   */
+  cleanup(): void {
+    ViewportPreloadManager.cleanup()
+  }
+
+  /**
+   * 静态清理方法
    */
   static cleanup(): void {
     this.observer?.disconnect()
@@ -155,7 +171,7 @@ export class ViewportPreloadManager {
   }
 
   /**
-   * 获取统计信息
+   * 获取统计信息 - 实现ICleanupManager接口
    */
   static getStats(): {
     observedLinksCount: number
@@ -165,7 +181,7 @@ export class ViewportPreloadManager {
     return {
       observedLinksCount: this.observedLinks.size,
       linkCheckInProgressCount: linkCheckInProgress.size,
-      isObserverActive: this.observer !== null
+      isObserverActive: this.observer !== null,
     }
   }
 }

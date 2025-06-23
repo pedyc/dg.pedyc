@@ -33,11 +33,11 @@ export class GlobalCleanupManager {
    * 清理所有注册的管理器
    */
   static cleanupAll(): void {
-    this.managers.forEach(manager => {
+    this.managers.forEach((manager) => {
       try {
         manager.cleanup()
       } catch (error) {
-        console.error('Error during cleanup:', error)
+        console.error("Error during cleanup:", error)
       }
     })
   }

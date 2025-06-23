@@ -1,4 +1,5 @@
-import type { ICleanupManager } from './CleanupManager'
+import { GlobalCacheConfig, type CacheConfig } from "../config/cache-config"
+import { ICleanupManager } from "./CleanupManager"
 
 /**
  * 缓存项接口
@@ -10,17 +11,6 @@ export interface CachedItem<T> {
   readonly size: number
   readonly accessCount: number
   readonly type?: string
-}
-
-/**
- * 缓存配置接口
- */
-export interface CacheConfig {
-  readonly maxSize: number
-  readonly maxMemoryMB: number
-  readonly defaultTTL?: number
-  readonly cleanupIntervalMs?: number
-  readonly memoryThreshold?: number
 }
 
 /**
@@ -43,7 +33,7 @@ class LRUNode<T> {
     public key: string,
     public value: CachedItem<T>,
     public prev: LRUNode<T> | null = null,
-    public next: LRUNode<T> | null = null
+    public next: LRUNode<T> | null = null,
   ) {}
 }
 
@@ -57,8 +47,8 @@ class LRUCache<T> {
 
   constructor(private readonly capacity: number) {
     // 创建虚拟头尾节点
-    this.head = new LRUNode('__head__', {} as CachedItem<T>)
-    this.tail = new LRUNode('__tail__', {} as CachedItem<T>)
+    this.head = new LRUNode("__head__", {} as CachedItem<T>)
+    this.tail = new LRUNode("__tail__", {} as CachedItem<T>)
     this.head.next = this.tail
     this.tail.prev = this.head
   }
@@ -95,7 +85,7 @@ class LRUCache<T> {
   private removeTail(): LRUNode<T> | null {
     const lastNode = this.tail.prev!
     if (lastNode === this.head) return null
-    
+
     this.removeNode(lastNode)
     return lastNode
   }
@@ -106,7 +96,7 @@ class LRUCache<T> {
   get(key: string): CachedItem<T> | null {
     const node = this.cache.get(key)
     if (!node) return null
-    
+
     // 移动到头部表示最近访问
     this.moveToHead(node)
     return node.value
@@ -117,17 +107,17 @@ class LRUCache<T> {
    */
   set(key: string, value: CachedItem<T>): LRUNode<T> | null {
     const existingNode = this.cache.get(key)
-    
+
     if (existingNode) {
       // 更新现有节点
       existingNode.value = value
       this.moveToHead(existingNode)
       return null
     }
-    
+
     const newNode = new LRUNode(key, value)
     let evictedNode: LRUNode<T> | null = null
-    
+
     // 检查容量限制
     if (this.cache.size >= this.capacity) {
       evictedNode = this.removeTail()
@@ -135,10 +125,10 @@ class LRUCache<T> {
         this.cache.delete(evictedNode.key)
       }
     }
-    
+
     this.cache.set(key, newNode)
     this.addToHead(newNode)
-    
+
     return evictedNode
   }
 
@@ -148,7 +138,7 @@ class LRUCache<T> {
   delete(key: string): CachedItem<T> | null {
     const node = this.cache.get(key)
     if (!node) return null
-    
+
     this.removeNode(node)
     this.cache.delete(key)
     return node.value
@@ -188,7 +178,7 @@ class LRUCache<T> {
    * 获取所有值
    */
   values(): readonly CachedItem<T>[] {
-    return Array.from(this.cache.values()).map(node => node.value)
+    return Array.from(this.cache.values()).map((node) => node.value)
   }
 }
 
@@ -204,27 +194,39 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
   private totalRequests = 0
   private cleanupInterval: number | null = null
 
-  constructor(config: CacheConfig) {
+  constructor(config: Partial<CacheConfig>) {
+    const filteredConfig = Object.fromEntries(
+      Object.entries(config).filter(([, value]) => value !== undefined),
+    )
+
     this.config = {
-      maxSize: config.maxSize,
-      maxMemoryMB: config.maxMemoryMB,
-      cleanupIntervalMs: config.cleanupIntervalMs ?? 5 * 60 * 1000, // 5分钟
-      memoryThreshold: config.memoryThreshold ?? 0.8, // 80%
-      defaultTTL: config.defaultTTL ?? 30 * 60 * 1000 // 30分钟
-    }
-    
-    this.cache = new LRUCache<T>(this.config.maxSize)
+      capacity: GlobalCacheConfig.DEFAULT.capacity,
+      ttl: GlobalCacheConfig.DEFAULT.ttl,
+      maxMemoryMB: GlobalCacheConfig.DEFAULT.maxMemoryMB,
+      warningThreshold: GlobalCacheConfig.DEFAULT.warningThreshold,
+      description: GlobalCacheConfig.DEFAULT.description,
+      keyPrefix: GlobalCacheConfig.DEFAULT.keyPrefix,
+      cleanupIntervalMs: GlobalCacheConfig.DEFAULT.cleanupIntervalMs,
+      memoryThreshold: GlobalCacheConfig.DEFAULT.memoryThreshold,
+      ...filteredConfig,
+    } as Required<CacheConfig>
+
+    this.cache = new LRUCache<T>(this.config.capacity)
     this.startPeriodicCleanup()
   }
 
   /**
    * 创建默认配置的缓存管理器
    */
-  static createDefault<T = any>(maxSize = 100, maxMemoryMB = 50): OptimizedCacheManager<T> {
+  static createDefault<T = any>(
+    capacity = 100,
+    ttl = 30 * 60 * 1000,
+    maxMemoryMB = 50,
+  ): OptimizedCacheManager<T> {
     return new OptimizedCacheManager<T>({
-      maxSize,
+      capacity,
+      ttl,
       maxMemoryMB,
-      defaultTTL: 30 * 60 * 1000 // 30分钟
     })
   }
 
@@ -233,27 +235,27 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
    */
   private estimateSize(obj: unknown): number {
     if (obj === null || obj === undefined) return 8 // 指针大小
-    
+
     switch (typeof obj) {
-      case 'string':
+      case "string":
         return obj.length * 2 + 24 // UTF-16 + 对象开销
-      case 'number':
+      case "number":
         return 8
-      case 'boolean':
+      case "boolean":
         return 4
-      case 'bigint':
+      case "bigint":
         return obj.toString().length + 16
-      case 'symbol':
+      case "symbol":
         return 8
-      case 'function':
+      case "function":
         return obj.toString().length * 2 + 32
-      case 'object':
+      case "object":
         if (obj instanceof Date) return 24
         if (obj instanceof RegExp) return obj.source.length * 2 + 32
         if (Array.isArray(obj)) {
           return obj.reduce((sum, item) => sum + this.estimateSize(item), 24)
         }
-        
+
         // 对于普通对象，使用 JSON 序列化估算
         try {
           return JSON.stringify(obj).length * 2 + 32
@@ -270,10 +272,10 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
    */
   private startPeriodicCleanup(): void {
     // 检查是否在浏览器环境中
-    if (typeof window === 'undefined') return
-    
+    if (typeof window === "undefined") return
+
     this.stopPeriodicCleanup()
-    
+
     this.cleanupInterval = window.setInterval(() => {
       this.cleanup()
     }, this.config.cleanupIntervalMs)
@@ -283,7 +285,7 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
    * 停止定期清理
    */
   private stopPeriodicCleanup(): void {
-    if (this.cleanupInterval && typeof window !== 'undefined') {
+    if (this.cleanupInterval && typeof window !== "undefined") {
       clearInterval(this.cleanupInterval)
       this.cleanupInterval = null
     }
@@ -296,11 +298,11 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
     try {
       const size = this.estimateSize(data)
       const maxMemoryBytes = this.config.maxMemoryMB * 1024 * 1024
-      
+
       // 检查内存使用情况
       if (this.currentMemoryUsage + size > maxMemoryBytes) {
         this.cleanup()
-        
+
         // 如果清理后仍然超限，拒绝添加
         if (this.currentMemoryUsage + size > maxMemoryBytes) {
           console.warn(`缓存内存不足，无法添加键: ${key}，需要 ${size} 字节`)
@@ -313,7 +315,7 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
         timestamp: Date.now(),
         ttl,
         size,
-        accessCount: 0
+        accessCount: 0,
       }
 
       // 处理可能被驱逐的节点
@@ -328,11 +330,13 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
         if (existingItem && existingItem !== item) {
           this.currentMemoryUsage -= existingItem.size
         }
+      } else {
+        // 如果有驱逐的节点，也要更新内存使用
+        this.currentMemoryUsage -= evictedNode.value.size
       }
 
       this.currentMemoryUsage += size
       return true
-      
     } catch (error) {
       console.error(`设置缓存项失败，键: ${key}`, error)
       return false
@@ -344,10 +348,10 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
    */
   get(key: string): T | null {
     this.totalRequests++
-    
+
     try {
       const item = this.cache.get(key)
-      
+
       if (!item) {
         return null
       }
@@ -361,15 +365,14 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
       // 更新访问计数
       const updatedItem: CachedItem<T> = {
         ...item,
-        accessCount: item.accessCount + 1
+        accessCount: item.accessCount + 1,
       }
-      
+
       // 更新缓存中的项目（这会触发 LRU 重新排序）
       this.cache.set(key, updatedItem)
-      
+
       this.totalHits++
       return item.data
-      
     } catch (error) {
       console.error(`获取缓存项失败，键: ${key}`, error)
       return null
@@ -382,7 +385,7 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
   has(key: string): boolean {
     try {
       const item = this.cache.get(key)
-      
+
       if (!item) {
         return false
       }
@@ -425,7 +428,7 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
       const now = Date.now()
       const maxMemoryBytes = this.config.maxMemoryMB * 1024 * 1024
       const memoryThreshold = maxMemoryBytes * this.config.memoryThreshold
-      
+
       let cleanedCount = 0
       let freedMemory = 0
       const expiredKeys: string[] = []
@@ -433,7 +436,7 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
       // 第一阶段：收集过期项
       for (const key of this.cache.keys()) {
         const item = this.cache.get(key)
-        if (item && (now - item.timestamp > item.ttl)) {
+        if (item && now - item.timestamp > item.ttl) {
           expiredKeys.push(key)
         }
       }
@@ -450,12 +453,13 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
 
       // 第二阶段：如果内存使用仍然过高，基于访问频率和大小进行清理
       if (this.currentMemoryUsage > memoryThreshold) {
-        const items = this.cache.values()
+        const items = this.cache
+          .values()
           .map((item, index) => ({
             key: this.cache.keys()[index],
             item,
             // 计算清理优先级：大小/访问次数，值越大优先级越高
-            priority: item.size / Math.max(item.accessCount, 1)
+            priority: item.size / Math.max(item.accessCount, 1),
           }))
           .sort((a, b) => b.priority - a.priority)
 
@@ -464,7 +468,7 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
           if (this.currentMemoryUsage <= memoryThreshold) {
             break
           }
-          
+
           const deletedItem = this.cache.delete(key)
           if (deletedItem) {
             freedMemory += deletedItem.size
@@ -477,12 +481,12 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
       if (cleanedCount > 0) {
         console.log(
           `缓存清理完成：移除 ${cleanedCount} 项，` +
-          `释放 ${(freedMemory / 1024).toFixed(2)} KB 内存，` +
-          `当前使用率: ${(this.currentMemoryUsage / maxMemoryBytes * 100).toFixed(1)}%`
+            `释放 ${(freedMemory / 1024).toFixed(2)} KB 内存，` +
+            `当前使用率: ${((this.currentMemoryUsage / maxMemoryBytes) * 100).toFixed(1)}%`,
         )
       }
     } catch (error) {
-      console.error('缓存清理失败:', error)
+      console.error("缓存清理失败:", error)
     }
   }
 
@@ -492,19 +496,21 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
   getStats(): CacheStats {
     const maxMemoryBytes = this.config.maxMemoryMB * 1024 * 1024
     const hitRate = this.totalRequests > 0 ? this.totalHits / this.totalRequests : 0
-    
+
     return {
       size: this.cache.size,
       memoryUsage: this.currentMemoryUsage,
       maxMemoryUsage: maxMemoryBytes,
       memoryUsagePercentage: this.currentMemoryUsage / maxMemoryBytes,
       hitRate,
-      keys: this.cache.keys()
+      keys: this.cache.keys(),
     }
   }
 
   /**
    * 获取配置信息
+
+
    */
   getConfig(): Readonly<Required<CacheConfig>> {
     return { ...this.config }
@@ -517,7 +523,7 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
     try {
       const item = this.cache.get(key)
       if (!item) return null
-      
+
       const isExpired = Date.now() - item.timestamp > item.ttl
       return { ...item, isExpired }
     } catch (error) {
@@ -535,9 +541,9 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
       this.currentMemoryUsage = 0
       this.totalHits = 0
       this.totalRequests = 0
-      console.log('缓存已清空')
+      console.log("缓存已清空")
     } catch (error) {
-      console.error('清空缓存失败:', error)
+      console.error("清空缓存失败:", error)
     }
   }
 
@@ -548,9 +554,9 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
     try {
       this.stopPeriodicCleanup()
       this.clear()
-      console.log('缓存管理器已销毁')
+      console.log("缓存管理器已销毁")
     } catch (error) {
-      console.error('销毁缓存管理器失败:', error)
+      console.error("销毁缓存管理器失败:", error)
     }
   }
 
@@ -562,10 +568,10 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
   }
 
   /**
-    * 重置统计信息
-    */
-   resetStats(): void {
-     this.totalHits = 0
-     this.totalRequests = 0
-   }
+   * 重置统计信息
+   */
+  resetStats(): void {
+    this.totalHits = 0
+    this.totalRequests = 0
+  }
 }

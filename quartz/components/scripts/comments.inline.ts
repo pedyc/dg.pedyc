@@ -80,8 +80,8 @@ document.addEventListener("nav", () => {
 
   // 清理已存在的 giscus 实例
   const existingScript = giscusContainer.querySelector('script[src="https://giscus.app/client.js"]')
-  const existingIframe = giscusContainer.querySelector('iframe.giscus-frame')
-  
+  const existingIframe = giscusContainer.querySelector("iframe.giscus-frame")
+
   if (existingScript) {
     existingScript.remove()
   }

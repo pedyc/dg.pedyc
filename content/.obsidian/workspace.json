@@ -17,7 +17,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Diary/2025-06-23.md",
+                    "file": "PARA/20-AREAS/08知识管理/0800知识管理.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -32,7 +32,7 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "2025-06-23"
+                  "title": "0800知识管理"
                 }
               }
             ]
@@ -74,13 +74,13 @@
                         "state": {
                           "type": "outline",
                           "state": {
-                            "file": "Diary/2025-06-23.md",
+                            "file": "PARA/20-AREAS/08知识管理/0800知识管理.md",
                             "followCursor": false,
                             "showSearch": false,
                             "searchQuery": ""
                           },
                           "icon": "lucide-list",
-                          "title": "Outline of 2025-06-23"
+                          "title": "Outline of 0800知识管理"
                         }
                       }
                     ]
@@ -96,7 +96,7 @@
                         "state": {
                           "type": "localgraph",
                           "state": {
-                            "file": "Diary/2025-06-23.md",
+                            "file": "PARA/20-AREAS/08知识管理/0800知识管理.md",
                             "options": {
                               "collapse-filter": true,
                               "search": "",
@@ -124,7 +124,7 @@
                             }
                           },
                           "icon": "lucide-git-fork",
-                          "title": "Graph of 2025-06-23"
+                          "title": "Graph of 0800知识管理"
                         }
                       }
                     ]
@@ -317,12 +317,14 @@
   },
   "active": "5161891edc96f818",
   "lastOpenFiles": [
+    "PARA/00-META/本库领域索引.md",
+    "index.md",
     "Diary/2025-06-19.md",
-    "Diary/_resources",
     "Diary/2025-06-23.md",
     "Diary/2025-06-22.md",
     "Diary/2025-06-21.md",
     "Diary/2025-06-20.md",
+    "Diary/_resources",
     "PARA/30-RESOURCES/项目矩阵/dg.pedyc.md",
     "Diary/_resources/2025-06-19",
     "Diary/2025-06-18.md",
@@ -330,7 +332,6 @@
     "PARA/20-AREAS/08知识管理/卡片盒笔记法实施工作流.md",
     "PARA/20-AREAS/08知识管理/知识管理核心原则.md",
     "PARA/40-ARCHIVES/数字花园概述.md",
-    "index.md",
     "Diary/2025-06-17.md",
     "PARA/20-AREAS/02前端/Service Worker API.md",
     "PARA/20-AREAS/04AI/知识管理大师提示词v4 动态重构版本.md",

@@ -1,6 +1,6 @@
-import { preloadedCache } from './cache'
-import { removeDuplicatePathSegments } from '../../../util/path'
-import { CacheKeyGenerator } from '../config/cache-config'
+import { preloadedCache } from "./cache"
+import { removeDuplicatePathSegments } from "../../../util/path"
+import { CacheKeyGenerator } from "../config/cache-config"
 
 /**
  * URL处理器
@@ -8,6 +8,78 @@ import { CacheKeyGenerator } from '../config/cache-config'
  * 使用统一的缓存管理器
  */
 export class URLProcessor {
+  /**
+   * 检查是否为内部链接
+   * @param href 链接地址
+   * @returns 是否为内部链接
+   */
+  static isInternalLink(href: string): boolean {
+    try {
+      const url = this.createUrl(href)
+      return url.origin === window.location.origin
+    } catch {
+      return false
+    }
+  }
+
+  /**
+   * 检查是否为有效的内部链接
+   * @param href 链接地址
+   * @returns 是否为有效的内部链接
+   */
+  static isValidInternalLink(href: string): boolean {
+    if (!this.isInternalLink(href)) {
+      return false
+    }
+
+    try {
+      const url = this.createUrl(href)
+      // 排除特殊协议和锚点链接
+      if (url.protocol !== "http:" && url.protocol !== "https:") {
+        return false
+      }
+
+      // 排除纯锚点链接（同页面内跳转）
+      if (url.pathname === window.location.pathname && url.hash) {
+        return false
+      }
+
+      return true
+    } catch {
+      return false
+    }
+  }
+
+  /**
+   * 检查链接是否应该被预加载
+   * @param href 链接地址
+   * @returns 是否应该预加载
+   */
+  static shouldPreload(href: string): boolean {
+    if (!this.isValidInternalLink(href)) {
+      return false
+    }
+
+    try {
+      const url = this.createUrl(href)
+
+      // 排除下载链接
+      const downloadExtensions = [".pdf", ".zip", ".rar", ".7z", ".tar", ".gz"]
+      if (downloadExtensions.some((ext) => url.pathname.toLowerCase().endsWith(ext))) {
+        return false
+      }
+
+      // 排除API端点
+      if (url.pathname.startsWith("/api/") || url.pathname.startsWith("/admin/")) {
+        return false
+      }
+
+      return true
+    } catch {
+      return false
+    }
+  }
+
   private static urlCache = preloadedCache
   private static readonly CACHE_TTL = 30 * 60 * 1000 // 30分钟TTL
 
@@ -68,7 +140,7 @@ export class URLProcessor {
     // 创建新的URL对象
     const processedUrl = new URL(url.toString())
     processedUrl.pathname = cleanedPath
-    processedUrl.hash = '' // 移除hash用于缓存
+    processedUrl.hash = "" // 移除hash用于缓存
 
     return processedUrl
   }

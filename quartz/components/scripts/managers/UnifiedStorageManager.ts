@@ -1,4 +1,4 @@
-import type { ICleanupManager } from './CleanupManager'
+import type { ICleanupManager } from "./CleanupManager"
 
 /**
  * 存储配额信息接口
@@ -14,8 +14,8 @@ interface StorageQuota {
  * 存储统计信息接口
  */
 interface StorageStats {
-  localStorage: Omit<StorageQuota, 'available'>
-  sessionStorage: Omit<StorageQuota, 'available'>
+  localStorage: Omit<StorageQuota, "available">
+  sessionStorage: Omit<StorageQuota, "available">
 }
 
 /**
@@ -24,7 +24,7 @@ interface StorageStats {
  */
 export class UnifiedStorageManager implements ICleanupManager {
   private static readonly QUOTA_CLEANUP_THRESHOLD = 0.9 // 90%
-  private static readonly STORAGE_PREFIX = 'quartz_'
+  private static readonly STORAGE_PREFIX = "quartz_"
   private static readonly DEFAULT_QUOTA = 10 * 1024 * 1024 // 10MB
   private static readonly LARGE_ITEM_THRESHOLD = 10000 // 10KB
 
@@ -44,11 +44,11 @@ export class UnifiedStorageManager implements ICleanupManager {
           used,
           total,
           percentage: total > 0 ? used / total : 0,
-          available: total - used
+          available: total - used,
         }
       }
     } catch (error) {
-      console.warn('无法获取存储配额信息:', error)
+      console.warn("无法获取存储配额信息:", error)
     }
 
     // 降级方案：估算当前存储使用量
@@ -57,7 +57,7 @@ export class UnifiedStorageManager implements ICleanupManager {
       used: estimatedSize,
       total: this.DEFAULT_QUOTA,
       percentage: estimatedSize / this.DEFAULT_QUOTA,
-      available: this.DEFAULT_QUOTA - estimatedSize
+      available: this.DEFAULT_QUOTA - estimatedSize,
     }
   }
 
@@ -77,7 +77,7 @@ export class UnifiedStorageManager implements ICleanupManager {
         }
       }
     } catch (error) {
-      console.warn('无法估算存储大小:', error)
+      console.warn("无法估算存储大小:", error)
     }
     return size
   }
@@ -104,18 +104,18 @@ export class UnifiedStorageManager implements ICleanupManager {
     try {
       const quota = await this.checkStorageQuota(storage)
       if (quota.percentage > this.QUOTA_CLEANUP_THRESHOLD) {
-        console.warn('存储配额即将耗尽，执行清理...')
+        console.warn("存储配额即将耗尽，执行清理...")
         this.cleanupStorage(storage)
 
         // 重新检查配额
         const newQuota = await this.checkStorageQuota(storage)
         if (newQuota.percentage > this.QUOTA_CLEANUP_THRESHOLD) {
-          console.warn('清理后配额仍然不足，执行紧急清理...')
+          console.warn("清理后配额仍然不足，执行紧急清理...")
           this.emergencyCleanup(storage)
         }
       }
     } catch (error) {
-      console.warn('配额检查失败:', error)
+      console.warn("配额检查失败:", error)
     }
   }
 
@@ -131,10 +131,10 @@ export class UnifiedStorageManager implements ICleanupManager {
       storage.setItem(key, value)
       return true
     } catch (error) {
-      if (error instanceof DOMException && error.name === 'QuotaExceededError') {
+      if (error instanceof DOMException && error.name === "QuotaExceededError") {
         return this.handleQuotaExceeded(storage, key, value)
       }
-      console.error('设置存储项失败:', error)
+      console.error("设置存储项失败:", error)
       return false
     }
   }
@@ -147,21 +147,21 @@ export class UnifiedStorageManager implements ICleanupManager {
    * @returns 是否设置成功
    */
   private static handleQuotaExceeded(storage: Storage, key: string, value: string): boolean {
-    console.warn('存储配额超限，尝试清理后重试...')
+    console.warn("存储配额超限，尝试清理后重试...")
     this.cleanupStorage(storage)
 
     try {
       storage.setItem(key, value)
       return true
     } catch (retryError) {
-      console.warn('清理后重试仍失败，执行紧急清理...')
+      console.warn("清理后重试仍失败，执行紧急清理...")
       this.emergencyCleanup(storage)
 
       try {
         storage.setItem(key, value)
         return true
       } catch (finalError) {
-        console.error('最终设置失败:', finalError)
+        console.error("最终设置失败:", finalError)
         return false
       }
     }
@@ -177,7 +177,7 @@ export class UnifiedStorageManager implements ICleanupManager {
     try {
       return storage.getItem(key)
     } catch (error) {
-      console.error('获取存储项失败:', error)
+      console.error("获取存储项失败:", error)
       return null
     }
   }
@@ -191,7 +191,7 @@ export class UnifiedStorageManager implements ICleanupManager {
     try {
       storage.removeItem(key)
     } catch (error) {
-      console.error('移除存储项失败:', error)
+      console.error("移除存储项失败:", error)
     }
   }
 
@@ -205,7 +205,7 @@ export class UnifiedStorageManager implements ICleanupManager {
       this.removeKeys(storage, keysToRemove)
       console.log(`清理了 ${keysToRemove.length} 个过期项目`)
     } catch (error) {
-      console.error('清理存储失败:', error)
+      console.error("清理存储失败:", error)
     }
   }
 
@@ -243,7 +243,7 @@ export class UnifiedStorageManager implements ICleanupManager {
     try {
       // 尝试解析为 JSON 以检查过期时间
       const parsed = JSON.parse(value)
-      if (parsed && typeof parsed === 'object' && parsed.expiry && parsed.expiry < now) {
+      if (parsed && typeof parsed === "object" && parsed.expiry && parsed.expiry < now) {
         return true
       }
     } catch {
@@ -261,7 +261,7 @@ export class UnifiedStorageManager implements ICleanupManager {
    * @param keys 要删除的键数组
    */
   private static removeKeys(storage: Storage, keys: string[]): void {
-    keys.forEach(key => {
+    keys.forEach((key) => {
       try {
         storage.removeItem(key)
       } catch (error) {
@@ -292,7 +292,7 @@ export class UnifiedStorageManager implements ICleanupManager {
 
       console.warn(`紧急清理：移除了 ${toRemove} 个存储项`)
     } catch (error) {
-      console.error('紧急清理失败:', error)
+      console.error("紧急清理失败:", error)
     }
   }
 
@@ -307,7 +307,11 @@ export class UnifiedStorageManager implements ICleanupManager {
 
   // SessionStorage 方法
   async setSessionItem(key: string, value: string): Promise<boolean> {
-    return UnifiedStorageManager.safeSetItem(sessionStorage, UnifiedStorageManager.addPrefix(key), value)
+    return UnifiedStorageManager.safeSetItem(
+      sessionStorage,
+      UnifiedStorageManager.addPrefix(key),
+      value,
+    )
   }
 
   getSessionItem(key: string): string | null {
@@ -320,7 +324,11 @@ export class UnifiedStorageManager implements ICleanupManager {
 
   // LocalStorage 方法
   async setLocalItem(key: string, value: string): Promise<boolean> {
-    return UnifiedStorageManager.safeSetItem(localStorage, UnifiedStorageManager.addPrefix(key), value)
+    return UnifiedStorageManager.safeSetItem(
+      localStorage,
+      UnifiedStorageManager.addPrefix(key),
+      value,
+    )
   }
 
   getLocalItem(key: string): string | null {
@@ -338,22 +346,16 @@ export class UnifiedStorageManager implements ICleanupManager {
    * @param value 值（可选，用于设置操作）
    * @returns 对于 get 操作返回值，对于 set 操作返回是否成功，对于 remove 操作无返回值
    */
-  async setItem(storageType: 'local' | 'session', key: string, value: string): Promise<boolean> {
-    return storageType === 'local' 
-      ? this.setLocalItem(key, value)
-      : this.setSessionItem(key, value)
+  async setItem(storageType: "local" | "session", key: string, value: string): Promise<boolean> {
+    return storageType === "local" ? this.setLocalItem(key, value) : this.setSessionItem(key, value)
   }
 
-  getItem(storageType: 'local' | 'session', key: string): string | null {
-    return storageType === 'local' 
-      ? this.getLocalItem(key)
-      : this.getSessionItem(key)
+  getItem(storageType: "local" | "session", key: string): string | null {
+    return storageType === "local" ? this.getLocalItem(key) : this.getSessionItem(key)
   }
 
-  removeItem(storageType: 'local' | 'session', key: string): void {
-    return storageType === 'local' 
-      ? this.removeLocalItem(key)
-      : this.removeSessionItem(key)
+  removeItem(storageType: "local" | "session", key: string): void {
+    return storageType === "local" ? this.removeLocalItem(key) : this.removeSessionItem(key)
   }
 
   /**
@@ -362,20 +364,20 @@ export class UnifiedStorageManager implements ICleanupManager {
   async getStorageStats(): Promise<StorageStats> {
     const [localQuota, sessionQuota] = await Promise.all([
       UnifiedStorageManager.checkStorageQuota(localStorage),
-      UnifiedStorageManager.checkStorageQuota(sessionStorage)
+      UnifiedStorageManager.checkStorageQuota(sessionStorage),
     ])
 
     return {
       localStorage: {
         used: localQuota.used,
         total: localQuota.total,
-        percentage: localQuota.percentage
+        percentage: localQuota.percentage,
       },
       sessionStorage: {
         used: sessionQuota.used,
         total: sessionQuota.total,
-        percentage: sessionQuota.percentage
-      }
+        percentage: sessionQuota.percentage,
+      },
     }
   }
 
@@ -395,5 +397,4 @@ export class UnifiedStorageManager implements ICleanupManager {
   getStats(): Promise<StorageStats> {
     return this.getStorageStats()
   }
-
 }

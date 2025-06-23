@@ -17,7 +17,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Diary/2025-06-19.md",
+                    "file": "Diary/2025-06-23.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -32,7 +32,7 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "2025-06-19"
+                  "title": "2025-06-23"
                 }
               }
             ]
@@ -74,13 +74,13 @@
                         "state": {
                           "type": "outline",
                           "state": {
-                            "file": "Diary/2025-06-19.md",
+                            "file": "Diary/2025-06-23.md",
                             "followCursor": false,
                             "showSearch": false,
                             "searchQuery": ""
                           },
                           "icon": "lucide-list",
-                          "title": "Outline of 2025-06-19"
+                          "title": "Outline of 2025-06-23"
                         }
                       }
                     ]
@@ -96,7 +96,7 @@
                         "state": {
                           "type": "localgraph",
                           "state": {
-                            "file": "Diary/2025-06-19.md",
+                            "file": "Diary/2025-06-23.md",
                             "options": {
                               "collapse-filter": true,
                               "search": "",
@@ -124,7 +124,7 @@
                             }
                           },
                           "icon": "lucide-git-fork",
-                          "title": "Graph of 2025-06-19"
+                          "title": "Graph of 2025-06-23"
                         }
                       }
                     ]
@@ -248,7 +248,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 321.5
+    "width": 288.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -317,9 +317,14 @@
   },
   "active": "5161891edc96f818",
   "lastOpenFiles": [
+    "Diary/2025-06-19.md",
+    "Diary/_resources",
+    "Diary/2025-06-23.md",
+    "Diary/2025-06-22.md",
+    "Diary/2025-06-21.md",
+    "Diary/2025-06-20.md",
     "PARA/30-RESOURCES/项目矩阵/dg.pedyc.md",
     "Diary/_resources/2025-06-19",
-    "Diary/2025-06-19.md",
     "Diary/2025-06-18.md",
     "PARA/20-AREAS/08知识管理/知识管理概述.md",
     "PARA/20-AREAS/08知识管理/卡片盒笔记法实施工作流.md",
@@ -327,7 +332,6 @@
     "PARA/40-ARCHIVES/数字花园概述.md",
     "index.md",
     "Diary/2025-06-17.md",
-    "Diary/_resources",
     "PARA/20-AREAS/02前端/Service Worker API.md",
     "PARA/20-AREAS/04AI/知识管理大师提示词v4 动态重构版本.md",
     "PARA/30-RESOURCES/面试真题/FAQ-Webpack.md",
@@ -340,11 +344,6 @@
     "PARA/20-AREAS/02前端/CSS.md",
     "PARA/20-AREAS/02前端/如何处理 Ajax 请求在不同浏览器中的兼容性问题？.md",
     "PARA/20-AREAS/02前端/如何使用 Babel 将 ES6+ 代码转换为 ES5 代码，以兼容旧版本浏览器？.md",
-    "PARA/20-AREAS/02前端/如何解决不同浏览器对 JavaScript API 的支持差异？.md",
-    "PARA/20-AREAS/02前端/如何处理 CSS3 新特性在旧版本浏览器中的兼容性问题？.md",
-    "PARA/20-AREAS/02前端/如何实现响应式布局，以适应不同屏幕尺寸的设备？.md",
-    "PARA/20-AREAS/02前端/如何解决不同浏览器对 CSS 属性的支持差异？.md",
-    "PARA/20-AREAS/02前端/浏览器.md",
     "SimpRead/backup/simpread_config@20250616174335.json",
     "PARA/20-AREAS/02前端/_resources",
     "_resources/sw-lifecycle.svg",

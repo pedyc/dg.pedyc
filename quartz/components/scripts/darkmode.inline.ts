@@ -1,7 +1,7 @@
 import { CacheKeyGenerator } from "./config/cache-config"
 
 const userPref = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"
-const themeKey = CacheKeyGenerator.user('theme', 'preference')
+const themeKey = CacheKeyGenerator.user("theme", "preference")
 const currentTheme = localStorage.getItem(themeKey) ?? userPref
 document.documentElement.setAttribute("saved-theme", currentTheme)
 
@@ -17,15 +17,15 @@ document.addEventListener("nav", () => {
     const newTheme =
       document.documentElement.getAttribute("saved-theme") === "dark" ? "light" : "dark"
     document.documentElement.setAttribute("saved-theme", newTheme)
-      localStorage.setItem(themeKey, newTheme)
-      emitThemeChangeEvent(newTheme)
+    localStorage.setItem(themeKey, newTheme)
+    emitThemeChangeEvent(newTheme)
   }
 
   const themeChange = (e: MediaQueryListEvent) => {
     const newTheme = e.matches ? "dark" : "light"
     document.documentElement.setAttribute("saved-theme", newTheme)
-      localStorage.setItem(themeKey, newTheme)
-      emitThemeChangeEvent(newTheme)
+    localStorage.setItem(themeKey, newTheme)
+    emitThemeChangeEvent(newTheme)
   }
 
   for (const darkmodeButton of document.getElementsByClassName("darkmode")) {

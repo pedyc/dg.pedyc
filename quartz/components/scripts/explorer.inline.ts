@@ -77,7 +77,7 @@ function toggleFolder(evt: MouseEvent) {
   }
 
   const stringifiedFileTree = JSON.stringify(currentExplorerState)
-  const fileTreeKey = CacheKeyGenerator.user('fileTree', 'explorer_state')
+  const fileTreeKey = CacheKeyGenerator.user("fileTree", "explorer_state")
   localStorage.setItem(fileTreeKey, stringifiedFileTree)
 }
 
@@ -234,7 +234,7 @@ async function setupExplorer(currentSlug: FullSlug) {
     explorerUl.insertBefore(fragment, explorerUl.firstChild)
 
     // restore explorer scrollTop position if it exists
-    const scrollTopKey = CacheKeyGenerator.user('explorerScrollTop', 'scroll_position')
+    const scrollTopKey = CacheKeyGenerator.user("explorerScrollTop", "scroll_position")
     const scrollTop = sessionStorage.getItem(scrollTopKey)
     if (scrollTop) {
       explorerUl.scrollTop = parseInt(scrollTop)
@@ -293,7 +293,7 @@ document.addEventListener("prenav", async () => {
   // save explorer scrollTop position
   const explorer = document.querySelector(".explorer-ul")
   if (!explorer) return
-  const scrollTopKey = CacheKeyGenerator.user('explorerScrollTop', 'scroll_position')
+  const scrollTopKey = CacheKeyGenerator.user("explorerScrollTop", "scroll_position")
   sessionStorage.setItem(scrollTopKey, explorer.scrollTop.toString())
 })
 

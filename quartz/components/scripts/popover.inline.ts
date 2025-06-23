@@ -9,7 +9,6 @@ import { getContentUrl } from "../../util/path"
 
 import { computePosition, flip, inline, shift } from "@floating-ui/dom"
 
-
 import {
   // PopoverError, // Not directly used, re-exported by index.ts
   HTMLContentProcessor,
@@ -17,12 +16,15 @@ import {
   FailedLinksManager,
   ViewportPreloadManager,
   LinkEventManager,
-
-  PopoverConfig
+  PopoverConfig,
 } from "./popover/index"
+
+import { globalResourceManager } from "./managers/index"
 
 // 从 popover/cache.ts 导入 preloadedCache
 import { preloadedCache } from "./popover/cache"
+// 导入统一存储管理器
+import { UnifiedStorageManager } from "./managers/UnifiedStorageManager"
 
 let activeAnchor: HTMLAnchorElement | null = null
 
@@ -106,11 +108,11 @@ async function mouseEnterHandler(
   const cacheKey = contentUrlString
 
   // 调试日志：记录URL处理过程
-  console.debug('[Popover] URL processing:', {
+  console.debug("[Popover] URL processing:", {
     originalHref: link.href,
     originalHash: originalHash,
     contentUrl: contentUrlString,
-    cacheKey: cacheKey
+    cacheKey: cacheKey,
   })
 
   // 使用处理后的contentUrl生成popoverId，确保唯一性
@@ -133,59 +135,65 @@ async function mouseEnterHandler(
 
   // 检查是否为失败链接
   if (FailedLinksManager.isFailedLink(cacheKey)) {
-    console.debug('[Popover] Rendering failed link content for:', cacheKey)
+    console.debug("[Popover] Rendering failed link content for:", cacheKey)
     HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
   } else {
     // 首先尝试从预加载缓存中获取内容
     const cachedData = preloadedCache.get(cacheKey)
-    console.debug('[Popover] Cache check:', {
+    // 创建存储管理器实例
+    const storageManager = new UnifiedStorageManager()
+
+    console.debug("[Popover] Cache check:", {
       cacheKey: cacheKey,
       memoryCache: !!cachedData,
-      sessionStorage: !!sessionStorage.getItem(cacheKey)
+      sessionStorage: !!storageManager.getSessionItem(cacheKey),
     })
     if (cachedData) {
-      console.debug('[Popover] Using memory cache for:', cacheKey)
+      console.debug("[Popover] Using memory cache for:", cacheKey)
       // OptimizedCacheManager 直接返回数据，需要包装成 CachedItem 格式
       const cachedItem = {
         data: cachedData,
         timestamp: Date.now(),
         ttl: PopoverConfig.CACHE_TTL,
         size: 0,
-        type: 'html' as const
+        type: "html" as const,
       }
       HTMLContentProcessor.renderPopoverContent(popoverInner, cachedItem)
     } else {
-        // 如果内存缓存未命中，尝试从sessionStorage读取
-        const sessionContent = sessionStorage.getItem(cacheKey)
-        if (sessionContent) {
-          console.debug('[Popover] Using sessionStorage cache for:', cacheKey)
-          try {
+      // 如果内存缓存未命中，尝试从sessionStorage读取
+      const sessionContent = storageManager.getSessionItem(cacheKey)
+      if (sessionContent) {
+        console.debug("[Popover] Using sessionStorage cache for:", cacheKey)
+        try {
           // sessionStorage中的内容已经是原始HTML，需要直接解析而不是重复处理
           // 避免重复调用processContent导致重复存储到sessionStorage
           // 使用原始URL（包含hash）进行内容处理，确保相对链接正确解析
-          const processedContent = await HTMLContentProcessor.parseStoredContent(sessionContent, originalUrl)
+          const processedContent = await HTMLContentProcessor.parseStoredContent(
+            sessionContent,
+            originalUrl,
+          )
           const cachedItem = {
             data: processedContent,
             timestamp: Date.now(),
             ttl: PopoverConfig.CACHE_TTL,
             size: sessionContent.length,
-            type: 'html' as const
+            type: "html" as const,
           }
           // 将处理后的内容存入内存缓存以便下次使用
           preloadedCache.set(cacheKey, processedContent, PopoverConfig.CACHE_TTL)
           HTMLContentProcessor.renderPopoverContent(popoverInner, cachedItem)
         } catch (error) {
-          console.error('Failed to parse stored content for:', cacheKey, error)
+          console.error("Failed to parse stored content for:", cacheKey, error)
           // 如果解析失败，清除可能损坏的缓存并重新获取
-          sessionStorage.removeItem(cacheKey)
+          storageManager.removeSessionItem(cacheKey)
           HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
         }
       } else {
-          // 如果sessionStorage也未命中，则立即 fetch (作为优先加载)
-          console.debug('[Popover] No cache found, fetching content for:', cacheKey)
-          try {
-            // 使用 contentUrlString 进行预加载，以确保与 cacheKey 一致
-            await PreloadManager.preloadLinkContent(contentUrlString)
+        // 如果sessionStorage也未命中，则立即 fetch (作为优先加载)
+        console.debug("[Popover] No cache found, fetching content for:", cacheKey)
+        try {
+          // 使用 contentUrlString 进行预加载，以确保与 cacheKey 一致
+          await PreloadManager.preloadLinkContent(contentUrlString)
           const newlyCachedData = preloadedCache.get(cacheKey) // 仍然使用 cacheKey 获取缓存
           if (newlyCachedData) {
             // 包装成 CachedItem 格式
@@ -194,7 +202,7 @@ async function mouseEnterHandler(
               timestamp: Date.now(),
               ttl: PopoverConfig.CACHE_TTL,
               size: 0,
-              type: 'html' as const
+              type: "html" as const,
             }
             HTMLContentProcessor.renderPopoverContent(popoverInner, newlyCachedItem)
           } else {
@@ -205,15 +213,11 @@ async function mouseEnterHandler(
           // If it's needed, it should be imported explicitly.
           // const popoverError = new PopoverError('Failed to load popover content', cacheKey)
           // console.error(popoverError.message, error)
-          console.error('Failed to load popover content for:', cacheKey, error) // Simplified error logging
+          console.error("Failed to load popover content for:", cacheKey, error) // Simplified error logging
           HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
         }
       }
     }
-  }
-
-  if (document.getElementById(popoverId)) {
-    return
   }
 
   document.body.appendChild(popoverElement)
@@ -237,7 +241,8 @@ function clearActivePopover() {
 // 视口预加载功能已移至 ViewportPreloadManager
 // 使用 ViewportPreloadManager.initializeViewportPreloading() 替代本地实现
 
-document.addEventListener("nav", () => {
+// 使用ResourceManager统一管理事件监听器
+globalResourceManager.addEventListener(document as unknown as EventTarget, "nav", () => {
   // 使用 LinkEventManager 设置事件监听器
   LinkEventManager.setupLinkEventListeners(mouseEnterHandler, clearActivePopover)
 
@@ -245,9 +250,12 @@ document.addEventListener("nav", () => {
   ViewportPreloadManager.initialize()
 })
 
-
 // 在 popover.inline.ts 中添加
-document.addEventListener("DOMContentLoaded", () => {
-  LinkEventManager.setupLinkEventListeners(mouseEnterHandler, clearActivePopover)
-  ViewportPreloadManager.initialize()
-})
+globalResourceManager.addEventListener(
+  document as unknown as EventTarget,
+  "DOMContentLoaded",
+  () => {
+    LinkEventManager.setupLinkEventListeners(mouseEnterHandler, clearActivePopover)
+    ViewportPreloadManager.initialize()
+  },
+)

@@ -1,4 +1,4 @@
-import type { ICleanupManager } from './CleanupManager'
+import type { ICleanupManager } from "./CleanupManager"
 
 /**
  * 资源管理器
@@ -43,7 +43,9 @@ export class ResourceManager implements ICleanupManager {
   /**
    * 注册通用观察器（兼容旧代码）
    */
-  registerObserver(observer: IntersectionObserver | MutationObserver | ResizeObserver): typeof observer {
+  registerObserver(
+    observer: IntersectionObserver | MutationObserver | ResizeObserver,
+  ): typeof observer {
     this.observers.add(observer)
     return observer
   }
@@ -82,7 +84,7 @@ export class ResourceManager implements ICleanupManager {
     element: EventTarget,
     type: string,
     listener: EventListener,
-    options?: boolean | AddEventListenerOptions
+    options?: boolean | AddEventListenerOptions,
   ): void {
     element.addEventListener(type, listener, options)
     this.eventListeners.push({ element, type, listener, options })
@@ -153,16 +155,14 @@ export class ResourceManager implements ICleanupManager {
     element: EventTarget,
     type: string,
     listener: EventListener,
-    options?: boolean | AddEventListenerOptions
+    options?: boolean | AddEventListenerOptions,
   ): void {
     element.removeEventListener(type, listener, options)
-    
+
     const index = this.eventListeners.findIndex(
-      item => item.element === element && 
-              item.type === type && 
-              item.listener === listener
+      (item) => item.element === element && item.type === type && item.listener === listener,
     )
-    
+
     if (index !== -1) {
       this.eventListeners.splice(index, 1)
     }
@@ -193,7 +193,7 @@ export class ResourceManager implements ICleanupManager {
   } {
     // 统计观察器类型
     const observerTypes: Record<string, number> = {}
-    this.observers.forEach(observer => {
+    this.observers.forEach((observer) => {
       const type = observer.constructor.name
       observerTypes[type] = (observerTypes[type] || 0) + 1
     })
@@ -211,8 +211,8 @@ export class ResourceManager implements ICleanupManager {
       abortControllers: this.abortControllers.size,
       details: {
         observerTypes,
-        eventTypes
-      }
+        eventTypes,
+      },
     }
   }
 
@@ -221,22 +221,22 @@ export class ResourceManager implements ICleanupManager {
    */
   cleanup(): void {
     // 清理观察器
-    this.observers.forEach(observer => {
+    this.observers.forEach((observer) => {
       try {
         observer.disconnect()
       } catch (error) {
-        console.error('清理观察器时出错:', error)
+        console.error("清理观察器时出错:", error)
       }
     })
     this.observers.clear()
 
     // 清理定时器
-    this.timers.forEach(timerId => {
+    this.timers.forEach((timerId) => {
       try {
         clearTimeout(timerId)
         clearInterval(timerId)
       } catch (error) {
-        console.error('清理定时器时出错:', error)
+        console.error("清理定时器时出错:", error)
       }
     })
     this.timers.clear()
@@ -246,27 +246,27 @@ export class ResourceManager implements ICleanupManager {
       try {
         element.removeEventListener(type, listener, options)
       } catch (error) {
-        console.error('清理事件监听器时出错:', error)
+        console.error("清理事件监听器时出错:", error)
       }
     })
     this.eventListeners.length = 0
 
     // 中止所有 AbortController
-    this.abortControllers.forEach(controller => {
+    this.abortControllers.forEach((controller) => {
       try {
         controller.abort()
       } catch (error) {
-        console.error('中止 AbortController 时出错:', error)
+        console.error("中止 AbortController 时出错:", error)
       }
     })
     this.abortControllers.clear()
 
     // 执行清理任务
-    this.cleanupTasks.forEach(task => {
+    this.cleanupTasks.forEach((task) => {
       try {
         task()
       } catch (error) {
-        console.error('执行清理任务时出错:', error)
+        console.error("执行清理任务时出错:", error)
       }
     })
     this.cleanupTasks.length = 0
@@ -283,10 +283,12 @@ export class ResourceManager implements ICleanupManager {
    * 检查是否有活跃的资源
    */
   hasActiveResources(): boolean {
-    return this.observers.size > 0 || 
-           this.timers.size > 0 || 
-           this.eventListeners.length > 0 || 
-           this.abortControllers.size > 0
+    return (
+      this.observers.size > 0 ||
+      this.timers.size > 0 ||
+      this.eventListeners.length > 0 ||
+      this.abortControllers.size > 0
+    )
   }
 
   /**
@@ -295,17 +297,17 @@ export class ResourceManager implements ICleanupManager {
   getActiveResourcesDetails(): {
     observers: string[]
     timers: number[]
-    eventListeners: Array<{ element: string, type: string }>
+    eventListeners: Array<{ element: string; type: string }>
     abortControllers: number
   } {
     return {
-      observers: Array.from(this.observers).map(obs => obs.constructor.name),
+      observers: Array.from(this.observers).map((obs) => obs.constructor.name),
       timers: Array.from(this.timers),
       eventListeners: this.eventListeners.map(({ element, type }) => ({
         element: element.constructor.name,
-        type
+        type,
       })),
-      abortControllers: this.abortControllers.size
+      abortControllers: this.abortControllers.size,
     }
   }
 }

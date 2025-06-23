@@ -4,16 +4,22 @@
  */
 
 export interface CacheConfig {
-  /** 缓存容量 */
-  capacity: number
-  /** TTL (毫秒) */
-  ttl: number
-  /** 警告阈值 */
-  warningThreshold?: number
+  /** 缓存容量 (最大项目数) */
+  readonly capacity: number
+  /** 默认 TTL (毫秒) */
+  readonly ttl: number
+  /** 最大内存限制 (MB) */
+  readonly maxMemoryMB: number
+  /** 警告阈值 (项目数) */
+  readonly warningThreshold?: number
   /** 描述 */
-  description?: string
+  readonly description?: string
   /** 缓存键前缀 */
-  keyPrefix?: string
+  readonly keyPrefix?: string
+  /** 清理间隔 (毫秒) */
+  readonly cleanupIntervalMs?: number
+  /** 内存使用阈值 (0-1) */
+  readonly memoryThreshold?: number
 }
 
 /**
@@ -23,33 +29,33 @@ export const CacheKeyRules = {
   /** 缓存键前缀定义 */
   PREFIXES: {
     /** 内容相关缓存 */
-    CONTENT: 'content_',
+    CONTENT: "content_",
     /** 链接相关缓存 */
-    LINK: 'link_',
+    LINK: "link_",
     /** 搜索相关缓存 */
-    SEARCH: 'search_',
+    SEARCH: "search_",
     /** 弹窗相关缓存 */
-    POPOVER: 'popover_',
+    POPOVER: "popover_",
     /** 字体相关缓存 */
-    FONT: 'font_',
+    FONT: "font_",
     /** 用户相关缓存 */
-    USER: 'user_',
+    USER: "user_",
     /** 系统相关缓存 */
-    SYSTEM: 'sys_'
+    SYSTEM: "sys_",
   } as const,
-  
+
   /** 分隔符 */
-  SEPARATOR: '_',
-  
+  SEPARATOR: "_",
+
   /** 命名约定 */
   CONVENTIONS: {
     /** 使用小写字母和下划线 */
-    CASE_STYLE: 'snake_case',
+    CASE_STYLE: "snake_case",
     /** 最大长度限制 */
     MAX_LENGTH: 100,
     /** 禁用字符 */
-    FORBIDDEN_CHARS: /[^a-z0-9_-]/g
-  } as const
+    FORBIDDEN_CHARS: /[^a-z0-9_-]/g,
+  } as const,
 } as const
 
 /**
@@ -75,59 +81,78 @@ export type CacheKeyGenerator = {
 /**
  * 全局缓存配置
  */
-export const GlobalCacheConfig = {
+export const GlobalCacheConfig: Record<string, CacheConfig> = {
   /** URL缓存配置 */
   URL_CACHE: {
     capacity: 1000,
     ttl: 30 * 60 * 1000, // 30分钟
+    maxMemoryMB: 20,
     warningThreshold: 800,
-    description: 'URL对象缓存，用于路径处理优化',
-    keyPrefix: CacheKeyRules.PREFIXES.CONTENT
+    description: "URL对象缓存，用于路径处理优化",
+    keyPrefix: CacheKeyRules.PREFIXES.CONTENT,
+    cleanupIntervalMs: 5 * 60 * 1000,
+    memoryThreshold: 0.8,
   } as CacheConfig,
 
   /** 搜索内容缓存配置 */
   SEARCH_CONTENT_CACHE: {
     capacity: 500,
     ttl: 60 * 60 * 1000, // 1小时
+    maxMemoryMB: 50,
     warningThreshold: 400,
-    description: '搜索页面内容缓存，用于预览功能',
-    keyPrefix: CacheKeyRules.PREFIXES.SEARCH
+    description: "搜索页面内容缓存，用于预览功能",
+    keyPrefix: CacheKeyRules.PREFIXES.SEARCH,
+    cleanupIntervalMs: 5 * 60 * 1000,
+    memoryThreshold: 0.8,
   } as CacheConfig,
 
   /** 弹窗预加载缓存配置 */
   POPOVER_PRELOAD_CACHE: {
     capacity: 30,
     ttl: 5 * 60 * 1000, // 5分钟
+    maxMemoryMB: 10,
     warningThreshold: 25,
-    description: '弹窗内容预加载缓存',
-    keyPrefix: CacheKeyRules.PREFIXES.POPOVER
+    description: "弹窗内容预加载缓存",
+    keyPrefix: CacheKeyRules.PREFIXES.POPOVER,
+    cleanupIntervalMs: 2 * 60 * 1000,
+    memoryThreshold: 0.9,
   } as CacheConfig,
 
   /** 链接有效性缓存配置 */
   LINK_VALIDITY_CACHE: {
     capacity: 1000,
     ttl: 60 * 60 * 1000, // 1小时
+    maxMemoryMB: 10,
     warningThreshold: 800,
-    description: '链接有效性检查缓存',
-    keyPrefix: CacheKeyRules.PREFIXES.LINK
+    description: "链接有效性检查缓存",
+    keyPrefix: CacheKeyRules.PREFIXES.LINK,
+    cleanupIntervalMs: 10 * 60 * 1000,
+    memoryThreshold: 0.8,
   } as CacheConfig,
 
   /** 失败链接缓存配置 */
   FAILED_LINKS_CACHE: {
     capacity: 500,
     ttl: 30 * 60 * 1000, // 30分钟
+    maxMemoryMB: 5,
     warningThreshold: 400,
-    description: '失败链接缓存，避免重复检查',
-    keyPrefix: CacheKeyRules.PREFIXES.LINK
+    description: "失败链接缓存，避免重复检查",
+    keyPrefix: CacheKeyRules.PREFIXES.LINK,
+    cleanupIntervalMs: 10 * 60 * 1000,
+    memoryThreshold: 0.8,
   } as CacheConfig,
 
   /** 默认缓存配置 */
   DEFAULT: {
     capacity: 100,
     ttl: 10 * 60 * 1000, // 10分钟
+    maxMemoryMB: 5,
     warningThreshold: 80,
-    description: '默认缓存配置'
-  } as CacheConfig
+    description: "默认缓存配置",
+    keyPrefix: CacheKeyRules.PREFIXES.SYSTEM,
+    cleanupIntervalMs: 5 * 60 * 1000,
+    memoryThreshold: 0.8,
+  } as CacheConfig,
 }
 
 /**
@@ -148,6 +173,7 @@ export function validateCacheConfig(config: CacheConfig): boolean {
   return (
     config.capacity > 0 &&
     config.ttl > 0 &&
+    config.maxMemoryMB > 0 &&
     (!config.warningThreshold || config.warningThreshold < config.capacity)
   )
 }
@@ -173,7 +199,7 @@ export const CacheKeyGenerator: CacheKeyGenerator = {
    */
   link: (url: string, type?: string): string => {
     const baseKey = sanitizeCacheKey(url)
-    return type 
+    return type
       ? `${CacheKeyRules.PREFIXES.LINK}${type}${CacheKeyRules.SEPARATOR}${baseKey}`
       : `${CacheKeyRules.PREFIXES.LINK}${baseKey}`
   },
@@ -241,7 +267,7 @@ export const CacheKeyGenerator: CacheKeyGenerator = {
     return identifier
       ? `${CacheKeyRules.PREFIXES.SYSTEM}${baseKey}${CacheKeyRules.SEPARATOR}${sanitizeCacheKey(identifier)}`
       : `${CacheKeyRules.PREFIXES.SYSTEM}${baseKey}`
-  }
+  },
 }
 
 /**
@@ -252,10 +278,10 @@ export const CacheKeyGenerator: CacheKeyGenerator = {
 export function sanitizeCacheKey(key: string): string {
   return key
     .toLowerCase()
-    .replace(CacheKeyRules.CONVENTIONS.FORBIDDEN_CHARS, '')
+    .replace(CacheKeyRules.CONVENTIONS.FORBIDDEN_CHARS, "")
     .replace(/\s+/g, CacheKeyRules.SEPARATOR)
     .replace(/_+/g, CacheKeyRules.SEPARATOR)
-    .replace(/^_+|_+$/g, '')
+    .replace(/^_+|_+$/g, "")
     .substring(0, CacheKeyRules.CONVENTIONS.MAX_LENGTH)
 }
 
@@ -268,10 +294,10 @@ export function validateCacheKey(key: string): boolean {
   if (!key || key.length === 0) return false
   if (key.length > CacheKeyRules.CONVENTIONS.MAX_LENGTH) return false
   if (CacheKeyRules.CONVENTIONS.FORBIDDEN_CHARS.test(key)) return false
-  
+
   // 检查是否有有效的前缀
   const prefixes = Object.values(CacheKeyRules.PREFIXES)
-  return prefixes.some(prefix => key.startsWith(prefix))
+  return prefixes.some((prefix) => key.startsWith(prefix))
 }
 
 /**
@@ -302,5 +328,5 @@ export const CacheMonitorConfig = {
   /** 是否在控制台输出警告 */
   CONSOLE_WARNINGS: true,
   /** 是否启用缓存键验证 */
-  ENABLE_KEY_VALIDATION: true
+  ENABLE_KEY_VALIDATION: true,
 }

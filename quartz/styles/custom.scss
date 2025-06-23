@@ -29,7 +29,6 @@ img[src*="banner.svg"] {
   filter: invert(100%);
 }
 
-
 code[data-theme*=" "] {
   opacity: 0.8;
   background-color: #d3dbdf;
@@ -40,7 +39,7 @@ code[data-theme*=" "] {
   background-color: #0a181e;
 }
 
-.graph>.graph-outer {
+.graph > .graph-outer {
   border: 1px solid #000;
 }
 
@@ -65,7 +64,6 @@ hr {
 
 // 标题
 .center {
-
   h1,
   h2,
   h3,
@@ -82,10 +80,7 @@ hr {
     position: relative;
     background-color: transparent !important;
   }
-
 }
-
-
 
 audio::-webkit-media-controls-panel {
   background-color: var(--lightgray);
@@ -107,7 +102,7 @@ body.animation-ready #quartz-body {
 
   @for $i from 1 through 4 {
     @for $j from 1 through 8 {
-      &>*:nth-child(#{$i})>*:nth-child(#{$j}) {
+      & > *:nth-child(#{$i}) > *:nth-child(#{$j}) {
         animation: var(--animation-name) 2s ease 1 normal backwards;
         animation-delay: #{0.1 * $j + 0.4 * $i}s;
       }
@@ -174,21 +169,23 @@ body.animation-ready #quartz-body {
     --bounce-light: #4251a9;
   }
 
-  &>#progressive-blur {
+  & > #progressive-blur {
     position: absolute;
     height: 100%;
     width: 100%;
 
-    &>div {
+    & > div {
       position: absolute;
       height: 100%;
       width: 100%;
       backdrop-filter: blur(var(--blur-amount));
-      mask-image: linear-gradient(252deg,
-          transparent,
-          transparent var(--stop1),
-          black var(--stop2),
-          black);
+      mask-image: linear-gradient(
+        252deg,
+        transparent,
+        transparent var(--stop1),
+        black var(--stop2),
+        black
+      );
 
       &:nth-child(1) {
         --blur-amount: 8px;
@@ -224,7 +221,7 @@ body.animation-ready #quartz-body {
     bottom: 0;
   }
 
-  &>.perspective {
+  & > .perspective {
     position: absolute;
     transition:
       transform 1.7s var(--timing-fn),
@@ -289,7 +286,7 @@ body.animation-ready #quartz-body {
       }
     }
 
-    &>.vertical {
+    & > .vertical {
       top: 0;
       position: absolute;
       height: 100%;
@@ -297,7 +294,7 @@ body.animation-ready #quartz-body {
       display: flex;
       justify-content: space-around;
 
-      &>.bar {
+      & > .bar {
         width: 12px;
         height: 100%;
       }

@@ -53,7 +53,7 @@ type NodeRenderData = GraphicsInfo & {
   label: Text
 }
 
-const localStorageKey = CacheKeyGenerator.user('graph-visited', 'navigation_history')
+const localStorageKey = CacheKeyGenerator.user("graph-visited", "navigation_history")
 
 function getVisited(): Set<SimpleSlug> {
   return new Set(JSON.parse(localStorage.getItem(localStorageKey) ?? "[]"))
@@ -672,8 +672,8 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
 async function initializeOrReinitializeGraph() {
   // 查找图谱容器元素
   const graphElement =
-    document.querySelector<HTMLElement>('.graph-container') ??
-    document.querySelector<HTMLElement>('.global-graph-container')
+    document.querySelector<HTMLElement>(".graph-container") ??
+    document.querySelector<HTMLElement>(".global-graph-container")
 
   if (graphElement) {
     const currentFullSlug = getFullSlug(window) // 获取当前页面的 slug

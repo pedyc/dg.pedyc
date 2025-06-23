@@ -1,12 +1,15 @@
-import { UnifiedStorageManager } from '../managers/UnifiedStorageManager'
+import { UnifiedStorageManager } from "../managers/UnifiedStorageManager"
 
 /**
  * 自定义弹窗错误类
  */
 export class PopoverError extends Error {
-  constructor(message: string, public context?: string) {
+  constructor(
+    message: string,
+    public context?: string,
+  ) {
     super(message)
-    this.name = 'PopoverError'
+    this.name = "PopoverError"
   }
 }
 
@@ -31,7 +34,7 @@ export class PopoverErrorHandler {
       context,
       details,
       timestamp: Date.now(),
-      stack: error.stack
+      stack: error.stack,
     }
 
     console.error(`[Popover Error] ${context}:`, error)
@@ -42,15 +45,15 @@ export class PopoverErrorHandler {
     this.logError(errorInfo)
   }
 
-
-
   /**
    * 记录错误到存储
    * @param errorInfo 错误信息
    */
   private static async logError(errorInfo: any): Promise<void> {
     try {
-      const existingLogs = JSON.parse(UnifiedStorageManager.safeGetItem(localStorage, this.LOG_STORAGE_KEY) || '[]')
+      const existingLogs = JSON.parse(
+        UnifiedStorageManager.safeGetItem(localStorage, this.LOG_STORAGE_KEY) || "[]",
+      )
       existingLogs.push(errorInfo)
 
       // 限制日志数量
@@ -58,9 +61,13 @@ export class PopoverErrorHandler {
         existingLogs.splice(0, existingLogs.length - this.MAX_LOG_ENTRIES)
       }
 
-      UnifiedStorageManager.safeSetItem(localStorage, this.LOG_STORAGE_KEY, JSON.stringify(existingLogs))
+      UnifiedStorageManager.safeSetItem(
+        localStorage,
+        this.LOG_STORAGE_KEY,
+        JSON.stringify(existingLogs),
+      )
     } catch (error) {
-      console.warn('Failed to save error logs:', error)
+      console.warn("Failed to save error logs:", error)
     }
   }
 
@@ -69,9 +76,11 @@ export class PopoverErrorHandler {
    */
   static async getErrorLogs(): Promise<any[]> {
     try {
-      return JSON.parse(UnifiedStorageManager.safeGetItem(localStorage, this.LOG_STORAGE_KEY) || '[]')
+      return JSON.parse(
+        UnifiedStorageManager.safeGetItem(localStorage, this.LOG_STORAGE_KEY) || "[]",
+      )
     } catch (error) {
-      console.warn('Failed to retrieve error logs:', error)
+      console.warn("Failed to retrieve error logs:", error)
       return []
     }
   }
@@ -83,9 +92,7 @@ export class PopoverErrorHandler {
     try {
       UnifiedStorageManager.safeRemoveItem(localStorage, this.LOG_STORAGE_KEY)
     } catch (error) {
-      console.warn('清空错误日志失败:', error)
+      console.warn("清空错误日志失败:", error)
     }
   }
-
-
 }

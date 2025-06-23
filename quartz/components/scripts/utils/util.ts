@@ -1,6 +1,5 @@
-import { OptimizedCacheManager } from '../managers/OptimizedCacheManager'
-import { PopoverError } from '../popover/error-handler'
-import { getCacheConfig, CacheKeyGenerator } from '../config/cache-config'
+import { OptimizedCacheManager } from "../managers/OptimizedCacheManager"
+import { PopoverError } from "../popover/error-handler"
 
 export function registerEscapeHandler(outsideContainer: HTMLElement | null, cb: () => void) {
   if (!outsideContainer) return
@@ -49,80 +48,6 @@ export async function fetchCanonical(url: URL): Promise<Response> {
   return redirect ? fetch(`${new URL(redirect, url)}`) : res
 }
 
-
-
-// 使用统一的缓存配置
-const linkValidityCacheConfig = getCacheConfig('LINK_VALIDITY_CACHE')
-const linkValidityCache = new OptimizedCacheManager<boolean>({
-  maxSize: linkValidityCacheConfig.capacity,
-  maxMemoryMB: 10,
-  defaultTTL: linkValidityCacheConfig.ttl,
-  cleanupIntervalMs: 600000
-})
-
-
-const invalidLinks = new Set<string>()
-
-/**
- * 检查链接是否有效，使用HEAD请求减少带宽消耗
- * @param url 要检查的URL
- * @returns Promise<boolean> 链接是否有效
- */
-export async function isLinkValid(url: URL): Promise<boolean> {
-  const cacheKey = CacheKeyGenerator.link(url.toString(), 'validity')
-
-  // 检查缓存
-  if (linkValidityCache.has(cacheKey)) {
-    return linkValidityCache.get(cacheKey) || false
-  }
-
-  // 检查已知无效链接
-  if (invalidLinks.has(cacheKey)) {
-    return false
-  }
-
-  try {
-    // 使用HEAD请求检查链接有效性，减少带宽消耗
-    const controller = new AbortController()
-    const timeoutId = setTimeout(() => controller.abort(), 3000)
-
-    const response = await fetch(url.toString(), {
-      method: 'HEAD',
-      signal: controller.signal
-    })
-
-    clearTimeout(timeoutId)
-
-    const isValid = response.ok
-    linkValidityCache.set(cacheKey, isValid, 60 * 60 * 1000) // 1小时TTL
-
-    if (!isValid) {
-      invalidLinks.add(cacheKey)
-    }
-
-    return isValid
-  } catch (error) {
-    // 网络错误或超时，标记为无效
-    linkValidityCache.set(cacheKey, false, 30 * 60 * 1000) // 30分钟TTL for failed links
-    invalidLinks.add(cacheKey)
-    return false
-  }
-}
-
-/**
- * 增强的fetchCanonical函数，添加链接有效性检查
- */
-export async function fetchCanonicalWithValidation(url: URL): Promise<Response | null> {
-  // 先检查链接有效性
-  const isValid = await isLinkValid(url)
-  if (!isValid) {
-    console.warn(`Skipping invalid link: ${url.toString()}`);
-    return null
-  }
-
-  return fetchCanonical(url)
-}
-
 // 添加性能统计
 export const preloadStats = {
   totalChecks: 0,
@@ -136,7 +61,7 @@ export const preloadStats = {
 
   getCacheHitRate(): number {
     return this.totalChecks > 0 ? this.cacheHits / this.totalChecks : 0
-  }
+  },
 }
 
 export function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T {
@@ -147,18 +72,22 @@ export function debounce<T extends (...args: any[]) => void>(func: T, delay: num
   }) as T
 }
 
-
-
 /**
  * 监控缓存大小并在接近限制时发出警告
  * @param cache - 优化缓存管理器实例
  * @param warningThreshold - 警告阈值
  * @param maxSize - 最大缓存大小
  */
-export function monitorCacheSize<V>(cache: OptimizedCacheManager<V>, warningThreshold: number, maxSize: number): void {
+export function monitorCacheSize<V>(
+  cache: OptimizedCacheManager<V>,
+  warningThreshold: number,
+  maxSize: number,
+): void {
   const currentSize = cache.getStats().size
   if (currentSize >= warningThreshold) {
-    console.warn(`Cache size (${currentSize}) approaching limit (${maxSize}). Consider clearing old entries.`)
+    console.warn(
+      `Cache size (${currentSize}) approaching limit (${maxSize}). Consider clearing old entries.`,
+    )
   }
 }
 
@@ -169,9 +98,9 @@ export function monitorCacheSize<V>(cache: OptimizedCacheManager<V>, warningThre
  */
 export function createOptimizedUrl(url: string | URL): URL {
   try {
-    return typeof url === 'string' ? new URL(url) : url
+    return typeof url === "string" ? new URL(url) : url
   } catch (error) {
-    throw new PopoverError('Invalid URL provided', url.toString())
+    throw new PopoverError("Invalid URL provided", url.toString())
   }
 }
 
@@ -189,10 +118,14 @@ export async function parseContentType(
   url: URL,
   contents?: string,
   cacheKey?: string,
-  processHtmlContentFn?: (contents: string, normalizeUrl: URL, cacheKey: string) => Promise<DocumentFragment>
+  processHtmlContentFn?: (
+    contents: string,
+    normalizeUrl: URL,
+    cacheKey: string,
+  ) => Promise<DocumentFragment>,
 ): Promise<{ data: string | DocumentFragment; type: string } | null> {
-  if (!contentTypeHeader || typeof contentTypeHeader !== 'string') {
-    console.warn('Invalid content type header provided')
+  if (!contentTypeHeader || typeof contentTypeHeader !== "string") {
+    console.warn("Invalid content type header provided")
     return null
   }
 

@@ -18,7 +18,7 @@ const isLocalUrl = (href: string) => {
     if (window.location.origin === url.origin) {
       return true
     }
-  } catch (e) { }
+  } catch (e) {}
   return false
 }
 
@@ -84,8 +84,6 @@ function getDOMParser(): DOMParser {
   }
   return domParser
 }
-
-
 
 /**
  * 内部导航实现函数
@@ -204,11 +202,11 @@ async function navigate(url: URL, isBack: boolean = false) {
   try {
     await _navigate(url, isBack)
   } catch (error) {
-    console.error('SPA Navigation failed:', {
+    console.error("SPA Navigation failed:", {
       url: url.toString(),
       error: error instanceof Error ? error.message : String(error),
       timestamp: new Date().toISOString(),
-      isBack
+      isBack,
     })
     window.location.assign(url)
   } finally {

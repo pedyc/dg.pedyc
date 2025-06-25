@@ -212,11 +212,8 @@ async function _navigate(url: URL, isBack: boolean = false) {
 
   // scroll into place and add history
   if (!isBack) {
-    if (url.hash) {
-      const el = document.getElementById(decodeURIComponent(url.hash.substring(1)))
-      el?.scrollIntoView()
-    } else {
-      window.scrollTo({ top: 0 })
+    if (!scrollToTarget(url)) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }
 
@@ -269,11 +266,28 @@ async function navigate(url: URL, isBack: boolean = false) {
 window.spaNavigate = navigate
 
 /**
+ * 统一处理滚动到目标元素或页面顶部
+ * @param url 目标URL
+ * @returns 是否成功滚动到hash目标
+ */
+function scrollToTarget(url: URL): boolean {
+  if (url.hash) {
+    const el = document.getElementById(decodeURIComponent(url.hash.substring(1)))
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+      return true
+    }
+  }
+  return false
+}
+
+/**
  * 创建并初始化SPA路由器
  * @returns Router实例
  */
 function createRouter() {
   if (typeof window !== "undefined") {
+    
     /**
      * 处理点击事件的导航逻辑
      * @param event 点击事件
@@ -285,26 +299,23 @@ function createRouter() {
       event.preventDefault()
 
       if (isSamePage(url) && url.hash) {
-        const el = document.getElementById(decodeURIComponent(url.hash.substring(1)))
-        el?.scrollIntoView()
-        // 对于同页面的hash跳转，使用 pushState 创建正常的历史记录
-        // 这样用户可以正常使用浏览器的前进后退功能
+        // 同页面hash跳转：只更新URL和滚动，不触发完整导航
         history.pushState({}, "", url)
+        scrollToTarget(url)
         return
       }
 
+      // 正常导航：不需要手动管理历史记录
       navigate(url, false)
     }
 
     /**
      * 处理浏览器前进后退事件
+     * 简化逻辑：popstate事件本身就表示历史记录变化
      */
     const handlePopstate = () => {
-      // 对于 popstate 事件，直接使用当前 window.location
       const currentUrl = new URL(window.location.toString())
-      
-      // 对于所有 popstate 事件，都执行完整导航
-      // 这确保了浏览器前进后退按钮能正确工作
+      // 统一标记为历史导航，让浏览器处理前进后退逻辑
       navigate(currentUrl, true)
     }
 

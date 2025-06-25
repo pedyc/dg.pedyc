@@ -83,33 +83,23 @@ export class LinkEventManager {
   }
 
   /**
-   * 处理内部链接点击事件，使用SPA导航系统避免重复历史记录
+   * 处理内部链接点击事件，只清理弹窗，让SPA系统处理导航
    * @param event 点击事件对象
    */
   private static async wikilinkClickHandler(event: MouseEvent): Promise<void> {
-    event.preventDefault() // 阻止默认跳转
+    // 不阻止默认行为，让spa.inline.ts中的handleClick处理导航
+    // event.preventDefault() // 移除这行，避免与SPA系统冲突
 
     const anchorElement = event.currentTarget as HTMLAnchorElement
-    const targetUrl = new URL(anchorElement.href)
-
     console.log("[LinkEvent Debug] Clicked link:", anchorElement.href)
-    console.log("[LinkEvent Debug] Target URL:", targetUrl.toString())
 
-    // 调用传入的 clearPopover 函数
+    // 只负责清理弹窗，导航由SPA系统统一处理
     if (this.clearPopoverFunction) {
       this.clearPopoverFunction()
     }
 
-    // 使用SPA导航系统，避免重复的历史记录条目
-    // 检查是否存在全局的SPA导航函数
-    if (typeof (window as any).spaNavigate === "function") {
-      console.log("[LinkEvent Debug] Using SPA navigation")
-      await (window as any).spaNavigate(targetUrl, false)
-    } else {
-      // 如果SPA导航不可用，回退到传统导航
-      console.log("[LinkEvent Debug] SPA navigation not available, using traditional navigation")
-      window.location.assign(targetUrl.toString())
-    }
+    // 不再手动处理导航，让spa.inline.ts的handleClick函数处理
+    // 这样可以确保导航逻辑的一致性，避免重复的历史记录问题
   }
 
   /**

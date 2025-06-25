@@ -2,7 +2,7 @@
  * 预加载管理器模块
  */
 import { OptimizedCacheManager } from "../managers/OptimizedCacheManager"
-import { getCacheConfig } from "../config/cache-config"
+import { getCacheConfig, CacheKeyGenerator, sanitizeCacheKey } from "../config/cache-config"
 import { ICleanupManager } from "../managers/CleanupManager"
 import { globalResourceManager } from "../managers/index"
 import { PopoverConfig } from "./config"
@@ -45,7 +45,7 @@ export class PreloadManager implements ICleanupManager {
   static async preloadLinkContent(href: string): Promise<void> {
     // 使用统一的URL处理函数确保缓存键一致性
     const contentUrl = getContentUrl(href)
-    const cacheKey = contentUrl.toString()
+    const cacheKey = CacheKeyGenerator.content(sanitizeCacheKey(contentUrl.toString()))
 
     // 检查是否已经在缓存中或正在预加载
     if (preloadedCache.has(cacheKey) || preloadingInProgress.has(cacheKey)) {
@@ -74,7 +74,7 @@ export class PreloadManager implements ICleanupManager {
    * @returns Promise<boolean> 是否成功预加载
    */
   private static async isLinkValid(url: URL): Promise<boolean> {
-    const cacheKey = url.toString()
+    const cacheKey = CacheKeyGenerator.link(sanitizeCacheKey(url.toString()), "validity")
 
     if (linkValidityCache.has(cacheKey)) {
       return linkValidityCache.get(cacheKey) || false
@@ -82,7 +82,10 @@ export class PreloadManager implements ICleanupManager {
 
     try {
       const controller = new AbortController()
-      const timeoutId = globalResourceManager.setTimeout(() => controller.abort(), 3000)
+      const timeoutId = globalResourceManager.setTimeout(
+        () => controller.abort(),
+        PopoverConfig.LINK_VALIDATION_TIMEOUT,
+      )
 
       const response = await fetch(url.toString(), {
         method: "HEAD",
@@ -96,14 +99,14 @@ export class PreloadManager implements ICleanupManager {
 
       return isValid
     } catch (error) {
-      linkValidityCache.set(cacheKey, false, 30 * 60 * 1000) // 30-minute TTL for failed links
+      linkValidityCache.set(cacheKey, false, PopoverConfig.FAILED_LINK_CACHE_TTL)
       return false
     }
   }
 
   private static async executePreload(href: string, _priority: number): Promise<boolean> {
     const contentUrl = getContentUrl(href)
-    const cacheKey = contentUrl.toString()
+    const cacheKey = CacheKeyGenerator.content(sanitizeCacheKey(contentUrl.toString()))
 
     // First, check if the link is valid
     if (!(await this.isLinkValid(contentUrl))) {
@@ -151,7 +154,19 @@ export class PreloadManager implements ICleanupManager {
       return true
     } catch (error) {
       PopoverErrorHandler.handleError(error as Error, "Preloading link content", cacheKey)
-      FailedLinksManager.addFailedLink(cacheKey) // 使用 FailedLinksManager 持久化失败链接
+
+      // 区分错误类型，避免将临时网络错误永久标记为失败
+      const errorMessage = (error as Error).message.toLowerCase()
+      const isTemporaryError =
+        errorMessage.includes("timeout") ||
+        errorMessage.includes("network") ||
+        errorMessage.includes("fetch")
+
+      // 只有非临时错误才标记为失败链接
+      if (!isTemporaryError) {
+        FailedLinksManager.addFailedLink(cacheKey)
+      }
+
       return false
     } finally {
       this.currentPreloads--
@@ -201,7 +216,7 @@ export class PreloadManager implements ICleanupManager {
       currentPreloads: this.currentPreloads,
       queueLength: this.preloadQueue.length,
       preloadingCount: preloadingInProgress.size,
-      failedLinksCount: FailedLinksManager.getStats().failedLinksCount,
+      failedLinksCount: FailedLinksManager.getStats().totalFailedLinks,
     }
   }
 }

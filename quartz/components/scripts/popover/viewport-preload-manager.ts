@@ -4,6 +4,7 @@ import { PreloadManager } from "./preload-manager"
 import { PopoverErrorHandler } from "./error-handler"
 import { ICleanupManager } from "../managers/CleanupManager"
 import { globalResourceManager } from "../managers/index"
+import { CacheKeyGenerator, sanitizeCacheKey } from "../config/cache-config"
 
 import { preloadedCache } from "./cache"
 import { PopoverConfig } from "./config"
@@ -101,7 +102,7 @@ export class ViewportPreloadManager implements ICleanupManager {
       let cacheKey: string | undefined
       try {
         const contentUrl = getContentUrl(link.href)
-        cacheKey = contentUrl.toString()
+        cacheKey = CacheKeyGenerator.content(sanitizeCacheKey(contentUrl.toString()))
 
         // 避免重复检查
         if (

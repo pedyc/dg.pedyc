@@ -204,7 +204,26 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
   } else {
     componentResources.afterDOMLoaded.push(`
       window.spaNavigate = (url, _) => window.location.assign(url)
-      window.addCleanup = () => {}
+      
+      // 非 SPA 模式下的清理函数实现
+      const cleanupTasks = []
+      window.addCleanup = (fn) => {
+        if (typeof fn === 'function') {
+          cleanupTasks.push(fn)
+        }
+      }
+      
+      // 页面卸载时执行清理
+      window.addEventListener('beforeunload', () => {
+        cleanupTasks.forEach(task => {
+          try {
+            task()
+          } catch (error) {
+            console.error('Error during cleanup:', error)
+          }
+        })
+      })
+      
       const event = new CustomEvent("nav", { detail: { url: document.body.dataset.slug } })
       document.dispatchEvent(event)
     `)

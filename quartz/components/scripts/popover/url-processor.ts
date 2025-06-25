@@ -1,6 +1,7 @@
 import { preloadedCache } from "./cache"
 import { removeDuplicatePathSegments } from "../../../util/path"
-import { CacheKeyGenerator } from "../config/cache-config"
+import { CacheKeyGenerator, sanitizeCacheKey } from "../config/cache-config"
+import { PopoverConfig } from "./config"
 
 /**
  * URL处理器
@@ -81,7 +82,6 @@ export class URLProcessor {
   }
 
   private static urlCache = preloadedCache
-  private static readonly CACHE_TTL = 30 * 60 * 1000 // 30分钟TTL
 
   /**
    * 创建URL对象，带缓存优化
@@ -89,13 +89,14 @@ export class URLProcessor {
    * @returns URL对象
    */
   static createUrl(href: string): URL {
-    const cached = this.urlCache.get(href)
+    const cacheKey = CacheKeyGenerator.content(sanitizeCacheKey(href))
+    const cached = this.urlCache.get(cacheKey)
     if (cached) {
       return cached
     }
 
     const url = new URL(href)
-    this.urlCache.set(href, url, this.CACHE_TTL)
+    this.urlCache.set(cacheKey, url, PopoverConfig.CACHE_TTL)
     return url
   }
 
@@ -124,7 +125,7 @@ export class URLProcessor {
     const processedUrl = this.processUrlPath(url)
 
     // 缓存处理后的URL
-    this.urlCache.set(cacheKey, processedUrl, this.CACHE_TTL)
+    this.urlCache.set(cacheKey, processedUrl, PopoverConfig.CACHE_TTL)
     return processedUrl
   }
 

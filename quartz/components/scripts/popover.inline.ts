@@ -19,6 +19,9 @@ import {
   PopoverConfig,
 } from "./popover/index"
 
+// 导入缓存键生成器
+import { CacheKeyGenerator, sanitizeCacheKey } from "./config/cache-config"
+
 import { globalResourceManager } from "./managers/index"
 
 // 从 popover/cache.ts 导入 preloadedCache
@@ -30,20 +33,6 @@ let activeAnchor: HTMLAnchorElement | null = null
 
 // 在初始化时加载失败链接
 FailedLinksManager.loadFailedLinks()
-
-// addFailedLink 函数已移至 FailedLinksManager.addFailedLink
-
-// HTML 处理函数已移至 HTMLContentProcessor
-// renderPopoverContent, render404Content, processHtmlContent 等函数已模块化
-
-// updateDocumentHead, renderPopoverContent, renderNotFoundContent 函数已移至 HTMLContentProcessor
-// 使用相应的 HTMLContentProcessor 方法替代本地实现
-
-// processHtmlContent 函数已移至 HTMLContentProcessor
-// 使用 HTMLContentProcessor.processHtmlContent 替代本地实现
-
-// parseContentType 和 preloadLinkContent 函数已移至相应的工具类
-// 使用 PreloadManager.preloadLinkContent 替代本地实现
 
 /**
  * 处理鼠标进入链接的事件，显示弹窗
@@ -104,8 +93,8 @@ async function mouseEnterHandler(
   // 使用getContentUrl确保URL处理一致性，但保留原始URL用于hash处理
   const contentUrl = getContentUrl(link.href)
   const contentUrlString = contentUrl.toString()
-  // 确保缓存键与SPA导航保持一致，使用相同的URL处理逻辑
-  const cacheKey = contentUrlString
+  // 使用统一的缓存键生成器，确保与SPA系统一致
+  const cacheKey = CacheKeyGenerator.content(sanitizeCacheKey(contentUrlString))
 
   // 调试日志：记录URL处理过程
   console.debug("[Popover] URL processing:", {
@@ -209,10 +198,6 @@ async function mouseEnterHandler(
             HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
           }
         } catch (error) {
-          // PopoverError is re-exported by popover/index.ts, but not directly used here.
-          // If it's needed, it should be imported explicitly.
-          // const popoverError = new PopoverError('Failed to load popover content', cacheKey)
-          // console.error(popoverError.message, error)
           console.error("Failed to load popover content for:", cacheKey, error) // Simplified error logging
           HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
         }
@@ -237,9 +222,6 @@ function clearActivePopover() {
   const allPopoverElements = document.querySelectorAll(".popover.active-popover")
   allPopoverElements.forEach((popoverElement) => popoverElement.classList.remove("active-popover"))
 }
-
-// 视口预加载功能已移至 ViewportPreloadManager
-// 使用 ViewportPreloadManager.initializeViewportPreloading() 替代本地实现
 
 // 使用ResourceManager统一管理事件监听器
 globalResourceManager.addEventListener(document as unknown as EventTarget, "nav", () => {

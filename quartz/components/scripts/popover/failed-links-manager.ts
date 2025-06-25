@@ -3,28 +3,97 @@
  * 优化的失败链接管理器
  * 提供更好的性能和内存管理，使用统一存储管理器
  * 使用UnifiedStorageManager统一管理存储
+ * 应用统一缓存配置和缓存键生成逻辑
  */
 import { PopoverConfig } from "./config"
 import { PopoverErrorHandler } from "./error-handler"
 import { UnifiedStorageManager } from "../managers/UnifiedStorageManager"
 import { globalResourceManager } from "../managers/index"
 import { ICleanupManager } from "../managers/CleanupManager"
+import { CacheKeyGenerator, getCacheConfig } from "../config/cache-config"
 export class FailedLinksManager implements ICleanupManager {
   private static pendingLinks = new Set<string>()
   private static batchSaveTimer: number | null = null
   private static failedLinks = new Set<string>()
 
+  // 使用统一缓存配置
+  private static readonly _cacheConfig = getCacheConfig("FAILED_LINKS_CACHE")
+
+  // 生成统一的存储键
+  private static readonly FAILED_LINKS_STORAGE_KEY = CacheKeyGenerator.system("failed_links", "storage")
+  private static readonly FAILURE_STATS_STORAGE_KEY = CacheKeyGenerator.system("failure_stats", "storage")
+
+  // 失败统计数据缓存
+  private static _failureStatsCache: Record<string, any> | null = null
+  private static _failureStatsCacheTime = 0
+  private static readonly CACHE_DURATION = 5000 // 5秒缓存
+
+  /**
+   * 验证URL是否有效
+   * @param url 要验证的URL
+   * @returns 是否为有效URL
+   */
+  private static isValidUrl(url: string): boolean {
+    return Boolean(url && typeof url === "string" && url.length > 0)
+  }
+
+  /**
+   * 获取失败统计数据（带缓存）
+   * @returns 失败统计数据对象
+   */
+  private static getFailureStats(): Record<string, any> {
+    const now = Date.now()
+    if (this._failureStatsCache && (now - this._failureStatsCacheTime) < this.CACHE_DURATION) {
+      return this._failureStatsCache
+    }
+
+    try {
+      const statsData = JSON.parse(
+        UnifiedStorageManager.safeGetItem(localStorage, this.FAILURE_STATS_STORAGE_KEY) || "{}"
+      )
+      this._failureStatsCache = statsData || {}
+      this._failureStatsCacheTime = now
+      return this._failureStatsCache!
+    } catch (error) {
+      PopoverErrorHandler.handleError(error as Error, "Parsing failure stats")
+      this._failureStatsCache = {}
+      this._failureStatsCacheTime = now
+      return this._failureStatsCache
+    }
+  }
+
+  /**
+   * 更新失败统计数据缓存
+   * @param stats 新的统计数据
+   */
+  private static updateFailureStatsCache(stats: Record<string, any>): void {
+    this._failureStatsCache = stats
+    this._failureStatsCacheTime = Date.now()
+
+    try {
+      UnifiedStorageManager.safeSetItem(
+        localStorage,
+        this.FAILURE_STATS_STORAGE_KEY,
+        JSON.stringify(stats)
+      )
+    } catch (error) {
+      PopoverErrorHandler.handleError(error as Error, "Updating failure stats cache")
+    }
+  }
+
   /**
    * 从localStorage加载失败链接列表
    */
   static loadFailedLinks(): void {
+    // 首先执行存储键迁移
+
     try {
-      const stored = UnifiedStorageManager.safeGetItem(localStorage, PopoverConfig.STORAGE_KEY)
+      const stored = UnifiedStorageManager.safeGetItem(localStorage, this.FAILED_LINKS_STORAGE_KEY)
       if (stored) {
         const links = JSON.parse(stored)
         if (Array.isArray(links)) {
           // 只加载最近的失败链接，避免内存过载
-          const recentLinks = links.slice(-PopoverConfig.MAX_FAILED_LINKS)
+          const recentLinks = links.slice(-this._cacheConfig.capacity)
           const validLinks = recentLinks.filter(
             (link) => typeof link === "string" && link.length > 0,
           )
@@ -36,6 +105,9 @@ export class FailedLinksManager implements ICleanupManager {
               `Filtered out ${recentLinks.length - validLinks.length} invalid failed links`,
             )
           }
+
+          // 加载后立即清理过期的失败链接
+          this.cleanupExpiredLinks()
         } else {
           console.warn("Invalid failed links data format in localStorage")
         }
@@ -43,7 +115,7 @@ export class FailedLinksManager implements ICleanupManager {
     } catch (error) {
       PopoverErrorHandler.handleError(error as Error, "Loading failed links from localStorage")
       // 清除损坏的数据
-      UnifiedStorageManager.safeRemoveItem(localStorage, PopoverConfig.STORAGE_KEY)
+      UnifiedStorageManager.safeRemoveItem(localStorage, this.FAILED_LINKS_STORAGE_KEY)
     }
   }
 
@@ -52,16 +124,21 @@ export class FailedLinksManager implements ICleanupManager {
    * 使用防抖机制减少localStorage写入频率
    */
   static async batchSaveFailedLinks(): Promise<void> {
-    if (this.pendingLinks.size === 0) return
-
     try {
+      // 如果有待保存的链接，先记录时间戳
+      if (this.pendingLinks.size > 0) {
+        const pendingArray = Array.from(this.pendingLinks)
+        this.batchRecordFailureTimestamps(pendingArray)
+        this.pendingLinks.clear()
+      }
+
       // 检查失败链接数量限制
-      if (this.failedLinks.size > PopoverConfig.MAX_FAILED_LINKS) {
+      if (this.failedLinks.size > this._cacheConfig.capacity) {
         console.warn(
-          `Failed links count (${this.failedLinks.size}) exceeds maximum (${PopoverConfig.MAX_FAILED_LINKS}), clearing old entries`,
+          `Failed links count (${this.failedLinks.size}) exceeds maximum (${this._cacheConfig.capacity}), clearing old entries`,
         )
         const linksArray = Array.from(this.failedLinks)
-        const keepCount = Math.floor(PopoverConfig.MAX_FAILED_LINKS * 0.8) // 保留80%
+        const keepCount = Math.floor(this._cacheConfig.capacity * 0.8) // 保留80%
         this.failedLinks.clear()
         linksArray.slice(-keepCount).forEach((link) => this.failedLinks.add(link))
       }
@@ -70,19 +147,64 @@ export class FailedLinksManager implements ICleanupManager {
       const linksToSave = Array.from(this.failedLinks)
       UnifiedStorageManager.safeSetItem(
         localStorage,
-        PopoverConfig.STORAGE_KEY,
+        this.FAILED_LINKS_STORAGE_KEY,
         JSON.stringify(linksToSave),
       )
 
-      // 清空待保存列表
-      this.pendingLinks.clear()
-      this.batchSaveTimer = null
       console.debug(`Saved ${linksToSave.length} failed links to localStorage`)
     } catch (error) {
       PopoverErrorHandler.handleError(error as Error, "Saving failed links to localStorage")
-      // 如果保存失败，清空待保存队列以避免内存泄漏
+    } finally {
+      // 确保清理状态
       this.pendingLinks.clear()
       this.batchSaveTimer = null
+    }
+  }
+
+  /**
+   * 检查失败链接是否过期
+   * 使用统一缓存配置的TTL
+   * @param url 链接URL
+   * @returns 是否过期
+   */
+  private static isFailedLinkExpired(url: string): boolean {
+    try {
+      const failures = this.getFailureStats()
+
+      if (failures[url] && typeof failures[url] === "object" && "timestamp" in failures[url]) {
+        const timestamp = failures[url].timestamp
+        const now = Date.now()
+        return (now - timestamp) > this._cacheConfig.ttl
+      }
+
+      return false // 如果没有时间戳信息，认为未过期
+    } catch (error) {
+      PopoverErrorHandler.handleError(error as Error, "Checking failed link expiration", url)
+      return false
+    }
+  }
+
+  /**
+   * 批量记录失败链接的时间戳
+   * @param urls 失败的链接URL数组
+   */
+  private static batchRecordFailureTimestamps(urls: string[]): void {
+    if (urls.length === 0) return
+
+    try {
+      const failures = this.getFailureStats()
+      const now = Date.now()
+
+      for (const url of urls) {
+        failures[url] = {
+          timestamp: now,
+          count: (failures[url]?.count || 0) + 1,
+        }
+      }
+
+      this.updateFailureStatsCache(failures)
+    } catch (error) {
+      PopoverErrorHandler.handleError(error as Error, "Batch recording failure timestamps")
     }
   }
 
@@ -91,7 +213,7 @@ export class FailedLinksManager implements ICleanupManager {
    * @param url 失败的链接URL
    */
   static addFailedLink(url: string): void {
-    if (!url || typeof url !== "string") {
+    if (!this.isValidUrl(url)) {
       console.warn("Invalid URL provided to addFailedLink:", url)
       return
     }
@@ -108,7 +230,7 @@ export class FailedLinksManager implements ICleanupManager {
         }
 
         this.batchSaveTimer = globalResourceManager.setTimeout(
-          () => FailedLinksManager.batchSaveFailedLinks(),
+          () => this.batchSaveFailedLinks(),
           PopoverConfig.BATCH_SAVE_DELAY,
         )
       }
@@ -119,11 +241,28 @@ export class FailedLinksManager implements ICleanupManager {
 
   /**
    * 检查链接是否为失败链接
+   * 考虑TTL过期时间
    * @param url 链接URL
    * @returns 是否为失败链接
    */
   static isFailedLink(url: string): boolean {
-    return this.failedLinks.has(url)
+    if (!this.isValidUrl(url)) {
+      return false
+    }
+
+    if (!this.failedLinks.has(url)) {
+      return false
+    }
+
+    // 检查是否过期
+    if (this.isFailedLinkExpired(url)) {
+      // 如果过期，从失败链接集合中移除
+      this.failedLinks.delete(url)
+      this.pendingLinks.delete(url)
+      return false
+    }
+
+    return true
   }
 
   /**
@@ -131,7 +270,7 @@ export class FailedLinksManager implements ICleanupManager {
    * @param url 要移除的链接URL
    */
   static removeFailedLink(url: string): void {
-    if (!url || typeof url !== "string") {
+    if (!this.isValidUrl(url)) {
       console.warn("Invalid URL provided to removeFailedLink:", url)
       return
     }
@@ -144,16 +283,20 @@ export class FailedLinksManager implements ICleanupManager {
       }
       if (this.pendingLinks.has(url)) {
         this.pendingLinks.delete(url)
-        // No need to set changed = true here as pendingLinks is a subset for saving
       }
 
       if (changed) {
-        // 如果确实移除了链接，则立即触发保存
-        // 以确保localStorage状态尽快更新
+        // 同时从失败统计中移除
+        const failures = this.getFailureStats()
+        if (failures[url]) {
+          delete failures[url]
+          this.updateFailureStatsCache(failures)
+        }
+
+        // 立即触发保存以确保localStorage状态更新
         if (this.batchSaveTimer) {
           clearTimeout(this.batchSaveTimer)
         }
-        // 直接调用 batchSaveFailedLinks 来更新 localStorage
         this.batchSaveFailedLinks()
       }
     } catch (error) {
@@ -174,36 +317,47 @@ export class FailedLinksManager implements ICleanupManager {
 
   /**
    * 清理过期的失败链接（统一存储管理）
-   * @param maxAge 最大年龄（毫秒）
+   * 使用统一的清理逻辑，避免与cleanupExpiredFailedLinks重复
+   * @param maxAge 最大年龄（毫秒），默认使用配置的TTL
    */
-  static async cleanupExpiredLinks(maxAge: number = 7 * 24 * 60 * 60 * 1000): Promise<void> {
+  static async cleanupExpiredLinks(maxAge?: number): Promise<void> {
+    const actualMaxAge = maxAge || this._cacheConfig.ttl
+    
     try {
-      const failures = JSON.parse(
-        UnifiedStorageManager.safeGetItem(localStorage, "popover-failures") || "{}",
-      )
+      const failures = this.getFailureStats()
       const now = Date.now()
       let cleaned = 0
+      const expiredUrls: string[] = []
 
+      // 找出过期的链接
       for (const [url, data] of Object.entries(failures)) {
         if (typeof data === "object" && data && "timestamp" in data) {
-          if (now - (data as any).timestamp > maxAge) {
-            delete failures[url]
-            this.failedLinks.delete(url)
-            cleaned++
+          if (now - (data as any).timestamp > actualMaxAge) {
+            expiredUrls.push(url)
           }
         }
       }
 
-      if (cleaned > 0) {
-        try {
-          UnifiedStorageManager.safeSetItem(
-            localStorage,
-            "popover-failures",
-            JSON.stringify(failures),
-          )
-        } catch (error) {
-          console.warn("Failed to save failure statistics:", error)
+      // 批量移除过期链接
+      if (expiredUrls.length > 0) {
+        for (const url of expiredUrls) {
+          this.failedLinks.delete(url)
+          this.pendingLinks.delete(url)
+          delete failures[url]
+          cleaned++
         }
+
+        // 更新缓存和存储
+        this.updateFailureStatsCache(failures)
+
+        // 同时更新失败链接列表
+        const linksArray = Array.from(this.failedLinks)
+        UnifiedStorageManager.safeSetItem(
+          localStorage,
+          this.FAILED_LINKS_STORAGE_KEY,
+          JSON.stringify(linksArray),
+        )
+
         console.debug(`Cleaned up ${cleaned} expired failed links`)
       }
     } catch (error) {
@@ -215,14 +369,62 @@ export class FailedLinksManager implements ICleanupManager {
    * 获取失败链接统计信息
    */
   static getStats(): {
-    failedLinksCount: number
-    pendingLinksCount: number
-    maxFailedLinks: number
+    totalFailedLinks: number
+    cacheCapacity: number
+    memoryUsage: string
+    failureDetails: Record<string, any>
   } {
-    return {
-      failedLinksCount: this.failedLinks.size,
-      pendingLinksCount: this.pendingLinks.size,
-      maxFailedLinks: PopoverConfig.MAX_FAILED_LINKS,
+    try {
+      const failures = this.getFailureStats()
+
+      return {
+        totalFailedLinks: this.failedLinks.size,
+        cacheCapacity: this._cacheConfig.capacity,
+        memoryUsage: `${Math.round((JSON.stringify(Array.from(this.failedLinks)).length / 1024) * 100) / 100} KB`,
+        failureDetails: failures,
+      }
+    } catch (error) {
+      PopoverErrorHandler.handleError(error as Error, "Getting failed links stats")
+      return {
+        totalFailedLinks: this.failedLinks.size,
+        cacheCapacity: this._cacheConfig.capacity,
+        memoryUsage: "0 KB",
+        failureDetails: {},
+      }
+    }
+  }
+
+  /**
+   * 获取调试信息
+   */
+  static getDebugInfo(): Record<string, any> {
+    try {
+      const failures = this.getFailureStats()
+
+      return {
+        failedLinksCount: this.failedLinks.size,
+        pendingLinksCount: this.pendingLinks.size,
+        cacheCapacity: this._cacheConfig.capacity,
+        cacheTTL: this._cacheConfig.ttl,
+        maxMemoryMB: this._cacheConfig.maxMemoryMB,
+        storageKeys: {
+          failedLinks: this.FAILED_LINKS_STORAGE_KEY,
+          failureStats: this.FAILURE_STATS_STORAGE_KEY,
+        },
+        failureDetails: failures,
+        memoryUsage: `${Math.round((JSON.stringify(Array.from(this.failedLinks)).length / 1024) * 100) / 100} KB`,
+        cacheInfo: {
+          statsCache: this._failureStatsCache ? "cached" : "not cached",
+          cacheAge: this._failureStatsCacheTime ? Date.now() - this._failureStatsCacheTime : 0,
+        },
+      }
+    } catch (error) {
+      PopoverErrorHandler.handleError(error as Error, "Getting debug info")
+      return {
+        error: "Failed to get debug info",
+        failedLinksCount: this.failedLinks.size,
+        pendingLinksCount: this.pendingLinks.size,
+      }
     }
   }
 
@@ -232,9 +434,23 @@ export class FailedLinksManager implements ICleanupManager {
   static clear(): void {
     this.failedLinks.clear()
     this.pendingLinks.clear()
+    
+    // 清理定时器
     if (this.batchSaveTimer) {
       clearTimeout(this.batchSaveTimer)
       this.batchSaveTimer = null
+    }
+
+    // 清理缓存
+    this._failureStatsCache = null
+    this._failureStatsCacheTime = 0
+
+    // 清理存储
+    try {
+      UnifiedStorageManager.safeRemoveItem(localStorage, this.FAILED_LINKS_STORAGE_KEY)
+      UnifiedStorageManager.safeRemoveItem(localStorage, this.FAILURE_STATS_STORAGE_KEY)
+    } catch (error) {
+      PopoverErrorHandler.handleError(error as Error, "Clearing failed links storage")
     }
   }
 
@@ -246,9 +462,14 @@ export class FailedLinksManager implements ICleanupManager {
   }
 
   /**
-   * 静态清理方法
+   * 静态清理方法 - 提供完整的清理功能
    */
   static cleanup(): void {
+    // 清理过期链接
+    this.cleanupExpiredLinks()
+    // 强制保存待保存的链接
+    this.forceSave()
+    // 清空内存中的数据
     this.clear()
   }
 

@@ -2,9 +2,21 @@ import micromorph from "micromorph"
 import { FullSlug, RelativeURL, getFullSlug, normalizeRelativeURLs } from "../../util/path"
 import { fetchCanonical } from "./utils/util"
 import { getContentUrl, clearUrlCache } from "../../util/path"
+import { CacheKeyGenerator, sanitizeCacheKey, getCacheConfig } from "./config/cache-config"
+// 导入管理器模块，实现统一的资源管理
+import { globalResourceManager, GlobalCleanupManager, OptimizedCacheManager, UnifiedStorageManager } from "./managers/index"
 
 // 清理URL处理器缓存以确保修复后的逻辑生效
 clearUrlCache()
+
+/**
+ * 全局清理函数实现
+ * 将清理任务注册到 globalResourceManager 中
+ * @param fn 清理函数
+ */
+window.addCleanup = (fn: (...args: any[]) => void) => {
+  globalResourceManager.addCleanupTask(fn)
+}
 
 // adapted from `micromorph`
 // https://github.com/natemoo-re/micromorph
@@ -18,7 +30,7 @@ const isLocalUrl = (href: string) => {
     if (window.location.origin === url.origin) {
       return true
     }
-  } catch (e) {}
+  } catch (e) { }
   return false
 }
 
@@ -48,27 +60,49 @@ function notifyNav(url: FullSlug) {
   document.dispatchEvent(event)
 }
 
-const cleanupFns: Set<(...args: any[]) => void> = new Set()
-window.addCleanup = (fn) => cleanupFns.add(fn)
-window.cleanup = () => {
-  cleanupFns.forEach((fn) => fn())
-  cleanupFns.clear()
-}
+// 使用统一存储管理器
+const storageManager = new UnifiedStorageManager()
+
+// 使用优化缓存管理器进行内容缓存
+const spaContentCache = new OptimizedCacheManager<string>(getCacheConfig("URL_CACHE"))
+
+// 声明全局加载条变量
+let loadingBar: HTMLElement | null = null
+
+
 
 /**
  * 显示导航加载进度条
  */
 function startLoading() {
-  const loadingBar = document.createElement("div")
-  loadingBar.className = "navigation-progress"
-  loadingBar.style.width = "0"
-  if (!document.body.contains(loadingBar)) {
-    document.body.appendChild(loadingBar)
+  // 清理之前的加载条
+  const existingBar = document.querySelector(".navigation-progress")
+  if (existingBar) {
+    existingBar.remove()
   }
 
-  setTimeout(() => {
-    loadingBar.style.width = "80%"
+  loadingBar = document.createElement("div")
+  loadingBar.className = "loading-bar"
+  loadingBar.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--accent);
+    z-index: 9999;
+    transition: width 0.3s ease;
+  `
+  document.body.appendChild(loadingBar)
+
+  // 使用 globalResourceManager 管理定时器
+  globalResourceManager.setTimeout(() => {
+    if (loadingBar) {
+      loadingBar.style.width = "80%"
+    }
   }, 100)
+
+  // 清理函数将在finally块中处理
 }
 
 let isNavigating = false
@@ -91,23 +125,29 @@ function getDOMParser(): DOMParser {
  * @param isBack 是否为后退操作（影响缓存策略和历史记录）
  */
 async function _navigate(url: URL, isBack: boolean = false) {
-  isNavigating = true
   startLoading()
   const parser = getDOMParser()
 
   // 使用统一的URL处理函数确保与popover系统缓存键一致
   const processedUrl = getContentUrl(url.toString())
-  const cacheKey = processedUrl.toString()
+  const cacheKey = CacheKeyGenerator.content(sanitizeCacheKey(processedUrl.toString()))
   let contents: string | undefined | null = null
 
-  // 尝试从 sessionStorage 获取缓存
-  const cachedContent = sessionStorage.getItem(cacheKey)
-  if (cachedContent) {
-    contents = cachedContent
+  // 首先尝试从内存缓存获取
+  if (spaContentCache.has(cacheKey)) {
+    contents = spaContentCache.get(cacheKey)
+  } else {
+    // 然后尝试从 sessionStorage 获取缓存
+    const cachedContent = storageManager.getSessionItem(cacheKey)
+    if (cachedContent) {
+      contents = cachedContent
+      // 将 sessionStorage 中的内容加载到内存缓存
+      spaContentCache.set(cacheKey, cachedContent)
+    }
   }
 
   // 如果没有缓存，则发起网络请求
-  if (contents === null) {
+  if (!contents) {
     contents = await fetchCanonical(processedUrl)
       .then((res) => {
         const contentType = res.headers.get("content-type")
@@ -123,14 +163,16 @@ async function _navigate(url: URL, isBack: boolean = false) {
         return null // 明确返回 null
       })
 
-    // 如果成功获取内容并且不是回退操作，则存入 sessionStorage
+    // 如果成功获取内容并且不是回退操作，则存入缓存
     if (contents && !isBack) {
       try {
-        sessionStorage.setItem(cacheKey, contents)
+        // 存入内存缓存
+        spaContentCache.set(cacheKey, contents)
+        // 存入 sessionStorage
+        storageManager.setSessionItem(cacheKey, contents)
       } catch (e) {
-        console.warn("Failed to cache content in sessionStorage:", e)
-        // 如果存储失败（例如超出大小限制），可以考虑清除一些旧的缓存项
-        // sessionStorage.clear(); // 或者更精细的清除策略
+        console.warn("Failed to cache content:", e)
+        // 如果存储失败，清理管理器会自动处理
       }
     }
   }
@@ -141,9 +183,13 @@ async function _navigate(url: URL, isBack: boolean = false) {
   const event: CustomEventMap["prenav"] = new CustomEvent("prenav", { detail: {} })
   document.dispatchEvent(event)
 
-  // cleanup old
-  cleanupFns.forEach((fn) => fn())
-  cleanupFns.clear()
+  // 清理加载条
+  if (loadingBar && loadingBar.parentNode) {
+    loadingBar.remove()
+  }
+
+  // 使用全局清理管理器清理旧资源
+  GlobalCleanupManager.cleanupAll()
 
   const html = parser.parseFromString(contents, "text/html")
   normalizeRelativeURLs(html, processedUrl)
@@ -198,6 +244,7 @@ async function _navigate(url: URL, isBack: boolean = false) {
  */
 async function navigate(url: URL, isBack: boolean = false) {
   if (isNavigating) return
+
   isNavigating = true
   try {
     await _navigate(url, isBack)
@@ -211,6 +258,11 @@ async function navigate(url: URL, isBack: boolean = false) {
     window.location.assign(url)
   } finally {
     isNavigating = false
+    // 确保清理加载进度条
+    const loadingBar = document.querySelector(".navigation-progress")
+    if (loadingBar) {
+      loadingBar.remove()
+    }
   }
 }
 
@@ -222,10 +274,14 @@ window.spaNavigate = navigate
  */
 function createRouter() {
   if (typeof window !== "undefined") {
-    window.addEventListener("click", async (event) => {
+    /**
+     * 处理点击事件的导航逻辑
+     * @param event 点击事件
+     */
+    const handleClick = async (event: Event) => {
       const { url } = getOpts(event) ?? {}
       // dont hijack behaviour, just let browser act normally
-      if (!url || event.ctrlKey || event.metaKey) return
+      if (!url || (event as MouseEvent).ctrlKey || (event as MouseEvent).metaKey) return
       event.preventDefault()
 
       if (isSamePage(url) && url.hash) {
@@ -238,22 +294,23 @@ function createRouter() {
       }
 
       navigate(url, false)
-    })
+    }
 
-    window.addEventListener("popstate", () => {
+    /**
+     * 处理浏览器前进后退事件
+     */
+    const handlePopstate = () => {
       // 对于 popstate 事件，直接使用当前 window.location
       const currentUrl = new URL(window.location.toString())
-
-      // 如果是同页面的 hash 变化，只需要滚动，不需要重新导航
-      if (currentUrl.hash) {
-        const el = document.getElementById(decodeURIComponent(currentUrl.hash.substring(1)))
-        el?.scrollIntoView()
-        return
-      }
-
-      // 只有在真正需要加载新内容时才进行导航
+      
+      // 对于所有 popstate 事件，都执行完整导航
+      // 这确保了浏览器前进后退按钮能正确工作
       navigate(currentUrl, true)
-    })
+    }
+
+    // 使用 globalResourceManager 管理事件监听器
+    globalResourceManager.addEventListener(window, "click", handleClick)
+    globalResourceManager.addEventListener(window, "popstate", handlePopstate)
   }
 
   return new (class Router {

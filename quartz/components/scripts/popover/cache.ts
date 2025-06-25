@@ -10,7 +10,7 @@ import { getCacheConfig } from "../config/cache-config"
 const popoverCacheConfig = getCacheConfig("POPOVER_PRELOAD_CACHE")
 export const preloadedCache = new OptimizedCacheManager<any>({
   capacity: popoverCacheConfig.capacity,
-  maxMemoryMB: 50,
+  maxMemoryMB: popoverCacheConfig.maxMemoryMB,
   ttl: popoverCacheConfig.ttl,
-  cleanupIntervalMs: 300000,
+  cleanupIntervalMs: popoverCacheConfig.cleanupIntervalMs || 300000,
 })

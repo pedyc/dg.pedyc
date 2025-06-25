@@ -1,4 +1,9 @@
 import type { ICleanupManager } from "./CleanupManager"
+import {
+  getCacheConfig,
+  CacheMonitorConfig,
+  type CacheConfig,
+} from "../config/cache-config"
 
 /**
  * 存储配额信息接口
@@ -23,10 +28,8 @@ interface StorageStats {
  * 统一管理 localStorage 和 sessionStorage，提供配额检查、自动清理等功能
  */
 export class UnifiedStorageManager implements ICleanupManager {
-  private static readonly QUOTA_CLEANUP_THRESHOLD = 0.9 // 90%
-  private static readonly STORAGE_PREFIX = "quartz_"
+  private static readonly config: CacheConfig = getCacheConfig("STORAGE_MANAGER")
   private static readonly DEFAULT_QUOTA = 10 * 1024 * 1024 // 10MB
-  private static readonly LARGE_ITEM_THRESHOLD = 10000 // 10KB
 
   /**
    * 检查存储配额使用情况
@@ -103,19 +106,27 @@ export class UnifiedStorageManager implements ICleanupManager {
   private static async checkAndCleanupIfNeeded(storage: Storage): Promise<void> {
     try {
       const quota = await this.checkStorageQuota(storage)
-      if (quota.percentage > this.QUOTA_CLEANUP_THRESHOLD) {
-        console.warn("存储配额即将耗尽，执行清理...")
+      const threshold = this.config.memoryThreshold || 0.9
+
+      if (quota.percentage > threshold) {
+        if (CacheMonitorConfig.CONSOLE_WARNINGS) {
+          console.warn("存储配额即将耗尽，执行清理...")
+        }
         this.cleanupStorage(storage)
 
         // 重新检查配额
         const newQuota = await this.checkStorageQuota(storage)
-        if (newQuota.percentage > this.QUOTA_CLEANUP_THRESHOLD) {
-          console.warn("清理后配额仍然不足，执行紧急清理...")
+        if (newQuota.percentage > threshold) {
+          if (CacheMonitorConfig.CONSOLE_WARNINGS) {
+            console.warn("清理后配额仍然不足，执行紧急清理...")
+          }
           this.emergencyCleanup(storage)
         }
       }
     } catch (error) {
-      console.warn("配额检查失败:", error)
+      if (CacheMonitorConfig.CONSOLE_WARNINGS) {
+        console.warn("配额检查失败:", error)
+      }
     }
   }
 
@@ -203,9 +214,14 @@ export class UnifiedStorageManager implements ICleanupManager {
     try {
       const keysToRemove = this.findExpiredKeys(storage)
       this.removeKeys(storage, keysToRemove)
-      console.log(`清理了 ${keysToRemove.length} 个过期项目`)
+
+      if (CacheMonitorConfig.CONSOLE_WARNINGS && keysToRemove.length > 0) {
+        console.log(`清理了 ${keysToRemove.length} 个过期项目`)
+      }
     } catch (error) {
-      console.error("清理存储失败:", error)
+      if (CacheMonitorConfig.CONSOLE_WARNINGS) {
+        console.error("清理存储失败:", error)
+      }
     }
   }
 
@@ -221,6 +237,17 @@ export class UnifiedStorageManager implements ICleanupManager {
     for (let i = 0; i < storage.length; i++) {
       const key = storage.key(i)
       if (!key) continue
+
+      // 只清理以缓存前缀开头的键，适应新的缓存键格式
+      const isCacheKey =
+        key.startsWith("popover_") ||
+        key.startsWith("content_") ||
+        key.startsWith("search_") ||
+        key.startsWith("link_") ||
+        key.startsWith("font_") ||
+        key.startsWith("user_")
+
+      if (!isCacheKey) continue
 
       const value = storage.getItem(key)
       if (!value) continue
@@ -241,16 +268,19 @@ export class UnifiedStorageManager implements ICleanupManager {
    */
   private static isExpiredItem(value: string, now: number): boolean {
     try {
-      // 尝试解析为 JSON 以检查过期时间
       const parsed = JSON.parse(value)
-      if (parsed && typeof parsed === "object" && parsed.expiry && parsed.expiry < now) {
-        return true
+      if (parsed && typeof parsed === "object" && parsed.timestamp) {
+        const age = now - parsed.timestamp
+        // 使用配置中的TTL，默认为24小时
+        const maxAge = (this.config.ttl || 24 * 60 * 60) * 1000
+        return age > maxAge
       }
     } catch {
-      // 如果不是 JSON 格式，检查是否是大文件（优先清理）
-      if (value.length > this.LARGE_ITEM_THRESHOLD) {
-        return true
-      }
+      // 不是JSON格式，检查大小
+      const sizeInBytes = new Blob([value]).size
+      // 使用配置中的最大内存限制，默认为1MB
+      const maxSize = (this.config.maxMemoryMB || 1024) * 1024
+      return sizeInBytes > maxSize
     }
     return false
   }
@@ -277,9 +307,11 @@ export class UnifiedStorageManager implements ICleanupManager {
   static emergencyCleanup(storage: Storage): void {
     try {
       const keys: string[] = []
+      const keyPrefix = this.config.keyPrefix || "sys_"
+
       for (let i = 0; i < storage.length; i++) {
         const key = storage.key(i)
-        if (key && key.startsWith(this.STORAGE_PREFIX)) {
+        if (key && key.startsWith(keyPrefix)) {
           keys.push(key)
         }
       }
@@ -290,53 +322,48 @@ export class UnifiedStorageManager implements ICleanupManager {
         storage.removeItem(keys[i])
       }
 
-      console.warn(`紧急清理：移除了 ${toRemove} 个存储项`)
+      if (CacheMonitorConfig.CONSOLE_WARNINGS) {
+        console.warn(`紧急清理：移除了 ${toRemove} 个存储项`)
+      }
     } catch (error) {
-      console.error("紧急清理失败:", error)
+      if (CacheMonitorConfig.CONSOLE_WARNINGS) {
+        console.error("紧急清理失败:", error)
+      }
     }
   }
 
-  /**
-   * 添加前缀到键名
-   * @param key 原始键名
-   * @returns 带前缀的键名
-   */
-  private static addPrefix(key: string): string {
-    return `${this.STORAGE_PREFIX}${key}`
-  }
+
 
   // SessionStorage 方法
   async setSessionItem(key: string, value: string): Promise<boolean> {
-    return UnifiedStorageManager.safeSetItem(
-      sessionStorage,
-      UnifiedStorageManager.addPrefix(key),
-      value,
-    )
+    // 直接使用传入的key，不再添加额外前缀，确保与内存缓存键一致
+    return UnifiedStorageManager.safeSetItem(sessionStorage, key, value)
   }
 
   getSessionItem(key: string): string | null {
-    return UnifiedStorageManager.safeGetItem(sessionStorage, UnifiedStorageManager.addPrefix(key))
+    // 直接使用传入的key，不再添加额外前缀，确保与内存缓存键一致
+    return UnifiedStorageManager.safeGetItem(sessionStorage, key)
   }
 
   removeSessionItem(key: string): void {
-    UnifiedStorageManager.safeRemoveItem(sessionStorage, UnifiedStorageManager.addPrefix(key))
+    // 直接使用传入的key，不再添加额外前缀，确保与内存缓存键一致
+    UnifiedStorageManager.safeRemoveItem(sessionStorage, key)
   }
 
   // LocalStorage 方法
   async setLocalItem(key: string, value: string): Promise<boolean> {
-    return UnifiedStorageManager.safeSetItem(
-      localStorage,
-      UnifiedStorageManager.addPrefix(key),
-      value,
-    )
+    // 直接使用传入的key，不再添加额外前缀，确保与内存缓存键一致
+    return UnifiedStorageManager.safeSetItem(localStorage, key, value)
   }
 
   getLocalItem(key: string): string | null {
-    return UnifiedStorageManager.safeGetItem(localStorage, UnifiedStorageManager.addPrefix(key))
+    // 直接使用传入的key，不再添加额外前缀，确保与内存缓存键一致
+    return UnifiedStorageManager.safeGetItem(localStorage, key)
   }
 
   removeLocalItem(key: string): void {
-    UnifiedStorageManager.safeRemoveItem(localStorage, UnifiedStorageManager.addPrefix(key))
+    // 直接使用传入的key，不再添加额外前缀，确保与内存缓存键一致
+    UnifiedStorageManager.safeRemoveItem(localStorage, key)
   }
 
   /**
@@ -360,24 +387,39 @@ export class UnifiedStorageManager implements ICleanupManager {
 
   /**
    * 获取存储统计信息
+   * @returns 存储统计
    */
-  async getStorageStats(): Promise<StorageStats> {
-    const [localQuota, sessionQuota] = await Promise.all([
-      UnifiedStorageManager.checkStorageQuota(localStorage),
-      UnifiedStorageManager.checkStorageQuota(sessionStorage),
-    ])
+  getStorageStats(): {
+    localStorage: { used: number; available: number; itemCount: number }
+    sessionStorage: { used: number; available: number; itemCount: number }
+  } {
+    const getStats = (storage: Storage) => {
+      let used = 0
+      let itemCount = 0
+      const keyPrefix = UnifiedStorageManager.config.keyPrefix || "sys_"
+
+      for (let i = 0; i < storage.length; i++) {
+        const key = storage.key(i)
+        if (key && key.startsWith(keyPrefix)) {
+          const value = storage.getItem(key)
+          if (value) {
+            used += new Blob([key + value]).size
+            itemCount++
+          }
+        }
+      }
+
+      const maxCapacity = (UnifiedStorageManager.config.capacity || 5) * 1024 * 1024 // 使用配置中的容量限制
+      return {
+        used,
+        available: Math.max(0, maxCapacity - used),
+        itemCount,
+      }
+    }
 
     return {
-      localStorage: {
-        used: localQuota.used,
-        total: localQuota.total,
-        percentage: localQuota.percentage,
-      },
-      sessionStorage: {
-        used: sessionQuota.used,
-        total: sessionQuota.total,
-        percentage: sessionQuota.percentage,
-      },
+      localStorage: getStats(localStorage),
+      sessionStorage: getStats(sessionStorage),
     }
   }
 
@@ -385,8 +427,20 @@ export class UnifiedStorageManager implements ICleanupManager {
    * 清理所有存储
    */
   cleanupAllStorage(): void {
+    const now = Date.now()
+    const cleanupInterval = (UnifiedStorageManager.config.cleanupIntervalMs || 60) * 60 * 1000 // 转换为毫秒
+
+    // 检查是否需要清理（基于配置的清理间隔）
+    const lastCleanup = parseInt(localStorage.getItem("last_cleanup") || "0")
+    if (now - lastCleanup < cleanupInterval) {
+      return // 还未到清理时间
+    }
+
     UnifiedStorageManager.cleanupStorage(localStorage)
     UnifiedStorageManager.cleanupStorage(sessionStorage)
+
+    // 记录清理时间
+    localStorage.setItem("last_cleanup", now.toString())
   }
 
   // 实现 ICleanupManager 接口
@@ -395,6 +449,21 @@ export class UnifiedStorageManager implements ICleanupManager {
   }
 
   getStats(): Promise<StorageStats> {
-    return this.getStorageStats()
+    const stats = this.getStorageStats()
+    const storageStats: StorageStats = {
+      localStorage: {
+        used: stats.localStorage.used,
+        total: stats.localStorage.used + stats.localStorage.available,
+        percentage:
+          stats.localStorage.used / (stats.localStorage.used + stats.localStorage.available),
+      },
+      sessionStorage: {
+        used: stats.sessionStorage.used,
+        total: stats.sessionStorage.used + stats.sessionStorage.available,
+        percentage:
+          stats.sessionStorage.used / (stats.sessionStorage.used + stats.sessionStorage.available),
+      },
+    }
+    return Promise.resolve(storageStats)
   }
 }

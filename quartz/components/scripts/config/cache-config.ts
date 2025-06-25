@@ -142,6 +142,18 @@ export const GlobalCacheConfig: Record<string, CacheConfig> = {
     memoryThreshold: 0.8,
   } as CacheConfig,
 
+  /** 存储管理器配置 */
+  STORAGE_MANAGER: {
+    capacity: 1000,
+    ttl: 24 * 60 * 60 * 1000, // 24小时
+    maxMemoryMB: 50,
+    warningThreshold: 800,
+    description: "统一存储管理器配置",
+    keyPrefix: CacheKeyRules.PREFIXES.SYSTEM,
+    cleanupIntervalMs: 10 * 60 * 1000, // 10分钟
+    memoryThreshold: 0.9, // 90%
+  } as CacheConfig,
+
   /** 默认缓存配置 */
   DEFAULT: {
     capacity: 100,

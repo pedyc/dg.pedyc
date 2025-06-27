@@ -35,6 +35,7 @@ import { ViewportPreloadManager } from "./viewport-preload-manager"
 import { PreloadManager } from "./preload-manager"
 import { preloadedCache } from "./cache"
 
+export { mouseEnterHandler, clearActivePopover } from "./popover-handler"
 // 注册实现了ICleanupManager接口的管理器
 GlobalCleanupManager.register(ViewportPreloadManager)
 GlobalCleanupManager.register(PreloadManager)

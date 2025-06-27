@@ -7,23 +7,29 @@ import { GlobalCleanupManager } from "./CleanupManager"
 import { UnifiedStorageManager } from "./UnifiedStorageManager"
 import { OptimizedCacheManager } from "./OptimizedCacheManager"
 import { ResourceManager } from "./ResourceManager"
+import { LazyloadManager } from "./LazyloadManager"
 
 // 导出所有管理器类
 export { ICleanupManager, GlobalCleanupManager } from "./CleanupManager"
 export { UnifiedStorageManager } from "./UnifiedStorageManager"
 export { OptimizedCacheManager } from "./OptimizedCacheManager"
 export { ResourceManager } from "./ResourceManager"
+export { LazyloadManager } from "./LazyloadManager"
+export { ImageLoadManager } from "./ImageLoadManager"
+export { ImageObserverManager } from "./ImageObserverManager"
 
 // 创建全局实例
 export const globalCleanupManager = new GlobalCleanupManager()
 export const globalResourceManager = new ResourceManager()
 export const globalCacheManager = OptimizedCacheManager.createDefault()
 export const globalStorageManager = new UnifiedStorageManager()
+export const globalLazyloadManager = LazyloadManager.createDefault()
 
 // 注册到全局清理管理器
 GlobalCleanupManager.register(globalResourceManager)
 GlobalCleanupManager.register(globalCacheManager)
 GlobalCleanupManager.register(globalStorageManager)
+GlobalCleanupManager.register(globalLazyloadManager)
 
 // 设置全局清理事件
 if (typeof window !== "undefined") {

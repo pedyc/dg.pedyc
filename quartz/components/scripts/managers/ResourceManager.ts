@@ -79,6 +79,10 @@ export class ResourceManager implements ICleanupManager {
 
   /**
    * 注册事件监听器
+   * @param element 事件目标，可以是 HTMLElement, Document, Window 等实现了 EventTarget 接口的对象
+   * @param type 事件类型字符串，如 'click', 'nav', 'beforeunload' 等
+   * @param listener 事件监听器函数
+   * @param options 可选参数，用于指定事件监听器的特性，如 once, passive, capture 等
    */
   addEventListener(
     element: EventTarget,

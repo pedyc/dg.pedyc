@@ -20,7 +20,7 @@ def extract_chinese_chars(directory):
                     with open(filepath, 'r', encoding='utf-8') as f:
                         content = f.read()
                         # Use a regex to find Chinese characters (Unicode range)
-                        found_chars = re.findall(r'[\u4e00-\u9fff]+', content)
+                        found_chars = re.findall(r'[\u4e00-\u9fffA-Za-z]+', content)
                         for chars in found_chars:
                             for char in chars:
                                 chinese_chars.add(char)

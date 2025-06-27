@@ -1,9 +1,5 @@
 import type { ICleanupManager } from "./CleanupManager"
-import {
-  getCacheConfig,
-  CacheMonitorConfig,
-  type CacheConfig,
-} from "../config/cache-config"
+import { getCacheConfig, CacheMonitorConfig, type CacheConfig } from "../config/cache-config"
 
 /**
  * 存储配额信息接口
@@ -331,8 +327,6 @@ export class UnifiedStorageManager implements ICleanupManager {
       }
     }
   }
-
-
 
   // SessionStorage 方法
   async setSessionItem(key: string, value: string): Promise<boolean> {

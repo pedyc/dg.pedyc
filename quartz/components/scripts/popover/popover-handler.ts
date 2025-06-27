@@ -20,6 +20,24 @@ export function clearActivePopover() {
 }
 
 /**
+ * 清除所有弹窗元素（用于 SPA 导航时的完全清理）
+ */
+export function clearAllPopovers() {
+  activeAnchor = null
+  // 移除所有弹窗元素
+  const allPopoverElements = document.querySelectorAll(".popover")
+  allPopoverElements.forEach((popoverElement) => {
+    popoverElement.remove()
+  })
+
+  // 清理所有链接的绑定标记，确保重新绑定事件
+  const allLinks = document.querySelectorAll("a[data-popover-bound]")
+  allLinks.forEach((link) => {
+    link.removeAttribute("data-popover-bound")
+  })
+}
+
+/**
  * 处理鼠标进入链接的事件，显示弹窗
  * @param this 触发事件的 HTMLAnchorElement
  * @param event 鼠标事件对象

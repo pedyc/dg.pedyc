@@ -1,4 +1,6 @@
-export declare global {
+import { RelativeURL } from "./quartz/util/path"
+
+declare global {
   interface Document {
     addEventListener<K extends keyof CustomEventMap>(
       type: K,
@@ -11,7 +13,7 @@ export declare global {
     dispatchEvent<K extends keyof CustomEventMap>(ev: CustomEventMap[K] | UIEvent): void
   }
   interface Window {
-    spaNavigate(url: URL, isBack: boolean = false)
+    spaNavigate(pathname: RelativeURL): Promise<void>
     addCleanup(fn: (...args: any[]) => void)
   }
 }

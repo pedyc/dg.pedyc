@@ -1,6 +1,5 @@
 import micromorph from "micromorph"
-import { FullSlug } from "../../../util/path"
-
+import { FullSlug, isInternalLink } from "../../../util/path"
 import { globalResourceManager } from "../managers/index"
 
 export { micromorph }
@@ -10,27 +9,20 @@ export { micromorph }
 const NODE_TYPE_ELEMENT = 1
 
 /**
- * 检查给定目标是否为Element类型。
- * @param target 要检查的EventTarget或null。
- * @returns 如果目标是Element，则返回true，否则返回false。
+ * 检查给定的目标是否为HTML元素。
+ * @param target 要检查的目标对象。
+ * @returns 如果目标是HTML元素，则返回true，否则返回false。
  */
 export const isElement = (target: EventTarget | null): target is Element =>
   (target as Node)?.nodeType === NODE_TYPE_ELEMENT
 
 /**
- * 检查给定的URL是否为本地URL（与当前页面同源）。
+ * 检查URL是否为本地URL（同源）。
+ * 统一使用path.ts中的isInternalLink函数
  * @param href 要检查的URL字符串。
  * @returns 如果URL是本地URL，则返回true，否则返回false。
  */
-export const isLocalUrl = (href: string) => {
-  try {
-    const url = new URL(href)
-    if (window.location.origin === url.origin) {
-      return true
-    }
-  } catch (e) {}
-  return false
-}
+export const isLocalUrl = isInternalLink
 
 /**
  * 检查两个URL是否指向同一页面（同源且同路径）。
@@ -45,26 +37,31 @@ export const isSamePage = (url: URL): boolean => {
 
 /**
  * 从事件中提取导航选项，例如目标URL和滚动行为。
- * @param event 触发导航的事件。
- * @returns 包含URL和可选滚动行为的对象，如果不需要导航则返回undefined。
+ * @param opts 包含target的选项对象。
+ * @returns 包含navigate标志和可选滚动行为的对象。
  */
-export const getOpts = ({ target }: Event): { url: URL; scroll?: boolean } | undefined => {
-  if (!isElement(target)) return
-  if (target.attributes.getNamedItem("target")?.value === "_blank") return
+export const getOpts = ({
+  target,
+}: {
+  target: EventTarget | null
+}): { navigate: boolean; scroll?: boolean } => {
+  if (!isElement(target)) return { navigate: false }
+  if (target.attributes.getNamedItem("target")?.value === "_blank") return { navigate: false }
   const a = target.closest("a")
-  if (!a) return
-  if ("routerIgnore" in a.dataset) return
+  if (!a) return { navigate: false }
+  if ("routerIgnore" in a.dataset) return { navigate: false }
   const { href } = a
-  if (!isLocalUrl(href)) return
-  return { url: new URL(href), scroll: "routerNoscroll" in a.dataset ? false : undefined }
+  if (!isLocalUrl(href)) return { navigate: false }
+  return { navigate: true, scroll: "routerNoscroll" in a.dataset ? false : undefined }
 }
 
 /**
  * 触发导航事件通知。
  * @param url 导航目标URL。
+ * @param type 事件类型，默认为"nav"。
  */
-export function notifyNav(url: FullSlug) {
-  const event: CustomEventMap["nav"] = new CustomEvent("nav", { detail: { url } })
+export function notifyNav(url: FullSlug, type: string = "nav") {
+  const event = new CustomEvent(type, { detail: { url } })
   document.dispatchEvent(event)
 }
 

@@ -5,7 +5,7 @@ export { PopoverConfig } from "./config"
 export { PopoverError, PopoverErrorHandler } from "./error-handler"
 
 // URL和链接处理
-export { URLProcessor } from "./url-processor"
+// URLProcessor已移除，直接使用path.ts中的函数
 
 // 内容处理
 export { HTMLContentProcessor } from "./html-processor"
@@ -35,7 +35,7 @@ import { ViewportPreloadManager } from "./viewport-preload-manager"
 import { PreloadManager } from "./preload-manager"
 import { preloadedCache } from "./cache"
 
-export { mouseEnterHandler, clearActivePopover } from "./popover-handler"
+export { mouseEnterHandler, clearActivePopover, clearAllPopovers } from "./popover-handler"
 // 注册实现了ICleanupManager接口的管理器
 GlobalCleanupManager.register(ViewportPreloadManager)
 GlobalCleanupManager.register(PreloadManager)

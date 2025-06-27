@@ -1,222 +1,184 @@
-import micromorph from "micromorph"
-import { normalizeRelativeURLs, getContentUrl, getFullSlug, RelativeURL } from "../../../util/path"
-import { fetchCanonical } from "../utils/util"
-import { CacheKeyGenerator, sanitizeCacheKey, getCacheConfig } from "../config/cache-config"
+// micromorph已在spa-services.ts中使用
+import { getFullSlug, RelativeURL } from "../../../util/path"
+import { globalResourceManager, globalStorageManager, globalCacheManager } from "../managers/index"
+import { clearAllPopovers } from "../popover/index"
+import { getOpts, notifyNav, startLoading } from "./spa-utils"
 import {
-  globalResourceManager,
-  GlobalCleanupManager,
-  OptimizedCacheManager,
-  UnifiedStorageManager,
-} from "../managers/index"
-import {
-  isSamePage,
-  getOpts,
-  notifyNav,
-  startLoading,
-  getDOMParser,
-  scrollToTarget,
-} from "./spa-utils"
+  getContentForNavigation,
+  updatePageContent,
+  handleSamePageNavigation,
+  cleanupNavigationState,
+} from "./spa-services"
 
-// 使用统一存储管理器
-export const storageManager = new UnifiedStorageManager()
-
-// 使用优化缓存管理器进行内容缓存
-export const spaContentCache = new OptimizedCacheManager<string>(getCacheConfig("URL_CACHE"))
+// 使用全局管理器实例，避免重复创建
+export const storageManager = globalStorageManager
+export const spaContentCache = globalCacheManager
 
 export let announcer = document.createElement("route-announcer")
-export let isNavigating = false
 
 /**
  * 内部导航实现函数
- * @param url 目标URL
- * @param isBack 是否为后退操作（影响缓存策略和历史记录）
+ * 重构后的简化版本，使用统一的服务函数
  */
-export async function _navigate(url: URL, isBack: boolean = false) {
-  startLoading()
-  const parser = getDOMParser()
+function createNavigateFunction(announcer: HTMLElement) {
+  return async function _navigate(url: URL, isBack: boolean = false): Promise<void> {
+    // 开始加载
+    startLoading()
 
-  // 使用统一的URL处理函数确保与popover系统缓存键一致
-  const processedUrl = getContentUrl(url.toString())
-  const cacheKey = CacheKeyGenerator.content(sanitizeCacheKey(processedUrl.toString()))
-  let contents: string | undefined | null = null
-
-  // 首先尝试从内存缓存获取
-  if (spaContentCache.has(cacheKey)) {
-    contents = spaContentCache.get(cacheKey)
-  } else {
-    // 然后尝试从 sessionStorage 获取缓存
-    const cachedContent = storageManager.getSessionItem(cacheKey)
-    if (cachedContent) {
-      contents = cachedContent
-      // 将 sessionStorage 中的内容加载到内存缓存
-      spaContentCache.set(cacheKey, cachedContent)
-    }
-  }
-
-  // 如果没有缓存，则发起网络请求
-  if (!contents) {
-    contents = await fetchCanonical(processedUrl)
-      .then((res) => {
-        const contentType = res.headers.get("content-type")
-        if (contentType?.startsWith("text/html")) {
-          return res.text()
-        } else {
-          window.location.assign(url)
-          return null // 明确返回 null，避免后续处理
-        }
-      })
-      .catch(() => {
+    try {
+      // 获取内容
+      const contents = await getContentForNavigation(url)
+      if (!contents) {
+        // 需要完整页面跳转
         window.location.assign(url)
-        return null // 明确返回 null
-      })
-
-    // 如果成功获取内容并且不是回退操作，则存入缓存
-    if (contents && !isBack) {
-      try {
-        // 存入内存缓存
-        spaContentCache.set(cacheKey, contents)
-        // 存入 sessionStorage
-        storageManager.setSessionItem(cacheKey, contents)
-      } catch (e) {
-        console.warn("Failed to cache content:", e)
-        // 如果存储失败，清理管理器会自动处理
-      }
-    }
-  }
-
-  if (!contents) return
-
-  // notify about to nav
-  const event: CustomEventMap["prenav"] = new CustomEvent("prenav", { detail: {} })
-  document.dispatchEvent(event)
-
-  // 清理加载条
-  const loadingBar = document.querySelector(".navigation-progress")
-  if (loadingBar && loadingBar.parentNode) {
-    loadingBar.remove()
-  }
-
-  // 使用全局清理管理器清理旧资源
-  GlobalCleanupManager.cleanupAll()
-
-  const html = parser.parseFromString(contents, "text/html")
-  normalizeRelativeURLs(html, processedUrl)
-
-  let title = html.querySelector("title")?.textContent
-  if (title) {
-    document.title = title
-  } else {
-    const h1 = document.querySelector("h1")
-    title = h1?.innerText ?? h1?.textContent ?? url.pathname
-  }
-  if (announcer.textContent !== title) {
-    announcer.textContent = title
-  }
-  announcer.dataset.persist = ""
-  html.body.appendChild(announcer)
-
-  // morph body
-  micromorph(document.body, html.body)
-
-  // scroll into place and add history
-  if (!isBack) {
-    if (!scrollToTarget(url)) {
-      window.scrollTo({ top: 0, behavior: "smooth" })
-    }
-  }
-
-  // now, patch head, re-executing scripts
-  const elementsToRemove = document.head.querySelectorAll(":not([spa-preserve])")
-  elementsToRemove.forEach((el) => el.remove())
-  const elementsToAdd = html.head.querySelectorAll(":not([spa-preserve])")
-  elementsToAdd.forEach((el) => document.head.appendChild(el))
-
-  // delay setting the url until now
-  // at this point everything is loaded so changing the url should resolve to the correct addresses
-  // 只有在非回退操作且不是同页面导航时才添加历史记录，避免重复的历史记录条目
-  if (!isBack && !isSamePage(url)) {
-    history.pushState({}, "", url)
-  }
-
-  notifyNav(getFullSlug(window))
-  delete announcer.dataset.persist
-}
-
-/**
- * 执行SPA导航
- * @param url 目标URL
- * @param isBack 是否为后退操作
- */
-export async function navigate(url: URL, isBack: boolean = false) {
-  if (isNavigating) return
-
-  isNavigating = true
-  try {
-    await _navigate(url, isBack)
-  } catch (error) {
-    console.error("SPA Navigation failed:", {
-      url: url.toString(),
-      error: error instanceof Error ? error.message : String(error),
-      timestamp: new Date().toISOString(),
-      isBack,
-    })
-    window.location.assign(url)
-  } finally {
-    isNavigating = false
-    // 确保清理加载进度条
-    const loadingBar = document.querySelector(".navigation-progress")
-    if (loadingBar) {
-      loadingBar.remove()
-    }
-  }
-}
-
-/**
- * 创建并初始化SPA路由器
- * @returns Router实例
- */
-export function createRouter() {
-  if (typeof window !== "undefined") {
-    /**
-     * 处理点击事件的导航逻辑
-     * @param event 点击事件
-     */
-    const handleClick = async (event: Event) => {
-      const { url } = getOpts(event) ?? {}
-      // dont hijack behaviour, just let browser act normally
-      if (!url || (event as MouseEvent).ctrlKey || (event as MouseEvent).metaKey) return
-      event.preventDefault()
-
-      if (isSamePage(url) && url.hash) {
-        // 同页面hash跳转：只更新URL和滚动，不触发完整导航
-        history.pushState({}, "", url)
-        scrollToTarget(url)
         return
       }
 
-      // 正常导航：不需要手动管理历史记录
-      navigate(url, false)
+      // 触发prenav事件
+      notifyNav(getFullSlug(window), "prenav")
+
+      // 清理导航状态
+      cleanupNavigationState()
+
+      // 清理弹窗和旧资源
+      clearAllPopovers()
+      // 清理全局资源
+      globalResourceManager.cleanup()
+
+      // 更新页面内容
+      updatePageContent(contents, url, isBack, announcer)
+    } catch (error) {
+      console.error("Navigation failed:", error)
+      window.location.assign(url)
+      return
     }
 
-    /**
-     * 处理浏览器前进后退事件
-     * 简化逻辑：popstate事件本身就表示历史记录变化
-     */
-    const handlePopstate = () => {
-      const currentUrl = new URL(window.location.toString())
-      // 统一标记为历史导航，让浏览器处理前进后退逻辑
-      navigate(currentUrl, true)
-    }
-
-    // 使用 globalResourceManager 管理事件监听器
-    globalResourceManager.addEventListener(window, "click", handleClick)
-    globalResourceManager.addEventListener(window, "popstate", handlePopstate)
+    // 触发导航完成事件
+    notifyNav(getFullSlug(window))
   }
+}
+
+/**
+ * 公开的导航函数
+ * 封装了错误处理和导航状态管理
+ */
+export function createNavigate(announcer: HTMLElement) {
+  const _navigate = createNavigateFunction(announcer)
+
+  return async function navigate(url: RelativeURL, isBack: boolean = false): Promise<void> {
+    const fullUrl = new URL(url, window.location.toString())
+    return _navigate(fullUrl, isBack)
+  }
+}
+
+// navigate函数现在通过createNavigate创建
+
+/**
+ * 创建路由器
+ * 设置事件监听器和导航处理逻辑
+ */
+export function createRouter() {
+  if (typeof window === "undefined") {
+    return {
+      go: (url: RelativeURL) => {
+        const fullUrl = new URL(url, window.location.toString())
+        window.location.assign(fullUrl)
+      },
+      back: () => window.history.back(),
+      forward: () => window.history.forward(),
+    }
+  }
+
+  // 初始化路由公告器
+  const announcer = initializeRouteAnnouncer()
+
+  // 创建导航函数
+  const navigate = createNavigate(announcer)
+
+  // 导航状态管理
+  let isNavigating = false
+
+  /**
+   * 处理点击事件
+   * 重构后的简化版本
+   */
+  const handleClick = async (e: Event): Promise<void> => {
+    const mouseEvent = e as MouseEvent
+    const target = mouseEvent.target as Element
+    const anchor = target.closest("a")
+    if (!anchor) return
+
+    const url = new URL(anchor.href)
+    const opts = getOpts({ target: anchor })
+    if (!opts.navigate) return
+
+    mouseEvent.preventDefault()
+    mouseEvent.stopPropagation()
+
+    // 使用统一的同页面导航处理
+    if (handleSamePageNavigation(url)) {
+      return
+    }
+
+    // 执行SPA导航
+    if (isNavigating) return
+    isNavigating = true
+    try {
+      await navigate(url.pathname as RelativeURL)
+    } catch (error) {
+      console.error("Navigation failed:", error)
+      window.location.assign(url)
+    } finally {
+      isNavigating = false
+      cleanupNavigationState()
+    }
+  }
+
+  /**
+   * 处理浏览器前进后退事件
+   * 重构后的简化版本
+   */
+  const handlePopstate = async () => {
+    const currentUrl = new URL(window.location.toString())
+
+    // 修复：移除错误的同页面判断
+    // 在popstate事件中，URL已经改变，但页面内容还未更新
+    // 不应该使用isSamePage判断，因为它会错误地认为是同页面导航
+
+    if (isNavigating) return
+    isNavigating = true
+    try {
+      // 标记为历史导航（回退操作）- 修复：传入true表示这是浏览器历史导航
+      await navigate(currentUrl.pathname as RelativeURL, true)
+    } catch (error) {
+      console.error("Popstate navigation failed:", error)
+      // 如果SPA导航失败，进行完整页面刷新
+      window.location.reload()
+    } finally {
+      isNavigating = false
+      cleanupNavigationState()
+    }
+  }
+
+  // 使用 globalResourceManager 管理事件监听器
+  globalResourceManager.addEventListener(window, "click", handleClick)
+  globalResourceManager.addEventListener(window, "popstate", handlePopstate)
 
   return new (class Router {
     go(pathname: RelativeURL) {
+      if (isNavigating) return Promise.resolve()
+      isNavigating = true
       const url = new URL(pathname, window.location.toString())
-      return navigate(url, false)
+      return navigate(pathname, false)
+        .catch((error) => {
+          console.error("Router navigation failed:", error)
+          window.location.assign(url)
+          return Promise.resolve()
+        })
+        .finally(() => {
+          isNavigating = false
+          cleanupNavigationState()
+        })
     }
 
     back() {
@@ -229,7 +191,7 @@ export function createRouter() {
   })()
 }
 
-export function initializeRouteAnnouncer() {
+export function initializeRouteAnnouncer(): HTMLElement {
   if (!customElements.get("route-announcer")) {
     const attrs = {
       "aria-live": "assertive",
@@ -252,4 +214,8 @@ export function initializeRouteAnnouncer() {
       },
     )
   }
+
+  const announcer = document.createElement("route-announcer")
+  document.body.appendChild(announcer)
+  return announcer
 }

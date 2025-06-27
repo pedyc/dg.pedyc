@@ -203,7 +203,7 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
     componentResources.afterDOMLoaded.push(spaRouterScript)
   } else {
     componentResources.afterDOMLoaded.push(`
-      window.spaNavigate = (url, _) => window.location.assign(url)
+      window.spaNavigate = (pathname) => { window.location.assign(pathname); return Promise.resolve(); }
       
       // 非 SPA 模式下的清理函数实现
       const cleanupTasks = []

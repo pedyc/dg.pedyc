@@ -1,5 +1,4 @@
 import { OptimizedCacheManager } from "../managers/OptimizedCacheManager"
-import { PopoverError } from "../popover/error-handler"
 
 export function registerEscapeHandler(outsideContainer: HTMLElement | null, cb: () => void) {
   if (!outsideContainer) return
@@ -88,19 +87,6 @@ export function monitorCacheSize<V>(
     console.warn(
       `Cache size (${currentSize}) approaching limit (${maxSize}). Consider clearing old entries.`,
     )
-  }
-}
-
-/**
- * 创建优化的URL对象，避免重复创建
- * @param url - 原始URL
- * @returns 标准化的URL对象
- */
-export function createOptimizedUrl(url: string | URL): URL {
-  try {
-    return typeof url === "string" ? new URL(url) : url
-  } catch (error) {
-    throw new PopoverError("Invalid URL provided", url.toString())
   }
 }
 

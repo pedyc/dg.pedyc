@@ -9,7 +9,7 @@ export class PopoverConfig {
   // 从统一配置获取缓存设置
   private static readonly _popoverCacheConfig = getCacheConfig("POPOVER_PRELOAD_CACHE")
   private static readonly _failedLinksCacheConfig = getCacheConfig("FAILED_LINKS_CACHE")
-  
+
   // 缓存配置 - 从统一配置获取
   static readonly CACHE_SIZE = PopoverConfig._popoverCacheConfig.capacity
   static readonly CACHE_TTL = PopoverConfig._popoverCacheConfig.ttl
@@ -44,9 +44,10 @@ export class PopoverConfig {
    */
   static validate(): boolean {
     // 验证统一缓存配置
-    const cacheConfigValid = validateCacheConfig(this._popoverCacheConfig) && 
-                            validateCacheConfig(this._failedLinksCacheConfig)
-    
+    const cacheConfigValid =
+      validateCacheConfig(this._popoverCacheConfig) &&
+      validateCacheConfig(this._failedLinksCacheConfig)
+
     // 验证popover特定配置
     const popoverChecks = [
       this.MAX_CONCURRENT_PRELOADS > 0,
@@ -69,7 +70,7 @@ export class PopoverConfig {
     if (memoryInfo) {
       const memoryPressure = memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit
       const configThreshold = this._popoverCacheConfig.memoryThreshold || 0.8
-      
+
       if (memoryPressure > configThreshold) {
         return this.ADAPTIVE_BATCH_MIN
       } else if (memoryPressure < 0.3) {
@@ -78,7 +79,7 @@ export class PopoverConfig {
     }
     return this.BATCH_SIZE
   }
-  
+
   /**
    * 获取popover缓存配置
    * @returns 弹窗缓存配置对象
@@ -86,7 +87,7 @@ export class PopoverConfig {
   static getPopoverCacheConfig() {
     return this._popoverCacheConfig
   }
-  
+
   /**
    * 获取失败链接缓存配置
    * @returns 失败链接缓存配置对象

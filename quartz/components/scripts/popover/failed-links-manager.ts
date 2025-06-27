@@ -20,8 +20,14 @@ export class FailedLinksManager implements ICleanupManager {
   private static readonly _cacheConfig = getCacheConfig("FAILED_LINKS_CACHE")
 
   // 生成统一的存储键
-  private static readonly FAILED_LINKS_STORAGE_KEY = CacheKeyGenerator.system("failed_links", "storage")
-  private static readonly FAILURE_STATS_STORAGE_KEY = CacheKeyGenerator.system("failure_stats", "storage")
+  private static readonly FAILED_LINKS_STORAGE_KEY = CacheKeyGenerator.system(
+    "failed_links",
+    "storage",
+  )
+  private static readonly FAILURE_STATS_STORAGE_KEY = CacheKeyGenerator.system(
+    "failure_stats",
+    "storage",
+  )
 
   // 失败统计数据缓存
   private static _failureStatsCache: Record<string, any> | null = null
@@ -43,13 +49,13 @@ export class FailedLinksManager implements ICleanupManager {
    */
   private static getFailureStats(): Record<string, any> {
     const now = Date.now()
-    if (this._failureStatsCache && (now - this._failureStatsCacheTime) < this.CACHE_DURATION) {
+    if (this._failureStatsCache && now - this._failureStatsCacheTime < this.CACHE_DURATION) {
       return this._failureStatsCache
     }
 
     try {
       const statsData = JSON.parse(
-        UnifiedStorageManager.safeGetItem(localStorage, this.FAILURE_STATS_STORAGE_KEY) || "{}"
+        UnifiedStorageManager.safeGetItem(localStorage, this.FAILURE_STATS_STORAGE_KEY) || "{}",
       )
       this._failureStatsCache = statsData || {}
       this._failureStatsCacheTime = now
@@ -74,7 +80,7 @@ export class FailedLinksManager implements ICleanupManager {
       UnifiedStorageManager.safeSetItem(
         localStorage,
         this.FAILURE_STATS_STORAGE_KEY,
-        JSON.stringify(stats)
+        JSON.stringify(stats),
       )
     } catch (error) {
       PopoverErrorHandler.handleError(error as Error, "Updating failure stats cache")
@@ -174,7 +180,7 @@ export class FailedLinksManager implements ICleanupManager {
       if (failures[url] && typeof failures[url] === "object" && "timestamp" in failures[url]) {
         const timestamp = failures[url].timestamp
         const now = Date.now()
-        return (now - timestamp) > this._cacheConfig.ttl
+        return now - timestamp > this._cacheConfig.ttl
       }
 
       return false // 如果没有时间戳信息，认为未过期
@@ -322,7 +328,7 @@ export class FailedLinksManager implements ICleanupManager {
    */
   static async cleanupExpiredLinks(maxAge?: number): Promise<void> {
     const actualMaxAge = maxAge || this._cacheConfig.ttl
-    
+
     try {
       const failures = this.getFailureStats()
       const now = Date.now()
@@ -434,7 +440,7 @@ export class FailedLinksManager implements ICleanupManager {
   static clear(): void {
     this.failedLinks.clear()
     this.pendingLinks.clear()
-    
+
     // 清理定时器
     if (this.batchSaveTimer) {
       clearTimeout(this.batchSaveTimer)

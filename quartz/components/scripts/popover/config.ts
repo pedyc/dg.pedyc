@@ -1,4 +1,4 @@
-import { getCacheConfig, validateCacheConfig } from "../config/cache-config"
+import { getCacheConfig, validateCacheConfig, CacheKeyGenerator, sanitizeCacheKey } from "../config/cache-config"
 
 /**
  * Popover配置类
@@ -25,7 +25,7 @@ export class PopoverConfig {
   static readonly LINK_VALIDATION_TIMEOUT = 3000 // 链接验证超时时间（毫秒）
 
   // 存储配置
-  static readonly STORAGE_KEY = "popover-failed-links"
+  static readonly STORAGE_KEY = CacheKeyGenerator.popover(sanitizeCacheKey("failed-links"))
   static readonly MAX_FAILED_LINKS = PopoverConfig._failedLinksCacheConfig.capacity
   static readonly BATCH_SAVE_DELAY = 1000
 

@@ -4,6 +4,7 @@ import { registerEscapeHandler, removeAllChildren } from "./utils/util"
 import { FullSlug, FilePath, normalizeRelativeURLs, resolveRelative, createUrl } from "../../util/path"
 
 import { globalUnifiedContentCache, CacheLayer } from "./managers/index"
+import { CacheKeyGenerator, sanitizeCacheKey } from "./config/cache-config"
 
 interface Item {
   id: number
@@ -361,7 +362,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
    * @returns 内容详情
    */
   async function fetchContent(slug: FullSlug): Promise<ContentDetails> {
-    const cacheKey = `search-content-${slug}`
+    const cacheKey = CacheKeyGenerator.search(sanitizeCacheKey(slug))
     
     
     // 尝试从统一缓存获取

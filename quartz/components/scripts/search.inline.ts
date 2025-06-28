@@ -1,9 +1,9 @@
 import FlexSearch from "flexsearch"
 import { ContentDetails } from "../../plugins/emitters/contentIndex"
 import { registerEscapeHandler, removeAllChildren } from "./utils/util"
-import { FullSlug, FilePath, normalizeRelativeURLs, resolveRelative } from "../../util/path"
+import { FullSlug, FilePath, normalizeRelativeURLs, resolveRelative, createUrl } from "../../util/path"
 
-import { OptimizedCacheManager } from "./managers/OptimizedCacheManager"
+import { globalUnifiedContentCache, CacheLayer } from "./managers/index"
 
 interface Item {
   id: number
@@ -41,10 +41,7 @@ let index = new FlexSearch.Document({
 })
 
 const p = new DOMParser()
-const fetchContentCache = new OptimizedCacheManager<ContentDetails>({
-  capacity: 50,
-  ttl: 5 * 60 * 1000, // 5分钟
-})
+// 使用全局统一缓存管理器，不再需要独立的缓存实例
 const contextWindowWords = 30
 const numSearchResults = 8
 const numTagResults = 5
@@ -295,7 +292,9 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
   }
 
   function resolveUrl(slug: FullSlug): URL {
-    return new URL(resolveRelative(currentSlug, slug), location.toString())
+    // 使用统一的URL处理逻辑，包含缓存优化
+    const relativePath = resolveRelative(currentSlug, slug)
+    return createUrl(new URL(relativePath, location.toString()).toString())
   }
 
   const resultToHTML = ({ slug, title, content, tags }: Item) => {
@@ -356,11 +355,24 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
     }
   }
 
+  /**
+   * 获取内容详情，使用统一缓存管理器
+   * @param slug 页面标识符
+   * @returns 内容详情
+   */
   async function fetchContent(slug: FullSlug): Promise<ContentDetails> {
-    const cacheKey = `content-${slug}`
-    const cached = fetchContentCache.get(cacheKey)
+    const cacheKey = `search-content-${slug}`
+    
+    
+    // 尝试从统一缓存获取
+    const cached = globalUnifiedContentCache.get(cacheKey)
     if (cached) {
-      return cached
+      try {
+        return JSON.parse(cached) as ContentDetails
+      } catch (e) {
+        console.warn(`[Search] Failed to parse cached content for ${slug}:`, e)
+        // 缓存数据损坏，继续获取新数据
+      }
     }
 
     const targetUrl = resolveUrl(slug).toString()
@@ -378,7 +390,14 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
       tags: [], // 你可能需要从html中提取标签
       content: html.body.innerText,
     }
-    fetchContentCache.set(cacheKey, newContent)
+    
+    // 存储到统一缓存，使用MEMORY层以获得最佳性能
+    try {
+      globalUnifiedContentCache.set(cacheKey, JSON.stringify(newContent), CacheLayer.MEMORY)
+    } catch (e) {
+      console.warn(`[Search] Failed to cache content for ${slug}:`, e)
+    }
+    
     return newContent
   }
 

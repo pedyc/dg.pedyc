@@ -13,7 +13,6 @@ export { HTMLContentProcessor } from "./html-processor"
 // 预加载和缓存管理
 export { PreloadManager, preloadingInProgress } from "./preload-manager"
 export type { CachedItem } from "../managers/OptimizedCacheManager"
-export { preloadedCache } from "./cache"
 
 // 失败链接管理
 export { FailedLinksManager } from "./failed-links-manager"
@@ -33,10 +32,9 @@ export { LinkEventManager, setupLinkEventListeners } from "./link-event-manager"
 import { GlobalCleanupManager } from "../managers/CleanupManager"
 import { ViewportPreloadManager } from "./viewport-preload-manager"
 import { PreloadManager } from "./preload-manager"
-import { preloadedCache } from "./cache"
 
 export { mouseEnterHandler, clearActivePopover, clearAllPopovers } from "./popover-handler"
 // 注册实现了ICleanupManager接口的管理器
+// 注意：preloadedCache已被统一缓存管理器替代，无需单独注册
 GlobalCleanupManager.register(ViewportPreloadManager)
 GlobalCleanupManager.register(PreloadManager)
-GlobalCleanupManager.register(preloadedCache)

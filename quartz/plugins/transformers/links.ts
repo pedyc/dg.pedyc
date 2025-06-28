@@ -141,7 +141,7 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                 node.properties &&
                 typeof node.properties.src === "string"
               ) {
-                if (opts.lazyLoad) {
+                if (opts.lazyLoad && !node.properties['noLazy']) {
                   node.properties.loading = "lazy"
                 }
 

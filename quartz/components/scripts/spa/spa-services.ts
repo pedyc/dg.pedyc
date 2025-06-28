@@ -6,53 +6,52 @@
 import { getContentUrl, normalizeRelativeURLs } from "../../../util/path"
 import { fetchCanonical } from "../utils/util"
 import { CacheKeyGenerator, sanitizeCacheKey } from "../config/cache-config"
-import { globalStorageManager, globalCacheManager } from "../managers/index"
+import { globalUnifiedContentCache, CacheLayer } from "../managers/index"
 import { getDOMParser, scrollToTarget, isSamePage, micromorph } from "./spa-utils"
 
 /**
  * 统一的内容获取服务
- * 集中处理缓存逻辑、网络请求和错误处理
+ * 使用统一缓存管理器，避免重复存储相同内容
  * @param url 目标URL
- * @param isBack 是否为后退操作（用于控制历史记录，不影响内容获取）
+ * @param preferredLayer 首选缓存层（可选）
  * @returns 内容字符串或null（需要完整页面跳转）
  */
-export async function getContentForNavigation(url: URL): Promise<string | null> {
+export async function getContentForNavigation(
+  url: URL, 
+  preferredLayer: CacheLayer = CacheLayer.MEMORY
+): Promise<string | null> {
   const processedUrl = getContentUrl(url.toString())
   const cacheKey = CacheKeyGenerator.content(sanitizeCacheKey(processedUrl.toString()))
 
-  // 尝试从缓存获取内容
-  let contents = globalCacheManager.get(cacheKey)
-  if (!contents) {
-    const cachedContent = globalStorageManager.getSessionItem(cacheKey)
-    if (cachedContent) {
-      contents = cachedContent
-      globalCacheManager.set(cacheKey, cachedContent)
-    }
+  // 尝试从统一缓存获取内容
+  let contents = globalUnifiedContentCache.get(cacheKey)
+  if (contents) {
+    console.log(`[SPA Debug] Page content for ${cacheKey} loaded from: Unified Cache`)
+    return contents
   }
 
   // 如果没有缓存，发起网络请求
-  if (!contents) {
-    try {
-      const res = await fetchCanonical(processedUrl)
-      const contentType = res.headers.get("content-type")
+  console.log(`[SPA Debug] Page content for ${cacheKey} loaded from: HTTP Request`)
+  try {
+    const res = await fetchCanonical(processedUrl)
+    const contentType = res.headers.get("content-type")
 
-      if (!contentType?.startsWith("text/html")) {
-        return null // 非HTML内容，需要完整页面跳转
-      }
-
-      contents = await res.text()
-
-      // 缓存内容
-      try {
-        globalCacheManager.set(cacheKey, contents)
-        globalStorageManager.setSessionItem(cacheKey, contents)
-      } catch (e) {
-        console.warn("Failed to cache content:", e)
-      }
-    } catch (error) {
-      console.error("Failed to fetch content for SPA navigation:", error)
-      return null // 网络错误，需要完整页面跳转
+    if (!contentType?.startsWith("text/html")) {
+      return null // 非HTML内容，需要完整页面跳转
     }
+
+    contents = await res.text()
+
+    // 使用统一缓存管理器存储内容，自动避免重复存储
+    try {
+      globalUnifiedContentCache.set(cacheKey, contents, preferredLayer)
+      console.log(`[SPA Debug] Content cached using unified cache manager`)
+    } catch (e) {
+      console.warn("Failed to cache content:", e)
+    }
+  } catch (error) {
+    console.error("Failed to fetch content for SPA navigation:", error)
+    return null // 网络错误，需要完整页面跳转
   }
 
   return contents

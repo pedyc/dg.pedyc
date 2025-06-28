@@ -2,11 +2,7 @@ import { computePosition, flip, inline, shift } from "@floating-ui/dom"
 import { getContentUrl } from "../../../util/path"
 import { HTMLContentProcessor, PreloadManager, FailedLinksManager, PopoverConfig } from "./index"
 import { CacheKeyGenerator, sanitizeCacheKey } from "../config/cache-config"
-import { preloadedCache } from "./cache"
-import { UnifiedStorageManager } from "../managers/UnifiedStorageManager"
-
-// 复用存储管理器实例，避免重复创建
-const storageManager = new UnifiedStorageManager()
+import { globalUnifiedContentCache } from "../managers/index"
 
 let activeAnchor: HTMLAnchorElement | null = null
 
@@ -23,7 +19,6 @@ export function clearActivePopover() {
  * 清除所有弹窗元素（用于 SPA 导航时的完全清理）
  */
 export function clearAllPopovers() {
-  activeAnchor = null
   // 移除所有弹窗元素
   const allPopoverElements = document.querySelectorAll(".popover")
   allPopoverElements.forEach((popoverElement) => {
@@ -35,6 +30,7 @@ export function clearAllPopovers() {
   allLinks.forEach((link) => {
     link.removeAttribute("data-popover-bound")
   })
+  activeAnchor = null
 }
 
 /**
@@ -114,6 +110,10 @@ export async function mouseEnterHandler(
 
   const prevPopoverElement = document.getElementById(popoverId)
   if (prevPopoverElement) {
+    // 确保弹窗元素在DOM中，如果之前被移除但未销毁
+    if (!document.body.contains(prevPopoverElement)) {
+      document.body.appendChild(prevPopoverElement)
+    }
     showPopover(prevPopoverElement, originalHash)
     return
   }
@@ -130,87 +130,51 @@ export async function mouseEnterHandler(
     console.debug("[Popover] Rendering failed link content for:", cacheKey)
     HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
   } else {
-    // 首先尝试从预加载缓存中获取内容
-    const cachedData = preloadedCache.get(cacheKey)
+    // 尝试从统一缓存管理器获取内容
+    const cachedData = globalUnifiedContentCache.get(cacheKey)
 
-    console.debug("[Popover] Cache check:", {
-      cacheKey: cacheKey,
-      memoryCache: !!cachedData,
-      sessionStorage: !!storageManager.getSessionItem(cacheKey),
-    })
     if (cachedData) {
-      console.debug("[Popover] Using memory cache for:", cacheKey)
-      // OptimizedCacheManager 直接返回数据，需要包装成 CachedItem 格式
+      console.log(`[Popover Debug] Popover content for ${cacheKey} loaded from: Unified Cache`)
+      console.debug("[Popover] Using unified cache for:", cacheKey)
+
+      // 包装成 CachedItem 格式
       const cachedItem = {
         data: cachedData,
         timestamp: Date.now(),
         ttl: PopoverConfig.CACHE_TTL,
-        size: 0,
+        size: cachedData.length,
         type: "html" as const,
       }
       HTMLContentProcessor.renderPopoverContent(popoverInner, cachedItem)
     } else {
-      // 如果内存缓存未命中，尝试从sessionStorage读取
-      const sessionContent = storageManager.getSessionItem(cacheKey)
-      if (sessionContent) {
-        console.debug("[Popover] Using sessionStorage cache for:", cacheKey)
-        try {
-          // sessionStorage中的内容已经是原始HTML，需要直接解析而不是重复处理
-          // 避免重复调用processContent导致重复存储到sessionStorage
-          // 使用原始URL（包含hash）进行内容处理，确保相对链接正确解析
-          const processedContent = await HTMLContentProcessor.parseStoredContent(
-            sessionContent,
-            originalUrl,
-          )
-          const cachedItem = {
-            data: processedContent,
+      // 如果缓存未命中，则立即 fetch 并使用统一缓存管理器存储
+      console.log(`[Popover Debug] Popover content for ${cacheKey} loaded from: HTTP Request`)
+      try {
+        // 使用 contentUrlString 进行预加载
+        await PreloadManager.preloadLinkContent(contentUrlString)
+
+        // 再次尝试从统一缓存获取（PreloadManager应该已经存储了内容）
+        const newlyCachedData = globalUnifiedContentCache.get(cacheKey)
+        if (newlyCachedData) {
+          // 包装成 CachedItem 格式
+          const newlyCachedItem = {
+            data: newlyCachedData,
             timestamp: Date.now(),
             ttl: PopoverConfig.CACHE_TTL,
-            size: sessionContent.length,
+            size: newlyCachedData.length,
             type: "html" as const,
           }
-          // 将处理后的内容存入内存缓存以便下次使用
-          preloadedCache.set(cacheKey, processedContent, PopoverConfig.CACHE_TTL)
-          HTMLContentProcessor.renderPopoverContent(popoverInner, cachedItem)
-        } catch (error) {
-          console.error("Failed to parse stored content for:", cacheKey, error)
-          // 如果解析失败，清除可能损坏的缓存并重新获取
-          storageManager.removeSessionItem(cacheKey)
+          HTMLContentProcessor.renderPopoverContent(popoverInner, newlyCachedItem)
+        } else {
           HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
         }
-      } else {
-        // 如果sessionStorage也未命中，则立即 fetch (作为优先加载)
-        console.debug("[Popover] No cache found, fetching content for:", cacheKey)
-        try {
-          // 使用 contentUrlString 进行预加载，以确保与 cacheKey 一致
-          await PreloadManager.preloadLinkContent(contentUrlString)
-          const newlyCachedData = preloadedCache.get(cacheKey) // 仍然使用 cacheKey 获取缓存
-          if (newlyCachedData) {
-            // 包装成 CachedItem 格式
-            const newlyCachedItem = {
-              data: newlyCachedData,
-              timestamp: Date.now(),
-              ttl: PopoverConfig.CACHE_TTL,
-              size: 0,
-              type: "html" as const,
-            }
-            HTMLContentProcessor.renderPopoverContent(popoverInner, newlyCachedItem)
-          } else {
-            HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
-          }
-        } catch (error) {
-          console.error("Failed to load popover content for:", cacheKey, error) // Simplified error logging
-          HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
-        }
+      } catch (error) {
+        console.error("Failed to load popover content for:", cacheKey, error)
+        HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
       }
     }
   }
 
   document.body.appendChild(popoverElement)
-  if (activeAnchor !== this) {
-    popoverElement.remove()
-    return
-  }
-
   showPopover(popoverElement, originalHash)
 }

@@ -4,6 +4,14 @@ import { normalizeRelativeURLs, removeDuplicatePathSegments } from "../../../uti
 import { updatePageHead } from "../utils/html-utils"
 import { UnifiedStorageManager } from "../managers/UnifiedStorageManager"
 
+export type cachedItem = {
+  data: any,
+  timestamp: number,
+  ttl: number,
+  size: number,
+  type: "html" | "image" | "pdf",
+}
+
 // 全局解析器实例
 const p = new DOMParser()
 
@@ -127,7 +135,7 @@ export class HTMLContentProcessor {
    * @param container 容器元素
    * @param cachedItem 缓存的内容项
    */
-  static renderPopoverContent(container: HTMLElement, cachedItem: any): void {
+  static renderPopoverContent(container: HTMLElement, cachedItem: cachedItem): void {
     if (!cachedItem || !cachedItem.data) {
       HTMLContentProcessor.renderNotFoundContent(container, "Unknown")
       return
@@ -197,6 +205,7 @@ export class HTMLContentProcessor {
     const errorDiv = document.createElement("div")
     errorDiv.className = "popover-error"
     errorDiv.innerHTML = `
+      <h1>404 Page</h1>
       <p>无法加载内容</p>
       <p class="popover-error-url">${url}</p>
     `

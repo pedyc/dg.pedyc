@@ -1,7 +1,7 @@
 import { i18n } from "../i18n"
 import { FullSlug, getFileExtension, joinSegments, pathToRoot } from "../util/path"
 import { CSSResourceToStyleElement, JSResourceToScriptElement } from "../util/resources"
-import { googleFontHref, googleFontSubsetHref } from "../util/theme"
+// import { googleFontHref, googleFontSubsetHref } from "../util/theme"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { unescapeHTML } from "../util/escape"
 import { CustomOgImagesEmitterName } from "../plugins/emitters/ogImage"
@@ -40,7 +40,7 @@ export default (() => {
       <head>
         <title>{title}</title>
         <meta charSet="utf-8" />
-        {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
+        {/* {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
           <>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -49,11 +49,11 @@ export default (() => {
               <link rel="stylesheet" href={googleFontSubsetHref(cfg.theme, cfg.pageTitle)} />
             )}
           </>
-        )}
+        )} */}
 
         <link rel="stylesheet" href="/static/fonts/font.css" />
 
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin={"anonymous"} />
+        {/* <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin={"anonymous"} /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <meta name="og:site_name" content={cfg.pageTitle}></meta>

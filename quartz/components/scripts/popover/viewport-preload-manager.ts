@@ -3,10 +3,9 @@ import { FailedLinksManager } from "./failed-links-manager"
 import { PreloadManager } from "./preload-manager"
 import { PopoverErrorHandler } from "./error-handler"
 import { ICleanupManager } from "../managers/CleanupManager"
-import { globalResourceManager } from "../managers/index"
+import { globalResourceManager, globalUnifiedContentCache } from "../managers/index"
 import { CacheKeyGenerator, sanitizeCacheKey } from "../config/cache-config"
 
-import { preloadedCache } from "./cache"
 import { PopoverConfig } from "./config"
 
 // 全局状态
@@ -53,12 +52,11 @@ export class ViewportPreloadManager implements ICleanupManager {
               const preloadedCount = await this.batchCheckLinks(visibleLinks)
 
               // 监控缓存大小
-              const cacheSize = preloadedCache.getStats().size
-              if (cacheSize > PopoverConfig.CACHE_WARNING_THRESHOLD) {
-                console.warn(
-                  `[Popover] Viewport preload cache warning: ${cacheSize}/${PopoverConfig.CACHE_SIZE}`,
-                )
-              }
+              const cacheStats = globalUnifiedContentCache.getStats()
+              const hitRate = cacheStats.hitRate
+              console.warn(
+                `[Popover] Unified cache warning: ${hitRate} hit rate`,
+              )
 
               if (preloadedCount > 0) {
                 console.debug(`Successfully preloaded ${preloadedCount} links from viewport`)
@@ -107,7 +105,7 @@ export class ViewportPreloadManager implements ICleanupManager {
         // 避免重复检查
         if (
           FailedLinksManager.isFailedLink(cacheKey) ||
-          preloadedCache.has(cacheKey) ||
+          globalUnifiedContentCache.has(cacheKey) ||
           linkCheckInProgress.has(cacheKey)
         ) {
           return null

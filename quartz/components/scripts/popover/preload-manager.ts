@@ -4,15 +4,16 @@
 import { OptimizedCacheManager } from "../managers/OptimizedCacheManager"
 import { getCacheConfig, CacheKeyGenerator, sanitizeCacheKey } from "../config/cache-config"
 import { ICleanupManager } from "../managers/CleanupManager"
-import { globalResourceManager } from "../managers/index"
+import { globalResourceManager, globalUnifiedContentCache, CacheLayer } from "../managers/index"
 import { PopoverConfig } from "./config"
 import { PopoverErrorHandler } from "./error-handler"
 import { getContentUrl } from "../../../util/path"
+import { FailedLinksManager } from "./failed-links-manager"
+import { HTMLContentProcessor } from "./html-processor"
 
 const linkValidityCache = new OptimizedCacheManager<boolean>(getCacheConfig("LINK_VALIDITY_CACHE"))
 
 // 类型定义
-
 interface PreloadQueueItem {
   href: string
   priority: number
@@ -21,11 +22,6 @@ interface PreloadQueueItem {
 
 // 全局状态
 const preloadingInProgress = new Set<string>()
-
-// 预加载缓存（从popover.inline导入）
-import { preloadedCache } from "./cache"
-import { FailedLinksManager } from "./failed-links-manager"
-import { HTMLContentProcessor } from "./html-processor"
 
 /**
  * 预加载管理器
@@ -48,7 +44,7 @@ export class PreloadManager implements ICleanupManager {
     const cacheKey = CacheKeyGenerator.content(sanitizeCacheKey(contentUrl.toString()))
 
     // 检查是否已经在缓存中或正在预加载
-    if (preloadedCache.has(cacheKey) || preloadingInProgress.has(cacheKey)) {
+    if (globalUnifiedContentCache.has(cacheKey) || preloadingInProgress.has(cacheKey)) {
       return
     }
 
@@ -141,11 +137,12 @@ export class PreloadManager implements ICleanupManager {
         const serializer = new XMLSerializer()
         const htmlString = serializer.serializeToString(content)
 
-        preloadedCache.set(cacheKey, htmlString, PopoverConfig.CACHE_TTL)
+        // 使用统一缓存管理器存储，优先存储在弹窗缓存层
+        globalUnifiedContentCache.set(cacheKey, htmlString, CacheLayer.POPOVER)
       } else if (contentType.includes("image/")) {
-        preloadedCache.set(cacheKey, contentUrl.toString(), PopoverConfig.CACHE_TTL)
+        globalUnifiedContentCache.set(cacheKey, contentUrl.toString(), CacheLayer.POPOVER)
       } else if (contentType.includes("application/pdf")) {
-        preloadedCache.set(cacheKey, contentUrl.toString(), PopoverConfig.CACHE_TTL)
+        globalUnifiedContentCache.set(cacheKey, contentUrl.toString(), CacheLayer.POPOVER)
       } else {
         throw new Error(`Unsupported content type: ${contentType}`)
       }

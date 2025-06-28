@@ -4,17 +4,11 @@ import { clone } from "./clone"
 
 // this file must be isomorphic so it can't use node libs (e.g. path)
 
-import { OptimizedCacheManager } from "../components/scripts/managers/OptimizedCacheManager"
-import { GlobalCacheConfig, CacheKeyGenerator } from "../components/scripts/config/cache-config"
+import { globalCacheManager } from "../components/scripts/managers/index"
+import { CacheKeyGenerator } from "../components/scripts/config/cache-config"
 
-// 使用统一的缓存配置
-const urlCacheConfig = GlobalCacheConfig.URL_CACHE
-const urlCache = new OptimizedCacheManager<URL>({
-  capacity: urlCacheConfig.capacity,
-  maxMemoryMB: 20,
-  ttl: urlCacheConfig.ttl,
-  cleanupIntervalMs: 300000,
-})
+// 使用全局统一缓存管理器
+const urlCache = globalCacheManager
 
 /**
  * 移除路径中的重复段
@@ -190,11 +184,13 @@ export function createUrl(href: string): URL {
   const cacheKey = CacheKeyGenerator.content(href)
   const cached = urlCache.get(cacheKey)
   if (cached) {
-    return cached
+    // 从缓存的字符串重建URL对象
+    return new URL(cached as string)
   }
 
   const url = new URL(href)
-  urlCache.set(cacheKey, url)
+  // 缓存URL的字符串表示
+  urlCache.set(cacheKey, url.toString())
   return url
 }
 
@@ -204,17 +200,18 @@ export function createUrl(href: string): URL {
  * @returns 用于缓存的URL对象
  */
 export function getContentUrl(href: string): URL {
-  const cacheKey = CacheKeyGenerator.content(href)
+  const cacheKey = CacheKeyGenerator.content(`processed_${href}`)
   const cached = urlCache.get(cacheKey)
   if (cached) {
-    return cached
+    // 从缓存的字符串重建URL对象
+    return new URL(cached as string)
   }
 
   const url = createUrl(href)
   const processedUrl = processUrlPath(url)
 
-  // 缓存处理后的URL
-  urlCache.set(cacheKey, processedUrl)
+  // 缓存处理后的URL字符串
+  urlCache.set(cacheKey, processedUrl.toString())
   return processedUrl
 }
 
@@ -239,14 +236,67 @@ function processUrlPath(url: URL): URL {
  * 清空URL缓存
  */
 export function clearUrlCache(): void {
-  urlCache.clear()
+  // 清空所有以content_前缀的缓存项（URL相关）
+  const stats = urlCache.getStats()
+  const urlKeys = stats.keys.filter(key => key.startsWith('content_'))
+  urlKeys.forEach(key => urlCache.delete(key))
 }
 
 /**
  * 获取URL缓存统计信息
  */
 export function getUrlCacheStats(): any {
-  return urlCache.getStats()
+  const stats = urlCache.getStats()
+  // 过滤出URL相关的统计信息
+  const urlKeys = stats.keys.filter(key => key.startsWith('content_'))
+  return {
+    ...stats,
+    size: urlKeys.length,
+    keys: urlKeys,
+    description: 'URL Cache Statistics (filtered from global cache)'
+  }
+}
+
+/**
+ * 验证URL是否有效
+ * @param url URL字符串
+ * @returns 是否为有效URL
+ */
+export function validateUrl(url: string): boolean {
+  try {
+    new URL(url)
+    return true
+  } catch {
+    return false
+  }
+}
+
+/**
+ * 安全地创建URL对象
+ * @param href URL字符串
+ * @returns URL对象或null（如果无效）
+ */
+export function safeCreateUrl(href: string): URL | null {
+  try {
+    return createUrl(href)
+  } catch (error) {
+    console.warn(`Failed to create URL: ${href}`, error)
+    return null
+  }
+}
+
+/**
+ * 安全地获取内容URL
+ * @param href URL字符串
+ * @returns URL对象或null（如果无效）
+ */
+export function getContentUrlSafe(href: string): URL | null {
+  try {
+    return getContentUrl(href)
+  } catch (error) {
+    console.warn(`Failed to process content URL: ${href}`, error)
+    return null
+  }
 }
 
 export const QUARTZ = "quartz"

@@ -54,9 +54,11 @@ export class ViewportPreloadManager implements ICleanupManager {
               // 监控缓存大小
               const cacheStats = globalUnifiedContentCache.getStats()
               const hitRate = cacheStats.hitRate
-              console.warn(
-                `[Popover] Unified cache warning: ${hitRate} hit rate`,
-              )
+              if (hitRate > 0.5) {
+                console.warn(
+                  `[Popover] Unified cache warning: ${hitRate}% hit rate`,
+                )
+              }
 
               if (preloadedCount > 0) {
                 console.debug(`Successfully preloaded ${preloadedCount} links from viewport`)

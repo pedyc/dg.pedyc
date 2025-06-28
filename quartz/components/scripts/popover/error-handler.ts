@@ -1,4 +1,5 @@
 import { UnifiedStorageManager } from "../managers/UnifiedStorageManager"
+import { CacheKeyGenerator, sanitizeCacheKey } from "../config/cache-config"
 
 /**
  * 自定义弹窗错误类
@@ -20,7 +21,7 @@ export class PopoverError extends Error {
  */
 export class PopoverErrorHandler {
   private static readonly MAX_LOG_ENTRIES = 50
-  private static readonly LOG_STORAGE_KEY = "popover_error_logs"
+  private static readonly LOG_STORAGE_KEY = CacheKeyGenerator.system(sanitizeCacheKey("popover_error_logs"))
 
   /**
    * 处理错误并记录日志

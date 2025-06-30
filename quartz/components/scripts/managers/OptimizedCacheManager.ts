@@ -1,4 +1,4 @@
-import { GlobalCacheConfig, type CacheConfig } from "../config/cache-config"
+import { type CacheConfig, getCacheConfig } from "../cache/unified-cache"
 import { ICleanupManager } from "./CleanupManager"
 
 /**
@@ -34,7 +34,7 @@ class LRUNode<T> {
     public value: CachedItem<T>,
     public prev: LRUNode<T> | null = null,
     public next: LRUNode<T> | null = null,
-  ) {}
+  ) { }
 }
 
 /**
@@ -199,15 +199,16 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
       Object.entries(config).filter(([, value]) => value !== undefined),
     )
 
+    const defaultConfig = getCacheConfig('DEFAULT')
     this.config = {
-      capacity: GlobalCacheConfig.DEFAULT.capacity,
-      ttl: GlobalCacheConfig.DEFAULT.ttl,
-      maxMemoryMB: GlobalCacheConfig.DEFAULT.maxMemoryMB,
-      warningThreshold: GlobalCacheConfig.DEFAULT.warningThreshold,
-      description: GlobalCacheConfig.DEFAULT.description,
-      keyPrefix: GlobalCacheConfig.DEFAULT.keyPrefix,
-      cleanupIntervalMs: GlobalCacheConfig.DEFAULT.cleanupIntervalMs,
-      memoryThreshold: GlobalCacheConfig.DEFAULT.memoryThreshold,
+      capacity: defaultConfig.capacity,
+      ttl: defaultConfig.ttl,
+      maxMemoryMB: defaultConfig.maxMemoryMB,
+      warningThreshold: defaultConfig.warningThreshold,
+      description: defaultConfig.description,
+      keyPrefix: defaultConfig.keyPrefix,
+      cleanupIntervalMs: defaultConfig.cleanupIntervalMs,
+      memoryThreshold: defaultConfig.memoryThreshold,
       ...filteredConfig,
     } as Required<CacheConfig>
 
@@ -481,8 +482,8 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
       if (cleanedCount > 0) {
         console.log(
           `缓存清理完成：移除 ${cleanedCount} 项，` +
-            `释放 ${(freedMemory / 1024).toFixed(2)} KB 内存，` +
-            `当前使用率: ${((this.currentMemoryUsage / maxMemoryBytes) * 100).toFixed(1)}%`,
+          `释放 ${(freedMemory / 1024).toFixed(2)} KB 内存，` +
+          `当前使用率: ${((this.currentMemoryUsage / maxMemoryBytes) * 100).toFixed(1)}%`,
         )
       }
     } catch (error) {

@@ -1,5 +1,5 @@
 import type { ICleanupManager } from "./CleanupManager"
-import { getCacheConfig, CacheMonitorConfig, type CacheConfig } from "../config/cache-config"
+import { CacheMonitorConfig, type CacheConfig, getCacheConfig } from "../cache/unified-cache"
 
 /**
  * 存储配额信息接口
@@ -24,7 +24,7 @@ interface StorageStats {
  * 统一管理 localStorage 和 sessionStorage，提供配额检查、自动清理等功能
  */
 export class UnifiedStorageManager implements ICleanupManager {
-  private static readonly config: CacheConfig = getCacheConfig("STORAGE_MANAGER")
+  private static readonly config: CacheConfig = getCacheConfig('DEFAULT')
   private static readonly DEFAULT_QUOTA = 10 * 1024 * 1024 // 10MB
 
   /**

@@ -4,7 +4,7 @@ import { PreloadManager } from "./preload-manager"
 import { PopoverErrorHandler } from "./error-handler"
 import { ICleanupManager } from "../managers/CleanupManager"
 import { globalResourceManager, globalUnifiedContentCache } from "../managers/index"
-import { CacheKeyGenerator, sanitizeCacheKey } from "../config/cache-config"
+import {  UnifiedCacheKeyGenerator } from "../cache/unified-cache"
 
 import { PopoverConfig } from "./config"
 
@@ -27,7 +27,9 @@ export class ViewportPreloadManager implements ICleanupManager {
    * 初始化视口预加载
    */
   static initialize(): void {
+    console.debug(`[ViewportPreloadManager Debug] Initialize called`)
     const links = [...document.querySelectorAll("a.internal")] as HTMLAnchorElement[]
+    console.debug(`[ViewportPreloadManager Debug] Found ${links.length} internal links`)
 
     if (!("IntersectionObserver" in window)) {
       console.warn("IntersectionObserver not supported, viewport preloading disabled.")
@@ -46,7 +48,9 @@ export class ViewportPreloadManager implements ICleanupManager {
             .filter((entry) => entry.isIntersecting)
             .map((entry) => entry.target as HTMLAnchorElement)
 
+          console.debug(`[ViewportPreloadManager Debug] ${entries.length} entries, ${visibleLinks.length} visible links`)
           if (visibleLinks.length > 0) {
+            console.debug(`[ViewportPreloadManager Debug] Processing visible links:`, visibleLinks.map(l => l.href))
             try {
               // 批量检查可见链接并获取成功预加载的数量
               const preloadedCount = await this.batchCheckLinks(visibleLinks)
@@ -102,7 +106,7 @@ export class ViewportPreloadManager implements ICleanupManager {
       let cacheKey: string | undefined
       try {
         const contentUrl = getContentUrl(link.href)
-        cacheKey = CacheKeyGenerator.content(sanitizeCacheKey(contentUrl.toString()))
+        cacheKey = UnifiedCacheKeyGenerator.generateContentKey(contentUrl.toString())
 
         // 避免重复检查
         if (

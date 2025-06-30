@@ -6,7 +6,12 @@
 
 import { OptimizedCacheManager } from "./OptimizedCacheManager"
 import { UnifiedStorageManager } from "./UnifiedStorageManager"
-import { CacheKeyRules, extractCacheKeyPrefix } from '../config/cache-config'
+import {
+  CacheKeyRules,
+  extractCacheKeyPrefix,
+  CACHE_LAYER_CONFIG,
+  CACHE_PERFORMANCE_CONFIG,
+} from '../cache/unified-cache'
 import { ICleanupManager } from "./CleanupManager"
 
 /**
@@ -35,7 +40,7 @@ export interface CacheKeyValidationResult {
  */
 export interface CacheDiagnostics {
   key: string
-  reference: CacheReference | null
+  reference: CacheReference | null | undefined
   validation: CacheKeyValidationResult
   storageLayerInfo: {
     memory: boolean
@@ -263,10 +268,11 @@ export class UnifiedContentCacheManager implements ICleanupManager {
   cleanup(): void {
     const now = Date.now()
     const expiredKeys: string[] = []
+    const cleanupThreshold = CACHE_PERFORMANCE_CONFIG.MEMORY_CHECK_INTERVAL
 
     for (const [key, reference] of this.referenceMap.entries()) {
-      // 清理超过1小时未访问的缓存
-      if (now - reference.lastAccessed > 60 * 60 * 1000) {
+      // 使用配置的清理阈值
+      if (now - reference.lastAccessed > cleanupThreshold) {
         expiredKeys.push(key)
       }
     }
@@ -284,20 +290,28 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    * @param preferred 首选层
    */
   private selectOptimalLayer(content: string, preferred: CacheLayer): CacheLayer {
-    const size = this.calculateSize(content)
+    const contentSize = this.calculateSize(content)
 
-    // 大内容优先存储在SessionStorage
-    if (size > 100 * 1024) { // 100KB
-      return CacheLayer.SESSION
-    }
+    // 使用统一配置的层级策略
+    const memoryConfig = CACHE_LAYER_CONFIG.MEMORY
+    const sessionConfig = CACHE_LAYER_CONFIG.SESSION
+    const popoverConfig = CACHE_LAYER_CONFIG.POPOVER
 
-    // 小内容优先存储在内存
-    if (size < 10 * 1024) { // 10KB
+    // 根据统一配置的大小限制选择存储层
+    if (contentSize < memoryConfig.maxSizeKB * 1024 && preferred === CacheLayer.MEMORY) {
       return CacheLayer.MEMORY
     }
 
-    // 中等大小内容根据首选层决定
-    return preferred
+    if (contentSize < popoverConfig.maxSizeKB * 1024 && preferred === CacheLayer.POPOVER) {
+      return CacheLayer.POPOVER
+    }
+
+    if (contentSize < sessionConfig.maxSizeKB * 1024) {
+      return CacheLayer.SESSION
+    }
+
+    // 超大内容默认使用会话存储
+    return CacheLayer.SESSION
   }
 
   /**
@@ -468,7 +482,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
 
     // 删除损坏的引用
     this.referenceMap.delete(key)
-    
+
     // 清理哈希映射
     for (const [hash, mappedKey] of this.contentHashMap.entries()) {
       if (mappedKey === key) {
@@ -488,7 +502,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
   getCacheDiagnostics(key: string): CacheDiagnostics {
     const reference = this.referenceMap.get(key)
     const validation = this.validateCacheKey(key)
-    
+
     // 检查各存储层
     const storageLayerInfo = {
       memory: this.memoryCache.has(key),

@@ -10,23 +10,21 @@ import { PopoverErrorHandler } from "./error-handler"
 import { UnifiedStorageManager } from "../managers/UnifiedStorageManager"
 import { globalResourceManager } from "../managers/index"
 import { ICleanupManager } from "../managers/CleanupManager"
-import { CacheKeyGenerator, getCacheConfig } from "../config/cache-config"
+import { getCacheConfig, UnifiedCacheKeyGenerator } from "../cache/unified-cache"
 export class FailedLinksManager implements ICleanupManager {
   private static pendingLinks = new Set<string>()
   private static batchSaveTimer: number | null = null
   private static failedLinks = new Set<string>()
 
   // 使用统一缓存配置
-  private static readonly _cacheConfig = getCacheConfig("FAILED_LINKS_CACHE")
+  private static readonly _cacheConfig = getCacheConfig('DEFAULT')
 
   // 生成统一的存储键
-  private static readonly FAILED_LINKS_STORAGE_KEY = CacheKeyGenerator.system(
+  private static readonly FAILED_LINKS_STORAGE_KEY = UnifiedCacheKeyGenerator.generateSystemKey(
     "failed_links",
-    "storage",
   )
-  private static readonly FAILURE_STATS_STORAGE_KEY = CacheKeyGenerator.system(
+  private static readonly FAILURE_STATS_STORAGE_KEY = UnifiedCacheKeyGenerator.generateSystemKey(
     "failure_stats",
-    "storage",
   )
 
   // 失败统计数据缓存

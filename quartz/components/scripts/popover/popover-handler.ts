@@ -1,7 +1,7 @@
 import { computePosition, flip, inline, shift } from "@floating-ui/dom"
 import { getContentUrl } from "../../../util/path"
 import { HTMLContentProcessor, PreloadManager, FailedLinksManager, PopoverConfig } from "./index"
-import { CacheKeyGenerator, sanitizeCacheKey } from "../config/cache-config"
+import { UnifiedCacheKeyGenerator } from "../cache/unified-cache"
 import { globalUnifiedContentCache } from "../managers/index"
 
 let activeAnchor: HTMLAnchorElement | null = null
@@ -68,8 +68,14 @@ export async function mouseEnterHandler(
    * @param targetHash 目标URL中的hash值，用于滚动到特定标题
    */
   function showPopover(popoverElement: HTMLElement, targetHash: string) {
+    console.debug("[Popover Debug] showPopover called with:", {
+      popoverId: popoverElement.id,
+      hasContent: popoverElement.querySelector('.popover-inner')?.children.length || 0,
+      targetHash
+    })
     clearActivePopover()
     popoverElement.classList.add("active-popover")
+    console.debug("[Popover Debug] Added active-popover class, element classes:", popoverElement.className)
     setPosition(popoverElement)
 
     if (targetHash !== "") {
@@ -93,7 +99,7 @@ export async function mouseEnterHandler(
   const contentUrl = getContentUrl(link.href)
   const contentUrlString = contentUrl.toString()
   // 使用统一的缓存键生成器，确保与SPA系统一致
-  const cacheKey = CacheKeyGenerator.content(sanitizeCacheKey(contentUrlString))
+  const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(contentUrlString)
 
   // 调试日志：记录URL处理过程
   console.debug("[Popover] URL processing:", {
@@ -135,7 +141,12 @@ export async function mouseEnterHandler(
 
     if (cachedData) {
       console.log(`[Popover Debug] Popover content for ${cacheKey} loaded from: Unified Cache`)
-      console.debug("[Popover] Using unified cache for:", cacheKey)
+      console.debug("[Popover Debug] Cached data details:", {
+        cacheKey,
+        dataType: typeof cachedData,
+        dataLength: typeof cachedData === 'string' ? cachedData.length : 'N/A',
+        dataPreview: typeof cachedData === 'string' ? cachedData.substring(0, 100) + '...' : cachedData
+      })
 
       // 包装成 CachedItem 格式
       const cachedItem = {
@@ -145,16 +156,26 @@ export async function mouseEnterHandler(
         size: cachedData.length,
         type: "html" as const,
       }
+      console.debug("[Popover Debug] About to render cached content with item:", cachedItem)
       HTMLContentProcessor.renderPopoverContent(popoverInner, cachedItem)
     } else {
       // 如果缓存未命中，则立即 fetch 并使用统一缓存管理器存储
       console.log(`[Popover Debug] Popover content for ${cacheKey} loaded from: HTTP Request`)
+      console.debug(`[Popover Debug] About to preload with href: ${contentUrlString}`)
+      console.debug(`[Popover Debug] Cache key before preload: ${cacheKey}`)
+      console.debug(`[Popover Debug] Cache has key before preload: ${globalUnifiedContentCache.has(cacheKey)}`)
       try {
         // 使用 contentUrlString 进行预加载
         await PreloadManager.preloadLinkContent(contentUrlString)
 
         // 再次尝试从统一缓存获取（PreloadManager应该已经存储了内容）
         const newlyCachedData = globalUnifiedContentCache.get(cacheKey)
+        console.debug("[Popover Debug] After preload, cached data:", {
+          found: !!newlyCachedData,
+          dataType: typeof newlyCachedData,
+          dataLength: typeof newlyCachedData === 'string' ? newlyCachedData.length : 'N/A'
+        })
+
         if (newlyCachedData) {
           // 包装成 CachedItem 格式
           const newlyCachedItem = {
@@ -164,8 +185,10 @@ export async function mouseEnterHandler(
             size: newlyCachedData.length,
             type: "html" as const,
           }
+          console.debug("[Popover Debug] About to render newly cached content with item:", newlyCachedItem)
           HTMLContentProcessor.renderPopoverContent(popoverInner, newlyCachedItem)
         } else {
+          console.warn("[Popover Debug] No content found after preload, rendering not found")
           HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
         }
       } catch (error) {

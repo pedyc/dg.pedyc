@@ -1,7 +1,7 @@
 import { FileTrieNode } from "../../util/fileTrie"
 import { FullSlug, resolveRelative, simplifySlug } from "../../util/path"
 import { ContentDetails } from "../../plugins/emitters/contentIndex"
-import { CacheKeyGenerator } from "./config/cache-config"
+import { UnifiedCacheKeyGenerator } from "./cache/unified-cache"
 
 type MaybeHTMLElement = HTMLElement | undefined
 
@@ -50,9 +50,9 @@ function toggleFolder(evt: MouseEvent) {
   const folderContainer = (
     isSvg
       ? // svg -> div.folder-container
-        target.parentElement
+      target.parentElement
       : // button.folder-button -> div -> div.folder-container
-        target.parentElement?.parentElement
+      target.parentElement?.parentElement
   ) as MaybeHTMLElement
   if (!folderContainer) return
   const childFolderContainer = folderContainer.nextElementSibling as MaybeHTMLElement
@@ -77,7 +77,7 @@ function toggleFolder(evt: MouseEvent) {
   }
 
   const stringifiedFileTree = JSON.stringify(currentExplorerState)
-  const fileTreeKey = CacheKeyGenerator.user("fileTree", "explorer_state")
+  const fileTreeKey = UnifiedCacheKeyGenerator.generateUserKey("fileTree", "explorer_state")
   localStorage.setItem(fileTreeKey, stringifiedFileTree)
 }
 
@@ -234,7 +234,7 @@ async function setupExplorer(currentSlug: FullSlug) {
     explorerUl.insertBefore(fragment, explorerUl.firstChild)
 
     // restore explorer scrollTop position if it exists
-    const scrollTopKey = CacheKeyGenerator.user("explorerScrollTop", "scroll_position")
+    const scrollTopKey = UnifiedCacheKeyGenerator.generateUserKey("explorerScrollTop", "scroll_position")
     const scrollTop = sessionStorage.getItem(scrollTopKey)
     if (scrollTop) {
       explorerUl.scrollTop = parseInt(scrollTop)
@@ -293,7 +293,7 @@ document.addEventListener("prenav", async () => {
   // save explorer scrollTop position
   const explorer = document.querySelector(".explorer-ul")
   if (!explorer) return
-  const scrollTopKey = CacheKeyGenerator.user("explorerScrollTop", "scroll_position")
+  const scrollTopKey = UnifiedCacheKeyGenerator.generateUserKey("explorerScrollTop", "scroll_position")
   sessionStorage.setItem(scrollTopKey, explorer.scrollTop.toString())
 })
 

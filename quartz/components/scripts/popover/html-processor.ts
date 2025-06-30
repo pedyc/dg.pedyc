@@ -136,7 +136,17 @@ export class HTMLContentProcessor {
    * @param cachedItem 缓存的内容项
    */
   static renderPopoverContent(container: HTMLElement, cachedItem: cachedItem): void {
+    console.debug("[Popover Debug] renderPopoverContent called with:", {
+      hasContainer: !!container,
+      hasCachedItem: !!cachedItem,
+      cachedItemType: cachedItem?.type,
+      hasData: !!cachedItem?.data,
+      dataType: typeof cachedItem?.data,
+      dataLength: typeof cachedItem?.data === 'string' ? cachedItem.data.length : 'N/A'
+    })
+
     if (!cachedItem || !cachedItem.data) {
+      console.warn("[Popover Debug] No cached item or data, rendering not found content")
       HTMLContentProcessor.renderNotFoundContent(container, "Unknown")
       return
     }
@@ -145,52 +155,91 @@ export class HTMLContentProcessor {
 
     switch (cachedItem.type) {
       case "image":
+        console.debug("[Popover Debug] Rendering image content")
         const img = document.createElement("img")
         img.src = cachedItem.data as string
         img.alt = new URL(cachedItem.data as string).pathname
         container.appendChild(img)
         break
       case "pdf":
+        console.debug("[Popover Debug] Rendering PDF content")
         const pdf = document.createElement("iframe")
         pdf.src = cachedItem.data as string
         container.appendChild(pdf)
         break
       case "html":
+        console.debug("[Popover Debug] Rendering HTML content")
         // 检查 cachedItem.data 的类型并相应处理
         if (cachedItem.data && typeof cachedItem.data.cloneNode === "function") {
+          console.debug("[Popover Debug] Data is DocumentFragment, cloning directly")
           // 如果是 DocumentFragment，直接克隆
-          container.appendChild((cachedItem.data as DocumentFragment).cloneNode(true))
+          const clonedFragment = (cachedItem.data as DocumentFragment).cloneNode(true)
+          container.appendChild(clonedFragment)
+          console.debug("[Popover Debug] DocumentFragment appended, children count:", container.children.length)
         } else if (typeof cachedItem.data === "string") {
+          console.debug("[Popover Debug] Data is HTML string, parsing...")
           // 如果是 HTML 字符串，使用与 parseStoredContent 相同的逻辑处理
           try {
             const html = p.parseFromString(cachedItem.data as string, "text/html")
+            console.debug("[Popover Debug] HTML parsed successfully:", {
+              bodyExists: !!html.body,
+              bodyChildren: html.body?.children.length || 0,
+              bodyTextContent: html.body?.textContent?.substring(0, 200) + '...',
+              documentTitle: html.title,
+              htmlPreview: (cachedItem.data as string).substring(0, 500) + '...'
+            })
+            
             const fragment = document.createDocumentFragment()
 
             // 查找 popover-hint 元素，如果没有则使用 body 内容
             const popoverHintElements = [...html.getElementsByClassName("popover-hint")]
+            console.debug("[Popover Debug] Found popover-hint elements:", popoverHintElements.length)
 
             if (popoverHintElements.length > 0) {
               // 如果有 popover-hint 元素，只使用这些元素
               popoverHintElements.forEach((el) => {
+                console.debug("[Popover Debug] Adding popover-hint element:", {
+                  tagName: el.tagName,
+                  className: el.className,
+                  textContent: el.textContent?.substring(0, 100) + '...'
+                })
                 fragment.appendChild(el.cloneNode(true))
               })
+              console.debug("[Popover Debug] Added popover-hint elements to fragment")
             } else if (html.body) {
               // 如果没有 popover-hint 元素，使用 body 的所有子元素
+              console.debug("[Popover Debug] No popover-hint elements, using body children:", html.body.children.length)
               Array.from(html.body.children).forEach((child) => {
                 fragment.appendChild(child.cloneNode(true))
               })
+              console.debug("[Popover Debug] Added body children to fragment")
+            } else {
+              console.warn("[Popover Debug] No body element found in parsed HTML")
             }
+            
             container.appendChild(fragment)
+            console.debug("[Popover Debug] Fragment appended to container:", {
+              finalChildrenCount: container.children.length,
+              containerTextContent: container.textContent?.substring(0, 200) + '...',
+              containerInnerHTML: container.innerHTML.substring(0, 300) + '...'
+            })
+            
+            // 检查容器内容是否为空
+            if (container.children.length === 0 && container.textContent?.trim() === '') {
+              console.warn("[Popover Debug] Container is empty after rendering, showing error")
+              HTMLContentProcessor.renderNotFoundContent(container, "Empty content after parsing")
+            }
           } catch (error) {
-            console.warn("Failed to parse HTML string:", error)
+            console.warn("[Popover Debug] Failed to parse HTML string:", error)
             HTMLContentProcessor.renderNotFoundContent(container, "Failed to parse content")
           }
         } else {
-          console.warn("Invalid content data type:", typeof cachedItem.data, cachedItem.data)
+          console.warn("[Popover Debug] Invalid content data type:", typeof cachedItem.data, cachedItem.data)
           HTMLContentProcessor.renderNotFoundContent(container, "Invalid content format")
         }
         break
       default:
+        console.warn("[Popover Debug] Unknown content type:", cachedItem.type)
         HTMLContentProcessor.renderNotFoundContent(container, "Unknown content type")
         break
     }

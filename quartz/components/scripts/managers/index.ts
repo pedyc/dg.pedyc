@@ -9,6 +9,11 @@ import { ResourceManager } from "./ResourceManager"
 // import { LazyloadManager } from "./LazyloadManager" // 暂时注释以避免循环依赖
 import { UnifiedStorageManager } from "./UnifiedStorageManager"
 import { UnifiedContentCacheManager } from "./UnifiedContentCacheManager"
+import {
+  getCacheConfig,
+  calculateLayerCapacity,
+  CACHE_LAYER_CONFIG
+} from '../cache/unified-cache'
 
 // 导出所有管理器类
 export { ICleanupManager, GlobalCleanupManager } from "./CleanupManager"
@@ -20,16 +25,31 @@ export { ImageLoadManager } from "./ImageLoadManager"
 export { ImageObserverManager } from "./ImageObserverManager"
 export { UnifiedContentCacheManager, CacheLayer } from "./UnifiedContentCacheManager"
 
+// 获取统一缓存配置
+const unifiedConfig = getCacheConfig('DEFAULT')
+
 // 创建全局实例
 export const globalCleanupManager = new GlobalCleanupManager()
 export const globalResourceManager = new ResourceManager()
-// 创建全局实例
-export const globalCacheManager = OptimizedCacheManager.createDefault()
-export const globalStorageManager = new UnifiedStorageManager()
-// export const globalLazyloadManager = LazyloadManager.createDefault() // 暂时注释以避免循环依赖
 
-// 创建弹窗缓存实例（用于统一缓存管理器）
-const popoverCacheConfig = { capacity: 30, ttl: 5 * 60 * 1000, maxMemoryMB: 10 }
+// 使用统一配置创建缓存管理器实例
+// 内存层缓存配置
+const memoryCacheConfig = {
+  capacity: calculateLayerCapacity('MEMORY'),
+  ttl: unifiedConfig.ttl,
+  maxMemoryMB: unifiedConfig.maxMemoryMB * CACHE_LAYER_CONFIG.MEMORY.capacityRatio
+}
+export const globalCacheManager = new OptimizedCacheManager<string>(memoryCacheConfig)
+
+// 统一存储管理器
+export const globalStorageManager = new UnifiedStorageManager()
+
+// 弹窗层缓存配置 - 使用统一配置
+const popoverCacheConfig = {
+  capacity: calculateLayerCapacity('POPOVER'),
+  ttl: unifiedConfig.ttl,
+  maxMemoryMB: unifiedConfig.maxMemoryMB * CACHE_LAYER_CONFIG.POPOVER.capacityRatio
+}
 export const globalPopoverCache = new OptimizedCacheManager<string>(popoverCacheConfig)
 
 // 创建统一内容缓存管理器实例

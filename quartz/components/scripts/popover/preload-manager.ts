@@ -2,7 +2,7 @@
  * 预加载管理器模块
  */
 import { OptimizedCacheManager } from "../managers/OptimizedCacheManager"
-import { getCacheConfig, CacheKeyGenerator, sanitizeCacheKey } from "../config/cache-config"
+import { UnifiedCacheKeyGenerator, getCacheConfig } from "../cache/unified-cache"
 import { ICleanupManager } from "../managers/CleanupManager"
 import { globalResourceManager, globalUnifiedContentCache, CacheLayer } from "../managers/index"
 import { PopoverConfig } from "./config"
@@ -11,7 +11,14 @@ import { getContentUrl } from "../../../util/path"
 import { FailedLinksManager } from "./failed-links-manager"
 import { HTMLContentProcessor } from "./html-processor"
 
-const linkValidityCache = new OptimizedCacheManager<boolean>(getCacheConfig("LINK_VALIDITY_CACHE"))
+// 使用统一配置创建链接有效性缓存
+const unifiedConfig = getCacheConfig('DEFAULT')
+const linkValidityCacheConfig = {
+  capacity: Math.floor(unifiedConfig.capacity * 0.1), // 10% 用于链接有效性缓存
+  ttl: unifiedConfig.ttl,
+  maxMemoryMB: unifiedConfig.maxMemoryMB * 0.05 // 5% 内存用于链接有效性
+}
+const linkValidityCache = new OptimizedCacheManager<boolean>(linkValidityCacheConfig)
 
 // 类型定义
 interface PreloadQueueItem {
@@ -41,25 +48,35 @@ export class PreloadManager implements ICleanupManager {
   static async preloadLinkContent(href: string): Promise<void> {
     // 使用统一的URL处理函数确保缓存键一致性
     const contentUrl = getContentUrl(href)
-    const cacheKey = CacheKeyGenerator.content(sanitizeCacheKey(contentUrl.toString()))
+    const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(contentUrl.toString())
+
+    console.debug(`[PreloadManager Debug] Input href: ${href}`)
+    console.debug(`[PreloadManager Debug] Processed contentUrl: ${contentUrl.toString()}`)
+    console.debug(`[PreloadManager Debug] Generated cache key: ${cacheKey}`)
+    console.debug(`[PreloadManager Debug] Cache already has key: ${globalUnifiedContentCache.has(cacheKey)}`)
+    console.debug(`[PreloadManager Debug] Currently preloading: ${preloadingInProgress.has(cacheKey)}`)
 
     // 检查是否已经在缓存中或正在预加载
     if (globalUnifiedContentCache.has(cacheKey) || preloadingInProgress.has(cacheKey)) {
+      console.debug(`[PreloadManager Debug] Content already cached or preloading, skipping: ${cacheKey}`)
       return
     }
 
     // 检查是否为失败链接
     if (FailedLinksManager.isFailedLink(cacheKey)) {
+      console.debug(`[PreloadManager Debug] Link marked as failed, skipping: ${cacheKey}`)
       return
     }
 
     // 如果当前预加载数量已达上限，加入队列
     if (this.currentPreloads >= this.MAX_CONCURRENT_PRELOADS) {
+      console.debug(`[PreloadManager Debug] Max concurrent preloads reached, queuing: ${cacheKey}`)
       return new Promise<void>((resolve) => {
         this.preloadQueue.push({ href, priority: 0, resolve: () => resolve() })
       })
     }
 
+    console.debug(`[PreloadManager Debug] Starting executePreload for: ${href}`)
     await this.executePreload(href, 0)
   }
 
@@ -70,7 +87,7 @@ export class PreloadManager implements ICleanupManager {
    * @returns Promise<boolean> 是否成功预加载
    */
   private static async isLinkValid(url: URL): Promise<boolean> {
-    const cacheKey = CacheKeyGenerator.link(sanitizeCacheKey(url.toString()), "validity")
+    const cacheKey = UnifiedCacheKeyGenerator.generateLinkKey(url.toString(), "validity")
 
     if (linkValidityCache.has(cacheKey)) {
       return linkValidityCache.get(cacheKey) || false
@@ -102,7 +119,7 @@ export class PreloadManager implements ICleanupManager {
 
   private static async executePreload(href: string, _priority: number): Promise<boolean> {
     const contentUrl = getContentUrl(href)
-    const cacheKey = CacheKeyGenerator.content(sanitizeCacheKey(contentUrl.toString()))
+    const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(contentUrl.toString())
 
     // First, check if the link is valid
     if (!(await this.isLinkValid(contentUrl))) {
@@ -127,18 +144,36 @@ export class PreloadManager implements ICleanupManager {
 
       if (contentType.includes("text/html")) {
         const html = await response.text()
+        console.debug("[Preload Debug] Raw HTML received:", {
+          length: html.length,
+          preview: html.substring(0, 200) + '...'
+        })
+
         const content = await HTMLContentProcessor.processContent(html, contentUrl, cacheKey)
+        console.debug("[Preload Debug] Processed content:", {
+          hasChildNodes: content.hasChildNodes(),
+          childElementCount: content.childElementCount,
+          textContent: content.textContent?.substring(0, 100) + '...'
+        })
 
         if (!content.hasChildNodes()) {
+          console.warn("[Preload Debug] Processed content is empty")
           throw new Error("无效的HTML内容：处理后内容为空")
         }
 
         // 将 DocumentFragment 转换为 HTML 字符串
-        const serializer = new XMLSerializer()
-        const htmlString = serializer.serializeToString(content)
+        // 使用临时div容器来获取正确的HTML字符串，避免XMLSerializer的兼容性问题
+        const tempDiv = document.createElement('div')
+        tempDiv.appendChild(content.cloneNode(true))
+        const htmlString = tempDiv.innerHTML
+        console.debug("[Preload Debug] Serialized HTML:", {
+          length: htmlString.length,
+          preview: htmlString.substring(0, 200) + '...'
+        })
 
         // 使用统一缓存管理器存储，优先存储在弹窗缓存层
         globalUnifiedContentCache.set(cacheKey, htmlString, CacheLayer.POPOVER)
+        console.debug("[Preload Debug] Content stored in cache with key:", cacheKey)
       } else if (contentType.includes("image/")) {
         globalUnifiedContentCache.set(cacheKey, contentUrl.toString(), CacheLayer.POPOVER)
       } else if (contentType.includes("application/pdf")) {

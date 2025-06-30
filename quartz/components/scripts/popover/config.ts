@@ -1,31 +1,37 @@
-import { getCacheConfig, validateCacheConfig, CacheKeyGenerator, sanitizeCacheKey } from "../config/cache-config"
+import {
+  getCacheConfig,
+  UnifiedCacheKeyGenerator,
+  CACHE_PERFORMANCE_CONFIG,
+  validateUnifiedCacheConfig,
+  calculateLayerCapacity
+} from '../cache/unified-cache'
 
 /**
  * Popover配置类
  * 提供弹窗相关的配置常量和验证方法
- * 缓存配置统一从cache-config.ts获取
+ * 使用统一缓存配置，确保popover和content资源共享
  */
 export class PopoverConfig {
-  // 从统一配置获取缓存设置
-  private static readonly _popoverCacheConfig = getCacheConfig("POPOVER_PRELOAD_CACHE")
-  private static readonly _failedLinksCacheConfig = getCacheConfig("FAILED_LINKS_CACHE")
+  // 使用统一缓存配置
+  private static readonly _unifiedCacheConfig = getCacheConfig('DEFAULT')
+  private static readonly _failedLinksCacheConfig = getCacheConfig('DEFAULT') // 失败链接也使用统一配置
 
-  // 缓存配置 - 从统一配置获取
-  static readonly CACHE_SIZE = PopoverConfig._popoverCacheConfig.capacity
-  static readonly CACHE_TTL = PopoverConfig._popoverCacheConfig.ttl
-  static readonly CACHE_WARNING_THRESHOLD = PopoverConfig._popoverCacheConfig.warningThreshold || 25
-  static readonly MAX_MEMORY_USAGE = PopoverConfig._popoverCacheConfig.maxMemoryMB * 1024 * 1024 // 转换为字节
+  // 缓存配置 - 从统一配置获取，popover和content共享资源
+  static readonly CACHE_SIZE = calculateLayerCapacity('POPOVER') // 使用popover层的计算容量
+  static readonly CACHE_TTL = PopoverConfig._unifiedCacheConfig.ttl
+  static readonly CACHE_WARNING_THRESHOLD = PopoverConfig._unifiedCacheConfig.warningThreshold || 160
+  static readonly MAX_MEMORY_USAGE = PopoverConfig._unifiedCacheConfig.maxMemoryMB * 1024 * 1024 // 转换为字节
   static readonly FAILED_LINK_CACHE_TTL = PopoverConfig._failedLinksCacheConfig.ttl
 
-  // 预加载配置
-  static readonly MAX_CONCURRENT_PRELOADS = 3
-  static readonly BATCH_SIZE = 5
+  // 预加载配置 - 使用统一性能配置
+  static readonly MAX_CONCURRENT_PRELOADS = CACHE_PERFORMANCE_CONFIG.MAX_CONCURRENT_PRELOADS
+  static readonly BATCH_SIZE = CACHE_PERFORMANCE_CONFIG.BATCH_SIZE
   static readonly ADAPTIVE_BATCH_MIN = 2
   static readonly ADAPTIVE_BATCH_MAX = 8
   static readonly LINK_VALIDATION_TIMEOUT = 3000 // 链接验证超时时间（毫秒）
 
-  // 存储配置
-  static readonly STORAGE_KEY = CacheKeyGenerator.popover(sanitizeCacheKey("failed-links"))
+  // 存储配置 - 使用统一键生成器
+  static readonly STORAGE_KEY = UnifiedCacheKeyGenerator.generatePopoverKey("failed-links")
   static readonly MAX_FAILED_LINKS = PopoverConfig._failedLinksCacheConfig.capacity
   static readonly BATCH_SAVE_DELAY = 1000
 
@@ -44,9 +50,7 @@ export class PopoverConfig {
    */
   static validate(): boolean {
     // 验证统一缓存配置
-    const cacheConfigValid =
-      validateCacheConfig(this._popoverCacheConfig) &&
-      validateCacheConfig(this._failedLinksCacheConfig)
+    const cacheConfigValid = validateUnifiedCacheConfig() // 统一验证，失败链接也使用相同配置
 
     // 验证popover特定配置
     const popoverChecks = [
@@ -69,7 +73,7 @@ export class PopoverConfig {
     const memoryInfo = (performance as any).memory
     if (memoryInfo) {
       const memoryPressure = memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit
-      const configThreshold = this._popoverCacheConfig.memoryThreshold || 0.8
+      const configThreshold = this._unifiedCacheConfig.memoryThreshold || 0.85
 
       if (memoryPressure > configThreshold) {
         return this.ADAPTIVE_BATCH_MIN
@@ -81,11 +85,19 @@ export class PopoverConfig {
   }
 
   /**
-   * 获取popover缓存配置
-   * @returns 弹窗缓存配置对象
+   * 获取统一缓存配置
+   * @returns 统一缓存配置对象
+   */
+  static getUnifiedCacheConfig() {
+    return this._unifiedCacheConfig
+  }
+
+  /**
+   * 获取popover缓存配置（兼容性方法）
+   * @returns 统一缓存配置对象
    */
   static getPopoverCacheConfig() {
-    return this._popoverCacheConfig
+    return this._unifiedCacheConfig
   }
 
   /**

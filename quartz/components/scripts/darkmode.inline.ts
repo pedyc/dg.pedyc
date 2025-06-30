@@ -1,7 +1,7 @@
-import { CacheKeyGenerator } from "./config/cache-config"
+import { UnifiedCacheKeyGenerator } from "./cache/unified-cache"
 
 const userPref = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"
-const themeKey = CacheKeyGenerator.user("theme", "preference")
+const themeKey = UnifiedCacheKeyGenerator.generateUserKey("theme", "preference")
 const currentTheme = localStorage.getItem(themeKey) ?? userPref
 document.documentElement.setAttribute("saved-theme", currentTheme)
 

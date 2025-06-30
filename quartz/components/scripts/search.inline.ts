@@ -4,7 +4,7 @@ import { registerEscapeHandler, removeAllChildren } from "./utils/util"
 import { FullSlug, FilePath, normalizeRelativeURLs, resolveRelative, createUrl } from "../../util/path"
 
 import { globalUnifiedContentCache, CacheLayer } from "./managers/index"
-import { CacheKeyGenerator, sanitizeCacheKey } from "./config/cache-config"
+import { UnifiedCacheKeyGenerator } from "./cache/unified-cache"
 
 interface Item {
   id: number
@@ -99,9 +99,8 @@ function highlight(searchTerm: string, text: string, trim?: boolean) {
     })
     .join(" ")
 
-  return `${startIndex === 0 ? "" : "..."}${slice}${
-    endIndex === tokenizedText.length - 1 ? "" : "..."
-  }`
+  return `${startIndex === 0 ? "" : "..."}${slice}${endIndex === tokenizedText.length - 1 ? "" : "..."
+    }`
 }
 
 function highlightHTML(searchTerm: string, el: HTMLElement) {
@@ -362,9 +361,9 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
    * @returns 内容详情
    */
   async function fetchContent(slug: FullSlug): Promise<ContentDetails> {
-    const cacheKey = CacheKeyGenerator.search(sanitizeCacheKey(slug))
-    
-    
+    const cacheKey = UnifiedCacheKeyGenerator.generateSearchKey(slug)
+
+
     // 尝试从统一缓存获取
     const cached = globalUnifiedContentCache.get(cacheKey)
     if (cached) {
@@ -391,14 +390,14 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
       tags: [], // 你可能需要从html中提取标签
       content: html.body.innerText,
     }
-    
+
     // 存储到统一缓存，使用MEMORY层以获得最佳性能
     try {
       globalUnifiedContentCache.set(cacheKey, JSON.stringify(newContent), CacheLayer.MEMORY)
     } catch (e) {
       console.warn(`[Search] Failed to cache content for ${slug}:`, e)
     }
-    
+
     return newContent
   }
 

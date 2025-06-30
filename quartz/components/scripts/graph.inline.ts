@@ -25,7 +25,7 @@ import {
   simplifySlug,
   RelativeURL,
 } from "../../util/path"
-import { CacheKeyGenerator } from "./config/cache-config"
+import { UnifiedCacheKeyGenerator } from "./cache/unified-cache"
 import { D3Config } from "../Graph"
 
 type GraphicsInfo = {
@@ -60,7 +60,7 @@ type NodeRenderData = GraphicsInfo & {
   label: Text
 }
 
-const localStorageKey = CacheKeyGenerator.user("graph-visited", "navigation_history")
+const localStorageKey = UnifiedCacheKeyGenerator.generateUserKey("graph-visited", "navigation_history")
 
 function getVisited(): Set<SimpleSlug> {
   return new Set(JSON.parse(localStorage.getItem(localStorageKey) ?? "[]"))

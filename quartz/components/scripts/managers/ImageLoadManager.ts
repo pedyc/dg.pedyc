@@ -1,5 +1,5 @@
 import { OptimizedCacheManager } from "./OptimizedCacheManager"
-import { CacheKeyGenerator, getCacheConfig } from "../config/cache-config"
+import { UnifiedCacheKeyGenerator, getCacheConfig } from "../cache/unified-cache"
 import { ICleanupManager } from "./CleanupManager"
 
 /**
@@ -64,7 +64,13 @@ export class ImageLoadManager implements ICleanupManager {
     }
 
     // 使用统一缓存管理器
-    this.loadedCache = new OptimizedCacheManager<boolean>(getCacheConfig("URL_CACHE"))
+    const unifiedConfig = getCacheConfig('DEFAULT')
+    const imageCacheConfig = {
+      capacity: Math.floor(unifiedConfig.capacity * 0.15), // 15% 用于图片缓存
+      ttl: unifiedConfig.ttl * 2, // 图片缓存时间更长
+      maxMemoryMB: unifiedConfig.maxMemoryMB * 0.1 // 10% 内存用于图片缓存
+    }
+    this.loadedCache = new OptimizedCacheManager<boolean>(imageCacheConfig)
   }
 
   /**
@@ -73,7 +79,7 @@ export class ImageLoadManager implements ICleanupManager {
    * @returns 是否已加载
    */
   isImageLoaded(src: string): boolean {
-    const cacheKey = CacheKeyGenerator.system(src, "image_loaded")
+    const cacheKey = UnifiedCacheKeyGenerator.generateSystemKey(`${src}_image_loaded`)
     return this.loadedCache.has(cacheKey)
   }
 
@@ -82,7 +88,7 @@ export class ImageLoadManager implements ICleanupManager {
    * @param src 图片源地址
    */
   markImageLoaded(src: string): void {
-    const cacheKey = CacheKeyGenerator.system(src, "image_loaded")
+    const cacheKey = UnifiedCacheKeyGenerator.generateSystemKey(`${src}_image_loaded`)
     this.loadedCache.set(cacheKey, true)
   }
 
@@ -93,7 +99,7 @@ export class ImageLoadManager implements ICleanupManager {
    */
   createLoadTask(img: HTMLImageElement): ImageLoadTask {
     const src = img.dataset.src || img.src
-    const cacheKey = CacheKeyGenerator.system(src, "image_loaded")
+    const cacheKey = UnifiedCacheKeyGenerator.generateSystemKey(`${src}_image_loaded`)
 
     return {
       element: img,

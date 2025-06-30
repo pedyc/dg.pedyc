@@ -5,7 +5,7 @@ import { clone } from "./clone"
 // this file must be isomorphic so it can't use node libs (e.g. path)
 
 import { globalCacheManager } from "../components/scripts/managers/index"
-import { CacheKeyGenerator } from "../components/scripts/config/cache-config"
+import { UnifiedCacheKeyGenerator } from "../components/scripts/cache/unified-cache"
 
 // 使用全局统一缓存管理器
 const urlCache = globalCacheManager
@@ -181,7 +181,7 @@ export function shouldPreload(href: string): boolean {
  * @returns URL对象
  */
 export function createUrl(href: string): URL {
-  const cacheKey = CacheKeyGenerator.content(href)
+  const cacheKey = UnifiedCacheKeyGenerator.generateLinkKey(href)
   const cached = urlCache.get(cacheKey)
   if (cached) {
     // 从缓存的字符串重建URL对象
@@ -200,7 +200,7 @@ export function createUrl(href: string): URL {
  * @returns 用于缓存的URL对象
  */
 export function getContentUrl(href: string): URL {
-  const cacheKey = CacheKeyGenerator.content(`processed_${href}`)
+  const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(href)
   const cached = urlCache.get(cacheKey)
   if (cached) {
     // 从缓存的字符串重建URL对象

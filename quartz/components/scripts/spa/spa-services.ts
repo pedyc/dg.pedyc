@@ -5,7 +5,7 @@
 
 import { getContentUrl, normalizeRelativeURLs } from "../../../util/path"
 import { fetchCanonical } from "../utils/util"
-import { CacheKeyGenerator, sanitizeCacheKey } from "../config/cache-config"
+import { UnifiedCacheKeyGenerator } from "../cache/unified-cache"
 import { globalUnifiedContentCache, CacheLayer } from "../managers/index"
 import { getDOMParser, scrollToTarget, isSamePage, micromorph } from "./spa-utils"
 
@@ -17,11 +17,11 @@ import { getDOMParser, scrollToTarget, isSamePage, micromorph } from "./spa-util
  * @returns 内容字符串或null（需要完整页面跳转）
  */
 export async function getContentForNavigation(
-  url: URL, 
+  url: URL,
   preferredLayer: CacheLayer = CacheLayer.MEMORY
 ): Promise<string | null> {
   const processedUrl = getContentUrl(url.toString())
-  const cacheKey = CacheKeyGenerator.content(sanitizeCacheKey(processedUrl.toString()))
+  const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(processedUrl.toString())
 
   // 尝试从统一缓存获取内容
   let contents = globalUnifiedContentCache.get(cacheKey)

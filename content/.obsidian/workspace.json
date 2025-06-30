@@ -17,7 +17,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "PARA/20-AREAS/08知识管理/0800知识管理.md",
+                    "file": "PARA/20-AREAS/02前端/0200前端.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -32,10 +32,35 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "0800知识管理"
+                  "title": "0200前端"
+                }
+              },
+              {
+                "id": "3e5b2dc962c448fb",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PARA/20-AREAS/02前端/Web API.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "Web API"
                 }
               }
-            ]
+            ],
+            "currentTab": 1
           },
           {
             "id": "863a685a41ce1720",
@@ -74,13 +99,13 @@
                         "state": {
                           "type": "outline",
                           "state": {
-                            "file": "PARA/20-AREAS/08知识管理/0800知识管理.md",
+                            "file": "PARA/20-AREAS/02前端/Web API.md",
                             "followCursor": false,
                             "showSearch": false,
                             "searchQuery": ""
                           },
                           "icon": "lucide-list",
-                          "title": "Outline of 0800知识管理"
+                          "title": "Outline of Web API"
                         }
                       }
                     ]
@@ -96,7 +121,7 @@
                         "state": {
                           "type": "localgraph",
                           "state": {
-                            "file": "PARA/20-AREAS/08知识管理/0800知识管理.md",
+                            "file": "PARA/20-AREAS/02前端/Web API.md",
                             "options": {
                               "collapse-filter": true,
                               "search": "",
@@ -124,7 +149,7 @@
                             }
                           },
                           "icon": "lucide-git-fork",
-                          "title": "Graph of 0800知识管理"
+                          "title": "Graph of Web API"
                         }
                       }
                     ]
@@ -315,38 +340,39 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "5161891edc96f818",
+  "active": "3e5b2dc962c448fb",
   "lastOpenFiles": [
+    "PARA/20-AREAS/02前端/0200前端.md",
+    "PARA/20-AREAS/02前端/CSS.md",
+    "Diary/2025-06-30.md",
+    "copilot-custom-prompts/Rewrite as tweet.md",
+    "copilot-custom-prompts/Remove URLs.md",
+    "copilot-custom-prompts/Rewrite as tweet thread.md",
+    "copilot-custom-prompts/Summarize.md",
+    "copilot-custom-prompts/Simplify.md",
+    "copilot-custom-prompts/Emojify.md",
+    "copilot-custom-prompts/文章助手.md",
+    "copilot-custom-prompts/根据标题完善笔记.md",
+    "copilot-custom-prompts/Rewrite as press release.md",
+    "copilot-custom-prompts/Explain like I am 5.md",
+    "copilot-custom-prompts/Generate glossary.md",
+    "copilot-custom-prompts/Generate table of contents.md",
+    "copilot-custom-prompts/Make longer.md",
+    "copilot-custom-prompts/Make shorter.md",
+    "copilot-custom-prompts",
+    "PARA/20-AREAS/02前端/_resources",
+    "Diary/2025-06-29.md",
+    "Diary/_resources",
+    "Diary/2025-06-28.md",
+    "Diary/2025-06-27.md",
+    "PARA/20-AREAS/08知识管理/0800知识管理.md",
     "PARA/00-META/本库领域索引.md",
     "index.md",
     "Diary/2025-06-19.md",
     "Diary/2025-06-23.md",
     "Diary/2025-06-22.md",
-    "Diary/2025-06-21.md",
-    "Diary/2025-06-20.md",
-    "Diary/_resources",
-    "PARA/30-RESOURCES/项目矩阵/dg.pedyc.md",
     "Diary/_resources/2025-06-19",
-    "Diary/2025-06-18.md",
-    "PARA/20-AREAS/08知识管理/知识管理概述.md",
-    "PARA/20-AREAS/08知识管理/卡片盒笔记法实施工作流.md",
-    "PARA/20-AREAS/08知识管理/知识管理核心原则.md",
-    "PARA/40-ARCHIVES/数字花园概述.md",
-    "Diary/2025-06-17.md",
-    "PARA/20-AREAS/02前端/Service Worker API.md",
-    "PARA/20-AREAS/04AI/知识管理大师提示词v4 动态重构版本.md",
-    "PARA/30-RESOURCES/面试真题/FAQ-Webpack.md",
-    "PARA/20-AREAS/02前端/浏览器兼容性.md",
-    "PARA/20-AREAS/02前端/FAQ-浏览器兼容性问题.md",
-    "Diary/2025-06-16.md",
-    "PARA/30-RESOURCES/面试真题/FAQ-Vite.md",
-    "PARA/20-AREAS/02前端/Vue 核心思想.md",
-    "PARA/20-AREAS/02前端/0200前端.md",
-    "PARA/20-AREAS/02前端/CSS.md",
-    "PARA/20-AREAS/02前端/如何处理 Ajax 请求在不同浏览器中的兼容性问题？.md",
-    "PARA/20-AREAS/02前端/如何使用 Babel 将 ES6+ 代码转换为 ES5 代码，以兼容旧版本浏览器？.md",
     "SimpRead/backup/simpread_config@20250616174335.json",
-    "PARA/20-AREAS/02前端/_resources",
     "_resources/sw-lifecycle.svg",
     "PARA/00-META/_resources",
     "PARA/30-RESOURCES/面试真题/_resources",
@@ -356,7 +382,6 @@
     "PARA/10-PROJECTS/_resources/Drawing 2025-05-29 16.11.38.excalidraw.svg",
     "PARA/10-PROJECTS/_resources",
     "PARA/20-AREAS/00看板/02前端领域看板.excalidraw.svg",
-    "PARA/20-AREAS/08知识管理/_resources/知识内化",
     "_resources/webkit-main-flow-b779d50c0cf28_856.png",
     "_resources/browser-components-9cd8ff834cc9c_856.png",
     "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否/aa39b161b5580788f4015aa7e97abe2c_MD5.jpg",

@@ -3,7 +3,7 @@ title: CSS
 aliases: [Cascading Style Sheets]
 description: 用于控制网页样式和布局的样式表语言。
 date-created: 2025-05-28
-date-modified: 2025-06-16
+date-modified: 2025-06-30
 status: active
 para: area
 related: ["[[HTML]]", "[[JavaScript]]", "[[视觉设计]]"]

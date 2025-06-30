@@ -54,6 +54,39 @@
       ]
     },
     {
+      "name": "google/gemini-2.5-flash-lite-preview-06-17",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "projectEnabled": true,
+      "capabilities": [
+        "vision"
+      ]
+    },
+    {
+      "name": "google/gemini-2.5-flash",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "projectEnabled": true,
+      "capabilities": [
+        "vision"
+      ]
+    },
+    {
+      "name": "google/gemini-2.5-pro",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "projectEnabled": true,
+      "capabilities": [
+        "vision"
+      ]
+    },
+    {
       "name": "gpt-4.1",
       "provider": "openai",
       "enabled": true,
@@ -278,78 +311,7 @@
   "numPartitions": 1,
   "promptUsageTimestamps": {},
   "defaultConversationNoteName": "{$topic}@{$date}_{$time}",
-  "inlineEditCommands": [
-    {
-      "name": "根据标题完善笔记",
-      "prompt": "角色：你是一位资深的知识管理专家，对 PARA 笔记组织法和卢曼盒卡片笔记法有着深入的理解，并且熟练掌握 Obsidian 的元数据格式。\n\n功能：\n1.完善笔记内容：根据{[[Note Title]]}完善笔记内容，如果笔记符合PARA要求，检查并优化行文结构。\n2.优化笔记结构：根据知识管理的最佳实践，对用户提供的笔记内容进行分类、打标签、总结，并优化其结构，使其逻辑更加清晰和连贯，方便在 Obsidian 中进行管理和回顾。\n\n执行步骤：\n1.  **PARA 类别判断与归档建议：** 基于 PARA 笔记组织法（项目、领域、资源、归档），判断该笔记最适合归入哪个类别，并简要说明理由。\n2.  **卢曼盒卡片笔记法启示：** 思考该笔记是否可以拆分为更小的、相互关联的知识单元（类似卢曼盒子的卡片），如果可以，请给出拆分建议和潜在的卡片之间的关联方式（例如，通过 Obsidian 的内部链接）。\n3.  **元数据生成：**\n    * **标题 (title):** 生成一个简洁且信息量高的标题。\n    * **PARA (para):** 填写判断出的 PARA 类别。\n    * **标签 (tags):** 生成 3-5 个相关的、能够反映笔记核心内容的标签。\n    * **关键词 (keywords):** 提取 3-5 个关键术语，用于更精确的搜索。\n    * **摘要 (description):** 撰写一段简短的摘要，概括笔记的主要内容和核心观点。\n    * **相关概念 (related):** 列出 1-3 个与该笔记内容相关的更广泛的概念或主题，为后续的知识连接提供线索。\n4.  **内容结构优化：**\n    * 分析笔记的现有结构，指出其优点和不足。\n    * 提出改进建议，例如使用更清晰的标题、子标题、列表、图表等方式来组织内容，使其逻辑更通顺。\n    * 如果内容存在跳跃或不连贯的地方，请指出并给出改进建议。\n5.  **总结提炼：** 用 2-3 句话概括笔记的核心要点和最重要的结论。\n\n请使用以下格式输出结果：\n\n**优化思路**\n{优化思路}\n\n**优化后的结果**\n```markdown\n---\ntitle: \"{符合命名规范的标题}\"\npara: \"{PARA 类别}\"\ntags:\n  - \"{标签1}\"\n  - \"{标签2}\"\n  - \"{标签3}\"\n  - \"{标签4}\"\n  - \"{标签5}\"\nkeywords:\n  - \"{关键词1}\"\n  - \"{关键词2}\"\n  - \"{关键词3}\"\n  - \"{关键词4}\"\n  - \"{关键词5}\"\ndescription: \"{摘要}\"\nrelated:\n  - \"[[{相关概念1}]]\"\n  - \"[[{相关概念2}]]\"\n  - \"[[{相关概念3}]]\"\n---\n{优化后的文章内容}\n```\n\n**优化要点说明**\n{优化说明}",
-      "showInContextMenu": true
-    },
-    {
-      "name": "文章助手",
-      "prompt": "您是一位学贯东西的文学大师，兼具深厚的西方文学造诣（如莎士比亚的戏剧性、陀思妥耶夫斯基的心理深度）与东方文化精髓的领悟力。作为文字炼金师，您能：\n\n进行微观层面的文本诊断：精准修正语法谬误、修辞失当与逻辑断裂\n\n提供宏观文学审视：从叙事结构、象征体系到文化互文性，给出具有学术深度的批评建议\n\n跨文化桥梁构建：在分析文本时自然融汇东西方文学比较视角\n\n风格化再造建议：根据文本特质推荐适当的文学传统参照（如物哀美学/存在主义笔法）\n\n当前待评审文本：{activeNote}\n\n[请以学术严谨性结合创作灵性展开分析，必要时可提供修改范例与经典文本互文解读]",
-      "showInContextMenu": true
-    },
-    {
-      "name": "Summarize",
-      "prompt": "<instruction>Create a bullet-point summary of the text below. Each bullet point should capture a key point. Return only the bullet-point summary.</instruction>\n\n<text>{copilot-selection}</text>",
-      "showInContextMenu": true
-    },
-    {
-      "name": "Simplify",
-      "prompt": "<instruction>Simplify the text below to a 6th-grade reading level (ages 11-12). Use simple sentences, common words, and clear explanations. Maintain the original key concepts. Return only the simplified text.</instruction>\n\n<text>{copilot-selection}</text>",
-      "showInContextMenu": true
-    },
-    {
-      "name": "Emojify",
-      "prompt": "<instruction>Add relevant emojis to enhance the text below. Follow these rules:\n    1. Insert emojis at natural breaks in the text\n    2. Never place two emojis next to each other\n    3. Keep all original text unchanged\n    4. Choose emojis that match the context and tone\n    Return only the emojified text.</instruction>\n\n<text>{copilot-selection}</text>",
-      "showInContextMenu": true
-    },
-    {
-      "name": "Make shorter",
-      "prompt": "<instruction>Reduce the text below to half its length while preserving these elements:\n    1. Main ideas and key points\n    2. Essential details\n    3. Original tone and style\n    Return only the shortened text.</instruction>\n\n<text>{copilot-selection}</text>",
-      "showInContextMenu": false
-    },
-    {
-      "name": "Make longer",
-      "prompt": "<instruction>Expand the text below to twice its length by:\n    1. Adding relevant details and examples\n    2. Elaborating on key points\n    3. Maintaining the original tone and style\n    Return only the expanded text.</instruction>\n\n<text>{copilot-selection}</text>",
-      "showInContextMenu": false
-    },
-    {
-      "name": "Generate table of contents",
-      "prompt": "<instruction>Generate a hierarchical table of contents for the text below. Use appropriate heading levels (H1, H2, H3, etc.). Include page numbers if present. Return only the table of contents.</instruction>\n\n<text>{copilot-selection}</text>",
-      "showInContextMenu": false
-    },
-    {
-      "name": "Generate glossary",
-      "prompt": "<instruction>Create a glossary of important terms, concepts, and phrases from the text below. Format each entry as \"Term: Definition\". Sort entries alphabetically. Return only the glossary.</instruction>\n\n<text>{copilot-selection}</text>",
-      "showInContextMenu": false
-    },
-    {
-      "name": "Remove URLs",
-      "prompt": "<instruction>Remove all URLs from the text below. Preserve all other content and formatting. URLs may be in various formats (http, https, www). Return only the text with URLs removed.</instruction>\n\n<text>{copilot-selection}</text>",
-      "showInContextMenu": false
-    },
-    {
-      "name": "Rewrite as tweet",
-      "prompt": "<instruction>Rewrite the text below as a single tweet with these requirements:\n    1. Maximum 280 characters\n    2. Use concise, impactful language\n    3. Maintain the core message\n    Return only the tweet text.</instruction>\n\n<text>{copilot-selection}</text>",
-      "showInContextMenu": false
-    },
-    {
-      "name": "Rewrite as tweet thread",
-      "prompt": "<instruction>Convert the text below into a Twitter thread following these rules:\n    1. Each tweet must be under 240 characters\n    2. Start with \"THREAD START\" on its own line\n    3. Separate tweets with \"\n\n---\n\n\"\n    4. End with \"THREAD END\" on its own line\n    5. Make content engaging and clear\n    Return only the formatted thread.</instruction>\n\n<text>{copilot-selection}</text>",
-      "showInContextMenu": false
-    },
-    {
-      "name": "Explain like I am 5",
-      "prompt": "<instruction>Explain the text below in simple terms that a 5-year-old would understand:\n    1. Use basic vocabulary\n    2. Include simple analogies\n    3. Break down complex concepts\n    Return only the simplified explanation.</instruction>\n\n<text>{copilot-selection}</text>",
-      "showInContextMenu": false
-    },
-    {
-      "name": "Rewrite as press release",
-      "prompt": "<instruction>Transform the text below into a professional press release:\n    1. Use formal, journalistic style\n    2. Include headline and dateline\n    3. Follow inverted pyramid structure\n    Return only the press release format.</instruction>\n\n<text>{copilot-selection}</text>",
-      "showInContextMenu": false
-    }
-  ],
+  "inlineEditCommands": [],
   "userId": "f18f0171-ec1a-4c66-b24d-f97f2035f5ce",
   "passMarkdownImages": true,
   "enableCustomPromptTemplating": true,

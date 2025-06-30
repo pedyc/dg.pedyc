@@ -22,7 +22,31 @@ export enum CacheLayer {
 }
 
 /**
- * 缓存引用信息
+ * 缓存键验证结果
+ */
+export interface CacheKeyValidationResult {
+  isValid: boolean
+  issues: string[]
+  suggestions: string[]
+}
+
+/**
+ * 缓存诊断信息
+ */
+export interface CacheDiagnostics {
+  key: string
+  reference: CacheReference | null
+  validation: CacheKeyValidationResult
+  storageLayerInfo: {
+    memory: boolean
+    session: boolean
+    popover: boolean
+  }
+  availableKeys: string[]
+}
+
+/**
+ * 缓存引用接口
  */
 interface CacheReference {
   /** 实际存储的缓存层 */
@@ -81,7 +105,6 @@ export class UnifiedContentCacheManager implements ICleanupManager {
 
 
     const reference = this.referenceMap.get(key)
-    console.log('ref', reference);
     if (!reference) {
       return null
     }
@@ -108,6 +131,11 @@ export class UnifiedContentCacheManager implements ICleanupManager {
         content = this.popoverCache.get(reference.storageKey) || null
         if (content) this.stats.popoverHits++
         break
+    }
+
+    if (!content) {
+      // 尝试清理损坏的引用
+      this.referenceMap.delete(key)
     }
 
     return content
@@ -382,6 +410,99 @@ export class UnifiedContentCacheManager implements ICleanupManager {
       totalSize += reference.size
     }
     return totalSize
+  }
+
+  /**
+   * 验证缓存键的一致性
+   * @param key 缓存键
+   * @returns 验证结果
+   */
+  validateCacheKey(key: string): CacheKeyValidationResult {
+    const issues: string[] = []
+    const suggestions: string[] = []
+
+    // 检查引用映射
+    const reference = this.referenceMap.get(key)
+    if (!reference) {
+      issues.push(`No reference found for key: ${key}`)
+      suggestions.push("Check if the key was properly stored")
+      return { isValid: false, issues, suggestions }
+    }
+
+    // 检查存储层内容
+    let contentExists = false
+    switch (reference.storageLayer) {
+      case CacheLayer.MEMORY:
+        contentExists = this.memoryCache.has(reference.storageKey)
+        break
+      case CacheLayer.SESSION:
+        contentExists = this.storageManager.getSessionItem(reference.storageKey) !== null
+        break
+      case CacheLayer.POPOVER:
+        contentExists = this.popoverCache.has(reference.storageKey)
+        break
+    }
+
+    if (!contentExists) {
+      issues.push(`Content not found in ${reference.storageLayer} layer with key: ${reference.storageKey}`)
+      suggestions.push("The reference exists but the actual content is missing")
+    }
+
+    return {
+      isValid: contentExists,
+      issues,
+      suggestions
+    }
+  }
+
+  /**
+   * 修复损坏的缓存引用
+   * @param key 缓存键
+   * @returns 是否修复成功
+   */
+  repairCacheReference(key: string): boolean {
+    const validation = this.validateCacheKey(key)
+    if (validation.isValid) {
+      return true
+    }
+
+    // 删除损坏的引用
+    this.referenceMap.delete(key)
+    
+    // 清理哈希映射
+    for (const [hash, mappedKey] of this.contentHashMap.entries()) {
+      if (mappedKey === key) {
+        this.contentHashMap.delete(hash)
+        break
+      }
+    }
+
+    return false
+  }
+
+  /**
+   * 获取缓存诊断信息
+   * @param key 缓存键
+   * @returns 诊断信息
+   */
+  getCacheDiagnostics(key: string): CacheDiagnostics {
+    const reference = this.referenceMap.get(key)
+    const validation = this.validateCacheKey(key)
+    
+    // 检查各存储层
+    const storageLayerInfo = {
+      memory: this.memoryCache.has(key),
+      session: this.storageManager.getSessionItem(key) !== null,
+      popover: this.popoverCache.has(key)
+    }
+
+    return {
+      key,
+      reference,
+      validation,
+      storageLayerInfo,
+      availableKeys: Array.from(this.referenceMap.keys())
+    }
   }
 
   /**

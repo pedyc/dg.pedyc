@@ -60,7 +60,10 @@ type NodeRenderData = GraphicsInfo & {
   label: Text
 }
 
-const localStorageKey = UnifiedCacheKeyGenerator.generateUserKey("graph-visited", "navigation_history")
+const localStorageKey = UnifiedCacheKeyGenerator.generateUserKey(
+  "graph-visited",
+  "navigation_history",
+)
 
 function getVisited(): Set<SimpleSlug> {
   return new Set(JSON.parse(localStorage.getItem(localStorageKey) ?? "[]"))

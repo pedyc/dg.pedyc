@@ -3,8 +3,8 @@ import {
   UnifiedCacheKeyGenerator,
   CACHE_PERFORMANCE_CONFIG,
   validateUnifiedCacheConfig,
-  calculateLayerCapacity
-} from '../cache/unified-cache'
+  calculateLayerCapacity,
+} from "../cache/unified-cache"
 
 /**
  * Popover配置类
@@ -13,13 +13,14 @@ import {
  */
 export class PopoverConfig {
   // 使用统一缓存配置
-  private static readonly _unifiedCacheConfig = getCacheConfig('DEFAULT')
-  private static readonly _failedLinksCacheConfig = getCacheConfig('DEFAULT') // 失败链接也使用统一配置
+  private static readonly _unifiedCacheConfig = getCacheConfig("DEFAULT")
+  private static readonly _failedLinksCacheConfig = getCacheConfig("DEFAULT") // 失败链接也使用统一配置
 
   // 缓存配置 - 从统一配置获取，popover和content共享资源
-  static readonly CACHE_SIZE = calculateLayerCapacity('POPOVER') // 使用popover层的计算容量
+  static readonly CACHE_SIZE = calculateLayerCapacity("POPOVER") // 使用popover层的计算容量
   static readonly CACHE_TTL = PopoverConfig._unifiedCacheConfig.ttl
-  static readonly CACHE_WARNING_THRESHOLD = PopoverConfig._unifiedCacheConfig.warningThreshold || 160
+  static readonly CACHE_WARNING_THRESHOLD =
+    PopoverConfig._unifiedCacheConfig.warningThreshold || 160
   static readonly MAX_MEMORY_USAGE = PopoverConfig._unifiedCacheConfig.maxMemoryMB * 1024 * 1024 // 转换为字节
   static readonly FAILED_LINK_CACHE_TTL = PopoverConfig._failedLinksCacheConfig.ttl
 

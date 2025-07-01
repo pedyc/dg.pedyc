@@ -103,7 +103,6 @@ export function createRouter() {
    * 重构后的简化版本
    */
   const handleClick = async (e: Event): Promise<void> => {
-    console.log('[SPA] handleClick')
     const mouseEvent = e as MouseEvent
     const target = mouseEvent.target as Element
     const anchor = target.closest("a")
@@ -140,7 +139,6 @@ export function createRouter() {
    * 重构后的简化版本
    */
   const handlePopstate = async () => {
-    console.log('[SPA] handlePopstate')
     const currentUrl = new URL(window.location.toString())
 
     // 修复：移除错误的同页面判断

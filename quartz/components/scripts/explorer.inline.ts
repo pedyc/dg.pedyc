@@ -50,9 +50,9 @@ function toggleFolder(evt: MouseEvent) {
   const folderContainer = (
     isSvg
       ? // svg -> div.folder-container
-      target.parentElement
+        target.parentElement
       : // button.folder-button -> div -> div.folder-container
-      target.parentElement?.parentElement
+        target.parentElement?.parentElement
   ) as MaybeHTMLElement
   if (!folderContainer) return
   const childFolderContainer = folderContainer.nextElementSibling as MaybeHTMLElement
@@ -234,7 +234,10 @@ async function setupExplorer(currentSlug: FullSlug) {
     explorerUl.insertBefore(fragment, explorerUl.firstChild)
 
     // restore explorer scrollTop position if it exists
-    const scrollTopKey = UnifiedCacheKeyGenerator.generateUserKey("explorerScrollTop", "scroll_position")
+    const scrollTopKey = UnifiedCacheKeyGenerator.generateUserKey(
+      "explorerScrollTop",
+      "scroll_position",
+    )
     const scrollTop = sessionStorage.getItem(scrollTopKey)
     if (scrollTop) {
       explorerUl.scrollTop = parseInt(scrollTop)
@@ -293,7 +296,10 @@ document.addEventListener("prenav", async () => {
   // save explorer scrollTop position
   const explorer = document.querySelector(".explorer-ul")
   if (!explorer) return
-  const scrollTopKey = UnifiedCacheKeyGenerator.generateUserKey("explorerScrollTop", "scroll_position")
+  const scrollTopKey = UnifiedCacheKeyGenerator.generateUserKey(
+    "explorerScrollTop",
+    "scroll_position",
+  )
   sessionStorage.setItem(scrollTopKey, explorer.scrollTop.toString())
 })
 

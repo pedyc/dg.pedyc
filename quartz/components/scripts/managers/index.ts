@@ -3,20 +3,15 @@
  */
 
 // 导入类
-import { GlobalCleanupManager } from "./CleanupManager"
 import { OptimizedCacheManager } from "./OptimizedCacheManager"
 import { ResourceManager } from "./ResourceManager"
 // import { LazyloadManager } from "./LazyloadManager" // 暂时注释以避免循环依赖
 import { UnifiedStorageManager } from "./UnifiedStorageManager"
 import { UnifiedContentCacheManager } from "./UnifiedContentCacheManager"
-import {
-  getCacheConfig,
-  calculateLayerCapacity,
-  CACHE_LAYER_CONFIG
-} from '../cache/unified-cache'
+import { getCacheConfig, calculateLayerCapacity, CACHE_LAYER_CONFIG } from "../cache/unified-cache"
 
 // 导出所有管理器类
-export { ICleanupManager, GlobalCleanupManager } from "./CleanupManager"
+import { GlobalCleanupManager } from "./CleanupManager"
 export { UnifiedStorageManager } from "./UnifiedStorageManager"
 export { OptimizedCacheManager } from "./OptimizedCacheManager"
 export { ResourceManager } from "./ResourceManager"
@@ -26,7 +21,7 @@ export { ImageObserverManager } from "./ImageObserverManager"
 export { UnifiedContentCacheManager, CacheLayer } from "./UnifiedContentCacheManager"
 
 // 获取统一缓存配置
-const unifiedConfig = getCacheConfig('DEFAULT')
+const unifiedConfig = getCacheConfig("DEFAULT")
 
 // 创建全局实例
 export const globalCleanupManager = new GlobalCleanupManager()
@@ -35,9 +30,9 @@ export const globalResourceManager = new ResourceManager()
 // 使用统一配置创建缓存管理器实例
 // 内存层缓存配置
 const memoryCacheConfig = {
-  capacity: calculateLayerCapacity('MEMORY'),
+  capacity: calculateLayerCapacity("MEMORY"),
   ttl: unifiedConfig.ttl,
-  maxMemoryMB: unifiedConfig.maxMemoryMB * CACHE_LAYER_CONFIG.MEMORY.capacityRatio
+  maxMemoryMB: unifiedConfig.maxMemoryMB * CACHE_LAYER_CONFIG.MEMORY.capacityRatio,
 }
 export const globalCacheManager = new OptimizedCacheManager<string>(memoryCacheConfig)
 
@@ -46,9 +41,9 @@ export const globalStorageManager = new UnifiedStorageManager()
 
 // 弹窗层缓存配置 - 使用统一配置
 const popoverCacheConfig = {
-  capacity: calculateLayerCapacity('POPOVER'),
+  capacity: calculateLayerCapacity("POPOVER"),
   ttl: unifiedConfig.ttl,
-  maxMemoryMB: unifiedConfig.maxMemoryMB * CACHE_LAYER_CONFIG.POPOVER.capacityRatio
+  maxMemoryMB: unifiedConfig.maxMemoryMB * CACHE_LAYER_CONFIG.POPOVER.capacityRatio,
 }
 export const globalPopoverCache = new OptimizedCacheManager<string>(popoverCacheConfig)
 
@@ -56,7 +51,7 @@ export const globalPopoverCache = new OptimizedCacheManager<string>(popoverCache
 export const globalUnifiedContentCache = UnifiedContentCacheManager.createDefault(
   globalCacheManager,
   globalStorageManager,
-  globalPopoverCache
+  globalPopoverCache,
 )
 
 // 注册到全局清理管理器

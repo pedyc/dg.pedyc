@@ -12,11 +12,11 @@ import { FailedLinksManager } from "./failed-links-manager"
 import { HTMLContentProcessor } from "./html-processor"
 
 // 使用统一配置创建链接有效性缓存
-const unifiedConfig = getCacheConfig('DEFAULT')
+const unifiedConfig = getCacheConfig("DEFAULT")
 const linkValidityCacheConfig = {
   capacity: Math.floor(unifiedConfig.capacity * 0.1), // 10% 用于链接有效性缓存
   ttl: unifiedConfig.ttl,
-  maxMemoryMB: unifiedConfig.maxMemoryMB * 0.05 // 5% 内存用于链接有效性
+  maxMemoryMB: unifiedConfig.maxMemoryMB * 0.05, // 5% 内存用于链接有效性
 }
 const linkValidityCache = new OptimizedCacheManager<boolean>(linkValidityCacheConfig)
 
@@ -71,12 +71,18 @@ export class PreloadManager implements ICleanupManager {
     console.debug(`[PreloadManager Debug] Input href: ${href}`)
     console.debug(`[PreloadManager Debug] Processed contentUrl: ${contentUrl.toString()}`)
     console.debug(`[PreloadManager Debug] Generated cache key: ${cacheKey}`)
-    console.debug(`[PreloadManager Debug] Cache already has key: ${globalUnifiedContentCache.has(cacheKey)}`)
-    console.debug(`[PreloadManager Debug] Currently preloading: ${preloadingInProgress.has(cacheKey)}`)
+    console.debug(
+      `[PreloadManager Debug] Cache already has key: ${globalUnifiedContentCache.has(cacheKey)}`,
+    )
+    console.debug(
+      `[PreloadManager Debug] Currently preloading: ${preloadingInProgress.has(cacheKey)}`,
+    )
 
     // 检查是否已经在缓存中或正在预加载
     if (globalUnifiedContentCache.has(cacheKey) || preloadingInProgress.has(cacheKey)) {
-      console.debug(`[PreloadManager Debug] Content already cached or preloading, skipping: ${cacheKey}`)
+      console.debug(
+        `[PreloadManager Debug] Content already cached or preloading, skipping: ${cacheKey}`,
+      )
       return
     }
 
@@ -169,14 +175,14 @@ export class PreloadManager implements ICleanupManager {
         const html = await response.text()
         console.debug("[Preload Debug] Raw HTML received:", {
           length: html.length,
-          preview: html.substring(0, 200) + '...'
+          preview: html.substring(0, 200) + "...",
         })
 
         const content = await HTMLContentProcessor.processContent(html, contentUrl, cacheKey)
         console.debug("[Preload Debug] Processed content:", {
           hasChildNodes: content.hasChildNodes(),
           childElementCount: content.childElementCount,
-          textContent: content.textContent?.substring(0, 100) + '...'
+          textContent: content.textContent?.substring(0, 100) + "...",
         })
 
         if (!content.hasChildNodes()) {
@@ -186,12 +192,12 @@ export class PreloadManager implements ICleanupManager {
 
         // 将 DocumentFragment 转换为 HTML 字符串
         // 使用临时div容器来获取正确的HTML字符串，避免XMLSerializer的兼容性问题
-        const tempDiv = document.createElement('div')
+        const tempDiv = document.createElement("div")
         tempDiv.appendChild(content.cloneNode(true))
         const htmlString = tempDiv.innerHTML
         console.debug("[Preload Debug] Serialized HTML:", {
           length: htmlString.length,
-          preview: htmlString.substring(0, 200) + '...'
+          preview: htmlString.substring(0, 200) + "...",
         })
 
         // 使用统一缓存管理器存储，优先存储在弹窗缓存层
@@ -290,28 +296,28 @@ export class PreloadManager implements ICleanupManager {
   }
 
   /**
-    * 静态方法获取统计信息 - 保持向后兼容
-    */
-   static getStats(): {
-     currentPreloads: number
-     queueLength: number
-     preloadingCount: number
-     failedLinksCount: number
-     isInitialized: boolean
-   } {
-     const instance = PreloadManager.getInstance()
-     return instance.getStats()
-   }
+   * 静态方法获取统计信息 - 保持向后兼容
+   */
+  static getStats(): {
+    currentPreloads: number
+    queueLength: number
+    preloadingCount: number
+    failedLinksCount: number
+    isInitialized: boolean
+  } {
+    const instance = PreloadManager.getInstance()
+    return instance.getStats()
+  }
 
-   /**
-    * 静态方法预加载链接内容 - 保持向后兼容
-    * @param href 链接地址
-    * @returns Promise<void>
-    */
-   static async preloadLinkContent(href: string): Promise<void> {
-     const instance = PreloadManager.getInstance()
-     return instance.preloadLinkContent(href)
-   }
+  /**
+   * 静态方法预加载链接内容 - 保持向后兼容
+   * @param href 链接地址
+   * @returns Promise<void>
+   */
+  static async preloadLinkContent(href: string): Promise<void> {
+    const instance = PreloadManager.getInstance()
+    return instance.preloadLinkContent(href)
+  }
 }
 
 // 导出全局状态供外部访问

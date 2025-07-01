@@ -238,8 +238,8 @@ function processUrlPath(url: URL): URL {
 export function clearUrlCache(): void {
   // 清空所有以content_前缀的缓存项（URL相关）
   const stats = urlCache.getStats()
-  const urlKeys = stats.keys.filter(key => key.startsWith('content_'))
-  urlKeys.forEach(key => urlCache.delete(key))
+  const urlKeys = stats.keys.filter((key) => key.startsWith("content_"))
+  urlKeys.forEach((key) => urlCache.delete(key))
 }
 
 /**
@@ -248,12 +248,12 @@ export function clearUrlCache(): void {
 export function getUrlCacheStats(): any {
   const stats = urlCache.getStats()
   // 过滤出URL相关的统计信息
-  const urlKeys = stats.keys.filter(key => key.startsWith('content_'))
+  const urlKeys = stats.keys.filter((key) => key.startsWith("content_"))
   return {
     ...stats,
     size: urlKeys.length,
     keys: urlKeys,
-    description: 'URL Cache Statistics (filtered from global cache)'
+    description: "URL Cache Statistics (filtered from global cache)",
   }
 }
 

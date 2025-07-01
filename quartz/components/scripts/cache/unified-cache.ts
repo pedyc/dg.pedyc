@@ -160,7 +160,7 @@ export const CACHE_LAYER_CONFIG = {
     capacityRatio: 0.3, // 30%的容量用于内存缓存
     maxSizeKB: 100,
     priority: 3,
-    description: "内存层 - 最快访问速度，存储最热数据"
+    description: "内存层 - 最快访问速度，存储最热数据",
   },
 
   /** 会话层配置 - 中等热度数据 */
@@ -168,7 +168,7 @@ export const CACHE_LAYER_CONFIG = {
     capacityRatio: 0.5, // 50%的容量用于会话缓存
     maxSizeKB: 500,
     priority: 2,
-    description: "会话层 - 中等访问速度，存储中等热度数据"
+    description: "会话层 - 中等访问速度，存储中等热度数据",
   },
 
   /** 弹窗层配置 - 预加载数据 */
@@ -176,8 +176,47 @@ export const CACHE_LAYER_CONFIG = {
     capacityRatio: 0.2, // 20%的容量用于弹窗预加载
     maxSizeKB: 200,
     priority: 1,
-    description: "弹窗层 - 预加载优化，存储即将访问的数据"
-  }
+    description: "弹窗层 - 预加载优化，存储即将访问的数据",
+  },
+} as const
+
+/**
+ * 缓存阈值配置
+ * 定义各种缓存操作的阈值和限制
+ */
+export const CACHE_THRESHOLDS = {
+  /** 大内容阈值 (字节) */
+  LARGE_CONTENT_SIZE: 1024 * 1024, // 1MB
+  /** 超大内容阈值 (字节) */
+  HUGE_CONTENT_SIZE: 5 * 1024 * 1024, // 5MB
+  /** 最大内存使用量 (字节) */
+  MAX_MEMORY_USAGE: 50 * 1024 * 1024, // 50MB
+  /** 内存清理阈值 (比例) */
+  MEMORY_CLEANUP_THRESHOLD: 0.8, // 80%
+  /** 会话存储清理阈值 (比例) */
+  SESSION_CLEANUP_THRESHOLD: 0.9, // 90%
+  /** 最大引用计数 */
+  MAX_REFERENCE_COUNT: 1000,
+  /** 内容哈希冲突检测阈值 */
+  HASH_COLLISION_THRESHOLD: 10,
+} as const
+
+/**
+ * 缓存验证规则配置
+ */
+export const CACHE_VALIDATION_RULES = {
+  /** 最大键长度 */
+  MAX_KEY_LENGTH: 256,
+  /** 禁用字符正则 */
+  FORBIDDEN_CHARS: /[\s<>:"/\\|?*]/,
+  /** 是否要求前缀 */
+  REQUIRED_PREFIX: true,
+  /** 最小内容长度 */
+  MIN_CONTENT_LENGTH: 1,
+  /** 最大内容长度 */
+  MAX_CONTENT_LENGTH: 10 * 1024 * 1024, // 10MB
+  /** 键格式验证正则 */
+  KEY_FORMAT_REGEX: /^[a-z0-9_-]+$/,
 } as const
 
 /**
@@ -198,7 +237,7 @@ export const CACHE_PERFORMANCE_CONFIG = {
   PRELOAD_STRATEGY: {
     enabled: true,
     count: 5,
-    delay: 100
+    delay: 100,
   },
   /** 监控配置 */
   MONITORING: {
@@ -207,7 +246,7 @@ export const CACHE_PERFORMANCE_CONFIG = {
     REPORT_INTERVAL: 30 * 60 * 1000, // 30分钟
     CONSOLE_WARNINGS: true,
     ENABLE_KEY_VALIDATION: true,
-  }
+  },
 } as const
 
 /**
@@ -236,7 +275,7 @@ export const UnifiedCacheKeyGenerator = {
    * @param type 内容类型 (可选)
    * @returns 统一格式的缓存键
    */
-  generateContentKey: (url: string, type?: 'popover' | 'content' | 'preview'): string => {
+  generateContentKey: (url: string, type?: "popover" | "content" | "preview"): string => {
     const sanitizedUrl = sanitizeCacheKey(url)
     const baseKey = `${CacheKeyRules.PREFIXES.CONTENT}${sanitizedUrl}`
     return type ? `${baseKey}${CacheKeyRules.SEPARATOR}${type}` : baseKey
@@ -275,7 +314,7 @@ export const UnifiedCacheKeyGenerator = {
    * @returns 弹窗缓存键
    */
   generatePopoverKey: (target: string, subType?: string): string => {
-    const baseKey = UnifiedCacheKeyGenerator.generateContentKey(target, 'popover')
+    const baseKey = UnifiedCacheKeyGenerator.generateContentKey(target, "popover")
     return subType ? `${baseKey}${CacheKeyRules.SEPARATOR}${sanitizeCacheKey(subType)}` : baseKey
   },
 
@@ -323,7 +362,9 @@ export const UnifiedCacheKeyGenerator = {
    * @param key 缓存键
    * @returns 解析结果
    */
-  parseKey: (key: string): {
+  parseKey: (
+    key: string,
+  ): {
     isValid: boolean
     prefix?: string
     baseUrl?: string
@@ -331,7 +372,7 @@ export const UnifiedCacheKeyGenerator = {
     subType?: string
   } => {
     const prefixes = Object.values(CacheKeyRules.PREFIXES)
-    const matchedPrefix = prefixes.find(prefix => key.startsWith(prefix))
+    const matchedPrefix = prefixes.find((prefix) => key.startsWith(prefix))
 
     if (!matchedPrefix) {
       return { isValid: false }
@@ -344,9 +385,9 @@ export const UnifiedCacheKeyGenerator = {
       prefix: matchedPrefix,
       baseUrl: parts[0],
       type: parts[1],
-      subType: parts[2]
+      subType: parts[2],
     }
-  }
+  },
 } as const
 
 /**
@@ -375,7 +416,7 @@ export function getCacheLayerConfig(layer: keyof typeof CACHE_LAYER_CONFIG) {
  */
 export function calculateLayerCapacity(
   layer: keyof typeof CACHE_LAYER_CONFIG,
-  baseCapacity?: number
+  baseCapacity?: number,
 ): number {
   const layerConfig = CACHE_LAYER_CONFIG[layer]
   const capacity = baseCapacity || UNIFIED_CACHE_CONFIG.CONTENT.capacity
@@ -401,8 +442,10 @@ export function validateCacheConfig(config: CacheConfig): boolean {
  * @returns 配置是否有效
  */
 export function validateUnifiedCacheConfig(): boolean {
-  const totalRatio = Object.values(CACHE_LAYER_CONFIG)
-    .reduce((sum, config) => sum + config.capacityRatio, 0)
+  const totalRatio = Object.values(CACHE_LAYER_CONFIG).reduce(
+    (sum, config) => sum + config.capacityRatio,
+    0,
+  )
 
   return (
     Math.abs(totalRatio - 1.0) < 0.01 && // 总比例应该接近100%
@@ -442,7 +485,6 @@ export function extractCacheKeyPrefix(key: string): string | null {
   return null
 }
 
-
 /**
  * 缓存配置诊断信息
  * @returns 诊断信息对象
@@ -456,11 +498,11 @@ export function getCacheConfigDiagnostics() {
       isValid: validateUnifiedCacheConfig(),
       totalCapacity: UNIFIED_CACHE_CONFIG.CONTENT.capacity,
       layerCapacities: {
-        memory: calculateLayerCapacity('MEMORY'),
-        session: calculateLayerCapacity('SESSION'),
-        popover: calculateLayerCapacity('POPOVER')
-      }
-    }
+        memory: calculateLayerCapacity("MEMORY"),
+        session: calculateLayerCapacity("SESSION"),
+        popover: calculateLayerCapacity("POPOVER"),
+      },
+    },
   }
 }
 
@@ -498,11 +540,15 @@ export default {
   keyGenerator: UnifiedCacheKeyGenerator,
   performance: CACHE_PERFORMANCE_CONFIG,
   layers: CACHE_LAYER_CONFIG,
+  thresholds: CACHE_THRESHOLDS,
+  validation: CACHE_VALIDATION_RULES,
+  monitor: CacheMonitorConfig,
   utils: {
     getCacheConfig,
     validateCacheConfig,
     validateUnifiedCacheConfig,
     sanitizeCacheKey,
-    getCacheConfigDiagnostics
-  }
+    getCacheConfigDiagnostics,
+    extractCacheKeyPrefix,
+  },
 }

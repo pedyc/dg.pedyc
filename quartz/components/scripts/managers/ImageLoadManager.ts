@@ -64,11 +64,11 @@ export class ImageLoadManager implements ICleanupManager {
     }
 
     // 使用统一缓存管理器
-    const unifiedConfig = getCacheConfig('DEFAULT')
+    const unifiedConfig = getCacheConfig("DEFAULT")
     const imageCacheConfig = {
       capacity: Math.floor(unifiedConfig.capacity * 0.15), // 15% 用于图片缓存
       ttl: unifiedConfig.ttl * 2, // 图片缓存时间更长
-      maxMemoryMB: unifiedConfig.maxMemoryMB * 0.1 // 10% 内存用于图片缓存
+      maxMemoryMB: unifiedConfig.maxMemoryMB * 0.1, // 10% 内存用于图片缓存
     }
     this.loadedCache = new OptimizedCacheManager<boolean>(imageCacheConfig)
   }

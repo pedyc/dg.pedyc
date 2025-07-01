@@ -31,21 +31,39 @@ interface PreloadQueueItem {
 const preloadingInProgress = new Set<string>()
 
 /**
- * 预加载管理器
+ * 预加载管理器 - 单例模式
  * 管理链接内容的预加载，包括并发控制和队列管理
  * 实现ICleanupManager接口，统一资源管理
  */
 export class PreloadManager implements ICleanupManager {
-  private static readonly MAX_CONCURRENT_PRELOADS = PopoverConfig.MAX_CONCURRENT_PRELOADS
-  private static currentPreloads = 0
-  private static preloadQueue: PreloadQueueItem[] = []
+  private static instance: PreloadManager | null = null
+  private readonly MAX_CONCURRENT_PRELOADS = PopoverConfig.MAX_CONCURRENT_PRELOADS
+  private currentPreloads = 0
+  private preloadQueue: PreloadQueueItem[] = []
+  private isInitialized = false
+
+  /**
+   * 私有构造函数，防止外部直接实例化
+   */
+  private constructor() {}
+
+  /**
+   * 获取单例实例
+   * @returns PreloadManager实例
+   */
+  static getInstance(): PreloadManager {
+    if (!PreloadManager.instance) {
+      PreloadManager.instance = new PreloadManager()
+    }
+    return PreloadManager.instance
+  }
 
   /**
    * 预加载链接内容
    * @param href 链接地址
    * @returns Promise<void>
    */
-  static async preloadLinkContent(href: string): Promise<void> {
+  async preloadLinkContent(href: string): Promise<void> {
     // 使用统一的URL处理函数确保缓存键一致性
     const contentUrl = getContentUrl(href)
     const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(contentUrl.toString())
@@ -81,12 +99,11 @@ export class PreloadManager implements ICleanupManager {
   }
 
   /**
-   * 执行预加载
-   * @param href 链接地址
-   * @param priority 优先级
-   * @returns Promise<boolean> 是否成功预加载
+   * 检查链接有效性
+   * @param url 链接URL
+   * @returns Promise<boolean> 是否有效
    */
-  private static async isLinkValid(url: URL): Promise<boolean> {
+  private async isLinkValid(url: URL): Promise<boolean> {
     const cacheKey = UnifiedCacheKeyGenerator.generateLinkKey(url.toString(), "validity")
 
     if (linkValidityCache.has(cacheKey)) {
@@ -117,7 +134,13 @@ export class PreloadManager implements ICleanupManager {
     }
   }
 
-  private static async executePreload(href: string, _priority: number): Promise<boolean> {
+  /**
+   * 执行预加载
+   * @param href 链接地址
+   * @param _priority 优先级
+   * @returns Promise<boolean> 是否成功预加载
+   */
+  private async executePreload(href: string, _priority: number): Promise<boolean> {
     const contentUrl = getContentUrl(href)
     const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(contentUrl.toString())
 
@@ -212,7 +235,7 @@ export class PreloadManager implements ICleanupManager {
   /**
    * 处理预加载队列
    */
-  private static processQueue(): void {
+  private processQueue(): void {
     if (this.preloadQueue.length > 0 && this.currentPreloads < this.MAX_CONCURRENT_PRELOADS) {
       const next = this.preloadQueue.shift()!
       this.executePreload(next.href, next.priority).then(() => next.resolve())
@@ -223,34 +246,72 @@ export class PreloadManager implements ICleanupManager {
    * 清理预加载状态 - 实现ICleanupManager接口
    */
   cleanup(): void {
-    PreloadManager.cleanup()
-  }
-
-  /**
-   * 静态清理方法
-   */
-  static cleanup(): void {
     preloadingInProgress.clear()
     this.preloadQueue.length = 0
     this.currentPreloads = 0
+    this.isInitialized = false
+  }
+
+  /**
+   * 静态清理方法 - 保持向后兼容
+   */
+  static cleanup(): void {
+    const instance = PreloadManager.getInstance()
+    instance.cleanup()
+  }
+
+  /**
+   * 重置单例实例
+   */
+  static resetInstance(): void {
+    if (PreloadManager.instance) {
+      PreloadManager.instance.cleanup()
+      PreloadManager.instance = null
+    }
   }
 
   /**
    * 获取预加载统计信息
    */
-  static getStats(): {
+  getStats(): {
     currentPreloads: number
     queueLength: number
     preloadingCount: number
     failedLinksCount: number
+    isInitialized: boolean
   } {
     return {
       currentPreloads: this.currentPreloads,
       queueLength: this.preloadQueue.length,
       preloadingCount: preloadingInProgress.size,
       failedLinksCount: FailedLinksManager.getStats().totalFailedLinks,
+      isInitialized: this.isInitialized,
     }
   }
+
+  /**
+    * 静态方法获取统计信息 - 保持向后兼容
+    */
+   static getStats(): {
+     currentPreloads: number
+     queueLength: number
+     preloadingCount: number
+     failedLinksCount: number
+     isInitialized: boolean
+   } {
+     const instance = PreloadManager.getInstance()
+     return instance.getStats()
+   }
+
+   /**
+    * 静态方法预加载链接内容 - 保持向后兼容
+    * @param href 链接地址
+    * @returns Promise<void>
+    */
+   static async preloadLinkContent(href: string): Promise<void> {
+     const instance = PreloadManager.getInstance()
+     return instance.preloadLinkContent(href)
+   }
 }
 
 // 导出全局状态供外部访问

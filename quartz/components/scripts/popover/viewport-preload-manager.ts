@@ -16,20 +16,43 @@ const elementMetadata = new WeakMap<
 >()
 
 /**
- * 优化的视口预加载管理器
+ * 优化的视口预加载管理器 - 单例模式
  * 实现ICleanupManager接口，统一资源管理
  */
 export class ViewportPreloadManager implements ICleanupManager {
-  private static observer: IntersectionObserver | null = null
-  private static observedLinks = new Set<HTMLAnchorElement>()
+  private static instance: ViewportPreloadManager | null = null
+  private observer: IntersectionObserver | null = null
+  private observedLinks = new Set<HTMLAnchorElement>()
+  private isInitialized = false
+
+  /**
+   * 私有构造函数，防止外部直接实例化
+   */
+  private constructor() {}
+
+  /**
+   * 获取单例实例
+   * @returns ViewportPreloadManager实例
+   */
+  static getInstance(): ViewportPreloadManager {
+    if (!ViewportPreloadManager.instance) {
+      ViewportPreloadManager.instance = new ViewportPreloadManager()
+    }
+    return ViewportPreloadManager.instance
+  }
 
   /**
    * 初始化视口预加载
    */
-  static initialize(): void {
-    console.debug(`[ViewportPreloadManager Debug] Initialize called`)
+  initialize(): void {
+    // 防止重复初始化
+    if (this.isInitialized) {
+      console.debug('[ViewportPreloadManager] Already initialized, skipping...')
+      return
+    }
+
     const links = [...document.querySelectorAll("a.internal")] as HTMLAnchorElement[]
-    console.debug(`[ViewportPreloadManager Debug] Found ${links.length} internal links`)
+
 
     if (!("IntersectionObserver" in window)) {
       console.warn("IntersectionObserver not supported, viewport preloading disabled.")
@@ -38,6 +61,7 @@ export class ViewportPreloadManager implements ICleanupManager {
 
     if (links.length === 0) {
       console.debug("No internal links found for viewport preloading")
+      this.isInitialized = true
       return
     }
 
@@ -87,6 +111,8 @@ export class ViewportPreloadManager implements ICleanupManager {
       this.observedLinks.add(link)
     })
 
+    this.isInitialized = true
+    console.debug('[ViewportPreloadManager] Initialized successfully')
     // 注册观察器到资源管理器
     // Observer will be automatically cleaned up when disconnected
   }
@@ -96,7 +122,7 @@ export class ViewportPreloadManager implements ICleanupManager {
    * @param linksToCheck - 需要检查的链接数组
    * @returns Promise<number> - 返回成功预加载的链接数量
    */
-  private static async batchCheckLinks(linksToCheck: HTMLAnchorElement[]): Promise<number> {
+  private async batchCheckLinks(linksToCheck: HTMLAnchorElement[]): Promise<number> {
     // 限制批量检查的数量以避免性能问题
     // 使用自适应批量大小
     const adaptiveBatchSize = PopoverConfig.getAdaptiveBatchSize()
@@ -147,8 +173,9 @@ export class ViewportPreloadManager implements ICleanupManager {
       .map((result) => result.value)
 
     // 委托给PreloadManager进行实际预加载，避免重复逻辑
+    const preloadManager = PreloadManager.getInstance()
     const preloadPromises = validUrls.map((url) =>
-      PreloadManager.preloadLinkContent(url.toString()),
+      preloadManager.preloadLinkContent(url.toString())
     )
 
     const preloadResults = await Promise.allSettled(preloadPromises)
@@ -163,31 +190,66 @@ export class ViewportPreloadManager implements ICleanupManager {
    * 清理资源 - 实现ICleanupManager接口
    */
   cleanup(): void {
-    ViewportPreloadManager.cleanup()
-  }
-
-  /**
-   * 静态清理方法
-   */
-  static cleanup(): void {
     this.observer?.disconnect()
     this.observer = null
     this.observedLinks.clear()
+    this.isInitialized = false
+  }
+
+  /**
+   * 静态清理方法 - 保持向后兼容
+   */
+  static cleanup(): void {
+    const instance = ViewportPreloadManager.getInstance()
+    instance.cleanup()
+  }
+
+  /**
+   * 重置单例实例
+   */
+  static resetInstance(): void {
+    if (ViewportPreloadManager.instance) {
+      ViewportPreloadManager.instance.cleanup()
+      ViewportPreloadManager.instance = null
+    }
   }
 
   /**
    * 获取统计信息 - 实现ICleanupManager接口
    */
-  static getStats(): {
+  getStats(): {
     observedLinksCount: number
     linkCheckInProgressCount: number
     isObserverActive: boolean
+    isInitialized: boolean
   } {
     return {
       observedLinksCount: this.observedLinks.size,
       linkCheckInProgressCount: linkCheckInProgress.size,
       isObserverActive: this.observer !== null,
+      isInitialized: this.isInitialized,
     }
+  }
+
+  /**
+   * 静态方法获取统计信息 - 保持向后兼容
+   */
+  static getStats(): {
+    observedLinksCount: number
+    linkCheckInProgressCount: number
+    isObserverActive: boolean
+    isInitialized: boolean
+  } {
+    const instance = ViewportPreloadManager.getInstance()
+    return instance.getStats()
+  }
+
+  /**
+   * 静态方法初始化 - 保持向后兼容
+   */
+  static initialize(): void {
+    const instance = ViewportPreloadManager.getInstance()
+    instance.initialize()
   }
 }
 
@@ -196,7 +258,8 @@ export class ViewportPreloadManager implements ICleanupManager {
  * 使用IntersectionObserver监控可见链接并进行批量预加载
  */
 export function initializeViewportPreloading(): void {
-  ViewportPreloadManager.initialize()
+  const manager = ViewportPreloadManager.getInstance()
+  manager.initialize()
 }
 
 // 导出全局状态供外部访问

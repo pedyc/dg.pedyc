@@ -24,7 +24,7 @@ globalResourceManager.addEventListener(document as unknown as EventTarget, "nav"
   LinkEventManager.setupLinkEventListeners(mouseEnterHandler, clearActivePopover)
 
   // 初始化视口预加载逻辑
-  ViewportPreloadManager.initialize()
+  // ViewportPreloadManager.initialize()
 })
 
 // 在 popover.inline.ts 中添加

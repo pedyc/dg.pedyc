@@ -113,6 +113,8 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     if (!reference) {
       return null
     }
+    console.log("reference", reference);
+
 
     // 更新访问时间和引用计数
     reference.lastAccessed = Date.now()

@@ -1,7 +1,13 @@
 import FlexSearch from "flexsearch"
 import { ContentDetails } from "../../plugins/emitters/contentIndex"
 import { registerEscapeHandler, removeAllChildren } from "./utils/util"
-import { FullSlug, FilePath, normalizeRelativeURLs, resolveRelative, createUrl } from "../../util/path"
+import {
+  FullSlug,
+  FilePath,
+  normalizeRelativeURLs,
+  resolveRelative,
+  createUrl,
+} from "../../util/path"
 
 import { globalUnifiedContentCache, CacheLayer } from "./managers/index"
 import { UnifiedCacheKeyGenerator } from "./cache/unified-cache"
@@ -99,8 +105,9 @@ function highlight(searchTerm: string, text: string, trim?: boolean) {
     })
     .join(" ")
 
-  return `${startIndex === 0 ? "" : "..."}${slice}${endIndex === tokenizedText.length - 1 ? "" : "..."
-    }`
+  return `${startIndex === 0 ? "" : "..."}${slice}${
+    endIndex === tokenizedText.length - 1 ? "" : "..."
+  }`
 }
 
 function highlightHTML(searchTerm: string, el: HTMLElement) {
@@ -362,7 +369,6 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
    */
   async function fetchContent(slug: FullSlug): Promise<ContentDetails> {
     const cacheKey = UnifiedCacheKeyGenerator.generateSearchKey(slug)
-
 
     // 尝试从统一缓存获取
     const cached = globalUnifiedContentCache.get(cacheKey)

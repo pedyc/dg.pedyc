@@ -70,12 +70,15 @@ export async function mouseEnterHandler(
   function showPopover(popoverElement: HTMLElement, targetHash: string) {
     console.debug("[Popover Debug] showPopover called with:", {
       popoverId: popoverElement.id,
-      hasContent: popoverElement.querySelector('.popover-inner')?.children.length || 0,
-      targetHash
+      hasContent: popoverElement.querySelector(".popover-inner")?.children.length || 0,
+      targetHash,
     })
     clearActivePopover()
     popoverElement.classList.add("active-popover")
-    console.debug("[Popover Debug] Added active-popover class, element classes:", popoverElement.className)
+    console.debug(
+      "[Popover Debug] Added active-popover class, element classes:",
+      popoverElement.className,
+    )
     setPosition(popoverElement)
 
     if (targetHash !== "") {
@@ -144,8 +147,9 @@ export async function mouseEnterHandler(
       console.debug("[Popover Debug] Cached data details:", {
         cacheKey,
         dataType: typeof cachedData,
-        dataLength: typeof cachedData === 'string' ? cachedData.length : 'N/A',
-        dataPreview: typeof cachedData === 'string' ? cachedData.substring(0, 100) + '...' : cachedData
+        dataLength: typeof cachedData === "string" ? cachedData.length : "N/A",
+        dataPreview:
+          typeof cachedData === "string" ? cachedData.substring(0, 100) + "..." : cachedData,
       })
 
       // 包装成 CachedItem 格式
@@ -156,14 +160,10 @@ export async function mouseEnterHandler(
         size: cachedData.length,
         type: "html" as const,
       }
-      console.debug("[Popover Debug] About to render cached content with item:", cachedItem)
       HTMLContentProcessor.renderPopoverContent(popoverInner, cachedItem)
     } else {
       // 如果缓存未命中，则立即 fetch 并使用统一缓存管理器存储
       console.log(`[Popover Debug] Popover content for ${cacheKey} loaded from: HTTP Request`)
-      console.debug(`[Popover Debug] About to preload with href: ${contentUrlString}`)
-      console.debug(`[Popover Debug] Cache key before preload: ${cacheKey}`)
-      console.debug(`[Popover Debug] Cache has key before preload: ${globalUnifiedContentCache.has(cacheKey)}`)
       try {
         // 使用 contentUrlString 进行预加载
         await PreloadManager.preloadLinkContent(contentUrlString)
@@ -173,7 +173,7 @@ export async function mouseEnterHandler(
         console.debug("[Popover Debug] After preload, cached data:", {
           found: !!newlyCachedData,
           dataType: typeof newlyCachedData,
-          dataLength: typeof newlyCachedData === 'string' ? newlyCachedData.length : 'N/A'
+          dataLength: typeof newlyCachedData === "string" ? newlyCachedData.length : "N/A",
         })
 
         if (newlyCachedData) {
@@ -185,7 +185,10 @@ export async function mouseEnterHandler(
             size: newlyCachedData.length,
             type: "html" as const,
           }
-          console.debug("[Popover Debug] About to render newly cached content with item:", newlyCachedItem)
+          console.debug(
+            "[Popover Debug] About to render newly cached content with item:",
+            newlyCachedItem,
+          )
           HTMLContentProcessor.renderPopoverContent(popoverInner, newlyCachedItem)
         } else {
           console.warn("[Popover Debug] No content found after preload, rendering not found")

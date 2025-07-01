@@ -4,7 +4,7 @@ import { PreloadManager } from "./preload-manager"
 import { PopoverErrorHandler } from "./error-handler"
 import { ICleanupManager } from "../managers/CleanupManager"
 import { globalResourceManager, globalUnifiedContentCache } from "../managers/index"
-import {  UnifiedCacheKeyGenerator } from "../cache/unified-cache"
+import { UnifiedCacheKeyGenerator } from "../cache/unified-cache"
 
 import { PopoverConfig } from "./config"
 
@@ -47,12 +47,11 @@ export class ViewportPreloadManager implements ICleanupManager {
   initialize(): void {
     // 防止重复初始化
     if (this.isInitialized) {
-      console.debug('[ViewportPreloadManager] Already initialized, skipping...')
+      console.debug("[ViewportPreloadManager] Already initialized, skipping...")
       return
     }
 
     const links = [...document.querySelectorAll("a.internal")] as HTMLAnchorElement[]
-
 
     if (!("IntersectionObserver" in window)) {
       console.warn("IntersectionObserver not supported, viewport preloading disabled.")
@@ -72,9 +71,14 @@ export class ViewportPreloadManager implements ICleanupManager {
             .filter((entry) => entry.isIntersecting)
             .map((entry) => entry.target as HTMLAnchorElement)
 
-          console.debug(`[ViewportPreloadManager Debug] ${entries.length} entries, ${visibleLinks.length} visible links`)
+          console.debug(
+            `[ViewportPreloadManager Debug] ${entries.length} entries, ${visibleLinks.length} visible links`,
+          )
           if (visibleLinks.length > 0) {
-            console.debug(`[ViewportPreloadManager Debug] Processing visible links:`, visibleLinks.map(l => l.href))
+            console.debug(
+              `[ViewportPreloadManager Debug] Processing visible links:`,
+              visibleLinks.map((l) => l.href),
+            )
             try {
               // 批量检查可见链接并获取成功预加载的数量
               const preloadedCount = await this.batchCheckLinks(visibleLinks)
@@ -83,9 +87,7 @@ export class ViewportPreloadManager implements ICleanupManager {
               const cacheStats = globalUnifiedContentCache.getStats()
               const hitRate = cacheStats.hitRate
               if (hitRate > 0.5) {
-                console.warn(
-                  `[Popover] Unified cache warning: ${hitRate}% hit rate`,
-                )
+                console.warn(`[Popover] Unified cache warning: ${hitRate}% hit rate`)
               }
 
               if (preloadedCount > 0) {
@@ -112,7 +114,7 @@ export class ViewportPreloadManager implements ICleanupManager {
     })
 
     this.isInitialized = true
-    console.debug('[ViewportPreloadManager] Initialized successfully')
+    console.debug("[ViewportPreloadManager] Initialized successfully")
     // 注册观察器到资源管理器
     // Observer will be automatically cleaned up when disconnected
   }
@@ -175,7 +177,7 @@ export class ViewportPreloadManager implements ICleanupManager {
     // 委托给PreloadManager进行实际预加载，避免重复逻辑
     const preloadManager = PreloadManager.getInstance()
     const preloadPromises = validUrls.map((url) =>
-      preloadManager.preloadLinkContent(url.toString())
+      preloadManager.preloadLinkContent(url.toString()),
     )
 
     const preloadResults = await Promise.allSettled(preloadPromises)

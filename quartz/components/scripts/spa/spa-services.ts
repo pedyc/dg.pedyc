@@ -18,7 +18,7 @@ import { getDOMParser, scrollToTarget, isSamePage, micromorph } from "./spa-util
  */
 export async function getContentForNavigation(
   url: URL,
-  preferredLayer: CacheLayer = CacheLayer.MEMORY
+  preferredLayer: CacheLayer = CacheLayer.MEMORY,
 ): Promise<string | null> {
   const processedUrl = getContentUrl(url.toString())
   const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(processedUrl.toString())

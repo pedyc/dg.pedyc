@@ -36,8 +36,7 @@ export interface LazyloadStats {
  * 统一的懒加载管理器
  * 整合图片加载和观察器功能，提供完整的懒加载解决方案
  */
-export class 
-LazyloadManager implements ICleanupManager {
+export class LazyloadManager implements ICleanupManager {
   private readonly config: LazyloadManagerConfig
   private readonly imageLoadManager: ImageLoadManager
   private readonly imageObserverManager: ImageObserverManager

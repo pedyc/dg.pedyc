@@ -1,5 +1,11 @@
 import type { ICleanupManager } from "./CleanupManager"
-import { CacheMonitorConfig, type CacheConfig, getCacheConfig } from "../cache/unified-cache"
+import {
+  CacheMonitorConfig,
+  type CacheConfig,
+  getCacheConfig,
+  CacheKeyRules,
+  CACHE_THRESHOLDS,
+} from "../cache/unified-cache"
 
 /**
  * 存储配额信息接口
@@ -24,8 +30,8 @@ interface StorageStats {
  * 统一管理 localStorage 和 sessionStorage，提供配额检查、自动清理等功能
  */
 export class UnifiedStorageManager implements ICleanupManager {
-  private static readonly config: CacheConfig = getCacheConfig('DEFAULT')
-  private static readonly DEFAULT_QUOTA = 10 * 1024 * 1024 // 10MB
+  private static readonly config: CacheConfig = getCacheConfig("DEFAULT")
+  private static readonly DEFAULT_QUOTA = CACHE_THRESHOLDS.MAX_MEMORY_USAGE // 使用统一配置
 
   /**
    * 检查存储配额使用情况
@@ -234,14 +240,10 @@ export class UnifiedStorageManager implements ICleanupManager {
       const key = storage.key(i)
       if (!key) continue
 
-      // 只清理以缓存前缀开头的键，适应新的缓存键格式
-      const isCacheKey =
-        key.startsWith("popover_") ||
-        key.startsWith("content_") ||
-        key.startsWith("search_") ||
-        key.startsWith("link_") ||
-        key.startsWith("font_") ||
-        key.startsWith("user_")
+      // 只清理以缓存前缀开头的键，使用统一配置
+      const isCacheKey = Object.values(CacheKeyRules.PREFIXES).some((prefix) =>
+        key.startsWith(prefix),
+      )
 
       if (!isCacheKey) continue
 
@@ -274,8 +276,8 @@ export class UnifiedStorageManager implements ICleanupManager {
     } catch {
       // 不是JSON格式，检查大小
       const sizeInBytes = new Blob([value]).size
-      // 使用配置中的最大内存限制，默认为1MB
-      const maxSize = (this.config.maxMemoryMB || 1024) * 1024
+      // 使用配置中的最大内存限制，默认使用统一配置
+      const maxSize = (this.config.maxMemoryMB || CACHE_THRESHOLDS.LARGE_CONTENT_SIZE / 1024) * 1024
       return sizeInBytes > maxSize
     }
     return false
@@ -403,7 +405,11 @@ export class UnifiedStorageManager implements ICleanupManager {
         }
       }
 
-      const maxCapacity = (UnifiedStorageManager.config.capacity || 5) * 1024 * 1024 // 使用配置中的容量限制
+      const maxCapacity =
+        (UnifiedStorageManager.config.capacity ||
+          CACHE_THRESHOLDS.HUGE_CONTENT_SIZE / (1024 * 1024)) *
+        1024 *
+        1024 // 使用统一配置的容量限制
       return {
         used,
         available: Math.max(0, maxCapacity - used),

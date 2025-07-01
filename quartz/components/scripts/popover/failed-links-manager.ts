@@ -17,15 +17,13 @@ export class FailedLinksManager implements ICleanupManager {
   private static failedLinks = new Set<string>()
 
   // 使用统一缓存配置
-  private static readonly _cacheConfig = getCacheConfig('DEFAULT')
+  private static readonly _cacheConfig = getCacheConfig("DEFAULT")
 
   // 生成统一的存储键
-  private static readonly FAILED_LINKS_STORAGE_KEY = UnifiedCacheKeyGenerator.generateSystemKey(
-    "failed_links",
-  )
-  private static readonly FAILURE_STATS_STORAGE_KEY = UnifiedCacheKeyGenerator.generateSystemKey(
-    "failure_stats",
-  )
+  private static readonly FAILED_LINKS_STORAGE_KEY =
+    UnifiedCacheKeyGenerator.generateSystemKey("failed_links")
+  private static readonly FAILURE_STATS_STORAGE_KEY =
+    UnifiedCacheKeyGenerator.generateSystemKey("failure_stats")
 
   // 失败统计数据缓存
   private static _failureStatsCache: Record<string, any> | null = null

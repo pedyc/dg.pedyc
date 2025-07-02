@@ -45,7 +45,7 @@ export class PreloadManager implements ICleanupManager {
   /**
    * 私有构造函数，防止外部直接实例化
    */
-  private constructor() {}
+  private constructor() { }
 
   /**
    * 获取单例实例
@@ -105,43 +105,25 @@ export class PreloadManager implements ICleanupManager {
   }
 
   /**
-   * 检查链接有效性
+   * 检查链接有效性（仅从缓存检查，避免重复请求）
    * @param url 链接URL
    * @returns Promise<boolean> 是否有效
    */
   private async isLinkValid(url: URL): Promise<boolean> {
     const cacheKey = UnifiedCacheKeyGenerator.generateLinkKey(url.toString(), "validity")
 
+    // 只检查缓存，不发起新的网络请求
     if (linkValidityCache.has(cacheKey)) {
       return linkValidityCache.get(cacheKey) || false
     }
 
-    try {
-      const controller = new AbortController()
-      const timeoutId = globalResourceManager.setTimeout(
-        () => controller.abort(),
-        PopoverConfig.LINK_VALIDATION_TIMEOUT,
-      )
-
-      const response = await fetch(url.toString(), {
-        method: "HEAD",
-        signal: controller.signal,
-      })
-
-      clearTimeout(timeoutId)
-
-      const isValid = response.ok
-      linkValidityCache.set(cacheKey, isValid)
-
-      return isValid
-    } catch (error) {
-      linkValidityCache.set(cacheKey, false, PopoverConfig.FAILED_LINK_CACHE_TTL)
-      return false
-    }
+    // 如果没有缓存记录，假设链接有效，让 executePreload 来验证
+    // 这样可以避免重复的 HEAD 请求
+    return true
   }
 
   /**
-   * 执行预加载
+   * 执行预加载（合并链接验证和内容获取）
    * @param href 链接地址
    * @param _priority 优先级
    * @returns Promise<boolean> 是否成功预加载
@@ -149,9 +131,16 @@ export class PreloadManager implements ICleanupManager {
   private async executePreload(href: string, _priority: number): Promise<boolean> {
     const contentUrl = getContentUrl(href)
     const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(contentUrl.toString())
+    const validityCacheKey = UnifiedCacheKeyGenerator.generateLinkKey(contentUrl.toString(), "validity")
 
-    // First, check if the link is valid
-    if (!(await this.isLinkValid(contentUrl))) {
+    // 首先检查统一缓存中是否已经存在内容
+    if (globalUnifiedContentCache.has(cacheKey)) {
+      console.debug(`[PreloadManager Debug] Content already exists in unified cache, skipping HTTP request: ${cacheKey}`)
+      return true
+    }
+
+    // 检查缓存中的链接有效性，如果明确标记为失败则跳过
+    if (linkValidityCache.has(validityCacheKey) && !linkValidityCache.get(validityCacheKey)) {
       FailedLinksManager.addFailedLink(cacheKey)
       return false
     }
@@ -160,14 +149,21 @@ export class PreloadManager implements ICleanupManager {
     preloadingInProgress.add(cacheKey)
 
     try {
+      // 直接获取内容，通过响应状态判断链接有效性，避免额外的 HEAD 请求
       const response = await fetch(contentUrl.toString(), {
         headers: {
           "X-Requested-With": "XMLHttpRequest", // To identify AJAX requests on server-side if needed
         },
       })
+
       if (!response.ok) {
+        // 同时更新链接有效性缓存
+        linkValidityCache.set(validityCacheKey, false, PopoverConfig.FAILED_LINK_CACHE_TTL)
         throw new Error(`HTTP ${response.status}: ${response.statusText}`)
       }
+
+      // 标记链接为有效
+      linkValidityCache.set(validityCacheKey, true)
 
       const contentType = response.headers.get("content-type") || ""
 
@@ -223,9 +219,14 @@ export class PreloadManager implements ICleanupManager {
         errorMessage.includes("network") ||
         errorMessage.includes("fetch")
 
-      // 只有非临时错误才标记为失败链接
+      // 更新链接有效性缓存
       if (!isTemporaryError) {
+        // 非临时错误：标记为失败并添加到失败链接管理器
+        linkValidityCache.set(validityCacheKey, false, PopoverConfig.FAILED_LINK_CACHE_TTL)
         FailedLinksManager.addFailedLink(cacheKey)
+      } else {
+        // 临时错误：短期标记为失败，但不添加到永久失败列表
+        linkValidityCache.set(validityCacheKey, false, Math.min(PopoverConfig.FAILED_LINK_CACHE_TTL, 300000)) // 最多5分钟
       }
 
       return false

@@ -231,6 +231,8 @@ async function setupExplorer(currentSlug: FullSlug) {
 
       fragment.appendChild(node)
     }
+    // 清空旧内容，避免重复渲染
+    explorerUl.innerHTML = ""
     explorerUl.insertBefore(fragment, explorerUl.firstChild)
 
     // restore explorer scrollTop position if it exists

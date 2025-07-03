@@ -688,9 +688,7 @@ async function initializeOrReinitializeGraph() {
   if (graphElement) {
     const currentFullSlug = getFullSlug(window) // 获取当前页面的 slug
     await renderGraph(graphElement, currentFullSlug)
-    console.log("Graph re-initialized/rendered for", currentFullSlug)
   } else {
-    console.warn("Graph container not found for re-initialization.")
   }
 }
 

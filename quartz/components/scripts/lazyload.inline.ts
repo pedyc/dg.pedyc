@@ -30,7 +30,6 @@ function initializeLazyLoading(): void {
  * 当管理器不可用时的备用方案
  */
 function fallbackToNativeLazyLoading(): void {
-  console.warn("[Lazyload] Falling back to native lazy loading")
 
   const lazyImages = document.querySelectorAll('#quartz-body img[loading="lazy"]')
   lazyImages.forEach((img) => {

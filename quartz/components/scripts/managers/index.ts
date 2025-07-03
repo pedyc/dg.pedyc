@@ -39,28 +39,41 @@ export const globalCacheManager = new OptimizedCacheManager<string>(memoryCacheC
 // 统一存储管理器
 export const globalStorageManager = new UnifiedStorageManager()
 
-// 弹窗层缓存配置 - 使用统一配置
-const popoverCacheConfig = {
-  capacity: calculateLayerCapacity("POPOVER"),
-  ttl: unifiedConfig.ttl,
-  maxMemoryMB: unifiedConfig.maxMemoryMB * CACHE_LAYER_CONFIG.POPOVER.capacityRatio,
-}
-export const globalPopoverCache = new OptimizedCacheManager<string>(popoverCacheConfig)
+// 创建统一内容缓存管理器实例（单例模式）
+let _globalUnifiedContentCache: UnifiedContentCacheManager | null = null
 
-// 创建统一内容缓存管理器实例
-export const globalUnifiedContentCache = UnifiedContentCacheManager.createDefault(
-  globalCacheManager,
-  globalStorageManager,
-  globalPopoverCache,
-)
+/**
+ * 获取全局统一内容缓存实例（单例模式）
+ * 确保只初始化一次，避免重复的初始化日志
+ */
+export function getGlobalUnifiedContentCache(): UnifiedContentCacheManager {
+  if (!_globalUnifiedContentCache) {
+    console.log(`[GlobalCache] Creating new UnifiedContentCacheManager instance`)
+    _globalUnifiedContentCache = UnifiedContentCacheManager.createDefault(
+      globalCacheManager,
+      globalStorageManager,
+    )
+    console.log(`[GlobalCache] New instance created, referenceMap size:`)
+  } else {
+    console.log(`[GlobalCache] Reusing existing UnifiedContentCacheManager instance`)
+  }
+  return _globalUnifiedContentCache
+}
+
+// 为了向后兼容，提供一个 getter 属性
+export const globalUnifiedContentCache = {
+  get instance() {
+    return getGlobalUnifiedContentCache()
+  }
+}
 
 // 注册到全局清理管理器
 GlobalCleanupManager.register(globalResourceManager)
 GlobalCleanupManager.register(globalCacheManager)
 GlobalCleanupManager.register(globalStorageManager)
 // GlobalCleanupManager.register(globalLazyloadManager) // 暂时注释以避免循环依赖
-GlobalCleanupManager.register(globalPopoverCache)
-GlobalCleanupManager.register(globalUnifiedContentCache)
+// 移除了globalPopoverCache的注册
+GlobalCleanupManager.register(globalUnifiedContentCache.instance)
 
 // 设置全局清理事件
 if (typeof window !== "undefined") {

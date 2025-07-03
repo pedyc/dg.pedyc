@@ -17,7 +17,7 @@ export class PopoverConfig {
   private static readonly _failedLinksCacheConfig = getCacheConfig("DEFAULT") // 失败链接也使用统一配置
 
   // 缓存配置 - 从统一配置获取，popover和content共享资源
-  static readonly CACHE_SIZE = calculateLayerCapacity("POPOVER") // 使用popover层的计算容量
+  static readonly CACHE_SIZE = calculateLayerCapacity("MEMORY") // 使用content层的计算容量
   static readonly CACHE_TTL = PopoverConfig._unifiedCacheConfig.ttl
   static readonly CACHE_WARNING_THRESHOLD =
     PopoverConfig._unifiedCacheConfig.warningThreshold || 160
@@ -32,7 +32,7 @@ export class PopoverConfig {
   static readonly LINK_VALIDATION_TIMEOUT = 3000 // 链接验证超时时间（毫秒）
 
   // 存储配置 - 使用统一键生成器
-  static readonly STORAGE_KEY = UnifiedCacheKeyGenerator.generatePopoverKey("failed-links")
+  static readonly STORAGE_KEY = UnifiedCacheKeyGenerator.generateSystemKey("failed-links")
   static readonly MAX_FAILED_LINKS = PopoverConfig._failedLinksCacheConfig.capacity
   static readonly BATCH_SAVE_DELAY = 1000
 

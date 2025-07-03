@@ -23,15 +23,11 @@ export async function getContentForNavigation(
   const processedUrl = getContentUrl(url.toString())
   const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(processedUrl.toString())
 
-  // 尝试从统一缓存获取内容
-  let contents = globalUnifiedContentCache.get(cacheKey)
+  // 尝试从统一缓存获取内容（检查所有缓存层）
+  let contents = globalUnifiedContentCache.instance.get(cacheKey)
   if (contents) {
-    console.log(`[SPA Debug] Page content for ${cacheKey} loaded from: Unified Cache`)
     return contents
   }
-
-  // 如果没有缓存，发起网络请求
-  console.log(`[SPA Debug] Page content for ${cacheKey} loaded from: HTTP Request`)
   try {
     const res = await fetchCanonical(processedUrl)
     const contentType = res.headers.get("content-type")
@@ -44,8 +40,7 @@ export async function getContentForNavigation(
 
     // 使用统一缓存管理器存储内容，自动避免重复存储
     try {
-      globalUnifiedContentCache.set(cacheKey, contents, preferredLayer)
-      console.log(`[SPA Debug] Content cached using unified cache manager`)
+      globalUnifiedContentCache.instance.set(cacheKey, contents, preferredLayer)
     } catch (e) {
       console.warn("Failed to cache content:", e)
     }

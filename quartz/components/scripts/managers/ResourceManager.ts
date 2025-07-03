@@ -223,7 +223,11 @@ export class ResourceManager implements ICleanupManager {
   /**
    * 清理所有资源
    */
-  cleanup(): void {
+  /**
+   * 只清理观察器和事件监听器，不执行注册的清理任务
+   * 用于 SPA 导航时避免清理缓存数据
+   */
+  cleanupObserversAndListeners(): void {
     // 清理观察器
     this.observers.forEach((observer) => {
       try {
@@ -255,17 +259,24 @@ export class ResourceManager implements ICleanupManager {
     })
     this.eventListeners.length = 0
 
-    // 中止所有 AbortController
+    // 清理 AbortController
     this.abortControllers.forEach((controller) => {
       try {
         controller.abort()
       } catch (error) {
-        console.error("中止 AbortController 时出错:", error)
+        console.error("清理 AbortController 时出错:", error)
       }
     })
     this.abortControllers.clear()
 
-    // 执行清理任务
+    // 注意：不执行 cleanupTasks，保留缓存数据
+  }
+
+  cleanup(): void {
+    // 先清理观察器和事件监听器
+    this.cleanupObserversAndListeners()
+
+    // 执行注册的清理任务
     this.cleanupTasks.forEach((task) => {
       try {
         task()

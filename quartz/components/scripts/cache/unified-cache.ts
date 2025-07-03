@@ -49,7 +49,7 @@ export const CacheKeyRules = {
     /** 搜索相关缓存 */
     SEARCH: "search_",
     /** 弹窗相关缓存 */
-    POPOVER: "popover_",
+
     /** 字体相关缓存 */
     FONT: "font_",
     /** 用户相关缓存 */
@@ -155,29 +155,23 @@ export const UNIFIED_CACHE_CONFIG: Record<string, CacheConfig> = {
  * 定义不同层级的资源分配策略
  */
 export const CACHE_LAYER_CONFIG = {
-  /** 内存层配置 - 最热数据 */
+  /** 内存层配置 - 热数据 */
   MEMORY: {
-    capacityRatio: 0.3, // 30%的容量用于内存缓存
-    maxSizeKB: 100,
-    priority: 3,
-    description: "内存层 - 最快访问速度，存储最热数据",
-  },
-
-  /** 会话层配置 - 中等热度数据 */
-  SESSION: {
-    capacityRatio: 0.5, // 50%的容量用于会话缓存
+    capacityRatio: 0.7, // 70%的容量用于内存缓存
     maxSizeKB: 500,
     priority: 2,
-    description: "会话层 - 中等访问速度，存储中等热度数据",
+    description: "内存层 - 最快访问，存储热数据",
   },
 
-  /** 弹窗层配置 - 预加载数据 */
-  POPOVER: {
-    capacityRatio: 0.2, // 20%的容量用于弹窗预加载
-    maxSizeKB: 200,
+  /** 会话层配置 - 持久化数据 */
+  SESSION: {
+    capacityRatio: 0.3, // 30%的容量用于会话存储
+    maxSizeKB: 1000,
     priority: 1,
-    description: "弹窗层 - 预加载优化，存储即将访问的数据",
+    description: "会话层 - 页面刷新保留，存储重要数据",
   },
+
+
 } as const
 
 /**
@@ -313,10 +307,7 @@ export const UnifiedCacheKeyGenerator = {
    * @param subType 子类型 (可选)
    * @returns 弹窗缓存键
    */
-  generatePopoverKey: (target: string, subType?: string): string => {
-    const baseKey = UnifiedCacheKeyGenerator.generateContentKey(target, "popover")
-    return subType ? `${baseKey}${CacheKeyRules.SEPARATOR}${sanitizeCacheKey(subType)}` : baseKey
-  },
+
 
   /**
    * 生成用户缓存键
@@ -500,7 +491,6 @@ export function getCacheConfigDiagnostics() {
       layerCapacities: {
         memory: calculateLayerCapacity("MEMORY"),
         session: calculateLayerCapacity("SESSION"),
-        popover: calculateLayerCapacity("POPOVER"),
       },
     },
   }
@@ -514,7 +504,6 @@ export const CacheKeyGeneratorCompat = {
   content: UnifiedCacheKeyGenerator.generateContentKey,
   link: UnifiedCacheKeyGenerator.generateLinkKey,
   search: UnifiedCacheKeyGenerator.generateSearchKey,
-  popover: UnifiedCacheKeyGenerator.generatePopoverKey,
   font: UnifiedCacheKeyGenerator.generateFontKey,
   user: UnifiedCacheKeyGenerator.generateUserKey,
   system: UnifiedCacheKeyGenerator.generateSystemKey,

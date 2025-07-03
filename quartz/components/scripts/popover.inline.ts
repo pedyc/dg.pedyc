@@ -36,3 +36,12 @@ globalResourceManager.addEventListener(
     ViewportPreloadManager.initialize()
   },
 )
+
+/**
+ * 监听缓存清理事件，并在事件触发时重新初始化 popover 相关功能。
+ */
+globalResourceManager.addEventListener(document as unknown as EventTarget, 'cacheCleared', () => {
+  LinkEventManager.setupLinkEventListeners(mouseEnterHandler, clearActivePopover);
+  ViewportPreloadManager.initialize();
+  console.log('Popover reinitialized after cache clear.');
+});

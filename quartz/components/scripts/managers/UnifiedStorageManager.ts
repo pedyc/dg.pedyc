@@ -441,6 +441,9 @@ export class UnifiedStorageManager implements ICleanupManager {
 
     // 记录清理时间
     localStorage.setItem("last_cleanup", now.toString())
+
+    // 触发自定义事件，通知其他模块缓存已清理
+    document.dispatchEvent(new CustomEvent('cacheCleared', { detail: {} }))
   }
 
   // 实现 ICleanupManager 接口

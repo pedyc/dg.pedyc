@@ -4,7 +4,7 @@
 import { OptimizedCacheManager } from "../managers/OptimizedCacheManager"
 import { UnifiedCacheKeyGenerator, getCacheConfig } from "../cache/unified-cache"
 import { ICleanupManager } from "../managers/CleanupManager"
-import { globalResourceManager, globalUnifiedContentCache, CacheLayer } from "../managers/index"
+import { globalUnifiedContentCache, CacheLayer } from "../managers/index"
 import { PopoverConfig } from "./config"
 import { PopoverErrorHandler } from "./error-handler"
 import { getContentUrl } from "../../../util/path"
@@ -72,14 +72,14 @@ export class PreloadManager implements ICleanupManager {
     console.debug(`[PreloadManager Debug] Processed contentUrl: ${contentUrl.toString()}`)
     console.debug(`[PreloadManager Debug] Generated cache key: ${cacheKey}`)
     console.debug(
-      `[PreloadManager Debug] Cache already has key: ${globalUnifiedContentCache.has(cacheKey)}`,
+      `[PreloadManager Debug] Cache already has key: ${globalUnifiedContentCache.instance.has(cacheKey)}`,
     )
     console.debug(
       `[PreloadManager Debug] Currently preloading: ${preloadingInProgress.has(cacheKey)}`,
     )
 
     // 检查是否已经在缓存中或正在预加载
-    if (globalUnifiedContentCache.has(cacheKey) || preloadingInProgress.has(cacheKey)) {
+    if (globalUnifiedContentCache.instance.has(cacheKey) || preloadingInProgress.has(cacheKey)) {
       console.debug(
         `[PreloadManager Debug] Content already cached or preloading, skipping: ${cacheKey}`,
       )
@@ -104,23 +104,6 @@ export class PreloadManager implements ICleanupManager {
     await this.executePreload(href, 0)
   }
 
-  /**
-   * 检查链接有效性（仅从缓存检查，避免重复请求）
-   * @param url 链接URL
-   * @returns Promise<boolean> 是否有效
-   */
-  private async isLinkValid(url: URL): Promise<boolean> {
-    const cacheKey = UnifiedCacheKeyGenerator.generateLinkKey(url.toString(), "validity")
-
-    // 只检查缓存，不发起新的网络请求
-    if (linkValidityCache.has(cacheKey)) {
-      return linkValidityCache.get(cacheKey) || false
-    }
-
-    // 如果没有缓存记录，假设链接有效，让 executePreload 来验证
-    // 这样可以避免重复的 HEAD 请求
-    return true
-  }
 
   /**
    * 执行预加载（合并链接验证和内容获取）
@@ -134,7 +117,7 @@ export class PreloadManager implements ICleanupManager {
     const validityCacheKey = UnifiedCacheKeyGenerator.generateLinkKey(contentUrl.toString(), "validity")
 
     // 首先检查统一缓存中是否已经存在内容
-    if (globalUnifiedContentCache.has(cacheKey)) {
+    if (globalUnifiedContentCache.instance.has(cacheKey)) {
       console.debug(`[PreloadManager Debug] Content already exists in unified cache, skipping HTTP request: ${cacheKey}`)
       return true
     }
@@ -197,12 +180,15 @@ export class PreloadManager implements ICleanupManager {
         })
 
         // 使用统一缓存管理器存储，优先存储在弹窗缓存层
-        globalUnifiedContentCache.set(cacheKey, htmlString, CacheLayer.POPOVER)
+        console.log(`[PreloadManager Debug] Storing content in cache with key: ${cacheKey}`)
+        console.log(`[PreloadManager Debug] Content length: ${htmlString.length}`)
+        globalUnifiedContentCache.instance.set(cacheKey, htmlString, CacheLayer.SESSION)
+        console.log(`[PreloadManager Debug] Content stored successfully. Cache now has key: ${globalUnifiedContentCache.instance.has(cacheKey)}`)
         console.debug("[Preload Debug] Content stored in cache with key:", cacheKey)
       } else if (contentType.includes("image/")) {
-        globalUnifiedContentCache.set(cacheKey, contentUrl.toString(), CacheLayer.POPOVER)
+        globalUnifiedContentCache.instance.set(cacheKey, contentUrl.toString(), CacheLayer.SESSION)
       } else if (contentType.includes("application/pdf")) {
-        globalUnifiedContentCache.set(cacheKey, contentUrl.toString(), CacheLayer.POPOVER)
+        globalUnifiedContentCache.instance.set(cacheKey, contentUrl.toString(), CacheLayer.SESSION)
       } else {
         throw new Error(`Unsupported content type: ${contentType}`)
       }

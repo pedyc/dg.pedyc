@@ -371,12 +371,11 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
     const cacheKey = UnifiedCacheKeyGenerator.generateSearchKey(slug)
 
     // 尝试从统一缓存获取
-    const cached = globalUnifiedContentCache.get(cacheKey)
+    const cached = globalUnifiedContentCache.instance.get(cacheKey)
     if (cached) {
       try {
         return JSON.parse(cached) as ContentDetails
       } catch (e) {
-        console.warn(`[Search] Failed to parse cached content for ${slug}:`, e)
         // 缓存数据损坏，继续获取新数据
       }
     }
@@ -399,7 +398,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
 
     // 存储到统一缓存，使用MEMORY层以获得最佳性能
     try {
-      globalUnifiedContentCache.set(cacheKey, JSON.stringify(newContent), CacheLayer.MEMORY)
+      globalUnifiedContentCache.instance.set(cacheKey, JSON.stringify(newContent), CacheLayer.MEMORY)
     } catch (e) {
       console.warn(`[Search] Failed to cache content for ${slug}:`, e)
     }

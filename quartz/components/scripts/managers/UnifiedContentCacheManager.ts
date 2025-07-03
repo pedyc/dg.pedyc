@@ -19,12 +19,10 @@ import { ICleanupManager } from "./CleanupManager"
  * 缓存层级枚举
  */
 export enum CacheLayer {
-  /** 内存缓存 - 最快访问 */
+  /** 内存缓存 - 最快访问，存储热数据 */
   MEMORY = "memory",
-  /** SessionStorage - 会话持久化 */
+  /** SessionStorage - 会话持久化，页面刷新保留 */
   SESSION = "session",
-  /** 弹窗缓存 - 预加载优化 */
-  POPOVER = "popover",
 }
 
 // CacheKeyValidationResult 已从 cache-key-utils 导入
@@ -39,7 +37,6 @@ export interface CacheDiagnostics {
   storageLayerInfo: {
     memory: boolean
     session: boolean
-    popover: boolean
   }
   availableKeys: string[]
 }
@@ -67,7 +64,6 @@ interface CacheReference {
 export class UnifiedContentCacheManager implements ICleanupManager {
   private readonly memoryCache: OptimizedCacheManager<string>
   private readonly storageManager: UnifiedStorageManager
-  private readonly popoverCache: OptimizedCacheManager<string>
 
   /** 缓存引用映射表 - 记录每个键对应的实际存储位置 */
   private readonly referenceMap = new Map<string, CacheReference>()
@@ -80,21 +76,27 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     totalRequests: 0,
     memoryHits: 0,
     sessionHits: 0,
-    popoverHits: 0,
     duplicatesAvoided: 0,
   }
+
+  /** 单例实例 */
+  private static _instance: UnifiedContentCacheManager | null = null
+
+  /** 初始化标志 */
+  private static _initialized = false
 
   constructor(
     memoryCache: OptimizedCacheManager<string>,
     storageManager: UnifiedStorageManager,
-    popoverCache: OptimizedCacheManager<string>,
   ) {
     this.memoryCache = memoryCache
     this.storageManager = storageManager
-    this.popoverCache = popoverCache
 
-    // 初始化时同步sessionStorage中的缓存引用
-    this.initializeFromSessionStorage()
+    // 只在首次初始化时同步sessionStorage中的缓存引用
+    if (!UnifiedContentCacheManager._initialized) {
+      this.initializeFromSessionStorage()
+      UnifiedContentCacheManager._initialized = true
+    }
   }
 
   /**
@@ -113,7 +115,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
         return
       }
       const sessionStorage = window.sessionStorage
-      const restoredCount: { [key: string]: number } = { content: 0, popover: 0 }
+      const restoredCount: { [key: string]: number } = { content: 0 }
 
       // 遍历sessionStorage中的所有键
       for (let i = 0; i < sessionStorage.length; i++) {
@@ -134,9 +136,9 @@ export class UnifiedContentCacheManager implements ICleanupManager {
         // 检查referenceMap中是否已存在该键
         if (this.referenceMap.has(originalKey)) continue
 
-        // 创建缓存引用
+        // 创建缓存引用 - 统一使用SESSION层
         const reference: CacheReference = {
-          storageLayer: cacheType === "content" ? CacheLayer.SESSION : CacheLayer.POPOVER,
+          storageLayer: CacheLayer.SESSION,
           storageKey: storageKey,
           refCount: 0, // 初始化时设为0，首次访问时会增加
           lastAccessed: Date.now(),
@@ -151,14 +153,19 @@ export class UnifiedContentCacheManager implements ICleanupManager {
           this.contentHashMap.set(contentHash, originalKey)
         }
 
-        restoredCount[cacheType]++
+        restoredCount.content++
       }
 
-      if (restoredCount.content > 0 || restoredCount.popover > 0) {
-        console.log(
-          `[UnifiedCache] 初始化完成: 恢复了 ${restoredCount.content} 个内容缓存引用和 ${restoredCount.popover} 个弹窗缓存引用`,
-        )
+      if (restoredCount.content > 0) {
+        // console.log(
+        //   `[UnifiedCache] 初始化完成: 恢复了 ${restoredCount.content} 个内容缓存引用`,
+        //   restoredCount,
+        // )
+      } else {
+        // console.log(`[UnifiedCache] 初始化完成: 未发现需要恢复的缓存引用`)
       }
+      // console.log(`[UnifiedCache] Final referenceMap size: ${this.referenceMap.size}`)
+      // console.log(`[UnifiedCache] Final referenceMap keys:`, Array.from(this.referenceMap.keys()).slice(0, 10))
     } catch (error) {
       console.warn("[UnifiedCache] 初始化sessionStorage引用时出错:", error)
     }
@@ -190,12 +197,39 @@ export class UnifiedContentCacheManager implements ICleanupManager {
   get(key: string): string | null {
     this.stats.totalRequests++
 
-    const reference = this.referenceMap.get(key)
+    // 提取原始键用于查找referenceMap（因为referenceMap存储的是原始键）
+    const originalKey = this.extractOriginalKey(key)
+    console.log(`[UnifiedCache] Looking for key: ${key}, originalKey: ${originalKey}`)
+
+    const reference = this.referenceMap.get(originalKey)
     if (!reference) {
+      console.log(`[UnifiedCache] No reference found for originalKey: ${originalKey}`)
+      console.log(`[UnifiedCache] ReferenceMap size: ${this.referenceMap.size}`)
+      console.log(`[UnifiedCache] ReferenceMap keys:`, Array.from(this.referenceMap.keys()).slice(0, 5))
+      
+      // 如果referenceMap为空但sessionStorage中可能有数据，尝试重新初始化
+      if (this.referenceMap.size === 0 && typeof window !== "undefined" && window.sessionStorage && window.sessionStorage.length > 0) {
+        console.log(`[UnifiedCache] ReferenceMap is empty but sessionStorage has data, attempting re-initialization`)
+        this.forceReinitializeFromSessionStorage()
+        // 重新尝试获取引用
+        const retryReference = this.referenceMap.get(originalKey)
+        if (retryReference) {
+          console.log(`[UnifiedCache] Found reference after re-initialization for ${originalKey}:`, retryReference)
+          return this.getContentFromReference(originalKey, retryReference)
+        }
+      }
+      
       return null
     }
-    console.log("reference", reference)
-
+    console.log(`[UnifiedCache] Found reference for ${originalKey}:`, reference)
+    
+    return this.getContentFromReference(originalKey, reference)
+  }
+  
+  /**
+    * 从引用获取内容的辅助方法
+    */
+   private getContentFromReference(key: string, reference: CacheReference): string | null {
     // 更新访问时间和引用计数
     reference.lastAccessed = Date.now()
     reference.refCount++
@@ -210,13 +244,10 @@ export class UnifiedContentCacheManager implements ICleanupManager {
         break
 
       case CacheLayer.SESSION:
+        console.log(`[UnifiedCache] Trying to get from SESSION with storageKey: ${reference.storageKey}`)
         content = this.storageManager.getSessionItem(reference.storageKey)
+        console.log(`[UnifiedCache] SESSION content found: ${content ? 'YES' : 'NO'}, length: ${content?.length || 0}`)
         if (content) this.stats.sessionHits++
-        break
-
-      case CacheLayer.POPOVER:
-        content = this.popoverCache.get(reference.storageKey) || null
-        if (content) this.stats.popoverHits++
         break
     }
 
@@ -227,6 +258,23 @@ export class UnifiedContentCacheManager implements ICleanupManager {
 
     return content
   }
+  
+  /**
+   * 强制重新从sessionStorage初始化referenceMap
+   * 用于解决SPA导航时referenceMap丢失的问题
+   */
+  private forceReinitializeFromSessionStorage(): void {
+    console.log(`[UnifiedCache] Force re-initializing from sessionStorage`)
+    
+    // 清空当前的referenceMap和contentHashMap
+    this.referenceMap.clear()
+    this.contentHashMap.clear()
+    
+    // 重新初始化
+    this.initializeFromSessionStorage()
+    
+    console.log(`[UnifiedCache] Force re-initialization completed, referenceMap size: ${this.referenceMap.size}`)
+  }
 
   /**
    * 设置内容
@@ -235,6 +283,10 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    * @param preferredLayer 首选存储层
    */
   set(key: string, content: string, preferredLayer: CacheLayer = CacheLayer.MEMORY): void {
+    // 提取原始键用于存储到referenceMap（保持一致性）
+    const originalKey = this.extractOriginalKey(key)
+    console.log(`[UnifiedCache] Setting cache for key: ${key}, originalKey: ${originalKey}`)
+    
     // 计算内容哈希
     const contentHash = this.calculateHash(content)
 
@@ -243,7 +295,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     if (existingKey && this.referenceMap.has(existingKey)) {
       // 相同内容已存在，创建引用
       const existingRef = this.referenceMap.get(existingKey)!
-      this.referenceMap.set(key, {
+      this.referenceMap.set(originalKey, {
         storageLayer: existingRef.storageLayer,
         storageKey: existingRef.storageKey,
         refCount: 1,
@@ -251,7 +303,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
         size: existingRef.size,
       })
       this.stats.duplicatesAvoided++
-      console.log(`[UnifiedCache] Avoided duplicate storage for ${key}, referencing ${existingKey}`)
+      console.log(`[UnifiedCache] Avoided duplicate storage for ${originalKey}, referencing ${existingKey}`)
       return
     }
 
@@ -272,10 +324,10 @@ export class UnifiedContentCacheManager implements ICleanupManager {
         size: this.calculateSize(content),
       }
 
-      this.referenceMap.set(key, reference)
-      this.contentHashMap.set(contentHash, key)
+      this.referenceMap.set(originalKey, reference)
+      this.contentHashMap.set(contentHash, originalKey)
 
-      console.log(`[UnifiedCache] Stored ${key} in ${optimalLayer} layer (${reference.size} bytes)`)
+      console.log(`[UnifiedCache] Stored ${originalKey} in ${optimalLayer} layer (${reference.size} bytes)`)
     }
   }
 
@@ -284,7 +336,9 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    * @param key 缓存键
    */
   delete(key: string): boolean {
-    const reference = this.referenceMap.get(key)
+    // 提取原始键用于查找referenceMap（因为referenceMap存储的是原始键）
+    const originalKey = this.extractOriginalKey(key)
+    const reference = this.referenceMap.get(originalKey)
     if (!reference) {
       return false
     }
@@ -298,14 +352,14 @@ export class UnifiedContentCacheManager implements ICleanupManager {
 
       // 清理哈希映射
       for (const [hash, mappedKey] of this.contentHashMap.entries()) {
-        if (mappedKey === key) {
+        if (mappedKey === originalKey) {
           this.contentHashMap.delete(hash)
           break
         }
       }
     }
 
-    this.referenceMap.delete(key)
+    this.referenceMap.delete(originalKey)
     return true
   }
 
@@ -314,7 +368,9 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    * @param key 缓存键
    */
   has(key: string): boolean {
-    return this.referenceMap.has(key)
+    // 提取原始键用于查找referenceMap（因为referenceMap存储的是原始键）
+    const originalKey = this.extractOriginalKey(key)
+    return this.referenceMap.has(originalKey)
   }
 
   /**
@@ -324,7 +380,6 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     this.referenceMap.clear()
     this.contentHashMap.clear()
     this.memoryCache.clear()
-    this.popoverCache.clear()
     // 注意：不清空sessionStorage，因为可能有其他数据
   }
 
@@ -333,7 +388,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    */
   getStats() {
     const hitRate =
-      ((this.stats.memoryHits + this.stats.sessionHits + this.stats.popoverHits) /
+      ((this.stats.memoryHits + this.stats.sessionHits) /
         this.stats.totalRequests) *
       100
 
@@ -379,23 +434,18 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     // 使用统一配置的层级策略
     const memoryConfig = CACHE_LAYER_CONFIG.MEMORY
     const sessionConfig = CACHE_LAYER_CONFIG.SESSION
-    const popoverConfig = CACHE_LAYER_CONFIG.POPOVER
 
     // 根据统一配置的大小限制选择存储层
     if (contentSize < memoryConfig.maxSizeKB * 1024 && preferred === CacheLayer.MEMORY) {
       return CacheLayer.MEMORY
     }
 
-    if (contentSize < popoverConfig.maxSizeKB * 1024 && preferred === CacheLayer.POPOVER) {
-      return CacheLayer.POPOVER
-    }
-
     if (contentSize < sessionConfig.maxSizeKB * 1024) {
       return CacheLayer.SESSION
     }
 
-    // 超大内容默认使用会话存储
-    return CacheLayer.SESSION
+    // 如果内容过大，降级到内存缓存（会被LRU自动清理）
+    return CacheLayer.MEMORY
   }
 
   /**
@@ -413,10 +463,6 @@ export class UnifiedContentCacheManager implements ICleanupManager {
 
         case CacheLayer.SESSION:
           this.storageManager.setSessionItem(key, content)
-          return true
-
-        case CacheLayer.POPOVER:
-          this.popoverCache.set(key, content)
           return true
 
         default:
@@ -442,10 +488,6 @@ export class UnifiedContentCacheManager implements ICleanupManager {
 
         case CacheLayer.SESSION:
           this.storageManager.removeSessionItem(key)
-          break
-
-        case CacheLayer.POPOVER:
-          this.popoverCache.delete(key)
           break
       }
     } catch (error) {
@@ -522,9 +564,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
       case CacheLayer.SESSION:
         contentExists = this.storageManager.getSessionItem(reference.storageKey) !== null
         break
-      case CacheLayer.POPOVER:
-        contentExists = this.popoverCache.has(reference.storageKey)
-        break
+      
     }
 
     if (!contentExists) {
@@ -579,7 +619,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     const storageLayerInfo = {
       memory: this.memoryCache.has(key),
       session: this.storageManager.getSessionItem(key) !== null,
-      popover: this.popoverCache.has(key),
+
     }
 
     return {
@@ -592,13 +632,29 @@ export class UnifiedContentCacheManager implements ICleanupManager {
   }
 
   /**
-   * 创建默认实例
+   * 创建默认实例（单例模式）
+   * 确保只创建一个实例，避免重复初始化
    */
   static createDefault(
     memoryCache: OptimizedCacheManager<string>,
     storageManager: UnifiedStorageManager,
-    popoverCache: OptimizedCacheManager<string>,
   ): UnifiedContentCacheManager {
-    return new UnifiedContentCacheManager(memoryCache, storageManager, popoverCache)
+    if (!UnifiedContentCacheManager._instance) {
+      console.log(`[UnifiedCache] Creating new singleton instance`)
+      UnifiedContentCacheManager._instance = new UnifiedContentCacheManager(memoryCache, storageManager)
+      console.log(`[UnifiedCache] Singleton created, initialized: ${UnifiedContentCacheManager._initialized}`)
+    } else {
+      console.log(`[UnifiedCache] Returning existing singleton instance`)
+    }
+    return UnifiedContentCacheManager._instance
+  }
+
+  /**
+   * 重置单例状态（仅用于测试或特殊情况）
+   * @internal
+   */
+  static resetSingleton(): void {
+    UnifiedContentCacheManager._instance = null
+    UnifiedContentCacheManager._initialized = false
   }
 }

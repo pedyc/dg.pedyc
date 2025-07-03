@@ -84,7 +84,7 @@ export class ViewportPreloadManager implements ICleanupManager {
               const preloadedCount = await this.batchCheckLinks(visibleLinks)
 
               // 监控缓存大小
-              const cacheStats = globalUnifiedContentCache.getStats()
+              const cacheStats = globalUnifiedContentCache.instance.getStats()
               const hitRate = cacheStats.hitRate
               if (hitRate > 0.5) {
                 console.warn(`[Popover] Unified cache warning: ${hitRate}% hit rate`)
@@ -139,7 +139,7 @@ export class ViewportPreloadManager implements ICleanupManager {
         // 避免重复检查
         if (
           FailedLinksManager.isFailedLink(cacheKey) ||
-          globalUnifiedContentCache.has(cacheKey) ||
+          globalUnifiedContentCache.instance.has(cacheKey) ||
           linkCheckInProgress.has(cacheKey)
         ) {
           return null

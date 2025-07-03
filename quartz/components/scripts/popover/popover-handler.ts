@@ -140,7 +140,7 @@ export async function mouseEnterHandler(
     HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
   } else {
     // 尝试从统一缓存管理器获取内容
-    const cachedData = globalUnifiedContentCache.get(cacheKey)
+    const cachedData = globalUnifiedContentCache.instance.get(cacheKey)
 
     if (cachedData) {
       console.log(`[Popover Debug] Popover content for ${cacheKey} loaded from: Unified Cache`)
@@ -169,7 +169,7 @@ export async function mouseEnterHandler(
         await PreloadManager.preloadLinkContent(contentUrlString)
 
         // 再次尝试从统一缓存获取（PreloadManager应该已经存储了内容）
-        const newlyCachedData = globalUnifiedContentCache.get(cacheKey)
+        const newlyCachedData = globalUnifiedContentCache.instance.get(cacheKey)
         console.debug("[Popover Debug] After preload, cached data:", {
           found: !!newlyCachedData,
           dataType: typeof newlyCachedData,
@@ -197,6 +197,8 @@ export async function mouseEnterHandler(
       } catch (error) {
         console.error("Failed to load popover content for:", cacheKey, error)
         HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
+        // 标记为失败链接
+        FailedLinksManager.addFailedLink(cacheKey)
       }
     }
   }

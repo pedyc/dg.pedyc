@@ -23,38 +23,45 @@ export let announcer = document.createElement("route-announcer")
 function createNavigateFunction(announcer: HTMLElement) {
   return async function _navigate(url: URL, isBack: boolean = false): Promise<void> {
     // 开始加载
+    // startLoading()
+
+    // try {
+    //   // 获取内容
+    //   const contents = await getContentForNavigation(url)
+    //   if (!contents) {
+    //     // 需要完整页面跳转
+    //     window.location.assign(url)
+    //     return
+    //   }
+
+    //   // 触发prenav事件
+    //   notifyNav(getFullSlug(window), "prenav")
+
+    //   // 清理导航状态
+    //   cleanupNavigationState()
+
+    //   // 清理弹窗和旧资源
+    //   clearAllPopovers()
+    //   // 注意：不调用 globalResourceManager.cleanup() 以避免清理缓存
+    //   // 只清理观察器和事件监听器，保留缓存数据
+    //   globalResourceManager.cleanupObserversAndListeners()
+
+    //   // 更新页面内容
+    //   updatePageContent(contents, url, isBack, announcer)
+    // } catch (error) {
+
+
+    
+    //   console.error("Navigation failed:", error)
+    //   window.location.assign(url)
+    //   return
+    // }
+
+    // // 触发导航完成事件
+    // notifyNav(getFullSlug(window))
     startLoading()
+    window.location.assign(url)
 
-    try {
-      // 获取内容
-      const contents = await getContentForNavigation(url)
-      if (!contents) {
-        // 需要完整页面跳转
-        window.location.assign(url)
-        return
-      }
-
-      // 触发prenav事件
-      notifyNav(getFullSlug(window), "prenav")
-
-      // 清理导航状态
-      cleanupNavigationState()
-
-      // 清理弹窗和旧资源
-      clearAllPopovers()
-      // 清理全局资源
-      globalResourceManager.cleanup()
-
-      // 更新页面内容
-      updatePageContent(contents, url, isBack, announcer)
-    } catch (error) {
-      console.error("Navigation failed:", error)
-      window.location.assign(url)
-      return
-    }
-
-    // 触发导航完成事件
-    notifyNav(getFullSlug(window))
   }
 }
 

@@ -58,7 +58,7 @@ export const CacheKeyUtils = {
     const prefixMap = {
       [CacheLayer.MEMORY]: CacheKeyRules.PREFIXES.CONTENT,
       [CacheLayer.SESSION]: CacheKeyRules.PREFIXES.CONTENT,
-      [CacheLayer.POPOVER]: CacheKeyRules.PREFIXES.POPOVER,
+    
     }
 
     const prefix = prefixMap[layer] || CacheKeyRules.PREFIXES.CONTENT

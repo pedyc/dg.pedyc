@@ -264,8 +264,6 @@ export class ImageLoadManager implements ICleanupManager {
   private handleLoadSuccess(task: ImageLoadTask): void {
     const { element: img, src } = task
 
-    console.log("Image loaded:", src)
-
     // 更新缓存
     this.markImageLoaded(src)
 
@@ -295,8 +293,6 @@ export class ImageLoadManager implements ICleanupManager {
       // 重试加载
       task.retryCount++
       task.state = ImageLoadState.RETRYING
-
-      console.log(`Retrying (${task.retryCount}/${this.config.retryCount}):`, src)
 
       setTimeout(() => {
         this.loadQueue.unshift(task) // 重新加入队列头部

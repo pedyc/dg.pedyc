@@ -273,4 +273,137 @@ export class HTMLContentProcessor {
     `
     container.appendChild(errorDiv)
   }
-}
+
+  /**
+   * 为SPA导航重构HTML片段内容
+   * @param fragmentHTML HTML片段字符串
+   * @param baseUrl 基础URL用于构建页面
+   * @returns 重构的HTML内容（标记为SPA重构内容）
+   */
+  static reconstructHtmlForSpa(fragmentHTML: string, baseUrl: URL): string {
+    console.debug("[HTMLProcessor Debug] Reconstructing content for SPA navigation:", {
+      fragmentLength: fragmentHTML.length,
+      fragmentPreview: fragmentHTML.substring(0, 200) + "...",
+      baseUrl: baseUrl.toString()
+    })
+    
+    // 解析片段内容
+    const parser = new DOMParser()
+    const tempDoc = parser.parseFromString(`<div>${fragmentHTML}</div>`, "text/html")
+    const fragmentContainer = tempDoc.querySelector('div')
+    
+    if (!fragmentContainer) {
+      console.warn("[HTMLProcessor Debug] Failed to parse fragment, returning as-is")
+      return fragmentHTML
+    }
+    
+    // 恢复原始ID（移除popover-internal-前缀）
+    fragmentContainer.querySelectorAll('[id^="popover-internal-"]').forEach(el => {
+      const originalId = el.id.replace('popover-internal-', '')
+      if (originalId) {
+        el.id = originalId
+      }
+    })
+    
+    // 构建标题
+    const title = fragmentContainer.querySelector('h1')?.textContent || 
+                 fragmentContainer.querySelector('h2')?.textContent || 
+                 baseUrl.pathname.split('/').pop() || 'Page'
+    
+    // 分析内容结构，提取beforeBody和主要内容
+    const contentElements = Array.from(fragmentContainer.children)
+    let beforeBodyContent = ''
+    let mainContent = ''
+    
+    // 查找popover-hint内容作为beforeBody（面包屑、标题、元数据等）
+    const popoverHintElement = fragmentContainer.querySelector('.popover-hint')
+    if (popoverHintElement) {
+      beforeBodyContent = popoverHintElement.innerHTML
+      // 移除popover-hint元素，剩余内容作为主要内容
+      popoverHintElement.remove()
+      mainContent = fragmentContainer.innerHTML
+    } else {
+      // 如果没有popover-hint，尝试智能分离
+      const titleElements = contentElements.filter(el => 
+        el.tagName === 'H1' || el.tagName === 'H2' || 
+        el.classList.contains('article-title') ||
+        el.classList.contains('content-meta') ||
+        el.classList.contains('breadcrumbs') ||
+        el.classList.contains('tag-list')
+      )
+      
+      if (titleElements.length > 0) {
+        beforeBodyContent = titleElements.map(el => el.outerHTML).join('\n')
+        // 移除这些元素，剩余作为主要内容
+        titleElements.forEach(el => el.remove())
+        mainContent = fragmentContainer.innerHTML
+      } else {
+        // 如果无法分离，将所有内容作为主要内容
+        mainContent = fragmentContainer.innerHTML
+      }
+    }
+    
+    // 构建符合页面布局的HTML结构
+    const spaHTML = `<!DOCTYPE html>
+<!-- SPA_RECONSTRUCTED_CONTENT -->
+<html>
+<head>
+  <title>${title}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div id="quartz-body">
+    <div class="left sidebar">
+      <!-- 左侧边栏内容将由现有组件保持 -->
+    </div>
+    <div class="center">
+      <div class="page-header">
+        <header>
+          <!-- 头部内容将由现有组件保持 -->
+        </header>
+        <div class="popover-hint">
+          ${beforeBodyContent}
+        </div>
+      </div>
+      <article class="popover-hint">
+        ${mainContent}
+      </article>
+      <hr />
+      <div class="page-footer">
+        <!-- 页脚内容将由现有组件保持 -->
+      </div>
+    </div>
+    <div class="right sidebar">
+      <!-- 右侧边栏内容将由现有组件保持 -->
+    </div>
+  </div>
+</body>
+</html>`
+    
+    console.debug("[HTMLProcessor Debug] Reconstructed HTML for SPA navigation:", spaHTML.substring(0, 500) + "...")
+    return spaHTML
+  }
+  
+    /**
+     * 检查内容是否为预处理的HTML片段（来自弹窗预加载）
+     * @param content HTML内容字符串
+     * @returns 是否为预处理内容
+     */
+    static isPreprocessedContent(content: string): boolean {
+      // 预处理内容的特征：
+      // 1. 不包含完整的HTML文档结构（没有<!DOCTYPE html>、<html>、<head>、<body>标签）
+      // 2. 包含popover-hint类或直接是文章内容
+      // 3. 包含popover-internal-前缀的ID
+      const hasDoctype = content.includes('<!DOCTYPE')
+      const hasHtmlTag = content.includes('<html')
+      const hasHeadTag = content.includes('<head')
+      const hasBodyTag = content.includes('<body')
+      const hasPopoverInternal = content.includes('popover-internal-')
+      const hasPopoverHint = content.includes('popover-hint')
+      
+      // 如果缺少基本HTML结构但包含popover特征，则认为是预处理内容
+      return (!hasDoctype || !hasHtmlTag || !hasHeadTag || !hasBodyTag) && 
+             (hasPopoverInternal || hasPopoverHint || content.trim().startsWith('<article') || content.trim().startsWith('<div'))
+    }
+  }

@@ -4,13 +4,12 @@ import { HTMLContentProcessor, PreloadManager, FailedLinksManager, PopoverConfig
 import { UnifiedCacheKeyGenerator } from "../cache/unified-cache"
 import { globalUnifiedContentCache } from "../managers/index"
 
-let activeAnchor: HTMLAnchorElement | null = null
+
 
 /**
  * 清除当前活动的弹窗
  */
 export function clearActivePopover() {
-  activeAnchor = null
   const allPopoverElements = document.querySelectorAll(".popover.active-popover")
   allPopoverElements.forEach((popoverElement) => popoverElement.classList.remove("active-popover"))
 }
@@ -30,7 +29,7 @@ export function clearAllPopovers() {
   allLinks.forEach((link) => {
     link.removeAttribute("data-popover-bound")
   })
-  activeAnchor = null
+
 }
 
 /**
@@ -42,7 +41,7 @@ export async function mouseEnterHandler(
   this: HTMLAnchorElement,
   { clientX, clientY }: { clientX: number; clientY: number },
 ) {
-  const link = (activeAnchor = this)
+  const link = this
 
   if (link.dataset.noPopover === "true") {
     return
@@ -165,8 +164,8 @@ export async function mouseEnterHandler(
       // 如果缓存未命中，则立即 fetch 并使用统一缓存管理器存储
       console.log(`[Popover Debug] Popover content for ${cacheKey} loaded from: HTTP Request`)
       try {
-        // 使用 contentUrlString 进行预加载
-        await PreloadManager.preloadLinkContent(contentUrlString)
+        // 使用 contentUrlString 进行预加载，并设置最高优先级
+        await PreloadManager.preloadLinkContent(contentUrlString, 1000) // 1000 为最高优先级，可根据实际情况调整
 
         // 再次尝试从统一缓存获取（PreloadManager应该已经存储了内容）
         const newlyCachedData = globalUnifiedContentCache.instance.get(cacheKey)

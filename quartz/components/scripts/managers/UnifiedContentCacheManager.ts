@@ -89,6 +89,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     memoryCache: OptimizedCacheManager<string>,
     storageManager: UnifiedStorageManager,
   ) {
+    console.log('UnifiedContentCacheManager constructor')
     this.memoryCache = memoryCache
     this.storageManager = storageManager
 
@@ -157,15 +158,8 @@ export class UnifiedContentCacheManager implements ICleanupManager {
       }
 
       if (restoredCount.content > 0) {
-        // console.log(
-        //   `[UnifiedCache] 初始化完成: 恢复了 ${restoredCount.content} 个内容缓存引用`,
-        //   restoredCount,
-        // )
       } else {
-        // console.log(`[UnifiedCache] 初始化完成: 未发现需要恢复的缓存引用`)
       }
-      // console.log(`[UnifiedCache] Final referenceMap size: ${this.referenceMap.size}`)
-      // console.log(`[UnifiedCache] Final referenceMap keys:`, Array.from(this.referenceMap.keys()).slice(0, 10))
     } catch (error) {
       console.warn("[UnifiedCache] 初始化sessionStorage引用时出错:", error)
     }
@@ -199,37 +193,29 @@ export class UnifiedContentCacheManager implements ICleanupManager {
 
     // 提取原始键用于查找referenceMap（因为referenceMap存储的是原始键）
     const originalKey = this.extractOriginalKey(key)
-    console.log(`[UnifiedCache] Looking for key: ${key}, originalKey: ${originalKey}`)
 
     const reference = this.referenceMap.get(originalKey)
     if (!reference) {
-      console.log(`[UnifiedCache] No reference found for originalKey: ${originalKey}`)
-      console.log(`[UnifiedCache] ReferenceMap size: ${this.referenceMap.size}`)
-      console.log(`[UnifiedCache] ReferenceMap keys:`, Array.from(this.referenceMap.keys()).slice(0, 5))
-      
       // 如果referenceMap为空但sessionStorage中可能有数据，尝试重新初始化
       if (this.referenceMap.size === 0 && typeof window !== "undefined" && window.sessionStorage && window.sessionStorage.length > 0) {
-        console.log(`[UnifiedCache] ReferenceMap is empty but sessionStorage has data, attempting re-initialization`)
         this.forceReinitializeFromSessionStorage()
         // 重新尝试获取引用
         const retryReference = this.referenceMap.get(originalKey)
         if (retryReference) {
-          console.log(`[UnifiedCache] Found reference after re-initialization for ${originalKey}:`, retryReference)
           return this.getContentFromReference(originalKey, retryReference)
         }
       }
-      
+
       return null
     }
-    console.log(`[UnifiedCache] Found reference for ${originalKey}:`, reference)
-    
+
     return this.getContentFromReference(originalKey, reference)
   }
-  
+
   /**
     * 从引用获取内容的辅助方法
     */
-   private getContentFromReference(key: string, reference: CacheReference): string | null {
+  private getContentFromReference(key: string, reference: CacheReference): string | null {
     // 更新访问时间和引用计数
     reference.lastAccessed = Date.now()
     reference.refCount++
@@ -244,9 +230,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
         break
 
       case CacheLayer.SESSION:
-        console.log(`[UnifiedCache] Trying to get from SESSION with storageKey: ${reference.storageKey}`)
         content = this.storageManager.getSessionItem(reference.storageKey)
-        console.log(`[UnifiedCache] SESSION content found: ${content ? 'YES' : 'NO'}, length: ${content?.length || 0}`)
         if (content) this.stats.sessionHits++
         break
     }
@@ -258,22 +242,18 @@ export class UnifiedContentCacheManager implements ICleanupManager {
 
     return content
   }
-  
+
   /**
    * 强制重新从sessionStorage初始化referenceMap
    * 用于解决SPA导航时referenceMap丢失的问题
    */
   private forceReinitializeFromSessionStorage(): void {
-    console.log(`[UnifiedCache] Force re-initializing from sessionStorage`)
-    
     // 清空当前的referenceMap和contentHashMap
     this.referenceMap.clear()
     this.contentHashMap.clear()
-    
+
     // 重新初始化
     this.initializeFromSessionStorage()
-    
-    console.log(`[UnifiedCache] Force re-initialization completed, referenceMap size: ${this.referenceMap.size}`)
   }
 
   /**
@@ -285,8 +265,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
   set(key: string, content: string, preferredLayer: CacheLayer = CacheLayer.MEMORY): void {
     // 提取原始键用于存储到referenceMap（保持一致性）
     const originalKey = this.extractOriginalKey(key)
-    console.log(`[UnifiedCache] Setting cache for key: ${key}, originalKey: ${originalKey}`)
-    
+
     // 计算内容哈希
     const contentHash = this.calculateHash(content)
 
@@ -326,8 +305,6 @@ export class UnifiedContentCacheManager implements ICleanupManager {
 
       this.referenceMap.set(originalKey, reference)
       this.contentHashMap.set(contentHash, originalKey)
-
-      console.log(`[UnifiedCache] Stored ${originalKey} in ${optimalLayer} layer (${reference.size} bytes)`)
     }
   }
 
@@ -564,7 +541,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
       case CacheLayer.SESSION:
         contentExists = this.storageManager.getSessionItem(reference.storageKey) !== null
         break
-      
+
     }
 
     if (!contentExists) {
@@ -640,11 +617,9 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     storageManager: UnifiedStorageManager,
   ): UnifiedContentCacheManager {
     if (!UnifiedContentCacheManager._instance) {
-      console.log(`[UnifiedCache] Creating new singleton instance`)
       UnifiedContentCacheManager._instance = new UnifiedContentCacheManager(memoryCache, storageManager)
-      console.log(`[UnifiedCache] Singleton created, initialized: ${UnifiedContentCacheManager._initialized}`)
     } else {
-      console.log(`[UnifiedCache] Returning existing singleton instance`)
+
     }
     return UnifiedContentCacheManager._instance
   }

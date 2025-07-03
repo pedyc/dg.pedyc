@@ -3,12 +3,12 @@
  * 提供统一的内容获取、页面更新等核心服务
  */
 
-import { getContentUrl, normalizeRelativeURLs } from "../../../util/path"
+import { getContentUrl, normalizeRelativeURLs, getFullSlug } from "../../../util/path"
 import { fetchCanonical } from "../utils/util"
 import { UnifiedCacheKeyGenerator } from "../cache/unified-cache"
 import { globalUnifiedContentCache, CacheLayer } from "../managers/index"
 import { getDOMParser, scrollToTarget, isSamePage, micromorph } from "./spa-utils"
-
+import { HTMLContentProcessor } from "../popover/html-processor"
 /**
  * 统一的内容获取服务
  * 使用统一缓存管理器，避免重复存储相同内容
@@ -26,6 +26,11 @@ export async function getContentForNavigation(
   // 尝试从统一缓存获取内容（检查所有缓存层）
   let contents = globalUnifiedContentCache.instance.get(cacheKey)
   if (contents) {
+    // 检查缓存内容是否为预处理的HTML片段（来自弹窗预加载）
+    if (HTMLContentProcessor.isPreprocessedContent(contents)) {
+      console.debug("[SPA Debug] Found preprocessed content from popover cache, reconstructing for SPA navigation")
+      contents = HTMLContentProcessor.reconstructHtmlForSpa(contents, processedUrl)
+    }
     return contents
   }
   try {
@@ -69,6 +74,119 @@ export function updatePageContent(
   const parser = getDOMParser()
   const processedUrl = getContentUrl(url.toString())
 
+  // 检查是否为重构的SPA内容（只包含quartz-body内容）
+  const isReconstructedContent = contents.includes('<!-- SPA_RECONSTRUCTED_CONTENT -->')
+
+  if (isReconstructedContent) {
+    console.debug("[SPA Debug] Processing reconstructed content for quartz-body update")
+    updateQuartzBodyContent(contents, url, isBack, announcer)
+  } else {
+    // 标准的完整页面更新流程
+    updateFullPageContent(contents, url, isBack, announcer, parser, processedUrl)
+  }
+}
+
+/**
+ * 更新quartz-body内容（用于重构的SPA内容）
+ * @param contents 重构的HTML内容
+ * @param url 目标URL
+ * @param isBack 是否为后退操作
+ * @param announcer 路由公告器元素
+ */
+function updateQuartzBodyContent(
+  contents: string,
+  url: URL,
+  isBack: boolean,
+  announcer: HTMLElement,
+): void {
+  const parser = getDOMParser()
+
+  // 解析重构的内容
+  const tempDoc = parser.parseFromString(contents, "text/html")
+  const newQuartzBody = tempDoc.querySelector('#quartz-body')
+  const currentQuartzBody = document.querySelector('#quartz-body')
+
+  if (!newQuartzBody || !currentQuartzBody) {
+    console.warn("[SPA Debug] quartz-body not found, falling back to full page update")
+    updateFullPageContent(contents, url, isBack, announcer, parser, getContentUrl(url.toString()))
+    return
+  }
+
+  // 更新标题
+  const title = tempDoc.querySelector("title")?.textContent ||
+    newQuartzBody.querySelector('h1')?.textContent ||
+    url.pathname.split('/').pop() || 'Page'
+  document.title = title
+
+  // 更新路由公告器
+  if (announcer.textContent !== title) {
+    announcer.textContent = title
+  }
+  announcer.dataset.persist = ""
+
+  // 智能更新：只更新center区域，保持侧边栏组件不变
+  const newCenterContent = newQuartzBody.querySelector('.center')
+  const currentCenterContent = currentQuartzBody.querySelector('.center')
+  
+  if (newCenterContent && currentCenterContent) {
+    console.debug("[SPA Debug] Updating center content only, preserving sidebars")
+    
+    // 将路由公告器添加到新的center内容中
+    const newPageHeader = newCenterContent.querySelector('.page-header')
+    if (newPageHeader) {
+      newPageHeader.appendChild(announcer)
+    } else {
+      newCenterContent.prepend(announcer)
+    }
+    
+    // 只更新center区域内容
+    micromorph(currentCenterContent, newCenterContent)
+  } else {
+    console.debug("[SPA Debug] Center content not found, updating entire quartz-body")
+    // 如果没有找到center结构，回退到完整更新
+    newQuartzBody.appendChild(announcer)
+    micromorph(currentQuartzBody, newQuartzBody)
+  }
+
+  // 处理滚动
+  if (!scrollToTarget(url)) {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  // 更新历史记录
+  if (!isBack && !isSamePage(url)) {
+    history.pushState({}, "", url)
+  }
+
+  // 清理公告器状态
+  delete announcer.dataset.persist
+
+  // 触发nav事件，让explorer和graph等组件更新
+  const navEvent = new CustomEvent("nav", {
+    detail: { url: getFullSlug(window) }
+  })
+  document.dispatchEvent(navEvent)
+
+  console.debug("[SPA Debug] Content updated successfully, nav event dispatched")
+}
+
+/**
+ * 完整页面更新处理（标准流程）
+ * @param contents HTML内容
+ * @param url 目标URL
+ * @param isBack 是否为后退操作
+ * @param announcer 路由公告器元素
+ * @param parser DOM解析器
+ * @param processedUrl 处理后的URL
+ */
+function updateFullPageContent(
+  contents: string,
+  url: URL,
+  isBack: boolean,
+  announcer: HTMLElement,
+  parser: DOMParser,
+  processedUrl: URL,
+): void {
   // 解析HTML
   const html = parser.parseFromString(contents, "text/html")
   normalizeRelativeURLs(html, processedUrl)
@@ -129,6 +247,8 @@ export function handleSamePageNavigation(url: URL): boolean {
   }
   return false
 }
+
+
 
 /**
  * 清理导航相关的UI状态

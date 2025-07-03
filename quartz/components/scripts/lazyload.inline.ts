@@ -15,7 +15,6 @@ function initializeLazyLoading(): void {
 
     // 在开发环境下输出统计信息
     if (process.env.NODE_ENV === "development") {
-      console.log("[Lazyload] Initialized with stats:", globalLazyloadManager.getStats())
     }
   } catch (error) {
     console.error("[Lazyload] Initialization failed:", error)

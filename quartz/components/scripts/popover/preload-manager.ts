@@ -23,8 +23,9 @@ const linkValidityCache = new OptimizedCacheManager<boolean>(linkValidityCacheCo
 // 类型定义
 interface PreloadQueueItem {
   href: string
-  priority: number
+  priority: number // 预加载优先级，数值越大优先级越高
   resolve: () => void
+  reject: (reason?: any) => void // 添加 reject 方法用于处理预加载失败
 }
 
 // 全局状态
@@ -61,9 +62,10 @@ export class PreloadManager implements ICleanupManager {
   /**
    * 预加载链接内容
    * @param href 链接地址
+   * @param priority 预加载优先级，数值越大优先级越高
    * @returns Promise<void>
    */
-  async preloadLinkContent(href: string): Promise<void> {
+  async preloadLinkContent(href: string, priority: number = 0): Promise<void> {
     // 使用统一的URL处理函数确保缓存键一致性
     const contentUrl = getContentUrl(href)
     const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(contentUrl.toString())
@@ -94,24 +96,25 @@ export class PreloadManager implements ICleanupManager {
 
     // 如果当前预加载数量已达上限，加入队列
     if (this.currentPreloads >= this.MAX_CONCURRENT_PRELOADS) {
-      console.debug(`[PreloadManager Debug] Max concurrent preloads reached, queuing: ${cacheKey}`)
-      return new Promise<void>((resolve) => {
-        this.preloadQueue.push({ href, priority: 0, resolve: () => resolve() })
+      console.debug(`[PreloadManager Debug] Max concurrent preloads reached, queuing: ${cacheKey} with priority ${priority}`)
+      return new Promise<void>((resolve, reject) => {
+        this.preloadQueue.push({ href, priority, resolve, reject })
+        this.preloadQueue.sort((a, b) => b.priority - a.priority) // 优先级高的排在前面
       })
     }
 
-    console.debug(`[PreloadManager Debug] Starting executePreload for: ${href}`)
-    await this.executePreload(href, 0)
+    console.debug(`[PreloadManager Debug] Starting executePreload for: ${href} with priority ${priority}`)
+    await this.executePreload(href, priority)
   }
 
 
   /**
    * 执行预加载（合并链接验证和内容获取）
    * @param href 链接地址
-   * @param _priority 优先级
+   * @param priority 优先级
    * @returns Promise<boolean> 是否成功预加载
    */
-  private async executePreload(href: string, _priority: number): Promise<boolean> {
+  private async executePreload(href: string, priority: number): Promise<boolean> {
     const contentUrl = getContentUrl(href)
     const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(contentUrl.toString())
     const validityCacheKey = UnifiedCacheKeyGenerator.generateLinkKey(contentUrl.toString(), "validity")
@@ -180,11 +183,7 @@ export class PreloadManager implements ICleanupManager {
         })
 
         // 使用统一缓存管理器存储，优先存储在弹窗缓存层
-        console.log(`[PreloadManager Debug] Storing content in cache with key: ${cacheKey}`)
-        console.log(`[PreloadManager Debug] Content length: ${htmlString.length}`)
         globalUnifiedContentCache.instance.set(cacheKey, htmlString, CacheLayer.SESSION)
-        console.log(`[PreloadManager Debug] Content stored successfully. Cache now has key: ${globalUnifiedContentCache.instance.has(cacheKey)}`)
-        console.debug("[Preload Debug] Content stored in cache with key:", cacheKey)
       } else if (contentType.includes("image/")) {
         globalUnifiedContentCache.instance.set(cacheKey, contentUrl.toString(), CacheLayer.SESSION)
       } else if (contentType.includes("application/pdf")) {
@@ -229,9 +228,14 @@ export class PreloadManager implements ICleanupManager {
    * 处理预加载队列
    */
   private processQueue(): void {
-    if (this.preloadQueue.length > 0 && this.currentPreloads < this.MAX_CONCURRENT_PRELOADS) {
+    // 确保队列按优先级排序，优先级高的在前
+    this.preloadQueue.sort((a, b) => b.priority - a.priority)
+
+    while (this.preloadQueue.length > 0 && this.currentPreloads < this.MAX_CONCURRENT_PRELOADS) {
       const next = this.preloadQueue.shift()!
-      this.executePreload(next.href, next.priority).then(() => next.resolve())
+      this.executePreload(next.href, next.priority)
+        .then(() => next.resolve())
+        .catch((reason) => next.reject(reason)) // 处理预加载失败的情况
     }
   }
 
@@ -299,9 +303,10 @@ export class PreloadManager implements ICleanupManager {
   /**
    * 静态方法预加载链接内容 - 保持向后兼容
    * @param href 链接地址
+   * @param priority 预加载优先级
    * @returns Promise<void>
    */
-  static async preloadLinkContent(href: string): Promise<void> {
+  static async preloadLinkContent(href: string, priority: number = 0): Promise<void> {
     const instance = PreloadManager.getInstance()
     return instance.preloadLinkContent(href)
   }

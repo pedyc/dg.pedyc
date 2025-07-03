@@ -25,9 +25,6 @@ export class LinkEventManager {
    * @param clearPopoverFn 清除弹窗函数
    */
   static setupLinkEventListeners(mouseEnterFn?: Function, clearPopoverFn?: Function): void {
-    // 移除 isInitialized 检查，允许在SPA导航后重新绑定事件
-    console.log("[LinkEventManager] Setting up link event listeners")
-
     // 保存 clearPopover 函数的引用
     if (clearPopoverFn) {
       this.clearPopoverFunction = clearPopoverFn

@@ -48,14 +48,10 @@ let _globalUnifiedContentCache: UnifiedContentCacheManager | null = null
  */
 export function getGlobalUnifiedContentCache(): UnifiedContentCacheManager {
   if (!_globalUnifiedContentCache) {
-    console.log(`[GlobalCache] Creating new UnifiedContentCacheManager instance`)
     _globalUnifiedContentCache = UnifiedContentCacheManager.createDefault(
       globalCacheManager,
       globalStorageManager,
     )
-    console.log(`[GlobalCache] New instance created, referenceMap size:`)
-  } else {
-    console.log(`[GlobalCache] Reusing existing UnifiedContentCacheManager instance`)
   }
   return _globalUnifiedContentCache
 }

@@ -69,7 +69,19 @@ export class ViewportPreloadManager implements ICleanupManager {
         async (entries, obs) => {
           const visibleLinks = entries
             .filter((entry) => entry.isIntersecting)
-            .map((entry) => entry.target as HTMLAnchorElement)
+            .map((entry) => {
+              const link = entry.target as HTMLAnchorElement
+              // 根据链接在视口中的位置计算优先级
+              const boundingClientRect = entry.boundingClientRect
+              const viewportHeight = window.innerHeight || document.documentElement.clientHeight
+              const center = viewportHeight / 2
+              const distanceToCenter = Math.abs(boundingClientRect.top + boundingClientRect.height / 2 - center)
+              // 距离中心越近，优先级越高
+              const priority = Math.max(0, 100 - Math.floor(distanceToCenter / viewportHeight * 100))
+
+              elementMetadata.set(link, { lastInteraction: Date.now(), preloadPriority: priority })
+              return link
+            })
 
           console.debug(
             `[ViewportPreloadManager Debug] ${entries.length} entries, ${visibleLinks.length} visible links`,
@@ -154,7 +166,9 @@ export class ViewportPreloadManager implements ICleanupManager {
         linkCheckInProgress.add(cacheKey)
         try {
           // The link validity check is now handled by PreloadManager
-          return contentUrl
+          // 根据交互信息设置优先级，例如：最近交互的链接优先级更高
+          const priority = elementMetadata.get(link)?.preloadPriority || 0
+          return { url: contentUrl, priority }
         } finally {
           linkCheckInProgress.delete(cacheKey)
         }
@@ -167,17 +181,18 @@ export class ViewportPreloadManager implements ICleanupManager {
       }
     })
 
-    const validUrls = (await Promise.allSettled(checkPromises))
+    // 过滤出有效的URL和对应的优先级
+    const validUrlsWithPriority = (await Promise.allSettled(checkPromises))
       .filter(
-        (result): result is PromiseFulfilledResult<URL> =>
+        (result): result is PromiseFulfilledResult<{ url: URL; priority: number }> =>
           result.status === "fulfilled" && result.value !== null,
       )
       .map((result) => result.value)
 
     // 委托给PreloadManager进行实际预加载，避免重复逻辑
     const preloadManager = PreloadManager.getInstance()
-    const preloadPromises = validUrls.map((url) =>
-      preloadManager.preloadLinkContent(url.toString()),
+    const preloadPromises = validUrlsWithPriority.map(({ url, priority }) =>
+      preloadManager.preloadLinkContent(url.toString(), priority),
     )
 
     const preloadResults = await Promise.allSettled(preloadPromises)

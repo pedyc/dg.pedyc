@@ -15,33 +15,25 @@ import {
 
 import { globalResourceManager } from "./managers/index"
 
-// 在初始化时加载失败链接
-FailedLinksManager.loadFailedLinks()
+function popoverSetup() {
+  FailedLinksManager.loadFailedLinks()
+  LinkEventManager.setupLinkEventListeners(mouseEnterHandler, clearActivePopover)
+  ViewportPreloadManager.initialize()
+}
 
 // 使用ResourceManager统一管理事件监听器
 globalResourceManager.addEventListener(document as unknown as EventTarget, "nav", () => {
-  // 使用 LinkEventManager 设置事件监听器
-  LinkEventManager.setupLinkEventListeners(mouseEnterHandler, clearActivePopover)
-
-  // 初始化视口预加载逻辑
-  // ViewportPreloadManager.initialize()
+  popoverSetup()
 })
 
 // 在 popover.inline.ts 中添加
-globalResourceManager.addEventListener(
-  document as unknown as EventTarget,
-  "DOMContentLoaded",
-  () => {
-    LinkEventManager.setupLinkEventListeners(mouseEnterHandler, clearActivePopover)
-    ViewportPreloadManager.initialize()
-  },
+globalResourceManager.addEventListener(document as unknown as EventTarget, "DOMContentLoaded", () =>
+  popoverSetup(),
 )
 
 /**
  * 监听缓存清理事件，并在事件触发时重新初始化 popover 相关功能。
  */
 globalResourceManager.addEventListener(document as unknown as EventTarget, "cacheCleared", () => {
-  LinkEventManager.setupLinkEventListeners(mouseEnterHandler, clearActivePopover)
-  ViewportPreloadManager.initialize()
-  console.log("Popover reinitialized after cache clear.")
+  popoverSetup()
 })

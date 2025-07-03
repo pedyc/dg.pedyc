@@ -130,9 +130,12 @@ export async function mouseEnterHandler(
   popoverInner.classList.add("popover-inner")
   popoverElement.appendChild(popoverInner)
 
+  console.log("失败链接", FailedLinksManager.getFailedLinks())
+  console.log("失败链接命中", FailedLinksManager.isFailedLink(cacheKey), cacheKey)
+
   // 检查是否为失败链接
   if (FailedLinksManager.isFailedLink(cacheKey)) {
-    console.debug("[Popover] Rendering failed link content for:", cacheKey)
+    console.log(`[Popover DEBUG]：从失败链接加载内容 ${cacheKey}`)
     HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
   } else {
     // 尝试从统一缓存管理器获取内容

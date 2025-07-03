@@ -41,7 +41,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "PARA/20-AREAS/02前端/Web API.md",
+                    "file": "Diary/2025-07-03.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -56,7 +56,7 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "Web API"
+                  "title": "2025-07-03"
                 }
               }
             ],
@@ -99,13 +99,13 @@
                         "state": {
                           "type": "outline",
                           "state": {
-                            "file": "PARA/20-AREAS/02前端/Web API.md",
+                            "file": "Diary/2025-07-03.md",
                             "followCursor": false,
                             "showSearch": false,
                             "searchQuery": ""
                           },
                           "icon": "lucide-list",
-                          "title": "Outline of Web API"
+                          "title": "Outline of 2025-07-03"
                         }
                       }
                     ]
@@ -121,7 +121,7 @@
                         "state": {
                           "type": "localgraph",
                           "state": {
-                            "file": "PARA/20-AREAS/02前端/Web API.md",
+                            "file": "Diary/2025-07-03.md",
                             "options": {
                               "collapse-filter": true,
                               "search": "",
@@ -149,7 +149,7 @@
                             }
                           },
                           "icon": "lucide-git-fork",
-                          "title": "Graph of Web API"
+                          "title": "Graph of 2025-07-03"
                         }
                       }
                     ]
@@ -342,6 +342,12 @@
   },
   "active": "3e5b2dc962c448fb",
   "lastOpenFiles": [
+    "Diary/2025-05-01.md",
+    "Diary/2025-07-03.md",
+    "Diary/2025-04-28.md",
+    "Diary/2025-07-02.md",
+    "Diary/2025-07-01.md",
+    "PARA/20-AREAS/02前端/Web API.md",
     "PARA/20-AREAS/02前端/0200前端.md",
     "PARA/20-AREAS/02前端/CSS.md",
     "Diary/2025-06-30.md",
@@ -365,12 +371,6 @@
     "Diary/_resources",
     "Diary/2025-06-28.md",
     "Diary/2025-06-27.md",
-    "PARA/20-AREAS/08知识管理/0800知识管理.md",
-    "PARA/00-META/本库领域索引.md",
-    "index.md",
-    "Diary/2025-06-19.md",
-    "Diary/2025-06-23.md",
-    "Diary/2025-06-22.md",
     "Diary/_resources/2025-06-19",
     "SimpRead/backup/simpread_config@20250616174335.json",
     "_resources/sw-lifecycle.svg",

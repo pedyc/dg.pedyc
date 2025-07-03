@@ -26,11 +26,9 @@ export async function getContentForNavigation(
   // 尝试从统一缓存获取内容（检查所有缓存层）
   let contents = globalUnifiedContentCache.instance.get(cacheKey)
   if (contents) {
+    console.log(`[SPA DEBUG] 从缓存加载内容：${cacheKey}`)
     // 检查缓存内容是否为预处理的HTML片段（来自弹窗预加载）
     if (HTMLContentProcessor.isPreprocessedContent(contents)) {
-      console.debug(
-        "[SPA Debug] Found preprocessed content from popover cache, reconstructing for SPA navigation",
-      )
       contents = HTMLContentProcessor.reconstructHtmlForSpa(contents, processedUrl)
     }
     return contents
@@ -44,6 +42,7 @@ export async function getContentForNavigation(
     }
 
     contents = await res.text()
+    console.log(`[SPA DEBUG] 从网络加载内容：${cacheKey}`)
 
     // 使用统一缓存管理器存储内容，自动避免重复存储
     try {

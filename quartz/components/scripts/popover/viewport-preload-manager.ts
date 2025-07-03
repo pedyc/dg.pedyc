@@ -75,9 +75,14 @@ export class ViewportPreloadManager implements ICleanupManager {
               const boundingClientRect = entry.boundingClientRect
               const viewportHeight = window.innerHeight || document.documentElement.clientHeight
               const center = viewportHeight / 2
-              const distanceToCenter = Math.abs(boundingClientRect.top + boundingClientRect.height / 2 - center)
+              const distanceToCenter = Math.abs(
+                boundingClientRect.top + boundingClientRect.height / 2 - center,
+              )
               // 距离中心越近，优先级越高
-              const priority = Math.max(0, 100 - Math.floor(distanceToCenter / viewportHeight * 100))
+              const priority = Math.max(
+                0,
+                100 - Math.floor((distanceToCenter / viewportHeight) * 100),
+              )
 
               elementMetadata.set(link, { lastInteraction: Date.now(), preloadPriority: priority })
               return link

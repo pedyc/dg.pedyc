@@ -398,7 +398,11 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
 
     // 存储到统一缓存，使用MEMORY层以获得最佳性能
     try {
-      globalUnifiedContentCache.instance.set(cacheKey, JSON.stringify(newContent), CacheLayer.MEMORY)
+      globalUnifiedContentCache.instance.set(
+        cacheKey,
+        JSON.stringify(newContent),
+        CacheLayer.MEMORY,
+      )
     } catch (e) {
       console.warn(`[Search] Failed to cache content for ${slug}:`, e)
     }

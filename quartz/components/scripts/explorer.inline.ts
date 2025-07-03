@@ -329,12 +329,12 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
 /**
  * 监听缓存清理事件，并在事件触发时重新初始化文件浏览器。
  */
-document.addEventListener('cacheCleared', async () => {
+document.addEventListener("cacheCleared", async () => {
   // 获取当前页面的 slug，以便重新初始化 explorer
-  const currentSlug = window.location.pathname.replace(/\/index\.html$/, '') as FullSlug;
-  await setupExplorer(currentSlug);
-  console.log('Explorer reinitialized after cache clear.');
-});
+  const currentSlug = window.location.pathname.replace(/\/index\.html$/, "") as FullSlug
+  await setupExplorer(currentSlug)
+  console.log("Explorer reinitialized after cache clear.")
+})
 
 window.addEventListener("resize", function () {
   // Desktop explorer opens by default, and it stays open when the window is resized

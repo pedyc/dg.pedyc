@@ -58,7 +58,6 @@ export const CacheKeyUtils = {
     const prefixMap = {
       [CacheLayer.MEMORY]: CacheKeyRules.PREFIXES.CONTENT,
       [CacheLayer.SESSION]: CacheKeyRules.PREFIXES.CONTENT,
-    
     }
 
     const prefix = prefixMap[layer] || CacheKeyRules.PREFIXES.CONTENT

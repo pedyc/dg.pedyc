@@ -46,7 +46,7 @@ export class PreloadManager implements ICleanupManager {
   /**
    * 私有构造函数，防止外部直接实例化
    */
-  private constructor() { }
+  private constructor() {}
 
   /**
    * 获取单例实例
@@ -96,17 +96,20 @@ export class PreloadManager implements ICleanupManager {
 
     // 如果当前预加载数量已达上限，加入队列
     if (this.currentPreloads >= this.MAX_CONCURRENT_PRELOADS) {
-      console.debug(`[PreloadManager Debug] Max concurrent preloads reached, queuing: ${cacheKey} with priority ${priority}`)
+      console.debug(
+        `[PreloadManager Debug] Max concurrent preloads reached, queuing: ${cacheKey} with priority ${priority}`,
+      )
       return new Promise<void>((resolve, reject) => {
         this.preloadQueue.push({ href, priority, resolve, reject })
         this.preloadQueue.sort((a, b) => b.priority - a.priority) // 优先级高的排在前面
       })
     }
 
-    console.debug(`[PreloadManager Debug] Starting executePreload for: ${href} with priority ${priority}`)
+    console.debug(
+      `[PreloadManager Debug] Starting executePreload for: ${href} with priority ${priority}`,
+    )
     await this.executePreload(href, priority)
   }
-
 
   /**
    * 执行预加载（合并链接验证和内容获取）
@@ -117,11 +120,16 @@ export class PreloadManager implements ICleanupManager {
   private async executePreload(href: string, priority: number): Promise<boolean> {
     const contentUrl = getContentUrl(href)
     const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(contentUrl.toString())
-    const validityCacheKey = UnifiedCacheKeyGenerator.generateLinkKey(contentUrl.toString(), "validity")
+    const validityCacheKey = UnifiedCacheKeyGenerator.generateLinkKey(
+      contentUrl.toString(),
+      "validity",
+    )
 
     // 首先检查统一缓存中是否已经存在内容
     if (globalUnifiedContentCache.instance.has(cacheKey)) {
-      console.debug(`[PreloadManager Debug] Content already exists in unified cache, skipping HTTP request: ${cacheKey}`)
+      console.debug(
+        `[PreloadManager Debug] Content already exists in unified cache, skipping HTTP request: ${cacheKey}`,
+      )
       return true
     }
 
@@ -211,7 +219,11 @@ export class PreloadManager implements ICleanupManager {
         FailedLinksManager.addFailedLink(cacheKey)
       } else {
         // 临时错误：短期标记为失败，但不添加到永久失败列表
-        linkValidityCache.set(validityCacheKey, false, Math.min(PopoverConfig.FAILED_LINK_CACHE_TTL, 300000)) // 最多5分钟
+        linkValidityCache.set(
+          validityCacheKey,
+          false,
+          Math.min(PopoverConfig.FAILED_LINK_CACHE_TTL, 300000),
+        ) // 最多5分钟
       }
 
       return false

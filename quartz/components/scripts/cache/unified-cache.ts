@@ -170,8 +170,6 @@ export const CACHE_LAYER_CONFIG = {
     priority: 1,
     description: "会话层 - 页面刷新保留，存储重要数据",
   },
-
-
 } as const
 
 /**
@@ -307,7 +305,6 @@ export const UnifiedCacheKeyGenerator = {
    * @param subType 子类型 (可选)
    * @returns 弹窗缓存键
    */
-
 
   /**
    * 生成用户缓存键

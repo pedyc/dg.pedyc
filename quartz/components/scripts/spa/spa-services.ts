@@ -28,7 +28,9 @@ export async function getContentForNavigation(
   if (contents) {
     // 检查缓存内容是否为预处理的HTML片段（来自弹窗预加载）
     if (HTMLContentProcessor.isPreprocessedContent(contents)) {
-      console.debug("[SPA Debug] Found preprocessed content from popover cache, reconstructing for SPA navigation")
+      console.debug(
+        "[SPA Debug] Found preprocessed content from popover cache, reconstructing for SPA navigation",
+      )
       contents = HTMLContentProcessor.reconstructHtmlForSpa(contents, processedUrl)
     }
     return contents
@@ -75,7 +77,7 @@ export function updatePageContent(
   const processedUrl = getContentUrl(url.toString())
 
   // 检查是否为重构的SPA内容（只包含quartz-body内容）
-  const isReconstructedContent = contents.includes('<!-- SPA_RECONSTRUCTED_CONTENT -->')
+  const isReconstructedContent = contents.includes("<!-- SPA_RECONSTRUCTED_CONTENT -->")
 
   if (isReconstructedContent) {
     console.debug("[SPA Debug] Processing reconstructed content for quartz-body update")
@@ -103,8 +105,8 @@ function updateQuartzBodyContent(
 
   // 解析重构的内容
   const tempDoc = parser.parseFromString(contents, "text/html")
-  const newQuartzBody = tempDoc.querySelector('#quartz-body')
-  const currentQuartzBody = document.querySelector('#quartz-body')
+  const newQuartzBody = tempDoc.querySelector("#quartz-body")
+  const currentQuartzBody = document.querySelector("#quartz-body")
 
   if (!newQuartzBody || !currentQuartzBody) {
     console.warn("[SPA Debug] quartz-body not found, falling back to full page update")
@@ -113,9 +115,11 @@ function updateQuartzBodyContent(
   }
 
   // 更新标题
-  const title = tempDoc.querySelector("title")?.textContent ||
-    newQuartzBody.querySelector('h1')?.textContent ||
-    url.pathname.split('/').pop() || 'Page'
+  const title =
+    tempDoc.querySelector("title")?.textContent ||
+    newQuartzBody.querySelector("h1")?.textContent ||
+    url.pathname.split("/").pop() ||
+    "Page"
   document.title = title
 
   // 更新路由公告器
@@ -125,20 +129,20 @@ function updateQuartzBodyContent(
   announcer.dataset.persist = ""
 
   // 智能更新：只更新center区域，保持侧边栏组件不变
-  const newCenterContent = newQuartzBody.querySelector('.center')
-  const currentCenterContent = currentQuartzBody.querySelector('.center')
-  
+  const newCenterContent = newQuartzBody.querySelector(".center")
+  const currentCenterContent = currentQuartzBody.querySelector(".center")
+
   if (newCenterContent && currentCenterContent) {
     console.debug("[SPA Debug] Updating center content only, preserving sidebars")
-    
+
     // 将路由公告器添加到新的center内容中
-    const newPageHeader = newCenterContent.querySelector('.page-header')
+    const newPageHeader = newCenterContent.querySelector(".page-header")
     if (newPageHeader) {
       newPageHeader.appendChild(announcer)
     } else {
       newCenterContent.prepend(announcer)
     }
-    
+
     // 只更新center区域内容
     micromorph(currentCenterContent, newCenterContent)
   } else {
@@ -163,7 +167,7 @@ function updateQuartzBodyContent(
 
   // 触发nav事件，让explorer和graph等组件更新
   const navEvent = new CustomEvent("nav", {
-    detail: { url: getFullSlug(window) }
+    detail: { url: getFullSlug(window) },
   })
   document.dispatchEvent(navEvent)
 
@@ -247,8 +251,6 @@ export function handleSamePageNavigation(url: URL): boolean {
   }
   return false
 }
-
-
 
 /**
  * 清理导航相关的UI状态

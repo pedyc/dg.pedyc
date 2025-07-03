@@ -4,8 +4,6 @@ import { HTMLContentProcessor, PreloadManager, FailedLinksManager, PopoverConfig
 import { UnifiedCacheKeyGenerator } from "../cache/unified-cache"
 import { globalUnifiedContentCache } from "../managers/index"
 
-
-
 /**
  * 清除当前活动的弹窗
  */
@@ -29,7 +27,6 @@ export function clearAllPopovers() {
   allLinks.forEach((link) => {
     link.removeAttribute("data-popover-bound")
   })
-
 }
 
 /**

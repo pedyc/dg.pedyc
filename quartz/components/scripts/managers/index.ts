@@ -60,7 +60,7 @@ export function getGlobalUnifiedContentCache(): UnifiedContentCacheManager {
 export const globalUnifiedContentCache = {
   get instance() {
     return getGlobalUnifiedContentCache()
-  }
+  },
 }
 
 // 注册到全局清理管理器

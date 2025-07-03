@@ -85,11 +85,8 @@ export class UnifiedContentCacheManager implements ICleanupManager {
   /** 初始化标志 */
   private static _initialized = false
 
-  constructor(
-    memoryCache: OptimizedCacheManager<string>,
-    storageManager: UnifiedStorageManager,
-  ) {
-    console.log('UnifiedContentCacheManager constructor')
+  constructor(memoryCache: OptimizedCacheManager<string>, storageManager: UnifiedStorageManager) {
+    console.log("UnifiedContentCacheManager constructor")
     this.memoryCache = memoryCache
     this.storageManager = storageManager
 
@@ -197,7 +194,12 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     const reference = this.referenceMap.get(originalKey)
     if (!reference) {
       // 如果referenceMap为空但sessionStorage中可能有数据，尝试重新初始化
-      if (this.referenceMap.size === 0 && typeof window !== "undefined" && window.sessionStorage && window.sessionStorage.length > 0) {
+      if (
+        this.referenceMap.size === 0 &&
+        typeof window !== "undefined" &&
+        window.sessionStorage &&
+        window.sessionStorage.length > 0
+      ) {
         this.forceReinitializeFromSessionStorage()
         // 重新尝试获取引用
         const retryReference = this.referenceMap.get(originalKey)
@@ -213,8 +215,8 @@ export class UnifiedContentCacheManager implements ICleanupManager {
   }
 
   /**
-    * 从引用获取内容的辅助方法
-    */
+   * 从引用获取内容的辅助方法
+   */
   private getContentFromReference(key: string, reference: CacheReference): string | null {
     // 更新访问时间和引用计数
     reference.lastAccessed = Date.now()
@@ -282,7 +284,9 @@ export class UnifiedContentCacheManager implements ICleanupManager {
         size: existingRef.size,
       })
       this.stats.duplicatesAvoided++
-      console.log(`[UnifiedCache] Avoided duplicate storage for ${originalKey}, referencing ${existingKey}`)
+      console.log(
+        `[UnifiedCache] Avoided duplicate storage for ${originalKey}, referencing ${existingKey}`,
+      )
       return
     }
 
@@ -365,9 +369,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    */
   getStats() {
     const hitRate =
-      ((this.stats.memoryHits + this.stats.sessionHits) /
-        this.stats.totalRequests) *
-      100
+      ((this.stats.memoryHits + this.stats.sessionHits) / this.stats.totalRequests) * 100
 
     return {
       ...this.stats,
@@ -541,7 +543,6 @@ export class UnifiedContentCacheManager implements ICleanupManager {
       case CacheLayer.SESSION:
         contentExists = this.storageManager.getSessionItem(reference.storageKey) !== null
         break
-
     }
 
     if (!contentExists) {
@@ -596,7 +597,6 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     const storageLayerInfo = {
       memory: this.memoryCache.has(key),
       session: this.storageManager.getSessionItem(key) !== null,
-
     }
 
     return {
@@ -617,9 +617,11 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     storageManager: UnifiedStorageManager,
   ): UnifiedContentCacheManager {
     if (!UnifiedContentCacheManager._instance) {
-      UnifiedContentCacheManager._instance = new UnifiedContentCacheManager(memoryCache, storageManager)
+      UnifiedContentCacheManager._instance = new UnifiedContentCacheManager(
+        memoryCache,
+        storageManager,
+      )
     } else {
-
     }
     return UnifiedContentCacheManager._instance
   }

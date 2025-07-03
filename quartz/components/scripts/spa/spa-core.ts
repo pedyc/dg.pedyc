@@ -49,9 +49,6 @@ function createNavigateFunction(announcer: HTMLElement) {
       // 更新页面内容
       updatePageContent(contents, url, isBack, announcer)
     } catch (error) {
-
-
-    
       console.error("Navigation failed:", error)
       window.location.assign(url)
       return
@@ -59,7 +56,6 @@ function createNavigateFunction(announcer: HTMLElement) {
 
     // 触发导航完成事件
     notifyNav(getFullSlug(window))
-
   }
 }
 

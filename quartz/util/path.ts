@@ -24,11 +24,16 @@ export function removeDuplicatePathSegments(path: string): string {
 
     if (path.startsWith("http") || path.startsWith("/")) {
       if (path.startsWith("http")) {
+      try {
         const url = new URL(path)
         pathname = url.pathname
         search = url.search
         hash = url.hash
-      } else {
+      } catch (e) {
+        console.warn(`Failed to parse URL in removeDuplicatePathSegments: ${path}`, e)
+        return path // 返回原始路径以避免程序崩溃
+      }
+    } else {
         const parts = path.split("#")
         const pathAndSearch = parts[0]
         hash = parts[1] ? "#" + parts[1] : ""
@@ -184,8 +189,20 @@ export function createUrl(href: string): URL {
   const cacheKey = UnifiedCacheKeyGenerator.generateLinkKey(href)
   const cached = urlCache.get(cacheKey)
   if (cached) {
-    // 从缓存的字符串重建URL对象
-    return new URL(cached as string)
+    // 尝试从缓存的字符串重建URL对象
+    // 在这里添加一个验证，确保缓存的值是有效的URL
+    if (validateUrl(cached as string)) {
+      return new URL(cached as string)
+    } else {
+      // 如果缓存的值无效，则清除该缓存项并继续使用原始href
+      console.warn(`Cached URL for ${href} is invalid: ${cached}. Clearing cache and re-creating.`)
+      urlCache.delete(cacheKey)
+    }
+  }
+
+  // 在构造URL之前验证href的有效性
+  if (!validateUrl(href)) {
+    throw new Error(`Invalid URL string provided to createUrl: ${href}`)
   }
 
   const url = new URL(href)
@@ -203,8 +220,20 @@ export function getContentUrl(href: string): URL {
   const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(href)
   const cached = urlCache.get(cacheKey)
   if (cached) {
-    // 从缓存的字符串重建URL对象
-    return new URL(cached as string)
+    // 尝试从缓存的字符串重建URL对象
+    // 在这里添加一个验证，确保缓存的值是有效的URL
+    if (validateUrl(cached as string)) {
+      return new URL(cached as string)
+    } else {
+      // 如果缓存的值无效，则清除该缓存项并继续使用原始href
+      console.warn(`Cached content URL for ${href} is invalid: ${cached}. Clearing cache and re-processing.`)
+      urlCache.delete(cacheKey)
+    }
+  }
+
+  // 在构造URL之前验证href的有效性
+  if (!validateUrl(href)) {
+    throw new Error(`Invalid URL string provided to getContentUrl: ${href}`)
   }
 
   const url = createUrl(href)

@@ -44,7 +44,15 @@ export async function fetchCanonical(url: URL): Promise<Response> {
   // to allow the caller to read it if it's was not a redirect
   const text = await res.clone().text()
   const [_, redirect] = text.match(canonicalRegex) ?? []
-  return redirect ? fetch(`${new URL(redirect, url)}`) : res
+  if (redirect) {
+    try {
+      return fetch(`${new URL(redirect, url)}`)
+    } catch (e) {
+      console.warn(`Failed to construct redirect URL from '${redirect}' with base '${url.toString()}':`, e)
+      return res // 如果重定向URL无效，则返回原始响应
+    }
+  }
+  return res
 }
 
 // 添加性能统计

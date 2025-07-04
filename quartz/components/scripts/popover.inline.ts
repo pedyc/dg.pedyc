@@ -22,18 +22,18 @@ function popoverSetup() {
 }
 
 // 使用ResourceManager统一管理事件监听器
-globalResourceManager.addEventListener(document as unknown as EventTarget, "nav", () => {
+globalResourceManager.instance.addEventListener(document as unknown as EventTarget, "nav", () => {
   popoverSetup()
 })
 
 // 在 popover.inline.ts 中添加
-globalResourceManager.addEventListener(document as unknown as EventTarget, "DOMContentLoaded", () =>
+globalResourceManager.instance.addEventListener(document as unknown as EventTarget, "DOMContentLoaded", () =>
   popoverSetup(),
 )
 
 /**
  * 监听缓存清理事件，并在事件触发时重新初始化 popover 相关功能。
  */
-globalResourceManager.addEventListener(document as unknown as EventTarget, "cacheCleared", () => {
+globalResourceManager.instance.addEventListener(document as unknown as EventTarget, "cacheCleared", () => {
   popoverSetup()
 })

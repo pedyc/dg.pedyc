@@ -1,6 +1,21 @@
 import type { ICleanupManager } from "./CleanupManager"
 
 /**
+ * 资源类型枚举
+ */
+export type ResourceType = 'observer' | 'timer' | 'eventListener' | 'abortController' | 'cleanupTask'
+
+/**
+ * 资源信息接口
+ */
+export interface ResourceInfo {
+  type: ResourceType
+  id: string
+  details?: any
+  createdAt: number
+}
+
+/**
  * 资源管理器
  * 统一管理 DOM 相关资源，包括观察器、定时器和事件监听器
  */

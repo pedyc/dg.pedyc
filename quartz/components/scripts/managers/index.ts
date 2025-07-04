@@ -1,100 +1,54 @@
 /**
  * 管理器模块统一导出
+ * 提供所有管理器类和全局实例
  */
 
-// 导入类
-import { OptimizedCacheManager } from "./OptimizedCacheManager"
-import { ResourceManager } from "./ResourceManager"
-// import { LazyloadManager } from "./LazyloadManager" // 暂时注释以避免循环依赖
-import { UnifiedStorageManager } from "./UnifiedStorageManager"
-import { UnifiedContentCacheManager } from "./UnifiedContentCacheManager"
-import { getCacheConfig, calculateLayerCapacity, CACHE_LAYER_CONFIG } from "../cache/unified-cache"
-
-// 导出所有管理器类
-import { GlobalCleanupManager } from "./CleanupManager"
-export { UnifiedStorageManager } from "./UnifiedStorageManager"
+// 导出管理器类
 export { OptimizedCacheManager } from "./OptimizedCacheManager"
 export { ResourceManager } from "./ResourceManager"
-// export { LazyloadManager } from "./LazyloadManager" // 暂时注释以避免循环依赖
+export { UnifiedStorageManager } from "./UnifiedStorageManager"
+export { UnifiedContentCacheManager } from "./UnifiedContentCacheManager"
+export { ICleanupManager, CleanupManager, GlobalCleanupManager } from "./CleanupManager"
 export { ImageLoadManager } from "./ImageLoadManager"
 export { ImageObserverManager } from "./ImageObserverManager"
-export { UnifiedContentCacheManager, CacheLayer } from "./UnifiedContentCacheManager"
+export { CacheLayer } from "./UnifiedContentCacheManager"
 
-// 获取统一缓存配置
-const unifiedConfig = getCacheConfig("DEFAULT")
+// 导出管理器类型
+export type { CachedItem, CacheStats } from "./OptimizedCacheManager"
+export type { ResourceType, ResourceInfo } from "./ResourceManager"
+export type { StorageConfig } from "./UnifiedStorageManager"
 
-// 创建全局实例
-export const globalCleanupManager = new GlobalCleanupManager()
-export const globalResourceManager = new ResourceManager()
+// 导出工厂和管理器
+export {
+  ManagerFactory,
+  ManagerType,
+  PREDEFINED_MANAGER_CONFIGS,
+} from "./manager-factory"
 
-// 使用统一配置创建缓存管理器实例
-// 内存层缓存配置
-const memoryCacheConfig = {
-  capacity: calculateLayerCapacity("MEMORY"),
-  ttl: unifiedConfig.ttl,
-  maxMemoryMB: unifiedConfig.maxMemoryMB * CACHE_LAYER_CONFIG.MEMORY.capacityRatio,
-}
-export const globalCacheManager = new OptimizedCacheManager<string>(memoryCacheConfig)
+export type {
+  ManagerInstanceConfig,
+} from "./manager-factory"
 
-// 统一存储管理器
-export const globalStorageManager = new UnifiedStorageManager()
+// 导出全局实例
+export {
+  globalCacheManager,
+  urlCacheManager,
+  globalResourceManager,
+  globalStorageManager,
+  globalUnifiedContentCache,
+  globalCleanupManager,
 
-// 创建统一内容缓存管理器实例（单例模式）
-let _globalUnifiedContentCache: UnifiedContentCacheManager | null = null
+  GlobalManagerController,
+} from "./global-instances"
+
+// 向后兼容的便捷函数
+import { globalUnifiedContentCache } from "./global-instances"
+import type { UnifiedContentCacheManager } from "./UnifiedContentCacheManager"
 
 /**
- * 获取全局统一内容缓存实例（单例模式）
- * 确保只初始化一次，避免重复的初始化日志
+ * 获取全局统一内容缓存实例的便捷函数
+ * @returns 全局统一内容缓存管理器实例
  */
 export function getGlobalUnifiedContentCache(): UnifiedContentCacheManager {
-  if (!_globalUnifiedContentCache) {
-    _globalUnifiedContentCache = UnifiedContentCacheManager.createDefault(
-      globalCacheManager,
-      globalStorageManager,
-    )
-  }
-  return _globalUnifiedContentCache
-}
-
-// 为了向后兼容，提供一个 getter 属性
-export const globalUnifiedContentCache = {
-  get instance() {
-    return getGlobalUnifiedContentCache()
-  },
-}
-
-// 注册到全局清理管理器
-GlobalCleanupManager.register(globalResourceManager)
-GlobalCleanupManager.register(globalCacheManager)
-GlobalCleanupManager.register(globalStorageManager)
-// GlobalCleanupManager.register(globalLazyloadManager) // 暂时注释以避免循环依赖
-// 移除了globalPopoverCache的注册
-GlobalCleanupManager.register(globalUnifiedContentCache.instance)
-
-// 设置全局清理事件
-if (typeof window !== "undefined") {
-  // 页面卸载时清理
-  window.addEventListener("beforeunload", () => {
-    GlobalCleanupManager.cleanupAll()
-  })
-
-  // 页面隐藏时清理（移动端兼容）
-  window.addEventListener("pagehide", () => {
-    GlobalCleanupManager.cleanupAll()
-  })
-
-  // 设置定期清理
-  globalResourceManager.setInterval(
-    () => {
-      GlobalCleanupManager.cleanupAll()
-    },
-    10 * 60 * 1000,
-  ) // 每10分钟清理一次
-
-  // 添加到全局清理函数
-  if (window.addCleanup) {
-    window.addCleanup(() => {
-      GlobalCleanupManager.cleanupAll()
-    })
-  }
+  return globalUnifiedContentCache.instance
 }

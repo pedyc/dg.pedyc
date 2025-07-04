@@ -44,7 +44,7 @@ function createNavigateFunction(announcer: HTMLElement) {
       clearAllPopovers()
       // 注意：不调用 globalResourceManager.cleanup() 以避免清理缓存
       // 只清理观察器和事件监听器，保留缓存数据
-      globalResourceManager.cleanupObserversAndListeners()
+      globalResourceManager.instance.cleanupObserversAndListeners()
 
       // 更新页面内容
       updatePageContent(contents, url, isBack, announcer)
@@ -162,8 +162,8 @@ export function createRouter() {
   }
 
   // 使用 globalResourceManager 管理事件监听器
-  globalResourceManager.addEventListener(window, "click", handleClick)
-  globalResourceManager.addEventListener(window, "popstate", handlePopstate)
+  globalResourceManager.instance.addEventListener(window, "click", handleClick)
+  globalResourceManager.instance.addEventListener(window, "popstate", handlePopstate)
 
   return new (class Router {
     go(pathname: RelativeURL) {

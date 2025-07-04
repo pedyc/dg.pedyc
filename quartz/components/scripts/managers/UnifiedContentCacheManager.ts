@@ -14,6 +14,7 @@ import {
   identifyCacheType,
 } from "../cache/cache-key-utils"
 import { ICleanupManager } from "./CleanupManager"
+import { urlHandler } from "../utils/simplified-url-handler"
 
 /**
  * 缓存层级枚举
@@ -92,6 +93,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
 
     // 只在首次初始化时同步sessionStorage中的缓存引用
     if (!UnifiedContentCacheManager._initialized) {
+      console.log("[UnifiedCache] Initializing UnifiedContentCacheManager from sessionStorage...")
       this.initializeFromSessionStorage()
       UnifiedContentCacheManager._initialized = true
     }
@@ -155,10 +157,12 @@ export class UnifiedContentCacheManager implements ICleanupManager {
       }
 
       if (restoredCount.content > 0) {
+        console.log(`[UnifiedCache] Successfully restored ${restoredCount.content} content items from sessionStorage.`)
       } else {
+        console.log("[UnifiedCache] No content items found in sessionStorage to restore.")
       }
     } catch (error) {
-      console.warn("[UnifiedCache] 初始化sessionStorage引用时出错:", error)
+      console.warn("[UnifiedCache] Error initializing sessionStorage references:", error)
     }
   }
 
@@ -191,8 +195,40 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     // 提取原始键用于查找referenceMap（因为referenceMap存储的是原始键）
     const originalKey = this.extractOriginalKey(key)
 
-    const reference = this.referenceMap.get(originalKey)
+    // 首先尝试直接匹配
+    let reference = this.referenceMap.get(originalKey)
+
+    // 如果直接匹配失败，尝试标准化键匹配
     if (!reference) {
+      console.debug(`[UnifiedCache] Direct match failed for: ${originalKey}`);
+      console.debug(`[UnifiedCache] Attempting normalization match...`);
+
+      // 对所有referenceMap中的键进行标准化比较
+      for (const [mapKey, mapReference] of this.referenceMap.entries()) {
+        const normalizedMapKey = this.normalizeKeyForComparison(mapKey)
+        const normalizedOriginalKey = this.normalizeKeyForComparison(originalKey)
+
+        console.debug(`[UnifiedCache] Comparing normalized keys:`);
+        console.debug(`  Original: "${normalizedOriginalKey}"`);
+        console.debug(`  Map key: "${normalizedMapKey}"`);
+
+        if (normalizedMapKey === normalizedOriginalKey) {
+          console.debug(`[UnifiedCache] Found match via normalization: ${originalKey} -> ${mapKey}`);
+          reference = mapReference;
+          break;
+        }
+      }
+    }
+
+    if (!reference) {
+      console.log(`[UnifiedCache] Cache miss for key: ${key}, originalKey: ${originalKey}. referenceMap size: ${this.referenceMap.size}`)
+
+      // 调试信息：显示referenceMap中的所有键
+      if (this.referenceMap.size > 0) {
+        const mapKeys = Array.from(this.referenceMap.keys()).slice(0, 5); // 只显示前5个
+        console.debug(`[UnifiedCache] Available keys in referenceMap:`, mapKeys);
+      }
+
       // 如果referenceMap为空但sessionStorage中可能有数据，尝试重新初始化
       if (
         this.referenceMap.size === 0 &&
@@ -515,6 +551,70 @@ export class UnifiedContentCacheManager implements ICleanupManager {
       totalSize += reference.size
     }
     return totalSize
+  }
+
+  /**
+   * 标准化键用于比较 - 使用简化URL处理器
+   * 使用统一的URL处理逻辑确保缓存键的一致性
+   * @param key 需要标准化的键（可能包含前缀）
+   * @returns 标准化后的键
+   */
+  private normalizeKeyForComparison(key: string): string {
+    try {
+      // 首先提取原始键，移除可能的前缀
+      const originalKey = this.extractOriginalKey(key)
+
+      // 使用简化URL处理器进行标准化
+      const urlResult = urlHandler.processURL(originalKey, {
+        normalizePath: true,
+        removeHash: true,
+        validate: false // 不验证，因为可能是路径片段
+      })
+
+      if (urlResult.isValid) {
+        const normalizedResult = urlResult.processed.pathname
+          .toLowerCase()
+          .replace(/\/$/, "") // 移除尾部斜杠
+          .replace(/\\+/g, "/") // 统一路径分隔符
+          .replace(/\/+/g, "/") // 合并多个连续斜杠
+
+        console.log(`[Cache Debug] normalizeKeyForComparison: ${key} -> ${originalKey} -> ${normalizedResult}`)
+        return normalizedResult
+      } else {
+        // 如果不是有效URL，直接处理为路径
+        const pathname = originalKey.startsWith('/') ? originalKey : '/' + originalKey
+        const segments = pathname.split("/").filter((segment) => segment.length > 0)
+        const deduplicatedSegments: string[] = []
+        const seen = new Set<string>()
+
+        for (const segment of segments) {
+          const isConsecutiveDuplicate =
+            deduplicatedSegments.length > 0 &&
+            deduplicatedSegments[deduplicatedSegments.length - 1] === segment
+          const isDuplicateInPath = seen.has(segment)
+
+          if (!isConsecutiveDuplicate && !isDuplicateInPath) {
+            deduplicatedSegments.push(segment)
+            seen.add(segment)
+          }
+        }
+
+        const result = deduplicatedSegments.length > 0
+          ? "/" + deduplicatedSegments.join("/")
+          : "/"
+
+        const normalizedResult = result
+          .toLowerCase()
+          .replace(/\/$/, "")
+          .replace(/\\+/g, "/")
+          .replace(/\/+/g, "/")
+
+        return normalizedResult
+      }
+    } catch (error) {
+      console.warn("Failed to normalize key for comparison:", error)
+      return key.toLowerCase()
+    }
   }
 
   /**

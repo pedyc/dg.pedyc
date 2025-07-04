@@ -16,6 +16,64 @@ export interface ICleanupManager {
 }
 
 /**
+ * 清理管理器
+ * 管理单个实例的清理任务
+ */
+export class CleanupManager {
+  private managers = new Map<string, ICleanupManager>()
+
+  /**
+   * 注册清理管理器
+   * @param key 管理器键
+   * @param manager 实现了ICleanupManager接口的管理器
+   */
+  register(key: string, manager: ICleanupManager): void {
+    this.managers.set(key, manager)
+  }
+
+  /**
+   * 注销清理管理器
+   * @param key 管理器键
+   */
+  unregister(key: string): void {
+    this.managers.delete(key)
+  }
+
+  /**
+   * 清理所有注册的管理器
+   */
+  cleanup(): void {
+    this.managers.forEach((manager, key) => {
+      try {
+        manager.cleanup()
+      } catch (error) {
+        console.error(`Error during cleanup of ${key}:`, error)
+      }
+    })
+  }
+
+  /**
+   * 获取所有管理器的统计信息
+   */
+  getAllStats(): Record<string, any> {
+    const stats: Record<string, any> = {}
+    this.managers.forEach((manager, key) => {
+      if (manager.getStats) {
+        stats[key] = manager.getStats()
+      }
+    })
+    return stats
+  }
+
+  /**
+   * 移除所有注册的管理器
+   */
+  clear(): void {
+    this.managers.clear()
+  }
+}
+
+/**
  * 全局清理管理器
  * 统一管理所有需要清理的资源
  */

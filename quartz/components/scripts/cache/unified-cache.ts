@@ -1,3 +1,5 @@
+import { urlHandler } from "../utils/simplified-url-handler"
+
 /**
  * 缓存监控配置接口
  */
@@ -267,23 +269,17 @@ export const UnifiedCacheKeyGenerator = {
    * @param type 内容类型 (可选)
    * @returns 统一格式的缓存键
    */
+  // 修改 unified-cache.ts 中的 generateContentKey
   generateContentKey: (url: string, type?: "popover" | "content" | "preview"): string => {
-    const sanitizedUrl = sanitizeCacheKey(url)
-    const baseKey = `${CacheKeyRules.PREFIXES.CONTENT}${sanitizedUrl}`
-    return type ? `${baseKey}${CacheKeyRules.SEPARATOR}${type}` : baseKey
-  },
+    // 使用 simplified-url-handler 进行标准化
+    const result = urlHandler.processURL(url, { cacheType: 'content' })
+    if (!result.isValid) {
+      console.warn(`Invalid URL for cache key generation: ${url}`)
+      return `${CacheKeyRules.PREFIXES.CONTENT}invalid_${sanitizeCacheKey(url)}`
+    }
 
-  /**
-   * 生成链接缓存键
-   * @param url 链接地址
-   * @param type 链接类型（可选）
-   * @returns 格式化的缓存键
-   */
-  generateLinkKey: (url: string, type?: string): string => {
-    const baseKey = sanitizeCacheKey(url)
-    return type
-      ? `${CacheKeyRules.PREFIXES.LINK}${type}${CacheKeyRules.SEPARATOR}${baseKey}`
-      : `${CacheKeyRules.PREFIXES.LINK}${baseKey}`
+    const baseKey = result.cacheKey
+    return type ? `${baseKey}${CacheKeyRules.SEPARATOR}${type}` : baseKey
   },
 
   /**
@@ -298,13 +294,6 @@ export const UnifiedCacheKeyGenerator = {
       ? `${CacheKeyRules.PREFIXES.SEARCH}${baseKey}${CacheKeyRules.SEPARATOR}${sanitizeCacheKey(filters)}`
       : `${CacheKeyRules.PREFIXES.SEARCH}${baseKey}`
   },
-
-  /**
-   * 生成弹窗缓存键
-   * @param target 目标标识
-   * @param subType 子类型 (可选)
-   * @returns 弹窗缓存键
-   */
 
   /**
    * 生成用户缓存键
@@ -499,7 +488,6 @@ export function getCacheConfigDiagnostics() {
  */
 export const CacheKeyGeneratorCompat = {
   content: UnifiedCacheKeyGenerator.generateContentKey,
-  link: UnifiedCacheKeyGenerator.generateLinkKey,
   search: UnifiedCacheKeyGenerator.generateSearchKey,
   font: UnifiedCacheKeyGenerator.generateFontKey,
   user: UnifiedCacheKeyGenerator.generateUserKey,

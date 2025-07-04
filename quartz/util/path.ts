@@ -4,14 +4,14 @@ import { clone } from "./clone"
 
 // this file must be isomorphic so it can't use node libs (e.g. path)
 
-import { globalCacheManager } from "../components/scripts/managers/index"
-import { UnifiedCacheKeyGenerator } from "../components/scripts/cache/unified-cache"
+import { urlCacheManager } from "../components/scripts/managers/index"
+import { urlHandler } from "../components/scripts/utils/simplified-url-handler"
 
 // 使用全局统一缓存管理器
-const urlCache = globalCacheManager
+const urlCache = urlCacheManager
 
 /**
- * 移除路径中的重复段
+ * 移除路径中的重复段 - 与UnifiedContentCacheManager保持一致
  * @param path 路径字符串
  * @returns 清理后的路径
  */
@@ -24,16 +24,16 @@ export function removeDuplicatePathSegments(path: string): string {
 
     if (path.startsWith("http") || path.startsWith("/")) {
       if (path.startsWith("http")) {
-      try {
-        const url = new URL(path)
-        pathname = url.pathname
-        search = url.search
-        hash = url.hash
-      } catch (e) {
-        console.warn(`Failed to parse URL in removeDuplicatePathSegments: ${path}`, e)
-        return path // 返回原始路径以避免程序崩溃
-      }
-    } else {
+        try {
+          const url = new URL(path)
+          pathname = url.pathname
+          search = url.search
+          hash = url.hash
+        } catch (e) {
+          console.warn(`Failed to parse URL in removeDuplicatePathSegments: ${path}`, e)
+          return path // 返回原始路径以避免程序崩溃
+        }
+      } else {
         const parts = path.split("#")
         const pathAndSearch = parts[0]
         hash = parts[1] ? "#" + parts[1] : ""
@@ -49,64 +49,37 @@ export function removeDuplicatePathSegments(path: string): string {
       pathname = path
     }
 
+    // 使用与UnifiedContentCacheManager.normalizeKeyForComparison一致的逻辑
     const segments = pathname.split("/").filter((segment) => segment.length > 0)
     const deduplicatedSegments: string[] = []
+    const seen = new Set<string>()
 
-    for (let i = 0; i < segments.length; i++) {
-      const segment = segments[i]
-
+    for (const segment of segments) {
       // 检查连续重复
       const isConsecutiveDuplicate =
         deduplicatedSegments.length > 0 &&
         deduplicatedSegments[deduplicatedSegments.length - 1] === segment
 
-      if (!isConsecutiveDuplicate) {
-        // 检查A/B/A模式和其他重复模式
-        const isDuplicatePattern = isDuplicatePathPattern(deduplicatedSegments, segment)
+      // 检查是否已经存在（避免A/B/A模式）
+      const isDuplicateInPath = seen.has(segment)
 
-        if (!isDuplicatePattern) {
-          deduplicatedSegments.push(segment)
-        }
+      if (!isConsecutiveDuplicate && !isDuplicateInPath) {
+        deduplicatedSegments.push(segment)
+        seen.add(segment)
       }
     }
 
     const cleanedPath = deduplicatedSegments.length > 0 ? "/" + deduplicatedSegments.join("/") : "/"
-    return cleanedPath + search + hash
+    const result = cleanedPath + search + hash
+
+    return result
   } catch (error) {
     console.warn("Failed to clean duplicate path segments:", error)
     return path
   }
 }
 
-/**
- * 检查是否为重复模式
- * @param existingSegments 已存在的路径段
- * @param newSegment 新的路径段
- * @returns 是否为重复模式
- */
-export function isDuplicatePathPattern(existingSegments: string[], newSegment: string): boolean {
-  if (existingSegments.length < 1) {
-    return false
-  }
 
-  // 检查是否形成重复序列模式（如 A/B/A/B）
-  const segmentCount = existingSegments.length
-  if (segmentCount >= 2) {
-    // 检查A/B/A模式
-    if (segmentCount >= 2 && existingSegments[segmentCount - 2] === newSegment) {
-      return true
-    }
-
-    // 检查更复杂的重复模式
-    for (let i = 0; i < segmentCount; i++) {
-      if (existingSegments[i] === newSegment) {
-        return true
-      }
-    }
-  }
-
-  return false
-}
 
 /**
  * 检查是否为内部链接
@@ -122,63 +95,6 @@ export function isInternalLink(href: string): boolean {
   }
 }
 
-/**
- * 检查是否为有效的内部链接
- * @param href 链接地址
- * @returns 是否为有效的内部链接
- */
-export function isValidInternalLink(href: string): boolean {
-  if (!isInternalLink(href)) {
-    return false
-  }
-
-  try {
-    const url = createUrl(href)
-    // 排除特殊协议和锚点链接
-    if (url.protocol !== "http:" && url.protocol !== "https:") {
-      return false
-    }
-
-    // 排除纯锚点链接（同页面内跳转）
-    if (url.pathname === window.location.pathname && url.hash) {
-      return false
-    }
-
-    return true
-  } catch {
-    return false
-  }
-}
-
-/**
- * 检查链接是否应该被预加载
- * @param href 链接地址
- * @returns 是否应该预加载
- */
-export function shouldPreload(href: string): boolean {
-  if (!isValidInternalLink(href)) {
-    return false
-  }
-
-  try {
-    const url = createUrl(href)
-
-    // 排除下载链接
-    const downloadExtensions = [".pdf", ".zip", ".rar", ".7z", ".tar", ".gz"]
-    if (downloadExtensions.some((ext) => url.pathname.toLowerCase().endsWith(ext))) {
-      return false
-    }
-
-    // 排除API端点
-    if (url.pathname.startsWith("/api/") || url.pathname.startsWith("/admin/")) {
-      return false
-    }
-
-    return true
-  } catch {
-    return false
-  }
-}
 
 /**
  * 创建URL对象，带缓存优化
@@ -186,146 +102,28 @@ export function shouldPreload(href: string): boolean {
  * @returns URL对象
  */
 export function createUrl(href: string): URL {
-  const cacheKey = UnifiedCacheKeyGenerator.generateLinkKey(href)
-  const cached = urlCache.get(cacheKey)
-  if (cached) {
-    // 尝试从缓存的字符串重建URL对象
-    // 在这里添加一个验证，确保缓存的值是有效的URL
-    if (validateUrl(cached as string)) {
-      return new URL(cached as string)
-    } else {
-      // 如果缓存的值无效，则清除该缓存项并继续使用原始href
-      console.warn(`Cached URL for ${href} is invalid: ${cached}. Clearing cache and re-creating.`)
-      urlCache.delete(cacheKey)
-    }
+  // 使用简化URL处理器进行URL验证和处理
+  const urlResult = urlHandler.processURL(href, {
+    cacheType: 'link',
+    validate: true
+  })
+
+  if (!urlResult.isValid) {
+    throw new Error(`Invalid URL string provided to createUrl: ${href} - ${urlResult.error}`)
   }
 
-  // 在构造URL之前验证href的有效性
-  if (!validateUrl(href)) {
-    throw new Error(`Invalid URL string provided to createUrl: ${href}`)
-  }
-
-  const url = new URL(href)
-  // 缓存URL的字符串表示
-  urlCache.set(cacheKey, url.toString())
-  return url
+  return urlResult.processed
 }
 
-/**
- * 获取用于内容缓存的URL（移除hash并去重路径）
- * @param href URL字符串
- * @returns 用于缓存的URL对象
- */
-export function getContentUrl(href: string): URL {
-  const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(href)
-  const cached = urlCache.get(cacheKey)
-  if (cached) {
-    // 尝试从缓存的字符串重建URL对象
-    // 在这里添加一个验证，确保缓存的值是有效的URL
-    if (validateUrl(cached as string)) {
-      return new URL(cached as string)
-    } else {
-      // 如果缓存的值无效，则清除该缓存项并继续使用原始href
-      console.warn(`Cached content URL for ${href} is invalid: ${cached}. Clearing cache and re-processing.`)
-      urlCache.delete(cacheKey)
-    }
-  }
-
-  // 在构造URL之前验证href的有效性
-  if (!validateUrl(href)) {
-    throw new Error(`Invalid URL string provided to getContentUrl: ${href}`)
-  }
-
-  const url = createUrl(href)
-  const processedUrl = processUrlPath(url)
-
-  // 缓存处理后的URL字符串
-  urlCache.set(cacheKey, processedUrl.toString())
-  return processedUrl
-}
-
-/**
- * 处理URL路径，去除重复段
- * @param url 原始URL对象
- * @returns 处理后的URL对象
- */
-function processUrlPath(url: URL): URL {
-  // 使用统一的路径去重函数
-  const cleanedPath = removeDuplicatePathSegments(url.pathname)
-
-  // 创建新的URL对象
-  const processedUrl = new URL(url.toString())
-  processedUrl.pathname = cleanedPath
-  processedUrl.hash = "" // 移除hash用于缓存
-
-  return processedUrl
-}
 
 /**
  * 清空URL缓存
  */
 export function clearUrlCache(): void {
   // 清空所有以content_前缀的缓存项（URL相关）
-  const stats = urlCache.getStats()
-  const urlKeys = stats.keys.filter((key) => key.startsWith("content_"))
-  urlKeys.forEach((key) => urlCache.delete(key))
-}
-
-/**
- * 获取URL缓存统计信息
- */
-export function getUrlCacheStats(): any {
-  const stats = urlCache.getStats()
-  // 过滤出URL相关的统计信息
-  const urlKeys = stats.keys.filter((key) => key.startsWith("content_"))
-  return {
-    ...stats,
-    size: urlKeys.length,
-    keys: urlKeys,
-    description: "URL Cache Statistics (filtered from global cache)",
-  }
-}
-
-/**
- * 验证URL是否有效
- * @param url URL字符串
- * @returns 是否为有效URL
- */
-export function validateUrl(url: string): boolean {
-  try {
-    new URL(url)
-    return true
-  } catch {
-    return false
-  }
-}
-
-/**
- * 安全地创建URL对象
- * @param href URL字符串
- * @returns URL对象或null（如果无效）
- */
-export function safeCreateUrl(href: string): URL | null {
-  try {
-    return createUrl(href)
-  } catch (error) {
-    console.warn(`Failed to create URL: ${href}`, error)
-    return null
-  }
-}
-
-/**
- * 安全地获取内容URL
- * @param href URL字符串
- * @returns URL对象或null（如果无效）
- */
-export function getContentUrlSafe(href: string): URL | null {
-  try {
-    return getContentUrl(href)
-  } catch (error) {
-    console.warn(`Failed to process content URL: ${href}`, error)
-    return null
-  }
+  const stats = urlCache.instance.getStats()
+  const urlKeys = stats.keys.filter((key: string) => key.startsWith("content_"))
+  urlKeys.forEach((key: string) => urlCache.instance.delete(key))
 }
 
 export const QUARTZ = "quartz"

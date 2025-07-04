@@ -1,7 +1,6 @@
 import { computePosition, flip, inline, shift } from "@floating-ui/dom"
-import { getContentUrl } from "../../../util/path"
+import { urlHandler } from "../utils/simplified-url-handler"
 import { HTMLContentProcessor, PreloadManager, FailedLinksManager, PopoverConfig } from "./index"
-import { UnifiedCacheKeyGenerator } from "../cache/unified-cache"
 import { globalUnifiedContentCache } from "../managers/index"
 
 /**
@@ -90,18 +89,28 @@ export async function mouseEnterHandler(
     }
   }
 
-  // 统一使用path.ts中的URL处理函数，避免重复处理逻辑
+  // 使用简化URL处理器，统一URL处理逻辑
   const originalUrl = new URL(link.href)
   const originalHash = decodeURIComponent(originalUrl.hash)
 
-  // 使用getContentUrl确保URL处理一致性，但保留原始URL用于hash处理
-  const contentUrl = getContentUrl(link.href)
+  // 使用简化URL处理器确保URL处理一致性
+  const urlResult = urlHandler.processURL(link.href, {
+    cacheType: 'content',
+    validate: true,
+    removeHash: true,
+    normalizePath: true
+  })
+
+  if (!urlResult.isValid) {
+    console.warn(`[Popover] Invalid URL: ${link.href} - ${urlResult.error}`)
+    return
+  }
+
+  const { processed: contentUrl, cacheKey } = urlResult
   const contentUrlString = contentUrl.toString()
-  // 使用统一的缓存键生成器，确保与SPA系统一致
-  const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(contentUrlString)
 
   // 调试日志：记录URL处理过程
-  console.debug("[Popover] URL processing:", {
+  console.log("[Popover Debug] URL processing:", {
     originalHref: link.href,
     originalHash: originalHash,
     contentUrl: contentUrlString,

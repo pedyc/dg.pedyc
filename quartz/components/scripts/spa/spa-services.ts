@@ -3,9 +3,9 @@
  * 提供统一的内容获取、页面更新等核心服务
  */
 
-import { getContentUrl, normalizeRelativeURLs, getFullSlug } from "../../../util/path"
+import { normalizeRelativeURLs, getFullSlug } from "../../../util/path"
+import { urlHandler } from "../utils/simplified-url-handler"
 import { fetchCanonical } from "../utils/util"
-import { UnifiedCacheKeyGenerator } from "../cache/unified-cache"
 import { globalUnifiedContentCache, CacheLayer } from "../managers/index"
 import { getDOMParser, scrollToTarget, isSamePage, micromorph } from "./spa-utils"
 import { HTMLContentProcessor } from "../popover/html-processor"
@@ -20,8 +20,20 @@ export async function getContentForNavigation(
   url: URL,
   preferredLayer: CacheLayer = CacheLayer.MEMORY,
 ): Promise<string | null> {
-  const processedUrl = getContentUrl(url.toString())
-  const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(processedUrl.toString())
+  // 使用简化URL处理器
+  const urlResult = urlHandler.processURL(url.toString(), {
+    cacheType: 'content',
+    validate: true,
+    removeHash: true,
+    normalizePath: true
+  })
+
+  if (!urlResult.isValid) {
+    console.warn(`[SPA] Invalid URL: ${url.toString()} - ${urlResult.error}`)
+    return null
+  }
+
+  const { processed: processedUrl, cacheKey } = urlResult
 
   // 尝试从统一缓存获取内容（检查所有缓存层）
   let contents = globalUnifiedContentCache.instance.get(cacheKey)
@@ -46,6 +58,7 @@ export async function getContentForNavigation(
 
     // 使用统一缓存管理器存储内容，自动避免重复存储
     try {
+      console.log(`[SPA DEBUG] 尝试将内容存入缓存，键为: ${cacheKey}`)
       globalUnifiedContentCache.instance.set(cacheKey, contents, preferredLayer)
     } catch (e) {
       console.warn("Failed to cache content:", e)
@@ -73,7 +86,8 @@ export function updatePageContent(
   announcer: HTMLElement,
 ): void {
   const parser = getDOMParser()
-  const processedUrl = getContentUrl(url.toString())
+  const urlResult = urlHandler.processURL(url.toString(), { validate: true })
+  const processedUrl = urlResult.isValid ? urlResult.processed : url
 
   // 检查是否为重构的SPA内容（只包含quartz-body内容）
   const isReconstructedContent = contents.includes("<!-- SPA_RECONSTRUCTED_CONTENT -->")
@@ -109,7 +123,9 @@ function updateQuartzBodyContent(
 
   if (!newQuartzBody || !currentQuartzBody) {
     console.warn("[SPA Debug] quartz-body not found, falling back to full page update")
-    updateFullPageContent(contents, url, isBack, announcer, parser, getContentUrl(url.toString()))
+    const fallbackUrlResult = urlHandler.processURL(url.toString(), { validate: true })
+    const fallbackProcessedUrl = fallbackUrlResult.isValid ? fallbackUrlResult.processed : url
+    updateFullPageContent(contents, url, isBack, announcer, parser, fallbackProcessedUrl)
     return
   }
 

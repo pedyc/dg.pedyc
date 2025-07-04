@@ -1,10 +1,9 @@
-import { getContentUrl } from "../../../util/path"
+import { urlHandler } from "../utils/simplified-url-handler"
 import { FailedLinksManager } from "./failed-links-manager"
 import { PreloadManager } from "./preload-manager"
 import { PopoverErrorHandler } from "./error-handler"
 import { ICleanupManager } from "../managers/CleanupManager"
 import { globalResourceManager, globalUnifiedContentCache } from "../managers/index"
-import { UnifiedCacheKeyGenerator } from "../cache/unified-cache"
 
 import { PopoverConfig } from "./config"
 
@@ -28,7 +27,7 @@ export class ViewportPreloadManager implements ICleanupManager {
   /**
    * 私有构造函数，防止外部直接实例化
    */
-  private constructor() {}
+  private constructor() { }
 
   /**
    * 获取单例实例
@@ -64,7 +63,7 @@ export class ViewportPreloadManager implements ICleanupManager {
       return
     }
 
-    this.observer = globalResourceManager.registerIntersectionObserver(
+    this.observer = globalResourceManager.instance.registerIntersectionObserver(
       new IntersectionObserver(
         async (entries, obs) => {
           const visibleLinks = entries
@@ -150,8 +149,21 @@ export class ViewportPreloadManager implements ICleanupManager {
     const checkPromises = linksToProcess.map(async (link) => {
       let cacheKey: string | undefined
       try {
-        const contentUrl = getContentUrl(link.href)
-        cacheKey = UnifiedCacheKeyGenerator.generateContentKey(contentUrl.toString())
+        // 使用简化URL处理器
+        const urlResult = urlHandler.processURL(link.href, {
+          cacheType: 'content',
+          validate: true,
+          removeHash: true,
+          normalizePath: true
+        })
+
+        if (!urlResult.isValid) {
+          console.warn(`[ViewportPreload] Invalid URL: ${link.href} - ${urlResult.error}`)
+          return null
+        }
+
+        const { processed: contentUrl, cacheKey: generatedCacheKey } = urlResult
+        cacheKey = generatedCacheKey
 
         // 避免重复检查
         if (

@@ -1,9 +1,6 @@
 import { initializeViewportPreloading } from "./viewport-preload-manager"
-import { clearUrlCache } from "../../../util/path"
 import { globalResourceManager } from "../managers/index"
 
-// 清理URL处理器缓存以确保修复后的逻辑生效
-clearUrlCache()
 
 // 外部依赖（需要从主文件导入）
 declare function mouseEnterHandler(
@@ -43,26 +40,76 @@ export class LinkEventManager {
 
       // 使用ResourceManager统一管理事件监听器
       if (mouseEnterFn) {
-        globalResourceManager.addEventListener(link, "mouseenter", mouseEnterFn as EventListener)
+        globalResourceManager.instance.addEventListener(link, "mouseenter", mouseEnterFn as EventListener)
+        // 添加触摸事件支持
+        globalResourceManager.instance.addEventListener(
+          link,
+          "touchstart",
+          mouseEnterFn as EventListener,
+          { passive: true },
+        )
+        // 添加焦点事件支持（键盘导航）
+        globalResourceManager.instance.addEventListener(
+          link,
+          "focus",
+          mouseEnterFn as EventListener,
+        )
       } else if (typeof mouseEnterHandler !== "undefined") {
-        globalResourceManager.addEventListener(
+        globalResourceManager.instance.addEventListener(
           link,
           "mouseenter",
+          mouseEnterHandler as unknown as EventListener,
+        )
+        // 添加触摸事件支持
+        globalResourceManager.instance.addEventListener(
+          link,
+          "touchstart",
+          mouseEnterHandler as unknown as EventListener,
+          { passive: true },
+        )
+        // 添加焦点事件支持（键盘导航）
+        globalResourceManager.instance.addEventListener(
+          link,
+          "focus",
           mouseEnterHandler as unknown as EventListener,
         )
       }
 
       if (clearPopoverFn) {
-        globalResourceManager.addEventListener(link, "mouseleave", clearPopoverFn as EventListener)
+        globalResourceManager.instance.addEventListener(link, "mouseleave", clearPopoverFn as EventListener)
+        // 添加触摸结束事件支持
+        globalResourceManager.instance.addEventListener(
+          link,
+          "touchend",
+          clearPopoverFn as EventListener,
+          { passive: true },
+        )
+        globalResourceManager.instance.addEventListener(
+          link,
+          "blur",
+          clearPopoverFn as EventListener,
+        )
       } else if (typeof clearActivePopover !== "undefined") {
-        globalResourceManager.addEventListener(
+        globalResourceManager.instance.addEventListener(
           link,
           "mouseleave",
           clearActivePopover as EventListener,
         )
+        // 添加触摸结束事件支持
+        globalResourceManager.instance.addEventListener(
+          link,
+          "touchend",
+          clearActivePopover as EventListener,
+          { passive: true },
+        )
+        globalResourceManager.instance.addEventListener(
+          link,
+          "blur",
+          clearActivePopover as EventListener,
+        )
       }
 
-      globalResourceManager.addEventListener(
+      globalResourceManager.instance.addEventListener(
         link,
         "click",
         this.wikilinkClickHandler as unknown as EventListener,

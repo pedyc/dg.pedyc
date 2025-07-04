@@ -1,10 +1,8 @@
-import { getFullSlug, clearUrlCache, RelativeURL } from "../../util/path"
+import { getFullSlug, RelativeURL } from "../../util/path"
 import { globalResourceManager } from "./managers/index"
 import { createRouter, initializeRouteAnnouncer } from "./spa/spa-core"
 import { notifyNav } from "./spa/spa-utils"
 
-// 清理URL处理器缓存以确保修复后的逻辑生效
-clearUrlCache()
 
 /**
  * 全局清理函数实现
@@ -12,7 +10,7 @@ clearUrlCache()
  * @param fn 清理函数
  */
 window.addCleanup = (fn: (...args: any[]) => void) => {
-  globalResourceManager.addCleanupTask(fn)
+  globalResourceManager.instance.addCleanupTask(fn)
 }
 
 // 创建路由器实例

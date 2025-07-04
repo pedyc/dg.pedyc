@@ -231,7 +231,7 @@ export class FailedLinksManager implements ICleanupManager {
           clearTimeout(this.batchSaveTimer)
         }
 
-        this.batchSaveTimer = globalResourceManager.setTimeout(
+        this.batchSaveTimer = globalResourceManager.instance.setTimeout(
           () => this.batchSaveFailedLinks(),
           PopoverConfig.BATCH_SAVE_DELAY,
         )

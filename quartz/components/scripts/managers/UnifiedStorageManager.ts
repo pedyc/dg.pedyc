@@ -8,6 +8,20 @@ import {
 } from "../cache/unified-cache"
 
 /**
+ * 存储配置接口
+ */
+export interface StorageConfig {
+  /** 最大存储大小（字节） */
+  maxSize?: number
+  /** 内存阈值（0-1） */
+  memoryThreshold?: number
+  /** 是否启用自动清理 */
+  autoCleanup?: boolean
+  /** 清理策略 */
+  cleanupStrategy?: 'lru' | 'fifo' | 'size'
+}
+
+/**
  * 存储配额信息接口
  */
 interface StorageQuota {

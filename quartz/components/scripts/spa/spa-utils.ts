@@ -1,6 +1,7 @@
 import micromorph from "micromorph"
-import { FullSlug, isInternalLink } from "../../../util/path"
+import { FullSlug } from "../../../util/path"
 import { globalResourceManager } from "../managers/index"
+import { isInternalLink } from "../utils/simplified-url-handler"
 
 export { micromorph }
 
@@ -93,7 +94,7 @@ export function startLoading() {
   document.body.appendChild(loadingBar)
 
   // 使用 globalResourceManager 管理定时器
-  globalResourceManager.setTimeout(() => {
+  globalResourceManager.instance.setTimeout(() => {
     if (loadingBar) {
       loadingBar.style.width = "80%"
     }

@@ -2,12 +2,12 @@
  * 预加载管理器模块
  */
 import { OptimizedCacheManager } from "../managers/OptimizedCacheManager"
-import { UnifiedCacheKeyGenerator, getCacheConfig } from "../cache/unified-cache"
+import { getCacheConfig } from "../cache/unified-cache"
 import { ICleanupManager } from "../managers/CleanupManager"
 import { globalUnifiedContentCache, CacheLayer } from "../managers/index"
 import { PopoverConfig } from "./config"
 import { PopoverErrorHandler } from "./error-handler"
-import { getContentUrl } from "../../../util/path"
+import { urlHandler } from "../utils/simplified-url-handler"
 import { FailedLinksManager } from "./failed-links-manager"
 import { HTMLContentProcessor } from "./html-processor"
 
@@ -46,7 +46,7 @@ export class PreloadManager implements ICleanupManager {
   /**
    * 私有构造函数，防止外部直接实例化
    */
-  private constructor() {}
+  private constructor() { }
 
   /**
    * 获取单例实例
@@ -66,9 +66,20 @@ export class PreloadManager implements ICleanupManager {
    * @returns Promise<void>
    */
   async preloadLinkContent(href: string, priority: number = 0): Promise<void> {
-    // 使用统一的URL处理函数确保缓存键一致性
-    const contentUrl = getContentUrl(href)
-    const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(contentUrl.toString())
+    // 使用简化URL处理器确保缓存键一致性
+    const urlResult = urlHandler.processURL(href, {
+      cacheType: 'content',
+      validate: true,
+      removeHash: true,
+      normalizePath: true
+    })
+
+    if (!urlResult.isValid) {
+      console.warn(`[PreloadManager] Invalid URL: ${href} - ${urlResult.error}`)
+      return
+    }
+
+    const { processed: contentUrl, cacheKey } = urlResult
 
     console.debug(`[PreloadManager Debug] Input href: ${href}`)
     console.debug(`[PreloadManager Debug] Processed contentUrl: ${contentUrl.toString()}`)
@@ -117,17 +128,26 @@ export class PreloadManager implements ICleanupManager {
    * @param priority 优先级
    * @returns Promise<boolean> 是否成功预加载
    */
-  private async executePreload(href: string, priority: number): Promise<boolean> {
-    const contentUrl = getContentUrl(href)
-    const cacheKey = UnifiedCacheKeyGenerator.generateContentKey(contentUrl.toString())
-    const validityCacheKey = UnifiedCacheKeyGenerator.generateLinkKey(
-      contentUrl.toString(),
-      "validity",
-    )
+  private async executePreload(href: string, _priority: number): Promise<boolean> {
+    // 使用简化URL处理器
+    const urlResult = urlHandler.processURL(href, {
+      cacheType: 'content',
+      validate: true,
+      removeHash: true,
+      normalizePath: true
+    })
+
+    if (!urlResult.isValid) {
+      console.warn(`[PreloadManager] Invalid URL: ${href} - ${urlResult.error}`)
+      return false
+    }
+
+    const { processed: contentUrl, cacheKey } = urlResult
+    const validityCacheKey = urlHandler.getCacheKey(contentUrl.toString(), 'link')
 
     // 首先检查统一缓存中是否已经存在内容
     if (globalUnifiedContentCache.instance.has(cacheKey)) {
-      console.debug(
+      console.log(
         `[PreloadManager Debug] Content already exists in unified cache, skipping HTTP request: ${cacheKey}`,
       )
       return true
@@ -320,7 +340,7 @@ export class PreloadManager implements ICleanupManager {
    */
   static async preloadLinkContent(href: string, priority: number = 0): Promise<void> {
     const instance = PreloadManager.getInstance()
-    return instance.preloadLinkContent(href)
+    return instance.preloadLinkContent(href, priority)
   }
 }
 

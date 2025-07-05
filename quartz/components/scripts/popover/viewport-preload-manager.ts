@@ -5,7 +5,7 @@ import { PopoverErrorHandler } from "./error-handler"
 import { ICleanupManager } from "../managers/CleanupManager"
 import { globalResourceManager, globalUnifiedContentCache } from "../managers/index"
 
-import { PopoverConfig } from "./config"
+import { PopoverConfig } from "./"
 
 // 全局状态
 const linkCheckInProgress = new Set<string>()

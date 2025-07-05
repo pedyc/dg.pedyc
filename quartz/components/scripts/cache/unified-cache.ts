@@ -159,18 +159,24 @@ export const UNIFIED_CACHE_CONFIG: Record<string, CacheConfig> = {
 export const CACHE_LAYER_CONFIG = {
   /** 内存层配置 - 热数据 */
   MEMORY: {
-    capacityRatio: 0.7, // 70%的容量用于内存缓存
+    capacityRatio: 0.6, // 70%的容量用于内存缓存
     maxSizeKB: 500,
-    priority: 2,
+    priority: 3,
     description: "内存层 - 最快访问，存储热数据",
   },
 
-  /** 会话层配置 - 持久化数据 */
   SESSION: {
-    capacityRatio: 0.3, // 30%的容量用于会话存储
+    capacityRatio: 0.2, // 30%的容量用于会话存储
     maxSizeKB: 1000,
-    priority: 1,
+    priority: 2,
     description: "会话层 - 页面刷新保留，存储重要数据",
+  },
+
+  LOCAL: {
+    capacityRatio: 0.2, // 30%的容量用于会话存储
+    maxSizeKB: 1000,
+    priority: 2,
+    description: "本地层 - 长期存储，存储长期数据",
   },
 } as const
 

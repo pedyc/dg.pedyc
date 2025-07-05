@@ -5,7 +5,7 @@
  * 使用UnifiedStorageManager统一管理存储
  * 应用统一缓存配置和缓存键生成逻辑
  */
-import { PopoverConfig } from "./config"
+import { PopoverConfig } from "./index"
 import { PopoverErrorHandler } from "./error-handler"
 import { UnifiedStorageManager } from "../managers/UnifiedStorageManager"
 import { globalResourceManager } from "../managers/index"

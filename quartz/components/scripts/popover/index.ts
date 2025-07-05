@@ -1,7 +1,7 @@
 /**
  * Popover模块统一导出
  */
-export { PopoverConfig } from "./config"
+export { PopoverConfig } from "./popover-config"
 export { PopoverError, PopoverErrorHandler } from "./error-handler"
 
 // URL和链接处理
@@ -32,9 +32,11 @@ export { LinkEventManager, setupLinkEventListeners } from "./link-event-manager"
 import { GlobalCleanupManager } from "../managers/CleanupManager"
 import { ViewportPreloadManager } from "./viewport-preload-manager"
 import { PreloadManager } from "./preload-manager"
+import { FailedLinksManager } from "./failed-links-manager"
 
 export { mouseEnterHandler, clearActivePopover, clearAllPopovers } from "./popover-handler"
 // 注册实现了ICleanupManager接口的管理器
 // 注意：preloadedCache已被统一缓存管理器替代，无需单独注册
 GlobalCleanupManager.register(ViewportPreloadManager)
 GlobalCleanupManager.register(PreloadManager)
+GlobalCleanupManager.register(FailedLinksManager)

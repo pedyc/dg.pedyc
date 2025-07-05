@@ -9,6 +9,7 @@ import { ResourceManager } from "./ResourceManager"
 import { UnifiedStorageManager } from "./UnifiedStorageManager"
 import { UnifiedContentCacheManager } from "./UnifiedContentCacheManager"
 import { CleanupManager } from "./CleanupManager"
+import { FailedLinksManager } from "../popover/failed-links-manager"
 
 
 /**
@@ -17,24 +18,26 @@ import { CleanupManager } from "./CleanupManager"
 class GlobalManagerInstances {
   /** 全局缓存管理器实例 */
   private _globalCacheManager: OptimizedCacheManager<any> | null = null
-  
+
   /** URL缓存管理器实例 */
   private _urlCacheManager: OptimizedCacheManager<boolean> | null = null
-  
+
+  private _failedLinksManager: FailedLinksManager | null = null
+
   /** 全局资源管理器实例 */
   private _globalResourceManager: ResourceManager | null = null
-  
+
   /** 全局存储管理器实例 */
   private _globalStorageManager: UnifiedStorageManager | null = null
-  
+
   /** 全局统一内容缓存管理器实例 */
   private _globalUnifiedContentCache: UnifiedContentCacheManager | null = null
-  
+
   /** 全局清理管理器实例 */
   private _globalCleanupManager: CleanupManager | null = null
-  
 
-  
+
+
   /** 初始化状态 */
   private _initialized = false
 
@@ -62,6 +65,19 @@ class GlobalManagerInstances {
       console.log(`[GlobalManagers] Initialized urlCacheManager`)
     }
     return this._urlCacheManager
+  }
+
+  /**
+ * 获取失败链接管理器实例（单例）
+ */
+  get failedLinksManager(): FailedLinksManager {
+    if (!this._failedLinksManager) {
+      this._failedLinksManager = ManagerFactory.createCacheManager<string>(
+        PREDEFINED_MANAGER_CONFIGS.failedLinksManager
+      )
+      console.log(`[GlobalManagers] Initialized failedLinksManager`)
+    }
+    return this._failedLinksManager
   }
 
   /**
@@ -128,21 +144,22 @@ class GlobalManagerInstances {
     }
 
     console.log(`[GlobalManagers] Initializing global manager instances...`)
-    
+
     // 总是初始化清理管理器和主要的内容缓存
     this.globalCleanupManager
     this.globalUnifiedContentCache
-    
+
     if (preloadAll) {
       // 预加载所有管理器实例
       this.globalCacheManager
       this.urlCacheManager
+      this.failedLinksManager
       this.globalResourceManager
       this.globalStorageManager
 
       console.log(`[GlobalManagers] All manager instances preloaded`)
     }
-    
+
     this._initialized = true
     console.log(`[GlobalManagers] Global manager instances initialized`)
   }
@@ -152,10 +169,7 @@ class GlobalManagerInstances {
    */
   cleanup(): void {
     console.log(`[GlobalManagers] Cleaning up all global manager instances...`)
-    
-    // 使用工厂进行统一清理
     ManagerFactory.cleanup()
-    
     console.log(`[GlobalManagers] All global manager instances cleaned up`)
   }
 
@@ -164,22 +178,17 @@ class GlobalManagerInstances {
    */
   destroy(): void {
     console.log(`[GlobalManagers] Destroying all global manager instances...`)
-    
-    this.cleanup()
-    
+    ManagerFactory.destroy()
     // 重置所有实例
     this._globalCacheManager = null
     this._urlCacheManager = null
+    this._failedLinksManager = null
     this._globalResourceManager = null
     this._globalStorageManager = null
     this._globalUnifiedContentCache = null
     this._globalCleanupManager = null
 
     this._initialized = false
-    
-    // 销毁工厂中的所有实例
-    ManagerFactory.destroy()
-    
     console.log(`[GlobalManagers] All global manager instances destroyed`)
   }
 
@@ -192,7 +201,7 @@ class GlobalManagerInstances {
     factoryStats: ReturnType<typeof ManagerFactory.getStats>
   } {
     const activeInstances: string[] = []
-    
+
     if (this._globalCacheManager) activeInstances.push('globalCacheManager')
     if (this._urlCacheManager) activeInstances.push('urlCacheManager')
     if (this._globalResourceManager) activeInstances.push('globalResourceManager')
@@ -200,7 +209,7 @@ class GlobalManagerInstances {
     if (this._globalUnifiedContentCache) activeInstances.push('globalUnifiedContentCache')
     if (this._globalCleanupManager) activeInstances.push('globalCleanupManager')
     // if (this._globalPreloadManager) activeInstances.push('globalPreloadManager')
-    
+
     return {
       initialized: this._initialized,
       activeInstances,
@@ -264,35 +273,35 @@ export const GlobalManagerController = {
   initialize: (preloadAll: boolean = false) => {
     globalManagerInstances.initialize(preloadAll)
   },
-  
+
   /**
    * 清理全局管理器系统
    */
   cleanup: () => {
     globalManagerInstances.cleanup()
   },
-  
+
   /**
    * 销毁全局管理器系统
    */
   destroy: () => {
     globalManagerInstances.destroy()
   },
-  
+
   /**
    * 获取全局管理器统计信息
    */
   getStats: () => {
     return globalManagerInstances.getStats()
   },
-  
+
   /**
    * 获取指定类型的管理器实例
    */
   getInstance: (type: ManagerType, identifier: string = 'default') => {
     return ManagerFactory.getInstance(type, identifier)
   },
-  
+
   /**
    * 检查管理器实例是否存在
    */

@@ -1,4 +1,4 @@
-import { PopoverConfig } from "./config"
+import { PopoverConfig } from "./popover-config"
 import { PopoverError } from "./error-handler"
 import { normalizeRelativeURLs, removeDuplicatePathSegments } from "../../../util/path"
 import { updatePageHead } from "../utils/html-utils"

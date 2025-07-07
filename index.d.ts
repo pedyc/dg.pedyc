@@ -9,6 +9,8 @@ interface CustomEventMap {
   nav: CustomEvent<{ url: FullSlug }>
   themechange: CustomEvent<{ theme: "light" | "dark" }>
   readermodechange: CustomEvent<{ mode: "on" | "off" }>
+  "reinit-explorer": CustomEvent<{ url: FullSlug }>
+  "reinit-graph": CustomEvent<{ url: FullSlug }>
 }
 
 type ContentIndex = Record<FullSlug, ContentDetails>

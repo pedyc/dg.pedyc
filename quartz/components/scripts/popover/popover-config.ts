@@ -1,6 +1,6 @@
+import { CacheKeyFactory } from "../cache"
 import {
   getCacheConfig,
-  UnifiedCacheKeyGenerator,
   CACHE_PERFORMANCE_CONFIG,
   validateUnifiedCacheConfig,
   calculateLayerCapacity,
@@ -32,7 +32,7 @@ export class PopoverConfig {
   static readonly LINK_VALIDATION_TIMEOUT = 3000 // 链接验证超时时间（毫秒）
 
   // 存储配置 - 使用统一键生成器
-  static readonly STORAGE_KEY = UnifiedCacheKeyGenerator.generateSystemKey("failed-links")
+  static readonly STORAGE_KEY = CacheKeyFactory.generateSystemKey("failed-links")
   static readonly MAX_FAILED_LINKS = PopoverConfig._failedLinksCacheConfig.capacity
   static readonly BATCH_SAVE_DELAY = 1000
 

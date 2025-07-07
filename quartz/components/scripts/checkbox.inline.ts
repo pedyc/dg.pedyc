@@ -1,4 +1,4 @@
-import { UnifiedCacheKeyGenerator } from "./cache/unified-cache"
+import { CacheKeyFactory } from "./cache/cache-key-utils"
 
 document.addEventListener("nav", () => {
   const checkboxes = document.querySelectorAll(
@@ -6,7 +6,7 @@ document.addEventListener("nav", () => {
   ) as NodeListOf<HTMLInputElement>
   checkboxes.forEach((el) => {
     const elId = el.id
-    const cacheKey = UnifiedCacheKeyGenerator.generateUserKey(elId, "checkbox_state")
+    const cacheKey = CacheKeyFactory.generateUserKey(elId, "checkbox_state")
     const switchState = (e: Event) => {
       const newCheckboxState = (e.target as HTMLInputElement)?.checked ? "true" : "false"
       localStorage.setItem(cacheKey, newCheckboxState)

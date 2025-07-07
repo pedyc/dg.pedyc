@@ -174,18 +174,19 @@ export async function mouseEnterHandler(
       console.log(`[Popover Debug] Popover content for ${cacheKey} loaded from: HTTP Request`)
       try {
         // 使用 contentUrlString 进行预加载，并设置最高优先级
-        await PreloadManager.getInstance().preloadLinkContent(contentUrlString, 1000) // 1000 为最高优先级，可根据实际情况调整
+        const newlyCachedData = await PreloadManager.getInstance().preloadLinkContent(
+          contentUrlString,
+          1000,
+        ) // 1000 为最高优先级
 
-        // 再次尝试从统一缓存获取（PreloadManager应该已经存储了内容）
-        const newlyCachedData = globalUnifiedContentCache.instance.get(cacheKey)
-        console.debug("[Popover Debug] After preload, cached data:", {
+        console.debug("[Popover Debug] After preload:", {
+          cacheKey,
           found: !!newlyCachedData,
           dataType: typeof newlyCachedData,
           dataLength: typeof newlyCachedData === "string" ? newlyCachedData.length : "N/A",
         })
 
         if (newlyCachedData) {
-          // 包装成 CachedItem 格式
           const newlyCachedItem = {
             data: newlyCachedData,
             timestamp: Date.now(),
@@ -193,10 +194,6 @@ export async function mouseEnterHandler(
             size: newlyCachedData.length,
             type: "html" as const,
           }
-          console.debug(
-            "[Popover Debug] About to render newly cached content with item:",
-            newlyCachedItem,
-          )
           HTMLContentProcessor.renderPopoverContent(popoverInner, newlyCachedItem)
         } else {
           console.warn("[Popover Debug] No content found after preload, rendering not found")

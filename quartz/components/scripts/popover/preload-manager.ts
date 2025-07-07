@@ -17,7 +17,7 @@ const linkValidityCache = urlCacheManager.instance
 interface PreloadQueueItem {
   href: string
   priority: number // 预加载优先级，数值越大优先级越高
-  resolve: () => void
+  resolve: (value: string | null | PromiseLike<string | null>) => void
   reject: (reason?: any) => void // 添加 reject 方法用于处理预加载失败
 }
 
@@ -58,7 +58,7 @@ export class PreloadManager implements ICleanupManager {
    * @param priority 预加载优先级，数值越大优先级越高
    * @returns Promise<void>
    */
-  async preloadLinkContent(href: string, priority: number = 0): Promise<void> {
+  async preloadLinkContent(href: string, priority: number = 0): Promise<string | null> {
     // 使用简化URL处理器确保缓存键一致性
     const urlResult = urlHandler.processURL(href, {
       cacheType: "content",
@@ -69,7 +69,7 @@ export class PreloadManager implements ICleanupManager {
 
     if (!urlResult.isValid) {
       console.warn(`[PreloadManager] Invalid URL: ${href} - ${urlResult.error}`)
-      return
+      return null
     }
 
     const { processed: contentUrl, cacheKey } = urlResult
@@ -96,14 +96,14 @@ export class PreloadManager implements ICleanupManager {
       console.debug(
         `[PreloadManager Debug] Content for ${cacheKey} already cached or preloading, skipping.`,
       )
-      return
+      return null
     }
 
     // 检查是否为失败链接
     if (FailedLinksManager.isFailedLink(cacheKey)) {
       // 如果链接被标记为失败，则跳过并打印调试信息
       console.debug(`[PreloadManager Debug] Link ${cacheKey} marked as failed, skipping preload.`)
-      return
+      return null
     }
 
     // 如果当前预加载数量已达上限，加入队列
@@ -112,7 +112,7 @@ export class PreloadManager implements ICleanupManager {
       console.debug(
         `[PreloadManager Debug] Max concurrent preloads (${this.MAX_CONCURRENT_PRELOADS}) reached. Queuing ${cacheKey} with priority ${priority}. Current preloads: ${this.currentPreloads}, Queue length: ${this.preloadQueue.length + 1}.`,
       )
-      return new Promise<void>((resolve, reject) => {
+      return new Promise<string | null>((resolve, reject) => {
         this.preloadQueue.push({ href: contentUrl.toString(), priority, resolve, reject })
         this.preloadQueue.sort((a, b) => b.priority - a.priority) // 优先级高的排在前面
       })
@@ -122,7 +122,7 @@ export class PreloadManager implements ICleanupManager {
     console.debug(
       `[PreloadManager Debug] Starting execution for ${href} (Cache Key: ${cacheKey}) with priority ${priority}.`,
     )
-    return this.executePreload(contentUrl.toString(), priority).then(() => {})
+    return this.executePreload(contentUrl.toString(), priority)
   }
 
   /**
@@ -131,7 +131,7 @@ export class PreloadManager implements ICleanupManager {
    * @param priority 优先级
    * @returns Promise<boolean> 是否成功预加载
    */
-  private async executePreload(href: string, _priority: number): Promise<boolean> {
+  private async executePreload(href: string, _priority: number): Promise<string | null> {
     // 使用简化URL处理器
     const urlResult = urlHandler.processURL(href, {
       cacheType: "content",
@@ -142,7 +142,7 @@ export class PreloadManager implements ICleanupManager {
 
     if (!urlResult.isValid) {
       console.warn(`[PreloadManager] Invalid URL: ${href} - ${urlResult.error}`)
-      return false
+      return null
     }
 
     const { processed: contentUrl, cacheKey } = urlResult
@@ -153,13 +153,13 @@ export class PreloadManager implements ICleanupManager {
       console.debug(
         `[PreloadManager Debug] Content for ${cacheKey} found in unified cache, skipping HTTP request.`,
       )
-      return true
+      return globalUnifiedContentCache.instance.get(cacheKey) as string | null
     }
 
     // 检查缓存中的链接有效性，如果明确标记为失败则跳过
     if (linkValidityCache.has(validityCacheKey) && !linkValidityCache.get(validityCacheKey)) {
       FailedLinksManager.addFailedLink(cacheKey)
-      return false
+      return null
     }
 
     this.currentPreloads++
@@ -217,16 +217,23 @@ export class PreloadManager implements ICleanupManager {
 
         // 使用统一缓存管理器存储，优先存储在弹窗缓存层
         globalUnifiedContentCache.instance.set(cacheKey, htmlString, CacheLayer.SESSION)
+        // 如果之前被标记为失败，现在成功了，就从失败列表中移除
+        FailedLinksManager.removeFailedLink(cacheKey)
+        return htmlString
       } else if (contentType.includes("image/")) {
         globalUnifiedContentCache.instance.set(cacheKey, contentUrl.toString(), CacheLayer.SESSION)
+        // 如果之前被标记为失败，现在成功了，就从失败列表中移除
+        FailedLinksManager.removeFailedLink(cacheKey)
+        return contentUrl.toString()
       } else if (contentType.includes("application/pdf")) {
         globalUnifiedContentCache.instance.set(cacheKey, contentUrl.toString(), CacheLayer.SESSION)
+        // 如果之前被标记为失败，现在成功了，就从失败列表中移除
+        FailedLinksManager.removeFailedLink(cacheKey)
+        return contentUrl.toString()
       } else {
         throw new Error(`Unsupported content type: ${contentType}`)
       }
-      // 如果之前被标记为失败，现在成功了，就从失败列表中移除
-      FailedLinksManager.removeFailedLink(cacheKey)
-      return true
+
     } catch (error) {
       // 捕获并处理预加载过程中的错误
       PopoverErrorHandler.handleError(error as Error, "Preloading link content", cacheKey)
@@ -253,7 +260,7 @@ export class PreloadManager implements ICleanupManager {
         ) // 最多5分钟
       }
 
-      return false
+      return null
     } finally {
       // 预加载任务完成（无论成功或失败），减少当前预加载计数并从进行中集合中移除
       this.currentPreloads--
@@ -277,7 +284,7 @@ export class PreloadManager implements ICleanupManager {
     while (this.preloadQueue.length > 0 && this.currentPreloads < this.MAX_CONCURRENT_PRELOADS) {
       const next = this.preloadQueue.shift()!
       this.executePreload(next.href, next.priority)
-        .then(() => next.resolve())
+        .then((content) => next.resolve(content))
         .catch((reason) => next.reject(reason)) // 处理预加载失败的情况
     }
   }
@@ -349,7 +356,7 @@ export class PreloadManager implements ICleanupManager {
    * @param priority 预加载优先级
    * @returns Promise<void>
    */
-  static async preloadLinkContent(href: string, priority: number = 0): Promise<void> {
+  static async preloadLinkContent(href: string, priority: number = 0): Promise<string | null> {
     const instance = PreloadManager.getInstance()
     return instance.preloadLinkContent(href, priority)
   }

@@ -1,8 +1,9 @@
-import { UnifiedCacheKeyGenerator } from "./cache/unified-cache"
+import { CacheKeyFactory } from "./cache/cache-key-utils"
+import { globalStorageManager } from "./managers"
 
 const userPref = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"
-const themeKey = UnifiedCacheKeyGenerator.generateUserKey("theme", "preference")
-const currentTheme = localStorage.getItem(themeKey) ?? userPref
+const themeKey = CacheKeyFactory.generateSystemKey("theme", "preference")
+const currentTheme = globalStorageManager.instance.getItem('local', themeKey) ?? userPref
 document.documentElement.setAttribute("saved-theme", currentTheme)
 
 const emitThemeChangeEvent = (theme: "light" | "dark") => {
@@ -17,14 +18,14 @@ document.addEventListener("nav", () => {
     const newTheme =
       document.documentElement.getAttribute("saved-theme") === "dark" ? "light" : "dark"
     document.documentElement.setAttribute("saved-theme", newTheme)
-    localStorage.setItem(themeKey, newTheme)
+    globalStorageManager.instance.setItem('local', themeKey, newTheme)
     emitThemeChangeEvent(newTheme)
   }
 
   const themeChange = (e: MediaQueryListEvent) => {
     const newTheme = e.matches ? "dark" : "light"
     document.documentElement.setAttribute("saved-theme", newTheme)
-    localStorage.setItem(themeKey, newTheme)
+    globalStorageManager.instance.setItem('local', themeKey, newTheme)
     emitThemeChangeEvent(newTheme)
   }
 

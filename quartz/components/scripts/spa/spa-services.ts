@@ -45,28 +45,29 @@ export async function getContentForNavigation(
       contents = HTMLContentProcessor.reconstructHtmlForSpa(contents, processedUrl)
     }
     return contents
-  }
-  try {
-    const res = await fetchCanonical(processedUrl)
-    const contentType = res.headers.get("content-type")
-
-    if (!contentType?.startsWith("text/html")) {
-      return null // 非HTML内容，需要完整页面跳转
-    }
-
-    contents = await res.text()
-    console.log(`[SPA DEBUG] 从网络加载内容：${cacheKey}`)
-
-    // 使用统一缓存管理器存储内容，自动避免重复存储
+  } else {
     try {
-      console.log(`[SPA DEBUG] 尝试将内容存入缓存，键为: ${cacheKey}`)
-      globalUnifiedContentCache.instance.set(cacheKey, contents, preferredLayer)
-    } catch (e) {
-      console.warn("Failed to cache content:", e)
+      const res = await fetchCanonical(processedUrl)
+      const contentType = res.headers.get("content-type")
+
+      if (!contentType?.startsWith("text/html")) {
+        return null // 非HTML内容，需要完整页面跳转
+      }
+
+      contents = await res.text()
+      console.log(`[SPA DEBUG] 从网络加载内容：${cacheKey}`)
+
+      // 使用统一缓存管理器存储内容，自动避免重复存储
+      try {
+        console.log(`[SPA DEBUG] 尝试将内容存入缓存，键为: ${cacheKey}`)
+        globalUnifiedContentCache.instance.set(cacheKey, contents, preferredLayer)
+      } catch (e) {
+        console.warn("Failed to cache content:", e)
+      }
+    } catch (error) {
+      console.error("Failed to fetch content for SPA navigation:", error)
+      return null // 网络错误，需要完整页面跳转
     }
-  } catch (error) {
-    console.error("Failed to fetch content for SPA navigation:", error)
-    return null // 网络错误，需要完整页面跳转
   }
 
   return contents

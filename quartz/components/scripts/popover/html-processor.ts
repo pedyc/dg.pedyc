@@ -233,7 +233,7 @@ export class HTMLContentProcessor {
             })
 
             // 检查容器内容是否为空
-            if (container.children.length === 0 && container.textContent?.trim() === "") {
+            if (container.innerHTML.trim() === "") {
               console.warn("[Popover Debug] Container is empty after rendering, showing error")
               HTMLContentProcessor.renderNotFoundContent(container, "Empty content after parsing")
             }
@@ -295,6 +295,8 @@ export class HTMLContentProcessor {
       console.warn("[HTMLProcessor Debug] Failed to parse fragment, returning as-is")
       return fragmentHTML
     }
+
+    normalizeRelativeURLs(tempDoc, baseUrl)
 
     // 恢复原始ID（移除popover-internal-前缀）
     fragmentContainer.querySelectorAll('[id^="popover-internal-"]').forEach((el) => {

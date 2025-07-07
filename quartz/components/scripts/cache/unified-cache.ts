@@ -1,4 +1,4 @@
-import { urlHandler } from "../utils/simplified-url-handler"
+import { CacheKeyFactory } from "./cache-key-utils"
 
 /**
  * 缓存监控配置接口
@@ -258,129 +258,7 @@ export const CACHE_PERFORMANCE_CONFIG = {
   },
 } as const
 
-/**
- * 清理和格式化缓存键
- * @param key 原始键名
- * @returns 清理后的键名
- */
-export function sanitizeCacheKey(key: string): string {
-  return key
-    .toLowerCase()
-    .replace(CacheKeyRules.CONVENTIONS.FORBIDDEN_CHARS, "")
-    .replace(/\s+/g, CacheKeyRules.SEPARATOR)
-    .replace(/_+/g, CacheKeyRules.SEPARATOR)
-    .replace(/^_+|_+$/g, "")
-    .substring(0, CacheKeyRules.CONVENTIONS.MAX_LENGTH)
-}
 
-/**
- * 统一缓存键生成器
- * 提供所有类型缓存键的生成方法
- */
-export const UnifiedCacheKeyGenerator = {
-  /**
-   * 生成内容缓存键
-   * @param url 内容URL
-   * @param type 内容类型 (可选)
-   * @returns 统一格式的缓存键
-   */
-  // 修改 unified-cache.ts 中的 generateContentKey
-  generateContentKey: (url: string, type?: "popover" | "content" | "preview"): string => {
-    // 使用 simplified-url-handler 进行标准化
-    const result = urlHandler.processURL(url, { cacheType: "content" })
-    if (!result.isValid) {
-      console.warn(`Invalid URL for cache key generation: ${url}`)
-      return `${CacheKeyRules.PREFIXES.CONTENT}invalid_${sanitizeCacheKey(url)}`
-    }
-
-    const baseKey = result.cacheKey
-    return type ? `${baseKey}${CacheKeyRules.SEPARATOR}${type}` : baseKey
-  },
-
-  /**
-   * 生成搜索缓存键
-   * @param query 搜索查询
-   * @param filters 过滤条件（可选）
-   * @returns 格式化的缓存键
-   */
-  generateSearchKey: (query: string, filters?: string): string => {
-    const baseKey = sanitizeCacheKey(query)
-    return filters
-      ? `${CacheKeyRules.PREFIXES.SEARCH}${baseKey}${CacheKeyRules.SEPARATOR}${sanitizeCacheKey(filters)}`
-      : `${CacheKeyRules.PREFIXES.SEARCH}${baseKey}`
-  },
-
-  /**
-   * 生成用户缓存键
-   * @param userId 用户ID
-   * @param dataType 数据类型（可选）
-   * @returns 格式化的缓存键
-   */
-  generateUserKey: (userId: string, dataType?: string): string => {
-    const baseKey = sanitizeCacheKey(userId)
-    return dataType
-      ? `${CacheKeyRules.PREFIXES.USER}${dataType}${CacheKeyRules.SEPARATOR}${baseKey}`
-      : `${CacheKeyRules.PREFIXES.USER}${baseKey}`
-  },
-
-  /**
-   * 生成字体缓存键
-   * @param fontName 字体名称
-   * @param weight 字体粗细（可选）
-   * @returns 格式化的缓存键
-   */
-  generateFontKey: (fontName: string, weight?: string | number): string => {
-    const baseKey = sanitizeCacheKey(fontName)
-    return weight
-      ? `${CacheKeyRules.PREFIXES.FONT}${baseKey}${CacheKeyRules.SEPARATOR}${weight}`
-      : `${CacheKeyRules.PREFIXES.FONT}${baseKey}`
-  },
-
-  /**
-   * 生成系统缓存键
-   * @param component 组件名称
-   * @param identifier 标识符（可选）
-   * @returns 格式化的缓存键
-   */
-  generateSystemKey: (component: string, identifier?: string): string => {
-    const baseKey = sanitizeCacheKey(component)
-    return identifier
-      ? `${CacheKeyRules.PREFIXES.SYSTEM}${baseKey}${CacheKeyRules.SEPARATOR}${sanitizeCacheKey(identifier)}`
-      : `${CacheKeyRules.PREFIXES.SYSTEM}${baseKey}`
-  },
-
-  /**
-   * 解析缓存键信息
-   * @param key 缓存键
-   * @returns 解析结果
-   */
-  parseKey: (
-    key: string,
-  ): {
-    isValid: boolean
-    prefix?: string
-    baseUrl?: string
-    type?: string
-    subType?: string
-  } => {
-    const prefixes = Object.values(CacheKeyRules.PREFIXES)
-    const matchedPrefix = prefixes.find((prefix) => key.startsWith(prefix))
-
-    if (!matchedPrefix) {
-      return { isValid: false }
-    }
-
-    const parts = key.substring(matchedPrefix.length).split(CacheKeyRules.SEPARATOR)
-
-    return {
-      isValid: true,
-      prefix: matchedPrefix,
-      baseUrl: parts[0],
-      type: parts[1],
-      subType: parts[2],
-    }
-  },
-} as const
 
 /**
  * 获取缓存配置
@@ -499,14 +377,14 @@ export function getCacheConfigDiagnostics() {
 
 /**
  * 向后兼容的缓存键生成器
- * @deprecated 建议使用 UnifiedCacheKeyGenerator
+ * @deprecated 建议使用 CacheKeyFactory
  */
 export const CacheKeyGeneratorCompat = {
-  content: UnifiedCacheKeyGenerator.generateContentKey,
-  search: UnifiedCacheKeyGenerator.generateSearchKey,
-  font: UnifiedCacheKeyGenerator.generateFontKey,
-  user: UnifiedCacheKeyGenerator.generateUserKey,
-  system: UnifiedCacheKeyGenerator.generateSystemKey,
+  content: CacheKeyFactory.generateContentKey,
+  search: CacheKeyFactory.generateSearchKey,
+  font: CacheKeyFactory.generateFontKey,
+  user: CacheKeyFactory.generateUserKey,
+  system: CacheKeyFactory.generateSystemKey,
 } as const
 
 // 导出缓存监控配置
@@ -526,7 +404,7 @@ export const CacheMonitorConfig = {
 // 默认导出统一缓存配置
 export default {
   config: UNIFIED_CACHE_CONFIG,
-  keyGenerator: UnifiedCacheKeyGenerator,
+  keyGenerator: CacheKeyFactory, // 使用新的 CacheKeyFactory
   performance: CACHE_PERFORMANCE_CONFIG,
   layers: CACHE_LAYER_CONFIG,
   thresholds: CACHE_THRESHOLDS,
@@ -536,7 +414,6 @@ export default {
     getCacheConfig,
     validateCacheConfig,
     validateUnifiedCacheConfig,
-    sanitizeCacheKey,
     getCacheConfigDiagnostics,
     extractCacheKeyPrefix,
   },

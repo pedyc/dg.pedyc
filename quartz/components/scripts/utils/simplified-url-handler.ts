@@ -178,33 +178,39 @@ export class SimplifiedURLHandler {
    * @returns 标准化后的路径
    */
   private normalizePath(pathname: string): string {
-    if (!pathname || pathname === "/") {
+    // 1. 预处理：移除末尾的 .md
+    if (pathname.endsWith(".md")) {
+      pathname = pathname.slice(0, -3)
+    }
+
+    // 2. 预处理：移除末尾的 /index
+    if (pathname.endsWith("/index")) {
+      pathname = pathname.slice(0, -6)
+    }
+
+    // 3. 预处理：移除末尾的 /
+    if (pathname.endsWith("/") && pathname.length > 1) {
+      pathname = pathname.slice(0, -1)
+    }
+
+    // 如果路径在处理后为空，说明是根目录的索引页
+    if (pathname === "") {
       return "/"
     }
 
-    // 分割路径段并过滤空段
-    const segments = pathname.split("/").filter((segment) => segment.length > 0)
-
-    // 去重逻辑：移除连续重复和循环重复
-    const deduplicatedSegments: string[] = []
-    const seen = new Set<string>()
-
-    for (const segment of segments) {
-      // 检查连续重复
-      const isConsecutiveDuplicate =
-        deduplicatedSegments.length > 0 &&
-        deduplicatedSegments[deduplicatedSegments.length - 1] === segment
-
-      // 检查循环重复（A/B/A模式）
-      const isCyclicDuplicate = seen.has(segment)
-
-      if (!isConsecutiveDuplicate && !isCyclicDuplicate) {
-        deduplicatedSegments.push(segment)
-        seen.add(segment)
+    // 4. 分割与去重（移除连续重复段）
+    const segments = pathname.split("/").filter(Boolean)
+    const uniqueSegments = segments.reduce((acc, segment) => {
+      if (acc.length === 0 || acc[acc.length - 1] !== segment) {
+        acc.push(segment)
       }
-    }
+      return acc
+    }, [] as string[])
 
-    return deduplicatedSegments.length > 0 ? "/" + deduplicatedSegments.join("/") : "/"
+    // 5. 重组路径
+    const normalizedPath = "/" + uniqueSegments.join("/")
+
+    return normalizedPath
   }
 
   /**
@@ -213,24 +219,14 @@ export class SimplifiedURLHandler {
    * @param type 缓存类型
    * @returns 缓存键
    */
+
   private generateCacheKey(url: string, type: "content" | "link" | "search"): string {
-    const sanitizedUrl = this.sanitizeForCacheKey(url)
-    const prefix = this.CACHE_PREFIXES[type]
-    return `${prefix}${sanitizedUrl}`
+    const encodedUrl = encodeURIComponent(url);
+    const prefix = this.CACHE_PREFIXES[type];
+    return `${prefix}${encodedUrl}`;
   }
 
-  /**
-   * 为缓存键清理URL字符串
-   * @param url URL字符串
-   * @returns 清理后的字符串
-   */
-  private sanitizeForCacheKey(url: string): string {
-    return url
-      .toLowerCase()
-      .replace(/[^a-z0-9_\-\/\.]/g, "_")
-      .replace(/_{2,}/g, "_")
-      .replace(/^_+|_+$/g, "")
-  }
+
 
   /**
    * 检查是否为内部链接

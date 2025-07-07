@@ -11,10 +11,10 @@ import {
   CacheKeyValidationResult,
   generateStorageKey,
   extractOriginalKey,
-  identifyCacheType,
+  CacheKeyFactory
 } from "../cache/cache-key-utils"
 import { ICleanupManager } from "./CleanupManager"
-import { urlHandler } from "../utils/simplified-url-handler"
+
 
 /**
  * 缓存诊断信息
@@ -113,13 +113,13 @@ export class UnifiedContentCacheManager implements ICleanupManager {
           const storageKey = storage.key(i)
           if (!storageKey) continue
 
-          const cacheType = this.identifyCacheType(storageKey)
+          const cacheType = CacheKeyFactory.identifyType(storageKey)
           if (!cacheType) continue
 
           const content = storage.getItem(storageKey)
           if (!content) continue
 
-          const originalKey = this.extractOriginalKey(storageKey)
+          const originalKey = extractOriginalKey(storageKey)
           if (!originalKey) continue
 
           if (this.referenceMap.has(originalKey)) continue
@@ -158,23 +158,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     }
   }
 
-  /**
-   * 识别缓存类型（使用统一工具函数）
-   * @param storageKey 存储键
-   * @returns 缓存类型或null
-   */
-  private identifyCacheType(storageKey: string): string | null {
-    return identifyCacheType(storageKey)
-  }
 
-  /**
-   * 从存储键提取原始缓存键（使用统一工具函数）
-   * @param storageKey 存储键
-   * @returns 原始键
-   */
-  private extractOriginalKey(storageKey: string): string {
-    return extractOriginalKey(storageKey)
-  }
 
   /**
    * 获取内容
@@ -185,32 +169,10 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     this.stats.totalRequests++
 
     // 提取原始键用于查找referenceMap（因为referenceMap存储的是原始键）
-    const originalKey = this.extractOriginalKey(key)
+    const originalKey = extractOriginalKey(key)
 
-    // 首先尝试直接匹配
-    let reference = this.referenceMap.get(originalKey)
-
-    // 如果直接匹配失败，尝试标准化键匹配
-    if (!reference) {
-      console.debug(`[UnifiedCache] Direct match failed for: ${originalKey}`)
-      console.debug(`[UnifiedCache] Attempting normalization match...`)
-
-      // 对所有referenceMap中的键进行标准化比较
-      for (const [mapKey, mapReference] of this.referenceMap.entries()) {
-        const normalizedMapKey = this.normalizeKeyForComparison(mapKey)
-        const normalizedOriginalKey = this.normalizeKeyForComparison(originalKey)
-
-        console.debug(`[UnifiedCache] Comparing normalized keys:`)
-        console.debug(`  Original: "${normalizedOriginalKey}"`)
-        console.debug(`  Map key: "${normalizedMapKey}"`)
-
-        if (normalizedMapKey === normalizedOriginalKey) {
-          console.debug(`[UnifiedCache] Found match via normalization: ${originalKey} -> ${mapKey}`)
-          reference = mapReference
-          break
-        }
-      }
-    }
+    // 直接使用原始键进行查找，不再进行标准化匹配
+    const reference = this.referenceMap.get(originalKey)
 
     if (!reference) {
       console.log(
@@ -219,7 +181,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
 
       // 调试信息：显示referenceMap中的所有键
       if (this.referenceMap.size > 0) {
-        const mapKeys = Array.from(this.referenceMap.keys()).slice(0, 5) // 只显示前5个
+        const mapKeys = Array.from(this.referenceMap.keys())
         console.debug(`[UnifiedCache] Available keys in referenceMap:`, mapKeys)
       }
 
@@ -301,7 +263,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    */
   set(key: string, content: string, preferredLayer: CacheLayer | undefined = undefined): void {
     // 提取原始键用于存储到referenceMap（保持一致性）
-    const originalKey = this.extractOriginalKey(key)
+    const originalKey = extractOriginalKey(key)
 
     // 计算内容哈希
     const contentHash = this.calculateHash(content)
@@ -327,7 +289,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
 
     // 选择最佳存储层
     const optimalLayer = this.selectOptimalLayer(content, preferredLayer)
-    const storageKey = this.generateStorageKey(key, optimalLayer)
+    const storageKey = generateStorageKey(key, optimalLayer)
 
     // 存储内容
     const success = this.storeContent(storageKey, content, optimalLayer)
@@ -353,7 +315,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    */
   delete(key: string): boolean {
     // 提取原始键用于查找referenceMap（因为referenceMap存储的是原始键）
-    const originalKey = this.extractOriginalKey(key)
+    const originalKey = extractOriginalKey(key)
     const reference = this.referenceMap.get(originalKey)
     if (!reference) {
       return false
@@ -385,7 +347,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    */
   has(key: string): boolean {
     // 提取原始键用于查找referenceMap（因为referenceMap存储的是原始键）
-    const originalKey = this.extractOriginalKey(key)
+    const originalKey = extractOriginalKey(key)
     return this.referenceMap.has(originalKey)
   }
 
@@ -541,14 +503,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     }
   }
 
-  /**
-   * 生成存储键（使用统一工具函数）
-   * @param originalKey 原始键
-   * @param layer 存储层
-   */
-  private generateStorageKey(originalKey: string, layer: CacheLayer): string {
-    return generateStorageKey(originalKey, layer)
-  }
+
 
   /**
    * 计算内容哈希
@@ -584,69 +539,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     return totalSize
   }
 
-  /**
-   * 标准化键用于比较 - 使用简化URL处理器
-   * 使用统一的URL处理逻辑确保缓存键的一致性
-   * @param key 需要标准化的键（可能包含前缀）
-   * @returns 标准化后的键
-   */
-  private normalizeKeyForComparison(key: string): string {
-    try {
-      // 首先提取原始键，移除可能的前缀
-      const originalKey = this.extractOriginalKey(key)
 
-      // 使用简化URL处理器进行标准化
-      const urlResult = urlHandler.processURL(originalKey, {
-        normalizePath: true,
-        removeHash: true,
-        validate: false, // 不验证，因为可能是路径片段
-      })
-
-      if (urlResult.isValid) {
-        const normalizedResult = urlResult.processed.pathname
-          .toLowerCase()
-          .replace(/\/$/, "") // 移除尾部斜杠
-          .replace(/\\+/g, "/") // 统一路径分隔符
-          .replace(/\/+/g, "/") // 合并多个连续斜杠
-
-        console.log(
-          `[Cache Debug] normalizeKeyForComparison: ${key} -> ${originalKey} -> ${normalizedResult}`,
-        )
-        return normalizedResult
-      } else {
-        // 如果不是有效URL，直接处理为路径
-        const pathname = originalKey.startsWith("/") ? originalKey : "/" + originalKey
-        const segments = pathname.split("/").filter((segment) => segment.length > 0)
-        const deduplicatedSegments: string[] = []
-        const seen = new Set<string>()
-
-        for (const segment of segments) {
-          const isConsecutiveDuplicate =
-            deduplicatedSegments.length > 0 &&
-            deduplicatedSegments[deduplicatedSegments.length - 1] === segment
-          const isDuplicateInPath = seen.has(segment)
-
-          if (!isConsecutiveDuplicate && !isDuplicateInPath) {
-            deduplicatedSegments.push(segment)
-            seen.add(segment)
-          }
-        }
-
-        const result = deduplicatedSegments.length > 0 ? "/" + deduplicatedSegments.join("/") : "/"
-
-        const normalizedResult = result
-          .toLowerCase()
-          .replace(/\/$/, "")
-          .replace(/\\+/g, "/")
-          .replace(/\/+/g, "/")
-
-        return normalizedResult
-      }
-    } catch (error) {
-      console.warn("Failed to normalize key for comparison:", error)
-      return key.toLowerCase()
-    }
-  }
 
   /**
    * 验证缓存键的一致性

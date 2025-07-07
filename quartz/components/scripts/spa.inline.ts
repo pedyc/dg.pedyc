@@ -3,7 +3,6 @@ import { globalResourceManager } from "./managers/index"
 import { createRouter, initializeRouteAnnouncer } from "./spa/spa-core"
 import { notifyNav } from "./spa/spa-utils"
 
-
 /**
  * 全局清理函数实现
  * 将清理任务注册到 globalResourceManager 中

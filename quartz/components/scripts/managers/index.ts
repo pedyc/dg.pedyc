@@ -1,17 +1,15 @@
 // Barrel file for manager-related modules
 
 // Export individual manager classes
-export { OptimizedCacheManager } from './OptimizedCacheManager';
-export { ResourceManager } from './ResourceManager';
-export { UnifiedStorageManager } from './UnifiedStorageManager';
-export { UnifiedContentCacheManager } from './UnifiedContentCacheManager';
-export { CleanupManager } from './CleanupManager';
+export { OptimizedCacheManager } from "./OptimizedCacheManager"
+export { ResourceManager } from "./ResourceManager"
+export { UnifiedStorageManager } from "./UnifiedStorageManager"
+export { UnifiedContentCacheManager } from "./UnifiedContentCacheManager"
+export { CleanupManager } from "./CleanupManager"
 
 // Export manager factory and related types
-export { ManagerFactory, ManagerType } from "./manager-factory";
-export type { ManagerInstanceConfig } from './manager-factory';
-
-
+export { ManagerFactory, ManagerType } from "./manager-factory"
+export type { ManagerInstanceConfig } from "./manager-factory"
 
 // Export the global manager controller and all global instances
 export {
@@ -28,4 +26,4 @@ export {
   urlCacheManager,
   failedLinksManager,
   globalCacheManager, // For backward compatibility
-} from './global-instances';
+} from "./global-instances"

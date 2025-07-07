@@ -27,13 +27,19 @@ globalResourceManager.instance.addEventListener(document as unknown as EventTarg
 })
 
 // 在 popover.inline.ts 中添加
-globalResourceManager.instance.addEventListener(document as unknown as EventTarget, "DOMContentLoaded", () =>
-  popoverSetup(),
+globalResourceManager.instance.addEventListener(
+  document as unknown as EventTarget,
+  "DOMContentLoaded",
+  () => popoverSetup(),
 )
 
 /**
  * 监听缓存清理事件，并在事件触发时重新初始化 popover 相关功能。
  */
-globalResourceManager.instance.addEventListener(document as unknown as EventTarget, "cacheCleared", () => {
-  popoverSetup()
-})
+globalResourceManager.instance.addEventListener(
+  document as unknown as EventTarget,
+  "cacheCleared",
+  () => {
+    popoverSetup()
+  },
+)

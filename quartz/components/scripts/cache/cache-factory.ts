@@ -6,14 +6,13 @@
 import {
   GlobalManagerController,
   globalCacheManager,
-  globalStorageManager
+  globalStorageManager,
 } from "../managers/global-instances"
 import { ManagerType } from "../managers"
 import type { OptimizedCacheManager } from "../managers/OptimizedCacheManager"
 import type { UnifiedStorageManager } from "../managers/UnifiedStorageManager"
 import type { UnifiedContentCacheManager } from "../managers/UnifiedContentCacheManager"
 import { type CacheConfig } from "./unified-cache"
-
 
 /**
  * 缓存实例类型枚举
@@ -42,9 +41,7 @@ export class CacheFactory {
   /**
    * 创建或获取优化缓存管理器实例
    */
-  static createOptimizedCache<T = any>(
-    config: CacheInstanceConfig
-  ): OptimizedCacheManager<T> {
+  static createOptimizedCache<T = any>(config: CacheInstanceConfig): OptimizedCacheManager<T> {
     console.log(`[CacheFactory] Requesting OptimizedCacheManager for ${config.type}`)
     // 默认返回全局缓存实例，未来可根据类型扩展
     return globalCacheManager.instance as OptimizedCacheManager<T>
@@ -63,13 +60,13 @@ export class CacheFactory {
    */
   static getInstance(
     type: CacheInstanceType,
-    unified: boolean = false
+    unified: boolean = false,
   ): OptimizedCacheManager<any> | UnifiedContentCacheManager | null {
     const identifier = type.toString()
     const managerType = unified ? ManagerType.UNIFIED_CONTENT_CACHE : ManagerType.CACHE
 
-    const instance = GlobalManagerController.getInstance(managerType, identifier);
-    return instance || null;
+    const instance = GlobalManagerController.getInstance(managerType, identifier)
+    return instance || null
   }
 
   /**

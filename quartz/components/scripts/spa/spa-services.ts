@@ -6,8 +6,8 @@
 import { normalizeRelativeURLs, getFullSlug } from "../../../util/path"
 import { urlHandler } from "../utils/simplified-url-handler"
 import { fetchCanonical } from "../utils/util"
-import { globalUnifiedContentCache } from "../managers/index";
-import { CacheLayer } from "../cache";
+import { globalUnifiedContentCache } from "../managers/index"
+import { CacheLayer } from "../cache"
 import { getDOMParser, scrollToTarget, isSamePage, micromorph } from "./spa-utils"
 import { HTMLContentProcessor } from "../popover/html-processor"
 /**
@@ -23,10 +23,10 @@ export async function getContentForNavigation(
 ): Promise<string | null> {
   // 使用简化URL处理器
   const urlResult = urlHandler.processURL(url.toString(), {
-    cacheType: 'content',
+    cacheType: "content",
     validate: true,
     removeHash: true,
-    normalizePath: true
+    normalizePath: true,
   })
 
   if (!urlResult.isValid) {

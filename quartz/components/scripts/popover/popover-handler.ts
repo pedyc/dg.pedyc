@@ -95,10 +95,10 @@ export async function mouseEnterHandler(
 
   // 使用简化URL处理器确保URL处理一致性
   const urlResult = urlHandler.processURL(link.href, {
-    cacheType: 'content',
+    cacheType: "content",
     validate: true,
     removeHash: true,
-    normalizePath: true
+    normalizePath: true,
   })
 
   if (!urlResult.isValid) {
@@ -174,7 +174,7 @@ export async function mouseEnterHandler(
       console.log(`[Popover Debug] Popover content for ${cacheKey} loaded from: HTTP Request`)
       try {
         // 使用 contentUrlString 进行预加载，并设置最高优先级
-        await PreloadManager.preloadLinkContent(contentUrlString, 1000) // 1000 为最高优先级，可根据实际情况调整
+        await PreloadManager.getInstance().preloadLinkContent(contentUrlString, 1000) // 1000 为最高优先级，可根据实际情况调整
 
         // 再次尝试从统一缓存获取（PreloadManager应该已经存储了内容）
         const newlyCachedData = globalUnifiedContentCache.instance.get(cacheKey)

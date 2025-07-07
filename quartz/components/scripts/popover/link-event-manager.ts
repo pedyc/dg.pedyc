@@ -1,7 +1,6 @@
 import { initializeViewportPreloading } from "./viewport-preload-manager"
 import { globalResourceManager } from "../managers/index"
 
-
 // 外部依赖（需要从主文件导入）
 declare function mouseEnterHandler(
   this: HTMLAnchorElement,
@@ -40,7 +39,11 @@ export class LinkEventManager {
 
       // 使用ResourceManager统一管理事件监听器
       if (mouseEnterFn) {
-        globalResourceManager.instance.addEventListener(link, "mouseenter", mouseEnterFn as EventListener)
+        globalResourceManager.instance.addEventListener(
+          link,
+          "mouseenter",
+          mouseEnterFn as EventListener,
+        )
         // 添加触摸事件支持
         globalResourceManager.instance.addEventListener(
           link,
@@ -76,7 +79,11 @@ export class LinkEventManager {
       }
 
       if (clearPopoverFn) {
-        globalResourceManager.instance.addEventListener(link, "mouseleave", clearPopoverFn as EventListener)
+        globalResourceManager.instance.addEventListener(
+          link,
+          "mouseleave",
+          clearPopoverFn as EventListener,
+        )
         // 添加触摸结束事件支持
         globalResourceManager.instance.addEventListener(
           link,

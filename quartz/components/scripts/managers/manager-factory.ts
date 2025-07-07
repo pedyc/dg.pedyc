@@ -8,11 +8,9 @@ import { ResourceManager } from "./ResourceManager"
 import { UnifiedStorageManager } from "./UnifiedStorageManager"
 import { UnifiedContentCacheManager } from "./UnifiedContentCacheManager"
 import { CleanupManager } from "./CleanupManager"
-
-;
 import { CacheInstanceType } from "../cache/cache-factory"
-import { getCacheConfig } from "../cache/unified-cache";
-import { globalCacheManager, globalStorageManager } from "./global-instances";
+import { getCacheConfig } from "../cache/unified-cache"
+import { globalCacheManager, globalStorageManager } from "./global-instances"
 
 /**
  * 管理器类型枚举
@@ -28,7 +26,6 @@ export enum ManagerType {
   UNIFIED_CONTENT_CACHE = "UNIFIED_CONTENT_CACHE",
   /** 清理管理器 */
   CLEANUP = "CLEANUP",
-
 }
 
 /**
@@ -42,7 +39,6 @@ export interface ManagerInstanceConfig {
   /** 自定义配置 */
   config?: Record<string, any>
 }
-
 
 /**
  * 管理器工厂类
@@ -66,9 +62,9 @@ export class ManagerFactory {
   private static _createAndRegisterManager<T>(
     config: ManagerInstanceConfig,
     creator: () => T,
-    managerName: string
+    managerName: string,
   ): T {
-    const instanceKey = `${config.type}_${config.identifier || 'default'}`
+    const instanceKey = `${config.type}_${config.identifier || "default"}`
 
     // 检查是否已存在实例
     if (this.instances.has(instanceKey)) {
@@ -93,25 +89,23 @@ export class ManagerFactory {
    * @param config 实例配置
    * @returns 缓存管理器实例
    */
-  static createCacheManager<T = any>(
-    config: ManagerInstanceConfig
-  ): OptimizedCacheManager<T> {
+  static createCacheManager<T = any>(config: ManagerInstanceConfig): OptimizedCacheManager<T> {
     return this._createAndRegisterManager(
       config,
       () => {
-        const cacheType = config.config?.cacheType || CacheInstanceType.DEFAULT;
+        const cacheType = config.config?.cacheType || CacheInstanceType.DEFAULT
 
         // 直接创建 OptimizedCacheManager 实例以打破循环依赖
-        const cacheConfig = getCacheConfig(cacheType);
+        const cacheConfig = getCacheConfig(cacheType)
         const finalConfig = {
           ...cacheConfig,
           ...(config.config?.configOverride || {}),
           enableMemoryLayer: config.config?.enableMemoryLayer ?? true,
           enableSessionLayer: config.config?.enableSessionLayer ?? false,
-        };
-        return new OptimizedCacheManager<T>(finalConfig);
+        }
+        return new OptimizedCacheManager<T>(finalConfig)
       },
-      "CacheManager"
+      "CacheManager",
     )
   }
 
@@ -120,14 +114,8 @@ export class ManagerFactory {
    * @param config 实例配置
    * @returns 资源管理器实例
    */
-  static createResourceManager(
-    config: ManagerInstanceConfig
-  ): ResourceManager {
-    return this._createAndRegisterManager(
-      config,
-      () => new ResourceManager(),
-      "ResourceManager"
-    )
+  static createResourceManager(config: ManagerInstanceConfig): ResourceManager {
+    return this._createAndRegisterManager(config, () => new ResourceManager(), "ResourceManager")
   }
 
   /**
@@ -135,13 +123,11 @@ export class ManagerFactory {
    * @param config 实例配置
    * @returns 存储管理器实例
    */
-  static createStorageManager(
-    config: ManagerInstanceConfig
-  ): UnifiedStorageManager {
+  static createStorageManager(config: ManagerInstanceConfig): UnifiedStorageManager {
     return this._createAndRegisterManager(
       config,
       () => new UnifiedStorageManager(),
-      "StorageManager"
+      "StorageManager",
     )
   }
 
@@ -151,22 +137,20 @@ export class ManagerFactory {
    * @returns 统一内容缓存管理器实例
    */
   static createUnifiedContentCacheManager(
-    config: ManagerInstanceConfig
+    config: ManagerInstanceConfig,
   ): UnifiedContentCacheManager {
     return this._createAndRegisterManager(
       config,
       () => {
         // TODO: 直接从全局实例获取依赖，这里同样存在潜在的循环依赖风险
         // 后续应重构为依赖注入模式，但首先解决 createCacheManager 的问题
-        const cacheManager = globalCacheManager.instance;
-        const storageManager = globalStorageManager.instance;
-        return new UnifiedContentCacheManager(cacheManager, storageManager);
+        const cacheManager = globalCacheManager.instance
+        const storageManager = globalStorageManager.instance
+        return new UnifiedContentCacheManager(cacheManager, storageManager)
       },
-      "UnifiedContentCacheManager"
-    );
+      "UnifiedContentCacheManager",
+    )
   }
-
-
 
   /**
    * 获取清理管理器实例（全局单例）
@@ -192,7 +176,7 @@ export class ManagerFactory {
   static cleanup(): void {
     console.log(`[ManagerFactory] Cleaning up all registered manager instances...`)
     this.instances.forEach((instance, key) => {
-      if (instance && typeof instance.cleanup === 'function') {
+      if (instance && typeof instance.cleanup === "function") {
         try {
           instance.cleanup()
           console.log(`[ManagerFactory] Cleaned up instance: ${key}`)
@@ -210,14 +194,14 @@ export class ManagerFactory {
   static destroy(): void {
     console.log(`[ManagerFactory] Destroying all registered manager instances...`)
     this.instances.forEach((instance, key) => {
-      if (instance && typeof instance.destroy === 'function') {
+      if (instance && typeof instance.destroy === "function") {
         try {
           instance.destroy()
           console.log(`[ManagerFactory] Destroyed instance: ${key}`)
         } catch (error) {
           console.error(`[ManagerFactory] Error destroying instance ${key}:`, error)
         }
-      } else if (instance && typeof instance.cleanup === 'function') {
+      } else if (instance && typeof instance.cleanup === "function") {
         // 如果没有destroy方法，尝试调用cleanup
         try {
           instance.cleanup()
@@ -238,10 +222,7 @@ export class ManagerFactory {
    * @param identifier 实例标识符
    * @returns 管理器实例或null
    */
-  static getInstance(
-    type: ManagerType,
-    identifier: string = 'default'
-  ): any | null {
+  static getInstance(type: ManagerType, identifier: string = "default"): any | null {
     const instanceKey = `${type}_${identifier}`
     return this.instances.get(instanceKey) || null
   }
@@ -252,10 +233,7 @@ export class ManagerFactory {
    * @param identifier 实例标识符
    * @returns 是否存在
    */
-  static hasInstance(
-    type: ManagerType,
-    identifier: string = 'default'
-  ): boolean {
+  static hasInstance(type: ManagerType, identifier: string = "default"): boolean {
     const instanceKey = `${type}_${identifier}`
     return this.instances.has(instanceKey)
   }
@@ -266,10 +244,7 @@ export class ManagerFactory {
    * @param identifier 实例标识符
    * @returns 是否成功移除
    */
-  static removeInstance(
-    type: ManagerType,
-    identifier: string = 'default'
-  ): boolean {
+  static removeInstance(type: ManagerType, identifier: string = "default"): boolean {
     const instanceKey = `${type}_${identifier}`
 
     if (this.instances.has(instanceKey)) {
@@ -281,7 +256,7 @@ export class ManagerFactory {
       }
 
       // 清理实例
-      if (instance && typeof instance.cleanup === 'function') {
+      if (instance && typeof instance.cleanup === "function") {
         try {
           instance.cleanup()
         } catch (error) {
@@ -299,7 +274,6 @@ export class ManagerFactory {
     return false
   }
 
-
   /**
    * 获取管理器工厂统计信息
    * @returns 统计信息
@@ -313,7 +287,7 @@ export class ManagerFactory {
     const instancesByType: Record<string, number> = {}
 
     for (const key of this.instances.keys()) {
-      const type = key.split('_')[0]
+      const type = key.split("_")[0]
       instancesByType[type] = (instancesByType[type] || 0) + 1
     }
 
@@ -333,7 +307,7 @@ export const PREDEFINED_MANAGER_CONFIGS: Record<string, ManagerInstanceConfig> =
   // 缓存管理器配置
   globalCacheManager: {
     type: ManagerType.CACHE,
-    identifier: 'global',
+    identifier: "global",
     config: {
       cacheType: CacheInstanceType.DEFAULT,
       enableMemoryLayer: true,
@@ -342,7 +316,7 @@ export const PREDEFINED_MANAGER_CONFIGS: Record<string, ManagerInstanceConfig> =
   },
   urlCacheManager: {
     type: ManagerType.CACHE,
-    identifier: 'url',
+    identifier: "url",
     config: {
       cacheType: CacheInstanceType.LINK,
       enableMemoryLayer: true,
@@ -351,7 +325,7 @@ export const PREDEFINED_MANAGER_CONFIGS: Record<string, ManagerInstanceConfig> =
   },
   failedLinksManager: {
     type: ManagerType.CACHE,
-    identifier: 'failedLinks',
+    identifier: "failedLinks",
     config: {
       cacheType: CacheInstanceType.LINK,
       enableMemoryLayer: false,
@@ -359,29 +333,28 @@ export const PREDEFINED_MANAGER_CONFIGS: Record<string, ManagerInstanceConfig> =
     },
   },
 
-
   // 资源管理器配置
   globalResourceManager: {
     type: ManagerType.RESOURCE,
-    identifier: 'global',
+    identifier: "global",
   },
 
   // 存储管理器配置
   globalStorageManager: {
     type: ManagerType.STORAGE,
-    identifier: 'global',
+    identifier: "global",
   },
 
   // 统一内容缓存管理器配置
   globalUnifiedContentCache: {
     type: ManagerType.UNIFIED_CONTENT_CACHE,
-    identifier: 'global',
+    identifier: "global",
     config: {
       cacheType: CacheInstanceType.CONTENT,
       enableMemoryLayer: true,
       enableSessionLayer: true,
     },
-  }
+  },
 
   // 预加载管理器配置
   // globalPreloadManager: {

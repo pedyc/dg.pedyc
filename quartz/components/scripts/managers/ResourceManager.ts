@@ -3,7 +3,12 @@ import type { ICleanupManager } from "./CleanupManager"
 /**
  * 资源类型枚举
  */
-export type ResourceType = 'observer' | 'timer' | 'eventListener' | 'abortController' | 'cleanupTask'
+export type ResourceType =
+  | "observer"
+  | "timer"
+  | "eventListener"
+  | "abortController"
+  | "cleanupTask"
 
 /**
  * 资源信息接口

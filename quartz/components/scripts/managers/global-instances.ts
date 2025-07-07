@@ -4,7 +4,7 @@
  */
 
 import { ManagerFactory, ManagerType, PREDEFINED_MANAGER_CONFIGS } from "./manager-factory"
-import { CacheInstanceType } from '../cache/cache-factory';
+import { CacheInstanceType } from "../cache/cache-factory"
 import { OptimizedCacheManager } from "./OptimizedCacheManager"
 import { ResourceManager } from "./ResourceManager"
 import { UnifiedStorageManager } from "./UnifiedStorageManager"
@@ -38,7 +38,9 @@ class GlobalManagerInstances {
 
   get unifiedContentCache(): UnifiedContentCacheManager {
     if (!this._unifiedContentCache) {
-      this._unifiedContentCache = ManagerFactory.createUnifiedContentCacheManager(PREDEFINED_MANAGER_CONFIGS.globalUnifiedContentCache)
+      this._unifiedContentCache = ManagerFactory.createUnifiedContentCacheManager(
+        PREDEFINED_MANAGER_CONFIGS.globalUnifiedContentCache,
+      )
       console.log(`[GlobalManagers] Initialized UnifiedContentCacheManager`)
     }
     return this._unifiedContentCache
@@ -86,7 +88,9 @@ class GlobalManagerInstances {
 
   get urlCacheManager(): OptimizedCacheManager<boolean> {
     if (!this._urlCacheManager) {
-      this._urlCacheManager = ManagerFactory.createCacheManager<boolean>(PREDEFINED_MANAGER_CONFIGS.urlCacheManager)
+      this._urlCacheManager = ManagerFactory.createCacheManager<boolean>(
+        PREDEFINED_MANAGER_CONFIGS.urlCacheManager,
+      )
       console.log(`[GlobalManagers] Initialized UrlCacheManager`)
     }
     return this._urlCacheManager
@@ -94,7 +98,9 @@ class GlobalManagerInstances {
 
   get failedLinksManager(): FailedLinksManager {
     if (!this._failedLinksManager) {
-      this._failedLinksManager = ManagerFactory.createCacheManager(PREDEFINED_MANAGER_CONFIGS.failedLinksManager)
+      this._failedLinksManager = ManagerFactory.createCacheManager(
+        PREDEFINED_MANAGER_CONFIGS.failedLinksManager,
+      )
       console.log(`[GlobalManagers] Initialized FailedLinksManager`)
     }
     return this._failedLinksManager
@@ -102,7 +108,9 @@ class GlobalManagerInstances {
 
   get storageManager(): UnifiedStorageManager {
     if (!this._storageManager) {
-      this._storageManager = ManagerFactory.createStorageManager(PREDEFINED_MANAGER_CONFIGS.globalStorageManager)
+      this._storageManager = ManagerFactory.createStorageManager(
+        PREDEFINED_MANAGER_CONFIGS.globalStorageManager,
+      )
       console.log(`[GlobalManagers] Initialized StorageManager`)
     }
     return this._storageManager
@@ -110,7 +118,9 @@ class GlobalManagerInstances {
 
   get resourceManager(): ResourceManager {
     if (!this._resourceManager) {
-      this._resourceManager = ManagerFactory.createResourceManager(PREDEFINED_MANAGER_CONFIGS.globalResourceManager)
+      this._resourceManager = ManagerFactory.createResourceManager(
+        PREDEFINED_MANAGER_CONFIGS.globalResourceManager,
+      )
       console.log(`[GlobalManagers] Initialized ResourceManager`)
     }
     return this._resourceManager
@@ -125,7 +135,11 @@ class GlobalManagerInstances {
   }
 
   private createCache<T>(type: CacheInstanceType): OptimizedCacheManager<T> {
-    return ManagerFactory.createCacheManager<T>({ type: ManagerType.CACHE, identifier: type, config: { cacheType: type } });
+    return ManagerFactory.createCacheManager<T>({
+      type: ManagerType.CACHE,
+      identifier: type,
+      config: { cacheType: type },
+    })
   }
 
   initialize(preloadAll: boolean = false): void {
@@ -164,15 +178,15 @@ class GlobalManagerInstances {
   destroy(): void {
     console.log(`[GlobalManagers] Destroying all global manager instances...`)
     ManagerFactory.destroy()
-    
+
     this._initialized = false
     // Reset all private properties
-    Object.keys(this).forEach(key => {
-      if (key.startsWith('_')) {
-        (this as any)[key] = null;
+    Object.keys(this).forEach((key) => {
+      if (key.startsWith("_")) {
+        ;(this as any)[key] = null
       }
-    });
-    this._initialized = false; // Ensure it's reset after nulling
+    })
+    this._initialized = false // Ensure it's reset after nulling
     console.log(`[GlobalManagers] All global manager instances destroyed`)
   }
 }
@@ -204,17 +218,17 @@ export class GlobalManagerController {
     switch (type) {
       case ManagerType.CACHE:
         // This is ambiguous, return default cache for now.
-        return this.instance.defaultCache;
+        return this.instance.defaultCache
       case ManagerType.RESOURCE:
-        return this.instance.resourceManager;
+        return this.instance.resourceManager
       case ManagerType.STORAGE:
-        return this.instance.storageManager;
+        return this.instance.storageManager
       case ManagerType.UNIFIED_CONTENT_CACHE:
-        return this.instance.unifiedContentCache;
+        return this.instance.unifiedContentCache
       case ManagerType.CLEANUP:
-        return this.instance.cleanupManager;
+        return this.instance.cleanupManager
       default:
-        throw new Error(`[GlobalManagerController] Unknown manager type: ${type}`);
+        throw new Error(`[GlobalManagerController] Unknown manager type: ${type}`)
     }
   }
 }
@@ -222,50 +236,74 @@ export class GlobalManagerController {
 // --- Convenience accessors for all global instances ---
 
 export const globalUnifiedContentCache = {
-  get instance() { return GlobalManagerController.instance.unifiedContentCache },
+  get instance() {
+    return GlobalManagerController.instance.unifiedContentCache
+  },
 }
 
 export const globalLinkCache = {
-  get instance() { return GlobalManagerController.instance.linkCache },
+  get instance() {
+    return GlobalManagerController.instance.linkCache
+  },
 }
 
 export const globalSearchCache = {
-  get instance() { return GlobalManagerController.instance.searchCache },
+  get instance() {
+    return GlobalManagerController.instance.searchCache
+  },
 }
 
 export const globalUserCache = {
-  get instance() { return GlobalManagerController.instance.userCache },
+  get instance() {
+    return GlobalManagerController.instance.userCache
+  },
 }
 
 export const globalSystemCache = {
-  get instance() { return GlobalManagerController.instance.systemCache },
+  get instance() {
+    return GlobalManagerController.instance.systemCache
+  },
 }
 
 export const globalDefaultCache = {
-  get instance() { return GlobalManagerController.instance.defaultCache },
+  get instance() {
+    return GlobalManagerController.instance.defaultCache
+  },
 }
 
 export const globalStorageManager = {
-  get instance() { return GlobalManagerController.instance.storageManager },
+  get instance() {
+    return GlobalManagerController.instance.storageManager
+  },
 }
 
 export const globalResourceManager = {
-  get instance() { return GlobalManagerController.instance.resourceManager },
+  get instance() {
+    return GlobalManagerController.instance.resourceManager
+  },
 }
 
 export const globalCleanupManager = {
-  get instance() { return GlobalManagerController.instance.cleanupManager },
+  get instance() {
+    return GlobalManagerController.instance.cleanupManager
+  },
 }
 
 export const urlCacheManager = {
-  get instance() { return GlobalManagerController.instance.urlCacheManager },
+  get instance() {
+    return GlobalManagerController.instance.urlCacheManager
+  },
 }
 
 export const failedLinksManager = {
-  get instance() { return GlobalManagerController.instance.failedLinksManager },
+  get instance() {
+    return GlobalManagerController.instance.failedLinksManager
+  },
 }
 
 // Backward compatibility
 export const globalCacheManager = {
-  get instance() { return GlobalManagerController.instance.defaultCache },
+  get instance() {
+    return GlobalManagerController.instance.defaultCache
+  },
 }

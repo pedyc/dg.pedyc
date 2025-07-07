@@ -9,8 +9,8 @@ import {
   createUrl,
 } from "../../util/path"
 
-import { globalUnifiedContentCache } from "./managers/index";
-import { CacheLayer } from "./cache";
+import { globalUnifiedContentCache } from "./managers/index"
+import { CacheLayer } from "./cache"
 import { UnifiedCacheKeyGenerator } from "./cache/unified-cache"
 
 interface Item {

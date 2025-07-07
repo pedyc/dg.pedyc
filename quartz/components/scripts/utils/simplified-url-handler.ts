@@ -12,7 +12,7 @@ export interface URLProcessingOptions {
   /** 是否验证URL */
   validate?: boolean
   /** 缓存类型 */
-  cacheType?: 'content' | 'link' | 'search'
+  cacheType?: "content" | "link" | "search"
 }
 
 // URL处理结果
@@ -38,12 +38,12 @@ export class SimplifiedURLHandler {
 
   // 缓存键前缀映射
   private readonly CACHE_PREFIXES = {
-    content: 'content_',
-    link: 'link_',
-    search: 'search_'
+    content: "content_",
+    link: "link_",
+    search: "search_",
   } as const
 
-  private constructor() { }
+  private constructor() {}
 
   static getInstance(): SimplifiedURLHandler {
     if (!SimplifiedURLHandler.instance) {
@@ -63,7 +63,7 @@ export class SimplifiedURLHandler {
       removeHash = true,
       normalizePath = true,
       validate = true,
-      cacheType = 'content'
+      cacheType = "content",
     } = options
 
     try {
@@ -71,17 +71,17 @@ export class SimplifiedURLHandler {
       if (validate && !this.isValidURL(href)) {
         return {
           original: href,
-          processed: new URL('about:blank'),
-          cacheKey: '',
+          processed: new URL("about:blank"),
+          cacheKey: "",
           isValid: false,
-          error: 'Invalid URL format'
+          error: "Invalid URL format",
         }
       }
 
       // 2. 预处理URL字符串
       let processedHref = href
       if (removeHash) {
-        processedHref = processedHref.split('#')[0]
+        processedHref = processedHref.split("#")[0]
       }
 
       // 3. 创建URL对象
@@ -100,15 +100,15 @@ export class SimplifiedURLHandler {
         original: href,
         processed: url,
         cacheKey,
-        isValid: true
+        isValid: true,
       }
     } catch (error) {
       return {
         original: href,
-        processed: new URL('about:blank'),
-        cacheKey: '',
+        processed: new URL("about:blank"),
+        cacheKey: "",
         isValid: false,
-        error: (error as Error).message
+        error: (error as Error).message,
       }
     }
   }
@@ -123,7 +123,7 @@ export class SimplifiedURLHandler {
       removeHash: true,
       normalizePath: true,
       validate: true,
-      cacheType: 'content'
+      cacheType: "content",
     })
 
     if (!result.isValid) {
@@ -139,7 +139,7 @@ export class SimplifiedURLHandler {
    * @param type 缓存类型
    * @returns 缓存键
    */
-  getCacheKey(href: string, type: 'content' | 'link' | 'search' = 'content'): string {
+  getCacheKey(href: string, type: "content" | "link" | "search" = "content"): string {
     const result = this.processURL(href, { cacheType: type })
     return result.cacheKey
   }
@@ -151,7 +151,7 @@ export class SimplifiedURLHandler {
    * @returns 处理结果数组
    */
   processBatch(hrefs: string[], options: URLProcessingOptions = {}): URLProcessingResult[] {
-    return hrefs.map(href => this.processURL(href, options))
+    return hrefs.map((href) => this.processURL(href, options))
   }
 
   /**
@@ -160,7 +160,7 @@ export class SimplifiedURLHandler {
    * @returns 是否有效
    */
   private isValidURL(href: string): boolean {
-    if (!href || typeof href !== 'string' || href.length === 0) {
+    if (!href || typeof href !== "string" || href.length === 0) {
       return false
     }
 
@@ -178,12 +178,12 @@ export class SimplifiedURLHandler {
    * @returns 标准化后的路径
    */
   private normalizePath(pathname: string): string {
-    if (!pathname || pathname === '/') {
-      return '/'
+    if (!pathname || pathname === "/") {
+      return "/"
     }
 
     // 分割路径段并过滤空段
-    const segments = pathname.split('/').filter(segment => segment.length > 0)
+    const segments = pathname.split("/").filter((segment) => segment.length > 0)
 
     // 去重逻辑：移除连续重复和循环重复
     const deduplicatedSegments: string[] = []
@@ -204,7 +204,7 @@ export class SimplifiedURLHandler {
       }
     }
 
-    return deduplicatedSegments.length > 0 ? '/' + deduplicatedSegments.join('/') : '/'
+    return deduplicatedSegments.length > 0 ? "/" + deduplicatedSegments.join("/") : "/"
   }
 
   /**
@@ -213,7 +213,7 @@ export class SimplifiedURLHandler {
    * @param type 缓存类型
    * @returns 缓存键
    */
-  private generateCacheKey(url: string, type: 'content' | 'link' | 'search'): string {
+  private generateCacheKey(url: string, type: "content" | "link" | "search"): string {
     const sanitizedUrl = this.sanitizeForCacheKey(url)
     const prefix = this.CACHE_PREFIXES[type]
     return `${prefix}${sanitizedUrl}`
@@ -227,9 +227,9 @@ export class SimplifiedURLHandler {
   private sanitizeForCacheKey(url: string): string {
     return url
       .toLowerCase()
-      .replace(/[^a-z0-9_\-\/\.]/g, '_')
-      .replace(/_{2,}/g, '_')
-      .replace(/^_+|_+$/g, '')
+      .replace(/[^a-z0-9_\-\/\.]/g, "_")
+      .replace(/_{2,}/g, "_")
+      .replace(/^_+|_+$/g, "")
   }
 
   /**
@@ -260,13 +260,13 @@ export class SimplifiedURLHandler {
       const url = new URL(href)
 
       // 排除下载文件
-      const downloadExtensions = ['.pdf', '.zip', '.rar', '.7z', '.tar', '.gz']
-      if (downloadExtensions.some(ext => url.pathname.toLowerCase().endsWith(ext))) {
+      const downloadExtensions = [".pdf", ".zip", ".rar", ".7z", ".tar", ".gz"]
+      if (downloadExtensions.some((ext) => url.pathname.toLowerCase().endsWith(ext))) {
         return false
       }
 
       // 排除API端点
-      if (url.pathname.startsWith('/api/') || url.pathname.startsWith('/admin/')) {
+      if (url.pathname.startsWith("/api/") || url.pathname.startsWith("/admin/")) {
         return false
       }
 
@@ -287,8 +287,7 @@ export class SimplifiedURLHandler {
    * @returns 是否为同一页面
    */
   isSamePage(url: URL): boolean {
-    return url.origin === window.location.origin &&
-      url.pathname === window.location.pathname
+    return url.origin === window.location.origin && url.pathname === window.location.pathname
   }
 }
 
@@ -322,13 +321,13 @@ export function isSamePage(url: URL): boolean {
 
 // 缓存键生成函数
 export function generateContentKey(url: string): string {
-  return urlHandler.getCacheKey(url, 'content')
+  return urlHandler.getCacheKey(url, "content")
 }
 
 export function generateLinkKey(url: string): string {
-  return urlHandler.getCacheKey(url, 'link')
+  return urlHandler.getCacheKey(url, "link")
 }
 
 export function generateSearchKey(query: string): string {
-  return urlHandler.getCacheKey(query, 'search')
+  return urlHandler.getCacheKey(query, "search")
 }

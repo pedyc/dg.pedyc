@@ -160,9 +160,9 @@ export const UNIFIED_CACHE_CONFIG: Record<string, CacheConfig> = {
  * 缓存层级枚举
  */
 export enum CacheLayer {
-  MEMORY = 'MEMORY',
-  SESSION = 'SESSION',
-  LOCAL = 'LOCAL',
+  MEMORY = "MEMORY",
+  SESSION = "SESSION",
+  LOCAL = "LOCAL",
 }
 
 export const CACHE_LAYER_CONFIG = {
@@ -287,7 +287,7 @@ export const UnifiedCacheKeyGenerator = {
   // 修改 unified-cache.ts 中的 generateContentKey
   generateContentKey: (url: string, type?: "popover" | "content" | "preview"): string => {
     // 使用 simplified-url-handler 进行标准化
-    const result = urlHandler.processURL(url, { cacheType: 'content' })
+    const result = urlHandler.processURL(url, { cacheType: "content" })
     if (!result.isValid) {
       console.warn(`Invalid URL for cache key generation: ${url}`)
       return `${CacheKeyRules.PREFIXES.CONTENT}invalid_${sanitizeCacheKey(url)}`

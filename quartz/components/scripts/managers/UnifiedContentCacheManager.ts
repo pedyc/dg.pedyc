@@ -4,9 +4,9 @@
  * 采用单一存储源 + 引用映射的架构
  */
 
-import { OptimizedCacheManager } from "./OptimizedCacheManager";
-import { UnifiedStorageManager } from "./UnifiedStorageManager";
-import { CacheLayer, CACHE_LAYER_CONFIG, CACHE_PERFORMANCE_CONFIG } from "../cache/unified-cache";
+import { OptimizedCacheManager } from "./OptimizedCacheManager"
+import { UnifiedStorageManager } from "./UnifiedStorageManager"
+import { CacheLayer, CACHE_LAYER_CONFIG, CACHE_PERFORMANCE_CONFIG } from "../cache/unified-cache"
 import {
   CacheKeyValidationResult,
   generateStorageKey,
@@ -15,9 +15,6 @@ import {
 } from "../cache/cache-key-utils"
 import { ICleanupManager } from "./CleanupManager"
 import { urlHandler } from "../utils/simplified-url-handler"
-
-
-
 
 /**
  * 缓存诊断信息
@@ -73,15 +70,10 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     duplicatesAvoided: 0,
   }
 
-
-
   /** 初始化标志 */
   private static _initialized = false
 
-  constructor(
-    memoryCache: OptimizedCacheManager<string>,
-    storageManager: UnifiedStorageManager,
-  ) {
+  constructor(memoryCache: OptimizedCacheManager<string>, storageManager: UnifiedStorageManager) {
     console.log("UnifiedContentCacheManager constructor")
     this.memoryCache = memoryCache
     this.storageManager = storageManager
@@ -200,33 +192,35 @@ export class UnifiedContentCacheManager implements ICleanupManager {
 
     // 如果直接匹配失败，尝试标准化键匹配
     if (!reference) {
-      console.debug(`[UnifiedCache] Direct match failed for: ${originalKey}`);
-      console.debug(`[UnifiedCache] Attempting normalization match...`);
+      console.debug(`[UnifiedCache] Direct match failed for: ${originalKey}`)
+      console.debug(`[UnifiedCache] Attempting normalization match...`)
 
       // 对所有referenceMap中的键进行标准化比较
       for (const [mapKey, mapReference] of this.referenceMap.entries()) {
         const normalizedMapKey = this.normalizeKeyForComparison(mapKey)
         const normalizedOriginalKey = this.normalizeKeyForComparison(originalKey)
 
-        console.debug(`[UnifiedCache] Comparing normalized keys:`);
-        console.debug(`  Original: "${normalizedOriginalKey}"`);
-        console.debug(`  Map key: "${normalizedMapKey}"`);
+        console.debug(`[UnifiedCache] Comparing normalized keys:`)
+        console.debug(`  Original: "${normalizedOriginalKey}"`)
+        console.debug(`  Map key: "${normalizedMapKey}"`)
 
         if (normalizedMapKey === normalizedOriginalKey) {
-          console.debug(`[UnifiedCache] Found match via normalization: ${originalKey} -> ${mapKey}`);
-          reference = mapReference;
-          break;
+          console.debug(`[UnifiedCache] Found match via normalization: ${originalKey} -> ${mapKey}`)
+          reference = mapReference
+          break
         }
       }
     }
 
     if (!reference) {
-      console.log(`[UnifiedCache] Cache miss for key: ${key}, originalKey: ${originalKey}. referenceMap size: ${this.referenceMap.size}`)
+      console.log(
+        `[UnifiedCache] Cache miss for key: ${key}, originalKey: ${originalKey}. referenceMap size: ${this.referenceMap.size}`,
+      )
 
       // 调试信息：显示referenceMap中的所有键
       if (this.referenceMap.size > 0) {
-        const mapKeys = Array.from(this.referenceMap.keys()).slice(0, 5); // 只显示前5个
-        console.debug(`[UnifiedCache] Available keys in referenceMap:`, mapKeys);
+        const mapKeys = Array.from(this.referenceMap.keys()).slice(0, 5) // 只显示前5个
+        console.debug(`[UnifiedCache] Available keys in referenceMap:`, mapKeys)
       }
 
       // 如果referenceMap为空但sessionStorage中可能有数据，尝试重新初始化
@@ -411,7 +405,9 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    */
   getStats() {
     const hitRate =
-      ((this.stats.memoryHits + this.stats.sessionHits + this.stats.localHits) / this.stats.totalRequests) * 100
+      ((this.stats.memoryHits + this.stats.sessionHits + this.stats.localHits) /
+        this.stats.totalRequests) *
+      100
 
     return {
       ...this.stats,
@@ -458,7 +454,12 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     const localStorageConfig = CACHE_LAYER_CONFIG.LOCAL
 
     // 定义层级优先级，过滤掉 undefined 的 preferred layer
-    const layerPriorities = [preferredLayer, CacheLayer.MEMORY, CacheLayer.SESSION, CacheLayer.LOCAL].filter(Boolean) as CacheLayer[]
+    const layerPriorities = [
+      preferredLayer,
+      CacheLayer.MEMORY,
+      CacheLayer.SESSION,
+      CacheLayer.LOCAL,
+    ].filter(Boolean) as CacheLayer[]
     const uniqueLayers = [...new Set(layerPriorities)] // 保证层级不重复
 
     for (const layer of uniqueLayers) {
@@ -598,7 +599,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
       const urlResult = urlHandler.processURL(originalKey, {
         normalizePath: true,
         removeHash: true,
-        validate: false // 不验证，因为可能是路径片段
+        validate: false, // 不验证，因为可能是路径片段
       })
 
       if (urlResult.isValid) {
@@ -608,11 +609,13 @@ export class UnifiedContentCacheManager implements ICleanupManager {
           .replace(/\\+/g, "/") // 统一路径分隔符
           .replace(/\/+/g, "/") // 合并多个连续斜杠
 
-        console.log(`[Cache Debug] normalizeKeyForComparison: ${key} -> ${originalKey} -> ${normalizedResult}`)
+        console.log(
+          `[Cache Debug] normalizeKeyForComparison: ${key} -> ${originalKey} -> ${normalizedResult}`,
+        )
         return normalizedResult
       } else {
         // 如果不是有效URL，直接处理为路径
-        const pathname = originalKey.startsWith('/') ? originalKey : '/' + originalKey
+        const pathname = originalKey.startsWith("/") ? originalKey : "/" + originalKey
         const segments = pathname.split("/").filter((segment) => segment.length > 0)
         const deduplicatedSegments: string[] = []
         const seen = new Set<string>()
@@ -629,9 +632,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
           }
         }
 
-        const result = deduplicatedSegments.length > 0
-          ? "/" + deduplicatedSegments.join("/")
-          : "/"
+        const result = deduplicatedSegments.length > 0 ? "/" + deduplicatedSegments.join("/") : "/"
 
         const normalizedResult = result
           .toLowerCase()
@@ -747,7 +748,6 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    * @internal
    */
   static resetSingleton(): void {
-
     UnifiedContentCacheManager._initialized = false
   }
 }

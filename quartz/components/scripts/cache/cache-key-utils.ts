@@ -3,8 +3,7 @@
  * 提供统一的缓存键生成、验证、解析等功能
  */
 
-import { CacheKeyRules } from "./unified-cache"
-import { CacheLayer } from "../managers/UnifiedContentCacheManager"
+import { CacheKeyRules, CacheLayer } from "./unified-cache"
 
 /**
  * 缓存键工具类
@@ -55,7 +54,7 @@ export const CacheKeyUtils = {
     }
 
     // 根据存储层映射到正确的前缀
-    const prefixMap = {
+    const prefixMap: { [key in CacheLayer]?: string } = {
       [CacheLayer.MEMORY]: CacheKeyRules.PREFIXES.CONTENT,
       [CacheLayer.SESSION]: CacheKeyRules.PREFIXES.CONTENT,
     }

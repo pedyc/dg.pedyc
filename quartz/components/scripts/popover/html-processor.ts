@@ -2,7 +2,7 @@ import { PopoverConfig } from "./popover-config"
 import { PopoverError } from "./error-handler"
 import { normalizeRelativeURLs, removeDuplicatePathSegments } from "../../../util/path"
 import { updatePageHead } from "../utils/html-utils"
-import { UnifiedStorageManager } from "../managers/UnifiedStorageManager"
+import { globalStorageManager } from "../managers"
 
 export type cachedItem = {
   data: any
@@ -41,8 +41,7 @@ export class HTMLContentProcessor {
 
     if (storeInSession) {
       try {
-        const storageManager = new UnifiedStorageManager()
-        await storageManager.setSessionItem(cacheKey, contents)
+        globalStorageManager.instance.setSessionItem(cacheKey, contents)
       } catch (error) {
         console.warn("Failed to cache processed content:", error)
       }

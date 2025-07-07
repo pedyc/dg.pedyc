@@ -156,6 +156,15 @@ export const UNIFIED_CACHE_CONFIG: Record<string, CacheConfig> = {
  * 缓存层级配置
  * 定义不同层级的资源分配策略
  */
+/**
+ * 缓存层级枚举
+ */
+export enum CacheLayer {
+  MEMORY = 'MEMORY',
+  SESSION = 'SESSION',
+  LOCAL = 'LOCAL',
+}
+
 export const CACHE_LAYER_CONFIG = {
   /** 内存层配置 - 热数据 */
   MEMORY: {

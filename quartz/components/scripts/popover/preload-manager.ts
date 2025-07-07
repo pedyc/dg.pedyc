@@ -1,24 +1,17 @@
 /**
  * 预加载管理器模块
  */
-import { OptimizedCacheManager } from "../managers/OptimizedCacheManager"
-import { getCacheConfig } from "../cache/unified-cache"
-import { ICleanupManager } from "../managers/CleanupManager"
-import { globalUnifiedContentCache, CacheLayer } from "../managers/index"
-import { PopoverConfig } from "./"
+import { ICleanupManager } from "../managers/CleanupManager";
+import { globalUnifiedContentCache, urlCacheManager } from "../managers/index";
+import { CacheLayer } from "../cache";
+import { PopoverConfig } from ".";
 import { PopoverErrorHandler } from "./error-handler"
 import { urlHandler } from "../utils/simplified-url-handler"
 import { FailedLinksManager } from "./failed-links-manager"
 import { HTMLContentProcessor } from "./html-processor"
 
-// 使用统一配置创建链接有效性缓存
-const unifiedConfig = getCacheConfig("DEFAULT")
-const linkValidityCacheConfig = {
-  capacity: Math.floor(unifiedConfig.capacity * 0.1), // 10% 用于链接有效性缓存
-  ttl: unifiedConfig.ttl,
-  maxMemoryMB: unifiedConfig.maxMemoryMB * 0.05, // 5% 内存用于链接有效性
-}
-const linkValidityCache = new OptimizedCacheManager<boolean>(linkValidityCacheConfig)
+// 直接从全局管理器获取链接有效性缓存实例
+const linkValidityCache = urlCacheManager.instance;
 
 // 类型定义
 interface PreloadQueueItem {
@@ -81,44 +74,40 @@ export class PreloadManager implements ICleanupManager {
 
     const { processed: contentUrl, cacheKey } = urlResult
 
-    console.debug(`[PreloadManager Debug] Input href: ${href}`)
-    console.debug(`[PreloadManager Debug] Processed contentUrl: ${contentUrl.toString()}`)
-    console.debug(`[PreloadManager Debug] Generated cache key: ${cacheKey}`)
-    console.debug(
-      `[PreloadManager Debug] Cache already has key: ${globalUnifiedContentCache.instance.has(cacheKey)}`,
-    )
-    console.debug(
-      `[PreloadManager Debug] Currently preloading: ${preloadingInProgress.has(cacheKey)}`,
-    )
+    // 打印预加载请求的原始信息
+    console.debug(`[PreloadManager Debug] Initiating preload for href: ${href}, priority: ${priority}`)
+    // 打印 URL 处理结果
+    console.debug(`[PreloadManager Debug] Processed URL: ${contentUrl.toString()}, Cache Key: ${cacheKey}`)
+    // 检查并打印缓存状态和预加载状态
+    console.debug(`[PreloadManager Debug] Is content already in cache? ${globalUnifiedContentCache.instance.has(cacheKey)}`)
+    console.debug(`[PreloadManager Debug] Is content currently preloading? ${preloadingInProgress.has(cacheKey)}`)
 
     // 检查是否已经在缓存中或正在预加载
     if (globalUnifiedContentCache.instance.has(cacheKey) || preloadingInProgress.has(cacheKey)) {
-      console.debug(
-        `[PreloadManager Debug] Content already cached or preloading, skipping: ${cacheKey}`,
-      )
+      // 如果内容已在缓存中或正在预加载，则跳过并打印调试信息
+      console.debug(`[PreloadManager Debug] Content for ${cacheKey} already cached or preloading, skipping.`)
       return
     }
 
     // 检查是否为失败链接
     if (FailedLinksManager.isFailedLink(cacheKey)) {
-      console.debug(`[PreloadManager Debug] Link marked as failed, skipping: ${cacheKey}`)
+      // 如果链接被标记为失败，则跳过并打印调试信息
+      console.debug(`[PreloadManager Debug] Link ${cacheKey} marked as failed, skipping preload.`)
       return
     }
 
     // 如果当前预加载数量已达上限，加入队列
     if (this.currentPreloads >= this.MAX_CONCURRENT_PRELOADS) {
-      console.debug(
-        `[PreloadManager Debug] Max concurrent preloads reached, queuing: ${cacheKey} with priority ${priority}`,
-      )
+      // 如果达到最大并发预加载数量，则将任务加入队列并打印调试信息
+      console.debug(`[PreloadManager Debug] Max concurrent preloads (${this.MAX_CONCURRENT_PRELOADS}) reached. Queuing ${cacheKey} with priority ${priority}. Current preloads: ${this.currentPreloads}, Queue length: ${this.preloadQueue.length + 1}.`)
       return new Promise<void>((resolve, reject) => {
         this.preloadQueue.push({ href, priority, resolve, reject })
         this.preloadQueue.sort((a, b) => b.priority - a.priority) // 优先级高的排在前面
       })
     }
 
-    console.debug(
-      `[PreloadManager Debug] Starting executePreload for: ${href} with priority ${priority}`,
-    )
+    // 开始执行预加载任务，并打印调试信息
+    console.debug(`[PreloadManager Debug] Starting execution for ${href} (Cache Key: ${cacheKey}) with priority ${priority}.`)
     await this.executePreload(href, priority)
   }
 
@@ -145,11 +134,9 @@ export class PreloadManager implements ICleanupManager {
     const { processed: contentUrl, cacheKey } = urlResult
     const validityCacheKey = urlHandler.getCacheKey(contentUrl.toString(), 'link')
 
-    // 首先检查统一缓存中是否已经存在内容
+    // 首先检查统一缓存中是否已经存在内容，如果存在则直接返回，避免重复请求
     if (globalUnifiedContentCache.instance.has(cacheKey)) {
-      console.log(
-        `[PreloadManager Debug] Content already exists in unified cache, skipping HTTP request: ${cacheKey}`,
-      )
+      console.debug(`[PreloadManager Debug] Content for ${cacheKey} found in unified cache, skipping HTTP request.`)
       return true
     }
 
@@ -171,8 +158,9 @@ export class PreloadManager implements ICleanupManager {
       })
 
       if (!response.ok) {
-        // 同时更新链接有效性缓存
+        // 如果响应不成功，更新链接有效性缓存为 false，并抛出错误
         linkValidityCache.set(validityCacheKey, false, PopoverConfig.FAILED_LINK_CACHE_TTL)
+        console.warn(`[PreloadManager] HTTP error for ${contentUrl.toString()}: ${response.status} ${response.statusText}`)
         throw new Error(`HTTP ${response.status}: ${response.statusText}`)
       }
 
@@ -183,20 +171,15 @@ export class PreloadManager implements ICleanupManager {
 
       if (contentType.includes("text/html")) {
         const html = await response.text()
-        console.debug("[Preload Debug] Raw HTML received:", {
-          length: html.length,
-          preview: html.substring(0, 200) + "...",
-        })
+        // 打印原始 HTML 内容的调试信息
+        console.debug(`[PreloadManager Debug] Raw HTML received for ${cacheKey}: Length = ${html.length}, Preview = ${html.substring(0, 200)}...`)
 
         const content = await HTMLContentProcessor.processContent(html, contentUrl, cacheKey)
-        console.debug("[Preload Debug] Processed content:", {
-          hasChildNodes: content.hasChildNodes(),
-          childElementCount: content.childElementCount,
-          textContent: content.textContent?.substring(0, 100) + "...",
-        })
+        // 打印处理后的内容调试信息
+        console.debug(`[PreloadManager Debug] Processed content for ${cacheKey}: Has child nodes = ${content.hasChildNodes()}, Child element count = ${content.childElementCount}, Text content preview = ${content.textContent?.substring(0, 100)}...`)
 
         if (!content.hasChildNodes()) {
-          console.warn("[Preload Debug] Processed content is empty")
+          console.warn(`[PreloadManager] Processed content for ${cacheKey} is empty.`)
           throw new Error("无效的HTML内容：处理后内容为空")
         }
 
@@ -223,7 +206,9 @@ export class PreloadManager implements ICleanupManager {
       FailedLinksManager.removeFailedLink(cacheKey)
       return true
     } catch (error) {
+      // 捕获并处理预加载过程中的错误
       PopoverErrorHandler.handleError(error as Error, "Preloading link content", cacheKey)
+      console.error(`[PreloadManager] Error preloading ${href} (Cache Key: ${cacheKey}):`, error)
 
       // 区分错误类型，避免将临时网络错误永久标记为失败
       const errorMessage = (error as Error).message.toLowerCase()
@@ -248,8 +233,10 @@ export class PreloadManager implements ICleanupManager {
 
       return false
     } finally {
+      // 预加载任务完成（无论成功或失败），减少当前预加载计数并从进行中集合中移除
       this.currentPreloads--
       preloadingInProgress.delete(cacheKey)
+      console.debug(`[PreloadManager Debug] Finished preload attempt for ${cacheKey}. Current preloads: ${this.currentPreloads}, Queue length: ${this.preloadQueue.length}.`)
 
       // 处理队列中的下一个任务
       this.processQueue()

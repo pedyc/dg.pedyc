@@ -9,7 +9,10 @@ import { UnifiedStorageManager } from "./UnifiedStorageManager"
 import { UnifiedContentCacheManager } from "./UnifiedContentCacheManager"
 import { CleanupManager } from "./CleanupManager"
 
-import { CacheFactory, CacheInstanceType } from "../cache/cache-factory"
+;
+import { CacheInstanceType } from "../cache/cache-factory"
+import { getCacheConfig } from "../cache/unified-cache";
+import { globalCacheManager, globalStorageManager } from "./global-instances";
 
 /**
  * 管理器类型枚举
@@ -96,13 +99,17 @@ export class ManagerFactory {
     return this._createAndRegisterManager(
       config,
       () => {
-        const cacheType = config.config?.cacheType || CacheInstanceType.DEFAULT
-        return CacheFactory.createOptimizedCache<T>({
-          type: cacheType,
+        const cacheType = config.config?.cacheType || CacheInstanceType.DEFAULT;
+
+        // 直接创建 OptimizedCacheManager 实例以打破循环依赖
+        const cacheConfig = getCacheConfig(cacheType);
+        const finalConfig = {
+          ...cacheConfig,
+          ...(config.config?.configOverride || {}),
           enableMemoryLayer: config.config?.enableMemoryLayer ?? true,
           enableSessionLayer: config.config?.enableSessionLayer ?? false,
-          configOverride: config.config?.configOverride,
-        })
+        };
+        return new OptimizedCacheManager<T>(finalConfig);
       },
       "CacheManager"
     )
@@ -149,16 +156,14 @@ export class ManagerFactory {
     return this._createAndRegisterManager(
       config,
       () => {
-        const cacheType = config.config?.cacheType || CacheInstanceType.CONTENT
-        return CacheFactory.createUnifiedContentCache({
-          type: cacheType,
-          enableMemoryLayer: config.config?.enableMemoryLayer ?? true,
-          enableSessionLayer: config.config?.enableSessionLayer ?? true,
-          configOverride: config.config?.configOverride,
-        })
+        // TODO: 直接从全局实例获取依赖，这里同样存在潜在的循环依赖风险
+        // 后续应重构为依赖注入模式，但首先解决 createCacheManager 的问题
+        const cacheManager = globalCacheManager.instance;
+        const storageManager = globalStorageManager.instance;
+        return new UnifiedContentCacheManager(cacheManager, storageManager);
       },
       "UnifiedContentCacheManager"
-    )
+    );
   }
 
 

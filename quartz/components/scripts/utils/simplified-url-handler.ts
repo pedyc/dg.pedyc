@@ -35,7 +35,7 @@ export interface URLProcessingResult {
  */
 export class SimplifiedURLHandler {
   private static instance: SimplifiedURLHandler | null = null
-  
+
   // 缓存键前缀映射
   private readonly CACHE_PREFIXES = {
     content: 'content_',
@@ -43,7 +43,7 @@ export class SimplifiedURLHandler {
     search: 'search_'
   } as const
 
-  private constructor() {}
+  private constructor() { }
 
   static getInstance(): SimplifiedURLHandler {
     if (!SimplifiedURLHandler.instance) {
@@ -94,6 +94,7 @@ export class SimplifiedURLHandler {
 
       // 5. 生成缓存键
       const cacheKey = this.generateCacheKey(url.toString(), cacheType)
+      console.debug(`[URLHandler Debug] Cache Key: ${cacheKey}`)
 
       return {
         original: href,
@@ -124,11 +125,11 @@ export class SimplifiedURLHandler {
       validate: true,
       cacheType: 'content'
     })
-    
+
     if (!result.isValid) {
       throw new Error(`Invalid URL: ${href} - ${result.error}`)
     }
-    
+
     return result.processed
   }
 
@@ -162,7 +163,7 @@ export class SimplifiedURLHandler {
     if (!href || typeof href !== 'string' || href.length === 0) {
       return false
     }
-    
+
     try {
       new URL(href)
       return true
@@ -183,15 +184,15 @@ export class SimplifiedURLHandler {
 
     // 分割路径段并过滤空段
     const segments = pathname.split('/').filter(segment => segment.length > 0)
-    
+
     // 去重逻辑：移除连续重复和循环重复
     const deduplicatedSegments: string[] = []
     const seen = new Set<string>()
 
     for (const segment of segments) {
       // 检查连续重复
-      const isConsecutiveDuplicate = 
-        deduplicatedSegments.length > 0 && 
+      const isConsecutiveDuplicate =
+        deduplicatedSegments.length > 0 &&
         deduplicatedSegments[deduplicatedSegments.length - 1] === segment
 
       // 检查循环重复（A/B/A模式）
@@ -257,7 +258,7 @@ export class SimplifiedURLHandler {
 
     try {
       const url = new URL(href)
-      
+
       // 排除下载文件
       const downloadExtensions = ['.pdf', '.zip', '.rar', '.7z', '.tar', '.gz']
       if (downloadExtensions.some(ext => url.pathname.toLowerCase().endsWith(ext))) {
@@ -286,8 +287,8 @@ export class SimplifiedURLHandler {
    * @returns 是否为同一页面
    */
   isSamePage(url: URL): boolean {
-    return url.origin === window.location.origin && 
-           url.pathname === window.location.pathname
+    return url.origin === window.location.origin &&
+      url.pathname === window.location.pathname
   }
 }
 

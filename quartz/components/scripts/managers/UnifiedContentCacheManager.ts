@@ -4,9 +4,9 @@
  * 采用单一存储源 + 引用映射的架构
  */
 
-import { OptimizedCacheManager } from "./OptimizedCacheManager"
-import { UnifiedStorageManager } from "./UnifiedStorageManager"
-import { CACHE_LAYER_CONFIG, CACHE_PERFORMANCE_CONFIG } from "../cache/unified-cache"
+import { OptimizedCacheManager } from "./OptimizedCacheManager";
+import { UnifiedStorageManager } from "./UnifiedStorageManager";
+import { CacheLayer, CACHE_LAYER_CONFIG, CACHE_PERFORMANCE_CONFIG } from "../cache/unified-cache";
 import {
   CacheKeyValidationResult,
   generateStorageKey,
@@ -16,17 +16,7 @@ import {
 import { ICleanupManager } from "./CleanupManager"
 import { urlHandler } from "../utils/simplified-url-handler"
 
-/**
- * 缓存层级枚举
- */
-export enum CacheLayer {
-  /** 内存缓存 - 最快访问，存储热数据 */
-  MEMORY = "memory",
-  /** SessionStorage - 会话持久化，页面刷新保留 */
-  SESSION = "session",
-  /** LocalStorage - 跨会话持久化，长期存储 */
-  LOCAL = "local",
-}
+
 
 
 /**
@@ -83,8 +73,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     duplicatesAvoided: 0,
   }
 
-  /** 单例实例 */
-  private static _instance: UnifiedContentCacheManager | null = null
+
 
   /** 初始化标志 */
   private static _initialized = false
@@ -316,7 +305,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    * @param content 内容
    * @param preferredLayer 首选存储层
    */
-  set(key: string, content: string, preferredLayer: CacheLayer = CacheLayer.MEMORY): void {
+  set(key: string, content: string, preferredLayer: CacheLayer | undefined = undefined): void {
     // 提取原始键用于存储到referenceMap（保持一致性）
     const originalKey = this.extractOriginalKey(key)
 
@@ -458,30 +447,41 @@ export class UnifiedContentCacheManager implements ICleanupManager {
   /**
    * 选择最佳存储层
    * @param content 内容
-   * @param preferred 首选层
+   * @param preferredLayer 首选层
    */
-  private selectOptimalLayer(content: string, preferred: CacheLayer): CacheLayer {
+  private selectOptimalLayer(content: string, preferredLayer: CacheLayer | undefined): CacheLayer {
     const contentSize = this.calculateSize(content)
 
     // 使用统一配置的层级策略
     const memoryConfig = CACHE_LAYER_CONFIG.MEMORY
     const sessionConfig = CACHE_LAYER_CONFIG.SESSION
-
-    // 根据统一配置的大小限制选择存储层
-    if (contentSize < memoryConfig.maxSizeKB * 1024 && preferred === CacheLayer.MEMORY) {
-      return CacheLayer.MEMORY
-    }
-
     const localStorageConfig = CACHE_LAYER_CONFIG.LOCAL
-    if (contentSize < localStorageConfig.maxSizeKB * 1024 && preferred === CacheLayer.LOCAL) {
-      return CacheLayer.LOCAL
+
+    // 定义层级优先级，过滤掉 undefined 的 preferred layer
+    const layerPriorities = [preferredLayer, CacheLayer.MEMORY, CacheLayer.SESSION, CacheLayer.LOCAL].filter(Boolean) as CacheLayer[]
+    const uniqueLayers = [...new Set(layerPriorities)] // 保证层级不重复
+
+    for (const layer of uniqueLayers) {
+      switch (layer) {
+        case CacheLayer.MEMORY:
+          if (contentSize < memoryConfig.maxSizeKB * 1024) {
+            return CacheLayer.MEMORY
+          }
+          break
+        case CacheLayer.SESSION:
+          if (contentSize < sessionConfig.maxSizeKB * 1024) {
+            return CacheLayer.SESSION
+          }
+          break
+        case CacheLayer.LOCAL:
+          if (contentSize < localStorageConfig.maxSizeKB * 1024) {
+            return CacheLayer.LOCAL
+          }
+          break
+      }
     }
 
-    if (contentSize < sessionConfig.maxSizeKB * 1024) {
-      return CacheLayer.SESSION
-    }
-
-    // 如果内容过大，降级到内存缓存（会被LRU自动清理）
+    // 如果内容过大，不适合任何持久化层，降级到内存缓存（可能被LRU快速清理）
     return CacheLayer.MEMORY
   }
 
@@ -743,29 +743,11 @@ export class UnifiedContentCacheManager implements ICleanupManager {
   }
 
   /**
-   * 创建默认实例（单例模式）
-   * 确保只创建一个实例，避免重复初始化
-   */
-  static createDefault(
-    memoryCache: OptimizedCacheManager<string>,
-    storageManager: UnifiedStorageManager,
-  ): UnifiedContentCacheManager {
-    if (!UnifiedContentCacheManager._instance) {
-      UnifiedContentCacheManager._instance = new UnifiedContentCacheManager(
-        memoryCache,
-        storageManager
-      )
-    } else {
-    }
-    return UnifiedContentCacheManager._instance
-  }
-
-  /**
    * 重置单例状态（仅用于测试或特殊情况）
    * @internal
    */
   static resetSingleton(): void {
-    UnifiedContentCacheManager._instance = null
+
     UnifiedContentCacheManager._initialized = false
   }
 }

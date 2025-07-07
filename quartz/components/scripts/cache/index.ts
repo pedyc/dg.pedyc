@@ -1,67 +1,12 @@
-/**
- * 缓存系统统一导出模块
- * 提供所有缓存相关的配置、工具和实例
- */
+// Barrel file for cache-related modules
 
-// 导出核心配置和常量
-export {
-  CacheKeyRules,
-  UNIFIED_CACHE_CONFIG,
-  CACHE_LAYER_CONFIG,
-  CACHE_THRESHOLDS,
-  CACHE_PERFORMANCE_CONFIG,
-  CacheMonitorConfig,
-} from "./unified-cache"
+// Export cache configuration and utilities
+export { CacheKeyRules, CacheLayer } from './unified-cache';
+export type { CacheConfig } from './unified-cache';
+export { CacheKeyUtils } from './cache-key-utils';
+export { CacheFactory, CacheInstanceType } from './cache-factory';
 
-// 导出接口和类型
-export type {
-  CacheConfig,
-  CacheMonitorConfig as CacheMonitorConfigType,
-} from "./unified-cache"
-
-// 导出缓存键工具
-export {
-  CacheKeyUtils,
-  validateCacheKey,
-  parseCacheKey,
-  sanitizeCacheKey,
-  generateStorageKey,
-  extractOriginalKey,
-  identifyCacheType,
-} from "./cache-key-utils"
-
-// 导出缓存键相关类型
-export type {
-  CacheKeyValidationResult,
-  CacheKeyParseResult,
-} from "./cache-key-utils"
-
-// 导出工具函数
-export {
-  getCacheConfig,
-  getCacheLayerConfig,
-  calculateLayerCapacity,
-  validateCacheConfig,
-  validateUnifiedCacheConfig,
-  validateCacheKey as validateCacheKeyFormat,
-  extractCacheKeyPrefix,
-  getCacheConfigDiagnostics,
-  UnifiedCacheKeyGenerator,
-  CacheKeyGeneratorCompat,
-} from "./unified-cache"
-
-// 导出缓存工厂
-export {
-  CacheFactory,
-  CacheInstanceType,
-  PREDEFINED_CACHE_CONFIGS,
-} from "./cache-factory"
-
-export type {
-  CacheInstanceConfig,
-} from "./cache-factory"
-
-// 导出全局缓存实例
+// Export global cache instances from the centralized manager module
 export {
   globalUnifiedContentCache,
   globalLinkCache,
@@ -69,9 +14,5 @@ export {
   globalUserCache,
   globalSystemCache,
   globalDefaultCache,
-  globalStorageManager,
-  GlobalCacheManager,
-} from "./global-instances"
-
-// 导出缓存验证工具
-// export * from "./cache-validation" // 文件不存在，已注释
+  globalCacheManager, // For backward compatibility
+} from '../managers';

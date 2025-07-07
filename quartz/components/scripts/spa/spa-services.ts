@@ -6,7 +6,8 @@
 import { normalizeRelativeURLs, getFullSlug } from "../../../util/path"
 import { urlHandler } from "../utils/simplified-url-handler"
 import { fetchCanonical } from "../utils/util"
-import { globalUnifiedContentCache, CacheLayer } from "../managers/index"
+import { globalUnifiedContentCache } from "../managers/index";
+import { CacheLayer } from "../cache";
 import { getDOMParser, scrollToTarget, isSamePage, micromorph } from "./spa-utils"
 import { HTMLContentProcessor } from "../popover/html-processor"
 /**

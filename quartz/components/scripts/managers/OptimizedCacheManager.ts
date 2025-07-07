@@ -216,20 +216,7 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
     this.startPeriodicCleanup()
   }
 
-  /**
-   * 创建默认配置的缓存管理器
-   */
-  static createDefault<T = any>(
-    capacity = 100,
-    ttl = 30 * 60 * 1000,
-    maxMemoryMB = 50,
-  ): OptimizedCacheManager<T> {
-    return new OptimizedCacheManager<T>({
-      capacity,
-      ttl,
-      maxMemoryMB,
-    })
-  }
+
 
   /**
    * 估算对象内存大小（字节）

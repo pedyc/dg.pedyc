@@ -24,8 +24,9 @@ import {
   resolveRelative,
   simplifySlug,
   RelativeURL,
+  removeDuplicatePathSegments,
 } from "../../util/path"
-import { UnifiedCacheKeyGenerator } from "./cache/unified-cache"
+import { CacheKeyFactory } from "./cache"
 import { D3Config } from "../Graph"
 
 type GraphicsInfo = {
@@ -60,9 +61,9 @@ type NodeRenderData = GraphicsInfo & {
   label: Text
 }
 
-const localStorageKey = UnifiedCacheKeyGenerator.generateUserKey(
+const localStorageKey = CacheKeyFactory.generateSystemKey(
   "graph-visited",
-  "navigation_history",
+  "navigation-history",
 )
 
 function getVisited(): Set<SimpleSlug> {
@@ -509,7 +510,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
           // if the time between mousedown and mouseup is short, we consider it a click
           if (Date.now() - dragStartTime < 500) {
             const node = graphData.nodes.find((n) => n.id === event.subject.id) as NodeData
-            const targ = resolveRelative(fullSlug, node.id)
+            const targ = removeDuplicatePathSegments(resolveRelative(fullSlug, node.id))
             window.spaNavigate(targ as RelativeURL)
           }
         }),
@@ -517,7 +518,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   } else {
     for (const node of nodeRenderData) {
       node.gfx.on("click", () => {
-        const targ = resolveRelative(fullSlug, node.simulationData.id)
+        const targ = removeDuplicatePathSegments(
+          resolveRelative(fullSlug, node.simulationData.id),
+        )
         window.spaNavigate(targ as RelativeURL)
       })
     }
@@ -700,7 +703,11 @@ if (document.readyState === "loading") {
 }
 
 // 监听自定义事件以重新初始化图谱
-document.addEventListener("reinit-graph", () => {
-  console.log("Received reinit-graph event.")
-  initializeOrReinitializeGraph()
+document.addEventListener("reinit-graph", async (e: CustomEvent<{ url: FullSlug }>) => {
+  console.log("reinit-graph", e)
+  const graph = document.getElementById("graph-container")
+  if (graph) {
+    const fullSlug = e.detail.url
+    await renderGraph(graph, fullSlug)
+  }
 })

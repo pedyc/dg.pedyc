@@ -64,9 +64,9 @@ initializeLazyLoading()
 // SPA导航时重新初始化
 globalResourceManager.instance.addEventListener(document as any, "nav", initializeLazyLoading)
 
-  // 页面卸载时清理
-  globalResourceManager.instance.addEventListener(window, "beforeunload", cleanupLazyLoading)
-  globalResourceManager.instance.addEventListener(window, "pagehide", cleanupLazyLoading)
+// 页面卸载时清理
+globalResourceManager.instance.addEventListener(window, "beforeunload", cleanupLazyLoading)
+globalResourceManager.instance.addEventListener(window, "pagehide", cleanupLazyLoading)
 
 // 导出给其他模块使用
 if (typeof window !== "undefined") {

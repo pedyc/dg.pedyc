@@ -18,7 +18,7 @@ export interface StorageConfig {
   /** 是否启用自动清理 */
   autoCleanup?: boolean
   /** 清理策略 */
-  cleanupStrategy?: 'lru' | 'fifo' | 'size'
+  cleanupStrategy?: "lru" | "fifo" | "size"
 }
 
 /**

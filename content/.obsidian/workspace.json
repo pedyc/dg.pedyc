@@ -41,7 +41,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Diary/2025-07-03.md",
+                    "file": "PARA/20-AREAS/04AI/提示词工程.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -56,11 +56,59 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "2025-07-03"
+                  "title": "提示词工程"
+                }
+              },
+              {
+                "id": "4f40c1aeb872e3fd",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PARA/20-AREAS/04AI/提示词工程.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "提示词工程"
+                }
+              },
+              {
+                "id": "4cec7058a57d27dd",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PARA/20-AREAS/04AI/提示词工程.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "提示词工程"
                 }
               }
             ],
-            "currentTab": 1
+            "currentTab": 3
           },
           {
             "id": "863a685a41ce1720",
@@ -99,13 +147,13 @@
                         "state": {
                           "type": "outline",
                           "state": {
-                            "file": "Diary/2025-07-03.md",
+                            "file": "PARA/20-AREAS/04AI/前端开发助手提示词 v2.md",
                             "followCursor": false,
                             "showSearch": false,
                             "searchQuery": ""
                           },
                           "icon": "lucide-list",
-                          "title": "Outline of 2025-07-03"
+                          "title": "Outline of 前端开发助手提示词 v2"
                         }
                       }
                     ]
@@ -121,7 +169,7 @@
                         "state": {
                           "type": "localgraph",
                           "state": {
-                            "file": "Diary/2025-07-03.md",
+                            "file": "PARA/20-AREAS/04AI/前端开发助手提示词 v2.md",
                             "options": {
                               "collapse-filter": true,
                               "search": "",
@@ -149,7 +197,7 @@
                             }
                           },
                           "icon": "lucide-git-fork",
-                          "title": "Graph of 2025-07-03"
+                          "title": "Graph of 前端开发助手提示词 v2"
                         }
                       }
                     ]
@@ -228,7 +276,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "合成层",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -268,8 +316,7 @@
               "title": "All properties"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -340,10 +387,17 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "3e5b2dc962c448fb",
+  "active": "72e989063b9157ff",
   "lastOpenFiles": [
-    "Diary/2025-05-01.md",
+    "PARA/20-AREAS/04AI/前端开发助手提示词 v2.md",
+    "PARA/20-AREAS/04AI/提示词工程.md",
+    "PARA/20-AREAS/04AI/前端开发助手提示词 v1.md",
+    "PARA/20-AREAS/04AI/优化助手提示词.md",
+    "PARA/20-AREAS/04AI/重构助手提示词.md",
+    "PARA/20-AREAS/04AI/_resources",
     "Diary/2025-07-03.md",
+    "Diary/_resources",
+    "Diary/2025-05-01.md",
     "Diary/2025-04-28.md",
     "Diary/2025-07-02.md",
     "Diary/2025-07-01.md",
@@ -363,14 +417,8 @@
     "copilot-custom-prompts/Explain like I am 5.md",
     "copilot-custom-prompts/Generate glossary.md",
     "copilot-custom-prompts/Generate table of contents.md",
-    "copilot-custom-prompts/Make longer.md",
-    "copilot-custom-prompts/Make shorter.md",
     "copilot-custom-prompts",
     "PARA/20-AREAS/02前端/_resources",
-    "Diary/2025-06-29.md",
-    "Diary/_resources",
-    "Diary/2025-06-28.md",
-    "Diary/2025-06-27.md",
     "Diary/_resources/2025-06-19",
     "SimpRead/backup/simpread_config@20250616174335.json",
     "_resources/sw-lifecycle.svg",
@@ -380,7 +428,6 @@
     "HTTP",
     "PARA/10-PROJECTS/_resources/前端面试.png",
     "PARA/10-PROJECTS/_resources/Drawing 2025-05-29 16.11.38.excalidraw.svg",
-    "PARA/10-PROJECTS/_resources",
     "PARA/20-AREAS/00看板/02前端领域看板.excalidraw.svg",
     "_resources/webkit-main-flow-b779d50c0cf28_856.png",
     "_resources/browser-components-9cd8ff834cc9c_856.png",

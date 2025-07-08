@@ -6,27 +6,15 @@
 
 import { OptimizedCacheManager } from "./OptimizedCacheManager"
 import { UnifiedStorageManager } from "./UnifiedStorageManager"
-import { CACHE_LAYER_CONFIG, CACHE_PERFORMANCE_CONFIG } from "../cache/unified-cache"
+import { CacheLayer, CACHE_LAYER_CONFIG, CACHE_PERFORMANCE_CONFIG } from "../cache/unified-cache"
 import {
   CacheKeyValidationResult,
   generateStorageKey,
   extractOriginalKey,
-  identifyCacheType,
+  CacheKeyFactory
 } from "../cache/cache-key-utils"
 import { ICleanupManager } from "./CleanupManager"
-import { urlHandler } from "../utils/simplified-url-handler"
 
-/**
- * 缓存层级枚举
- */
-export enum CacheLayer {
-  /** 内存缓存 - 最快访问，存储热数据 */
-  MEMORY = "memory",
-  /** SessionStorage - 会话持久化，页面刷新保留 */
-  SESSION = "session",
-}
-
-// CacheKeyValidationResult 已从 cache-key-utils 导入
 
 /**
  * 缓存诊断信息
@@ -38,6 +26,7 @@ export interface CacheDiagnostics {
   storageLayerInfo: {
     memory: boolean
     session: boolean
+    local: boolean
   }
   availableKeys: string[]
 }
@@ -77,11 +66,9 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     totalRequests: 0,
     memoryHits: 0,
     sessionHits: 0,
+    localHits: 0,
     duplicatesAvoided: 0,
   }
-
-  /** 单例实例 */
-  private static _instance: UnifiedContentCacheManager | null = null
 
   /** 初始化标志 */
   private static _initialized = false
@@ -94,7 +81,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     // 只在首次初始化时同步sessionStorage中的缓存引用
     if (!UnifiedContentCacheManager._initialized) {
       console.log("[UnifiedCache] Initializing UnifiedContentCacheManager from sessionStorage...")
-      this.initializeFromSessionStorage()
+      this.initializeFromStorage()
       UnifiedContentCacheManager._initialized = true
     }
   }
@@ -103,86 +90,75 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    * 从sessionStorage初始化referenceMap
    * 解决页面刷新后referenceMap丢失但sessionStorage数据仍存在的问题
    */
-  private initializeFromSessionStorage(): void {
+  private initializeFromStorage(): void {
     /**
      * 从sessionStorage初始化referenceMap
      * 解决页面刷新后referenceMap丢失但sessionStorage数据仍存在的问题
      */
     try {
       // 检查window和sessionStorage是否可用，以避免在非浏览器环境下报错
-      if (typeof window === "undefined" || !window.sessionStorage) {
-        console.warn("[UnifiedCache] window.sessionStorage 不可用，跳过初始化。")
+      if (typeof window === "undefined") {
+        console.warn("[UnifiedCache] window 对象不可用，跳过初始化。")
         return
       }
-      const sessionStorage = window.sessionStorage
-      const restoredCount: { [key: string]: number } = { content: 0 }
 
-      // 遍历sessionStorage中的所有键
-      for (let i = 0; i < sessionStorage.length; i++) {
-        const storageKey = sessionStorage.key(i)
-        if (!storageKey) continue
+      const restoredCount: { [key: string]: number } = { memory: 0, session: 0, local: 0 }
 
-        // 检查是否是缓存相关的键
-        const cacheType = this.identifyCacheType(storageKey)
-        if (!cacheType) continue
-
-        const content = sessionStorage.getItem(storageKey)
-        if (!content) continue
-
-        // 从存储键推导出原始缓存键
-        const originalKey = this.extractOriginalKey(storageKey)
-        if (!originalKey) continue
-
-        // 检查referenceMap中是否已存在该键
-        if (this.referenceMap.has(originalKey)) continue
-
-        // 创建缓存引用 - 统一使用SESSION层
-        const reference: CacheReference = {
-          storageLayer: CacheLayer.SESSION,
-          storageKey: storageKey,
-          refCount: 0, // 初始化时设为0，首次访问时会增加
-          lastAccessed: Date.now(),
-          size: this.calculateSize(content),
+      const processStorage = (storage: Storage, layer: CacheLayer, name: string) => {
+        if (!storage) {
+          console.warn(`[UnifiedCache] ${name}Storage 不可用，跳过初始化。`)
+          return
         }
+        for (let i = 0; i < storage.length; i++) {
+          const storageKey = storage.key(i)
+          if (!storageKey) continue
 
-        this.referenceMap.set(originalKey, reference)
+          const cacheType = CacheKeyFactory.identifyType(storageKey)
+          if (!cacheType) continue
 
-        // 更新内容哈希映射
-        const contentHash = this.calculateHash(content)
-        if (!this.contentHashMap.has(contentHash)) {
-          this.contentHashMap.set(contentHash, originalKey)
+          const content = storage.getItem(storageKey)
+          if (!content) continue
+
+          const originalKey = extractOriginalKey(storageKey)
+          if (!originalKey) continue
+
+          if (this.referenceMap.has(originalKey)) continue
+
+          const reference: CacheReference = {
+            storageLayer: layer,
+            storageKey: storageKey,
+            refCount: 0,
+            lastAccessed: Date.now(),
+            size: this.calculateSize(content),
+          }
+
+          this.referenceMap.set(originalKey, reference)
+
+          const contentHash = this.calculateHash(content)
+          if (!this.contentHashMap.has(contentHash)) {
+            this.contentHashMap.set(contentHash, originalKey)
+          }
+
+          restoredCount[layer]++
         }
-
-        restoredCount.content++
       }
 
-      if (restoredCount.content > 0) {
-        console.log(`[UnifiedCache] Successfully restored ${restoredCount.content} content items from sessionStorage.`)
+      processStorage(window.sessionStorage, CacheLayer.SESSION, "session")
+      processStorage(window.localStorage, CacheLayer.LOCAL, "local")
+
+      if (restoredCount.session > 0 || restoredCount.local > 0) {
+        console.log(
+          `[UnifiedCache] Successfully restored ${restoredCount.session} items from sessionStorage and ${restoredCount.local} items from localStorage.`,
+        )
       } else {
-        console.log("[UnifiedCache] No content items found in sessionStorage to restore.")
+        console.log("[UnifiedCache] No items found in sessionStorage or localStorage to restore.")
       }
     } catch (error) {
-      console.warn("[UnifiedCache] Error initializing sessionStorage references:", error)
+      console.warn("[UnifiedCache] Error initializing storage references:", error)
     }
   }
 
-  /**
-   * 识别缓存类型（使用统一工具函数）
-   * @param storageKey 存储键
-   * @returns 缓存类型或null
-   */
-  private identifyCacheType(storageKey: string): string | null {
-    return identifyCacheType(storageKey)
-  }
 
-  /**
-   * 从存储键提取原始缓存键（使用统一工具函数）
-   * @param storageKey 存储键
-   * @returns 原始键
-   */
-  private extractOriginalKey(storageKey: string): string {
-    return extractOriginalKey(storageKey)
-  }
 
   /**
    * 获取内容
@@ -193,40 +169,20 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     this.stats.totalRequests++
 
     // 提取原始键用于查找referenceMap（因为referenceMap存储的是原始键）
-    const originalKey = this.extractOriginalKey(key)
+    const originalKey = extractOriginalKey(key)
 
-    // 首先尝试直接匹配
-    let reference = this.referenceMap.get(originalKey)
-
-    // 如果直接匹配失败，尝试标准化键匹配
-    if (!reference) {
-      console.debug(`[UnifiedCache] Direct match failed for: ${originalKey}`);
-      console.debug(`[UnifiedCache] Attempting normalization match...`);
-
-      // 对所有referenceMap中的键进行标准化比较
-      for (const [mapKey, mapReference] of this.referenceMap.entries()) {
-        const normalizedMapKey = this.normalizeKeyForComparison(mapKey)
-        const normalizedOriginalKey = this.normalizeKeyForComparison(originalKey)
-
-        console.debug(`[UnifiedCache] Comparing normalized keys:`);
-        console.debug(`  Original: "${normalizedOriginalKey}"`);
-        console.debug(`  Map key: "${normalizedMapKey}"`);
-
-        if (normalizedMapKey === normalizedOriginalKey) {
-          console.debug(`[UnifiedCache] Found match via normalization: ${originalKey} -> ${mapKey}`);
-          reference = mapReference;
-          break;
-        }
-      }
-    }
+    // 直接使用原始键进行查找，不再进行标准化匹配
+    const reference = this.referenceMap.get(originalKey)
 
     if (!reference) {
-      console.log(`[UnifiedCache] Cache miss for key: ${key}, originalKey: ${originalKey}. referenceMap size: ${this.referenceMap.size}`)
+      console.log(
+        `[UnifiedCache] Cache miss for key: ${key}, originalKey: ${originalKey}. referenceMap size: ${this.referenceMap.size}`,
+      )
 
       // 调试信息：显示referenceMap中的所有键
       if (this.referenceMap.size > 0) {
-        const mapKeys = Array.from(this.referenceMap.keys()).slice(0, 5); // 只显示前5个
-        console.debug(`[UnifiedCache] Available keys in referenceMap:`, mapKeys);
+        const mapKeys = Array.from(this.referenceMap.keys())
+        console.debug(`[UnifiedCache] Available keys in referenceMap:`, mapKeys)
       }
 
       // 如果referenceMap为空但sessionStorage中可能有数据，尝试重新初始化
@@ -236,7 +192,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
         window.sessionStorage &&
         window.sessionStorage.length > 0
       ) {
-        this.forceReinitializeFromSessionStorage()
+        this.forceReinitializeFromStorage()
         // 重新尝试获取引用
         const retryReference = this.referenceMap.get(originalKey)
         if (retryReference) {
@@ -271,6 +227,11 @@ export class UnifiedContentCacheManager implements ICleanupManager {
         content = this.storageManager.getSessionItem(reference.storageKey)
         if (content) this.stats.sessionHits++
         break
+
+      case CacheLayer.LOCAL:
+        content = this.storageManager.getLocalItem(reference.storageKey)
+        if (content) this.stats.localHits++
+        break
     }
 
     if (!content) {
@@ -285,13 +246,13 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    * 强制重新从sessionStorage初始化referenceMap
    * 用于解决SPA导航时referenceMap丢失的问题
    */
-  private forceReinitializeFromSessionStorage(): void {
+  private forceReinitializeFromStorage(): void {
     // 清空当前的referenceMap和contentHashMap
     this.referenceMap.clear()
     this.contentHashMap.clear()
 
     // 重新初始化
-    this.initializeFromSessionStorage()
+    this.initializeFromStorage()
   }
 
   /**
@@ -300,9 +261,9 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    * @param content 内容
    * @param preferredLayer 首选存储层
    */
-  set(key: string, content: string, preferredLayer: CacheLayer = CacheLayer.MEMORY): void {
+  set(key: string, content: string, preferredLayer: CacheLayer | undefined = undefined): void {
     // 提取原始键用于存储到referenceMap（保持一致性）
-    const originalKey = this.extractOriginalKey(key)
+    const originalKey = extractOriginalKey(key)
 
     // 计算内容哈希
     const contentHash = this.calculateHash(content)
@@ -328,7 +289,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
 
     // 选择最佳存储层
     const optimalLayer = this.selectOptimalLayer(content, preferredLayer)
-    const storageKey = this.generateStorageKey(key, optimalLayer)
+    const storageKey = generateStorageKey(key, optimalLayer)
 
     // 存储内容
     const success = this.storeContent(storageKey, content, optimalLayer)
@@ -354,7 +315,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    */
   delete(key: string): boolean {
     // 提取原始键用于查找referenceMap（因为referenceMap存储的是原始键）
-    const originalKey = this.extractOriginalKey(key)
+    const originalKey = extractOriginalKey(key)
     const reference = this.referenceMap.get(originalKey)
     if (!reference) {
       return false
@@ -386,7 +347,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    */
   has(key: string): boolean {
     // 提取原始键用于查找referenceMap（因为referenceMap存储的是原始键）
-    const originalKey = this.extractOriginalKey(key)
+    const originalKey = extractOriginalKey(key)
     return this.referenceMap.has(originalKey)
   }
 
@@ -397,7 +358,8 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     this.referenceMap.clear()
     this.contentHashMap.clear()
     this.memoryCache.clear()
-    // 注意：不清空sessionStorage，因为可能有其他数据
+    // 注意：不清空sessionStorage和localStorage，因为可能有其他数据
+    // this.storageManager.cleanupAllStorage() // 如果需要彻底清理所有存储，可以启用此行
   }
 
   /**
@@ -405,7 +367,9 @@ export class UnifiedContentCacheManager implements ICleanupManager {
    */
   getStats() {
     const hitRate =
-      ((this.stats.memoryHits + this.stats.sessionHits) / this.stats.totalRequests) * 100
+      ((this.stats.memoryHits + this.stats.sessionHits + this.stats.localHits) /
+        this.stats.totalRequests) *
+      100
 
     return {
       ...this.stats,
@@ -441,25 +405,46 @@ export class UnifiedContentCacheManager implements ICleanupManager {
   /**
    * 选择最佳存储层
    * @param content 内容
-   * @param preferred 首选层
+   * @param preferredLayer 首选层
    */
-  private selectOptimalLayer(content: string, preferred: CacheLayer): CacheLayer {
+  private selectOptimalLayer(content: string, preferredLayer: CacheLayer | undefined): CacheLayer {
     const contentSize = this.calculateSize(content)
 
     // 使用统一配置的层级策略
     const memoryConfig = CACHE_LAYER_CONFIG.MEMORY
     const sessionConfig = CACHE_LAYER_CONFIG.SESSION
+    const localStorageConfig = CACHE_LAYER_CONFIG.LOCAL
 
-    // 根据统一配置的大小限制选择存储层
-    if (contentSize < memoryConfig.maxSizeKB * 1024 && preferred === CacheLayer.MEMORY) {
-      return CacheLayer.MEMORY
+    // 定义层级优先级，过滤掉 undefined 的 preferred layer
+    const layerPriorities = [
+      preferredLayer,
+      CacheLayer.MEMORY,
+      CacheLayer.SESSION,
+      CacheLayer.LOCAL,
+    ].filter(Boolean) as CacheLayer[]
+    const uniqueLayers = [...new Set(layerPriorities)] // 保证层级不重复
+
+    for (const layer of uniqueLayers) {
+      switch (layer) {
+        case CacheLayer.MEMORY:
+          if (contentSize < memoryConfig.maxSizeKB * 1024) {
+            return CacheLayer.MEMORY
+          }
+          break
+        case CacheLayer.SESSION:
+          if (contentSize < sessionConfig.maxSizeKB * 1024) {
+            return CacheLayer.SESSION
+          }
+          break
+        case CacheLayer.LOCAL:
+          if (contentSize < localStorageConfig.maxSizeKB * 1024) {
+            return CacheLayer.LOCAL
+          }
+          break
+      }
     }
 
-    if (contentSize < sessionConfig.maxSizeKB * 1024) {
-      return CacheLayer.SESSION
-    }
-
-    // 如果内容过大，降级到内存缓存（会被LRU自动清理）
+    // 如果内容过大，不适合任何持久化层，降级到内存缓存（可能被LRU快速清理）
     return CacheLayer.MEMORY
   }
 
@@ -478,6 +463,10 @@ export class UnifiedContentCacheManager implements ICleanupManager {
 
         case CacheLayer.SESSION:
           this.storageManager.setSessionItem(key, content)
+          return true
+
+        case CacheLayer.LOCAL:
+          this.storageManager.setLocalItem(key, content)
           return true
 
         default:
@@ -504,20 +493,17 @@ export class UnifiedContentCacheManager implements ICleanupManager {
         case CacheLayer.SESSION:
           this.storageManager.removeSessionItem(key)
           break
+
+        case CacheLayer.LOCAL:
+          this.storageManager.removeLocalItem(key)
+          break
       }
     } catch (error) {
       console.warn(`[UnifiedCache] Failed to delete from ${layer}:`, error)
     }
   }
 
-  /**
-   * 生成存储键（使用统一工具函数）
-   * @param originalKey 原始键
-   * @param layer 存储层
-   */
-  private generateStorageKey(originalKey: string, layer: CacheLayer): string {
-    return generateStorageKey(originalKey, layer)
-  }
+
 
   /**
    * 计算内容哈希
@@ -553,69 +539,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     return totalSize
   }
 
-  /**
-   * 标准化键用于比较 - 使用简化URL处理器
-   * 使用统一的URL处理逻辑确保缓存键的一致性
-   * @param key 需要标准化的键（可能包含前缀）
-   * @returns 标准化后的键
-   */
-  private normalizeKeyForComparison(key: string): string {
-    try {
-      // 首先提取原始键，移除可能的前缀
-      const originalKey = this.extractOriginalKey(key)
 
-      // 使用简化URL处理器进行标准化
-      const urlResult = urlHandler.processURL(originalKey, {
-        normalizePath: true,
-        removeHash: true,
-        validate: false // 不验证，因为可能是路径片段
-      })
-
-      if (urlResult.isValid) {
-        const normalizedResult = urlResult.processed.pathname
-          .toLowerCase()
-          .replace(/\/$/, "") // 移除尾部斜杠
-          .replace(/\\+/g, "/") // 统一路径分隔符
-          .replace(/\/+/g, "/") // 合并多个连续斜杠
-
-        console.log(`[Cache Debug] normalizeKeyForComparison: ${key} -> ${originalKey} -> ${normalizedResult}`)
-        return normalizedResult
-      } else {
-        // 如果不是有效URL，直接处理为路径
-        const pathname = originalKey.startsWith('/') ? originalKey : '/' + originalKey
-        const segments = pathname.split("/").filter((segment) => segment.length > 0)
-        const deduplicatedSegments: string[] = []
-        const seen = new Set<string>()
-
-        for (const segment of segments) {
-          const isConsecutiveDuplicate =
-            deduplicatedSegments.length > 0 &&
-            deduplicatedSegments[deduplicatedSegments.length - 1] === segment
-          const isDuplicateInPath = seen.has(segment)
-
-          if (!isConsecutiveDuplicate && !isDuplicateInPath) {
-            deduplicatedSegments.push(segment)
-            seen.add(segment)
-          }
-        }
-
-        const result = deduplicatedSegments.length > 0
-          ? "/" + deduplicatedSegments.join("/")
-          : "/"
-
-        const normalizedResult = result
-          .toLowerCase()
-          .replace(/\/$/, "")
-          .replace(/\\+/g, "/")
-          .replace(/\/+/g, "/")
-
-        return normalizedResult
-      }
-    } catch (error) {
-      console.warn("Failed to normalize key for comparison:", error)
-      return key.toLowerCase()
-    }
-  }
 
   /**
    * 验证缓存键的一致性
@@ -642,6 +566,9 @@ export class UnifiedContentCacheManager implements ICleanupManager {
         break
       case CacheLayer.SESSION:
         contentExists = this.storageManager.getSessionItem(reference.storageKey) !== null
+        break
+      case CacheLayer.LOCAL:
+        contentExists = this.storageManager.getLocalItem(reference.storageKey) !== null
         break
     }
 
@@ -697,6 +624,7 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     const storageLayerInfo = {
       memory: this.memoryCache.has(key),
       session: this.storageManager.getSessionItem(key) !== null,
+      local: this.storageManager.getLocalItem(key) !== null,
     }
 
     return {
@@ -709,29 +637,10 @@ export class UnifiedContentCacheManager implements ICleanupManager {
   }
 
   /**
-   * 创建默认实例（单例模式）
-   * 确保只创建一个实例，避免重复初始化
-   */
-  static createDefault(
-    memoryCache: OptimizedCacheManager<string>,
-    storageManager: UnifiedStorageManager,
-  ): UnifiedContentCacheManager {
-    if (!UnifiedContentCacheManager._instance) {
-      UnifiedContentCacheManager._instance = new UnifiedContentCacheManager(
-        memoryCache,
-        storageManager,
-      )
-    } else {
-    }
-    return UnifiedContentCacheManager._instance
-  }
-
-  /**
    * 重置单例状态（仅用于测试或特殊情况）
    * @internal
    */
   static resetSingleton(): void {
-    UnifiedContentCacheManager._instance = null
     UnifiedContentCacheManager._initialized = false
   }
 }

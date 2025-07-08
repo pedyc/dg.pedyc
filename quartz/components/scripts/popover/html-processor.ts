@@ -1,8 +1,8 @@
-import { PopoverConfig } from "./config"
+import { PopoverConfig } from "./popover-config"
 import { PopoverError } from "./error-handler"
 import { normalizeRelativeURLs, removeDuplicatePathSegments } from "../../../util/path"
 import { updatePageHead } from "../utils/html-utils"
-import { UnifiedStorageManager } from "../managers/UnifiedStorageManager"
+import { globalStorageManager } from "../managers"
 
 export type cachedItem = {
   data: any
@@ -41,8 +41,7 @@ export class HTMLContentProcessor {
 
     if (storeInSession) {
       try {
-        const storageManager = new UnifiedStorageManager()
-        await storageManager.setSessionItem(cacheKey, contents)
+        globalStorageManager.instance.setSessionItem(cacheKey, contents)
       } catch (error) {
         console.warn("Failed to cache processed content:", error)
       }
@@ -234,7 +233,7 @@ export class HTMLContentProcessor {
             })
 
             // 检查容器内容是否为空
-            if (container.children.length === 0 && container.textContent?.trim() === "") {
+            if (container.innerHTML.trim() === "") {
               console.warn("[Popover Debug] Container is empty after rendering, showing error")
               HTMLContentProcessor.renderNotFoundContent(container, "Empty content after parsing")
             }
@@ -296,6 +295,8 @@ export class HTMLContentProcessor {
       console.warn("[HTMLProcessor Debug] Failed to parse fragment, returning as-is")
       return fragmentHTML
     }
+
+    normalizeRelativeURLs(tempDoc, baseUrl)
 
     // 恢复原始ID（移除popover-internal-前缀）
     fragmentContainer.querySelectorAll('[id^="popover-internal-"]').forEach((el) => {

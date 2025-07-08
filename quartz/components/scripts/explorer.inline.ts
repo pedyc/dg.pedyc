@@ -1,7 +1,8 @@
 import { FileTrieNode } from "../../util/fileTrie"
 import { FullSlug, resolveRelative, simplifySlug } from "../../util/path"
 import { ContentDetails } from "../../plugins/emitters/contentIndex"
-import { UnifiedCacheKeyGenerator } from "./cache/unified-cache"
+import { CacheKeyFactory } from "./cache"
+import { globalStorageManager } from "./managers"
 
 type MaybeHTMLElement = HTMLElement | undefined
 
@@ -50,9 +51,9 @@ function toggleFolder(evt: MouseEvent) {
   const folderContainer = (
     isSvg
       ? // svg -> div.folder-container
-        target.parentElement
+      target.parentElement
       : // button.folder-button -> div -> div.folder-container
-        target.parentElement?.parentElement
+      target.parentElement?.parentElement
   ) as MaybeHTMLElement
   if (!folderContainer) return
   const childFolderContainer = folderContainer.nextElementSibling as MaybeHTMLElement
@@ -77,8 +78,8 @@ function toggleFolder(evt: MouseEvent) {
   }
 
   const stringifiedFileTree = JSON.stringify(currentExplorerState)
-  const fileTreeKey = UnifiedCacheKeyGenerator.generateUserKey("fileTree", "explorer_state")
-  localStorage.setItem(fileTreeKey, stringifiedFileTree)
+  const fileTreeKey = CacheKeyFactory.generateUserKey("fileTree", "explorer_state")
+  globalStorageManager.instance.setItem('local', fileTreeKey, stringifiedFileTree)
 }
 
 function createFileNode(currentSlug: FullSlug, node: FileTrieNode): HTMLLIElement {
@@ -90,7 +91,7 @@ function createFileNode(currentSlug: FullSlug, node: FileTrieNode): HTMLLIElemen
   a.dataset.for = node.slug
   a.textContent = node.displayName
 
-  if (currentSlug === node.slug) {
+  if (simplifySlug(currentSlug) === simplifySlug(node.slug)) {
     a.classList.add("active")
   }
 
@@ -183,11 +184,15 @@ async function setupExplorer(currentSlug: FullSlug) {
     // const storageTree = localStorage.getItem("fileTree")
     // const serializedExplorerState = storageTree && opts.useSavedState ? JSON.parse(storageTree) : []
 
-    // Clear currentExplorerState to ensure all folders are collapsed on page navigation
-    currentExplorerState = []
+    const fileTreeKey = CacheKeyFactory.generateUserKey("fileTree", "explorer_state")
+    const storageTree = globalStorageManager.instance.getItem('local', fileTreeKey)
+    const serializedExplorerState = storageTree && opts.useSavedState ? JSON.parse(storageTree) : []
+    currentExplorerState = serializedExplorerState
 
-    // Force oldIndex to be empty to ensure folders are collapsed on navigation
     const oldIndex = new Map<string, boolean>()
+    for (const folder of serializedExplorerState) {
+      oldIndex.set(folder.path, folder.collapsed)
+    }
 
     const data = await fetchData
     const entries = [...Object.entries(data)] as [FullSlug, ContentDetails][]
@@ -236,7 +241,7 @@ async function setupExplorer(currentSlug: FullSlug) {
     explorerUl.insertBefore(fragment, explorerUl.firstChild)
 
     // restore explorer scrollTop position if it exists
-    const scrollTopKey = UnifiedCacheKeyGenerator.generateUserKey(
+    const scrollTopKey = CacheKeyFactory.generateUserKey(
       "explorerScrollTop",
       "scroll_position",
     )
@@ -275,21 +280,23 @@ async function setupExplorer(currentSlug: FullSlug) {
 
     // 尝试滚动到活动元素，如果它存在且不在当前视图中
     const activeElement: HTMLElement | null = explorerUl.querySelector(".active")
-    // Custom scroll into view logic to prevent main panel scrolling
     if (activeElement) {
-      const explorerRect = explorerUl.getBoundingClientRect()
-      const activeRect = activeElement.getBoundingClientRect()
+      requestAnimationFrame(() => {
+        // Custom scroll into view logic to prevent main panel scrolling
+        const explorerRect = explorerUl.getBoundingClientRect()
+        const activeRect = activeElement.getBoundingClientRect()
 
-      // Check if the active element is outside the visible area of the explorerUl
-      if (activeRect.top < explorerRect.top || activeRect.bottom > explorerRect.bottom) {
-        // Calculate the new scroll position
-        const newScrollTop =
-          activeElement.offsetTop -
-          explorerUl.offsetTop -
-          explorerRect.height / 2 +
-          activeRect.height / 2
-        explorerUl.scrollTo({ top: newScrollTop, behavior: "smooth" })
-      }
+        // Check if the active element is outside the visible area of the explorerUl
+        if (activeRect.top < explorerRect.top || activeRect.bottom > explorerRect.bottom) {
+          // Calculate the new scroll position
+          const newScrollTop =
+            activeElement.offsetTop -
+            explorerUl.offsetTop -
+            explorerRect.height / 2 +
+            activeRect.height / 2
+          explorerUl.scrollTo({ top: newScrollTop, behavior: "smooth" })
+        }
+      })
     }
   }
 }
@@ -298,7 +305,7 @@ document.addEventListener("prenav", async () => {
   // save explorer scrollTop position
   const explorer = document.querySelector(".explorer-ul")
   if (!explorer) return
-  const scrollTopKey = UnifiedCacheKeyGenerator.generateUserKey(
+  const scrollTopKey = CacheKeyFactory.generateUserKey(
     "explorerScrollTop",
     "scroll_position",
   )
@@ -335,6 +342,12 @@ document.addEventListener("cacheCleared", async () => {
   await setupExplorer(currentSlug)
   console.log("Explorer reinitialized after cache clear.")
 })
+
+document.addEventListener("reinit-explorer", async (e: CustomEvent<{ url: FullSlug }>) => {
+  console.log("reinit-explorer", e)
+  const currentSlug = e.detail.url
+  await setupExplorer(currentSlug)
+});
 
 window.addEventListener("resize", function () {
   // Desktop explorer opens by default, and it stays open when the window is resized

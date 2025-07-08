@@ -1,306 +1,309 @@
 /**
- * 全局管理器实例管理模块
- * 统一创建、管理和导出所有全局管理器实例
+ * 统一全局管理器实例模块
+ * 集中创建、管理并导出所有全局管理器实例，作为唯一的真实来源。
  */
 
 import { ManagerFactory, ManagerType, PREDEFINED_MANAGER_CONFIGS } from "./manager-factory"
+import { CacheInstanceType } from "../cache/cache-factory"
 import { OptimizedCacheManager } from "./OptimizedCacheManager"
 import { ResourceManager } from "./ResourceManager"
 import { UnifiedStorageManager } from "./UnifiedStorageManager"
 import { UnifiedContentCacheManager } from "./UnifiedContentCacheManager"
 import { CleanupManager } from "./CleanupManager"
-
+import { FailedLinksManager } from "../popover/failed-links-manager"
 
 /**
- * 全局管理器实例容器
+ * 全局管理器实例的内部容器类
+ * @internal
  */
 class GlobalManagerInstances {
-  /** 全局缓存管理器实例 */
-  private _globalCacheManager: OptimizedCacheManager<any> | null = null
-  
-  /** URL缓存管理器实例 */
-  private _urlCacheManager: OptimizedCacheManager<boolean> | null = null
-  
-  /** 全局资源管理器实例 */
-  private _globalResourceManager: ResourceManager | null = null
-  
-  /** 全局存储管理器实例 */
-  private _globalStorageManager: UnifiedStorageManager | null = null
-  
-  /** 全局统一内容缓存管理器实例 */
-  private _globalUnifiedContentCache: UnifiedContentCacheManager | null = null
-  
-  /** 全局清理管理器实例 */
-  private _globalCleanupManager: CleanupManager | null = null
-  
-
-  
-  /** 初始化状态 */
   private _initialized = false
 
-  /**
-   * 获取全局缓存管理器实例（单例）
-   */
-  get globalCacheManager(): OptimizedCacheManager<any> {
-    if (!this._globalCacheManager) {
-      this._globalCacheManager = ManagerFactory.createCacheManager(
-        PREDEFINED_MANAGER_CONFIGS.globalCacheManager
+  // 缓存实例
+  private _unifiedContentCache: UnifiedContentCacheManager | null = null
+  private _linkCache: OptimizedCacheManager<boolean> | null = null
+  private _searchCache: OptimizedCacheManager<any> | null = null
+  private _userCache: OptimizedCacheManager<any> | null = null
+  private _systemCache: OptimizedCacheManager<any> | null = null
+  private _defaultCache: OptimizedCacheManager<any> | null = null
+  private _urlCacheManager: OptimizedCacheManager<boolean> | null = null
+  private _failedLinksManager: FailedLinksManager | null = null
+
+  // 其他管理器实例
+  private _storageManager: UnifiedStorageManager | null = null
+  private _resourceManager: ResourceManager | null = null
+  private _cleanupManager: CleanupManager | null = null
+
+  // --- Getters for all managers ---
+
+  get unifiedContentCache(): UnifiedContentCacheManager {
+    if (!this._unifiedContentCache) {
+      this._unifiedContentCache = ManagerFactory.createUnifiedContentCacheManager(
+        PREDEFINED_MANAGER_CONFIGS.globalUnifiedContentCache,
       )
-      console.log(`[GlobalManagers] Initialized globalCacheManager`)
+      console.log(`[GlobalManagers] Initialized UnifiedContentCacheManager`)
     }
-    return this._globalCacheManager
+    return this._unifiedContentCache
   }
 
-  /**
-   * 获取URL缓存管理器实例（单例）
-   */
+  get linkCache(): OptimizedCacheManager<boolean> {
+    if (!this._linkCache) {
+      this._linkCache = this.createCache(CacheInstanceType.LINK)
+      console.log(`[GlobalManagers] Initialized LinkCache`)
+    }
+    return this._linkCache
+  }
+
+  get searchCache(): OptimizedCacheManager<any> {
+    if (!this._searchCache) {
+      this._searchCache = this.createCache(CacheInstanceType.SEARCH)
+      console.log(`[GlobalManagers] Initialized SearchCache`)
+    }
+    return this._searchCache
+  }
+
+  get userCache(): OptimizedCacheManager<any> {
+    if (!this._userCache) {
+      this._userCache = this.createCache(CacheInstanceType.USER)
+      console.log(`[GlobalManagers] Initialized UserCache`)
+    }
+    return this._userCache
+  }
+
+  get systemCache(): OptimizedCacheManager<any> {
+    if (!this._systemCache) {
+      this._systemCache = this.createCache(CacheInstanceType.SYSTEM)
+      console.log(`[GlobalManagers] Initialized SystemCache`)
+    }
+    return this._systemCache
+  }
+
+  get defaultCache(): OptimizedCacheManager<any> {
+    if (!this._defaultCache) {
+      this._defaultCache = this.createCache(CacheInstanceType.DEFAULT)
+      console.log(`[GlobalManagers] Initialized DefaultCache`)
+    }
+    return this._defaultCache
+  }
+
   get urlCacheManager(): OptimizedCacheManager<boolean> {
     if (!this._urlCacheManager) {
       this._urlCacheManager = ManagerFactory.createCacheManager<boolean>(
-        PREDEFINED_MANAGER_CONFIGS.urlCacheManager
+        PREDEFINED_MANAGER_CONFIGS.urlCacheManager,
       )
-      console.log(`[GlobalManagers] Initialized urlCacheManager`)
+      console.log(`[GlobalManagers] Initialized UrlCacheManager`)
     }
     return this._urlCacheManager
   }
 
-  /**
-   * 获取全局资源管理器实例（单例）
-   */
-  get globalResourceManager(): ResourceManager {
-    if (!this._globalResourceManager) {
-      this._globalResourceManager = ManagerFactory.createResourceManager(
-        PREDEFINED_MANAGER_CONFIGS.globalResourceManager
+  get failedLinksManager(): FailedLinksManager {
+    if (!this._failedLinksManager) {
+      this._failedLinksManager = ManagerFactory.createCacheManager(
+        PREDEFINED_MANAGER_CONFIGS.failedLinksManager,
       )
-      console.log(`[GlobalManagers] Initialized globalResourceManager`)
+      console.log(`[GlobalManagers] Initialized FailedLinksManager`)
     }
-    return this._globalResourceManager
+    return this._failedLinksManager
   }
 
-  /**
-   * 获取全局存储管理器实例（单例）
-   */
-  get globalStorageManager(): UnifiedStorageManager {
-    if (!this._globalStorageManager) {
-      this._globalStorageManager = ManagerFactory.createStorageManager(
-        PREDEFINED_MANAGER_CONFIGS.globalStorageManager
+  get storageManager(): UnifiedStorageManager {
+    if (!this._storageManager) {
+      this._storageManager = ManagerFactory.createStorageManager(
+        PREDEFINED_MANAGER_CONFIGS.globalStorageManager,
       )
-      console.log(`[GlobalManagers] Initialized globalStorageManager`)
+      console.log(`[GlobalManagers] Initialized StorageManager`)
     }
-    return this._globalStorageManager
+    return this._storageManager
   }
 
-  /**
-   * 获取全局统一内容缓存管理器实例（单例）
-   * 这是主要的内容缓存，用于SPA导航和Popover预加载
-   */
-  get globalUnifiedContentCache(): UnifiedContentCacheManager {
-    if (!this._globalUnifiedContentCache) {
-      this._globalUnifiedContentCache = ManagerFactory.createUnifiedContentCacheManager(
-        PREDEFINED_MANAGER_CONFIGS.globalUnifiedContentCache
+  get resourceManager(): ResourceManager {
+    if (!this._resourceManager) {
+      this._resourceManager = ManagerFactory.createResourceManager(
+        PREDEFINED_MANAGER_CONFIGS.globalResourceManager,
       )
-      console.log(`[GlobalManagers] Initialized globalUnifiedContentCache`)
+      console.log(`[GlobalManagers] Initialized ResourceManager`)
     }
-    return this._globalUnifiedContentCache
+    return this._resourceManager
   }
 
-  /**
-   * 获取全局清理管理器实例（单例）
-   */
-  get globalCleanupManager(): CleanupManager {
-    if (!this._globalCleanupManager) {
-      this._globalCleanupManager = ManagerFactory.getCleanupManager()
-      console.log(`[GlobalManagers] Initialized globalCleanupManager`)
+  get cleanupManager(): CleanupManager {
+    if (!this._cleanupManager) {
+      this._cleanupManager = ManagerFactory.getCleanupManager()
+      console.log(`[GlobalManagers] Initialized CleanupManager`)
     }
-    return this._globalCleanupManager
+    return this._cleanupManager
   }
 
+  private createCache<T>(type: CacheInstanceType): OptimizedCacheManager<T> {
+    return ManagerFactory.createCacheManager<T>({
+      type: ManagerType.CACHE,
+      identifier: type,
+      config: { cacheType: type },
+    })
+  }
 
-
-  /**
-   * 初始化所有管理器实例
-   * @param preloadAll 是否预加载所有管理器实例
-   */
   initialize(preloadAll: boolean = false): void {
     if (this._initialized) {
       console.log(`[GlobalManagers] Already initialized, skipping...`)
       return
     }
-
     console.log(`[GlobalManagers] Initializing global manager instances...`)
-    
-    // 总是初始化清理管理器和主要的内容缓存
-    this.globalCleanupManager
-    this.globalUnifiedContentCache
-    
-    if (preloadAll) {
-      // 预加载所有管理器实例
-      this.globalCacheManager
-      this.urlCacheManager
-      this.globalResourceManager
-      this.globalStorageManager
 
+    this.cleanupManager
+    this.unifiedContentCache
+
+    if (preloadAll) {
+      this.linkCache
+      this.searchCache
+      this.userCache
+      this.systemCache
+      this.defaultCache
+      this.storageManager
+      this.resourceManager
+      this.failedLinksManager
+      this.urlCacheManager
       console.log(`[GlobalManagers] All manager instances preloaded`)
     }
-    
+
     this._initialized = true
     console.log(`[GlobalManagers] Global manager instances initialized`)
   }
 
-  /**
-   * 清理所有管理器实例
-   */
   cleanup(): void {
     console.log(`[GlobalManagers] Cleaning up all global manager instances...`)
-    
-    // 使用工厂进行统一清理
     ManagerFactory.cleanup()
-    
     console.log(`[GlobalManagers] All global manager instances cleaned up`)
   }
 
-  /**
-   * 销毁所有管理器实例
-   */
   destroy(): void {
     console.log(`[GlobalManagers] Destroying all global manager instances...`)
-    
-    this.cleanup()
-    
-    // 重置所有实例
-    this._globalCacheManager = null
-    this._urlCacheManager = null
-    this._globalResourceManager = null
-    this._globalStorageManager = null
-    this._globalUnifiedContentCache = null
-    this._globalCleanupManager = null
+    ManagerFactory.destroy()
 
     this._initialized = false
-    
-    // 销毁工厂中的所有实例
-    ManagerFactory.destroy()
-    
+    // Reset all private properties
+    Object.keys(this).forEach((key) => {
+      if (key.startsWith("_")) {
+        ;(this as any)[key] = null
+      }
+    })
+    this._initialized = false // Ensure it's reset after nulling
     console.log(`[GlobalManagers] All global manager instances destroyed`)
   }
+}
 
-  /**
-   * 获取全局管理器统计信息
-   */
-  getStats(): {
-    initialized: boolean
-    activeInstances: string[]
-    factoryStats: ReturnType<typeof ManagerFactory.getStats>
-  } {
-    const activeInstances: string[] = []
-    
-    if (this._globalCacheManager) activeInstances.push('globalCacheManager')
-    if (this._urlCacheManager) activeInstances.push('urlCacheManager')
-    if (this._globalResourceManager) activeInstances.push('globalResourceManager')
-    if (this._globalStorageManager) activeInstances.push('globalStorageManager')
-    if (this._globalUnifiedContentCache) activeInstances.push('globalUnifiedContentCache')
-    if (this._globalCleanupManager) activeInstances.push('globalCleanupManager')
-    // if (this._globalPreloadManager) activeInstances.push('globalPreloadManager')
-    
-    return {
-      initialized: this._initialized,
-      activeInstances,
-      factoryStats: ManagerFactory.getStats(),
+/**
+ * 全局管理器控制器
+ * 提供对全局实例的单例访问和生命周期管理
+ */
+export class GlobalManagerController {
+  private static readonly _instance = new GlobalManagerInstances()
+
+  static get instance(): GlobalManagerInstances {
+    return this._instance
+  }
+
+  static initialize(preloadAll: boolean = false): void {
+    this._instance.initialize(preloadAll)
+  }
+
+  static cleanup(): void {
+    this._instance.cleanup()
+  }
+
+  static destroy(): void {
+    this._instance.destroy()
+  }
+
+  static getInstance(type: ManagerType, _identifier?: string): any {
+    switch (type) {
+      case ManagerType.CACHE:
+        // This is ambiguous, return default cache for now.
+        return this.instance.defaultCache
+      case ManagerType.RESOURCE:
+        return this.instance.resourceManager
+      case ManagerType.STORAGE:
+        return this.instance.storageManager
+      case ManagerType.UNIFIED_CONTENT_CACHE:
+        return this.instance.unifiedContentCache
+      case ManagerType.CLEANUP:
+        return this.instance.cleanupManager
+      default:
+        throw new Error(`[GlobalManagerController] Unknown manager type: ${type}`)
     }
   }
 }
 
-// 创建全局实例容器
-const globalManagerInstances = new GlobalManagerInstances()
+// --- Convenience accessors for all global instances ---
 
-// 导出全局管理器实例（向后兼容）
-export const globalCacheManager = {
-  get instance(): OptimizedCacheManager<any> {
-    return globalManagerInstances.globalCacheManager
-  }
+export const globalUnifiedContentCache = {
+  get instance() {
+    return GlobalManagerController.instance.unifiedContentCache
+  },
 }
 
-export const urlCacheManager = {
-  get instance(): OptimizedCacheManager<boolean> {
-    return globalManagerInstances.urlCacheManager
-  }
+export const globalLinkCache = {
+  get instance() {
+    return GlobalManagerController.instance.linkCache
+  },
 }
 
-export const globalResourceManager = {
-  get instance(): ResourceManager {
-    return globalManagerInstances.globalResourceManager
-  }
+export const globalSearchCache = {
+  get instance() {
+    return GlobalManagerController.instance.searchCache
+  },
+}
+
+export const globalUserCache = {
+  get instance() {
+    return GlobalManagerController.instance.userCache
+  },
+}
+
+export const globalSystemCache = {
+  get instance() {
+    return GlobalManagerController.instance.systemCache
+  },
+}
+
+export const globalDefaultCache = {
+  get instance() {
+    return GlobalManagerController.instance.defaultCache
+  },
 }
 
 export const globalStorageManager = {
-  get instance(): UnifiedStorageManager {
-    return globalManagerInstances.globalStorageManager
-  }
+  get instance() {
+    return GlobalManagerController.instance.storageManager
+  },
 }
 
-export const globalUnifiedContentCache = {
-  get instance(): UnifiedContentCacheManager {
-    return globalManagerInstances.globalUnifiedContentCache
-  }
+export const globalResourceManager = {
+  get instance() {
+    return GlobalManagerController.instance.resourceManager
+  },
 }
 
 export const globalCleanupManager = {
-  get instance(): CleanupManager {
-    return globalManagerInstances.globalCleanupManager
-  }
-}
-
-// export const globalPreloadManager = {
-//   get instance(): PreloadManager {
-//     return globalManagerInstances.globalPreloadManager
-//   }
-// }
-
-// 导出管理接口
-export const GlobalManagerController = {
-  /**
-   * 初始化全局管理器系统
-   * @param preloadAll 是否预加载所有管理器实例
-   */
-  initialize: (preloadAll: boolean = false) => {
-    globalManagerInstances.initialize(preloadAll)
-  },
-  
-  /**
-   * 清理全局管理器系统
-   */
-  cleanup: () => {
-    globalManagerInstances.cleanup()
-  },
-  
-  /**
-   * 销毁全局管理器系统
-   */
-  destroy: () => {
-    globalManagerInstances.destroy()
-  },
-  
-  /**
-   * 获取全局管理器统计信息
-   */
-  getStats: () => {
-    return globalManagerInstances.getStats()
-  },
-  
-  /**
-   * 获取指定类型的管理器实例
-   */
-  getInstance: (type: ManagerType, identifier: string = 'default') => {
-    return ManagerFactory.getInstance(type, identifier)
-  },
-  
-  /**
-   * 检查管理器实例是否存在
-   */
-  hasInstance: (type: ManagerType, identifier: string = 'default') => {
-    return ManagerFactory.hasInstance(type, identifier)
+  get instance() {
+    return GlobalManagerController.instance.cleanupManager
   },
 }
 
-// 导出类型
-export { ManagerType } from "./manager-factory"
-export type { ManagerInstanceConfig } from "./manager-factory"
+export const urlCacheManager = {
+  get instance() {
+    return GlobalManagerController.instance.urlCacheManager
+  },
+}
+
+export const failedLinksManager = {
+  get instance() {
+    return GlobalManagerController.instance.failedLinksManager
+  },
+}
+
+// Backward compatibility
+export const globalCacheManager = {
+  get instance() {
+    return GlobalManagerController.instance.defaultCache
+  },
+}

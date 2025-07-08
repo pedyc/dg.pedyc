@@ -5,12 +5,13 @@
  * 使用UnifiedStorageManager统一管理存储
  * 应用统一缓存配置和缓存键生成逻辑
  */
-import { PopoverConfig } from "./config"
+import { PopoverConfig } from "./index"
 import { PopoverErrorHandler } from "./error-handler"
 import { UnifiedStorageManager } from "../managers/UnifiedStorageManager"
 import { globalResourceManager } from "../managers/index"
 import { ICleanupManager } from "../managers/CleanupManager"
-import { getCacheConfig, UnifiedCacheKeyGenerator } from "../cache/unified-cache"
+import { getCacheConfig } from "../cache/unified-cache"
+import { CacheKeyFactory } from "../cache"
 export class FailedLinksManager implements ICleanupManager {
   private static pendingLinks = new Set<string>()
   private static batchSaveTimer: number | null = null
@@ -21,9 +22,9 @@ export class FailedLinksManager implements ICleanupManager {
 
   // 生成统一的存储键
   private static readonly FAILED_LINKS_STORAGE_KEY =
-    UnifiedCacheKeyGenerator.generateSystemKey("failed_links")
+    CacheKeyFactory.generateSystemKey("failed_links")
   private static readonly FAILURE_STATS_STORAGE_KEY =
-    UnifiedCacheKeyGenerator.generateSystemKey("failure_stats")
+    CacheKeyFactory.generateSystemKey("failure_stats")
 
   // 失败统计数据缓存
   private static _failureStatsCache: Record<string, any> | null = null

@@ -48,7 +48,10 @@ export async function fetchCanonical(url: URL): Promise<Response> {
     try {
       return fetch(`${new URL(redirect, url)}`)
     } catch (e) {
-      console.warn(`Failed to construct redirect URL from '${redirect}' with base '${url.toString()}':`, e)
+      console.warn(
+        `Failed to construct redirect URL from '${redirect}' with base '${url.toString()}':`,
+        e,
+      )
       return res // 如果重定向URL无效，则返回原始响应
     }
   }

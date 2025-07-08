@@ -10,7 +10,7 @@ import { formatDate, getDate } from "../components/Date"
 import readingTime from "reading-time"
 import { i18n } from "../i18n"
 import { styleText } from "util"
-import { UnifiedCacheKeyGenerator } from "../components/scripts/cache/unified-cache"
+import { CacheKeyFactory } from "../components/scripts/cache"
 
 const defaultHeaderWeight = [700]
 const defaultBodyWeight = [400]
@@ -77,7 +77,7 @@ export async function fetchTtf(
   weight: FontWeight,
 ): Promise<Buffer<ArrayBufferLike> | undefined> {
   const fontName = rawFontName.replaceAll(" ", "+")
-  const cacheKey = UnifiedCacheKeyGenerator.generateFontKey(fontName, weight.toString())
+  const cacheKey = CacheKeyFactory.generateFontKey(fontName, weight.toString())
   const cacheDir = path.join(QUARTZ, ".quartz-cache", "fonts")
   const cachePath = path.join(cacheDir, cacheKey)
 

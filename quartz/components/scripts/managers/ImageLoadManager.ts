@@ -1,5 +1,5 @@
 import { OptimizedCacheManager } from "./OptimizedCacheManager"
-import { CacheKeyFactory } from "../cache/cache-key-utils"
+import { CacheKeyFactory } from "../cache"
 import { ICleanupManager } from "./CleanupManager"
 import { globalCacheManager } from "./global-instances"
 

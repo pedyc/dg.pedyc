@@ -1,4 +1,4 @@
-import { CacheKeyFactory } from "./cache/cache-key-utils"
+import { CacheKeyFactory } from "./cache"
 
 document.addEventListener("nav", () => {
   const checkboxes = document.querySelectorAll(

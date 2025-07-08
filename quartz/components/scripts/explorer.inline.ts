@@ -1,7 +1,7 @@
 import { FileTrieNode } from "../../util/fileTrie"
 import { FullSlug, resolveRelative, simplifySlug } from "../../util/path"
 import { ContentDetails } from "../../plugins/emitters/contentIndex"
-import { CacheKeyFactory } from "./cache/cache-key-utils"
+import { CacheKeyFactory } from "./cache"
 import { globalStorageManager } from "./managers"
 
 type MaybeHTMLElement = HTMLElement | undefined

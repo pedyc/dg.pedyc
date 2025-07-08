@@ -9,8 +9,8 @@ import {
   createUrl,
 } from "../../util/path"
 
-import { globalUnifiedContentCache, CacheLayer } from "./managers/index"
-import { UnifiedCacheKeyGenerator } from "./cache/unified-cache"
+import { globalUnifiedContentCache } from "./managers/index"
+import { CacheKeyFactory, CacheLayer } from "./cache"
 
 interface Item {
   id: number
@@ -368,7 +368,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
    * @returns 内容详情
    */
   async function fetchContent(slug: FullSlug): Promise<ContentDetails> {
-    const cacheKey = UnifiedCacheKeyGenerator.generateSearchKey(slug)
+    const cacheKey = CacheKeyFactory.generateContentKey(slug, "preview")
 
     // 尝试从统一缓存获取
     const cached = globalUnifiedContentCache.instance.get(cacheKey)

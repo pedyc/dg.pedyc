@@ -79,8 +79,6 @@ export function removeDuplicatePathSegments(path: string): string {
   }
 }
 
-
-
 /**
  * 检查是否为内部链接
  * @param href 链接地址
@@ -95,7 +93,6 @@ export function isInternalLink(href: string): boolean {
   }
 }
 
-
 /**
  * 创建URL对象，带缓存优化
  * @param href URL字符串
@@ -104,8 +101,8 @@ export function isInternalLink(href: string): boolean {
 export function createUrl(href: string): URL {
   // 使用简化URL处理器进行URL验证和处理
   const urlResult = urlHandler.processURL(href, {
-    cacheType: 'link',
-    validate: true
+    cacheType: "link",
+    validate: true,
   })
 
   if (!urlResult.isValid) {
@@ -114,7 +111,6 @@ export function createUrl(href: string): URL {
 
   return urlResult.processed
 }
-
 
 /**
  * 清空URL缓存

@@ -5,7 +5,7 @@ import { PopoverErrorHandler } from "./error-handler"
 import { ICleanupManager } from "../managers/CleanupManager"
 import { globalResourceManager, globalUnifiedContentCache } from "../managers/index"
 
-import { PopoverConfig } from "./config"
+import { PopoverConfig } from "./"
 
 // 全局状态
 const linkCheckInProgress = new Set<string>()
@@ -27,7 +27,7 @@ export class ViewportPreloadManager implements ICleanupManager {
   /**
    * 私有构造函数，防止外部直接实例化
    */
-  private constructor() { }
+  private constructor() {}
 
   /**
    * 获取单例实例
@@ -151,10 +151,10 @@ export class ViewportPreloadManager implements ICleanupManager {
       try {
         // 使用简化URL处理器
         const urlResult = urlHandler.processURL(link.href, {
-          cacheType: 'content',
+          cacheType: "content",
           validate: true,
           removeHash: true,
-          normalizePath: true
+          normalizePath: true,
         })
 
         if (!urlResult.isValid) {

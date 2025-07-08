@@ -46,6 +46,11 @@ function createNavigateFunction(announcer: HTMLElement) {
       // 只清理观察器和事件监听器，保留缓存数据
       globalResourceManager.instance.cleanupObserversAndListeners()
 
+      // 重新渲染图谱和浏览器
+      // const newUrl = getFullSlug(window)
+      // window.dispatchEvent(new CustomEvent('reinit-graph', { detail: { url: newUrl } }))
+      // window.dispatchEvent(new CustomEvent('reinit-explorer', { detail: { url: newUrl } }))
+
       // 更新页面内容
       updatePageContent(contents, url, isBack, announcer)
     } catch (error) {

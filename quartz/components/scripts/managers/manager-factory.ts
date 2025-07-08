@@ -8,8 +8,9 @@ import { ResourceManager } from "./ResourceManager"
 import { UnifiedStorageManager } from "./UnifiedStorageManager"
 import { UnifiedContentCacheManager } from "./UnifiedContentCacheManager"
 import { CleanupManager } from "./CleanupManager"
-
-import { CacheFactory, CacheInstanceType } from "../cache/cache-factory"
+import { CacheInstanceType } from "../cache/cache-factory"
+import { getCacheConfig } from "../cache/unified-cache"
+import { globalCacheManager, globalStorageManager } from "./global-instances"
 
 /**
  * 管理器类型枚举
@@ -25,7 +26,6 @@ export enum ManagerType {
   UNIFIED_CONTENT_CACHE = "UNIFIED_CONTENT_CACHE",
   /** 清理管理器 */
   CLEANUP = "CLEANUP",
-
 }
 
 /**
@@ -47,42 +47,66 @@ export interface ManagerInstanceConfig {
 export class ManagerFactory {
   /** 管理器实例注册表 */
   private static readonly instances = new Map<string, any>()
-  
+
   /** 清理管理器实例（全局唯一） */
   private static cleanupManager: CleanupManager | null = null
+
+  /**
+   * 通用管理器创建和注册方法
+   * 负责检查现有实例、创建新实例、注册到清理管理器并记录日志
+   * @param config 实例配置
+   * @param creator 创建实例的函数
+   * @param managerName 管理器名称，用于日志
+   * @returns 管理器实例
+   */
+  private static _createAndRegisterManager<T>(
+    config: ManagerInstanceConfig,
+    creator: () => T,
+    managerName: string,
+  ): T {
+    const instanceKey = `${config.type}_${config.identifier || "default"}`
+
+    // 检查是否已存在实例
+    if (this.instances.has(instanceKey)) {
+      return this.instances.get(instanceKey) as T
+    }
+
+    // 创建实例
+    const instance = creator()
+
+    // 注册实例
+    this.instances.set(instanceKey, instance)
+
+    // 注册到清理管理器
+    this.getCleanupManager().register(instanceKey, instance as any)
+
+    console.log(`[ManagerFactory] Created ${managerName}: ${instanceKey}`)
+    return instance
+  }
 
   /**
    * 创建缓存管理器实例
    * @param config 实例配置
    * @returns 缓存管理器实例
    */
-  static createCacheManager<T = any>(
-    config: ManagerInstanceConfig
-  ): OptimizedCacheManager<T> {
-    const instanceKey = `${config.type}_${config.identifier || 'default'}`
-    
-    // 检查是否已存在实例
-    if (this.instances.has(instanceKey)) {
-      return this.instances.get(instanceKey) as OptimizedCacheManager<T>
-    }
+  static createCacheManager<T = any>(config: ManagerInstanceConfig): OptimizedCacheManager<T> {
+    return this._createAndRegisterManager(
+      config,
+      () => {
+        const cacheType = config.config?.cacheType || CacheInstanceType.DEFAULT
 
-    // 使用缓存工厂创建实例
-    const cacheType = config.config?.cacheType || CacheInstanceType.DEFAULT
-    const instance = CacheFactory.createOptimizedCache<T>({
-      type: cacheType,
-      enableMemoryLayer: config.config?.enableMemoryLayer ?? true,
-      enableSessionLayer: config.config?.enableSessionLayer ?? false,
-      configOverride: config.config?.configOverride,
-    })
-    
-    // 注册实例
-    this.instances.set(instanceKey, instance)
-    
-    // 注册到清理管理器
-    this.getCleanupManager().register(instanceKey, instance)
-    
-    console.log(`[ManagerFactory] Created CacheManager: ${instanceKey}`)
-    return instance
+        // 直接创建 OptimizedCacheManager 实例以打破循环依赖
+        const cacheConfig = getCacheConfig(cacheType)
+        const finalConfig = {
+          ...cacheConfig,
+          ...(config.config?.configOverride || {}),
+          enableMemoryLayer: config.config?.enableMemoryLayer ?? true,
+          enableSessionLayer: config.config?.enableSessionLayer ?? false,
+        }
+        return new OptimizedCacheManager<T>(finalConfig)
+      },
+      "CacheManager",
+    )
   }
 
   /**
@@ -90,27 +114,8 @@ export class ManagerFactory {
    * @param config 实例配置
    * @returns 资源管理器实例
    */
-  static createResourceManager(
-    config: ManagerInstanceConfig
-  ): ResourceManager {
-    const instanceKey = `${config.type}_${config.identifier || 'default'}`
-    
-    // 检查是否已存在实例
-    if (this.instances.has(instanceKey)) {
-      return this.instances.get(instanceKey) as ResourceManager
-    }
-
-    // 创建实例
-    const instance = new ResourceManager()
-    
-    // 注册实例
-    this.instances.set(instanceKey, instance)
-    
-    // 注册到清理管理器
-    this.getCleanupManager().register(instanceKey, instance)
-    
-    console.log(`[ManagerFactory] Created ResourceManager: ${instanceKey}`)
-    return instance
+  static createResourceManager(config: ManagerInstanceConfig): ResourceManager {
+    return this._createAndRegisterManager(config, () => new ResourceManager(), "ResourceManager")
   }
 
   /**
@@ -118,27 +123,12 @@ export class ManagerFactory {
    * @param config 实例配置
    * @returns 存储管理器实例
    */
-  static createStorageManager(
-    config: ManagerInstanceConfig
-  ): UnifiedStorageManager {
-    const instanceKey = `${config.type}_${config.identifier || 'default'}`
-    
-    // 检查是否已存在实例
-    if (this.instances.has(instanceKey)) {
-      return this.instances.get(instanceKey) as UnifiedStorageManager
-    }
-
-    // 创建实例
-    const instance = new UnifiedStorageManager()
-    
-    // 注册实例
-    this.instances.set(instanceKey, instance)
-    
-    // 注册到清理管理器
-    this.getCleanupManager().register(instanceKey, instance)
-    
-    console.log(`[ManagerFactory] Created StorageManager: ${instanceKey}`)
-    return instance
+  static createStorageManager(config: ManagerInstanceConfig): UnifiedStorageManager {
+    return this._createAndRegisterManager(
+      config,
+      () => new UnifiedStorageManager(),
+      "StorageManager",
+    )
   }
 
   /**
@@ -147,35 +137,20 @@ export class ManagerFactory {
    * @returns 统一内容缓存管理器实例
    */
   static createUnifiedContentCacheManager(
-    config: ManagerInstanceConfig
+    config: ManagerInstanceConfig,
   ): UnifiedContentCacheManager {
-    const instanceKey = `${config.type}_${config.identifier || 'default'}`
-    
-    // 检查是否已存在实例
-    if (this.instances.has(instanceKey)) {
-      return this.instances.get(instanceKey) as UnifiedContentCacheManager
-    }
-
-    // 使用缓存工厂创建实例
-    const cacheType = config.config?.cacheType || CacheInstanceType.CONTENT
-    const instance = CacheFactory.createUnifiedContentCache({
-      type: cacheType,
-      enableMemoryLayer: config.config?.enableMemoryLayer ?? true,
-      enableSessionLayer: config.config?.enableSessionLayer ?? true,
-      configOverride: config.config?.configOverride,
-    })
-    
-    // 注册实例
-    this.instances.set(instanceKey, instance)
-    
-    // 注册到清理管理器
-    this.getCleanupManager().register(instanceKey, instance)
-    
-    console.log(`[ManagerFactory] Created UnifiedContentCacheManager: ${instanceKey}`)
-    return instance
+    return this._createAndRegisterManager(
+      config,
+      () => {
+        // TODO: 直接从全局实例获取依赖，这里同样存在潜在的循环依赖风险
+        // 后续应重构为依赖注入模式，但首先解决 createCacheManager 的问题
+        const cacheManager = globalCacheManager.instance
+        const storageManager = globalStorageManager.instance
+        return new UnifiedContentCacheManager(cacheManager, storageManager)
+      },
+      "UnifiedContentCacheManager",
+    )
   }
-
-
 
   /**
    * 获取清理管理器实例（全局单例）
@@ -195,10 +170,59 @@ export class ManagerFactory {
    * @param identifier 实例标识符
    * @returns 管理器实例或null
    */
-  static getInstance(
-    type: ManagerType,
-    identifier: string = 'default'
-  ): any | null {
+  /**
+   * 清理所有已注册的管理器实例
+   */
+  static cleanup(): void {
+    console.log(`[ManagerFactory] Cleaning up all registered manager instances...`)
+    this.instances.forEach((instance, key) => {
+      if (instance && typeof instance.cleanup === "function") {
+        try {
+          instance.cleanup()
+          console.log(`[ManagerFactory] Cleaned up instance: ${key}`)
+        } catch (error) {
+          console.error(`[ManagerFactory] Error cleaning up instance ${key}:`, error)
+        }
+      }
+    })
+    console.log(`[ManagerFactory] All registered manager instances cleaned up.`)
+  }
+
+  /**
+   * 销毁所有已注册的管理器实例并清空注册表
+   */
+  static destroy(): void {
+    console.log(`[ManagerFactory] Destroying all registered manager instances...`)
+    this.instances.forEach((instance, key) => {
+      if (instance && typeof instance.destroy === "function") {
+        try {
+          instance.destroy()
+          console.log(`[ManagerFactory] Destroyed instance: ${key}`)
+        } catch (error) {
+          console.error(`[ManagerFactory] Error destroying instance ${key}:`, error)
+        }
+      } else if (instance && typeof instance.cleanup === "function") {
+        // 如果没有destroy方法，尝试调用cleanup
+        try {
+          instance.cleanup()
+          console.log(`[ManagerFactory] Cleaned up (as destroy) instance: ${key}`)
+        } catch (error) {
+          console.error(`[ManagerFactory] Error cleaning up (as destroy) instance ${key}:`, error)
+        }
+      }
+    })
+    this.instances.clear()
+    this.cleanupManager = null // 清空清理管理器实例
+    console.log(`[ManagerFactory] All registered manager instances destroyed and registry cleared.`)
+  }
+
+  /**
+   * 获取已注册的管理器实例
+   * @param type 管理器类型
+   * @param identifier 实例标识符
+   * @returns 管理器实例或null
+   */
+  static getInstance(type: ManagerType, identifier: string = "default"): any | null {
     const instanceKey = `${type}_${identifier}`
     return this.instances.get(instanceKey) || null
   }
@@ -209,10 +233,7 @@ export class ManagerFactory {
    * @param identifier 实例标识符
    * @returns 是否存在
    */
-  static hasInstance(
-    type: ManagerType,
-    identifier: string = 'default'
-  ): boolean {
+  static hasInstance(type: ManagerType, identifier: string = "default"): boolean {
     const instanceKey = `${type}_${identifier}`
     return this.instances.has(instanceKey)
   }
@@ -223,81 +244,34 @@ export class ManagerFactory {
    * @param identifier 实例标识符
    * @returns 是否成功移除
    */
-  static removeInstance(
-    type: ManagerType,
-    identifier: string = 'default'
-  ): boolean {
+  static removeInstance(type: ManagerType, identifier: string = "default"): boolean {
     const instanceKey = `${type}_${identifier}`
-    
+
     if (this.instances.has(instanceKey)) {
       const instance = this.instances.get(instanceKey)
-      
+
       // 从清理管理器中注销
       if (this.cleanupManager) {
         this.cleanupManager.unregister(instanceKey)
       }
-      
+
       // 清理实例
-      if (instance && typeof instance.cleanup === 'function') {
+      if (instance && typeof instance.cleanup === "function") {
         try {
           instance.cleanup()
         } catch (error) {
           console.error(`[ManagerFactory] Error cleaning up ${instanceKey}:`, error)
         }
       }
-      
+
       // 移除实例
       this.instances.delete(instanceKey)
-      
+
       console.log(`[ManagerFactory] Removed instance: ${instanceKey}`)
       return true
     }
-    
+
     return false
-  }
-
-  /**
-   * 清理所有管理器实例
-   */
-  static cleanup(): void {
-    console.log(`[ManagerFactory] Cleaning up all manager instances...`)
-    
-    // 使用清理管理器进行统一清理
-    if (this.cleanupManager) {
-      this.cleanupManager.cleanup()
-    }
-    
-    // 手动清理未注册的实例
-    for (const [key, instance] of this.instances.entries()) {
-      if (instance && typeof instance.cleanup === 'function') {
-        try {
-          instance.cleanup()
-          console.log(`[ManagerFactory] Cleaned up ${key}`)
-        } catch (error) {
-          console.error(`[ManagerFactory] Error cleaning up ${key}:`, error)
-        }
-      }
-    }
-  }
-
-  /**
-   * 销毁所有管理器实例
-   */
-  static destroy(): void {
-    console.log(`[ManagerFactory] Destroying all manager instances...`)
-    
-    this.cleanup()
-    
-    // 清空注册表
-    this.instances.clear()
-    
-    // 销毁清理管理器
-    if (this.cleanupManager) {
-      this.cleanupManager.cleanup()
-      this.cleanupManager = null
-    }
-    
-    console.log(`[ManagerFactory] All manager instances destroyed`)
   }
 
   /**
@@ -311,12 +285,12 @@ export class ManagerFactory {
     instancesByType: Record<string, number>
   } {
     const instancesByType: Record<string, number> = {}
-    
+
     for (const key of this.instances.keys()) {
-      const type = key.split('_')[0]
+      const type = key.split("_")[0]
       instancesByType[type] = (instancesByType[type] || 0) + 1
     }
-    
+
     return {
       totalInstances: this.instances.size,
       hasCleanupManager: this.cleanupManager !== null,
@@ -333,7 +307,7 @@ export const PREDEFINED_MANAGER_CONFIGS: Record<string, ManagerInstanceConfig> =
   // 缓存管理器配置
   globalCacheManager: {
     type: ManagerType.CACHE,
-    identifier: 'global',
+    identifier: "global",
     config: {
       cacheType: CacheInstanceType.DEFAULT,
       enableMemoryLayer: true,
@@ -342,37 +316,46 @@ export const PREDEFINED_MANAGER_CONFIGS: Record<string, ManagerInstanceConfig> =
   },
   urlCacheManager: {
     type: ManagerType.CACHE,
-    identifier: 'url',
+    identifier: "url",
     config: {
       cacheType: CacheInstanceType.LINK,
       enableMemoryLayer: true,
       enableSessionLayer: false,
     },
   },
-  
+  failedLinksManager: {
+    type: ManagerType.CACHE,
+    identifier: "failedLinks",
+    config: {
+      cacheType: CacheInstanceType.LINK,
+      enableMemoryLayer: false,
+      enableSessionLayer: true,
+    },
+  },
+
   // 资源管理器配置
   globalResourceManager: {
     type: ManagerType.RESOURCE,
-    identifier: 'global',
+    identifier: "global",
   },
-  
+
   // 存储管理器配置
   globalStorageManager: {
     type: ManagerType.STORAGE,
-    identifier: 'global',
+    identifier: "global",
   },
-  
+
   // 统一内容缓存管理器配置
   globalUnifiedContentCache: {
     type: ManagerType.UNIFIED_CONTENT_CACHE,
-    identifier: 'global',
+    identifier: "global",
     config: {
       cacheType: CacheInstanceType.CONTENT,
       enableMemoryLayer: true,
       enableSessionLayer: true,
     },
-  }
-  
+  },
+
   // 预加载管理器配置
   // globalPreloadManager: {
   //   type: ManagerType.PRELOAD,

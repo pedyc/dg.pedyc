@@ -34,7 +34,7 @@ class LRUNode<T> {
     public value: CachedItem<T>,
     public prev: LRUNode<T> | null = null,
     public next: LRUNode<T> | null = null,
-  ) { }
+  ) {}
 }
 
 /**
@@ -214,21 +214,6 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
 
     this.cache = new LRUCache<T>(this.config.capacity)
     this.startPeriodicCleanup()
-  }
-
-  /**
-   * 创建默认配置的缓存管理器
-   */
-  static createDefault<T = any>(
-    capacity = 100,
-    ttl = 30 * 60 * 1000,
-    maxMemoryMB = 50,
-  ): OptimizedCacheManager<T> {
-    return new OptimizedCacheManager<T>({
-      capacity,
-      ttl,
-      maxMemoryMB,
-    })
   }
 
   /**
@@ -482,8 +467,8 @@ export class OptimizedCacheManager<T = any> implements ICleanupManager {
       if (cleanedCount > 0) {
         console.log(
           `缓存清理完成：移除 ${cleanedCount} 项，` +
-          `释放 ${(freedMemory / 1024).toFixed(2)} KB 内存，` +
-          `当前使用率: ${((this.currentMemoryUsage / maxMemoryBytes) * 100).toFixed(1)}%`,
+            `释放 ${(freedMemory / 1024).toFixed(2)} KB 内存，` +
+            `当前使用率: ${((this.currentMemoryUsage / maxMemoryBytes) * 100).toFixed(1)}%`,
         )
       }
     } catch (error) {

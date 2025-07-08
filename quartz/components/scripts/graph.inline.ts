@@ -26,7 +26,7 @@ import {
   RelativeURL,
   removeDuplicatePathSegments,
 } from "../../util/path"
-import { CacheKeyFactory } from "./cache/cache-key-utils"
+import { CacheKeyFactory } from "./cache"
 import { D3Config } from "../Graph"
 
 type GraphicsInfo = {

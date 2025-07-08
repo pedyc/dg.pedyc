@@ -1,5 +1,5 @@
-import { CacheKeyFactory } from "./cache/cache-key-utils"
 import { globalStorageManager } from "./managers"
+import { CacheKeyFactory } from "./cache"
 
 const userPref = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"
 const themeKey = CacheKeyFactory.generateSystemKey("theme", "preference")

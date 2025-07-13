@@ -47,9 +47,9 @@ function createNavigateFunction(announcer: HTMLElement) {
       globalResourceManager.instance.cleanupObserversAndListeners()
 
       // 重新渲染图谱和浏览器
-      // const newUrl = getFullSlug(window)
-      // window.dispatchEvent(new CustomEvent('reinit-graph', { detail: { url: newUrl } }))
-      // window.dispatchEvent(new CustomEvent('reinit-explorer', { detail: { url: newUrl } }))
+      const newUrl = getFullSlug(window)
+      window.dispatchEvent(new CustomEvent('reinit-graph', { detail: { url: newUrl } }))
+      window.dispatchEvent(new CustomEvent('reinit-explorer', { detail: { url: newUrl } }))
 
       // 更新页面内容
       updatePageContent(contents, url, isBack, announcer)
@@ -79,11 +79,13 @@ export function createNavigate(announcer: HTMLElement) {
 
 // navigate函数现在通过createNavigate创建
 
+
 /**
  * 创建路由器
  * 设置事件监听器和导航处理逻辑
+ * @param {HTMLElement} announcer 用于路由公告的 HTMLElement
  */
-export function createRouter() {
+export function createRouter(announcer: HTMLElement) {
   if (typeof window === "undefined") {
     return {
       go: (url: RelativeURL) => {
@@ -94,9 +96,6 @@ export function createRouter() {
       forward: () => window.history.forward(),
     }
   }
-
-  // 初始化路由公告器
-  const announcer = initializeRouteAnnouncer()
 
   // 创建导航函数
   const navigate = createNavigate(announcer)
@@ -222,6 +221,14 @@ export function initializeRouteAnnouncer(): HTMLElement {
   }
 
   const announcer = document.createElement("route-announcer")
-  document.body.appendChild(announcer)
+  // 确保 document.body 存在后再添加元素
+  if (document.body) {
+    document.body.appendChild(announcer)
+  } else {
+    // 如果 body 不存在，等待 DOMContentLoaded 事件
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.appendChild(announcer)
+    })
+  }
   return announcer
 }

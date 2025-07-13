@@ -3,6 +3,7 @@ import { QuartzEmitterPlugin } from "../types"
 
 // @ts-ignore
 import spaRouterScript from "../../components/scripts/spa.inline"
+
 // @ts-ignore
 import popoverScript from "../../components/scripts/popover.inline"
 import styles from "../../styles/custom.scss"
@@ -78,6 +79,11 @@ async function joinScripts(scripts: string[]): Promise<string> {
 
 function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentResources) {
   const cfg = ctx.cfg.configuration
+
+  // spaRouterScript should be loaded before other scripts that use window.addCleanup
+  if (cfg.enableSPA) {
+    componentResources.beforeDOMLoaded.push(spaRouterScript)
+  }
 
   // popovers
   if (cfg.enablePopovers) {
@@ -337,6 +343,6 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
         content: postscript,
       })
     },
-    async *partialEmit() {},
+    async *partialEmit() { },
   }
 }

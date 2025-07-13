@@ -115,6 +115,7 @@ export async function mouseEnterHandler(
     originalHash: originalHash,
     contentUrl: contentUrlString,
     cacheKey: cacheKey,
+    cacheHas: globalUnifiedContentCache.instance.has(cacheKey)
   })
 
   // 使用处理后的contentUrl生成popoverId，确保唯一性
@@ -173,9 +174,9 @@ export async function mouseEnterHandler(
       // 如果缓存未命中，则立即 fetch 并使用统一缓存管理器存储
       console.log(`[Popover Debug] Popover content for ${cacheKey} loaded from: HTTP Request`)
       try {
-        // 使用 contentUrlString 进行预加载，并设置最高优先级
+        // 使用原始链接进行预加载，确保URL处理逻辑与SPA导航一致
         const newlyCachedData = await PreloadManager.getInstance().preloadLinkContent(
-          contentUrlString,
+          link.href,
           1000,
         ) // 1000 为最高优先级
 

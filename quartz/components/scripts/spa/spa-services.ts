@@ -36,12 +36,21 @@ export async function getContentForNavigation(
 
   const { processed: processedUrl, cacheKey } = urlResult
 
+  // 详细的调试信息
+  console.log(`[SPA DEBUG] Navigation URL processing:`, {
+    originalUrl: url.toString(),
+    processedUrl: processedUrl.toString(),
+    cacheKey: cacheKey,
+    cacheHas: globalUnifiedContentCache.instance.has(cacheKey)
+  })
+
   // 尝试从统一缓存获取内容（检查所有缓存层）
   let contents = globalUnifiedContentCache.instance.get(cacheKey)
   if (contents) {
     console.log(`[SPA DEBUG] 从缓存加载内容：${cacheKey}`)
     // 检查缓存内容是否为预处理的HTML片段（来自弹窗预加载）
     if (HTMLContentProcessor.isPreprocessedContent(contents)) {
+      console.log(`[SPA DEBUG] 检测到预处理内容，正在重构为SPA格式`)
       contents = HTMLContentProcessor.reconstructHtmlForSpa(contents, processedUrl)
     }
     return contents

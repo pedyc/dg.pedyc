@@ -198,14 +198,17 @@ export class SimplifiedURLHandler {
       return "/"
     }
 
-    // 4. 分割与去重（移除连续重复段）
+    // 4. 分割与去重（移除所有重复段，不仅仅是连续重复）
     const segments = pathname.split("/").filter(Boolean)
-    const uniqueSegments = segments.reduce((acc, segment) => {
-      if (acc.length === 0 || acc[acc.length - 1] !== segment) {
-        acc.push(segment)
+    const uniqueSegments: string[] = []
+    const seen = new Set<string>()
+    
+    for (const segment of segments) {
+      if (!seen.has(segment)) {
+        seen.add(segment)
+        uniqueSegments.push(segment)
       }
-      return acc
-    }, [] as string[])
+    }
 
     // 5. 重组路径
     const normalizedPath = "/" + uniqueSegments.join("/")

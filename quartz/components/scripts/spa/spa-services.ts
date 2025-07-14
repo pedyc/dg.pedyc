@@ -37,20 +37,12 @@ export async function getContentForNavigation(
   const { processed: processedUrl, cacheKey } = urlResult
 
   // 详细的调试信息
-  console.log(`[SPA DEBUG] Navigation URL processing:`, {
-    originalUrl: url.toString(),
-    processedUrl: processedUrl.toString(),
-    cacheKey: cacheKey,
-    cacheHas: globalUnifiedContentCache.instance.has(cacheKey)
-  })
 
   // 尝试从统一缓存获取内容（检查所有缓存层）
   let contents = globalUnifiedContentCache.instance.get(cacheKey)
   if (contents) {
-    console.log(`[SPA DEBUG] 从缓存加载内容：${cacheKey}`)
     // 检查缓存内容是否为预处理的HTML片段（来自弹窗预加载）
     if (HTMLContentProcessor.isPreprocessedContent(contents)) {
-      console.log(`[SPA DEBUG] 检测到预处理内容，正在重构为SPA格式`)
       contents = HTMLContentProcessor.reconstructHtmlForSpa(contents, processedUrl)
     }
     return contents
@@ -60,21 +52,18 @@ export async function getContentForNavigation(
       const contentType = res.headers.get("content-type")
 
       if (!contentType?.startsWith("text/html")) {
+        console.warn(`[SPA] 非HTML内容，需要完整页面跳转: ${contentType}`)
         return null // 非HTML内容，需要完整页面跳转
       }
 
       contents = await res.text()
-      console.log(`[SPA DEBUG] 从网络加载内容：${cacheKey}`)
 
       // 使用统一缓存管理器存储内容，自动避免重复存储
       try {
-        console.log(`[SPA DEBUG] 尝试将内容存入缓存，键为: ${cacheKey}`)
         globalUnifiedContentCache.instance.set(cacheKey, contents, preferredLayer)
-      } catch (e) {
-        console.warn("Failed to cache content:", e)
-      }
+      } catch (e) {}
     } catch (error) {
-      console.error("Failed to fetch content for SPA navigation:", error)
+      console.error("[SPA] Failed to fetch content for SPA navigation:", error)
       return null // 网络错误，需要完整页面跳转
     }
   }
@@ -104,7 +93,6 @@ export function updatePageContent(
   const isReconstructedContent = contents.includes("<!-- SPA_RECONSTRUCTED_CONTENT -->")
 
   if (isReconstructedContent) {
-    console.debug("[SPA Debug] Processing reconstructed content for quartz-body update")
     updateQuartzBodyContent(contents, url, isBack, announcer)
   } else {
     // 标准的完整页面更新流程
@@ -133,7 +121,7 @@ function updateQuartzBodyContent(
   const currentQuartzBody = document.querySelector("#quartz-body")
 
   if (!newQuartzBody || !currentQuartzBody) {
-    console.warn("[SPA Debug] quartz-body not found, falling back to full page update")
+    console.warn("[SPA] quartz-body not found, falling back to full page update")
     const fallbackUrlResult = urlHandler.processURL(url.toString(), { validate: true })
     const fallbackProcessedUrl = fallbackUrlResult.isValid ? fallbackUrlResult.processed : url
     updateFullPageContent(contents, url, isBack, announcer, parser, fallbackProcessedUrl)
@@ -159,8 +147,6 @@ function updateQuartzBodyContent(
   const currentCenterContent = currentQuartzBody.querySelector(".center")
 
   if (newCenterContent && currentCenterContent) {
-    console.debug("[SPA Debug] Updating center content only, preserving sidebars")
-
     // 将路由公告器添加到新的center内容中
     const newPageHeader = newCenterContent.querySelector(".page-header")
     if (newPageHeader) {
@@ -172,7 +158,6 @@ function updateQuartzBodyContent(
     // 只更新center区域内容
     micromorph(currentCenterContent, newCenterContent)
   } else {
-    console.debug("[SPA Debug] Center content not found, updating entire quartz-body")
     // 如果没有找到center结构，回退到完整更新
     newQuartzBody.appendChild(announcer)
     micromorph(currentQuartzBody, newQuartzBody)

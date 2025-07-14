@@ -26,6 +26,7 @@ function createNavigateFunction(announcer: HTMLElement) {
     startLoading()
 
     try {
+      notifyNav(getFullSlug(window), "prenav")
       // 获取内容
       const contents = await getContentForNavigation(url)
       if (!contents) {
@@ -35,7 +36,6 @@ function createNavigateFunction(announcer: HTMLElement) {
       }
 
       // 触发prenav事件
-      notifyNav(getFullSlug(window), "prenav")
 
       // 清理导航状态
       cleanupNavigationState()
@@ -43,13 +43,14 @@ function createNavigateFunction(announcer: HTMLElement) {
       // 清理弹窗和旧资源
       clearAllPopovers()
       // 注意：不调用 globalResourceManager.cleanup() 以避免清理缓存
-      // 只清理观察器和事件监听器，保留缓存数据
-      globalResourceManager.instance.cleanupObserversAndListeners()
+      // 使用选择性清理，保留SPA路由相关的关键事件监听器
+
+      globalResourceManager.instance.cleanupNonCriticalResources()
 
       // 重新渲染图谱和浏览器
-      const newUrl = getFullSlug(window)
-      window.dispatchEvent(new CustomEvent('reinit-graph', { detail: { url: newUrl } }))
-      window.dispatchEvent(new CustomEvent('reinit-explorer', { detail: { url: newUrl } }))
+      // const newUrl = getFullSlug(window)
+      // window.dispatchEvent(new CustomEvent('reinit-graph', { detail: { url: newUrl } }))
+      // window.dispatchEvent(new CustomEvent('reinit-explorer', { detail: { url: newUrl } }))
 
       // 更新页面内容
       updatePageContent(contents, url, isBack, announcer)
@@ -79,7 +80,6 @@ export function createNavigate(announcer: HTMLElement) {
 
 // navigate函数现在通过createNavigate创建
 
-
 /**
  * 创建路由器
  * 设置事件监听器和导航处理逻辑
@@ -102,6 +102,7 @@ export function createRouter(announcer: HTMLElement) {
 
   // 导航状态管理
   let isNavigating = false
+  let navigationTimeout: ReturnType<typeof setTimeout> | null = null
 
   /**
    * 处理点击事件
@@ -115,6 +116,9 @@ export function createRouter(announcer: HTMLElement) {
 
     const url = new URL(anchor.href)
     const opts = getOpts({ target: anchor })
+
+    // [SPA DEBUG] 确保此日志在任何提前返回之前输出，以确认 handleClick 是否被触发
+
     if (!opts.navigate) return
 
     mouseEvent.preventDefault()
@@ -128,6 +132,11 @@ export function createRouter(announcer: HTMLElement) {
     // 执行SPA导航
     if (isNavigating) return
     isNavigating = true
+    // 设置一个短的超时，以处理快速连续的导航请求
+    navigationTimeout = setTimeout(() => {
+      isNavigating = false
+    }, 500) // 500ms 内的重复点击将被忽略
+
     try {
       await navigate(url.pathname as RelativeURL)
     } catch (error) {
@@ -135,7 +144,10 @@ export function createRouter(announcer: HTMLElement) {
       window.location.assign(url)
     } finally {
       isNavigating = false
-      cleanupNavigationState()
+      if (navigationTimeout) {
+        clearTimeout(navigationTimeout)
+        navigationTimeout = null
+      }
     }
   }
 
@@ -152,6 +164,11 @@ export function createRouter(announcer: HTMLElement) {
 
     if (isNavigating) return
     isNavigating = true
+    // 设置一个短的超时，以处理快速连续的导航请求
+    navigationTimeout = setTimeout(() => {
+      isNavigating = false
+    }, 500) // 500ms 内的重复点击将被忽略
+
     try {
       // 标记为历史导航（回退操作）- 修复：传入true表示这是浏览器历史导航
       await navigate(currentUrl.pathname as RelativeURL, true)
@@ -161,16 +178,28 @@ export function createRouter(announcer: HTMLElement) {
       window.location.reload()
     } finally {
       isNavigating = false
-      cleanupNavigationState()
+      if (navigationTimeout) {
+        clearTimeout(navigationTimeout)
+        navigationTimeout = null
+      }
     }
   }
 
   // 使用 globalResourceManager 管理事件监听器
+
   globalResourceManager.instance.addEventListener(window, "click", handleClick)
   globalResourceManager.instance.addEventListener(window, "popstate", handlePopstate)
 
+  // 输出当前事件监听器统计信息
+  const stats = globalResourceManager.instance.getStats()
+
   return new (class Router {
-    go(pathname: RelativeURL) {
+    /**
+     * 导航到指定路径
+     * @param {RelativeURL} pathname 目标路径
+     * @returns {Promise<void>}
+     */
+    go(pathname: RelativeURL): Promise<void> {
       if (isNavigating) return Promise.resolve()
       isNavigating = true
       const url = new URL(pathname, window.location.toString())
@@ -182,7 +211,6 @@ export function createRouter(announcer: HTMLElement) {
         })
         .finally(() => {
           isNavigating = false
-          cleanupNavigationState()
         })
     }
 
@@ -220,15 +248,19 @@ export function initializeRouteAnnouncer(): HTMLElement {
     )
   }
 
-  const announcer = document.createElement("route-announcer")
-  // 确保 document.body 存在后再添加元素
-  if (document.body) {
-    document.body.appendChild(announcer)
-  } else {
-    // 如果 body 不存在，等待 DOMContentLoaded 事件
-    document.addEventListener("DOMContentLoaded", () => {
+  // 检查是否已存在 route-announcer 元素，避免重复添加
+  let announcer = document.querySelector("route-announcer") as HTMLElement
+  if (!announcer) {
+    announcer = document.createElement("route-announcer")
+    // 确保 document.body 存在后再添加元素
+    if (document.body) {
       document.body.appendChild(announcer)
-    })
+    } else {
+      // 如果 body 不存在，等待 DOMContentLoaded 事件
+      document.addEventListener("DOMContentLoaded", () => {
+        document.body.appendChild(announcer)
+      })
+    }
   }
   return announcer
 }

@@ -21,8 +21,7 @@ export class PopoverError extends Error {
  */
 export class PopoverErrorHandler {
   private static readonly MAX_LOG_ENTRIES = 50
-  private static readonly LOG_STORAGE_KEY =
-    CacheKeyFactory.generateSystemKey("popover_error_logs")
+  private static readonly LOG_STORAGE_KEY = CacheKeyFactory.generateSystemKey("popover_error_logs")
 
   /**
    * 处理错误并记录日志

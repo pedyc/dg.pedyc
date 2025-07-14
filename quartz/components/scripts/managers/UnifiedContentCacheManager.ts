@@ -11,10 +11,9 @@ import {
   CacheKeyValidationResult,
   generateStorageKey,
   extractOriginalKey,
-  CacheKeyFactory
+  CacheKeyFactory,
 } from "../cache/cache-key-utils"
 import { ICleanupManager } from "./CleanupManager"
-
 
 /**
  * 缓存诊断信息
@@ -157,8 +156,6 @@ export class UnifiedContentCacheManager implements ICleanupManager {
       console.warn("[UnifiedCache] Error initializing storage references:", error)
     }
   }
-
-
 
   /**
    * 获取内容
@@ -503,8 +500,6 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     }
   }
 
-
-
   /**
    * 计算内容哈希
    * @param content 内容
@@ -538,8 +533,6 @@ export class UnifiedContentCacheManager implements ICleanupManager {
     }
     return totalSize
   }
-
-
 
   /**
    * 验证缓存键的一致性

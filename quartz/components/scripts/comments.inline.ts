@@ -1,3 +1,5 @@
+import { globalResourceManager } from "./managers"
+
 const changeTheme = (e: CustomEventMap["themechange"]) => {
   const theme = e.detail.theme
   const iframe = document.querySelector("iframe.giscus-frame") as HTMLIFrameElement
@@ -118,6 +120,10 @@ document.addEventListener("nav", () => {
 
   giscusContainer.appendChild(giscusScript)
 
+  // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
+  // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
   document.addEventListener("themechange", changeTheme)
-  window.addCleanup(() => document.removeEventListener("themechange", changeTheme))
+  globalResourceManager.instance.addCleanupTask(() =>
+    document.removeEventListener("themechange", changeTheme),
+  )
 })

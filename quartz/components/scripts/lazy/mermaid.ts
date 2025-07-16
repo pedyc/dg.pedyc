@@ -1,4 +1,4 @@
-import { registerEscapeHandler, removeAllChildren } from "./utils/util"
+import { registerEscapeHandler, removeAllChildren } from "../utils/util"
 
 interface Position {
   x: number
@@ -31,9 +31,16 @@ class DiagramPanZoom {
     const mouseUpHandler = this.onMouseUp.bind(this)
     const resizeHandler = this.resetTransform.bind(this)
 
-    this.container.addEventListener("mousedown", mouseDownHandler)
+    this.container // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
+      .addEventListener("mousedown", mouseDownHandler)
+    // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
+    // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
     document.addEventListener("mousemove", mouseMoveHandler)
+    // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
+    // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
     document.addEventListener("mouseup", mouseUpHandler)
+    // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
+    // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
     window.addEventListener("resize", resizeHandler)
 
     this.cleanups.push(
@@ -70,8 +77,10 @@ class DiagramPanZoom {
     const button = document.createElement("button")
     button.textContent = text
     button.className = "mermaid-control-button"
+    // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
+    // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
     button.addEventListener("click", onClick)
-    window.addCleanup(() => button.removeEventListener("click", onClick))
+    this.cleanups.push(() => button.removeEventListener("click", onClick))
     return button
   }
 
@@ -142,12 +151,16 @@ const cssVars = [
   "--codeFont",
 ] as const
 
-let mermaidImport = undefined
-document.addEventListener("nav", async () => {
-  const center = document.querySelector(".center") as HTMLElement
-  const nodes = center.querySelectorAll("code.mermaid") as NodeListOf<HTMLElement>
+let mermaidImport: any = undefined
+
+/**
+ * 初始化 Mermaid 图表
+ * @param nodes Mermaid 代码块节点列表
+ */
+export async function initializeMermaid(nodes: NodeListOf<HTMLElement>) {
   if (nodes.length === 0) return
 
+  // 动态导入 Mermaid 库
   mermaidImport ||= await import(
     // @ts-ignore
     "https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs"
@@ -199,14 +212,37 @@ document.addEventListener("nav", async () => {
   }
 
   await renderMermaid()
-  document.addEventListener("themechange", renderMermaid)
-  window.addCleanup(() => document.removeEventListener("themechange", renderMermaid))
+
+  // 主题变化监听
+  const themeChangeHandler = renderMermaid
+  // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
+  // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
+  document.addEventListener("themechange", themeChangeHandler)
+
+  // 设置图表交互功能
+  setupMermaidInteractions(nodes)
+
+  return {
+    cleanup: () => {
+      document.removeEventListener("themechange", themeChangeHandler)
+    },
+  }
+}
+
+/**
+ * 设置 Mermaid 图表的交互功能
+ * @param nodes Mermaid 代码块节点列表
+ */
+function setupMermaidInteractions(nodes: NodeListOf<HTMLElement>) {
+  const panZoomInstances: DiagramPanZoom[] = []
 
   for (let i = 0; i < nodes.length; i++) {
     const codeBlock = nodes[i] as HTMLElement
     const pre = codeBlock.parentElement as HTMLPreElement
     const clipboardBtn = pre.querySelector(".clipboard-button") as HTMLButtonElement
     const expandBtn = pre.querySelector(".expand-button") as HTMLButtonElement
+
+    if (!expandBtn) continue
 
     const clipboardStyle = window.getComputedStyle(clipboardBtn)
     const clipboardWidth =
@@ -220,9 +256,10 @@ document.addEventListener("nav", async () => {
 
     // query popup container
     const popupContainer = pre.querySelector("#mermaid-container") as HTMLElement
-    if (!popupContainer) return
+    if (!popupContainer) continue
 
     let panZoom: DiagramPanZoom | null = null
+
     function showMermaid() {
       const container = popupContainer.querySelector("#mermaid-space") as HTMLElement
       const content = popupContainer.querySelector(".mermaid-content") as HTMLElement
@@ -239,20 +276,42 @@ document.addEventListener("nav", async () => {
 
       // Initialize pan-zoom after showing the popup
       panZoom = new DiagramPanZoom(container, content)
+      panZoomInstances.push(panZoom)
     }
 
     function hideMermaid() {
       popupContainer.classList.remove("active")
-      panZoom?.cleanup()
-      panZoom = null
+      if (panZoom) {
+        panZoom.cleanup()
+        const index = panZoomInstances.indexOf(panZoom)
+        if (index > -1) {
+          panZoomInstances.splice(index, 1)
+        }
+        panZoom = null
+      }
     }
 
+    // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
+    // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
     expandBtn.addEventListener("click", showMermaid)
     registerEscapeHandler(popupContainer, hideMermaid)
-
-    window.addCleanup(() => {
-      panZoom?.cleanup()
-      expandBtn.removeEventListener("click", showMermaid)
-    })
   }
-})
+
+  return {
+    cleanup: () => {
+      panZoomInstances.forEach((instance) => instance.cleanup())
+      panZoomInstances.length = 0
+    },
+  }
+}
+
+/**
+ * 清理 Mermaid 相关资源
+ */
+export function cleanupMermaid() {
+  // 清理所有 Mermaid 相关的事件监听器和资源
+  const containers = document.querySelectorAll("#mermaid-container")
+  containers.forEach((container) => {
+    container.classList.remove("active")
+  })
+}

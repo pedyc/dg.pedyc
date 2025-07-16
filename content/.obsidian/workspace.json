@@ -89,7 +89,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "PARA/20-AREAS/04AI/提示词工程.md",
+                    "file": "PARA/20-AREAS/04AI/前端开发助手提示词 v2.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -104,7 +104,7 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "提示词工程"
+                  "title": "前端开发助手提示词 v2"
                 }
               }
             ],
@@ -387,14 +387,14 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "72e989063b9157ff",
+  "active": "4cec7058a57d27dd",
   "lastOpenFiles": [
+    "PARA/20-AREAS/04AI/_resources",
     "PARA/20-AREAS/04AI/前端开发助手提示词 v2.md",
     "PARA/20-AREAS/04AI/提示词工程.md",
     "PARA/20-AREAS/04AI/前端开发助手提示词 v1.md",
     "PARA/20-AREAS/04AI/优化助手提示词.md",
     "PARA/20-AREAS/04AI/重构助手提示词.md",
-    "PARA/20-AREAS/04AI/_resources",
     "Diary/2025-07-03.md",
     "Diary/_resources",
     "Diary/2025-05-01.md",
@@ -416,7 +416,6 @@
     "copilot-custom-prompts/Rewrite as press release.md",
     "copilot-custom-prompts/Explain like I am 5.md",
     "copilot-custom-prompts/Generate glossary.md",
-    "copilot-custom-prompts/Generate table of contents.md",
     "copilot-custom-prompts",
     "PARA/20-AREAS/02前端/_resources",
     "Diary/_resources/2025-06-19",

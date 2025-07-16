@@ -1,6 +1,6 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 // @ts-ignore
-import script from "./scripts/graph.inline"
+
 import style from "./styles/graph.scss"
 import { i18n } from "../i18n"
 import { classNames } from "../util/lang"
@@ -70,7 +70,7 @@ export default ((opts?: Partial<GraphOptions>) => {
       <div class={classNames(displayClass, "graph")}>
         <h3>{i18n(cfg.locale).components.graph.title}</h3>
         <div class="graph-outer">
-          <div class="graph-container" data-cfg={JSON.stringify(localGraph)}></div>
+          <div class="graph-container" data-cfg={JSON.stringify(localGraph || {})}></div>
           <button class="global-graph-icon" aria-label="Global Graph">
             <svg
               version="1.1"
@@ -99,14 +99,26 @@ export default ((opts?: Partial<GraphOptions>) => {
           </button>
         </div>
         <div class="global-graph-outer">
-          <div class="global-graph-container" data-cfg={JSON.stringify(globalGraph)}></div>
+          <div class="global-graph-container" data-cfg={JSON.stringify(globalGraph || {})}></div>
         </div>
       </div>
     )
   }
 
   Graph.css = style
-  Graph.afterDOMLoaded = script
+  // Graph.afterDOMLoaded = () => {
+  //   console.log("Graph.afterDOMLoaded and initGraph", window.initGraph)
+  //   if (!window.initGraph) {
+  //     const script = document.createElement("script")
+  //     script.src = "/static/graph.bundle.js"
+  //     script.onload = () => {
+  //       if (window.initGraph) window.initGraph()
+  //     }
+  //     document.body.appendChild(script)
+  //   } else {
+  //     window.initGraph()
+  //   }
+  // }
 
   return Graph
 }) satisfies QuartzComponentConstructor

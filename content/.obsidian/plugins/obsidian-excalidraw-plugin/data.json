@@ -138102,7 +138102,7 @@
     }
   },
   "defaultTrayMode": true,
-  "previousRelease": "2.13.0",
+  "previousRelease": "2.13.1",
   "showReleaseNotes": true,
   "showNewVersionNotification": true,
   "latexBoilerplate": "\\color{blue}",

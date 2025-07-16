@@ -343,6 +343,6 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
         content: postscript,
       })
     },
-    async *partialEmit() { },
+    async *partialEmit() {},
   }
 }

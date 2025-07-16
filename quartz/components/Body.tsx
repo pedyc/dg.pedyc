@@ -12,6 +12,9 @@ const Body: QuartzComponent = ({ children }: QuartzComponentProps) => {
       {children}
       <script dangerouslySetInnerHTML={{ __html: clipboardScript }} />
       <script dangerouslySetInnerHTML={{ __html: lazyloadScript }} />
+      <script src="https://app.rybbit.io/api/script.js" data-site-id="1531" defer></script>
+      <script src="/static/graph.bundle.js" defer></script>
+      <script src="/static/search.bundle.js" defer></script>
     </div>
   )
 }

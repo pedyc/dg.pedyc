@@ -116,27 +116,79 @@ export class FileTrieNode<T extends FileTrieData = ContentDetails> {
   }
 
   /**
-   * Filter trie nodes. Behaves similar to `Array.prototype.filter()`, but modifies tree in place
+   * 过滤文件树节点（优化版本，减少递归调用）
+   * @param filterFn 过滤函数
+   * @returns 过滤后的新文件树
    */
-  filter(filterFn: (node: FileTrieNode<T>) => boolean) {
-    this.children = this.children.filter(filterFn)
-    this.children.forEach((child) => child.filter(filterFn))
+  filter(filterFn: (node: FileTrieNode<T>) => boolean): FileTrieNode<T> {
+    const newRoot = new FileTrieNode<T>(this.slugSegments, this.data ?? undefined)
+    newRoot.isFolder = this.isFolder
+    newRoot.displayName = this.displayName
+
+    if (!filterFn(this)) {
+      return newRoot
+    }
+
+    // 使用迭代而非递归，提高性能
+    const stack: Array<{ source: FileTrieNode<T>; target: FileTrieNode<T> }> = [
+      { source: this, target: newRoot },
+    ]
+
+    while (stack.length > 0) {
+      const { source, target } = stack.pop()!
+
+      for (const child of source.children) {
+        if (filterFn(child)) {
+          const newChild = new FileTrieNode<T>(child.slugSegments, child.data ?? undefined)
+          newChild.isFolder = child.isFolder
+          newChild.displayName = child.displayName
+          target.children.push(newChild)
+
+          // 如果有子节点，加入栈中继续处理
+          if (child.children.length > 0) {
+            stack.push({ source: child, target: newChild })
+          }
+        }
+      }
+    }
+
+    return newRoot
   }
 
   /**
-   * Map over trie nodes. Behaves similar to `Array.prototype.map()`, but modifies tree in place
+   * Map over trie nodes（优化版本，使用迭代）
    */
   map(mapFn: (node: FileTrieNode<T>) => void) {
-    mapFn(this)
-    this.children.forEach((child) => child.map(mapFn))
+    // 使用迭代而非递归，提高性能
+    const stack: FileTrieNode<T>[] = [this]
+
+    while (stack.length > 0) {
+      const node = stack.pop()!
+      mapFn(node)
+
+      // 将子节点加入栈中继续处理
+      for (const child of node.children) {
+        stack.push(child)
+      }
+    }
   }
 
   /**
-   * Sort trie nodes according to sort/compare function
+   * Sort trie nodes according to sort/compare function（优化版本，使用迭代）
    */
   sort(sortFn: (a: FileTrieNode<T>, b: FileTrieNode<T>) => number) {
-    this.children = this.children.sort(sortFn)
-    this.children.forEach((e) => e.sort(sortFn))
+    // 使用迭代而非递归，提高性能
+    const stack: FileTrieNode<T>[] = [this]
+
+    while (stack.length > 0) {
+      const node = stack.pop()!
+      node.children = node.children.sort(sortFn)
+
+      // 将子节点加入栈中继续处理
+      for (const child of node.children) {
+        stack.push(child)
+      }
+    }
   }
 
   static fromEntries<T extends FileTrieData>(entries: [FullSlug, T][]) {

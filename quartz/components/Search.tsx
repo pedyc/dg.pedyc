@@ -1,7 +1,7 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/search.scss"
 // @ts-ignore
-import script from "./scripts/search.inline"
+// import script from "./scripts/search.inline"
 import { classNames } from "../util/lang"
 import { i18n } from "../i18n"
 
@@ -46,8 +46,19 @@ export default ((userOpts?: Partial<SearchOptions>) => {
     )
   }
 
-  Search.afterDOMLoaded = script
   Search.css = style
+  // Search.afterDOMLoaded = () => {
+  //   if (!window.initSearch) {
+  //     const script = document.createElement("script")
+  //     script.src = "/static/search.bundle.js"
+  //     script.onload = () => {
+  //       if (window.initSearch) window.initSearch()
+  //     }
+  //     document.body.appendChild(script)
+  //   } else {
+  //     window.initSearch()
+  //   }
+  // }
 
   return Search
 }) satisfies QuartzComponentConstructor

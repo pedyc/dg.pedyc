@@ -1,25 +1,18 @@
-let isReaderMode = false
+/**
+ * 阅读模式组件入口文件
+ * 使用 BaseComponentManager 统一管理模式
+ */
 
-const emitReaderModeChangeEvent = (mode: "on" | "off") => {
-  const event: CustomEventMap["readermodechange"] = new CustomEvent("readermodechange", {
-    detail: { mode },
-  })
-  document.dispatchEvent(event)
-}
+import { ComponentManagerFactory } from "./component-manager/BaseComponentManager"
+import { ReadermodeComponentManager } from "./component-manager/ReadermodeComponentManager"
 
-document.addEventListener("nav", () => {
-  const switchReaderMode = () => {
-    isReaderMode = !isReaderMode
-    const newMode = isReaderMode ? "on" : "off"
-    document.documentElement.setAttribute("reader-mode", newMode)
-    emitReaderModeChangeEvent(newMode)
-  }
-
-  for (const readerModeButton of document.getElementsByClassName("readermode")) {
-    readerModeButton.addEventListener("click", switchReaderMode)
-    window.addCleanup(() => readerModeButton.removeEventListener("click", switchReaderMode))
-  }
-
-  // Set initial state
-  document.documentElement.setAttribute("reader-mode", isReaderMode ? "on" : "off")
+// 注册并初始化阅读模式管理器
+const readermodeManager = new ReadermodeComponentManager({
+  name: "readermode",
+  defaultMode: "off",
 })
+
+ComponentManagerFactory.register("readermode", readermodeManager)
+
+// 初始化组件
+ComponentManagerFactory.initialize("readermode")

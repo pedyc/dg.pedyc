@@ -61,10 +61,7 @@ type NodeRenderData = GraphicsInfo & {
   label: Text
 }
 
-const localStorageKey = CacheKeyFactory.generateSystemKey(
-  "graph-visited",
-  "navigation-history",
-)
+const localStorageKey = CacheKeyFactory.generateSystemKey("graph-visited", "navigation-history")
 
 function getVisited(): Set<SimpleSlug> {
   return new Set(JSON.parse(localStorage.getItem(localStorageKey) ?? "[]"))
@@ -518,9 +515,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   } else {
     for (const node of nodeRenderData) {
       node.gfx.on("click", () => {
-        const targ = removeDuplicatePathSegments(
-          resolveRelative(fullSlug, node.simulationData.id),
-        )
+        const targ = removeDuplicatePathSegments(resolveRelative(fullSlug, node.simulationData.id))
         window.spaNavigate(targ as RelativeURL)
       })
     }

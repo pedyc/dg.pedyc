@@ -18,7 +18,11 @@ export const WorkerBuilder: QuartzEmitterPlugin = () => {
     getQuartzComponents() {
       return []
     },
-    async emit(ctx: BuildCtx, _content: ProcessedContent[], _resources: StaticResources): Promise<FilePath[]> {
+    async emit(
+      ctx: BuildCtx,
+      _content: ProcessedContent[],
+      _resources: StaticResources,
+    ): Promise<FilePath[]> {
       const { argv } = ctx
       const emittedFiles: FilePath[] = []
 
@@ -26,7 +30,7 @@ export const WorkerBuilder: QuartzEmitterPlugin = () => {
         // 查找所有 .worker.ts 文件
         const workerFiles = await globby("quartz/components/scripts/**/*.worker.ts", {
           cwd: path.resolve("."),
-          absolute: true
+          absolute: true,
         })
 
         console.log(`Found ${workerFiles.length} worker files to build`)
@@ -52,7 +56,7 @@ export const WorkerBuilder: QuartzEmitterPlugin = () => {
             minify: true,
             target: "esnext",
             sourcemap: false,
-            write: true
+            write: true,
           })
 
           emittedFiles.push(outputName as FilePath)
@@ -64,6 +68,6 @@ export const WorkerBuilder: QuartzEmitterPlugin = () => {
       }
 
       return emittedFiles
-    }
+    },
   }
 }

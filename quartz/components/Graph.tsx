@@ -1,9 +1,8 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 // @ts-ignore
-import script from "./scripts/graph.inline"
 import style from "./styles/graph.scss"
-import { i18n } from "../i18n"
-import { classNames } from "../util/lang"
+  import { i18n } from "../i18n"
+  import { classNames } from "../util/lang"
 
 export interface D3Config {
   drag: boolean
@@ -70,7 +69,7 @@ export default ((opts?: Partial<GraphOptions>) => {
       <div class={classNames(displayClass, "graph")}>
         <h3>{i18n(cfg.locale).components.graph.title}</h3>
         <div class="graph-outer">
-          <div class="graph-container" data-cfg={JSON.stringify(localGraph)}></div>
+          <div class="graph-container" data-cfg={JSON.stringify(localGraph || {})}></div>
           <button class="global-graph-icon" aria-label="Global Graph">
             <svg
               version="1.1"
@@ -99,14 +98,16 @@ export default ((opts?: Partial<GraphOptions>) => {
           </button>
         </div>
         <div class="global-graph-outer">
-          <div class="global-graph-container" data-cfg={JSON.stringify(globalGraph)}></div>
+          <div class="global-graph-container" data-cfg={JSON.stringify(globalGraph || {})}></div>
         </div>
+        <script src="/static/graph.bundle.js" defer></script>
       </div>
     )
+
   }
 
   Graph.css = style
-  Graph.afterDOMLoaded = script
+   // Graph.afterDOMLoaded = script
 
-  return Graph
+   return Graph
 }) satisfies QuartzComponentConstructor

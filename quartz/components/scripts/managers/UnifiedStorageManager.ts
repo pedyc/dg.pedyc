@@ -445,7 +445,7 @@ export class UnifiedStorageManager implements ICleanupManager {
     const cleanupInterval = (UnifiedStorageManager.config.cleanupIntervalMs || 60) * 60 * 1000 // 转换为毫秒
 
     // 检查是否需要清理（基于配置的清理间隔）
-    const lastCleanup = parseInt(localStorage.getItem("last_cleanup") || "0")
+    const lastCleanup = parseInt(this.getItem("local", "last_cleanup") || "0")
     if (now - lastCleanup < cleanupInterval) {
       return // 还未到清理时间
     }
@@ -454,7 +454,7 @@ export class UnifiedStorageManager implements ICleanupManager {
     UnifiedStorageManager.cleanupStorage(sessionStorage)
 
     // 记录清理时间
-    localStorage.setItem("last_cleanup", now.toString())
+    this.setItem("local", "last_cleanup", now.toString())
 
     // 触发自定义事件，通知其他模块缓存已清理
     document.dispatchEvent(new CustomEvent("cacheCleared", { detail: {} }))

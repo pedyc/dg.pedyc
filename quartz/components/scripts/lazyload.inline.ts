@@ -2,7 +2,7 @@ import { LazyloadManager } from "./managers/LazyloadManager"
 import { globalResourceManager } from "./managers/index"
 
 // 创建本地LazyloadManager实例以避免循环依赖
-const globalLazyloadManager = LazyloadManager.createDefault()
+const globalLazyloadManager = new LazyloadManager()
 
 /**
  * 图片懒加载初始化函数

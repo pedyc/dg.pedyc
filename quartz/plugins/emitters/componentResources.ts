@@ -19,6 +19,7 @@ import {
 import { Features, transform } from "lightningcss"
 import { transform as transpile } from "esbuild"
 import { write } from "./helpers"
+import { GlobalManagerController } from "../../components/scripts/managers/global-instances"
 
 type ComponentResources = {
   css: string[]
@@ -79,6 +80,9 @@ async function joinScripts(scripts: string[]): Promise<string> {
 
 function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentResources) {
   const cfg = ctx.cfg.configuration
+
+  // Ensure GlobalManagerController is initialized before any other scripts that might use global managers
+  componentResources.beforeDOMLoaded.unshift(`GlobalManagerController.initialize(true);`);
 
   // spaRouterScript should be loaded before other scripts that use window.addCleanup
   if (cfg.enableSPA) {

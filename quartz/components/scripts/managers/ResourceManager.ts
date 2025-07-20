@@ -110,8 +110,13 @@ export class ResourceManager implements ICleanupManager {
     listener: EventListener,
     options?: boolean | AddEventListenerOptions,
   ): void {
-    element.addEventListener(type, listener, options)
-    this.eventListeners.push({ element, type, listener, options })
+    const exists = this.eventListeners.some(
+      (item) => item.element === element && item.type === type && item.listener === listener,
+    )
+    if (!exists) {
+      element.addEventListener(type, listener, options)
+      this.eventListeners.push({ element, type, listener, options })
+    }
   }
 
   /**
@@ -278,6 +283,80 @@ export class ResourceManager implements ICleanupManager {
       }
     })
     this.eventListeners.length = 0
+
+    // 清理 AbortController
+    this.abortControllers.forEach((controller) => {
+      try {
+        controller.abort()
+      } catch (error) {
+        console.error("清理 AbortController 时出错:", error)
+      }
+    })
+    this.abortControllers.clear()
+
+    // 注意：不执行 cleanupTasks，保留缓存数据
+  }
+
+  /**
+   * 选择性清理非关键的观察器和事件监听器
+   * 保留SPA路由相关的关键事件监听器（click和popstate）
+   * 用于SPA导航时避免清理关键的路由事件监听器
+   */
+  cleanupNonCriticalResources(): void {
+    // 清理观察器
+    this.observers.forEach((observer) => {
+      try {
+        observer.disconnect()
+      } catch (error) {
+        console.error("清理观察器时出错:", error)
+      }
+    })
+    this.observers.clear()
+
+    // 清理定时器
+    this.timers.forEach((timerId) => {
+      try {
+        clearTimeout(timerId)
+        clearInterval(timerId)
+      } catch (error) {
+        console.error("清理定时器时出错:", error)
+      }
+    })
+    this.timers.clear()
+
+    // 选择性清理事件监听器，保留关键的SPA路由事件监听器
+    const criticalEventTypes = ["click", "popstate"]
+    const criticalElements = [window, document]
+
+    const listenersToKeep: Array<{
+      element: EventTarget
+      type: string
+      listener: EventListener
+      options?: boolean | AddEventListenerOptions
+    }> = []
+
+    this.eventListeners.forEach(({ element, type, listener, options }) => {
+      // 保留关键的SPA路由事件监听器
+      if (
+        criticalEventTypes.includes(type) &&
+        criticalElements.some((el) => el === (element as Window | Document))
+      ) {
+        listenersToKeep.push({ element, type, listener, options })
+        console.log(`[SPA DEBUG] 保留关键事件监听器: ${type} on ${element.constructor.name}`)
+      } else {
+        // 清理非关键事件监听器
+        try {
+          element.removeEventListener(type, listener, options)
+          console.log(`[SPA DEBUG] 清理非关键事件监听器: ${type} on ${element.constructor.name}`)
+        } catch (error) {
+          console.error("清理事件监听器时出错:", error)
+        }
+      }
+    })
+
+    // 更新事件监听器列表，只保留关键的
+    this.eventListeners.length = 0
+    this.eventListeners.push(...listenersToKeep)
 
     // 清理 AbortController
     this.abortControllers.forEach((controller) => {

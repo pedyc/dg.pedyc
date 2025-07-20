@@ -1,3 +1,8 @@
+/**
+ * Popover 组件入口文件
+ * 使用 BaseComponentManager 统一管理模式
+ */
+
 // 在文件顶部添加类型声明
 declare global {
   interface Window {
@@ -5,41 +10,24 @@ declare global {
   }
 }
 
-import {
-  FailedLinksManager,
-  ViewportPreloadManager,
-  LinkEventManager,
-  mouseEnterHandler,
-  clearActivePopover,
-} from "./popover/index"
+import { ComponentManagerFactory } from "./component-manager/BaseComponentManager"
+import { PopoverComponentManager } from "./component-manager/PopoverComponentManager"
 
-import { globalResourceManager } from "./managers/index"
-
-function popoverSetup() {
-  FailedLinksManager.loadFailedLinks()
-  LinkEventManager.setupLinkEventListeners(mouseEnterHandler, clearActivePopover)
-  ViewportPreloadManager.initialize()
-}
-
-// 使用ResourceManager统一管理事件监听器
-globalResourceManager.instance.addEventListener(document as unknown as EventTarget, "nav", () => {
-  popoverSetup()
+// 创建并注册 Popover 组件管理器
+const popoverManager = new PopoverComponentManager({
+  name: "popover",
+  debug: false,
+  enablePreload: true,
+  preloadDelay: 1000,
+  enableViewportPreload: true,
+  enableFailedLinksManagement: true,
+  showDelay: 300,
+  hideDelay: 100,
 })
 
-// 在 popover.inline.ts 中添加
-globalResourceManager.instance.addEventListener(
-  document as unknown as EventTarget,
-  "DOMContentLoaded",
-  () => popoverSetup(),
-)
+ComponentManagerFactory.register("popover", popoverManager)
 
-/**
- * 监听缓存清理事件，并在事件触发时重新初始化 popover 相关功能。
- */
-globalResourceManager.instance.addEventListener(
-  document as unknown as EventTarget,
-  "cacheCleared",
-  () => {
-    popoverSetup()
-  },
-)
+// 初始化组件
+ComponentManagerFactory.initialize("popover").catch((error) => {
+  console.error("Popover component initialization failed:", error)
+})

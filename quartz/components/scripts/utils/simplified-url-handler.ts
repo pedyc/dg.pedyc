@@ -202,7 +202,7 @@ export class SimplifiedURLHandler {
     const segments = pathname.split("/").filter(Boolean)
     const uniqueSegments: string[] = []
     const seen = new Set<string>()
-    
+
     for (const segment of segments) {
       if (!seen.has(segment)) {
         seen.add(segment)
@@ -224,12 +224,10 @@ export class SimplifiedURLHandler {
    */
 
   private generateCacheKey(url: string, type: "content" | "link" | "search"): string {
-    const encodedUrl = encodeURIComponent(url);
-    const prefix = this.CACHE_PREFIXES[type];
-    return `${prefix}${encodedUrl}`;
+    const encodedUrl = encodeURIComponent(url)
+    const prefix = this.CACHE_PREFIXES[type]
+    return `${prefix}${encodedUrl}`
   }
-
-
 
   /**
    * 检查是否为内部链接

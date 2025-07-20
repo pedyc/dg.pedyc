@@ -216,11 +216,13 @@ export class PreloadManager implements ICleanupManager {
         })
 
         // 使用统一缓存管理器存储，优先存储在弹窗缓存层
-        console.log(`[PreloadManager DEBUG] 存储内容到缓存，键为: ${cacheKey}, 内容长度: ${htmlString.length}`)
+        console.log(
+          `[PreloadManager DEBUG] 存储内容到缓存，键为: ${cacheKey}, 内容长度: ${htmlString.length}`,
+        )
         globalUnifiedContentCache.instance.set(cacheKey, htmlString, CacheLayer.SESSION)
         // 验证存储是否成功
         const verifyStored = globalUnifiedContentCache.instance.has(cacheKey)
-        console.log(`[PreloadManager DEBUG] 缓存存储验证: ${verifyStored ? '成功' : '失败'}`)
+        console.log(`[PreloadManager DEBUG] 缓存存储验证: ${verifyStored ? "成功" : "失败"}`)
         // 如果之前被标记为失败，现在成功了，就从失败列表中移除
         FailedLinksManager.removeFailedLink(cacheKey)
         return htmlString
@@ -237,7 +239,6 @@ export class PreloadManager implements ICleanupManager {
       } else {
         throw new Error(`Unsupported content type: ${contentType}`)
       }
-
     } catch (error) {
       // 捕获并处理预加载过程中的错误
       PopoverErrorHandler.handleError(error as Error, "Preloading link content", cacheKey)

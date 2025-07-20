@@ -258,8 +258,6 @@ export const CACHE_PERFORMANCE_CONFIG = {
   },
 } as const
 
-
-
 /**
  * 获取缓存配置
  * @param type 缓存类型

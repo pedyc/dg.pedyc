@@ -152,9 +152,7 @@ export const CacheKeyFactory = {
    * @param key 缓存键
    * @returns 验证结果
    */
-  validateKeyFormat: (
-    key: string,
-  ): CacheKeyValidationResult => {
+  validateKeyFormat: (key: string): CacheKeyValidationResult => {
     const issues: string[] = []
     const suggestions: string[] = []
 
@@ -192,7 +190,7 @@ export const CacheKeyFactory = {
    */
   parseKey: (key: string): CacheKeyParseResult => {
     const type = CacheKeyFactory.identifyType(key)
-    const prefix = Object.values(CacheKeyRules.PREFIXES).find(p => key.startsWith(p)) || null
+    const prefix = Object.values(CacheKeyRules.PREFIXES).find((p) => key.startsWith(p)) || null
     const original = CacheKeyFactory.extractOriginalKey(key)
     const validation = CacheKeyFactory.validateKeyFormat(key)
 
@@ -225,7 +223,7 @@ export interface CacheKeyParseResult {
 }
 
 // 导出别名以方便使用
-export const { 
+export const {
   generateContentKey,
   generateSearchKey,
   generateUserKey,

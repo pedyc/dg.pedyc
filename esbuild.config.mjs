@@ -13,11 +13,12 @@ const esConfig = {
   jsx: "automatic",
   jsxImportSource: "preact",
   packages: "external",
-  sourcemap: true,
+  sourcemap: false,
   sourcesContent: true,
   bundle: true,
   keepNames: true,
   minify: true,
+  treeShaking: true,
   metafile: true,
   plugins: [
     sassPlugin({
@@ -57,6 +58,7 @@ const esConfig = {
             format: "esm",
           })
           const rawMod = transpiled.outputFiles[0].text
+
           return {
             contents: rawMod,
             loader: "text",

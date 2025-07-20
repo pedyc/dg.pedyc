@@ -1,4 +1,5 @@
 import { OptimizedCacheManager } from "../managers/OptimizedCacheManager"
+import { globalResourceManager } from "../managers/index"
 
 export function registerEscapeHandler(outsideContainer: HTMLElement | null, cb: () => void) {
   if (!outsideContainer) return
@@ -16,9 +17,13 @@ export function registerEscapeHandler(outsideContainer: HTMLElement | null, cb: 
   }
 
   outsideContainer?.addEventListener("click", click)
-  window.addCleanup(() => outsideContainer?.removeEventListener("click", click))
+  globalResourceManager.instance.addCleanupTask(() =>
+    outsideContainer?.removeEventListener("click", click),
+  )
+  // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
+  // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
   document.addEventListener("keydown", esc)
-  window.addCleanup(() => document.removeEventListener("keydown", esc))
+  globalResourceManager.instance.addCleanupTask(() => document.removeEventListener("keydown", esc))
 }
 
 export function removeAllChildren(node: HTMLElement) {

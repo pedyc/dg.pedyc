@@ -41,7 +41,7 @@ document.addEventListener("nav", (e) => {
   if (!end) return
 
   observer.observe(end)
-  window.addCleanup(() => observer.disconnect())
+  globalResourceManager.instance.addCleanupTask(() => observer.disconnect())
 })
 `,
   }

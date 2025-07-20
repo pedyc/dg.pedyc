@@ -238,7 +238,11 @@ export class ImageLoadManager implements ICleanupManager {
       }
 
       // 添加事件监听器
+      // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
+      // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
       img.addEventListener("load", onLoad, { once: true })
+      // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
+      // TODO: 检查是否需要替换为 globalResourceManager.instance.addEventListener
       img.addEventListener("error", onError, { once: true })
 
       // 设置图片源触发加载

@@ -115,7 +115,7 @@ export async function mouseEnterHandler(
     originalHash: originalHash,
     contentUrl: contentUrlString,
     cacheKey: cacheKey,
-    cacheHas: globalUnifiedContentCache.instance.has(cacheKey)
+    cacheHas: globalUnifiedContentCache.instance.has(cacheKey),
   })
 
   // 使用处理后的contentUrl生成popoverId，确保唯一性

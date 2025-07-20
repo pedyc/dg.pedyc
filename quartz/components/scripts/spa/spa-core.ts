@@ -190,8 +190,7 @@ export function createRouter(announcer: HTMLElement) {
   globalResourceManager.instance.addEventListener(window, "click", handleClick)
   globalResourceManager.instance.addEventListener(window, "popstate", handlePopstate)
 
-  // 输出当前事件监听器统计信息
-  const stats = globalResourceManager.instance.getStats()
+
 
   return new (class Router {
     /**

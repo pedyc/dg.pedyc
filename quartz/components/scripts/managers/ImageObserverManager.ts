@@ -118,6 +118,7 @@ export class ImageObserverManager implements ICleanupManager {
 
     // 检查是否应该跳过观察
     if (this.shouldSkipObservation(img)) {
+      console.log(`[ImageObserverManager] 跳过观察图片元素 ${img.src}`)
       return
     }
 

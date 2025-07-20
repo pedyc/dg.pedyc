@@ -76,10 +76,21 @@ export class LazyloadManager implements ICleanupManager {
     this.setupEventListeners()
   }
 
+  // 防止重复注册事件监听器的标志
+  private eventListenersSetup = false
+
   /**
    * 设置事件监听器
    */
   private setupEventListeners(): void {
+    // 如果已经设置过事件监听器，直接返回
+    if (this.eventListenersSetup) {
+      this.log("事件监听器已设置，跳过重复注册")
+      return
+    }
+
+    this.log("开始设置事件监听器")
+
     // 监听导航事件，重新初始化懒加载
     document.addEventListener("nav", () => {
       this.reinitialize()
@@ -93,6 +104,10 @@ export class LazyloadManager implements ICleanupManager {
         this.resume()
       }
     })
+
+    // 标记事件监听器已设置
+    this.eventListenersSetup = true
+    this.log("事件监听器设置完成")
   }
 
   /**

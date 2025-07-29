@@ -1,5 +1,6 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 // @ts-ignore
+// import script from "./scripts/graph.inline"
 import style from "./styles/graph.scss"
   import { i18n } from "../i18n"
   import { classNames } from "../util/lang"
@@ -107,7 +108,7 @@ export default ((opts?: Partial<GraphOptions>) => {
   }
 
   Graph.css = style
-   // Graph.afterDOMLoaded = script
+  // Graph.afterDOMLoaded = script
 
    return Graph
 }) satisfies QuartzComponentConstructor

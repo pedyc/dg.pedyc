@@ -6,6 +6,7 @@
 import { BaseComponentManager, ComponentState, type ComponentConfig } from "./BaseComponentManager"
 import { FullSlug, getFullSlug } from "../../../util/path"
 import { registerEscapeHandler } from "../utils/util"
+import { initializeSearchLogic, fillDocument } from "../search.inline"
 
 // 搜索懒加载状态管理
 const searchLoadingStates = new Map<HTMLElement, boolean>()
@@ -165,8 +166,8 @@ export class SearchComponentManager extends BaseComponentManager<
       this.removeInputTriggers(input, initOnFirstInteraction)
     }
 
-    this.addEventListener(input, "focus", initOnFirstInteraction)
-    this.addEventListener(input, "input", initOnFirstInteraction)
+    this.addEventListener(input as any, "focus", initOnFirstInteraction)
+    this.addEventListener(input as any, "input", initOnFirstInteraction)
 
     // 保存清理函数
     this.addCleanupTask(() => {
@@ -215,7 +216,10 @@ export class SearchComponentManager extends BaseComponentManager<
       const searchModule = await this.loadSearchModule()
 
       // 初始化搜索
-      await searchModule.initializeSearch()
+      const currentSlug = (this.state as any).currentSlug
+      const data = await window.fetchData
+      await fillDocument(data)
+      await initializeSearchLogic(element, currentSlug, data)
 
       // 标记为已初始化
       searchLoadingStates.set(element, false)

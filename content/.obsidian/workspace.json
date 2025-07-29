@@ -89,7 +89,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "PARA/20-AREAS/04AI/提示词工程.md",
+                    "file": "PARA/20-AREAS/02前端/SPA.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -104,7 +104,7 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "提示词工程"
+                  "title": "SPA"
                 }
               }
             ],
@@ -147,13 +147,13 @@
                         "state": {
                           "type": "outline",
                           "state": {
-                            "file": "PARA/20-AREAS/04AI/提示词工程.md",
+                            "file": "PARA/20-AREAS/02前端/SPA.md",
                             "followCursor": false,
                             "showSearch": false,
                             "searchQuery": ""
                           },
                           "icon": "lucide-list",
-                          "title": "Outline of 提示词工程"
+                          "title": "Outline of SPA"
                         }
                       }
                     ]
@@ -169,7 +169,7 @@
                         "state": {
                           "type": "localgraph",
                           "state": {
-                            "file": "PARA/20-AREAS/04AI/提示词工程.md",
+                            "file": "PARA/20-AREAS/02前端/SPA.md",
                             "options": {
                               "collapse-filter": true,
                               "search": "",
@@ -192,12 +192,12 @@
                               "repelStrength": 10,
                               "linkStrength": 1,
                               "linkDistance": 250,
-                              "scale": 0.6723333706978419,
+                              "scale": 0.17402586620205723,
                               "close": true
                             }
                           },
                           "icon": "lucide-git-fork",
-                          "title": "Graph of 提示词工程"
+                          "title": "Graph of SPA"
                         }
                       }
                     ]
@@ -277,7 +277,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -316,7 +316,8 @@
               "title": "All properties"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -389,34 +390,36 @@
   },
   "active": "4cec7058a57d27dd",
   "lastOpenFiles": [
-    "PARA/20-AREAS/04AI/错误修复助手提示词.md",
+    "PARA/20-AREAS/02前端/多页应用 (MPA).md",
+    "PARA/20-AREAS/02前端/SPA.md",
+    "Diary/2025-07-01.md",
+    "Diary/2025-07-03.md",
+    "Diary/2025-07-02.md",
+    "copilot-conversations/[[SPA]]完善笔记@20250724_175255.md",
+    "SimpRead/simpread_config.json",
+    "SimpRead/backup/simpread_config@20250724175033.json",
+    "PARA/20-AREAS/02前端/Web通信.md",
+    "PARA/20-AREAS/02前端/CORS.md",
+    "PARA/20-AREAS/02前端/0200前端.md",
+    "PARA/20-AREAS/02前端/前端框架.md",
+    "PARA/20-AREAS/02前端/前端性能优化.md",
+    "PARA/20-AREAS/02前端/JavaScript.md",
+    "PARA/10-PROJECTS/2025Q2-面试提升专项.md",
+    "copilot-conversations/SPA应该归属与哪个模块？@20250724_084600.md",
+    "copilot-conversations/SPA应该归属与哪个模块？@20250724_084151.md",
+    "PARA/10-PROJECTS/2025Q2-深耕前端生态.md",
+    "PARA/20-AREAS/04AI/知识管理大师提示词v2.md",
     "PARA/20-AREAS/04AI/提示词工程.md",
+    "PARA/20-AREAS/04AI/错误修复助手提示词.md",
     "PARA/20-AREAS/04AI/重构助手提示词.md",
     "PARA/20-AREAS/04AI/优化助手提示词.md",
     "PARA/20-AREAS/04AI/_resources",
     "PARA/20-AREAS/04AI/前端开发助手提示词 v2.md",
     "PARA/20-AREAS/04AI/前端开发助手提示词 v1.md",
-    "Diary/2025-07-03.md",
     "Diary/_resources",
     "Diary/2025-05-01.md",
     "Diary/2025-04-28.md",
-    "Diary/2025-07-02.md",
-    "Diary/2025-07-01.md",
     "PARA/20-AREAS/02前端/Web API.md",
-    "PARA/20-AREAS/02前端/0200前端.md",
-    "PARA/20-AREAS/02前端/CSS.md",
-    "Diary/2025-06-30.md",
-    "copilot-custom-prompts/Rewrite as tweet.md",
-    "copilot-custom-prompts/Remove URLs.md",
-    "copilot-custom-prompts/Rewrite as tweet thread.md",
-    "copilot-custom-prompts/Summarize.md",
-    "copilot-custom-prompts/Simplify.md",
-    "copilot-custom-prompts/Emojify.md",
-    "copilot-custom-prompts/文章助手.md",
-    "copilot-custom-prompts/根据标题完善笔记.md",
-    "copilot-custom-prompts/Rewrite as press release.md",
-    "copilot-custom-prompts/Explain like I am 5.md",
-    "copilot-custom-prompts/Generate glossary.md",
     "copilot-custom-prompts",
     "PARA/20-AREAS/02前端/_resources",
     "Diary/_resources/2025-06-19",
@@ -424,8 +427,6 @@
     "_resources/sw-lifecycle.svg",
     "PARA/00-META/_resources",
     "PARA/30-RESOURCES/面试真题/_resources",
-    "SimpRead/backup/simpread_config@20250602214508.json",
-    "HTTP",
     "PARA/10-PROJECTS/_resources/前端面试.png",
     "PARA/10-PROJECTS/_resources/Drawing 2025-05-29 16.11.38.excalidraw.svg",
     "PARA/20-AREAS/00看板/02前端领域看板.excalidraw.svg",

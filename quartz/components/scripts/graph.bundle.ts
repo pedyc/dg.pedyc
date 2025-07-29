@@ -13,9 +13,6 @@ const graphManager = new GraphComponentManager({
   enablePreload: true,
   preloadDelay: 2000,
 })
-export async function initializeGraph(): Promise<void> {
-  graphManager.initialize()
-}
 ComponentManagerFactory.register("graph", graphManager)
 ComponentManagerFactory.initialize("graph").catch((error) => {
   console.error("Graph component initialization failed:", error)

@@ -194,6 +194,11 @@ export class ExplorerComponentManager extends BaseComponentManager<ExplorerConfi
     for (const icon of folderIcons) {
       this.addEventListener(icon, "click", toggleFolder)
     }
+
+    this.addEventListener(document, 'nav', () => {
+      // 在导航事件时，将 explorer 组件滚动到 slug 对应的元素
+      scrollToActiveElement(explorer)
+    })
   }
 
   /**
@@ -219,7 +224,7 @@ export class ExplorerComponentManager extends BaseComponentManager<ExplorerConfi
 
     // 触发垃圾回收（如果可用）
     if (typeof window !== "undefined" && "gc" in window) {
-      ;(window as any).gc()
+      ; (window as any).gc()
     }
   }
 
@@ -233,7 +238,7 @@ export class ExplorerComponentManager extends BaseComponentManager<ExplorerConfi
 
     const config = this.getOptimizationConfig()
     if (config.memory.enableAutoCleanup) {
-      ;(this.state as any).cleanupInterval = setInterval(
+      ; (this.state as any).cleanupInterval = setInterval(
         () => this.cleanupMemory(),
         config.memory.cleanupInterval,
       )
@@ -463,12 +468,13 @@ export class ExplorerComponentManager extends BaseComponentManager<ExplorerConfi
    * 初始化组件
    */
   protected async onInitialize(): Promise<void> {
+    console.debug(`[Explorer] initialize method called. Config:`, this.config);
     // 初始化状态
-    ;(this.state as any).explorerElements = []
-    ;(this.state as any).currentFileData = null
-    ;(this.state as any).currentSlug = null
-    ;(this.state as any).nodeCache = new Map()
-    ;(this.state as any).cleanupInterval = null
+    ; (this.state as any).explorerElements = []
+      ; (this.state as any).currentFileData = null
+      ; (this.state as any).currentSlug = null
+      ; (this.state as any).nodeCache = new Map()
+      ; (this.state as any).cleanupInterval = null
 
     // 设置内存清理
     this.setupMemoryCleanup()
@@ -479,6 +485,7 @@ export class ExplorerComponentManager extends BaseComponentManager<ExplorerConfi
     })
 
     this.log("Explorer component initialized")
+    this.log(`[Explorer] Current state after initialization: ${JSON.stringify(this.state)}`)
   }
 
   /**
@@ -486,7 +493,7 @@ export class ExplorerComponentManager extends BaseComponentManager<ExplorerConfi
    */
   protected onSetupEventListeners(): void {
     // 查找浏览器元素
-    ;(this.state as any).explorerElements = this.findComponentElements()
+    ; (this.state as any).explorerElements = this.findComponentElements()
 
     this.log(`Found ${(this.state as any).explorerElements.length} explorer elements`)
   }
@@ -496,16 +503,16 @@ export class ExplorerComponentManager extends BaseComponentManager<ExplorerConfi
    */
   protected onSetupPage(_elements: HTMLElement[]): void {
     // 重新查找浏览器元素
-    ;(this.state as any).explorerElements = this.findComponentElements()
+    ; (this.state as any).explorerElements = this.findComponentElements()
 
     // 获取当前页面 slug
     const currentSlug = window.location.pathname as FullSlug
-    ;(this.state as any).currentSlug = currentSlug
+      ; (this.state as any).currentSlug = currentSlug
 
-    // 设置每个浏览器
-    ;(this.state as any).explorerElements.forEach((explorer: HTMLElement) => {
-      this.setupSingleExplorer(explorer, currentSlug)
-    })
+      // 设置每个浏览器
+      ; (this.state as any).explorerElements.forEach((explorer: HTMLElement) => {
+        this.setupSingleExplorer(explorer, currentSlug)
+      })
 
     this.log(`Page setup completed for ${(this.state as any).explorerElements.length} explorers`)
   }
@@ -517,14 +524,14 @@ export class ExplorerComponentManager extends BaseComponentManager<ExplorerConfi
     // 清理内存定时器
     if ((this.state as any).cleanupInterval) {
       clearInterval((this.state as any).cleanupInterval)
-      ;(this.state as any).cleanupInterval = null
+        ; (this.state as any).cleanupInterval = null
     }
 
     // 清理缓存
-    ;(this.state as any).nodeCache.clear()
-    ;(this.state as any).currentFileData = null
-    ;(this.state as any).explorerElements = []
-    ;(this.state as any).currentSlug = null
+    ; (this.state as any).nodeCache.clear()
+      ; (this.state as any).currentFileData = null
+      ; (this.state as any).explorerElements = []
+      ; (this.state as any).currentSlug = null
 
     this.log("Explorer component cleaned up")
   }
@@ -566,3 +573,5 @@ export class ExplorerComponentManager extends BaseComponentManager<ExplorerConfi
     }
   }
 }
+ 
+

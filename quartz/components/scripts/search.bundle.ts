@@ -6,14 +6,11 @@
 import { ComponentManagerFactory } from "./component-manager/BaseComponentManager"
 import { SearchComponentManager } from "./component-manager/SearchComponentManager"
 
+// SearchComponentManager now directly manages search initialization.
+
 const searchManager = new SearchComponentManager()
-
-export async function initializeSearch(): Promise<void> {
-  searchManager.initialize()
-}
-
 ComponentManagerFactory.register("search", searchManager)
-ComponentManagerFactory.initialize("search").catch((error) => {
+searchManager.initialize().catch((error) => {
   console.error("Search component initialization failed:", error)
 })
 

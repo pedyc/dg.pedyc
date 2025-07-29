@@ -85,6 +85,10 @@ export class GraphRenderer {
     this.setupSimulation()
     this.setupInteractions()
     this.registerCleanup()
+
+    // 启动渲染循环
+    this.app.start()
+    console.log("Render loop started")
   }
 
   /**

@@ -1,5 +1,5 @@
-import { LazyloadManager } from "./managers/LazyloadManager"
 import { globalResourceManager } from "./managers/index"
+import { LazyloadManager } from "./managers/LazyloadManager"
 
 // 创建本地LazyloadManager实例以避免循环依赖
 const globalLazyloadManager = new LazyloadManager()
@@ -11,6 +11,7 @@ const globalLazyloadManager = new LazyloadManager()
 function initializeLazyLoading(): void {
   try {
     // 使用全局懒加载管理器初始化
+
     globalLazyloadManager.initialize()
 
     // 在开发环境下输出统计信息

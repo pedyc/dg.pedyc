@@ -2,7 +2,7 @@
 title: CORS
 aliases: [跨域资源共享]
 date-created: 2025-05-23
-date-modified: 2025-05-26
+date-modified: 2025-07-24
 ---
 
 ## 跨域资源共享 (Cross-Origin Resource Sharing, CORS)

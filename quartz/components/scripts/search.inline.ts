@@ -1,16 +1,7 @@
 import FlexSearch from "flexsearch"
 import { ContentDetails } from "../../plugins/emitters/contentIndex"
 import { registerEscapeHandler, removeAllChildren } from "./utils/util"
-import {
-  FullSlug,
-  FilePath,
-  normalizeRelativeURLs,
-  resolveRelative,
-  createUrl,
-} from "../../util/path"
-
-import { globalUnifiedContentCache } from "./managers/index"
-import { CacheKeyFactory, CacheLayer } from "./cache"
+import { FullSlug, normalizeRelativeURLs, resolveRelative } from "../../util/path"
 
 interface Item {
   id: number
@@ -25,7 +16,8 @@ type SearchType = "basic" | "tags"
 let searchType: SearchType = "basic"
 let currentSearchTerm: string = ""
 const encoder = (str: string) => str.toLowerCase().split(/([^a-z]|[^\x00-\x7F])/)
-let index = new FlexSearch.Document({
+let index = new FlexSearch.Document<Item>({
+  charset: "latin:extra",
   encode: encoder,
   document: {
     id: "id",
@@ -48,7 +40,7 @@ let index = new FlexSearch.Document({
 })
 
 const p = new DOMParser()
-// 使用全局统一缓存管理器，不再需要独立的缓存实例
+const fetchContentCache: Map<FullSlug, Element[]> = new Map()
 const contextWindowWords = 30
 const numSearchResults = 8
 const numTagResults = 5
@@ -278,12 +270,12 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
       slug,
       title: searchType === "tags" ? data[slug].title : highlight(term, data[slug].title ?? ""),
       content: highlight(term, data[slug].content ?? "", true),
-      tags: highlightTags(term, data[slug].tags),
+      tags: highlightTags(term.substring(1), data[slug].tags),
     }
   }
 
-  function highlightTags(term: string, tags: string[], force: boolean = false) {
-    if (!tags || (!force && searchType !== "tags")) {
+  function highlightTags(term: string, tags: string[]) {
+    if (!tags || searchType !== "tags") {
       return []
     }
 
@@ -299,9 +291,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
   }
 
   function resolveUrl(slug: FullSlug): URL {
-    // 使用统一的URL处理逻辑，包含缓存优化
-    const relativePath = resolveRelative(currentSlug, slug)
-    return createUrl(new URL(relativePath, location.toString()).toString())
+    return new URL(resolveRelative(currentSlug, slug), location.toString())
   }
 
   const resultToHTML = ({ slug, title, content, tags }: Item) => {
@@ -362,64 +352,36 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
     }
   }
 
-  /**
-   * 获取内容详情，使用统一缓存管理器
-   * @param slug 页面标识符
-   * @returns 内容详情
-   */
-  async function fetchContent(slug: FullSlug): Promise<ContentDetails> {
-    const cacheKey = CacheKeyFactory.generateContentKey(slug, "preview")
-
-    // 尝试从统一缓存获取
-    const cached = globalUnifiedContentCache.instance.get(cacheKey)
-    if (cached) {
-      try {
-        return JSON.parse(cached) as ContentDetails
-      } catch (e) {
-        // 缓存数据损坏，继续获取新数据
-      }
+  async function fetchContent(slug: FullSlug): Promise<Element[]> {
+    if (fetchContentCache.has(slug)) {
+      return fetchContentCache.get(slug) as Element[]
     }
 
     const targetUrl = resolveUrl(slug).toString()
-    const contents = await fetch(targetUrl).then((res) => res.text())
-    if (contents === undefined) {
-      throw new Error(`Could not fetch ${targetUrl}`)
-    }
-    const html = p.parseFromString(contents ?? "", "text/html")
-    normalizeRelativeURLs(html, targetUrl)
-    const newContent: ContentDetails = {
-      slug: targetUrl as FullSlug,
-      filePath: "" as FilePath,
-      title: html.title,
-      links: [],
-      tags: [], // 你可能需要从html中提取标签
-      content: html.body.innerText,
-    }
+    const contents = await fetch(targetUrl)
+      .then((res) => res.text())
+      .then((contents) => {
+        if (contents === undefined) {
+          throw new Error(`Could not fetch ${targetUrl}`)
+        }
+        const html = p.parseFromString(contents ?? "", "text/html")
+        normalizeRelativeURLs(html, targetUrl)
+        return [...html.getElementsByClassName("popover-hint")]
+      })
 
-    // 存储到统一缓存，使用MEMORY层以获得最佳性能
-    try {
-      globalUnifiedContentCache.instance.set(
-        cacheKey,
-        JSON.stringify(newContent),
-        CacheLayer.MEMORY,
-      )
-    } catch (e) {
-      console.warn(`[Search] Failed to cache content for ${slug}:`, e)
-    }
-
-    return newContent
+    fetchContentCache.set(slug, contents)
+    return contents
   }
 
   async function displayPreview(el: HTMLElement | null) {
     if (!searchLayout || !enablePreview || !el || !preview) return
     const slug = el.id as FullSlug
-    const content = await fetchContent(slug)
-    const innerDiv = document.createElement("div")
-    innerDiv.innerHTML = content.content
-    const highlightedContent = highlightHTML(currentSearchTerm, innerDiv)
+    const innerDiv = await fetchContent(slug).then((contents) =>
+      contents.flatMap((el) => [...highlightHTML(currentSearchTerm, el as HTMLElement).children]),
+    )
     previewInner = document.createElement("div")
     previewInner.classList.add("preview-inner")
-    previewInner.append(highlightedContent)
+    previewInner.append(...innerDiv)
     preview.replaceChildren(previewInner)
 
     // scroll to longest
@@ -435,59 +397,46 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
     searchLayout.classList.toggle("display-results", currentSearchTerm !== "")
     searchType = currentSearchTerm.startsWith("#") ? "tags" : "basic"
 
-    let searchResults: any = []
+    let searchResults: FlexSearch.SimpleDocumentSearchResultSetUnit[]
     if (searchType === "tags") {
-      const newSearchTerm = currentSearchTerm.substring(1).trim()
-      const separatorIndex = newSearchTerm.indexOf(" ")
-      if (separatorIndex !== -1) {
-        // This is the special case for #tag query
-        const tag = newSearchTerm.substring(0, separatorIndex)
-        const query = newSearchTerm.substring(separatorIndex + 1).trim()
-        searchResults = await index.searchAsync(query, {
-          limit: 10000, // Get many results and we will slice later
+      currentSearchTerm = currentSearchTerm.substring(1).trim()
+      const separatorIndex = currentSearchTerm.indexOf(" ")
+      if (separatorIndex != -1) {
+        // search by title and content index and then filter by tag (implemented in flexsearch)
+        const tag = currentSearchTerm.substring(0, separatorIndex)
+        const query = currentSearchTerm.substring(separatorIndex + 1).trim()
+        searchResults = await index.searchAsync({
+          query: query,
+          // return at least 10000 documents, so it is enough to filter them by tag (implemented in flexsearch)
+          limit: Math.max(numSearchResults, 10000),
           index: ["title", "content"],
           tag: tag,
         })
-
-        const getByField = (field: string): number[] => {
-          const results = searchResults.filter((x: any) => x.field === field)
-          return results.length === 0 ? [] : [...results[0].result]
+        for (let searchResult of searchResults) {
+          searchResult.result = searchResult.result.slice(0, numSearchResults)
         }
-
-        const allIds = [...new Set([...getByField("title"), ...getByField("content")])]
-        const finalResults = allIds.slice(0, numSearchResults).map((id) => {
-          const slug = idDataMap[id]
-          const dataForSlug = data[slug]
-          return {
-            id,
-            slug,
-            title: highlight(query, dataForSlug.title ?? ""),
-            content: highlight(query, dataForSlug.content ?? "", true),
-            tags: highlightTags(tag, dataForSlug.tags, true), // force highlight
-          }
-        })
-
+        // set search type to basic and remove tag from term for proper highlightning and scroll
+        searchType = "basic"
         currentSearchTerm = query
-        await displayResults(finalResults)
-        return // Done for this case
       } else {
-        // Tag-only search
-        currentSearchTerm = newSearchTerm
-        searchResults = await index.searchAsync(currentSearchTerm, {
+        // default search by tags index
+        searchResults = await index.searchAsync({
+          query: currentSearchTerm,
           limit: numSearchResults,
           index: ["tags"],
         })
       }
     } else if (searchType === "basic") {
-      searchResults = await index.searchAsync(currentSearchTerm, {
+      searchResults = await index.searchAsync({
+        query: currentSearchTerm,
         limit: numSearchResults,
         index: ["title", "content"],
       })
     }
 
     const getByField = (field: string): number[] => {
-      const fieldResults = searchResults.find((x: any) => x.field === field)
-      return fieldResults ? fieldResults.result : []
+      const results = searchResults.filter((x) => x.field === field)
+      return results.length === 0 ? [] : ([...results[0].result] as number[])
     }
 
     // order titles ahead of content
@@ -496,9 +445,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
       ...getByField("content"),
       ...getByField("tags"),
     ])
-    const finalResults = [...allIds]
-      .slice(0, numSearchResults)
-      .map((id) => formatForDisplay(currentSearchTerm, id))
+    const finalResults = [...allIds].map((id) => formatForDisplay(currentSearchTerm, id))
     await displayResults(finalResults)
   }
 

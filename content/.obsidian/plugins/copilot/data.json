@@ -12,11 +12,11 @@
   "azureOpenAIApiVersion": "",
   "azureOpenAIApiEmbeddingDeploymentName": "",
   "googleApiKey": "AIzaSyA8ijUzGT7nZIdsodAW_MbhTGafjkEAgrw",
-  "openRouterAiApiKey": "",
+  "openRouterAiApiKey": "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",
   "mistralApiKey": "",
   "deepseekApiKey": "sk-c67fc9990bea497dbcb16db8f1617174",
   "defaultChainType": "llm_chain",
-  "defaultModelKey": "gpt-4.1|openai",
+  "defaultModelKey": "deepseek-chat|deepseek",
   "embeddingModelKey": "text-embedding-3-small|openai",
   "temperature": 0.1,
   "maxTokens": 1000,
@@ -62,7 +62,9 @@
       "projectEnabled": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "apiKey": "AIzaSyA8ijUzGT7nZIdsodAW_MbhTGafjkEAgrw",
+      "enableCors": true
     },
     {
       "name": "google/gemini-2.5-flash",
@@ -73,7 +75,8 @@
       "projectEnabled": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "enableCors": true
     },
     {
       "name": "google/gemini-2.5-pro",
@@ -84,7 +87,8 @@
       "projectEnabled": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "enableCors": true
     },
     {
       "name": "gpt-4.1",
@@ -217,7 +221,8 @@
       "isBuiltIn": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "enableCors": true
     },
     {
       "name": "gemini-2.0-flash",
@@ -226,7 +231,8 @@
       "isBuiltIn": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "enableCors": true
     },
     {
       "name": "azure-openai",

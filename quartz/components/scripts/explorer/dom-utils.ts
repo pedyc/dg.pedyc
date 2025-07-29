@@ -205,15 +205,7 @@ export function createFolderNode(
   const simpleFolderPath = simplifySlug(folderPath)
   const simpleCurrentSlug = simplifySlug(currentSlug)
   const folderIsPrefixOfCurrentSlug =
-    simpleCurrentSlug.startsWith(simpleFolderPath + "/") || simpleFolderPath === simpleCurrentSlug
-
-  // console.log('Explorer: 文件夹展开检查', {
-  //   folderPath: simpleFolderPath,
-  //   currentSlug: simpleCurrentSlug,
-  //   isPrefix: folderIsPrefixOfCurrentSlug,
-  //   isCollapsed: isCollapsed,
-  //   willOpen: !isCollapsed || folderIsPrefixOfCurrentSlug
-  // })
+    simpleCurrentSlug.startsWith(simpleFolderPath + "/") || simpleCurrentSlug === simpleFolderPath
 
   if (!isCollapsed || folderIsPrefixOfCurrentSlug) {
     folderOuter.classList.add("open")
@@ -250,50 +242,16 @@ export function setFolderState(folderElement: HTMLElement, collapsed: boolean): 
 export function scrollToActiveElement(explorerUl: HTMLElement): void {
   const activeElement: HTMLElement | null = explorerUl.querySelector(".active")
 
-  console.log("Explorer: 尝试滚动到活动元素", {
-    hasActiveElement: !!activeElement,
-    activeElementText: activeElement?.textContent,
-    explorerScrollTop: explorerUl.scrollTop,
-  })
-
   if (activeElement) {
-    // 使用双重 requestAnimationFrame 确保 DOM 完全更新后再滚动
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        // 自定义滚动逻辑，防止主面板滚动
-        const explorerRect = explorerUl.getBoundingClientRect()
-        const activeRect = activeElement.getBoundingClientRect()
+    // 检查活动元素是否在视图内
+    const explorerRect = explorerUl.getBoundingClientRect()
+    const activeRect = activeElement.getBoundingClientRect()
 
-        console.log("Explorer: 滚动计算", {
-          explorerTop: explorerRect.top,
-          explorerBottom: explorerRect.bottom,
-          activeTop: activeRect.top,
-          activeBottom: activeRect.bottom,
-          needsScroll: activeRect.top < explorerRect.top || activeRect.bottom > explorerRect.bottom,
-        })
+    const isVisible = activeRect.top >= explorerRect.top && activeRect.bottom <= explorerRect.bottom
 
-        // 检查活动元素是否在 explorerUl 的可见区域外
-        if (activeRect.top < explorerRect.top || activeRect.bottom > explorerRect.bottom) {
-          // 计算新的滚动位置，将活动元素居中显示
-          const newScrollTop =
-            activeElement.offsetTop -
-            explorerUl.offsetTop -
-            explorerRect.height / 2 +
-            activeRect.height / 2
-
-          console.log("Explorer: 执行滚动", {
-            currentScrollTop: explorerUl.scrollTop,
-            newScrollTop: newScrollTop,
-            activeElementOffsetTop: activeElement.offsetTop,
-          })
-
-          explorerUl.scrollTo({ top: Math.max(0, newScrollTop), behavior: "smooth" })
-        } else {
-          console.log("Explorer: 活动元素已在可见区域内，无需滚动")
-        }
-      })
-    })
-  } else {
-    console.log("Explorer: 未找到活动元素")
+    if (!isVisible) {
+      // 元素不在视图内，滚动到视图
+      activeElement.scrollIntoView({ behavior: "smooth", block: "center" })
+    }
   }
 }

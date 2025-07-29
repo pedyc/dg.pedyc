@@ -30,7 +30,7 @@ interface GraphState {
   loadingStates: Map<HTMLElement, boolean>
   initializedStates: Map<HTMLElement, boolean>
   currentObserver: IntersectionObserver | null
-  graphModulePromise: Promise<typeof import("../graph.bundle")> | null
+  graphModulePromise: Promise<typeof import("../graph")> | null
 }
 
 /**
@@ -77,8 +77,7 @@ export class GraphComponentManager extends BaseComponentManager<GraphConfig, Gra
   protected async onInitialize(): Promise<void> {
     this.state.currentSlug = getFullSlug(window)
 
-    // 初始化全局图谱管理器
-    globalGraphManagerInstance.initialize()
+
 
     this.log("Graph component initialized for slug:", this.state.currentSlug)
   }
@@ -196,11 +195,11 @@ export class GraphComponentManager extends BaseComponentManager<GraphConfig, Gra
 
       // 动态加载图谱模块
       const graphModule = await this.preloadGraphModule()
+      if (this.state.currentSlug) {
+        await graphModule.initializeGraph(graphElement, this.state.currentSlug)
+      }
 
-      // 初始化图谱
-      await graphModule.initializeGraph()
-
-      // 标记为已初始化
+      // 更新状态
       this.state.initializedStates.set(graphElement, true)
       this.log("Graph initialized successfully for element:", graphElement.className)
     } catch (error) {
@@ -214,9 +213,9 @@ export class GraphComponentManager extends BaseComponentManager<GraphConfig, Gra
   /**
    * 预加载图谱模块
    */
-  private preloadGraphModule(): Promise<typeof import("../graph.bundle")> {
+  private preloadGraphModule(): Promise<typeof import("../graph")> {
     if (!this.state.graphModulePromise) {
-      this.state.graphModulePromise = import("../graph.bundle")
+      this.state.graphModulePromise = import("../graph")
     }
     return this.state.graphModulePromise
   }

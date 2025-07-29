@@ -1,6 +1,7 @@
 import { FullSlug, joinSegments } from "../../util/path"
 import { QuartzEmitterPlugin } from "../types"
 
+
 // @ts-ignore
 import spaRouterScript from "../../components/scripts/spa.inline"
 
@@ -19,7 +20,7 @@ import {
 import { Features, transform } from "lightningcss"
 import { transform as transpile } from "esbuild"
 import { write } from "./helpers"
-import { GlobalManagerController } from "../../components/scripts/managers/global-instances"
+// import { GlobalManagerController } from "../../components/scripts/managers/global-instances"
 
 type ComponentResources = {
   css: string[]
@@ -82,12 +83,13 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
   const cfg = ctx.cfg.configuration
 
   // Ensure GlobalManagerController is initialized before any other scripts that might use global managers
-  componentResources.beforeDOMLoaded.unshift(`GlobalManagerController.initialize(true);`);
+  // Expose GlobalManagerController to the global scope for access in prescript.js
+  // componentResources.beforeDOMLoaded.unshift(managerScript);
 
   // spaRouterScript should be loaded before other scripts that use window.addCleanup
-  if (cfg.enableSPA) {
-    componentResources.beforeDOMLoaded.push(spaRouterScript)
-  }
+  // if (cfg.enableSPA) {
+  //   componentResources.beforeDOMLoaded.push(spaRouterScript)
+  // }
 
   // popovers
   if (cfg.enablePopovers) {

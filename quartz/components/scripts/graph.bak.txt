@@ -373,7 +373,6 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   tweens.forEach((tween) => tween.stop())
   tweens.clear()
 
-  const pixiPreference = await determineGraphicsAPI()
   const app = new Application()
   await app.init({
     width,
@@ -382,7 +381,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     autoStart: false,
     autoDensity: true,
     backgroundAlpha: 0,
-    preference: pixiPreference,
+    preference: "webgpu",
     resolution: window.devicePixelRatio,
     eventMode: "static",
   })

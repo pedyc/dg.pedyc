@@ -1,3 +1,3 @@
-import { GlobalManagerController } from "./managers/global-instances";
+import { GlobalManagerController } from "./managers/global-instances"
 
 GlobalManagerController.initialize()

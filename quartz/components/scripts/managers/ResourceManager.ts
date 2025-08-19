@@ -347,7 +347,9 @@ export class ResourceManager implements ICleanupManager {
         // 清理非关键事件监听器
         try {
           element.removeEventListener(type, listener, options)
-          console.log(`[SPA DEBUG] 清理非关键事件监听器: ${type} on ${element.constructor.name} (Tag: ${element instanceof HTMLElement ? element.tagName : 'N/A'}, ID: ${element instanceof HTMLElement ? element.id : 'N/A'}, Class: ${element instanceof HTMLElement ? element.className : 'N/A'})`)
+          console.log(
+            `[SPA DEBUG] 清理非关键事件监听器: ${type} on ${element.constructor.name} (Tag: ${element instanceof HTMLElement ? element.tagName : "N/A"}, ID: ${element instanceof HTMLElement ? element.id : "N/A"}, Class: ${element instanceof HTMLElement ? element.className : "N/A"})`,
+          )
         } catch (error) {
           console.error("清理事件监听器时出错:", error)
         }

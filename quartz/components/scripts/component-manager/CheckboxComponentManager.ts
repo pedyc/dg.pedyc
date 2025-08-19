@@ -75,7 +75,6 @@ export class CheckboxComponentManager extends BaseComponentManager<CheckboxConfi
   protected async onSetupEventListeners(): Promise<void> {
     // 页面导航时重新设置
     // 事件监听已在 BaseComponentManager 中统一处理
-  
   }
 
   /**

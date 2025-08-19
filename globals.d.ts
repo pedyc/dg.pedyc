@@ -1,6 +1,8 @@
 import { RelativeURL } from "./quartz/util/path"
 import { GlobalManagerController } from "./quartz/components/scripts/managers/global-instances"
 
+declare const fetchData: Promise<ContentIndex>
+
 declare global {
   interface Document {
     addEventListener<K extends keyof CustomEventMap>(
@@ -17,5 +19,6 @@ declare global {
     spaNavigate(pathname: RelativeURL): Promise<void>
     addCleanup(fn: (...args: any[]) => void)
     GlobalManagerController: typeof GlobalManagerController
+    quartzContent: Record<string, any>
   }
 }

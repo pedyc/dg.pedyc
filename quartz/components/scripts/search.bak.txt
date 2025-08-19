@@ -1,5 +1,5 @@
-import FlexSearch from "flexsearch"
-import { ContentDetails } from "../../plugins/emitters/contentIndex"
+import * as FlexSearch from "flexsearch"
+import type { ContentDetails } from "../../plugins/emitters/contentIndex.tsx"
 import { registerEscapeHandler, removeAllChildren } from "./utils/util"
 import { FullSlug, normalizeRelativeURLs, resolveRelative } from "../../util/path"
 
@@ -9,6 +9,7 @@ interface Item {
   title: string
   content: string
   tags: string[]
+  field: string // Added field property based on usage
 }
 
 // Can be expanded with things like "term" in the future
@@ -16,8 +17,8 @@ type SearchType = "basic" | "tags"
 let searchType: SearchType = "basic"
 let currentSearchTerm: string = ""
 const encoder = (str: string) => str.toLowerCase().split(/([^a-z]|[^\x00-\x7F])/)
-let index = new FlexSearch.Document<Item>({
-  charset: "latin:extra",
+let index = new FlexSearch.Document({
+  preset: "score",
   encode: encoder,
   document: {
     id: "id",
@@ -220,7 +221,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
 
     // If search is active, then we will render the first result and display accordingly
     if (!container.classList.contains("active")) return
-    if (e.key === "Enter" && !e.isComposing) {
+    if (e.key === "Enter") {
       // If result has focus, navigate to that one, otherwise pick first result
       if (results.contains(document.activeElement)) {
         const active = document.activeElement as HTMLInputElement
@@ -271,6 +272,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
       title: searchType === "tags" ? data[slug].title : highlight(term, data[slug].title ?? ""),
       content: highlight(term, data[slug].content ?? "", true),
       tags: highlightTags(term.substring(1), data[slug].tags),
+      field: "", // Added to satisfy Item interface
     }
   }
 
@@ -397,7 +399,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
     searchLayout.classList.toggle("display-results", currentSearchTerm !== "")
     searchType = currentSearchTerm.startsWith("#") ? "tags" : "basic"
 
-    let searchResults: FlexSearch.SimpleDocumentSearchResultSetUnit[]
+    let searchResults: any
     if (searchType === "tags") {
       currentSearchTerm = currentSearchTerm.substring(1).trim()
       const separatorIndex = currentSearchTerm.indexOf(" ")
@@ -435,7 +437,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
     }
 
     const getByField = (field: string): number[] => {
-      const results = searchResults.filter((x) => x.field === field)
+      const results = searchResults.filter((x: Item) => x.field === field)
       return results.length === 0 ? [] : ([...results[0].result] as number[])
     }
 
@@ -466,7 +468,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
  * @param data data to fill index with
  */
 let indexPopulated = false
-async function fillDocument(data: ContentIndex) {
+export async function fillDocument(data: ContentIndex) {
   if (indexPopulated) return
   let id = 0
   const promises: Array<Promise<unknown>> = []

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "lib": ["esnext", "DOM", "DOM.Iterable"],
     "experimentalDecorators": true,
-    "baseUrl": "quartz",
+    "baseUrl": ".",
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "node",
@@ -16,13 +16,7 @@
     "noUnusedParameters": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "preact",
-    "paths": {
-      "@": ["quartz/*"],
-      "@util": ["quartz/util/*"],
-      "@components": ["quartz/components/*"],
-      "@static": ["quartz/static/*"]
-    }
+    "jsxImportSource": "preact"
   },
   "include": ["**/*.ts", "**/*.tsx", "./package.json", "esbuild.config.mjs"],
   "exclude": ["build/**/*.d.ts", "content"]

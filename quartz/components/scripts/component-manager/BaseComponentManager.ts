@@ -17,6 +17,14 @@ export interface ComponentConfig {
     prefix?: string
     ttl?: number
   }
+  /** 是否启用懒加载 */
+  enableLazyLoad?: boolean
+  /** 懒加载的根边距 */
+  lazyLoadRootMargin?: string
+  /** 是否启用预加载 */
+  enablePreload?: boolean
+  /** 预加载延迟 */
+  preloadDelay?: number
 }
 
 export interface ComponentState {
@@ -109,7 +117,9 @@ export abstract class BaseComponentManager<
     this.log("Setting up event listeners...")
 
     // 注册页面导航事件
-    this.resourceManager.addEventListener(document as any as EventTarget, "nav", () => this.setupPage())
+    this.resourceManager.addEventListener(document as any as EventTarget, "nav", () =>
+      this.setupPage(),
+    )
 
     // 注册 DOM 加载事件
     this.resourceManager.addEventListener(document as any as EventTarget, "DOMContentLoaded", () =>
@@ -328,25 +338,17 @@ export abstract class BaseComponentManager<
   protected abstract onCleanup(): void
 }
 
-/**
- * 组件管理器工厂
- */
 export class ComponentManagerFactory {
-  private static instances = new Map<string, BaseComponentManager>()
+  private static instances = new Map<string, BaseComponentManager<any, any>>()
 
-  /**
-   * 注册组件管理器实例
-   */
-  static register(name: string, manager: BaseComponentManager): void {
+  static register(name: string, manager: BaseComponentManager<any, any>): void {
+    if (this.instances.has(name)) {
+      console.warn(`Component manager '${name}' already registered. Overwriting.`)
+    }
     this.instances.set(name, manager)
-    console.log(`Component manager '${name}' registered`);
-
   }
 
-  /**
-   * 获取组件管理器实例
-   */
-  static get(name: string): BaseComponentManager | undefined {
+  static get(name: string): BaseComponentManager<any, any> | undefined {
     return this.instances.get(name)
   }
 

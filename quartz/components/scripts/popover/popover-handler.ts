@@ -123,22 +123,26 @@ export async function mouseEnterHandler(
   const pathId = contentUrl.pathname.replace(/[^a-zA-Z0-9-_]/g, "-").replace(/^-+|-+$/g, "")
   const popoverId = `popover-${pathId}-${popoverIdSuffix}`
 
-  const prevPopoverElement = document.getElementById(popoverId)
-  if (prevPopoverElement) {
-    // 确保弹窗元素在DOM中，如果之前被移除但未销毁
-    if (!document.body.contains(prevPopoverElement)) {
-      document.body.appendChild(prevPopoverElement)
-    }
-    showPopover(prevPopoverElement, originalHash)
-    return
-  }
+  let popoverElement = document.getElementById(popoverId)
+  let popoverInner: HTMLElement
 
-  const popoverElement = document.createElement("div")
-  popoverElement.id = popoverId
-  popoverElement.classList.add("popover")
-  const popoverInner = document.createElement("div")
-  popoverInner.classList.add("popover-inner")
-  popoverElement.appendChild(popoverInner)
+  if (popoverElement) {
+    // 确保弹窗元素在DOM中，如果之前被移除但未销毁
+    if (!document.body.contains(popoverElement)) {
+      document.body.appendChild(popoverElement)
+    }
+    popoverInner = popoverElement.querySelector(".popover-inner") as HTMLElement
+    showPopover(popoverElement, originalHash)
+  } else {
+    popoverElement = document.createElement("div")
+    popoverElement.id = popoverId
+    popoverElement.classList.add("popover")
+    popoverInner = document.createElement("div")
+    popoverInner.classList.add("popover-inner")
+    popoverElement.appendChild(popoverInner)
+    document.body.appendChild(popoverElement)
+    showPopover(popoverElement, originalHash)
+  }
 
   console.log("失败链接", FailedLinksManager.getFailedLinks())
   console.log("失败链接命中", FailedLinksManager.isFailedLink(cacheKey), cacheKey)
@@ -170,10 +174,18 @@ export async function mouseEnterHandler(
         type: "html" as const,
       }
       HTMLContentProcessor.renderPopoverContent(popoverInner, cachedItem)
+      // 移除加载指示器
+      const loadingIndicator = popoverInner.querySelector(".popover-loading")
+      if (loadingIndicator) {
+        loadingIndicator.remove()
+      }
     } else {
       // 如果缓存未命中，则立即 fetch 并使用统一缓存管理器存储
       console.log(`[Popover Debug] Popover content for ${cacheKey} loaded from: HTTP Request`)
       try {
+        // 在这里可以添加一个加载指示器或者空白内容，表示正在加载
+        popoverInner.innerHTML = '<div class="popover-loading">Loading...</div>' // 添加加载指示器
+
         // 使用原始链接进行预加载，确保URL处理逻辑与SPA导航一致
         const newlyCachedData = await PreloadManager.getInstance().preloadLinkContent(
           link.href,
@@ -200,11 +212,21 @@ export async function mouseEnterHandler(
           console.warn("[Popover Debug] No content found after preload, rendering not found")
           HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
         }
+        // 移除加载指示器
+        const loadingIndicator = popoverInner.querySelector(".popover-loading")
+        if (loadingIndicator) {
+          loadingIndicator.remove()
+        }
       } catch (error) {
         console.error("Failed to load popover content for:", cacheKey, error)
         HTMLContentProcessor.renderNotFoundContent(popoverInner, cacheKey)
         // 标记为失败链接
         FailedLinksManager.addFailedLink(cacheKey)
+        // 移除加载指示器
+        const loadingIndicator = popoverInner.querySelector(".popover-loading")
+        if (loadingIndicator) {
+          loadingIndicator.remove()
+        }
       }
     }
   }

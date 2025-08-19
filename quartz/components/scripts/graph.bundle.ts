@@ -13,10 +13,9 @@ const graphManager = new GraphComponentManager({
   enablePreload: true,
   preloadDelay: 2000,
 })
+
+// 注册并初始化图谱组件
 ComponentManagerFactory.register("graph", graphManager)
 ComponentManagerFactory.initialize("graph").catch((error) => {
   console.error("Graph component initialization failed:", error)
 })
-
-
-

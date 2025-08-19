@@ -2,12 +2,12 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 // @ts-ignore
 // import script from "./scripts/graph.inline"
 import style from "./styles/graph.scss"
-  import { i18n } from "../i18n"
-  import { classNames } from "../util/lang"
+import { i18n } from "../i18n"
+import { classNames } from "../util/lang"
 
 export interface D3Config {
   drag: boolean
-  zoom: boolean
+  zoom: number
   depth: number
   scale: number
   repelForce: number
@@ -30,7 +30,7 @@ interface GraphOptions {
 const defaultOptions: GraphOptions = {
   localGraph: {
     drag: true,
-    zoom: true,
+    zoom: 1,
     depth: 1,
     scale: 1.1,
     repelForce: 0.5,
@@ -46,7 +46,7 @@ const defaultOptions: GraphOptions = {
   },
   globalGraph: {
     drag: true,
-    zoom: true,
+    zoom: 1,
     depth: -1,
     scale: 0.9,
     repelForce: 0.5,
@@ -104,11 +104,10 @@ export default ((opts?: Partial<GraphOptions>) => {
         <script src="/static/graph.bundle.js" defer></script>
       </div>
     )
-
   }
 
   Graph.css = style
   // Graph.afterDOMLoaded = script
 
-   return Graph
+  return Graph
 }) satisfies QuartzComponentConstructor

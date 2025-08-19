@@ -263,11 +263,13 @@ export class HTMLContentProcessor {
    * @param url 失败的URL
    */
   static renderNotFoundContent(container: HTMLElement, url: string): void {
+    // 清空容器，避免重复渲染
+    container.innerHTML = ''
     const errorDiv = document.createElement("div")
     errorDiv.className = "popover-error"
     errorDiv.innerHTML = `
       <h1>404 Page</h1>
-      <p>无法加载内容</p>
+      <p>无法加载内容</p> 
       <p class="popover-error-url">${url}</p>
     `
     container.appendChild(errorDiv)

@@ -1,4 +1,4 @@
-import { ContentDetails } from "../plugins/emitters/contentIndex"
+import type { ContentDetails } from "../plugins/emitters/contentIndex.tsx"
 import { FullSlug, joinSegments } from "./path"
 
 interface FileTrieData {

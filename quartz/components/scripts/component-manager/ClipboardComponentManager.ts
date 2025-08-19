@@ -152,7 +152,6 @@ export class ClipboardComponentManager extends BaseComponentManager<
     this.log("Code block clipboard button set up", preElement)
   }
 
-
   /**
    * 获取代码元素的源代码
    */

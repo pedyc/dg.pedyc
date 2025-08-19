@@ -238,8 +238,6 @@ export class MermaidComponentManager extends BaseComponentManager<MermaidConfig,
     }
   }
 
-
-
   /**
    * 清理观察器
    */

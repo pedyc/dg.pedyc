@@ -9,13 +9,11 @@
 ### 已实现的统一模式
 
 1. **全局管理器实例**
-
    - `globalResourceManager` - 统一的资源和事件管理
    - `globalStorageManager` - 统一的存储管理
    - `globalCacheManager` - 统一的缓存管理
 
 2. **缓存键生成**
-
    - `CacheKeyFactory` - 统一的缓存键生成工具
    - 所有组件应使用 `CacheKeyFactory.generateSystemKey()` 等方法
 
@@ -28,13 +26,11 @@
 #### ✅ 已遵循统一模式的组件
 
 1. **Explorer 组件**
-
    - 使用 `setupEventListeners()` 统一管理事件
    - 通过 `globalResourceManager` 注册事件监听器
    - 实现了完整的清理机制
 
 2. **Darkmode 组件**
-
    - 使用 `CacheKeyFactory.generateSystemKey()` 生成缓存键
    - 通过 `globalStorageManager` 管理存储
    - 正确使用 `window.addCleanup()` 注册清理函数
@@ -46,12 +42,10 @@
 #### ⚠️ 需要改进的组件
 
 1. **Search 组件**
-
    - 已使用 `globalResourceManager` 但可以进一步标准化
    - 缓存键生成需要统一使用 `CacheKeyFactory`
 
 2. **Graph 组件**
-
    - 已使用 `globalResourceManager` 但事件管理可以更加统一
    - 需要确保缓存键生成的一致性
 
@@ -192,25 +186,21 @@ globalResourceManager.instance.addEventListener(element, "click", handler)
 ## 最佳实践
 
 1. **始终使用全局管理器实例**
-
    - 通过 `globalResourceManager` 管理事件
    - 通过 `globalStorageManager` 管理存储
    - 通过 `globalCacheManager` 管理缓存
 
 2. **统一缓存键生成**
-
    - 使用 `CacheKeyFactory` 的标准方法
    - 避免硬编码缓存键
    - 保持键名的一致性和可预测性
 
 3. **完整的清理机制**
-
    - 每个事件监听器都要有对应的清理函数
    - 使用 `window.addCleanup()` 或 `globalResourceManager.addCleanupTask()`
    - 在页面导航时自动清理
 
 4. **防止重复初始化**
-
    - 使用标志变量防止重复设置事件监听器
    - 检查全局实例的可用性
    - 提供降级方案

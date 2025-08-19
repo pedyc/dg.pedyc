@@ -190,8 +190,6 @@ export function createRouter(announcer: HTMLElement) {
   globalResourceManager.instance.addEventListener(window, "click", handleClick)
   globalResourceManager.instance.addEventListener(window, "popstate", handlePopstate)
 
-
-
   return new (class Router {
     /**
      * 导航到指定路径

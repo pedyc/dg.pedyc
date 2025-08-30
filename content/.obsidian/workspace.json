@@ -10,7 +10,7 @@
           {
             "id": "1d0a9ba433660226",
             "type": "tabs",
-            "dimension": 68.92605633802818,
+            "dimension": 54.885563380281695,
             "children": [
               {
                 "id": "5161891edc96f818",
@@ -18,7 +18,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "PARA/20-AREAS/02前端/0200前端.md",
+                    "file": "SimpRead/20-6000 字 + 6 个案例：写给普通人的 MCP 入门指南.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -33,20 +33,93 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "0200前端"
+                  "title": "20-6000 字 + 6 个案例：写给普通人的 MCP 入门指南"
+                }
+              },
+              {
+                "id": "ac7d7cb0766321e5",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PARA/20-AREAS/01个人成长/心流体验.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "心流体验"
+                }
+              },
+              {
+                "id": "939e98a06b54dc12",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PARA/20-AREAS/04AI/0400AI.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "0400AI"
+                }
+              },
+              {
+                "id": "aadcba9b59a719f5",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "PARA/20-AREAS/04AI/Agent.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "Agent"
                 }
               }
-            ]
+            ],
+            "currentTab": 2
           },
           {
             "id": "863a685a41ce1720",
             "type": "split",
-            "dimension": 31.073943661971832,
+            "dimension": 45.114436619718305,
             "children": [
               {
                 "id": "acc9a141859d8da0",
                 "type": "tabs",
-                "dimension": 76.59574468085107,
+                "dimension": 75.21902377972465,
                 "children": [
                   {
                     "id": "a4c6fb730f39dbca",
@@ -63,12 +136,12 @@
               {
                 "id": "3c050c82f441f726",
                 "type": "split",
-                "dimension": 23.404255319148938,
+                "dimension": 24.78097622027535,
                 "children": [
                   {
                     "id": "b20eba77b5bf0c42",
                     "type": "tabs",
-                    "dimension": 28.418230563002684,
+                    "dimension": 19.51219512195122,
                     "children": [
                       {
                         "id": "fe8c139c8b6b0638",
@@ -76,13 +149,13 @@
                         "state": {
                           "type": "outline",
                           "state": {
-                            "file": "PARA/20-AREAS/02前端/0200前端.md",
+                            "file": "PARA/20-AREAS/04AI/0400AI.md",
                             "followCursor": false,
                             "showSearch": false,
                             "searchQuery": ""
                           },
                           "icon": "lucide-list",
-                          "title": "Outline of 0200前端"
+                          "title": "Outline of 0400AI"
                         }
                       }
                     ]
@@ -90,7 +163,7 @@
                   {
                     "id": "9f786c0a924cc293",
                     "type": "tabs",
-                    "dimension": 31.814119749776587,
+                    "dimension": 53.36585365853659,
                     "children": [
                       {
                         "id": "dfebbf521b0b73ce",
@@ -98,7 +171,7 @@
                         "state": {
                           "type": "localgraph",
                           "state": {
-                            "file": "PARA/20-AREAS/02前端/0200前端.md",
+                            "file": "PARA/20-AREAS/04AI/0400AI.md",
                             "options": {
                               "collapse-filter": true,
                               "search": "",
@@ -121,12 +194,12 @@
                               "repelStrength": 10,
                               "linkStrength": 1,
                               "linkDistance": 250,
-                              "scale": 0.17402586620205723,
+                              "scale": 0.6723333706978422,
                               "close": true
                             }
                           },
                           "icon": "lucide-git-fork",
-                          "title": "Graph of 0200前端"
+                          "title": "Graph of 0400AI"
                         }
                       }
                     ]
@@ -134,7 +207,7 @@
                   {
                     "id": "0f153412fadf30d7",
                     "type": "tabs",
-                    "dimension": 39.76764968722073,
+                    "dimension": 27.121951219512198,
                     "children": [
                       {
                         "id": "d97f169839e60d66",
@@ -318,44 +391,46 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "a4c6fb730f39dbca",
+  "active": "939e98a06b54dc12",
   "lastOpenFiles": [
     "PARA/20-AREAS/04AI/提示词工程.md",
+    "PARA/20-AREAS/04AI/0400AI.md",
+    "PARA/20-AREAS/04AI/Google提示词读书笔记.md",
+    "Diary/2025-08-28.md",
+    "PARA/30-RESOURCES/记录：提示词优化指南.md",
+    "PARA/20-AREAS/01个人成长/心流体验.md",
+    "PARA/20-AREAS/01个人成长/职业发展思考.md",
+    "PARA/20-AREAS/01个人成长/0100个人成长.md",
+    "copilot-conversations/你好@20250828_175629.md",
+    "copilot-conversations/_resources",
+    "copilot-conversations/[[0400AI]]根据标题和内容完善笔记，例如AI工作原理，重要的参数例如top-k、top-p等@20250828_173431.md",
+    "copilot-conversations/[[@20250828_162336.md",
+    "PARA/20-AREAS/02前端/ES2025.md",
+    "PARA/20-AREAS/04AI/Google_Prompt Engineering_v7.pdf",
+    "PARA/20-AREAS/04AI/Claude Code 辅助编程.md",
+    "PARA/20-AREAS/04AI/Agent.md",
+    "PARA/20-AREAS/04AI/AI辅助编程.md",
+    "copilot-conversations/[[Claude_Code_辅助编程]]将笔记中“掌握核心命令”部分转化为中文表达@20250827_230012.md",
+    "PARA/20-AREAS/02前端/JavaScript.md",
+    "PARA/20-AREAS/04AI/MCP.md",
+    "SimpRead/20-6000 字 + 6 个案例：写给普通人的 MCP 入门指南.md",
+    "copilot-conversations/9.11_and_9.8,_which_is_bigger@20250825_083220.md",
+    "copilot-conversations/[[0400AI]][[templage_area]]根据模板和标题生成领域笔记@20250820_095419.md",
+    "copilot-conversations/[[templage_area]]根据模板和标题完善领域笔记[[0400AI]]@20250820_095203.md",
+    "_template/templage_area.md",
+    "_template/template_archive.md",
+    "_template/template_resource.md",
+    "_template/template_record.md",
+    "PARA/20-AREAS/04AI/Untitled.base",
+    "SimpRead/_resources/15-知乎-债务转移/c3fc2373932cc327a62c1ce02e42695f_MD5.jpg",
+    "PARA/20-AREAS/04AI/_resources",
     "Bases/all.base",
-    "PARA/20-AREAS/08知识管理/知识管理概述.md",
-    "PARA/40-ARCHIVES/数字花园概述.md",
-    "index.md",
     "Bases/excalidraw.base",
-    "Bases/Untitled.md",
     "PARA/20-AREAS/03视觉思维/常用视觉工具.excalidraw.svg",
     "Bases",
-    "PARA/20-AREAS/02前端/SPA.md",
     "copilot-custom-prompts/_resources",
-    "PARA/20-AREAS/02前端/多页应用 (MPA).md",
-    "Diary/2025-06-01.md",
-    "excalibrain.md",
     "PARA/20-AREAS/02前端/_resources",
-    "Diary/2025-07-01.md",
-    "Diary/2025-07-03.md",
-    "Diary/2025-07-02.md",
-    "copilot-conversations/[[SPA]]完善笔记@20250724_175255.md",
     "SimpRead/simpread_config.json",
-    "SimpRead/backup/simpread_config@20250724175033.json",
-    "PARA/20-AREAS/02前端/Web通信.md",
-    "PARA/20-AREAS/02前端/CORS.md",
-    "PARA/20-AREAS/02前端/0200前端.md",
-    "PARA/20-AREAS/02前端/前端框架.md",
-    "PARA/20-AREAS/02前端/前端性能优化.md",
-    "PARA/20-AREAS/02前端/JavaScript.md",
-    "PARA/10-PROJECTS/2025Q2-面试提升专项.md",
-    "copilot-conversations/SPA应该归属与哪个模块？@20250724_084600.md",
-    "copilot-conversations/SPA应该归属与哪个模块？@20250724_084151.md",
-    "PARA/10-PROJECTS/2025Q2-深耕前端生态.md",
-    "PARA/20-AREAS/04AI/知识管理大师提示词v2.md",
-    "PARA/20-AREAS/04AI/错误修复助手提示词.md",
-    "PARA/20-AREAS/04AI/_resources",
-    "Diary/_resources",
-    "copilot-custom-prompts",
     "_resources/sw-lifecycle.svg",
     "PARA/10-PROJECTS/_resources/前端面试.png",
     "PARA/10-PROJECTS/_resources/Drawing 2025-05-29 16.11.38.excalidraw.svg",
@@ -364,7 +439,6 @@
     "_resources/browser-components-9cd8ff834cc9c_856.png",
     "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否/aa39b161b5580788f4015aa7e97abe2c_MD5.jpg",
     "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否/be92cddf934a31fc299c9cc3b06d26ab_MD5.jpg",
-    "SimpRead/_resources/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否/a0aa2ef4f7493a39d3575b10c9fcefa2_MD5.jpg",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir D:Workspacepedycdg.pedycpublicstatic)",
+      "Bash(dir D:Workspacepedycdg.pedycpublicstaticsearch.bundle.js)",
+      "WebSearch",
+      "WebFetch(domain:preactjs.com)",
+      "Bash(npm run check)",
+      "Bash(npm run build)",
+      "Bash(npm run format)",
+      "Bash(tsc --noEmit)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

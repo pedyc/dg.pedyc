@@ -264,7 +264,7 @@ export class HTMLContentProcessor {
    */
   static renderNotFoundContent(container: HTMLElement, url: string): void {
     // 清空容器，避免重复渲染
-    container.innerHTML = ''
+    container.innerHTML = ""
     const errorDiv = document.createElement("div")
     errorDiv.className = "popover-error"
     errorDiv.innerHTML = `

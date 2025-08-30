@@ -1,7 +1,6 @@
 import { removeAllChildren } from "../utils/util"
 import { FullSlug, normalizeRelativeURLs, resolveRelative } from "../../../util/path"
 import { index, currentSearchTerm, Item } from "./search-index"
-import { ContentIndex } from "../../plugins/emitters/contentIndex.ts"
 
 export async function onType(
   e: Event,
@@ -26,7 +25,7 @@ export async function onType(
 
   currentSearchTerm.set(actualSearchTerm)
 
-  const results = await index.searchAsync(actualSearchTerm, {
+  const results: any = await index.searchAsync(actualSearchTerm, {
     enrich: true,
     suggest: true,
     limit: 10,
@@ -36,14 +35,14 @@ export async function onType(
 
   // Add tag matches
   if (searchType === "tags") {
-    const tagMatches = results.filter((res: any) => res.field === "tags")
+    const tagMatches = (results as any[]).filter((res: any) => res.field === "tags")
     for (const res of tagMatches) {
       finalResults.push(formatForDisplay(searchTerm, res.id, idDataMap, data, searchType))
     }
   }
 
   // Add content matches
-  const contentMatches = results.filter(
+  const contentMatches = (results as any[]).filter(
     (res: any) => res.field === "content" || res.field === "title",
   )
   for (const res of contentMatches) {

@@ -20,7 +20,8 @@ export class SearchComponentManager extends BaseComponentManager {
   protected onSetupPage(_elements: HTMLElement[]): void {
     const fetchData = new Promise<ContentIndex>(async (resolve, reject) => {
       try {
-        const data = await fetch("../../static/contentIndex.json").then((res) => res.json())
+        // const data = await fetch("../../static/contentIndex.json").then((res) => res.json())
+        const data = await fetchData
         let indexPopulated = false
         await fillDocument(data, indexPopulated)
         indexPopulated = true

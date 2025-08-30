@@ -1,7 +1,7 @@
 "use strict"
 ;(() => {
   var Se = Object.create
-  var G = Object.defineProperty
+  var V = Object.defineProperty
   var ve = Object.getOwnPropertyDescriptor
   var be = Object.getOwnPropertyNames
   var Re = Object.getPrototypeOf,
@@ -9,25 +9,25 @@
   var D = (a, e) => () => (a && (e = a((a = 0))), e)
   var Te = (a, e) => () => (e || a((e = { exports: {} }).exports, e), e.exports),
     Ie = (a, e) => {
-      for (var t in e) G(a, t, { get: e[t], enumerable: !0 })
+      for (var t in e) V(a, t, { get: e[t], enumerable: !0 })
     },
     Oe = (a, e, t, r) => {
       if ((e && typeof e == "object") || typeof e == "function")
         for (let n of be(e))
           !Le.call(a, n) &&
             n !== t &&
-            G(a, n, { get: () => e[n], enumerable: !(r = ve(e, n)) || r.enumerable })
+            V(a, n, { get: () => e[n], enumerable: !(r = ve(e, n)) || r.enumerable })
       return a
     }
   var Be = (a, e, t) => (
     (t = a != null ? Se(Re(a)) : {}),
-    Oe(e || !a || !a.__esModule ? G(t, "default", { value: a, enumerable: !0 }) : t, a)
+    Oe(e || !a || !a.__esModule ? V(t, "default", { value: a, enumerable: !0 }) : t, a)
   )
-  var V,
-    W,
-    X = D(() => {
+  var W,
+    X,
+    j = D(() => {
       "use strict"
-      ;((V = class a {
+      ;((W = class a {
         static instance = null
         CACHE_PREFIXES = { content: "content_", link: "link_", search: "search_" }
         constructor() {}
@@ -138,7 +138,7 @@
           return e.origin === window.location.origin && e.pathname === window.location.pathname
         }
       }),
-        (W = V.getInstance()))
+        (X = W.getInstance()))
     })
   var F,
     d,
@@ -153,9 +153,9 @@
     et,
     tt,
     rt,
-    _ = D(() => {
+    P = D(() => {
       "use strict"
-      X()
+      j()
       E()
       ;((F = (a) =>
         a
@@ -169,7 +169,7 @@
           : ""),
         (d = {
           generateContentKey: (a, e) => {
-            let t = W.processURL(a, { cacheType: "content" })
+            let t = X.processURL(a, { cacheType: "content" })
             if (!t.isValid)
               return (
                 console.warn(`Invalid URL for cache key generation: ${a}`),
@@ -260,15 +260,15 @@
   }
   var l,
     ue,
-    z,
-    P,
+    K,
+    H,
     st,
     ce,
     it,
     m,
     E = D(() => {
       "use strict"
-      _()
+      P()
       ;((l = {
         PREFIXES: {
           CONTENT: "content_",
@@ -284,67 +284,67 @@
         (ue = {
           CONTENT: {
             capacity: 200,
-            ttl: 15 * 60 * 1e3,
+            ttl: 900 * 1e3,
             maxMemoryMB: 30,
             warningThreshold: 160,
             description:
               "\u7EDF\u4E00\u5185\u5BB9\u7F13\u5B58\uFF0C\u652F\u6301\u9875\u9762\u548C\u5F39\u7A97\u5185\u5BB9",
             keyPrefix: l.PREFIXES.CONTENT,
-            cleanupIntervalMs: 3 * 60 * 1e3,
+            cleanupIntervalMs: 180 * 1e3,
             memoryThreshold: 0.85,
           },
           LINK: {
             capacity: 1e3,
-            ttl: 60 * 60 * 1e3,
+            ttl: 3600 * 1e3,
             maxMemoryMB: 15,
             warningThreshold: 800,
             description: "\u94FE\u63A5\u6709\u6548\u6027\u548C\u5931\u8D25\u94FE\u63A5\u7F13\u5B58",
             keyPrefix: l.PREFIXES.LINK,
-            cleanupIntervalMs: 10 * 60 * 1e3,
+            cleanupIntervalMs: 600 * 1e3,
             memoryThreshold: 0.8,
           },
           SEARCH: {
             capacity: 500,
-            ttl: 60 * 60 * 1e3,
+            ttl: 3600 * 1e3,
             maxMemoryMB: 50,
             warningThreshold: 400,
             description: "\u641C\u7D22\u7ED3\u679C\u548C\u5185\u5BB9\u9884\u89C8\u7F13\u5B58",
             keyPrefix: l.PREFIXES.SEARCH,
-            cleanupIntervalMs: 5 * 60 * 1e3,
+            cleanupIntervalMs: 300 * 1e3,
             memoryThreshold: 0.8,
           },
           USER: {
             capacity: 100,
-            ttl: 24 * 60 * 60 * 1e3,
+            ttl: 1440 * 60 * 1e3,
             maxMemoryMB: 5,
             warningThreshold: 80,
             description: "\u7528\u6237\u504F\u597D\u548C\u8BBE\u7F6E\u7F13\u5B58",
             keyPrefix: l.PREFIXES.USER,
-            cleanupIntervalMs: 30 * 60 * 1e3,
+            cleanupIntervalMs: 1800 * 1e3,
             memoryThreshold: 0.9,
           },
           SYSTEM: {
             capacity: 200,
-            ttl: 60 * 60 * 1e3,
+            ttl: 3600 * 1e3,
             maxMemoryMB: 10,
             warningThreshold: 160,
             description: "\u7CFB\u7EDF\u7EC4\u4EF6\u548C\u914D\u7F6E\u7F13\u5B58",
             keyPrefix: l.PREFIXES.SYSTEM,
-            cleanupIntervalMs: 15 * 60 * 1e3,
+            cleanupIntervalMs: 900 * 1e3,
             memoryThreshold: 0.8,
           },
           DEFAULT: {
             capacity: 100,
-            ttl: 10 * 60 * 1e3,
+            ttl: 600 * 1e3,
             maxMemoryMB: 5,
             warningThreshold: 80,
             description: "\u9ED8\u8BA4\u7F13\u5B58\u914D\u7F6E",
             keyPrefix: l.PREFIXES.SYSTEM,
-            cleanupIntervalMs: 5 * 60 * 1e3,
+            cleanupIntervalMs: 300 * 1e3,
             memoryThreshold: 0.8,
           },
         }),
-        (z = {
+        (K = {
           MEMORY: {
             capacityRatio: 0.6,
             maxSizeKB: 500,
@@ -367,7 +367,7 @@
               "\u672C\u5730\u5C42 - \u957F\u671F\u5B58\u50A8\uFF0C\u5B58\u50A8\u957F\u671F\u6570\u636E",
           },
         }),
-        (P = {
+        (H = {
           LARGE_CONTENT_SIZE: 1024 * 1024,
           HUGE_CONTENT_SIZE: 5 * 1024 * 1024,
           MAX_MEMORY_USAGE: 50 * 1024 * 1024,
@@ -393,8 +393,8 @@
           PRELOAD_STRATEGY: { enabled: !0, count: 5, delay: 100 },
           MONITORING: {
             ENABLE_MONITORING: !0,
-            MONITOR_INTERVAL: 5 * 60 * 1e3,
-            REPORT_INTERVAL: 30 * 60 * 1e3,
+            MONITOR_INTERVAL: 300 * 1e3,
+            REPORT_INTERVAL: 1800 * 1e3,
             CONSOLE_WARNINGS: !0,
             ENABLE_KEY_VALIDATION: !0,
           },
@@ -408,19 +408,19 @@
       }),
         (m = {
           ENABLE_MONITORING: !0,
-          MONITOR_INTERVAL: 5 * 60 * 1e3,
-          REPORT_INTERVAL: 30 * 60 * 1e3,
+          MONITOR_INTERVAL: 300 * 1e3,
+          REPORT_INTERVAL: 1800 * 1e3,
           CONSOLE_WARNINGS: !0,
           ENABLE_KEY_VALIDATION: !0,
         }))
     })
-  var I,
-    j,
-    O,
-    Y = D(() => {
+  var O,
+    Y,
+    B,
+    q = D(() => {
       "use strict"
       E()
-      ;((I = class {
+      ;((O = class {
         constructor(e, t, r = null, n = null) {
           this.key = e
           this.value = t
@@ -428,11 +428,11 @@
           this.next = n
         }
       }),
-        (j = class {
+        (Y = class {
           constructor(e) {
             this.capacity = e
-            ;((this.head = new I("__head__", {})),
-              (this.tail = new I("__tail__", {})),
+            ;((this.head = new O("__head__", {})),
+              (this.tail = new O("__tail__", {})),
               (this.head.next = this.tail),
               (this.tail.prev = this.head))
           }
@@ -462,7 +462,7 @@
           set(e, t) {
             let r = this.cache.get(e)
             if (r) return ((r.value = t), this.moveToHead(r), null)
-            let n = new I(e, t),
+            let n = new O(e, t),
               s = null
             return (
               this.cache.size >= this.capacity &&
@@ -492,7 +492,7 @@
             return Array.from(this.cache.values()).map((e) => e.value)
           }
         }),
-        (O = class {
+        (B = class {
           cache
           config
           currentMemoryUsage = 0
@@ -513,7 +513,7 @@
               memoryThreshold: r.memoryThreshold,
               ...t,
             }),
-              (this.cache = new j(this.config.capacity)),
+              (this.cache = new Y(this.config.capacity)),
               this.startPeriodicCleanup())
           }
           estimateSize(e) {
@@ -556,7 +556,7 @@
               typeof window < "u" &&
               (clearInterval(this.cleanupInterval), (this.cleanupInterval = null))
           }
-          set(e, t, r = 30 * 60 * 1e3) {
+          set(e, t, r = 1800 * 1e3) {
             try {
               let n = this.estimateSize(t),
                 s = this.config.maxMemoryMB * 1024 * 1024
@@ -721,10 +721,10 @@
           }
         }))
     })
-  var B,
-    q = D(() => {
+  var x,
+    Q = D(() => {
       "use strict"
-      B = class {
+      x = class {
         observers = new Set()
         timers = new Set()
         eventListeners = []
@@ -925,13 +925,13 @@
         }
       }
     })
-  var x,
-    Q = D(() => {
+  var N,
+    Z = D(() => {
       "use strict"
       E()
-      x = class a {
+      N = class a {
         static config = v("DEFAULT")
-        static DEFAULT_QUOTA = P.MAX_MEMORY_USAGE
+        static DEFAULT_QUOTA = H.MAX_MEMORY_USAGE
         static async checkStorageQuota(e) {
           try {
             if (navigator.storage?.estimate) {
@@ -1058,12 +1058,12 @@
             let r = JSON.parse(e)
             if (r && typeof r == "object" && r.timestamp) {
               let n = t - r.timestamp,
-                s = (this.config.ttl || 24 * 60 * 60) * 1e3
+                s = (this.config.ttl || 1440 * 60) * 1e3
               return n > s
             }
           } catch {
             let r = new Blob([e]).size,
-              n = (this.config.maxMemoryMB || P.LARGE_CONTENT_SIZE / 1024) * 1024
+              n = (this.config.maxMemoryMB || H.LARGE_CONTENT_SIZE / 1024) * 1024
             return r > n
           }
           return !1
@@ -1134,7 +1134,7 @@
                 u && ((r += new Blob([i + u]).size), n++)
               }
             }
-            let o = (a.config.capacity || P.HUGE_CONTENT_SIZE / (1024 * 1024)) * 1024 * 1024
+            let o = (a.config.capacity || H.HUGE_CONTENT_SIZE / (1024 * 1024)) * 1024 * 1024
             return { used: r, available: Math.max(0, o - r), itemCount: n }
           }
           return { localStorage: e(localStorage), sessionStorage: e(sessionStorage) }
@@ -1171,12 +1171,12 @@
         }
       }
     })
-  var N,
-    Z = D(() => {
+  var w,
+    J = D(() => {
       "use strict"
       E()
-      _()
-      N = class a {
+      P()
+      w = class a {
         memoryCache
         storageManager
         referenceMap = new Map()
@@ -1371,9 +1371,9 @@
         }
         selectOptimalLayer(e, t) {
           let r = this.calculateSize(e),
-            n = z.MEMORY,
-            s = z.SESSION,
-            o = z.LOCAL,
+            n = K.MEMORY,
+            s = K.SESSION,
+            o = K.LOCAL,
             c = [t, "MEMORY", "SESSION", "LOCAL"].filter(Boolean),
             i = [...new Set(c)]
           for (let u of i)
@@ -1499,10 +1499,10 @@
         }
       }
     })
-  var U,
-    J = D(() => {
+  var _,
+    ee = D(() => {
       "use strict"
-      U = class {
+      _ = class {
         managers = new Map()
         register(e, t) {
           this.managers.set(e, t)
@@ -1533,223 +1533,23 @@
         }
       }
     })
-  var ee,
-    y,
-    R,
-    te,
-    A,
-    K = D(() => {
-      "use strict"
-      re()
-      H()
-      ;((ee = class {
-        _initialized = !1
-        _unifiedContentCache = null
-        _linkCache = null
-        _searchCache = null
-        _userCache = null
-        _systemCache = null
-        _defaultCache = null
-        _urlCacheManager = null
-        _failedLinksManager = null
-        _storageManager = null
-        _resourceManager = null
-        _cleanupManager = null
-        get unifiedContentCache() {
-          return (
-            this._unifiedContentCache ||
-              ((this._unifiedContentCache = C.createUnifiedContentCacheManager(
-                b.globalUnifiedContentCache,
-              )),
-              console.log("[GlobalManagers] Initialized UnifiedContentCacheManager")),
-            this._unifiedContentCache
-          )
-        }
-        get linkCache() {
-          return (
-            this._linkCache ||
-              ((this._linkCache = this.createCache("LINK")),
-              console.log("[GlobalManagers] Initialized LinkCache")),
-            this._linkCache
-          )
-        }
-        get searchCache() {
-          return (
-            this._searchCache ||
-              ((this._searchCache = this.createCache("SEARCH")),
-              console.log("[GlobalManagers] Initialized SearchCache")),
-            this._searchCache
-          )
-        }
-        get userCache() {
-          return (
-            this._userCache ||
-              ((this._userCache = this.createCache("USER")),
-              console.log("[GlobalManagers] Initialized UserCache")),
-            this._userCache
-          )
-        }
-        get systemCache() {
-          return (
-            this._systemCache ||
-              ((this._systemCache = this.createCache("SYSTEM")),
-              console.log("[GlobalManagers] Initialized SystemCache")),
-            this._systemCache
-          )
-        }
-        get defaultCache() {
-          return (
-            this._defaultCache ||
-              ((this._defaultCache = this.createCache("DEFAULT")),
-              console.log("[GlobalManagers] Initialized DefaultCache")),
-            this._defaultCache
-          )
-        }
-        get urlCacheManager() {
-          return (
-            this._urlCacheManager ||
-              ((this._urlCacheManager = C.createCacheManager(b.urlCacheManager)),
-              console.log("[GlobalManagers] Initialized UrlCacheManager")),
-            this._urlCacheManager
-          )
-        }
-        get failedLinksManager() {
-          return (
-            this._failedLinksManager ||
-              ((this._failedLinksManager = C.createCacheManager(b.failedLinksManager)),
-              console.log("[GlobalManagers] Initialized FailedLinksManager")),
-            this._failedLinksManager
-          )
-        }
-        get storageManager() {
-          return (
-            this._storageManager ||
-              ((this._storageManager = C.createStorageManager(b.globalStorageManager)),
-              console.log("[GlobalManagers] Initialized StorageManager")),
-            this._storageManager
-          )
-        }
-        get resourceManager() {
-          return (
-            this._resourceManager ||
-              ((this._resourceManager = C.createResourceManager(b.globalResourceManager)),
-              console.log("[GlobalManagers] Initialized ResourceManager")),
-            this._resourceManager
-          )
-        }
-        get cleanupManager() {
-          return (
-            this._cleanupManager ||
-              ((this._cleanupManager = C.getCleanupManager()),
-              console.log("[GlobalManagers] Initialized CleanupManager")),
-            this._cleanupManager
-          )
-        }
-        createCache(e) {
-          return C.createCacheManager({ type: "CACHE", identifier: e, config: { cacheType: e } })
-        }
-        initialize(e = !1) {
-          if (this._initialized) {
-            console.log("[GlobalManagers] Already initialized, skipping...")
-            return
-          }
-          ;(console.log("[GlobalManagers] Initializing global manager instances..."),
-            this.cleanupManager,
-            this.unifiedContentCache,
-            e &&
-              (this.linkCache,
-              this.searchCache,
-              this.userCache,
-              this.systemCache,
-              this.defaultCache,
-              this.storageManager,
-              this.resourceManager,
-              this.failedLinksManager,
-              this.urlCacheManager,
-              console.log("[GlobalManagers] All manager instances preloaded")),
-            (this._initialized = !0),
-            console.log("[GlobalManagers] Global manager instances initialized"))
-        }
-        cleanup() {
-          ;(console.log("[GlobalManagers] Cleaning up all global manager instances..."),
-            C.cleanup(),
-            console.log("[GlobalManagers] All global manager instances cleaned up"))
-        }
-        destroy() {
-          ;(console.log("[GlobalManagers] Destroying all global manager instances..."),
-            C.destroy(),
-            (this._initialized = !1),
-            Object.keys(this).forEach((e) => {
-              e.startsWith("_") && (this[e] = null)
-            }),
-            (this._initialized = !1),
-            console.log("[GlobalManagers] All global manager instances destroyed"))
-        }
-      }),
-        (y = class {
-          static _instance = new ee()
-          static get instance() {
-            return this._instance
-          }
-          static initialize(e = !1) {
-            this._instance.initialize(e)
-          }
-          static cleanup() {
-            this._instance.cleanup()
-          }
-          static destroy() {
-            this._instance.destroy()
-          }
-          static getInstance(e, t) {
-            switch (e) {
-              case "CACHE":
-                return this.instance.defaultCache
-              case "RESOURCE":
-                return this.instance.resourceManager
-              case "STORAGE":
-                return this.instance.storageManager
-              case "UNIFIED_CONTENT_CACHE":
-                return this.instance.unifiedContentCache
-              case "CLEANUP":
-                return this.instance.cleanupManager
-              default:
-                throw new Error(`[GlobalManagerController] Unknown manager type: ${e}`)
-            }
-          }
-        }),
-        (R = {
-          get instance() {
-            return y.instance.storageManager
-          },
-        }),
-        (te = {
-          get instance() {
-            return y.instance.resourceManager
-          },
-        }),
-        (A = {
-          get instance() {
-            return y.instance.defaultCache
-          },
-        }))
-    })
-  var H = D(() => {
+  var $ = D(() => {
     "use strict"
-    K()
-    w()
+    U()
+    z()
   })
   var C,
-    b,
-    re = D(() => {
+    R,
+    te = D(() => {
       "use strict"
-      Y()
       q()
       Q()
       Z()
       J()
-      H()
+      ee()
+      $()
       E()
-      K()
+      U()
       ;((C = class {
         static instances = new Map()
         static cleanupManager = null
@@ -1775,24 +1575,24 @@
                   enableMemoryLayer: e.config?.enableMemoryLayer ?? !0,
                   enableSessionLayer: e.config?.enableSessionLayer ?? !1,
                 }
-              return new O(n)
+              return new B(n)
             },
             "CacheManager",
           )
         }
         static createResourceManager(e) {
-          return this._createAndRegisterManager(e, () => new B(), "ResourceManager")
+          return this._createAndRegisterManager(e, () => new x(), "ResourceManager")
         }
         static createStorageManager(e) {
-          return this._createAndRegisterManager(e, () => new x(), "StorageManager")
+          return this._createAndRegisterManager(e, () => new N(), "StorageManager")
         }
         static createUnifiedContentCacheManager(e) {
           return this._createAndRegisterManager(
             e,
             () => {
               let t = A.instance,
-                r = R.instance
-              return new N(t, r)
+                r = b.instance
+              return new w(t, r)
             },
             "UnifiedContentCacheManager",
           )
@@ -1800,7 +1600,7 @@
         static getCleanupManager() {
           return (
             this.cleanupManager ||
-              ((this.cleanupManager = new U()),
+              ((this.cleanupManager = new _()),
               console.log("[ManagerFactory] Created CleanupManager singleton")),
             this.cleanupManager
           )
@@ -1883,7 +1683,7 @@
           }
         }
       }),
-        (b = {
+        (R = {
           globalCacheManager: {
             type: "CACHE",
             identifier: "global",
@@ -1908,34 +1708,240 @@
           },
         }))
     })
-  var w = D(() => {
+  var re,
+    y,
+    b,
+    L,
+    A,
+    U = D(() => {
+      "use strict"
+      te()
+      $()
+      ;((re = class {
+        _initialized = !1
+        _unifiedContentCache = null
+        _linkCache = null
+        _searchCache = null
+        _userCache = null
+        _systemCache = null
+        _defaultCache = null
+        _urlCacheManager = null
+        _failedLinksManager = null
+        _storageManager = null
+        _resourceManager = null
+        _cleanupManager = null
+        get unifiedContentCache() {
+          return (
+            this._unifiedContentCache ||
+              ((this._unifiedContentCache = C.createUnifiedContentCacheManager(
+                R.globalUnifiedContentCache,
+              )),
+              console.log("[GlobalManagers] Initialized UnifiedContentCacheManager")),
+            this._unifiedContentCache
+          )
+        }
+        get linkCache() {
+          return (
+            this._linkCache ||
+              ((this._linkCache = this.createCache("LINK")),
+              console.log("[GlobalManagers] Initialized LinkCache")),
+            this._linkCache
+          )
+        }
+        get searchCache() {
+          return (
+            this._searchCache ||
+              ((this._searchCache = this.createCache("SEARCH")),
+              console.log("[GlobalManagers] Initialized SearchCache")),
+            this._searchCache
+          )
+        }
+        get userCache() {
+          return (
+            this._userCache ||
+              ((this._userCache = this.createCache("USER")),
+              console.log("[GlobalManagers] Initialized UserCache")),
+            this._userCache
+          )
+        }
+        get systemCache() {
+          return (
+            this._systemCache ||
+              ((this._systemCache = this.createCache("SYSTEM")),
+              console.log("[GlobalManagers] Initialized SystemCache")),
+            this._systemCache
+          )
+        }
+        get defaultCache() {
+          return (
+            this._defaultCache ||
+              ((this._defaultCache = this.createCache("DEFAULT")),
+              console.log("[GlobalManagers] Initialized DefaultCache")),
+            this._defaultCache
+          )
+        }
+        get urlCacheManager() {
+          return (
+            this._urlCacheManager ||
+              ((this._urlCacheManager = C.createCacheManager(R.urlCacheManager)),
+              console.log("[GlobalManagers] Initialized UrlCacheManager")),
+            this._urlCacheManager
+          )
+        }
+        get failedLinksManager() {
+          return (
+            this._failedLinksManager ||
+              ((this._failedLinksManager = C.createCacheManager(R.failedLinksManager)),
+              console.log("[GlobalManagers] Initialized FailedLinksManager")),
+            this._failedLinksManager
+          )
+        }
+        get storageManager() {
+          return (
+            this._storageManager ||
+              ((this._storageManager = C.createStorageManager(R.globalStorageManager)),
+              console.log("[GlobalManagers] Initialized StorageManager")),
+            this._storageManager
+          )
+        }
+        get resourceManager() {
+          return (
+            this._resourceManager ||
+              ((this._resourceManager = C.createResourceManager(R.globalResourceManager)),
+              console.log("[GlobalManagers] Initialized ResourceManager")),
+            this._resourceManager
+          )
+        }
+        get cleanupManager() {
+          return (
+            this._cleanupManager ||
+              ((this._cleanupManager = C.getCleanupManager()),
+              console.log("[GlobalManagers] Initialized CleanupManager")),
+            this._cleanupManager
+          )
+        }
+        createCache(e) {
+          return C.createCacheManager({ type: "CACHE", identifier: e, config: { cacheType: e } })
+        }
+        initialize(e = !1) {
+          if (this._initialized) {
+            console.log("[GlobalManagers] Already initialized, skipping...")
+            return
+          }
+          ;(console.log("[GlobalManagers] Initializing global manager instances..."),
+            this.cleanupManager,
+            this.unifiedContentCache,
+            e &&
+              (this.linkCache,
+              this.searchCache,
+              this.userCache,
+              this.systemCache,
+              this.defaultCache,
+              this.storageManager,
+              this.resourceManager,
+              this.failedLinksManager,
+              this.urlCacheManager,
+              console.log("[GlobalManagers] All manager instances preloaded")),
+            (this._initialized = !0),
+            console.log("[GlobalManagers] Global manager instances initialized"))
+        }
+        cleanup() {
+          ;(console.log("[GlobalManagers] Cleaning up all global manager instances..."),
+            C.cleanup(),
+            console.log("[GlobalManagers] All global manager instances cleaned up"))
+        }
+        destroy() {
+          ;(console.log("[GlobalManagers] Destroying all global manager instances..."),
+            C.destroy(),
+            (this._initialized = !1),
+            Object.keys(this).forEach((e) => {
+              e.startsWith("_") && (this[e] = null)
+            }),
+            (this._initialized = !1),
+            console.log("[GlobalManagers] All global manager instances destroyed"))
+        }
+      }),
+        (y = class {
+          static _instance = new re()
+          static get instance() {
+            return this._instance
+          }
+          static initialize(e = !1) {
+            this._instance.initialize(e)
+          }
+          static cleanup() {
+            this._instance.cleanup()
+          }
+          static destroy() {
+            this._instance.destroy()
+          }
+          static getInstance(e, t) {
+            switch (e) {
+              case "CACHE":
+                return this.instance.defaultCache
+              case "RESOURCE":
+                return this.instance.resourceManager
+              case "STORAGE":
+                return this.instance.storageManager
+              case "UNIFIED_CONTENT_CACHE":
+                return this.instance.unifiedContentCache
+              case "CLEANUP":
+                return this.instance.cleanupManager
+              default:
+                throw new Error(`[GlobalManagerController] Unknown manager type: ${e}`)
+            }
+          }
+        }),
+        (b = {
+          get instance() {
+            return y.instance.storageManager
+          },
+        }),
+        (L = {
+          get instance() {
+            return y.instance.resourceManager
+          },
+        }),
+        (A = {
+          get instance() {
+            return y.instance.defaultCache
+          },
+        }))
+    })
+  var z = D(() => {
     "use strict"
-    Y()
+    U()
     q()
     Q()
     Z()
     J()
-    re()
-    K()
+    ee()
+    te()
+    U()
+    typeof window < "u" &&
+      ((window.__quartz = window.__quartz || {}),
+      (window.__quartz.managers = window.__quartz.managers || {}),
+      L.instance,
+      (window.__quartz.managers.resourceManager = L.instance))
   })
   var he = D(() => {
     "use strict"
     E()
-    _()
-    H()
-    w()
+    P()
+    $()
+    z()
   })
-  var $,
-    L,
+  var k,
+    T,
     ne = D(() => {
       "use strict"
-      w()
+      z()
       he()
-      ;(($ = class {
+      ;((k = class {
         config
         state
-        resourceManager = te.instance
-        storageManager = R.instance
+        resourceManager = L.instance
+        storageManager = b.instance
         cacheManager = A.instance
         constructor(e) {
           ;((this.config = {
@@ -2073,10 +2079,12 @@
             throw new Error(`[${this.config.name}] CacheManager not available`)
         }
       }),
-        (L = class {
+        (T = class {
           static instances = new Map()
           static register(e, t) {
-            ;(this.instances.set(e, t), console.log(`Component manager '${e}' registered`))
+            ;(this.instances.has(e) &&
+              console.warn(`Component manager '${e}' already registered. Overwriting.`),
+              this.instances.set(e, t))
           }
           static get(e) {
             return this.instances.get(e)
@@ -2100,15 +2108,15 @@
         }))
     })
   var de = D(() => {})
-  var tr,
+  var rr,
     fe = D(() => {
       de()
-      tr = Object.hasOwnProperty
+      rr = Object.hasOwnProperty
     })
-  var Ce = Te((nr, De) => {
+  var Ce = Te((ar, De) => {
     "use strict"
     De.exports = Ke
-    function T(a) {
+    function I(a) {
       return a instanceof Buffer
         ? Buffer.from(a)
         : new a.constructor(a.buffer.slice(), a.byteOffset, a.length)
@@ -2136,7 +2144,7 @@
             : f.constructor !== Object && (t = e.get(f.constructor))
               ? (u[g] = t(f, c))
               : ArrayBuffer.isView(f)
-                ? (u[g] = T(f))
+                ? (u[g] = I(f))
                 : (u[g] = c(f))
         }
         return u
@@ -2154,7 +2162,7 @@
             : u.constructor !== Object && (t = e.get(u.constructor))
               ? (c[i] = t(u, n))
               : ArrayBuffer.isView(u)
-                ? (c[i] = T(u))
+                ? (c[i] = I(u))
                 : (c[i] = n(u))
         }
         return c
@@ -2171,7 +2179,7 @@
             : u.constructor !== Object && (t = e.get(u.constructor))
               ? (c[i] = t(u, s))
               : ArrayBuffer.isView(u)
-                ? (c[i] = T(u))
+                ? (c[i] = I(u))
                 : (c[i] = s(u))
         }
         return c
@@ -2198,7 +2206,7 @@
             p = i[M]
           if (typeof p != "object" || p === null) g[M] = p
           else if (p.constructor !== Object && (n = r.get(p.constructor))) g[M] = n(p, u)
-          else if (ArrayBuffer.isView(p)) g[M] = T(p)
+          else if (ArrayBuffer.isView(p)) g[M] = I(p)
           else {
             let se = e.indexOf(p)
             se !== -1 ? (g[M] = t[se]) : (g[M] = u(p))
@@ -2217,7 +2225,7 @@
           let g = i[h]
           if (typeof g != "object" || g === null) u[h] = g
           else if (g.constructor !== Object && (n = r.get(g.constructor))) u[h] = n(g, o)
-          else if (ArrayBuffer.isView(g)) u[h] = T(g)
+          else if (ArrayBuffer.isView(g)) u[h] = I(g)
           else {
             let f = e.indexOf(g)
             f !== -1 ? (u[h] = t[f]) : (u[h] = o(g))
@@ -2235,7 +2243,7 @@
           let g = i[h]
           if (typeof g != "object" || g === null) u[h] = g
           else if (g.constructor !== Object && (n = r.get(g.constructor))) u[h] = n(g, c)
-          else if (ArrayBuffer.isView(g)) u[h] = T(g)
+          else if (ArrayBuffer.isView(g)) u[h] = I(g)
           else {
             let f = e.indexOf(g)
             f !== -1 ? (u[h] = t[f]) : (u[h] = c(g))
@@ -2258,15 +2266,15 @@
     "use strict"
     fe()
     me()
-    w()
-    X()
+    z()
+    j()
   })
-  var k,
+  var G,
     ye = D(() => {
       "use strict"
       ne()
       Ee()
-      k = class extends $ {
+      G = class extends k {
         constructor(e = {}) {
           ;(super({
             name: "Mermaid",
@@ -2393,7 +2401,7 @@
     Me = D(() => {
       ne()
       ye()
-      ae = new k({
+      ae = new G({
         name: "mermaid",
         debug: !1,
         enableLazyLoad: !0,
@@ -2401,9 +2409,9 @@
         enablePreload: !0,
         preloadDelay: 2e3,
       })
-      L.register("mermaid", ae)
-      L.register("mermaid", ae)
-      L.initialize("mermaid").catch((a) => {
+      T.register("mermaid", ae)
+      T.register("mermaid", ae)
+      T.initialize("mermaid").catch((a) => {
         console.error("Mermaid component initialization failed:", a)
       })
     })

@@ -37,7 +37,7 @@ async function subsetFont(fontPath, charsFile, outputFontPath) {
       fontPath,
       `--text-file=${charsFile}`,
       `--output-file=${outputFontPath}`,
-      "--flavor=woff2", // Specify woff2 output format
+      "--flavor=woff", // Specify woff output format
     ]
 
     // Construct the full command string

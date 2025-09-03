@@ -5,11 +5,9 @@
     opacity: 0;
     visibility: hidden;
   }
-
   1% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
     visibility: visible;
@@ -44,10 +42,6 @@
     white-space: normal;
     user-select: none;
     cursor: default;
-
-    & img {
-      display: none;
-    }
   }
 
   & > .popover-inner[data-content-type] {
@@ -70,12 +64,6 @@
         width: 100%;
       }
     }
-  }
-
-  .popover-loading {
-    padding: 10px;
-    text-align: center;
-    color: var(--darkgray);
   }
 
   h1 {

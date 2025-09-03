@@ -1,23 +1,23 @@
-/**
- * Checkbox 组件入口文件
- * 使用 BaseComponentManager 统一管理模式
- */
+import { getFullSlug } from "../../util/path"
 
-import { ComponentManagerFactory } from "./component-manager/BaseComponentManager"
-import { CheckboxComponentManager } from "./component-manager/CheckboxComponentManager"
+const checkboxId = (index: number) => `${getFullSlug(window)}-checkbox-${index}`
 
-// 创建并注册 Checkbox 组件管理器
-const checkboxManager = new CheckboxComponentManager({
-  name: "checkbox",
-  debug: false,
-  enableStatePersistence: true,
-  storageType: "local",
-  autoRestoreState: true,
-})
+document.addEventListener("nav", () => {
+  const checkboxes = document.querySelectorAll(
+    "input.checkbox-toggle",
+  ) as NodeListOf<HTMLInputElement>
+  checkboxes.forEach((el, index) => {
+    const elId = checkboxId(index)
 
-ComponentManagerFactory.register("checkbox", checkboxManager)
+    const switchState = (e: Event) => {
+      const newCheckboxState = (e.target as HTMLInputElement)?.checked ? "true" : "false"
+      localStorage.setItem(elId, newCheckboxState)
+    }
 
-// 初始化组件
-ComponentManagerFactory.initialize("checkbox").catch((error) => {
-  console.error("Checkbox component initialization failed:", error)
+    el.addEventListener("change", switchState)
+    window.addCleanup(() => el.removeEventListener("change", switchState))
+    if (localStorage.getItem(elId) === "true") {
+      el.checked = true
+    }
+  })
 })

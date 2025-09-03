@@ -1,23 +1,27 @@
-/**
- * Callout 组件入口文件
- * 使用 BaseComponentManager 统一管理模式
- */
+function toggleCallout(this: HTMLElement) {
+  const outerBlock = this.parentElement!
+  outerBlock.classList.toggle("is-collapsed")
+  const content = outerBlock.getElementsByClassName("callout-content")[0] as HTMLElement
+  if (!content) return
+  const collapsed = outerBlock.classList.contains("is-collapsed")
+  content.style.gridTemplateRows = collapsed ? "0fr" : "1fr"
+}
 
-import { ComponentManagerFactory } from "./component-manager/BaseComponentManager"
-import { CalloutComponentManager } from "./component-manager/CalloutComponentManager"
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`,
+  ) as HTMLCollectionOf<HTMLElement>
+  for (const div of collapsible) {
+    const title = div.getElementsByClassName("callout-title")[0] as HTMLElement
+    const content = div.getElementsByClassName("callout-content")[0] as HTMLElement
+    if (!title || !content) continue
 
-// 创建并注册 Callout 组件管理器
-const calloutManager = new CalloutComponentManager({
-  name: "callout",
-  debug: false,
-  defaultCollapsed: false,
-  animationDuration: 300,
-  enableKeyboardNav: true,
-})
+    title.addEventListener("click", toggleCallout)
+    window.addCleanup(() => title.removeEventListener("click", toggleCallout))
 
-ComponentManagerFactory.register("callout", calloutManager)
+    const collapsed = div.classList.contains("is-collapsed")
+    content.style.gridTemplateRows = collapsed ? "0fr" : "1fr"
+  }
+}
 
-// 初始化组件
-ComponentManagerFactory.initialize("callout").catch((error) => {
-  console.error("Callout component initialization failed:", error)
-})
+document.addEventListener("nav", setupCallout)

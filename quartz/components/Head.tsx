@@ -26,6 +26,7 @@ export default (() => {
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
     const iconPath = joinSegments(baseDir, "static/icon.png")
+    const fontStylePath = joinSegments(baseDir, "static/font/font-style.css")
 
     // Url of current page
     const socialUrl =
@@ -52,8 +53,7 @@ export default (() => {
         )} */}
 
         <link rel="stylesheet" href="/static/fonts/font.css" />
-
-        {/* <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin={"anonymous"} /> */}
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <meta name="og:site_name" content={cfg.pageTitle}></meta>
@@ -88,9 +88,7 @@ export default (() => {
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
-
-        <script src="https://app.rybbit.io/api/script.js" data-site-id="1531" defer></script>
-
+        <link href={fontStylePath} rel="stylesheet" type="text/css" spa-preserve />
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")

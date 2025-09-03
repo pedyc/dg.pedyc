@@ -20,7 +20,7 @@ import calloutScript from "../../components/scripts/callout.inline"
 // @ts-ignore
 import checkboxScript from "../../components/scripts/checkbox.inline"
 // @ts-ignore
-// import mermaidScript from "../../components/scripts/mermaid.inline"
+import mermaidScript from "../../components/scripts/mermaid.inline"
 import mermaidStyle from "../../components/styles/mermaid.inline.scss"
 import { FilePath, pathToRoot, slugTag, slugifyFilePath } from "../../util/path"
 import { toHast } from "mdast-util-to-hast"
@@ -171,16 +171,6 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
           return value + "\n> "
         })
       }
-
-      // 处理Excalidraw文件引用，将![[filename.excalidraw]]转换为![[filename.excalidraw.svg]]
-      src = src.replace(
-        /!\[\[([^\]\[\|#]+\.excalidraw)(#[^\]\[\|#]+)?(\|[^\]\[#]+)?\]\]/g,
-        (value, filename, anchor, alias) => {
-          // 如果文件名已经以.svg结尾，则不做处理
-          if (filename.endsWith(".svg")) return value
-          return `![[${filename}.svg${anchor || ""}${alias || ""}]]`
-        },
-      )
 
       // pre-transform wikilinks (fix anchors to things that may contain illegal syntax e.g. codeblocks, latex)
       if (opts.wikilinks) {
@@ -784,19 +774,19 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
         })
       }
 
-      // if (opts.mermaid) {
-      //   js.push({
-      //     script: mermaidScript,
-      //     loadTime: "afterDOMReady",
-      //     contentType: "inline",
-      //     moduleType: "module",
-      //   })
+      if (opts.mermaid) {
+        js.push({
+          script: mermaidScript,
+          loadTime: "afterDOMReady",
+          contentType: "inline",
+          moduleType: "module",
+        })
 
-      //   css.push({
-      //     content: mermaidStyle,
-      //     inline: true,
-      //   })
-      // }
+        css.push({
+          content: mermaidStyle,
+          inline: true,
+        })
+      }
 
       return { js, css }
     },

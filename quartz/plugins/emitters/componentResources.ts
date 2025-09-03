@@ -3,7 +3,6 @@ import { QuartzEmitterPlugin } from "../types"
 
 // @ts-ignore
 import spaRouterScript from "../../components/scripts/spa.inline"
-
 // @ts-ignore
 import popoverScript from "../../components/scripts/popover.inline"
 import styles from "../../styles/custom.scss"
@@ -19,8 +18,6 @@ import {
 import { Features, transform } from "lightningcss"
 import { transform as transpile } from "esbuild"
 import { write } from "./helpers"
-
-// import { GlobalManagerController } from "../../components/scripts/managers/global-instances"
 
 type ComponentResources = {
   css: string[]
@@ -82,28 +79,6 @@ async function joinScripts(scripts: string[]): Promise<string> {
 function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentResources) {
   const cfg = ctx.cfg.configuration
 
-  // Ensure GlobalManagerController is initialized before any other scripts that might use global managers
-  // Expose GlobalManagerController to the global scope for access in prescript.js
-
-  // const managerScriptContent = `
-  //    if (typeof window !== 'undefined') {
-  //      window.__quartz = window.__quartz || {};
-  //      window.__quartz.managers = window.__quartz.managers || {};
-  //      // 强制访问 globalResourceManager.instance 以确保其初始化
-  //      // @ts-ignore
-  //      const resourceManagerInstance = globalResourceManager.instance;
-  //      window.__quartz.managers.resourceManager = resourceManagerInstance;
-  //      // @ts-ignore
-  //      window.globalResourceManager = resourceManagerInstance;
-  //    }
-  //  `;
-  // componentResources.beforeDOMLoaded.unshift(managerScriptContent);
-
-  // spaRouterScript should be loaded before other scripts that use window.addCleanup
-  // if (cfg.enableSPA) {
-  //   componentResources.beforeDOMLoaded.push(spaRouterScript)
-  // }
-
   // popovers
   if (cfg.enablePopovers) {
     componentResources.afterDOMLoaded.push(popoverScript)
@@ -160,19 +135,15 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
     `)
   } else if (cfg.analytics?.provider === "goatcounter") {
     componentResources.afterDOMLoaded.push(`
-      const goatcounterScriptPre = document.createElement('script');
-      goatcounterScriptPre.textContent = \`
-        window.goatcounter = { no_onload: true };
-      \`;
-      document.head.appendChild(goatcounterScriptPre);
-
-      const endpoint = "https://${cfg.analytics.websiteId}.${cfg.analytics.host ?? "goatcounter.com"}/count";
       const goatcounterScript = document.createElement('script');
       goatcounterScript.src = "${cfg.analytics.scriptSrc ?? "https://gc.zgo.at/count.js"}";
       goatcounterScript.defer = true;
-      goatcounterScript.setAttribute('data-goatcounter', endpoint);
+      goatcounterScript.setAttribute(
+        'data-goatcounter',
+        "https://${cfg.analytics.websiteId}.${cfg.analytics.host ?? "goatcounter.com"}/count"
+      );
       goatcounterScript.onload = () => {
-        window.goatcounter.endpoint = endpoint;
+        window.goatcounter = { no_onload: true };
         goatcounter.count({ path: location.pathname });
         document.addEventListener('nav', () => {
           goatcounter.count({ path: location.pathname });
@@ -226,60 +197,14 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
       })(window, document, "clarity", "script", "${cfg.analytics.projectId}");\`
       document.head.appendChild(clarityScript)
     `)
-  } else if (cfg.analytics?.provider === "matomo") {
-    componentResources.afterDOMLoaded.push(`
-      const matomoScript = document.createElement("script");
-      matomoScript.innerHTML = \`
-      let _paq = window._paq = window._paq || [];
-
-      // Track SPA navigation
-      // https://developer.matomo.org/guides/spa-tracking
-      document.addEventListener("nav", () => {
-        _paq.push(['setCustomUrl', location.pathname]);
-        _paq.push(['setDocumentTitle', document.title]);
-        _paq.push(['trackPageView']);
-      });
-
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        const u="//${cfg.analytics.host}/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
-        _paq.push(['setSiteId', ${cfg.analytics.siteId}]);
-        const d=document, g=d.createElement('script'), s=d.getElementsByTagName
-('script')[0];
-        g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-      })();
-      \`
-      document.head.appendChild(matomoScript);
-    `)
   }
 
   if (cfg.enableSPA) {
     componentResources.afterDOMLoaded.push(spaRouterScript)
   } else {
     componentResources.afterDOMLoaded.push(`
-      window.spaNavigate = (pathname) => { window.location.assign(pathname); return Promise.resolve(); }
-      
-      // 非 SPA 模式下的清理函数实现
-      const cleanupTasks = []
-      window.addCleanup = (fn) => {
-        if (typeof fn === 'function') {
-          cleanupTasks.push(fn)
-        }
-      }
-      
-      // 页面卸载时执行清理
-      window.addEventListener('beforeunload', () => {
-        cleanupTasks.forEach(task => {
-          try {
-            task()
-          } catch (error) {
-            console.error('Error during cleanup:', error)
-          }
-        })
-      })
-      
+      window.spaNavigate = (url, _) => window.location.assign(url)
+      window.addCleanup = () => {}
       const event = new CustomEvent("nav", { detail: { url: document.body.dataset.slug } })
       document.dispatchEvent(event)
     `)

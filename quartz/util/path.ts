@@ -4,124 +4,6 @@ import { clone } from "./clone"
 
 // this file must be isomorphic so it can't use node libs (e.g. path)
 
-import { urlCacheManager } from "../components/scripts/managers/index"
-import { urlHandler } from "../components/scripts/utils/simplified-url-handler"
-
-// 使用全局统一缓存管理器
-const urlCache = urlCacheManager
-
-/**
- * 移除路径中的重复段 - 与UnifiedContentCacheManager保持一致
- * @param path 路径字符串
- * @returns 清理后的路径
- */
-export function removeDuplicatePathSegments(path: string): string {
-  try {
-    // 如果是完整URL，解析它；否则作为路径处理
-    let pathname: string
-    let search = ""
-    let hash = ""
-
-    if (path.startsWith("http") || path.startsWith("/")) {
-      if (path.startsWith("http")) {
-        try {
-          const url = new URL(path)
-          pathname = url.pathname
-          search = url.search
-          hash = url.hash
-        } catch (e) {
-          console.warn(`Failed to parse URL in removeDuplicatePathSegments: ${path}`, e)
-          return path // 返回原始路径以避免程序崩溃
-        }
-      } else {
-        const parts = path.split("#")
-        const pathAndSearch = parts[0]
-        hash = parts[1] ? "#" + parts[1] : ""
-        const searchIndex = pathAndSearch.indexOf("?")
-        if (searchIndex !== -1) {
-          pathname = pathAndSearch.substring(0, searchIndex)
-          search = pathAndSearch.substring(searchIndex)
-        } else {
-          pathname = pathAndSearch
-        }
-      }
-    } else {
-      pathname = path
-    }
-
-    // 使用与UnifiedContentCacheManager.normalizeKeyForComparison一致的逻辑
-    const segments = pathname.split("/").filter((segment) => segment.length > 0)
-    const deduplicatedSegments: string[] = []
-    const seen = new Set<string>()
-
-    for (const segment of segments) {
-      // 检查连续重复
-      const isConsecutiveDuplicate =
-        deduplicatedSegments.length > 0 &&
-        deduplicatedSegments[deduplicatedSegments.length - 1] === segment
-
-      // 检查是否已经存在（避免A/B/A模式）
-      const isDuplicateInPath = seen.has(segment)
-
-      if (!isConsecutiveDuplicate && !isDuplicateInPath) {
-        deduplicatedSegments.push(segment)
-        seen.add(segment)
-      }
-    }
-
-    const cleanedPath = deduplicatedSegments.length > 0 ? "/" + deduplicatedSegments.join("/") : "/"
-    const result = cleanedPath + search + hash
-
-    return result
-  } catch (error) {
-    console.warn("Failed to clean duplicate path segments:", error)
-    return path
-  }
-}
-
-/**
- * 检查是否为内部链接
- * @param href 链接地址
- * @returns 是否为内部链接
- */
-export function isInternalLink(href: string): boolean {
-  try {
-    const url = createUrl(href)
-    return url.origin === window.location.origin
-  } catch {
-    return false
-  }
-}
-
-/**
- * 创建URL对象，带缓存优化
- * @param href URL字符串
- * @returns URL对象
- */
-export function createUrl(href: string): URL {
-  // 使用简化URL处理器进行URL验证和处理
-  const urlResult = urlHandler.processURL(href, {
-    cacheType: "link",
-    validate: true,
-  })
-
-  if (!urlResult.isValid) {
-    throw new Error(`Invalid URL string provided to createUrl: ${href} - ${urlResult.error}`)
-  }
-
-  return urlResult.processed
-}
-
-/**
- * 清空URL缓存
- */
-export function clearUrlCache(): void {
-  // 清空所有以content_前缀的缓存项（URL相关）
-  const stats = urlCache.instance.getStats()
-  const urlKeys = stats.keys.filter((key: string) => key.startsWith("content_"))
-  urlKeys.forEach((key: string) => urlCache.instance.delete(key))
-}
-
 export const QUARTZ = "quartz"
 
 /// Utility type to simulate nominal types in TypeScript
@@ -228,57 +110,17 @@ export function transformInternalLink(link: string): RelativeURL {
 
 // from micromorph/src/utils.ts
 // https://github.com/natemoo-re/micromorph/blob/main/src/utils.ts#L5
-/**
- * 重新设置HTML元素的属性URL，避免重复路径
- * @param el HTML元素
- * @param attr 属性名（href或src）
- * @param newBase 新的基础URL
- */
 const _rebaseHtmlElement = (el: Element, attr: string, newBase: string | URL) => {
-  const originalValue = el.getAttribute(attr)
-  if (!originalValue) return
-
-  try {
-    const rebased = new URL(originalValue, newBase)
-    // 使用pathname而不是完整URL，避免重复路径问题
-    let finalPath = rebased.pathname
-
-    // 使用统一的路径去重逻辑
-    finalPath = removeDuplicatePathSegments(finalPath)
-    el.setAttribute(attr, finalPath + (rebased.hash || ""))
-  } catch (error) {
-    console.warn(`Failed to rebase ${attr} for element:`, error)
-  }
+  const rebased = new URL(el.getAttribute(attr)!, newBase)
+  el.setAttribute(attr, rebased.pathname + rebased.hash)
 }
-
-/**
- * 标准化HTML文档中的相对URL，防止重复处理
- * @param el HTML元素或文档
- * @param destination 目标URL
- */
 export function normalizeRelativeURLs(el: Element | Document, destination: string | URL) {
-  // 检查是否已经处理过，避免重复标准化
-  const processedAttr = "data-urls-normalized"
-  if (el instanceof Element && el.hasAttribute(processedAttr)) {
-    return
-  }
-  if (el instanceof Document && el.documentElement?.hasAttribute(processedAttr)) {
-    return
-  }
-
   el.querySelectorAll('[href=""], [href^="./"], [href^="../"]').forEach((item) =>
     _rebaseHtmlElement(item, "href", destination),
   )
   el.querySelectorAll('[src=""], [src^="./"], [src^="../"]').forEach((item) =>
     _rebaseHtmlElement(item, "src", destination),
   )
-
-  // 标记为已处理
-  if (el instanceof Element) {
-    el.setAttribute(processedAttr, "true")
-  } else if (el instanceof Document && el.documentElement) {
-    el.documentElement.setAttribute(processedAttr, "true")
-  }
 }
 
 const _rebaseHastElement = (
@@ -314,9 +156,9 @@ export function normalizeHastElement(rawEl: HastElement, curBase: FullSlug, newB
 export function pathToRoot(slug: FullSlug): RelativeURL {
   let rootPath = slug
     .split("/")
-    .filter((x: string) => x !== "")
+    .filter((x) => x !== "")
     .slice(0, -1)
-    .map((_: string) => "..")
+    .map((_) => "..")
     .join("/")
 
   if (rootPath.length === 0) {

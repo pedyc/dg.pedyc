@@ -1,4 +1,4 @@
-import { registerEscapeHandler, removeAllChildren } from "./utils/util"
+import { registerEscapeHandler, removeAllChildren } from "./util"
 
 interface Position {
   x: number

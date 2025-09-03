@@ -2,7 +2,6 @@
 title: 20-6000 字 + 6 个案例：写给普通人的 MCP 入门指南@annote
 date-created: 2025-04-07
 date-modified: 2025-04-22
-alias: ["srAnnote@6000 字 + 6 个案例：写给普通人的 MCP 入门指南"]
 index: 20
 type: Simpread
 UID: 20250407084640

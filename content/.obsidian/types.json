@@ -53,6 +53,7 @@
     "area": "multitext",
     "source": "multitext",
     "rating": "multitext",
-    "related": "multitext"
+    "related": "multitext",
+    "excalidraw-embed-md": "checkbox"
   }
 }

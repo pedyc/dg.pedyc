@@ -32,7 +32,6 @@ import {
   cacheFile,
   cwd,
 } from "./constants.js"
-import { pathToFileURL } from "url"
 
 /**
  * Resolve content directory path
@@ -112,11 +111,7 @@ export async function handleCreate(argv) {
         message: `Choose how to initialize the content in \`${contentFolder}\``,
         options: [
           { value: "new", label: "Empty Quartz" },
-          {
-            value: "copy",
-            label: "Copy an existing folder",
-            hint: "overwrites `content`",
-          },
+          { value: "copy", label: "Copy an existing folder", hint: "overwrites `content`" },
           {
             value: "symlink",
             label: "Symlink an existing folder",
@@ -213,9 +208,7 @@ See the [documentation](https://quartz.jzhao.xyz) for how to get started.
 
   // now, do config changes
   const configFilePath = path.join(cwd, "quartz.config.ts")
-  let configContent = await fs.promises.readFile(configFilePath, {
-    encoding: "utf-8",
-  })
+  let configContent = await fs.promises.readFile(configFilePath, { encoding: "utf-8" })
   configContent = configContent.replace(
     /markdownLinkResolution: '(.+)'/,
     `markdownLinkResolution: '${linkResolutionStrategy}'`,
@@ -240,11 +233,6 @@ See the [documentation](https://quartz.jzhao.xyz) for how to get started.
  * @param {*} argv arguments for `build`
  */
 export async function handleBuild(argv) {
-  const esConfigPath = path.join(cwd, "./esbuild.config.mjs")
-  const esConfigUrl = pathToFileURL(esConfigPath).href
-  const { default: esConfig } = await import(esConfigUrl)
-
-  await esbuild.build(esConfig)
   if (argv.serve) {
     argv.watch = true
   }
@@ -365,8 +353,7 @@ export async function handleBuild(argv) {
     }
 
     await build(clientRefresh)
-    // 创建请求处理函数
-    const requestHandler = async (req, res) => {
+    const server = http.createServer(async (req, res) => {
       if (argv.baseDir && !req.url?.startsWith(argv.baseDir)) {
         console.log(
           styleText(
@@ -464,20 +451,10 @@ export async function handleBuild(argv) {
       }
 
       return serve()
-    }
+    })
 
-    // 保存服务器配置
-    currentServerConfig = {
-      port: argv.port,
-      requestHandler: requestHandler,
-    }
-
-    // 创建并启动HTTP服务器
-    serverInstance = http.createServer(requestHandler)
-    serverInstance.listen(argv.port)
-
-    // 创建WebSocket服务器
-    wss = new WebSocketServer({ port: argv.wsPort })
+    server.listen(argv.port)
+    const wss = new WebSocketServer({ port: argv.wsPort })
     wss.on("connection", (ws) => connections.push(ws))
     console.log(
       styleText(
@@ -641,54 +618,3 @@ export async function handleSync(argv) {
 
   console.log(styleText("green", "Done!"))
 }
-
-// 在文件顶部添加模块级变量声明
-let wss = null
-
-// 用于存储当前的HTTP服务器实例和配置
-let serverInstance = null
-let currentServerConfig = null
-
-process.on("uncaughtException", (err) => {
-  if (err.code === "EACCES") {
-    console.log(chalk.red("端口访问被拒绝，尝试备用端口..."))
-    if (wss && serverInstance && currentServerConfig) {
-      const currentPort = wss.options.port
-      const newWsPort = currentPort + Math.floor(Math.random() * 50) + 100
-      const currentHttpPort = currentServerConfig.port || 8080
-      const newHttpPort = currentHttpPort + Math.floor(Math.random() * 50) + 100
-      const connections = []
-
-      // 关闭旧WebSocket服务器
-      wss.close(() => {
-        console.log(chalk.yellow(`旧WebSocket服务器已关闭`))
-      })
-
-      // 关闭旧HTTP服务器
-      serverInstance.close(() => {
-        console.log(chalk.yellow(`旧HTTP服务器已关闭`))
-
-        // 创建新的HTTP服务器
-        serverInstance = http.createServer(currentServerConfig.requestHandler)
-        serverInstance.listen(newHttpPort)
-
-        // 创建新的WebSocket服务器
-        wss = new WebSocketServer({ port: newWsPort })
-        wss.on("connection", (ws) => connections.push(ws))
-
-        // 更新当前配置
-        currentServerConfig.port = newHttpPort
-
-        console.log(chalk.yellow(`WebSocket 端口已切换至: ${newWsPort}`))
-        console.log(
-          chalk.cyan(`Quartz 服务器已重新启动，监听端口: http://localhost:${newHttpPort}`),
-        )
-      })
-    } else {
-      console.log(chalk.red(`无法重新启动服务器，服务器实例未初始化`))
-    }
-  } else {
-    console.error(chalk.red(`未处理的异常: ${err.message}`))
-    console.error(err.stack)
-  }
-})

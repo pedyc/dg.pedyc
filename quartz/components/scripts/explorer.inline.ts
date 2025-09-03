@@ -1,8 +1,6 @@
 import { FileTrieNode } from "../../util/fileTrie"
 import { FullSlug, resolveRelative, simplifySlug } from "../../util/path"
 import { ContentDetails } from "../../plugins/emitters/contentIndex"
-import { CacheKeyFactory } from "./cache"
-import { globalStorageManager } from "./managers"
 
 type MaybeHTMLElement = HTMLElement | undefined
 
@@ -51,9 +49,9 @@ function toggleFolder(evt: MouseEvent) {
   const folderContainer = (
     isSvg
       ? // svg -> div.folder-container
-      target.parentElement
+        target.parentElement
       : // button.folder-button -> div -> div.folder-container
-      target.parentElement?.parentElement
+        target.parentElement?.parentElement
   ) as MaybeHTMLElement
   if (!folderContainer) return
   const childFolderContainer = folderContainer.nextElementSibling as MaybeHTMLElement
@@ -78,8 +76,7 @@ function toggleFolder(evt: MouseEvent) {
   }
 
   const stringifiedFileTree = JSON.stringify(currentExplorerState)
-  const fileTreeKey = CacheKeyFactory.generateUserKey("fileTree", "explorer_state")
-  globalStorageManager.instance.setItem('local', fileTreeKey, stringifiedFileTree)
+  localStorage.setItem("fileTree", stringifiedFileTree)
 }
 
 function createFileNode(currentSlug: FullSlug, node: FileTrieNode): HTMLLIElement {
@@ -91,7 +88,7 @@ function createFileNode(currentSlug: FullSlug, node: FileTrieNode): HTMLLIElemen
   a.dataset.for = node.slug
   a.textContent = node.displayName
 
-  if (simplifySlug(currentSlug) === simplifySlug(node.slug)) {
+  if (currentSlug === node.slug) {
     a.classList.add("active")
   }
 
@@ -153,18 +150,6 @@ function createFolderNode(
   return li
 }
 
-/**
- * Initializes and sets up the file explorer. This function handles:
- * 1. Parsing explorer options from data attributes.
- * 2. Loading and applying saved folder states from local storage.
- * 3. Processing file data using filter, map, and sort functions.
- * 4. Building the explorer tree structure.
- * 5. Restoring the scroll position of the explorer.
- * 6. Setting up event listeners for explorer toggles and folder interactions.
- * 7. Scrolling the active file/folder into view.
- *
- * @param currentSlug The slug of the currently active page, used to highlight the active item in the explorer.
- */
 async function setupExplorer(currentSlug: FullSlug) {
   const allExplorers = document.querySelectorAll("div.explorer") as NodeListOf<HTMLElement>
 
@@ -181,18 +166,11 @@ async function setupExplorer(currentSlug: FullSlug) {
     }
 
     // Get folder state from local storage
-    // const storageTree = localStorage.getItem("fileTree")
-    // const serializedExplorerState = storageTree && opts.useSavedState ? JSON.parse(storageTree) : []
-
-    const fileTreeKey = CacheKeyFactory.generateUserKey("fileTree", "explorer_state")
-    const storageTree = globalStorageManager.instance.getItem('local', fileTreeKey)
+    const storageTree = localStorage.getItem("fileTree")
     const serializedExplorerState = storageTree && opts.useSavedState ? JSON.parse(storageTree) : []
-    currentExplorerState = serializedExplorerState
-
-    const oldIndex = new Map<string, boolean>()
-    for (const folder of serializedExplorerState) {
-      oldIndex.set(folder.path, folder.collapsed)
-    }
+    const oldIndex = new Map<string, boolean>(
+      serializedExplorerState.map((entry: FolderState) => [entry.path, entry.collapsed]),
+    )
 
     const data = await fetchData
     const entries = [...Object.entries(data)] as [FullSlug, ContentDetails][]
@@ -224,7 +202,7 @@ async function setupExplorer(currentSlug: FullSlug) {
       }
     })
 
-    const explorerUl: HTMLElement | null = explorer.querySelector(".explorer-ul")
+    const explorerUl = explorer.querySelector(".explorer-ul")
     if (!explorerUl) continue
 
     // Create and insert new content
@@ -236,18 +214,18 @@ async function setupExplorer(currentSlug: FullSlug) {
 
       fragment.appendChild(node)
     }
-    // 清空旧内容，避免重复渲染
-    explorerUl.innerHTML = ""
     explorerUl.insertBefore(fragment, explorerUl.firstChild)
 
     // restore explorer scrollTop position if it exists
-    const scrollTopKey = CacheKeyFactory.generateUserKey(
-      "explorerScrollTop",
-      "scroll_position",
-    )
-    const scrollTop = sessionStorage.getItem(scrollTopKey)
+    const scrollTop = sessionStorage.getItem("explorerScrollTop")
     if (scrollTop) {
       explorerUl.scrollTop = parseInt(scrollTop)
+    } else {
+      // try to scroll to the active element if it exists
+      const activeElement = explorerUl.querySelector(".active")
+      if (activeElement) {
+        activeElement.scrollIntoView({ behavior: "smooth" })
+      }
     }
 
     // Set up event handlers
@@ -277,27 +255,6 @@ async function setupExplorer(currentSlug: FullSlug) {
       icon.addEventListener("click", toggleFolder)
       window.addCleanup(() => icon.removeEventListener("click", toggleFolder))
     }
-
-    // 尝试滚动到活动元素，如果它存在且不在当前视图中
-    const activeElement: HTMLElement | null = explorerUl.querySelector(".active")
-    if (activeElement) {
-      requestAnimationFrame(() => {
-        // Custom scroll into view logic to prevent main panel scrolling
-        const explorerRect = explorerUl.getBoundingClientRect()
-        const activeRect = activeElement.getBoundingClientRect()
-
-        // Check if the active element is outside the visible area of the explorerUl
-        if (activeRect.top < explorerRect.top || activeRect.bottom > explorerRect.bottom) {
-          // Calculate the new scroll position
-          const newScrollTop =
-            activeElement.offsetTop -
-            explorerUl.offsetTop -
-            explorerRect.height / 2 +
-            activeRect.height / 2
-          explorerUl.scrollTo({ top: newScrollTop, behavior: "smooth" })
-        }
-      })
-    }
   }
 }
 
@@ -305,16 +262,21 @@ document.addEventListener("prenav", async () => {
   // save explorer scrollTop position
   const explorer = document.querySelector(".explorer-ul")
   if (!explorer) return
-  const scrollTopKey = CacheKeyFactory.generateUserKey(
-    "explorerScrollTop",
-    "scroll_position",
-  )
-  sessionStorage.setItem(scrollTopKey, explorer.scrollTop.toString())
+  sessionStorage.setItem("explorerScrollTop", explorer.scrollTop.toString())
 })
 
 document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
   const currentSlug = e.detail.url
   await setupExplorer(currentSlug)
+
+  // Scroll to the active item in explorer after navigation
+  const explorerUl = document.querySelector(".explorer-ul")
+  if (explorerUl) {
+    const activeElement = explorerUl.querySelector(".active")
+    if (activeElement) {
+      activeElement.scrollIntoView({ behavior: "smooth", block: "center" })
+    }
+  }
 
   // if mobile hamburger is visible, collapse by default
   for (const explorer of document.getElementsByClassName("explorer")) {
@@ -332,22 +294,6 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
     mobileExplorer.classList.remove("hide-until-loaded")
   }
 })
-
-/**
- * 监听缓存清理事件，并在事件触发时重新初始化文件浏览器。
- */
-document.addEventListener("cacheCleared", async () => {
-  // 获取当前页面的 slug，以便重新初始化 explorer
-  const currentSlug = window.location.pathname.replace(/\/index\.html$/, "") as FullSlug
-  await setupExplorer(currentSlug)
-  console.log("Explorer reinitialized after cache clear.")
-})
-
-document.addEventListener("reinit-explorer", async (e: CustomEvent<{ url: FullSlug }>) => {
-  console.log("reinit-explorer", e)
-  const currentSlug = e.detail.url
-  await setupExplorer(currentSlug)
-});
 
 window.addEventListener("resize", function () {
   // Desktop explorer opens by default, and it stays open when the window is resized

@@ -13,11 +13,12 @@ const esConfig = {
   jsx: "automatic",
   jsxImportSource: "preact",
   packages: "external",
-  sourcemap: true,
+  sourcemap: false,
   sourcesContent: true,
   bundle: true,
   keepNames: true,
   minify: true,
+  treeShaking: true,
   metafile: true,
   plugins: [
     sassPlugin({
@@ -36,27 +37,19 @@ const esConfig = {
           let text = await promises.readFile(args.path, "utf8")
 
           // remove default exports that we manually inserted
-          text = text.replace("export default", "")
-          text = text.replace("export", "")
+          // No longer filtering imports/exports here, esbuild.transform will handle it.
 
           const sourcefile = path.relative(path.resolve("."), args.path)
           const resolveDir = path.dirname(sourcefile)
-          const transpiled = await esbuild.build({
-            stdin: {
-              contents: text,
-              loader: "ts",
-              resolveDir,
-              sourcefile,
-            },
-            write: false,
-            bundle: true,
+          const transpiled = await esbuild.transform(text, {
+            loader: "ts",
             minify: true,
             treeShaking: true,
             target: "esnext",
-            platform: "browser",
-            format: "esm",
+            format: "iife",
           })
-          const rawMod = transpiled.outputFiles[0].text
+          const rawMod = transpiled.code
+
           return {
             contents: rawMod,
             loader: "text",

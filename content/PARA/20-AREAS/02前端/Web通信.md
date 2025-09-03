@@ -1,7 +1,7 @@
 ---
 title: Web通信
 date-created: 2025-06-07
-date-modified: 2025-06-15
+date-modified: 2025-07-24
 ---
 
 ## 定义
@@ -17,23 +17,23 @@ Web 通信是指 Web 应用程序与服务器、第三方服务或其他客户�
 ## 分类
 
 - **HTTP 通信**:
-	- `fetch`: 现代 Web API，用于发起 HTTP 请求。
-	- `axios`: 基于 Promise 的 HTTP 客户端，支持更多高级特性。
-	- `REST API`: 一种设计风格，用于构建可扩展的网络服务。
+	- [[Fetch API]]: 现代 Web API，用于发起 HTTP 请求。
+	- [[Axios]]: 基于 Promise 的 HTTP 客户端，支持更多高级特性。
+	- [[RESTful API]]: 一种设计风格，用于构建可扩展的网络服务。
 - **持久连接**:
-	- `WebSocket`: 一种全双工通信协议，允许服务器主动向客户端推送数据。
-	- `Server-Sent Events (SSE)`: 一种单向通信协议，允许服务器向客户端推送数据。
+	- [[WebSocket]]: 一种全双工通信协议，允许服务器主动向客户端推送数据。
+	- [[SSE]]（Server-Sent Events）: 一种单向通信协议，允许服务器向客户端推送数据。
 - **跨域通信**:
-	- `CORS (Cross-Origin Resource Sharing)`: 一种安全机制，允许跨域请求。
-	- `JSONP (JSON with Padding)`: 一种古老的跨域解决方案，利用 `<script>` 标签的跨域特性。
+	- [[CORS]] (Cross-Origin Resource Sharing): 一种安全机制，允许跨域请求。
+	- [[JSONP]] (JSON with Padding): 一种古老的跨域解决方案，利用 `<script>` 标签的跨域特性。
 - **客户端内通信**:
-	- `postMessage`: 允许不同源的窗口之间进行通信。
-	- `Broadcast Channel API`: 允许同一浏览器的不同窗口或标签页之间进行通信。
-	- `EventEmitter`: 一种发布/订阅模式的实现，用于组件之间的通信。
-	- `CustomEvent`: 一种自定义事件，用于组件之间的通信。
+	- [[postMessage]]: 允许不同源的窗口之间进行通信。
+	- [[Broadcast Channel API]]: 允许同一浏览器的不同窗口或标签页之间进行通信。
+	- [[EventEmitter]]: 一种发布/订阅模式的实现，用于组件之间的通信。
+	- [[CustomEvent]]: 一种自定义事件，用于组件之间的通信。
 - **服务端通信**:
-	- `WebRTC (Web Real-Time Communication)`: 允许浏览器之间进行点对点通信。
-	- `GraphQL`: 一种查询语言，用于从服务器获取数据。
+	- [[WebRTC]] (Web Real-Time Communication): 允许浏览器之间进行点对点通信。
+	- [[GraphQL]]: 一种查询语言，用于从服务器获取数据。
 
 > 参见：[[Web通信方式]]
 

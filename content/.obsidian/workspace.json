@@ -162,7 +162,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "PARA/20-AREAS/04AI/重构助手提示词.md",
+                    "file": "Diary/2025-09-04.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -177,7 +177,7 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "重构助手提示词"
+                  "title": "2025-09-04"
                 }
               },
               {
@@ -245,13 +245,13 @@
                         "state": {
                           "type": "outline",
                           "state": {
-                            "file": "PARA/20-AREAS/04AI/重构助手提示词.md",
+                            "file": "Diary/2025-09-04.md",
                             "followCursor": false,
                             "showSearch": false,
                             "searchQuery": ""
                           },
                           "icon": "lucide-list",
-                          "title": "Outline of 重构助手提示词"
+                          "title": "Outline of 2025-09-04"
                         }
                       }
                     ]
@@ -267,7 +267,7 @@
                         "state": {
                           "type": "localgraph",
                           "state": {
-                            "file": "PARA/20-AREAS/04AI/重构助手提示词.md",
+                            "file": "Diary/2025-09-04.md",
                             "options": {
                               "collapse-filter": true,
                               "search": "",
@@ -295,7 +295,7 @@
                             }
                           },
                           "icon": "lucide-git-fork",
-                          "title": "Graph of 重构助手提示词"
+                          "title": "Graph of 2025-09-04"
                         }
                       }
                     ]
@@ -489,6 +489,9 @@
   },
   "active": "eadae8a64454d1cb",
   "lastOpenFiles": [
+    "Diary/_resources",
+    "PARA/20-AREAS/04AI/重构助手提示词.md",
+    "Diary/2025-09-04.md",
     "Clippings/5 Agent Workflows You Need to Master (And Exactly How to Use Them).md",
     "Clippings/_resources/5 Agent Workflows You Need to Master (And Exactly How to Use Them)/5de08731cd16322802a0eb2fbf78cf14_MD5.webp",
     "Clippings/_resources/5 Agent Workflows You Need to Master (And Exactly How to Use Them)/87b316cabfe059b8294a566fb3b36592_MD5.webp",
@@ -525,8 +528,6 @@
     "PARA/20-AREAS/02前端/JavaScript.md",
     "PARA/20-AREAS/04AI/MCP.md",
     "SimpRead/20-6000 字 + 6 个案例：写给普通人的 MCP 入门指南.md",
-    "copilot-conversations/9.11_and_9.8,_which_is_bigger@20250825_083220.md",
-    "copilot-conversations/[[0400AI]][[templage_area]]根据模板和标题生成领域笔记@20250820_095419.md",
     "PARA/20-AREAS/04AI/Untitled.base",
     "SimpRead/_resources/15-知乎-债务转移/c3fc2373932cc327a62c1ce02e42695f_MD5.jpg",
     "Bases/all.base",

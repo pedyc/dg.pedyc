@@ -319,7 +319,7 @@
   "userId": "f18f0171-ec1a-4c66-b24d-f97f2035f5ce",
   "passMarkdownImages": true,
   "enableCustomPromptTemplating": true,
-  "lastDismissedVersion": "2.9.3",
+  "lastDismissedVersion": "3.0.2",
   "includeActiveNoteAsContext": true,
   "allowAdditionalContext": true,
   "enableWordCompletion": false,

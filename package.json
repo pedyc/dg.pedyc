@@ -16,7 +16,7 @@
     "docs": "npx quartz build --serve -d docs",
     "server": "npx quartz build --serve -d content --port 8081 --wsPort 3000",
     "start": "npx quartz build --serve --watch",
-    "build": "npm run subset-fonts",
+    "build": "npm run subset-fonts && build:main",
     "build:main": "node quartz/bootstrap-cli.mjs build",
     "build:bundles": "node build-bundles.js",
     "subset-fonts": "node quartz/scripts/subset_fonts.js",

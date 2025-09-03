@@ -172,16 +172,6 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
         })
       }
 
-      // 处理Excalidraw文件引用，将![[filename.excalidraw]]转换为![[filename.excalidraw.svg]]
-      src = src.replace(
-        /!\[\[([^\]\[\|#]+\.excalidraw)(#[^\]\[\|#]+)?(\|[^\]\[#]+)?\]\]/g,
-        (value, filename, anchor, alias) => {
-          // 如果文件名已经以.svg结尾，则不做处理
-          if (filename.endsWith(".svg")) return value
-          return `![[${filename}.svg${anchor || ""}${alias || ""}]]`
-        },
-      )
-
       // pre-transform wikilinks (fix anchors to things that may contain illegal syntax e.g. codeblocks, latex)
       if (opts.wikilinks) {
         // replace all wikilinks inside a table first

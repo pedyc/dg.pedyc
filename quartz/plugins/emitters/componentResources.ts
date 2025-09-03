@@ -3,7 +3,6 @@ import { QuartzEmitterPlugin } from "../types"
 
 // @ts-ignore
 import spaRouterScript from "../../components/scripts/spa.inline"
-
 // @ts-ignore
 import popoverScript from "../../components/scripts/popover.inline"
 import styles from "../../styles/custom.scss"
@@ -80,11 +79,6 @@ async function joinScripts(scripts: string[]): Promise<string> {
 function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentResources) {
   const cfg = ctx.cfg.configuration
 
-  // spaRouterScript should be loaded before other scripts that use window.addCleanup
-  if (cfg.enableSPA) {
-    componentResources.beforeDOMLoaded.push(spaRouterScript)
-  }
-
   // popovers
   if (cfg.enablePopovers) {
     componentResources.afterDOMLoaded.push(popoverScript)
@@ -141,19 +135,15 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
     `)
   } else if (cfg.analytics?.provider === "goatcounter") {
     componentResources.afterDOMLoaded.push(`
-      const goatcounterScriptPre = document.createElement('script');
-      goatcounterScriptPre.textContent = \`
-        window.goatcounter = { no_onload: true };
-      \`;
-      document.head.appendChild(goatcounterScriptPre);
-
-      const endpoint = "https://${cfg.analytics.websiteId}.${cfg.analytics.host ?? "goatcounter.com"}/count";
       const goatcounterScript = document.createElement('script');
       goatcounterScript.src = "${cfg.analytics.scriptSrc ?? "https://gc.zgo.at/count.js"}";
       goatcounterScript.defer = true;
-      goatcounterScript.setAttribute('data-goatcounter', endpoint);
+      goatcounterScript.setAttribute(
+        'data-goatcounter',
+        "https://${cfg.analytics.websiteId}.${cfg.analytics.host ?? "goatcounter.com"}/count"
+      );
       goatcounterScript.onload = () => {
-        window.goatcounter.endpoint = endpoint;
+        window.goatcounter = { no_onload: true };
         goatcounter.count({ path: location.pathname });
         document.addEventListener('nav', () => {
           goatcounter.count({ path: location.pathname });
@@ -213,27 +203,8 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
     componentResources.afterDOMLoaded.push(spaRouterScript)
   } else {
     componentResources.afterDOMLoaded.push(`
-      window.spaNavigate = (pathname) => { window.location.assign(pathname); return Promise.resolve(); }
-      
-      // 非 SPA 模式下的清理函数实现
-      const cleanupTasks = []
-      window.addCleanup = (fn) => {
-        if (typeof fn === 'function') {
-          cleanupTasks.push(fn)
-        }
-      }
-      
-      // 页面卸载时执行清理
-      window.addEventListener('beforeunload', () => {
-        cleanupTasks.forEach(task => {
-          try {
-            task()
-          } catch (error) {
-            console.error('Error during cleanup:', error)
-          }
-        })
-      })
-      
+      window.spaNavigate = (url, _) => window.location.assign(url)
+      window.addCleanup = () => {}
       const event = new CustomEvent("nav", { detail: { url: document.body.dataset.slug } })
       document.dispatchEvent(event)
     `)
@@ -343,6 +314,6 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
         content: postscript,
       })
     },
-    async *partialEmit() { },
+    async *partialEmit() {},
   }
 }

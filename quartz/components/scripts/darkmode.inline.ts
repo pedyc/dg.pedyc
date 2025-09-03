@@ -1,12 +1,9 @@
-import { globalStorageManager } from "./managers"
-import { CacheKeyFactory } from "./cache"
-
 const userPref = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"
-const themeKey = CacheKeyFactory.generateSystemKey("theme", "preference")
-const currentTheme = globalStorageManager.instance.getItem('local', themeKey) ?? userPref
+const currentTheme = localStorage.getItem("theme") ?? userPref
 document.documentElement.setAttribute("saved-theme", currentTheme)
 
 const emitThemeChangeEvent = (theme: "light" | "dark") => {
+  document.body.classList.add("animation-ready")
   const event: CustomEventMap["themechange"] = new CustomEvent("themechange", {
     detail: { theme },
   })
@@ -18,14 +15,14 @@ document.addEventListener("nav", () => {
     const newTheme =
       document.documentElement.getAttribute("saved-theme") === "dark" ? "light" : "dark"
     document.documentElement.setAttribute("saved-theme", newTheme)
-    globalStorageManager.instance.setItem('local', themeKey, newTheme)
+    localStorage.setItem("theme", newTheme)
     emitThemeChangeEvent(newTheme)
   }
 
   const themeChange = (e: MediaQueryListEvent) => {
     const newTheme = e.matches ? "dark" : "light"
     document.documentElement.setAttribute("saved-theme", newTheme)
-    globalStorageManager.instance.setItem('local', themeKey, newTheme)
+    localStorage.setItem("theme", newTheme)
     emitThemeChangeEvent(newTheme)
   }
 

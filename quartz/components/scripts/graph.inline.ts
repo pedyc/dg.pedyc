@@ -16,17 +16,8 @@ import {
 } from "d3"
 import { Text, Graphics, Application, Container, Circle } from "pixi.js"
 import { Group as TweenGroup, Tween as Tweened } from "@tweenjs/tween.js"
-import { registerEscapeHandler, removeAllChildren } from "./utils/util"
-import {
-  FullSlug,
-  SimpleSlug,
-  getFullSlug,
-  resolveRelative,
-  simplifySlug,
-  RelativeURL,
-  removeDuplicatePathSegments,
-} from "../../util/path"
-import { CacheKeyFactory } from "./cache"
+import { registerEscapeHandler, removeAllChildren } from "./util"
+import { FullSlug, SimpleSlug, getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
 import { D3Config } from "../Graph"
 
 type GraphicsInfo = {
@@ -61,11 +52,7 @@ type NodeRenderData = GraphicsInfo & {
   label: Text
 }
 
-const localStorageKey = CacheKeyFactory.generateSystemKey(
-  "graph-visited",
-  "navigation-history",
-)
-
+const localStorageKey = "graph-visited"
 function getVisited(): Set<SimpleSlug> {
   return new Set(JSON.parse(localStorage.getItem(localStorageKey) ?? "[]"))
 }
@@ -81,20 +68,30 @@ type TweenNode = {
   stop: () => void
 }
 
+// workaround for pixijs webgpu issue: https://github.com/pixijs/pixijs/issues/11389
 async function determineGraphicsAPI(): Promise<"webgpu" | "webgl"> {
   const adapter = await navigator.gpu?.requestAdapter().catch(() => null)
-  if (!adapter) {
+  const device = adapter && (await adapter.requestDevice().catch(() => null))
+  if (!device) {
     return "webgl"
   }
-  // Devices with WebGPU but no float32-blendable feature fail to render the graph
-  return adapter.features.has("float32-blendable") ? "webgpu" : "webgl"
+
+  const canvas = document.createElement("canvas")
+  const gl =
+    (canvas.getContext("webgl2") as WebGL2RenderingContext | null) ??
+    (canvas.getContext("webgl") as WebGLRenderingContext | null)
+
+  // we have to return webgl so pixijs automatically falls back to canvas
+  if (!gl) {
+    return "webgl"
+  }
+
+  const webglMaxTextures = gl.getParameter(gl.MAX_TEXTURE_IMAGE_UNITS)
+  const webgpuMaxTextures = device.limits.maxSampledTexturesPerShaderStage
+
+  return webglMaxTextures === webgpuMaxTextures ? "webgpu" : "webgl"
 }
 
-/**
- * 渲染图谱的核心函数
- * @param graph 图谱的容器 HTMLElement
- * @param fullSlug 当前页面的 FullSlug
- */
 async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const slug = simplifySlug(fullSlug)
   const visited = getVisited()
@@ -510,18 +507,16 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
           // if the time between mousedown and mouseup is short, we consider it a click
           if (Date.now() - dragStartTime < 500) {
             const node = graphData.nodes.find((n) => n.id === event.subject.id) as NodeData
-            const targ = removeDuplicatePathSegments(resolveRelative(fullSlug, node.id))
-            window.spaNavigate(targ as RelativeURL)
+            const targ = resolveRelative(fullSlug, node.id)
+            window.spaNavigate(new URL(targ, window.location.toString()))
           }
         }),
     )
   } else {
     for (const node of nodeRenderData) {
       node.gfx.on("click", () => {
-        const targ = removeDuplicatePathSegments(
-          resolveRelative(fullSlug, node.simulationData.id),
-        )
-        window.spaNavigate(targ as RelativeURL)
+        const targ = resolveRelative(fullSlug, node.simulationData.id)
+        window.spaNavigate(new URL(targ, window.location.toString()))
       })
     }
   }
@@ -676,38 +671,4 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
     cleanupLocalGraphs()
     cleanupGlobalGraphs()
   })
-})
-
-/**
- * 初始化或重新初始化图谱。
- * 会查找图谱容器并调用 renderGraph。
- */
-async function initializeOrReinitializeGraph() {
-  // 查找图谱容器元素
-  const graphElement =
-    document.querySelector<HTMLElement>(".graph-container") ??
-    document.querySelector<HTMLElement>(".global-graph-container")
-
-  if (graphElement) {
-    const currentFullSlug = getFullSlug(window) // 获取当前页面的 slug
-    await renderGraph(graphElement, currentFullSlug)
-  } else {
-  }
-}
-
-// 初始加载时执行图谱渲染
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initializeOrReinitializeGraph)
-} else {
-  initializeOrReinitializeGraph() // DOMContentLoaded 已经发生
-}
-
-// 监听自定义事件以重新初始化图谱
-document.addEventListener("reinit-graph", async (e: CustomEvent<{ url: FullSlug }>) => {
-  console.log("reinit-graph", e)
-  const graph = document.getElementById("graph-container")
-  if (graph) {
-    const fullSlug = e.detail.url
-    await renderGraph(graph, fullSlug)
-  }
 })

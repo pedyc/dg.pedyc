@@ -1,7 +1,7 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/search.scss"
 // @ts-ignore
-import script from "./scripts/search/index.inline"
+import script from "./scripts/search.inline"
 import { classNames } from "../util/lang"
 import { i18n } from "../i18n"
 
@@ -42,13 +42,12 @@ export default ((userOpts?: Partial<SearchOptions>) => {
             <div class="search-layout" data-preview={opts.enablePreview}></div>
           </div>
         </div>
-        <script src="/static/search.bundle.js" defer></script>
       </div>
     )
   }
 
-  Search.css = style
   Search.afterDOMLoaded = script
+  Search.css = style
 
   return Search
 }) satisfies QuartzComponentConstructor

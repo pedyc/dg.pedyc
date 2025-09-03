@@ -17,7 +17,6 @@ type Options = {
     strict?: boolean
     reactionsEnabled?: boolean
     inputPosition?: "top" | "bottom"
-    lang?: string
   }
 }
 
@@ -26,7 +25,7 @@ function boolToStringBool(b: boolean): string {
 }
 
 export default ((opts: Options) => {
-  const Comments: QuartzComponent = ({ displayClass, fileData }: QuartzComponentProps) => {
+  const Comments: QuartzComponent = ({ displayClass, fileData, cfg }: QuartzComponentProps) => {
     // check if comments should be displayed according to frontmatter
     const disableComment: boolean =
       typeof fileData.frontmatter?.comments !== "undefined" &&
@@ -46,7 +45,11 @@ export default ((opts: Options) => {
         data-strict={boolToStringBool(opts.options.strict ?? true)}
         data-reactions-enabled={boolToStringBool(opts.options.reactionsEnabled ?? true)}
         data-input-position={opts.options.inputPosition ?? "bottom"}
-        data-lang={opts.options.lang ?? "en"}
+        data-light-theme={opts.options.lightTheme ?? "light"}
+        data-dark-theme={opts.options.darkTheme ?? "dark"}
+        data-theme-url={
+          opts.options.themeUrl ?? `https://${cfg.baseUrl ?? "example.com"}/static/giscus`
+        }
       ></div>
     )
   }

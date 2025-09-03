@@ -1,13 +1,13 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 // @ts-ignore
-// import script from "./scripts/graph.inline"
+import script from "./scripts/graph.inline"
 import style from "./styles/graph.scss"
 import { i18n } from "../i18n"
 import { classNames } from "../util/lang"
 
 export interface D3Config {
   drag: boolean
-  zoom: number
+  zoom: boolean
   depth: number
   scale: number
   repelForce: number
@@ -19,7 +19,6 @@ export interface D3Config {
   showTags: boolean
   focusOnHover?: boolean
   enableRadial?: boolean
-  highlightBrowsingPath?: boolean
 }
 
 interface GraphOptions {
@@ -30,35 +29,33 @@ interface GraphOptions {
 const defaultOptions: GraphOptions = {
   localGraph: {
     drag: true,
-    zoom: 1,
+    zoom: true,
     depth: 1,
     scale: 1.1,
     repelForce: 0.5,
     centerForce: 0.3,
     linkDistance: 30,
     fontSize: 0.6,
-    opacityScale: 1.5, // 增加透明度缩放系数
+    opacityScale: 1,
     showTags: true,
     removeTags: [],
     focusOnHover: false,
     enableRadial: false,
-    highlightBrowsingPath: false,
   },
   globalGraph: {
     drag: true,
-    zoom: 1,
+    zoom: true,
     depth: -1,
     scale: 0.9,
     repelForce: 0.5,
     centerForce: 0.2,
     linkDistance: 30,
     fontSize: 0.6,
-    opacityScale: 1.5, // 增加透明度缩放系数
+    opacityScale: 1,
     showTags: true,
     removeTags: [],
     focusOnHover: true,
     enableRadial: true,
-    highlightBrowsingPath: true,
   },
 }
 
@@ -70,7 +67,7 @@ export default ((opts?: Partial<GraphOptions>) => {
       <div class={classNames(displayClass, "graph")}>
         <h3>{i18n(cfg.locale).components.graph.title}</h3>
         <div class="graph-outer">
-          <div class="graph-container" data-cfg={JSON.stringify(localGraph || {})}></div>
+          <div class="graph-container" data-cfg={JSON.stringify(localGraph)}></div>
           <button class="global-graph-icon" aria-label="Global Graph">
             <svg
               version="1.1"
@@ -99,15 +96,14 @@ export default ((opts?: Partial<GraphOptions>) => {
           </button>
         </div>
         <div class="global-graph-outer">
-          <div class="global-graph-container" data-cfg={JSON.stringify(globalGraph || {})}></div>
+          <div class="global-graph-container" data-cfg={JSON.stringify(globalGraph)}></div>
         </div>
-        <script src="/static/graph.bundle.js" defer></script>
       </div>
     )
   }
 
   Graph.css = style
-  // Graph.afterDOMLoaded = script
+  Graph.afterDOMLoaded = script
 
   return Graph
 }) satisfies QuartzComponentConstructor

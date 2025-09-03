@@ -12,9 +12,9 @@ const OverflowList = ({
   )
 }
 
-let numLists = 0
+let numExplorers = 0
 export default () => {
-  const id = `list-${numLists++}`
+  const id = `list-${numExplorers++}`
 
   return {
     OverflowList: (props: JSX.HTMLAttributes<HTMLUListElement>) => (
@@ -41,7 +41,7 @@ document.addEventListener("nav", (e) => {
   if (!end) return
 
   observer.observe(end)
-  globalResourceManager.instance.addCleanupTask(() => observer.disconnect())
+  window.addCleanup(() => observer.disconnect())
 })
 `,
   }

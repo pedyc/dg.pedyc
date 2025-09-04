@@ -52,7 +52,7 @@ export default (() => {
           </>
         )} */}
 
-        <link rel="stylesheet" href="/static/fonts/font.css" />
+        <link rel="stylesheet" href="/static/fonts/font.css" spa-preserve />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 

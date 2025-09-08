@@ -162,7 +162,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Diary/2025-09-04.md",
+                    "file": "PARA/20-AREAS/02前端/React.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -177,7 +177,7 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "2025-09-04"
+                  "title": "React"
                 }
               },
               {
@@ -245,13 +245,13 @@
                         "state": {
                           "type": "outline",
                           "state": {
-                            "file": "Diary/2025-09-04.md",
+                            "file": "PARA/20-AREAS/02前端/React.md",
                             "followCursor": false,
                             "showSearch": false,
                             "searchQuery": ""
                           },
                           "icon": "lucide-list",
-                          "title": "Outline of 2025-09-04"
+                          "title": "Outline of React"
                         }
                       }
                     ]
@@ -267,7 +267,7 @@
                         "state": {
                           "type": "localgraph",
                           "state": {
-                            "file": "Diary/2025-09-04.md",
+                            "file": "PARA/20-AREAS/02前端/React.md",
                             "options": {
                               "collapse-filter": true,
                               "search": "",
@@ -295,7 +295,7 @@
                             }
                           },
                           "icon": "lucide-git-fork",
-                          "title": "Graph of 2025-09-04"
+                          "title": "Graph of React"
                         }
                       }
                     ]
@@ -484,14 +484,15 @@
       "templater-obsidian:Templater": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "copilot:Open Copilot Chat": false,
-      "cmdr:堆叠/取消堆叠标签页": false
+      "cmdr:堆叠/取消堆叠标签页": false,
+      "obsidian-local-images-plus:Local Images Plus  0.16.4\r\nLocalize attachments (plugin folder)": false
     }
   },
   "active": "eadae8a64454d1cb",
   "lastOpenFiles": [
     "Diary/_resources",
-    "PARA/20-AREAS/04AI/重构助手提示词.md",
     "Diary/2025-09-04.md",
+    "PARA/20-AREAS/04AI/重构助手提示词.md",
     "Clippings/5 Agent Workflows You Need to Master (And Exactly How to Use Them).md",
     "Clippings/_resources/5 Agent Workflows You Need to Master (And Exactly How to Use Them)/5de08731cd16322802a0eb2fbf78cf14_MD5.webp",
     "Clippings/_resources/5 Agent Workflows You Need to Master (And Exactly How to Use Them)/87b316cabfe059b8294a566fb3b36592_MD5.webp",
@@ -534,7 +535,6 @@
     "Bases/excalidraw.base",
     "PARA/20-AREAS/03视觉思维/常用视觉工具.excalidraw.svg",
     "Bases",
-    "copilot-custom-prompts/_resources",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

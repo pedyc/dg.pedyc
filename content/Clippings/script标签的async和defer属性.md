@@ -1,7 +1,7 @@
 ---
 title: script标签的async和defer属性
 date-created: 2025-05-14
-date-modified: 2025-05-14
+date-modified: 2025-09-25
 ---
 
 「HTML 的  `<script>` 当中， `<script async>`  与  `<script defer>` 有什么差别？」这一题可以分成两个阶段来答，先讨论为什么需要 `async` 与 `defer` 这两个属性，接着再分析两者的差别。以下为这题的拟答笔记。

@@ -66,6 +66,12 @@
       "icon": "lucide-paw-print",
       "name": "ExcaliBrain: ExcaliBrain Normal",
       "mode": "any"
+    },
+    {
+      "id": "calendar:show-calendar-view",
+      "icon": "lucide-calendar-days",
+      "name": "Calendar: Open view",
+      "mode": "any"
     }
   ],
   "macros": [],

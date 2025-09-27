@@ -4,7 +4,7 @@ aliases: [React.js, ReactJS]
 description: React 是一个用于构建用户界面的 JavaScript 库，它采用组件化的开发模式，能够高效地更新和渲染视图。
 tags: [前端, JavaScript, 框架]
 date-created: 2025-05-21
-date-modified: 2025-09-08
+date-modified: 2025-09-09
 content-type: concept
 keywords: [React, React.js, JavaScript, UI, 组件化, Virtual DOM]
 para: area
@@ -36,7 +36,7 @@ React 是一个用于构建用户界面的 JavaScript 库，由 Facebook 开发�
 - [[组件 (React)]]：「React 的核心概念，用于构建 UI 的基本单元。」
 - [[JSX]]：「React 的语法扩展，允许在 JavaScript 代码中编写 HTML 结构。」
 - [[Virtual DOM]]：「React 的核心技术，用于高效地更新和渲染视图。」
-- [[Hook (React)]]
+- [[React 重新渲染]]
 
 ### 设计理念
 
@@ -50,7 +50,7 @@ React 是一个用于构建用户界面的 JavaScript 库，由 Facebook 开发�
 ### 状态管理
 
 - [[状态管理 (React)]]：「React 中管理组件状态的方式，例如使用 useState、useReducer 等 Hook。」
-- [[Hook (React)]]：「React 16.8 引入的新特性，允许在函数组件中使用状态和其他 React 特性。」
+- [[Hooks (React)]]：「React 16.8 引入的新特性，允许在函数组件中使用状态和其他 React 特性。」
 - [[Redux]]：「React 的状态管理库，用于管理复杂应用的状态。」
 
 ### 路由

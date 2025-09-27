@@ -4,7 +4,6 @@
   "highlightr-plugin",
   "obsidian-style-settings",
   "cmdr",
-  "calendar",
   "obsidian-linter",
   "obsidian-local-images-plus",
   "templater-obsidian",
@@ -17,5 +16,7 @@
   "obsidian-latex-suite",
   "copilot",
   "obsidian-image-toolkit",
-  "excalibrain"
+  "excalibrain",
+  "obsidian-footnotes",
+  "calendar"
 ]

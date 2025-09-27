@@ -227,8 +227,6 @@
     "Next": {}
   },
   "navigationHistory": [
-    "_template/Untitled.md",
-    "Excalidraw/对角线遍历.excalidraw.md",
     "Excalidraw/draw_8_thinking_map.excalidraw.md",
     "Excalidraw/draw_how_to_organize_your_note.excalidraw",
     "Excalidraw/draw_knowledge_atomization.md",
@@ -276,7 +274,9 @@
     "PARA/20-AREAS/03视觉思维/视觉工具.excalidraw.md",
     "Diary/2025-05-21.md",
     "PARA/20-AREAS/08知识管理/0800知识管理.md",
-    "PARA/20-AREAS/02前端/SPA.md"
+    "PARA/20-AREAS/02前端/SPA.md",
+    "https://github.com/ped-Yc",
+    "index.md"
   ],
   "allowOntologySuggester": true,
   "ontologySuggesterParentTrigger": "::p",

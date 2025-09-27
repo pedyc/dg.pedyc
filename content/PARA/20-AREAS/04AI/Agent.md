@@ -3,7 +3,7 @@ title: Agent
 description: "能够感知环境、自主决策并执行行动的智能实体"
 tags: [AI/智能体, 人工智能, 自主系统]
 date-created: 2025-08-25
-date-modified: 2025-08-25
+date-modified: 2025-09-12
 content-type: "concept"
 keywords: [智能体, 自主决策, 感知-决策-执行, 多智能体系统]
 para: "area"

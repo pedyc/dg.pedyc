@@ -1,5 +1,5 @@
 {
-  "name": "@pedyc/dg.pedyc",
+  "name": "dg",
   "description": "🌱 publish your digital garden and notes as a website",
   "private": true,
   "version": "4.5.1",
@@ -14,18 +14,22 @@
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
     "docs": "npx quartz build --serve -d docs",
-    "server": "npx quartz build --serve -d content --port 8081 --wsPort 3000",
-    "start": "npx quartz build --serve --watch",
+    "dev": "cross-env NODE_OPTIONS=\"--max-old-space-size=6144 --max-semi-space-size=128\" npx quartz build --serve -d content --port 8081 --wsPort 3001 --concurrency=1",
+    "start": "cross-env NODE_OPTIONS=\"--max-old-space-size=6144\" npx quartz build --serve --watch --port 8081 --concurrency=1",
     "build": "npm run subset-fonts && npm run build:main",
-    "build:main": "node quartz/bootstrap-cli.mjs build",
-    "build:bundles": "node build-bundles.js",
+    "build:main": "cross-env NODE_OPTIONS=\"--max-old-space-size=6144\" node quartz/bootstrap-cli.mjs build --concurrency=1",
+    "build:bundles": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" node build-bundles.js",
     "subset-fonts": "node quartz/scripts/subset_fonts.js",
+    "type-check": "tsc --noEmit",
     "check": "tsc --noEmit && npx prettier . --check --ignore-path .prettierignore",
     "format": "npx prettier . --write --ignore-path .prettierignore",
     "test": "tsx ./quartz/util/path.test.ts && tsx ./quartz/depgraph.test.ts",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "serve": "npx quartz serve",
-    "preinstall": "npm install --no-save @napi-rs/simple-git@latest @myriaddreamin/typst-ts-node-compiler@latest sharp@latest lightningcss@latest"
+    "memory:monitor": "node scripts/memory-optimize.js monitor",
+    "memory:report": "node scripts/memory-optimize.js report",
+    "memory:clean": "node scripts/memory-optimize.js clean",
+    "dev:optimized": "concurrently \"npm run memory:monitor\" \"npm run dev\""
   },
   "engines": {
     "npm": ">=10.9.2",
@@ -124,6 +128,8 @@
     "@types/source-map-support": "^0.5.10",
     "@types/ws": "^8.18.1",
     "@types/yargs": "^17.0.33",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
     "esbuild": "^0.25.8",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.6.2",

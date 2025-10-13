@@ -7,7 +7,7 @@ author:
 description: 
 tags: [原则, PARA]
 date-created: 2025-02-22
-date-modified: 2025-05-10
+date-modified: 2025-09-29
 status: 
 content-type: theory
 ---

@@ -1,7 +1,7 @@
 ---
 title: 我的VSCode配置
 date-created: 2025-05-28
-date-modified: 2025-05-28
+date-modified: 2025-10-09
 ---
 
 ```json

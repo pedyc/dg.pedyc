@@ -1,16 +1,12 @@
 ---
 title: 2025Q1-学习Github Actions
-tags:
-  - DevOps
-  - CI/CD
+tags: [DevOps, CI/CD]
 date-created: 2025-01-01
-date-modified: 2025-04-14
+date-modified: 2025-10-02
 status: 进行中
-area:
-  - "[[00算法领域]]"
+area: ["[[00算法领域]]"]
 cycle: 2025/01/01 - 2025/03/31
-type:
-  - project
+type: [project]
 ---
 
 ## 🎯 核心靶心

@@ -4,229 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "1d0a9ba433660226",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "5161891edc96f818",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SimpRead/20-6000 字 + 6 个案例：写给普通人的 MCP 入门指南.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "20-6000 字 + 6 个案例：写给普通人的 MCP 入门指南"
-            }
-          },
-          {
-            "id": "ac7d7cb0766321e5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/01个人成长/心流体验.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "心流体验"
-            }
-          },
-          {
-            "id": "939e98a06b54dc12",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/04AI/0400AI.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "0400AI"
-            }
-          },
-          {
-            "id": "fff1a55d21b7f2f4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/04AI/0400AI.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "0400AI"
-            }
-          },
-          {
-            "id": "e4717d294d8980a4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/04AI/0400AI.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "0400AI"
-            }
-          },
-          {
-            "id": "387bb6cda2bc0141",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/04AI/前端AI工作流.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "前端AI工作流"
-            }
-          },
-          {
-            "id": "eadae8a64454d1cb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/20-AREAS/02前端/React.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "React"
-            }
-          },
-          {
-            "id": "858aa3a039ead6c7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/00-META/00关于本库.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "00关于本库"
-            }
-          },
-          {
-            "id": "05fa7f3123568b49",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/40-ARCHIVES/数字花园概述.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "数字花园概述"
-            }
-          }
-        ],
-        "currentTab": 7
-      },
-      {
         "id": "e1c34754d88af276",
         "type": "tabs",
         "children": [
@@ -234,12 +11,62 @@
             "id": "1de29f5a899c31dd",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2025-09-25 11.10.32.excalidraw.md"
+                "file": "Diary/2025-10-14.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2025-09-25 11.10.32.excalidraw"
+              "icon": "lucide-file",
+              "title": "2025-10-14"
+            }
+          },
+          {
+            "id": "cfe69f8e5d211bb5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/20-AREAS/02前端/JavaScript 引擎.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "JavaScript 引擎"
+            }
+          },
+          {
+            "id": "c4fddd01950f21dc",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://v8.dev/",
+                "title": "V8 JavaScript engine",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "V8 JavaScript engine"
             }
           }
         ]
@@ -302,15 +129,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
-                "matchingCase": true,
+                "query": "google ",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "搜索"
             }
           },
           {
@@ -427,22 +254,42 @@
       "obsidian-local-images-plus:Local Images Plus  0.16.4\r\nLocalize attachments (plugin folder)": false,
       "templater-obsidian:Templater": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "copilot:Open Copilot Chat": false,
-      "homepage:Open homepage": false
+      "copilot:Open Copilot Chat": false
     }
   },
   "active": "1de29f5a899c31dd",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2025-09-25 11.10.32.excalidraw.md",
-    "_template/_scripts/handleFrontermatter.js.md",
-    "Excalidraw/Drawing 2025-09-25 11.10.32.excalidraw.svg",
-    "Clippings/script标签的async和defer属性.md",
-    "PARA/00-META/00关于本库.md",
-    "index.md",
-    "Diary/2025-09-25.md",
-    "Clippings/Getting Started.md",
     "Diary/_resources",
-    "Diary/2025-09-24.md",
+    "Diary/2025-10-13.md",
+    "Diary/2025-10-14.md",
+    "Diary/2025-10-12.md",
+    "Diary/2025-10-11.md",
+    "Diary/2025-10-10.md",
+    "Diary/2025-10-09.md",
+    "Diary/2025-10-08.md",
+    "Diary/2025-10-07.md",
+    "Diary/2025-10-06.md",
+    "Diary/2025-10-05.md",
+    "Diary/2025-10-03.md",
+    "PARA/20-AREAS/02前端/JavaScript 引擎.md",
+    "Follow/Build AI-Powered App.md",
+    "PARA/20-AREAS/02前端/我的VSCode配置.md",
+    "SimpRead/21-用 AI 重构知识管理：重塑 Obsidian 工作流的三层进阶指南.md",
+    "copilot-conversations/[[0400AI]][[templage_area]]根据模板和标题生成领域笔记@20250820_095419.md",
+    "PARA/20-AREAS/04AI/提示词工程.md",
+    "SimpRead/_resources/1-如何进入生成式 AI 的新范式",
+    "SimpRead/1-如何进入生成式 AI 的新范式.md",
+    "Diary/2025-10-04.md",
+    "Diary/2025-10-02.md",
+    "Diary/2025-10-01.md",
+    "PARA/10-PROJECTS/2025Q1-学习Github Actions.md",
+    "PARA/10-PROJECTS/2025Q1-学习Jest.md",
+    "PARA/10-PROJECTS/2025Q1-学习Docker.md",
+    "PARA/10-PROJECTS/2025Q2-个人认知提升专项.md",
+    "Excalidraw/Drawing 2025-10-01 11.21.21.excalidraw.svg",
+    "Excalidraw/Drawing 2025-09-25 11.10.32.excalidraw.svg",
+    "Excalidraw/前端框架对比：Vue&React.excalidraw.svg",
+    "PARA/00-META/_resources",
     "Clippings/_resources/Getting Started/6b1bb2655db1e08c0d5e5f0afa51f2b5_MD5.jpg",
     "Clippings/_resources/Getting Started/04a087ae6acd04d5c8dc679cacd48144_MD5.jpg",
     "Clippings/_resources/Getting Started/a0f835535a061a099244ca5a049a58f6_MD5.jpg",
@@ -450,35 +297,13 @@
     "Clippings/_resources/Getting Started/d449b98f04c6568ff74122782c3808cb_MD5.jpg",
     "Clippings/_resources/Getting Started/3c52467119ccc158162d3305582cac9b_MD5.jpg",
     "Clippings/_resources/Getting Started/4d2964a27245154b392e8249303136a1_MD5.jpg",
-    "Clippings/_resources/Getting Started/75cbe5bad0188825fff303999aa0bca0_MD5.jpg",
-    "Clippings/_resources/Getting Started/a40066da989e4a4b7c450322be06e675_MD5.jpg",
     "Clippings/_resources/Getting Started",
-    "PARA/40-ARCHIVES/数字花园概述.md",
-    "excalibrain.md",
-    "PARA/20-AREAS/02前端/SPA.md",
-    "Diary/2025-09-23.md",
-    "Diary/2025-09-17.md",
-    "Clippings/EP177 The Modern Software Stack.md",
     "Clippings/_resources/EP177 The Modern Software Stack",
-    "Diary/2025-09-15.md",
-    "Diary/2025-09-14.md",
-    "Diary/2025-09-13.md",
-    "2025-W38.md",
-    "Diary/2025-09-04.md",
-    "PARA/20-AREAS/04AI/Agent.md",
-    "Diary/2025-09-12.md",
-    "Clippings/Liquid Glass in the Browser Refraction with CSS and SVG.md",
-    "PARA/20-AREAS/02前端/React 重新渲染.md",
-    "PARA/20-AREAS/02前端/React.md",
-    "PARA/20-AREAS/02前端/Hooks (React).md",
-    "PARA/20-AREAS/02前端/useCallback.md",
     "Clippings/_resources/5 Agent Workflows You Need to Master (And Exactly How to Use Them)",
     "SimpRead/backup/simpread_config@20250902230443.json",
     "PARA/20-AREAS/04AI/_resources",
     "copilot-conversations/_resources",
     "PARA/20-AREAS/04AI/Google_Prompt Engineering_v7.pdf",
-    "PARA/20-AREAS/04AI/Untitled.base",
-    "Bases/all.base",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

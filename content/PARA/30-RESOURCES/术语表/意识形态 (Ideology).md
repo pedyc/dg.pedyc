@@ -3,7 +3,7 @@ title: 意识形态 (Ideology)
 description: 意识形态是特定社会群体或阶级所持有的信念、价值观和思想体系，它塑造了人们对世界的认知，并为政治行动提供合法性。
 tags: [政治, 社会, 思想, 权力, 文化]
 date-created: 2025-04-25
-date-modified: 2025-04-25
+date-modified: 2025-10-23
 keywords: [意识形态, 权力, 社会结构, 文化霸权, 政治哲学]
 para: Resource
 related: ["[[政治哲学]]", "[[社会学]]", "[[文化研究]]"]

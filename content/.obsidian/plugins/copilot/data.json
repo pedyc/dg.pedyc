@@ -11,12 +11,12 @@
   "azureOpenAIApiDeploymentName": "",
   "azureOpenAIApiVersion": "",
   "azureOpenAIApiEmbeddingDeploymentName": "",
-  "googleApiKey": "AIzaSyA8ijUzGT7nZIdsodAW_MbhTGafjkEAgrw",
-  "openRouterAiApiKey": "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",
+  "googleApiKey": "enc_desk_djEwYSm4jAthuCZp3AV1kOCkZ75ZNEV4x9dwKjTjEEZnJ7eDfj320VGZUW2YSRhnjgt64/NIH/Ot0Z0EkjPsD3uwelCt7g==",
+  "openRouterAiApiKey": "enc_desk_djEwKhLUVBtBYOVfIA/n5bTbuqCT07vDBa7qpoPziQRJfVYB8Q2wdGj5h3E1rBT//sc49RLIY4nqFdMl0iYFI1KKmKwbVH0erWRMWGBlmwume1E1lmX33dthCd0Ja3b0pktVfUUDxqc=",
   "mistralApiKey": "",
-  "deepseekApiKey": "sk-c67fc9990bea497dbcb16db8f1617174",
+  "deepseekApiKey": "enc_desk_djEw5N6O/luvK/4KPaWJ7ZSnaiTbSqND0NfI4/+q8fPscmPkAWgQax2I3QTkSFiGs+OTOm6ZlSyG94fS38agn2os",
   "defaultChainType": "llm_chain",
-  "defaultModelKey": "gemini-2.5-flash-lite|google",
+  "defaultModelKey": "gemini-2.5-flash|google",
   "embeddingModelKey": "text-embedding-3-small|openai",
   "temperature": 0.1,
   "maxTokens": 1000,
@@ -37,7 +37,7 @@
   "chatNoteContextTags": [],
   "enableIndexSync": true,
   "debug": false,
-  "enableEncryption": false,
+  "enableEncryption": true,
   "maxSourceChunks": 3,
   "groqApiKey": "",
   "activeModels": [
@@ -51,7 +51,8 @@
       "projectEnabled": false,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "apiKey": ""
     },
     {
       "name": "google/gemini-2.5-flash-lite",
@@ -62,7 +63,8 @@
       "projectEnabled": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "apiKey": ""
     },
     {
       "name": "google/gemini-2.5-flash",
@@ -73,7 +75,8 @@
       "projectEnabled": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "apiKey": ""
     },
     {
       "name": "google/gemini-2.5-pro",
@@ -84,7 +87,8 @@
       "projectEnabled": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "apiKey": ""
     },
     {
       "name": "gpt-5",
@@ -94,7 +98,8 @@
       "core": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "apiKey": ""
     },
     {
       "name": "gpt-5-mini",
@@ -104,7 +109,8 @@
       "core": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "apiKey": ""
     },
     {
       "name": "gpt-5-nano",
@@ -114,7 +120,8 @@
       "core": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "apiKey": ""
     },
     {
       "name": "gpt-4.1",
@@ -125,7 +132,8 @@
       "projectEnabled": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "apiKey": ""
     },
     {
       "name": "gpt-4.1-mini",
@@ -136,7 +144,8 @@
       "projectEnabled": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "apiKey": ""
     },
     {
       "name": "gpt-4.1-nano",
@@ -145,7 +154,8 @@
       "isBuiltIn": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "apiKey": ""
     },
     {
       "name": "claude-sonnet-4-20250514",
@@ -155,7 +165,8 @@
       "capabilities": [
         "reasoning",
         "vision"
-      ]
+      ],
+      "apiKey": ""
     },
     {
       "name": "claude-3-7-sonnet-latest",
@@ -165,19 +176,22 @@
       "capabilities": [
         "reasoning",
         "vision"
-      ]
+      ],
+      "apiKey": ""
     },
     {
       "name": "grok-3-beta",
       "provider": "xai",
       "enabled": true,
-      "isBuiltIn": true
+      "isBuiltIn": true,
+      "apiKey": ""
     },
     {
       "name": "grok-3-mini-beta",
       "provider": "xai",
       "enabled": true,
-      "isBuiltIn": true
+      "isBuiltIn": true,
+      "apiKey": ""
     },
     {
       "name": "gemini-2.5-flash",
@@ -187,7 +201,8 @@
       "projectEnabled": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "apiKey": "enc_desk_djEwiH9mxyL/EbjnVtyPiIa01nwcLdxbAjN2b8vyZJYpPasP1H5Ie4eRio/vvcTkPK+rhrupbdz4eksIPKWWmJU8+6S7mA=="
     },
     {
       "name": "gemini-2.5-flash-lite",
@@ -197,7 +212,8 @@
       "projectEnabled": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "apiKey": ""
     },
     {
       "name": "gemini-2.5-pro",
@@ -207,19 +223,22 @@
       "projectEnabled": true,
       "capabilities": [
         "vision"
-      ]
+      ],
+      "apiKey": ""
     },
     {
       "name": "azure-openai",
       "provider": "azure openai",
       "enabled": true,
-      "isBuiltIn": true
+      "isBuiltIn": true,
+      "apiKey": ""
     },
     {
       "name": "deepseek-chat",
       "provider": "deepseek",
       "enabled": true,
-      "isBuiltIn": true
+      "isBuiltIn": true,
+      "apiKey": ""
     },
     {
       "name": "deepseek-reasoner",
@@ -228,7 +247,8 @@
       "isBuiltIn": true,
       "capabilities": [
         "reasoning"
-      ]
+      ],
+      "apiKey": ""
     }
   ],
   "activeEmbeddingModels": [
@@ -239,7 +259,8 @@
       "isBuiltIn": true,
       "isEmbeddingModel": true,
       "core": true,
-      "plusExclusive": true
+      "plusExclusive": true,
+      "apiKey": ""
     },
     {
       "name": "copilot-plus-large",
@@ -250,7 +271,8 @@
       "core": true,
       "plusExclusive": true,
       "believerExclusive": true,
-      "dimensions": 1024
+      "dimensions": 1024,
+      "apiKey": ""
     },
     {
       "name": "copilot-plus-multilingual",
@@ -260,7 +282,8 @@
       "isEmbeddingModel": true,
       "core": true,
       "plusExclusive": true,
-      "dimensions": 512
+      "dimensions": 512,
+      "apiKey": ""
     },
     {
       "name": "text-embedding-3-small",
@@ -268,7 +291,8 @@
       "enabled": true,
       "isBuiltIn": true,
       "isEmbeddingModel": true,
-      "core": true
+      "core": true,
+      "apiKey": ""
     },
     {
       "name": "gemini-embedding-001",
@@ -276,35 +300,40 @@
       "enabled": true,
       "isBuiltIn": true,
       "isEmbeddingModel": true,
-      "core": true
+      "core": true,
+      "apiKey": ""
     },
     {
       "name": "text-embedding-3-large",
       "provider": "openai",
       "enabled": true,
       "isBuiltIn": true,
-      "isEmbeddingModel": true
+      "isEmbeddingModel": true,
+      "apiKey": ""
     },
     {
       "name": "embed-multilingual-light-v3.0",
       "provider": "cohereai",
       "enabled": true,
       "isBuiltIn": true,
-      "isEmbeddingModel": true
+      "isEmbeddingModel": true,
+      "apiKey": ""
     },
     {
       "name": "text-embedding-004",
       "provider": "google",
       "enabled": true,
       "isBuiltIn": true,
-      "isEmbeddingModel": true
+      "isEmbeddingModel": true,
+      "apiKey": ""
     },
     {
       "name": "azure-openai",
       "provider": "azure openai",
       "enabled": true,
       "isBuiltIn": true,
-      "isEmbeddingModel": true
+      "isEmbeddingModel": true,
+      "apiKey": ""
     }
   ],
   "embeddingRequestsPerMin": 90,
@@ -334,5 +363,11 @@
     "replaceInFile"
   ],
   "generateAIChatTitleOnSave": true,
-  "enableInlineCitations": true
+  "enableInlineCitations": true,
+  "enableAutocomplete": false,
+  "memoryFolderName": "copilot/memory",
+  "enableRecentConversations": false,
+  "enableSavedMemory": false,
+  "maxRecentConversations": 30,
+  "enableSemanticSearchV3": true
 }

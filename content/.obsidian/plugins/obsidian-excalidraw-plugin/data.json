@@ -138106,7 +138106,8 @@
     }
   },
   "defaultTrayMode": true,
-  "previousRelease": "2.15.3",
+  "compactModeOnTablets": true,
+  "previousRelease": "2.16.1",
   "showReleaseNotes": true,
   "compareManifestToPluginVersion": true,
   "showNewVersionNotification": true,

@@ -3,7 +3,7 @@ title: 知识论(Epistemology)
 description: 知识论（Epistemology），又称认识论，是哲学的一个分支，研究知识的本质、来源、范围和有效性。它探讨我们如何认识世界，以及我们所获得的知识是否可靠。
 tags: [哲学, 知识论, 认识论, 真理, 信念]
 date-created: 2025-04-28
-date-modified: 2025-04-28
+date-modified: 2025-10-19
 keywords: [知识, " justified true belief", 理性主义, 经验主义, 怀疑主义]
 para: Resource
 related: ["[[哲学(Philosophy)]]", "[[真理]]", "[[信念]]", "[[理性]]", "[[经验]]", "[[怀疑主义]]"]

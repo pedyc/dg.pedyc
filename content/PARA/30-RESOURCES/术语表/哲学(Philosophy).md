@@ -3,7 +3,7 @@ title: 哲学(Philosophy)
 description: "哲学是对存在、知识、价值、理性、心灵和语言等基本问题的理性探究。它是一种思考的艺术与科学，旨在追求智慧和真理。"
 tags: ["哲学", "思考", "智慧", "知识"]
 date-created: 2025-04-28
-date-modified: 2025-04-28
+date-modified: 2025-10-23
 keywords: [形而上学, 伦理学, 知识论, 逻辑学, 美学]
 para: "Resource"
 related: ["[[知识论]]", "[[伦理学]]", "[[形而上学]]", "[[逻辑学]]", "[[美学]]"]

@@ -3,7 +3,7 @@ title: 存在主义(Existentialism)
 description: 存在主义是一种关注个体存在体验的哲学思潮，强调在无意义的宇宙中，人通过自由选择和行动来定义自己，并承担相应的责任。
 tags: [哲学, 存在主义, 自由意志, 责任, 意义]
 date-created: 2025-04-27
-date-modified: 2025-05-06
+date-modified: 2025-10-21
 keywords: [存在先于本质, 荒诞, 萨特, 加缪, 海德格尔]
 para: Resource
 related: ["[[哲学(Philosophy)]]", "[[虚无主义（Nihilism）]]", "[[自由意志(Free Will)]]"]

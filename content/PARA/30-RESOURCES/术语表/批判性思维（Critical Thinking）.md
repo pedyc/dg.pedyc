@@ -3,7 +3,7 @@ title: 批判性思维（Critical Thinking）
 description: "一种通过评估证据和逻辑来形成判断的思维方式。"
 tags: ["思维方法", "认知能力"]
 date-created: 2025-05-03
-date-modified: 2025-05-13
+date-modified: 2025-10-23
 content-type: "concept"
 keywords: [证据评估, 逻辑推理, 论证分析]
 para: "area"

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Diary/2025-10-14.md",
+                "file": "Diary/2025-10-25.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-10-14"
+              "title": "2025-10-25"
             }
           },
           {
-            "id": "cfe69f8e5d211bb5",
+            "id": "a76c653998f05845",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/20-AREAS/02前端/JavaScript 引擎.md",
+                "file": "Clippings/How I Built Agent Skills for Claude Code.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,21 +52,23 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "JavaScript 引擎"
+              "title": "How I Built Agent Skills for Claude Code"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "c16f049ace952783",
+        "type": "tabs",
+        "children": [
           {
-            "id": "c4fddd01950f21dc",
+            "id": "dd55ffbdc12a3b47",
             "type": "leaf",
             "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://v8.dev/",
-                "title": "V8 JavaScript engine",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "V8 JavaScript engine"
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
             }
           }
         ]
@@ -120,7 +122,7 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "书签"
             }
           },
           {
@@ -129,7 +131,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "google ",
+                "query": "[\"title\"]",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -152,7 +154,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "标签"
             }
           },
           {
@@ -166,7 +168,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "All properties"
+              "title": "添加笔记属性"
             }
           }
         ]
@@ -259,33 +261,42 @@
   },
   "active": "1de29f5a899c31dd",
   "lastOpenFiles": [
+    "Diary/2025-10-24.md",
+    "Diary/2025-10-25.md",
+    "PARA/30-RESOURCES/术语表/知识 (Knowledge).md",
+    "PARA/30-RESOURCES/术语表/哲学(Philosophy).md",
+    "PARA/30-RESOURCES/术语表/意识形态 (Ideology).md",
+    "PARA/20-AREAS/06哲学/0600哲学.md",
+    "PARA/30-RESOURCES/术语表/存在 (Being).md",
+    "PARA/20-AREAS/06哲学/存在—概念笔记.md",
+    "PARA/20-AREAS/06哲学/逻辑学.md",
+    "Diary/2025-10-23.md",
+    "copilot-conversations/举孝廉，不知书。这句话的完整诗词@20251023_091744.md",
+    "PARA/30-RESOURCES/术语表/批判性思维（Critical Thinking）.md",
+    "PARA/20-AREAS/09数学/0900数学.md",
+    "PARA/20-AREAS/05算法与数据结构/0500算法与数据结构.md",
+    "PARA/20-AREAS/09数学",
+    "PARA/20-AREAS/05算法与数据结构/常用数据结构信息汇总.md",
+    "Diary/2025-10-22.md",
     "Diary/_resources",
-    "Diary/2025-10-13.md",
-    "Diary/2025-10-14.md",
-    "Diary/2025-10-12.md",
-    "Diary/2025-10-11.md",
-    "Diary/2025-10-10.md",
-    "Diary/2025-10-09.md",
-    "Diary/2025-10-08.md",
-    "Diary/2025-10-07.md",
-    "Diary/2025-10-06.md",
-    "Diary/2025-10-05.md",
-    "Diary/2025-10-03.md",
+    "PARA/20-AREAS/01个人成长/心流体验.md",
+    "Clippings/How I Built Agent Skills for Claude Code.md",
+    "copilot-conversations/_resources",
+    "copilot-conversations/介绍一下巴别塔概念@20251021_165113.md",
+    "Bases/all.base",
+    "Bases/excalidraw.base",
     "PARA/20-AREAS/02前端/JavaScript 引擎.md",
-    "Follow/Build AI-Powered App.md",
-    "PARA/20-AREAS/02前端/我的VSCode配置.md",
-    "SimpRead/21-用 AI 重构知识管理：重塑 Obsidian 工作流的三层进阶指南.md",
+    "_resources/sw-lifecycle.svg",
+    "_resources/webkit-main-flow-b779d50c0cf28_856.png",
+    "_resources/browser-components-9cd8ff834cc9c_856.png",
+    "Diary/2025-10-21.md",
+    "Diary/2025-10-20.md",
+    "PARA/30-RESOURCES/术语表/存在主义(Existentialism).md",
     "copilot-conversations/[[0400AI]][[templage_area]]根据模板和标题生成领域笔记@20250820_095419.md",
-    "PARA/20-AREAS/04AI/提示词工程.md",
+    "PARA/30-RESOURCES/术语表/苏格拉底方法.md",
+    "PARA/30-RESOURCES/术语表/苏格拉底.md",
+    "PARA/20-AREAS/01个人成长/_resources",
     "SimpRead/_resources/1-如何进入生成式 AI 的新范式",
-    "SimpRead/1-如何进入生成式 AI 的新范式.md",
-    "Diary/2025-10-04.md",
-    "Diary/2025-10-02.md",
-    "Diary/2025-10-01.md",
-    "PARA/10-PROJECTS/2025Q1-学习Github Actions.md",
-    "PARA/10-PROJECTS/2025Q1-学习Jest.md",
-    "PARA/10-PROJECTS/2025Q1-学习Docker.md",
-    "PARA/10-PROJECTS/2025Q2-个人认知提升专项.md",
     "Excalidraw/Drawing 2025-10-01 11.21.21.excalidraw.svg",
     "Excalidraw/Drawing 2025-09-25 11.10.32.excalidraw.svg",
     "Excalidraw/前端框架对比：Vue&React.excalidraw.svg",
@@ -294,16 +305,8 @@
     "Clippings/_resources/Getting Started/04a087ae6acd04d5c8dc679cacd48144_MD5.jpg",
     "Clippings/_resources/Getting Started/a0f835535a061a099244ca5a049a58f6_MD5.jpg",
     "Clippings/_resources/Getting Started/54ebdbc59bacdbfe7ba100b25e1b9207_MD5.jpg",
-    "Clippings/_resources/Getting Started/d449b98f04c6568ff74122782c3808cb_MD5.jpg",
-    "Clippings/_resources/Getting Started/3c52467119ccc158162d3305582cac9b_MD5.jpg",
-    "Clippings/_resources/Getting Started/4d2964a27245154b392e8249303136a1_MD5.jpg",
     "Clippings/_resources/Getting Started",
     "Clippings/_resources/EP177 The Modern Software Stack",
-    "Clippings/_resources/5 Agent Workflows You Need to Master (And Exactly How to Use Them)",
-    "SimpRead/backup/simpread_config@20250902230443.json",
-    "PARA/20-AREAS/04AI/_resources",
-    "copilot-conversations/_resources",
-    "PARA/20-AREAS/04AI/Google_Prompt Engineering_v7.pdf",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

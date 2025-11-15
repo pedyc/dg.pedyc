@@ -10,6 +10,7 @@ import { read } from "to-vfile"
 import { FilePath, QUARTZ, slugifyFilePath } from "../util/path"
 import path from "path"
 import workerpool, { Promise as WorkerPromise } from "workerpool"
+import os from "os"
 import { QuartzLogger } from "../util/log"
 import { trace } from "../util/trace"
 import { BuildCtx, WorkerSerializableBuildCtx } from "../util/ctx"
@@ -152,7 +153,11 @@ export async function parseMarkdown(ctx: BuildCtx, fps: FilePath[]): Promise<Pro
 
   // rough heuristics: 128 gives enough time for v8 to JIT and optimize parsing code paths
   const CHUNK_SIZE = 128
-  const concurrency = ctx.argv.concurrency ?? clamp(fps.length / CHUNK_SIZE, 1, 4)
+  const envConcurrency = process.env.QUARTZ_CONCURRENCY
+    ? Number(process.env.QUARTZ_CONCURRENCY)
+    : undefined
+  const defaultWorkers = clamp(os.cpus().length - 1, 1, 8)
+  const concurrency = ctx.argv.concurrency ?? envConcurrency ?? defaultWorkers
 
   let res: ProcessedContent[] = []
   log.start(`Parsing input files using ${concurrency} threads`)

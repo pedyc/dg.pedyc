@@ -29,12 +29,6 @@
       "mode": "any"
     },
     {
-      "id": "theme:use-light",
-      "icon": "lucide-sun",
-      "name": "使用浅色模式",
-      "mode": "any"
-    },
-    {
       "id": "theme:use-dark",
       "icon": "lucide-moon-star",
       "name": "使用深色模式",

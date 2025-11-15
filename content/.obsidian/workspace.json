@@ -32,6 +32,18 @@
             }
           },
           {
+            "id": "f7909fff6adf9926",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.3"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.10.3"
+            }
+          },
+          {
             "id": "a76c653998f05845",
             "type": "leaf",
             "state": {
@@ -55,7 +67,8 @@
               "title": "How I Built Agent Skills for Claude Code"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "c16f049ace952783",
@@ -259,7 +272,7 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "1de29f5a899c31dd",
+  "active": "f7909fff6adf9926",
   "lastOpenFiles": [
     "Diary/2025-10-24.md",
     "Diary/2025-10-25.md",

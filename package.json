@@ -14,10 +14,10 @@
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
     "docs": "npx quartz build --serve -d docs",
-    "dev": "npx quartz build --serve -d content",
-    "start": "cross-env NODE_OPTIONS=\"--max-old-space-size=6144\" npx quartz build --serve --watch --port 8081 --concurrency=1",
+    "dev": "npx quartz build --serve --port 8081 -d content",
+    "start": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" npx quartz build --serve --watch --port 8081",
     "build": "npm run subset-fonts && npm run build:main",
-    "build:main": "cross-env NODE_OPTIONS=\"--max-old-space-size=6144\" node quartz/bootstrap-cli.mjs build --concurrency=1",
+    "build:main": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" node quartz/bootstrap-cli.mjs build",
     "build:bundles": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" node build-bundles.js",
     "subset-fonts": "node quartz/scripts/subset_fonts.js",
     "type-check": "tsc --noEmit",

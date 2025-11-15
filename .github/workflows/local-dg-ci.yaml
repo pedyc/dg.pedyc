@@ -1,0 +1,67 @@
+name: DG Build (Local)
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: Detect changes
+        id: changes
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            fonts:
+              - 'apps/dg/quartz/static/fonts/**'
+            content:
+              - 'apps/dg/content/**'
+              - 'apps/dg/docs/**'
+            config:
+              - 'apps/dg/quartz/**'
+
+      - name: Install deps (dg)
+        run: pnpm -C apps/dg i --frozen-lockfile
+
+      - name: Subset fonts (changed only)
+        if: steps.changes.outputs.fonts == 'true'
+        run: pnpm -C apps/dg run subset-fonts
+
+      - name: Build DG
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+        run: pnpm -C apps/dg run build:main
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dg-public
+          path: apps/dg/public

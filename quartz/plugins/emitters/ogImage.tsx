@@ -12,6 +12,7 @@ import { BuildCtx } from "../../util/ctx"
 import { QuartzPluginData } from "../vfile"
 import fs from "node:fs/promises"
 import { styleText } from "util"
+import path from "path"
 
 const defaultOptions: SocialImageOptions = {
   colorScheme: "lightMode",
@@ -80,6 +81,17 @@ async function processOgImage(
     fileData.frontmatter?.socialDescription ??
     fileData.frontmatter?.description ??
     unescapeHTML(fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description)
+
+  const outPath = joinSegments(ctx.argv.output, `${slug}-og-image.webp`)
+  try {
+    const [srcStat, outStat] = [
+      await fs.stat(fileData.filePath!),
+      await fs.stat(outPath).catch(() => null),
+    ]
+    if (outStat && outStat.mtimeMs >= srcStat.mtimeMs) {
+      return outPath as FullSlug
+    }
+  } catch {}
 
   const stream = await generateSocialImage(
     {

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Diary/2025-10-25.md",
+                "file": "Diary/2025-11-17.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-10-25"
+              "title": "2025-11-17"
             }
           },
           {
@@ -67,8 +67,7 @@
               "title": "How I Built Agent Skills for Claude Code"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "c16f049ace952783",
@@ -188,7 +187,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 209.5
+    "width": 253.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -272,10 +271,13 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "f7909fff6adf9926",
+  "active": "1de29f5a899c31dd",
   "lastOpenFiles": [
-    "Diary/2025-10-24.md",
+    "Diary/2025-11-16.md",
+    "Diary/2025-11-17.md",
+    "Diary/_resources",
     "Diary/2025-10-25.md",
+    "Diary/2025-10-24.md",
     "PARA/30-RESOURCES/术语表/知识 (Knowledge).md",
     "PARA/30-RESOURCES/术语表/哲学(Philosophy).md",
     "PARA/30-RESOURCES/术语表/意识形态 (Ideology).md",
@@ -291,7 +293,6 @@
     "PARA/20-AREAS/09数学",
     "PARA/20-AREAS/05算法与数据结构/常用数据结构信息汇总.md",
     "Diary/2025-10-22.md",
-    "Diary/_resources",
     "PARA/20-AREAS/01个人成长/心流体验.md",
     "Clippings/How I Built Agent Skills for Claude Code.md",
     "copilot-conversations/_resources",
@@ -306,8 +307,6 @@
     "Diary/2025-10-20.md",
     "PARA/30-RESOURCES/术语表/存在主义(Existentialism).md",
     "copilot-conversations/[[0400AI]][[templage_area]]根据模板和标题生成领域笔记@20250820_095419.md",
-    "PARA/30-RESOURCES/术语表/苏格拉底方法.md",
-    "PARA/30-RESOURCES/术语表/苏格拉底.md",
     "PARA/20-AREAS/01个人成长/_resources",
     "SimpRead/_resources/1-如何进入生成式 AI 的新范式",
     "Excalidraw/Drawing 2025-10-01 11.21.21.excalidraw.svg",

@@ -113,17 +113,6 @@
       "apiKey": ""
     },
     {
-      "name": "gpt-5-nano",
-      "provider": "openai",
-      "enabled": true,
-      "isBuiltIn": true,
-      "core": true,
-      "capabilities": [
-        "vision"
-      ],
-      "apiKey": ""
-    },
-    {
       "name": "gpt-4.1",
       "provider": "openai",
       "enabled": true,
@@ -142,6 +131,17 @@
       "isBuiltIn": true,
       "core": true,
       "projectEnabled": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gpt-5-nano",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
       "capabilities": [
         "vision"
       ],
@@ -304,6 +304,16 @@
       "apiKey": ""
     },
     {
+      "name": "Qwen/Qwen3-Embedding-0.6B",
+      "provider": "siliconflow",
+      "enabled": true,
+      "isBuiltIn": true,
+      "isEmbeddingModel": true,
+      "core": true,
+      "baseUrl": "https://api.siliconflow.com/v1",
+      "apiKey": ""
+    },
+    {
       "name": "text-embedding-3-large",
       "provider": "openai",
       "enabled": true,
@@ -369,5 +379,8 @@
   "enableRecentConversations": false,
   "enableSavedMemory": false,
   "maxRecentConversations": 30,
-  "enableSemanticSearchV3": true
+  "enableSemanticSearchV3": true,
+  "quickCommandIncludeNoteContext": true,
+  "autoIncludeTextSelection": false,
+  "defaultSendShortcut": "enter"
 }

@@ -4,7 +4,7 @@ author: ["[[DEV Community]]"]
 description: "How I stopped re-explaining my legacy database every single conversation  So I was working with this... Tagged with claude, ai, productivity, development."
 tags: ["clippings"]
 date-created: 2025-10-21
-date-modified: 2025-10-21
+date-modified: 2025-11-27
 created: 2025-10-21
 published: 2025-10-21
 source: "https://dev.to/nunc/how-i-built-agent-skills-for-claude-code-oj4"

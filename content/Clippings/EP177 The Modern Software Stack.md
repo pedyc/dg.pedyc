@@ -4,7 +4,7 @@ author: ["[[ByteByteGo]]"]
 description: "In today’s world, building software means working across multiple layers, each with its own role, tools, and technologies."
 tags: ["clippings"]
 date-created: 2025-09-17
-date-modified: 2025-09-17
+date-modified: 2025-11-27
 created: 2025-09-17
 published: 2025-08-23
 source: "https://blog.bytebytego.com/p/ep177-the-modern-software-stack?ref=dailydev"

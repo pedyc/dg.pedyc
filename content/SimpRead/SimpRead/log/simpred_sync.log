@@ -1,0 +1,462 @@
+[2024-08-11 08:39:48.097] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-11 08:39:52.195] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240811083952.json
+[2024-08-11 12:58:00.666] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-11 23:18:51.113] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240811231851.json
+[2024-08-11 23:18:52.133] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\output/22-适配器模式 - JavaScript Guidebook.html, C:\Users\zxc66\MyDocs\output/22-适配器模式 - JavaScript Guidebook.md
+[2024-08-11 23:18:52.134] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/22-全能、全平台书签管理工具：Raindrop_io.html
+[2024-08-11 23:18:53.121] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/22-全能、全平台书签管理工具：Raindrop_io.md
+[2024-08-12 09:24:30.025] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-12 11:36:18.101] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240812113618.json
+[2024-08-12 11:36:18.811] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/23-How Google handles JavaScript throughout the indexing process – Vercel.html
+[2024-08-12 11:36:19.810] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/23-How Google handles JavaScript throughout the indexing process – Vercel.md
+[2024-08-12 12:46:07.769] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240812124607.json
+[2024-08-12 12:46:08.489] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\output/24-何新：关于共济会核心信仰（犹太密教）与基督教的区别 _ 犹太 _ 犹太人_手机网易网.html, C:\Users\zxc66\MyDocs\output/24-何新：关于共济会核心信仰（犹太密教）与基督教的区别 _ 犹太 _ 犹太人_手机网易网.md
+[2024-08-12 12:46:08.490] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/24-WebCIA Weekly 第 05 期 - 实习奶爸.html
+[2024-08-12 12:46:09.481] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/24-WebCIA Weekly 第 05 期 - 实习奶爸.md
+[2024-08-13 17:49:00.777] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240813174900.json
+[2024-08-13 18:00:46.532] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240813180046.json
+[2024-08-14 06:08:57.139] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-14 10:47:20.496] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240814104720.json
+[2024-08-14 11:12:09.956] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240814111209.json
+[2024-08-14 14:04:34.395] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-14 22:55:54.382] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-14 22:57:14.910] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240814225714.json
+[2024-08-14 22:57:17.026] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240814225717.json
+[2024-08-14 22:57:19.916] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240814225719.json
+[2024-08-14 23:15:30.880] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240814231530.json
+[2024-08-14 23:15:31.611] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\output/28-全方位强化你的浏览器，我们推荐多达 40+ 款实用的油猴脚本.html, C:\Users\zxc66\MyDocs\output/28-全方位强化你的浏览器，我们推荐多达 40+ 款实用的油猴脚本.md, C:\Users\zxc66\MyDocs\output/28-全方位强化你的浏览器，我们推荐多达 40+ 款实用的油猴脚本@annote.html, C:\Users\zxc66\MyDocs\output/28-全方位强化你的浏览器，我们推荐多达 40+ 款实用的油猴脚本@annote.md
+[2024-08-14 23:15:31.612] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/28-再次折腾 RSS 之搭建 FreshRSS 服务.html
+[2024-08-14 23:15:33.629] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/28-再次折腾 RSS 之搭建 FreshRSS 服务.md
+[2024-08-14 23:19:30.265] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-14 23:22:33.472] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-14 23:22:33.822] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-14 23:22:41.020] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-14 23:23:07.802] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-14 23:23:20.384] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-14 23:23:20.758] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-14 23:23:39.109] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240814232339.json
+[2024-08-14 23:23:41.863] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240814232341.json
+[2024-08-14 23:24:04.703] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-14 23:24:04.749] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-14 23:24:08.321] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-14 23:24:14.875] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-14 23:38:25.218] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/tmp-再次折腾 RSS 之搭建 FreshRSS 服务.html
+[2024-08-14 23:38:25.340] ERROR (on ped-yc): write: send mail 
+    error: {
+      "errno": -4062,
+      "code": "ESOCKET",
+      "syscall": "connect",
+      "address": "2603:1046:c01:248d::2",
+      "port": 587,
+      "command": "CONN"
+    }
+[2024-08-14 23:38:33.368] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/tmp-再次折腾 RSS 之搭建 FreshRSS 服务.html
+[2024-08-14 23:38:33.431] ERROR (on ped-yc): write: send mail 
+    error: {
+      "errno": -4062,
+      "code": "ESOCKET",
+      "syscall": "connect",
+      "address": "2603:1046:c01:248d::2",
+      "port": 587,
+      "command": "CONN"
+    }
+[2024-08-14 23:41:10.647] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/tmp-再次折腾 RSS 之搭建 FreshRSS 服务.html
+[2024-08-14 23:41:10.694] ERROR (on ped-yc): write: send mail 
+    error: {
+      "errno": -4062,
+      "code": "ESOCKET",
+      "syscall": "connect",
+      "address": "2603:1046:c01:248d::2",
+      "port": 587,
+      "command": "CONN"
+    }
+[2024-08-14 23:41:24.753] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/tmp-再次折腾 RSS 之搭建 FreshRSS 服务.html
+[2024-08-14 23:41:24.797] ERROR (on ped-yc): write: send mail 
+    error: {
+      "errno": -4062,
+      "code": "ESOCKET",
+      "syscall": "connect",
+      "address": "2603:1046:c01:248d::2",
+      "port": 587,
+      "command": "CONN"
+    }
+[2024-08-15 00:08:52.850] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/tmp-How does the Internet Work？ - cs_fyi.html
+[2024-08-15 00:08:59.301] ERROR (on ped-yc): write: send mail 
+    error: {
+      "code": "EAUTH",
+      "response": "535 5.7.3 Authentication unsuccessful [SG2PR06CA0230.apcprd06.prod.outlook.com 2024-08-14T16:09:02.195Z 08DCBAD8A78CEF5A]",
+      "responseCode": 535,
+      "command": "AUTH LOGIN"
+    }
+[2024-08-15 00:10:42.726] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/tmp-再次折腾 RSS 之搭建 FreshRSS 服务.html
+[2024-08-15 00:10:49.384] ERROR (on ped-yc): write: send mail 
+    error: {
+      "code": "EAUTH",
+      "response": "535 5.7.3 Authentication unsuccessful [SG2PR06CA0242.apcprd06.prod.outlook.com 2024-08-14T16:10:52.216Z 08DCBB2E2A6C0418]",
+      "responseCode": 535,
+      "command": "AUTH LOGIN"
+    }
+[2024-08-15 00:11:32.348] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/tmp-再次折腾 RSS 之搭建 FreshRSS 服务.html
+[2024-08-15 00:11:40.789] ERROR (on ped-yc): write: send mail 
+    error: {
+      "code": "EAUTH",
+      "response": "535 5.7.3 Authentication unsuccessful [SG2PR06CA0232.apcprd06.prod.outlook.com 2024-08-14T16:11:43.624Z 08DCBBAE14371B4B]",
+      "responseCode": 535,
+      "command": "AUTH LOGIN"
+    }
+[2024-08-15 00:16:20.681] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/tmp-再次折腾 RSS 之搭建 FreshRSS 服务.html
+[2024-08-15 00:16:21.335] ERROR (on ped-yc): write: send mail 
+    error: {
+      "code": "EAUTH",
+      "response": "535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256",
+      "responseCode": 535,
+      "command": "AUTH PLAIN"
+    }
+[2024-08-15 00:16:40.404] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/tmp-再次折腾 RSS 之搭建 FreshRSS 服务.html
+[2024-08-15 00:16:41.120] ERROR (on ped-yc): write: send mail 
+    error: {
+      "code": "EAUTH",
+      "response": "535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256",
+      "responseCode": 535,
+      "command": "AUTH PLAIN"
+    }
+[2024-08-15 00:18:59.026] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/tmp-再次折腾 RSS 之搭建 FreshRSS 服务.html
+[2024-08-15 00:18:59.598] ERROR (on ped-yc): write: send mail 
+    error: {
+      "code": "EAUTH",
+      "response": "535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256",
+      "responseCode": 535,
+      "command": "AUTH PLAIN"
+    }
+[2024-08-15 00:21:05.445] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/tmp-触摸事件 - JavaScript 教程 - 网道.html
+[2024-08-15 00:21:08.702] ERROR (on ped-yc): write: send mail 
+    error: {
+      "code": "EAUTH",
+      "response": "535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256",
+      "responseCode": 535,
+      "command": "AUTH PLAIN"
+    }
+[2024-08-15 00:25:21.737] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240814002521.json
+[2024-08-15 00:31:59.098] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/tmp-触摸事件 - JavaScript 教程 - 网道.html
+[2024-08-15 00:31:59.660] ERROR (on ped-yc): write: send mail 
+    error: {
+      "code": "EAUTH",
+      "response": "535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256",
+      "responseCode": 535,
+      "command": "AUTH PLAIN"
+    }
+[2024-08-15 00:32:12.142] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/tmp-触摸事件 - JavaScript 教程 - 网道.html
+[2024-08-15 00:32:12.700] ERROR (on ped-yc): write: send mail 
+    error: {
+      "code": "EAUTH",
+      "response": "535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256",
+      "responseCode": 535,
+      "command": "AUTH PLAIN"
+    }
+[2024-08-15 00:38:24.228] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/tmp-触摸事件 - JavaScript 教程 - 网道.html
+[2024-08-15 00:38:25.841] INFO (on ped-yc): write: send mail
+[2024-08-15 00:43:33.398] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/tmp-再次折腾 RSS 之搭建 FreshRSS 服务.html
+[2024-08-15 00:43:35.466] INFO (on ped-yc): write: send mail
+[2024-08-15 00:46:19.667] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-15 00:46:20.062] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-15 00:46:25.600] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-15 00:46:25.996] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\output\\27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html"
+    }
+[2024-08-15 00:47:12.419] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/27-How does the Internet Work？ - cs_fyi.md
+[2024-08-15 00:47:16.150] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\output/27-How does the Internet Work？ - cs_fyi.md, C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.html, C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否.md, C:\Users\zxc66\MyDocs\output/27-JavaScript - 手动实现 new - 个人文章 - SegmentFault 思否@annote.html
+[2024-08-15 00:47:16.150] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/27-How does the Internet Work？ - cs_fyi.html
+[2024-08-15 00:47:49.641] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\output/26-javascript - 8 种用于前端性能分析工具 - 终身学习者 - SegmentFault 思否.md
+[2024-08-15 00:47:49.642] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/26-Angular-深入了解NgRx的优势.html
+[2024-08-15 00:47:49.815] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/26-Angular-深入了解NgRx的优势.html
+[2024-08-15 00:47:55.319] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/26-Angular-深入了解NgRx的优势.md
+[2024-08-15 00:51:02.830] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240814005102.json
+[2024-08-15 00:51:08.520] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240814005108.json
+[2024-08-15 00:51:08.537] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240814005108.json
+[2024-08-15 00:51:09.523] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\output/28-再次折腾 RSS 之搭建 FreshRSS 服务.md
+[2024-08-15 00:51:09.524] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/28-再次折腾 RSS 之搭建 FreshRSS 服务.html
+[2024-08-15 00:51:10.219] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/28-再次折腾 RSS 之搭建 FreshRSS 服务@annote.html
+[2024-08-15 00:51:10.524] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/28-再次折腾 RSS 之搭建 FreshRSS 服务.md
+[2024-08-15 00:51:10.916] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/28-再次折腾 RSS 之搭建 FreshRSS 服务@annote.md
+[2024-08-15 00:51:20.205] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240814005120.json
+[2024-08-15 00:51:20.207] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240814005120.json
+[2024-08-15 00:51:20.912] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\output/28-再次折腾 RSS 之搭建 FreshRSS 服务.md, C:\Users\zxc66\MyDocs\output/28-再次折腾 RSS 之搭建 FreshRSS 服务@annote.md
+[2024-08-15 00:51:20.913] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/28-再次折腾 RSS 之搭建 FreshRSS 服务.html
+[2024-08-15 00:51:21.315] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/28-再次折腾 RSS 之搭建 FreshRSS 服务@annote.html
+[2024-08-15 00:51:21.906] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/28-再次折腾 RSS 之搭建 FreshRSS 服务.md
+[2024-08-15 00:51:22.298] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/28-再次折腾 RSS 之搭建 FreshRSS 服务@annote.md
+[2024-08-15 00:52:46.073] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240814005246.json
+[2024-08-15 00:53:43.866] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/25-How to review code effectively- A GitHub staff engineer’s philosophy - The GitHub Blog.html
+[2024-08-15 00:53:47.249] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/25-How to review code effectively- A GitHub staff engineer’s philosophy - The GitHub Blog.md
+[2024-08-15 00:54:38.737] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/21-(14) javascript - 【转载】深入理解Proxy和defineProperty - 个人文章 - SegmentFault 思否.md
+[2024-08-15 00:54:39.832] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\output/21-(14) javascript - 【转载】深入理解Proxy和defineProperty - 个人文章 - SegmentFault 思否.md
+[2024-08-15 00:54:39.832] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\output/21-(14) javascript - 【转载】深入理解Proxy和defineProperty - 个人文章 - SegmentFault 思否.html
+[2024-08-15 07:23:20.318] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-15 13:32:55.782] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240815133255.json
+[2024-08-15 13:32:58.142] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\SimpRead\backup\simpread_config@20240815133258.json
+[2024-08-16 11:28:37.459] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-16 11:34:06.363] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240816113406.json
+[2024-08-16 11:34:07.094] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/30-面试官：有使用过 vue 吗？说说你对 vue 的理解 _ web 前端面试 - 面试官系列.html, C:\Users\zxc66\MyDocs\ClippingVault\output/30-面试官：有使用过 vue 吗？说说你对 vue 的理解 _ web 前端面试 - 面试官系列.md
+[2024-08-16 11:34:07.095] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/30-(23) javascript - 从零搭建 Node_js 企业级 Web 服务器（零）：静态服务 - 个人文章 - SegmentFault 思否.html
+[2024-08-16 11:34:08.104] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/30-(23) javascript - 从零搭建 Node_js 企业级 Web 服务器（零）：静态服务 - 个人文章 - SegmentFault 思否.md
+[2024-08-16 11:36:58.330] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240816113658.json
+[2024-08-16 11:37:11.559] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\ClippingVault\output/29-前端的葵花宝典——架构.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\ClippingVault\\output\\29-前端的葵花宝典——架构.html"
+    }
+[2024-08-16 11:37:25.731] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\ClippingVault\output/29-前端的葵花宝典——架构.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\ClippingVault\\output\\29-前端的葵花宝典——架构.html"
+    }
+[2024-08-16 11:37:26.066] ERROR (on ped-yc): read: C:\Users\zxc66\MyDocs\ClippingVault\output/29-前端的葵花宝典——架构.html 
+    error: {
+      "errno": -4094,
+      "code": "UNKNOWN",
+      "syscall": "open",
+      "path": "C:\\Users\\zxc66\\MyDocs\\ClippingVault\\output\\29-前端的葵花宝典——架构.html"
+    }
+[2024-08-16 11:41:40.716] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240816114140.json
+[2024-08-16 11:44:51.685] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240816114451.json
+[2024-08-16 22:54:01.091] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240816225401.json
+[2024-08-16 22:54:03.073] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240816225403.json
+[2024-08-16 22:54:05.707] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240816225405.json
+[2024-08-16 22:54:09.304] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240816225409.json
+[2024-08-16 23:03:35.747] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240816230335.json
+[2024-08-16 23:03:36.485] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/30-(23) javascript - 从零搭建 Node_js 企业级 Web 服务器（零）：静态服务 - 个人文章 - SegmentFault 思否.html, C:\Users\zxc66\MyDocs\ClippingVault\output/30-(23) javascript - 从零搭建 Node_js 企业级 Web 服务器（零）：静态服务 - 个人文章 - SegmentFault 思否.md
+[2024-08-16 23:03:36.485] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/30-使用 “黑魔法” 优雅的修改第三方依赖包.html
+[2024-08-16 23:03:37.488] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/30-使用 “黑魔法” 优雅的修改第三方依赖包.md
+[2024-08-17 11:06:29.446] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240817110629.json
+[2024-08-17 11:06:30.181] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/31-使用 Hexo + GitHub + Netlify + Cloudflare 搭建个人博客的全流程 _ Grin's Blog.html
+[2024-08-17 11:06:31.156] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/31-使用 Hexo + GitHub + Netlify + Cloudflare 搭建个人博客的全流程 _ Grin's Blog.md
+[2024-08-17 19:49:02.890] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240817194902.json
+[2024-08-17 19:49:07.609] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240817194907.json
+[2024-08-17 19:49:13.419] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240817194913.json
+[2024-08-17 19:49:14.435] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/32-面试官：说说对 React 的理解？有哪些特性？ _ web 前端面试 - 面试官系列.md
+[2024-08-17 19:49:14.436] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.html
+[2024-08-17 19:49:14.820] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别@annote.html
+[2024-08-17 19:49:15.409] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.md
+[2024-08-17 19:49:15.814] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别@annote.md
+[2024-08-17 19:49:18.727] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240817194918.json
+[2024-08-17 19:49:19.706] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.md, C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别@annote.md
+[2024-08-17 19:49:19.706] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.html
+[2024-08-17 19:49:20.697] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.md
+[2024-08-17 19:49:21.005] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240817194921.json
+[2024-08-17 19:49:21.992] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.md
+[2024-08-17 19:49:21.992] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.html
+[2024-08-17 19:49:22.394] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别@annote.html
+[2024-08-17 19:49:23.562] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.md
+[2024-08-17 19:49:23.566] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别@annote.md
+[2024-08-17 19:49:25.306] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240817194925.json
+[2024-08-17 19:49:26.286] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.md, C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别@annote.md
+[2024-08-17 19:49:26.287] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.html
+[2024-08-17 19:49:27.274] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.md
+[2024-08-17 19:49:27.672] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别@annote.md
+[2024-08-17 19:49:27.741] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.md, C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别@annote.md
+[2024-08-17 19:49:27.741] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.html
+[2024-08-17 19:49:27.972] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240817194927.json
+[2024-08-17 19:49:28.145] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别@annote.html
+[2024-08-17 19:49:28.733] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.md
+[2024-08-17 19:49:28.979] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.md
+[2024-08-17 19:49:28.980] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.html
+[2024-08-17 19:49:29.138] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别@annote.md
+[2024-08-17 19:49:29.375] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别@annote.md
+[2024-08-17 19:49:29.375] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别@annote.html
+[2024-08-17 19:49:29.938] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.html
+[2024-08-17 19:49:29.971] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.md
+[2024-08-17 19:49:30.339] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.md
+[2024-08-17 19:49:30.339] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别@annote.html
+[2024-08-17 19:49:30.376] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别@annote.md
+[2024-08-17 19:49:31.281] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别.md
+[2024-08-17 19:49:31.340] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/32-cloudflare_vercel and netlify 的作用和区别@annote.md
+[2024-08-17 19:49:33.455] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240817194933.json
+[2024-08-19 18:15:06.812] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240819181506.json
+[2024-08-19 18:15:07.474] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/33-向 Windows 高级用户进阶，这 10 款效率工具帮你开路 _ 新手问号.md
+[2024-08-19 18:15:07.474] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/33-Obsidian 插件：QuickAdd 自动化操作的编辑器.html
+[2024-08-19 18:15:07.868] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/33-Obsidian 插件：QuickAdd 自动化操作的编辑器@annote.html
+[2024-08-19 18:15:08.461] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/33-Obsidian 插件：QuickAdd 自动化操作的编辑器.md
+[2024-08-19 18:15:08.860] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/33-Obsidian 插件：QuickAdd 自动化操作的编辑器@annote.md
+[2024-08-19 18:15:13.579] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240819181513.json
+[2024-08-19 18:15:14.560] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/33-Obsidian 插件：QuickAdd 自动化操作的编辑器.md, C:\Users\zxc66\MyDocs\ClippingVault\output/33-Obsidian 插件：QuickAdd 自动化操作的编辑器@annote.md
+[2024-08-19 18:15:14.560] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/33-Obsidian 插件：QuickAdd 自动化操作的编辑器.html
+[2024-08-19 18:15:15.567] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/33-Obsidian 插件：QuickAdd 自动化操作的编辑器.md
+[2024-08-19 18:15:30.918] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240819181530.json
+[2024-08-19 18:15:33.204] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240819181533.json
+[2024-08-19 18:16:49.569] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240819181649.json
+[2024-08-19 18:17:14.568] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240819181714.json
+[2024-08-19 18:17:15.600] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/34-面试官：说说 HTTP 常见的状态码有哪些，适用场景？ _ web 前端面试 - 面试官系列.md
+[2024-08-19 18:17:15.600] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/34-PKMer_Mermaid 语法.html
+[2024-08-19 18:17:16.597] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/34-PKMer_Mermaid 语法.md
+[2024-08-20 08:21:04.512] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-20 10:57:59.495] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-22 08:39:43.549] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-22 08:39:48.083] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240822083948.json
+[2024-08-22 08:39:49.147] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240822083949.json
+[2024-08-22 09:27:25.137] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-22 09:31:29.973] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-22 09:59:02.201] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240822095902.json
+[2024-08-22 21:02:58.033] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-23 08:40:13.034] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-23 10:36:17.936] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240823103617.json
+[2024-08-23 10:36:18.596] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/34-PKMer_Mermaid 语法.html, C:\Users\zxc66\MyDocs\ClippingVault\output/34-PKMer_Mermaid 语法.md
+[2024-08-23 10:36:18.597] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/34-PKMer_知识管理常见问题讨论.html
+[2024-08-23 10:36:18.977] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/34-PKMer_知识管理常见问题讨论@annote.html
+[2024-08-23 10:36:19.563] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/34-PKMer_知识管理常见问题讨论.md
+[2024-08-23 10:36:19.960] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/34-PKMer_知识管理常见问题讨论@annote.md
+[2024-08-23 10:36:23.400] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240823103623.json
+[2024-08-26 10:41:31.694] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-27 09:10:57.176] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-08-27 09:11:16.874] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240827091116.json
+[2024-08-30 10:34:46.630] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240830103446.json
+[2024-08-31 09:04:08.637] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-09-08 08:53:35.959] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-09-09 00:18:26.629] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240908001826.json
+[2024-09-09 00:18:28.742] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240908001828.json
+[2024-09-09 00:18:30.973] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240908001830.json
+[2024-09-09 00:18:34.946] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240908001834.json
+[2024-09-09 07:29:16.966] INFO (on ped-yc): SimpRead sync started and listening on port7026
+[2024-09-09 21:19:58.701] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240909211958.json
+[2024-09-10 21:42:54.784] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240910214254.json
+[2024-09-10 21:42:55.789] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/35-面试官：说说 HTTP1_0_1_1_2_0 的区别？ _ web 前端面试 - 面试官系列.md
+[2024-09-10 21:42:55.791] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/35-从信息源到第二大脑：利用 AI 自动化阅读工作流.html
+[2024-09-10 21:42:56.165] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/35-从信息源到第二大脑：利用 AI 自动化阅读工作流@annote.html
+[2024-09-10 21:42:56.756] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/35-从信息源到第二大脑：利用 AI 自动化阅读工作流.md
+[2024-09-10 21:42:57.161] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/35-从信息源到第二大脑：利用 AI 自动化阅读工作流@annote.md
+[2024-09-10 21:43:23.883] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240910214323.json
+[2024-09-10 21:46:27.286] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240910214627.json
+[2024-09-10 21:46:27.319] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/35-从信息源到第二大脑：利用 AI 自动化阅读工作流.md, C:\Users\zxc66\MyDocs\ClippingVault\output/35-从信息源到第二大脑：利用 AI 自动化阅读工作流@annote.md
+[2024-09-10 21:46:27.320] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/35-从信息源到第二大脑：利用 AI 自动化阅读工作流.html
+[2024-09-10 21:46:49.722] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240910214649.json
+[2024-09-10 21:46:49.754] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/35-从信息源到第二大脑：利用 AI 自动化阅读工作流.html
+[2024-09-10 21:46:50.913] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240910214650.json
+[2024-09-10 21:46:50.938] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/35-从信息源到第二大脑：利用 AI 自动化阅读工作流.html
+[2024-09-10 21:48:44.126] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240910214844.json
+[2024-09-10 21:48:47.819] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240910214847.json
+[2024-09-10 21:56:33.883] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240910215633.json
+[2024-09-10 21:56:33.910] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/22-全能、全平台书签管理工具：Raindrop_io.md
+[2024-09-10 21:56:33.910] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/22-全能、全平台书签管理工具：Raindrop_io.html
+[2024-09-10 22:05:36.655] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240910220536.json
+[2024-09-10 22:05:57.491] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240910220557.json
+[2024-09-10 22:06:04.897] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240910220604.json
+[2024-09-10 22:06:52.011] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240910220652.json
+[2024-09-10 22:06:53.004] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/37-高效追踪学术前沿动态.html
+[2024-09-10 22:06:53.996] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/37-高效追踪学术前沿动态.md
+[2024-09-10 22:07:19.057] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240910220719.json
+[2024-09-10 22:07:19.086] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/37-高效追踪学术前沿动态.md
+[2024-09-10 22:07:19.087] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/37-高效追踪学术前沿动态.html
+[2024-09-10 22:08:06.747] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/35-从信息源到第二大脑：利用 AI 自动化阅读工作流.md
+[2024-09-10 22:08:06.836] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/35-从信息源到第二大脑：利用 AI 自动化阅读工作流@annote.md
+[2024-09-10 22:15:20.872] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/35-从信息源到第二大脑：利用 AI 自动化阅读工作流.md
+[2024-09-10 22:21:47.826] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240910222147.json
+[2024-09-10 22:21:48.801] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/38-我如何管理自己的「数字资产」.html
+[2024-09-10 22:21:49.795] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/38-我如何管理自己的「数字资产」.md
+[2024-09-10 22:25:09.636] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/37-高效追踪学术前沿动态.md
+[2024-09-10 22:29:44.111] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\SimpRead\backup\simpread_config@20240910222944.json
+[2024-09-10 22:29:44.794] INFO (on ped-yc): remove: C:\Users\zxc66\MyDocs\ClippingVault\output/37-高效追踪学术前沿动态.md
+[2024-09-10 22:29:44.794] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/37-高效追踪学术前沿动态.html
+[2024-09-10 22:29:45.189] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/37-高效追踪学术前沿动态@annote.html
+[2024-09-10 22:29:45.787] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/37-高效追踪学术前沿动态.md
+[2024-09-10 22:29:46.183] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/37-高效追踪学术前沿动态@annote.md
+[2024-09-10 22:29:51.043] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/37-高效追踪学术前沿动态.md
+[2024-09-10 22:29:51.397] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/37-高效追踪学术前沿动态@annote.md
+[2024-09-10 22:15:20.962] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/35-从信息源到第二大脑：利用 AI 自动化阅读工作流@annote.md
+[2024-09-10 22:29:51.459] INFO (on ped-yc): write: C:\Users\zxc66\MyDocs\ClippingVault\output/37-高效追踪学术前沿动态@annote.md

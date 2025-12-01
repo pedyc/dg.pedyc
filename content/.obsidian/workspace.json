@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Diary/2025-11-17.md",
+                "file": "Clippings/CSS has become too POWERFUL.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,19 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-11-17"
-            }
-          },
-          {
-            "id": "f7909fff6adf9926",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.10.3"
-              },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.10.3"
+              "title": "CSS has become too POWERFUL"
             }
           },
           {
@@ -49,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clippings/How I Built Agent Skills for Claude Code.md",
+                "file": "Clippings/5 Agent Workflows You Need to Master (And Exactly How to Use Them).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -64,10 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "How I Built Agent Skills for Claude Code"
+              "title": "5 Agent Workflows You Need to Master (And Exactly How to Use Them)"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "c16f049ace952783",
@@ -271,10 +260,25 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "1de29f5a899c31dd",
+  "active": "a76c653998f05845",
   "lastOpenFiles": [
-    "Diary/2025-11-16.md",
+    "Clippings/Liquid Glass in the Browser Refraction with CSS and SVG.md",
+    "Clippings/How I Built Agent Skills for Claude Code.md",
+    "Clippings/EP177 The Modern Software Stack.md",
+    "Clippings/Diving Into Reactive Programming in Node.js  AppSignal Blog.md",
+    "Clippings/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/c829b955bce686a696951ba18cef5002_MD5.jpg",
+    "Clippings/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/8131b12ef701bb6d9e2251d0e9eba028_MD5.jpg",
+    "Clippings/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/78812283c2c8dc1138666487cb499402_MD5.jpg",
+    "Clippings/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog",
+    "Clippings/_resources/CSS has become too POWERFUL/929a5c9d2904a4b28060cf59ddc411a2_MD5.jpg",
+    "Clippings/_resources/CSS has become too POWERFUL/aa89f242e13d22bfdc6227f58363dcb7_MD5.jpg",
+    "Clippings/_resources/CSS has become too POWERFUL/88e94769626050c17c5f610eb0ea566d_MD5.jpg",
+    "Clippings/_resources/CSS has become too POWERFUL/ac133da025bc4a7746c42a89cb59a06a_MD5.jpg",
+    "Clippings/_resources/CSS has become too POWERFUL/c28774ea69ab125c23b1dc799789b12f_MD5.jpg",
+    "Clippings/_resources/CSS has become too POWERFUL",
     "Diary/2025-11-17.md",
+    "Clippings/CSS has become too POWERFUL.md",
+    "Diary/2025-11-16.md",
     "Diary/_resources",
     "Diary/2025-10-25.md",
     "Diary/2025-10-24.md",
@@ -294,7 +298,6 @@
     "PARA/20-AREAS/05算法与数据结构/常用数据结构信息汇总.md",
     "Diary/2025-10-22.md",
     "PARA/20-AREAS/01个人成长/心流体验.md",
-    "Clippings/How I Built Agent Skills for Claude Code.md",
     "copilot-conversations/_resources",
     "copilot-conversations/介绍一下巴别塔概念@20251021_165113.md",
     "Bases/all.base",
@@ -302,23 +305,9 @@
     "PARA/20-AREAS/02前端/JavaScript 引擎.md",
     "_resources/sw-lifecycle.svg",
     "_resources/webkit-main-flow-b779d50c0cf28_856.png",
-    "_resources/browser-components-9cd8ff834cc9c_856.png",
-    "Diary/2025-10-21.md",
-    "Diary/2025-10-20.md",
-    "PARA/30-RESOURCES/术语表/存在主义(Existentialism).md",
-    "copilot-conversations/[[0400AI]][[templage_area]]根据模板和标题生成领域笔记@20250820_095419.md",
     "PARA/20-AREAS/01个人成长/_resources",
     "SimpRead/_resources/1-如何进入生成式 AI 的新范式",
-    "Excalidraw/Drawing 2025-10-01 11.21.21.excalidraw.svg",
-    "Excalidraw/Drawing 2025-09-25 11.10.32.excalidraw.svg",
-    "Excalidraw/前端框架对比：Vue&React.excalidraw.svg",
     "PARA/00-META/_resources",
-    "Clippings/_resources/Getting Started/6b1bb2655db1e08c0d5e5f0afa51f2b5_MD5.jpg",
-    "Clippings/_resources/Getting Started/04a087ae6acd04d5c8dc679cacd48144_MD5.jpg",
-    "Clippings/_resources/Getting Started/a0f835535a061a099244ca5a049a58f6_MD5.jpg",
-    "Clippings/_resources/Getting Started/54ebdbc59bacdbfe7ba100b25e1b9207_MD5.jpg",
-    "Clippings/_resources/Getting Started",
-    "Clippings/_resources/EP177 The Modern Software Stack",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

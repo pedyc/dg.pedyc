@@ -5,7 +5,7 @@ import BodyConstructor from "../../components/Body"
 import { pageResources, renderPage } from "../../components/renderPage"
 import { ProcessedContent, QuartzPluginData, defaultProcessedContent } from "../vfile"
 import { FullPageLayout } from "../../cfg"
-import { FullSlug, getAllSegmentPrefixes, joinSegments, pathToRoot } from "../../util/path"
+import { FullSlug, getAllSegmentPrefixes, joinSegments, pathToRoot, slugTag } from "../../util/path"
 import { defaultListPageLayout, sharedPageComponents } from "../../../quartz.layout"
 import { TagContent } from "../../components"
 import { write } from "./helpers"
@@ -38,7 +38,7 @@ function computeTagInfo(
       return [
         tag,
         defaultProcessedContent({
-          slug: joinSegments("tags", tag) as FullSlug,
+          slug: joinSegments("tags", slugTag(tag)) as FullSlug,
           frontmatter: { title, tags: [] },
         }),
       ]
@@ -70,7 +70,7 @@ async function processTagPage(
   opts: FullPageLayout,
   resources: StaticResources,
 ) {
-  const slug = joinSegments("tags", tag) as FullSlug
+  const slug = joinSegments("tags", slugTag(tag)) as FullSlug
   const [tree, file] = tagContent
   const cfg = ctx.cfg.configuration
   const externalResources = pageResources(pathToRoot(slug), resources)

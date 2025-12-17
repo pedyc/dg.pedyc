@@ -321,9 +321,9 @@ desc: Learn about how web browser have evolved. Explore their types, features, a
 
 ## Introduction
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/74089e64aaa4cd6849c9bbc1af4e306b_MD5.jpg]]
+![[74089e64aaa4cd6849c9bbc1af4e306b_MD5.jpg]]
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/720481932e2b1bf0cc15a12903202e4c_MD5.webp]]
+![[720481932e2b1bf0cc15a12903202e4c_MD5.webp]]
 
 With the advent of the internet, digital media has spread rapidly into the business world. Today, every organization must develop its online presence to interact with its customers and make space in the potential market.
 
@@ -353,9 +353,9 @@ By entering a [URL](https://www.ramotion.com/blog/what-is-web-domain/) into the 
 
 Hence, the main functions of a web browser are to fetch and display web pages and provide an interface for user interaction. It allows people to access information online in a [user-friendly experience](https://www.ramotion.com/blog/what-is-ux-design/).
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/96d6038d0d0a528d692ae6f7dd70c0e8_MD5.jpg]]
+![[96d6038d0d0a528d692ae6f7dd70c0e8_MD5.jpg]]
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/b0001b9f8337890e629b4ad77446ad5f_MD5.webp]]
+![[b0001b9f8337890e629b4ad77446ad5f_MD5.webp]]
 
 A list of popular web browsers of today
 
@@ -377,9 +377,9 @@ Browsers with access to the World Wide Web emerged in the 1990s. Let's examine t
 
 Initially, he named it WordWideWeb, but it was later called Nexus. It was linked to the first web server, laying the foundation for the web as we know it today.
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/92d305dea7be4f0d50db16e408ed69dd_MD5.jpg]]
+![[92d305dea7be4f0d50db16e408ed69dd_MD5.jpg]]
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/eb29dc811bd28542cef68bb514f8e6f4_MD5.webp]]
+![[eb29dc811bd28542cef68bb514f8e6f4_MD5.webp]]
 
 A glimpse of the WorldWideWeb interface
 
@@ -389,25 +389,25 @@ Its main functions were to display web pages and navigate hyperlinks. It had no 
 
 The 1990s not only marked the birth of web browsers but also led to their development over time. The first change came in 1991, introducing a **Line Mode Browser** developed by the same Berners-Lee. It was a text-based browser designed for older terminals, allowing broader access to the web beyond specialized workstations.
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/eb89ee353b3b2686900f0b4199a6b57e_MD5.jpg]]
+![[eb89ee353b3b2686900f0b4199a6b57e_MD5.jpg]]
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/41fa4df329b0945014f9bf2c5126e017_MD5.webp]]
+![[41fa4df329b0945014f9bf2c5126e017_MD5.webp]]
 
 A glimpse of the Line Mode interface
 
 The next major shift came in 1993 with the development of **Mosaic**, the first-ever graphical web browser. It was developed by the National Center for Supercomputing Applications (NCSA) and presented images alongside the text on web pages.
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/345660e0005160cc8cbfa16373a1a425_MD5.jpg]]
+![[345660e0005160cc8cbfa16373a1a425_MD5.jpg]]
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/78d1f5b871b89d676afa277714af7a51_MD5.webp]]
+![[78d1f5b871b89d676afa277714af7a51_MD5.webp]]
 
 A glimpse of the Mosaic interface
 
 With the introduction of these early browsers, the development arena took up the pace, and the mid-1990s are often marked as the era for 'browser wars.' It led to the introduction of **Netscape Navigator** in 1994 by Netscape Communications. It became the first widely used commercial web browser.
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/59cf1b1a2720ecbca9592cfef308c7f1_MD5.jpg]]
+![[59cf1b1a2720ecbca9592cfef308c7f1_MD5.jpg]]
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/ba642d0a82c069a7d8657800491c9ee1_MD5.webp]]
+![[ba642d0a82c069a7d8657800491c9ee1_MD5.webp]]
 
 A glimpse of the Netscape Navigator interface
 
@@ -429,9 +429,9 @@ This evolution of web browsers is a story of constant innovation and the drive t
 
 Now that we know how web browsers have evolved, let's look at how they work. Here's a breakdown of how a web browser converts behind-the-scenes technical jargon into a user-friendly experience.
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/9d26d83fb0b8c6bb10eef0ffd1dbd54e_MD5.jpg]]
+![[9d26d83fb0b8c6bb10eef0ffd1dbd54e_MD5.jpg]]
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/143b0811610b6c5640c155739774d855_MD5.webp]]
+![[143b0811610b6c5640c155739774d855_MD5.webp]]
 
 Outlook of how a web browser works
 
@@ -483,9 +483,9 @@ Some common examples of embedded browsers are:
 * **Social Media Apps:** Social media platforms often embed web browsers so users can view shared links or articles without leaving the app.
 * **Gaming Consoles:** Modern gaming consoles frequently have built-in web browsers, which allow users to access online features game guides, and connect with other players.
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/74089e64aaa4cd6849c9bbc1af4e306b_MD5.jpg]]
+![[74089e64aaa4cd6849c9bbc1af4e306b_MD5.jpg]]
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/8e17f8fb27d27a4b842e3e0d0e0e1114_MD5.webp]]
+![[8e17f8fb27d27a4b842e3e0d0e0e1114_MD5.webp]]
 
 It is important to understand the different types of web browsers when choosing the appropriate one for your use.
 
@@ -511,9 +511,9 @@ It allows the user to manage and navigate through multiple websites simultaneous
 
 ### Bookmarks
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/f2d3eebbc1e4417fbb624306a4021820_MD5.jpg]]
+![[f2d3eebbc1e4417fbb624306a4021820_MD5.jpg]]
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/484151535e53f803ed83c15adeda07d5_MD5.webp]]
+![[484151535e53f803ed83c15adeda07d5_MD5.webp]]
 
 An example of bookmarks ([Comodo Help](https://help.comodo.com/uploads/Comodo%20Dragon%20Web%20Browser/cc05948e1bc19ef4d043c103f910787a/5eac818f1e1c4adc19d335055b06586b/6db71e84dd049a605e7ff248f7c256cf/bookmks1.png))
 
@@ -521,9 +521,9 @@ It enables the user to save websites for easy access later, revisiting them in t
 
 ### Browsing History
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/2721b0b7142524c6d39b99758c530fb4_MD5.jpg]]
+![[2721b0b7142524c6d39b99758c530fb4_MD5.jpg]]
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/5f1d32adab89fdce4d3a1fc6e92ebbe9_MD5.webp]]
+![[5f1d32adab89fdce4d3a1fc6e92ebbe9_MD5.webp]]
 
 An example of browsing history ([Vivaldi Browser](https://vivaldi.com/wp-content/uploads/View-delete-browsing-history-Chrome.png))
 
@@ -539,9 +539,9 @@ The integrated search bar allows users to type the relevant keywords directly in
 
 ### User Interface (UI) Customization
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/b83f2d4a714048edc3a26ca0598bf607_MD5.jpg]]
+![[b83f2d4a714048edc3a26ca0598bf607_MD5.jpg]]
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/47638c623a1fdbf7ee8fb9932b579935_MD5.webp]]
+![[47638c623a1fdbf7ee8fb9932b579935_MD5.webp]]
 
 An example of user interface customization ([Chrome Web Store](https://lh3.googleusercontent.com/Un9CXTs6D6iksZTy330ks6g0GOHsribLNotCiO5SsKUxvKE-9zvOXZIJuVwvxuAG6QTwsqD0LZ59UA6jLWonQvLD13Q=s1280-w1280-h800))
 
@@ -549,9 +549,9 @@ It offers different personalization features for a customized UI, including them
 
 ### Extensions and Add-Ons
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/41f35eba43cbfa666f98537f7c87dfbe_MD5.jpg]]
+![[41f35eba43cbfa666f98537f7c87dfbe_MD5.jpg]]
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/71df28e743a240c6e34bc816d3d94d53_MD5.webp]]
+![[71df28e743a240c6e34bc816d3d94d53_MD5.webp]]
 
 An example of extensions and add-ons ([PCMag](https://i.pcmag.com/imagery/articles/06YlZrf7aot9tixxJvapOR0-3..v1569470607.png))
 
@@ -559,9 +559,9 @@ Different extensions and add-ons expand the functionality of the browser. Some c
 
 ### Synchronization
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/a75e61239f09efd33c2830a58cf63baf_MD5.jpg]]
+![[a75e61239f09efd33c2830a58cf63baf_MD5.jpg]]
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/a88b218b0e4aa0527d73af74c6b7bee3_MD5.webp]]
+![[a88b218b0e4aa0527d73af74c6b7bee3_MD5.webp]]
 
 An example of synchronization ([HelloTech](https://www.hellotech.com/guide/wp-content/uploads/2021/01/Sync-in-Google-Chrome-on-an-iPhone_2.jpg))
 
@@ -569,9 +569,9 @@ It allows the user to synchronize their browsing data across multiple devices. I
 
 ### Hypertext Transfer Protocol (HTTPS) Support
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/43d584c8adb0016dfb7cf99992dacc5f_MD5.jpg]]
+![[43d584c8adb0016dfb7cf99992dacc5f_MD5.jpg]]
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/0a4401c4893208be9c5d3483aca1f9fb_MD5.webp]]
+![[0a4401c4893208be9c5d3483aca1f9fb_MD5.webp]]
 
 An example of HTTPS ([The Mozilla Blog](https://blog.mozilla.org/security/files/2020/11/lock.jpg))
 
@@ -583,9 +583,9 @@ It prevents unwanted pop-up windows from interrupting the user's browsing experi
 
 ### Incognito Browsing Mode
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/824cee19c69f708e4f4dd788b59e3d8a_MD5.jpg]]
+![[824cee19c69f708e4f4dd788b59e3d8a_MD5.jpg]]
 
-![[SimpRead/_resources/23-What is a Web Browser： Definition_ Types_ and Features/bec75e22b53ca5e16eb1e0b8258fcf61_MD5.webp]]
+![[bec75e22b53ca5e16eb1e0b8258fcf61_MD5.webp]]
 
 An example of incognito browsing mode ([Computerworld](https://images.idgesg.net/images/article/2020/05/incognito-2-100843144-large.jpg?auto=webp&quality=85,70))
 

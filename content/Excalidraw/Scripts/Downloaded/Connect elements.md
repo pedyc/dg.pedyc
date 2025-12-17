@@ -1,5 +1,5 @@
 /*
-![[Excalidraw/Scripts/Downloaded/_resources/Connect elements/9d2b42627e21e4659c657536080357e3_MD5.jpg]]
+![[9d2b42627e21e4659c657536080357e3_MD5.jpg]]
 
 This script will connect two objects with an arrow. If either of the objects are a set of grouped elements (e.g. a text element grouped with an encapsulating rectangle), the script will identify these groups, and connect the arrow to the largest object in the group (assuming you want to connect the arrow to the box around the text element).
 

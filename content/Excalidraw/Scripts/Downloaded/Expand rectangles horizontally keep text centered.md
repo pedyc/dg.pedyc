@@ -4,7 +4,7 @@
 
 Download this file and save to your Obsidian Vault including the first line, or open it in "Raw" and copy the entire contents to Obsidian.
 
-![[Excalidraw/Scripts/Downloaded/_resources/Expand rectangles horizontally keep text centered/3e63260f9b4783c3d5f5139cd3ec73e8_MD5.gif]]
+![[3e63260f9b4783c3d5f5139cd3ec73e8_MD5.gif]]
 
 This script expands the width of the selected rectangles until they are all the same width and keep the text centered.
 

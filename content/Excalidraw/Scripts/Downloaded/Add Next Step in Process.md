@@ -1,5 +1,5 @@
 /*
-![[Excalidraw/Scripts/Downloaded/_resources/Add Next Step in Process/93974596197cdfd2363f07b36c81f4f7_MD5.jpg]]
+![[93974596197cdfd2363f07b36c81f4f7_MD5.jpg]]
 
 This script will prompt you for the title of the process step, then will create a stick note with the text. If an element is selected then the script will connect this new step with an arrow to the previous step (the selected element). If no element is selected, then the script assumes this is the first step in the process and will only output the sticky note with the text that was entered.
 

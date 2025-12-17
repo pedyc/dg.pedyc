@@ -87,7 +87,7 @@ Three-way handshake in it's simples form is that all the TCP connections begin w
 
 Once the three-way handshake is completed, the data sharing between the client and server may begin. It should be noted that the client may start sending the application data as soon as it dispatches the last ACK packet but the server will still have to wait for the ACK packet to be received in order to fulfill the request.
 
-![[SimpRead/_resources/22-Everything you need to know about HTTP/0c58fe5a0d0ba8e1d087d619c6197cea_MD5.jpg]]
+![[0c58fe5a0d0ba8e1d087d619c6197cea_MD5.jpg]]
 
 However, some implementations of HTTP/1.0 tried to overcome this issue by introducing a new header called Connection: keep-alive which was meant to tell the server "Hey server, do not close this connection, I need it again". But still, it wasn't that widely supported and the problem still persisted.
 
@@ -160,7 +160,7 @@ By now, you must be convinced that why we needed another revision of the HTTP pr
 * Request Prioritization
 * Security
 
-![[SimpRead/_resources/22-Everything you need to know about HTTP/0c58fe5a0d0ba8e1d087d619c6197cea_MD5.jpg]]
+![[0c58fe5a0d0ba8e1d087d619c6197cea_MD5.jpg]]
 
 ### 1. Binary Protocol
 

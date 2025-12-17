@@ -4,7 +4,7 @@ author: ["[[Paolo Perrone]]"]
 description: "Master AI Agent workflows to get reliable, high-quality outputs. Learn prompt chaining, routing, orchestration, parallelization, and evaluation loops."
 tags: ["clippings"]
 date-created: 2025-09-02
-date-modified: 2025-09-02
+date-modified: 2025-12-01
 created: 2025-09-02
 published: 2025-08-20
 source: "https://medium.com/data-science-collective/5-agent-workflows-you-need-to-master-and-exactly-how-to-use-them-1b8726d17d4c"
@@ -28,7 +28,7 @@ Let's dive in!
 
 Prompt chaining means using the output of one LLM call as the input to the next. Instead of dumping a complex task into one giant prompt, you break it into smaller steps.
 
-![[Clippings/_resources/5 Agent Workflows You Need to Master (And Exactly How to Use Them)/0dc268368aaa85fdd75a405e8fb6b25d_MD5.webp]]
+![[0dc268368aaa85fdd75a405e8fb6b25d_MD5.webp]]
 
 The idea is simple: smaller steps reduce confusion and errors. A chain guides the model instead of leaving it to guess.
 
@@ -69,7 +69,7 @@ Routing decides where each input goes.
 
 Not every query deserves your largest, slowest, or most expensive model. Routing makes sure simple tasks go to lightweight models, while complex tasks reach heavyweight ones.
 
-![[Clippings/_resources/5 Agent Workflows You Need to Master (And Exactly How to Use Them)/b9c3d78bc2ff3ba7c28c795c0b2cdab5_MD5.webp]]
+![[b9c3d78bc2ff3ba7c28c795c0b2cdab5_MD5.webp]]
 
 Without routing, you risk overspending on easy tasks or giving poor results on hard ones.
 
@@ -141,7 +141,7 @@ Most people run LLMs one task at a time. If tasks are independent, you can run t
 
 Parallelization breaks a large task into smaller, independent parts that run simultaneously. After each part is done, you combine the results.
 
-![[Clippings/_resources/5 Agent Workflows You Need to Master (And Exactly How to Use Them)/87b316cabfe059b8294a566fb3b36592_MD5.webp]]
+![[87b316cabfe059b8294a566fb3b36592_MD5.webp]]
 
 **Examples**:
 
@@ -214,7 +214,7 @@ This workflow uses an orchestrator model to plan a task and assign specific subt
 
 The orchestrator decides what needs to be done and in what order, so you don't have to design the workflow manually. Worker models handle their tasks, and the orchestrator combines their outputs into a final result.
 
-![[Clippings/_resources/5 Agent Workflows You Need to Master (And Exactly How to Use Them)/5b39c31a74cea19bf740e4393726e9fe_MD5.webp]]
+![[5b39c31a74cea19bf740e4393726e9fe_MD5.webp]]
 
 **Examples**:
 
@@ -312,7 +312,7 @@ This workflow focuses on improving output quality by introducing a feedback loop
 
 One model generates content, and a separate evaluator model checks it against specific criteria. If the output doesn't meet the standards, the generator revises it and the evaluator checks again. This process continues until the output passes.
 
-![[Clippings/_resources/5 Agent Workflows You Need to Master (And Exactly How to Use Them)/5de08731cd16322802a0eb2fbf78cf14_MD5.webp]]
+![[5de08731cd16322802a0eb2fbf78cf14_MD5.webp]]
 
 **Examples**:
 

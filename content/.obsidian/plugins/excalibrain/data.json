@@ -227,7 +227,6 @@
     "Next": {}
   },
   "navigationHistory": [
-    "Excalidraw/draw_8_thinking_map.excalidraw.md",
     "Excalidraw/draw_how_to_organize_your_note.excalidraw",
     "Excalidraw/draw_knowledge_atomization.md",
     "Excalidraw/draw_PKM_Processes.excalidraw.md",
@@ -276,7 +275,8 @@
     "PARA/20-AREAS/08知识管理/0800知识管理.md",
     "PARA/20-AREAS/02前端/SPA.md",
     "https://github.com/ped-Yc",
-    "index.md"
+    "index.md",
+    "PARA/10-PROJECTS/P 构建PKM系统/PARA笔记法.md"
   ],
   "allowOntologySuggester": true,
   "ontologySuggesterParentTrigger": "::p",

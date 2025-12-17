@@ -1,5 +1,5 @@
 /*
-![[Excalidraw/Scripts/Downloaded/_resources/Add Link to Existing File and Open/93f0a5048f291f3f93d003d1db095880_MD5.jpg]]
+![[93f0a5048f291f3f93d003d1db095880_MD5.jpg]]
 
 Prompts for a file from the vault. Adds a link to the selected element pointing to the selected file. You can control in settings to open the file in the current active pane or an adjacent pane.
 

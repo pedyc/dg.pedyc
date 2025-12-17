@@ -44,7 +44,7 @@ Execution Context Stack，下文中简写为 ECS。解释引擎记录执行上�
 
 JS 解释引擎是边解析边执行的。JS 解释引擎在载入一段脚本（进入任何一段 \<script> 标签范围（包括通过 src 引入的外表脚本））的时候，会执行这个流程：（多个 script 标签之间的加载执行顺序问题本文暂时不讨论）
 
-![[SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/dec652c4d24ba72954a2ae3e33ba7334_MD5.jpg]]
+![[dec652c4d24ba72954a2ae3e33ba7334_MD5.jpg]]
 
 ### 2，创建执行上下文
 
@@ -54,13 +54,13 @@ JS 解释引擎是边解析边执行的。JS 解释引擎在载入一段脚本�
 
 **参考下图**：
 
-![[SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/540a2eef172906bd1b685141ed942db7_MD5.jpg]]
+![[540a2eef172906bd1b685141ed942db7_MD5.jpg]]
 
 执行上下文栈示例：
 
 ####
 
-![[SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/8ec600c0c7097d0ca0cbd0b425db68a2_MD5.jpg]]
+![[8ec600c0c7097d0ca0cbd0b425db68a2_MD5.jpg]]
 
 #### 2.2，创建执行上下文示例：MDN 上的一个例子
 
@@ -84,13 +84,13 @@ foo(2);
 
 其执行上下文的入栈、出栈流程示意图：
 
-![[SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/aebe67c234ebc7ef9193718ff1192c5a_MD5.jpg]]
+![[aebe67c234ebc7ef9193718ff1192c5a_MD5.jpg]]
 
 ### 3，创建全局执行上下文，预编译和执行全局代码
 
 这个环节相对简单点，先直接上一个流程图。细节部分参考函数的预编译和执行。
 
-![[SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/2cf3152bc3f7d2bb7ef48e8900495fa0_MD5.jpg]]
+![[2cf3152bc3f7d2bb7ef48e8900495fa0_MD5.jpg]]
 
 ### 4，创建函数执行上下文，预编译和执行函数代码
 
@@ -114,7 +114,7 @@ foo(2);
 
  流程图参考：
 
-![[SimpRead/_resources/24-深入理解 JavaScript 的执行流程，执行上下文 EC、变量对象 VO、活动对象 AO、作用域 Scope（链）_js vo ao 机制 - CSDN 博客/be65bac4b664014eeff9ee02a87d0747_MD5.jpg]]
+![[be65bac4b664014eeff9ee02a87d0747_MD5.jpg]]
 
 ### 5，示例分析
 

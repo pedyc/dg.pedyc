@@ -23,9 +23,12 @@ nnoremap N Nzz
 " 取消搜索高亮
 nnoremap <leader>nh :nohl<CR>
 
+nnoremap <space>o <C-o>
+nnoremap <space>i <C-i>
+
+
 nmap H ^
 nmap L $
-
 
 " Alt + 上下箭头移动当前行
 nnoremap <A-Up> :m-2<CR>

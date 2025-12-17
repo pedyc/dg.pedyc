@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1de29f5a899c31dd",
+            "id": "1efd6108715e37cf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clippings/CSS has become too POWERFUL.md",
+                "file": "PARA/10-PROJECTS/P 构建PKM系统/我是怎样架构混合型知识库的.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "CSS has become too POWERFUL"
+              "title": "我是怎样架构混合型知识库的"
             }
           },
           {
-            "id": "a76c653998f05845",
+            "id": "8edb04e946b997be",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clippings/5 Agent Workflows You Need to Master (And Exactly How to Use Them).md",
+                "file": "PARA/20-AREAS/A 知识管理/信息应按可行动性而非主题分类.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,27 +52,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "5 Agent Workflows You Need to Master (And Exactly How to Use Them)"
+              "title": "信息应按可行动性而非主题分类"
+            }
+          },
+          {
+            "id": "0550fa705ba82619",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/30-RESOURCES/01 Atlas/知识管理大师提示词v5 个人语境版本.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "知识管理大师提示词v5 个人语境版本"
             }
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "c16f049ace952783",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "dd55ffbdc12a3b47",
-            "type": "leaf",
-            "state": {
-              "type": "copilot-chat-view",
-              "state": {},
-              "icon": "message-square",
-              "title": "Copilot"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -84,7 +92,7 @@
       {
         "id": "e31579f7aa38d74b",
         "type": "tabs",
-        "dimension": 77.29903536977491,
+        "dimension": 76.31133671742809,
         "children": [
           {
             "id": "3dfca4b5c072d131",
@@ -104,7 +112,7 @@
       {
         "id": "5e0950099d64d5f6",
         "type": "tabs",
-        "dimension": 22.70096463022508,
+        "dimension": 23.688663282571916,
         "children": [
           {
             "id": "0ce97509d7755f3d",
@@ -132,7 +140,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "[\"title\"]",
+                "query": "just-in-",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -172,11 +180,12 @@
               "title": "添加笔记属性"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 253.5
+    "width": 284.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -192,7 +201,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Diary/2025-09-15.md",
+                "file": "PARA/20-AREAS/03视觉思维/0300视觉思维.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,7 +211,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2025-09-15"
+              "title": "0300视觉思维 的反向链接列表"
             }
           },
           {
@@ -211,12 +220,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PARA/00-META/本库构建指南.excalidraw.md",
+                "file": "PARA/20-AREAS/02前端/前端性能优化.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 本库构建指南.excalidraw"
+              "title": "前端性能优化 的出链列表"
             }
           },
           {
@@ -225,21 +234,31 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Diary/2025-09-15.md",
+                "file": "PARA/30-RESOURCES/02 Zettelkasten/我是怎样架构混合型知识库的.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025-09-15"
+              "title": "我是怎样架构混合型知识库的 的大纲"
+            }
+          },
+          {
+            "id": "a24c0ae278146f58",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 519.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -257,57 +276,58 @@
       "obsidian-local-images-plus:Local Images Plus  0.16.4\r\nLocalize attachments (plugin folder)": false,
       "templater-obsidian:Templater": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "copilot:Open Copilot Chat": false
+      "copilot:Open Copilot Chat": false,
+      "terminal:Open terminal": false
     }
   },
-  "active": "a76c653998f05845",
+  "active": "8edb04e946b997be",
   "lastOpenFiles": [
-    "Clippings/Liquid Glass in the Browser Refraction with CSS and SVG.md",
-    "Clippings/How I Built Agent Skills for Claude Code.md",
-    "Clippings/EP177 The Modern Software Stack.md",
-    "Clippings/Diving Into Reactive Programming in Node.js  AppSignal Blog.md",
-    "Clippings/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/c829b955bce686a696951ba18cef5002_MD5.jpg",
-    "Clippings/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/8131b12ef701bb6d9e2251d0e9eba028_MD5.jpg",
-    "Clippings/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/78812283c2c8dc1138666487cb499402_MD5.jpg",
-    "Clippings/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog",
-    "Clippings/_resources/CSS has become too POWERFUL/929a5c9d2904a4b28060cf59ddc411a2_MD5.jpg",
-    "Clippings/_resources/CSS has become too POWERFUL/aa89f242e13d22bfdc6227f58363dcb7_MD5.jpg",
-    "Clippings/_resources/CSS has become too POWERFUL/88e94769626050c17c5f610eb0ea566d_MD5.jpg",
-    "Clippings/_resources/CSS has become too POWERFUL/ac133da025bc4a7746c42a89cb59a06a_MD5.jpg",
-    "Clippings/_resources/CSS has become too POWERFUL/c28774ea69ab125c23b1dc799789b12f_MD5.jpg",
-    "Clippings/_resources/CSS has become too POWERFUL",
-    "Diary/2025-11-17.md",
-    "Clippings/CSS has become too POWERFUL.md",
-    "Diary/2025-11-16.md",
-    "Diary/_resources",
-    "Diary/2025-10-25.md",
-    "Diary/2025-10-24.md",
-    "PARA/30-RESOURCES/术语表/知识 (Knowledge).md",
-    "PARA/30-RESOURCES/术语表/哲学(Philosophy).md",
-    "PARA/30-RESOURCES/术语表/意识形态 (Ideology).md",
-    "PARA/20-AREAS/06哲学/0600哲学.md",
-    "PARA/30-RESOURCES/术语表/存在 (Being).md",
-    "PARA/20-AREAS/06哲学/存在—概念笔记.md",
-    "PARA/20-AREAS/06哲学/逻辑学.md",
-    "Diary/2025-10-23.md",
-    "copilot-conversations/举孝廉，不知书。这句话的完整诗词@20251023_091744.md",
-    "PARA/30-RESOURCES/术语表/批判性思维（Critical Thinking）.md",
-    "PARA/20-AREAS/09数学/0900数学.md",
-    "PARA/20-AREAS/05算法与数据结构/0500算法与数据结构.md",
-    "PARA/20-AREAS/09数学",
-    "PARA/20-AREAS/05算法与数据结构/常用数据结构信息汇总.md",
-    "Diary/2025-10-22.md",
-    "PARA/20-AREAS/01个人成长/心流体验.md",
-    "copilot-conversations/_resources",
-    "copilot-conversations/介绍一下巴别塔概念@20251021_165113.md",
-    "Bases/all.base",
-    "Bases/excalidraw.base",
-    "PARA/20-AREAS/02前端/JavaScript 引擎.md",
-    "_resources/sw-lifecycle.svg",
-    "_resources/webkit-main-flow-b779d50c0cf28_856.png",
-    "PARA/20-AREAS/01个人成长/_resources",
-    "SimpRead/_resources/1-如何进入生成式 AI 的新范式",
-    "PARA/00-META/_resources",
+    "PARA/10-PROJECTS/P 构建PKM系统/我是怎样架构混合型知识库的.md",
+    "PARA/20-AREAS/A 知识管理/00知识管理.md",
+    "PARA/30-RESOURCES/01 Atlas/知识管理大师提示词v5 个人语境版本.md",
+    "PARA/20-AREAS/A 知识管理/信息应按可行动性而非主题分类.md",
+    "_template/template_atomic.md",
+    "_template/template_archive.md",
+    "_template/template_area.md",
+    "PARA/20-AREAS/A 知识管理/自下而上的涌现优于自上而下的分类.md",
+    "PARA/00-META/本库检索方案.md",
+    "PARA/30-RESOURCES/02 Zettelkasten/知识只有被调用时才产生价值.md",
+    "PARA/20-AREAS/A 知识管理/SOP-CODE知识全生命周期工作流.md",
+    "_template/template_concept.md",
+    "Bases/ALL.base",
+    "Bases/EXCALIDRAW.base",
+    "Bases/PARA.base",
+    "PARA/30-RESOURCES/01 Atlas/经济学基础.md",
+    "PARA/30-RESOURCES/01 Atlas/知识管理大师提示词v4 动态重构版本.md",
+    "PARA/30-RESOURCES/01 Atlas/术语表/稀缺性.md",
+    "copilot/copilot-conversations/根据模板重写笔记@20251217_005515.md",
+    "PARA/30-RESOURCES/01 Atlas/术语表/权力 (Power).md",
+    "_template/template_term.md",
+    "PARA/30-RESOURCES/01 Atlas/术语表/信噪比.md",
+    "PARA/30-RESOURCES/02 Zettelkasten/外部大脑能释放前额叶的认知负荷.md",
+    "PARA/30-RESOURCES/01 Atlas/术语表/米勒法则.md",
+    "PARA/20-AREAS/A 个人成长/00个人成长.md",
+    "PARA/30-RESOURCES/01 Atlas/概念表/艾宾浩斯记忆曲线.md",
+    "PARA/30-RESOURCES/01 Atlas/概念表/SPA.md",
+    "PARA/30-RESOURCES/01 Atlas/费曼技巧.md",
+    "PARA/30-RESOURCES/01 Atlas/概念表/00概念表.md",
+    "PARA/30-RESOURCES/01 Atlas/概念表",
+    "PARA/20-AREAS/A 知识管理/_resources/draw_PKM_methods.svg",
+    "PARA/30-RESOURCES/02 Zettelkasten/_resources",
+    "Diary/_resources/2025-12-13",
+    "PARA/30-RESOURCES/01 Atlas/读书笔记",
+    "PARA/10-PROJECTS/P 构建PKM系统/未命名.base",
+    "PARA/10-PROJECTS/_resources/前端面试.png",
+    "PARA/10-PROJECTS/_resources/Drawing 2025-05-29 16.11.38.excalidraw.svg",
+    "PARA/20-AREAS/A 知识管理/_resources/draw_PKM_Processes.excalidraw.svg",
+    "PARA/10-PROJECTS/P 个人网站优化",
+    "PARA/10-PROJECTS/P 求职前端岗位",
+    "Excalidraw/PARA和知识管理工作流.excalidraw.svg",
+    "SimpRead/SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息/9b3a310711eadbdae35074fe0d35db39_MD5.jpg",
+    "SimpRead/SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息/04bd2b299b1acef502ccff31dae57325_MD5.jpg",
+    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/ed48906235c106ffa823f9852f538c16_MD5.webp",
+    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/cdcae7b8a0b288b79e44ee717e437984_MD5.webp",
+    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/b508ae6abf83d03fdb16aadcc1dd0df3_MD5.webp",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

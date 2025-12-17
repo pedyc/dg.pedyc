@@ -2,7 +2,7 @@
 
 format **the left to right** mind map
 
-![[Excalidraw/Scripts/Downloaded/_resources/Mindmap format/6ef2222d06c48f91e04fc4f13f316b36_MD5.jpg]]
+![[6ef2222d06c48f91e04fc4f13f316b36_MD5.jpg]]
 
 # tree
 
@@ -14,7 +14,7 @@ The element connecting node and node must be an **arrow** and  have the correct 
 
 The order of nodes in the Y axis or vertical direction is determined by **the creation time** of the arrow connecting it
 
-![[Excalidraw/Scripts/Downloaded/_resources/Mindmap format/cf3c5e94006f334b5380b249909efd5f_MD5.jpg]]
+![[cf3c5e94006f334b5380b249909efd5f_MD5.jpg]]
 
 So if you want to readjust the order, you can **delete arrows and reconnect them**
 

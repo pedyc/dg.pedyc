@@ -260,7 +260,7 @@ Note
 1. 在 GitHub 上，导航到存储库的主页面。
 2. 在存储库名称下，单击 " 操作 "。
 
-![[SimpRead/_resources/17-缓存依赖项以加快工作流程 - GitHub 文档/d8d420b3e560cba35d63db716989988e_MD5.jpg]]
+![[d8d420b3e560cba35d63db716989988e_MD5.jpg]]
 
 3. 在左侧栏中的 " 管理 " 部分下，单击 " 缓存 "。
 4. 查看存储库的缓存条目列表。
@@ -268,7 +268,7 @@ Note
 * 若要搜索用于特定分支的缓存条目，请单击 " 分支 " 下拉菜单并选择一个分支。 缓存列表将显示用于所选分支的所有缓存。
 * 若要搜索具有特定缓存键的缓存条目，请使用 " 筛选缓存 " 字段中的语法 `key: key-name`。 缓存列表将显示使用键的所有分支中的缓存。
 
-![[SimpRead/_resources/17-缓存依赖项以加快工作流程 - GitHub 文档/982d5711cb08e1b5097167402845b2b0_MD5.jpg]]
+![[982d5711cb08e1b5097167402845b2b0_MD5.jpg]]
 
 ### [删除缓存条目](#deleting-cache-entries)
 
@@ -277,12 +277,12 @@ Note
 1. 在 GitHub 上，导航到存储库的主页面。
 2. 在存储库名称下，单击 " 操作 "。
 
-![[SimpRead/_resources/17-缓存依赖项以加快工作流程 - GitHub 文档/d8d420b3e560cba35d63db716989988e_MD5.jpg]]
+![[d8d420b3e560cba35d63db716989988e_MD5.jpg]]
 
 3. 在左侧栏中的 " 管理 " 部分下，单击 " 缓存 "。
 4. 在要删除的缓存条目右侧，单击 。
 
-![[SimpRead/_resources/17-缓存依赖项以加快工作流程 - GitHub 文档/d88ba8d4a85a163be5cdfde7b499d00c_MD5.jpg]]
+![[d88ba8d4a85a163be5cdfde7b499d00c_MD5.jpg]]
 
 ### [强制删除缓存条目](#force-deleting-cache-entries)
 

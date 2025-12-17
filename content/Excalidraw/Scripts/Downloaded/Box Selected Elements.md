@@ -1,5 +1,5 @@
 /*
-![[Excalidraw/Scripts/Downloaded/_resources/Box Selected Elements/42a5b75df28298d61cc66b91597975fa_MD5.jpg]]
+![[42a5b75df28298d61cc66b91597975fa_MD5.jpg]]
 
 This script will add an encapsulating box around the currently selected elements in Excalidraw.
 

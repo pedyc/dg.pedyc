@@ -66,7 +66,7 @@ url: https://pkmer.cn/Pkmer-Docs/02-%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E5%9F%B
 * 五一旅游是一个项目，而旅游是一个区域
 * 计划年会是一个项目，而策划是一个领域
 
-![[SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息/9b3a310711eadbdae35074fe0d35db39_MD5.jpg]]
+![[SimpRead/SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息/9b3a310711eadbdae35074fe0d35db39_MD5.jpg]]
 
 * 领域与资源
 		* 请记住，领域也称作负责领域 - 负责的事情与仅仅感兴趣的事情 / 话题之间有着非常明确的界限和区别
@@ -108,7 +108,7 @@ url: https://pkmer.cn/Pkmer-Docs/02-%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E5%9F%B
 
 P.A.R.A. 是一个动态的系统（信息在四个类别之间流动）。同一条信息（文本行、图像、完整笔记或整个笔记本）在任何两个主要类别之间流动的原因是不同的。
 
-![[SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息/04bd2b299b1acef502ccff31dae57325_MD5.jpg]]
+![[SimpRead/SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息/04bd2b299b1acef502ccff31dae57325_MD5.jpg]]
 
 * 从项目…
 		* 到领域：项目可能会成为长期的负责领域（比如：我学习了一门变成语言，后来他成为了我兼职工作）

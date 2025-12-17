@@ -29,8 +29,7 @@ await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
 
 ## 👣跬步（任务列表）
 
-- TODO
-- TODO
+![[PROJECTS]]
 
 ## 🌞日新（行动记录）
 

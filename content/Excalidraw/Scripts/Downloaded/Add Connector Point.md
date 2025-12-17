@@ -1,5 +1,5 @@
 /*
-![[Excalidraw/Scripts/Downloaded/_resources/Add Connector Point/0f2dfc99c09d05837b10e97c18273ec5_MD5.jpg]]
+![[0f2dfc99c09d05837b10e97c18273ec5_MD5.jpg]]
 
 This script will add a small circle to the top left of each text element in the selection and add the text and the "bullet point" into a group.
 

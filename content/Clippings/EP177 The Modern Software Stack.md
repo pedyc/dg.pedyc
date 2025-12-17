@@ -12,7 +12,7 @@ source: "https://blog.bytebytego.com/p/ep177-the-modern-software-stack?ref=daily
 
 ## ✂️ Cut your QA cycles down to minutes with QA Wolf (Sponsored)
 
-![[Clippings/_resources/EP177 The Modern Software Stack/52c6ca5161aada67230128a3d16e152a_MD5.webp]]
+![[52c6ca5161aada67230128a3d16e152a_MD5.webp]]
 
 If slow QA processes bottleneck you or your software engineering team and you're releasing slower because of it — you need to check out QA Wolf.
 
@@ -51,7 +51,7 @@ This week's system design refresher:
 
 ## The Modern Software Stack
 
-![[Clippings/_resources/EP177 The Modern Software Stack/ac9a0c973e1860dc0ae75601ad9ef6e9_MD5.webp]]
+![[ac9a0c973e1860dc0ae75601ad9ef6e9_MD5.webp]]
 
 In today's world, building software means working across multiple layers, each with its own role, tools, and technologies. Here are 9 layers that make up most modern applications:
 
@@ -71,7 +71,7 @@ Over to you: Which layer do you think is the most underrated in modern software 
 
 ## Data-in-Motion Transparency (Sponsored)
 
-![[Clippings/_resources/EP177 The Modern Software Stack/215c5bc7e5ec46551645ebfd6d2f9a1f_MD5.webp]]
+![[215c5bc7e5ec46551645ebfd6d2f9a1f_MD5.webp]]
 
 Your backend makes thousands of encrypted connections daily. What sensitive data is flowing through them? Which processes are talking to which APIs? Traditional tools can't tell you without proxies, cert management, or performance hits.
 
@@ -85,7 +85,7 @@ Whether you're debugging API issues, auditing for sensitive data leaks, validati
 
 ## Concurrency is NOT Parallelism
 
-![[Clippings/_resources/EP177 The Modern Software Stack/1e0c43a4caa11b9c31b44a06f746bc1c_MD5.webp]]
+![[1e0c43a4caa11b9c31b44a06f746bc1c_MD5.webp]]
 
 Concurrency: It's a design approach where tasks can start, run, and complete in overlapping periods, even on a single CPU core. It is about managing multiple tasks at the same time.
 
@@ -109,7 +109,7 @@ Over to you: Have you encountered any challenges with concurrency or parallelism
 
 ## Out Ship, Out Deliver, Out Perform. (Sponsored)
 
-![[Clippings/_resources/EP177 The Modern Software Stack/9ede500e163b1dfa88f690c752b3dcf7_MD5.webp]]
+![[9ede500e163b1dfa88f690c752b3dcf7_MD5.webp]]
 
 DevStats helps engineering leaders unpack metrics, experience flow, and ship faster so every release drives real business impact.
 
@@ -127,7 +127,7 @@ It's time to ship more and make your impact impossible to ignore.
 
 Token-based authentication has become quite popular over the years. Traditionally, JWTs have dominated this space.
 
-![[Clippings/_resources/EP177 The Modern Software Stack/f756ae68b084999aeef7b2b9a6117568_MD5.webp]]
+![[f756ae68b084999aeef7b2b9a6117568_MD5.webp]]
 
 But now, a new player is making waves: PASETO, or Platform-Agnostic Security Tokens.
 
@@ -156,7 +156,7 @@ Over to you: Have you used JWTs or PASETO in your applications?
 
 Cron is a time-based job scheduler that allows users to automate repetitive tasks by running commands or scripts at specified intervals. It uses a Cron expression, a syntax defining the schedule, which consists of five fields (minute, hours, day, month, weekday).
 
-![[Clippings/_resources/EP177 The Modern Software Stack/e05cb683cc02e29e08f53d5165ac25f6_MD5.webp]]
+![[e05cb683cc02e29e08f53d5165ac25f6_MD5.webp]]
 
 Cron is widely for system maintenance, backups, log rotation, and automation of tasks like sending emails or running scripts at regular intervals. In this cheatsheet, we cover:
 
@@ -171,7 +171,7 @@ Over to you: Have you used Cron?
 
 ## AI Agent versus MCP
 
-![[Clippings/_resources/EP177 The Modern Software Stack/0ee808d11fffdf316feb0ad40583d37d_MD5.webp]]
+![[0ee808d11fffdf316feb0ad40583d37d_MD5.webp]]
 
 An AI agent is a software program that can interact with its environment, gather data, and use that data to achieve predetermined goals. AI agents can choose the best actions to perform to meet those goals.
 

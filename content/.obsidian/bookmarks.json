@@ -8,7 +8,7 @@
     {
       "type": "file",
       "ctime": 1740245395831,
-      "path": "PARA/20-AREAS/04AI/提示词Prompt.png",
+      "path": "PARA/30-RESOURCES/01 Atlas/提示词Prompt.png",
       "title": "deepseek提示词指南"
     },
     {
@@ -19,7 +19,14 @@
     {
       "type": "group",
       "ctime": 1743953116786,
-      "items": [],
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1765376533074,
+          "path": "PARA/30-RESOURCES/01 Atlas/知识管理大师提示词v4 动态重构版本.md",
+          "title": "知识管理大师提示词v4"
+        }
+      ],
       "title": "认知维度"
     }
   ]

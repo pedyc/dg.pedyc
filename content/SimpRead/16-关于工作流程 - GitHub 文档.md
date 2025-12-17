@@ -30,7 +30,7 @@ url: https://docs.github.com/zh/actions/writing-workflows/about-workflows
 
 有关这些基本组件的详细信息，请参阅 "[了解 GitHub Actions](https://docs.github.com/zh/actions/learn-github-actions/understanding-github-actions#the-components-of-github-actions)"。
 
-![[SimpRead/_resources/16-关于工作流程 - GitHub 文档/1007b084b0005cfc51f430cd469ff5ee_MD5.jpg]]
+![[1007b084b0005cfc51f430cd469ff5ee_MD5.jpg]]
 
 ## [触发工作流程](#triggering-a-workflow)
 

@@ -16,7 +16,7 @@ status:
 
 Download this file and save to your Obsidian Vault including the first line, or open it in "Raw" and copy the entire contents to Obsidian.
 
-![[Excalidraw/Scripts/Downloaded/_resources/Auto Layout/e44f3331845f32889f9d91337e803778_MD5.png]]
+![[e44f3331845f32889f9d91337e803778_MD5.png]]
 
 This script performs automatic layout for the selected top-level grouping objects. It is powered by [elkjs](https://github.com/kieler/elkjs) and needs to be connected to the Internet.
 

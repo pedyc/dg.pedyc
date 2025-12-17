@@ -54,6 +54,8 @@
     "source": "multitext",
     "rating": "multitext",
     "related": "multitext",
-    "excalidraw-embed-md": "checkbox"
+    "excalidraw-embed-md": "checkbox",
+    "excalidraw-export-internal-links": "checkbox",
+    "content-type": "text"
   }
 }

@@ -8,7 +8,7 @@ desc: 能够手撕各种 JavaScript 原生函数，可以说是进大厂必备�
 url: https://segmentfault.com/a/1190000021758529
 ---
 
-![[SimpRead/_resources/19-JavaScript 中各种源码实现 - JavaScript 进阶之路 - SegmentFault 思否/b7b8b0a80f493763b6097635e59de867_MD5.jpg]]
+![[b7b8b0a80f493763b6097635e59de867_MD5.jpg]]
 
 ## 前言
 

@@ -13,7 +13,7 @@ date-modified: 2025-06-15
 浏览器在渲染画面时，会经过几个过程：
 
 1. **解析 HTML 和样式计算 (parsing and style calculation)** 把 HTML 解析成 DOM，把 CSS 解析成 CSSOM，DOM 和 CSSOM 合并成**渲染树 (render tree)**。可参考下图所示：
-	![[Clippings/_resources/回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？/6529496547adefc310e2f136a0ab8363_MD5.jpg]]
+	![[6529496547adefc310e2f136a0ab8363_MD5.jpg]]
 
 2. **布局 (Layout)**
 
@@ -26,7 +26,7 @@ date-modified: 2025-06-15
 
 	**如下图所示**
 
-	![[Clippings/_resources/回流 (Reflow) 和重绘 (Repaint) 是什么？以及如何优化？/5228904c1cf75f3fa519d6c277c38dda_MD5.jpg]]
+	![[5228904c1cf75f3fa519d6c277c38dda_MD5.jpg]]
 4. **合成 (compositing)**
 
 	前三个步骤中，浏览器已经获得了渲染页面所需的资讯，但为了提高整体渲染效率，浏览器会再透过**合成 (compositing)**，将资讯渲染到画面上。合成 (compositing) 是一种将页面的各个部分分成图层 (layers) 的技术，而这个技术会在**合成线程 (compositor thread)**  这个单独的线程执行。在这个过程完成之后，还会再产生一个图层树 (layer tree)，最终才会渲染到画面上。

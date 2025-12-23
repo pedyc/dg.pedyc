@@ -1,7 +1,7 @@
 ---
 title: 如何区分Project和Area？
 date-created: 2025-12-12
-date-modified: 2025-12-12
+date-modified: 2025-12-18
 ---
 
 在 PARA 系统中，Project 是具有明确截止时间和产出目标的，例如 2025 年 3 月份上线个人博客 1.0 版本，具有截止日期和产出目标两个维度，应当被认为是 Project。

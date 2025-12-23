@@ -3,7 +3,7 @@ title: 视觉化PKM
 description: 2025年第二季度，将 Obsidian PKM 库进行视觉化改造的项目，旨在提升知识管理效率。
 tags: [PKM/视觉化, Obsidian/插件, 项目管理/季度项目]
 date-created: 2025-05-04
-date-modified: 2025-12-12
+date-modified: 2025-12-18
 status: 进行中
 area: ["[[视觉思维概述|视觉思维]]"]
 content-type: record

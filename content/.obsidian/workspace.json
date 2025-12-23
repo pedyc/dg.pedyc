@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/10-PROJECTS/P 构建PKM系统/我是怎样架构混合型知识库的.md",
+                "file": "PARA/30-RESOURCES/01 Atlas/术语表/文献笔记.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,79 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "我是怎样架构混合型知识库的"
+              "title": "文献笔记"
+            }
+          },
+          {
+            "id": "3437c334c1e4aa7b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/10-PROJECTS/P 构建PKM系统/PARA笔记法.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "PARA笔记法"
+            }
+          },
+          {
+            "id": "998fe86eb5fb607e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/30-RESOURCES/01 Atlas/视觉思维概述.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "视觉思维概述"
+            }
+          },
+          {
+            "id": "e3bcaa82c818243c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/00-META/00关于本库.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00关于本库"
             }
           },
           {
@@ -54,33 +126,9 @@
               "icon": "lucide-file",
               "title": "信息应按可行动性而非主题分类"
             }
-          },
-          {
-            "id": "0550fa705ba82619",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/30-RESOURCES/01 Atlas/知识管理大师提示词v5 个人语境版本.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "知识管理大师提示词v5 个人语境版本"
-            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -180,8 +228,7 @@
               "title": "添加笔记属性"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -280,54 +327,54 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "8edb04e946b997be",
+  "active": "998fe86eb5fb607e",
   "lastOpenFiles": [
-    "PARA/10-PROJECTS/P 构建PKM系统/我是怎样架构混合型知识库的.md",
-    "PARA/20-AREAS/A 知识管理/00知识管理.md",
-    "PARA/30-RESOURCES/01 Atlas/知识管理大师提示词v5 个人语境版本.md",
+    "Diary/2025-12-19.md",
+    "PARA/10-PROJECTS/P 构建PKM系统/SOP-混合型PKM构建指南.md",
+    "PARA/10-PROJECTS/P 构建PKM系统/怎样架构混合型知识库.md",
+    "PARA/10-PROJECTS/P 构建PKM系统/卡片盒笔记法.md",
+    "PARA/10-PROJECTS/P 构建PKM系统/构建PKM系统.md",
+    "PARA/00-META/00关于本库.md",
     "PARA/20-AREAS/A 知识管理/信息应按可行动性而非主题分类.md",
-    "_template/template_atomic.md",
-    "_template/template_archive.md",
-    "_template/template_area.md",
-    "PARA/20-AREAS/A 知识管理/自下而上的涌现优于自上而下的分类.md",
-    "PARA/00-META/本库检索方案.md",
-    "PARA/30-RESOURCES/02 Zettelkasten/知识只有被调用时才产生价值.md",
-    "PARA/20-AREAS/A 知识管理/SOP-CODE知识全生命周期工作流.md",
-    "_template/template_concept.md",
+    "Bases/SOP.base",
+    "PARA/00-META/_resources/本库架构指南.excalidraw.md",
+    "PARA/10-PROJECTS/P 构建PKM系统/PARA笔记法.md",
+    "PARA/30-RESOURCES/02 Zettelkasten/如何区分Project和Area？.md",
+    "SimpRead/SimpRead/backup/simpread_config@20251218172122.json",
+    "PARA/10-PROJECTS/P 构建PKM系统/PARA实施工作流.md",
+    "PARA/20-AREAS/A 知识管理/_resources/00知识管理领域/57f0f1e5b6fa22ab83de5f7dab87cca4_MD5.jpeg",
+    "PARA/20-AREAS/A 知识管理/_resources/08知识管理领域/f1682794a0227c1a0c5065bd634e8808_MD5.jpeg",
+    "PARA/20-AREAS/A 知识管理/_resources/08知识管理领域/fa545b9686cb506c5b3dae7f8217ee4f_MD5.jpeg",
+    "PARA/30-RESOURCES/01 Atlas/术语表/文献笔记.md",
+    "PARA/30-RESOURCES/01 Atlas/术语表/永久笔记.md",
+    "PARA/30-RESOURCES/01 Atlas/术语表/未命名",
+    "PARA/10-PROJECTS/P 构建PKM系统/视觉化PKM.md",
+    "PARA/10-PROJECTS/P 构建PKM系统/SOP-卡片盒笔记法实施工作流.md",
     "Bases/ALL.base",
     "Bases/EXCALIDRAW.base",
     "Bases/PARA.base",
-    "PARA/30-RESOURCES/01 Atlas/经济学基础.md",
-    "PARA/30-RESOURCES/01 Atlas/知识管理大师提示词v4 动态重构版本.md",
-    "PARA/30-RESOURCES/01 Atlas/术语表/稀缺性.md",
-    "copilot/copilot-conversations/根据模板重写笔记@20251217_005515.md",
-    "PARA/30-RESOURCES/01 Atlas/术语表/权力 (Power).md",
-    "_template/template_term.md",
-    "PARA/30-RESOURCES/01 Atlas/术语表/信噪比.md",
-    "PARA/30-RESOURCES/02 Zettelkasten/外部大脑能释放前额叶的认知负荷.md",
-    "PARA/30-RESOURCES/01 Atlas/术语表/米勒法则.md",
-    "PARA/20-AREAS/A 个人成长/00个人成长.md",
-    "PARA/30-RESOURCES/01 Atlas/概念表/艾宾浩斯记忆曲线.md",
-    "PARA/30-RESOURCES/01 Atlas/概念表/SPA.md",
-    "PARA/30-RESOURCES/01 Atlas/费曼技巧.md",
-    "PARA/30-RESOURCES/01 Atlas/概念表/00概念表.md",
+    "PARA/30-RESOURCES/01 Atlas/SOP-视觉思维工作流.md",
+    "Diary/2025-12-18.md",
+    "Diary/2025-12-17.md",
+    "Diary/2025-12-16.md",
+    "Diary/2025-12-15.md",
+    "PARA/30-RESOURCES/01 Atlas/视觉思维.md",
+    "PARA/30-RESOURCES/01 Atlas/SOP-视觉工具选择矩阵.md",
+    "PARA/20-AREAS/A 个人博客/反者道之动.md",
+    "PARA/20-AREAS/A 知识管理/00知识管理.md",
+    "PARA/00-META/本库工作流汇总.md",
+    "PARA/00-META/本库标签汇总.md",
+    "PARA/20-AREAS/A 思维模型",
     "PARA/30-RESOURCES/01 Atlas/概念表",
     "PARA/20-AREAS/A 知识管理/_resources/draw_PKM_methods.svg",
     "PARA/30-RESOURCES/02 Zettelkasten/_resources",
     "Diary/_resources/2025-12-13",
-    "PARA/30-RESOURCES/01 Atlas/读书笔记",
-    "PARA/10-PROJECTS/P 构建PKM系统/未命名.base",
     "PARA/10-PROJECTS/_resources/前端面试.png",
     "PARA/10-PROJECTS/_resources/Drawing 2025-05-29 16.11.38.excalidraw.svg",
     "PARA/20-AREAS/A 知识管理/_resources/draw_PKM_Processes.excalidraw.svg",
-    "PARA/10-PROJECTS/P 个人网站优化",
-    "PARA/10-PROJECTS/P 求职前端岗位",
     "Excalidraw/PARA和知识管理工作流.excalidraw.svg",
     "SimpRead/SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息/9b3a310711eadbdae35074fe0d35db39_MD5.jpg",
     "SimpRead/SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息/04bd2b299b1acef502ccff31dae57325_MD5.jpg",
-    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/ed48906235c106ffa823f9852f538c16_MD5.webp",
-    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/cdcae7b8a0b288b79e44ee717e437984_MD5.webp",
-    "SimpRead/SimpRead/_resources/1-如何进入生成式 AI 的新范式/b508ae6abf83d03fdb16aadcc1dd0df3_MD5.webp",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

@@ -3,7 +3,7 @@ title: JavaScript
 aliases: [JS]
 description: 一种广泛应用于 Web 开发的脚本语言，用于为网页添加交互性和动态效果。
 date-created: 2025-05-19
-date-modified: 2025-08-26
+date-modified: 2025-12-25
 status: active
 para: area
 related: ["[[DOM]]", "[[JS执行机制]]", "[[This绑定]]"]

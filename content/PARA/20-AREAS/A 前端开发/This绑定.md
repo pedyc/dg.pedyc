@@ -1,7 +1,7 @@
 ---
 title: This绑定
 date-created: 2025-05-19
-date-modified: 2025-05-19
+date-modified: 2025-12-26
 ---
 
 在前端开发中，`this` 的绑定是一个常见的概念，它的值取决于函数的调用方式。以下是几种常见的 `this` 绑定情形：

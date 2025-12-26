@@ -2,7 +2,7 @@
 title: Web Storage API
 aliases: [Web 存储]
 date-created: 2025-05-21
-date-modified: 2025-06-16
+date-modified: 2025-12-25
 ---
 
 ## Web Storage API

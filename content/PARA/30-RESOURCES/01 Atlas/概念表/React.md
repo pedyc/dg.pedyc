@@ -19,7 +19,7 @@ React 是一个用于构建用户界面的 JavaScript 库，由 Facebook 开发�
 
 ### 相关领域
 
-- [[0200前端]]：「React 是前端开发中常用的框架。」
+- [[00前端]]：「React 是前端开发中常用的框架。」
 - [[JavaScript]]：「React 基于 JavaScript 语言。」
 - [[模块化与组件化开发]]：「React 采用组件化的开发模式。」
 - [[状态管理]]：「React 中需要进行状态管理，例如使用 Redux 或 Context API。」

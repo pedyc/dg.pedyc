@@ -4,7 +4,7 @@ aliases: [JavaScript Engine]
 description: JS 引擎是一种用于解析和执行 JavaScript 代码的程序或解释器。
 tags: [前端, JavaScript, 引擎]
 date-created: 2025-05-21
-date-modified: 2025-05-21
+date-modified: 2025-12-26
 content-type: concept
 keywords: [JS引擎, JavaScript Engine, V8, JavaScriptCore]
 para: resource

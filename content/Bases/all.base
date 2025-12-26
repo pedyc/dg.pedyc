@@ -3,7 +3,7 @@ views:
     name: Table
     filters:
       and:
-        - type.contains("concept")
+        - file.links.isEmpty()
     order:
       - file.name
       - file.links

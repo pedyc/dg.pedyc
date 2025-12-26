@@ -29,7 +29,7 @@ date-modified: 2025-05-26
 - 使用 `SameSite` Cookie 策略（建议设置为 `Strict` 或 `Lax`）
 - 对关键操作使用验证码或双重确认
 
- 3. [[Clickjacking]]（点击劫持） ✅
+ 3. [[点击劫持]]（点击劫持） ✅
 
 > 页面被恶意嵌入 iframe 中，诱导用户点击
 
@@ -103,7 +103,7 @@ date-modified: 2025-05-26
 - 使用 `SameSite` Cookie 策略（建议设置为 `Strict` 或 `Lax`）
 - 对关键操作使用验证码或双重确认
 
- 3. [[Clickjacking]]（点击劫持） ✅
+ 3. [[点击劫持]]（点击劫持） ✅
 
 > 页面被恶意嵌入 iframe 中，诱导用户点击
 

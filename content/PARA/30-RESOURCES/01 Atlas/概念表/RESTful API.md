@@ -55,7 +55,7 @@ RESTful API 是一种设计风格，用于构建可扩展的 Web 服务。 它�
 ## 内部联系
 
 - [[HTTP]]: RESTful API 基于 HTTP 协议。
-- [[Web API]]: RESTful API 是一种 Web API 设计风格。
+- [[Web APIs]]: RESTful API 是一种 Web API 设计风格。
 - [[GraphQL]]: GraphQL 是一种替代 RESTful API 的方案，可以解决 RESTful API 的一些问题。
 
 ## 后续优化建议

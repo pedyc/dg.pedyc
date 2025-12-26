@@ -3,7 +3,7 @@ title: DOM
 description: "DOM 是连接 JavaScript 和 HTML 的桥梁，允许 JavaScript 动态地访问和操作网页内容。是前端开发的核心技术之一。"
 tags: ["前端", "JavaScript"]
 date-created: 2025-05-22
-date-modified: 2025-06-02
+date-modified: 2025-12-25
 content-type: "concept"
 keywords: [DOM, 文档对象模型, JavaScript, HTML, 动态网页]
 para: "area"

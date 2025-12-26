@@ -1,7 +1,7 @@
 ---
 title: HTTP~1.1
 date-created: 2025-06-02
-date-modified: 2025-06-02
+date-modified: 2025-12-25
 ---
 
 ## 定义

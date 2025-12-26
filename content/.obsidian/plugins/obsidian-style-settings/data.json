@@ -1,9 +1,9 @@
 {
-  "blue-topaz-theme@@color-scheme-options": "color-scheme-options-avocado-topaz",
+  "blue-topaz-theme@@color-scheme-options": "color-scheme-options-default",
   "blue-topaz-theme@@background-settings-workplace-background-image": false,
   "blue-topaz-theme@@background-notebook-liked-switch": true,
   "blue-topaz-theme@@notebook-liked-markdown-page-options": "notebook-liked-markdown-page-dotted-notebook-2",
-  "Blue-Topaz-Codebox-Highlight@@code-theme-selection": "code-theme-monokai",
+  "Blue-Topaz-Codebox-Highlight@@code-theme-selection": "code-theme-custom",
   "Blue-Topaz-Codebox-Highlight@@code-line-number": true,
   "Blue-Topaz-Codebox-Highlight@@code-box-style-option": "codebox-default-style",
   "blue-topaz-theme@@toggle-header-bottom-line": true,
@@ -69,5 +69,7 @@
   "blue-topaz-theme@@remove-external-link-icon": false,
   "blue-topaz-theme@@internal-link-color@@light": "#2118A100",
   "blue-topaz-theme@@outline-style": "logseq-outline-style",
-  "blue-topaz-theme@@nowrap-outline": true
+  "blue-topaz-theme@@nowrap-outline": true,
+  "pln@@font-ui-smaller": 16,
+  "anuppuccin-theme-settings@@anuppuccin-theme-dark": "ctp-mocha-old"
 }

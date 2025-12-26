@@ -1,7 +1,7 @@
 ---
 title: HSTS
 date-created: 2025-05-26
-date-modified: 2025-05-26
+date-modified: 2025-12-25
 ---
 
 定义：HSTS 是一种 Web 安全策略机制，它允许 Web 服务器声明浏览器只能通过安全 HTTPS 连接访问它们。

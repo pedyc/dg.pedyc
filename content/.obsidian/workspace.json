@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1efd6108715e37cf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/30-RESOURCES/01 Atlas/术语表/文献笔记.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "文献笔记"
-            }
-          },
-          {
             "id": "3437c334c1e4aa7b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/10-PROJECTS/P 构建PKM系统/PARA笔记法.md",
+                "file": "PROJECTS.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +28,29 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "PARA笔记法"
+              "title": "PROJECTS"
             }
           },
           {
-            "id": "998fe86eb5fb607e",
+            "id": "ec5cf63e25c5886d",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "Bases/ALL.base",
+                "viewName": "Table"
+              },
+              "icon": "lucide-table",
+              "title": "ALL"
+            }
+          },
+          {
+            "id": "81639189fc7529ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/30-RESOURCES/01 Atlas/视觉思维概述.md",
+                "file": "PARA/20-AREAS/A 前端开发/00前端.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,31 +65,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "视觉思维概述"
-            }
-          },
-          {
-            "id": "e3bcaa82c818243c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PARA/00-META/00关于本库.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "00关于本库"
+              "title": "00前端"
             }
           },
           {
@@ -109,7 +74,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/20-AREAS/A 知识管理/信息应按可行动性而非主题分类.md",
+                "file": "PARA/30-RESOURCES/01 Atlas/概念表/JS引擎.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -124,7 +89,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "信息应按可行动性而非主题分类"
+              "title": "JS引擎"
             }
           }
         ],
@@ -140,7 +105,7 @@
       {
         "id": "e31579f7aa38d74b",
         "type": "tabs",
-        "dimension": 76.31133671742809,
+        "dimension": 53.78690629011553,
         "children": [
           {
             "id": "3dfca4b5c072d131",
@@ -158,12 +123,71 @@
         ]
       },
       {
-        "id": "5e0950099d64d5f6",
+        "id": "22301f168340fb7f",
         "type": "tabs",
-        "dimension": 23.688663282571916,
+        "dimension": 24.58279845956354,
         "children": [
           {
-            "id": "0ce97509d7755f3d",
+            "id": "84d02f8178444945",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "PARA/20-AREAS/A 前端开发/00前端.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.8647700342637916,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "00前端 的关系图"
+            }
+          },
+          {
+            "id": "3690ad53e5842d0d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "PARA/20-AREAS/A 前端开发/00前端.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "00前端 的大纲"
+            }
+          }
+        ]
+      },
+      {
+        "id": "5e0950099d64d5f6",
+        "type": "tabs",
+        "dimension": 21.630295250320923,
+        "children": [
+          {
+            "id": "5dc3cef7701d1aec",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -188,7 +212,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "just-in-",
+                "query": "tag:领域/前端",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -232,7 +256,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 277.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -276,22 +300,7 @@
             }
           },
           {
-            "id": "3690ad53e5842d0d",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "PARA/30-RESOURCES/02 Zettelkasten/我是怎样架构混合型知识库的.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "我是怎样架构混合型知识库的 的大纲"
-            }
-          },
-          {
-            "id": "a24c0ae278146f58",
+            "id": "39d39d451048730c",
             "type": "leaf",
             "state": {
               "type": "copilot-chat-view",
@@ -301,7 +310,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -310,6 +319,11 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "cmdr:堆叠/取消堆叠标签页": false,
+      "copilot:Open Copilot Chat": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "obsidian-local-images-plus:Local Images Plus  0.16.4\r\nLocalize attachments (plugin folder)": false,
+      "templater-obsidian:Templater": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -318,63 +332,57 @@
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
       "publish:发布更改": false,
-      "bases:创建新数据库": false,
-      "cmdr:堆叠/取消堆叠标签页": false,
-      "obsidian-local-images-plus:Local Images Plus  0.16.4\r\nLocalize attachments (plugin folder)": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "copilot:Open Copilot Chat": false,
-      "terminal:Open terminal": false
+      "bases:创建新数据库": false
     }
   },
-  "active": "998fe86eb5fb607e",
+  "active": "84d02f8178444945",
   "lastOpenFiles": [
-    "Diary/2025-12-19.md",
-    "PARA/10-PROJECTS/P 构建PKM系统/SOP-混合型PKM构建指南.md",
-    "PARA/10-PROJECTS/P 构建PKM系统/怎样架构混合型知识库.md",
-    "PARA/10-PROJECTS/P 构建PKM系统/卡片盒笔记法.md",
-    "PARA/10-PROJECTS/P 构建PKM系统/构建PKM系统.md",
-    "PARA/00-META/00关于本库.md",
-    "PARA/20-AREAS/A 知识管理/信息应按可行动性而非主题分类.md",
-    "Bases/SOP.base",
-    "PARA/00-META/_resources/本库架构指南.excalidraw.md",
+    "PARA/30-RESOURCES/01 Atlas/00前端面试真题库.md",
+    "PARA/30-RESOURCES/01 Atlas/前端‘.md",
+    "Bases/ALL.base",
+    "PARA/20-AREAS/A 前端开发/00前端.md",
+    "PARA/20-AREAS/A 前端开发/Web安全.md",
+    "PARA/30-RESOURCES/01 Atlas/概念表/JS引擎.md",
+    "PARA/20-AREAS/A 前端开发/浏览器.md",
+    "PARA/30-RESOURCES/02 Zettelkasten/信息应按可行动性而非主题分类.md",
+    "PARA/20-AREAS/A 前端开发/This绑定.md",
+    "PARA/20-AREAS/A 前端开发/前端进阶学习路线图.md",
+    "PARA/20-AREAS/A 前端开发/前端性能优化.md",
+    "PARA/20-AREAS/A 前端开发/性能优化概述.md",
+    "PARA/10-PROJECTS/P 求职前端岗位/00求职前端岗位.md",
+    "Diary/2025-11-16.md",
+    "PARA/30-RESOURCES/01 Atlas/FAQ-Web安全.md",
+    "PARA/30-RESOURCES/01 Atlas/FAQ-Web通信.md",
+    "PARA/30-RESOURCES/01 Atlas/FAQ-JS&TS.md",
+    "PARA/20-AREAS/A 前端开发/浏览器工作原理.md",
+    "PARA/20-AREAS/A 知识管理/Zettelkasten核心原则.md",
+    "PARA/20-AREAS/A 前端开发/CSRF.md",
+    "PARA/30-RESOURCES/00 Inbox/清单.md",
+    "Diary/2025-12-26.md",
+    "Diary/_resources/2025-12-26",
+    "Diary/2025-12-25.md",
+    "PROJECTS.md",
     "PARA/10-PROJECTS/P 构建PKM系统/PARA笔记法.md",
-    "PARA/30-RESOURCES/02 Zettelkasten/如何区分Project和Area？.md",
+    "excalibrain.md",
+    "index.md",
+    "banner.svg",
+    "PARA/30-RESOURCES/01 Atlas/概念表/_resources",
+    "PARA/20-AREAS/A 前端开发/数学在前端开发中的应用.excalidraw.svg",
+    "PARA/20-AREAS/A 前端开发/_resources/前端工程化与前端开发生命周期.excalidraw.svg",
+    "PARA/20-AREAS/A 前端开发/_resources",
+    "Bases/SOP.base",
     "SimpRead/SimpRead/backup/simpread_config@20251218172122.json",
-    "PARA/10-PROJECTS/P 构建PKM系统/PARA实施工作流.md",
     "PARA/20-AREAS/A 知识管理/_resources/00知识管理领域/57f0f1e5b6fa22ab83de5f7dab87cca4_MD5.jpeg",
     "PARA/20-AREAS/A 知识管理/_resources/08知识管理领域/f1682794a0227c1a0c5065bd634e8808_MD5.jpeg",
     "PARA/20-AREAS/A 知识管理/_resources/08知识管理领域/fa545b9686cb506c5b3dae7f8217ee4f_MD5.jpeg",
-    "PARA/30-RESOURCES/01 Atlas/术语表/文献笔记.md",
-    "PARA/30-RESOURCES/01 Atlas/术语表/永久笔记.md",
     "PARA/30-RESOURCES/01 Atlas/术语表/未命名",
-    "PARA/10-PROJECTS/P 构建PKM系统/视觉化PKM.md",
-    "PARA/10-PROJECTS/P 构建PKM系统/SOP-卡片盒笔记法实施工作流.md",
-    "Bases/ALL.base",
     "Bases/EXCALIDRAW.base",
     "Bases/PARA.base",
-    "PARA/30-RESOURCES/01 Atlas/SOP-视觉思维工作流.md",
-    "Diary/2025-12-18.md",
-    "Diary/2025-12-17.md",
-    "Diary/2025-12-16.md",
-    "Diary/2025-12-15.md",
-    "PARA/30-RESOURCES/01 Atlas/视觉思维.md",
-    "PARA/30-RESOURCES/01 Atlas/SOP-视觉工具选择矩阵.md",
-    "PARA/20-AREAS/A 个人博客/反者道之动.md",
-    "PARA/20-AREAS/A 知识管理/00知识管理.md",
-    "PARA/00-META/本库工作流汇总.md",
-    "PARA/00-META/本库标签汇总.md",
     "PARA/20-AREAS/A 思维模型",
-    "PARA/30-RESOURCES/01 Atlas/概念表",
     "PARA/20-AREAS/A 知识管理/_resources/draw_PKM_methods.svg",
-    "PARA/30-RESOURCES/02 Zettelkasten/_resources",
-    "Diary/_resources/2025-12-13",
     "PARA/10-PROJECTS/_resources/前端面试.png",
     "PARA/10-PROJECTS/_resources/Drawing 2025-05-29 16.11.38.excalidraw.svg",
     "PARA/20-AREAS/A 知识管理/_resources/draw_PKM_Processes.excalidraw.svg",
-    "Excalidraw/PARA和知识管理工作流.excalidraw.svg",
-    "SimpRead/SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息/9b3a310711eadbdae35074fe0d35db39_MD5.jpg",
-    "SimpRead/SimpRead/_resources/2-PKMer_PARA 信息组织法 — 如何整理我的数字信息/04bd2b299b1acef502ccff31dae57325_MD5.jpg",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

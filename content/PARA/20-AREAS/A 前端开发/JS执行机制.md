@@ -1,128 +1,187 @@
 ---
 title: JS执行机制
-date-created: 2025-05-16
-date-modified: 2025-05-22
+aliases: [JS Execution Context, V8 Pipeline, JS Runtime]
+tags: [领域/前端, 核心概念, 面试/高频]
+date-created: 2025-12-17
+date-modified: 2025-12-26
+status: 🟢 活跃
+related: ["[[事件循环]]", "[[V8引擎工作原理]]", "[[闭包与作用域链]]", "[[垃圾回收机制]]"]
 ---
 
-浏览器解析和执行 JavaScript 代码的机制是一个多阶段协作的过程，涉及引擎、编译器、内存管理和优化策略。以下是详细解析：
+## ⚙️ 核心概念：JS 执行机制
 
-## 1. 加载阶段（Loading）
+### 🔎 核心定义
 
-- **网络请求**：当 HTML 解析器遇到 `<script>` 标签时，会暂停 HTML 解析（除非标记为 `async/defer`），发起网络请求获取 JS 文件。
-- **缓存策略**：根据 HTTP 头部（如 `Cache-Control`）决定是否复用本地缓存。
-
----
-
-## 2. 解析与编译（Parsing & Compilation）
-
-### 词法分析（Lexical Analysis）
-
-- **分词（Tokenization）**：将源代码字符串拆分为有意义的词法单元（tokens），例如：
-
-	```javascript
-  const x = 10; // 分解为 tokens: ["const", "x", "=", "10", ";"]
-  ```
-
-### 语法分析（Syntax Analysis）
-
-- **生成 AST（Abstract Syntax Tree）**：根据 tokens 构建树状结构表示代码逻辑。例如：
-
-	```javascript
-  function foo() { return 1; }
-  ```
-
-	转换为 AST 的伪结构：
-
-	```json
-  {
-    "type": "FunctionDeclaration",
-    "id": { "name": "foo" },
-    "body": { "type": "BlockStatement", "body": […] }
-  }
-  ```
-
-### 预解析（Pre-Parsing）
-
-- **快速跳过非立即执行的代码**：如函数声明，仅进行浅层解析以提升速度。当函数被调用时再深度解析。
-
-### 编译阶段
-
-- **即时编译（JIT, Just-In-Time）**：
-	- **基线编译器（Baseline Compiler）**：快速生成未优化的机器码（如 V8 的 Ignition 解释器生成字节码）。
-	- **优化编译器（Optimizing Compiler）**：对热点代码（Hot Code）进行优化（如 V8 的 TurboFan 生成高效机器码）。
-	- **去优化（Deoptimization）**：当假设失效（如变量类型变化）时回退到未优化代码。
+> [!info] 单线程与 JIT 的艺术
+> JavaScript 是一门**单线程**、**非阻塞**、**解释与编译混合 (JIT)** 的语言。
+> 它的执行机制包含两个核心部分：
+> 1.  **引擎 (Engine)**：负责将源码翻译成机器码并执行 (如 V8)。
+> 2.  **运行时 (Runtime)**：负责调度异步任务和内存管理 (如浏览器/[[Node.js]] 环境)。
 
 ---
 
-## 3. 执行阶段（Execution）
+### 🏗️ 第一阶段：解析与编译 (The V8 Pipeline)
 
-### 创建 [[执行上下文]]（Execution Context）
+在代码执行前，V8 引擎需要对其进行 " 咀嚼 " 和 " 消化 "。
 
-- **全局上下文**：脚本开始执行时创建。
-- **函数上下文**：每次函数调用时创建。
-- **Eval 上下文**：`eval()` 调用时创建（性能差，避免使用）。
+```mermaid
+graph TD
+    %% --- 节点定义 ---
+    Source["📜 源代码 Source Code"]
+    
+    %% 解析阶段节点
+    Scanner["词法分析<br>Tokenization"]
+    Parser["语法分析<br>AST 构建"]
+    AST(("🌳 AST"))
 
-### 变量环境与词法环境
+    %% 编译阶段节点
+    Ignition["🔥 Ignition (解释器)<br>生成 Bytecode"]
+    TurboFan["🚀 TurboFan (优化编译器)<br>生成 Machine Code"]
+    
+    %% 产物节点
+    Bytecode["字节码"]
+    Optimized["机器码"]
+    CPU["CPU 执行"]
 
-- **变量提升（Hoisting）**：`var` 声明在编译阶段被提升并初始化为 `undefined`，而 `let/const` 处于 " 暂时性死区 "（TDZ）直至实际声明处。
-- **作用域链（Scope Chain）**：根据代码嵌套关系确定变量访问权限。
+    %% --- 子图结构 (关键修改：移除 '1. ' 格式) ---
+    subgraph Parse ["Phase 1 - 解析 (Parsing)"]
+        direction TB
+        Scanner
+        Parser
+    end
 
-### [[事件循环]]（Event Loop）
+    subgraph Compile ["Phase 2 - 编译与执行 (JIT)"]
+        direction TB
+        Ignition
+        TurboFan
+    end
 
-- **调用栈（Call Stack）**：同步代码按顺序执行，函数调用压入栈，执行完毕弹出。
-- **微任务（Microtasks）与宏任务（Macrotasks）**：
-	- **微任务**：`Promise.then`、`queueMicrotask`、`MutationObserver`，在每轮宏任务结束后立即执行。
-	- **宏任务**：`setTimeout`、`setInterval`、DOM 事件、I/O 操作。
-	- **执行顺序**：
+    %% --- 连接关系 ---
+    Source --> Scanner
+    Scanner --> Parser
+    Parser --> AST
+    AST --> Ignition
+    
+    Ignition -->|"逐行执行"| Bytecode
+    Bytecode -->|"执行结果"| CPU
+    
+    Ignition -.->|"发现热点代码 (Hot)"| TurboFan
+    TurboFan -->|"优化编译"| Optimized
+    Optimized -->|"执行"| CPU
+    
+    Optimized -.->|"假设失效 (Deopt)"| Ignition
+````
 
-```plaintext
-宏任务 → 清空微任务队列 → 渲染（如有需要） → 下一宏任务
+#### 关键环节深度解析
+
+1. **AST (抽象语法树)**：Babel、ESLint、Vue 模板编译都基于此。
+2. **JIT (即时编译)**：
+		
+	- **Ignition**：先将 AST 转为**字节码 (Bytecode)** 并解释执行。启动快，内存占用小。
+	- **TurboFan**：后台线程监控代码，发现**热点代码 (Hot Spot)**（例如被多次调用的函数），将其编译为高效的**机器码 (Machine Code)**。
+	- **去优化 (Deoptimization)**：如果变量类型动态改变（如 `add(1, 2)` 突变为 `add("1", 2)`），优化的机器码失效，V8 会回退到字节码解释执行（会有性能损耗）。
+
+---
+
+### 🏃 第二阶段：运行时环境 (The Runtime)
+
+当引擎开始执行代码时，就进入了动态的运行时环境。
+
+#### 1. 执行上下文 (Execution Context)
+
+代码运行的 " 环境 "。包含：
+
+- **变量环境 (Variable Environment)**：`var` 声明、函数声明。
+- **词法环境 (Lexical Environment)**：`let`/`const` 声明、外部环境引用（作用域链）。
+- **This 绑定**。
+
+#### 2. 调用栈 (Call Stack)
+
+JS 引擎维护的一个 **LIFO (后进先出)** 栈结构，用于管理执行上下文。
+
+Code snippet
+
+```bash
+sequenceDiagram
+    participant Stack as 📚 调用栈 (Call Stack)
+    participant Heap as 💾 堆内存 (Heap)
+    
+    Note over Stack: Global Context 入栈
+    Stack->>Stack: foo() 被调用
+    Note over Stack: foo Context 入栈
+    Stack->>Stack: bar() 被调用
+    Note over Stack: bar Context 入栈
+    Note over Stack: bar 执行完毕出栈
+    Note over Stack: foo 执行完毕出栈
 ```
 
-### 内存管理
+#### 3. 作用域与闭包
 
-- **垃圾回收（GC）**：
-	- **标记 - 清除（Mark-Sweep）**：从根对象（全局变量、活动函数）出发标记可达对象，清除未标记的。
-	- **分代收集（Generational Collection）**：V8 将堆分为新生代（频繁 GC）和老生代（较少 GC）。
-	- **内联缓存（Inline Caching）**：优化属性访问路径。
+- **作用域链**：由**词法环境**中的 `outer` 指针决定。JS 是**词法作用域**（静态作用域），函数的作用域在**定义时**就决定了，而不是调用时。
+- **闭包**：即使外层函数销毁，内存中依然保留了被内部函数引用的变量对象（Closure）。
 
 ---
 
-## 4. 优化策略
+### 🔄 第三阶段：事件循环 (The Coordinator)
 
-- **隐藏类（Hidden Classes）**：V8 为对象创建隐藏类以优化属性访问。
-- **逃逸分析（Escape Analysis）**：确定对象是否可在栈上分配而非堆。
-- **延迟解析（Lazy Parsing）**：推迟非立即执行函数的解析。
+由于 JS 是单线程的，为了处理异步操作（HTTP、定时器、DOM），浏览器引入了 **[[事件循环]] (Event Loop)**。
+
+> [!important] 执行顺序口诀
+>
+> 同步代码 -> 清空微任务 -> 尝试渲染 -> 执行一个宏任务 -> 循环
+
+|**任务类型**|**代表 API**|**优先级**|
+|---|---|---|
+|**Macrotask (宏任务)**|`setTimeout`, `setInterval`, `setImmediate`, I/O, UI Rendering|低|
+|**Microtask (微任务)**|`Promise.then`, `process.nextTick`, `MutationObserver`|🔥 **高 (插队执行)**|
 
 ---
 
-## 示例分析
+### 💾 第四阶段：内存管理 (Memory)
 
-```javascript
-console.log(a); // undefined（var 提升）
-var a = 1;
-let b = 2;     // TDZ 开始
+- **栈内存 (Stack)**：存储基本数据类型（Number, Boolean…）和引用类型的地址。系统自动回收。
+- **堆内存 (Heap)**：存储对象（Object, Array…）。由 **[[垃圾回收机制]] (GC)** 管理。
 
-function foo() {
-  console.log(b); // 2（闭包访问外层作用域）
-}
-foo();
+#### V8 GC 策略
 
-setTimeout(() => console.log('Macrotask'), 0);
-Promise.resolve().then(() => console.log('Microtask'));
+- **新生代 (New Space)**：存活时间短的对象。使用 **Scavenge 算法** (Cheney 算法)，以空间换时间，快速清理。
+- **老生代 (Old Space)**：存活时间长或大对象。使用 **标记 - 清除 (Mark-Sweep)** 和 **标记 - 整理 (Mark-Compact)**。
+
+---
+
+### 📝 代码实战分析
+
+JavaScript
+
+```bash
+console.log('1'); // 同步
+
+setTimeout(() => {
+    console.log('2'); // 宏任务
+    Promise.resolve().then(() => {
+        console.log('3'); // 宏任务中的微任务
+    });
+}, 0);
+
+new Promise((resolve) => {
+    console.log('4'); // 同步 (构造函数立即执行)
+    resolve();
+}).then(() => {
+    console.log('5'); // 微任务
+});
+
+console.log('6'); // 同步
 ```
 
-**执行顺序**：
-1. 变量 `a` 提升，输出 `undefined`。
-2. 执行 `foo()`，输出 `2`。
-3. 微任务优先于宏任务，输出 `Microtask` → `Macrotask`。
+> 输出顺序：1 -> 4 -> 6 -> 5 -> 2 -> 3
+>
+> 解析：同步代码走完，清空微任务队列 (5)，然后事件循环取出一个宏任务 (setTimeout)，执行其中的同步代码 (2)，再清空该宏任务产生的微任务 (3)。
 
 ---
 
-## 关键点总结
+### 📥 自检清单 (Checklist)
 
-- **解析与执行分离**：现代引擎通过预解析和延迟编译加速启动。
-- **JIT 权衡**：快速启动（基线编译）与高效运行（优化编译）的平衡。
-- **单线程模型**：JS 通过事件循环实现非阻塞，避免 UI 冻结。
-
-理解这些机制有助于编写高性能代码（如减少重优化、合理使用微任务）和调试复杂问题（如内存泄漏）。
+- [ ] **JIT**：V8 为什么要先把代码转成字节码，而不是直接转机器码？（内存占用、启动速度平衡）
+- [ ] **Deopt**：为什么 TypeScript 的静态类型有助于 V8 性能优化？（保持 Hidden Class 稳定，减少去优化）
+- [ ] **Event Loop**：如果微任务队列无限添加任务，页面会卡死吗？（会，因为微任务在渲染前执行）
+- [ ] **Scope**：`var`, `let`, `const` 在 " 创建、初始化、赋值 " 三个阶段有什么区别？（[[暂时性死区]]）

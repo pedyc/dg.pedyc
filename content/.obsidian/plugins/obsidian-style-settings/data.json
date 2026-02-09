@@ -1,5 +1,5 @@
 {
-  "blue-topaz-theme@@color-scheme-options": "color-scheme-options-default",
+  "blue-topaz-theme@@color-scheme-options": "color-scheme-options-avocado-topaz",
   "blue-topaz-theme@@background-settings-workplace-background-image": false,
   "blue-topaz-theme@@background-notebook-liked-switch": true,
   "blue-topaz-theme@@notebook-liked-markdown-page-options": "notebook-liked-markdown-page-dotted-notebook-2",
@@ -71,5 +71,15 @@
   "blue-topaz-theme@@outline-style": "logseq-outline-style",
   "blue-topaz-theme@@nowrap-outline": true,
   "pln@@font-ui-smaller": 16,
-  "anuppuccin-theme-settings@@anuppuccin-theme-dark": "ctp-mocha-old"
+  "anuppuccin-theme-settings@@anuppuccin-theme-dark": "ctp-mocha-old",
+  "blue-topaz-theme@@table-format-options": "default-table",
+  "blue-topaz-theme@@show-border-table": true,
+  "blue-topaz-theme@@table-style-options": "table-style-three",
+  "blue-topaz-theme@@fancy-hr": "default-hr",
+  "blue-topaz-theme@@file-bg-shape-option": "file-shape-default",
+  "blue-topaz-theme@@file-name-style-option": "file-name-non-wrapped",
+  "blue-topaz-theme@@dark-background-file": false,
+  "blue-topaz-theme@@remove-file-icons": false,
+  "blue-topaz-theme@@folder-style-change-options-colorful": "folder-style-change-options-colorful-tab-liked",
+  "blue-topaz-theme@@folder-style-change-options-colorful-subfolder": "folder-colorful-six"
 }

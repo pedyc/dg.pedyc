@@ -75,6 +75,7 @@
   "focusOnFileTab": false,
   "openInMainWorkspace": true,
   "showLinkBrackets": false,
+  "syncElementLinkWithText": false,
   "allowCtrlClick": true,
   "forceWrap": false,
   "pageTransclusionCharLimit": 200,
@@ -138808,7 +138809,7 @@
       }
     }
   },
-  "previousRelease": "2.18.3",
+  "previousRelease": "2.20.2",
   "showReleaseNotes": true,
   "compareManifestToPluginVersion": true,
   "showNewVersionNotification": true,
@@ -138819,6 +138820,7 @@
   "pinnedScripts": [
     "Excalidraw/Scripts/Downloaded/Connect elements.md"
   ],
+  "sidepanelTabs": [],
   "customPens": [
     {
       "type": "default",

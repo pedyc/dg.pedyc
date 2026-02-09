@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Diary/2026-01-23.md",
+                "file": "_template/template_startup.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-01-23"
+              "title": "template_startup"
+            }
+          },
+          {
+            "id": "0fa1474363092f9b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PARA/00-META/02 架构设计/数字花园设计.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "数字花园设计"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -71,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Diary/2026-01-23.md",
+                "file": "PARA/00-META/02 架构设计/数字花园设计.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "2026-01-23 的关系图"
+              "title": "数字花园设计 的关系图"
             }
           },
           {
@@ -150,7 +175,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:JavaScript",
+                "query": "tag:#模板",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -190,7 +215,8 @@
               "title": "添加笔记属性"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -270,50 +296,53 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
-      "publish:发布更改": false
+      "publish:发布更改": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "cf457dbc8ee0375f",
+  "active": "0fa1474363092f9b",
   "lastOpenFiles": [
-    "Diary/_resources/2026-01-23",
-    "PARA/00-META/本库领域索引.md",
-    "Diary/2026-01-23.md",
-    "index.md",
-    "Bases/all.base",
-    "Diary/马太效应.md",
-    "Diary/涓滴效应.md",
-    "PARA/30-RESOURCES/02 Zettelkasten/观点：给富人减税理论上能惠及穷人.md",
-    "PARA/30-RESOURCES/02 Zettelkasten/_resources",
-    "Diary/2025-12-01.md",
-    "Diary/2025-12-31.md",
-    "Diary/2025-12-30.md",
-    "Diary/_resources",
-    "Diary/2025-12-29.md",
-    "Diary/2025-12-28.md",
-    "PARA/10-PROJECTS/配置Wezterm + Neovim + WSL.md",
-    "PARA/30-RESOURCES/01 Atlas/为什么使用SSR（服务端渲染）？.md",
-    "PARA/10-PROJECTS/未命名.md",
-    "PARA/30-RESOURCES/01 Atlas/概念表/JS引擎.md",
-    "PARA/30-RESOURCES/01 Atlas/概念表/机器码.md",
-    "PARA/30-RESOURCES/01 Atlas/概念表/WebAssembly.md",
-    "PARA/20-AREAS/A 前端开发/前端性能优化.md",
-    "PARA/30-RESOURCES/01 Atlas/概念表/事件循环.md",
-    "PROJECTS.md",
-    "Diary/2025-12-26.md",
-    "Diary/2025-12-27.md",
-    "Bases/EXCALIDRAW.base",
-    "Bases/SOP.base",
-    "PARA/30-RESOURCES/01 Atlas/概念表/字节码.md",
-    "PARA/20-AREAS/A 前端开发/JS执行机制.md",
-    "PARA/10-PROJECTS/P 求职前端岗位/00求职前端岗位.md",
-    "Bases/ALL.base",
-    "Diary/_resources/2025-12-26",
+    "PARA/00-META/02 架构设计/目录结构设计.md",
+    "PARA/00-META/02 架构设计/本库顶层设计.md",
+    "PARA/00-META/00关于本库.md",
+    "PARA/10-PROJECTS/P 构建PKM系统/SOP-混合型PKM构建指南.md",
+    "PARA/00-META/01 规范与标准/领域命名规范.md",
+    "PARA/00-META/03 子系统与方案/标签系统.md",
+    "PARA/00-META/01 规范与标准/笔记分类与内容模板.md",
+    "PARA/00-META/02 架构设计/数字花园设计.md",
+    "PARA/00-META/03 子系统与方案/元数据系统.md",
+    "PARA/00-META/02 架构设计/本库中的AI.md",
+    "PARA/00-META/本库自动化方案.md",
+    "PARA/00-META/本库项目管理.md",
+    "PARA/00-META/本库诊断报告.md",
+    "PARA/00-META/01 规范与标准/命名规范.md",
+    "PARA/00-META/05 维护与日志",
+    "PARA/00-META/04 全局索引",
+    "PARA/00-META/03 子系统与方案",
+    "PARA/00-META/04 全局索引/本库术语索引.md",
+    "PARA/30-RESOURCES/00 Inbox/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
+    "PARA/30-RESOURCES/00 Inbox/00临时.md",
+    "PARA/30-RESOURCES/00 Inbox/00 Inbox规则.md",
+    "PARA/30-RESOURCES/Archive/积分系统.md",
+    "PARA/30-RESOURCES/Archive/RSS.md",
+    "PARA/30-RESOURCES/Archive/重构GTD OS.md",
+    "PARA/30-RESOURCES/Archive/_resources",
+    "PARA/30-RESOURCES/Archive/【记录】将个人博客部署到Netlify.md",
+    "_template/template_startup.md",
+    "PARA/30-RESOURCES/Archive",
+    "_template/_resources",
+    "_template/template_term.md",
+    "Diary/2026-02-09.md",
+    "Diary/_resources/2026-02-09",
+    "PARA/30-RESOURCES/Archive/「记录」WSL2配置代理.md",
+    "PARA/30-RESOURCES/Archive/【记录】建站.md",
+    "PARA/30-RESOURCES/00 Inbox/_resources",
+    "PARA/20-AREAS/A AI研究实践",
     "banner.svg",
-    "PARA/30-RESOURCES/01 Atlas/概念表/_resources",
     "PARA/20-AREAS/A 前端开发/数学在前端开发中的应用.excalidraw.svg",
     "PARA/20-AREAS/A 前端开发/_resources/前端工程化与前端开发生命周期.excalidraw.svg",
-    "PARA/20-AREAS/A 前端开发/_resources",
-    "SimpRead/SimpRead/backup/simpread_config@20251218172122.json",
     "PARA/20-AREAS/A 知识管理/_resources/00知识管理领域/57f0f1e5b6fa22ab83de5f7dab87cca4_MD5.jpeg",
     "PARA/20-AREAS/A 知识管理/_resources/08知识管理领域/f1682794a0227c1a0c5065bd634e8808_MD5.jpeg",
     "PARA/20-AREAS/A 知识管理/_resources/08知识管理领域/fa545b9686cb506c5b3dae7f8217ee4f_MD5.jpeg",

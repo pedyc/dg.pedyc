@@ -60,6 +60,12 @@
       "icon": "lucide-calendar-days",
       "name": "Calendar: Open view",
       "mode": "any"
+    },
+    {
+      "id": "obsidian-minimal-settings:toggle-minimal-switch",
+      "icon": "lucide-sun",
+      "name": "Minimal Theme Settings: Switch between light and dark mode",
+      "mode": "any"
     }
   ],
   "macros": [],

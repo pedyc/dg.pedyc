@@ -1,0 +1,8 @@
+views:
+  - type: table
+    name: PROJECTS
+    filters:
+      and:
+        - file.folder.contains("PARA/10-PROJECTS")
+  - type: table
+    name: AREAS

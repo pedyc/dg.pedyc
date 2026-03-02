@@ -32,12 +32,12 @@
             }
           },
           {
-            "id": "0fa1474363092f9b",
+            "id": "155a1ca15fd6046a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARA/00-META/02 架构设计/数字花园设计.md",
+                "file": "90 Diary/2026-03-01.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "数字花园设计"
+              "title": "2026-03-01"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "PARA/00-META/02 架构设计/数字花园设计.md",
+                "file": "90 Diary/2026-03-01.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -119,12 +119,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.8647700342637916,
+                  "scale": 0.4399620332244867,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "数字花园设计 的关系图"
+              "title": "2026-03-01 的关系图"
             }
           },
           {
@@ -133,13 +133,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PARA/20-AREAS/A 前端开发/00前端.md",
+                "file": "PARA/30-RESOURCES/01 Atlas/React 组件之间有哪些通信方式？适用于哪些场景？.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "00前端 的大纲"
+              "title": "React 组件之间有哪些通信方式？适用于哪些场景？ 的大纲"
             }
           }
         ]
@@ -175,7 +175,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#模板",
+                "query": "tag:AI/前端结合",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -215,8 +215,7 @@
               "title": "添加笔记属性"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -302,54 +301,54 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "0fa1474363092f9b",
+  "active": "155a1ca15fd6046a",
   "lastOpenFiles": [
-    "PARA/00-META/02 架构设计/目录结构设计.md",
-    "PARA/00-META/02 架构设计/本库顶层设计.md",
-    "PARA/00-META/00关于本库.md",
-    "PARA/10-PROJECTS/P 构建PKM系统/SOP-混合型PKM构建指南.md",
-    "PARA/00-META/01 规范与标准/领域命名规范.md",
-    "PARA/00-META/03 子系统与方案/标签系统.md",
-    "PARA/00-META/01 规范与标准/笔记分类与内容模板.md",
-    "PARA/00-META/02 架构设计/数字花园设计.md",
-    "PARA/00-META/03 子系统与方案/元数据系统.md",
-    "PARA/00-META/02 架构设计/本库中的AI.md",
-    "PARA/00-META/本库自动化方案.md",
-    "PARA/00-META/本库项目管理.md",
-    "PARA/00-META/本库诊断报告.md",
-    "PARA/00-META/01 规范与标准/命名规范.md",
-    "PARA/00-META/05 维护与日志",
-    "PARA/00-META/04 全局索引",
-    "PARA/00-META/03 子系统与方案",
-    "PARA/00-META/04 全局索引/本库术语索引.md",
-    "PARA/30-RESOURCES/00 Inbox/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
-    "PARA/30-RESOURCES/00 Inbox/00临时.md",
-    "PARA/30-RESOURCES/00 Inbox/00 Inbox规则.md",
-    "PARA/30-RESOURCES/Archive/积分系统.md",
-    "PARA/30-RESOURCES/Archive/RSS.md",
-    "PARA/30-RESOURCES/Archive/重构GTD OS.md",
-    "PARA/30-RESOURCES/Archive/_resources",
-    "PARA/30-RESOURCES/Archive/【记录】将个人博客部署到Netlify.md",
-    "_template/template_startup.md",
-    "PARA/30-RESOURCES/Archive",
-    "_template/_resources",
-    "_template/template_term.md",
-    "Diary/2026-02-09.md",
-    "Diary/_resources/2026-02-09",
-    "PARA/30-RESOURCES/Archive/「记录」WSL2配置代理.md",
-    "PARA/30-RESOURCES/Archive/【记录】建站.md",
-    "PARA/30-RESOURCES/00 Inbox/_resources",
-    "PARA/20-AREAS/A AI研究实践",
-    "banner.svg",
-    "PARA/20-AREAS/A 前端开发/数学在前端开发中的应用.excalidraw.svg",
-    "PARA/20-AREAS/A 前端开发/_resources/前端工程化与前端开发生命周期.excalidraw.svg",
-    "PARA/20-AREAS/A 知识管理/_resources/00知识管理领域/57f0f1e5b6fa22ab83de5f7dab87cca4_MD5.jpeg",
-    "PARA/20-AREAS/A 知识管理/_resources/08知识管理领域/f1682794a0227c1a0c5065bd634e8808_MD5.jpeg",
-    "PARA/20-AREAS/A 知识管理/_resources/08知识管理领域/fa545b9686cb506c5b3dae7f8217ee4f_MD5.jpeg",
-    "PARA/20-AREAS/A 知识管理/_resources/draw_PKM_methods.svg",
-    "PARA/10-PROJECTS/_resources/前端面试.png",
-    "PARA/10-PROJECTS/_resources/Drawing 2025-05-29 16.11.38.excalidraw.svg",
-    "PARA/20-AREAS/A 知识管理/_resources/draw_PKM_Processes.excalidraw.svg",
+    "20-AREAS/A 前端开发/前端面试真题库 MOC.md",
+    "20-AREAS/A 前端开发/前端开发 MOC.md",
+    "20-AREAS/A 前端开发/前端面试问题追踪看板.md",
+    "30-Zettelkasten/FAQ-框架原理.md",
+    "30-Zettelkasten/存在 (Being).md",
+    "30-Zettelkasten/艾宾浩斯记忆曲线.md",
+    "30-Zettelkasten/柏拉图.md",
+    "40-RESOURCES/SimpRead/0-React_js 中组件重渲染性能问题及优化方法_react 弹框 导致 页面重新渲染 - CSDN 博客.md",
+    "40-RESOURCES/SimpRead/0-React_js 中组件重渲染性能问题及优化方法_react 弹框 导致 页面重新渲染 - CSDN 博客@annote.md",
+    "40-RESOURCES/SimpRead/_resources/0-React_js 中组件重渲染性能问题及优化方法_react 弹框 导致 页面重新渲染 - CSDN 博客/94acb6f4bdfae182247febb78becafb4_MD5.jpg",
+    "40-RESOURCES/SimpRead/_resources/0-React_js 中组件重渲染性能问题及优化方法_react 弹框 导致 页面重新渲染 - CSDN 博客",
+    "40-RESOURCES/SimpRead/_resources",
+    "40-RESOURCES/SimpRead/3-理解 React 的渲染机制：为什么组件会重新渲染？.md",
+    "40-RESOURCES/SimpRead/3-理解 React 的渲染机制：为什么组件会重新渲染？@annote.md",
+    "40-RESOURCES/SimpRead/理解 React 的渲染机制：为什么组件会重新渲染？.md",
+    "40-RESOURCES/Clippings/理解 React 的渲染机制：为什么组件会重新渲染？.md",
+    "30-Zettelkasten/渐进式总结.md",
+    "30-Zettelkasten/发散思维.md",
+    "30-Zettelkasten/白色相簿2：关于爱、道德与自我超越的思考.md",
+    "30-Zettelkasten/个人品牌构建概述.md",
+    "20-AREAS/A 个人成长/个人成长 MOC.md",
+    "_template/template_concept.md",
+    "SimpRead/3-理解 React 的渲染机制：为什么组件会重新渲染？.md",
+    "SimpRead/3-理解 React 的渲染机制：为什么组件会重新渲染？@annote.md",
+    "SimpRead/3-理解 React 的渲染机制：为什么组件会重新渲染？@all.md",
+    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/a7f078d533ab28df48e2086a41205217_MD5.avif",
+    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/21e93bc987c1ede08e9be8b18831f2dc_MD5.mp4",
+    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/3013e1f38f86bcfd2369a4e182f6c3f4_MD5.jpg",
+    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/b8724ab594ac3f611bbef56f9246a2ad_MD5.avif",
+    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/3735fef7e2b9cc03163ce73f70512aa1_MD5.webp",
+    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/72ae8c947be1865b1abfe5646cc26f5b_MD5.svg",
+    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/cf65fdd1fcbec3f1264da76fd665ed12_MD5.avif",
+    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/fed479fb9a8866dcd3f731850a826821_MD5.webp",
+    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/8914a04ecd89bcda922b64c01b216056_MD5.avif",
+    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/b6d6860d7cef238d23c644115ffbe57a_MD5.jpg",
+    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？",
+    "_template/template_area.md",
+    "40-RESOURCES/SimpRead/0-AI 复兴 RSS ？@annote.md",
+    "40-RESOURCES/SimpRead/0-AI 复兴 RSS ？.md",
+    "40-RESOURCES/SimpRead/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否@annote.md",
+    "SimpRead",
+    "40-RESOURCES/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
+    "99-ASSETS",
+    "99-ASSETS/Bases/PARA.base",
+    "99-ASSETS/Bases/EXCALIDRAW.base",
+    "99-ASSETS/Bases/SOP.base",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

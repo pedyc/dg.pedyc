@@ -14,7 +14,6 @@
   "obsidian-style-settings",
   "obsidian-tasks-plugin",
   "templater-obsidian",
-  "obsidian-vimrc-support",
-  "virtual-linker",
-  "pdf-plus"
+  "pdf-plus",
+  "virtual-linker"
 ]

@@ -1,6 +1,6 @@
 {
   "blue-topaz-theme@@color-scheme-options": "color-scheme-options-avocado-topaz",
-  "blue-topaz-theme@@background-settings-workplace-background-image": false,
+  "blue-topaz-theme@@background-settings-workplace-background-image": true,
   "blue-topaz-theme@@background-notebook-liked-switch": true,
   "blue-topaz-theme@@notebook-liked-markdown-page-options": "notebook-liked-markdown-page-dotted-notebook-2",
   "Blue-Topaz-Codebox-Highlight@@code-theme-selection": "code-theme-custom",
@@ -15,8 +15,8 @@
   "blue-topaz-theme@@tab-title-bar-position": false,
   "blue-topaz-theme@@layout-style-options": "layout-style-options-default",
   "blue-topaz-theme@@background-image-settings-command-palette-same-as-workplace": true,
-  "blue-topaz-theme@@background-settings-workplace-theme-light": "background-settings-workplace-theme-light-blue-mountain",
-  "blue-topaz-theme@@background-image-settings-switch": false,
+  "blue-topaz-theme@@background-settings-workplace-theme-light": "background-settings-workplace-waves-light",
+  "blue-topaz-theme@@background-image-settings-switch": true,
   "blue-topaz-theme@@inline-title-font": "Aa奶糖油画体",
   "blue-topaz-theme@@inline-title-text-align-settings": "inline-title-text-align-center",
   "blue-topaz-theme@@toggle-nonoverlapping-bg": false,
@@ -81,5 +81,9 @@
   "blue-topaz-theme@@dark-background-file": false,
   "blue-topaz-theme@@remove-file-icons": false,
   "blue-topaz-theme@@folder-style-change-options-colorful": "folder-style-change-options-colorful-tab-liked",
-  "blue-topaz-theme@@folder-style-change-options-colorful-subfolder": "folder-colorful-six"
+  "blue-topaz-theme@@folder-style-change-options-colorful-subfolder": "folder-colorful-six",
+  "blue-topaz-theme@@background-settings-workplace-theme-dark": "background-settings-workplace-waves",
+  "blue-topaz-theme@@bg-panel-page-option-dark": "panel-page-bg-theme-dark-plant",
+  "blue-topaz-theme@@scrollbar-style-option": "hover-scrollbars",
+  "blue-topaz-theme@@remove-cloze-style": false
 }

@@ -1,13 +1,16 @@
 ---
 title: templage_area
-aliases: [领域别名]
+aliases:
+  - 领域别名
 description: 领域索引笔记通用模板，用于定义和管理特定领域的知识
-date-created: 2025-05-30
-date-modified: 2025-12-16
 status: active | archived
-para: area
-related: ["[[卡片笔记1]]", "[[卡片笔记2]]"]
+related:
+  - "[[卡片笔记1]]"
+  - "[[卡片笔记2]]"
 zettel: moc
+tags:
+  - area
+  - MOC
 ---
 
 ## 🗺️ 领域：{{领域名称}}

@@ -1,7 +1,10 @@
 ---
 title: template_concept
-tags: [concept, status/cultivating]
+tags:
+  - concept
+  - status/cultivating
 type: concept
+status: 🌰 seed | 🌱 sprout | 🌲 evergreen
 ---
 
 ## 🧩 概念：{{概念名称}}

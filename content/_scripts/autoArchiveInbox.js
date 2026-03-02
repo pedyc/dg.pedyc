@@ -3,7 +3,7 @@
  */
 async function autoArchiveInbox(tp) {
     const INBOX_PATH = "PARA/30-RESOURCES/00 Inbox";
-    const ARCHIVE_PATH = "PARA/30-RESOURCES/Archive";
+    const ARCHIVE_PATH = "PARA/40-Archive";
     const EXPIRE_DAYS = 14;
 
     // 1. 等待 Obsidian 索引完全加载 (避免开机太快读不到文件)

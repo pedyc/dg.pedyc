@@ -1,14 +1,14 @@
 ---
 title: PROJECTS
 date-created: 2025-12-04
-date-modified: 2025-12-27
+date-modified: 2026-03-01
 ---
 
 ## 规划中的项目
 
 ```dataview
 TABLE status, area, cycle
-FROM "PARA/10-PROJECTS"
+FROM "10-PROJECTS"
 SORT file.name ASC
 ```
 
@@ -16,7 +16,7 @@ SORT file.name ASC
 
 ```dataview
 TABLE status, area, cycle
-FROM "PARA/10-PROJECTS"
+FROM "10-PROJECTS"
 WHERE status = "进行中"
 SORT file.name ASC
 ```
@@ -25,7 +25,7 @@ SORT file.name ASC
 
 ```dataview
 TABLE status, area, cycle
-FROM "PARA/10-PROJECTS"
+FROM "10-PROJECTS"
 WHERE status = "已完成"
 SORT file.name ASC
 ```

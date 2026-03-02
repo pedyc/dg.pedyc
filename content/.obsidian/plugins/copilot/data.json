@@ -11,13 +11,13 @@
   "azureOpenAIApiDeploymentName": "",
   "azureOpenAIApiVersion": "",
   "azureOpenAIApiEmbeddingDeploymentName": "",
-  "googleApiKey": "enc_desk_djEwEFIH1ofbEINjPuLzALSz0zovL0wCPhYFtm/RQzJgzc0W/KpDpTAfybUzyoKPjyGZw7y4LMYqHsCGzJ2YLSGUqI4r4Q==",
+  "googleApiKey": "enc_desk_djEwKNh4IjTCV5e0QHia+Olwzl4LBe+cxb8fSqD6VCV4hVHGnqur1vQFKYCRjgrTEam29Mjn4gtejRrIzg+idp5La4f03w==",
   "openRouterAiApiKey": "enc_desk_djEw0v8cahRn6A4ps310/s2keEXmoQ1he0BVNFsQhb8rb3R6w8ZdFdWF0319UoeyvMUzryvyNZix7KFBD3aBjzEYpaEcTHOXrxEKtnoiwd8868dqDTxQRCozSPPrk/1K428mzxA7Tg4=",
   "mistralApiKey": "",
-  "deepseekApiKey": "",
+  "deepseekApiKey": "enc_desk_djEwkwF2/ESaYoUBKf/alDpl6A3czd3FlmjsDrFinPQ2asXrQw7HJN8/XoKab/ee+BJ7P5s0oDuEvUadaopoutOy",
   "defaultChainType": "vault_qa",
   "defaultModelKey": "gemini-2.5-flash|google",
-  "embeddingModelKey": "text-embedding-004|google",
+  "embeddingModelKey": "gemini-embedding-001|google",
   "temperature": 0.1,
   "maxTokens": 6000,
   "contextTurns": 15,
@@ -25,8 +25,8 @@
   "openAIProxyBaseUrl": "",
   "openAIEmbeddingProxyBaseUrl": "",
   "stream": true,
-  "defaultSaveFolder": "copilot/copilot-conversations",
-  "defaultConversationTag": "copilot-conversation",
+  "defaultSaveFolder": "99-ASSETS/copilot/copilot-conversations",
+  "defaultConversationTag": "99-ASSETS/copilot-conversation",
   "autosaveChat": true,
   "defaultOpenArea": "view",
   "customPromptsFolder": "copilot/copilot-custom-prompts",
@@ -55,7 +55,7 @@
       "apiKey": ""
     },
     {
-      "name": "google/gemini-2.5-flash-lite",
+      "name": "google/gemini-2.5-flash",
       "provider": "openrouterai",
       "enabled": true,
       "isBuiltIn": true,
@@ -67,7 +67,29 @@
       "apiKey": ""
     },
     {
-      "name": "google/gemini-2.5-flash",
+      "name": "gpt-5.2",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gpt-5-mini",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "google/gemini-2.5-flash-lite",
       "provider": "openrouterai",
       "enabled": true,
       "isBuiltIn": true,
@@ -92,17 +114,6 @@
     },
     {
       "name": "gpt-5",
-      "provider": "openai",
-      "enabled": true,
-      "isBuiltIn": true,
-      "core": true,
-      "capabilities": [
-        "vision"
-      ],
-      "apiKey": ""
-    },
-    {
-      "name": "gpt-5-mini",
       "provider": "openai",
       "enabled": true,
       "isBuiltIn": true,
@@ -307,6 +318,15 @@
       "apiKey": ""
     },
     {
+      "name": "openai/text-embedding-3-small",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "isEmbeddingModel": true,
+      "core": true,
+      "apiKey": ""
+    },
+    {
       "name": "text-embedding-3-small",
       "provider": "openai",
       "enabled": true,
@@ -340,7 +360,8 @@
       "enabled": true,
       "isBuiltIn": true,
       "isEmbeddingModel": true,
-      "apiKey": ""
+      "apiKey": "",
+      "enableCors": false
     },
     {
       "name": "embed-multilingual-light-v3.0",
@@ -379,7 +400,7 @@
   "userId": "cc77606d-4ad8-47e5-8b9a-422a09d82f1c",
   "passMarkdownImages": true,
   "enableCustomPromptTemplating": true,
-  "lastDismissedVersion": null,
+  "lastDismissedVersion": "3.2.3",
   "includeActiveNoteAsContext": true,
   "allowAdditionalContext": true,
   "enableWordCompletion": false,
@@ -425,5 +446,10 @@
   "chatHistorySortStrategy": "recent",
   "projectListSortStrategy": "recent",
   "userSystemPromptsFolder": "copilot/system-prompts",
-  "defaultSystemPromptTitle": "Migrated Custom System Prompt"
+  "defaultSystemPromptTitle": "",
+  "githubCopilotAccessToken": "enc_desk_djEwHm1t7x0YOq/Uy580WLF1PPPL1d4DEgsEpYu0Pc4eCmGU7J8qiK8xYPNPbNq/HH2Xd8uEycIJ25VXuBlY9QvP/eDEFuE=",
+  "githubCopilotToken": "enc_desk_djEwAKEMAyDkEFbcubyRwte2VYpK1B81BdmQiS2GcxemvnBqx3TkIQBUh6YoOtg+2/NiUbFwaYfmjejpPZlZXbPIZ5kE05KJwcgzNyPFbLV5KpezVh/4oS9/wYs+8z6amQn+nADgghXJx1WO3heh+/byZiBDzJFGkiZU/bV/kgLCV0aXGgvHVElhlv69KH5BfaO8lc7pqWxZr2ZpIAmrEMCrsbyy3wmF6NA+X9uUzAYeIgvvh32oDcSWyRDDsgt/jVLjRsKLusD76Nrv+DahKb8trsAYeDGzg+eN3r7n1EZKBYKslybcPFulGdx5QbDoyHeyab887wtW7uaDdJaYJliikOEnyq1BSIU8EKSrCQf2GZxsi3MWSqUh7ItK8Ok4wtPuJ/cb88ixym0Aa9O8ZK3ilx1PkMcNweZCHlcbLSH41wuBRbEns/HqvBVS5Fl05UfL5PMYX/4SmuRpHjTH1qPvd8Y4Ub8n3hemtLh9dub+4+kAAtCnzRyC+m+ZL/E=",
+  "githubCopilotTokenExpiresAt": 1770694588000,
+  "enableMiyo": false,
+  "selfHostSearchProvider": "firecrawl"
 }

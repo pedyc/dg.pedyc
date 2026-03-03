@@ -1,25 +1,25 @@
 ---
-topics: 
-uid: 
 title: Obsidian
 aliases: []
 author: ped_yc
-description: 
-tags: [tools]
+description:
+tags: [tool]
 date-created: 2024-08-14
-date-modified: 2025-02-24
-status: [YCTODO]
-type: [记录]
+date-modified: 2026-03-03
+status: 🌰 seed
+content-type: [tool]
 ---
 
-## Obsidian 设置
+> [!hint] Abstract
+> Obsidian 是一个本地知识库软件，支持扩展 Markdown 语法和双向链接
 
-### obsidian 输入优化
+## 常用插件
 
-## Obsidian 插件
-
-## 本库常用快捷键
-
-- <Ctrl-O> 打开文件
-- <Ctrl-P> 打开命令面板
-- <Ctrl-Shift-I> 打开开发者工具
+- StyleSettings：主题设置插件
+- LocalImagesPlus：本地化图片插件
+- Linter：格式化插件
+- Templater：模板插件
+- Copilot：AI 插件
+- Dataview：数据查询插件
+- Excalidraw：画图插件
+- SimpRead Sync：简悦同步插件

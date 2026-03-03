@@ -16,7 +16,7 @@
   "mistralApiKey": "",
   "deepseekApiKey": "enc_desk_djEwkwF2/ESaYoUBKf/alDpl6A3czd3FlmjsDrFinPQ2asXrQw7HJN8/XoKab/ee+BJ7P5s0oDuEvUadaopoutOy",
   "defaultChainType": "vault_qa",
-  "defaultModelKey": "gemini-2.5-flash|google",
+  "defaultModelKey": "deepseek-chat|deepseek",
   "embeddingModelKey": "gemini-embedding-001|google",
   "temperature": 0.1,
   "maxTokens": 6000,

@@ -1,5 +1,5 @@
 {
-  "blue-topaz-theme@@color-scheme-options": "color-scheme-options-avocado-topaz",
+  "blue-topaz-theme@@color-scheme-options": "color-scheme-options-default",
   "blue-topaz-theme@@background-settings-workplace-background-image": true,
   "blue-topaz-theme@@background-notebook-liked-switch": true,
   "blue-topaz-theme@@notebook-liked-markdown-page-options": "notebook-liked-markdown-page-dotted-notebook-2",
@@ -17,19 +17,12 @@
   "blue-topaz-theme@@background-image-settings-command-palette-same-as-workplace": true,
   "blue-topaz-theme@@background-settings-workplace-theme-light": "background-settings-workplace-waves-light",
   "blue-topaz-theme@@background-image-settings-switch": true,
-  "blue-topaz-theme@@inline-title-font": "Aa奶糖油画体",
   "blue-topaz-theme@@inline-title-text-align-settings": "inline-title-text-align-center",
   "blue-topaz-theme@@toggle-nonoverlapping-bg": false,
   "blue-topaz-theme@@toggle-fixed-pattern": false,
   "blue-topaz-theme@@toggle-split-note-background": false,
   "blue-topaz-theme@@toggle-bg-panel-page": false,
   "blue-topaz-theme@@font-family-change-to-default": false,
-  "blue-topaz-theme@@h1-font": "Aa奶糖油画体",
-  "blue-topaz-theme@@h2-font": "Aa奶糖油画体",
-  "blue-topaz-theme@@h3-font": "Aa奶糖油画体",
-  "blue-topaz-theme@@h4-font": "Aa奶糖油画体",
-  "blue-topaz-theme@@h5-font": "Aa奶糖油画体",
-  "blue-topaz-theme@@h6-font": "Aa奶糖油画体",
   "blue-topaz-theme@@text-indentation-two-em": false,
   "blue-topaz-theme@@justify-align": false,
   "blue-topaz-theme@@toggle-left-aligned-content": false,
@@ -85,5 +78,10 @@
   "blue-topaz-theme@@background-settings-workplace-theme-dark": "background-settings-workplace-waves",
   "blue-topaz-theme@@bg-panel-page-option-dark": "panel-page-bg-theme-dark-plant",
   "blue-topaz-theme@@scrollbar-style-option": "hover-scrollbars",
-  "blue-topaz-theme@@remove-cloze-style": false
+  "blue-topaz-theme@@remove-cloze-style": false,
+  "blue-topaz-theme@@background-waves-color@@dark": "#000000",
+  "blue-topaz-theme@@background-image-settings-markdown-page-options": "background-image-settings-markdown-page-transparent",
+  "blue-topaz-theme@@custom-markdown-page-background-color@@dark": "#000000",
+  "blue-topaz-theme@@text-normal@@dark": "#939393",
+  "blue-topaz-theme@@magic-main-color@@dark": "#CC9C7A"
 }

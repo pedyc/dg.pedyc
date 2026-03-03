@@ -76,7 +76,7 @@ export async function fetchTtf(
   weight: FontWeight,
 ): Promise<Buffer<ArrayBufferLike> | undefined> {
   const fontName = rawFontName.replaceAll(" ", "+")
-  const cacheKey = `${fontName}-${weight}`
+  const cacheKey = `${fontName}-${weight}.ttf`
   const cacheDir = path.join(QUARTZ, ".quartz-cache", "fonts")
   const cachePath = path.join(cacheDir, cacheKey)
 
@@ -86,6 +86,25 @@ export async function fetchTtf(
     return fs.readFile(cachePath)
   } catch (error) {
     // ignore errors and fetch font
+  }
+
+  // Check local static font directory first (support ttf, woff, woff2)
+  const localFontDir = path.join(QUARTZ, "static", "font")
+  const fontBaseName = rawFontName.replaceAll(" ", "_")
+  const fontExtensions = ["ttf", "woff2", "woff"]
+
+  for (const ext of fontExtensions) {
+    const localFontPath = path.join(localFontDir, `${fontBaseName}-${weight}.${ext}`)
+    try {
+      await fs.access(localFontPath)
+      const fontData = await fs.readFile(localFontPath)
+      // Cache local font for faster access
+      await fs.mkdir(cacheDir, { recursive: true })
+      await fs.writeFile(cachePath, fontData)
+      return fontData
+    } catch {
+      // Try next format
+    }
   }
 
   // Get css file from google fonts

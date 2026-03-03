@@ -163,9 +163,8 @@ export function pathToRoot(slug: FullSlug): RelativeURL {
     .map((_) => "..")
     .join("/")
 
-  if (rootPath.length === 0) {
-    rootPath = "."
-  }
+  // Don't add "." for root index page - this causes 404s with relative links
+  // Empty string will result in correct relative paths like "folder/file" instead of "./folder/file"
 
   return rootPath as RelativeURL
 }

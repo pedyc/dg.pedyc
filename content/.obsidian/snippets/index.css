@@ -4,5 +4,9 @@
 }
 
 .virtual-link:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+}
+
+*{
+    /* font-family: 'Arial', sans-serif; */
 }

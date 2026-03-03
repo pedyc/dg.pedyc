@@ -19,6 +19,7 @@
   "propertiesInDocument": "visible",
   "uriCallbacks": true,
   "userIgnoreFilters": [
-    "SimpRead/backup/"
+    "SimpRead/backup/",
+    "80-PRIVATE/"
   ]
 }

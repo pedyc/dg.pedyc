@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cf457dbc8ee0375f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_template/template_startup.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "template_startup"
-            }
-          },
-          {
             "id": "155a1ca15fd6046a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90 Diary/2026-03-01.md",
+                "file": "90-Diary/2026-03-01.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -54,9 +30,177 @@
               "icon": "lucide-file",
               "title": "2026-03-01"
             }
+          },
+          {
+            "id": "cb6065e9f1f6e038",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "90-Diary/2026-03-03.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-03-03"
+            }
+          },
+          {
+            "id": "ba3604bfe5d95d6d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10-PROJECTS/P-学习ClaudeCode.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "P-学习ClaudeCode"
+            }
+          },
+          {
+            "id": "20ab953ac178f633",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20-AREAS/A-前端开发/前端开发 MOC.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "前端开发 MOC"
+            }
+          },
+          {
+            "id": "598f7d08f2d5ea0d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40-RESOURCES/SimpRead/1-Claude Code 如何工作 - Claude Code Docs@annote.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "1-Claude Code 如何工作 - Claude Code Docs@annote"
+            }
+          },
+          {
+            "id": "eff21c8ffbf843f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40-RESOURCES/SimpRead/1-Claude Code 如何工作 - Claude Code Docs@annote.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "1-Claude Code 如何工作 - Claude Code Docs@annote"
+            }
+          },
+          {
+            "id": "8e98cdcec6925ab5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20-AREAS/A-人工智能/Claude Code.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Claude Code"
+            }
+          },
+          {
+            "id": "4b2180cf6b9ffc6e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20-AREAS/A-人工智能/AI 核心概念 MOC.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "AI 核心概念 MOC"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -96,7 +240,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "90 Diary/2026-03-01.md",
+                "file": "10-PROJECTS/P-学习ClaudeCode.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +268,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "2026-03-01 的关系图"
+              "title": "P-学习ClaudeCode 的关系图"
             }
           },
           {
@@ -215,7 +359,8 @@
               "title": "添加笔记属性"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -301,54 +446,54 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "155a1ca15fd6046a",
+  "active": "ba3604bfe5d95d6d",
   "lastOpenFiles": [
-    "20-AREAS/A 前端开发/前端面试真题库 MOC.md",
-    "20-AREAS/A 前端开发/前端开发 MOC.md",
-    "20-AREAS/A 前端开发/前端面试问题追踪看板.md",
-    "30-Zettelkasten/FAQ-框架原理.md",
-    "30-Zettelkasten/存在 (Being).md",
-    "30-Zettelkasten/艾宾浩斯记忆曲线.md",
-    "30-Zettelkasten/柏拉图.md",
-    "40-RESOURCES/SimpRead/0-React_js 中组件重渲染性能问题及优化方法_react 弹框 导致 页面重新渲染 - CSDN 博客.md",
+    "20-AREAS/A-前端开发/前端开发 MOC.md",
+    "10-PROJECTS/P-学习ClaudeCode.md",
+    "40-RESOURCES/SimpRead/1-Claude Code 如何工作 - Claude Code Docs@annote.md",
+    "50-ARCHIVE/Obsidian.md",
     "40-RESOURCES/SimpRead/0-React_js 中组件重渲染性能问题及优化方法_react 弹框 导致 页面重新渲染 - CSDN 博客@annote.md",
+    "40-RESOURCES/SimpRead/0-React_js 中组件重渲染性能问题及优化方法_react 弹框 导致 页面重新渲染 - CSDN 博客.md",
+    "40-RESOURCES/SimpRead/1-Claude Code 如何工作 - Claude Code Docs.md",
+    "40-RESOURCES/Claude Code 如何工作.md",
+    "40-RESOURCES/SimpRead/_resources/1-Claude Code 如何工作 - Claude Code Docs/fa961b2fdb873479ae3273ce809b350a_MD5.svg",
+    "40-RESOURCES/SimpRead/_resources/1-Claude Code 如何工作 - Claude Code Docs/3eddd2200c69d4bd9748b5e19935fc08_MD5.svg",
+    "40-RESOURCES/SimpRead/_resources/1-Claude Code 如何工作 - Claude Code Docs",
+    "40-RESOURCES/_resources/Claude Code 如何工作/d93a75128019bc05e27a6a3f72afc9e5_MD5.jpg",
+    "40-RESOURCES/_resources/Claude Code 如何工作",
+    "40-RESOURCES/_resources/Pasted image 20260303122714.png",
+    "40-RESOURCES/_resources",
+    "20-AREAS/A-人工智能/Claude Code.md",
+    "90-Diary/2026-03-01.md",
+    "_template/template_startup.md",
+    "90-Diary/2026-03-03.md",
+    "20-AREAS/A-人工智能/AI 核心概念 MOC.md",
+    "20-AREAS/A-人工智能/MCP (Model Context Protocol).md",
+    "20-AREAS/A-常用工具/常用工具 MOC.md",
+    "99-ASSETS/copilot/copilot-conversations/根据领域模板template_area重构笔记@20260303_103119.md",
+    "10-PROJECTS/_resources",
+    "10-PROJECTS/P-学习Obsidian CLI、Skills.md",
+    "99-ASSETS/copilot/copilot-conversations/根据标题完善笔记内容@20260303_001311.md",
+    "_template/template_project.md",
+    "20-AREAS/A-常用工具",
+    "90-Diary/_resources/2026-03-03",
+    "90-Diary/_resources/2026-03-02",
+    "90-Diary/2026-03-02.md",
+    "99-ASSETS/copilot/copilot-conversations/根据项目模板完善笔记@20260302_215215.md",
+    "80-PRIVATE/API_KEY.md",
+    "80-PRIVATE/_resources",
+    "99-ASSETS/Excalidraw/Drawing 2025-09-25 11.10.32.excalidraw.md",
+    "99-ASSETS/Excalidraw/Drawing 2025-09-25 11.10.32.excalidraw.svg",
+    "80-PRIVATE",
+    "99-ASSETS/copilot/copilot-conversations/将openclaw加入笔记@20260302_135616.md",
+    "20-AREAS/A-前端开发/前端面试真题库 MOC.md",
+    "20-AREAS/A 前端开发/前端面试问题追踪看板.md",
     "40-RESOURCES/SimpRead/_resources/0-React_js 中组件重渲染性能问题及优化方法_react 弹框 导致 页面重新渲染 - CSDN 博客/94acb6f4bdfae182247febb78becafb4_MD5.jpg",
     "40-RESOURCES/SimpRead/_resources/0-React_js 中组件重渲染性能问题及优化方法_react 弹框 导致 页面重新渲染 - CSDN 博客",
-    "40-RESOURCES/SimpRead/_resources",
-    "40-RESOURCES/SimpRead/3-理解 React 的渲染机制：为什么组件会重新渲染？.md",
-    "40-RESOURCES/SimpRead/3-理解 React 的渲染机制：为什么组件会重新渲染？@annote.md",
-    "40-RESOURCES/SimpRead/理解 React 的渲染机制：为什么组件会重新渲染？.md",
-    "40-RESOURCES/Clippings/理解 React 的渲染机制：为什么组件会重新渲染？.md",
-    "30-Zettelkasten/渐进式总结.md",
-    "30-Zettelkasten/发散思维.md",
-    "30-Zettelkasten/白色相簿2：关于爱、道德与自我超越的思考.md",
-    "30-Zettelkasten/个人品牌构建概述.md",
-    "20-AREAS/A 个人成长/个人成长 MOC.md",
-    "_template/template_concept.md",
-    "SimpRead/3-理解 React 的渲染机制：为什么组件会重新渲染？.md",
-    "SimpRead/3-理解 React 的渲染机制：为什么组件会重新渲染？@annote.md",
-    "SimpRead/3-理解 React 的渲染机制：为什么组件会重新渲染？@all.md",
     "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/a7f078d533ab28df48e2086a41205217_MD5.avif",
-    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/21e93bc987c1ede08e9be8b18831f2dc_MD5.mp4",
     "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/3013e1f38f86bcfd2369a4e182f6c3f4_MD5.jpg",
     "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/b8724ab594ac3f611bbef56f9246a2ad_MD5.avif",
     "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/3735fef7e2b9cc03163ce73f70512aa1_MD5.webp",
-    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/72ae8c947be1865b1abfe5646cc26f5b_MD5.svg",
-    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/cf65fdd1fcbec3f1264da76fd665ed12_MD5.avif",
-    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/fed479fb9a8866dcd3f731850a826821_MD5.webp",
-    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/8914a04ecd89bcda922b64c01b216056_MD5.avif",
-    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/b6d6860d7cef238d23c644115ffbe57a_MD5.jpg",
-    "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？",
-    "_template/template_area.md",
-    "40-RESOURCES/SimpRead/0-AI 复兴 RSS ？@annote.md",
-    "40-RESOURCES/SimpRead/0-AI 复兴 RSS ？.md",
-    "40-RESOURCES/SimpRead/27-浏览器缓存 - Javascript 编程基础 - SegmentFault 思否@annote.md",
-    "SimpRead",
-    "40-RESOURCES/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
-    "99-ASSETS",
-    "99-ASSETS/Bases/PARA.base",
-    "99-ASSETS/Bases/EXCALIDRAW.base",
-    "99-ASSETS/Bases/SOP.base",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

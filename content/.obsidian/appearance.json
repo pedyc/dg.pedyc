@@ -8,5 +8,6 @@
     "index"
   ],
   "showRibbon": false,
-  "nativeMenus": true
+  "nativeMenus": false,
+  "accentColor": "#259838"
 }

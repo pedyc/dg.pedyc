@@ -8,7 +8,10 @@
       "Bash(npm run check)",
       "Bash(npm run build)",
       "Bash(npm run format)",
-      "Bash(tsc --noEmit)"
+      "Bash(tsc --noEmit)",
+      "Bash(node --version && npm --version && npm list esbuild 2>&1)",
+      "Bash(npm test)",
+      "Bash(git status)"
     ],
     "deny": [],
     "ask": []

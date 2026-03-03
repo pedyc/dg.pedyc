@@ -16,7 +16,7 @@ const config: QuartzConfig = {
     },
     locale: "zh-CN",
     baseUrl: "dg.pedyc.site",
-    ignorePatterns: [".obsidian", ".trash", "Private"],
+    ignorePatterns: [".obsidian", "80-PRIVATE", "_resources", "_templates", "_scripts"],
     defaultDateType: "created",
     theme: {
       fontOrigin: "local",
@@ -55,11 +55,11 @@ const config: QuartzConfig = {
   plugins: {
     transformers: [
       Plugin.FrontMatter(),
-      Plugin.TableOfContents({ maxDepth: 3 }),
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "git", "filesystem"],
       }),
-      // Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.Poetry(),
+      Plugin.Latex({ renderEngine: "katex" }),
       Plugin.SyntaxHighlighting(),
       Plugin.ObsidianFlavoredMarkdown({
         enableInHtmlEmbed: false,
@@ -70,11 +70,10 @@ const config: QuartzConfig = {
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest", lazyLoad: true }),
       Plugin.Description(),
-      // Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.Latex({ renderEngine: "katex" }),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
-      Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
       Plugin.FolderPage(),
@@ -87,8 +86,7 @@ const config: QuartzConfig = {
       Plugin.Static(),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // Plugin.WorkerBuilder(),
-      // // Comment out CustomOgImages to speed up build time
+      // Comment out CustomOgImages to speed up build time
       // Plugin.CustomOgImages(),
     ],
   },

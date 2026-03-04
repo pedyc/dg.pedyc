@@ -43,16 +43,17 @@ export function pageResources(
         loadTime: "beforeDOMReady",
         contentType: "external",
       },
-      {
-        loadTime: "beforeDOMReady",
-        contentType: "inline",
-        spaPreserve: true,
-        script: contentIndexScript,
-      },
       ...staticResources.js,
     ],
     additionalHead: staticResources.additionalHead,
   }
+
+  resources.js.push({
+    loadTime: "afterDOMReady",
+    contentType: "inline",
+    spaPreserve: true,
+    script: contentIndexScript,
+  })
 
   resources.js.push({
     src: joinSegments(baseDir, "postscript.js"),

@@ -53,6 +53,8 @@ export default (() => {
         )} */}
 
         <link rel="preload" href="/static/fonts/lxgw.subset.woff" as="font" type="font/woff" crossorigin="anonymous" />
+        <link rel="preload" href="/static/index.css" as="style" />
+        <link rel="preload" href="/static/katex.min.css" as="style" />
         <link rel="stylesheet" href="/static/fonts/font.css" spa-preserve />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

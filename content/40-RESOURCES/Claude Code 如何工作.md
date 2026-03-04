@@ -127,7 +127,7 @@ claude --continue --fork-session
 
 #### 上下文窗口
 
-Claude 的上下文窗口保存您的对话历史、文件内容、命令输出、[CLAUDE.md](/zh-CN/memory)、加载的 skills 和系统说明。当您工作时，上下文填满。Claude 自动压缩，但对话早期的说明可能会丢失。将持久规则放在 CLAUDE.md 中，并运行 `/context` 以查看什么在占用空间。
+==Claude 的上下文窗口保存您的对话历史、文件内容、命令输出、[CLAUDE.md](/zh-CN/memory)、加载的 skills 和系统说明。当您工作时，上下文填满。Claude 自动压缩，但对话早期的说明可能会丢失。将持久规则放在 CLAUDE.md 中，并运行 `/context` 以查看什么在占用空间。==
 
 ##### 当上下文填满时
 
@@ -141,9 +141,9 @@ Claude Code 在您接近限制时自动管理上下文。它首先清除较旧�
 
 除了压缩，您可以使用其他功能来控制什么加载到上下文中。
 
-[Skills](/zh-CN/skills) 按需加载。Claude 在会话开始时看到 skill 描述，但完整内容仅在使用 skill 时加载。对于您手动调用的 skills，设置 `disable-model-invocation: true` 以将描述保留在上下文之外，直到您需要它们。
+==[Skills](/zh-CN/skills) 按需加载。Claude 在会话开始时看到 skill 描述，但完整内容仅在使用 skill 时加载。对于您手动调用的 skills，设置 `disable-model-invocation: true` 以将描述保留在上下文之外，直到您需要它们。==
 
-[Subagents](/zh-CN/sub-agents) 获得自己的新上下文，完全独立于您的主对话。他们的工作不会膨胀您的上下文。完成后，他们返回摘要。这种隔离是为什么 subagents 有助于长会话。
+==[Subagents](/zh-CN/sub-agents) 获得自己的新上下文，完全独立于您的主对话。他们的工作不会膨胀您的上下文。完成后，他们返回摘要。这种隔离是为什么 subagents 有助于长会话。==
 
 有关每个功能的成本，请参阅 [上下文成本](/zh-CN/features-overview#understand-context-costs)，以及有关管理上下文的提示，请参阅 [减少令牌使用](/zh-CN/costs#reduce-token-usage)。
 
@@ -153,7 +153,7 @@ Claude 有两个安全机制：检查点让您撤销文件更改，权限控制 
 
 #### 使用检查点撤销更改
 
-**每个文件编辑都是可逆的。** 在 Claude 编辑任何文件之前，它会对当前内容进行快照。如果出现问题，按两次 `Esc` 以回退到之前的状态，或要求 Claude 撤销。
+==**每个文件编辑都是可逆的。** 在 Claude 编辑任何文件之前，它会对当前内容进行快照。如果出现问题，按两次 `Esc` 以回退到之前的状态，或要求 Claude 撤销。==
 
 检查点是会话本地的，独立于 git。它们仅涵盖文件更改。影响远程系统（数据库、API、部署）的操作无法检查点，这就是为什么 Claude 在运行具有外部副作用的命令之前询问。
 
@@ -165,7 +165,7 @@ Claude 有两个安全机制：检查点让您撤销文件更改，权限控制 
 * **自动接受编辑**：Claude 编辑文件而不询问，仍然询问命令
 * **Plan Mode**：Claude 仅使用只读工具，创建您可以在执行前批准的计划
 
-您也可以在 `.claude/settings.json` 中允许特定命令，以便 Claude 不会每次都询问。这对于受信任的命令（如 `npm test` 或 `git status`）很有用。设置可以从组织范围的策略范围到个人偏好。有关详细信息，请参阅 [权限](/zh-CN/permissions)。
+==您也可以在 `.claude/settings.json` 中允许特定命令，以便 Claude 不会每次都询问。这对于受信任的命令（如 `npm test` 或 `git status`）很有用。设置可以从组织范围的策略范围到个人偏好。有关详细信息，请参阅 [权限](/zh-CN/permissions)。==
 
 ***
 
@@ -247,15 +247,3 @@ Claude Code 是对话式的。您不需要完美的提示。从您想要的开�
 ```
 
 您不需要指定要读取哪些文件或运行什么命令。Claude 会弄清楚。
-
-### 接下来是什么
-
-<CardGroup cols={2}>
-	<Card title="使用功能扩展" icon="puzzle-piece" href="/zh-CN/features-overview">
-		添加 Skills、MCP 连接和自定义命令
-	</Card>
-
-	<Card title="常见工作流" icon="graduation-cap" href="/zh-CN/common-workflows">
-		典型任务的分步指南
-	</Card>
-</CardGroup>

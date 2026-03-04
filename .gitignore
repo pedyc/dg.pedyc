@@ -12,3 +12,4 @@ replit.nix
 **/SimpRead/backup
 simpread_config.json
 quartz copy
+**/80-PRIVATE/**/*

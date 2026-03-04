@@ -1,6 +1,6 @@
 {
   "command_timeout": 5,
-  "templates_folder": "_template",
+  "templates_folder": "_templates",
   "templates_pairs": [
     [
       "",
@@ -36,7 +36,7 @@
     ""
   ],
   "startup_templates": [
-    "_template/template_startup.md"
+    "_templates/template_startup.md"
   ],
   "intellisense_render": 1
 }

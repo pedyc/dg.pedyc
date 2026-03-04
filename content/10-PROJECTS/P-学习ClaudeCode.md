@@ -16,7 +16,7 @@ type: [project]
 * [[AI 核心概念 MOC|A-人工智能]]
 * [[前端开发 MOC|A-前端开发]]
 
-## 🎯 核心靶心（项目的主要目标）  
+## 🎯 核心靶心（项目的主要目标）
 
 * [x] 成功在 WSL 环境下配置并顺畅运行 Claude Code 命令行工具 ✅ 2026-03-03
 * [x] 跑通 Claude Code 与 Minimax 模型的集成链路 ✅ 2026-03-03
@@ -60,6 +60,7 @@ type: [project]
 
 * [[Claude Code 核心概念与指令大全]] 💎
 * [[WSL环境下ClaudeCode结合Minimax配置指南]] 💎
+* [[Claude Code 注意事项]] 💎
 * 一段由 AI 辅助完成并成功运行的 `前端业务/动效代码 Demo` 💎
 
 ## 💡 项目总结（复盘）

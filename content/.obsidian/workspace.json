@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-学习ClaudeCode.md",
+                "file": "10-PROJECTS/Claude Code 注意事项.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,55 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "P-学习ClaudeCode"
+              "title": "Claude Code 注意事项"
+            }
+          },
+          {
+            "id": "702e33ba51ebb04e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "80-PRIVATE/API_KEY.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "API_KEY"
+            }
+          },
+          {
+            "id": "174613a44bdfd96c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40-RESOURCES/SimpRead/1-Claude Code 如何工作 - Claude Code Docs@annote.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "1-Claude Code 如何工作 - Claude Code Docs@annote"
             }
           },
           {
@@ -200,7 +248,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -240,7 +288,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-学习ClaudeCode.md",
+                "file": "80-PRIVATE/API_KEY.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -268,7 +316,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "P-学习ClaudeCode 的关系图"
+              "title": "API_KEY 的关系图"
             }
           },
           {
@@ -446,16 +494,19 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "ba3604bfe5d95d6d",
+  "active": "702e33ba51ebb04e",
   "lastOpenFiles": [
-    "20-AREAS/A-前端开发/前端开发 MOC.md",
+    "10-PROJECTS/Claude Code 注意事项.md",
+    "80-PRIVATE/API_KEY.md",
     "10-PROJECTS/P-学习ClaudeCode.md",
+    "40-RESOURCES/Claude Code 如何工作.md",
     "40-RESOURCES/SimpRead/1-Claude Code 如何工作 - Claude Code Docs@annote.md",
+    "40-RESOURCES/SimpRead/_resources/1-Claude Code 如何工作 - Claude Code Docs@annote",
+    "40-RESOURCES/SimpRead/1-Claude Code 如何工作 - Claude Code Docs.md",
+    "20-AREAS/A-前端开发/前端开发 MOC.md",
     "50-ARCHIVE/Obsidian.md",
     "40-RESOURCES/SimpRead/0-React_js 中组件重渲染性能问题及优化方法_react 弹框 导致 页面重新渲染 - CSDN 博客@annote.md",
     "40-RESOURCES/SimpRead/0-React_js 中组件重渲染性能问题及优化方法_react 弹框 导致 页面重新渲染 - CSDN 博客.md",
-    "40-RESOURCES/SimpRead/1-Claude Code 如何工作 - Claude Code Docs.md",
-    "40-RESOURCES/Claude Code 如何工作.md",
     "40-RESOURCES/SimpRead/_resources/1-Claude Code 如何工作 - Claude Code Docs/fa961b2fdb873479ae3273ce809b350a_MD5.svg",
     "40-RESOURCES/SimpRead/_resources/1-Claude Code 如何工作 - Claude Code Docs/3eddd2200c69d4bd9748b5e19935fc08_MD5.svg",
     "40-RESOURCES/SimpRead/_resources/1-Claude Code 如何工作 - Claude Code Docs",
@@ -465,7 +516,7 @@
     "40-RESOURCES/_resources",
     "20-AREAS/A-人工智能/Claude Code.md",
     "90-Diary/2026-03-01.md",
-    "_template/template_startup.md",
+    "_templates/template_startup.md",
     "90-Diary/2026-03-03.md",
     "20-AREAS/A-人工智能/AI 核心概念 MOC.md",
     "20-AREAS/A-人工智能/MCP (Model Context Protocol).md",
@@ -474,22 +525,18 @@
     "10-PROJECTS/_resources",
     "10-PROJECTS/P-学习Obsidian CLI、Skills.md",
     "99-ASSETS/copilot/copilot-conversations/根据标题完善笔记内容@20260303_001311.md",
-    "_template/template_project.md",
+    "_templates/template_project.md",
     "20-AREAS/A-常用工具",
     "90-Diary/_resources/2026-03-03",
     "90-Diary/_resources/2026-03-02",
     "90-Diary/2026-03-02.md",
     "99-ASSETS/copilot/copilot-conversations/根据项目模板完善笔记@20260302_215215.md",
-    "80-PRIVATE/API_KEY.md",
     "80-PRIVATE/_resources",
     "99-ASSETS/Excalidraw/Drawing 2025-09-25 11.10.32.excalidraw.md",
     "99-ASSETS/Excalidraw/Drawing 2025-09-25 11.10.32.excalidraw.svg",
     "80-PRIVATE",
     "99-ASSETS/copilot/copilot-conversations/将openclaw加入笔记@20260302_135616.md",
-    "20-AREAS/A-前端开发/前端面试真题库 MOC.md",
-    "20-AREAS/A 前端开发/前端面试问题追踪看板.md",
     "40-RESOURCES/SimpRead/_resources/0-React_js 中组件重渲染性能问题及优化方法_react 弹框 导致 页面重新渲染 - CSDN 博客/94acb6f4bdfae182247febb78becafb4_MD5.jpg",
-    "40-RESOURCES/SimpRead/_resources/0-React_js 中组件重渲染性能问题及优化方法_react 弹框 导致 页面重新渲染 - CSDN 博客",
     "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/a7f078d533ab28df48e2086a41205217_MD5.avif",
     "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/3013e1f38f86bcfd2369a4e182f6c3f4_MD5.jpg",
     "40-RESOURCES/Clippings/_resources/理解 React 的渲染机制：为什么组件会重新渲染？/b8724ab594ac3f611bbef56f9246a2ad_MD5.avif",

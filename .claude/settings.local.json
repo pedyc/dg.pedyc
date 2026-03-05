@@ -11,7 +11,9 @@
       "Bash(tsc --noEmit)",
       "Bash(node --version && npm --version && npm list esbuild 2>&1)",
       "Bash(npm test)",
-      "Bash(git status)"
+      "Bash(git status)",
+      "Bash(npm run type-check 2>&1 | head -30)",
+      "Bash(npm run 2>&1)"
     ],
     "deny": [],
     "ask": []

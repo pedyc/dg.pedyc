@@ -24,7 +24,7 @@ const config: QuartzConfig = {
       typography: {
         header: "LXGW WenKai",
         body: "LXGW WenKai",
-        code: "JetBrains Mono",
+        code: "LXGW WenKai",
       },
       colors: {
         lightMode: {

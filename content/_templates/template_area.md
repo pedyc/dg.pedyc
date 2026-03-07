@@ -1,19 +1,24 @@
 ---
-title: templage_area
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+title: template_area
 aliases:
   - 领域别名
 description: 领域索引笔记通用模板，用于定义和管理特定领域的知识
-status: active | archived
-related:
-  - "[[卡片笔记1]]"
-  - "[[卡片笔记2]]"
-zettel: moc
 tags:
   - area
   - MOC
+status: active | archived
+content-type:
+  - MOC
+related:
+  - "[[卡片笔记1]]"
+  - "[[卡片笔记2]]"
 ---
 
 ## 🗺️ 领域：{{领域名称}}
+
+- [ ] {{关联项目1}}
+- [ ] {{关联项目2}}
 
 ### 🎯 核心定义 (Scope & Definition)
 

@@ -1,8 +1,10 @@
 ---
+uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
 title: template_alg
-tags: [数组]
+tags:
+  - 数组
 date-created: 2025-04-04
-date-modified: 2025-04-12
+date-modified: 2026-03-04
 ---
 
 ## 题目

@@ -1,11 +1,11 @@
 ---
 title: P-算法提升专项
 date-created: 2025-04-04
-date-modified: 2026-03-01
-status: 进行中
-area: ["[[0500算法与数据结构领域]]"]
-cycle: YYYY/MM/DD - YYYY/MM/DD
-type: [project]
+date-modified: 2026-03-07
+status: 🌰 seed
+area: ["[[前端开发 MOC|A-前端开发]]"]
+content-type: [project]
+expire: 2026-03-31
 ---
 
 ## 🔗依赖项目
@@ -29,7 +29,7 @@ type: [project]
 
 ### 阶段一：准备期（0404）
 
-- [x] 创建 [[00算法真题库]] ✅ 2025-04-04
+- [x] 创建 [[算法真题库 MOC]] ✅ 2025-04-04
 
 ### 阶段二：小试牛刀（0405）
 
@@ -50,7 +50,7 @@ type: [project]
 
 ## 🧩 成果与交付物（输出资源）
 
-- [[00算法真题库]]💎
+- [[算法真题库 MOC]]💎
 - [[前端场景下的算法优先级]]💎
 
 ## 💡 项目总结（复盘）

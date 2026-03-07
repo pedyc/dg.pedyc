@@ -1,10 +1,10 @@
 ---
-topic:
-  - 个人成长/周报
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+topic: [个人成长/周报]
 title: template_week
-tags:
-  - 个人成长/weekly
+tags: [个人成长/weekly]
+date-created: 2025-07-20
+date-modified: 2026-03-04
 ---
 
 ## 📋 任务全景（本周任务追踪）

@@ -29,11 +29,20 @@ await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
 
 ## 👣跬步（任务列表）
 
-![[PROJECTS]]
+```dataview
+TABLE status, area, expire
+FROM "10-PROJECTS"
+WHERE date(expire) >= date(file.name)
+SORT file.frontmatter.expire ASC
+```
 
 ## 🌞日新（行动记录）
 
-- 状态：😼
+```dataview
+TABLE file.ctime AS "创建时间", file.mtime AS "最后修改时间"
+WHERE file.mtime >= date("{{date:YYYY-MM-DD}}") AND file.mtime < date("{{date:YYYY-MM-DD}}") + dur(1 day) OR file.ctime = date("{{date:YYYY-MM-DD}}")
+SORT file.mtime DESC
+```
 
 ## 🌙温故（每日总结）
 
@@ -41,9 +50,3 @@ await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
 > - 今天最大的收获是什么？
 > - 今天遇到的挑战是什么？
 > - 明天可以改进的地方是什么？
-
-```dataview
-TABLE file.ctime AS "创建时间", file.mtime AS "最后修改时间"
-WHERE file.mtime >= date("{{date:YYYY-MM-DD}}") AND file.mtime < date("{{date:YYYY-MM-DD}}") + dur(1 day) OR file.ctime = date("{{date:YYYY-MM-DD}}")
-SORT file.mtime DESC
-```

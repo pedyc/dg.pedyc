@@ -33,7 +33,7 @@
   "renderingConcurrency": 3,
   "allowImageCache": true,
   "allowImageCacheInScene": true,
-  "displayExportedImageIfAvailable": false,
+  "displayExportedImageIfAvailable": true,
   "previewMatchObsidianTheme": false,
   "width": "800",
   "height": "",
@@ -113,7 +113,7 @@
   "library2": {
     "type": "excalidrawlib",
     "version": 2,
-    "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.20.5",
+    "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.20.6",
     "libraryItems": [
       {
         "status": "published",
@@ -141980,7 +141980,7 @@
     ]
   },
   "imageElementNotice": true,
-  "mdSVGwidth": 500,
+  "mdSVGwidth": 800,
   "mdSVGmaxHeight": 800,
   "mdFont": "Virgil",
   "mdFontColor": "Black",

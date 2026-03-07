@@ -1,10 +1,10 @@
 ---
 title: P-学习Obsidian CLI、Skills
 date-created: 2026-03-02
-date-modified: 2026-03-03
+date-modified: 2026-03-07
 status: 🌰 seed
-area: [A 常用工具]
-cycle: 2026/03/03 ~ 2026/03/05
+area: ["[[常用工具 MOC|A-常用工具]]", "[[A-知识管理]]"]
+expire: 2026-03-31
 type: [project]
 ---
 

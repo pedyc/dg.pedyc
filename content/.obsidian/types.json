@@ -47,7 +47,7 @@
     "TQ_show_tree": "checkbox",
     "TQ_show_urgency": "checkbox",
     "topics": "multitext",
-    "author": "text",
+    "author": "multitext",
     "flower-type": "multitext",
     "topic": "multitext",
     "area": "multitext",
@@ -57,6 +57,7 @@
     "excalidraw-embed-md": "checkbox",
     "excalidraw-export-internal-links": "checkbox",
     "content-type": "multitext",
-    "TQ_show_toolbar": "checkbox"
+    "TQ_show_toolbar": "checkbox",
+    "expire": "date"
   }
 }

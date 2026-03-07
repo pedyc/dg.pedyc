@@ -280,7 +280,7 @@
   "displayLintOnFileChangeNotice": true,
   "settingsConvertedToConfigKeyValues": true,
   "foldersToIgnore": [
-    "_template",
+    "_templates",
     "_resources",
     "_scripts",
     "99-ASSETS/Excalidraw"

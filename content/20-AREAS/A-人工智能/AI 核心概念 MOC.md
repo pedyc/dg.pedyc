@@ -2,17 +2,21 @@
 title: AI 核心概念 MOC
 aliases: [A-人工智能]
 date-created: 2026-03-01
-date-modified: 2026-03-03
+date-modified: 2026-03-07
+content-type: [MOC]
 ---
 
 ## 🗺️ 领域：AI 核心概念
+
+### 相关项目
+
+- [[P-学习OpenClaw]]
+- [[P-学习ClaudeCode]]
 
 ### 🎯 核心定义 (Scope & Definition)
 
 > [!abstract]
 > 本领域旨在系统性地理解和梳理人工智能技术，特别是大语言模型（LLM）与智能体（Agent）生态的核心原理、交互协议及工程化实践，并将其转化为实际开发与工作流中的生产力。
-
----
 
 ### 🧠 核心心智模型 (Atomic Principles)
 
@@ -36,6 +40,7 @@ date-modified: 2026-03-03
 	- [[SOP-在 Neovim 中集成并代理 AI 代码助手]]：解决在开发环境中无缝调用 AI 辅助编程的问题。
 - **关键工具**
 	- [[Claude Code]]: 运行在命令行的大模型工具
+	- [[OpenClaw]]: 支持多款即时通讯软件的 AI 助手
 	- [[Tool-MCP (Model Context Protocol)]]：实现 AI 与本地资源安全交互的核心协议与工具集。
 
 ### 🔗 知识网络 (Context)

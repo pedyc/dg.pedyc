@@ -1,8 +1,14 @@
+---
+title: template_startup
+date-created: 2026-02-09
+date-modified: 2026-03-04
+---
+
 <%*
 try {
-    // 获取用户脚本
-    const archiveScript = tp.user.autoArchiveInbox;
-    
+		// 获取用户脚本
+		const archiveScript = tp.user.autoArchiveInbox;
+
     if (archiveScript) {
         // 执行脚本
         await archiveScript(tp);
@@ -11,6 +17,6 @@ try {
         console.error("Templater Startup: Script 'autoArchiveInbox.js' not found in your scripts folder.");
     }
 } catch (e) {
-    console.error("Templater Startup Execution Error:", e);
+		console.error("Templater Startup Execution Error:", e);
 }
 %>

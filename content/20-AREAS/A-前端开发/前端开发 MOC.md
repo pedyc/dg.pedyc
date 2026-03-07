@@ -3,8 +3,8 @@ title: 前端开发 MOC
 aliases: [前端开发, 前端, Web, Web开发, A-前端开发]
 description: 领域索引笔记，涵盖构建 Web 应用和网站用户界面的所有技术和实践，旨在提供卓越的用户体验。
 date-created: 2025-05-15
-date-modified: 2026-03-03
-status: active
+date-modified: 2026-03-04
+status: 🌱 sprout
 related: ["[[前端工程]]", "[[算法与数据结构]]", "[[数学应用]]"]
 ---
 
@@ -59,7 +59,8 @@ related: ["[[前端工程]]", "[[算法与数据结构]]", "[[数学应用]]"]
 
 #### 关键专项
 
-- **🚀 性能**：[[前端性能优化]] (Lighthouse, FCP, LCP)
+- **🚀 性能**：[[Web存储]]、[[前端性能优化]] (Lighthouse, FCP, LCP)
+	- 关于不同存储机制的性能、容量及同源策略对比，详见：[[各种前端存储方式间有什么区别？]]
 - **🛡️ 安全**：[[Web安全]] (XSS, CSRF, CSP)
 - **🌐 通信**：[[Web通信]] (HTTP/1.1 vs 2.0, WebSocket) | [[网络协议]]
 - **🎨 视觉**：[[交互式动画]] (Canvas/WebGL/[[GASP]]) | [[视觉设计]] | 3D 效果（Three.js）

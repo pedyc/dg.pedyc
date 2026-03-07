@@ -1,7 +1,7 @@
 ---
 title: Web存储
 date-created: 2025-06-15
-date-modified: 2025-06-15
+date-modified: 2026-03-04
 keywords: [Web API]
 ---
 

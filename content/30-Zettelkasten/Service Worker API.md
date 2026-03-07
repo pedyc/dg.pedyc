@@ -1,7 +1,7 @@
 ---
 title: Service Worker API
 date-created: 2025-05-30
-date-modified: 2025-06-17
+date-modified: 2026-03-04
 ---
 
 ## 定义
@@ -48,7 +48,7 @@ Service Worker 广泛应用于各种 Web 应用程序中，例如：
 - [[PWA (Progressive Web App)]]: 使用 Service Worker 实现离线访问、推送通知等功能，提供类似原生应用的体验。
 - [[Cache API]]: 用于缓存 Web 应用程序的资源。
 - [[Push API]]: 用于接收服务器推送的通知。
-- [[Web Storage API]]
+- [[Web Storage API]]: 用于客户端存储
 
 ## 案例
 
@@ -56,10 +56,13 @@ Service Worker 广泛应用于各种 Web 应用程序中，例如：
 
 ## 问答卡片
 
-- Q1：Service Worker 如何实现离线访问？
-- A：Service Worker 可以缓存 Web 应用程序的资源，当用户访问 Web 应用程序时，Service Worker 可以拦截网络请求，并从缓存中返回资源，实现离线访问。
-- Q2：Service Worker 如何接收服务器推送的通知？
-- A：Service Worker 可以使用 Push API 接收服务器推送的通知，并在浏览器中显示。服务器需要使用 Web Push 协议向浏览器发送推送通知。
+> Q1：Service Worker 如何实现离线访问？
+
+A：Service Worker 可以缓存 Web 应用程序的资源，当用户访问 Web 应用程序时，Service Worker 可以拦截网络请求，并从缓存中返回资源，实现离线访问。
+
+> Q2：Service Worker 如何接收服务器推送的通知？
+
+A：Service Worker 可以使用 Push API 接收服务器推送的通知，并在浏览器中显示。服务器需要使用 Web Push 协议向浏览器发送推送通知。
 
 ## 参考资料
 

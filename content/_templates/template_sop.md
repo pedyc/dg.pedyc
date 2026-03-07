@@ -1,8 +1,14 @@
 ---
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: template_sop
-tags: [sop, action/workflow, tool/相关工具]
+tags:
+  - sop
+  - action/workflow
+  - tool/相关工具
+date-created: 2025-12-26
+date-modified: 2026-03-04
 status: cultivating
-type: sop
+content-type: sop
 up: "[[{{所属的技能或项目}}]]"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Service Worker前端案例
 date-created: 2025-06-15
-date-modified: 2025-06-15
+date-modified: 2026-03-04
 ---
 
 ## 离线应用

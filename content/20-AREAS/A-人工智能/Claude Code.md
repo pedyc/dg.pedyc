@@ -4,8 +4,8 @@ aliases: []
 description: 由 Anthropic 开发的命令行界面 (CLI) 工具，允许在终端中直接与 Claude 模型交互。
 tags: [tool, AI, CLI, Anthropic]
 date-created: 2026-03-03
-date-modified: 2026-03-03
-content-type: tool
+date-modified: 2026-03-07
+content-type: [concept]
 ---
 
 ## ⚙️ 工具：Claude Code
@@ -21,8 +21,10 @@ content-type: tool
 
 ### 核心概念
 
-- `plugin`:
-- `skill`
+- Plugin:
+- Agent
+- Skill
+- 指令
 
 ### 外部资源
 

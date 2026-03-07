@@ -1,4 +1,5 @@
 ---
+uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
 title: template_archive
 tags: [archived]
 end-date: YYYY/MM/DD

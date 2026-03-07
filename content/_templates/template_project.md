@@ -1,11 +1,10 @@
 ---
+uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
 title: template_project
 status: 进行中｜已暂停｜已完成
-area:
-  - "[[00-看板]]"
-cycle: YYYY/MM/DD - YYYY/MM/DD
-type:
-  - project
+area: ["[[00-看板]]"]
+content-type: [project]
+expire: YYYY/MM/DD
 ---
 
 ## 🔗关联领域
@@ -20,8 +19,8 @@ type:
 
 ## 🗺️ 战略地图（KEY RESULT：关键结果）
 
-- KR1：关键结果 1（权重 X%）
-- KR2：关键结果 2（权重 X%）
+- [ ] KR1：关键结果 1（权重 X%）
+- [ ] KR2：关键结果 2（权重 X%）
 
 ## 🛠️ 执行引擎（分步执行）
 

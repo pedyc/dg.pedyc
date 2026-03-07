@@ -1,6 +1,91 @@
 import micromorph from "micromorph"
 import { FullSlug, RelativeURL, getFullSlug, normalizeRelativeURLs } from "../../util/path"
 import { fetchCanonical } from "./util"
+import { cacheManager, LRUCache } from "./storage"
+
+// 静态资源缓存 - 使用已有的 LRUCache
+const staticResourceCache = new LRUCache<{ content: string; contentType: string }>(20)
+
+// 需要缓存的静态资源扩展名
+const STATIC_EXTENSIONS = ['.css', '.woff', '.woff2', '.ttf', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.ico']
+
+/**
+ * 检查是否为静态资源
+ */
+function isStaticResource(url: string): boolean {
+  return STATIC_EXTENSIONS.some(ext => url.toLowerCase().endsWith(ext))
+}
+
+/**
+ * 覆盖 fetch 拦截静态资源请求
+ */
+function setupStaticResourceCaching() {
+  if (typeof window === 'undefined' || typeof fetch === 'undefined') return
+
+  const originalFetch = window.fetch
+
+  window.fetch = async (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {
+    const url = typeof input === 'string' ? input : input instanceof URL ? input.href : input.url
+
+    // 只缓存同源的静态资源
+    if (isStaticResource(url) && url.startsWith(window.location.origin)) {
+      // 检查缓存
+      const cached = staticResourceCache.get(url)
+      if (cached) {
+        // 返回缓存的响应
+        return new Response(cached.content, {
+          status: 200,
+          headers: { 'Content-Type': cached.contentType }
+        })
+      }
+
+      // 发起请求并缓存
+      try {
+        const response = await originalFetch(input, init)
+        if (response.ok) {
+          const content = await response.text()
+          staticResourceCache.set(url, {
+            content,
+            contentType: response.headers.get('Content-Type') || getContentType(url)
+          })
+          return new Response(content, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: response.headers
+          })
+        }
+        return response
+      } catch {
+        return originalFetch(input, init)
+      }
+    }
+
+    return originalFetch(input, init)
+  }
+}
+
+/**
+ * 根据文件扩展名获取 Content-Type
+ */
+function getContentType(url: string): string {
+  const ext = url.toLowerCase().split('.').pop() || ''
+  const types: Record<string, string> = {
+    css: 'text/css',
+    woff: 'font/woff',
+    woff2: 'font/woff2',
+    ttf: 'font/ttf',
+    png: 'image/png',
+    jpg: 'image/jpeg',
+    jpeg: 'image/jpeg',
+    gif: 'image/gif',
+    svg: 'image/svg+xml',
+    ico: 'image/x-icon'
+  }
+  return types[ext] || 'application/octet-stream'
+}
+
+// 初始化静态资源缓存
+setupStaticResourceCaching()
 
 // adapted from `micromorph`
 // https://github.com/natemoo-re/micromorph
@@ -58,10 +143,21 @@ function startLoading() {
 
 let isNavigating = false
 let p: DOMParser
-async function _navigate(url: URL, isBack: boolean = false) {
-  isNavigating = true
-  startLoading()
-  p = p || new DOMParser()
+
+/**
+ * 获取页面内容 - 优先使用缓存
+ */
+async function getPageContent(url: URL): Promise<string | null> {
+  const cacheKey = url.pathname
+
+  // 1. 检查缓存
+  const cached = cacheManager.getContent(cacheKey)
+  if (cached) {
+    console.log("[Navigate] Cache hit:", cacheKey)
+    return cached.html
+  }
+
+  // 2. 缓存未命中，发起网络请求
   const contents = await fetchCanonical(url)
     .then((res) => {
       const contentType = res.headers.get("content-type")
@@ -69,11 +165,39 @@ async function _navigate(url: URL, isBack: boolean = false) {
         return res.text()
       } else {
         window.location.assign(url)
+        return null
       }
     })
     .catch(() => {
       window.location.assign(url)
+      return null
     })
+
+  // 3. 将请求结果存入缓存
+  if (contents) {
+    const parser = new DOMParser()
+    const doc = parser.parseFromString(contents, "text/html")
+    cacheManager.setContent(cacheKey, {
+      html: contents,
+      text: doc.body.textContent?.trim() || "",
+      title: doc.querySelector("title")?.textContent || cacheKey,
+      links: Array.from(doc.querySelectorAll("a.internal"))
+        .map(a => a.getAttribute("href") || "")
+        .filter(Boolean),
+      tags: []
+    })
+  }
+
+  return contents
+}
+
+async function _navigate(url: URL, isBack: boolean = false) {
+  isNavigating = true
+  startLoading()
+  p = p || new DOMParser()
+
+  // 使用带缓存的内容获取
+  const contents = await getPageContent(url)
 
   if (!contents) return
 

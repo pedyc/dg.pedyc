@@ -13,7 +13,6 @@ content-type: [MOC]
 <img
 	src="./banner.svg"
 	alt="banner"
-	noLazy
 	style="width: 100%" />
 
 ✌Hello，我是 pedyc，欢迎来到我的 [[数字花园概述|数字花园]]。

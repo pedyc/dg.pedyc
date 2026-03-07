@@ -26,7 +26,6 @@ export default (() => {
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
     const iconPath = joinSegments(baseDir, "static/icon.png")
-    const fontStylePath = joinSegments(baseDir, "static/font/font-style.css")
 
     // Url of current page
     const socialUrl =
@@ -52,10 +51,32 @@ export default (() => {
           </>
         )} */}
 
-        <link rel="preload" href="/static/fonts/lxgw.subset.woff" as="font" type="font/woff" crossorigin="anonymous" />
-        <link rel="preload" href="/static/index.css" as="style" />
-        <link rel="preload" href="/static/katex.min.css" as="style" />
-        <link rel="stylesheet" href="/static/fonts/font.css" spa-preserve />
+        <link rel="preload" href="/static/fonts/lxgw.subset.woff" as="font" type="font/woff" crossorigin="anonymous" data-persist />
+        <link rel="preload" href="/static/index.css" as="style" data-persist />
+        <link rel="preload" href="/static/katex.min.css" as="style" data-persist />
+        {/* 内联字体 CSS，避免 SPA 导航时重新加载导致闪烁 */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              @font-face {
+                font-family: "LXGW WenKai";
+                src: url("/static/fonts/lxgw.subset.woff") format("woff");
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+              }
+              @font-face {
+                font-family: "biro_script_standardRgus";
+                src: url("/static/font/biro_script_standard_us.woff2") format("woff2"),
+                     url("/static/font/biro_script_standard_us.woff") format("woff");
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+              }
+            `,
+          }}
+          data-persist
+        />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -91,7 +112,6 @@ export default (() => {
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
-        <link href={fontStylePath} rel="stylesheet" type="text/css" spa-preserve />
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")

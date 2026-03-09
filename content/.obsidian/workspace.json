@@ -195,8 +195,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.5,
-    "collapsed": true
+    "width": 277.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -277,8 +276,10 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "ba8b73afe1637169",
+  "active": "3dfca4b5c072d131",
   "lastOpenFiles": [
+    "copilot/memory/Recent Conversations.md",
+    "80-PRIVATE/API_KEY.md",
     "10-PROJECTS/P-算法提升专项.md",
     "99-ASSETS/copilot/copilot-conversations/template_project_根据模板优化笔记P-算法提升专项@20260309_093428.md",
     "99-ASSETS/copilot/copilot-conversations/template_project_根据模板优化笔记@20260309_093300.md",
@@ -287,7 +288,6 @@
     "10-PROJECTS/P-求职前端岗位.md",
     "_templates/template_project.md",
     "99-ASSETS/copilot/system-prompts/_resources",
-    "copilot/memory/Recent Conversations.md",
     "copilot/memory",
     "copilot",
     "00-META/01 规范与标准/META-笔记分类系统.md",
@@ -307,7 +307,6 @@
     "00-META/01 规范与标准/META-元数据系统.md",
     "00-META/01 规范与标准/META-组织方案.md",
     "30-ZETTELKASTEN/知识管理大师提示词v5 个人语境版本.md",
-    "90-Diary/2026-03-08.md",
     "copilot/system-prompts",
     "四象限.excalidraw.svg",
     "20-AREAS/A-健康管理",

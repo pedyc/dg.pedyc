@@ -15,7 +15,7 @@ up: "[[Linux]]"
 
 > [!quote] 核心论点
 >
-> **systemd 是 Linux 的系统和服务管理器，通过 " 并行启动 " 和 " 按需激活 " 机制，取代了传统的 SysV init，成为现代 Linux 分发版的标准初始化系统（PID 1）。**
+> systemd 是 Linux 的系统和服务管理器，通过 " 并行启动 " 和 " 按需激活 " 机制，取代了传统的 SysV init，成为现代 Linux 分发版的标准初始化系统（PID 1）。
 
 ### 🧬 技术原理 / 逻辑 (Mechanism)
 
@@ -58,7 +58,7 @@ WantedBy=multi-user.target
 
 ### 🔗 链接网络
 
-- **MOC 索引**: [[Linux 系统管理 MOC]], [[DevOps 实务]]
+- **MOC 索引**: [[A-Linux MOC]], [[DevOps 实务]]
 - **技术支撑**: [[cgroups]], [[Init System 演进史]]
 - **对比反面**: [[SysVinit]], [[OpenRC]]
 - **SOP**: [[SOP-如何在WSL中配置并运行自定义systemd服务？]]

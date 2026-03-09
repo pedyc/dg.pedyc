@@ -1,14 +1,14 @@
 ---
-uid: 
+uid:
 title: WSL + SSH + Zellij + NeoVim 工作流
 aliases: []
-author: 
-description: 
+author:
+description:
 tags: [tools, blog, workflow]
 date-created: 2025-02-08
-date-modified: 2025-05-13
-content-type: record
-topics: 
+date-modified: 2026-03-08
+content-type: [sop]
+topics:
 ---
 
 ## 用 WSL+SSH+Zellij+NeoVim 构建高效开发工作流
@@ -30,11 +30,11 @@ topics:
 	- 使用 apt 管理开发依赖包
 - **配置示例**：
 
-	```bash
+```bash
   # 启用WSL功能
   dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
   wsl --set-default-version 2
-  ```
+```
 
 #### 2. SSH：穿越服务器的任意门
 
@@ -44,7 +44,7 @@ topics:
 	- 端口转发实现内网穿透
 - **配置示例**：
 
-	```bash
+```bash
   # ~/.ssh/config
   Host prod-server
     HostName 192.168.1.100
@@ -52,7 +52,7 @@ topics:
     Port 2222
     IdentityFile ~/.ssh/prod_key
     ProxyJump jump-host
-  ```
+```
 
 #### 3. Zellij：终端的乐高积木
 
@@ -62,7 +62,7 @@ topics:
 	- 插件系统扩展能力
 - **实战技巧**：
 
-	```bash
+```bash
   # 创建开发面板布局
   zellij setup --layout my-dev
 
@@ -70,13 +70,13 @@ topics:
   keybindings:
     - action: [NewPane, Split:Vertical]
       key: ['alt': 'v']
-  ```
+```
 
 #### 4. NeoVim：代码炼金术士的工作台
 
 - **现代化升级**：
 
-	```lua
+```lua
   -- 智能代码补全
   local cmp = require'cmp'
   cmp.setup({
@@ -85,7 +85,7 @@ topics:
       { name = 'luasnip' }
     }
   })
-  ```
+```
 
 ---
 
@@ -128,9 +128,9 @@ topics:
 2. **终端编码**
 	 统一配置 UTF-8 编码防止乱码：
 
-	 ```bash
+ ```bash
    export LANG=C.UTF-8
-   ```
+ ```
 
 3. **剪贴板同步**
 	 安装 win32yank 实现 NeoVim 与 Windows 剪贴板互通

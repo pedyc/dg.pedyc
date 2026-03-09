@@ -1,8 +1,9 @@
 ---
-title: Linux 系统管理 MOC
+title: A-Linux MOC
 aliases: [A-Linux]
 date-created: 2026-03-07
-date-modified: 2026-03-07
+date-modified: 2026-03-08
+status: 🌰 seed
 content-type: [MOC]
 ---
 

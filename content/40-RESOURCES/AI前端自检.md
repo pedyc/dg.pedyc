@@ -1,13 +1,13 @@
 ---
-topic: 
-uid: 
+topic:
+uid:
 title: AI前端自检
 aliases: []
-author: [Grok]
+author: [AI]
 description: Grok is a free AI assistant designed by xAI to maximize truth and objectivity. Grok offers real-time search, image generation, trend analysis, and more.
 tags: [clippings, 记录, 职业规划, 人工智能, 前端开发]
 date-created: 2025-02-21
-date-modified: 2026-03-04
+date-modified: 2026-03-07
 status: YCDONE
 source: [https://grok.com/chat/28fd48ea-4bd4-47b4-9f6d-57ae3eb5ade0]
 ---

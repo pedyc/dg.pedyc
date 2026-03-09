@@ -1,16 +1,18 @@
 ---
 title: P-学习Obsidian CLI、Skills
 date-created: 2026-03-02
-date-modified: 2026-03-07
+date-modified: 2026-03-08
 status: 🌰 seed
-area: ["[[常用工具 MOC|A-常用工具]]", "[[A-知识管理]]"]
+area: ["[[A-常用工具 MOC|A-常用工具]]", "[[A-知识管理]]"]
+consequence: 3
 expire: 2026-03-31
 type: [project]
+urgency: 1
 ---
 
 ## 🔗关联领域
 
-- [[常用工具 MOC|A-常用工具]]
+- [[A-常用工具 MOC|A-常用工具]]
 
 ## 🎯 核心靶心（项目的主要目标）
 

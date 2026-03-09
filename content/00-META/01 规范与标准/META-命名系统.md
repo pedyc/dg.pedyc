@@ -1,16 +1,16 @@
 ---
 uid: 202409190055
-title: META-命名规范
+title: META-命名系统
 aliases: [About Metadata]
 author: ped_yc
 description: 描述本库所使用的元数据规范，包括字段、含义和约束。
 tags: [meta, 规范, 库管理]
 date-created: 2024-09-19
-date-modified: 2026-03-06
+date-modified: 2026-03-08
 status: [YCDONE]
 keywords: [元数据, 字段, 规范, Obsidian]
 para: resource
-related: ["[[template_meta]]", "[[META-命名规范]]"]
+related: ["[[template_meta]]", "[[META-命名系统]]"]
 zettel: permanent
 ---
 

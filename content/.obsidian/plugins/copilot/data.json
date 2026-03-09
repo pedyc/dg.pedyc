@@ -445,11 +445,11 @@
   "autoAcceptEdits": false,
   "chatHistorySortStrategy": "recent",
   "projectListSortStrategy": "recent",
-  "userSystemPromptsFolder": "copilot/system-prompts",
-  "defaultSystemPromptTitle": "",
-  "githubCopilotAccessToken": "enc_desk_djEwHm1t7x0YOq/Uy580WLF1PPPL1d4DEgsEpYu0Pc4eCmGU7J8qiK8xYPNPbNq/HH2Xd8uEycIJ25VXuBlY9QvP/eDEFuE=",
-  "githubCopilotToken": "enc_desk_djEwAKEMAyDkEFbcubyRwte2VYpK1B81BdmQiS2GcxemvnBqx3TkIQBUh6YoOtg+2/NiUbFwaYfmjejpPZlZXbPIZ5kE05KJwcgzNyPFbLV5KpezVh/4oS9/wYs+8z6amQn+nADgghXJx1WO3heh+/byZiBDzJFGkiZU/bV/kgLCV0aXGgvHVElhlv69KH5BfaO8lc7pqWxZr2ZpIAmrEMCrsbyy3wmF6NA+X9uUzAYeIgvvh32oDcSWyRDDsgt/jVLjRsKLusD76Nrv+DahKb8trsAYeDGzg+eN3r7n1EZKBYKslybcPFulGdx5QbDoyHeyab887wtW7uaDdJaYJliikOEnyq1BSIU8EKSrCQf2GZxsi3MWSqUh7ItK8Ok4wtPuJ/cb88ixym0Aa9O8ZK3ilx1PkMcNweZCHlcbLSH41wuBRbEns/HqvBVS5Fl05UfL5PMYX/4SmuRpHjTH1qPvd8Y4Ub8n3hemtLh9dub+4+kAAtCnzRyC+m+ZL/E=",
-  "githubCopilotTokenExpiresAt": 1770694588000,
+  "userSystemPromptsFolder": "99-ASSETS/copilot/system-prompts",
+  "defaultSystemPromptTitle": "Obsidian Smart Librarian",
+  "githubCopilotAccessToken": "",
+  "githubCopilotToken": "",
+  "githubCopilotTokenExpiresAt": 0,
   "enableMiyo": false,
   "selfHostSearchProvider": "firecrawl"
 }

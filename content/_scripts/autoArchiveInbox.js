@@ -2,8 +2,8 @@
  * 自动归档 Inbox 中过期的笔记 (最终修复版 - 解决遍历跳过问题)
  */
 async function autoArchiveInbox(tp) {
-    const INBOX_PATH = "PARA/30-RESOURCES/00 Inbox";
-    const ARCHIVE_PATH = "PARA/40-Archive";
+    const INBOX_PATH = "40-RESOURCES/Inbox";
+    const ARCHIVE_PATH = "50-ARCHIVE";
     const EXPIRE_DAYS = 14;
 
     // 1. 等待 Obsidian 索引完全加载 (避免开机太快读不到文件)

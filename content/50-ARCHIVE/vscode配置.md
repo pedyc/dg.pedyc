@@ -1,5 +1,4 @@
 ---
-topics: 
 uid: 202409090005
 title: vscode配置
 aliases: []
@@ -7,9 +6,10 @@ author: ped_yc
 description: 
 tags: [config]
 date-created: 2024-09-08
-date-modified: 2025-02-24
+date-modified: 2026-03-08
 status: 
 alias: [vscode配置]
+topics: 
 type: 
 ---
 

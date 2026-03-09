@@ -1,10 +1,14 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: template_atomic
-tags: [atomic, status/cultivating, topic/待分类]
+tags:
+  - atomic
+  - status/cultivating
+  - topic/待分类
 date-created: 2025-12-17
 date-modified: 2026-03-07
-alias: ["{{title}}"]
+aliases:
+  - "{{title}}"
 ---
 
 ## {{title}}

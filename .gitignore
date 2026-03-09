@@ -13,4 +13,7 @@ replit.nix
 simpread_config.json
 quartz copy
 **/80-PRIVATE/**/*
-**/.obsidian/plugins/copilot/*
+**/.obsidian/plugins/**/*
+
+# Added by ggshield
+.cache_ggshield

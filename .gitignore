@@ -13,3 +13,4 @@ replit.nix
 simpread_config.json
 quartz copy
 **/80-PRIVATE/**/*
+**/.obsidian/plugins/copilot/*

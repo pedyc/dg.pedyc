@@ -1,10 +1,11 @@
 ---
-title: 前端工程
-aliases: [Front-End Engineering, FE Ops]
+title: 前端工程化 MOC
+aliases: [Front-End Engineering, FE Ops, A-前端开发/A-前端工程]
+author: [AI, pedyc]
 tags: [领域/前端, 领域/工程化, 索引/MOC]
 date-created: 2025-12-17
-date-modified: 2025-12-25
-status: 🟢 活跃
+date-modified: 2026-03-08
+status: 🌰 seed
 ---
 
 ## 🏗️ 领域：前端工程化 (FE Engineering)

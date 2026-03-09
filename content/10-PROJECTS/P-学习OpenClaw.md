@@ -3,17 +3,19 @@ uid: "202603072217"
 title: P-学习OpenClaw
 author: [AI, pedyc]
 date-created: 2026-03-06
-date-modified: 2026-03-07
+date-modified: 2026-03-08
 status: 🌰 seed
-area: ["[[AI 核心概念 MOC|A-人工智能]]"]
+area: ["[[A-人工智能 MOC|A-人工智能]]"]
+consequence: 5
 content-type: [project]
 expire: 2026-03-11
+urgency: 2
 ---
 
 ## 🔗关联领域
 
-- [[AI 核心概念 MOC|A-人工智能]]
-- [[Linux 系统管理 MOC|A-Linux]]
+- [[A-人工智能 MOC|A-人工智能]]
+- [[A-Linux MOC|A-Linux]]
 
 ## 🎯 核心靶心（项目的主要目标）
 
@@ -40,7 +42,7 @@ expire: 2026-03-11
 - [x] 执行 `openclaw gateway install` 创建 systemd 服务
 - [x] 验证服务：`systemctl --user status openclaw-gateway`
 - [x] 获取 Web 控制台 Token：`openclaw dashboard --no-open`
-- [x] 记录 [[SOP-在WSL中部署OpenClaw]] ✅ 2026-03-07
+- [x] 记录 [[SOP-在WSL2中部署OpenClaw]] ✅ 2026-03-07
 
 ### 阶段二：Telegram 频道配置（2026/03/08 - 2026/03/09）
 
@@ -77,6 +79,7 @@ expire: 2026-03-11
 
 ## 📦 关联资源（输入资源）
 
+- [[SOP-在WSL2中安装OpenClaw]]🔨 核心指南（部署前必读）
 - [[systemd]] 🔨 核心工具（部署前必读）
 - [[DBus]] 🔨 核心工具（理解底层机制）
 - [[Telegram Bot API文档]] 📚 灵感来源（机器人高级功能）
@@ -86,7 +89,7 @@ expire: 2026-03-11
 
 ## 🧩 成果与交付物（输出资源）
 
-- [[SOP-在WSL中部署OpenClaw]]💎 个人化完整指南
+- [[SOP-在WSL2中部署OpenClaw]]💎 个人化完整指南
 - [[OpenClaw-部署避坑指南]]💎 实战经验总结
 - [[OpenClaw-Telegram配置参数]]💎 配置模板可直接复用
 - [[OpenClaw-AI测试用例库]]💎 包含成功和失败案例

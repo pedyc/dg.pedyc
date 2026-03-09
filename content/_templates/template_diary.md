@@ -1,8 +1,9 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
 title: template_diary
-tags:
-  - 个人成长/diary
+tags: [个人成长/diary]
+date-created: 2025-12-17
+date-modified: 2026-03-08
 ---
 
 <%*
@@ -30,10 +31,14 @@ await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
 ## 👣跬步（任务列表）
 
 ```dataview
-TABLE status, area, expire
+TABLE 
+	urgency + consequence AS "评分",
+	status AS "状态", 
+	area AS "领域", 
+	expire AS "截止日期"
 FROM "10-PROJECTS"
-WHERE date(expire) >= date(file.name)
-SORT file.frontmatter.expire ASC
+WHERE date(expire) >= date(this.file.frontmatter.title)
+SORT urgency + consequence DESC
 ```
 
 ## 🌞日新（行动记录）

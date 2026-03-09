@@ -5,12 +5,13 @@ author: pedyc
 description: '"本库的核心设计理念、组织方案和关键索引入口。" # 添加描述'
 tags: [汇总]
 date-created: 2024-09-18
-date-modified: 2026-03-06
+date-modified: 2026-03-08
 status: 🌲 evergreen
 ---
 
 > [!hint]
 > 本库不用做日程管理，日记只作为方便检索笔记的工具。
+> 本库设计原则：Less is more.
 > 本库方法论：[[PARA笔记法]]、[[卡片盒笔记]]
 > 本库工作流：捕获、加工、内化、行动
 > 本库工具链：Linter、Templater、Copilot、Dataview、Excalidraw
@@ -21,7 +22,7 @@ status: 🌲 evergreen
 
 - [[SOP-混合型PKM构建指南]]
 - [[META-顶层设计]]
-	- [[META-命名规范|名称系统]]
+	- [[META-命名系统|名称系统]]
 	- [[META-元数据系统|元数据系统]]
 	- [[META-目录结构设计|文件系统]]
 	- [[META-笔记分类系统|笔记分类系统]]

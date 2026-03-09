@@ -1,9 +1,9 @@
 ---
-title: 个人成长 MOC
+title: A-个人成长 MOC
 aliases: [个人成长]
 tags: [area/core]
 date-created: 2025-03-05
-date-modified: 2026-03-01
+date-modified: 2026-03-08
 content-type: index
 refresh: 月度｜季度
 type: [area]

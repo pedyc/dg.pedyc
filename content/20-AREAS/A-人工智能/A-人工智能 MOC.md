@@ -1,17 +1,32 @@
 ---
-title: AI 核心概念 MOC
+title: A-人工智能 MOC
 aliases: [A-人工智能]
 date-created: 2026-03-01
-date-modified: 2026-03-07
+date-modified: 2026-03-08
 content-type: [MOC]
 ---
 
-## 🗺️ 领域：AI 核心概念
+## 🗺️ 人工智能领域
 
-### 相关项目
+**子领域**
+- [[A-Agent MOC]]
 
-- [[P-学习OpenClaw]]
-- [[P-学习ClaudeCode]]
+**相关项目**
+
+```dataview
+TABLE 
+  file.link as "项目",
+  status,
+  expire,
+  date(expire) - date(today) as "剩余天数"
+FROM "10-PROJECTS"
+WHERE 
+  contains(area, this.file.link) AND
+  status != "已完成"
+SORT 
+  choice(date(expire) < date(today), 0, 1) ASC, 
+  expire ASC
+```
 
 ### 🎯 核心定义 (Scope & Definition)
 
@@ -46,7 +61,7 @@ content-type: [MOC]
 ### 🔗 知识网络 (Context)
 
 - **上游学科**：[[机器学习]] (提供算法与模型的理论支撑)
-- **协同领域**：[[前端开发 MOC]] (协同点：探索 AI 在 WebGL、Canvas 交互等前端场景中的应用)
+- **协同领域**：[[A-前端开发 MOC]] (协同点：探索 AI 在 WebGL、Canvas 交互等前端场景中的应用)
 - **对立/竞争概念**：[[传统规则引擎]] (冲突点：基于符号逻辑的确定性与基于概率的生成式 AI 的灵活性)
 
 ### 🧪 探索前沿 (The Frontier)

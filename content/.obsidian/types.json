@@ -58,6 +58,8 @@
     "excalidraw-export-internal-links": "checkbox",
     "content-type": "multitext",
     "TQ_show_toolbar": "checkbox",
-    "expire": "date"
+    "expire": "date",
+    "urgency": "number",
+    "consequence": "number"
   }
 }

@@ -7,7 +7,7 @@ author: ped_yc
 description: 
 tags: [系统设计, 分类学]
 date-created: 2025-02-24
-date-modified: 2026-03-06
+date-modified: 2026-03-08
 status: YCTODO
 para: resource
 zettel: permanent
@@ -39,7 +39,7 @@ zettel: permanent
 
 ### 命名规范设计
 
-![[META-命名规范]]
+![[META-命名系统]]
 
 ### 元数据设计
 

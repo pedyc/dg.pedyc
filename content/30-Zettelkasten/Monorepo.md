@@ -29,7 +29,7 @@ type: [area]
 
 ### 关联领域
 
-- [[前端工程]]
+- [[前端工程化 MOC]]
 - [[前端性能优化]] (协同点：Monorepo 项目的性能优化)
 - [[DevOps|DevOps]] (协同点：Monorepo 项目的 CI/CD 流水线整合)
 - [[代码管理领域]] (协同点：Monorepo 项目的代码管理策略)

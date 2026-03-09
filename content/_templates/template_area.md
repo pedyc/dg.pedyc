@@ -6,7 +6,6 @@ aliases:
 description: 领域索引笔记通用模板，用于定义和管理特定领域的知识
 tags:
   - area
-  - MOC
 status: active | archived
 content-type:
   - MOC
@@ -17,12 +16,22 @@ related:
 
 ## 🗺️ 领域：{{领域名称}}
 
-- [ ] {{关联项目1}}
-- [ ] {{关联项目2}}
+```dataview
+TABLE 
+  file.link as "项目",
+  status,
+  expire,
+  date(expire) - date(today) as "剩余天数"
+FROM "10-PROJECTS"
+WHERE 
+  contains(area, this.file.link) AND
+  status != "已完成"
+SORT 
+  choice(date(expire) < date(today), 0, 1) ASC, 
+  expire ASC
+```
 
-### 🎯 核心定义 (Scope & Definition)
-
-> [!abstract]
+> [!abstract] 核心定义
 > {{领域定义}}
 
 ---

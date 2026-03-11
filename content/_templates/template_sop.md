@@ -1,15 +1,13 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: template_sop
-tags:
-  - sop
-  - action/workflow
-  - tool/相关工具
-date-created: 2025-12-26
-date-modified: 2026-03-04
-status: cultivating
+title: {{SOP名称}}
+description: {{一句话描述这个 SOP 的用途}}
+tags: []
 content-type: sop
-up: "[[{{所属的技能或项目}}]]"
+status: cultivating
+date-created: <% tp.date.now("YYYY-MM-DD") %>
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
+up: ""
 ---
 
 ## 🚀 SOP：{{动宾结构标题，如：如何重构遗留代码}}

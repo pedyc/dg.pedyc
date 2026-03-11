@@ -1,10 +1,13 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
-title: template_project
-status: 进行中｜已暂停｜已完成
-area: ["[[00-看板]]"]
-content-type: [project]
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+title: {{项目名称}}
+description: {{一句话描述项目目标}}
+status: fleeting
+area: []
+content-type: project
 expire: YYYY/MM/DD
+consequence: 1
+urgency: 1
 ---
 
 ## 🔗关联领域

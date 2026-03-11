@@ -1,9 +1,13 @@
 ---
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: A-人工智能 MOC
 aliases: [A-人工智能]
+description: 人工智能领域知识索引
+tags: [area]
+content-type: moc
+status: cultivating
 date-created: 2026-03-01
-date-modified: 2026-03-08
-content-type: [MOC]
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
 ## 🗺️ 人工智能领域
@@ -14,17 +18,17 @@ content-type: [MOC]
 **相关项目**
 
 ```dataview
-TABLE 
+TABLE
   file.link as "项目",
   status,
   expire,
   date(expire) - date(today) as "剩余天数"
 FROM "10-PROJECTS"
-WHERE 
+WHERE
   contains(area, this.file.link) AND
-  status != "已完成"
-SORT 
-  choice(date(expire) < date(today), 0, 1) ASC, 
+  status != "completed"
+SORT
+  choice(date(expire) < date(today), 0, 1) ASC,
   expire ASC
 ```
 

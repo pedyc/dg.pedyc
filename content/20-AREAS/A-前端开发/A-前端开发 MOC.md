@@ -2,12 +2,12 @@
 uid: 202603111625
 title: A-前端开发 MOC
 aliases: [A-前端开发, 前端开发]
-description: 前端开发领域知识索引，涵盖核心基础、进阶深化与实践应用
-tags: [area, type/moc, topic/前端开发]
+description: 前端开发领域知识索引
+tags: [area]
+content-type: moc
+status: cultivating
 date-created: 2026-03-08
-date-modified: 2026-03-11
-status: active
-content-type: [MOC]
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
 related: ["[[JavaScript MOC]]", "[[前端工程化 MOC]]"]
 ---
 
@@ -18,17 +18,17 @@ related: ["[[JavaScript MOC]]", "[[前端工程化 MOC]]"]
 ### 关联项目
 
 ```dataview
-TABLE 
+TABLE
 file.link as "项目",
 status,
 expire,
 date(expire) - date(today) as "剩余天数"
 FROM "10-PROJECTS"
-WHERE 
+WHERE
 contains(area, this.file.link) AND
-status != "已完成"
-SORT 
-choice(date(expire) < date(today), 0, 1) ASC, 
+status != "completed"
+SORT
+choice(date(expire) < date(today), 0, 1) ASC,
 expire ASC
 ```
 

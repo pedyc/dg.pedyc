@@ -1,13 +1,12 @@
 ---
 uid: "202603072217"
 title: P-学习OpenClaw
-author: [AI, pedyc]
 date-created: 2026-03-06
 date-modified: 2026-03-08
-status: 🌰 seed
+status: fleeting
 area: ["[[A-人工智能 MOC|A-人工智能]]"]
 consequence: 5
-content-type: [project]
+content-type: project
 expire: 2026-03-11
 urgency: 2
 ---

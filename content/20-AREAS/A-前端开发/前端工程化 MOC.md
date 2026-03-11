@@ -1,11 +1,13 @@
 ---
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: 前端工程化 MOC
-aliases: [Front-End Engineering, FE Ops, A-前端开发/A-前端工程]
-author: [AI, pedyc]
-tags: [领域/前端, 领域/工程化, 索引/MOC]
+aliases: [Front-End Engineering, FE Ops]
+description: 前端工程化知识索引
+tags: []
+content-type: moc
+status: cultivating
 date-created: 2025-12-17
-date-modified: 2026-03-08
-status: 🌰 seed
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
 ## 🏗️ 领域：前端工程化 (FE Engineering)

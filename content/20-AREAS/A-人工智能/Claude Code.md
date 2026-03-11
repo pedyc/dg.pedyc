@@ -1,11 +1,12 @@
 ---
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: Claude Code
-aliases: []
-description: 由 Anthropic 开发的命令行界面 (CLI) 工具，允许在终端中直接与 Claude 模型交互。
-tags: [tool, AI, CLI, Anthropic]
+description: Claude Code 概念笔记
+tags: [tool/AI]
+content-type: concept
+status: cultivating
 date-created: 2026-03-03
-date-modified: 2026-03-07
-content-type: [concept]
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
 ## ⚙️ 工具：Claude Code

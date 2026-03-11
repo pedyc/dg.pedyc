@@ -1,12 +1,12 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: P-构建一个智能体
 date-created: 2026-03-08
 date-modified: 2026-03-08
-status: 🌰 seed
+status: fleeting
 area: ["[[A-人工智能 MOC|A-人工智能]]"]
 consequence: 7
-content-type: [project]
+content-type: project
 expire: 2026-03-31
 urgency: 3
 ---

@@ -1,9 +1,13 @@
 ---
-title: META-自动化方案
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+title: 自动化方案
+description: 记录知识库自动化相关的想法和脚本
+tags: [meta/附录]
+status: cultivating
 date-created: 2025-04-04
-date-modified: 2026-03-06
-status: YCTODO
-content-type: method
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
+related:
+  - "[[00-本库指南]]"
 ---
 
 ## 本库自动化方案

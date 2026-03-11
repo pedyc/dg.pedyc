@@ -2,29 +2,29 @@
 uid: 202603082302
 title: A-时间管理
 aliases: [时间管理领域, 个人效能系统]
-description: 关于时间管理、精力管理、任务优先级和个人效率提升的知识集合
-tags: [area, MOC, topic/时间管理, topic/个人成长]
+description: 时间管理领域知识索引
+tags: [area]
+content-type: moc
+status: cultivating
 date-created: 2026-03-08
-date-modified: 2026-03-10
-status: 🌰 seed
-content-type: [MOC]
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
 related: ["[[精力成本]]", "[[四象限法则]]", "[[SOP-如何在四象限中应用精力成本]]"]
 ---
 
 ## 🗺️ A- 时间管理
 
 ```dataview
-TABLE 
+TABLE
   file.link as "项目",
   status,
   expire,
   date(expire) - date(today) as "剩余天数"
 FROM "10-PROJECTS"
-WHERE 
+WHERE
   contains(area, this.file.link) AND
-  status != "已完成"
-SORT 
-  choice(date(expire) < date(today), 0, 1) ASC, 
+  status != "completed"
+SORT
+  choice(date(expire) < date(today), 0, 1) ASC,
   expire ASC
 ```
 
@@ -63,5 +63,3 @@ SORT
 - [[如何科学测量个人精力水平？]]
 - [[如何准确判断任务的重要性？]]
 
----
-**🏷️ Tags**: #area/{{领域英文名}} #status/cultivating

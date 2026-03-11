@@ -1,8 +1,12 @@
 ---
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: 算法真题库 MOC
+description: 算法真题知识索引
+tags: []
+content-type: moc
+status: cultivating
 date-created: 2025-03-30
-date-modified: 2026-03-08
-content-type: [MOC]
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
 ## 前端场景场景下的算法优先级

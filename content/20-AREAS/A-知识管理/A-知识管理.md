@@ -1,12 +1,13 @@
 ---
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: A-知识管理
 aliases: [知识管理领域]
-description: 定义个人知识管理领域，构建知识体系，优化知识工作流，提升知识管理效率。
-tags: [知识管理, PKM, 知识体系, 信息管理, 个人成长]
+description: 知识管理领域知识索引
+tags: [area]
+content-type: moc
+status: cultivating
 date-created: 2025-04-30
-date-modified: 2026-03-08
-keywords: [知识管理, 知识组织, 知识内化, PKM工具, 知识工作流]
-para: Area
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
 ## 🗺️ 领域：00- 知识管理
@@ -64,5 +65,3 @@ para: Area
 - [[Q-个人知识管理的ROI(投入产出比)该如何衡量？]]
 	- *针对 " 如何量化成效 " 的课题*
 
----
-**🏷️ Tags**: #area/PKM #status/active #maintenance/weekly

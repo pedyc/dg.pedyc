@@ -2,12 +2,12 @@
 uid: 202603111734
 title: JavaScript MOC
 aliases: [JS]
-tags: [type/moc, topic/JavaScript, topic/前端开发]
+description: JavaScript 知识索引
+tags: []
+content-type: moc
+status: cultivating
 date-created: 2025-05-19
-date-modified: 2026-03-11
-status: 🌱 sprout
-category: work
-content-type: [MOC]
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
 up: "[[A-前端开发 MOC]]"
 ---
 

@@ -1,9 +1,10 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
-title: template_diary
-tags: [个人成长/diary]
-date-created: 2025-12-17
-date-modified: 2026-03-08
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+title: {{日期}}
+tags: []
+status: active
+date-created: <% tp.date.now("YYYY-MM-DD") %>
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
 <%*

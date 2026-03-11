@@ -1,27 +1,27 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
-title: template_alg
-tags:
-  - 数组
-date-created: 2025-04-04
-date-modified: 2026-03-04
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+title: {{算法题目标题}}
+description: {{一句话描述这个算法题}}
+tags: []
+content-type: atomic
+status: fleeting
+date-created: <% tp.date.now("YYYY-MM-DD") %>
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
 ## 题目
 
-https://leetcode.cn/leetbook/read/array-and-string/conm7/
-
-给你一个字符串 `s`，找到 `s` 中最长的 回文 子串。
+{{题目描述或链接}}
 
 ## 实现
 
-思路：遍历每个字符作为回文中心，向左右扩展寻找最长回文。
-注意：奇偶情况
+思路：{{解题思路}}
+注意：{{需要注意的边界情况}}
 
 > [!hint] 复杂度分析
-> - 时间复杂度：$O(n^2)$
-> - 空间复杂度：$O(1)$
+> - 时间复杂度：$O({{复杂度}})$
+> - 空间复杂度：$O({{复杂度}})$
 
-```javascript
+```{{语言}}
 var func = function(){}
 ```

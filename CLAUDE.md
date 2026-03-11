@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Quartz v4 digital garden - a static site generator for publishing notes and digital gardens as websites. The project is a fork of the original Quartz with customizations including Chinese localization (locale: zh-CN), custom theme colors, and specific font choices (LXGW WenKai).
 
+**content/ directory** is a complete Obsidian local knowledge base with PARA + Zettelkasten methodology.
+
 ## Common Development Commands
 
 - **Start dev server (content)**: `npm run server` or `npm run dev`
@@ -20,7 +22,7 @@ This is a Quartz v4 digital garden - a static site generator for publishing note
 
 ## Project Structure
 
-- `content/` - Markdown notes and content source
+- `content/` - Markdown notes and content source (Obsidian knowledge base)
 - `quartz/` - Core Quartz engine code
   - `quartz/plugins/` - Plugin system (transformers, filters, emitters)
   - `quartz/components/` - Preact components for page rendering
@@ -29,6 +31,138 @@ This is a Quartz v4 digital garden - a static site generator for publishing note
   - `quartz/i18n/` - Internationalization (supports 20+ locales)
 - `quartz.config.ts` - Main configuration (plugins, theme, features)
 - `quartz.layout.ts` - Page layout definitions
+
+---
+
+# content/ Obsidian Knowledge Base
+
+When working with notes in `content/` directory, follow these rules:
+
+## Directory Structure
+
+```
+content/
+├── 00-META/           # System metadata (specs, architecture, indexes)
+├── 10-PROJECTS/       # Projects (specific goals with deadlines)
+├── 20-AREAS/          # Areas (ongoing focus areas)
+├── 30-ZETTELCASTEN/   # Original notes (internalized knowledge)
+├── 40-RESOURCES/      # External resources (clips, web archives)
+├── 50-ARCHIVE/        # Archives (completed/obsolete content)
+├── 90-DIARY/          # Diary (time-series records)
+└── 99-ASSETS/         # Extra resources (plugins, attachments)
+```
+
+## Metadata Specification
+
+### Standard Fields
+
+| Field | Purpose | Values |
+|-------|---------|--------|
+| uid | Unique identifier | Timestamp |
+| title | Note title | - |
+| aliases | Search keywords | - |
+| description | Description | - |
+| tags | Tags | `#parent/child` format |
+| status | Note lifecycle | See below |
+| content-type | Content type | See below |
+| category | Category | learning / work / life / hobby |
+| up | Parent link | [[MOC/Concept]] |
+| date-created | Creation date | Auto-generated |
+| date-modified | Modification date | Auto-generated |
+
+### status: Note Lifecycle
+
+**One-way flow, cannot be reversed**
+
+| Status | Meaning | Action |
+|--------|---------|--------|
+| fleeting | Draft/raw idea | Needs processing or deletion |
+| cultivating | Growing | Adding content/links |
+| active | Active | Main reference |
+| completed | Completed | Project finished/note closed |
+| archived | Archived | Stored, no longer maintained |
+
+### content-type: Content Classification
+
+- **Specific** (determined by physical location): `project`, `area`
+- **General** (determined by content entropy):
+
+| Type | Definition | Example |
+|------|------------|---------|
+| term | Terminology (from external sources) | HTTP, 多巴胺 |
+| atomic | Permanent note (your insights/statements) | "遗忘是记忆的默认属性" |
+| concept | Concept set, explains "why" or "how" | 双重编码理论, 熵增 |
+| comparison | Comparison, cross-concept analysis | A vs B, selection guide |
+| sop | Standard operating procedure | Deployment process, 周回顾 SOP |
+| moc | Map of Content, indexes multiple notes | Navigation page |
+
+### Project-specific Fields
+
+| Field | Purpose | Values |
+|-------|---------|--------|
+| consequence | Importance | 1~10 |
+| urgency | Urgency | 1~10 |
+| energy-type | Energy type | 💡 / ⚡ / 🔄 / 🏃 |
+| quadrant | Eisenhower matrix | - |
+| expire | Deadline | Date |
+
+## Naming Conventions
+
+### File Prefixes
+
+| Prefix | Usage | Example |
+|--------|-------|---------|
+| P- | Project | P-求职, Docker项目 |
+| A- | Area | A-人工智能, A-个人成长 |
+| Q- | Question | Q-如何学习编程 |
+| MOC- | Map of Content | MOC-前端知识地图 |
+| SOP- | Standard Procedure | SOP-周回顾 |
+| T- | Term | T-HTTP |
+| C- | Concept | C-双重编码理论 |
+
+### Directory Prefixes
+
+Numeric prefixes for sorting:
+
+```
+00-META      → System metadata
+10-PROJECTS  → Projects
+20-AREAS     → Areas
+30-ZETTELCASTEN → Original notes
+40-RESOURCES → External resources
+50-ARCHIVE   → Archives
+90-DIARY     → Diary
+99-ASSETS    → Extra resources
+```
+
+## Tag Conventions
+
+- Format: `#父标签/子标签` (e.g., `#学习/前端`, `#工具/Obsidian`)
+- Mainly used for Topic and Medium
+- No quantity limit
+- No special meaning tags
+
+## Key Files
+
+- `content/00-META/00-本库指南.md` - Core guide (all specs in one place)
+- `content/00-META/01 索引/` - Indexes (领域, 方法论, 标签, 工作流, 术语)
+
+## Templates
+
+Templates are in `content/_templates/`:
+
+- `template_area.md` - Area template
+- `template_project.md` - Project template
+- `template_atomic.md` - Atomic note template
+- `template_concept.md` - Concept template
+- `template_comp.md` - Comparison template
+- `template_sop.md` - SOP template
+- `template_moc.md` - MOC template
+- `template_term.md` - Term template
+- `template_diary.md` - Diary template
+- `template_week.md` - Weekly report template
+
+---
 
 ## Architecture Overview
 

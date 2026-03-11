@@ -1,11 +1,14 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
-title: template_comp
-tags: [atomic, type/comparison, status/cultivating, topic/待分类]
-date-created: Invalid date
-date-modified: 2026-03-08
-alias: ["{{title}}与{{title2}}对比", "{{title}}-{{title2}}"]
-comparison: ["[[{{title}}]]", "[[{{title2}}]]"]
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+title: {{对比标题}}
+description: {{一句话概括这两个概念的核心区别}}
+tags: []
+content-type: comparison
+status: fleeting
+date-created: <% tp.date.now("YYYY-MM-DD") %>
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
+aliases: []
+comparison: []
 ---
 
 ## `= this.title`

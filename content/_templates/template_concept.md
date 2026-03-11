@@ -1,12 +1,12 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: template_concept
-tags:
-  - concept
-  - status/cultivating
-type: concept
-status: 🌰 seed | 🌱 sprout | 🌲 evergreen
-description: 包含多个定义、解释“为什么”或“如何运作”的逻辑集合
+uid: <% tp.file.creation_date(“YYYYMMDDHHmm”) %>
+title: {{概念名称}}
+description: {{一句话定义这个概念}}
+tags: []
+content-type: concept
+status: fleeting
+date-created: <% tp.date.now(“YYYY-MM-DD”) %>
+date-modified: <% tp.date.now(“YYYY-MM-DD”) %>
 ---
 
 ## 🧩 概念：{{概念名称}}

@@ -1,16 +1,15 @@
 ---
-topic: 
-uid: 
-title: META-领域索引
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+title: 领域索引
 aliases: [领域导航, 领域仪表盘]
-description: 本笔记作为特定领域的指南，概述该领域的目标、关键资源、当前状态和相关项目，并作为导航索引，连接领域内的相关笔记和信息。
-tags: [领域指南, 元笔记, 索引, 知识管理, PARA]
+description: 本知识库中所有领域的索引入口
+tags: [meta/索引]
+content-type: moc
+status: active
 date-created: 2025-03-05
-date-modified: 2026-03-08
-status: 进行中
-keywords: [领域, 指南, 索引, 责任范围, 目标]
-para: Area
-related: [PARA方法, 知识领域, 责任管理, 目标设定, 索引笔记]
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
+related:
+  - "[[00-本库指南]]"
 ---
 
 ## 🗂️ 领域列表

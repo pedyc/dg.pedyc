@@ -1,12 +1,13 @@
 ---
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: A-个人成长 MOC
 aliases: [个人成长]
-tags: [area/core]
+description: 个人成长领域知识索引
+tags: [area]
+content-type: moc
+status: cultivating
 date-created: 2025-03-05
-date-modified: 2026-03-08
-content-type: index
-refresh: 月度｜季度
-type: [area]
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
 > **当前状态**：正在构建知识体系，重点提升算法能力。

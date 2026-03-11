@@ -1,12 +1,13 @@
 ---
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: P-学习Obsidian CLI、Skills
 date-created: 2026-03-02
 date-modified: 2026-03-08
-status: 🌰 seed
+status: fleeting
 area: ["[[A-常用工具 MOC|A-常用工具]]", "[[A-知识管理]]"]
 consequence: 3
+content-type: project
 expire: 2026-03-31
-type: [project]
 urgency: 1
 ---
 

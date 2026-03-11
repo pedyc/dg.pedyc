@@ -1,52 +1,10 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: A-Agent MOC
-aliases: [领域别名]
-description: 领域索引笔记通用模板，用于定义和管理特定领域的知识
+description: Agent 智能体领域知识索引
 tags: [area]
+content-type: moc
+status: cultivating
 date-created: 2026-03-08
-date-modified: 2026-03-08
-status: active | archived
-content-type: [MOC]
-related: ["[[卡片笔记1]]", "[[卡片笔记2]]"]
+date-modified: <% tp.date.now("YYYY-MM-DD") %>
 ---
-
-## 🗺️ Agent
-
-> [!abstract] 核心定义
-> 智能体指的是具有环境感知和自主决策能力的实体，它能够通过传感器感知环境，通过执行器采取行动。
-
----
-
-### 🧠 核心心智模型 (Atomic Principles)
-
-- **理论基石**
-	- [[{{完整陈述句标题1，例如：遗忘是记忆的默认属性}}]]
-		- **洞见**：{{简述该观点的核心逻辑}}
-	- [[{{完整陈述句标题2}}]]
-		- **洞见**：{{简述}}
-- **思维模型**
-	- [[{{完整陈述句标题3，例如：费曼技巧本质是降维攻击}}]]
-		- **洞见**：{{简述}}
-
-### 🛠️ 执行系统 (Actionable Workflows)
-
-- **SOP (标准流程)**
-	- [[SOP-{{具体流程名称}}]]：{{解决什么场景的问题}}
-	- [[SOP-{{具体流程名称}}]]：{{解决什么场景的问题}}
-- **关键工具**
-	- [[Tool-{{工具名}}]]：{{工具的核心价值}}
-
-### 🔗 知识网络 (Context)
-
-- **上游学科**：[[{{学科名}}]] (提供理论支撑)
-- **协同领域**：[[{{领域名}}]] ({{协同点描述}})
-- **对立/竞争概念**：[[{{概念名}}]] ({{冲突点描述}})
-
-### 🧪 探索前沿 (The Frontier)
-
-- [[Q-{{开放性问题1}}]]
-- [[Q-{{开放性问题2}}]]
-
----
-**🏷️ Tags**: #area/{{领域英文名}} #status/cultivating

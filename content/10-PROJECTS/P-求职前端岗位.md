@@ -1,11 +1,12 @@
 ---
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: P-求职前端岗位
 date-created: 2025-04-30
 date-modified: 2026-03-09
-status: 🌱 sprout
+status: cultivating
 area: ["[[A-前端开发 MOC|A-前端开发]]"]
 consequence: 10
-content-type: [project]
+content-type: project
 expire: 2026-03-31
 urgency: 9
 ---

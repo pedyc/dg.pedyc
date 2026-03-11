@@ -1,12 +1,12 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: P-健康重启计划
 date-created: 2026-03-08
 date-modified: 2026-03-08
-status: 🌱 sprout
+status: cultivating
 area: ["[[A-健康管理]]"]
 consequence: 9
-content-type: [project]
+content-type: project
 expire: 2026-03-31
 urgency: 2
 ---

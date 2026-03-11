@@ -16,7 +16,6 @@ related:
 
 ## 🗺️ 领域：{{领域名称}}
 
-
 ```dataview
 TABLE 
   file.link as "项目",

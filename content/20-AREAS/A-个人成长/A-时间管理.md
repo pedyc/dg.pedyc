@@ -5,7 +5,7 @@ aliases: [时间管理领域, 个人效能系统]
 description: 关于时间管理、精力管理、任务优先级和个人效率提升的知识集合
 tags: [area, MOC, topic/时间管理, topic/个人成长]
 date-created: 2026-03-08
-date-modified: 2026-03-08
+date-modified: 2026-03-10
 status: 🌰 seed
 content-type: [MOC]
 related: ["[[精力成本]]", "[[四象限法则]]", "[[SOP-如何在四象限中应用精力成本]]"]

@@ -1,10 +1,10 @@
 ---
 title: Project Rating System
 date-created: 2026-03-08
-date-modified: 2026-03-08
+date-modified: 2026-03-11
 copilot-system-prompt-created: 1773018381313
-copilot-system-prompt-modified: 1773018381313
 copilot-system-prompt-last-used: 0
+copilot-system-prompt-modified: 1773018381313
 ---
 
 ## Role: 项目评分助手

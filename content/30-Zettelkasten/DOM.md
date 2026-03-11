@@ -1,14 +1,29 @@
 ---
 title: DOM
-description: "DOM 是连接 JavaScript 和 HTML 的桥梁，允许 JavaScript 动态地访问和操作网页内容。是前端开发的核心技术之一。"
-tags: ["前端", "JavaScript"]
+description: DOM 是连接 JavaScript 和 HTML 的桥梁，允许 JavaScript 动态地访问和操作网页内容。是前端开发的核心技术之一。
+tags:
+  - 前端
+  - JavaScript
 date-created: 2025-05-22
 date-modified: 2025-12-25
-content-type: "concept"
-keywords: [DOM, 文档对象模型, JavaScript, HTML, 动态网页]
-para: "area"
-related: ["[[HTML]]", "[[JavaScript]]", "[[BOM]]", "[[CSS]]", "[[DOM操作]]", "[[DOM事件处理]]", "[[DOM性能优化]]", "[[DOM安全]]"]
-zettel: "permanent"
+content-type: concept
+keywords:
+  - DOM
+  - 文档对象模型
+  - JavaScript
+  - HTML
+  - 动态网页
+para: area
+related:
+  - "[[HTML]]"
+  - "[[JavaScript MOC]]"
+  - "[[BOM]]"
+  - "[[CSS]]"
+  - "[[DOM操作]]"
+  - "[[DOM事件处理]]"
+  - "[[DOM性能优化]]"
+  - "[[DOM安全]]"
+zettel: permanent
 ---
 
 ## 定义
@@ -49,7 +64,7 @@ zettel: "permanent"
 ## 相关概念
 
 - **[[BOM]]**: 浏览器对象模型，提供了访问浏览器功能的接口。
-- **[[JavaScript]]**: 一种脚本语言，通常用于操作 DOM。
+- **[[JavaScript MOC]]**: 一种脚本语言，通常用于操作 DOM。
 - **[[HTML]]**: 一种标记语言，用于定义网页的结构。
 - **[[CSS]]**: 用于控制网页的样式和布局。
 

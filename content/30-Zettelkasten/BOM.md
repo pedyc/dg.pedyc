@@ -42,7 +42,7 @@ BOM (Browser Object Model) 是浏览器对象模型，它允许 JavaScript 与�
 ## 相关概念
 
 - [[DOM]]: 文档对象模型，用于访问和操作 HTML 文档的内容。
-- [[JavaScript]]: 一种脚本语言，用于在浏览器中执行动态操作。
+- [[JavaScript MOC]]: 一种脚本语言，用于在浏览器中执行动态操作。
 
 ## 问答卡片
 

@@ -11,10 +11,10 @@
   "azureOpenAIApiDeploymentName": "",
   "azureOpenAIApiVersion": "",
   "azureOpenAIApiEmbeddingDeploymentName": "",
-  "googleApiKey": "enc_desk_djEw8AHTmn4u8i5TIqf4OKNbxCZzVfKmoniBxIMCImStYV/sYV0P+8nNr12B2yl2zFOEnAPLW18zmvRtZ7//g7kLnz9PJw==",
+  "googleApiKey": "enc_desk_djEw7vdlVJYZuXZOHnmk+t1i79FBCo4bAlSH4CCC4ZPcCOc2eAgSKiy3EelGxiVcuSMX54DyIUbiZhWTOxAJi64ErJ3Pkw==",
   "openRouterAiApiKey": "enc_desk_djEw0v8cahRn6A4ps310/s2keEXmoQ1he0BVNFsQhb8rb3R6w8ZdFdWF0319UoeyvMUzryvyNZix7KFBD3aBjzEYpaEcTHOXrxEKtnoiwd8868dqDTxQRCozSPPrk/1K428mzxA7Tg4=",
   "mistralApiKey": "",
-  "deepseekApiKey": "enc_desk_djEwkwF2/ESaYoUBKf/alDpl6A3czd3FlmjsDrFinPQ2asXrQw7HJN8/XoKab/ee+BJ7P5s0oDuEvUadaopoutOy",
+  "deepseekApiKey": "enc_desk_djEwj+efQeS0Jx6/ur9l3YAAb1tCSgHEDu0YMp/ESMozmqrqA+T8eav7cW/gboh4T6KD1mofU+6/a6t/EGi5RyVQ",
   "defaultChainType": "vault_qa",
   "defaultModelKey": "deepseek-chat|deepseek",
   "embeddingModelKey": "gemini-embedding-001|google",
@@ -29,9 +29,9 @@
   "defaultConversationTag": "/99-ASSETS/copilot-conversation",
   "autosaveChat": true,
   "defaultOpenArea": "view",
-  "customPromptsFolder": "copilot/copilot-custom-prompts",
+  "customPromptsFolder": "99-ASSETS/copilot/copilot-custom-prompts",
   "indexVaultToVectorStore": "ON MODE SWITCH",
-  "qaExclusions": "copilot",
+  "qaExclusions": "99-ASSETS%2Fcopilot",
   "qaInclusions": "",
   "chatNoteContextPath": "",
   "chatNoteContextTags": [],
@@ -360,8 +360,7 @@
       "enabled": true,
       "isBuiltIn": true,
       "isEmbeddingModel": true,
-      "apiKey": "",
-      "enableCors": false
+      "apiKey": ""
     },
     {
       "name": "embed-multilingual-light-v3.0",
@@ -419,7 +418,7 @@
   "generateAIChatTitleOnSave": true,
   "enableInlineCitations": true,
   "enableAutocomplete": false,
-  "memoryFolderName": "copilot/memory",
+  "memoryFolderName": "/99-ASSETS/copilot/memory",
   "enableRecentConversations": true,
   "enableSavedMemory": true,
   "maxRecentConversations": 30,
@@ -445,11 +444,12 @@
   "autoAcceptEdits": false,
   "chatHistorySortStrategy": "recent",
   "projectListSortStrategy": "recent",
-  "userSystemPromptsFolder": "99-ASSETS/copilot/system-prompts",
+  "userSystemPromptsFolder": "/99-ASSETS/copilot/system-prompts",
   "defaultSystemPromptTitle": "Obsidian Smart Librarian",
   "githubCopilotAccessToken": "",
   "githubCopilotToken": "",
   "githubCopilotTokenExpiresAt": 0,
   "enableMiyo": false,
-  "selfHostSearchProvider": "firecrawl"
+  "selfHostSearchProvider": "firecrawl",
+  "convertedDocOutputFolder": "/99-ASSETS/copilot/converteddocs"
 }

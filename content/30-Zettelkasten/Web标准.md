@@ -61,7 +61,7 @@ Web 标准是由 W3C (World Wide Web Consortium) 等标准化组织制定的一�
 
 - [[HTML]]: 简述 HTML 的概念和作用。
 - [[CSS]]: 简述 CSS 的概念和作用。
-- [[JavaScript]]: 简述 JavaScript 的概念和作用。
+- [[JavaScript MOC]]: 简述 JavaScript 的概念和作用。
 - [[可访问性]]: 简述可访问性的概念和重要性。
 - [[语义化]]: 简述语义化的概念和作用。
 

@@ -1,12 +1,16 @@
 ---
 title: WebGL
-aliases: [Web Graphics Library]
+aliases:
+  - Web Graphics Library
 description: 一种用于在任何兼容的 Web 浏览器中渲染交互式 2D 和 3D 图形的 JavaScript API，无需使用插件。
 date-created: 2025-05-28
 date-modified: 2025-05-28
 status: active
 para: area
-related: ["[[OpenGL]]", "[[Canvas]]", "[[JavaScript]]"]
+related:
+  - "[[OpenGL]]"
+  - "[[Canvas]]"
+  - "[[JavaScript MOC]]"
 zettel: permanent
 ---
 
@@ -20,7 +24,7 @@ WebGL（Web Graphics Library）是一种 JavaScript API，用于在任何兼容�
 
 - [[OpenGL]]：「WebGL 基于 OpenGL ES，是 OpenGL 在 Web 上的实现。」
 - [[Canvas]]：「WebGL 通常在一个 Canvas 元素中进行渲染，Canvas 提供 WebGL 的 " 画布 "。」
-- [[JavaScript]]：「WebGL 使用 JavaScript API 进行编程，需要 JavaScript 基础。」
+- [[JavaScript MOC]]：「WebGL 使用 JavaScript API 进行编程，需要 JavaScript 基础。」
 - [[图形学]]：「WebGL 涉及大量的图形学知识，如向量、矩阵、变换、光照等。」
 
 ## 🧱 关键要素

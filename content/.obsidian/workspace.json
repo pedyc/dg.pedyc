@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4d50d36fcbdc9081",
+        "id": "3cd1058150c1f588",
         "type": "tabs",
         "children": [
           {
-            "id": "ba8b73afe1637169",
+            "id": "2de0d844d8676e35",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "80-PRIVATE/API_KEY.md",
+                "file": "20-AREAS/A-前端开发/JavaScript MOC.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,83 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "API_KEY"
+              "title": "JavaScript MOC"
+            }
+          },
+          {
+            "id": "7f2a2983c110ba92",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20-AREAS/A-宗教与神秘学/A-宗教与神秘学 MOC.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "A-宗教与神秘学 MOC"
+            }
+          },
+          {
+            "id": "cefd928e8365bdad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20-AREAS/A-宗教与神秘学/超验.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "超验"
+            }
+          },
+          {
+            "id": "8e8bdc45ca4fe3e1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "99-ASSETS/copilot/system-prompts/Obsidian Smart Librarian.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Obsidian Smart Librarian"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -108,13 +181,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "80-PRIVATE/API_KEY.md",
+                "file": "20-AREAS/A-宗教与神秘学/超验.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "API_KEY 的大纲"
+              "title": "超验 的大纲"
             }
           }
         ],
@@ -276,54 +349,54 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "3dfca4b5c072d131",
+  "active": "cefd928e8365bdad",
   "lastOpenFiles": [
-    "copilot/memory/Recent Conversations.md",
-    "80-PRIVATE/API_KEY.md",
-    "10-PROJECTS/P-算法提升专项.md",
-    "99-ASSETS/copilot/copilot-conversations/template_project_根据模板优化笔记P-算法提升专项@20260309_093428.md",
-    "99-ASSETS/copilot/copilot-conversations/template_project_根据模板优化笔记@20260309_093300.md",
-    "10-PROJECTS/SOP-前端面试的算法提升指南.md",
-    "90-Diary/2026-03-09.md",
-    "10-PROJECTS/P-求职前端岗位.md",
-    "_templates/template_project.md",
-    "99-ASSETS/copilot/system-prompts/_resources",
+    "20-AREAS/A-宗教与神秘学/撒旦教.md",
+    "99-ASSETS/copilot/system-prompts/Obsidian Smart Librarian.md",
+    "99-ASSETS/copilot/system-prompts/Untitled.md",
+    "99-ASSETS/copilot/system-prompts/Project Rating System.md",
+    "20-AREAS/A-宗教与神秘学/超验.md",
+    "30-ZETTELKASTEN/为什么隐秘团体往往进行邪恶仪式？.md",
+    "50-ARCHIVE/知识管理大师提示词v6 模板对齐.md",
+    "50-ARCHIVE/前端开发助手提示词 v2.md",
+    "50-ARCHIVE/前端开发助手提示词.md",
+    "30-ZETTELKASTEN/前端性能优化.md",
+    "50-ARCHIVE/前端开发助手提示词 v1.md",
+    "40-RESOURCES/知识管理大师提示词V7.md",
+    "50-ARCHIVE/重构GTD OS.md",
+    "50-ARCHIVE/知识管理大师提示词v5 个人语境版本.md",
+    "50-ARCHIVE/知识管理大师提示词v4 动态重构版本.md",
+    "50-ARCHIVE/知识管理大师提示词v3.md",
+    "50-ARCHIVE/知识管理大师提示词v2.md",
+    "50-ARCHIVE/知识管理大师提示词v1.md",
+    "20-AREAS/A-宗教与神秘学/A-宗教与神秘学 MOC.md",
+    "30-ZETTELKASTEN/JavaScript 引擎.md",
+    "20-AREAS/A-宗教与神秘学",
+    "30-ZETTELKASTEN/JS执行机制.md",
+    "20-AREAS/A-前端开发/JavaScript MOC.md",
+    "99-ASSETS/copilot/copilot-conversations/优化并完善笔记@20260311_173005.md",
+    "30-ZETTELKASTEN/变量对象.md",
+    "30-ZETTELKASTEN/闭包的本质是函数保存了其定义时的作用域链.md",
+    "30-ZETTELKASTEN/This绑定.md",
+    "99-ASSETS/copilot/copilot-custom-prompts",
     "copilot/memory",
     "copilot",
-    "00-META/01 规范与标准/META-笔记分类系统.md",
-    "_templates/template_alg.md",
-    "99-ASSETS/copilot/system-prompts/Obsidian Smart Librarian.md",
-    "_templates/template_archive.md",
-    "_templates/template_moc.md",
-    "_templates/template_area.md",
-    "_templates/template_sop.md",
-    "_templates/template_comp.md",
-    "_templates/template_term.md",
-    "_templates/template_atomic.md",
-    "_templates/template_concept.md",
-    "00-META/01 规范与标准/META-标签系统.md",
-    "00-META/01 规范与标准/META-命名系统.md",
-    "00-META/01 规范与标准/META-项目评分系统.md",
-    "00-META/01 规范与标准/META-元数据系统.md",
-    "00-META/01 规范与标准/META-组织方案.md",
-    "30-ZETTELKASTEN/知识管理大师提示词v5 个人语境版本.md",
+    "40-RESOURCES/HelloAgents",
+    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/94f4fa7622f13fe917fe437ea47b357b_MD5.jpg",
+    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/185bf38385852d9cb8ed37dffc065d1c_MD5.jpg",
+    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/369676f7957b8839fb0833f7fd91ca80_MD5.jpg",
+    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/56f463a1d25e533b43f6a73d0b2b4183_MD5.jpg",
+    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/81e89d60c6b76107f9845a96661231df_MD5.jpg",
+    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/6638071406ebbc234a37bf22b2335292_MD5.jpg",
+    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/147227f98a4d7a7cc420dacb1c075fd9_MD5.jpg",
+    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/3d06e473f99265cbcf19ba8161537f90_MD5.jpg",
+    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents",
+    "99-ASSETS/copilot/system-prompts/_resources",
     "copilot/system-prompts",
     "四象限.excalidraw.svg",
     "20-AREAS/A-健康管理",
     "20-AREAS/A-人工智能/未命名",
     "40-RESOURCES/Inbox/_resources/Windows (WSL2)  OpenClaw 文档/97637eedc66ef75f5204923d6c7bbe59_MD5.svg",
-    "40-RESOURCES/Inbox/_resources/Windows (WSL2)  OpenClaw 文档",
-    "20-AREAS/A-视觉思维",
-    "20-AREAS/A-Linux",
-    "40-RESOURCES/Inbox/_resources/从采集到回顾，我用 AI 搭建了一套个人信息处理系统",
-    "00-META/_resources/本库项目看板.excalidraw.svg",
-    "00-META/_resources/本库架构指南.excalidraw.svg",
-    "40-RESOURCES/SimpRead/_resources/1-Claude Code 如何工作 - Claude Code Docs/fa961b2fdb873479ae3273ce809b350a_MD5.svg",
-    "40-RESOURCES/SimpRead/_resources/1-Claude Code 如何工作 - Claude Code Docs/3eddd2200c69d4bd9748b5e19935fc08_MD5.svg",
-    "40-RESOURCES/_resources/Claude Code 如何工作/d93a75128019bc05e27a6a3f72afc9e5_MD5.jpg",
-    "40-RESOURCES/_resources/Pasted image 20260303122714.png",
-    "99-ASSETS/Excalidraw/Drawing 2025-09-25 11.10.32.excalidraw.svg",
-    "40-RESOURCES/SimpRead/_resources/0-React_js 中组件重渲染性能问题及优化方法_react 弹框 导致 页面重新渲染 - CSDN 博客/94acb6f4bdfae182247febb78becafb4_MD5.jpg",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

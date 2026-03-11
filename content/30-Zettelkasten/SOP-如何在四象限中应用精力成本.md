@@ -3,7 +3,7 @@ uid: 202603082304
 title: SOP-如何在四象限中应用精力成本
 tags: [sop, action/workflow, tool/时间管理, tool/精力管理]
 date-created: 2025-12-26
-date-modified: 2026-03-08
+date-modified: 2026-03-10
 status: 🌱 sprout
 content-type: sop
 up: "[[精力成本]]"

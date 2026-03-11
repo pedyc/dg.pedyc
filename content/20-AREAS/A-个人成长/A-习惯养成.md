@@ -5,7 +5,7 @@ aliases: [领域别名]
 description: 领域索引笔记通用模板，用于定义和管理特定领域的知识
 tags: [area]
 date-created: 2026-03-08
-date-modified: 2026-03-08
+date-modified: 2026-03-10
 status: 🌰 seed
 content-type: [MOC]
 related: ["[[卡片笔记1]]", "[[卡片笔记2]]"]

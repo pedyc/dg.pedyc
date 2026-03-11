@@ -3,7 +3,7 @@ title: SOP-在WSL2中安装OpenClaw
 description: OpenClaw 官方文档 — 个人 AI 助手，任意平台 🦞
 tags: [clippings]
 date-created: 2026-03-07
-date-modified: 2026-03-07
+date-modified: 2026-03-09
 created: 2026-03-07
 source: https://openclaw.cc/platforms/windows.html
 ---

@@ -1,16 +1,34 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: 前端工程化 MOC
+uid: 202603121028
+title: A-前端工程化
 aliases: [Front-End Engineering, FE Ops]
-description: 前端工程化知识索引
-tags: []
-content-type: moc
-status: cultivating
+description: 前端工程化是将软件工程方法论应用于前端开发，通过规范化、模块化、组件化和自动化手段解决规模化、协作化和性能优化挑战
+tags: [area]
 date-created: 2025-12-17
-date-modified: <% tp.date.now("YYYY-MM-DD") %>
+date-modified: 2026-03-12
+status: cultivating
+content-type: area
+related: ["[[A-前端开发]]", "[[A-常用工具]]"]
 ---
 
-## 🏗️ 领域：前端工程化 (FE Engineering)
+## 🗺️ 领域：前端工程化
+
+### 📋 关联项目
+
+```dataview
+TABLE
+  file.link as "项目",
+  status,
+  choice(date(expire) < date(today) and status != "completed", "🔴 逾期", choice(date(expire) - date(today) <= 7 and status != "completed", "🟡 临近", "⚪ 正常")) as "状态",
+  date(expire) - date(today) as "剩余天数"
+FROM "10-PROJECTS"
+WHERE
+  contains(area, this.file.link) AND
+  status != "completed"
+SORT
+  choice(date(expire) < date(today), 1, 0) DESC,
+  date(expire) ASC
+```
 
 ### 🎯 核心定义
 
@@ -90,7 +108,7 @@ graph LR
 
 - **代码管理**：
 	- [[Monorepo]] (Turborepo/Nx) —— *解决多项目依赖与复用*
-	- [[Gitflow工作流]] —— *解决多人协作冲突*
+	- [[Gitflow工作流]] —— *解决多人协作冲突*====
 - **架构模式**：
 	- [[微前端架构]] (Micro-Frontends) —— *巨石应用拆解*
 	- [[BFF层]] (Backend for Frontend) —— *接口聚合与适配*
@@ -112,3 +130,58 @@ graph LR
 - [[Serverless]] 如何改变前端的边界？(Vercel/Netlify 模式)
 - [[AI辅助编程]] (Copilot) 如何整合进 Code Review 流程？
 - 如何量化工程化带来的 ROI？(不仅仅是感觉 " 快了 ")
+
+### 🎯 长期目标
+
+- **目标 1**：建立标准化的前端项目脚手架和工程规范，覆盖团队 90% 的日常开发场景
+- **目标 2**：实现从代码提交到生产部署的全链路自动化，平均部署时间 < 5 分钟
+- **目标 3**：构建完整的监控体系，核心 Web 指标劣化自动报警
+
+### 🧠 核心心智模型
+
+- **原子洞见**（待创建）
+	- [ ] [[前端工程化的本质是标准化、模块化、自动化]]
+	- [ ] [[持续集成能早发现、早修复问题]]
+
+- **概念支撑**
+	- [[C-软件工程]]：前端工程化的理论基础（待创建）
+	- [[C-测试金字塔]]：单元测试 → 组件测试 → E2E 测试的分层策略（待创建）
+	- [[C-构建优化]]：Tree Shaking、Code Splitting、Module Federation（待创建）
+
+### 🛠️ 执行系统
+
+- **核心流程**
+	- [[SOP-新项目初始化]]：脚手架创建 → 环境配置 → 规范集成
+	- [[SOP-代码提交流程]]：Commit 规范 → Hooks 检查 → Code Review
+- **关键工具**
+	- 构建工具：[[Vite]]（开发体验）、[[Webpack]]（生态）、[[Rspack]]（性能）
+	- 代码质量：[[ESLint]]、[[Prettier]]、[[Husky]]
+	- 测试框架：[[Vitest]]（单元）、[[Cypress]]（E2E）
+	- CI/CD：[[GitHub Actions]]
+- **行动触发器**
+	- 当启动新项目 → 使用脚手架模板
+	- 当代码提交 → 自动触发 Lint + Test
+	- 当性能劣化 → 触发监控报警
+
+### 🔗 知识网络
+
+- **上游支撑**：[[A-前端开发]] | [[C-软件工程]]
+- **下游应用**：[[A-个人博客]]（部署上线）
+- **协同领域**：[[A-常用工具]]（开发工具链）
+- **对立/竞争概念**：[[C-快速原型]]（追求速度 vs 追求可维护性）
+
+### 📊 领域健康度
+
+| 维度 | 状态 | 说明 |
+|:---:|:---:|:---|
+| 项目进度 | 🟡 | 有相关项目进行中 |
+| 知识更新 | 🟢 | 持续补充工具链内容 |
+| 行动频率 | 🟡 | 有工程实践需求 |
+
+### 📈 复盘记录
+
+- **版本**：v1.0
+- **待迭代**：
+	- 补充缺失的技术词条（如 Rspack、SWC、ESBuild）
+	- 添加 SOP 文档
+	- 完善监控体系细节

@@ -31,7 +31,7 @@
   "defaultOpenArea": "view",
   "customPromptsFolder": "99-ASSETS/copilot/copilot-custom-prompts",
   "indexVaultToVectorStore": "ON MODE SWITCH",
-  "qaExclusions": "99-ASSETS%2Fcopilot",
+  "qaExclusions": "99-ASSETS%2Fcopilot,copilot",
   "qaInclusions": "",
   "chatNoteContextPath": "",
   "chatNoteContextTags": [],

@@ -1,12 +1,12 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: 202603121028
 title: 术语索引
 description: 本知识库中术语的索引入口
 tags: [meta/索引]
 content-type: moc
 status: active
 date-created: 2025-05-06
-date-modified: <% tp.date.now("YYYY-MM-DD") %>
+date-modified: 2026-03-12
 related:
   - "[[00-本库指南]]"
 ---

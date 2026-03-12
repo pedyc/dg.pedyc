@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-宗教与神秘学/超验.md",
+                "file": "99-ASSETS/copilot/system-prompts/Obsidian Smart Librarian.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "超验"
+              "title": "Obsidian Smart Librarian"
             }
           },
           {
@@ -181,13 +181,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20-AREAS/A-宗教与神秘学/超验.md",
+                "file": "90-Diary/2026-03-12.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "超验 的大纲"
+              "title": "2026-03-12 的大纲"
             }
           }
         ],
@@ -268,7 +268,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.5
+    "width": 277.5,
+    "collapsed": true
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -349,35 +350,37 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "cefd928e8365bdad",
+  "active": "39d39d451048730c",
   "lastOpenFiles": [
-    "20-AREAS/A-宗教与神秘学/撒旦教.md",
-    "99-ASSETS/copilot/system-prompts/Obsidian Smart Librarian.md",
+    "99-ASSETS/copilot/copilot-conversations/根据_templatestempates_area模板完善笔记@20260312_030908.md",
+    "90-Diary/2026-03-12.md",
+    "20-AREAS/A-健康管理/3月健康目标.md",
+    "30-ZETTELKASTEN/SOP-前端面试的算法提升指南.md",
+    "00-META/02 附录/META-设计中碰到的问题.md",
+    "00-META/02 附录/META-自动化方案.md",
+    "00-META/02 附录",
+    "00-META/01 索引/META-领域索引.md",
+    "00-META/01 索引/META-标签汇总.md",
+    "00-META/01 索引/META-术语索引.md",
+    "00-META/01 索引/META-方法论汇总.md",
+    "00-META/01 索引/META-工作流汇总.md",
+    "00-META/01 索引",
+    "00-META/00-本库指南.md",
     "99-ASSETS/copilot/system-prompts/Untitled.md",
-    "99-ASSETS/copilot/system-prompts/Project Rating System.md",
+    "20-AREAS/A-个人成长/未命名.md",
+    "99-ASSETS/copilot/system-prompts/Obsidian Smart Librarian.md",
+    "00-META/02 架构设计/META-目录结构设计.md",
+    "00-META/02 架构设计/META-顶层设计.md",
+    "20-AREAS/A-人工智能/A-人工智能 MOC.md",
     "20-AREAS/A-宗教与神秘学/超验.md",
+    "10-PROJECTS/P-健康重启计划.md",
+    "20-AREAS/A-健康管理/A-健康管理.md",
+    "90-Diary/2026-03-11.md",
+    "四象限.excalidraw.md",
+    "20-AREAS/A-宗教与神秘学/撒旦教.md",
+    "99-ASSETS/copilot/system-prompts/Project Rating System.md",
     "30-ZETTELKASTEN/为什么隐秘团体往往进行邪恶仪式？.md",
-    "50-ARCHIVE/知识管理大师提示词v6 模板对齐.md",
-    "50-ARCHIVE/前端开发助手提示词 v2.md",
-    "50-ARCHIVE/前端开发助手提示词.md",
-    "30-ZETTELKASTEN/前端性能优化.md",
-    "50-ARCHIVE/前端开发助手提示词 v1.md",
-    "40-RESOURCES/知识管理大师提示词V7.md",
-    "50-ARCHIVE/重构GTD OS.md",
-    "50-ARCHIVE/知识管理大师提示词v5 个人语境版本.md",
-    "50-ARCHIVE/知识管理大师提示词v4 动态重构版本.md",
-    "50-ARCHIVE/知识管理大师提示词v3.md",
-    "50-ARCHIVE/知识管理大师提示词v2.md",
-    "50-ARCHIVE/知识管理大师提示词v1.md",
-    "20-AREAS/A-宗教与神秘学/A-宗教与神秘学 MOC.md",
-    "30-ZETTELKASTEN/JavaScript 引擎.md",
     "20-AREAS/A-宗教与神秘学",
-    "30-ZETTELKASTEN/JS执行机制.md",
-    "20-AREAS/A-前端开发/JavaScript MOC.md",
-    "99-ASSETS/copilot/copilot-conversations/优化并完善笔记@20260311_173005.md",
-    "30-ZETTELKASTEN/变量对象.md",
-    "30-ZETTELKASTEN/闭包的本质是函数保存了其定义时的作用域链.md",
-    "30-ZETTELKASTEN/This绑定.md",
     "99-ASSETS/copilot/copilot-custom-prompts",
     "copilot/memory",
     "copilot",
@@ -394,8 +397,6 @@
     "99-ASSETS/copilot/system-prompts/_resources",
     "copilot/system-prompts",
     "四象限.excalidraw.svg",
-    "20-AREAS/A-健康管理",
-    "20-AREAS/A-人工智能/未命名",
     "40-RESOURCES/Inbox/_resources/Windows (WSL2)  OpenClaw 文档/97637eedc66ef75f5204923d6c7bbe59_MD5.svg",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",

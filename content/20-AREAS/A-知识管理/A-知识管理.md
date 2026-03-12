@@ -1,22 +1,23 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: '202603121028'
 title: A-知识管理
 aliases: [知识管理领域]
 description: 知识管理领域知识索引
 tags: [area]
-content-type: moc
-status: cultivating
 date-created: 2025-04-30
-date-modified: <% tp.date.now("YYYY-MM-DD") %>
+date-modified: 2026-03-12
+status: cultivating
+content-type: area
+related: ["[[A-个人成长]]", "[[A-常用工具]]"]
 ---
 
-## 🗺️ 领域：00- 知识管理
+## 🗺️ 领域：知识管理
 
 ### 🎯 核心定义 (Scope & Definition)
 
 > [!abstract]
 > 本领域代表我对个人知识进行**捕捉、组织、提炼和应用**的持续责任。
-> **核心目标**：构建 " 第二大脑 "，将碎片化信息转化为决策支撑与创造力，以服务于 [[A-个人成长 MOC]] 和 [[项目矩阵]]。
+> **核心目标**：构建 " 第二大脑 "，将碎片化信息转化为决策支撑与创造力，以服务于 [[A-个人成长]] 和 [[项目矩阵]]。
 
 ---
 
@@ -49,12 +50,12 @@ date-modified: <% tp.date.now("YYYY-MM-DD") %>
 ### 🔗 知识网络 (Context)
 
 - **子领域 (流水线)**
-	- [[01知识获取]] (Input) $\rightarrow$ [[02知识组织]] (Process) $\rightarrow$ [[03知识内化]] (Internalize) $\rightarrow$ [[04知识分享]] (Output)
+	- [[MOC-知识获取]] (Input) $\rightarrow$ [[02知识组织]] (Process) $\rightarrow$ [[03知识内化]] (Internalize) $\rightarrow$ [[04知识分享]] (Output)
 - **上游学科**
 	- [[认知科学]] (提供了关于记忆与注意力的理论支撑)
 	- [[信息科学]] (提供了分类学与检索理论)
 - **协同领域**
-	- [[A-个人成长 MOC]] (PKM 是个人成长的加速器)
+	- [[A-个人成长]] (PKM 是个人成长的加速器)
 
 ### 🧪 探索前沿 (The Frontier)
 
@@ -65,3 +66,23 @@ date-modified: <% tp.date.now("YYYY-MM-DD") %>
 - [[Q-个人知识管理的ROI(投入产出比)该如何衡量？]]
 	- *针对 " 如何量化成效 " 的课题*
 
+### 🎯 长期目标
+
+- **目标 1**：建立完整的知识获取→组织→内化→输出工作流，实现知识的高效流动
+- **目标 2**：定期维护和重构知识库，保持系统的可用性和相关性
+- **目标 3**：通过知识管理提升个人决策质量和创造力
+
+### 📊 领域健康度
+
+| 维度 | 状态 | 说明 |
+|:---:|:---:|:---|
+| 项目进度 | 🟢 | 知识管理本身就是持续项目 |
+| 知识更新 | 🟢 | 持续添加和整理笔记 |
+| 行动频率 | 🟢 | 日常使用 |
+
+### 📈 复盘记录
+
+- **版本**：v1.0
+- **待迭代**：
+	- 完善 SOP 文档
+	- 补充工具配置细节

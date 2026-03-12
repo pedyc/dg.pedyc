@@ -1,19 +1,21 @@
 ---
 uid: 202603111625
-title: A-前端开发 MOC
+title: A-前端开发
 aliases: [A-前端开发, 前端开发]
 description: 前端开发领域知识索引
 tags: [area]
-content-type: moc
-status: cultivating
 date-created: 2026-03-08
-date-modified: <% tp.date.now("YYYY-MM-DD") %>
-related: ["[[JavaScript MOC]]", "[[前端工程化 MOC]]"]
+date-modified: 2026-03-12
+status: cultivating
+content-type: area
+related: ["[[MOC-JavaScript]]", "[[A-前端工程化]]", "[[A-常用工具]]"]
 ---
 
 ## 🗺️ 领域：前端开发
 
 ### 子领域
+
+- [[A-前端工程化]]
 
 ### 关联项目
 
@@ -67,3 +69,17 @@ expire ASC
 
 - [[Q-Web Components 能否成为下一代前端框架？]]
 - [[Q-如何将AI能力有效融入前端开发工作流？]]
+
+### 🎯 长期目标
+
+- **目标 1**：深入掌握前端核心技术（JavaScript、React/Vue）
+- **目标 2**：建立完整的工程化知识体系
+- **目标 3**：提升性能和用户体验优化能力
+
+### 📊 领域健康度
+
+| 维度 | 状态 | 说明 |
+|:---:|:---:|:---|
+| 项目进度 | 🟡 | 有相关项目进行中 |
+| 知识更新 | 🟢 | 持续学习新技术 |
+| 行动频率 | 🟢 | 日常开发工作 |

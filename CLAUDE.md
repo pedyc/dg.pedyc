@@ -137,7 +137,27 @@ Numeric prefixes for sorting:
 
 ## Tag Conventions
 
+### Format
 - Format: `#父标签/子标签` (e.g., `#学习/前端`, `#工具/Obsidian`)
+- Use Chinese for parent tags, English or Chinese for sub-tags
+
+### Recommended Tag System
+
+| Parent Tag | Sub-tags |
+|------------|----------|
+| #知识管理 | 方法论、工具、工作流、心智模型 |
+| #人工智能 | AI助手、提示词、Agent |
+| #前端开发 | JavaScript、React、工程化、CSS |
+| #个人成长 | 健康、时间管理、习惯 |
+| #工具 | AI、编辑器、效率 |
+| #方法论 | PARA、卡片盒、费曼技巧 |
+| #认知科学 | 心理学、记忆、学习 |
+
+### Principles
+
+- **content-type** (atomic/concept/sop/term) ≠ **tags**
+  - content-type: 决定笔记形式（模板）
+  - tags: 描述笔记主题
 - Mainly used for Topic and Medium
 - No quantity limit
 - No special meaning tags

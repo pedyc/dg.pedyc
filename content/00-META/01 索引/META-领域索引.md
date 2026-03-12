@@ -1,5 +1,5 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: 202603121028
 title: 领域索引
 aliases: [领域导航, 领域仪表盘]
 description: 本知识库中所有领域的索引入口
@@ -7,7 +7,7 @@ tags: [meta/索引]
 content-type: moc
 status: active
 date-created: 2025-03-05
-date-modified: <% tp.date.now("YYYY-MM-DD") %>
+date-modified: 2026-03-12
 related:
   - "[[00-本库指南]]"
 ---

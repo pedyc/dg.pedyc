@@ -1,11 +1,11 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: 202603121028
 title: 自动化方案
 description: 记录知识库自动化相关的想法和脚本
 tags: [meta/附录]
 status: cultivating
 date-created: 2025-04-04
-date-modified: <% tp.date.now("YYYY-MM-DD") %>
+date-modified: 2026-03-12
 related:
   - "[[00-本库指南]]"
 ---

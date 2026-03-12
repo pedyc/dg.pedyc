@@ -1,13 +1,14 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: A-个人成长 MOC
+uid: 202603121028
+title: A-个人成长
 aliases: [个人成长]
 description: 个人成长领域知识索引
 tags: [area]
-content-type: moc
-status: cultivating
 date-created: 2025-03-05
-date-modified: <% tp.date.now("YYYY-MM-DD") %>
+date-modified: 2026-03-12
+status: cultivating
+content-type: area
+related: ["[[A-时间管理]]", "[[A-健康管理]]", "[[A-知识管理]]"]
 ---
 
 > **当前状态**：正在构建知识体系，重点提升算法能力。
@@ -26,7 +27,7 @@ date-modified: <% tp.date.now("YYYY-MM-DD") %>
 ### 关联领域
 
 **子领域：**
-* [[心流体验]]（协同点：个人认知感悟）
+* [[A-心流体验]]（协同点：个人认知感悟）
 * [[职业规划]]（协同点：对职业发展的思考）
 * [[能力提升]]（协同点：促进技能发展）
 * [[热点关注]]（协同点：拓展视野格局）
@@ -69,3 +70,17 @@ date-modified: <% tp.date.now("YYYY-MM-DD") %>
 
 * 如何量化评估 XXX 的影响？
 * XX 方法与 YY 场景的适配性验证
+
+### 🎯 长期目标
+
+* **目标 1**：持续提升专业技能，实现职业发展目标
+* **目标 2**：建立个人品牌，提升影响力
+* **目标 3**：保持身心健康，实现工作生活平衡
+
+### 📊 领域健康度
+
+| 维度 | 状态 | 说明 |
+|:---:|:---:|:---|
+| 项目进度 | 🟡 | 有多个项目进行中 |
+| 知识更新 | 🟢 | 持续学习和成长 |
+| 行动频率 | 🟡 | 按计划推进 |

@@ -4,10 +4,10 @@ title: A-时间管理
 aliases: [时间管理领域, 个人效能系统]
 description: 时间管理领域知识索引
 tags: [area]
-content-type: moc
-status: cultivating
 date-created: 2026-03-08
-date-modified: <% tp.date.now("YYYY-MM-DD") %>
+date-modified: 2026-03-12
+status: cultivating
+content-type: [area]
 related: ["[[精力成本]]", "[[四象限法则]]", "[[SOP-如何在四象限中应用精力成本]]"]
 ---
 
@@ -62,4 +62,3 @@ SORT
 
 - [[如何科学测量个人精力水平？]]
 - [[如何准确判断任务的重要性？]]
-

@@ -2,8 +2,8 @@
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: P-健康重启计划
 date-created: 2026-03-08
-date-modified: 2026-03-08
-status: cultivating
+date-modified: 2026-03-11
+status: 🌱 sprout
 area: ["[[A-健康管理]]"]
 consequence: 9
 content-type: project
@@ -61,6 +61,7 @@ urgency: 2
 
 ## 📦 关联资源（输入资源）
 
+- [[3月健康目标]]: 健康计划的基础目标
 - [[心率与习惯追踪日志]] 📊 **核心工具**：每日记录晨起心率、睡眠、运动和吸烟数据，是自我反馈的关键。
 - [[无器械健身指南/视频]] 💪 **核心工具**：推荐适合初学者的居家跟练视频，标注难度★。
 - [[4-7-8呼吸法]] 🧘 **应急预案**：当烟瘾或焦虑来袭时，立即使用，标注为**橙色预警**触发动作。

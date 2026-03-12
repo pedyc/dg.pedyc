@@ -1,12 +1,12 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: {{标题}}
-description: {{一句话概述这个知识点}}
+title:
+  "{ 标题 }":
+description:
+  "{ 一句话概述这个知识点 }":
 tags: []
 content-type: atomic
 status: fleeting
-date-created: <% tp.date.now("YYYY-MM-DD") %>
-date-modified: <% tp.date.now("YYYY-MM-DD") %>
 aliases: []
 ---
 

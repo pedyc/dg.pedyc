@@ -1,7 +1,7 @@
 ---
 
 excalidraw-plugin: parsed
-tags: [excalidraw]
+tags: [工具]
 
 ---
 ==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plugin settings under 'Saving'
@@ -15,9 +15,9 @@ tags: [excalidraw]
 1. 将概念重新解释一遍
 2.在解释的过程中查漏补缺 ^sGm14u3F
 
-[[费曼技巧]] ^JIEev61B
+[[C-费曼技巧]] ^JIEev61B
 
-[[间隔重复]] ^bzIoJT5Z
+[[C-间隔重复]] ^bzIoJT5Z
 
 1.随着时间的推移，记忆会逐渐衰退。
 间隔重复通过在遗忘发生前进行复习，来减缓记忆衰退的速度

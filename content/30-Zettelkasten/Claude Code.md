@@ -1,12 +1,12 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: 202603121028
 title: Claude Code
 description: Claude Code 概念笔记
 tags: [tool/AI]
-content-type: concept
-status: cultivating
 date-created: 2026-03-03
-date-modified: <% tp.date.now("YYYY-MM-DD") %>
+date-modified: 2026-03-12
+status: cultivating
+content-type: concept
 ---
 
 ## ⚙️ 工具：Claude Code

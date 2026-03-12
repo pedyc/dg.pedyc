@@ -1,11 +1,11 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: 202603121028
 title: 设计复盘
 description: 记录知识库设计过程中的问题和思考
 tags: [meta/附录]
 status: archived
 date-created: 2024-09-18
-date-modified: <% tp.date.now("YYYY-MM-DD") %>
+date-modified: 2026-03-12
 related:
   - "[[00-本库指南]]"
 ---

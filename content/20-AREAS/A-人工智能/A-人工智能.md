@@ -1,19 +1,20 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: A-人工智能 MOC
+uid: 202603121028
+title: A-人工智能
 aliases: [A-人工智能]
 description: 人工智能领域知识索引
 tags: [area]
-content-type: moc
-status: cultivating
 date-created: 2026-03-01
-date-modified: <% tp.date.now("YYYY-MM-DD") %>
+date-modified: 2026-03-12
+status: cultivating
+content-type: area
+related: ["[[MOC-Agent]]", "[[A-前端开发]]", "[[A-常用工具]]"]
 ---
 
 ## 🗺️ 人工智能领域
 
 **子领域**
-- [[A-Agent MOC]]
+- [[MOC-Agent]]
 
 **相关项目**
 
@@ -65,10 +66,31 @@ SORT
 ### 🔗 知识网络 (Context)
 
 - **上游学科**：[[机器学习]] (提供算法与模型的理论支撑)
-- **协同领域**：[[A-前端开发 MOC]] (协同点：探索 AI 在 WebGL、Canvas 交互等前端场景中的应用)
+- **协同领域**：[[A-前端开发]] (协同点：探索 AI 在 WebGL、Canvas 交互等前端场景中的应用)
 - **对立/竞争概念**：[[传统规则引擎]] (冲突点：基于符号逻辑的确定性与基于概率的生成式 AI 的灵活性)
 
 ### 🧪 探索前沿 (The Frontier)
 
 - [[Q-AI 如何辅助 WebGL / Three.js 渲染逻辑生成？]]
 - [[Q-如何在 Canvas 交互中实现 AI 意图识别？]]
+
+### 🎯 长期目标
+
+- **目标 1**：建立完整的 AI 开发工具链和工作流，实现日常开发的 AI 辅助
+- **目标 2**：深入理解 LLM 原理和提示词工程，提升 AI 使用效率
+- **目标 3**：构建本地化的 AI 助手，结合私有知识库实现安全可控的 AI 应用
+
+### 📊 领域健康度
+
+| 维度 | 状态 | 说明 |
+|:---:|:---:|:---|
+| 项目进度 | 🟡 | 有相关项目进行中 |
+| 知识更新 | 🟢 | 持续学习 AI 新技术 |
+| 行动频率 | 🟢 | 日常使用 AI 辅助开发 |
+
+### 📈 复盘记录
+
+- **版本**：v1.0
+- **待迭代**：
+	- 补充 MCP 相关工具的详细配置
+	- 完善 Agent 实践案例

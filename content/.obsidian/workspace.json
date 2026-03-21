@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-ZETTELKASTEN/闭包会导致内存泄漏.md",
+                "file": "30-ZETTELKASTEN/函数组件每次渲染都重新执行，为什么 React 还能保留状态、函数引用？这些数据是怎么“记住”的？.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "闭包会导致内存泄漏"
+              "title": "函数组件每次渲染都重新执行，为什么 React 还能保留状态、函数引用？这些数据是怎么“记住”的？"
             }
           }
         ],
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30-ZETTELKASTEN/闭包会导致内存泄漏.md",
+                "file": "30-ZETTELKASTEN/函数组件每次渲染都重新执行，为什么 React 还能保留状态、函数引用？这些数据是怎么“记住”的？.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "闭包会导致内存泄漏 的大纲"
+              "title": "函数组件每次渲染都重新执行，为什么 React 还能保留状态、函数引用？这些数据是怎么“记住”的？ 的大纲"
             }
           }
         ],
@@ -339,6 +339,9 @@
   },
   "active": "ead60622b1b29df1",
   "lastOpenFiles": [
+    "30-ZETTELKASTEN/原子笔记强调一个笔记只阐述一个观点.md",
+    "30-ZETTELKASTEN/函数组件每次渲染都重新执行，为什么 React 还能保留状态、函数引用？这些数据是怎么“记住”的？.md",
+    "30-ZETTELKASTEN/观点：给富人减税理论上能惠及穷人.md",
     "30-ZETTELKASTEN/闭包的本质是函数保存了其定义时的作用域链.md",
     "30-ZETTELKASTEN/闭包会导致内存泄漏.md",
     "30-ZETTELKASTEN/闭包可以创建私有变量.md",
@@ -366,9 +369,6 @@
     "40-RESOURCES/FAQ-浏览器原理与运行机制.md",
     "40-RESOURCES/FAQ-浏览器兼容性问题.md",
     "40-RESOURCES/FAQ-构建打包.md",
-    "40-RESOURCES/C-超验.md",
-    "40-RESOURCES/三数之和.md",
-    "40-RESOURCES/如何筛选出特定需求.md",
     "20-AREAS/A-知识管理/_resources/知识管理工作流.excalidraw.svg",
     "20-AREAS/A-知识管理/_resources/draw_PKM_methods.svg",
     "20-AREAS/A-知识管理/_resources/draw_knowledge_atomization.svg",

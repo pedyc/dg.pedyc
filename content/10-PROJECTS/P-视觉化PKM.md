@@ -1,11 +1,13 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: 202603121028
 title: P-视觉化PKM
 description: 2025年第二季度，将 Obsidian PKM 库进行视觉化改造的项目，旨在提升知识管理效率。
 date-created: 2025-05-04
-date-modified: 2026-03-08
+date-modified: 2026-03-12
 status: cultivating
-area: ["[[A-视觉思维 MOC|A-视觉思维]]", "[[A-知识管理]]"]
+area:
+  - "[[A-视觉思维|A-视觉思维]]"
+  - "[[A-知识管理]]"
 consequence: 4
 content-type: project
 expire: 2026-03-31
@@ -30,7 +32,7 @@ urgency: 1
 
 - [ ] 给每个领域添加领域看板
 - [x] 视觉化 [[A-知识管理]] ✅ 2025-05-07
-- [ ] 视觉化 [[前端工程化 MOC]]
+- [ ] 视觉化 [[前端工程化]]
 
 ### 阶段二：视觉化次要领域（2025/04/16 - 2025/05/31）
 

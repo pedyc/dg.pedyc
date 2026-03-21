@@ -1,6 +1,7 @@
 ---
 name: verify-build
 description: 验证代码通过构建和类型检查。适用于代码修改后、提交前验证构建是否通过。
+argument-hint: [project-path]
 allowed-tools: Bash(npm *)
 ---
 

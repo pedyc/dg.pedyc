@@ -791,10 +791,18 @@
       "content": "    requirementDiagram\n\n        requirement test_req {\n        id: 1\n        text: the test text.\n        risk: high\n        verifymethod: test\n        }\n    \n        element test_entity {\n        type: simulation\n        }\n    \n        test_entity - satisfies -> test_req",
       "sortingOrder": 5,
       "isPinned": false
+    },
+    {
+      "id": "5d4787f0-3d58-461c-a7bc-164c3e812ce8",
+      "categoryId": "flowchart",
+      "description": "Circle (copy)",
+      "content": "id1((Some text))",
+      "sortingOrder": 23,
+      "isPinned": false
     }
   ],
   "customCategories": [],
-  "selectedCategoryId": "requirementDiagram",
+  "selectedCategoryId": "xyChart",
   "defaultCategorySortOrders": {},
   "categoryModifications": {}
 }

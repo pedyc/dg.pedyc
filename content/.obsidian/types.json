@@ -60,6 +60,7 @@
     "TQ_show_toolbar": "checkbox",
     "expire": "date",
     "urgency": "number",
-    "consequence": "number"
+    "consequence": "number",
+    "up": "text"
   }
 }

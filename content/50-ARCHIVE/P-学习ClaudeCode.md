@@ -1,10 +1,10 @@
 ---
 title: P-学习ClaudeCode
 date-created: 2026-03-02
-date-modified: 2026-03-06
+date-modified: 2026-03-15
 status: 已完成
 area:
-  - "[[A-人工智能 MOC|A-人工智能]]"
+  - "[[人工智能|A-人工智能]]"
 content-type:
   - project
 expire: 2026/03/05
@@ -12,8 +12,8 @@ expire: 2026/03/05
 
 ## 🔗关联领域
 
-* [[A-人工智能 MOC|A-人工智能]]
-* [[A-前端开发 MOC|A-前端开发]]
+* [[人工智能|A-人工智能]]
+* [[前端开发|A-前端开发]]
 
 ## 🎯 核心靶心（项目的主要目标）
 

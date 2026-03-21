@@ -1,10 +1,11 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: 202603121028
 title: P-构建一个智能体
 date-created: 2026-03-08
-date-modified: 2026-03-08
+date-modified: 2026-03-12
 status: fleeting
-area: ["[[A-人工智能 MOC|A-人工智能]]"]
+area:
+  - "[[人工智能|A-人工智能]]"
 consequence: 7
 content-type: project
 expire: 2026-03-31
@@ -13,7 +14,7 @@ urgency: 3
 
 ## 🔗关联领域
 
-- [[A-人工智能 MOC|A-人工智能]]
+- [[人工智能|A-人工智能]]
 - 关联领域 2
 
 ## 🎯 核心靶心（项目的主要目标）

@@ -1,10 +1,11 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: {{日期}}
+title: "{{日期}}"
 tags: []
 status: active
 date-created: <% tp.date.now("YYYY-MM-DD") %>
 date-modified: <% tp.date.now("YYYY-MM-DD") %>
+content-type: diary
 ---
 
 <%*

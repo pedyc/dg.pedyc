@@ -15,5 +15,6 @@
   "obsidian-tasks-plugin",
   "templater-obsidian",
   "pdf-plus",
-  "virtual-linker"
+  "virtual-linker",
+  "mermaid-tools"
 ]

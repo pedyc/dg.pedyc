@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(note-analyzer)",
+      "Skill(content-review)",
+      "Bash(cd:*)",
+      "Read(//d/Workspace/pedyc/site/apps/dg/**)",
+      "Bash(npm run type-check)",
+      "Skill(obsidian-note)",
+      "Bash(ls:*)",
+      "Skill(content-verifier)"
+    ]
+  }
+}

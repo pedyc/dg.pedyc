@@ -38,6 +38,12 @@ This is a Quartz v4 digital garden - a static site generator for publishing note
 
 When working with notes in `content/` directory, follow these rules:
 
+## Core Principles
+
+- **Keep Context Intact**: Notes should serve the current context first. Linking to atomic notes is optional, not mandatory.
+- **PARA + Zettelkasten**: Projects → Areas → Resources → Archive
+- **Location is for organization, metadata is for templates**
+
 ## Directory Structure
 
 ```
@@ -90,9 +96,10 @@ content/
 | Type | Definition | Example |
 |------|------------|---------|
 | term | Terminology (from external sources) | HTTP, 多巴胺 |
-| atomic | Permanent note (your insights/statements) | "遗忘是记忆的默认属性" |
-| concept | Concept set, explains "why" or "how" | 双重编码理论, 熵增 |
+| atomic | Permanent note (single insight/观点) | "闭包的本质是..." |
+| concept | Concept set (overview + integration) | 闭包（概念总览） |
 | comparison | Comparison, cross-concept analysis | A vs B, selection guide |
+| question | Open-ended question, exploratory thinking | Q-如何学习编程 |
 | sop | Standard operating procedure | Deployment process, 周回顾 SOP |
 | moc | Map of Content, indexes multiple notes | Navigation page |
 
@@ -108,17 +115,25 @@ content/
 
 ## Naming Conventions
 
-### File Prefixes
+### 前缀规范（通过 aliases 实现）
 
-| Prefix | Usage | Example |
-|--------|-------|---------|
-| P- | Project | P-求职, Docker项目 |
-| A- | Area | A-人工智能, A-个人成长 |
-| Q- | Question | Q-如何学习编程 |
-| MOC- | Map of Content | MOC-前端知识地图 |
-| SOP- | Standard Procedure | SOP-周回顾 |
-| T- | Term | T-HTTP |
-| C- | Concept | C-双重编码理论 |
+前缀由 `content-type` 属性决定，存储在 `aliases` 中。文件名使用纯标题，正文引用更通顺。
+
+| Prefix | content-type | Example Alias |
+|--------|-------------|---------------|
+| P- | project | P-求职 |
+| A- | area | A-人工智能 |
+| Q- | question | Q-如何学习编程 |
+| MOC- | moc | MOC-前端知识地图 |
+| SOP- | sop | SOP-周回顾 |
+| T- | term | T-TCP |
+| C- | concept | C-闭包 |
+| VS- | comparison | VS-Title1 vs Title2 |
+| - | atomic | No specific prefix |
+
+**使用方式：**
+- concept: `闭包.md`, aliases: `[Closure, C-闭包]`, 引用: `[[闭包]]`
+- atomic: `闭包的本质是...md`, aliases: `[]`, 引用: `[[闭包的本质是...]]`
 
 ### Directory Prefixes
 

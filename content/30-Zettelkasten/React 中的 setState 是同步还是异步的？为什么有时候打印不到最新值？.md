@@ -1,7 +1,8 @@
 ---
 title: React 中的 setState 是同步还是异步的？为什么有时候打印不到最新值？
 date-created: 2025-05-21
-date-modified: 2025-05-21
+date-modified: 2026-03-21
+content-type: atomic
 ---
 
 Q：React 中的 setState 是同步还是异步的？为什么有时候打印不到最新值？

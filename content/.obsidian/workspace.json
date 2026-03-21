@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2de0d844d8676e35",
+            "id": "d83c50d209d7a442",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-前端开发/JavaScript MOC.md",
+                "file": "10-PROJECTS/P-求职前端岗位/MOC-前端面试知识清单.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "JavaScript MOC"
+              "title": "MOC-前端面试知识清单"
             }
           },
           {
-            "id": "7f2a2983c110ba92",
+            "id": "d410e9eef7da19a9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-宗教与神秘学/A-宗教与神秘学 MOC.md",
+                "file": "40-RESOURCES/生产资料.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "A-宗教与神秘学 MOC"
+              "title": "生产资料"
             }
           },
           {
-            "id": "cefd928e8365bdad",
+            "id": "ead60622b1b29df1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99-ASSETS/copilot/system-prompts/Obsidian Smart Librarian.md",
+                "file": "30-ZETTELKASTEN/闭包会导致内存泄漏.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,31 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Obsidian Smart Librarian"
-            }
-          },
-          {
-            "id": "8e8bdc45ca4fe3e1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99-ASSETS/copilot/system-prompts/Obsidian Smart Librarian.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Obsidian Smart Librarian"
+              "title": "闭包会导致内存泄漏"
             }
           }
         ],
@@ -181,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "90-Diary/2026-03-12.md",
+                "file": "30-ZETTELKASTEN/闭包会导致内存泄漏.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2026-03-12 的大纲"
+              "title": "闭包会导致内存泄漏 的大纲"
             }
           }
         ],
@@ -224,7 +200,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:topic/待分类",
+                "query": "tag:topic/JavaScript",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -268,8 +244,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.5,
-    "collapsed": true
+    "width": 326.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -321,13 +296,24 @@
               "icon": "message-square",
               "title": "Copilot"
             }
+          },
+          {
+            "id": "02d23b460528696f",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {},
+              "icon": "trident-custom",
+              "title": "Mermaid Toolbar"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 519.5
+    "width": 519.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -347,57 +333,58 @@
       "publish:发布更改": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
-      "pdf-plus:PDF++: Toggle auto-paste": false
+      "pdf-plus:PDF++: Toggle auto-paste": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "39d39d451048730c",
+  "active": "ead60622b1b29df1",
   "lastOpenFiles": [
-    "99-ASSETS/copilot/copilot-conversations/根据_templatestempates_area模板完善笔记@20260312_030908.md",
-    "90-Diary/2026-03-12.md",
-    "20-AREAS/A-健康管理/3月健康目标.md",
-    "30-ZETTELKASTEN/SOP-前端面试的算法提升指南.md",
-    "00-META/02 附录/META-设计中碰到的问题.md",
-    "00-META/02 附录/META-自动化方案.md",
-    "00-META/02 附录",
-    "00-META/01 索引/META-领域索引.md",
-    "00-META/01 索引/META-标签汇总.md",
-    "00-META/01 索引/META-术语索引.md",
-    "00-META/01 索引/META-方法论汇总.md",
-    "00-META/01 索引/META-工作流汇总.md",
-    "00-META/01 索引",
-    "00-META/00-本库指南.md",
-    "99-ASSETS/copilot/system-prompts/Untitled.md",
-    "20-AREAS/A-个人成长/未命名.md",
-    "99-ASSETS/copilot/system-prompts/Obsidian Smart Librarian.md",
-    "00-META/02 架构设计/META-目录结构设计.md",
-    "00-META/02 架构设计/META-顶层设计.md",
-    "20-AREAS/A-人工智能/A-人工智能 MOC.md",
-    "20-AREAS/A-宗教与神秘学/超验.md",
-    "10-PROJECTS/P-健康重启计划.md",
-    "20-AREAS/A-健康管理/A-健康管理.md",
-    "90-Diary/2026-03-11.md",
-    "四象限.excalidraw.md",
-    "20-AREAS/A-宗教与神秘学/撒旦教.md",
-    "99-ASSETS/copilot/system-prompts/Project Rating System.md",
-    "30-ZETTELKASTEN/为什么隐秘团体往往进行邪恶仪式？.md",
-    "20-AREAS/A-宗教与神秘学",
-    "99-ASSETS/copilot/copilot-custom-prompts",
-    "copilot/memory",
-    "copilot",
-    "40-RESOURCES/HelloAgents",
-    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/94f4fa7622f13fe917fe437ea47b357b_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/185bf38385852d9cb8ed37dffc065d1c_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/369676f7957b8839fb0833f7fd91ca80_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/56f463a1d25e533b43f6a73d0b2b4183_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/81e89d60c6b76107f9845a96661231df_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/6638071406ebbc234a37bf22b2335292_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/147227f98a4d7a7cc420dacb1c075fd9_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents/3d06e473f99265cbcf19ba8161537f90_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/hello-agentsdocschapter1第一章 初识智能体.md at main · datawhalechinahello-agents",
-    "99-ASSETS/copilot/system-prompts/_resources",
-    "copilot/system-prompts",
-    "四象限.excalidraw.svg",
-    "40-RESOURCES/Inbox/_resources/Windows (WSL2)  OpenClaw 文档/97637eedc66ef75f5204923d6c7bbe59_MD5.svg",
+    "30-ZETTELKASTEN/闭包的本质是函数保存了其定义时的作用域链.md",
+    "30-ZETTELKASTEN/闭包会导致内存泄漏.md",
+    "30-ZETTELKASTEN/闭包可以创建私有变量.md",
+    "30-ZETTELKASTEN/_resources/常用视觉工具.excalidraw.md",
+    "30-ZETTELKASTEN/_resources/常用视觉工具.excalidraw.svg",
+    "30-ZETTELKASTEN/_resources/常用思维方式.excalidraw.svg",
+    "30-ZETTELKASTEN/_resources/思维分类及视觉工具.excalidraw.md",
+    "30-ZETTELKASTEN/_resources/思维分类及视觉工具.excalidraw.svg",
+    "30-ZETTELKASTEN/_resources/提示词Prompt.png",
+    "30-ZETTELKASTEN/_resources/原型链.excalidraw.md",
+    "40-RESOURCES/SOP-如何在WSL中配置并运行自定义systemd服务？.md",
+    "40-RESOURCES/SOP-如何在Vite中配置环境变量？.md",
+    "40-RESOURCES/SOP-视觉工具选择矩阵.md",
+    "40-RESOURCES/SOP-视觉思维工作流.md",
+    "40-RESOURCES/SOP-在WSL2中安装OpenClaw.md",
+    "40-RESOURCES/SOP-怎样架构混合型知识库.md",
+    "40-RESOURCES/SOP-混合型PKM构建指南.md",
+    "40-RESOURCES/SOP-滑动窗口解题心得.md",
+    "40-RESOURCES/SOP-从问题到图形的决策路径.md",
+    "40-RESOURCES/Skills 最佳实践(Claude Code).md",
+    "40-RESOURCES/FAQ-Web安全.md",
+    "40-RESOURCES/FAQ-CSS相关.md",
+    "40-RESOURCES/FAQ-JS&TS.md",
+    "40-RESOURCES/FAQ-前端场景实践.md",
+    "40-RESOURCES/FAQ-浏览器原理与运行机制.md",
+    "40-RESOURCES/FAQ-浏览器兼容性问题.md",
+    "40-RESOURCES/FAQ-构建打包.md",
+    "40-RESOURCES/C-超验.md",
+    "40-RESOURCES/三数之和.md",
+    "40-RESOURCES/如何筛选出特定需求.md",
+    "20-AREAS/A-知识管理/_resources/知识管理工作流.excalidraw.svg",
+    "20-AREAS/A-知识管理/_resources/draw_PKM_methods.svg",
+    "20-AREAS/A-知识管理/_resources/draw_knowledge_atomization.svg",
+    "99-ASSETS/Excalidraw/金融分析框架.excalidraw.svg",
+    "99-ASSETS/Excalidraw/Drawing 2025-10-01 11.21.21.excalidraw.svg",
+    "99-ASSETS/Excalidraw/PARA和知识管理工作流.excalidraw.svg",
+    "20-AREAS/A-哲学",
+    "10-PROJECTS/P-求职前端岗位/_resources",
+    "10-PROJECTS/P-学习OpenClaw",
+    "10-PROJECTS/_resources/P-学习OpenClaw",
+    "10-PROJECTS/_resources",
+    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers",
+    "40-RESOURCES/Inbox/_resources/未命名",
+    "20-AREAS/A-政治经济/未命名.md.nssyncsc",
+    "90-DIARY/_resources",
+    "60-BLOGS/_resources",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

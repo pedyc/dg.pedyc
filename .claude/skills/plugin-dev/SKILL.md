@@ -1,7 +1,7 @@
 ---
 name: plugin-dev
 description: 辅助创建或修改 Quartz 插件（transformer、filter、emitter）
-argument-hint: [name] [type]
+argument-hint: [name] [type: transformer|filter|emitter]
 allowed-tools: Glob,Grep,Read,Write,Edit
 ---
 

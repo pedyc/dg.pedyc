@@ -2,7 +2,7 @@
 title: SOP-如何在WSL中配置并运行自定义systemd服务？
 author: [AI]
 date-created: 2026-03-07
-date-modified: 2026-03-07
+date-modified: 2026-03-21
 content-type: [sop]
 ---
 
@@ -105,6 +105,6 @@ sudo systemctl enable --now my-service
 ### 🔗 关联逻辑
 
 - **方法论依据**: [[systemd]]
-- **关联 MOC**: [[A-Linux MOC]]
+- **关联 MOC**: [[A-Linux]]
 - **修订记录**:
 	- 2026-03-07: 基于新的 SOP 模板生成。

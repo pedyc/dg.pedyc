@@ -19,11 +19,11 @@
       "template": "_templates/template_project.md"
     }
   ],
-  "enable_file_templates": false,
+  "enable_file_templates": true,
   "file_templates": [
     {
-      "regex": "",
-      "template": ""
+      "regex": "/*/",
+      "template": "_templates/template_new.md"
     }
   ],
   "syntax_highlighting": true,

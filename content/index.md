@@ -6,7 +6,7 @@ author: ped_yc
 description:
 tags: []
 date-created: 2024-08-23
-date-modified: 2026-03-08
+date-modified: 2026-03-18
 content-type: [MOC]
 ---
 
@@ -28,7 +28,7 @@ content-type: [MOC]
 >
 > 如果你希望对本库有更多的了解，欢迎查看 [[META-关于本库]]。
 >
-> 纵览本库主题：[[本库看板索引]]，[[META-领域索引]]
+> 纵览本库主题：[[本库看板索引]]，[[领域索引]]
 >
 > 这里是我的博客地址：[ped-Yc's Blog](https://blog.ped-yc.site/)
 >

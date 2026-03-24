@@ -237,6 +237,63 @@ Layout is defined in `quartz.layout.ts` using components placed in sections: `he
 - Node.js >= 22
 - npm >= 10.9.2
 
+---
+
+# Obsidian Knowledge Base
+
+## content/ Directory Structure
+
+```
+content/
+├── 00-META/           # System metadata (specs, architecture, indexes)
+├── 10-PROJECTS/       # Projects (specific goals with deadlines)
+├── 20-AREAS/          # Areas (ongoing focus areas)
+├── 30-ZETTELKASTEN/   # Atomic notes (single insights/opinions)
+├── 40-RESOURCES/      # Concept notes, terms, MOCs, SOPs
+├── 60-BLOGS/          # Blog articles
+├── 90-DIARY/          # Diary (time-series records)
+└── 99-ASSETS/         # Extra resources (plugins, attachments)
+```
+
+## content-type Classification
+
+| Type | Description | Directory |
+|------|-------------|-----------|
+| `project` | Project with deadline | 10-PROJECTS |
+| `area` | Responsibility area | 20-AREAS |
+| `atomic` | Single insight (statement) | 30-ZETTELKASTEN |
+| `concept` | Concept overview | 40-RESOURCES |
+| `term` | Terminology | 40-RESOURCES |
+| `moc` | Map of Content | 40-RESOURCES |
+| `sop` | Standard procedure | 40-RESOURCES |
+| `question` | Open question | 40-RESOURCES |
+| `comparison` | Comparison | 40-RESOURCES |
+| `record` | Event record | 40-RESOURCES |
+| `article` | Blog article | 60-BLOGS |
+| `diary` | Diary | 90-DIARY |
+
+## Knowledge Structure
+
+```
+Area (领域)
+  └── 关键领域 → 链接 Concept
+
+Concept (概念)
+  ├── 核心命题 → 链接 Atomic (陈述句观点)
+  └── 知识图谱 → 链接 Term + Concept
+
+Atomic (原子笔记)
+  └── 单一洞察，陈述句观点
+```
+
+## Key Principles
+
+- **Keep context intact**: Notes serve current context first, linking atomic notes is optional
+- **PARA + Zettelkasten**: Projects → Areas → Resources → Archive
+- **Atomic notes**: Statement-form titles, one insight per note
+- **Concept notes**: Aggregate atomic notes via "核心命题" section
+- **Area notes**: Responsibility domain with long-term goals and key topics
+
 ## Code Review Guidelines
 
 When reviewing code changes, follow these principles:

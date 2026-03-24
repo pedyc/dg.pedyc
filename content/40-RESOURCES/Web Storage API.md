@@ -1,9 +1,9 @@
 ---
-content-type: atomic
 title: Web Storage API
-aliases: [Web 存储]
+aliases: [C-Web-Storage-API]
 date-created: 2025-05-21
-date-modified: 2025-12-25
+date-modified: 2026-03-23
+content-type: [concept]
 ---
 
 ## Web Storage API
@@ -21,13 +21,13 @@ Web Storage API 是一种在浏览器中存储键值对数据的机制，它提�
 ## 分类
 
 - **`localStorage`**：
-		- 用于持久化存储数据，数据在浏览器关闭后仍然存在。
-		- 所有同源的窗口都可以访问 `localStorage` 中存储的数据。
-		- 适合缓存页面状态、用户偏好等场景
-		- 同步 API，读取大体积数据可能阻塞
+	- 用于持久化存储数据，数据在浏览器关闭后仍然存在。
+	- 所有同源的窗口都可以访问 `localStorage` 中存储的数据。
+	- 适合缓存页面状态、用户偏好等场景
+	- 同步 API，读取大体积数据可能阻塞
 - **`sessionStorage`**：
-		- 用于临时存储数据，数据只在当前会话中有效，浏览器关闭后数据会被清除。
-		- 只有创建 `sessionStorage` 的窗口可以访问其中存储的数据。
+	- 用于临时存储数据，数据只在当前会话中有效，浏览器关闭后数据会被清除。
+	- 只有创建 `sessionStorage` 的窗口可以访问其中存储的数据。
 
 ## 应用
 

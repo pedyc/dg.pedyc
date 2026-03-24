@@ -1,8 +1,8 @@
 ---
-content-type: atomic
 title: 生态系统（Vue）
 date-created: 2025-06-02
-date-modified: 2025-06-02
+date-modified: 2026-03-23
+content-type: atomic
 ---
 
 ## 定义
@@ -19,12 +19,12 @@ Vue 生态系统是指围绕 Vue.js 核心库构建的一系列工具、库、�
 ## 分类
 
 - **路由管理**: [[Vue Router]]
-- **状态管理**: [[Vuex]], [[Pinia]]
-- **脚手架工具**: [[Vue CLI]], [[Vite]]
-- **服务端渲染**: [[Nuxt.js]]
-- **UI 组件库**: [[Element UI]], [[Ant Design Vue]], [[Vuetify]]
-- **测试工具**: [[Jest]], [[Cypress]]
-- **开发工具**: [[Vue Devtools]]
+- **状态管理**: [[Pinia]]（Vuex 已不推荐使用）
+- **脚手架工具**: [[Vite]]（推荐），Vue CLI（传统）
+- **服务端渲染**: Nuxt.js（[[Nuxt.js]]）
+- **UI 组件库**: Element UI, Ant Design Vue, Vuetify
+- **测试工具**: Jest, Cypress
+- **开发工具**: Vue Devtools
 
 ## 应用
 
@@ -51,11 +51,9 @@ Vue 生态系统是指围绕 Vue.js 核心库构建的一系列工具、库、�
 ## 相关概念
 
 - [[Vue Router]]: Vue.js 的官方路由管理器，用于构建 SPA。
-- [[Vuex]]: Vue.js 的官方状态管理库，用于管理应用的状态。
-- [[Vue CLI]]: Vue.js 的官方脚手架工具，用于快速搭建 Vue.js 项目。
+- [[Pinia]]: 一个轻量级的状态管理库，Vue3 推荐使用。
 - [[Vite]]: 一个快速、轻量的构建工具，可以用于快速搭建 Vue.js 项目。
-- [[Nuxt.js]]: 一个基于 Vue.js 的服务端渲染框架，用于构建 SSR 应用。
-- [[Pinia]]: 一个轻量级的状态管理库，与 Vuex 类似，但更简单易用。
+- Nuxt.js: 一个基于 Vue.js 的服务端渲染框架，用于构建 SSR 应用。
 
 ## 案例
 

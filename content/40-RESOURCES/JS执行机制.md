@@ -1,8 +1,15 @@
 ---
 uid: 202603111526
 title: JS执行机制
-aliases: [JS Execution Context, V8 Pipeline, JS Runtime]
-tags: [type/concept, topic/前端开发, topic/JavaScript, status/cultivating]
+aliases:
+  - JS Execution Context
+  - V8 Pipeline
+  - JS Runtime
+tags:
+  - type/concept
+  - topic/前端开发
+  - topic/JavaScript
+  - status/cultivating
 date-created: 2025-12-17
 date-modified: 2026-03-20
 status: 🌱 sprout

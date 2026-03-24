@@ -1,11 +1,14 @@
 ---
 uid: 202603091430
 title: P-算法提升专项
-aliases: [前端算法面试指南, LeetCode刷题计划]
+aliases:
+  - 前端算法面试指南
+  - LeetCode刷题计划
 date-created: 2026-03-09
-date-modified: 2026-03-19
+date-modified: 2026-03-23
 status: cultivating
-area: ["[[前端开发|A-前端开发]]"]
+area:
+  - "[[前端开发|A-前端开发]]"
 consequence: 8
 content-type: project
 energy-type: ⚡

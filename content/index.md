@@ -6,7 +6,7 @@ author: ped_yc
 description:
 tags: []
 date-created: 2024-08-23
-date-modified: 2026-03-18
+date-modified: 2026-03-23
 content-type: [MOC]
 ---
 
@@ -26,7 +26,7 @@ content-type: [MOC]
 >
 > 按下 *Ctrl-G* 按键进入全局视图
 >
-> 如果你希望对本库有更多的了解，欢迎查看 [[META-关于本库]]。
+> 如果你希望对本库有更多的了解，欢迎查看 [[本库指南|关于本库]]。
 >
 > 纵览本库主题：[[本库看板索引]]，[[领域索引]]
 >

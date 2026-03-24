@@ -1,17 +1,13 @@
 ---
 title: React
-aliases:
-  - React.js
-  - ReactJS
-  - A-React
+aliases: [React.js, ReactJS, A-React]
 description: 用于构建用户界面的 JavaScript 库，采用组件化和 Virtual DOM
-tags:
-  - 前端开发/框架
-content-type: area
-status: cultivating
-up: [[前端开发]]
+tags: [前端开发/框架]
 date-created: 2025-05-21
-date-modified: 2026-03-16
+date-modified: 2026-03-23
+status: cultivating
+content-type: area
+up: [[前端开发]]
 ---
 
 ## Area: React
@@ -33,9 +29,9 @@ date-modified: 2026-03-16
 
 - **愿景**：深入掌握 React 生态，能够独立构建中大型 React 应用
 - **里程碑**：
-  - 阶段1：掌握 React 核心概念和 Hooks
-  - 阶段2：掌握状态管理和性能优化
-  - 阶段3：深入 React 源码和原理
+	- 阶段 1：掌握 React 核心概念和 Hooks
+	- 阶段 2：掌握状态管理和性能优化
+	- 阶段 3：深入 React 源码和原理
 
 ---
 
@@ -44,24 +40,24 @@ date-modified: 2026-03-16
 > 指导这个领域实践的核心观点
 
 - **原子洞见**
-  - 组件是 UI 的抽象单元
-  - Virtual DOM 提高渲染效率
-  - 单向数据流使状态可预测
+	- 组件是 UI 的抽象单元
+	- Virtual DOM 提高渲染效率
+	- 单向数据流使状态可预测
 - **关键概念**
-  - JSX、Hooks、Virtual DOM
-  - 状态管理、组件化
+	- JSX、Hooks、Virtual DOM
+	- 状态管理、组件化
 
 ---
 
 ### 执行系统
 
 - **核心流程**
-  - 组件开发流程
-  - 状态管理选择流程
+	- 组件开发流程
+	- 状态管理选择流程
 - **关键工具**
-  - React Router：路由管理
-  - Redux/Zustand：状态管理
-  - Next.js：全栈框架
+	- React Router：路由管理
+	- Redux/Zustand：状态管理
+	- Next.js：全栈框架
 
 ---
 
@@ -76,8 +72,8 @@ date-modified: 2026-03-16
 ### 探索前沿
 
 - **待解问题**
-  - React Server Components 的应用场景
-  - 状态管理方案的选择
+	- React Server Components 的应用场景
+	- 状态管理方案的选择
 
 ---
 

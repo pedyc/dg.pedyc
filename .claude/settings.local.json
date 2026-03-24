@@ -17,7 +17,9 @@
       "Skill(obsidian-note)",
       "Bash(ls:*)",
       "Bash(mv:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Skill(content-verifier)",
+      "Skill(note-analyzer)"
     ],
     "deny": [],
     "ask": []

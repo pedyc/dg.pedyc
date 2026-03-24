@@ -15,7 +15,7 @@ allowed-tools: Glob,Read,Write,Edit,Bash
 |--------------|------|
 | `project` | 10-PROJECTS |
 | `area` | 20-AREAS |
-| `moc` | 20-AREAS 或 40-RESOURCES |
+| `moc` | 40-RESOURCES |
 | `diary` | 90-DIARY |
 | `article` | 60-BLOGS |
 | `atomic` | 30-ZETTELKASTEN |
@@ -24,15 +24,17 @@ allowed-tools: Glob,Read,Write,Edit,Bash
 | `question` | 40-RESOURCES |
 | `term` | 40-RESOURCES |
 | `comparison` | 40-RESOURCES |
+| `record` | 40-RESOURCES |
 
 ## 步骤
 
 ### Create（创建新笔记）
 
-1. 根据 content-type 确定存放目录
-2. 读取模板
-3. 替换占位符
-4. 写入新文件
+1. **根据 content-type 确定存放目录**
+2. **读取模板**（content/_templates/template_{type}.md）
+3. 替换占位符（tp.file.title, tp.file.creation_date 等）
+4. **严格按模板结构生成内容**
+5. 写入新文件
 
 ### Append（追加内容）
 
@@ -42,7 +44,9 @@ allowed-tools: Glob,Read,Write,Edit,Bash
 4. 基于模板生成内容
 5. 追加到笔记
 
-## 注意
+## 重要规则
 
-- 严格基于模板结构
+- **必须先读取模板再生成内容**
+- **严格基于模板结构**，不得自行调整章节
+- **不使用模板时必须说明原因**
 - 追加内容放在"总结"之前

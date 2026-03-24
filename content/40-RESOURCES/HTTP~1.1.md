@@ -1,56 +1,99 @@
 ---
-content-type: atomic
+uid: 202506020000
 title: HTTP~1.1
+aliases: [C-HTTP/1.1, HTTP/1.1]
+description: HTTP/1.1 是 HTTP 协议的第二个主要版本，通过持久连接、管道化等特性提升了 Web 性能
+tags: [前端开发/网络协议]
 date-created: 2025-06-02
-date-modified: 2025-12-25
+date-modified: 2026-03-23
+status: active
+content-type: concept
 ---
 
-## 定义
+> HTTP/1.1 (Hypertext Transfer Protocol 1.1) 是 HTTP 协议的第二个主要版本，在 HTTP/1.0 基础上引入了持久连接、管道化、分块传输等特性，提高了 Web 应用的性能和效率。
 
-HTTP/1.1 (Hypertext Transfer Protocol 1.1) 是一种应用层协议，是 HTTP 协议的第二个主要版本。它在 HTTP/1.0 的基础上进行了改进，引入了许多新的特性，例如==持久连接、管道化、分块传输和内容协商等==，提高了 Web 应用的性能和效率。
+**解决的核心痛点**：如何减少 TCP 连接建立的开销，提升页面加载速度？
 
-## 核心特点
+---
 
-- [[持久连接]] (Persistent Connection): 允许在同一个 TCP 连接上发送多个 HTTP 请求和响应，减少了 TCP 连接的建立和关闭次数，提高了性能。
-- [[管道化]] (Pipelining): 允许在同一个 TCP 连接上同时发送多个 HTTP 请求，而无需等待前一个请求的响应，进一步提高了性能。
-- [[分块传输]] (Chunked Transfer): 允许将 HTTP 响应分成多个块进行传输，而无需在发送响应之前知道响应的总长度，提高了灵活性。
-- [[内容协商]] (Content Negotiation): 允许客户端和服务器之间协商使用哪种内容类型，例如文本、图片、视频等，提高了用户体验。
-- Host 头部: 强制要求客户端在 HTTP 请求中包含 Host 头部，用于指定服务器的域名，支持虚拟主机。
+## 核心命题
 
-## 应用
+- [[HTTP/1.1 通过持久连接减少 TCP 连接建立次数]]
+	- **原理**：默认开启 Keep-Alive，同一个 TCP 连接可处理多个请求 - 响应，避免重复三次握手
+- [[HTTP/1.1 管道化允许并发发送请求]]
+	- **原理**：无需等待前一个响应返回，即可发送下一个请求，提升网络利用率
+- [[HTTP/1.1 存在队头阻塞问题]]
+	- **原理**：虽然可以并发发送请求，但响应必须按顺序返回，若首个请求卡住，后续请求全部阻塞
 
-- **Web 浏览器**: Web 浏览器使用 HTTP/1.1 协议与 Web 服务器进行通信，获取网页内容。
-- **Web 服务器**: Web 服务器使用 HTTP/1.1 协议与 Web 浏览器进行通信，提供网页内容。
-- **API**: 许多 API 使用 HTTP/1.1 协议进行数据传输。
+---
 
-## 优缺点
+## 运行机制
 
-- 优点:
-		- 提高了性能和效率。
-		- 支持虚拟主机。
-		- 提高了灵活性。
-- 缺点:
-		- 头部冗余，每个 HTTP 请求和响应都包含大量的头部信息。
-		- 队头阻塞 (Head-of-Line Blocking)，如果一个 HTTP 请求的响应被阻塞，后续的 HTTP 请求也会被阻塞。
+```mermaid
+sequenceDiagram
+    participant C as 客户端
+    participant S as 服务器
 
-## 相关概念
+    Note over C,S: 1. 建立 TCP 连接 (三次握手)
+    C->>S: SYN
+    S-->>C: SYN-ACK
+    C->>S: ACK
 
-- [[HTTP~1.0]]: HTTP 协议的第一个主要版本。
-- [[HTTP~2]]: HTTP 协议的第三个主要版本，在 HTTP/1.1 的基础上进行了进一步的改进，例如多路复用和头部压缩等。
-- [[TCP]]: 一种传输层协议，用于在客户端和服务器之间建立可靠的连接。
+    Note over C,S: 2. 持久连接上发送多个请求
+    C->>S: GET /index.html
+    C->>S: GET /style.css
+    C->>S: GET /script.js
 
-## 案例
+    S-->>C: 200 OK (index.html)
+    S-->>C: 200 OK (style.css)
+    S-->>C: 200 OK (script.js)
 
-- **Web 浏览器访问网页**: Web 浏览器使用 HTTP/1.1 协议与 Web 服务器进行通信，获取网页内容。
-- **API 获取数据**: API 使用 HTTP/1.1 协议进行数据传输。
+    Note over C,S: 3. 关闭连接（或保持）
+    C->>S: Connection: close
+```
 
-## 问答卡片
+---
 
-- Q1：HTTP/1.1 和 HTTP/1.0 有什么区别？
-- A：HTTP/1.1 在 HTTP/1.0 的基础上进行了改进，引入了持久连接、管道化、分块传输和内容协商等新的特性，提高了 Web 应用的性能和效率。
-- Q2：HTTP/1.1 存在哪些问题？
-- A：HTTP/1.1 存在头部冗余和队头阻塞等问题。
+## 关键区别
 
-## 参考资料
+| 维度          | HTTP~1.1 | [[HTTP~1.0]] | [[HTTP~2]] |
+|:---------- |:------- |:----------- |:--------- |
+| **持久连接**    | 默认开启     | 需手动开启        | 默认开启       |
+| **管道化**     | 支持       | 不支持          | 多路复用       |
+| **队头阻塞**    | 有（响应有序）  | 无            | 无          |
+| **头部压缩**    | 无        | 无            | HPACK      |
+| **多路复用**    | 无        | 无            | 支持         |
+| **Host 头部** | 必需       | 可选           | 必需         |
 
-- MDN Web Docs: [https://developer.mozilla.org/en-US/docs/Web/HTTP/1.1](https://developer.mozilla.org/en-US/docs/Web/HTTP/1.1)
+---
+
+## 应用场景
+
+- ✅ **适用场景**
+	- **兼容性强**：所有浏览器和服务器都支持，适用于需要广泛兼容性的场景
+	- **简单请求**：请求数量较少时，持久连接已能满足性能需求
+- ⛔ **误用**
+	- **大量并发请求**：应使用 HTTP/2 或 HTTP/3，避免队头阻塞
+	- **敏感数据传输**：应使用 HTTPS 而非明文 HTTP/1.1
+
+---
+
+## 知识图谱
+
+- **父级概念**：[[HTTP]] — HTTP/1.1 是 HTTP 协议的一个版本
+- **子级概念**：
+	- [[持久连接]] — HTTP/1.1 的核心特性
+	- [[管道化]] — HTTP/1.1 的请求并发方式
+- **并列概念**：
+	- [[HTTP~1.0]] — HTTP/1.1 的前身
+	- [[HTTP~2]] — HTTP/1.1 的后续版本
+- **相关概念**：
+	- [[TCP]] — HTTP/1.1 的传输层协议
+	- [[队头阻塞]] — HTTP/1.1 的性能瓶颈
+
+---
+
+## 参考延伸
+
+- [MDN HTTP/1.1](https://developer.mozilla.org/en-US/docs/Web/HTTP/1.1)
+- [RFC 7231 - HTTP/1.1](https://httpwg.org/specs/rfc7231/)

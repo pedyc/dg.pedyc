@@ -1,8 +1,8 @@
 ---
-content-type: atomic
 title: Web通信
 date-created: 2025-06-07
-date-modified: 2026-03-04
+date-modified: 2026-03-23
+content-type: [concept]
 ---
 
 ## 定义
@@ -66,38 +66,38 @@ Web 通信是指 Web 应用程序与服务器、第三方服务或其他客户�
 
 - **使用 `fetch` 获取用户数据**:
 
-	```javascript
-  fetch('/api/users')
-    .then(response => response.json())
-    .then(data => console.log(data));
-  ```
+```javascript
+fetch('/api/users')
+	.then(response => response.json())
+	.then(data => console.log(data));
+```
 
 - **使用 `WebSocket` 实现实时聊天**:
 
-	```javascript
-  const socket = new WebSocket('ws://example.com/chat');
-  socket.addEventListener('message', event => {
-    console.log('Message from server ', event.data);
-  });
-  ```
+```javascript
+const socket = new WebSocket('ws://example.com/chat');
+socket.addEventListener('message', event => {
+	console.log('Message from server ', event.data);
+});
+```
 
 - **使用 `postMessage` 进行跨域通信**:
 
-	```javascript
-  // 在 A 页面中
-  const otherWindow = document.getElementById('iframe').contentWindow;
-  otherWindow.postMessage('Hello from A', 'http://example.com');
+```javascript
+// 在 A 页面中
+const otherWindow = document.getElementById('iframe').contentWindow;
+otherWindow.postMessage('Hello from A', 'http://example.com');
 
-  // 在 B 页面中 (http://example.com)
-  window.addEventListener('message', event => {
-    if (event.origin !== 'http://example.com') return;
-    console.log('Message from A: ', event.data);
-  });
-  ```
+// 在 B 页面中 (http://example.com)
+window.addEventListener('message', event => {
+if (event.origin !== 'http://example.com') return;
+console.log('Message from A: ', event.data);
+});
+```
 
 ## 问答卡片
 
-> 参见：[[FAQ-Web通信]]
+> 参见：[[MOC-网络协议相关问题]]
 
 - Q1：什么是 CORS？如何解决跨域问题？
 - A：CORS (Cross-Origin Resource Sharing) 是一种安全机制，用于控制跨域请求。可以通过配置服务器的 HTTP 响应头来允许跨域请求。

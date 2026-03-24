@@ -2,11 +2,15 @@
 uid: 202603130930
 title: P-前端能力提升专项
 description: AI 时代前端能力提升指南，区分核心护城河与 AI 辅助技能
-tags: [前端/面试, 求职, AI时代]
+tags:
+  - 前端/面试
+  - 求职
+  - AI时代
 date-created: 2026-03-13
-date-modified: 2026-03-19
+date-modified: 2026-03-23
 status: active
-area: ["[[前端开发|A-前端开发]]"]
+area:
+  - "[[前端开发|A-前端开发]]"
 consequence: 8
 content-type: project
 expire: 2026-04-20

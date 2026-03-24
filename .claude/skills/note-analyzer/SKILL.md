@@ -16,6 +16,16 @@ allowed-tools: Glob,Read,Edit
 3. **对比差距**：找出缺少的模板章节
 4. **输出**：列出需要补充的内容
 
+## content-type 说明
+
+| 类型 | 目录 | 模板 |
+|------|------|------|
+| area | 20-AREAS | template_area.md |
+| concept | 40-RESOURCES | template_concept.md |
+| term | 40-RESOURCES | template_term.md |
+| atomic | 30-ZETTELKASTEN | template_atomic.md |
+| moc | 40-RESOURCES | template_moc.md |
+
 ## 输出格式
 
 ```

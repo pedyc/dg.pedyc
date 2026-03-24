@@ -1,73 +1,100 @@
 ---
-content-type: atomic
+uid: 202506160002
 title: 如何解决不同浏览器对 JavaScript API 的支持差异？
+aliases: [Q-JS兼容性]
+description: 解决不同浏览器对 JavaScript API 支持差异的方法
+tags: [前端开发/浏览器]
 date-created: 2025-06-16
-date-modified: 2025-06-16
+date-modified: 2026-03-23
+status: completed
+content-type: question
 ---
 
-## 回答
+> 如何解决不同浏览器对 JavaScript API 的支持差异？
 
-解决不同浏览器对 JavaScript API 的支持差异，可以采用以下方法：
+---
 
-1. **使用 Polyfill**：
-* 使用 Polyfill 填充旧版本浏览器不支持的 JavaScript API。
-* Polyfill 是一段 JavaScript 代码，用于模拟新 API 的行为，使其在旧版本浏览器中也能正常工作。
-* 例如，可以使用 `es5-shim` 和 `es5-sham` 来填充 ES5 API，使用 `es6-shim` 来填充 ES6 API。
+## 问题背景
 
-2. **使用 Feature Detection**：
-* 使用 Feature Detection 检测浏览器是否支持某个 JavaScript API，并根据不同的浏览器执行不同的代码。
-* 可以使用 `typeof` 运算符或 `in` 运算符进行 Feature Detection。
+不同浏览器对 JavaScript 新 API（Promise、fetch、Map/Set、Array.prototype 方法等）的支持程度不同，需要兼容处理以确保代码在旧浏览器正常运行。
 
-3. **使用 Babel**：
-* 使用 Babel 将 ES6+ 代码转换为 ES5 代码，以兼容旧版本浏览器。
-* Babel 是一个 JavaScript 编译器，可以将 ES6+ 代码转换为 ES5 代码，使其在旧版本浏览器中也能正常运行。
+---
 
-4. **使用库或框架**：
-* 使用一些库或框架，例如 jQuery、React、Vue 等，它们已经处理了大部分浏览器兼容性问题。
+## 现有答案
 
-## 示例
+### 1. Polyfill（推荐）
 
-1. **使用 Polyfill**：
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Polyfill Example</title>
-	<!-- 引入 es5-shim 和 es5-sham -->
-	<script src="es5-shim.js"></script>
-	<script src="es5-sham.js"></script>
-</head>
-<body>
-	<script>
-		// 使用 ES5 API
-		var arr = [1, 2, 3];
-		arr.forEach(function(item) {
-			console.log(item);
-		});
-	</script>
-</body>
-</html>
-```
-
-2. **使用 Feature Detection**：
+- **作用**：用 JavaScript 模拟浏览器不支持的 API
+- **常用库**：
+  - core-js：最完整的 ES polyfill
+  - es5-shim/es5-sham：ES5 API
+  - whatwg-fetch：fetch API
 
 ```javascript
-if ('addEventListener' in window) {
-	// 浏览器支持 addEventListener API
-	console.log('支持 addEventListener');
-	window.addEventListener('load', function() {
-		console.log('页面加载完成');
-	});
-} else if ('attachEvent' in window) {
-	// 浏览器支持 attachEvent API
-	console.log('支持 attachEvent');
-	window.attachEvent('onload', function() {
-		console.log('页面加载完成');
-	});
+// 检测并加载 polyfill
+import 'core-js/stable';
+import 'whatwg-fetch';
+```
+
+### 2. Babel 转译
+
+- **作用**：将 ES6+ 语法转换为 ES5 语法
+- **原理**：在构建时将新语法转换为旧语法
+
+```javascript
+// 输入（ES6）
+const arr = [1, 2, 3];
+const doubled = arr.map(x => x * 2);
+
+// 输出（ES5）
+var arr = [1, 2, 3];
+var doubled = arr.map(function(x) {
+  return x * 2;
+});
+```
+
+### 3. Feature Detection
+
+- **作用**：检测浏览器是否支持某个 API
+- **实现**：`typeof` 或 `in` 运算符
+
+```javascript
+// 检测 fetch 支持
+if ('fetch' in window) {
+  // 使用 fetch
 } else {
-	// 浏览器不支持 addEventListener 和 attachEvent API
-	console.log('不支持 addEventListener 和 attachEvent');
+  // 使用 XMLHttpRequest 或 JSONP
+}
+
+// 检测 Promise 支持
+if (typeof Promise !== 'undefined') {
+  // 使用 Promise
+} else {
+  // 使用回调或 bluebird
 }
 ```
+
+### 4. 库/框架
+
+- **作用**：封装了兼容性处理
+- **示例**：jQuery、axios、bluebird
+
+---
+
+## 总结
+
+| 方法 | 适用场景 | 推荐程度 |
+|:--- |:--- |:--- |
+| Babel | ES6+ 语法转译 | ⭐⭐⭐⭐⭐ |
+| core-js | ES 标准库 polyfill | ⭐⭐⭐⭐⭐ |
+| whatwg-fetch | fetch API polyfill | ⭐⭐⭐⭐ |
+| Feature Detection | 运行时检测 | ⭐⭐⭐⭐ |
+
+---
+
+## 相关笔记
+
+- [[浏览器兼容性]]
+- [[Web标准]]
+- [[Babel]]
+- [[Polyfill]]

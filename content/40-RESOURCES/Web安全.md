@@ -1,43 +1,46 @@
 ---
-content-type: atomic
+uid: 202512170000
 title: Web安全
-aliases: [Web Security, 前端安全]
-tags: [领域/前端, 领域/安全, 索引/MOC]
+aliases: [C-Web安全, Web Security, 前端安全]
+description: Web安全是处理不被信任的输入，守住浏览器大门，防止恶意代码执行和数据泄露
+tags: [前端开发/安全]
 date-created: 2025-12-17
-date-modified: 2025-12-25
-status: 🟢 活跃
+date-modified: 2026-03-23
+status: active
+content-type: concept
 ---
 
-## 🛡️ 领域：Web 安全 (Web Security)
+> Web 安全的本质是**处理不被信任的输入**。对于前端工程师而言，安全意味着守住浏览器这道大门，防止恶意代码在用户的客户端执行，并保护用户的敏感数据不被窃取。
 
-### 🎯 核心定义
-
-> [!abstract] 信任的边界
-> Web 安全的本质是**处理 " 不被信任 " 的输入**。
-> 对于前端工程师而言，安全意味着守住**浏览器**这道大门，防止恶意代码在用户的客户端执行，并保护用户的敏感数据（Cookie/Token）不被窃取。
->
-> *核心三要素 (CIA)*：**机密性** (Confidentiality)、**完整性** (Integrity)、**可用性** (Availability)。
+**解决的核心痛点**：Web 应用暴露在开放的互联网中，攻击者可以利用浏览器的信任机制或解析漏洞发起攻击；如何建立多层防御体系保障用户数据安全？
 
 ---
 
-### ⚔️ 威胁模型与攻击面 (Threat Model)
+## 核心命题
 
-前端主要面临的威胁来源于攻击者利用浏览器的信任机制或解析漏洞：
+- [[XSS 和 CSRF 是前端最核心的安全威胁]]
+	- **原理**：XSS 利用浏览器盲目信任并执行恶意脚本；CSRF 利用用户的登录态偷偷发送伪造请求，两者都是前端必须重点防御的攻击方式
+- [[纵深防御是保障 Web 安全的最佳策略]]
+	- **原理**：单一防御手段无法应对所有攻击，需要在编码层、浏览器层、传输层、存储层等多个层面建立防御
+
+---
+
+## 运行机制
 
 ```mermaid
 graph TD
-    Attacker[🕵️ 攻击者]
-    
-    subgraph Browser [💻 浏览器/客户端]
+    Attacker[攻击者]
+
+    subgraph Browser [浏览器/客户端]
         DOM[DOM 环境]
         Storage[Cookie/Storage]
     end
-    
-    subgraph Network [🌐 传输层]
+
+    subgraph Network [传输层]
         Req[HTTP 请求]
     end
-    
-    subgraph Server [☁️ 服务端]
+
+    subgraph Server [服务端]
         DB[(数据库)]
     end
 
@@ -48,68 +51,66 @@ graph TD
     Attacker -->|中间人劫持| Req
 ```
 
-#### 1. 客户端核心威胁 (The Big Two)
+---
 
-*前端工程师必须死磕的两个概念*
+## 关键区别
 
-- **[[XSS]] (跨站脚本攻击)**：
-	- *本质*：浏览器盲目信任并执行了恶意脚本。
-	- *场景*：评论区注入 `<script>`、URL 参数反射。
-	- *防御*：**转义输出**、**[[CSP]] (内容安全策略)**、避免 `v-html`/`dangerouslySetInnerHTML`。
-- **[[CSRF]] (跨站请求伪造)**：
-	- *本质*：利用用户的登录态（Cookie）偷偷发送请求。
-	- *场景*：点开钓鱼链接，账户自动转账。
-	- *防御*：**SameSite Cookie**、**CSRF Token**、验证 Referer。
-
-#### 2. 其他常见威胁
-
-- **[[点击劫持]] (点击劫持)**：利用 `iframe` 透明层覆盖，骗取用户点击。
-- **[[中间人攻击]] (MITM)**：HTTP 明文传输被窃听或篡改（强制 HTTPS）。
-- **依赖供应链攻击**：`npm` 包中包含恶意代码（需定期审计）。
+| 维度 | [[XSS]] | [[CSRF]] |
+|:--- |:--- |:--- |
+| **本质** | 浏览器执行恶意脚本 | 利用登录态发送伪造请求 |
+| **攻击目标** | 窃取数据、执行操作 | 借用用户身份执行操作 |
+| **防御关键** | 输出转义、CSP | SameSite Cookie、CSRF Token |
 
 ---
 
-### 🛡️ 纵深防御体系 (Defense Strategy)
+## 常见威胁与防御
 
-不要指望单一手段解决所有问题，需要建立多层防御。
-
-|**防御层级**|**关键技术/策略**|**前端动作 (Action)**|
-|---|---|---|
-|**编码层**|输入验证、输出转义|对所有用户输入进行 HTML Entity 编码；使用 React/Vue 自动转义|
-|**浏览器层**|[[CSP]] (内容安全策略)|配置 HTTP Header，禁止加载外部未知脚本，禁止内联脚本|
-|**传输层**|[[HTTPS]]|确保全站 HTTPS，开启 HSTS，避免混合内容 (Mixed Content)|
-|**存储层**|Cookie 安全属性|敏感 Token 必须设置 `HttpOnly`、`Secure`、`SameSite=Strict`|
-|**通信层**|[[CORS]]|理解跨域资源共享，不随意配置 `Access-Control-Allow-Origin: *`|
-|**依赖层**|供应链审计|定期执行 `npm audit`，慎用不明来源的第三方 SDK|
+| 威胁       | 类型   | 防御措施                     |
+|:------- |:--- |:----------------------- |
+| [[XSS]]  | 注入型  | 输出转义、CSP、避免 v-html       |
+| [[CSRF]] | 请求伪造 | SameSite Cookie、Token 验证 |
+| [[点击劫持]] | 界面劫持 | X-Frame-Options          |
+| 中间人攻击    | 传输层  | HTTPS、HSTS               |
+| 供应链攻击    | 依赖   | npm audit、Snyk           |
 
 ---
 
-### 📝 知识自检清单 (Checklist)
+## 纵深防御体系
 
-> [!hint] 面试/Code Review 速查
->
-> Web 安全不是后端的专利，写出 " 不作死 " 的代码是前端的底线。
-
-| **安全概念**         | **责任归属**    | **重要程度** | **关键考点/检查点**                                                  |
-| ---------------- | ----------- | -------- | ------------------------------------------------------------- |
-| [[XSS]]      | ✅ 前端主责  | ⭐⭐⭐⭐⭐    | 存储型 vs 反射型 vs DOM 型的区别？CSP 怎么配？                               |
-| [[CSRF]]     | 🤝 协作防御 | ⭐⭐⭐⭐⭐    | SameSite 属性的作用？Token 放在 Header 还是 Body？                       |
-| [[浏览器安全机制]]  | ✅ 必须理解  | ⭐⭐⭐⭐⭐    | [[同源策略]] (SOP) 是什么？CORS 预检请求 (Options) 什么时候触发？                |
-| Token 存储     | ✅ 架构设计  | ⭐⭐⭐⭐     | JWT 存 LocalStorage 还是 Cookie？(推荐 Cookie + HttpOnly + CSRF 防范) |
-| Clickjacking | ⚠️ 配置       | ⭐⭐⭐      | `X-Frame-Options` 响应头配置                                       |
-| SQL 注入       | ❌ 后端主责      | ⭐⭐       | 前端虽然不修，但要懂原理（永远不要在前端拼装 SQL 语句）                                |
-| 第三方依赖        | ✅ 日常维护  | ⭐⭐⭐      | 只有业务代码安全是不够的，`package.json` 里的包安全吗？                           |
+| 防御层级 | 关键技术 | 前端动作 |
+|:--- |:--- |:--- |
+| 编码层 | 输入验证、输出转义 | HTML Entity 编码 |
+| 浏览器层 | [[CSP]] | 配置安全策略头 |
+| 传输层 | [[HTTPS]] | 全站 HTTPS |
+| 存储层 | Cookie 安全属性 | HttpOnly、Secure、SameSite |
+| 通信层 | [[CORS]] | 合理配置跨域 |
+| 依赖层 | 供应链审计 | 定期安全扫描 |
 
 ---
 
-### 📥 待办与进阶 (Inbox)
+## 知识图谱
 
-- [ ] **进阶研究**：[[SRI]] (子资源完整性) 如何防止 CDN 被劫持？
-- [ ] **实战演练**：使用 PortSwigger (Burp Suite 官方靶场) 体验一次 XSS 攻击。
-- [ ] **工具配置**：在项目中集成 `snyk` 或 `audit-ci` 进行自动化依赖扫描。
+- **父级概念**：[[前端开发]] — Web 安全是前端开发的重要议题
+- **子级概念**：
+	- [[XSS]] — 跨站脚本攻击
+	- [[CSRF]] — 跨站请求伪造
+	- [[点击劫持]]
+- **并列概念**：
+	- [[浏览器安全机制]]
+- **相关概念**：
+	- [[HTTPS]]
+	- [[CSP]]
+	- [[CORS]]
+	- [[同源策略]]
 
-### 📚 权威资源
+## FAQ
 
-- **标准**：[[MDN Web Security]]
-- **指南**：[[OWASP Top 10]] (Web 应用安全风险 Top 10)
-- **工具**：[[Can I use]] (查询 CSP 等特性兼容性)
+![[MOC-Web安全问题]]
+
+---
+
+## 参考延伸
+
+- [[7]]
+- [MDN Web Security](https://developer.mozilla.org/en-US/docs/Web/Security)
+- [OWASP Top 10](https://owasp.org/www-project-top-ten/)

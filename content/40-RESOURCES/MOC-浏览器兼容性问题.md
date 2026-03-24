@@ -1,8 +1,8 @@
 ---
-title: FAQ-浏览器兼容性问题
+title: MOC-浏览器兼容性问题
 date-created: 2025-06-16
-date-modified: 2026-03-21
-content-type: atomic
+date-modified: 2026-03-23
+content-type: [moc]
 ---
 
 ## CSS 兼容性问题

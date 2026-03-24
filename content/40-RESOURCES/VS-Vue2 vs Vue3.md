@@ -5,7 +5,7 @@ aliases: [Vue2 vs Vue3]
 description: Vue2 和 Vue3 在核心特性、API、性能等方面的全面对比
 tags: [前端/Vue]
 date-created: 2026-03-13
-date-modified: 2026-03-18
+date-modified: 2026-03-23
 status: cultivating
 comparison: [Vue2, Vue3]
 content-type: comparison

@@ -1,6 +1,7 @@
 ---
-content-type: atomic
+content-type: term
 title: Vue Router
+aliases: [Vue-Router, 路由]
 date-created: 2025-06-02
 date-modified: 2025-06-02
 ---

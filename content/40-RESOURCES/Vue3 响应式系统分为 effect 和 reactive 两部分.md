@@ -4,7 +4,7 @@ title: Vue3 响应式系统分为 effect 和 reactive 两部分
 description: Vue3 响应式系统中 effect 负责依赖收集和触发更新，reactive 负责将普通对象转换为响应式对象
 tags: [前端/Vue]
 date-created: 2026-03-17
-date-modified: 2026-03-16
+date-modified: 2026-03-23
 status: fleeting
 content-type: atomic
 ---

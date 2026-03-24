@@ -3,6 +3,19 @@ import { FullSlug, RelativeURL, getFullSlug, normalizeRelativeURLs } from "../..
 import { fetchCanonical } from "./util"
 import { cacheManager, LRUCache } from "./storage"
 
+// 注册 Service Worker
+if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/static/sw.js')
+      .then((registration) => {
+        console.log('[SW] Service Worker registered:', registration.scope)
+      })
+      .catch((error) => {
+        console.warn('[SW] Service Worker registration failed:', error)
+      })
+  })
+}
+
 // 静态资源缓存 - 使用已有的 LRUCache
 const staticResourceCache = new LRUCache<{ content: string; contentType: string }>(20)
 

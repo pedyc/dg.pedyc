@@ -49,9 +49,9 @@ function toggleFolder(evt: MouseEvent) {
   const folderContainer = (
     isSvg
       ? // svg -> div.folder-container
-        target.parentElement
+      target.parentElement
       : // button.folder-button -> div -> div.folder-container
-        target.parentElement?.parentElement
+      target.parentElement?.parentElement
   ) as MaybeHTMLElement
   if (!folderContainer) return
   const childFolderContainer = folderContainer.nextElementSibling as MaybeHTMLElement
@@ -129,19 +129,15 @@ function createFolderNode(
     span.textContent = node.displayName
   }
 
-  // if the saved state is collapsed or the default state is collapsed
-  const isCollapsed =
-    currentExplorerState.find((item) => item.path === folderPath)?.collapsed ??
-    opts.folderDefaultState === "collapsed"
-
-  // if this folder is a prefix of the current path we
-  // want to open it anyways
+  // this folder should open only when它是当前页面路径的祖先（如果不，自动关闭）
   const simpleFolderPath = simplifySlug(folderPath)
   const folderIsPrefixOfCurrentSlug =
     simpleFolderPath === currentSlug.slice(0, simpleFolderPath.length)
 
-  if (!isCollapsed || folderIsPrefixOfCurrentSlug) {
+  if (folderIsPrefixOfCurrentSlug) {
     folderOuter.classList.add("open")
+  } else {
+    folderOuter.classList.remove("open")
   }
 
   for (const child of node.children) {
@@ -274,13 +270,16 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
   await setupExplorer(currentSlug)
 
   // Scroll to the active item in explorer after navigation
-  const explorerUl = document.querySelector(".explorer-ul")
-  if (explorerUl) {
-    const activeElement = explorerUl.querySelector(".active")
-    if (activeElement) {
-      activeElement.scrollIntoView({ behavior: "smooth", block: "center" })
+  // Use requestAnimationFrame to ensure DOM updates are complete
+  requestAnimationFrame(() => {
+    const explorerUl = document.querySelector(".explorer-ul")
+    if (explorerUl) {
+      const activeElement = explorerUl.querySelector(".active")
+      if (activeElement) {
+        activeElement.scrollIntoView({ behavior: "smooth", block: "center" })
+      }
     }
-  }
+  })
 
   // if mobile hamburger is visible, collapse by default
   for (const explorer of document.getElementsByClassName("explorer")) {

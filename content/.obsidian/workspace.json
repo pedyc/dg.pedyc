@@ -152,7 +152,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -192,7 +192,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-前端/前端性能优化.md",
+                "file": "40-RESOURCES/Diff算法(Vue3).md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -220,7 +220,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "前端性能优化 的关系图"
+              "title": "Diff算法(Vue3) 的关系图"
             }
           },
           {
@@ -411,8 +411,9 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "e416ab0b25204149",
+  "active": "3dfca4b5c072d131",
   "lastOpenFiles": [
+    "mermaid-test.md",
     "20-AREAS/A-前端/前端开发.md",
     "40-RESOURCES/Diff算法(Vue3).md",
     "40-RESOURCES/Vue2 vs Vue3 Diff算法.md",
@@ -438,7 +439,6 @@
     "40-RESOURCES/CORS.md",
     "_templates/template_area.md",
     "40-RESOURCES/Q-Vapor Mode是什么.md",
-    "40-RESOURCES/Q-Vue编译器如何优化.md",
     "30-ZETTELKASTEN/_resources/提示词Prompt.png",
     "30-ZETTELKASTEN/_resources/常用视觉工具.excalidraw.svg",
     "30-ZETTELKASTEN/_resources/常用思维方式.excalidraw.svg",

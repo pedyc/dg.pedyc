@@ -1,16 +1,11 @@
 ---
 uid: 202603240004
 title: Block管理
-aliases:
-  - Block
-  - Block Tree
-  - C-Block管理
+aliases: [Block, Block Tree, C-Block管理]
 description: Vue3核心优化机制，通过Block树结构实现高效的动态节点管理和精准更新
-tags:
-  - 前端/Vue
-  - 前端/原理
+tags: [前端/Vue, 前端/原理]
 date-created: 2026-03-24
-date-modified: 2026-03-24
+date-modified: 2026-03-28
 status: cultivating
 content-type: concept
 up: "[[模板编译(Vue3)]]"

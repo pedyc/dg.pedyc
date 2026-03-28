@@ -3,8 +3,8 @@ uid: 202408011030
 title: P-构建PKM系统
 aliases: [PKM系统搭建, P 构建PKM系统]
 date-created: 2024-08-01
-date-modified: 2026-03-12
-status: cultivating
+date-modified: 2026-03-28
+status: completed
 area: ["[[A-知识管理]]"]
 consequence: 4
 content-type: project

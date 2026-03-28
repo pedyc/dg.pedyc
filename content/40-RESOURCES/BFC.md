@@ -1,84 +1,93 @@
 ---
+uid: 202506020000
 title: BFC
-description: BFC（块格式化上下文）是 CSS 视觉渲染的一部分，它决定了块级盒子的布局方式。
-tags: [前端开发, CSS]
+aliases: [Block Formatting Context, 块格式化上下文, C-BFC]
+description: BFC是CSS视觉渲染的一部分，决定了块级盒子的布局方式，可以看作独立的容器
+tags: [前端/CSS]
 date-created: 2025-06-02
-date-modified: 2025-06-02
+date-modified: 2026-03-24
+status: active
 content-type: concept
-keywords: [BFC, Block Formatting Context]
-para: AREA
-related: ["[[CSS]]", "[[盒子模型]]"]
-zettel: permanent
+up: "[[CSS]]"
 ---
 
-## 定义
+## 概念：BFC
 
-BFC（Block Formatting Context，块格式化上下文）是 CSS 视觉渲染的一部分，它决定了块级盒子的布局方式。可以把 BFC 看作是一个独立的容器，容器里面的元素不会在布局上影响到外面的元素，反之也是如此。
+> BFC（Block Formatting Context，块格式化上下文）是 CSS 视觉渲染的一部分，可以看作一个独立的容器，内部的元素不会影响外部，反之亦然。
 
-## 核心特点
+**解决的问题**：浮动塌陷、外边距重叠、布局混乱
 
-- 内部盒子垂直排列 ：BFC 内部的块级盒子会一个接一个地垂直排列。
-- 外边距折叠 ：属于同一个 BFC 的两个相邻块级盒子的垂直外边距会发生折叠（除非其中一个被 BFC 包含）。
-- 包含浮动元素 ：BFC 会包含其内部的所有浮动元素，防止浮动元素溢出到 BFC 外部。
-- 阻止外边距折叠 ：不同 BFC 之间的外边距不会发生折叠。
+---
 
-## 如何创建 BFC？
+### 核心命题
 
-以下 CSS 属性可以创建一个新的 BFC：
+- **BFC 的本质**
+	- 独立的渲染区域
+	- 内部盒子垂直排列
+	- 与外部隔离
+- **触发条件**
+	- 根元素 `<html>`
+	- `float` 不为 `none`
+	- `position` 为 `absolute`/`fixed`
+	- `display` 为 `inline-block`/`flex`/`grid` 等
+	- `overflow` 不为 `visible`
 
-- 根元素 `<html>`
-- `float` 属性不为 `none`
-- `position` 属性为 `absolute` 或 `fixed`
-- `display` 属性为 `inline-block`、`table-cell`、`table-caption`、`flex`、`inline-flex`、`grid` 或 `inline-grid`
-- `overflow` 属性不为 `visible`
+---
 
-## 应用场景
+### 运行机制
 
-1. **清除浮动：** 可以通过将父元素设置为 BFC 来清除子元素的浮动，防止父元素高度塌陷。
-2. **防止外边距重叠：** 可以通过将元素设置为 BFC 来防止 margin 重叠，确保元素之间的间距符合预期。
-3. **创建多栏布局：** 可以通过将元素设置为 BFC 来创建多栏布局，实现自适应的列宽。
-4. **避免浮动元素覆盖：** 可以通过将元素设置为 BFC 来避免浮动元素覆盖其他元素。
-
-## 示例
-
-### 清除浮动
-
-```html
-<!-- 父元素高度塌陷 -->
-<div style="border: 1px solid red;">
-  <div style="float: left; width: 100px; height: 100px; background-color: lightblue;"></div>
-  <div style="float: left; width: 100px; height: 100px; background-color: lightgreen;"></div>
-</div>
-
-<!-- 通过设置父元素overflow触发BFC -->
-<div style="border: 1px solid blue; overflow: auto;">
-  <div style="float: left; width: 100px; height: 100px; background-color: lightblue;"></div>
-  <div style="float: left; width: 100px; height: 100px; background-color: lightgreen;"></div>
-</div>
+```mermaid
+flowchart TB
+    A[创建BFC] --> B{内部布局}
+    B --> C[块级盒子垂直排列]
+    B --> D[浮动元素被包含]
+    B --> E[外边距折叠规则]
+    F[外部元素] --> G[不受BFC内部影响]
 ```
 
-### 防止 margin 重叠
+#### 三大特性
 
-```html
-<div style="margin-bottom: 20px;">First div</div>
-<div style="margin-top: 30px;">Second div</div>
+1. **内部盒子垂直排列**
+	 - 内部块级盒子一个接一个垂直排列
+2. **包含浮动元素**
+	 - BFC 会包含浮动元素，防止高度塌陷
+3. **阻止外边距折叠**
+	 - 不同 BFC 之间的外边距不会折叠
 
-<div style="overflow: auto; margin-bottom: 20px;">First div</div>
-<div style="overflow: auto; margin-top: 30px;">Second div</div>
-```
+---
 
-## 注意事项
+### 应用场景
 
-1. **过度使用：** 避免过度使用 BFC，只在必要时创建 BFC，否则可能会导致代码的复杂性增加。
-2. **兼容性：** 不同的浏览器对 BFC 的支持可能存在差异，需要进行兼容性测试。
-3. **理解原理：** 深入理解 BFC 的原理，才能更好地应用 BFC 解决实际问题。
+| 场景 | 解决方案 | 示例 |
+|:---|:---|:---|
+| 清除浮动 | 父元素设置为 BFC | `overflow: auto` |
+| 防止 margin 重叠 | 元素放入独立 BFC | `display: inline-block` |
+| 多栏自适应布局 | 创建独立 BFC | Grid 布局 |
+| 防止浮动元素覆盖 | 非浮动元素设置为 BFC | `overflow: hidden` |
 
-## 问答卡片
+---
 
-- Q：什么是 BFC？有哪些触发方式？能解决哪些问题？
-- A：BFC 是浏览器布局中的一个独立区域，它内部的元素垂直排列，且不会影响外部布局。常用来清除浮动、解决外边距合并以及实现复杂布局，比如三栏布局的中间自适应列。常通过 float、overflow、display 等属性触发。
+### 与 CSS 盒模型的关系
 
-## 参考资料
+- BFC 是盒模型的外层容器
+- 盒模型定义单个元素的组成（content/padding/border/margin）
+- BFC 定义一组盒子的布局规则
 
-- MDN Web Docs: [https://developer.mozilla.org/](https://developer.mozilla.org/)
-- CSS Tricks: [https://css-tricks.com/](https://css-tricks.com/)
+---
+
+### 知识图谱
+
+- **父级概念**：[[CSS]]
+- **关联概念**：
+	- [[CSS盒模型]] — BFC 内部的盒子组成
+	- [[层叠上下文]] — BFC 是二维布局，BFC 是垂直布局
+- **相关问题**：
+	- Flexbox 和 BFC 有什么区别
+
+---
+
+### 参考延伸
+
+- [CSS BFC (Block Formatting Context) 详解在 CSS 布局中，BFC（Block For - 掘金](https://juejin.cn/post/7403657162529210409?from=search-suggest)
+- MDN: Block formatting contexts
+- CSS Tricks: Understanding CSS Layout and BFC

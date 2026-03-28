@@ -5,10 +5,10 @@ aliases: [ReprintTypscriptDecorator]
 description: TypeScript 装饰器完全指南，了解装饰器的使用场景和原理
 tags: [前端开发/TypeScript]
 date-created: 2024-09-16
-date-modified: 2025-03-17
+date-modified: 2026-03-25
 status: completed
-content-type: article
 category: blog
+content-type: article
 published: true
 ---
 

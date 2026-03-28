@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d83c50d209d7a442",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/原型链.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "原型链"
-            }
-          },
-          {
             "id": "42a4bd166593c69f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Block管理.md",
+                "file": "30-Zettelkasten/浏览器合成渲染树后进行布局和绘制.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Block管理"
+              "title": "浏览器合成渲染树后进行布局和绘制"
             }
           },
           {
@@ -85,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Diff算法(Vue3).md",
+                "file": "40-RESOURCES/移动端 1px 问题如何解决？.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,59 +76,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Diff算法(Vue3)"
-            }
-          },
-          {
-            "id": "25aba57c32d2aeb4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/Diff算法(Vue3).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Diff算法(Vue3)"
-            }
-          },
-          {
-            "id": "2989436a8e995ef5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/Vue2 vs Vue3 Diff算法.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Vue2 vs Vue3 Diff算法"
+              "title": "移动端 1px 问题如何解决？"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -192,7 +119,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Diff算法(Vue3).md",
+                "file": "30-Zettelkasten/浏览器合成渲染树后进行布局和绘制.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -215,12 +142,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.44733309471897764,
+                  "scale": 0.8792582687471956,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Diff算法(Vue3) 的关系图"
+              "title": "浏览器合成渲染树后进行布局和绘制 的关系图"
             }
           },
           {
@@ -271,7 +198,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Vitals",
+                "query": "tag:#算法  ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -311,12 +238,11 @@
               "title": "添加笔记属性"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 326.5
+    "width": 323.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -411,34 +337,43 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "3dfca4b5c072d131",
+  "active": "42a4bd166593c69f",
   "lastOpenFiles": [
-    "mermaid-test.md",
-    "20-AREAS/A-前端/前端开发.md",
-    "40-RESOURCES/Diff算法(Vue3).md",
-    "40-RESOURCES/Vue2 vs Vue3 Diff算法.md",
-    "20-AREAS/A-前端/前端性能优化.md",
-    "40-RESOURCES/前端框架.md",
-    "40-RESOURCES/AJAX.md",
-    "20-AREAS/A-前端/算法与数据结构.md",
-    "40-RESOURCES/前端场景下的算法优先级.md",
-    "40-RESOURCES/虚拟DOM(Vue3).md",
-    "40-RESOURCES/生命周期(Vue3).md",
-    "20-AREAS/A-前端/Vue.md",
-    "40-RESOURCES/模板编译(Vue3).md",
-    "40-RESOURCES/原型链.md",
-    "40-RESOURCES/预标记.md",
-    "_templates/template_moc.md",
-    "40-RESOURCES/MOC-Vue 面试题.md",
+    "30-Zettelkasten/浏览器通过事件循环机制处理异步任务.md",
+    "30-Zettelkasten/浏览器合成渲染树后进行布局和绘制.md",
+    "90-DIARY/2026-03-28.md",
+    "50-ARCHIVE/P-学习Obsidian CLI、Skills.md",
+    "10-PROJECTS/P-构建PKM系统.md",
+    "10-PROJECTS/P-求职前端岗位/P-后端能力提升专项.md",
+    "90-DIARY/2026-03-27.md",
+    "90-DIARY/2026-03-26.md",
+    "90-DIARY/2026-03-25.md",
+    "90-DIARY/2026-03-24.md",
+    "90-DIARY/2026-03-23.md",
     "40-RESOURCES/Block管理.md",
-    "_templates/template_concept.md",
-    "40-RESOURCES/静态提升.md",
-    "40-RESOURCES/点击劫持.md",
-    "40-RESOURCES/响应式原理(Vue3).md",
-    "40-RESOURCES/生态系统（Vue）.md",
-    "40-RESOURCES/CORS.md",
     "_templates/template_area.md",
-    "40-RESOURCES/Q-Vapor Mode是什么.md",
+    "40-RESOURCES/移动端 1px 问题如何解决？.md",
+    "40-RESOURCES/按位异或.md",
+    "CLAUDE.md",
+    "20-AREAS/A-前端/React.md",
+    "20-AREAS/A-前端/Vue.md",
+    "00-META/02 附录/META-模板系统.md",
+    "00-META/本库指南.md",
+    "00-META/02 附录/Q-怎样规划信息单元？.md",
+    "00-META/02 附录/Q-怎样控制信息冗余？.md",
+    "99-ASSETS/Anki/Anki-浏览器和网络.txt",
+    "99-ASSETS/Anki/新建 文本文档.txt",
+    "99-ASSETS/Anki/Anki-Vue框架.txt",
+    "99-ASSETS/Anki/Anki-Javascript核心 - 副本.txt",
+    "99-ASSETS/Anki/未命名.md",
+    "99-ASSETS/Anki/Anki-Javascript核心.txt",
+    "99-ASSETS/Anki",
+    "40-RESOURCES/深拷贝和浅拷贝.md",
+    "50-ARCHIVE/自定义光标开发记录.md",
+    "40-RESOURCES/T-will-change.md",
+    "someInterestingQuestions01",
+    "vueSourceCodeStudy01",
+    "40-RESOURCES/CSS.md.tmp.108243.1774372424243",
     "30-ZETTELKASTEN/_resources/提示词Prompt.png",
     "30-ZETTELKASTEN/_resources/常用视觉工具.excalidraw.svg",
     "30-ZETTELKASTEN/_resources/常用思维方式.excalidraw.svg",
@@ -450,15 +385,6 @@
     "99-ASSETS/Excalidraw/Drawing 2025-10-01 11.21.21.excalidraw.svg",
     "99-ASSETS/Excalidraw/PARA和知识管理工作流.excalidraw.svg",
     "20-AREAS/A-哲学",
-    "10-PROJECTS/P-求职前端岗位/_resources",
-    "10-PROJECTS/P-学习OpenClaw",
-    "10-PROJECTS/_resources/P-学习OpenClaw",
-    "10-PROJECTS/_resources",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers",
-    "40-RESOURCES/Inbox/_resources/未命名",
-    "20-AREAS/A-政治经济/未命名.md.nssyncsc",
-    "90-DIARY/_resources",
-    "60-BLOGS/_resources",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

@@ -5,7 +5,7 @@ aliases: []
 description: JavaScript 模块化系统完全解析，探讨模块化的前世今生和实现原理
 tags: [前端开发/JavaScript, 前端开发/工程化]
 date-created: 2024-09-16
-date-modified: 2026-03-15
+date-modified: 2026-03-25
 status: completed
 category: blog
 content-type: article

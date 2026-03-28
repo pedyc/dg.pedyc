@@ -4,12 +4,10 @@ title: Q-怎样控制信息冗余？
 description: 双链笔记中如何避免信息重复和冗余
 tags: [知识管理/知识组织]
 date-created: 2026-03-13
-date-modified: 2026-03-13
+date-modified: 2026-03-27
 status: cultivating
 content-type: question
 ---
-
-## 问题
 
 > [!question]
 > 在双链笔记系统中，如何控制信息冗余？

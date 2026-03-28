@@ -61,6 +61,7 @@
     "expire": "date",
     "urgency": "number",
     "consequence": "number",
-    "up": "text"
+    "up": "text",
+    "published": "checkbox"
   }
 }

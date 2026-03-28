@@ -21,3 +21,8 @@
     width: 800px !important;
     height: auto !important;
 }
+
+/* 隐藏嵌入内容的标题 */
+.internal-embed .markdown-embed-title {
+    display: none;
+}

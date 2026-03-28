@@ -5,9 +5,10 @@ aliases: ["A-{{领域名称}}"]
 description: "{ 一句话定义这个领域的核心范畴 }"
 tags: [area]
 date-created: Invalid date
-date-modified: 2026-03-23
+date-modified: 2026-03-28
 status: cultivating
 up: ["[[{父级笔记}]]"]
+content-type: area
 ---
 
 <!--
@@ -16,17 +17,10 @@ up: ["[[{父级笔记}]]"]
 	1. Area 是 PARA 系统中的"A"——持续关注的责任领域
 	2. 核心是"领域定义"——明确核心范畴、边界、区别
 	3. 必须有"长期目标"——愿景和里程碑
-	4. 包含"关键领域"——链接 Concept（子领域视为相关概念笔记）
+	4. 包含"关键领域"——链接 Concept
 	5. 包含"FAQ"——常见问题汇总
 
-	与 Concept 的区别：
-	- Area：需要设定长期目标、持续关注的领域
-	- Concept：纯知识性概念，理解后即可
-
-	写作节奏：
-	- 先写领域定义（What is this field）
-	- 再写长期目标（Where am I going）
-	- 最后写关键领域（What to learn）
+	已移除：核心心智模型、执行系统、知识网络、探索前沿、复盘
 -->
 
 ## Area: {{领域名称}}
@@ -54,7 +48,7 @@ up: ["[[{父级笔记}]]"]
 
 ### 关键领域
 
-> 该领域的核心知识主题（链接 子领域area或者核心概念concept）
+> 该领域的核心知识主题（链接 Concept 或子领域 Area）
 
 - **{{主题1}}**
 	- [[{{概念1}}]] — {{描述}}

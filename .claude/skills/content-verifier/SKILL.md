@@ -54,9 +54,9 @@ allowed-tools: Glob,Read,Grep,WebSearch,Edit
 | term | 定义、核心特点、应用、相关概念 |
 | moc | 分类链接列表（灵活结构，不强制章节） |
 | atomic | 定义、论据/示例 |
-| comparison | 维度列表、对比表格、总结 |
+| comparison | 一句话对比、核心对比、差异点、场景选择、知识图谱 |
 | question | 问题描述、探索路径、相关概念 |
-| sop | 步骤列表、适用场景、注意事项 |
+| sop | 适用场景、核心步骤、常见坑点、知识图谱 |
 | record | 时间线、背景、影响、引申 |
 | article | 引言、主体、总结、相关阅读 |
 

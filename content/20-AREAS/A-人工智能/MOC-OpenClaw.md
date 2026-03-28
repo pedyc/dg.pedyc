@@ -33,7 +33,7 @@ up: "[[人工智能]]"
 	- [[MCP]] - 模型上下文协议
 	- [[Claude Code]] - CLI AI 助手
 - **同领域**：
-	- [[MOC-Agent]] - Agent 智能体
+	- [[智能体]] - Agent 智能体
 
 ### 🚧 待完善
 

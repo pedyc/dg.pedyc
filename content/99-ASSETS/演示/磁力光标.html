@@ -1,0 +1,233 @@
+<!-- 【“自瞄锁敌”？做一个带有磁力的网页光标】 
+https://www.bilibili.com/video/BV1rEQ1BbEmn/?share_source=copy_web&vd_source=36314fa22feedfc30d571657fd7e6485 
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Custom Pointer Effect</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: #171717;
+        overflow: hidden;
+        cursor: none; /* 隐藏默认光标，让效果更纯粹 */
+      }
+
+      p,
+      section {
+        font-family: Impact;
+        font-size: 4rem;
+        color: #f7f7f7;
+        cursor: pointer;
+        user-select: none; /* 避免文本选中干扰 */
+      }
+
+      section {
+        padding: 5rem;
+        background-color: #f7f7f7;
+        color: #171717;
+      }
+
+      .pointer {
+        --width: 4rem;
+        --height: 4rem;
+        position: fixed;
+        top: calc(var(--height) / -2);
+        left: calc(var(--width) / -2);
+        width: var(--width);
+        height: var(--height);
+        transition:
+          width 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1),
+          height 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1),
+          transform 0.05s linear; /* 光标移动更跟手 */
+        pointer-events: none; /* 关键：让光标不拦截任何事件 */
+        z-index: 9999;
+        will-change: transform, width, height; /* 性能优化 */
+      }
+
+      .pointer div {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border: 0.2rem solid #17f700; /* 使用 border 替代 border-style */
+      }
+
+      .pointer div:nth-child(1) {
+        top: 0;
+        left: 0;
+        border-right: none;
+        border-bottom: none;
+      }
+
+      .pointer div:nth-child(2) {
+        top: 0;
+        right: 0;
+        border-left: none;
+        border-bottom: none;
+      }
+
+      .pointer div:nth-child(3) {
+        left: 0;
+        bottom: 0;
+        border-right: none;
+        border-top: none;
+      }
+
+      .pointer div:nth-child(4) {
+        right: 0;
+        bottom: 0;
+        border-left: none;
+        border-top: none;
+      }
+
+      /* 添加一个中心点效果，让光标更明显 */
+      .pointer::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 4px;
+        height: 4px;
+        background: #17f700;
+        border-radius: 50%;
+        opacity: 0.8;
+      }
+
+      /* 悬停时的额外动画效果 */
+      ._target:hover ~ .pointer {
+        filter: drop-shadow(0 0 5px #17f700);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pointer">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <p class="_target">HOVER ME</p>
+    <!-- 可以添加更多测试元素 -->
+    <!-- <section class="_target">CLICK ME</section> -->
+  </body>
+  <script>
+    const pointer = {
+      container: document.querySelector(".pointer"),
+      curTarget: null,
+      isHovering: false,
+
+      init() {
+        // 使用 requestAnimationFrame 优化移动性能
+        let rafId = null;
+
+        window.addEventListener("mousemove", (e) => {
+          if (rafId) {
+            cancelAnimationFrame(rafId);
+          }
+          rafId = requestAnimationFrame(() => {
+            this.move(e);
+            rafId = null;
+          });
+        });
+
+        this.bindTargetsEvents();
+
+        // 可选：当鼠标离开窗口时重置光标大小
+        window.addEventListener("mouseleave", () => {
+          if (this.isHovering) {
+            this.resetSize();
+            this.isHovering = false;
+          }
+        });
+      },
+
+      move(e) {
+        let x = e.clientX;
+        let y = e.clientY;
+        if (this.curTarget) {
+          const rect = this.curTarget.getBoundingClientRect();
+          const center_x = rect.left + rect.width / 2;
+          const center_y = rect.top + rect.height / 2;
+          x = center_x + (x - center_x) * 0.1;
+          y = center_y + (y - center_y) * 0.1;
+        }
+        // 直接使用 transform，不触发重排
+        this.container.style.transform = `translate(${x}px, ${y}px)`;
+      },
+
+      bindTargetsEvents() {
+        const targets = document.querySelectorAll("._target");
+
+        if (targets.length === 0) return;
+
+        targets.forEach((el) => {
+          // 使用 mouseenter/mouseleave 而不是 mouseover/mouseout，避免冒泡
+          el.addEventListener("mouseenter", (e) => {
+            this.curTarget = el;
+            // 防止重复触发
+            if (this.isHovering) return;
+
+            const rect = el.getBoundingClientRect();
+
+            // 添加一点内边距，让光标比元素稍大，视觉效果更好
+            const padding = 8;
+            const targetWidth = rect.width + padding * 2;
+            const targetHeight = rect.height + padding * 2;
+
+            this.container.style.setProperty("--width", targetWidth + "px");
+            this.container.style.setProperty("--height", targetHeight + "px");
+
+            this.isHovering = true;
+
+            // 添加一个自定义事件，方便扩展
+            el.dispatchEvent(new CustomEvent("pointerenter"));
+          });
+
+          el.addEventListener("mouseleave", () => {
+            if (!this.isHovering) return;
+
+            this.resetSize();
+            this.isHovering = false;
+
+            el.dispatchEvent(new CustomEvent("pointerleave"));
+            this.curTarget = null;
+          });
+        });
+      },
+
+      resetSize() {
+        this.container.style.setProperty("--width", "4rem");
+        this.container.style.setProperty("--height", "4rem");
+      },
+
+      // 手动重置方法，供外部调用
+      reset() {
+        this.resetSize();
+        this.isHovering = false;
+      },
+    };
+
+    pointer.init();
+
+    // 可选：添加键盘快捷键重置（按 ESC 重置）
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        pointer.reset();
+      }
+    });
+  </script>
+</html>

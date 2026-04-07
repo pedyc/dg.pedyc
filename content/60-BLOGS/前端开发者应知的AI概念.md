@@ -5,7 +5,7 @@ aliases: [AIConceptsForFrontend]
 description: 系统梳理前端开发者需要掌握的 AI 核心概念，从 LLM 原理到智能体开发
 tags: [AI/Claude, 前端开发]
 date-created: 2026-03-26
-date-modified: 2026-03-25
+date-modified: 2026-04-07
 status: completed
 category: blog
 content-type: article
@@ -124,7 +124,7 @@ LLM（Large Language Model）的本质是一个**概率预测机器**：
 
 #### 3.2 工具系统
 
-Agent 的能力通过**工具（Tools）**扩展：
+Agent 的能力通过**工具（Tools）** 扩展：
 
 | 工具 | 功能 |
 |------|------|
@@ -224,7 +224,7 @@ Claude → MCP Client → MCP Server → 外部服务
 描述需求 → Claude 生成代码 → 验证运行
 
 # 代码审查
-/ review src/components/
+/review src/components/
 
 # 调试
 粘贴错误 → Claude 分析 → 修复建议
@@ -279,5 +279,5 @@ allowed-tools: [Read, Write, Edit, Glob, Bash]
 - [[Claude Code]]
 - [[Claude核心概念]]
 - [[人工智能]]
-- [[智能体]]
+- [[Agent|智能体]]
 - [[MCP]]

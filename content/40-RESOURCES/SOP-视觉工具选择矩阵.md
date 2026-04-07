@@ -1,9 +1,8 @@
 ---
 title: SOP-视觉工具选择矩阵
 date-created: 2025-04-23
-date-modified: 2026-03-21
+date-modified: 2026-04-07
 content-type: sop
-type: [sop]
 ---
 
 ![[思维分类及视觉工具.excalidraw|800]]

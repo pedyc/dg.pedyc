@@ -78,6 +78,12 @@
       "icon": "lucide-bookmark-plus",
       "name": "书签: 收藏",
       "mode": "any"
+    },
+    {
+      "id": "obsidian-emoji-toolbar:emoji-picker:open-picker",
+      "icon": "lucide-aperture",
+      "name": "Emoji Toolbar: Open emoji picker",
+      "mode": "any"
     }
   ],
   "macros": [],

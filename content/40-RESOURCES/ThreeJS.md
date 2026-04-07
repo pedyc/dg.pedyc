@@ -5,7 +5,7 @@ aliases: [Three.js, three.js, C-ThreeJS]
 description: WebGL 3D 图形库，用于在浏览器中创建和展示 3D 图形
 tags: [前端开发/图形]
 date-created: 2026-03-20
-date-modified: 2026-03-19
+date-modified: 2026-04-07
 status: cultivating
 content-type: concept
 ---
@@ -64,14 +64,16 @@ flowchart TB
 	- **交互体验**：3D 官网、 Landing Page
 - ⛔ **误用**
 	- **2D 场景**：使用 Canvas 2D 即可
-	- **极致性能需求**：可能需要原生 WebGL
+	- **极致性能需求**：可能需要原生 WebG
 
 ---
 
 ### 知识图谱
 
 - **父级概念**：[[WebGL]]
-- **并列概念**：[[Babylon.js]] [[WebGPU]]
+- **并列概念**：
+	- [[Babylon.js]]
+	- [[WebGPU]]
 - **相关概念**：
 	- [[GSAP]]（3D 动画）
 	- [[SVG]]（2D 矢量）

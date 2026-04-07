@@ -1,28 +1,97 @@
 ---
+uid: 202508250000
 title: Agent
+aliases: [C-Agent, 智能体]
 description: 能够感知环境、自主决策并执行行动的智能实体
-tags: ["人工智能/Agent"]
+tags: [concept, AI, Agent]
 date-created: 2025-08-25
-date-modified: 2026-03-25
+date-modified: 2026-04-07
+status: active
 content-type: concept
-keywords: [智能体, 自主决策, 感知-决策-执行, 多智能体系统]
-para: area
-related: ["[[人工智能]]", "[[机器学习]]", "[[强化学习]]", "[[多智能体系统]]"]
-zettel: permanent
+related: ["[[人工智能]]", "[[Prompt Engineering]]", "[[Harness]]"]
 ---
 
-## 定义
+## 概念：Agent
 
-智能体（Agent）是指能够感知环境、自主决策并执行行动以实现特定目标的智能实体。在人工智能领域，智能体通常指软件程序或机器人系统，具备一定程度的自主性和智能行为。
+> 能够感知环境、自主决策并执行行动以实现特定目标的智能实体。
 
-## 核心特点
+**解决的核心痛点**：传统软件只能被动响应输入，Agent 能够自主感知环境、推理决策、执行复杂多步骤任务，实现真正的智能化自动化。
 
-- **自主性**：能够在没有直接干预的情况下操作
-- **反应性**：能够感知环境并及时响应环境变化
-- **主动性**：能够主动采取目标导向的行为
-- **社交能力**：能够与其他智能体进行交互和协作
+---
 
-## 分类
+### 核心命题
+
+- Agent 的本质是「感知 - 推理 - 执行」的闭环系统，而非单一工具调用
+- Agent 的可靠性取决于 Harness（工程化框架），而非单纯的 Prompt 优化
+- 好的 Agent 设计是在「灵活性」与「可控性」之间找到平衡
+
+---
+
+### 运行机制
+
+```mermaid
+flowchart LR
+    A[感知 Environment] --> B[推理 Reasoning]
+    B --> C[规划 Planning]
+    C --> D[执行 Action]
+    D --> A
+    B --> E[工具调用 Tools]
+    E --> D
+
+    style A fill:#e1f5fe
+    style B fill:#fff3e0
+    style C fill:#e8f5e9
+    style D fill:#fce4ec
+```
+
+#### 核心能力
+
+| 能力 | 说明 |
+|:---|:---|
+| **感知 (Perception)** | 理解输入、环境状态、上下文 |
+| **推理 (Reasoning)** | 分析问题、制定策略 |
+| **规划 (Planning)** | 分解任务、设计执行步骤 |
+| **执行 (Action)** | 调用工具、生成输出 |
+| **学习 (Learning)** | 从反馈中调整策略（可选） |
+
+---
+
+### Agent vs 相关概念
+
+| 维度       | [[Agent]]  | [[提示词工程\|Prompt Engineering]] | 传统软件    |
+|:------- |:--------- |:---------------------------- |:------ |
+| **执行模式** | 自主决策循环     | 一次性输入输出                       | 预定义逻辑   |
+| **核心特点** | 主动性、适应性    | 引导模型输出                        | 确定性     |
+| **工程重点** | Harness 设计 | Prompt 优化                     | 流程控制    |
+| **适用场景** | 复杂多步骤任务    | 单一任务、生成                       | 规则明确的任务 |
+
+---
+
+### Agent 的架构层次
+
+```mermaid
+flowchart TB
+    A[用户需求] --> B[Harness 框架]
+    B --> C[Prompt Engineering]
+    C --> D[LLM / Base Model]
+    D --> E[工具 Tools]
+    E --> F[执行结果]
+
+    subgraph 可靠性来源
+        G[输入契约] --> B
+        H[输出契约] --> B
+        I[错误处理] --> B
+        J[评估标准] --> B
+    end
+```
+
+- [[提示词工程|Prompt Engineering]] — 优化模型能力表达
+- [[Harness]] — 优化工程可靠性（输入/输出契约、错误处理）
+- LLM — 提供推理能力
+
+---
+
+### 分类
 
 **按智能程度分类**：
 - 简单反射智能体
@@ -36,51 +105,43 @@ zettel: permanent
 - 物理智能体（机器人、自动驾驶）
 - 混合智能体（软硬件结合）
 
-## 应用
+---
 
-- **聊天机器人**：客户服务、信息查询
-- **推荐系统**：个性化内容推荐
-- **游戏 AI**：NPC 行为控制
-- **自动驾驶**：环境感知和决策
-- **智能家居**：设备控制和优化
-- **金融交易**：自动化交易策略
+### 应用场景
 
-## 优缺点
+- ✅ **复杂工作流自动化**：多步骤任务、跨系统操作
+- ✅ **智能助手**：[[Claude Code]]、[Siri/Alexa](语音助手)
+- ✅ **自动驾驶**：Tesla Autopilot
+- ✅ **游戏 AI**：AlphaGo、NPC 行为控制
+- ⛔ **简单确定性任务**：传统程序更高效
 
-- **优点**:
-	- 提高效率和自动化程度
-	- 能够处理复杂环境
-	- 可扩展性和并行处理能力
-- **缺点**:
-	- 开发和训练成本较高
-	- 可能存在不可预测的行为
-	- 需要大量数据和计算资源
-- **对比/区别**:
-	- 与传统程序的区别在于自主性和适应性
-	- 与专家的区别在于可复制性和规模化能力
+---
 
-## 相关概念
+### 知识图谱
 
-- **多智能体系统**：多个智能体协同工作的系统
-- **强化学习**：智能体通过试错学习最优策略的方法
-- **感知 - 决策 - 执行循环**：智能体的基本工作模式
+- **父级概念**：[[人工智能]] — Agent 是 AI 的重要分支
+- **子级概念**：
+	- [[Harness]] — Agent 工程化框架
+	- [[智能体编排]] — 多个 Agent 协作
+- **并列概念**：
+	- [[提示词工程|Prompt Engineering]] — 优化模型输出
+	- [[RAG]] — 检索增强生成
+- **相关领域**：
+	- [[强化学习]] — Agent 的学习方法论
+	- [[Claude Code]] — Agent 的具体实现
 
-## 案例
+---
 
-- 在 Claude Code 中创建智能体
-- **AlphaGo**：围棋游戏智能体
-- **Siri/Alexa**：语音助手智能体
-- **特斯拉 Autopilot**：自动驾驶智能体
-- **推荐算法**：电商平台个性化推荐智能体
+### 常见问题
 
-## 问答卡片
+- ⛔ **过度依赖 Agent**：忽视可靠性验证和错误处理
+- ⛔ **Prompt vs Harness 失衡**：只优化 Prompt 而忽视工程约束
+- ⛔ **缺乏评估标准**：无法量化 Agent 质量就无法迭代
 
-- Q1：智能体的核心能力是什么？
-- A：感知环境、自主决策、执行行动、学习适应
-- Q2：智能体与传统程序的主要区别？
-- A：智能体具有自主性和适应性，而传统程序是预定义执行的
+---
 
-## 参考资料
+### 参考延伸
 
-- Russell, S., & Norvig, P. Artificial Intelligence: A Modern Approach
-- Wooldridge, M. An Introduction to MultiAgent Systems
+- Russell, S., & Norvig, P. *Artificial Intelligence: A Modern Approach*
+- Wooldridge, M. *An Introduction to MultiAgent Systems*
+- [Anthropic - Building Effective Agents](https://docs.anthropic.com/)

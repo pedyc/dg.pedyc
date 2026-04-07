@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-Zettelkasten/浏览器合成渲染树后进行布局和绘制.md",
+                "file": "_templates/template_concept.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "浏览器合成渲染树后进行布局和绘制"
+              "title": "template_concept"
             }
           },
           {
-            "id": "e416ab0b25204149",
+            "id": "2369ac9ae0d1d8bb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-前端/前端性能优化.md",
+                "file": "40-RESOURCES/Inbox/Vibe Coding Is Dead. Here’s What Replaced It.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端性能优化"
+              "title": "Vibe Coding Is Dead. Here’s What Replaced It"
             }
           },
           {
-            "id": "2d3113c371365215",
+            "id": "9e4dc818ea8c0ac9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/移动端 1px 问题如何解决？.md",
+                "file": "20-AREAS/A-前端/Vue.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,10 +76,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "移动端 1px 问题如何解决？"
+              "title": "Vue"
+            }
+          },
+          {
+            "id": "cc81937d7169ae2d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40-RESOURCES/E2E.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "E2E"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -119,7 +144,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-Zettelkasten/浏览器合成渲染树后进行布局和绘制.md",
+                "file": "20-AREAS/A-前端/Vue.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -142,12 +167,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.8792582687471956,
+                  "scale": 0.8792582687471958,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "浏览器合成渲染树后进行布局和绘制 的关系图"
+              "title": "Vue 的关系图"
             }
           },
           {
@@ -156,13 +181,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20-AREAS/A-前端/前端性能优化.md",
+                "file": "20-AREAS/A-前端/前端工程化.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "前端性能优化 的大纲"
+              "title": "前端工程化 的大纲"
             }
           }
         ]
@@ -238,7 +263,8 @@
               "title": "添加笔记属性"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -296,7 +322,7 @@
             }
           },
           {
-            "id": "02d23b460528696f",
+            "id": "09edd99624caf564",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -337,54 +363,54 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "42a4bd166593c69f",
+  "active": "9e4dc818ea8c0ac9",
   "lastOpenFiles": [
-    "30-Zettelkasten/浏览器通过事件循环机制处理异步任务.md",
-    "30-Zettelkasten/浏览器合成渲染树后进行布局和绘制.md",
-    "90-DIARY/2026-03-28.md",
-    "50-ARCHIVE/P-学习Obsidian CLI、Skills.md",
-    "10-PROJECTS/P-构建PKM系统.md",
-    "10-PROJECTS/P-求职前端岗位/P-后端能力提升专项.md",
-    "90-DIARY/2026-03-27.md",
-    "90-DIARY/2026-03-26.md",
-    "90-DIARY/2026-03-25.md",
-    "90-DIARY/2026-03-24.md",
-    "90-DIARY/2026-03-23.md",
-    "40-RESOURCES/Block管理.md",
+    "20-AREAS/A-前端/A-ThreeJS.md",
+    "20-AREAS/A-前端/前端开发.md",
+    "20-AREAS/A-前端/前端交互.md",
     "_templates/template_area.md",
-    "40-RESOURCES/移动端 1px 问题如何解决？.md",
-    "40-RESOURCES/按位异或.md",
-    "CLAUDE.md",
-    "20-AREAS/A-前端/React.md",
     "20-AREAS/A-前端/Vue.md",
-    "00-META/02 附录/META-模板系统.md",
-    "00-META/本库指南.md",
-    "00-META/02 附录/Q-怎样规划信息单元？.md",
-    "00-META/02 附录/Q-怎样控制信息冗余？.md",
-    "99-ASSETS/Anki/Anki-浏览器和网络.txt",
+    "20-AREAS/A-前端/React.md",
+    "20-AREAS/A-前端/CSS.md",
+    "40-RESOURCES/ThreeJS.md",
+    "40-RESOURCES/Web动画.md",
+    "40-RESOURCES/奥卡姆剃刀.md",
+    "40-RESOURCES/收敛思维.md",
+    "40-RESOURCES/Q-如何识别系统中的增强回路和调节回路.md",
+    "40-RESOURCES/系统思维.md",
+    "40-RESOURCES/批判性思维.md",
+    "40-RESOURCES/知识论.md",
+    "40-RESOURCES/发散思维.md",
+    "40-RESOURCES/SOP-视觉工具选择矩阵.md",
+    "40-RESOURCES/稀缺性.md",
+    "40-RESOURCES/稀缺性.md",
+    "40-RESOURCES/线性思维（Linear Thinking）.md",
+    "40-RESOURCES/系统思维（Systems Thinking）.md",
+    "40-RESOURCES/线性思维.md",
+    "40-RESOURCES/设计思维.md",
+    "40-RESOURCES/SOP-使用Claude-Code开发React组件.md",
+    "40-RESOURCES/SOP-如何在WSL中配置并运行自定义systemd服务？.md",
+    "40-RESOURCES/SOP-实现磁吸式光标.md",
+    "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/d8e14c7c273c3de0e30979b4b6f9dcff_MD5.jpg",
+    "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/d09012f06cb371d6d38e666b42eb591a_MD5.jpg",
+    "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/bb117410e57bb43f14b68e1e09db6570_MD5.jpg",
+    "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/8512922b8b8958912b507e783ba0857d_MD5.jpg",
+    "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/be32e7804e1d0a7b03dce1d1162903a1_MD5.jpg",
+    "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/af9dea2bc29ba0596fb41eff7820b913_MD5.webp",
+    "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It",
+    "99-ASSETS/演示/演示.html",
+    "99-ASSETS/演示/磁力光标.html",
+    "99-ASSETS/演示/新建 文本文档.txt",
+    "99-ASSETS/演示",
+    "99-ASSETS/Anki/Anki-性能优化专项.txt",
+    "99-ASSETS/Anki/Anki-设计模式和算法.txt",
+    "99-ASSETS/Anki/Anki-工程化与构建.txt",
+    "99-ASSETS/Anki/Anki-Typescript专项.txt",
     "99-ASSETS/Anki/新建 文本文档.txt",
-    "99-ASSETS/Anki/Anki-Vue框架.txt",
-    "99-ASSETS/Anki/Anki-Javascript核心 - 副本.txt",
-    "99-ASSETS/Anki/未命名.md",
-    "99-ASSETS/Anki/Anki-Javascript核心.txt",
-    "99-ASSETS/Anki",
-    "40-RESOURCES/深拷贝和浅拷贝.md",
-    "50-ARCHIVE/自定义光标开发记录.md",
-    "40-RESOURCES/T-will-change.md",
-    "someInterestingQuestions01",
-    "vueSourceCodeStudy01",
-    "40-RESOURCES/CSS.md.tmp.108243.1774372424243",
     "30-ZETTELKASTEN/_resources/提示词Prompt.png",
     "30-ZETTELKASTEN/_resources/常用视觉工具.excalidraw.svg",
     "30-ZETTELKASTEN/_resources/常用思维方式.excalidraw.svg",
     "30-ZETTELKASTEN/_resources/思维分类及视觉工具.excalidraw.svg",
-    "20-AREAS/A-知识管理/_resources/知识管理工作流.excalidraw.svg",
-    "20-AREAS/A-知识管理/_resources/draw_PKM_methods.svg",
-    "20-AREAS/A-知识管理/_resources/draw_knowledge_atomization.svg",
-    "99-ASSETS/Excalidraw/金融分析框架.excalidraw.svg",
-    "99-ASSETS/Excalidraw/Drawing 2025-10-01 11.21.21.excalidraw.svg",
-    "99-ASSETS/Excalidraw/PARA和知识管理工作流.excalidraw.svg",
-    "20-AREAS/A-哲学",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

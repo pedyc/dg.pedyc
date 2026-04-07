@@ -35,7 +35,7 @@ allowed-tools: Glob,Read,Grep,WebSearch,Edit
 
 | content-type | 知识网络章节 | 检查重点 |
 |:---|:---|:---|
-| area | 关键领域 | 核心概念覆盖 |
+| area | 领域知识图谱 | 父级领域→子概念→并列/相关领域 |
 | concept | 知识图谱 | 核心命题→关联概念 |
 | term | 知识网络 | 术语定义 |
 | atomic | 关联 | 观点→论据 |
@@ -49,8 +49,8 @@ allowed-tools: Glob,Read,Grep,WebSearch,Edit
 
 | content-type | 必要章节 |
 |:---|:---|
-| area | 领域定义、长期目标、关键领域、知识网络、FAQ、领域健康度 |
-| concept | 核心命题、运行机制、应用场景、知识图谱、参考延伸 |
+| area | 领域知识图谱、领域定义、长期目标、关键领域、标准流程、FAQ、领域健康度 |
+| concept | 核心命题、运行机制、应用场景、知识图谱、FAQ、参考延伸 |
 | term | 定义、核心特点、应用、相关概念 |
 | moc | 分类链接列表（灵活结构，不强制章节） |
 | atomic | 定义、论据/示例 |

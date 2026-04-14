@@ -11,24 +11,12 @@
             "id": "9e4dc818ea8c0ac9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "40-RESOURCES/React版本演进.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "99-ASSETS/Excalidraw/React版本演进.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "React版本演进"
+              "icon": "excalidraw-icon",
+              "title": "React版本演进.excalidraw"
             }
           },
           {
@@ -95,7 +83,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/React版本演进.md",
+                "file": "99-ASSETS/Excalidraw/React版本演进.excalidraw.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -123,7 +111,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "React版本演进 的关系图"
+              "title": "React版本演进.excalidraw 的关系图"
             }
           },
           {
@@ -326,10 +314,15 @@
   },
   "active": "9e4dc818ea8c0ac9",
   "lastOpenFiles": [
-    "_templates/template_roadmap.md",
     "40-RESOURCES/React版本演进.md",
+    "99-ASSETS/Excalidraw/React版本演进.excalidraw.md",
     "20-AREAS/A-前端/React.md",
     "_templates/template_area.md",
+    "99-ASSETS/Excalidraw/React版本演进.excalidraw.svg",
+    "40-RESOURCES/React版本演进.md.tmp.168740.1776165545701",
+    "40-RESOURCES/React版本演进.md.tmp.168740.1776165529095",
+    "40-RESOURCES/React版本演进.md.tmp.168740.1776165513744",
+    "_templates/template_roadmap.md",
     "40-RESOURCES/React 组件之间有哪些通信方式？适用于哪些场景？.md",
     "20-AREAS/A-前端/Vue.md",
     "40-RESOURCES/MOC-Vue 面试题.md",
@@ -352,8 +345,6 @@
     "40-RESOURCES/SOP-微前端WebComponents封装.md",
     "40-RESOURCES/SOP-微前端沙箱隔离.md",
     "40-RESOURCES/SOP-微前端ModuleFederation方案.md",
-    "40-RESOURCES/SOP-微前端路由分发模式.md",
-    "40-RESOURCES/SOP-ThreeJS实现光影滤镜.md",
     "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果/e655c36112b327b457605e6ccaf06d92_MD5.gif",
     "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果",
     "40-RESOURCES/_resources/Pasted image 20260412182101.png",
@@ -367,11 +358,7 @@
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It",
     "99-ASSETS/演示/演示.html",
     "99-ASSETS/演示/磁力光标.html",
-    "99-ASSETS/演示",
-    "99-ASSETS/Anki/Anki-性能优化专项.txt",
-    "99-ASSETS/Anki/Anki-设计模式和算法.txt",
     "30-ZETTELKASTEN/_resources/提示词Prompt.png",
-    "30-ZETTELKASTEN/_resources/常用视觉工具.excalidraw.svg",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

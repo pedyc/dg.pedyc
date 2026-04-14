@@ -69,7 +69,7 @@ mindmap
 - **核心概念**
 	- [[React版本演进]] — 各版本核心差异与演进路线
 	- [[虚拟DOM(React)]] — Virtual DOM 的原理与 Diff 算法
-	- [[Fiber架构(React)]] — React 16+ 的协调引擎
+	- [[Fiber架构]] — React 16+ 的协调引擎
 	- [[Hooks (React)]] — useState / useEffect / useRef 等
 	- [[useCallback]] — 函数引用缓存
 	- [[useMemo]] — 计算结果缓存

@@ -6,7 +6,8 @@
       "Bash(npm run type-check)",
       "Skill(obsidian-note)",
       "Bash(ls:*)",
-      "Skill(content-verifier)"
+      "Skill(content-verifier)",
+      "mcp__MiniMax__web_search"
     ]
   }
 }

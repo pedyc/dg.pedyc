@@ -23,10 +23,10 @@ content-type: concept
 	写作节奏：
 	- 先写核心定义（What）
 	- 再写核心命题（Why/How）- 引用 atomic 观点
-	- 最后写应用场景（When/Where）和 SOP（How to do）
+	- 最后写应用场景（When/Where）和 SOP（How to do）和FAQ（What's the problem）
 
 	章节顺序：
-	概念定义 → 核心命题 → 运行机制 → 关键区别 → 应用场景 → SOP → 知识图谱 → FAQ → 参考延伸
+	概念定义 → 核心命题 → 运行机制 → 关键区别 → 应用场景（包含SOP和FAQ）  → 知识图谱 → 参考延伸
 -->
 
 ## 概念：{{概念名称}}

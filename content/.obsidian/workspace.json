@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9e4dc818ea8c0ac9",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "99-ASSETS/Excalidraw/React版本演进.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "React版本演进.excalidraw"
-            }
-          },
-          {
             "id": "34f83448f171246c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_templates/template_area.md",
+                "file": "40-RESOURCES/Fiber架构(React).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -40,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "template_area"
+              "title": "Fiber架构(React)"
             }
           }
         ]
@@ -83,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "99-ASSETS/Excalidraw/React版本演进.excalidraw.md",
+                "file": "40-RESOURCES/Fiber架构(React).md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -111,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "React版本演进.excalidraw 的关系图"
+              "title": "Fiber架构(React) 的关系图"
             }
           },
           {
@@ -312,12 +300,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9e4dc818ea8c0ac9",
+  "active": "34f83448f171246c",
   "lastOpenFiles": [
+    "_templates/template_concept.md",
+    "40-RESOURCES/Fiber架构(React).md",
     "40-RESOURCES/React版本演进.md",
     "99-ASSETS/Excalidraw/React版本演进.excalidraw.md",
-    "20-AREAS/A-前端/React.md",
     "_templates/template_area.md",
+    "99-ASSETS/Excalidraw/问题拆解流程.excalidraw.md",
+    "99-ASSETS/Excalidraw/问题拆解流程.excalidraw.svg",
+    "40-RESOURCES/_resources/React版本演进",
+    "20-AREAS/A-前端/React.md",
     "99-ASSETS/Excalidraw/React版本演进.excalidraw.svg",
     "40-RESOURCES/React版本演进.md.tmp.168740.1776165545701",
     "40-RESOURCES/React版本演进.md.tmp.168740.1776165529095",
@@ -330,7 +323,6 @@
     "40-RESOURCES/SOP-使用Claude-Code开发React组件.md",
     "20-AREAS/A-前端/ThreeJS.md",
     "40-RESOURCES/SOP-ThreeJS实现3D视差滚动.md",
-    "_templates/template_concept.md",
     "40-RESOURCES/Inbox/Vibe Coding Is Dead. Here’s What Replaced It.md",
     "20-AREAS/A-知识管理/知识内化.md",
     "_templates/template_sop.md",
@@ -344,7 +336,6 @@
     "40-RESOURCES/Q-何时选微前端vsMonorepo.md",
     "40-RESOURCES/SOP-微前端WebComponents封装.md",
     "40-RESOURCES/SOP-微前端沙箱隔离.md",
-    "40-RESOURCES/SOP-微前端ModuleFederation方案.md",
     "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果/e655c36112b327b457605e6ccaf06d92_MD5.gif",
     "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果",
     "40-RESOURCES/_resources/Pasted image 20260412182101.png",
@@ -357,8 +348,6 @@
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/af9dea2bc29ba0596fb41eff7820b913_MD5.webp",
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It",
     "99-ASSETS/演示/演示.html",
-    "99-ASSETS/演示/磁力光标.html",
-    "30-ZETTELKASTEN/_resources/提示词Prompt.png",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

@@ -8,31 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "42a4bd166593c69f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_templates/template_concept.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "template_concept"
-            }
-          },
-          {
-            "id": "2369ac9ae0d1d8bb",
+            "id": "9e4dc818ea8c0ac9",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -56,12 +32,12 @@
             }
           },
           {
-            "id": "9e4dc818ea8c0ac9",
+            "id": "34f83448f171246c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-前端/Vue.md",
+                "file": "_templates/template_concept.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,35 +52,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Vue"
-            }
-          },
-          {
-            "id": "cc81937d7169ae2d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/E2E.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "E2E"
+              "title": "template_concept"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -144,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-前端/Vue.md",
+                "file": "40-RESOURCES/Inbox/Vibe Coding Is Dead. Here’s What Replaced It.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -167,12 +118,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.8792582687471958,
+                  "scale": 0.44733309471897786,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Vue 的关系图"
+              "title": "Vibe Coding Is Dead. Here’s What Replaced It 的关系图"
             }
           },
           {
@@ -181,13 +132,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20-AREAS/A-前端/前端工程化.md",
+                "file": "40-RESOURCES/SOP-在React中实现ASCII动画.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "前端工程化 的大纲"
+              "title": "SOP-在React中实现ASCII动画 的大纲"
             }
           }
         ]
@@ -223,7 +174,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#算法  ",
+                "query": "marquee",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -263,12 +214,12 @@
               "title": "添加笔记属性"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 323.5,
+    "collapsed": true
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -342,7 +293,6 @@
   "left-ribbon": {
     "hiddenItems": {
       "bases:新建数据库": false,
-      "cmdr:堆叠/取消堆叠标签页": false,
       "copilot:Open Copilot Chat": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
       "obsidian-local-images-plus:Local Images Plus  0.16.4\r\nLocalize attachments (plugin folder)": false,
@@ -360,37 +310,45 @@
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "mermaid-tools:Open Mermaid Toolbar": false,
       "random-note:开始漫游笔记": false,
-      "omnisearch:Omnisearch": false
+      "omnisearch:Omnisearch": false,
+      "cmdr:堆叠/取消堆叠标签页": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "9e4dc818ea8c0ac9",
   "lastOpenFiles": [
-    "20-AREAS/A-前端/A-ThreeJS.md",
-    "20-AREAS/A-前端/前端开发.md",
-    "20-AREAS/A-前端/前端交互.md",
-    "_templates/template_area.md",
-    "20-AREAS/A-前端/Vue.md",
-    "20-AREAS/A-前端/React.md",
-    "20-AREAS/A-前端/CSS.md",
+    "20-AREAS/A-知识管理/知识内化.md",
+    "40-RESOURCES/SOP-使用ThreeJS实现3D视差滚动.md",
+    "_templates/template_sop.md",
     "40-RESOURCES/ThreeJS.md",
-    "40-RESOURCES/Web动画.md",
-    "40-RESOURCES/奥卡姆剃刀.md",
-    "40-RESOURCES/收敛思维.md",
-    "40-RESOURCES/Q-如何识别系统中的增强回路和调节回路.md",
-    "40-RESOURCES/系统思维.md",
-    "40-RESOURCES/批判性思维.md",
-    "40-RESOURCES/知识论.md",
-    "40-RESOURCES/发散思维.md",
-    "40-RESOURCES/SOP-视觉工具选择矩阵.md",
-    "40-RESOURCES/稀缺性.md",
-    "40-RESOURCES/稀缺性.md",
-    "40-RESOURCES/线性思维（Linear Thinking）.md",
-    "40-RESOURCES/系统思维（Systems Thinking）.md",
-    "40-RESOURCES/线性思维.md",
-    "40-RESOURCES/设计思维.md",
-    "40-RESOURCES/SOP-使用Claude-Code开发React组件.md",
-    "40-RESOURCES/SOP-如何在WSL中配置并运行自定义systemd服务？.md",
-    "40-RESOURCES/SOP-实现磁吸式光标.md",
+    "40-RESOURCES/SOP-ThreeJS实现平面凹凸效果.md",
+    "99-ASSETS/演示/平面凹凸效果.html",
+    "99-ASSETS/演示/新建 文本文档.txt",
+    "40-RESOURCES/SOP-ThreeJS实现气泡粒子.md",
+    "40-RESOURCES/微前端.md",
+    "40-RESOURCES/Q-qiankun和ModuleFederation怎么选.md",
+    "40-RESOURCES/Q-微前端vsMonorepo性能对比.md",
+    "40-RESOURCES/Q-何时选微前端vsMonorepo.md",
+    "_templates/template_concept.md",
+    "40-RESOURCES/SOP-微前端WebComponents封装.md",
+    "40-RESOURCES/SOP-微前端沙箱隔离.md",
+    "40-RESOURCES/SOP-微前端ModuleFederation方案.md",
+    "40-RESOURCES/SOP-微前端路由分发模式.md",
+    "20-AREAS/A-前端/前端开发.md",
+    "40-RESOURCES/SOP-ThreeJS实现光影滤镜.md",
+    "20-AREAS/A-知识管理/A-知识管理.md",
+    "20-AREAS/A-知识管理/知识组织.md",
+    "20-AREAS/A-知识管理/知识获取.md",
+    "20-AREAS/A-知识管理/知识分享.md",
+    "20-AREAS/A-知识管理/视觉思维.md",
+    "20-AREAS/A-知识管理/经过验证的高信噪比信源.md",
+    "40-RESOURCES/Canvas动画.md",
+    "40-RESOURCES/SOP-使用Canvas实现网页无限滑动效果.md",
+    "40-RESOURCES/Inbox/Vibe Coding Is Dead. Here’s What Replaced It.md",
+    "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果/e655c36112b327b457605e6ccaf06d92_MD5.gif",
+    "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果",
+    "40-RESOURCES/_resources/Pasted image 20260412182101.png",
+    "_templates/_resources",
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/d8e14c7c273c3de0e30979b4b6f9dcff_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/d09012f06cb371d6d38e666b42eb591a_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/bb117410e57bb43f14b68e1e09db6570_MD5.jpg",
@@ -400,17 +358,11 @@
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It",
     "99-ASSETS/演示/演示.html",
     "99-ASSETS/演示/磁力光标.html",
-    "99-ASSETS/演示/新建 文本文档.txt",
     "99-ASSETS/演示",
     "99-ASSETS/Anki/Anki-性能优化专项.txt",
     "99-ASSETS/Anki/Anki-设计模式和算法.txt",
-    "99-ASSETS/Anki/Anki-工程化与构建.txt",
-    "99-ASSETS/Anki/Anki-Typescript专项.txt",
-    "99-ASSETS/Anki/新建 文本文档.txt",
     "30-ZETTELKASTEN/_resources/提示词Prompt.png",
     "30-ZETTELKASTEN/_resources/常用视觉工具.excalidraw.svg",
-    "30-ZETTELKASTEN/_resources/常用思维方式.excalidraw.svg",
-    "30-ZETTELKASTEN/_resources/思维分类及视觉工具.excalidraw.svg",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

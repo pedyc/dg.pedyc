@@ -5,7 +5,7 @@ aliases: [Three.js, three.js, C-ThreeJS]
 description: WebGL 3D 图形库，用于在浏览器中创建和展示 3D 图形
 tags: [前端开发/图形]
 date-created: 2026-03-20
-date-modified: 2026-04-07
+date-modified: 2026-04-14
 status: cultivating
 content-type: concept
 ---
@@ -64,7 +64,24 @@ flowchart TB
 	- **交互体验**：3D 官网、 Landing Page
 - ⛔ **误用**
 	- **2D 场景**：使用 Canvas 2D 即可
-	- **极致性能需求**：可能需要原生 WebG
+	- **极致性能需求**：可能需要原生 WebGLL
+
+#### SOP
+
+- [[SOP-使用ThreeJS实现3D视差滚动]]
+- [[SOP-ThreeJS实现气泡粒子]]
+- [[SOP-ThreeJS实现光影滤镜]]
+- [[SOP-ThreeJS实现平面凹凸效果]]
+- [[SOP-ThreeJS实现液体交汇]]
+
+#### FAQ
+
+- **Q：Three.js 和 Babylon.js 怎么选？**
+	- Three.js 更广泛、社区活跃、示例丰富；Babylon.js 更完整、文档更好、内置功能更多。快速原型选 Three.js，企业级应用可考虑 Babylon.js
+- **Q：Three.js 能做移动端吗？**
+	- 可以，但需要注意性能。移动端 WebGL 性能有限，建议减少多边形数量、压缩纹理、限制 draw call，必要时使用低功耗渲染模式
+- **Q：Three.js 的性能瓶颈在哪里？**
+	- 主要是 draw call 数量（ meshes 数量）、纹理内存、以及复杂着色器的 GPU 计算。使用 InstancedMesh、合并几何体、延迟渲染等技术优化
 
 ---
 

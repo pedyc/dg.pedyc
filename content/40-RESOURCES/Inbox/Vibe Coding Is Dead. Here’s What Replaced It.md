@@ -4,14 +4,13 @@ author: ["[[Ayesha Mughal]]"]
 description: Vibe Coding Is Dead. Here’s What Replaced It. Exactly one year ago, Andrej Karpathy posted a tweet.“There’s a new kind of coding I call ‘vibe coding’, where you fully give in to the vibes …
 tags: [clippings]
 date-created: 2026-04-07
-date-modified: 2026-04-07
+date-modified: 2026-04-14
 content-type: [article]
 created: 2026-04-07
 published: 2026-03-16
 source: https://ai.plainenglish.io/vibe-coding-is-dead-heres-what-replaced-it-aa7d2889b05a
 ---
 
-New AI, ML and Data Science articles every day. Follow to join our 3.5M+ monthly readers.
 
 ![[40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/af9dea2bc29ba0596fb41eff7820b913_MD5.webp]]
 

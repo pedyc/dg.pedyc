@@ -3,7 +3,7 @@ title: SOP-怎样架构混合型知识库
 aliases: [我的PKM架构, 混合型知识管理体系]
 tags: [concept, pkm, system-architecture, methodology]
 date-created: 2025-12-17
-date-modified: 2026-03-21
+date-modified: 2026-04-09
 status: cultivating
 content-type: sop
 type: concept

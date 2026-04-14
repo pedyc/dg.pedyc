@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Inbox/Vibe Coding Is Dead. Here’s What Replaced It.md",
+                "file": "40-RESOURCES/React版本演进.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Vibe Coding Is Dead. Here’s What Replaced It"
+              "title": "React版本演进"
             }
           },
           {
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_templates/template_concept.md",
+                "file": "_templates/template_area.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "template_concept"
+              "title": "template_area"
             }
           }
         ]
@@ -95,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Inbox/Vibe Coding Is Dead. Here’s What Replaced It.md",
+                "file": "40-RESOURCES/React版本演进.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -123,7 +123,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Vibe Coding Is Dead. Here’s What Replaced It 的关系图"
+              "title": "React版本演进 的关系图"
             }
           },
           {
@@ -218,8 +218,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5,
-    "collapsed": true
+    "width": 323.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -281,9 +280,19 @@
               "icon": "trident-custom",
               "title": "Mermaid Toolbar"
             }
+          },
+          {
+            "id": "29313616ae432795",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {},
+              "icon": "history",
+              "title": "History"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -317,10 +326,21 @@
   },
   "active": "9e4dc818ea8c0ac9",
   "lastOpenFiles": [
+    "_templates/template_roadmap.md",
+    "40-RESOURCES/React版本演进.md",
+    "20-AREAS/A-前端/React.md",
+    "_templates/template_area.md",
+    "40-RESOURCES/React 组件之间有哪些通信方式？适用于哪些场景？.md",
+    "20-AREAS/A-前端/Vue.md",
+    "40-RESOURCES/MOC-Vue 面试题.md",
+    "20-AREAS/A-前端/前端开发.md",
+    "40-RESOURCES/SOP-使用Claude-Code开发React组件.md",
+    "20-AREAS/A-前端/ThreeJS.md",
+    "40-RESOURCES/SOP-ThreeJS实现3D视差滚动.md",
+    "_templates/template_concept.md",
+    "40-RESOURCES/Inbox/Vibe Coding Is Dead. Here’s What Replaced It.md",
     "20-AREAS/A-知识管理/知识内化.md",
-    "40-RESOURCES/SOP-使用ThreeJS实现3D视差滚动.md",
     "_templates/template_sop.md",
-    "40-RESOURCES/ThreeJS.md",
     "40-RESOURCES/SOP-ThreeJS实现平面凹凸效果.md",
     "99-ASSETS/演示/平面凹凸效果.html",
     "99-ASSETS/演示/新建 文本文档.txt",
@@ -329,22 +349,11 @@
     "40-RESOURCES/Q-qiankun和ModuleFederation怎么选.md",
     "40-RESOURCES/Q-微前端vsMonorepo性能对比.md",
     "40-RESOURCES/Q-何时选微前端vsMonorepo.md",
-    "_templates/template_concept.md",
     "40-RESOURCES/SOP-微前端WebComponents封装.md",
     "40-RESOURCES/SOP-微前端沙箱隔离.md",
     "40-RESOURCES/SOP-微前端ModuleFederation方案.md",
     "40-RESOURCES/SOP-微前端路由分发模式.md",
-    "20-AREAS/A-前端/前端开发.md",
     "40-RESOURCES/SOP-ThreeJS实现光影滤镜.md",
-    "20-AREAS/A-知识管理/A-知识管理.md",
-    "20-AREAS/A-知识管理/知识组织.md",
-    "20-AREAS/A-知识管理/知识获取.md",
-    "20-AREAS/A-知识管理/知识分享.md",
-    "20-AREAS/A-知识管理/视觉思维.md",
-    "20-AREAS/A-知识管理/经过验证的高信噪比信源.md",
-    "40-RESOURCES/Canvas动画.md",
-    "40-RESOURCES/SOP-使用Canvas实现网页无限滑动效果.md",
-    "40-RESOURCES/Inbox/Vibe Coding Is Dead. Here’s What Replaced It.md",
     "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果/e655c36112b327b457605e6ccaf06d92_MD5.gif",
     "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果",
     "40-RESOURCES/_resources/Pasted image 20260412182101.png",

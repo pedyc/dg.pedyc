@@ -50,27 +50,9 @@
       "color": "#22d889"
     },
     {
-      "id": "excalibrain:excalibrain-start",
-      "icon": "lucide-paw-print",
-      "name": "ExcaliBrain: ExcaliBrain Normal",
-      "mode": "any"
-    },
-    {
-      "id": "calendar:show-calendar-view",
-      "icon": "lucide-calendar-days",
-      "name": "Calendar: Open view",
-      "mode": "any"
-    },
-    {
       "id": "obsidian-minimal-settings:toggle-minimal-switch",
       "icon": "lucide-sun",
       "name": "Minimal Theme Settings: Switch between light and dark mode",
-      "mode": "any"
-    },
-    {
-      "id": "graph:open-local",
-      "icon": "lucide-git-fork",
-      "name": "关系图谱: 打开局部关系图",
       "mode": "any"
     },
     {

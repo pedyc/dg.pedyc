@@ -5,10 +5,10 @@ aliases: ["A-{{领域名称}}"]
 description: "{ 一句话定义这个领域的核心范畴 }"
 tags: [area]
 date-created: Invalid date
-date-modified: 2026-03-30
+date-modified: 2026-04-14
 status: cultivating
-up: ["[[{父级笔记}]]"]
 content-type: area
+up: ["[[{父级笔记}]]"]
 ---
 
 <!--
@@ -76,12 +76,12 @@ mindmap
 
 ### 关键领域
 
-> 该领域的核心知识主题（链接 Concept 或子领域 Area）
+> 该领域的核心知识主题（链接 Concept 或子领域 Area，可以指向空链接）
 
-- **{{主题1}}**
+- **{{主题 1}}**
 	- [[{{概念1}}]] — {{描述}}
 	- [[{{概念2}}]] — {{描述}}
-- **{{主题2}}**
+- **{{主题 2}}**
 	- [[{{概念3}}]] — {{描述}}
 	- [[{{概念4}}]] — {{描述}}
 

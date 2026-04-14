@@ -11,7 +11,6 @@ published: 2026-03-16
 source: https://ai.plainenglish.io/vibe-coding-is-dead-heres-what-replaced-it-aa7d2889b05a
 ---
 
-
 ![[40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/af9dea2bc29ba0596fb41eff7820b913_MD5.webp]]
 
 Exactly one year ago, Andrej Karpathy posted a tweet.*"There's a new kind of coding I call 'vibe coding', where you fully give in to the vibes, embrace exponentials, and forget that the code even exists."*

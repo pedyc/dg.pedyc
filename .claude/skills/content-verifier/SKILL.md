@@ -42,6 +42,7 @@ allowed-tools: Glob,Read,Grep,WebSearch,Edit
 | comparison | 关联 | 维度完整性 |
 | question | 关联 | 探索路径 |
 | sop | 关联 | 步骤完整性 |
+| roadmap | 阶段详情 | 版本/时间→核心变化→关键转折点 |
 
 ### Step 2: 模板完整性检查
 
@@ -59,6 +60,7 @@ allowed-tools: Glob,Read,Grep,WebSearch,Edit
 | sop | 适用场景、核心步骤、常见坑点、知识图谱 |
 | record | 时间线、背景、影响、引申 |
 | article | 引言、主体、总结、相关阅读 |
+| roadmap | 演进概览、阶段详情、关键转折点、未来展望、关联概念 |
 
 ### Step 3: 关键领域检查（仅 area）
 

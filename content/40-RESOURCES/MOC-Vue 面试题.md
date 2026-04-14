@@ -1,7 +1,7 @@
 ---
 title: MOC-Vue 面试题
 date-created: 2026-03-15
-date-modified: 2026-03-24
+date-modified: 2026-04-14
 ---
 
 ## MOC-Vue 面试题
@@ -104,7 +104,7 @@ date-modified: 2026-03-24
 
 ---
 
-### Diff算法
+### Diff 算法
 
 | 示例题目 | 关联笔记 |
 |:---|:---|

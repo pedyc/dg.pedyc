@@ -254,6 +254,6 @@ function animate() {
 
 - **父级概念**：[[ThreeJS]] — 本 SOP 是 Three.js 光照与后处理系统的应用
 - **关联 SOP**：
-	- [[SOP-使用ThreeJS实现3D视差滚动]] — Three.js 的动态场景应用
+	- [[SOP-ThreeJS实现3D视差滚动]] — Three.js 的动态场景应用
 	- [[SOP-使用Canvas实现网页无限滑动效果]] — Canvas 2D 渲染方案对比
 	- [[SOP-CSS实现文字横向滚动效果]] — CSS 动画方案对比

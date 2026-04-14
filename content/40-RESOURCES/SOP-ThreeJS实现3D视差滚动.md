@@ -1,11 +1,11 @@
 ---
 uid: 202604131000
-title: SOP-使用ThreeJS实现3D视差滚动
+title: SOP-ThreeJS实现3D视差滚动
 aliases: [SOP-使用ThreeJS实现3D视差滚动]
 description: 使用 Three.js 实现 3D 视差滚动效果的标准流程
 tags: [前端开发/动画, ThreeJS]
 date-created: 2026-04-13
-date-modified: 2026-04-13
+date-modified: 2026-04-14
 status: cultivating
 content-type: sop
 up: "[[ThreeJS]]"

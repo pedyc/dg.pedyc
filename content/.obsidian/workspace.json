@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Fiber架构(React).md",
+                "file": "40-RESOURCES/执行上下文.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Fiber架构(React)"
+              "title": "执行上下文"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Fiber架构(React).md",
+                "file": "40-RESOURCES/执行上下文.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Fiber架构(React) 的关系图"
+              "title": "执行上下文 的关系图"
             }
           },
           {
@@ -302,8 +302,8 @@
   },
   "active": "34f83448f171246c",
   "lastOpenFiles": [
-    "_templates/template_concept.md",
     "40-RESOURCES/Fiber架构(React).md",
+    "_templates/template_concept.md",
     "40-RESOURCES/React版本演进.md",
     "99-ASSETS/Excalidraw/React版本演进.excalidraw.md",
     "_templates/template_area.md",

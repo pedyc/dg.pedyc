@@ -5,7 +5,7 @@ aliases: [A-React, React.js, ReactJS]
 description: 用于构建用户界面的 JavaScript 库，采用组件化和 Virtual DOM
 tags: [前端开发/框架]
 date-created: 2025-05-21
-date-modified: 2026-04-14
+date-modified: 2026-04-15
 status: cultivating
 content-type: area
 up: ["[[前端开发]]"]
@@ -69,9 +69,9 @@ mindmap
 - **核心概念**
 	- [[React版本演进]] — 各版本核心差异与演进路线
 	- [[虚拟DOM(React)]] — Virtual DOM 的原理与 Diff 算法
-	- [[Fiber架构]] — React 16+ 的协调引擎
+	- [[Fiber架构(React)]] — React 16+ 的协调引擎
 	- [[Hooks (React)]] — useState / useEffect / useRef 等
-	- [[useCallback]] — 函数引用缓存
+	- [[useCallback]] — 回调函数缓存
 	- [[useMemo]] — 计算结果缓存
 	- [[React.memo]] — 组件级别的记忆化
 - **渲染机制**

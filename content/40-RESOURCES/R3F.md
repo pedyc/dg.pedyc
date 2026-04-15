@@ -5,10 +5,10 @@ aliases: [C-R3F, React Three Fiber]
 description: React 中使用 Three.js 的声明式组件化方案，将 3D 场景作为 React 组件树来管理
 tags: [concept, 前端, 3D图形]
 date-created: 2026-04-01
-date-modified: 2026-04-01
+date-modified: 2026-04-15
 status: cultivating
 content-type: concept
-related: ["[[ThreeJS]]", "[[WebGL]]", "[[前端交互]]"]
+related: ["[[ThreeJS]]", "[[WebGL]]", "[[前端交互]]", "[[React]]"]
 ---
 
 ## 概念：R3F
@@ -115,15 +115,15 @@ flowchart TB
 
 - **父级概念**：[[ThreeJS]] — R3F 是 Three.js 的 React 封装
 - **并列概念**：
-  - [[WebGL]] — 底层技术
-  - 原生 Three.js — 非 React 方案
+	- [[WebGL]] — 底层技术
+	- 原生 Three.js — 非 React 方案
 - **相关领域**：
-  - [[前端交互]] — R3F 是实现 3D 交互的技术
-  - [[着色器]] — 3D 视觉效果的核心
+	- [[前端交互]] — R3F 是实现 3D 交互的技术
+	- [[着色器]] — 3D 视觉效果的核心
 - **生态库**：
-  - **drei** — R3F 官方辅助库
-  - **react-three/postprocessing** — 后处理效果
-  - **@react-three/rapier** — 物理引擎
+	- **drei** — R3F 官方辅助库
+	- **react-three/postprocessing** — 后处理效果
+	- **@react-three/rapier** — 物理引擎
 
 ---
 

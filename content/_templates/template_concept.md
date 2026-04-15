@@ -1,10 +1,11 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
 title: template_concept
-aliases:
-  - C-{{概念名称}}
+aliases: ["C-概念名称"]
 description: "{ 一句话定义这个概念 }"
 tags: []
+date-created: 2026-04-08
+date-modified: 2026-04-15
 status: fleeting | cultivating | active | completed | archive
 content-type: concept
 ---
@@ -26,7 +27,7 @@ content-type: concept
 	- 最后写应用场景（When/Where）和 SOP（How to do）和FAQ（What's the problem）
 
 	章节顺序：
-	概念定义 → 核心命题 → 运行机制 → 关键区别 → 应用场景（包含SOP和FAQ）  → 知识图谱 → 参考延伸
+	概念定义 → 核心命题 → 运行机制 → 关键区别 → 应用场景（包含SOP和FAQ） → 知识图谱 → 参考延伸
 -->
 
 ## 概念：{{概念名称}}
@@ -76,14 +77,19 @@ graph LR
 - ⛔ **误用**
 	- **{{反模式}}**：{{为什么这样用是错的}}
 
-#### SOP
+---
+
+### SOP
 
 > 与本概念相关的标准操作流程，通过实践辅助理解
 
+- [[SOP-{{本概念相关示例}}]] — {{简短描述}}
 - [[SOP-{{相关SOP名称}}]] — {{简短描述}}
 - [[SOP-{{另一个SOP名称}}]] — {{简短描述}}
 
-#### FAQ
+---
+
+### FAQ
 
 > 与本概念相关的开放性问题，待进一步探索
 
@@ -104,4 +110,3 @@ graph LR
 	- [[{{相关概念}}]] — 有联系但非上下位的概念
 - **参考文章**
 	- {{文献/文章链接}}
-

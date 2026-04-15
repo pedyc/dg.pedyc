@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Hooks (React).md",
+                "file": "40-RESOURCES/SOP-useCallback使用示例.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Hooks (React)"
+              "title": "SOP-useCallback使用示例"
+            }
+          },
+          {
+            "id": "ff128596495921cb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20-AREAS/A-前端/React.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "React"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -71,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Hooks (React).md",
+                "file": "20-AREAS/A-前端/React.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -82,8 +107,16 @@
                   "showTags": false,
                   "showAttachments": false,
                   "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
+                  "collapse-color-groups": false,
+                  "colorGroups": [
+                    {
+                      "query": "",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14701138
+                      }
+                    }
+                  ],
                   "collapse-display": true,
                   "showArrow": false,
                   "textFadeMultiplier": 0,
@@ -99,7 +132,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Hooks (React) 的关系图"
+              "title": "React 的关系图"
             }
           },
           {
@@ -108,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "40-RESOURCES/SOP-在React中实现ASCII动画.md",
+                "file": "20-AREAS/A-前端/React.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "SOP-在React中实现ASCII动画 的大纲"
+              "title": "React 的大纲"
             }
           }
         ]
@@ -300,14 +333,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "34f83448f171246c",
+  "active": "ff128596495921cb",
   "lastOpenFiles": [
-    "40-RESOURCES/Hooks (React).md.tmp.168740.1776225409863",
+    "40-RESOURCES/SOP-useCallback使用示例.md",
+    "20-AREAS/A-前端/React.md",
+    "40-RESOURCES/R3F.md",
+    "40-RESOURCES/useCallback.md",
     "_templates/template_concept.md",
+    "40-RESOURCES/TypeScript的类型是编译时约束.md",
     "40-RESOURCES/Hooks (React).md",
+    "40-RESOURCES/Hooks (React).md.tmp.168740.1776225409863",
     "_templates/template_area.md",
     "40-RESOURCES/Hooks (React).md.tmp.168740.1776224733893",
-    "20-AREAS/A-前端/React.md",
     "40-RESOURCES/Fiber架构(React).md",
     "40-RESOURCES/作用域链.md",
     "40-RESOURCES/外部词法环境引用.md",
@@ -332,11 +369,8 @@
     "40-RESOURCES/SOP-ThreeJS实现3D视差滚动.md",
     "40-RESOURCES/Inbox/Vibe Coding Is Dead. Here’s What Replaced It.md",
     "20-AREAS/A-知识管理/知识内化.md",
-    "_templates/template_sop.md",
-    "40-RESOURCES/SOP-ThreeJS实现平面凹凸效果.md",
     "99-ASSETS/演示/平面凹凸效果.html",
     "99-ASSETS/演示/新建 文本文档.txt",
-    "40-RESOURCES/SOP-ThreeJS实现气泡粒子.md",
     "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果/e655c36112b327b457605e6ccaf06d92_MD5.gif",
     "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果",
     "40-RESOURCES/_resources/Pasted image 20260412182101.png",
@@ -347,7 +381,6 @@
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/8512922b8b8958912b507e783ba0857d_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/be32e7804e1d0a7b03dce1d1162903a1_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/af9dea2bc29ba0596fb41eff7820b913_MD5.webp",
-    "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

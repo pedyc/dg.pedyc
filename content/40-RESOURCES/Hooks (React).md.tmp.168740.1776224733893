@@ -2,7 +2,7 @@
 uid: 202504270000
 title: Hooks (React)
 aliases: [C-Hooks, React Hooks]
-description: 'React 16.8 引入的函数组件状态逻辑复用机制，通过函数调用在函数组件中"钩入" React 状态和生命周期'
+description: React 16.8 引入的函数组件状态逻辑复用机制，通过函数调用在函数组件中"钩入" React 状态和生命周期
 tags: [前端开发/框架/React]
 date-created: 2025-09-09
 date-modified: 2026-04-15
@@ -13,7 +13,7 @@ related: "[[React]]"
 
 ## 概念：React Hooks
 
-> React 16.8 引入的函数组件状态逻辑复用机制，通过函数调用在函数组件中 " 钩入 " React 状态和生命周期。
+> React 16.8 引入的函数组件状态逻辑复用机制，通过函数调用在函数组件中"钩入" React 状态和生命周期。
 
 **解决的核心痛点**：在 Hooks 之前，复用状态逻辑只能通过 Class 组件的 HOC 或 Render Props，导致组件嵌套地狱（Wrapper Hell）；Hooks 允许在函数组件中使用状态和其他 React 特性，无需编写 Class。
 
@@ -21,7 +21,7 @@ related: "[[React]]"
 
 ### 核心命题
 
-- **状态钩入**：`useState` 等 Hooks 让函数组件 " 记住 " 状态，类似 Class 组件的 `this.state`
+- **状态钩入**：`useState` 等 Hooks 让函数组件"记住"状态，类似 Class 组件的 `this.state`
 - **副作用管理**：`useEffect` 在渲染后执行副作用，替代 Class 的生命周期方法
 - **自定义逻辑复用**：自定义 Hooks（以 `use` 开头的函数）将可复用逻辑提取为独立函数
 - **渲染 Props 替代**：Hook 可以替代 Render Props 的逻辑共享模式，避免嵌套
@@ -99,28 +99,6 @@ graph LR
 	- **过度优化**：`useCallback`/`useMemo` 在简单组件中反而增加开销
 	- **滥用 useEffect**：用 useEffect 处理同步逻辑，或在 effect 中处理应属于渲染的逻辑
 	- **破坏 Hooks 调用规则**：在条件/循环中调用 Hooks 导致状态错乱
-
----
-
-### SOP
-
-> Hooks 的标准操作流程，通过实践辅助理解
-
-- [[SOP-创建自定义Hooks]] — 如何创建可复用的自定义 Hooks
-- [[SOP-正确使用useEffect]] — useEffect 的正确使用模式和常见误区
-- [[SOP-React性能优化]] — 使用 useCallback、useMemo 进行性能优化
-
----
-
-### FAQ
-
-> 关于 Hooks 的常见问题，待进一步探索
-
-- [[Q-Hooks 的依赖数组为空时和 componentDidMount 有什么区别？]]
-- [[Q-useCallback 和 useMemo 的性能优化原理是什么？]]
-- [[Q-自定义 Hooks 如何实现逻辑复用？]]
-- [[Q-Hooks 能否完全替代 Class 组件？]]
-- [[Q-为什么 useEffect 的 cleanup 函数需要返回函数？]]
 
 ---
 

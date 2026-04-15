@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/执行上下文.md",
+                "file": "40-RESOURCES/Hooks (React).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "执行上下文"
+              "title": "Hooks (React)"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/执行上下文.md",
+                "file": "40-RESOURCES/Hooks (React).md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "执行上下文 的关系图"
+              "title": "Hooks (React) 的关系图"
             }
           },
           {
@@ -302,15 +302,22 @@
   },
   "active": "34f83448f171246c",
   "lastOpenFiles": [
-    "40-RESOURCES/Fiber架构(React).md",
+    "40-RESOURCES/Hooks (React).md.tmp.168740.1776225409863",
     "_templates/template_concept.md",
+    "40-RESOURCES/Hooks (React).md",
+    "_templates/template_area.md",
+    "40-RESOURCES/Hooks (React).md.tmp.168740.1776224733893",
+    "20-AREAS/A-前端/React.md",
+    "40-RESOURCES/Fiber架构(React).md",
+    "40-RESOURCES/作用域链.md",
+    "40-RESOURCES/外部词法环境引用.md",
+    "40-RESOURCES/词法环境.md",
+    "40-RESOURCES/执行上下文.md",
     "40-RESOURCES/React版本演进.md",
     "99-ASSETS/Excalidraw/React版本演进.excalidraw.md",
-    "_templates/template_area.md",
     "99-ASSETS/Excalidraw/问题拆解流程.excalidraw.md",
     "99-ASSETS/Excalidraw/问题拆解流程.excalidraw.svg",
     "40-RESOURCES/_resources/React版本演进",
-    "20-AREAS/A-前端/React.md",
     "99-ASSETS/Excalidraw/React版本演进.excalidraw.svg",
     "40-RESOURCES/React版本演进.md.tmp.168740.1776165545701",
     "40-RESOURCES/React版本演进.md.tmp.168740.1776165529095",
@@ -330,12 +337,6 @@
     "99-ASSETS/演示/平面凹凸效果.html",
     "99-ASSETS/演示/新建 文本文档.txt",
     "40-RESOURCES/SOP-ThreeJS实现气泡粒子.md",
-    "40-RESOURCES/微前端.md",
-    "40-RESOURCES/Q-qiankun和ModuleFederation怎么选.md",
-    "40-RESOURCES/Q-微前端vsMonorepo性能对比.md",
-    "40-RESOURCES/Q-何时选微前端vsMonorepo.md",
-    "40-RESOURCES/SOP-微前端WebComponents封装.md",
-    "40-RESOURCES/SOP-微前端沙箱隔离.md",
     "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果/e655c36112b327b457605e6ccaf06d92_MD5.gif",
     "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果",
     "40-RESOURCES/_resources/Pasted image 20260412182101.png",
@@ -347,7 +348,6 @@
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/be32e7804e1d0a7b03dce1d1162903a1_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/af9dea2bc29ba0596fb41eff7820b913_MD5.webp",
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It",
-    "99-ASSETS/演示/演示.html",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

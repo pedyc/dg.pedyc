@@ -143,11 +143,33 @@ mindmap
 - **不存在的笔记链接**：断链是正常现象，表示"尚未掌握"，不必强制创建
 - **跨目录引用**：使用完整路径如 `[[40-RESOURCES/笔记名称]]`
 
-### 笔记标题
+### 笔记标题与 WikiLink 命名原则
 
-- **命名原则**：使用纯标题，不带前缀
-- **前缀存放位置**：aliases 字段（如 `aliases: [C-闭包]`）
-- **引用方式**：正文引用 `[[闭包]]`，自动解析到对应笔记
+**核心原则**：前缀仅用于 aliases 检索，WikiLink 引用使用纯标题。
+
+- **文件名**：使用纯标题，不带前缀
+  - ✅ `闭包.md`
+  - ❌ `C-闭包.md`
+- **aliases**：存储前缀用于检索
+  - `aliases: [C-闭包]`
+- **WikiLink 引用**：正文引用使用纯标题
+  - ✅ `[[闭包]]`
+  - ❌ `[[C-闭包]]`
+
+**前缀与 content-type 对应**：
+
+| 前缀 | content-type |
+|:---|:---|
+| P- | project |
+| A- | area |
+| Q- | question |
+| MOC- | moc |
+| SOP- | sop |
+| T- | term |
+| C- | concept |
+| VS- | comparison |
+| R- | record |
+| （无特定前缀） | atomic |
 
 ---
 

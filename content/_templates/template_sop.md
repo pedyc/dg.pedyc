@@ -1,29 +1,39 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: "{ SOP名称 }"
+title: template_sop
+aliases:
+  - SOP-{{标题名称}}
 description: "{ 一句话描述这个 SOP 的用途 }"
 tags: []
-content-type: sop
 status: cultivating
-date-created: <% tp.date.now("YYYY-MM-DD") %>
-date-modified: <% tp.date.now("YYYY-MM-DD") %>
+content-type: sop
 up: ""
-aliases: ["SOP-{{标题名称}}"]
 ---
+
+<!--
+	SOP 设计原则：
+
+	1. SOP指的是Standard Operating Procedure（标准化作业流程）
+	2. 核心是标准化（目标、实现步骤、实践示例）、边界条件（适用场景、常见坑点）
+	3. 撰写流程：先确定目标和适用场景，然后写实现步骤并画流程图，最后总结坑点
+
+	视觉化支持：
+	- Mermaid图标：流程图形式，展示达到目标的标准流程
+-->
 
 ## SOP：{{动宾结构标题}}
 
 > 一句话描述这个 SOP 的目标和适用场景
 
 目标：{{要实现的目标}}
-实现：{{完成的示例}}
+实现：{{实践示例}}
 
 ---
 
 ### 适用场景
 
-- 场景1：{{具体情况}}
-- 场景2：{{具体情况}}
+- 场景 1：{{具体情况}}
+- 场景 2：{{具体情况}}
 
 ---
 
@@ -43,10 +53,10 @@ flowchart TD
 
 ### 核心步骤
 
-1. **步骤1**：{{做什么}}
-   - 注意：{{关键点}}
-2. **步骤2**：{{做什么}}
-3. **步骤3**：{{做什么}}
+1. **步骤 1**：{{做什么}}
+	 - 注意：{{关键点}}
+2. **步骤 2**：{{做什么}}
+3. **步骤 3**：{{做什么}}
 
 ---
 

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/SOP-useCallback使用示例.md",
+                "file": "40-RESOURCES/useCallback.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "SOP-useCallback使用示例"
+              "title": "useCallback"
             }
           },
           {
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-前端/React.md",
+                "file": "00-META/本库指南.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "React"
+              "title": "本库指南"
             }
           }
         ],
@@ -91,12 +91,12 @@
         "dimension": 24.58279845956354,
         "children": [
           {
-            "id": "84d02f8178444945",
+            "id": "716cea69c1af23f6",
             "type": "leaf",
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-前端/React.md",
+                "file": "00-META/本库指南.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -107,16 +107,8 @@
                   "showTags": false,
                   "showAttachments": false,
                   "hideUnresolved": false,
-                  "collapse-color-groups": false,
-                  "colorGroups": [
-                    {
-                      "query": "",
-                      "color": {
-                        "a": 1,
-                        "rgb": 14701138
-                      }
-                    }
-                  ],
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
                   "collapse-display": true,
                   "showArrow": false,
                   "textFadeMultiplier": 0,
@@ -127,12 +119,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.44733309471897786,
+                  "scale": 1,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "React 的关系图"
+              "title": "本库指南 的关系图"
             }
           },
           {
@@ -141,13 +133,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20-AREAS/A-前端/React.md",
+                "file": "00-META/本库指南.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "React 的大纲"
+              "title": "本库指南 的大纲"
             }
           }
         ]
@@ -335,46 +327,46 @@
   },
   "active": "ff128596495921cb",
   "lastOpenFiles": [
-    "40-RESOURCES/SOP-useCallback使用示例.md",
-    "20-AREAS/A-前端/React.md",
-    "40-RESOURCES/R3F.md",
+    "00-META/本库指南.md.tmp.340182.1776350385761",
+    "00-META/本库指南.md.tmp.340182.1776350365176",
+    "_templates/template_startup.md",
+    "_templates/template_diary.md",
+    "_templates/template_record.md",
+    "_templates/template_comp.md",
+    "_templates/template_article.md",
+    "_templates/template_atomic.md",
+    "_templates/template_area.md",
+    "40-RESOURCES/计算机图形学.md",
+    "00-META/本库指南.md",
+    "_templates/template_sop.md",
     "40-RESOURCES/useCallback.md",
+    "40-RESOURCES/SOP-useCallback使用示例.md",
+    "40-RESOURCES/3D高斯泼溅.md",
+    "40-RESOURCES/光栅化.md",
+    "40-RESOURCES/高斯分布.md",
+    "20-AREAS/A-前端/React.md",
+    "40-RESOURCES/Mesh.md",
+    "40-RESOURCES/R3F.md",
     "_templates/template_concept.md",
     "40-RESOURCES/TypeScript的类型是编译时约束.md",
     "40-RESOURCES/Hooks (React).md",
     "40-RESOURCES/Hooks (React).md.tmp.168740.1776225409863",
-    "_templates/template_area.md",
     "40-RESOURCES/Hooks (React).md.tmp.168740.1776224733893",
     "40-RESOURCES/Fiber架构(React).md",
     "40-RESOURCES/作用域链.md",
     "40-RESOURCES/外部词法环境引用.md",
     "40-RESOURCES/词法环境.md",
-    "40-RESOURCES/执行上下文.md",
-    "40-RESOURCES/React版本演进.md",
-    "99-ASSETS/Excalidraw/React版本演进.excalidraw.md",
-    "99-ASSETS/Excalidraw/问题拆解流程.excalidraw.md",
     "99-ASSETS/Excalidraw/问题拆解流程.excalidraw.svg",
     "40-RESOURCES/_resources/React版本演进",
     "99-ASSETS/Excalidraw/React版本演进.excalidraw.svg",
     "40-RESOURCES/React版本演进.md.tmp.168740.1776165545701",
     "40-RESOURCES/React版本演进.md.tmp.168740.1776165529095",
     "40-RESOURCES/React版本演进.md.tmp.168740.1776165513744",
-    "_templates/template_roadmap.md",
-    "40-RESOURCES/React 组件之间有哪些通信方式？适用于哪些场景？.md",
-    "20-AREAS/A-前端/Vue.md",
-    "40-RESOURCES/MOC-Vue 面试题.md",
-    "20-AREAS/A-前端/前端开发.md",
-    "40-RESOURCES/SOP-使用Claude-Code开发React组件.md",
-    "20-AREAS/A-前端/ThreeJS.md",
-    "40-RESOURCES/SOP-ThreeJS实现3D视差滚动.md",
-    "40-RESOURCES/Inbox/Vibe Coding Is Dead. Here’s What Replaced It.md",
-    "20-AREAS/A-知识管理/知识内化.md",
     "99-ASSETS/演示/平面凹凸效果.html",
     "99-ASSETS/演示/新建 文本文档.txt",
     "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果/e655c36112b327b457605e6ccaf06d92_MD5.gif",
     "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果",
     "40-RESOURCES/_resources/Pasted image 20260412182101.png",
-    "_templates/_resources",
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/d8e14c7c273c3de0e30979b4b6f9dcff_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/d09012f06cb371d6d38e666b42eb591a_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/bb117410e57bb43f14b68e1e09db6570_MD5.jpg",

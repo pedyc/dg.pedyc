@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-META/本库指南.md",
+                "file": "40-RESOURCES/计算机图形学.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "本库指南"
+              "title": "计算机图形学"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "00-META/本库指南.md",
+                "file": "40-RESOURCES/计算机图形学.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "本库指南 的关系图"
+              "title": "计算机图形学 的关系图"
             }
           },
           {
@@ -133,13 +133,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00-META/本库指南.md",
+                "file": "40-RESOURCES/计算机图形学.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "本库指南 的大纲"
+              "title": "计算机图形学 的大纲"
             }
           }
         ]
@@ -327,17 +327,17 @@
   },
   "active": "ff128596495921cb",
   "lastOpenFiles": [
+    "_templates/template_area.md",
+    "_templates/template_atomic.md",
+    "_templates/template_article.md",
+    "_templates/template_comp.md",
+    "_templates/template_record.md",
+    "_templates/template_diary.md",
+    "_templates/template_startup.md",
+    "00-META/本库指南.md",
     "00-META/本库指南.md.tmp.340182.1776350385761",
     "00-META/本库指南.md.tmp.340182.1776350365176",
-    "_templates/template_startup.md",
-    "_templates/template_diary.md",
-    "_templates/template_record.md",
-    "_templates/template_comp.md",
-    "_templates/template_article.md",
-    "_templates/template_atomic.md",
-    "_templates/template_area.md",
     "40-RESOURCES/计算机图形学.md",
-    "00-META/本库指南.md",
     "_templates/template_sop.md",
     "40-RESOURCES/useCallback.md",
     "40-RESOURCES/SOP-useCallback使用示例.md",
@@ -365,7 +365,6 @@
     "99-ASSETS/演示/平面凹凸效果.html",
     "99-ASSETS/演示/新建 文本文档.txt",
     "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果/e655c36112b327b457605e6ccaf06d92_MD5.gif",
-    "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果",
     "40-RESOURCES/_resources/Pasted image 20260412182101.png",
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/d8e14c7c273c3de0e30979b4b6f9dcff_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/d09012f06cb371d6d38e666b42eb591a_MD5.jpg",

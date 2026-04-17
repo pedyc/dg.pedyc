@@ -5,7 +5,7 @@ aliases: [Cascading Style Sheets, 层叠样式表]
 description: Web 的表现层语言，通过层叠和继承机制决定 HTML 文档的渲染方式
 tags: [前端开发/CSS]
 date-created: 2025-12-17
-date-modified: 2026-04-07
+date-modified: 2026-04-17
 status: active
 content-type: area
 up: "[[前端开发]]"
@@ -66,18 +66,6 @@ up: "[[前端开发]]"
 	- [[前端开发]]：实际项目应用
 - **协同领域**
 	- [[JavaScript]]：动态样式操作
-
----
-
-### FAQ
-
-- [[MOC-CSS相关问题]]
-- CSS 选择器优先级如何计算？
-	- 内联 (1000) > ID(100) > 类 (10) > 标签 (1) > 通配 (0)
-- Flex 和 Grid 有什么区别？
-	- Flex 一维，Grid 二维
-- 如何实现垂直居中？
-	- Flex/Grid/定位等多种方案
 
 ---
 

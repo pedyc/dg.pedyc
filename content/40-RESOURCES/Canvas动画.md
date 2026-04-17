@@ -5,7 +5,7 @@ aliases: [C-Canvas动画, Canvas Animation]
 description: 使用 HTML5 Canvas API 实现高性能动画的技术
 tags: [concept, Canvas, 动画, 前端, 图形]
 date-created: 2026-04-10
-date-modified: 2026-04-11
+date-modified: 2026-04-17
 status: cultivating
 content-type: concept
 related: ["[[动画原理]]", "[[CSS Animation]]", "[[前端开发]]"]
@@ -80,8 +80,7 @@ flowchart LR
 
 #### SOP
 
-- [[SOP-Canvas动画入门]] — 从零开始创建第一个 Canvas 动画
-- [[SOP-使用Canvas实现网页无限滑动效果]]
+![[动画效果示例#Canvas]]
 
 #### FAQ
 

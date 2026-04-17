@@ -2,7 +2,7 @@
 name: obsidian-note
 description: 使用 content/_templates 目录下的模板创建或追加 Obsidian 笔记内容
 argument-hint: <笔记标题或路径>
-allowed-tools: Glob,Read,Write,Edit,Bash
+allowed-tools: Glob,Read,Write,Edit,Bash,Grep,WebSearch
 ---
 
 ## 触发条件
@@ -38,9 +38,12 @@ allowed-tools: Glob,Read,Write,Edit,Bash
 ### Create（创建新笔记）
 
 1. 读取模板 `template_{type}.md`
-2. 替换占位符（tp.file.title, tp.file.creation_date 等）
-3. 严格按模板结构生成内容
-4. 写入文件
+2. 提取模板的**必含章节**（H2/H3 标题）
+3. 替换占位符（tp.file.title, tp.file.creation_date 等）
+4. **严格按模板结构**生成内容，保留所有章节
+5. 若某章节无内容，添加说明而非删除章节
+6. 写入文件
+7. **完成后自动调用 content-verifier skill**核查新创建的笔记
 
 ### Append（追加内容）
 
@@ -48,6 +51,7 @@ allowed-tools: Glob,Read,Write,Edit,Bash
 2. 对比差距
 3. 基于模板生成内容
 4. 追加到「总结」之前
+5. **完成后自动调用 content-verifier skill**核查修改后的笔记
 
 ---
 
@@ -56,6 +60,7 @@ allowed-tools: Glob,Read,Write,Edit,Bash
 - **必须先读取模板**再生成内容
 - **严格按模板结构**，不得自行调整章节
 - **不使用模板时必须说明原因**
+- **章节不可省略**：若某章节无内容，添加说明（如"暂无 SOP"）而非删除章节
 
 ---
 
@@ -181,3 +186,4 @@ mindmap
 | 模板不存在 | 返回错误，列出可用类型 |
 | 追加时笔记不存在 | 提示使用 create 模式 |
 | 路径包含空格 | 使用双引号包裹 |
+| 模板章节无内容 | 添加说明而非删除章节（如"暂无 SOP"） |

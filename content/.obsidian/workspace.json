@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/计算机图形学.md",
+                "file": "20-AREAS/A-前端/动画效果示例.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "计算机图形学"
+              "title": "动画效果示例"
+            }
+          },
+          {
+            "id": "c5b6dcf6de75faeb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20-AREAS/A-前端/动画效果示例.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "动画效果示例"
             }
           }
         ],
@@ -96,7 +120,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/计算机图形学.md",
+                "file": "20-AREAS/A-前端/动画效果示例.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -119,12 +143,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1,
+                  "scale": 0.5087618855792586,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "计算机图形学 的关系图"
+              "title": "动画效果示例 的关系图"
             }
           },
           {
@@ -133,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "40-RESOURCES/计算机图形学.md",
+                "file": "20-AREAS/A-前端/动画效果示例.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "计算机图形学 的大纲"
+              "title": "动画效果示例 的大纲"
             }
           }
         ]
@@ -327,6 +351,15 @@
   },
   "active": "ff128596495921cb",
   "lastOpenFiles": [
+    "40-RESOURCES/Canvas动画.md",
+    "20-AREAS/A-前端/动画效果示例.md",
+    "20-AREAS/A-前端/前端交互.md",
+    "40-RESOURCES/动画原理.md",
+    "40-RESOURCES/SOP-使用Canvas实现网页无限滑动效果.md",
+    "20-AREAS/A-前端/CSS.md",
+    "40-RESOURCES/线性插值.md",
+    "_templates/template_concept.md",
+    "40-RESOURCES/计算机图形学.md",
     "_templates/template_area.md",
     "_templates/template_atomic.md",
     "_templates/template_article.md",
@@ -337,7 +370,6 @@
     "00-META/本库指南.md",
     "00-META/本库指南.md.tmp.340182.1776350385761",
     "00-META/本库指南.md.tmp.340182.1776350365176",
-    "40-RESOURCES/计算机图形学.md",
     "_templates/template_sop.md",
     "40-RESOURCES/useCallback.md",
     "40-RESOURCES/SOP-useCallback使用示例.md",
@@ -347,15 +379,8 @@
     "20-AREAS/A-前端/React.md",
     "40-RESOURCES/Mesh.md",
     "40-RESOURCES/R3F.md",
-    "_templates/template_concept.md",
-    "40-RESOURCES/TypeScript的类型是编译时约束.md",
-    "40-RESOURCES/Hooks (React).md",
     "40-RESOURCES/Hooks (React).md.tmp.168740.1776225409863",
     "40-RESOURCES/Hooks (React).md.tmp.168740.1776224733893",
-    "40-RESOURCES/Fiber架构(React).md",
-    "40-RESOURCES/作用域链.md",
-    "40-RESOURCES/外部词法环境引用.md",
-    "40-RESOURCES/词法环境.md",
     "99-ASSETS/Excalidraw/问题拆解流程.excalidraw.svg",
     "40-RESOURCES/_resources/React版本演进",
     "99-ASSETS/Excalidraw/React版本演进.excalidraw.svg",

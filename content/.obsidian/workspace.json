@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/间隔重复.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "间隔重复"
+              "title": "index"
             }
           },
           {
@@ -120,7 +120,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/间隔重复.md",
+                "file": "index.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +148,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "间隔重复 的关系图"
+              "title": "index 的关系图"
             }
           },
           {
@@ -351,6 +351,8 @@
   },
   "active": "ff128596495921cb",
   "lastOpenFiles": [
+    "CLAUDE.md",
+    "40-RESOURCES/间隔重复.md",
     "40-RESOURCES/艾宾浩斯记忆曲线.md",
     "40-RESOURCES/_resources/艾宾浩斯记忆曲线/04080985eb809d980f8802c59e954e2b_MD5.jpg",
     "40-RESOURCES/_resources/艾宾浩斯记忆曲线",
@@ -382,8 +384,6 @@
     "_templates/template_area.md",
     "_templates/template_atomic.md",
     "_templates/template_article.md",
-    "_templates/template_comp.md",
-    "_templates/template_record.md",
     "00-META/本库指南.md.tmp.340182.1776350385761",
     "00-META/本库指南.md.tmp.340182.1776350365176",
     "40-RESOURCES/Hooks (React).md.tmp.168740.1776225409863",

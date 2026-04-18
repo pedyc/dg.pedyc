@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "40-RESOURCES/Hooks (React).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "Hooks (React)"
             }
           },
           {
@@ -120,7 +120,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "index.md",
+                "file": "40-RESOURCES/Hooks (React).md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +148,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "index 的关系图"
+              "title": "Hooks (React) 的关系图"
             }
           },
           {
@@ -351,6 +351,14 @@
   },
   "active": "ff128596495921cb",
   "lastOpenFiles": [
+    "40-RESOURCES/useEffect.md",
+    "40-RESOURCES/Q-为什么useEffect需要return-cleanup函数.md",
+    "20-AREAS/A-前端/动画效果示例.md",
+    "40-RESOURCES/Q-useEffect依赖数组为什么不能使用对象.md",
+    "40-RESOURCES/Q-useState的参数为什么不能直接用对象写法.md",
+    "_templates/template_question.md",
+    "30-Zettelkasten/useEffect的return语句在组件卸载和依赖变化时都会被调用.md",
+    "index.md",
     "CLAUDE.md",
     "40-RESOURCES/间隔重复.md",
     "40-RESOURCES/艾宾浩斯记忆曲线.md",
@@ -373,17 +381,9 @@
     "40-RESOURCES/Javascript版本演进.md.tmp.340182.1776433140412",
     "40-RESOURCES/Javascript版本演进.md.tmp.340182.1776433114461",
     "40-RESOURCES/ES2025.md",
-    "20-AREAS/A-前端/动画效果示例.md",
     "40-RESOURCES/Canvas动画.md",
     "20-AREAS/A-前端/前端交互.md",
     "40-RESOURCES/动画原理.md",
-    "40-RESOURCES/SOP-使用Canvas实现网页无限滑动效果.md",
-    "20-AREAS/A-前端/CSS.md",
-    "40-RESOURCES/线性插值.md",
-    "40-RESOURCES/计算机图形学.md",
-    "_templates/template_area.md",
-    "_templates/template_atomic.md",
-    "_templates/template_article.md",
     "00-META/本库指南.md.tmp.340182.1776350385761",
     "00-META/本库指南.md.tmp.340182.1776350365176",
     "40-RESOURCES/Hooks (React).md.tmp.168740.1776225409863",

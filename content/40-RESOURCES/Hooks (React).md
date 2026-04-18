@@ -5,7 +5,7 @@ aliases: [C-Hooks, React Hooks]
 description: 'React 16.8 引入的函数组件状态逻辑复用机制，通过函数调用在函数组件中"钩入" React 状态和生命周期'
 tags: [前端开发/框架/React]
 date-created: 2025-09-09
-date-modified: 2026-04-15
+date-modified: 2026-04-18
 status: cultivating
 content-type: concept
 related: "[[React]]"
@@ -61,17 +61,17 @@ graph LR
 
 ### 关键 API
 
-| Hook | 用途 | 核心机制 |
-|:---|:---|:---|
-| `useState` | 状态管理 | 返回 `[state, setState]`，setState 支持函数式更新 |
-| `useEffect` | 副作用 | 渲染后执行，返回 cleanup 函数用于清理 |
-| `useCallback` | 函数缓存 | 依赖不变时返回相同函数引用 |
-| `useMemo` | 值缓存 | 依赖不变时返回缓存的计算结果 |
-| `useRef` | 引用存储 | 变更不触发重新渲染，可存储可变值 |
-| `useContext` | 上下文读取 | 读取最近的 Context 值 |
-| `useReducer` | 复杂状态逻辑 | 基于 reducer 的状态管理 |
-| `useLayoutEffect` | 同步副作用 | DOM 更新后同步执行，类似 componentDidMount/Update |
-| `useImperativeHandle` | 暴露 DOM/实例方法 | 与 `forwardRef` 配合使用 |
+| Hook                  | 用途          | 核心机制                                    |
+|:-------------------- |:---------- |:-------------------------------------- |
+| `useState`            | 状态管理        | 返回 `[state, setState]`，setState 支持函数式更新 |
+| `useEffect`           | 副作用         | 渲染后执行，返回 cleanup 函数用于清理                 |
+| `useCallback`         | 函数缓存        | 依赖不变时返回相同函数引用                           |
+| `useMemo`             | 值缓存         | 依赖不变时返回缓存的计算结果                          |
+| `useRef`              | 引用存储        | 变更不触发重新渲染，可存储可变值                        |
+| `useContext`          | 上下文读取       | 读取最近的 Context 值                         |
+| `useReducer`          | 复杂状态逻辑      | 基于 reducer 的状态管理                        |
+| `useLayoutEffect`     | 同步副作用       | DOM 更新后同步执行，类似 componentDidMount/Update |
+| `useImperativeHandle` | 暴露 DOM/实例方法 | 与 `forwardRef` 配合使用                     |
 
 ---
 

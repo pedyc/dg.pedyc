@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Hooks (React).md",
+                "file": "40-RESOURCES/useCallback.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Hooks (React)"
+              "title": "useCallback"
             }
           },
           {
@@ -120,7 +120,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Hooks (React).md",
+                "file": "40-RESOURCES/useCallback.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +148,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Hooks (React) 的关系图"
+              "title": "useCallback 的关系图"
             }
           },
           {
@@ -351,6 +351,11 @@
   },
   "active": "ff128596495921cb",
   "lastOpenFiles": [
+    "40-RESOURCES/React.memo.md",
+    "40-RESOURCES/useCallback.md",
+    "_templates/template_record.md",
+    "40-RESOURCES/SOP-useCallback使用示例.md",
+    "40-RESOURCES/Hooks (React).md",
     "40-RESOURCES/useEffect.md",
     "40-RESOURCES/Q-为什么useEffect需要return-cleanup函数.md",
     "20-AREAS/A-前端/动画效果示例.md",
@@ -377,13 +382,8 @@
     "40-RESOURCES/Error.isError.md",
     "async/await.md",
     "async",
-    "40-RESOURCES/async-await.md",
     "40-RESOURCES/Javascript版本演进.md.tmp.340182.1776433140412",
     "40-RESOURCES/Javascript版本演进.md.tmp.340182.1776433114461",
-    "40-RESOURCES/ES2025.md",
-    "40-RESOURCES/Canvas动画.md",
-    "20-AREAS/A-前端/前端交互.md",
-    "40-RESOURCES/动画原理.md",
     "00-META/本库指南.md.tmp.340182.1776350385761",
     "00-META/本库指南.md.tmp.340182.1776350365176",
     "40-RESOURCES/Hooks (React).md.tmp.168740.1776225409863",

@@ -5,7 +5,7 @@ aliases: [C-useCallback]
 description: React Hooks 之一，缓存函数引用，只有依赖变化时才返回新的函数引用，用于性能优化
 tags: [前端开发/框架/React]
 date-created: 2025-09-09
-date-modified: 2026-04-15
+date-modified: 2026-04-19
 status: cultivating
 content-type: concept
 related: "[[React]]"
@@ -21,10 +21,9 @@ related: "[[React]]"
 
 ### 核心命题
 
-- **引用稳定性**：依赖不变时，返回相同的函数引用
-- **性能优化工具**：需要配合 `React.memo` 才能发挥效果，单独使用无意义
-- **依赖决定更新**：依赖数组中的值变化时，才会返回新的函数引用
-- **不是万能药**：过度使用会增加内存开销和复杂度，应在确实有性能问题时使用
+- [[useCallback只在依赖变化时返回新的函数引用]]
+- [[useCallback配合React.memo进行性能优化]]
+- [[useCallback只在确实存在性能问题时使用]]
 
 ---
 

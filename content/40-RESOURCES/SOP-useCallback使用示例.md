@@ -5,7 +5,7 @@ aliases: [SOP-useCallback使用示例]
 description: 展示 useCallback 的正确使用场景和示例
 tags: [前端开发/框架/React]
 date-created: 2026-04-15
-date-modified: 2026-04-15
+date-modified: 2026-04-19
 status: active
 content-type: sop
 up: "[[useCallback]]"
@@ -139,7 +139,7 @@ function ItemList({ items }) {
 
 - ⛔ **空依赖导致闭包陷阱**
 
-	```jsx
+```jsx
   // ❌ 错误：handleClick 永远引用初始的 count 值（0）
   const handleClick = useCallback(() => {
     console.log(count);
@@ -149,11 +149,11 @@ function ItemList({ items }) {
   const handleClick = useCallback(() => {
     console.log(count);
   }, [count]);
-  ```
+```
 
 - ⛔ **过度使用**
 
-	```jsx
+```jsx
   // ❌ 错误：简单组件不需要 useCallback，反而增加复杂度
   const Button = ({ onClick }) => {
     const handleClick = useCallback(onClick, [onClick]);
@@ -164,16 +164,17 @@ function ItemList({ items }) {
   const Button = ({ onClick }) => {
     return <button onClick={onClick}>Click</button>;
   };
-  ```
+```
 
 - ⛔ **依赖数组遗漏**
 
-	```jsx
+```jsx
   // ❌ 错误：函数内部使用了 value 但依赖数组为空
   const handleSubmit = useCallback(() => {
     submitForm(value); // value 变化时函数不更新
   }, []); // 应该写成 [value]
-  ```
+
+```
 
 - 🔧 **排查**：如果子组件仍然重新渲染，检查：
 	1. 子组件是否真的用 `React.memo` 包装

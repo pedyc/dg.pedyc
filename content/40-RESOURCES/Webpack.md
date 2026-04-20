@@ -5,7 +5,7 @@ aliases: [模块打包器]
 description: 开源的 JavaScript 模块打包器，将各种资源打包成静态资源
 tags: [前端/构建工具]
 date-created: 2025-05-29
-date-modified: 2026-03-15
+date-modified: 2026-03-30
 status: active
 content-type: term
 up: "[[前端工程化]]"
@@ -41,4 +41,4 @@ up: "[[前端工程化]]"
 
 - **上游**：[[前端工程化]]
 - **相关工具**：[[Vite]]（对比学习）
-- **深入主题**：[[T-Webpack]]
+- **深入主题**：[[Webpack vs Vite|Webpack vs Vite]]

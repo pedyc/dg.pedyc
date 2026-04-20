@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d83c50d209d7a442",
+            "id": "34f83448f171246c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/原型链.md",
+                "file": "40-RESOURCES/useCallback.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "原型链"
+              "title": "useCallback"
             }
           },
           {
-            "id": "42a4bd166593c69f",
+            "id": "ff128596495921cb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Block管理.md",
+                "file": "20-AREAS/A-前端/React.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Block管理"
+              "title": "React"
             }
           },
           {
-            "id": "e416ab0b25204149",
+            "id": "c5b6dcf6de75faeb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-前端/前端性能优化.md",
+                "file": "20-AREAS/A-前端/动画效果示例.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,83 +76,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端性能优化"
-            }
-          },
-          {
-            "id": "2d3113c371365215",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/Diff算法(Vue3).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Diff算法(Vue3)"
-            }
-          },
-          {
-            "id": "25aba57c32d2aeb4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/Diff算法(Vue3).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Diff算法(Vue3)"
-            }
-          },
-          {
-            "id": "2989436a8e995ef5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/Vue2 vs Vue3 Diff算法.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Vue2 vs Vue3 Diff算法"
+              "title": "动画效果示例"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -187,12 +115,12 @@
         "dimension": 24.58279845956354,
         "children": [
           {
-            "id": "84d02f8178444945",
+            "id": "716cea69c1af23f6",
             "type": "leaf",
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-前端/前端性能优化.md",
+                "file": "20-AREAS/A-前端/React.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -215,12 +143,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.44733309471897764,
+                  "scale": 0.5087618855792586,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "前端性能优化 的关系图"
+              "title": "React 的关系图"
             }
           },
           {
@@ -229,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20-AREAS/A-前端/前端性能优化.md",
+                "file": "20-AREAS/A-前端/动画效果示例.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "前端性能优化 的大纲"
+              "title": "动画效果示例 的大纲"
             }
           }
         ]
@@ -271,7 +199,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Vitals",
+                "query": "marquee",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -316,7 +244,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 326.5
+    "width": 323.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -370,7 +298,7 @@
             }
           },
           {
-            "id": "02d23b460528696f",
+            "id": "09edd99624caf564",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -378,19 +306,27 @@
               "icon": "trident-custom",
               "title": "Mermaid Toolbar"
             }
+          },
+          {
+            "id": "29313616ae432795",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {},
+              "icon": "history",
+              "title": "History"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 519.5,
-    "collapsed": true
+    "width": 519.5
   },
   "left-ribbon": {
     "hiddenItems": {
       "bases:新建数据库": false,
-      "cmdr:堆叠/取消堆叠标签页": false,
       "copilot:Open Copilot Chat": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
       "obsidian-local-images-plus:Local Images Plus  0.16.4\r\nLocalize attachments (plugin folder)": false,
@@ -408,57 +344,59 @@
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "mermaid-tools:Open Mermaid Toolbar": false,
       "random-note:开始漫游笔记": false,
-      "omnisearch:Omnisearch": false
+      "omnisearch:Omnisearch": false,
+      "cmdr:堆叠/取消堆叠标签页": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e416ab0b25204149",
+  "active": "3dfca4b5c072d131",
   "lastOpenFiles": [
-    "20-AREAS/A-前端/前端开发.md",
-    "40-RESOURCES/Diff算法(Vue3).md",
-    "40-RESOURCES/Vue2 vs Vue3 Diff算法.md",
-    "20-AREAS/A-前端/前端性能优化.md",
-    "40-RESOURCES/前端框架.md",
-    "40-RESOURCES/AJAX.md",
-    "20-AREAS/A-前端/算法与数据结构.md",
-    "40-RESOURCES/前端场景下的算法优先级.md",
-    "40-RESOURCES/虚拟DOM(Vue3).md",
-    "40-RESOURCES/生命周期(Vue3).md",
-    "20-AREAS/A-前端/Vue.md",
-    "40-RESOURCES/模板编译(Vue3).md",
-    "40-RESOURCES/原型链.md",
-    "40-RESOURCES/预标记.md",
-    "_templates/template_moc.md",
+    "20-AREAS/Angular.md",
+    "20-AREAS/A-前端/Angular.md",
+    "20-AREAS/A-前端/React.md",
+    "40-RESOURCES/MOC-React面试题.md",
     "40-RESOURCES/MOC-Vue 面试题.md",
-    "40-RESOURCES/Block管理.md",
-    "_templates/template_concept.md",
-    "40-RESOURCES/静态提升.md",
-    "40-RESOURCES/点击劫持.md",
-    "40-RESOURCES/响应式原理(Vue3).md",
-    "40-RESOURCES/生态系统（Vue）.md",
-    "40-RESOURCES/CORS.md",
-    "_templates/template_area.md",
-    "40-RESOURCES/Q-Vapor Mode是什么.md",
-    "40-RESOURCES/Q-Vue编译器如何优化.md",
-    "30-ZETTELKASTEN/_resources/提示词Prompt.png",
-    "30-ZETTELKASTEN/_resources/常用视觉工具.excalidraw.svg",
-    "30-ZETTELKASTEN/_resources/常用思维方式.excalidraw.svg",
-    "30-ZETTELKASTEN/_resources/思维分类及视觉工具.excalidraw.svg",
-    "20-AREAS/A-知识管理/_resources/知识管理工作流.excalidraw.svg",
-    "20-AREAS/A-知识管理/_resources/draw_PKM_methods.svg",
-    "20-AREAS/A-知识管理/_resources/draw_knowledge_atomization.svg",
-    "99-ASSETS/Excalidraw/金融分析框架.excalidraw.svg",
-    "99-ASSETS/Excalidraw/Drawing 2025-10-01 11.21.21.excalidraw.svg",
-    "99-ASSETS/Excalidraw/PARA和知识管理工作流.excalidraw.svg",
-    "20-AREAS/A-哲学",
-    "10-PROJECTS/P-求职前端岗位/_resources",
-    "10-PROJECTS/P-学习OpenClaw",
-    "10-PROJECTS/_resources/P-学习OpenClaw",
-    "10-PROJECTS/_resources",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers",
-    "40-RESOURCES/Inbox/_resources/未命名",
-    "20-AREAS/A-政治经济/未命名.md.nssyncsc",
-    "90-DIARY/_resources",
-    "60-BLOGS/_resources",
+    "40-RESOURCES/Redux.md",
+    "40-RESOURCES/Zustand.md",
+    "40-RESOURCES/RxJS.md",
+    "20-AREAS/A-前端/动画效果示例.md",
+    "40-RESOURCES/Zustand vs Redux.md",
+    "40-RESOURCES/useCallback.md",
+    "40-RESOURCES/React.memo.md",
+    "_templates/template_record.md",
+    "40-RESOURCES/SOP-useCallback使用示例.md",
+    "40-RESOURCES/Hooks (React).md",
+    "40-RESOURCES/useEffect.md",
+    "40-RESOURCES/Q-为什么useEffect需要return-cleanup函数.md",
+    "40-RESOURCES/Q-useEffect依赖数组为什么不能使用对象.md",
+    "40-RESOURCES/Q-useState的参数为什么不能直接用对象写法.md",
+    "_templates/template_question.md",
+    "30-Zettelkasten/useEffect的return语句在组件卸载和依赖变化时都会被调用.md",
+    "index.md",
+    "CLAUDE.md",
+    "40-RESOURCES/间隔重复.md",
+    "40-RESOURCES/艾宾浩斯记忆曲线.md",
+    "40-RESOURCES/_resources/艾宾浩斯记忆曲线/04080985eb809d980f8802c59e954e2b_MD5.jpg",
+    "40-RESOURCES/_resources/艾宾浩斯记忆曲线",
+    "40-RESOURCES/_resources/Pasted image 20260418000649.png",
+    "40-RESOURCES/_resources/Pasted image 20260418000638.png",
+    "40-RESOURCES/3D高斯泼溅.md",
+    "async",
+    "40-RESOURCES/Javascript版本演进.md.tmp.340182.1776433140412",
+    "40-RESOURCES/Javascript版本演进.md.tmp.340182.1776433114461",
+    "00-META/本库指南.md.tmp.340182.1776350385761",
+    "00-META/本库指南.md.tmp.340182.1776350365176",
+    "40-RESOURCES/Hooks (React).md.tmp.168740.1776225409863",
+    "40-RESOURCES/Hooks (React).md.tmp.168740.1776224733893",
+    "99-ASSETS/Excalidraw/问题拆解流程.excalidraw.svg",
+    "40-RESOURCES/_resources/React版本演进",
+    "99-ASSETS/Excalidraw/React版本演进.excalidraw.svg",
+    "40-RESOURCES/React版本演进.md.tmp.168740.1776165545701",
+    "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果/e655c36112b327b457605e6ccaf06d92_MD5.gif",
+    "40-RESOURCES/_resources/Pasted image 20260412182101.png",
+    "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/d8e14c7c273c3de0e30979b4b6f9dcff_MD5.jpg",
+    "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/d09012f06cb371d6d38e666b42eb591a_MD5.jpg",
+    "40-RESOURCES/Inbox/_resources/Vibe Coding Is Dead. Here’s What Replaced It/bb117410e57bb43f14b68e1e09db6570_MD5.jpg",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
     "Untitled.canvas"

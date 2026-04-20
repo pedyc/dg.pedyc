@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Three.js 滚动凹凸效果</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        /* 滚动进度指示器 */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+            transform-origin: 0 0;
+            transform: scaleX(0);
+            z-index: 200;
+        }
+
+        /* 滚动提示 */
+        .info {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: monospace;
+            z-index: 200;
+            pointer-events: none;
+            font-size: 14px;
+        }
+
+        .scroll-container {
+            position: relative;
+            z-index: 10;
+        }
+
+        .info span {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .info {
+                font-size: 10px;
+                bottom: 10px;
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scroll-container">
+        <div class="scroll-content" style="height: 300vh">
+            <!-- 三屏内容，让页面可滚动 -->
+            <div class="scroll-section" style="
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          ">
+                <div>
+                    <h1 style="color: white; font-size: 3rem; margin-bottom: 1rem">
+                        向下滚动
+                    </h1>
+                    <p style="color: rgba(255, 255, 255, 0.7); font-size: 1.2rem">
+                        页面将产生凸起效果
+                    </p>
+                </div>
+            </div>
+            <div class="scroll-section" style="
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          ">
+                <div>
+                    <h1 style="color: white; font-size: 3rem; margin-bottom: 1rem">
+                        继续滚动
+                    </h1>
+                    <p style="color: rgba(255, 255, 255, 0.7); font-size: 1.2rem">
+                        感受凹凸变形的视觉效果
+                    </p>
+                </div>
+            </div>
+            <div class="scroll-section" style="
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          ">
+                <div>
+                    <h1 style="color: white; font-size: 3rem; margin-bottom: 1rem">
+                        向上回滚
+                    </h1>
+                    <p style="color: rgba(255, 255, 255, 0.7); font-size: 1.2rem">
+                        页面将产生凹陷效果
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-progress"></div>
+    <div class="info">
+        🖱️ 滚动体验凹凸效果 | 当前偏移: <span id="offsetValue">0.00</span>
+    </div>
+
+    <!-- 引入 Three.js 核心库和扩展 -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <script type="module">
+        import * as THREE from "three";
+        import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+        import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+        import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+        import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+
+        // --- 初始化场景、相机、渲染器 ---
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x050b1a);
+        scene.fog = new THREE.FogExp2(0x050b1a, 0.008); // 雾效增强景深
+
+        // 透视相机: 视野, 宽高比, 近平面, 远平面
+        const camera = new THREE.PerspectiveCamera(
+            45,
+            window.innerWidth / window.innerHeight,
+            0.1,
+            1000,
+        );
+        camera.position.set(0, 0, 5); // 拉近相机，增强凹凸视觉
+        camera.lookAt(0, 0, 0);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.toneMapping = THREE.ReinhardToneMapping;
+        renderer.toneMappingExposure = 1.2;
+        renderer.domElement.style.position = "fixed";
+        renderer.domElement.style.top = "0";
+        renderer.domElement.style.left = "0";
+        renderer.domElement.style.zIndex = "1";
+        document.body.appendChild(renderer.domElement);
+
+        // --- 后期效果: 发光 (增强凹凸视觉感) ---
+        const renderScene = new RenderPass(scene, camera);
+        const bloomPass = new UnrealBloomPass(
+            new THREE.Vector2(window.innerWidth, window.innerHeight),
+            0.5,
+            0.3,
+            0.2,
+        );
+        bloomPass.threshold = 0.1;
+        bloomPass.strength = 0.6;
+        bloomPass.radius = 0.5;
+        const effectComposer = new EffectComposer(renderer);
+        effectComposer.addPass(renderScene);
+        effectComposer.addPass(bloomPass);
+
+        // --- 轨道控制 (方便调试，可注释) ---
+        // const controls = new OrbitControls(camera, renderer.domElement);
+        // controls.enableDamping = true;
+        // controls.enableZoom = true;
+        // controls.zoomSpeed = 1.0;
+        // controls.enablePan = false;
+
+        // --- 辅助元素: 网格地面参考线 (可选) ---
+        const gridHelper = new THREE.GridHelper(20, 20, 0x4ecdc4, 0x2c3e66);
+        gridHelper.position.y = -1.5;
+        gridHelper.material.transparent = true;
+        gridHelper.material.opacity = 0.3;
+        scene.add(gridHelper);
+
+        // 添加简单环境光和点光源，增强立体感
+        const ambientLight = new THREE.AmbientLight(0x404060);
+        scene.add(ambientLight);
+        const mainLight = new THREE.DirectionalLight(0xffffff, 1);
+        mainLight.position.set(2, 5, 3);
+        scene.add(mainLight);
+        const backLight = new THREE.PointLight(0x4466ff, 0.5);
+        backLight.position.set(0, 0, -3);
+        scene.add(backLight);
+
+        // --- 核心: 创建平面网格，使用 ShaderMaterial ---
+
+        // 平面细分参数: 宽6，高4，分段数 64x64 (越多凹凸越平滑)
+        const width = 6;
+        const height = 4;
+        const segments = 128; // 适当增加分段使变形更平滑
+
+        const geometry = new THREE.PlaneGeometry(
+            width,
+            height,
+            segments,
+            segments,
+        );
+        // 旋转平面使其朝向相机 (默认PlaneGeometry是在XY平面，需要绕X轴旋转 -Math.PI/2 使其在XZ平面？但为了便于观察，让它正对相机并产生Z轴偏移)
+        // 为了让凹凸效果明显，我们保持平面面向Z轴正向，默认PlaneGeometry是面向Z正轴(0,0,1)方向，相机从正面看即可。
+        // 但默认情况下PlaneGeometry的法线是(0,0,1)，顶点坐标z=0，我们将通过shader改变z坐标。
+
+        // 获取顶点位置属性数组，用于传递uv和位置到着色器
+        const positionAttribute = geometry.attributes.position;
+        const uvAttribute = geometry.attributes.uv;
+
+        // 为了让凹凸形状有更丰富的图案，我们可以在顶点着色器里基于uv和sin/cos组合，但为了演示滚动控制一个“凸起中心”，我们使用一个简单的公式：
+        // 凸起值 = 滚动偏移量 * 高斯型径向函数 (基于顶点到中心的距离)
+        // 中心点坐标(0,0)，范围宽度6高度4，距离归一化后计算权重
+
+        // 构建顶点颜色属性（可选，用于调试视觉）
+        const colors = [];
+        for (let i = 0; i < positionAttribute.count; i++) {
+            const x = positionAttribute.getX(i);
+            const y = positionAttribute.getY(i);
+            // 根据位置生成颜色渐变
+            const r = x / width + 0.5;
+            const g = y / height + 0.5;
+            const b = 0.8;
+            colors.push(r, g, b);
+        }
+        geometry.setAttribute(
+            "color",
+            new THREE.BufferAttribute(new Float32Array(colors), 3),
+        );
+
+        // --- 定义着色器代码 ---
+
+        // 顶点着色器: 根据uniform中的滚动值 (offset) 来计算顶点的Z轴偏移
+        // 使用径向基函数: 中心 (0,0) 处偏移最大，边缘处偏移为0
+        // 公式: deltaZ = offset * (1 - smoothstep(0, radius, distance)) 或者高斯衰减
+        // 为了使效果平滑，我们使用: deltaZ = offset * max(0, (1 - (dist / maxRadius)^2))^2
+        const vertexShader = `
+        varying vec2 vUv;
+        varying vec3 vColor;
+        attribute vec3 color;
+        uniform float uOffset;      // 滚动偏移量，范围[-1, 1] 负->凹陷，正->凸起
+        uniform float uTime;        // 时间，用于轻微波动效果（可选）
+        
+        void main() {
+            vUv = uv;
+            vColor = color;
+            
+            vec3 pos = position;
+            
+            // 计算顶点到平面中心的距离 (平面中心在局部坐标原点)
+            float dist = length(pos.xy);
+            // 最大影响半径，平面半宽为3，半高为2，取对角线一半约3.6
+            float maxRadius = 3.6;
+            // 计算权重: 使用平滑衰减 (1 - (dist/maxRadius)^2)^2，边缘处为0
+            float t = clamp(1.0 - pow(dist / maxRadius, 2.0), 0.0, 1.0);
+            float weight = pow(t, 1.5);  // 形状调整
+            
+            // 添加一点正弦波纹使效果更生动 (可选)
+            float ripple = sin(pos.x * 2.0 + uTime) * cos(pos.y * 2.0 + uTime) * 0.05;
+            
+            // 最终Z轴偏移: 凸起/凹陷值 * 权重 + 微小波纹
+            float deltaZ = uOffset * 2.0 * weight + ripple * 0.03;
+            pos.z += deltaZ;
+            
+            // 标准MVP变换
+            vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
+            gl_PointSize = 1.0;
+            gl_Position = projectionMatrix * mvPosition;
+        }
+`;
+
+        // 片元着色器: 根据uv和颜色以及偏移量产生动态颜色效果
+        const fragmentShader = `
+        uniform float uOffset;
+        uniform float uTime;
+        varying vec2 vUv;
+        varying vec3 vColor;
+        
+        void main() {
+            // 基础颜色: 根据位置渐变 + 偏移影响色相
+            vec3 color1 = vec3(0.2, 0.3, 0.8); // 蓝色调
+            vec3 color2 = vec3(0.8, 0.2, 0.5); // 粉紫色
+            vec3 color3 = vec3(0.1, 0.8, 0.6); // 青绿色
+            
+            // 根据偏移量混合颜色 (正偏移偏暖色，负偏移偏冷色)
+            float mixFactor = (uOffset + 1.0) / 2.0; // 将[-1,1]映射到[0,1]
+            vec3 baseColor = mix(color1, color2, mixFactor);
+            
+            // 添加UV方向的渐变
+            vec3 uvGradient = vec3(vUv.x, vUv.y, 1.0 - vUv.x);
+            
+            // 动态光晕效果: 随时间变化的边缘光
+            float glow = sin(vUv.x * 20.0 - uTime * 3.0) * cos(vUv.y * 20.0 + uTime * 2.0);
+            glow = clamp(glow * 0.3 + 0.7, 0.5, 1.2);
+            
+            // 最终颜色
+            vec3 finalColor = baseColor * (0.8 + uvGradient * 0.3) * glow;
+            
+            // 根据凸起程度增加高光 (在片元中模拟简单光照，也可以依赖顶点光照)
+            float highlight = max(0.0, uOffset) * 0.5;
+            finalColor += vec3(highlight, highlight * 0.6, highlight * 0.3);
+            
+            gl_FragColor = vec4(finalColor, 1.0);
+        }
+    `;
+
+        // 创建ShaderMaterial
+        const shaderMaterial = new THREE.ShaderMaterial({
+            uniforms: {
+                uOffset: { value: 0.0 },
+                uTime: { value: 0.0 },
+            },
+            vertexShader: vertexShader,
+            fragmentShader: fragmentShader,
+            side: THREE.DoubleSide, // 双面渲染，以便凹陷时看到背面颜色
+            transparent: false,
+            wireframe: false,
+            flatShading: false,
+        });
+
+        // 创建平面网格
+        const planeMesh = new THREE.Mesh(geometry, shaderMaterial);
+        scene.add(planeMesh);
+
+        // 添加边缘轮廓线条效果 (可选，增强视觉)
+        const edgesGeo = new THREE.EdgesGeometry(geometry);
+        const edgesMat = new THREE.LineBasicMaterial({
+            color: 0x4ecdc4,
+            transparent: true,
+            opacity: 0.2,
+        });
+        const wireframeEdges = new THREE.LineSegments(edgesGeo, edgesMat);
+        planeMesh.add(wireframeEdges);
+
+        // --- 滚动交互逻辑 ---
+
+        // 滚动偏移量范围 [-1, 1] ，向下滚动 -> 凸起 (正)，向上滚动 -> 凹陷 (负)
+        let targetOffset = 0;
+        let currentOffset = 0;
+
+        // 获取滚动进度指示器元素
+        const progressBar = document.querySelector(".scroll-progress");
+        const offsetSpan = document.getElementById("offsetValue");
+
+        // 页面总滚动高度计算
+        function getScrollPercent() {
+            const scrollTop =
+                window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight =
+                document.documentElement.scrollHeight - window.innerHeight;
+            if (scrollHeight <= 0) return 0;
+            return scrollTop / scrollHeight;
+        }
+
+        // 滚动事件监听
+        window.addEventListener("scroll", () => {
+            const percent = getScrollPercent();
+            // 映射滚动百分比到偏移量: 0% -> -1 (凹陷), 50% -> 0 (平面), 100% -> 1 (凸起)
+            // 这样向下滚动时逐渐凸起
+            targetOffset = percent * 2 - 1;
+
+            // 更新进度条
+            if (progressBar) {
+                progressBar.style.transform = `scaleX(${percent})`;
+            }
+        });
+
+        // 也可以根据滚动方向更细腻的控制，这里使用线性映射即可
+
+        // --- 辅助: 添加粒子背景增加视觉效果 ---
+        const particleCount = 800;
+        const particlesGeometry = new THREE.BufferGeometry();
+        const particlePositions = new Float32Array(particleCount * 3);
+        for (let i = 0; i < particleCount; i++) {
+            particlePositions[i * 3] = (Math.random() - 0.5) * 30;
+            particlePositions[i * 3 + 1] = (Math.random() - 0.5) * 15;
+            particlePositions[i * 3 + 2] = (Math.random() - 0.5) * 15 - 10;
+        }
+        particlesGeometry.setAttribute(
+            "position",
+            new THREE.BufferAttribute(particlePositions, 3),
+        );
+        const particlesMaterial = new THREE.PointsMaterial({
+            color: 0x88aaff,
+            size: 0.05,
+            transparent: true,
+            opacity: 0.4,
+            blending: THREE.AdditiveBlending,
+        });
+        const particleSystem = new THREE.Points(
+            particlesGeometry,
+            particlesMaterial,
+        );
+        scene.add(particleSystem);
+
+        // 简单的星空旋转动画
+        function animateParticles(time) {
+            particleSystem.rotation.y = time * 0.05;
+            particleSystem.rotation.x = Math.sin(time * 0.1) * 0.2;
+        }
+
+        // --- 动画循环 ---
+        let clock = new THREE.Clock();
+
+        function animate() {
+            const delta = clock.getDelta();
+            const elapsedTime = performance.now() / 1000; // seconds
+
+            // 平滑过渡偏移量 (lerp) - 增大系数加快响应
+            currentOffset += (targetOffset - currentOffset) * 0.15;
+
+            // 更新材质的uniform
+            if (shaderMaterial) {
+                shaderMaterial.uniforms.uOffset.value = currentOffset;
+                shaderMaterial.uniforms.uTime.value = elapsedTime;
+            }
+
+            // 更新UI显示偏移值
+            if (offsetSpan) {
+                offsetSpan.textContent = currentOffset.toFixed(2);
+            }
+
+            // 动态微调相机位置，增强沉浸感 (轻微跟随偏移)
+            const targetCameraZ = 5 - currentOffset * 0.3;
+            camera.position.z += (targetCameraZ - camera.position.z) * 0.05;
+            camera.lookAt(0, 0, currentOffset * 0.2);
+
+            // 粒子动画
+            animateParticles(elapsedTime);
+
+            // 使用效果合成器渲染
+            effectComposer.render();
+
+            // 也可以直接使用renderer，但为了发光效果使用composer
+            // renderer.render(scene, camera);
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // --- 窗口自适应 ---
+        window.addEventListener("resize", onWindowResize, false);
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            effectComposer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        // 控制台输出提示
+        console.log("初始化完成，滚动页面体验3D凹凸效果！");
+    </script>
+</body>
+
+</html>

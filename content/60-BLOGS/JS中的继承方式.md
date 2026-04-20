@@ -5,7 +5,7 @@ aliases: [JavaScript继承方式]
 description: 全面介绍JavaScript中的7种继承方式及其优缺点
 tags: [前端开发/JavaScript]
 date-created: 2026-03-22
-date-modified: 2026-03-22
+date-modified: 2026-03-25
 status: cultivating
 category: blog
 content-type: article

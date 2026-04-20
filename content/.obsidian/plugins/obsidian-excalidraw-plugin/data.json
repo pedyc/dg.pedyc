@@ -29,7 +29,7 @@
   "annotateSuffix": "",
   "annotatePrefix": "annotated_",
   "annotatePreserveSize": false,
-  "previewImageType": "SVGIMG",
+  "previewImageType": "SVG",
   "renderingConcurrency": 3,
   "allowImageCache": true,
   "allowImageCacheInScene": true,
@@ -93,7 +93,7 @@
   "autoexportPNG": false,
   "autoExportLightAndDark": false,
   "autoexportExcalidraw": false,
-  "embedType": "excalidraw",
+  "embedType": "SVG",
   "embedMarkdownCommentLinks": true,
   "embedWikiLink": true,
   "syncExcalidraw": false,
@@ -113,7 +113,7 @@
   "library2": {
     "type": "excalidrawlib",
     "version": 2,
-    "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.21.2",
+    "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.22.0",
     "libraryItems": [
       {
         "status": "published",
@@ -142082,7 +142082,7 @@
       }
     }
   },
-  "previousRelease": "2.21.2",
+  "previousRelease": "2.22.0",
   "showReleaseNotes": true,
   "compareManifestToPluginVersion": true,
   "showNewVersionNotification": true,

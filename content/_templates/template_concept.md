@@ -1,10 +1,11 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: {{概念名称}}
-aliases:
-  - C-{{概念名称}}
+uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+title: template_concept
+aliases: ["C-概念名称"]
 description: "{ 一句话定义这个概念 }"
 tags: []
+date-created: 2026-04-08
+date-modified: 2026-04-15
 status: fleeting | cultivating | active | completed | archive
 content-type: concept
 ---
@@ -17,11 +18,16 @@ content-type: concept
 	3. 核心命题应该引用 atomic 笔记（陈述句观点），而非 term（术语定义）
 	4. 知识图谱链接 term 和其他 concept，建立概念关系网络
 	5. 包含运行机制的可视化（Mermaid 代码）
+	6. FAQ 链接 Question，深化概念理解
+	7. SOP 链接标准流程，建立「理解 → 实践」的桥梁
 
 	写作节奏：
 	- 先写核心定义（What）
 	- 再写核心命题（Why/How）- 引用 atomic 观点
-	- 最后写应用场景（When/Where）
+	- 最后写应用场景（When/Where）和 SOP（How to do）和FAQ（What's the problem）
+
+	章节顺序：
+	概念定义 → 核心命题 → 运行机制 → 关键区别 → 应用场景（包含SOP和FAQ） → 知识图谱 → 参考延伸
 -->
 
 ## 概念：{{概念名称}}
@@ -73,6 +79,24 @@ graph LR
 
 ---
 
+### SOP
+
+> 与本概念相关的标准操作流程，通过实践辅助理解
+
+- [[SOP-{{本概念相关示例}}]] — {{简短描述}}
+- [[SOP-{{相关SOP名称}}]] — {{简短描述}}
+- [[SOP-{{另一个SOP名称}}]] — {{简短描述}}
+
+---
+
+### FAQ
+
+> 与本概念相关的开放性问题，待进一步探索
+
+- [[Q-{{相关问题1}}]]
+- [[Q-{{相关问题2}}]]
+---
+
 ### 知识图谱
 
 > 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
@@ -84,18 +108,5 @@ graph LR
 	- [[{{并列概念}}]] — 同级别的相关概念
 - **相关概念**：
 	- [[{{相关概念}}]] — 有联系但非上下位的概念
-
----
-
-### FAQ
-
-> 与本概念相关的开放性问题，待进一步探索
-
-- [[Q-{{相关问题1}}]]
-- [[Q-{{相关问题2}}]]
-
----
-
-### 参考延伸
-
-- {{文献/文章链接}}
+- **参考文章**
+	- {{文献/文章链接}}

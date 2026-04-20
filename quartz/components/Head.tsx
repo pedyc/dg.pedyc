@@ -65,14 +65,6 @@ export default (() => {
                 font-style: normal;
                 font-display: swap;
               }
-              @font-face {
-                font-family: "biro_script_standardRgus";
-                src: url("/static/font/biro_script_standard_us.woff2") format("woff2"),
-                     url("/static/font/biro_script_standard_us.woff") format("woff");
-                font-weight: normal;
-                font-style: normal;
-                font-display: swap;
-              }
             `,
           }}
           data-persist

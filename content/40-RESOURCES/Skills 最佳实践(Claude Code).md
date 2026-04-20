@@ -4,7 +4,7 @@ title: Skills 最佳实践(Claude Code)
 description: 使用 Claude Code Skill 的规范和原则
 tags: ["AI/Claude"]
 date-created: 2025-05-19
-date-modified: 2026-03-21
+date-modified: 2026-03-25
 status: cultivating
 content-type: concept
 ---

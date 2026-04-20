@@ -20,6 +20,7 @@
   "uriCallbacks": true,
   "userIgnoreFilters": [
     "80-PRIVATE/",
-    "40-RESOURCES/SimpRead/"
+    "40-RESOURCES/SimpRead/",
+    "/CLAUDE/"
   ]
 }

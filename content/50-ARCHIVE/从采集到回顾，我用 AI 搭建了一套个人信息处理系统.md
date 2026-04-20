@@ -2,7 +2,7 @@
 title: 从采集到回顾，我用 AI 搭建了一套个人信息处理系统
 tags: []
 date-created: 2026-03-06
-date-modified: 2026-03-06
+date-modified: 2026-03-29
 banner: "https://images.unsplash.com/photo-1770211163195-a5f663ad0afd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Njc1ODd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI4MTE0NjR8&ixlib=rb-4.1.0&q=85&fit=crop&w=800&max-h=540"
 date: 2026-03-06 23:37:46
 url: https://sspai.com/post/106477

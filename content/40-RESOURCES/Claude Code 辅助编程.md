@@ -4,7 +4,7 @@ title: Claude Code 辅助编程
 description: Claude Code 的安装配置和核心命令使用指南
 tags: [人工智能, 工具]
 date-created: 2025-08-26
-date-modified: 2026-03-15
+date-modified: 2026-03-25
 status: cultivating
 content-type: sop
 ---
@@ -15,24 +15,24 @@ content-type: sop
 
 1. **安装 Node.js** (v18+)
 
-	 ```bash
-   # 使用 nvm 安装
-   nvm install 18
-   nvm use 18
-   ```
+ ```bash
+ # 使用 nvm 安装
+ nvm install 18
+ nvm use 18
+ ```
 
 2. **安装 Claude Code**
 
-	 ```bash
+```bash
    npm install -g @anthropic-ai/claude
-   ```
+```
 
 3. **可选安装** - Claude Code Router
 
-	 ```bash
+```bash
    # 用于多模型切换或离线使用
    npm install -g claude-code-router
-   ```
+```
 
 ### 验证安装
 

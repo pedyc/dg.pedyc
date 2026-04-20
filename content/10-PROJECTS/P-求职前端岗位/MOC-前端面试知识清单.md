@@ -1,18 +1,14 @@
 ---
 uid: 202603130000
 title: MOC-前端面试知识清单
-aliases:
-  - MOC-前端面试Roadmap
+aliases: [MOC-前端面试Roadmap]
 description: 前端工程师求职面试所需掌握的知识体系地图
-tags:
-  - 前端/面试
+tags: [前端/面试]
 date-created: 2026-03-13
-date-modified: 2026-03-22
+date-modified: 2026-03-24
 status: cultivating
 content-type: moc
-related:
-  - "[[前端开发]]"
-  - "[[P-复习vue3]]"
+related: ["[[前端开发]]", "[[P-复习vue3]]"]
 ---
 
 ## 🔥 核心知识（面试占比 70% 精力）
@@ -73,7 +69,7 @@ related:
 ### 4. 算法与数据结构（大厂必备）
 
 - [ ] **高频手写**（⭐⭐⭐⭐⭐）
-	- [ ] 数组去重/扁平化
+	- [x] [[如何实现数组去重？]]
 	- [ ] 防抖/节流
 	- [ ] 柯里化
 	- [ ] 发布订阅/观察者模式

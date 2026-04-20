@@ -1,8 +1,4 @@
----
-title: template_startup
-date-created: 2026-02-09
-date-modified: 2026-03-04
----
+
 
 <%*
 try {

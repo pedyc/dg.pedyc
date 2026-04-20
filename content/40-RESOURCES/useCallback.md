@@ -1,106 +1,125 @@
 ---
-content-type: atomic
+uid: 202509270000
 title: useCallback
+aliases: [C-useCallback]
+description: React Hooks 之一，缓存函数引用，只有依赖变化时才返回新的函数引用，用于性能优化
+tags: [前端开发/框架/React]
 date-created: 2025-09-09
-date-modified: 2025-09-09
+date-modified: 2026-04-19
+status: cultivating
+content-type: concept
+related: "[[React]]"
 ---
 
-## React useCallback 与 Vue computed 的区别
+## 概念：useCallback
 
-### 🎯 核心用途不同
+> 在渲染期间返回记忆化的函数引用，只有当依赖项变化时才返回新的函数引用。
 
-React useCallback:
-- 用于**缓存函数引用**，避免不必要的函数重新创建
-- 主要解决**性能优化**问题，防止子组件不必要的重新渲染
-- 返回一个**记忆化的函数**
+**解决的核心痛点**：每次组件渲染都会重新创建函数，如果将这些函数作为 props 传递给子组件，会导致子组件不必要的重新渲染；useCallback 可以缓存函数引用，避免这种性能损耗。
 
-Vue computed:
-- 用于**计算派生状态**，基于响应式数据计算新值
-- 主要解决**数据转换**问题，将复杂逻辑从模板中抽离
-- 返回一个**计算后的值**
+---
 
-### 📝 代码示例对比
+### 核心命题
 
-React useCallback:
+- [[useCallback只在依赖变化时返回新的函数引用]]
+- [[useCallback配合React.memo进行性能优化]]
+- [[useCallback只在确实存在性能问题时使用]]
 
-```javascript
-const MyComponent = () => {
-  const [count, setCount] = useState(0);
-  const [name, setName] = useState('');
-  
-  // 缓存函数，只有当 count 变化时才重新创建
-  const handleClick = useCallback(() => {
-    console.log('Count:', count);
-  }, [count]); // 依赖数组
-  
-  return <ChildComponent onClick={handleClick} />;
-};
+---
+
+### 运行机制
+
+```mermaid
+graph TD
+    A[组件渲染] --> B{useCallback 调用}
+    B --> C[检查依赖数组]
+    C --> D{依赖是否变化?}
+    D -->|否| E[返回缓存的函数引用<br/>同一引用]
+    D -->|是| F[创建新函数<br/>存入缓存]
+    F --> E
+    E --> G[组件渲染完成<br/>子组件接收 props]
+    G --> H{子组件用 React.memo?}
+    H -->|是| I[比较 props 是否变化]
+    H -->|否| J[子组件必然重新渲染]
+    I --> K{props 引用相同?}
+    K -->|是| L[跳过子组件渲染]
+    K -->|否| M[子组件重新渲染]
 ```
 
-Vue computed:
+#### 源码核心逻辑（简化）
 
 ```javascript
-const MyComponent = {
-  data() {
-    return {
-      firstName: 'John',
-      lastName: 'Doe'
-    }
-  },
-  computed: {
-    // 计算属性，基于 firstName 和 lastName 计算
-    fullName() {
-      return this.firstName + ' ' + this.lastName;
-    }
+// useCallback 简化实现原理
+function useCallback(fn, deps) {
+  const { current } = useRef();
+  if (hasDepsChanged(deps, current.deps)) {
+    current.fn = fn;
+    current.deps = deps;
   }
-};
+  return current.fn;
+}
 ```
 
-### 🔄 触发机制
+---
 
-useCallback:
-- 依赖数组中的值变化时，返回新的函数引用
-- 依赖不变时，返回缓存的函数引用
-- 手动控制缓存策略
+### 关键区别
 
-computed:
-- 依赖的响应式数据变化时，自动重新计算
-- 结果会被缓存，依赖不变时直接返回缓存值
-- Vue 自动追踪依赖关系
+| 维度 | useCallback | useMemo | 不使用缓存 |
+|:---|:---|:---|:---|
+| **缓存内容** | 函数引用 | 计算值 | 每次渲染重新创建 |
+| **触发更新条件** | 依赖变化 | 依赖变化 | 父组件渲染必然触发 |
+| **适用场景** | 回调函数 props | 计算密集结果 | 简单组件或无性能问题 |
+| **开销** | 缓存管理开销 | 缓存存储开销 | 无额外开销 |
 
-### ⚡ 性能特点
+| 维度 | useCallback | React.memo |
+|:---|:---|:---|
+| **作用对象** | 函数引用 | 组件本身 |
+| **防止渲染** | 防止 props 引用变化 | 防止 props 值变化 |
+| **配合使用** | 作为 props 传入 | 包装子组件 |
 
-useCallback:
-- 防止函数重新创建导致的子组件重渲染
-- 需要配合 `React.memo` 或 `useMemo` 使用才有效果
-- 过度使用可能适得其反
+---
 
-computed:
-- 自动缓存计算结果，避免重复计算
-- 惰性求值，只有被访问时才计算
-- Vue 的响应式系统自动优化
+### 应用场景
 
-### 🎨 使用场景
+- ✅ **适用场景**
+	- **传递给 memo 包装的子组件**：作为 `React.memo` 包装的子组件的回调 props
+	- **作为其他 Hook 的依赖**：如 `useEffect`、`useCallback` 本身依赖其他函数
+	- **高频渲染的列表项**：列表中的回调函数（如 `onClick`）
+- ⛔ **误用**
+	- **简单组件**：组件本身渲染不频繁，缓存函数的开销可能大于收益
+	- **没有配合 React.memo**：子组件没有用 `React.memo` 包装时，useCallback 无法阻止子组件渲染
+	- **过度依赖**：依赖数组过于宽泛或空数组使用不当
 
-useCallback 适用于:
-- 传递给子组件的事件处理函数
-- 作为其他 Hook 的依赖项的函数
-- 避免昂贵的函数重新创建
+---
 
-computed 适用于:
-- 基于现有数据计算新数据
-- 复杂的数据格式化
-- 过滤、排序等数据处理
+### SOP
 
-### 📊 总结对比
+> useCallback 的标准操作流程，通过实践辅助理解
 
-| 特性 | React useCallback | Vue computed |
-|------|------------------|-------------|
-| **目的** | 缓存函数引用 | 计算派生数据 |
-| **返回值** | 函数 | 计算结果 |
-| **依赖追踪** | 手动指定依赖数组 | 自动追踪依赖 |
-| **缓存机制** | 基于依赖比较 | 基于响应式系统 |
-| **主要用途** | 性能优化 | 数据转换 |
-| **使用复杂度** | 需要理解依赖数组 | 相对简单直观 |
+- [[SOP-useCallback使用示例]]
+- [[SOP-React性能优化]] — 何时使用 useCallback 的判断流程
+- [[SOP-避免不必要的重新渲染]] — useCallback 与 React.memo 配合使用
 
-两者解决的是不同层面的问题：useCallback 专注于**函数缓存优化**，而 computed 专注于**数据计算缓存**。
+---
+
+### FAQ
+
+> 关于 useCallback 的常见问题，待进一步探索
+
+- [[Q-useCallback 和 useMemo 的性能优化原理是什么？]]
+- [[Q-为什么 useCallback 需要配合 React.memo 使用？]]
+- [[Q-useCallback 的依赖数组应该如何设置？]]
+- [[Q-什么情况下不应该使用 useCallback？]]
+
+---
+
+### 知识图谱
+
+- **父级概念**：[[React]] — React Hooks 之一
+- **父级 Hook**：
+	- [[Hooks (React)]] — useCallback 所属的 Hooks 体系
+- **相关概念**：
+	- [[useMemo]] — 值缓存，与 useCallback 机制类似但缓存的是值
+	- [[React.memo]] — 组件记忆化，需要配合 useCallback 使用
+	- [[虚拟DOM(React)]] — useCallback 影响 Virtual DOM diff 结果
+	- [[Fiber架构(React)]] — Hooks 依赖 Fiber 链表结构实现

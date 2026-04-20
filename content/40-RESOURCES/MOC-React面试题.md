@@ -1,7 +1,7 @@
 ---
 title: MOC-React面试题
 date-created: 2025-05-21
-date-modified: 2026-03-15
+date-modified: 2026-04-20
 content-type: atomic
 ---
 
@@ -38,4 +38,6 @@ content-type: atomic
 | [[函数组件每次渲染都重新执行，为什么 React 还能保留状态、函数引用？这些数据是怎么“记住”的？]] | Hooks 原理、性能优化   | 为什么函数组件每次执行都重头开始、`useState` 为什么能 " 记住 " 旧值、闭包为什么 " 看不见 " 新值 |
 | [[React 中的 setState 是同步还是异步的？为什么有时候打印不到最新值？]]         | Hooks 原理        | setState                                                    |
 
-[[MOC-Vue 面试题]]e |
+### 相关链接
+
+- [[MOC-Vue 面试题]]

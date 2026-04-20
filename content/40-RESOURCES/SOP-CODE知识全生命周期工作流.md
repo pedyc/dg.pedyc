@@ -6,7 +6,7 @@ author:
 description:
 tags: ["知识管理/工作流"]
 date-created: 2025-02-20
-date-modified: 2026-03-18
+date-modified: 2026-04-09
 status: completed
 content-type: sop
 ---
@@ -33,7 +33,7 @@ content-type: sop
 - 工具：
 	- Obsidian
 - 我的方案：
-	- [[PARA笔记法]] + [[卡片盒笔记法|卢曼卡片盒笔记法]] + [[视觉思维概述|视觉思维]]
+	- [[PARA笔记法]] + [[卡片盒笔记法|卢曼卡片盒笔记法]] + [[视觉思维|视觉思维]]
 	- 参见：[[META-组织方案]]
 
 ### 知识内化 (Distill)

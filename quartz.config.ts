@@ -64,7 +64,7 @@ const config: QuartzConfig = {
       Plugin.ObsidianFlavoredMarkdown({
         enableInHtmlEmbed: false,
         parseTags: false,
-        mermaid: false,
+        mermaid: true,
       }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),

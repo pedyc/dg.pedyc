@@ -472,5 +472,5 @@
   "enableMiyo": false,
   "selfHostSearchProvider": "firecrawl",
   "convertedDocOutputFolder": "/99-ASSETS/copilot/converteddocs",
-  "miyoVaultName": ""
+  "miyoServerUrl": ""
 }

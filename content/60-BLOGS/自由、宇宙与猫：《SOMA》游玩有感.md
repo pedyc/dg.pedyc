@@ -3,12 +3,12 @@ uid: 202411191051
 title: 自由、宇宙与猫：《SOMA》游玩有感
 aliases: [SOMA观后感]
 description: 探讨存在主义与虚无主义的游戏观后感，关于意识、身份和自由的哲学思考
-tags: [生活/思考, 游戏/观后感]
+tags: [生活/思考, 游戏/观后感, 意识流]
 date-created: 2024-11-19
-date-modified: 2025-05-10
+date-modified: 2026-03-25
 status: completed
-content-type: article
 category: blog
+content-type: article
 published: true
 ---
 

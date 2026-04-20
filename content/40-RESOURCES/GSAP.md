@@ -5,7 +5,7 @@ aliases: [GSAP, C-GSAP, GreenSock Animation Platform]
 description: 专业的高性能 Web 动画库，提供流畅的动画控制和强大的时间线功能
 tags: [前端开发/动画]
 date-created: 2026-03-20
-date-modified: 2026-03-19
+date-modified: 2026-03-30
 status: cultivating
 content-type: concept
 ---
@@ -70,7 +70,7 @@ flowchart TB
 
 ### 知识图谱
 
-- **父级概念**：[[Web 动画]]
+- **父级概念**：[[Web动画]]
 - **子集概念**：
 	- [[ScrollTrigger]]
 	- [[Flip]]

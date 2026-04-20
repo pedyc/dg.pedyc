@@ -5,7 +5,7 @@ aliases: [A-知识管理]
 description: 捕捉、组织、提炼和应用知识，构建第二大脑
 tags: [area]
 date-created: 2025-04-30
-date-modified: 2026-03-18
+date-modified: 2026-04-09
 status: cultivating
 content-type: area
 up: 

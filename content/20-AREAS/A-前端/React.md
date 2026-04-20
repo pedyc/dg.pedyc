@@ -8,7 +8,7 @@ date-created: 2025-05-21
 date-modified: 2026-04-20
 status: cultivating
 content-type: area
-up: ["[[前端开发]]"]
+up: "[[前端开发]]"
 ---
 
 ## Area: React

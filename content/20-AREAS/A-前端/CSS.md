@@ -5,7 +5,7 @@ aliases: [Cascading Style Sheets, 层叠样式表]
 description: Web 的表现层语言，通过层叠和继承机制决定 HTML 文档的渲染方式
 tags: [前端开发/CSS]
 date-created: 2025-12-17
-date-modified: 2026-04-17
+date-modified: 2026-04-20
 status: active
 content-type: area
 up: "[[前端开发]]"

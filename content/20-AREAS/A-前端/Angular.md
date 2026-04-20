@@ -1,17 +1,14 @@
 ---
-uid: '202604201200'
+uid: "202604201200"
 title: Angular
-aliases: ["A-Angular"]
-description: "Angular 是 Google 维护的 TypeScript 优先企业级前端框架，提供完整的前端解决方案"
-tags:
-  - angular
-  - frontend
-  - framework
+aliases: [A-Angular]
+description: Angular 是 Google 维护的 TypeScript 优先企业级前端框架，提供完整的前端解决方案
+tags: [angular, "前端开发/框架"]
 date-created: 2026-04-20
 date-modified: 2026-04-20
 status: cultivating
 content-type: area
-up: [["前端开发"]]
+up: "[[前端开发]]"
 ---
 
 ## Area: Angular
@@ -64,6 +61,7 @@ mindmap
 	- 后端开发（属于后端领域）
 - **与相关领域的区别**：
 	- vs [[React]]：Angular 是完整框架（内置路由、表单、HTTP），React 是库需搭配使用
+		- 👉[[Angular vs React]]
 	- vs [[Vue]]：Angular 强制 TypeScript 和装饰器语法，Vue 更灵活
 	- vs [[Svelte]]：Angular 编译时复杂，运行时框架；Svelte 编译时复杂，零运行时
 
@@ -110,6 +108,16 @@ mindmap
 	- [[Angular性能优化]] — OnPush、变更检测、虚拟滚动
 	- [[Angular测试]] — 单元测试与 E2E 测试
 	- [[Angular CLI]] — Angular 项目脚手架与构建工具
+- **生态系统**
+	- [[Angular Material]] — Google 官方的 UI 组件库
+	- [[Angular CDK]] — 组件开发工具包（拖拽、无障碍、 overlays）
+	- [[NgRx]] — Angular 专用状态管理（Redux 模式）
+	- [[NgRx ComponentStore]] — 组件级轻量状态管理
+	- [[PrimeNG]] — 第三方全功能 UI 组件库
+	- [[NG-ZORRO]] — 阿里 Ant Design Angular 实现
+	- [[Angular Fire]] — Firebase 与 Angular 的集成
+	- [[Nx]] — Angular Monorepo 开发工具
+	- [[Augury]] — Angular 官方调试与性能分析工具
 - **进阶主题**
 	- [[Angular Universal]] — 服务端渲染（SSR）
 	- [[Angular PWA]] — Progressive Web App 支持
@@ -135,7 +143,6 @@ mindmap
 
 > 该领域的常见问题（链接 Question 或 MOC）
 
-- [[Q-Angular vs React 选哪个]]
 - [[Q-Angular 变更检测如何工作]]
 - [[Q-Angular 中何时用 RxJS]]
 - [[Q-Angular 性能优化怎么做]]

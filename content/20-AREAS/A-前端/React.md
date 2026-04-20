@@ -5,7 +5,7 @@ aliases: [A-React, React.js, ReactJS]
 description: 用于构建用户界面的 JavaScript 库，采用组件化和 Virtual DOM
 tags: [前端开发/框架]
 date-created: 2025-05-21
-date-modified: 2026-04-15
+date-modified: 2026-04-20
 status: cultivating
 content-type: area
 up: ["[[前端开发]]"]
@@ -84,12 +84,13 @@ mindmap
 	- [[useDeferredValue]] — 延迟值更新
 - **状态管理**
 	- [[状态管理(React)]] — Redux / Zustand / Jotai / Recoil
-	- [[Context]] — 跨层级数据传递
+	- [[React Context]] — 跨层级数据传递
 - **路由与生态**
 	- [[React Router]] — 路由管理
 	- [[Next.js]] — React 全栈框架
 	- [[R3F]] — React + Three.js
-
+	- [[Zustand]]、[[Redux]] — React 状态管理库
+		- 👉[[Zustand vs Redux]]
 ---
 
 ### SOP

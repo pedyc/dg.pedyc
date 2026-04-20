@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-前端/前端交互.md",
+                "file": "40-RESOURCES/RxJS.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端交互"
+              "title": "RxJS"
             }
           },
           {
@@ -120,7 +120,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-前端/前端交互.md",
+                "file": "40-RESOURCES/RxJS.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +148,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "前端交互 的关系图"
+              "title": "RxJS 的关系图"
             }
           },
           {
@@ -352,17 +352,25 @@
   },
   "active": "ff128596495921cb",
   "lastOpenFiles": [
+    "20-AREAS/A-前端/Angular.md",
+    "20-AREAS/A-前端/算法与数据结构.md",
+    "40-RESOURCES/设计模式.md",
+    "40-RESOURCES/观察者模式.md",
+    "10-PROJECTS/P-求职前端岗位/MOC-算法真题库.md",
+    "40-RESOURCES/三数之和.md",
+    "40-RESOURCES/背包问题.md",
+    "20-AREAS/A-前端/动画效果示例.md",
+    "40-RESOURCES/链表.md",
     "20-AREAS/A-前端/CSS.md",
+    "20-AREAS/A-前端/前端交互.md",
     "20-AREAS/A-前端/Vue.md",
     "20-AREAS/A-前端/React.md",
-    "20-AREAS/A-前端/Angular.md",
     "20-AREAS/_resources",
     "40-RESOURCES/MOC-React面试题.md",
     "40-RESOURCES/MOC-Vue 面试题.md",
     "40-RESOURCES/Redux.md",
     "40-RESOURCES/Zustand.md",
     "40-RESOURCES/RxJS.md",
-    "20-AREAS/A-前端/动画效果示例.md",
     "40-RESOURCES/Zustand vs Redux.md",
     "40-RESOURCES/useCallback.md",
     "40-RESOURCES/React.memo.md",
@@ -371,14 +379,6 @@
     "40-RESOURCES/Hooks (React).md",
     "40-RESOURCES/useEffect.md",
     "40-RESOURCES/Q-为什么useEffect需要return-cleanup函数.md",
-    "40-RESOURCES/Q-useEffect依赖数组为什么不能使用对象.md",
-    "40-RESOURCES/Q-useState的参数为什么不能直接用对象写法.md",
-    "_templates/template_question.md",
-    "30-Zettelkasten/useEffect的return语句在组件卸载和依赖变化时都会被调用.md",
-    "index.md",
-    "CLAUDE.md",
-    "40-RESOURCES/间隔重复.md",
-    "40-RESOURCES/艾宾浩斯记忆曲线.md",
     "40-RESOURCES/_resources/艾宾浩斯记忆曲线/04080985eb809d980f8802c59e954e2b_MD5.jpg",
     "40-RESOURCES/_resources/艾宾浩斯记忆曲线",
     "40-RESOURCES/_resources/Pasted image 20260418000649.png",

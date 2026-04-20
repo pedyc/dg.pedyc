@@ -22,7 +22,7 @@ content-type: concept
 
 > 核心命题引用 atomic 笔记（陈述句观点），每个命题是一句话洞见
 
-- [[在RxJS中一切皆为流]]
+- [[RxJS中一切皆为流]]
 	- **原理**：在 RxJS 世界里，一切数据都是 Observable 序列，包括用户点击、HTTP 请求、定时器等
 - [[RxJS中操作符即为数据转换]]
 	- **原理**：通过管道（pipe）组合操作符，实现声明式的数据流转换
@@ -128,12 +128,12 @@ flowchart LR
 
 - **父级概念**：[[响应式编程]] — RxJS 所属的编程范式
 - **子级概念**：
-	- [[RxJS-Observable]] — RxJS 的核心概念
-	- [[RxJS-Observer]]
-	- [[RxJS-Subscription]]
-	- [[RxJS-Operator]] — RxJS 数据流的转换工具
+	- [[RxJS-Observable]] — 被观察数据源
+	- [[RxJS-Observer]] — 观察者
+	- [[RxJS-Subscription]] — 用于终止观察者观察的执行过程
+	- [[RxJS-Operator]] — RxJS 数据流的转换工具（map,filter,reduce）
 	- [[RxJS-Subject]] — 特殊的多播 Observable
-	- [[RxJS-Schedulers]]
+	- [[RxJS-Schedulers]] — 调度器
 - **并列概念**：
 	- [[Bacon.js]] — 类似的响应式编程库
 	- [[lodash-flow]] — 同步场景的函数组合

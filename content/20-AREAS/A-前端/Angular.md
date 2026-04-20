@@ -44,6 +44,9 @@ mindmap
             Zone.js
             Angular Material
             Angular Universal
+            NgRx
+            Angular CDK
+            Nx
 ```
 
 ---

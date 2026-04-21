@@ -63,9 +63,9 @@ graph LR
 
 | Hook                  | 用途          | 核心机制                                    |
 |:-------------------- |:---------- |:-------------------------------------- |
-| [[useState]]          | 状态管理        | 返回 `[state, setState]`，setState 支持函数式更新 |
-| useEffect             | 副作用         | 渲染后执行，返回 cleanup 函数用于清理                 |
-| [[useCallback]]       | 函数缓存        | 依赖不变时返回相同函数引用                           |
+| `useState`            | 状态管理        | 返回 `[state, setState]`，setState 支持函数式更新 |
+| `useEffect`           | 副作用         | 渲染后执行，返回 cleanup 函数用于清理                 |
+| `useCallback`         | 函数缓存        | 依赖不变时返回相同函数引用                           |
 | `useMemo`             | 值缓存         | 依赖不变时返回缓存的计算结果                          |
 | `useRef`              | 引用存储        | 变更不触发重新渲染，可存储可变值                        |
 | `useContext`          | 上下文读取       | 读取最近的 Context 值                         |
@@ -132,6 +132,7 @@ graph LR
 	- [[Fiber架构(React)]] — Hooks 依赖 Fiber 的链表结构实现
 	- [[虚拟DOM(React)]] — Hooks 操作的 state 影响 Virtual DOM 更新
 	- [[useState]] — 基础状态 Hook
+	- [[useReducer]]
 	- [[useEffect]] — 副作用 Hook
 	- [[useCallback]] — 回调缓存 Hook
 	- [[useMemo]] — 值缓存 Hook

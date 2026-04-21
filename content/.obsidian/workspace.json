@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/useEffect.md",
+                "file": "40-RESOURCES/React.memo vs useMemo.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "useEffect"
+              "title": "React.memo vs useMemo"
             }
           },
           {
@@ -120,7 +120,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/useEffect.md",
+                "file": "40-RESOURCES/React.memo vs useMemo.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +148,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "useEffect 的关系图"
+              "title": "React.memo vs useMemo 的关系图"
             }
           },
           {
@@ -352,10 +352,16 @@
   },
   "active": "ff128596495921cb",
   "lastOpenFiles": [
+    "_templates/template_comp.md",
+    "40-RESOURCES/React.memo vs useMemo.md",
+    "40-RESOURCES/React.memo.md",
+    "40-RESOURCES/React Context 可搭配 React.memo 使用.md",
+    "40-RESOURCES/React Context.md",
     "40-RESOURCES/Hooks (React).md",
+    "20-AREAS/A-前端/React.md",
+    "40-RESOURCES/useEffect.md",
     "40-RESOURCES/SOP-创建自定义Hooks.md",
     "20-AREAS/A-前端/动画效果示例.md",
-    "20-AREAS/A-前端/React.md",
     "20-AREAS/A-前端/前端开发.md",
     "40-RESOURCES/React最佳实践.md",
     "_templates/template_sop.md",
@@ -374,12 +380,6 @@
     "20-AREAS/A-前端/前端交互.md",
     "20-AREAS/A-前端/Vue.md",
     "20-AREAS/_resources",
-    "40-RESOURCES/MOC-React面试题.md",
-    "40-RESOURCES/MOC-Vue 面试题.md",
-    "40-RESOURCES/Redux.md",
-    "40-RESOURCES/Zustand.md",
-    "40-RESOURCES/Zustand vs Redux.md",
-    "40-RESOURCES/useCallback.md",
     "40-RESOURCES/_resources/艾宾浩斯记忆曲线/04080985eb809d980f8802c59e954e2b_MD5.jpg",
     "40-RESOURCES/_resources/艾宾浩斯记忆曲线",
     "40-RESOURCES/_resources/Pasted image 20260418000649.png",

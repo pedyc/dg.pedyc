@@ -5,7 +5,7 @@ aliases: [C-React.memo]
 description: React 提供的高阶组件，用于缓存函数组件，避免 props 未变化时的不必要的重新渲染
 tags: [前端开发/框架/React]
 date-created: 2026-04-19
-date-modified: 2026-04-19
+date-modified: 2026-04-21
 status: cultivating
 content-type: concept
 related: "[[React]]"
@@ -96,7 +96,7 @@ const MyComponent = React.memo(
 
 ### FAQ
 
-- [[Q-React.memo和useMemo有什么区别]] — 两者适用场景对比
+- [[React.memo vs useMemo]] — 两者适用场景对比
 - [[Q-React.memo为什么有时候不生效]] — 常见失效原因分析
 
 ---

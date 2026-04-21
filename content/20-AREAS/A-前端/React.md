@@ -5,7 +5,7 @@ aliases: [A-React, React.js, ReactJS]
 description: 用于构建用户界面的 JavaScript 库，采用组件化和 Virtual DOM
 tags: [前端开发/框架]
 date-created: 2025-05-21
-date-modified: 2026-04-20
+date-modified: 2026-04-21
 status: cultivating
 content-type: area
 up: "[[前端开发]]"
@@ -97,6 +97,7 @@ mindmap
 
 > 该领域的标准化操作流程
 
+- [[React最佳实践|SOP-React最佳实践]] — 开发 React 应用需要遵循的规范
 - [[SOP-使用Claude-Code开发React组件]] — Claude Code 开发 React 组件的工作流
 - [[SOP-在React中实现文字故障效果]] — React 中的 Glitch 文字动画
 - [[SOP-在React中实现ASCII动画]] — React 中的 ASCII 动画效果

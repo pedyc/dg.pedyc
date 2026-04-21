@@ -5,7 +5,7 @@ aliases: [C-useEffect]
 description: React Hooks 中用于处理副作用的核心 API，在渲染后执行清理和订阅逻辑
 tags: [前端开发/框架/React]
 date-created: 2026-04-18
-date-modified: 2026-04-18
+date-modified: 2026-04-21
 status: cultivating
 content-type: concept
 related: "[[Hooks (React)]]"

@@ -1,36 +1,21 @@
 ---
 uid: 202604210000
 title: SOP-创建自定义Hooks
-aliases:
-  - SOP-创建自定义Hooks
-description: "创建可复用的 React 自定义 Hooks 的标准化流程"
-tags:
-  - react
-  - hooks
-  - frontend
+aliases: [SOP-创建自定义Hooks]
+description: 创建可复用的 React 自定义 Hooks 的标准化流程
+tags: [react, hooks, frontend]
+date-created: 2026-04-21
+date-modified: 2026-04-21
 status: cultivating
 content-type: sop
-up: "[[React Hooks]]
-"
-
+up: "[[Hooks (React)|React Hooks]]"
 ---
 
-<!--
-	SOP 设计原则：
-
-	1. SOP指的是Standard Operating Procedure（标准化作业流程）
-	2. 核心是标准化（目标、实现步骤、实践示例）、边界条件（适用场景、常见坑点）
-	3. 撰写流程：先确定目标和适用场景，然后写实现步骤并画流程图，最后总结坑点
-
-	视觉化支持：
-	- Mermaid图标：流程图形式，展示达到目标的标准流程
--->
-
-## SOP：创建自定义Hooks
+## SOP：创建自定义 Hooks
 
 > 一句话描述这个 SOP 的目标和适用场景
 
-目标：建立一套标准化的自定义 Hooks 创建流程，确保 Hooks 可复用、可测试、符合 React 最佳实践
+目标：建立一套标准化的自定义 Hooks 创建流程，确保 Hooks 可复用、可测试、符合 [[React最佳实践]]
 实现：`useLocalStorage` 示例展示了从需求分析到完整实现的标准化流程
 
 ---
@@ -70,15 +55,15 @@ flowchart TD
 ### 核心步骤
 
 1. **识别复用点**：分析组件间重复的状态逻辑或副作用代码
-   - 注意：确保该逻辑确实需要在多处使用，避免过度抽象
+	 - 注意：确保该逻辑确实需要在多处使用，避免过度抽象
 2. **确定 Hook 签名**：明确输入参数和返回值类型
-   - 注意：优先使用 TypeScript 泛型确保类型安全
+	 - 注意：优先使用 TypeScript 泛型确保类型安全
 3. **实现核心逻辑**：编写 Hook 函数体，处理状态和副作用
-   - 注意：遵循 Hooks 规则（只在顶层调用、不条件调用）
+	 - 注意：遵循 Hooks 规则（只在顶层调用、不条件调用）
 4. **处理边界情况**：添加加载状态、错误处理、清理函数
-   - 注意：确保 Hook 在各种场景下都能正常工作
+	 - 注意：确保 Hook 在各种场景下都能正常工作
 5. **编写测试用例**：覆盖主要场景和边界情况
-   - 注意：使用 `renderHook` 测试工具确保测试可靠性
+	 - 注意：使用 `renderHook` 测试工具确保测试可靠性
 
 ---
 

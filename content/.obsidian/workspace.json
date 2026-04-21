@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-前端/前端开发.md",
+                "file": "40-RESOURCES/Hooks (React).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端开发"
+              "title": "Hooks (React)"
             }
           },
           {
@@ -120,7 +120,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-前端/前端开发.md",
+                "file": "40-RESOURCES/Hooks (React).md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +148,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "前端开发 的关系图"
+              "title": "Hooks (React) 的关系图"
             }
           },
           {
@@ -352,8 +352,11 @@
   },
   "active": "ff128596495921cb",
   "lastOpenFiles": [
-    "40-RESOURCES/虚拟DOM(Vue3).md",
+    "40-RESOURCES/SOP-创建自定义Hooks.md",
+    "20-AREAS/A-前端/_resources",
     "20-AREAS/A-前端/React.md",
+    "20-AREAS/A-前端/前端开发.md",
+    "40-RESOURCES/虚拟DOM(Vue3).md",
     "40-RESOURCES/RxJS.md",
     "20-AREAS/A-前端/Angular.md",
     "20-AREAS/A-前端/算法与数据结构.md",
@@ -377,8 +380,6 @@
     "40-RESOURCES/React.memo.md",
     "_templates/template_record.md",
     "40-RESOURCES/SOP-useCallback使用示例.md",
-    "40-RESOURCES/Hooks (React).md",
-    "40-RESOURCES/useEffect.md",
     "40-RESOURCES/_resources/艾宾浩斯记忆曲线/04080985eb809d980f8802c59e954e2b_MD5.jpg",
     "40-RESOURCES/_resources/艾宾浩斯记忆曲线",
     "40-RESOURCES/_resources/Pasted image 20260418000649.png",
@@ -391,7 +392,6 @@
     "40-RESOURCES/Hooks (React).md.tmp.168740.1776225409863",
     "40-RESOURCES/Hooks (React).md.tmp.168740.1776224733893",
     "99-ASSETS/Excalidraw/问题拆解流程.excalidraw.svg",
-    "40-RESOURCES/_resources/React版本演进",
     "99-ASSETS/Excalidraw/React版本演进.excalidraw.svg",
     "40-RESOURCES/_resources/SOP-CSS实现文字横向滚动效果/e655c36112b327b457605e6ccaf06d92_MD5.gif",
     "40-RESOURCES/_resources/Pasted image 20260412182101.png",

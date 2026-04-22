@@ -1,14 +1,13 @@
 ---
-content-type: atomic
-title: 累计布局偏移 (Cumulative Layout Shift, CLS)
-description: "累计布局偏移（CLS）是衡量网页视觉稳定性的指标，用于量化页面上非预期布局偏移的程度。低CLS值表示更好的用户体验。"
-tags: ["Web性能", "用户体验", "布局稳定性"]
+title: CLS
+aliases: [T-CLS, 累计布局偏移, Cumulative Layout Shift]
+description: 累计布局偏移（CLS）是衡量网页视觉稳定性的指标，用于量化页面上非预期布局偏移的程度。低CLS值表示更好的用户体验。
+tags: [Web性能, 用户体验, 布局稳定性]
 date-created: 2025-05-06
-date-modified: 2025-05-12
+date-modified: 2026-04-22
+content-type: [term]
 keywords: [CLS, Cumulative Layout Shift, 布局偏移]
-para: "20-AREAS"
-related: ["[[首次输入延迟（First Input Delay，FID）]]", "[[最大内容渲染时间（Largest Contentful Paint，LCP）]]"]
-zettel: "前端性能优化"
+related: ["[[核心Web指标]]"]
 ---
 
 ## 定义

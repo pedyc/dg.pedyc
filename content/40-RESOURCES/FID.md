@@ -1,15 +1,13 @@
 ---
-content-type: atomic
-title: 首次输入延迟（First Input Delay，FID）
-aliases: [FID]
+title: FID
+aliases: [FID, First Input Delay, T-FID, 首次输入延迟]
 description: 首次输入延迟（FID）是衡量用户首次与页面交互时，浏览器响应的延迟时间。它是评估页面交互性的关键指标。
 tags: [Web性能, 用户体验, 性能指标]
 date-created: 2025-05-06
-date-modified: 2025-06-02
+date-modified: 2026-04-22
+content-type: [term]
 keywords: [FID, First Input Delay, 输入响应]
-para: Resource
-related: ["[[最大内容渲染时间（Largest Contentful Paint，LCP）]]", "[[累积布局偏移（Cumulative Layout Shift，CLS）]]"]
-zettel: 性能优化
+related: ["[[核心Web指标]]"]
 ---
 
 ## 定义

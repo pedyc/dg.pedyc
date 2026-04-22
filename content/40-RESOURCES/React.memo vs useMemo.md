@@ -80,12 +80,80 @@ graph TD
 
 ### 示例
 
+**React.memo 示例**：
+
+```typescript
+// 未优化：父组件更新时，子组件无条件重渲染
+const ChildComponent = ({ name }: { name: string }) => {
+  console.log('ChildComponent rendered')
+  return <div>{name}</div>
+}
+
+// 已优化：用 React.memo 包裹
+const ChildComponent = React.memo(({ name }: { name: string }) => {
+  console.log('ChildComponent rendered')
+  return <div>{name}</div>
+})
+
+// 父组件
+const Parent = () => {
+  const [count, setCount] = useState(0)
+  const [name, setName] = useState('Alice')
+
+  return (
+    <div>
+      <button onClick={() => setCount(c => c + 1)}>Count: {count}</button>
+      {/* 每次 count 更新，ChildComponent 不会重渲染（因为 name 不变） */}
+      <ChildComponent name={name} />
+    </div>
+  )
+}
+```
+
+**useMemo 示例**：
+
+```typescript
+const ExpensiveCalculation = ({ data }: { data: number[] }) => {
+  // 仅当 data 变化时重新计算，否则返回缓存结果
+  const result = useMemo(() => {
+    console.log('Computing...')
+    return data.reduce((sum, n) => sum + n, 0)
+  }, [data])
+
+  return <div>Sum: {result}</div>
+}
+```
+
+**两者结合使用**：
+
+```typescript
+const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
+  const [theme, setTheme] = useState('light')
+  const [user, setUser] = useState({ name: 'Alice' })
+
+  // 稳定 value 引用，避免 Context 消费者不必要重渲染
+  const value = useMemo(() => ({ theme, setTheme, user, setUser }), [theme, user])
+
+  return (
+    <ThemeContext.Provider value={value}>
+      {children}
+    </ThemeContext.Provider>
+  )
+}
+
+const ThemedButton = React.memo(({ onClick }: { onClick: () => void }) => {
+  const { theme } = useContext(ThemeContext)
+  console.log('ThemedButton rendered')
+  return <button className={theme} onClick={onClick}>Click</button>
+})
+```
+
+---
+
 ### 知识图谱
 
 - **父级概念**：[[Hooks (React)|React Hooks]] — 两者都是 React 性能优化相关的 API
-- **相关对比**：
-	- [[React Context 可搭配 React.memo 使用]] — 结合使用的最佳实践
 - **相关概念**：
 	- [[React.memo]] — 组件记忆化高阶组件
 	- [[useMemo]] — 值记忆化 Hook
-	- [[React 性能优化]] — 性能优化的完整策略
+	- [[SOP-React性能优化]] — 性能优化的完整策略

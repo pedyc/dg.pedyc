@@ -19,7 +19,8 @@
       "Bash(mv:*)",
       "Bash(grep:*)",
       "Skill(content-verifier)",
-      "Skill(note-analyzer)"
+      "Skill(note-analyzer)",
+      "mcp__MiniMax__web_search"
     ],
     "deny": [],
     "ask": []

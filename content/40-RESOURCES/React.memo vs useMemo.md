@@ -5,7 +5,7 @@ aliases: [VS-React.memo vs useMemo]
 description: React.memo 和 useMemo 都是性能优化手段，但作用于不同的层面
 tags: [react, hooks, performance]
 date-created: 2026-04-21
-date-modified: 2026-04-21
+date-modified: 2026-04-22
 status: cultivating
 content-type: comparison
 up: "[[Hooks (React)|React Hooks]]"

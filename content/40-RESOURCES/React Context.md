@@ -5,7 +5,7 @@ aliases: [C-React Context]
 description: React Context 提供了在组件树间共享数据的方式，避免 prop drilling
 tags: [react, hooks, state-management]
 date-created: 2026-04-21
-date-modified: 2026-04-21
+date-modified: 2026-04-22
 status: cultivating
 content-type: concept
 up: "[[Hooks (React)|React Hooks]]"
@@ -26,9 +26,11 @@ up: "[[Hooks (React)|React Hooks]]"
 - [[React Context 应作为浅层、可枚举的全局数据共享方案]]
 	- **原理**：Context 每次更新会导致所有消费组件重渲染，过多或频繁更新的 Context 会导致性能问题
 - [[React Context 可搭配 React.memo 使用]]
+	- **原理**：Context 可能导致性能问题，搭配 React.memo 不再重渲染 props 稳定的组件
 - [[React Context 不等于状态管理库]]
 	- **原理**：Context 是 React 内置的 " 注射 " 机制，而非状态管理方案。状态管理需要配合 useState/useReducer 或外部库实现
-
+- [[React Context 是观察者模式的变体]]
+	- **原理**：Provider 持有 Consumer 的引用，Provider.props.value 更新时，会通知所有 Consumer 重渲染
 ---
 
 ### 运行机制
@@ -47,7 +49,9 @@ graph TB
 **核心流程**：
 
 1. **创建 Context**：`const ThemeContext = React.createContext(defaultValue)`
+	- 产生 `Provider` 和 `Consumer`，`Provider` 是一个 React 组件用来提供数据
 2. **提供数据**：在父组件用 `<ThemeContext.Provider value={theme}>`
+	- React 内部通过 `Provider.props.value` 获取共享数据，然后分享给所有 Consumer
 3. **消费数据**：在子组件用 `const theme = useContext(ThemeContext)` 或 `<ThemeContext.Consumer>`
 
 ---

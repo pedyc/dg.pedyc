@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/useCallback.md",
+                "file": "40-RESOURCES/观察者模式.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "useCallback"
+              "title": "观察者模式"
             }
           },
           {
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/React.memo vs useMemo.md",
+                "file": "40-RESOURCES/浏览器.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "React.memo vs useMemo"
+              "title": "浏览器"
+            }
+          },
+          {
+            "id": "39d0199a96349c13",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "60-BLOGS/回流和重绘.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "回流和重绘"
             }
           },
           {
@@ -120,7 +144,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/React.memo vs useMemo.md",
+                "file": "40-RESOURCES/浏览器.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +172,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "React.memo vs useMemo 的关系图"
+              "title": "浏览器 的关系图"
             }
           },
           {
@@ -352,13 +376,25 @@
   },
   "active": "ff128596495921cb",
   "lastOpenFiles": [
-    "40-RESOURCES/SOP-React性能优化.md",
+    "60-BLOGS/回流和重绘.md",
+    "40-RESOURCES/浏览器.md",
+    "40-RESOURCES/MOC-浏览器兼容性问题.md",
+    "40-RESOURCES/合成层.md",
+    "40-RESOURCES/浏览器渲染流程.md",
+    "30-Zettelkasten/浏览器合成渲染树后进行布局和绘制.md",
+    "30-Zettelkasten/浏览器采用多进程架构保证稳定性和流畅性.md",
+    "30-Zettelkasten/浏览器通过事件循环机制处理异步任务.md",
     "40-RESOURCES/React.memo vs useMemo.md",
+    "40-RESOURCES/React Context.md",
+    "30-Zettelkasten/React Context 是观察者模式的变体.md",
+    "40-RESOURCES/观察者模式.md",
+    "40-RESOURCES/React Context 可搭配 React.memo 使用.md",
+    "40-RESOURCES/发布订阅模式.md",
+    "40-RESOURCES/useCallback.md",
+    "40-RESOURCES/SOP-React性能优化.md",
     "40-RESOURCES/React.memo.md",
     "20-AREAS/A-前端/动画效果示例.md",
     "_templates/template_comp.md",
-    "40-RESOURCES/React Context 可搭配 React.memo 使用.md",
-    "40-RESOURCES/React Context.md",
     "40-RESOURCES/Hooks (React).md",
     "20-AREAS/A-前端/React.md",
     "40-RESOURCES/useEffect.md",
@@ -367,18 +403,6 @@
     "40-RESOURCES/React最佳实践.md",
     "_templates/template_sop.md",
     "20-AREAS/A-前端/_resources",
-    "40-RESOURCES/虚拟DOM(Vue3).md",
-    "40-RESOURCES/RxJS.md",
-    "20-AREAS/A-前端/Angular.md",
-    "20-AREAS/A-前端/算法与数据结构.md",
-    "40-RESOURCES/设计模式.md",
-    "40-RESOURCES/观察者模式.md",
-    "10-PROJECTS/P-求职前端岗位/MOC-算法真题库.md",
-    "40-RESOURCES/三数之和.md",
-    "40-RESOURCES/背包问题.md",
-    "40-RESOURCES/链表.md",
-    "20-AREAS/A-前端/CSS.md",
-    "20-AREAS/A-前端/前端交互.md",
     "20-AREAS/_resources",
     "40-RESOURCES/_resources/艾宾浩斯记忆曲线/04080985eb809d980f8802c59e954e2b_MD5.jpg",
     "40-RESOURCES/_resources/艾宾浩斯记忆曲线",

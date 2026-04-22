@@ -5,7 +5,7 @@ aliases: [C-useCallback]
 description: React Hooks 之一，缓存函数引用，只有依赖变化时才返回新的函数引用，用于性能优化
 tags: [前端开发/框架/React]
 date-created: 2025-09-09
-date-modified: 2026-04-19
+date-modified: 2026-04-22
 status: cultivating
 content-type: concept
 related: "[[React]]"

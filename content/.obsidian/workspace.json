@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/浏览器.md",
+                "file": "40-RESOURCES/浏览器渲染流程.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,107 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "浏览器"
+              "title": "浏览器渲染流程"
             }
           },
           {
             "id": "58dc9c2a34fe32c0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/核心Web指标.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "核心Web指标"
-            }
-          },
-          {
-            "id": "5ce01f98ca9c3e7e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/核心Web指标.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "核心Web指标"
-            }
-          },
-          {
-            "id": "399d4583ebeb7514",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/核心Web指标.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "核心Web指标"
-            }
-          },
-          {
-            "id": "c5b6dcf6de75faeb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/核心Web指标.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "核心Web指标"
-            }
-          },
-          {
-            "id": "eceae9663c68d349",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -200,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -240,7 +144,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/INP.md",
+                "file": "40-RESOURCES/浏览器渲染流程.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -268,22 +172,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "INP 的关系图"
-            }
-          },
-          {
-            "id": "3690ad53e5842d0d",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "20-AREAS/A-前端/动画效果示例.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "动画效果示例 的大纲"
+              "title": "浏览器渲染流程 的关系图"
             }
           }
         ]
@@ -301,6 +190,21 @@
               "state": {},
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
+            }
+          },
+          {
+            "id": "3690ad53e5842d0d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "40-RESOURCES/浏览器渲染流程.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "浏览器渲染流程 的大纲"
             }
           },
           {
@@ -360,7 +264,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -470,11 +374,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "45cd10613bc1ff45",
+  "active": "ff128596495921cb",
   "lastOpenFiles": [
+    "40-RESOURCES/浏览器.md",
+    "40-RESOURCES/渲染进程.md",
+    "40-RESOURCES/浏览器核心架构.md",
+    "40-RESOURCES/观察者模式.md",
+    "40-RESOURCES/INP.md",
     "40-RESOURCES/核心Web指标.md",
     "40-RESOURCES/LCP.md",
-    "40-RESOURCES/INP.md",
     "40-RESOURCES/CLS.md",
     "20-AREAS/A-前端/动画效果示例.md",
     "40-RESOURCES/累积布局偏移（Cumulative Layout Shift，CLS）.md",
@@ -482,7 +390,6 @@
     "40-RESOURCES/FID.md",
     "20-AREAS/A-前端/前端性能优化.md",
     "40-RESOURCES/回流和重绘.md",
-    "40-RESOURCES/浏览器.md",
     "40-RESOURCES/MOC-浏览器兼容性问题.md",
     "40-RESOURCES/合成层.md",
     "40-RESOURCES/浏览器渲染流程.md",
@@ -492,13 +399,10 @@
     "40-RESOURCES/React.memo vs useMemo.md",
     "40-RESOURCES/React Context.md",
     "30-Zettelkasten/React Context 是观察者模式的变体.md",
-    "40-RESOURCES/观察者模式.md",
     "40-RESOURCES/React Context 可搭配 React.memo 使用.md",
     "40-RESOURCES/发布订阅模式.md",
     "40-RESOURCES/useCallback.md",
     "40-RESOURCES/SOP-React性能优化.md",
-    "40-RESOURCES/React.memo.md",
-    "_templates/template_comp.md",
     "20-AREAS/A-前端/_resources",
     "20-AREAS/_resources",
     "40-RESOURCES/_resources/艾宾浩斯记忆曲线/04080985eb809d980f8802c59e954e2b_MD5.jpg",

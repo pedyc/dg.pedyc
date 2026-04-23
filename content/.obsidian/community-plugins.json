@@ -15,9 +15,9 @@
   "obsidian-tasks-plugin",
   "templater-obsidian",
   "pdf-plus",
-  "virtual-linker",
   "mermaid-tools",
   "omnisearch",
   "obsidian-emoji-toolbar",
-  "obsidian-git"
+  "obsidian-git",
+  "virtual-linker"
 ]

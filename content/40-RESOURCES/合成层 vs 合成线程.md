@@ -120,5 +120,5 @@ graph TB
 
 ### 参考延伸
 
-- [GPU 合成机制](https://developer.chrome.com/blog/hardware-accelerated-compositing/) — Chrome 官方关于硬件加速合成的解释
+- [[深入了解现代网络浏览器(3) 渲染进程]] — Chrome 官方关于硬件加速合成的解释
 - [will-change 使用指南](https://developer.mozilla.org/zh-CN/docs/Web/CSS/will-change) — MDN 关于合成层的 CSS 提示

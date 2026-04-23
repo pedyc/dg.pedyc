@@ -82,6 +82,10 @@
   "blue-topaz-theme@@background-waves-color@@dark": "#000000",
   "blue-topaz-theme@@background-image-settings-markdown-page-options": "background-image-settings-markdown-page-transparent",
   "blue-topaz-theme@@custom-markdown-page-background-color@@dark": "#000000",
-  "blue-topaz-theme@@text-normal@@dark": "#939393",
-  "blue-topaz-theme@@magic-main-color@@dark": "#CC9C7A"
+  "blue-topaz-theme@@magic-main-color@@dark": "#CC9C7A",
+  "anuppuccin-theme-settings@@anuppuccin-light-theme-accents": "ctp-accent-light-mauve",
+  "anuppuccin-theme-settings@@anp-toggle-preview": true,
+  "anuppuccin-theme-settings@@anp-autohide-titlebar": false,
+  "anuppuccin-theme-settings@@anp-color-transition-toggle": false,
+  "anuppuccin-theme-settings@@anp-active-line": "anp-current-line-border"
 }

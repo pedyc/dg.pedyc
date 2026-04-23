@@ -5,7 +5,7 @@ aliases: [Interaction to Next Paint, 交互至下一次绘制]
 description: INP 衡量网页对用户交互的响应速度，是 2024 年取代 FID 的 Core Web Vitals 指标
 tags: [performance, core-web-vitals]
 date-created: 2026-04-22
-date-modified: 2026-04-22
+date-modified: 2026-04-23
 status: cultivating
 content-type: concept
 up: "[[核心Web指标]]"

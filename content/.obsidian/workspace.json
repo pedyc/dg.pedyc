@@ -20,20 +20,15 @@
             }
           },
           {
-            "id": "2e89c74915841831",
+            "id": "161c2d016d7997fc",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "excalidraw",
               "state": {
-                "file": "Untitled.canvas",
-                "viewState": {
-                  "x": -177,
-                  "y": -105.5,
-                  "zoom": 0
-                }
+                "file": "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.md"
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Untitled"
+              "icon": "excalidraw-icon",
+              "title": "Storyboard - Compare link-based DNP-based and list based PKM.excalidraw"
             }
           }
         ],
@@ -74,8 +69,7 @@
               "title": "Navigator"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "22301f168340fb7f",
@@ -88,7 +82,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Untitled.canvas",
+                "file": "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -116,7 +110,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Untitled 的关系图"
+              "title": "Storyboard - Compare link-based DNP-based and list based PKM.excalidraw 的关系图"
             }
           }
         ]
@@ -316,11 +310,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "09a7399cfc0192c8",
+  "active": "161c2d016d7997fc",
   "lastOpenFiles": [
-    "40-RESOURCES/SOP-视觉思维工作流.md",
+    "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",
+    "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.md",
+    "四象限.excalidraw.md",
     "Tags/#workflow/#workflow.md",
+    "Untitled",
+    "//Untitled",
     "Untitled.canvas",
+    "40-RESOURCES/SOP-视觉思维工作流.md",
     "//Untitled.canvas",
     "10-PROJECTS/P-构建PKM系统.md",
     "Tags/#workflow",
@@ -359,12 +358,8 @@
     "40-RESOURCES/INP.md",
     "40-RESOURCES/核心Web指标.md",
     "40-RESOURCES/渲染进程.md",
-    "40-RESOURCES/Inbox/_resources/未命名",
     "40-RESOURCES/合成层.md",
     "40-RESOURCES/回流和重绘.md",
-    "40-RESOURCES/浏览器渲染流程.md",
-    "40-RESOURCES/浏览器.md",
-    "40-RESOURCES/核心Web指标.md.tmp.2780.1776848726397",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas"
   ]

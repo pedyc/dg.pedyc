@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(1) 多进程机构.md",
+                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(2) 导航流程.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -40,7 +40,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "深入了解现代网络浏览器(1) 多进程机构"
+              "title": "深入了解现代网络浏览器(2) 导航流程"
             }
           }
         ],
@@ -94,7 +94,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(1) 多进程机构.md",
+                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(2) 导航流程.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -122,7 +122,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "深入了解现代网络浏览器(1) 多进程机构 的关系图"
+              "title": "深入了解现代网络浏览器(2) 导航流程 的关系图"
             }
           }
         ]
@@ -324,6 +324,7 @@
   },
   "active": "161c2d016d7997fc",
   "lastOpenFiles": [
+    "40-RESOURCES/Inbox/深入了解现代网络浏览器(1) 多进程机构.md",
     "50-ARCHIVE/00 Inbox规则.md",
     "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.md",
     "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",
@@ -338,7 +339,6 @@
     "Tags/#workflow",
     "10-PROJECTS/10-PROJECTS.md",
     "90-DIARY/2026-03-16.md",
-    "40-RESOURCES/Inbox/深入了解现代网络浏览器(1) 多进程机构.md",
     "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
     "PARA.md",
     "PARA/PARA.md",

@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "2b4c2b8a7d65ea98",
+        "id": "6143adddcbcdcb29",
         "type": "tabs",
         "children": [
           {
-            "id": "68c10446cbf4f88f",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "mk-ever-view",
-              "state": {},
-              "pinned": true,
-              "icon": "columns",
-              "title": "Overview"
-            }
-          },
-          {
-            "id": "161c2d016d7997fc",
+            "id": "7b77359f8cc3b487",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(2) 导航流程.md",
+                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -40,11 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "深入了解现代网络浏览器(2) 导航流程"
+              "title": "深入了解现代网络浏览器(3) 渲染进程"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -54,12 +41,12 @@
     "type": "split",
     "children": [
       {
-        "id": "e31579f7aa38d74b",
+        "id": "63f7c57bcc006028",
         "type": "tabs",
-        "dimension": 53.78690629011553,
+        "dimension": 57.81350482315113,
         "children": [
           {
-            "id": "3dfca4b5c072d131",
+            "id": "60236dec7012791f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -70,23 +57,13 @@
               "icon": "lucide-folder-closed",
               "title": "文件列表"
             }
-          },
-          {
-            "id": "09a7399cfc0192c8",
-            "type": "leaf",
-            "state": {
-              "type": "mk-path-view",
-              "state": {},
-              "icon": "layout-grid",
-              "title": "Navigator"
-            }
           }
         ]
       },
       {
-        "id": "22301f168340fb7f",
+        "id": "0add37d9a842f039",
         "type": "tabs",
-        "dimension": 24.58279845956354,
+        "dimension": 19.742765273311896,
         "children": [
           {
             "id": "716cea69c1af23f6",
@@ -94,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(2) 导航流程.md",
+                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -117,20 +94,36 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1.0534979423868314,
+                  "scale": 0.5359795996225935,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "深入了解现代网络浏览器(2) 导航流程 的关系图"
+              "title": "深入了解现代网络浏览器(3) 渲染进程 的关系图"
+            }
+          },
+          {
+            "id": "3690ad53e5842d0d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "深入了解现代网络浏览器(3) 渲染进程 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "5e0950099d64d5f6",
         "type": "tabs",
-        "dimension": 21.630295250320923,
+        "dimension": 22.443729903536976,
         "children": [
           {
             "id": "5dc3cef7701d1aec",
@@ -140,20 +133,6 @@
               "state": {},
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
-            }
-          },
-          {
-            "id": "3690ad53e5842d0d",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "大纲"
             }
           },
           {
@@ -322,8 +301,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "161c2d016d7997fc",
+  "active": "5dc3cef7701d1aec",
   "lastOpenFiles": [
+    "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
+    "Tags/#浏览器/#浏览器.md",
+    "Tags/#浏览器",
+    "40-RESOURCES/Inbox/深入了解现代网络浏览器(2) 导航流程.md",
+    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器(2) 导航流程",
     "40-RESOURCES/Inbox/深入了解现代网络浏览器(1) 多进程机构.md",
     "50-ARCHIVE/00 Inbox规则.md",
     "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.md",
@@ -339,12 +323,10 @@
     "Tags/#workflow",
     "10-PROJECTS/10-PROJECTS.md",
     "90-DIARY/2026-03-16.md",
-    "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
     "PARA.md",
     "PARA/PARA.md",
     "PARA",
     "Tags",
-    "40-RESOURCES/Inbox/深入了解现代网络浏览器(2) 导航流程.md",
     "40-RESOURCES/Inbox/深入了解现代网络浏览器(4) 合成层.md",
     "待办事项.md",
     "深入了解现代网络浏览器（第 3 部分）.md",
@@ -365,13 +347,10 @@
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog",
     "40-RESOURCES/Inbox/深入理解现代网络浏览器 01.md",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 3 部分）    Blog",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 2 部分）    Blog",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog",
     "40-RESOURCES/INP.md",
     "40-RESOURCES/核心Web指标.md",
     "40-RESOURCES/渲染进程.md",
     "40-RESOURCES/合成层.md",
-    "40-RESOURCES/回流和重绘.md",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas"
   ]

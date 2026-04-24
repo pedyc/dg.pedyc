@@ -23,12 +23,24 @@
             "id": "161c2d016d7997fc",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.md"
+                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(1) 多进程机构.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "excalidraw-icon",
-              "title": "Storyboard - Compare link-based DNP-based and list based PKM.excalidraw"
+              "icon": "lucide-file",
+              "title": "深入了解现代网络浏览器(1) 多进程机构"
             }
           }
         ],
@@ -82,7 +94,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.md",
+                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(1) 多进程机构.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -110,7 +122,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Storyboard - Compare link-based DNP-based and list based PKM.excalidraw 的关系图"
+              "title": "深入了解现代网络浏览器(1) 多进程机构 的关系图"
             }
           }
         ]
@@ -312,8 +324,9 @@
   },
   "active": "161c2d016d7997fc",
   "lastOpenFiles": [
-    "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",
+    "50-ARCHIVE/00 Inbox规则.md",
     "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.md",
+    "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",
     "四象限.excalidraw.md",
     "Tags/#workflow/#workflow.md",
     "Untitled",
@@ -351,7 +364,6 @@
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/3a7f013a461bc6b83064080b908b891c_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog",
     "40-RESOURCES/Inbox/深入理解现代网络浏览器 01.md",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 3 部分）    Blog/9198673f1a4d796b6855e7ccc3dace8f_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 3 部分）    Blog",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 2 部分）    Blog",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog",

@@ -4,55 +4,36 @@
     "type": "split",
     "children": [
       {
-        "id": "3cd1058150c1f588",
+        "id": "2b4c2b8a7d65ea98",
         "type": "tabs",
         "children": [
           {
-            "id": "34f83448f171246c",
+            "id": "68c10446cbf4f88f",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "深入了解现代网络浏览器(3) 渲染进程"
+              "type": "mk-ever-view",
+              "state": {},
+              "pinned": true,
+              "icon": "columns",
+              "title": "Overview"
             }
           },
           {
-            "id": "ea8f6a31e2c90008",
+            "id": "2e89c74915841831",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
+                "file": "Untitled.canvas",
+                "viewState": {
+                  "x": -177,
+                  "y": -105.5,
+                  "zoom": 0
                 }
               },
-              "icon": "lucide-file",
-              "title": "深入了解现代网络浏览器(3) 渲染进程"
+              "icon": "lucide-layout-dashboard",
+              "title": "Untitled"
             }
           }
         ],
@@ -82,8 +63,19 @@
               "icon": "lucide-folder-closed",
               "title": "文件列表"
             }
+          },
+          {
+            "id": "09a7399cfc0192c8",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {},
+              "icon": "layout-grid",
+              "title": "Navigator"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "22301f168340fb7f",
@@ -96,7 +88,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
+                "file": "Untitled.canvas",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +116,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "深入了解现代网络浏览器(3) 渲染进程 的关系图"
+              "title": "Untitled 的关系图"
             }
           }
         ]
@@ -150,13 +142,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "深入了解现代网络浏览器(3) 渲染进程 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -325,11 +316,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ea8f6a31e2c90008",
+  "active": "09a7399cfc0192c8",
   "lastOpenFiles": [
-    "40-RESOURCES/Inbox/深入了解现代网络浏览器(2) 导航流程.md",
-    "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
+    "40-RESOURCES/SOP-视觉思维工作流.md",
+    "Tags/#workflow/#workflow.md",
+    "Untitled.canvas",
+    "//Untitled.canvas",
+    "10-PROJECTS/P-构建PKM系统.md",
+    "Tags/#workflow",
+    "10-PROJECTS/10-PROJECTS.md",
+    "90-DIARY/2026-03-16.md",
     "40-RESOURCES/Inbox/深入了解现代网络浏览器(1) 多进程机构.md",
+    "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
+    "PARA.md",
+    "PARA/PARA.md",
+    "PARA",
+    "Tags",
+    "40-RESOURCES/Inbox/深入了解现代网络浏览器(2) 导航流程.md",
     "40-RESOURCES/Inbox/深入了解现代网络浏览器(4) 合成层.md",
     "待办事项.md",
     "深入了解现代网络浏览器（第 3 部分）.md",
@@ -361,20 +364,8 @@
     "40-RESOURCES/回流和重绘.md",
     "40-RESOURCES/浏览器渲染流程.md",
     "40-RESOURCES/浏览器.md",
-    "40-RESOURCES/浏览器核心架构.md",
-    "40-RESOURCES/LCP.md",
-    "40-RESOURCES/CLS.md",
-    "20-AREAS/A-前端/动画效果示例.md",
-    "40-RESOURCES/累积布局偏移（Cumulative Layout Shift，CLS）.md",
     "40-RESOURCES/核心Web指标.md.tmp.2780.1776848726397",
-    "40-RESOURCES/FID.md",
-    "20-AREAS/A-前端/前端性能优化.md",
-    "40-RESOURCES/MOC-浏览器兼容性问题.md",
-    "20-AREAS/A-前端/_resources",
-    "20-AREAS/_resources",
-    "40-RESOURCES/_resources/艾宾浩斯记忆曲线",
     "Diary/Untitled.canvas",
-    "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas",
-    "Untitled.canvas"
+    "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas"
   ]
 }

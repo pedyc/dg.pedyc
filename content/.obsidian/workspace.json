@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
+                "file": "90-DIARY/2026-04-25.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "深入了解现代网络浏览器(3) 渲染进程"
+              "title": "2026-04-25"
             }
           }
         ]
@@ -108,13 +108,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
+                "file": "90-DIARY/2026-04-25.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "深入了解现代网络浏览器(3) 渲染进程 的大纲"
+              "title": "2026-04-25 的大纲"
             }
           }
         ],
@@ -301,9 +301,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5dc3cef7701d1aec",
+  "active": "7b77359f8cc3b487",
   "lastOpenFiles": [
     "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
+    "90-DIARY/2026-04-25.md",
     "Tags/#浏览器/#浏览器.md",
     "Tags/#浏览器",
     "40-RESOURCES/Inbox/深入了解现代网络浏览器(2) 导航流程.md",
@@ -350,7 +351,6 @@
     "40-RESOURCES/INP.md",
     "40-RESOURCES/核心Web指标.md",
     "40-RESOURCES/渲染进程.md",
-    "40-RESOURCES/合成层.md",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas"
   ]

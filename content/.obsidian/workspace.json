@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/React Context.md",
+                "file": "CLAUDE.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "React Context"
+              "title": "CLAUDE"
             }
           }
         ]
@@ -108,13 +108,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "40-RESOURCES/React Context.md",
+                "file": "CLAUDE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "React Context 的大纲"
+              "title": "CLAUDE 的大纲"
             }
           }
         ],
@@ -303,6 +303,15 @@
   },
   "active": "7b77359f8cc3b487",
   "lastOpenFiles": [
+    "excalibrain.md",
+    "CLAUDE.md",
+    "四象限.excalidraw.md",
+    "收藏.md",
+    "待办事项.md",
+    "40-RESOURCES/React Refs.md",
+    "20-AREAS/A-前端/React.md",
+    "40-RESOURCES/Hooks (React).md",
+    "40-RESOURCES/React Context.md",
     "90-DIARY/2026-04-25.md",
     "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
     "Tags/#浏览器/#浏览器.md",
@@ -313,7 +322,6 @@
     "50-ARCHIVE/00 Inbox规则.md",
     "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.md",
     "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",
-    "四象限.excalidraw.md",
     "Tags/#workflow/#workflow.md",
     "Untitled",
     "//Untitled",
@@ -329,13 +337,9 @@
     "PARA",
     "Tags",
     "40-RESOURCES/Inbox/深入了解现代网络浏览器(4) 合成层.md",
-    "待办事项.md",
     "深入了解现代网络浏览器（第 3 部分）.md",
     "90-DIARY/2026-04-23.md",
-    "40-RESOURCES/观察者模式.md",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器(1)",
-    "20-AREAS/A-前端/CSS.md",
-    "40-RESOURCES/合成层 vs 合成线程.md",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/600ff6634be835891546f905314fca3d_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/d7d515ec822266a0614895424a9e0bd3_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/c9ec14e5ce8c390328c3c724d6fdc561_MD5.jpg",
@@ -346,11 +350,7 @@
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/57c375ff2768dde7d66bb53227b010b4_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/3a7f013a461bc6b83064080b908b891c_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog",
-    "40-RESOURCES/Inbox/深入理解现代网络浏览器 01.md",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 3 部分）    Blog",
-    "40-RESOURCES/INP.md",
-    "40-RESOURCES/核心Web指标.md",
-    "40-RESOURCES/渲染进程.md",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas"
   ]

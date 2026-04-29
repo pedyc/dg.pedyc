@@ -5,7 +5,7 @@ aliases: [A-React, React.js, ReactJS]
 description: 用于构建用户界面的 JavaScript 库，采用组件化和 Virtual DOM
 tags: [前端开发/框架]
 date-created: 2025-05-21
-date-modified: 2026-04-21
+date-modified: 2026-04-28
 status: cultivating
 content-type: area
 up: "[[前端开发]]"
@@ -56,7 +56,7 @@ mindmap
 - **里程碑**：
 	- [x] 掌握 React 核心概念和 Hooks
 	- [ ] 掌握状态管理（Redux / Zustand / Jotai）
-	- [ ] 掌握性能优化（useMemo / useCallback / React.memo）
+	- [x] 掌握性能优化（useMemo / useCallback / React.memo） ✅ 2026-04-28
 	- [ ] 深入 React 源码和原理（Fiber / Reconciliation）
 	- [ ] 掌握 Next.js 全栈开发
 
@@ -74,6 +74,7 @@ mindmap
 	- [[useCallback]] — 回调函数缓存
 	- [[useMemo]] — 计算结果缓存
 	- [[React.memo]] — 组件级别的记忆化
+	- [[React Refs]] — DOM 节点和组件实例
 - **渲染机制**
 	- [[React重新渲染]] — 重新渲染的触发条件与优化
 	- [[React组件通信]] — Props / Context / 状态提升 / 事件总线

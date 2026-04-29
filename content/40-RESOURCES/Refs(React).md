@@ -1,11 +1,11 @@
 ---
 uid: "202604280001"
-title: React Refs
-aliases: [C-React Refs, Refs(React)]
+title: Refs(React)
+aliases: [C-Refs(React), React Refs]
 description: React Refs 是一种允许组件访问 DOM 节点和 React 元素实例的机制
 tags: []
 date-created: 2026-04-28
-date-modified: 2026-04-28
+date-modified: 2026-04-29
 status: cultivating
 content-type: concept
 ---
@@ -14,7 +14,7 @@ content-type: concept
 
 > React Refs 是一种允许组件访问 DOM 节点和 React 元素实例的机制
 
-**解决的核心痛点**：在 React ==的声明式编程模型中==，数据流是单向的，当需要直接操作 DOM 节点、聚焦输入、触发动画或访问类组件实例时，Refs 提供了必要的「命令式」逃生舱。
+**解决的核心痛点**：在 React 的声明式编程模型中，数据流是单向的，当需要直接操作 DOM 节点、聚焦输入、触发动画或访问类组件实例时，Refs 提供了必要的「命令式」逃生舱。
 
 ---
 
@@ -105,7 +105,7 @@ graph LR
 	- [[React State]] — 触发 UI 更新的状态管理
 	- [[React Props]] — 组件间数据传递
 - **相关概念**：
-	- [[React 虚拟 DOM]] — 理解 Ref 与真实 DOM 的关系
+	- [[虚拟DOM(React)]] — 理解 Ref 与真实 DOM 的关系
 	- [[React 生命周期]] — 类组件中 Ref 与组件生命周期的关联
 
 ---

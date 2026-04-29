@@ -3,7 +3,7 @@
   "ignoredExt": "cnt|php|htm|html",
   "processAll": true,
   "useCaptions": true,
-  "pathInTags": "fullDirPath",
+  "pathInTags": "onlyRelative",
   "downUnknown": false,
   "saveAttE": "nextToNoteS",
   "realTimeUpdate": true,
@@ -24,5 +24,8 @@
   "JpegQuality": 80,
   "DoNotCreateObsFolder": false,
   "DateFormat": "YYYY MM DD",
+  "ImgCompressionType": "image/webp",
+  "ExcludedFoldersList": "",
+  "ExcludedFoldersListRegexp": "",
   "include": ".*\\.md"
 }

@@ -223,7 +223,7 @@ Thanks for reading!
 ## Most popular Javascript articles
 
 - [
-![Top 5 HTTP Request Libraries for Node.js](https://blog.appsignal.com/_next/image?url=%2Fimages%2Fblog%2F2024-09%2Fhttps-request-libs.jpg&w=640&q=75)
+![[50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/c829b955bce686a696951ba18cef5002_MD5.jpg]]
 	Top 5 HTTP Request Libraries for Node.js
 
 ### Top 5 HTTP Request Libraries for Node.js
@@ -232,7 +232,7 @@ Thanks for reading!
 	See more
 	](https://blog.appsignal.com/2024/09/11/top-5-http-request-libraries-for-nodejs.html)
 - [
-![How to Implement Rate Limiting in Express for Node.js](https://blog.appsignal.com/_next/image?url=%2Fimages%2Fblog%2F2024-04%2Frate-limiting.jpg&w=640&q=75)
+![[50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/78812283c2c8dc1138666487cb499402_MD5.jpg]]
 	How to Implement Rate Limiting in Express for Node.js
 
 ### How to Implement Rate Limiting in Express for Node.js
@@ -253,4 +253,4 @@ Become our next author!
 
 AppSignal provides insights for Ruby, Rails, Elixir, Phoenix, Node.js, Express and many other frameworks and libraries. We are located in beautiful Amsterdam. We love [stroopwafels](https://www.appsignal.com/waffles). If you do too,[let us know](https://blog.appsignal.com/2025/11/12/). We might send you some!
 
-[Discover AppSignal](https://www.appsignal.com/)![AppSignal monitors your apps](https://blog.appsignal.com/_next/image?url=%2Fimages%2Fgeneral%2Fcall-to-action-small.png&w=3840&q=90)
+[Discover AppSignal](https://www.appsignal.com/)![[50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/8131b12ef701bb6d9e2251d0e9eba028_MD5.jpg]]

@@ -1,12 +1,12 @@
 ---
 uid: 202408162328
-title: 【记录】将个人博客部署到Netlify
+title: 将个人博客部署到Netlify
 aliases: []
 author: ped_yc
 description: 
 tags: [记录]
 date-created: 2024-08-15
-date-modified: 2026-02-09
+date-modified: 2026-04-29
 status: 
 ---
 

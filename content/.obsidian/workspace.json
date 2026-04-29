@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "40-RESOURCES/useEffect.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "CLAUDE"
+              "title": "useEffect"
+            }
+          },
+          {
+            "id": "5d9a66f49338111d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "50-ARCHIVE/将个人博客部署到Netlify.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "将个人博客部署到Netlify"
             }
           }
         ]
@@ -71,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
+                "file": "40-RESOURCES/useEffect.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -94,12 +118,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.5359795996225935,
+                  "scale": 1.0534979423868314,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "深入了解现代网络浏览器(3) 渲染进程 的关系图"
+              "title": "useEffect 的关系图"
             }
           },
           {
@@ -108,17 +132,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "40-RESOURCES/useEffect.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "CLAUDE 的大纲"
+              "title": "useEffect 的大纲"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "5e0950099d64d5f6",
@@ -195,7 +218,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 313.5,
+    "collapsed": true
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -264,8 +288,8 @@
             "state": {
               "type": "git-history-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-history-view"
+              "icon": "history",
+              "title": "History"
             }
           }
         ],
@@ -303,54 +327,54 @@
   },
   "active": "7b77359f8cc3b487",
   "lastOpenFiles": [
-    "excalibrain.md",
+    "40-RESOURCES/MOC-React面试题.md",
+    "40-RESOURCES/useEffect.md",
+    "40-RESOURCES/Hooks (React).md",
+    "40-RESOURCES/SOP-在React中正确使用Ref.md",
+    "40-RESOURCES/Refs(React).md",
+    "40-RESOURCES/SOP-React性能优化.md",
+    "40-RESOURCES/在React中有哪些更改数据不触发重新渲染的方式.md",
+    "40-RESOURCES/useCallback.md",
+    "40-RESOURCES/SOP-useCallback使用示例.md",
+    "20-AREAS/A-前端/React.md",
+    "50-ARCHIVE/深入了解现代网络浏览器(1) 多进程机构.md",
+    "50-ARCHIVE/将个人博客部署到Netlify.md",
+    "50-ARCHIVE/【记录】建站.md",
+    "40-RESOURCES/合成层 vs 合成线程.md",
+    "50-ARCHIVE/深入了解现代网络浏览器(3) 渲染进程.md",
+    "50-ARCHIVE/深入了解现代网络浏览器(2) 导航流程.md",
+    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
+    "50-ARCHIVE/_resources/深入了解现代网络浏览器(1) 多进程机构",
+    "60-BLOGS/_resources/阿拉伯世界没落的原因是什么/117f6e750ccda2fd70fcce241328c524_MD5.jpg",
+    "60-BLOGS/_resources/阿拉伯世界没落的原因是什么",
+    "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/c829b955bce686a696951ba18cef5002_MD5.jpg",
+    "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/8131b12ef701bb6d9e2251d0e9eba028_MD5.jpg",
+    "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/78812283c2c8dc1138666487cb499402_MD5.jpg",
+    "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog",
+    "50-ARCHIVE/_resources/Personal Knowledge Management Workflow for a Deeper Life — as a Computer Scientist",
+    "50-ARCHIVE/_resources/从采集到回顾，我用 AI 搭建了一套个人信息处理系统",
+    "50-ARCHIVE/_resources",
+    "30-Zettelkasten/useRef变化不会触发重新渲染.md",
+    "30-Zettelkasten/useRef不会触发重新渲染.md",
     "CLAUDE.md",
+    "excalibrain.md",
     "四象限.excalidraw.md",
     "收藏.md",
     "待办事项.md",
-    "40-RESOURCES/React Refs.md",
-    "20-AREAS/A-前端/React.md",
-    "40-RESOURCES/Hooks (React).md",
     "40-RESOURCES/React Context.md",
     "90-DIARY/2026-04-25.md",
-    "40-RESOURCES/Inbox/深入了解现代网络浏览器(3) 渲染进程.md",
     "Tags/#浏览器/#浏览器.md",
     "Tags/#浏览器",
-    "40-RESOURCES/Inbox/深入了解现代网络浏览器(2) 导航流程.md",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器(2) 导航流程",
-    "40-RESOURCES/Inbox/深入了解现代网络浏览器(1) 多进程机构.md",
-    "50-ARCHIVE/00 Inbox规则.md",
-    "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.md",
     "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",
-    "Tags/#workflow/#workflow.md",
     "Untitled",
     "//Untitled",
     "Untitled.canvas",
-    "40-RESOURCES/SOP-视觉思维工作流.md",
     "//Untitled.canvas",
-    "10-PROJECTS/P-构建PKM系统.md",
-    "Tags/#workflow",
-    "10-PROJECTS/10-PROJECTS.md",
-    "90-DIARY/2026-03-16.md",
-    "PARA.md",
-    "PARA/PARA.md",
-    "PARA",
-    "Tags",
-    "40-RESOURCES/Inbox/深入了解现代网络浏览器(4) 合成层.md",
-    "深入了解现代网络浏览器（第 3 部分）.md",
-    "90-DIARY/2026-04-23.md",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器(1)",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/600ff6634be835891546f905314fca3d_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/d7d515ec822266a0614895424a9e0bd3_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/c9ec14e5ce8c390328c3c724d6fdc561_MD5.jpg",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/d3fc5930828237eba3a33cabdf3a4443_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/8de7597adfb24ab6b4d3e229746bb78c_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/19ba4a157b41291c747cb12d964f195a_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/6eb9455dae92db51438380e1f7521f26_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/57c375ff2768dde7d66bb53227b010b4_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/3a7f013a461bc6b83064080b908b891c_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 3 部分）    Blog",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas"
   ]

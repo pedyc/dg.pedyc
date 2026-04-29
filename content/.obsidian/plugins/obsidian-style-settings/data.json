@@ -30,5 +30,11 @@
   "blue-topaz-theme@@background-notebook-liked-switch": true,
   "blue-topaz-theme@@notebook-liked-markdown-page-options": "notebook-liked-markdown-page-dotted-notebook-2",
   "blue-topaz-theme@@bg-panel-page-option": "panel-page-bg-theme-light-wall",
-  "blue-topaz-theme@@bg-panel-page-option-dark": "panel-page-bg-theme-dark-custom"
+  "blue-topaz-theme@@bg-panel-page-option-dark": "panel-page-bg-theme-dark-custom",
+  "blue-topaz-theme@@colorful-link-animation": false,
+  "blue-topaz-theme@@link-underline-internal": false,
+  "blue-topaz-theme@@link-underline-external": false,
+  "blue-topaz-theme@@link-underline-unresolved": false,
+  "blue-topaz-theme@@color-scheme-options": "color-scheme-options-simplicity-topaz",
+  "blue-topaz-theme@@fancy-hr": "default-hr"
 }

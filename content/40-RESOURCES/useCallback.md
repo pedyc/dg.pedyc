@@ -5,7 +5,7 @@ aliases: [C-useCallback]
 description: React Hooks 之一，缓存函数引用，只有依赖变化时才返回新的函数引用，用于性能优化
 tags: [前端开发/框架/React]
 date-created: 2025-09-09
-date-modified: 2026-04-22
+date-modified: 2026-04-29
 status: cultivating
 content-type: concept
 related: "[[React]]"
@@ -98,7 +98,7 @@ function useCallback(fn, deps) {
 
 - [[SOP-useCallback使用示例]]
 - [[SOP-React性能优化]] — 何时使用 useCallback 的判断流程
-- [[SOP-避免不必要的重新渲染]] — useCallback 与 React.memo 配合使用
+- [[SOP-避免不必要的重新渲]] — useCallback 与 React.memo 配合使用
 
 ---
 

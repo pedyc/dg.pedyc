@@ -5,7 +5,7 @@ aliases: [A-React, React.js, ReactJS]
 description: 用于构建用户界面的 JavaScript 库，采用组件化和 Virtual DOM
 tags: [前端开发/框架]
 date-created: 2025-05-21
-date-modified: 2026-04-28
+date-modified: 2026-04-29
 status: cultivating
 content-type: area
 up: "[[前端开发]]"
@@ -71,10 +71,10 @@ mindmap
 	- [[虚拟DOM(React)]] — Virtual DOM 的原理与 Diff 算法
 	- [[Fiber架构(React)]] — React 16+ 的协调引擎
 	- [[Hooks (React)]] — useState / useEffect / useRef 等
+	- [[Refs(React)]] — DOM 节点和组件实例
 	- [[useCallback]] — 回调函数缓存
 	- [[useMemo]] — 计算结果缓存
 	- [[React.memo]] — 组件级别的记忆化
-	- [[React Refs]] — DOM 节点和组件实例
 - **渲染机制**
 	- [[React重新渲染]] — 重新渲染的触发条件与优化
 	- [[React组件通信]] — Props / Context / 状态提升 / 事件总线
@@ -99,6 +99,7 @@ mindmap
 > 该领域的标准化操作流程
 
 - [[React最佳实践|SOP-React最佳实践]] — 开发 React 应用需要遵循的规范
+- [[SOP-React性能优化]] — 开发 React 应用需要注意的性能优化方法
 - [[SOP-使用Claude-Code开发React组件]] — Claude Code 开发 React 组件的工作流
 - [[SOP-在React中实现文字故障效果]] — React 中的 Glitch 文字动画
 - [[SOP-在React中实现ASCII动画]] — React 中的 ASCII 动画效果

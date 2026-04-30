@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/useEffect.md",
+                "file": "30-Zettelkasten/React.memo通过浅比较props决定是否重新渲染.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "useEffect"
+              "title": "React.memo通过浅比较props决定是否重新渲染"
             }
           },
           {
@@ -95,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/useEffect.md",
+                "file": "30-Zettelkasten/React.memo通过浅比较props决定是否重新渲染.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -123,7 +123,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "useEffect 的关系图"
+              "title": "React.memo通过浅比较props决定是否重新渲染 的关系图"
             }
           },
           {
@@ -132,13 +132,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "40-RESOURCES/useEffect.md",
+                "file": "30-Zettelkasten/React.memo通过浅比较props决定是否重新渲染.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "useEffect 的大纲"
+              "title": "React.memo通过浅比较props决定是否重新渲染 的大纲"
             }
           }
         ]
@@ -327,8 +327,10 @@
   },
   "active": "7b77359f8cc3b487",
   "lastOpenFiles": [
-    "40-RESOURCES/MOC-React面试题.md",
+    "40-RESOURCES/React.memo.md",
+    "30-Zettelkasten/React.memo通过浅比较props决定是否重新渲染.md",
     "40-RESOURCES/useEffect.md",
+    "40-RESOURCES/MOC-React面试题.md",
     "40-RESOURCES/Hooks (React).md",
     "40-RESOURCES/SOP-在React中正确使用Ref.md",
     "40-RESOURCES/Refs(React).md",
@@ -362,8 +364,6 @@
     "收藏.md",
     "待办事项.md",
     "40-RESOURCES/React Context.md",
-    "90-DIARY/2026-04-25.md",
-    "Tags/#浏览器/#浏览器.md",
     "Tags/#浏览器",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器(2) 导航流程",
     "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",

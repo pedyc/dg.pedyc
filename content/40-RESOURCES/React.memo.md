@@ -5,7 +5,7 @@ aliases: [C-React.memo]
 description: React 提供的高阶组件，用于缓存函数组件，避免 props 未变化时的不必要的重新渲染
 tags: [前端开发/框架/React]
 date-created: 2026-04-19
-date-modified: 2026-04-21
+date-modified: 2026-04-30
 status: cultivating
 content-type: concept
 related: "[[React]]"
@@ -23,8 +23,6 @@ related: "[[React]]"
 
 - [[React.memo通过浅比较props决定是否重新渲染]]
 	- **原理**：React.memo 对新旧 props 进行浅比较（Object.is），只有当 props 变化时才重新渲染
-- [[React.memo只对props进行浅比较]]
-	- **原理**：对于对象、数组、函数等引用类型，浅比较只比较引用，不比较内容
 - [[React.memo不会阻止子组件因父组件渲染而渲染]]
 	- **原理**：memo 只比较传入的 props，不关心父组件的渲染状态
 

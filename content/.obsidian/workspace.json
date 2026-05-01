@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-Zettelkasten/React.memo通过浅比较props决定是否重新渲染.md",
+                "file": "90-DIARY/2026-05-01.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,31 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "React.memo通过浅比较props决定是否重新渲染"
-            }
-          },
-          {
-            "id": "5d9a66f49338111d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "50-ARCHIVE/将个人博客部署到Netlify.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "将个人博客部署到Netlify"
+              "title": "2026-05-01"
             }
           }
         ]
@@ -95,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-Zettelkasten/React.memo通过浅比较props决定是否重新渲染.md",
+                "file": "90-DIARY/2026-05-01.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -123,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "React.memo通过浅比较props决定是否重新渲染 的关系图"
+              "title": "2026-05-01 的关系图"
             }
           },
           {
@@ -132,13 +108,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30-Zettelkasten/React.memo通过浅比较props决定是否重新渲染.md",
+                "file": "90-DIARY/2026-05-01.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "React.memo通过浅比较props决定是否重新渲染 的大纲"
+              "title": "2026-05-01 的大纲"
             }
           }
         ]
@@ -218,8 +194,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5,
-    "collapsed": true
+    "width": 313.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -327,8 +302,11 @@
   },
   "active": "7b77359f8cc3b487",
   "lastOpenFiles": [
-    "40-RESOURCES/React.memo.md",
+    "LIST.md",
+    "90-DIARY/2026-05-01.md",
+    "50-ARCHIVE/将个人博客部署到Netlify.md",
     "30-Zettelkasten/React.memo通过浅比较props决定是否重新渲染.md",
+    "40-RESOURCES/React.memo.md",
     "40-RESOURCES/useEffect.md",
     "40-RESOURCES/MOC-React面试题.md",
     "40-RESOURCES/Hooks (React).md",
@@ -340,7 +318,6 @@
     "40-RESOURCES/SOP-useCallback使用示例.md",
     "20-AREAS/A-前端/React.md",
     "50-ARCHIVE/深入了解现代网络浏览器(1) 多进程机构.md",
-    "50-ARCHIVE/将个人博客部署到Netlify.md",
     "50-ARCHIVE/【记录】建站.md",
     "40-RESOURCES/合成层 vs 合成线程.md",
     "50-ARCHIVE/深入了解现代网络浏览器(3) 渲染进程.md",
@@ -362,8 +339,6 @@
     "excalibrain.md",
     "四象限.excalidraw.md",
     "收藏.md",
-    "待办事项.md",
-    "40-RESOURCES/React Context.md",
     "Tags/#浏览器",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器(2) 导航流程",
     "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",

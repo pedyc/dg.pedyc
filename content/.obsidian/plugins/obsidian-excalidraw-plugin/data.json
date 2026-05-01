@@ -2,6 +2,7 @@
   "copyLinkToElemenetAnchorTo100": false,
   "copyFrameLinkByName": false,
   "disableDoubleClickTextEditing": false,
+  "phoneFooterSafeAreaPadding": false,
   "folder": "99-ASSETS/Excalidraw",
   "cropFolder": "",
   "annotateFolder": "",
@@ -29,6 +30,7 @@
   "annotateSuffix": "",
   "annotatePrefix": "annotated_",
   "annotatePreserveSize": false,
+  "displaySVGInPreview": false,
   "previewImageType": "SVG",
   "renderingConcurrency": 3,
   "allowImageCache": true,
@@ -142082,7 +142084,7 @@
       }
     }
   },
-  "previousRelease": "2.22.0",
+  "previousRelease": "2.22.1",
   "showReleaseNotes": true,
   "compareManifestToPluginVersion": true,
   "showNewVersionNotification": true,

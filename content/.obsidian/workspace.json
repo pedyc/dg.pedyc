@@ -302,8 +302,9 @@
   },
   "active": "7b77359f8cc3b487",
   "lastOpenFiles": [
-    "LIST.md",
+    "90-DIARY/2026-05-02.md",
     "90-DIARY/2026-05-01.md",
+    "LIST.md",
     "50-ARCHIVE/将个人博客部署到Netlify.md",
     "30-Zettelkasten/React.memo通过浅比较props决定是否重新渲染.md",
     "40-RESOURCES/React.memo.md",
@@ -338,7 +339,6 @@
     "CLAUDE.md",
     "excalibrain.md",
     "四象限.excalidraw.md",
-    "收藏.md",
     "Tags/#浏览器",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器(2) 导航流程",
     "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",

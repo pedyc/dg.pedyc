@@ -5,7 +5,7 @@ aliases: [A-ThreeJS, Three.js, three.js]
 description: 使用 Three.js 在浏览器中创建和展示 3D 图形的领域
 tags: [前端开发/图形]
 date-created: 2026-03-20
-date-modified: 2026-04-14
+date-modified: 2026-05-05
 status: cultivating
 content-type: area
 up: ["[[WebGL]]"]

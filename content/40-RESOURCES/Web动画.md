@@ -5,7 +5,7 @@ aliases: [Web 动画, C-Web动画, Web Animation]
 description: 在 Web 平台上创建动态视觉效果的技术和方法
 tags: [前端开发/动画]
 date-created: 2026-03-20
-date-modified: 2026-03-30
+date-modified: 2026-05-05
 status: cultivating
 content-type: concept
 ---
@@ -83,6 +83,7 @@ flowchart TB
 - **相关概念**：
 	- [[合成层]]
 	- [[requestAnimationFrame]]
+	- [[动画效果示例|MOC-动画效果SOP]]
 
 ---
 

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-05-01.md",
+                "file": "40-RESOURCES/SOP-ThreeJS实现气泡粒子.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-05-01"
+              "title": "SOP-ThreeJS实现气泡粒子"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "90-DIARY/2026-05-01.md",
+                "file": "40-RESOURCES/SOP-ThreeJS实现气泡粒子.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "2026-05-01 的关系图"
+              "title": "SOP-ThreeJS实现气泡粒子 的关系图"
             }
           },
           {
@@ -238,16 +238,6 @@
             }
           },
           {
-            "id": "39d39d451048730c",
-            "type": "leaf",
-            "state": {
-              "type": "copilot-chat-view",
-              "state": {},
-              "icon": "message-square",
-              "title": "Copilot"
-            }
-          },
-          {
             "id": "09edd99624caf564",
             "type": "leaf",
             "state": {
@@ -268,7 +258,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -302,8 +292,14 @@
   },
   "active": "7b77359f8cc3b487",
   "lastOpenFiles": [
-    "90-DIARY/2026-05-02.md",
+    "20-AREAS/A-前端/动画效果示例.md",
+    "40-RESOURCES/MOC-加载动画.md",
+    "40-RESOURCES/Web动画.md",
+    "40-RESOURCES/SOP-ThreeJS实现3D视差滚动.md",
+    "20-AREAS/A-前端/ThreeJS.md",
+    "90-DIARY/_resources/2026-05-01",
     "90-DIARY/2026-05-01.md",
+    "90-DIARY/2026-05-02.md",
     "LIST.md",
     "50-ARCHIVE/将个人博客部署到Netlify.md",
     "30-Zettelkasten/React.memo通过浅比较props决定是否重新渲染.md",
@@ -334,16 +330,10 @@
     "50-ARCHIVE/_resources/Personal Knowledge Management Workflow for a Deeper Life — as a Computer Scientist",
     "50-ARCHIVE/_resources/从采集到回顾，我用 AI 搭建了一套个人信息处理系统",
     "50-ARCHIVE/_resources",
-    "30-Zettelkasten/useRef变化不会触发重新渲染.md",
-    "30-Zettelkasten/useRef不会触发重新渲染.md",
-    "CLAUDE.md",
-    "excalibrain.md",
-    "四象限.excalidraw.md",
     "Tags/#浏览器",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器(2) 导航流程",
     "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",
     "Untitled",
-    "//Untitled",
     "Untitled.canvas",
     "//Untitled.canvas",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/600ff6634be835891546f905314fca3d_MD5.jpg",

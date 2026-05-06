@@ -5,7 +5,7 @@ aliases: [C-SSR, Server-Side Rendering, 服务端渲染]
 description: 在服务器端生成完整 HTML 内容后返回给客户端的渲染模式
 tags: [concept, 前端, 渲染模式, SSR]
 date-created: 2026-04-08
-date-modified: 2026-04-08
+date-modified: 2026-05-06
 status: cultivating
 content-type: concept
 related: ["[[CSR]]", "[[SSG]]", "[[前端开发]]"]

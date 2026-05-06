@@ -5,7 +5,7 @@ aliases: [SOP-ThreeJS实现平面凹凸效果]
 description: 使用 Three.js ShaderMaterial 和滚动事件，实现页面滚动驱动的平面凸起/凹陷变形效果
 tags: [前端开发/动画, ThreeJS]
 date-created: 2026-04-14
-date-modified: 2026-04-14
+date-modified: 2026-05-06
 status: cultivating
 content-type: sop
 up: "[[ThreeJS]]"

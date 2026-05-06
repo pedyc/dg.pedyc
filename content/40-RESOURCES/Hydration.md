@@ -5,7 +5,7 @@ aliases: [C-Hydration, 注水, 水分]
 description: 客户端 JavaScript 接管 SSR 输出的过程，使页面具有交互能力
 tags: [concept, 前端, SSR, 渲染模式]
 date-created: 2026-04-08
-date-modified: 2026-04-08
+date-modified: 2026-05-06
 status: cultivating
 content-type: concept
 related: ["[[SSR]]", "[[CSR]]", "[[NextJS]]"]

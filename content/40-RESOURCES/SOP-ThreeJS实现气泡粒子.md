@@ -5,7 +5,7 @@ aliases: [SOP-ThreeJS实现气泡粒子]
 description: 使用 Three.js 实现水下气泡粒子上升动画效果的标准流程
 tags: [前端开发/动画, ThreeJS]
 date-created: 2026-04-13
-date-modified: 2026-04-13
+date-modified: 2026-05-06
 status: cultivating
 content-type: sop
 up: "[[ThreeJS]]"

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/SOP-ThreeJS实现气泡粒子.md",
+                "file": "40-RESOURCES/Hydration.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "SOP-ThreeJS实现气泡粒子"
+              "title": "Hydration"
+            }
+          },
+          {
+            "id": "a63786b52690c882",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40-RESOURCES/SSR.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "SSR"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -71,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/SOP-ThreeJS实现气泡粒子.md",
+                "file": "40-RESOURCES/SSR.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "SOP-ThreeJS实现气泡粒子 的关系图"
+              "title": "SSR 的关系图"
             }
           },
           {
@@ -190,7 +215,8 @@
               "title": "添加笔记属性"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -290,13 +316,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7b77359f8cc3b487",
+  "active": "a63786b52690c882",
   "lastOpenFiles": [
+    "40-RESOURCES/Hydration.md",
+    "40-RESOURCES/SOP-在Next.js中使用Hydration.md",
+    "30-Zettelkasten/NextJS 首屏渲染不需要 JS 引擎参与但 hydration 仍然需要.md",
+    "40-RESOURCES/NextJS.md",
+    "40-RESOURCES/CORS凭证与跨域.md",
+    "30-Zettelkasten/给富人减税理论上能惠及穷人.md",
+    "30-Zettelkasten/NextJS 的本质是 React 框架与服务端能力的深度融合.md",
+    "20-AREAS/A-前端/ThreeJS.md",
+    "40-RESOURCES/SOP-ThreeJS实现平面凹凸效果.md",
+    "40-RESOURCES/SOP-ThreeJS实现气泡粒子.md",
     "20-AREAS/A-前端/动画效果示例.md",
     "40-RESOURCES/MOC-加载动画.md",
     "40-RESOURCES/Web动画.md",
     "40-RESOURCES/SOP-ThreeJS实现3D视差滚动.md",
-    "20-AREAS/A-前端/ThreeJS.md",
     "90-DIARY/_resources/2026-05-01",
     "90-DIARY/2026-05-01.md",
     "90-DIARY/2026-05-02.md",
@@ -310,15 +345,6 @@
     "40-RESOURCES/SOP-在React中正确使用Ref.md",
     "40-RESOURCES/Refs(React).md",
     "40-RESOURCES/SOP-React性能优化.md",
-    "40-RESOURCES/在React中有哪些更改数据不触发重新渲染的方式.md",
-    "40-RESOURCES/useCallback.md",
-    "40-RESOURCES/SOP-useCallback使用示例.md",
-    "20-AREAS/A-前端/React.md",
-    "50-ARCHIVE/深入了解现代网络浏览器(1) 多进程机构.md",
-    "50-ARCHIVE/【记录】建站.md",
-    "40-RESOURCES/合成层 vs 合成线程.md",
-    "50-ARCHIVE/深入了解现代网络浏览器(3) 渲染进程.md",
-    "50-ARCHIVE/深入了解现代网络浏览器(2) 导航流程.md",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
     "50-ARCHIVE/_resources/深入了解现代网络浏览器(1) 多进程机构",
     "60-BLOGS/_resources/阿拉伯世界没落的原因是什么/117f6e750ccda2fd70fcce241328c524_MD5.jpg",

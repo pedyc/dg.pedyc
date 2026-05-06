@@ -5,10 +5,10 @@ aliases: []
 description: 携带凭证时不能使用通配符，必须指定具体 origin
 tags: [前端开发/安全/原子]
 date-created: 2026-03-24
-date-modified: 2026-03-24
+date-modified: 2026-05-06
 status: active
-content-type: atomic
-up: [[CORS]]
+content-type: [term]
+up: "[[CORS]]"
 ---
 
 > CORS 凭证与跨域
@@ -23,6 +23,7 @@ up: [[CORS]]
 ## 示例
 
 **前端请求**：
+
 ```javascript
 fetch('https://api.example.com/data', {
   credentials: 'include'  // 携带 Cookie
@@ -30,12 +31,14 @@ fetch('https://api.example.com/data', {
 ```
 
 **服务端响应（正确）**：
+
 ```http
 Access-Control-Allow-Origin: https://example.com  # 不能是 *
 Access-Control-Allow-Credentials: true
 ```
 
 **服务端响应（错误）**：
+
 ```http
 Access-Control-Allow-Origin: *  # ❌ 携带凭证时不能使用通配符
 Access-Control-Allow-Credentials: true

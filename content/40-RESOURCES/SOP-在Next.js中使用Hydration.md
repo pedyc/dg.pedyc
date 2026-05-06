@@ -5,7 +5,7 @@ aliases: [SOP-在Next.js中使用Hydration]
 description: Next.js 中使用 Hydration 的标准流程和最佳实践
 tags: [sop, SSR, Hydration, 前端, Nextjs]
 date-created: 2026-04-08
-date-modified: 2026-04-08
+date-modified: 2026-05-06
 status: cultivating
 content-type: sop
 up: "[[NextJS]]"

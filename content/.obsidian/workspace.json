@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/链表.md",
+                "file": "40-RESOURCES/合并有序链表.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "链表"
+              "title": "合并有序链表"
+            }
+          },
+          {
+            "id": "efec3ab117667ef2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40-RESOURCES/合并有序链表.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "合并有序链表"
             }
           }
         ],
@@ -96,7 +120,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/链表.md",
+                "file": "40-RESOURCES/合并有序链表.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +148,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "链表 的关系图"
+              "title": "合并有序链表 的关系图"
             }
           },
           {
@@ -318,9 +342,12 @@
   },
   "active": "a63786b52690c882",
   "lastOpenFiles": [
+    "40-RESOURCES/反转链表.md",
+    "40-RESOURCES/合并有序链表.md",
+    "_templates/template_sop.md",
+    "40-RESOURCES/链表.md",
     "40-RESOURCES/常用数据结构.md",
     "40-RESOURCES/递归树.md",
-    "40-RESOURCES/链表.md",
     "40-RESOURCES/Fiber架构(React).md",
     "30-Zettelkasten/React Fiber 的时间切片基于优先级调度.md",
     "30-Zettelkasten/React Fiber 采用链表结构代替递归.md",
@@ -340,10 +367,6 @@
     "30-Zettelkasten/给富人减税理论上能惠及穷人.md",
     "30-Zettelkasten/NextJS 的本质是 React 框架与服务端能力的深度融合.md",
     "20-AREAS/A-前端/ThreeJS.md",
-    "40-RESOURCES/SOP-ThreeJS实现平面凹凸效果.md",
-    "40-RESOURCES/SOP-ThreeJS实现气泡粒子.md",
-    "20-AREAS/A-前端/动画效果示例.md",
-    "40-RESOURCES/MOC-加载动画.md",
     "90-DIARY/_resources/2026-05-01",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
     "50-ARCHIVE/_resources/深入了解现代网络浏览器(1) 多进程机构",

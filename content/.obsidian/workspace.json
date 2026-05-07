@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/合并有序链表.md",
+                "file": "40-RESOURCES/Web Animations API.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "合并有序链表"
+              "title": "Web Animations API"
+            }
+          },
+          {
+            "id": "00d8a25c601e7fea",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Animations_API",
+                "title": "developer.mozilla.org/zh-CN/docs/Web/API/Web_Animations_API",
+                "mode": "error"
+              },
+              "icon": "globe-2",
+              "title": "developer.mozilla.org/zh-CN/docs/Web/API/Web_Animations_API"
+            }
+          },
+          {
+            "id": "082ae5d3b8f7704c",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback",
+                "title": "developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback",
+                "mode": "error"
+              },
+              "icon": "globe-2",
+              "title": "developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback"
             }
           },
           {
@@ -120,7 +148,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/合并有序链表.md",
+                "file": "40-RESOURCES/Web Animations API.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +176,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "合并有序链表 的关系图"
+              "title": "Web Animations API 的关系图"
             }
           },
           {
@@ -244,7 +272,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 313.5,
+    "collapsed": true
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -342,8 +371,16 @@
   },
   "active": "a63786b52690c882",
   "lastOpenFiles": [
-    "40-RESOURCES/反转链表.md",
+    "40-RESOURCES/Web Animations API.md",
+    "40-RESOURCES/Web动画.md",
+    "40-RESOURCES/requestIdleCallback.md",
+    "20-AREAS/A-前端/前端交互.md",
+    "40-RESOURCES/WebGL.md",
+    "20-AREAS/A-前端/ThreeJS.md",
+    "40-RESOURCES/场景图结构.md",
+    "00-META/本库指南.md",
     "40-RESOURCES/合并有序链表.md",
+    "40-RESOURCES/反转链表.md",
     "_templates/template_sop.md",
     "40-RESOURCES/链表.md",
     "40-RESOURCES/常用数据结构.md",
@@ -360,13 +397,6 @@
     "30-Zettelkasten/React RSC 是发动机技术而非完整汽车框架.md",
     "40-RESOURCES/SSR.md",
     "40-RESOURCES/Hydration.md",
-    "40-RESOURCES/SOP-在Next.js中使用Hydration.md",
-    "30-Zettelkasten/NextJS 首屏渲染不需要 JS 引擎参与但 hydration 仍然需要.md",
-    "40-RESOURCES/NextJS.md",
-    "40-RESOURCES/CORS凭证与跨域.md",
-    "30-Zettelkasten/给富人减税理论上能惠及穷人.md",
-    "30-Zettelkasten/NextJS 的本质是 React 框架与服务端能力的深度融合.md",
-    "20-AREAS/A-前端/ThreeJS.md",
     "90-DIARY/_resources/2026-05-01",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
     "50-ARCHIVE/_resources/深入了解现代网络浏览器(1) 多进程机构",

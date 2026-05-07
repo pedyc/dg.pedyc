@@ -5,10 +5,11 @@ aliases: [C-WebGL, Web Graphics Library]
 description: 在浏览器中实现高性能 2D 和 3D 图形渲染的 JavaScript API，基于 OpenGL ES
 tags: [concept, 前端, 图形渲染]
 date-created: 2025-05-28
-date-modified: 2026-03-31
+date-modified: 2026-05-07
 status: active
 content-type: concept
 related: ["[[OpenGL]]", "[[Canvas]]", "[[着色器]]", "[[ThreeJS]]"]
+up: ["[[前端交互]]"]
 ---
 
 ## 概念：WebGL
@@ -93,7 +94,7 @@ flowchart LR
 	- 片元着色器 — 处理颜色
 - **相关工具**：
 	- [[ThreeJS]] — 封装 WebGL 的高级 3D 库
-	- [[Babylon.js]] —另一个 WebGL 3D 引擎
+	- [[Babylon.js]] — 另一个 WebGL 3D 引擎
 - **技术基础**：
 	- [[OpenGL]] — WebGL 基于 OpenGL ES
 	- GLSL — 着色器语言

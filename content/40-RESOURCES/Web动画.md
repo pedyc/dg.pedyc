@@ -5,7 +5,7 @@ aliases: [Web 动画, C-Web动画, Web Animation]
 description: 在 Web 平台上创建动态视觉效果的技术和方法
 tags: [前端开发/动画]
 date-created: 2026-03-20
-date-modified: 2026-05-05
+date-modified: 2026-05-07
 status: cultivating
 content-type: concept
 ---
@@ -49,12 +49,12 @@ flowchart TB
 
 ### 关键区别
 
-| 维度 | CSS 动画 | JavaScript 动画 | Web Animations API |
-|:--- |:--- |:--- |:--- |
-| **控制力** | 有限 | 精细 | 中等 |
-| **性能** | 较好 | 依赖实现 | 较好 |
-| **复杂序列** | 困难 | 容易 | 中等 |
-| **适用场景** | 简单循环动画 | 复杂交互动画 | 需语义化动画 |
+| 维度       | CSS Animation | GSAP   | Web Animations API |
+|:------- |:------------ |:----- |:----------------- |
+| **控制力**  | 有限            | 精细     | 中等                 |
+| **性能**   | 较好            | 依赖实现   | 较好                 |
+| **复杂序列** | 困难            | 容易     | 中等                 |
+| **适用场景** | 简单循环动画        | 复杂交互动画 | 需语义化动画             |
 
 ---
 
@@ -76,7 +76,7 @@ flowchart TB
 - **子集概念**：
 	- [[CSS Animation]]
 	- [[GSAP]]：高性能 Javascript 动画库
-	- [[Web Animations API]]
+	- [[Web-Animations-API|Web-Animations-API]]
 - **并列概念**：
 	- [[Canvas]]
 	- [[SVG]]

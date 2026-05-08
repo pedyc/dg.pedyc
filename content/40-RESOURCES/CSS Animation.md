@@ -5,10 +5,10 @@ aliases: [CSS Animation, C-CSS动画]
 description: CSS 动画技术，通过 @keyframes 和 animation 属性创建网页动画
 tags: [前端开发/动画]
 date-created: 2026-03-20
-date-modified: 2026-04-11
+date-modified: 2026-05-08
 status: cultivating
 content-type: concept
-up: "[[Web 动画]]"
+up: ["[[Web动画]]"]
 ---
 
 ## 概念：CSS Animation

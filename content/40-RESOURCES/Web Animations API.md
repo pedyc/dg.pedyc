@@ -5,9 +5,10 @@ aliases: [C-Web动画-Web-Animations-API, Web-Animations-API, WAAPI]
 description: Web Animations API 是浏览器原生的动画 API，提供命令式动画控制能力
 tags: [前端开发/动画]
 date-created: 2026-05-08
-date-modified: 2026-05-07
+date-modified: 2026-05-08
 status: cultivating
 content-type: concept
+up: [Web API]
 ---
 
 > Web Animations API（WAAPI）是浏览器原生的动画接口，通过 JavaScript 提供可编程的动画控制

@@ -5,9 +5,10 @@ aliases: [Web 动画, C-Web动画, Web Animation]
 description: 在 Web 平台上创建动态视觉效果的技术和方法
 tags: [前端开发/动画]
 date-created: 2026-03-20
-date-modified: 2026-05-07
+date-modified: 2026-05-08
 status: cultivating
 content-type: concept
+up: ["[[前端交互]]"]
 ---
 
 ## 概念：Web 动画
@@ -19,13 +20,6 @@ content-type: concept
 ---
 
 ### 核心命题
-
-- [[Web 动画通过改变元素的视觉属性创造运动效果]]
-	- **原理**：浏览器渲染管线解析属性变化，触发重排、重绘或合成
-- [[不同动画技术适用于不同场景]]
-	- **原理**：CSS 适合简单动画，JS 适合复杂交互，SVG 适合矢量图形
-- [[性能是 Web 动画的核心考量]]
-	- **原理**：动画性能直接影响页面流畅度和用户体验
 
 ---
 
@@ -76,7 +70,7 @@ flowchart TB
 - **子集概念**：
 	- [[CSS Animation]]
 	- [[GSAP]]：高性能 Javascript 动画库
-	- [[Web-Animations-API|Web-Animations-API]]
+	- [[Web Animations API]]
 - **并列概念**：
 	- [[Canvas]]
 	- [[SVG]]

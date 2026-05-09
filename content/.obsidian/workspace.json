@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Web动画.md",
+                "file": "40-RESOURCES/requestIdleCallback.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Web动画"
+              "title": "requestIdleCallback"
             }
           },
           {
@@ -148,7 +148,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Web动画.md",
+                "file": "40-RESOURCES/requestIdleCallback.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -176,7 +176,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Web动画 的关系图"
+              "title": "requestIdleCallback 的关系图"
             }
           },
           {
@@ -371,8 +371,10 @@
   },
   "active": "a63786b52690c882",
   "lastOpenFiles": [
-    "40-RESOURCES/CSS Animation.md",
+    "40-RESOURCES/合成层 vs 合成线程.md",
+    "40-RESOURCES/合成层.md",
     "40-RESOURCES/Web动画.md",
+    "40-RESOURCES/CSS Animation.md",
     "40-RESOURCES/Web Animations API.md",
     "40-RESOURCES/requestIdleCallback.md",
     "20-AREAS/A-前端/前端交互.md",
@@ -395,8 +397,6 @@
     "40-RESOURCES/MOC-网络协议相关问题.md",
     "40-RESOURCES/Edge Runtime.md",
     "40-RESOURCES/JWT.md",
-    "30-Zettelkasten/React RSC 是发动机技术而非完整汽车框架.md",
-    "40-RESOURCES/SSR.md",
     "90-DIARY/_resources/2026-05-01",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
     "50-ARCHIVE/_resources/深入了解现代网络浏览器(1) 多进程机构",

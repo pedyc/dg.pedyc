@@ -5,7 +5,7 @@ aliases: [VS-合成层与合成线程, Compositing Layer vs Compositor Thread]
 description: 合成层是浏览器为 GPU 加速创建的数据结构，合成线程是执行合成操作的常驻线程
 tags: [browser, rendering, performance]
 date-created: 2026-04-23
-date-modified: 2026-04-23
+date-modified: 2026-05-09
 status: cultivating
 comparison: [合成层, 合成线程]
 content-type: comparison

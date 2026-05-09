@@ -108,7 +108,7 @@ const MyComponent = React.memo(
 	- [[React重新渲染]] — React.memo 解决的核心问题
 - **相关概念**：
 	- [[虚拟DOM(React)]] — React.memo 基于 Virtual DOM 的比较机制
-	- [[Fiber架构(React)]] — React 的协调渲染架构
+	- [[Fiber]] — React 的协调渲染架构
 
 ---
 

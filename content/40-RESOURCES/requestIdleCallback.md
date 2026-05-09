@@ -4,36 +4,22 @@ title: requestIdleCallback
 aliases: ["T-浏览器API-requestIdleCallback", "requestIdleCallback"]
 description: "requestIdleCallback 是浏览器 API，在空闲时执行低优先级任务"
 tags: [前端开发/浏览器API]
-content-type: term
-status: cultivating
 date-created: 2025-02-25
 date-modified: 2026-05-09
+status: cultivating
+content-type: term
 ---
-
-<!--
-	术语笔记 (Term Note) 设计原则：
-
-	1. 术语笔记用于记录客观、中立的技术/学科术语
-	2. 核心是"定义"——准确、无歧义的定义
-	3. 不需要主观洞见——那是 atomic 或 concept 的职责
-	4. 包含跨学科/场景的含义——术语在不同领域的差异
-	5. 建立术语与原子笔记的连接——谁引用了这个术语
-
-	写作节奏：
-	- 先写定义（What）
-	- 再写跨学科含义（Variations）
-	- 最后写关联（Connections）
--->
 
 ## 术语：requestIdleCallback
 
-> **领域**：#前端开发/浏览器API
+> **领域**：#前端开发/浏览器 API
 
 ### 定义
 
 requestIdleCallback 是浏览器提供的 API，用于在**浏览器空闲时期**调度执行低优先级任务，避免阻塞主线程影响用户交互。
 
 **签名**：
+
 ```javascript
 requestIdleCallback(callback, options?)
 // callback: (deadline: IdleDeadline) => void
@@ -43,6 +29,7 @@ requestIdleCallback(callback, options?)
 ```
 
 **IdleDeadline 对象**：
+
 ```javascript
 {
   timeRemaining(): number  // 剩余空闲时间（毫秒）
@@ -51,6 +38,7 @@ requestIdleCallback(callback, options?)
 ```
 
 **示例**：
+
 ```javascript
 requestIdleCallback((deadline) => {
   while (deadline.timeRemaining() > 0 && taskQueue.length > 0) {
@@ -79,8 +67,8 @@ requestIdleCallback((deadline) => {
 
 ### 跨学科含义
 
-- **在 React 中**：React 早期曾尝试用 requestIdleCallback 实现时间切片，但最终自行实现了**优先级调度队列**，不依赖浏览器空闲期
-- **在浏览器渲染中**：与 requestAnimationFrame 配合，rAF 控制渲染帧，ric 控制后台任务
+- **在 React 中**：React 早期曾尝试用 requestIdleCallback 实现时间切片，但最终自行实现了**优先级调度队列 React Fiber**，不依赖浏览器空闲期
+- **在浏览器渲染中**：与 requestAnimationFrame 配合，==rAF 控制渲染帧，ric 控制后台任务==
 - **在 Node.js 中**：无原生支持，类似 API 为 `setImmediate`
 
 ---
@@ -94,7 +82,7 @@ requestIdleCallback((deadline) => {
 	- [[浏览器渲染管线]] — requestIdleCallback 运行的上下文
 - **相关概念**：
 	- [[requestAnimationFrame]] — 每帧渲染回调，与 ric 配合使用
-	- [[Fiber 调度]] — React 的优先级调度，取代了 ric 的使用
+	- [[Fiber]] — React 的优先级调度，取代了 ric 的使用
 	- [[事件循环]] — ric 运行的 JavaScript 执行环境
 
 ---

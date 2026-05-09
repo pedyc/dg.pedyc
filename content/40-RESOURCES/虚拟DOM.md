@@ -1,11 +1,11 @@
 ---
 uid: 202603240000
-title: 虚拟DOM(Vue3)
-aliases: [Virtual DOM, C-虚拟DOM]
+title: 虚拟DOM
+aliases: [Virtual DOM, C-虚拟DOM, VDOM]
 description: Vue中用于优化DOM操作的核心技术，通过JavaScript对象模拟真实DOM结构
 tags: [前端/Vue, 前端/原理]
 date-created: 2026-03-24
-date-modified: 2026-03-24
+date-modified: 2026-05-09
 status: cultivating
 content-type: concept
 up: "[[前端开发]]"

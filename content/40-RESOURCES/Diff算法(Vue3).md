@@ -1,14 +1,19 @@
 ---
 uid: 202603240006
 title: Diff算法(Vue3)
-aliases: [Virtual DOM Diff, Patch, C-Diff算法]
+aliases:
+  - Virtual DOM Diff
+  - Patch
+  - C-Diff算法
 description: Vue中比较新旧虚拟DOM树并高效更新真实DOM的算法
-tags: [前端/Vue, 前端/原理]
+tags:
+  - 前端/Vue
+  - 前端/原理
 date-created: 2026-03-24
 date-modified: 2026-03-24
 status: cultivating
 content-type: concept
-up: "[[虚拟DOM(Vue3)]]"
+up: "[[虚拟DOM]]"
 ---
 
 ## 概念：Diff 算法
@@ -147,7 +152,7 @@ function updateChildren(oldChildren, newChildren) {
 
 ### 知识图谱
 
-- **父级概念**：[[虚拟DOM(Vue3)]]
+- **父级概念**：[[虚拟DOM]]
 - **关联概念**：
 	- [[响应式原理(Vue3)]] — 数据变化触发重新渲染
 	- [[模板编译(Vue3)]] — 生成 render 函数

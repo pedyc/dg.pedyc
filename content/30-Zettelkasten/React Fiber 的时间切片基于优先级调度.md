@@ -60,6 +60,6 @@ React 没有直接用 requestIdleCallback，而是自己实现了**优先级队�
 ## 关联
 
 - [[React]]
-- [[Fiber架构(React)]]
+- [[Fiber]]
 - [[React Fiber 采用链表结构代替递归]]
 - [[React Fiber 是可中断的增量渲染架构]]

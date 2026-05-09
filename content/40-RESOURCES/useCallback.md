@@ -122,4 +122,4 @@ function useCallback(fn, deps) {
 	- [[useMemo]] — 值缓存，与 useCallback 机制类似但缓存的是值
 	- [[React.memo]] — 组件记忆化，需要配合 useCallback 使用
 	- [[虚拟DOM(React)]] — useCallback 影响 Virtual DOM diff 结果
-	- [[Fiber架构(React)]] — Hooks 依赖 Fiber 链表结构实现
+	- [[Fiber]] — Hooks 依赖 Fiber 链表结构实现

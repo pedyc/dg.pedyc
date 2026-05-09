@@ -57,7 +57,7 @@ related: "[[React]]"
 	- **Hooks**：新增 `useState` 等 Hooks API
 	- **React.lazy + Suspense**：代码分割和加载状态
 	- **memo / PureComponent**：组件记忆化优化
-- **相关概念**：[[Fiber架构(React)]]
+- **相关概念**：[[Fiber]]
 
 #### React 17
 
@@ -130,7 +130,7 @@ related: "[[React]]"
 - **父级领域**：[[React]]
 - **相关概念**：
 	- [[虚拟DOM(React)]] — Virtual DOM 原理
-	- [[Fiber架构]] — Fiber 架构
+	- [[Fiber]] — Fiber 架构
 	- [[Server Components]] — React 18+ 服务端组件
 	- [[useTransition]] — React 18 并发模式 API
 	- [[React.memo]] — 组件记忆化

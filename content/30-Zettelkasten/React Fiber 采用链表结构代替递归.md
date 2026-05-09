@@ -7,7 +7,8 @@ date-created: 2026-05-06
 date-modified: 2026-05-06
 status: active
 content-type: atomic
-up: ["[[Fiber架构(React)]]"]
+up:
+  - "[[Fiber]]"
 ---
 
 > React Fiber 用链表代替递归树遍历，使渲染过程可中断、可恢复

@@ -1,11 +1,11 @@
 ---
 uid: 202604150100
-title: Fiber架构(React)
-aliases: [C-Fiber架构, Fiber Architecture, Fiber, React Fiber]
+title: Fiber
+aliases: [Fiber Architecture, Fiber, React Fiber, C-React-Fiber]
 description: React 16 引入的新协调引擎，将同步整树渲染改为异步可中断的链表遍历
 tags: [前端开发/框架/React]
 date-created: 2026-04-15
-date-modified: 2026-05-06
+date-modified: 2026-05-09
 status: cultivating
 content-type: concept
 related: "[[React]]"
@@ -22,7 +22,7 @@ related: "[[React]]"
 ### 核心命题
 
 - [[React Fiber 是可中断的增量渲染架构]]
-	- 原理：把 VDOM 树拆成 Fiber 链表，利用 requestIdleCallback 分偏执行
+	- 原理：把 VDOM 树拆成 Fiber 链表，利用 requestIdleCallback 分片执行
 - [[React Fiber 采用链表结构代替递归]]
 	- 原理：递归树遍历无法中断，链表因为存储了节点指针，所以可以终端和恢复
 - [[React Fiber 的时间切片基于优先级调度]]
@@ -116,6 +116,6 @@ graph LR
 - **父级概念**：[[React]] — React 生态的核心架构
 - **演进关系**：[[React版本演进]] — Fiber 在 React 16 中引入
 - **相关概念**：
-	- [[虚拟DOM(React)]] — Fiber 操作的底层对象
+	- [[虚拟DOM|VDOM]] — Fiber 操作的底层对象
 	- [[Concurrent Mode]] — Fiber 的能力扩展
 	- [[useTransition]] — 基于 Fiber 优先级的 API

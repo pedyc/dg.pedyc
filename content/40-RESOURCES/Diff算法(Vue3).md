@@ -13,7 +13,7 @@ date-created: 2026-03-24
 date-modified: 2026-03-24
 status: cultivating
 content-type: concept
-up: "[[虚拟DOM]]"
+up: "[[Virtual DOM]]"
 ---
 
 ## 概念：Diff 算法
@@ -152,7 +152,7 @@ function updateChildren(oldChildren, newChildren) {
 
 ### 知识图谱
 
-- **父级概念**：[[虚拟DOM]]
+- **父级概念**：[[Virtual DOM]]
 - **关联概念**：
 	- [[响应式原理(Vue3)]] — 数据变化触发重新渲染
 	- [[模板编译(Vue3)]] — 生成 render 函数

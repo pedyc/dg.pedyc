@@ -116,6 +116,6 @@ graph LR
 - **父级概念**：[[React]] — React 生态的核心架构
 - **演进关系**：[[React版本演进]] — Fiber 在 React 16 中引入
 - **相关概念**：
-	- [[虚拟DOM|VDOM]] — Fiber 操作的底层对象
+	- [[Virtual DOM|VDOM]] — Fiber 操作的底层对象
 	- [[Concurrent Mode]] — Fiber 的能力扩展
 	- [[useTransition]] — 基于 Fiber 优先级的 API

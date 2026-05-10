@@ -149,7 +149,7 @@ function render(_ctx, _cache) {
 	- [[预标记]]
 	- [[Block管理]]
 - **关联概念**：
-	- [[虚拟DOM]] — 编译输出的 render 函数创建 VNode
+	- [[Virtual DOM]] — 编译输出的 render 函数创建 VNode
 	- [[响应式原理(Vue3)]] — render 函数执行触发依赖收集
 - **相关问题**：
 	- Vue 编译器如何优化

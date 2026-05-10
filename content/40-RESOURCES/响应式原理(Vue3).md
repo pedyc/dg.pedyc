@@ -201,7 +201,7 @@ function trigger(target, key) {
 - **父级概念**：[[前端开发]]
 - **关联概念**：
 	- [[Vue3 ref 和 reactive 的区别]]
-	- [[虚拟DOM]] — 响应式数据变化后通过 render 函数生成新的 VNode
+	- [[Virtual DOM]] — 响应式数据变化后通过 render 函数生成新的 VNode
 - **相关问题**：
 	- [[为什么Vue3的响应式系统要使用WeakMap]]
 

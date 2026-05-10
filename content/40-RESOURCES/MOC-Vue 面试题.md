@@ -37,8 +37,8 @@ date-modified: 2026-04-14
 
 | 示例题目                        | 关联笔记           |
 | --------------------------- |:------------- |
-| [[虚拟DOM]] 的本质是什么？      | [[虚拟DOM]] |
-| Vue 的 Diff 算法与 React 有哪些异同？ | [[虚拟DOM]] |
+| [[Virtual DOM]] 的本质是什么？      | [[Virtual DOM]] |
+| Vue 的 Diff 算法与 React 有哪些异同？ | [[Virtual DOM]] |
 | 为什么 data 更新后视图没立即变化？        | nextTick 机制    |
 
 ---

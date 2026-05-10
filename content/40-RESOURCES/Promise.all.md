@@ -1,7 +1,7 @@
 ---
 title: Promise.all
 date-created: 2025-05-20
-date-modified: 2026-03-20
+date-modified: 2026-05-10
 content-type: atomic
 ---
 

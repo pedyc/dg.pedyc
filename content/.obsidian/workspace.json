@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/虚拟列表.md",
+                "file": "40-RESOURCES/手写经典功能.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,35 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "虚拟列表"
-            }
-          },
-          {
-            "id": "00d8a25c601e7fea",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Animations_API",
-                "title": "developer.mozilla.org/zh-CN/docs/Web/API/Web_Animations_API",
-                "mode": "error"
-              },
-              "icon": "globe-2",
-              "title": "developer.mozilla.org/zh-CN/docs/Web/API/Web_Animations_API"
-            }
-          },
-          {
-            "id": "082ae5d3b8f7704c",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback",
-                "title": "developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback",
-                "mode": "error"
-              },
-              "icon": "globe-2",
-              "title": "developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback"
+              "title": "手写经典功能"
             }
           },
           {
@@ -148,7 +120,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/虚拟列表.md",
+                "file": "40-RESOURCES/手写经典功能.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -176,7 +148,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "虚拟列表 的关系图"
+              "title": "手写经典功能 的关系图"
             }
           },
           {
@@ -370,6 +342,17 @@
   },
   "active": "a63786b52690c882",
   "lastOpenFiles": [
+    "40-RESOURCES/柯里化.md",
+    "40-RESOURCES/手写经典功能.md",
+    "40-RESOURCES/实现简易虚拟列表.md",
+    "40-RESOURCES/手写Promise.md",
+    "40-RESOURCES/Promise.all.md",
+    "40-RESOURCES/防抖和节流.md",
+    "40-RESOURCES/深拷贝和浅拷贝.md",
+    "10-PROJECTS/P-求职前端岗位/MOC-前端面试真题库.md",
+    "40-RESOURCES/FAQ-前端场景实践.md",
+    "40-RESOURCES/虚拟列表.md",
+    "40-RESOURCES/合并有序链表.md",
     "40-RESOURCES/IntersectionObserver.md",
     "40-RESOURCES/ResizeObserver.md",
     "40-RESOURCES/Web API.md",
@@ -385,17 +368,6 @@
     "40-RESOURCES/概率云.md",
     "40-RESOURCES/Fiber.md",
     "40-RESOURCES/合成层 vs 合成线程.md",
-    "40-RESOURCES/合成层.md",
-    "40-RESOURCES/Web动画.md",
-    "40-RESOURCES/CSS Animation.md",
-    "40-RESOURCES/Web Animations API.md",
-    "20-AREAS/A-前端/前端交互.md",
-    "40-RESOURCES/WebGL.md",
-    "20-AREAS/A-前端/ThreeJS.md",
-    "40-RESOURCES/场景图结构.md",
-    "00-META/本库指南.md",
-    "40-RESOURCES/合并有序链表.md",
-    "40-RESOURCES/反转链表.md",
     "90-DIARY/_resources/2026-05-01",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
     "50-ARCHIVE/_resources/深入了解现代网络浏览器(1) 多进程机构",

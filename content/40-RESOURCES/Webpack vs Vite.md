@@ -1,15 +1,22 @@
 ---
 uid: 202603301800
 title: Webpack vs Vite
-aliases: [VS-Webpack vs Vite]
+aliases:
+  - VS-Webpack vs Vite
 description: Webpack 是功能强大的模块打包器，Vite 是基于 ESM 的下一代构建工具
-tags: [comparison, 前端工程化]
+tags:
+  - comparison
+  - 前端工程化
 date-created: 2026-03-30
 date-modified: 2026-03-30
 status: active
-comparison: [Webpack, Vite]
+comparison:
+  - Webpack
+  - Vite
 content-type: comparison
-related: ["[[前端工程化]]", "[[T-Rspack]]"]
+related:
+  - "[[前端工程]]"
+  - "[[T-Rspack]]"
 ---
 
 ## Webpack vs Vite
@@ -101,7 +108,7 @@ graph TD
 
 ### 知识图谱
 
-- **父级概念**：[[前端工程化]] — 同属构建工具领域
+- **父级概念**：[[前端工程]] — 同属构建工具领域
 - **相关对比**：
 	- [[T-Rspack]] — Vite 的高性能替代方案
 	- [[T-Rollup]] — 适合库打包

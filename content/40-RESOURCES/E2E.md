@@ -1,14 +1,23 @@
 ---
 uid: 202604011200
 title: E2E
-aliases: [C-E2E, End-to-End Testing, 端到端测试]
+aliases:
+  - C-E2E
+  - End-to-End Testing
+  - 端到端测试
 description: 模拟真实用户行为，从前端到后端完整流程进行测试的验证方法
-tags: [concept, 前端工程化, 测试]
+tags:
+  - concept
+  - 前端工程化
+  - 测试
 date-created: 2026-04-01
 date-modified: 2026-04-01
 status: cultivating
 content-type: concept
-related: ["[[前端工程化]]", "[[T-Playwright]]", "[[T-Cypress]]"]
+related:
+  - "[[前端工程]]"
+  - "[[T-Playwright]]"
+  - "[[T-Cypress]]"
 ---
 
 ## 概念：E2E
@@ -86,7 +95,7 @@ flowchart TB
 
 ### 知识图谱
 
-- **父级概念**：[[前端工程化]] — 属于质量保障领域
+- **父级概念**：[[前端工程]] — 属于质量保障领域
 - **并列概念**：
 	- 单元测试 — 测试粒度更细
 	- 集成测试 — 模块间接口验证

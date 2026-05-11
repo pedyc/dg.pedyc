@@ -1,14 +1,17 @@
 ---
 uid: 202505290000
 title: Vite
-aliases: [Vite, C-Vite]
+aliases:
+  - Vite
+  - C-Vite
 description: 由尤雨溪开发的现代化前端构建工具，利用 ESM 实现快速冷启动和即时 HMR
-tags: [前端开发/构建工具]
+tags:
+  - 前端开发/构建工具
 date-created: 2025-05-29
 date-modified: 2026-03-19
 status: active
 content-type: concept
-up: "[[前端工程化]]"
+up: "[[前端工程]]"
 ---
 
 ## 概念：Vite
@@ -76,7 +79,7 @@ flowchart TB
 
 ### 知识图谱
 
-- **父级概念**：[[前端工程化]]
+- **父级概念**：[[前端工程]]
 - **子集概念**：[[HMR原理（Vite）]] [[预构建机制（Vite）]] [[环境变量（Vite）]]
 - **并列概念**：[[Webpack]] [[Rollup]]
 - **相关概念**：[[ESM]]

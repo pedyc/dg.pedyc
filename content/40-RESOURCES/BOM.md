@@ -24,7 +24,7 @@ BOM（Browser Object Model，浏览器对象模型）是一套 JavaScript API，
 ### 核心 API
 
 | 对象                           | 作用                      |
-| :--------------------------- | :---------------------- |
+|:--------------------------- |:---------------------- |
 | `window`                     | 浏览器窗口全局对象               |
 | `navigator`                  | 浏览器信息（UA、平台、语言）         |
 | `location`                   | URL 信息与操作（href、reload）  |
@@ -49,7 +49,7 @@ BOM（Browser Object Model，浏览器对象模型）是一套 JavaScript API，
 - **在浏览器中**：`window` 是全局对象，`navigator` 提供浏览器信息，`location` 操作 URL
 - **在 Node.js 中**：`global` 是全局对象，类似 BOM 的 `window`；`process` 提供浏览器 navigator 的功能
 - **在 Electron 中**：`BrowserWindow` 是窗口对象，与 BOM 的 `window` 对应
-- **在小程序中**：无 BOM概念，使用 `wx` API（如 `wx.getSystemInfo`）替代
+- **在小程序中**：无 BOM 概念，使用 `wx` API（如 `wx.getSystemInfo`）替代
 
 ---
 

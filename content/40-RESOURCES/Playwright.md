@@ -1,14 +1,20 @@
 ---
 uid: 202604011300
 title: Playwright
-aliases: [T-Playwright]
+aliases:
+  - T-Playwright
 description: 微软开发的现代 E2E 测试框架，支持 Chromium、Firefox、WebKit 多浏览器
-tags: [term, 前端工程化, 测试]
+tags:
+  - term
+  - 前端工程化
+  - 测试
 date-created: 2026-04-01
 date-modified: 2026-04-01
 status: active
 content-type: term
-related: ["[[E2E]]", "[[前端工程化]]"]
+related:
+  - "[[E2E]]"
+  - "[[前端工程]]"
 ---
 
 ## 术语：Playwright
@@ -128,7 +134,7 @@ await page.route('**/api/user', route => {
 - **父级概念**：[[E2E]] — 属于端到端测试领域
 - **相关概念**：
 	- [[Cypress]] — 另一个 E2E 测试框架
-	- [[前端工程化]] — Playwright 是质量保障工具
+	- [[前端工程]] — Playwright 是质量保障工具
 - **相关工具**：
 	- Playwright CLI — 测试运行器
 	- Playwright Test — 测试运行器（@playwright/test）

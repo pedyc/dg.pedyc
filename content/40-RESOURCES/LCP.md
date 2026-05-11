@@ -4,7 +4,7 @@ aliases: [T-LCP, Largest Contentful Paint, 最大内容渲染时间]
 description: 最大内容渲染时间 (LCP) 衡量的是在页面首次开始加载时，最大可见元素完成渲染的时间。
 tags: [Web, 性能, 性能指标]
 date-created: 2025-05-06
-date-modified: 2026-04-22
+date-modified: 2026-05-11
 content-type: [term]
 keywords: [LCP, Largest Contentful Paint]
 related: ["[[核心Web指标]]"]

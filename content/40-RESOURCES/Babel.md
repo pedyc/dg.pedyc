@@ -11,7 +11,7 @@ date-created: 2026-03-16
 date-modified: 2026-03-15
 status: active
 content-type: term
-up: "[[前端工程化]]"
+up: "[[前端工程]]"
 ---
 
 ## 术语：Babel
@@ -43,6 +43,6 @@ flowchart LR
 
 ### 锚点连接
 
-- **属于**：[[前端工程化]]
+- **属于**：[[前端工程]]
 - **相关概念**：[[抽象语法树]] [[Webpack]] [[Vite]]
 - **相关工具**：ESLint、TypeScript

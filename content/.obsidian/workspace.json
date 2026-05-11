@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7b77359f8cc3b487",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/BOM.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "BOM"
-            }
-          },
-          {
             "id": "a63786b52690c882",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/优惠券发放领取核销的前端实现逻辑.md",
+                "file": "_templates/template_question.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,21 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "优惠券发放领取核销的前端实现逻辑"
-            }
-          },
-          {
-            "id": "4fc2a76a0032791d",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://developer.mozilla.org/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications",
-                "title": "编写 WebSocket 客户端应用 - Web API | MDN",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "编写 WebSocket 客户端应用 - Web API | MDN"
+              "title": "template_question"
             }
           },
           {
@@ -133,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/BOM.md",
+                "file": "_templates/template_question.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -156,12 +118,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1.0534979423868314,
+                  "scale": 0.5359795996225935,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "BOM 的关系图"
+              "title": "template_question 的关系图"
             }
           },
           {
@@ -252,12 +214,12 @@
               "title": "添加笔记属性"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 313.5,
+    "collapsed": true
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -352,15 +314,27 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7b77359f8cc3b487",
+  "active": "a63786b52690c882",
   "lastOpenFiles": [
+    "40-RESOURCES/Q-如何选择前端监控方案.md",
+    "40-RESOURCES/持续集成与持续部署.md",
+    "40-RESOURCES/SaaS.md",
+    "40-RESOURCES/前端监控.md",
+    "40-RESOURCES/宏.md",
+    "40-RESOURCES/MOC-前端工程化工具.md",
+    "20-AREAS/A-前端/前端工程.md",
+    "20-AREAS/A-前端/前端开发.md",
+    "20-AREAS/A-前端/前端交互.md",
+    "40-RESOURCES/SOP-前端监控指标采集.md",
+    "40-RESOURCES/优惠券发放、领取、核销的前端实现逻辑.md",
+    "40-RESOURCES/LCP.md",
+    "40-RESOURCES/埋点.md",
+    "90-DIARY/2026-05-11.md",
     "40-RESOURCES/Web API.md",
+    "40-RESOURCES/BOM.md",
     "40-RESOURCES/DOM API.md",
     "40-RESOURCES/DOM.md",
-    "40-RESOURCES/BOM.md",
     "40-RESOURCES/Temporal API.md",
-    "40-RESOURCES/优惠券发放领取核销的前端实现逻辑.md",
-    "40-RESOURCES/宏.md",
     "40-RESOURCES/语法糖.md",
     "40-RESOURCES/TypeScript.md",
     "30-Zettelkasten/宏语法在编译时处理.md",
@@ -368,18 +342,6 @@
     "40-RESOURCES/WebSocket.md",
     "40-RESOURCES/ES2026.md",
     "40-RESOURCES/Hydration.md",
-    "40-RESOURCES/前端场景实践.md",
-    "10-PROJECTS/P-求职前端岗位/MOC-前端面试真题库.md",
-    "40-RESOURCES/手写经典功能.md",
-    "40-RESOURCES/柯里化.md",
-    "40-RESOURCES/实现简易虚拟列表.md",
-    "40-RESOURCES/手写Promise.md",
-    "40-RESOURCES/Promise.all.md",
-    "40-RESOURCES/防抖和节流.md",
-    "40-RESOURCES/深拷贝和浅拷贝.md",
-    "40-RESOURCES/虚拟列表.md",
-    "40-RESOURCES/IntersectionObserver.md",
-    "40-RESOURCES/ResizeObserver.md",
     "90-DIARY/_resources/2026-05-01",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
     "50-ARCHIVE/_resources/深入了解现代网络浏览器(1) 多进程机构",

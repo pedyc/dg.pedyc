@@ -1,14 +1,11 @@
 ---
 uid: 202505290000
 title: TypeScript
-aliases:
-  - TS
-  - A-TypeScript
+aliases: [TS, A-TypeScript]
 description: JavaScript 的超集，添加了类型系统和其他高级特性
-tags:
-  - 前端开发/TypeScript
+tags: [前端开发/TypeScript]
 date-created: 2025-05-29
-date-modified: 2026-03-17
+date-modified: 2026-05-11
 status: cultivating
 content-type: area
 up: "[[前端开发]]"

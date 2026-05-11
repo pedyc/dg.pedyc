@@ -5,7 +5,7 @@ aliases: [MOC-Web API, Web API, Browser APIs, 浏览器API]
 description: Web API 是浏览器提供给 JavaScript 调用的接口，用于操纵 DOM、网络请求、存储等能力
 tags: [前端开发/浏览器API]
 date-created: 2026-05-09
-date-modified: 2026-05-09
+date-modified: 2026-05-11
 status: cultivating
 content-type: moc
 ---
@@ -20,9 +20,9 @@ content-type: moc
 
 _页面的骨架与窗口交互_
 
-- [[DOM API]] — 文档对象模型，节点操作、事件委托
+- [[DOM]] — 文档对象模型，节点操作、事件委托
+- [[BOM]] — 浏览器对象模型，操作浏览器内置对象（window/location/history/navigator）
 - [[Shadow DOM]] — 组件隔离的 DOM 结构
-- [[BOM API]] — 浏览器对象模型，window/location/history/navigator
 - [[IntersectionObserver]] — 懒加载、曝光埋点
 - [[ResizeObserver]] — 监听元素尺寸变化
 - [[MutationObserver]] — 监听 DOM 变动

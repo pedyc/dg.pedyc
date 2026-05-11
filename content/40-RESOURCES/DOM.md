@@ -5,7 +5,7 @@ aliases: ["T-概念-DOM", "DOM", "文档对象模型"]
 description: "DOM 是将 HTML/XML 文档解析为树状结构的数据模型"
 tags: [前端开发/概念]
 date-created: 2025-05-22
-date-modified: 2026-05-09
+date-modified: 2026-05-11
 status: cultivating
 content-type: term
 ---
@@ -36,7 +36,7 @@ DOM（Document Object Model，文档对象模型）是一种**树状数据结构
 
 ---
 
-### DOM vs HTML
+### 关键区别：DOM vs HTML
 
 ```bash
 HTML（文本）:
@@ -48,6 +48,27 @@ document
     └── p (Element)
         └── "Hello" (Text)
 ```
+
+---
+
+### 核心 API
+
+| 分类 | API | 说明 |
+|:---|:---|:---|
+| **查询** | `querySelector()` | 返回首个匹配元素 |
+| **查询** | `querySelectorAll()` | 返回 NodeList |
+| **查询** | `getElementById()` | ID 查询（最快） |
+| **查询** | `getElementsByClassName()` | 类名查询 |
+| **创建** | `createElement()` | 创建新元素 |
+| **创建** | `createTextNode()` | 创建文本节点 |
+| **插入** | `appendChild()` | 末尾插入 |
+| **插入** | `insertBefore()` | 指定位置插入 |
+| **删除** | `removeChild()` | 移除子节点 |
+| **属性** | `setAttribute()` | 设置属性 |
+| **属性** | `getAttribute()` | 获取属性 |
+| **样式** | `classList.add/remove` | 增删类名 |
+| **事件** | `addEventListener()` | 绑定事件 |
+| **事件** | `removeEventListener()` | 解绑事件 |
 
 ---
 

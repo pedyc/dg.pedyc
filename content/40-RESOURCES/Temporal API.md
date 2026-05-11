@@ -1,14 +1,14 @@
 ---
-uid: '202604180003'
+uid: "202604180003"
 title: Temporal API
-aliases: ["T-Temporal API", "Temporal"]
-description: "ES2026 引入的现代化日期时间 API，替代有设计缺陷的 Date 对象"
-tags: ["计算机科学", "前端开发", "JavaScript", "ECMAScript"]
+aliases: [T-Temporal API, Temporal, T-Web API-Temporal API]
+description: ES2026 引入的现代化日期时间 API，替代有设计缺陷的 Date 对象
+tags: [计算机科学, 前端开发, JavaScript, ECMAScript]
 date-created: 2026-04-18
-date-modified: 2026-04-17
+date-modified: 2026-05-11
 status: active
 content-type: concept
-related:   "[[ES2026]]"
+related: "[[ES2026]]"
 ---
 
 ## 概念：Temporal API

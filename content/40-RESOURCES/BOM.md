@@ -1,57 +1,63 @@
 ---
-content-type: atomic
+uid: 202505020001
 title: BOM
+aliases: [T-BOM]
+description: 浏览器对象模型，提供与浏览器窗口交互的 API
+tags: []
 date-created: 2025-06-02
-date-modified: 2025-12-25
+date-modified: 2026-05-11
+status: cultivating
+content-type: term
+up: ""
 ---
 
-## 定义
+## 术语：BOM
 
-BOM (Browser Object Model) 是浏览器对象模型，它允许 JavaScript 与浏览器进行交互。BOM 提供了一系列对象，用于访问和操作浏览器的各个方面，例如窗口、导航、历史记录、屏幕等。
+> **领域**：#前端/浏览器
 
-## 核心特点
+### 定义
 
-- **浏览器对象**: BOM 中的对象都是浏览器提供的，用于访问和操作浏览器的功能。
-- **全局对象**: BOM 中的 `window` 对象是全局对象，可以直接访问，无需声明。
-- **兼容性问题**: 不同浏览器对 BOM 的实现可能存在差异，需要注意兼容性问题。
+BOM（Browser Object Model，浏览器对象模型）是一套 JavaScript API，用于与浏览器窗口进行交互。BOM 不是 W3C 标准化的规范，各浏览器实现略有差异。
 
-## 主要对象
+**核心全局对象**：`window`
 
-- [[window]]: 浏览器窗口对象，是 BOM 的核心对象，提供了访问和操作浏览器窗口的方法。
-- [[navigator]]: 浏览器信息对象，包含了浏览器的名称、版本、操作系统等信息。
-- [[location]]: 浏览器地址对象，包含了当前页面的 URL 信息，可以用于页面跳转和重定向。
-- [[history]]: 浏览器历史记录对象，包含了用户访问过的页面历史记录，可以用于前进和后退。
-- [[screen]]: 屏幕对象，包含了用户屏幕的尺寸和颜色信息。
+### 核心 API
 
-## 应用
+| 对象                           | 作用                      |
+| :--------------------------- | :---------------------- |
+| `window`                     | 浏览器窗口全局对象               |
+| `navigator`                  | 浏览器信息（UA、平台、语言）         |
+| `location`                   | URL 信息与操作（href、reload）  |
+| `history`                    | 浏览器历史记录（pushState、back） |
+| `screen`                     | 屏幕信息（width、height）      |
+| `localStorage`               | 本地存储（持久化）               |
+| `sessionStorage`             | 会话存储（标签页关闭后清除）          |
+| `fetch`                      | 网络请求                    |
+| `setTimeout` / `setInterval` | 定时器                     |
 
-- **窗口操作**: 使用 `window` 对象可以打开、关闭、移动和调整浏览器窗口的大小。
-- **页面跳转**: 使用 `location` 对象可以跳转到其他页面或刷新当前页面。
-- **历史记录**: 使用 `history` 对象可以前进和后退浏览器的历史记录。
-- **浏览器信息**: 使用 `navigator` 对象可以获取浏览器的名称、版本和操作系统等信息。
-- **屏幕信息**: 使用 `screen` 对象可以获取用户屏幕的尺寸和颜色信息。
+### BOM vs DOM
 
-## 优缺点
+| 维度 | BOM | DOM |
+|:---|:---|:---|
+| **全称** | Browser Object Model | Document Object Model |
+| **操作对象** | 浏览器窗口 | 文档内容 |
+| **标准化** | 无标准，各浏览器实现不同 | W3C 标准 |
+| **示例** | `window.location` | `document.getElementById()` |
 
-- 优点:
-		- 提供了访问和操作浏览器功能的接口。
-		- 可以实现丰富的 Web 应用功能。
-- 缺点:
-		- 不同浏览器对 BOM 的实现可能存在差异，需要注意兼容性问题。
-		- 部分 BOM 对象可能存在安全风险，需要谨慎使用。
+### 跨学科含义
 
-## 相关概念
+- **在浏览器中**：`window` 是全局对象，`navigator` 提供浏览器信息，`location` 操作 URL
+- **在 Node.js 中**：`global` 是全局对象，类似 BOM 的 `window`；`process` 提供浏览器 navigator 的功能
+- **在 Electron 中**：`BrowserWindow` 是窗口对象，与 BOM 的 `window` 对应
+- **在小程序中**：无 BOM概念，使用 `wx` API（如 `wx.getSystemInfo`）替代
 
-- [[DOM]]: 文档对象模型，用于访问和操作 HTML 文档的内容。
-- [[JavaScript]]: 一种脚本语言，用于在浏览器中执行动态操作。
+---
 
-## 问答卡片
+### 知识网络
 
-- Q1：BOM 和 DOM 有什么区别？
-- A：BOM 是浏览器对象模型，用于访问和操作浏览器的功能。DOM 是文档对象模型，用于访问和操作 HTML 文档的内容。
-- Q2：如何解决 BOM 的兼容性问题？
-- A：可以使用一些 JavaScript 库或框架，例如 jQuery 和 Vue.js，它们对 BOM 进行了封装，可以解决部分兼容性问题。
-
-## 参考资料
-
-- MDN Web Docs: [https://developer.mozilla.org/en-US/docs/Web/API/BOM](https://developer.mozilla.org/en-US/docs/Web/API/BOM)
+- **父级概念**：浏览器
+- **并列概念**：
+	- [[DOM]] — 文档对象模型，操作页面内容
+- **相关概念**：
+	- [[History API]] — 操作浏览器历史
+	- [[navigator]] — 浏览器信息

@@ -1,81 +1,118 @@
 ---
+uid: 202505200001
 title: WebSocket
-description: WebSocket 是一种在客户端和服务器之间提供持久连接的协议，用于实现实时双向数据传输。
+aliases: [C-WebSocket]
+description: 全双工通信协议，实现服务器主动推送
 tags: [前端, 网络协议]
-date-created: 2024-07-03
-date-modified: 2025-06-02
+date-created: 2025-05-20
+date-modified: 2026-05-11
+status: cultivating
 content-type: concept
-keywords: [WebSocket, 实时通信, 双向通信]
-para: AREAS
-related: ["[[HTTP]]", "[[Socket.IO]]"]
-tititle: WebSocket
-zettel: permanent
+up: ""
 ---
 
-## 定义
+## 概念：WebSocket
 
-WebSocket 是一种网络通信协议，可在单个 TCP 连接上提供全双工通信。它使得客户端和服务器之间可以进行实时的双向数据传输，而无需像 HTTP 那样每次都发起新的请求。
+> WebSocket 是一种全双工通信协议，允许服务器主动向客户端推送数据
 
-## 核心特点
+**解决的核心痛点**：HTTP 轮询的实时性低、资源浪费问题；WebSocket 通过一次握手建立持久连接，服务器可随时推送消息
 
-- **全双工通信**: 客户端和服务器可以同时发送和接收数据。
-- **持久连接**: 一旦连接建立，就会保持打开状态，直到客户端或服务器主动关闭。
-- **实时性**: 数据可以立即传输，无需等待请求 - 响应周期。
-- **低延迟**: 减少了 HTTP 协议中重复的握手和头部信息，降低了延迟。
+---
 
-## 工作原理
+### 核心命题
 
-1. **握手**: 客户端发起 HTTP 请求，请求升级为 WebSocket 连接。服务器接受请求后，完成握手。
-2. **数据传输**: 握手完成后，客户端和服务器可以通过已建立的 TCP 连接自由地发送和接收数据帧。
-3. **连接关闭**: 客户端或服务器可以随时关闭连接。
+- **全双工优于半双工**：WebSocket 建立后，客户端和服务器可以互相主动发送消息，无需轮询
+	- **原理**：HTTP 是请求 - 响应模型，只有客户端能主动发起请求；WebSocket 握手后升级为 TCP 连接，双方平等
+- **连接建立成本低**：WebSocket 只需一次握手，后续消息无需重复建立连接
+	- **原理**：HTTP 每次请求都需要 TCP 握手，而 WebSocket 握手后保持 TCP 连接
+- **协议头开销小**：WebSocket 数据帧使用掩码传输，头部仅 2-14 字节
+	- **原理**：相比 HTTP 的 Header 重复传输，WebSocket 使用帧格式大幅减少开销
 
-## 应用
+---
 
-- **实时聊天应用**: 例如在线客服、聊天室等。
-- **在线游戏**: 例如多人在线游戏，需要实时同步游戏状态。
-- **实时数据更新**: 例如股票行情、体育赛事直播等。
-- **协同编辑**: 例如多人在线文档编辑。
-- **物联网 (IoT)**: 设备与服务器之间的实时数据交换。
+### 运行机制
 
-## 优缺点
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Server
+    Note over Client: TCP 三次握手
+    Client->>Server: HTTP Upgrade 请求（包含 Sec-WebSocket-Key）
+    Server-->>Client: 101 Switching Protocols（响应 Sec-WebSocket-Accept）
+    Note over Client,Server: WebSocket 连接建立成功
+    Client->>Server: 发送数据帧（掩码处理）
+    Server->>Client: 发送数据帧
+    loop 心跳保活
+        Client->>Server: Ping 帧
+        Server->>Client: Pong 帧
+    end
+```
 
-- **优点**:
-		- 实时性高，延迟低。
-		- 全双工通信，效率高。
-		- 减少了 HTTP 的头部开销。
-- **缺点**:
-		- 需要服务器支持 WebSocket 协议。
-		- 相比 HTTP，部署和维护可能更复杂。
-		- 安全性需要额外考虑。
+**连接建立流程**：
 
-## 与 HTTP 的比较
+1. 客户端发送 HTTP 请求，包含 `Upgrade: websocket` 头和 `Sec-WebSocket-Key`
+2. 服务器返回 101 状态码，响应 `Sec-WebSocket-Accept`
+3. 协议从 HTTP 升级为 WebSocket，建立持久 TCP 连接
+4. 双方可随时发送数据帧，支持文本和二进制
 
-| 特性     | HTTP                                  | WebSocket                               |
-| -------- | ------------------------------------- | --------------------------------------- |
-| 连接方式   | 短连接，每次请求都需要建立新的 TCP 连接 | 长连接，建立一次 TCP 连接后保持打开状态 |
-| 通信方式   | 半双工，请求 - 响应模式                   | 全双工，双向实时通信                      |
-| 实时性     | 较低，需要轮询或长轮询模拟实时性          | 高，实时性好                            |
-| 头部开销   | 较大，每次请求都包含头部信息              | 较小，只有在握手时有头部信息                |
-| 适用场景   | 适用于非实时性要求的场景                  | 适用于实时性要求高的场景                    |
+---
 
-## 安全性
+### 关键区别
 
-- **防止跨站 WebSocket 劫持 (CSWSH)**: 验证 Origin 头部，确保请求来自信任的域名。
-- **输入验证**: 对客户端发送的数据进行验证，防止恶意代码注入。
-- **使用 TLS 加密**: 使用 wss:// 协议进行加密通信。
+| 维度 | WebSocket | HTTP 轮询 | SSE |
+|:--- |:--- |:--- |:--- |
+| **通信方向** | 全双工 | 半双工（客户端主动） | 单向（服务器→客户端） |
+| **连接方式** | 持久连接 | 每次请求新建 | 持久连接 |
+| **实时性** | 毫秒级 | 取决于轮询间隔 | 秒级 |
+| **资源消耗** | 低 | 高（频繁建连） | 低 |
+| **浏览器支持** | 需降级处理 | 完全支持 | IE 不支持 |
 
-## 相关概念
+---
 
-- **Socket.IO**: 一个基于 WebSocket 的库，提供了更多的功能和兼容性，例如自动降级到 HTTP 长轮询。
+### 应用场景
 
-## 问答卡片
+- ✅ **适用场景**
+	- **即时通讯**：聊天应用、客服系统、游戏同步
+	- **实时数据**：股票行情、在线协作、监控面板
+	- **推送通知**：订单状态、活动提醒、系统告警
+- ⛔ **误用**
+	- **低频数据场景**：数据更新间隔大（小时级），用 HTTP 即可，无需 WebSocket
+	- **REST 场景**：资源操作更适合 HTTP，WebSocket 难以表达语义
 
-- **Q: WebSocket 是什么？**
-		- A: 一种在客户端和服务器之间提供持久连接的协议，用于实现实时双向数据传输。
-- **Q: WebSocket 和 HTTP 有什么区别？**
-		- A: WebSocket 是全双工通信，而 HTTP 是半双工通信。WebSocket 建立一次连接后保持打开状态，而 HTTP 每次请求都需要建立新的 TCP 连接。
+---
 
-## 参考资料
+### SOP
+
+> 与本概念相关的标准操作流程，通过实践辅助理解
+
+- [[优惠券发放领取核销的前端实现逻辑|SOP-优惠券发放领取核销]] — 优惠券领取通知使用 WebSocket 实现
+
+---
+
+### FAQ
+
+> 与本概念相关的开放性问题，待进一步探索
+
+- [[Q-WebSocket与Socket.io的区别]] — 如何选择
+- [[Q-WebSocket连接断开如何处理]] — 重连策略
+
+---
+
+### 知识图谱
+
+> 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
+
+- **父级概念**：网络协议
+- **并列概念**：
+	- [[SSE]] — 服务器推送的另一种方案
+	- [[HTTP]] — 请求 - 响应模型
+- **相关概念**：
+	- [[WebSocket心跳机制]] — 保活策略
+	- [[WebSocket断线重连]] — 容错处理
+
+---
+
+### 参考资料
 
 - [RFC 6455 - The WebSocket Protocol](https://datatracker.ietf.org/doc/html/rfc6455)
 - [MDN Web Docs: WebSocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)

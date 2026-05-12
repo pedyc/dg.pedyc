@@ -50,14 +50,7 @@
       "key": "O"
     }
   ],
-  "global-search:open": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "Q"
-    }
-  ],
+  "global-search:open": [],
   "templater-obsidian:_template/template_meta.md": [
     {
       "modifiers": [
@@ -187,17 +180,17 @@
   "obsidian-emoji-toolbar:emoji-picker:open-picker": [
     {
       "modifiers": [
-        "Mod"
+        "Alt"
       ],
-      "key": "Q"
+      "key": "A"
     }
   ],
   "omnisearch:show-modal": [
     {
       "modifiers": [
-        "Mod"
+        "Alt"
       ],
-      "key": "F"
+      "key": "Q"
     }
   ],
   "editor:open-search": []

@@ -14,6 +14,8 @@ content-type: moc
 
 > 前端缓存方案的索引入口，按缓存层级和用途分类
 
+👉[[各种前端存储方式间有什么区别？]]
+
 ---
 
 ### 浏览器缓存
@@ -21,6 +23,12 @@ content-type: moc
 - [[BOM]] — 浏览器对象模型，localStorage/sessionStorage 所在
 - [[Cache API]] — Service Worker 缓存资源的 API
 - [[HTTP 缓存]] — 强缓存、协商缓存机制
+
+### 客户端存储
+
+- [[IndexedDB]] — 客户端持久化存储，缓存 API 响应、离线数据存储
+- [[localStorage]] — 5Mb 左右，
+- [[sessionStorage]] — 5Mb 左右，会话级存储
 
 ---
 

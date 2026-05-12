@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a63786b52690c882",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_templates/template_question.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "template_question"
-            }
-          },
-          {
             "id": "efec3ab117667ef2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/宏.md",
+                "file": "40-RESOURCES/柯里化.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "宏"
+              "title": "柯里化"
             }
           }
         ]
@@ -95,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "_templates/template_question.md",
+                "file": "40-RESOURCES/柯里化.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -123,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "template_question 的关系图"
+              "title": "柯里化 的关系图"
             }
           },
           {
@@ -314,13 +290,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a63786b52690c882",
+  "active": "efec3ab117667ef2",
   "lastOpenFiles": [
+    "40-RESOURCES/语法糖.md",
+    "40-RESOURCES/宏.md",
+    "_templates/template_question.md",
     "40-RESOURCES/Q-如何选择前端监控方案.md",
     "40-RESOURCES/持续集成与持续部署.md",
     "40-RESOURCES/SaaS.md",
     "40-RESOURCES/前端监控.md",
-    "40-RESOURCES/宏.md",
     "40-RESOURCES/MOC-前端工程化工具.md",
     "20-AREAS/A-前端/前端工程.md",
     "20-AREAS/A-前端/前端开发.md",
@@ -335,13 +313,11 @@
     "40-RESOURCES/DOM API.md",
     "40-RESOURCES/DOM.md",
     "40-RESOURCES/Temporal API.md",
-    "40-RESOURCES/语法糖.md",
     "40-RESOURCES/TypeScript.md",
     "30-Zettelkasten/宏语法在编译时处理.md",
     "40-RESOURCES/合并有序链表.md",
     "40-RESOURCES/WebSocket.md",
     "40-RESOURCES/ES2026.md",
-    "40-RESOURCES/Hydration.md",
     "90-DIARY/_resources/2026-05-01",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
     "50-ARCHIVE/_resources/深入了解现代网络浏览器(1) 多进程机构",

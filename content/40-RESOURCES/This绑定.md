@@ -4,7 +4,7 @@ title: This绑定
 aliases: [T-This绑定, this binding]
 tags: [前端/JavaScript]
 date-created: 2025-05-19
-date-modified: 2026-03-20
+date-modified: 2026-05-12
 status: active
 content-type: [term]
 up: "[[JavaScript]]"

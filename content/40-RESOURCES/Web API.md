@@ -5,7 +5,7 @@ aliases: [MOC-Web API, Web API, Browser APIs, 浏览器API]
 description: Web API 是浏览器提供给 JavaScript 调用的接口，用于操纵 DOM、网络请求、存储等能力
 tags: [前端开发/浏览器API]
 date-created: 2026-05-09
-date-modified: 2026-05-11
+date-modified: 2026-05-12
 status: cultivating
 content-type: moc
 ---
@@ -38,7 +38,7 @@ _数据的获取与实时交换_
 - [[Beacon API]] — 页面卸载时发送数据，用于埋点
 - [[WebSocket]] — 全双工实时通信
 - [[WebRTC]] — 点对点音视频传输
-- [[Server-Sent Events]] — SSE，服务端单向推送
+- [[SSE]] — 服务端单向推送
 
 ---
 

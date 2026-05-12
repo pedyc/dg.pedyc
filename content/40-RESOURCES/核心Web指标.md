@@ -4,7 +4,7 @@ aliases: [Core Web Vitals, MOC-核心Web指标]
 description: 核心 Web 指标 (Core Web Vitals) 的详细介绍，包括指标定义、影响因素、优化方法和常用工具。
 tags: [性能优化, 用户体验, 前端优化]
 date-created: 2025-04-29
-date-modified: 2026-04-22
+date-modified: 2026-05-12
 content-type: moc
 keywords: [LCP, FID, CLS, Web 性能, 用户体验]
 para: Area

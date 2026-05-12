@@ -1,8 +1,8 @@
 ---
-content-type: atomic
 title: Service Worker前端案例
 date-created: 2025-06-15
-date-modified: 2026-03-04
+date-modified: 2026-05-12
+content-type: [sop]
 ---
 
 ## 离线应用

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/PWA.md",
+                "file": "40-RESOURCES/事件循环.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "PWA"
+              "title": "事件循环"
             }
           },
           {
@@ -95,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/PWA.md",
+                "file": "40-RESOURCES/事件循环.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -123,7 +123,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "PWA 的关系图"
+              "title": "事件循环 的关系图"
             }
           },
           {
@@ -316,20 +316,20 @@
   },
   "active": "efec3ab117667ef2",
   "lastOpenFiles": [
-    "40-RESOURCES/SOP-开发一个最小PWA应用.md",
+    "40-RESOURCES/Web Worker.md",
+    "40-RESOURCES/Service Worker.md",
     "40-RESOURCES/PWA.md",
+    "40-RESOURCES/SOP-开发一个最小PWA应用.md",
     "40-RESOURCES/MOC-PWA应用案例.md",
     "20-AREAS/A-前端/前端工程.md",
     "40-RESOURCES/Web App Manifest.md",
     "30-Zettelkasten/PWA持续更新本质是ServiceWorker与页面生命周期解耦.md",
-    "40-RESOURCES/Service Worker.md",
     "40-RESOURCES/各种前端存储方式间有什么区别？.md",
     "40-RESOURCES/MOC-前端缓存方案.md",
     "40-RESOURCES/多级缓存示例.md",
     "40-RESOURCES/内容缓存示例.md",
     "40-RESOURCES/SOP-调试JavaScript内存泄漏.md",
     "40-RESOURCES/Service Worker前端案例.md",
-    "40-RESOURCES/Web Worker.md",
     "40-RESOURCES/Web API.md",
     "40-RESOURCES/浏览器.md",
     "40-RESOURCES/INP.md",

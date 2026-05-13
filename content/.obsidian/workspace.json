@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/作用域 vs 作用域链.md",
+                "file": "40-RESOURCES/作用域链.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "作用域 vs 作用域链"
+              "title": "作用域链"
             }
           },
           {
@@ -109,7 +109,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/作用域 vs 作用域链.md",
+                "file": "40-RESOURCES/作用域链.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -137,7 +137,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "作用域 vs 作用域链 的关系图"
+              "title": "作用域链 的关系图"
             }
           },
           {
@@ -330,9 +330,9 @@
   },
   "active": "efec3ab117667ef2",
   "lastOpenFiles": [
-    "40-RESOURCES/MOC-JS&TS相关问题.md",
-    "40-RESOURCES/作用域链.md",
     "40-RESOURCES/作用域 vs 作用域链.md",
+    "40-RESOURCES/作用域链.md",
+    "40-RESOURCES/MOC-JS&TS相关问题.md",
     "40-RESOURCES/执行上下文.md",
     "40-RESOURCES/执行栈.md",
     "40-RESOURCES/事件循环.md",

@@ -5,7 +5,7 @@ aliases: [C-Harness]
 description: 用于围绕 AI Agent 构建工程化体系的框架和方法论
 tags: [concept, AI, Agent]
 date-created: 2026-04-01
-date-modified: 2026-04-07
+date-modified: 2026-05-14
 status: cultivating
 content-type: concept
 related: ["[[Agent]]", "[[Claude Code]]", "[[前端交互]]"]
@@ -73,11 +73,11 @@ flowchart LR
 
 ### 关键区别
 
-| 维度 | Prompt Engineering | Harness |
-|:---|:---|:---|
-| **关注点** | 优化 Agent 的能力表达 | 优化 Agent 的工程可靠性 |
-| **抽象层次** | 指令层 | 架构层 |
-| **类比** | 优化函数的实现逻辑 | 优化函数的调用方式、错误处理 |
+| 维度       | Prompt Engineering | Harness         |
+| :------- | :----------------- | :-------------- |
+| **关注点**  | 优化 Agent 的能力表达     | 优化 Agent 的工程可靠性 |
+| **抽象层次** | 指令层                | 架构层             |
+| **类比**   | 优化函数的实现逻辑          | 优化函数的调用方式、错误处理  |
 
 ---
 
@@ -111,6 +111,7 @@ flowchart LR
 - **相关领域**：
 	- [[前端交互]] — Agent 可赋能前端交互
 	- [[工作流引擎]] — Agent 流水线的编排方式
+
 
 ---
 

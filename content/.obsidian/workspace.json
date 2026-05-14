@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/作用域 vs 作用域链.md",
+                "file": "40-RESOURCES/Harness.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "作用域 vs 作用域链"
+              "title": "Harness"
             }
           },
           {
@@ -109,7 +109,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/作用域 vs 作用域链.md",
+                "file": "40-RESOURCES/Harness.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -137,7 +137,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "作用域 vs 作用域链 的关系图"
+              "title": "Harness 的关系图"
             }
           },
           {
@@ -228,8 +228,7 @@
               "title": "添加笔记属性"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -330,9 +329,13 @@
   },
   "active": "efec3ab117667ef2",
   "lastOpenFiles": [
+    "90-DIARY/2026-05-14.md",
+    "40-RESOURCES/Harness.md",
+    "50-ARCHIVE/Vibe Coding Is Dead. Here’s What Replaced It.md",
+    "20-AREAS/A-人工智能/人工智能.md",
+    "40-RESOURCES/作用域 vs 作用域链.md",
     "40-RESOURCES/作用域链.md",
     "40-RESOURCES/词法环境.md",
-    "40-RESOURCES/作用域 vs 作用域链.md",
     "40-RESOURCES/词法作用域.md",
     "40-RESOURCES/MOC-JS&TS相关问题.md",
     "40-RESOURCES/执行上下文.md",
@@ -352,10 +355,6 @@
     "40-RESOURCES/内容缓存示例.md",
     "40-RESOURCES/SOP-调试JavaScript内存泄漏.md",
     "40-RESOURCES/Service Worker前端案例.md",
-    "40-RESOURCES/Web API.md",
-    "40-RESOURCES/浏览器.md",
-    "40-RESOURCES/INP.md",
-    "40-RESOURCES/核心Web指标.md",
     "90-DIARY/_resources/2026-05-01",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
     "50-ARCHIVE/_resources/深入了解现代网络浏览器(1) 多进程机构",

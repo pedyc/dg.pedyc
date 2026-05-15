@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Harness.md",
+                "file": "40-RESOURCES/SOP-React性能优化.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,21 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Harness"
+              "title": "SOP-React性能优化"
+            }
+          },
+          {
+            "id": "4325c7e35a908bbe",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://react.dev/reference/react/createContext",
+                "title": "createContext – React",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "createContext – React"
             }
           },
           {
@@ -109,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Harness.md",
+                "file": "40-RESOURCES/SOP-React性能优化.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -137,7 +151,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Harness 的关系图"
+              "title": "SOP-React性能优化 的关系图"
             }
           },
           {
@@ -188,7 +202,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:前端开发/浏览器API",
+                "query": "tag:#前端开发/工程化",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -228,7 +242,8 @@
               "title": "添加笔记属性"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -329,8 +344,17 @@
   },
   "active": "efec3ab117667ef2",
   "lastOpenFiles": [
-    "60-BLOGS/Agent与Harness.md",
+    "20-AREAS/A-前端/React.md",
+    "40-RESOURCES/JSX 是什么？如何被转换？React 渲染过程是怎样的？.md",
+    "30-Zettelkasten/React 的 Diff 算法是怎么工作的？为什么性能很高？.md",
+    "40-RESOURCES/React 重新渲染.md",
+    "40-RESOURCES/Babel.md",
+    "50-ARCHIVE/理解 React 的渲染机制：为什么组件会重新渲染？.md",
+    "40-RESOURCES/MOC-React面试题.md",
+    "40-RESOURCES/React Context.md",
+    "40-RESOURCES/Fiber.md",
     "40-RESOURCES/Harness.md",
+    "60-BLOGS/Agent与Harness.md",
     "90-DIARY/2026-05-14.md",
     "50-ARCHIVE/Vibe Coding Is Dead. Here’s What Replaced It.md",
     "20-AREAS/A-人工智能/人工智能.md",
@@ -346,15 +370,6 @@
     "40-RESOURCES/Service Worker.md",
     "40-RESOURCES/PWA.md",
     "40-RESOURCES/SOP-开发一个最小PWA应用.md",
-    "40-RESOURCES/MOC-PWA应用案例.md",
-    "20-AREAS/A-前端/前端工程.md",
-    "40-RESOURCES/Web App Manifest.md",
-    "30-Zettelkasten/PWA持续更新本质是ServiceWorker与页面生命周期解耦.md",
-    "40-RESOURCES/各种前端存储方式间有什么区别？.md",
-    "40-RESOURCES/MOC-前端缓存方案.md",
-    "40-RESOURCES/多级缓存示例.md",
-    "40-RESOURCES/内容缓存示例.md",
-    "40-RESOURCES/SOP-调试JavaScript内存泄漏.md",
     "90-DIARY/_resources/2026-05-01",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
     "50-ARCHIVE/_resources/深入了解现代网络浏览器(1) 多进程机构",

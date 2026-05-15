@@ -4,7 +4,7 @@ author: "[[niusir]]"
 description: React 是一个优秀的 UI 库，以其声明式、组件化、响应式的设计深受前端开发者喜爱。但在实际开发中，我们经常会遇到「组件频繁重新渲染」的问题，甚至因此导致性能下降、动画卡顿或者数据闪烁等现象。 这
 tags: [clippings]
 date-created: 2026-03-01
-date-modified: 2026-03-01
+date-modified: 2026-05-15
 published: 2025-06-24
 source: https://juejin.cn/post/7519131267293888522
 ---
@@ -31,9 +31,7 @@ React 的 " 渲染 " 指的是：
 
 最常见的原因。当调用 `setState` 或 `useState` 的 setter 函数时，组件会重新执行。
 
-```bash
-jsx
-复制编辑
+```jsx
 const [count, setCount] = useState(0);
 
 // 点击按钮会导致组件重新渲染
@@ -44,9 +42,7 @@ const [count, setCount] = useState(0);
 
 如果父组件传递给子组件的 `props` 发生变化，子组件也会重新渲染。
 
-```bash
-jsx
-复制编辑
+```jsx
 <Child value={parentValue} />
 ```
 
@@ -79,9 +75,7 @@ React 内部并不会自动 " 阻止 " 不必要的渲染，它的策略是：
 
 对于纯函数组件，如果 props 没有变化，可以使用 `React.memo` 来阻止重新渲染。
 
-```javascript
-jsx
-复制编辑
+```jsx
 const MyComponent = React.memo(function MyComponent(props) {
   // 只有当 props 改变时才重新渲染
   return <div>{props.text}</div>;
@@ -92,9 +86,7 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 每次渲染都会创建新的对象和函数，除非使用 `useCallback` 或 `useMemo` ：
 
-```bash
-jsx
-复制编辑
+```jsx
 const memoizedFn = useCallback(() => {
   // ...
 }, [dependencies]);

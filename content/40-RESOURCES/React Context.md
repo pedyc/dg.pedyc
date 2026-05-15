@@ -5,7 +5,7 @@ aliases: [C-React Context]
 description: React Context 提供了在组件树间共享数据的方式，避免 prop drilling
 tags: [react, hooks, state-management]
 date-created: 2026-04-21
-date-modified: 2026-04-27
+date-modified: 2026-05-15
 status: cultivating
 content-type: concept
 up: "[[Hooks (React)|React Hooks]]"

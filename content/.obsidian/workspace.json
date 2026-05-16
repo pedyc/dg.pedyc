@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/SOP-React性能优化.md",
+                "file": "40-RESOURCES/JSX 是什么？如何被转换？React 渲染过程是怎样的？.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "SOP-React性能优化"
+              "title": "JSX 是什么？如何被转换？React 渲染过程是怎样的？"
             }
           },
           {
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/SOP-React性能优化.md",
+                "file": "40-RESOURCES/JSX 是什么？如何被转换？React 渲染过程是怎样的？.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,7 +151,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "SOP-React性能优化 的关系图"
+              "title": "JSX 是什么？如何被转换？React 渲染过程是怎样的？ 的关系图"
             }
           },
           {
@@ -345,6 +345,7 @@
   "active": "efec3ab117667ef2",
   "lastOpenFiles": [
     "20-AREAS/A-前端/React.md",
+    "40-RESOURCES/SOP-React性能优化.md",
     "40-RESOURCES/JSX 是什么？如何被转换？React 渲染过程是怎样的？.md",
     "30-Zettelkasten/React 的 Diff 算法是怎么工作的？为什么性能很高？.md",
     "40-RESOURCES/React 重新渲染.md",
@@ -369,7 +370,6 @@
     "40-RESOURCES/Web Worker.md",
     "40-RESOURCES/Service Worker.md",
     "40-RESOURCES/PWA.md",
-    "40-RESOURCES/SOP-开发一个最小PWA应用.md",
     "90-DIARY/_resources/2026-05-01",
     "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
     "50-ARCHIVE/_resources/深入了解现代网络浏览器(1) 多进程机构",

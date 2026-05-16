@@ -113,7 +113,7 @@ graph LR
 	- [[useLayoutEffect]] — 同步执行的副作用
 - **应用场景**：
 	- [[SOP-正确使用useEffect]] — useEffect 标准操作流程
-	- [[MOC-React面试题]] — React 相关面试题汇总
+	- [[React面试题]] — React 相关面试题汇总
 
 ---
 

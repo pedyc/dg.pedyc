@@ -1,8 +1,9 @@
 ---
-title: MOC-JS&TS相关问题
+title: JS&TS相关问题
+aliases: [MOC-JS&TS相关问题]
 tags: [算法题单]
 date-created: 2025-04-10
-date-modified: 2026-05-13
+date-modified: 2026-05-16
 content-type: [moc]
 ---
 

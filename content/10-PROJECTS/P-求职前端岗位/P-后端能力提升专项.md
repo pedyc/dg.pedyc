@@ -4,7 +4,7 @@ title: P-后端能力提升专项
 description: '前端开发者后端能力提升指南，从"会接口"到"懂架构"'
 tags: [前端/后端, 求职]
 date-created: 2026-03-13
-date-modified: 2026-03-28
+date-modified: 2026-05-16
 status: cultivating
 area: ["[[前端开发|A-前端开发]]"]
 consequence: 7

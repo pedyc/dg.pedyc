@@ -22,7 +22,7 @@ source: https://developer.chrome.com/blog/inside-browser-part1?hl=zh-cn&authuser
 
 ### CPU
 
-![[40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg]]
+![[40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg]]
 
 图 1：4 个 CPU 核心就像坐在各个办公桌前处理新任务的上班族
 
@@ -30,7 +30,7 @@ source: https://developer.chrome.com/blog/inside-browser-part1?hl=zh-cn&authuser
 
 ### GPU
 
-![[40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/9ea66fccd17347ab81ecaf1cf2ddaa94_MD5.jpg]]
+![[40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/9ea66fccd17347ab81ecaf1cf2ddaa94_MD5.jpg]]
 
 图 2：许多带有扳手的 GPU 核心，表示它们处理的任务有限
 
@@ -38,13 +38,13 @@ source: https://developer.chrome.com/blog/inside-browser-part1?hl=zh-cn&authuser
 
 当您在计算机或手机上启动应用时，CPU 和 GPU 会为应用提供支持。通常，应用使用操作系统提供的机制在 CPU 和 GPU 上运行。
 
-![[40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/50b52cf6e915bb909b33af23066a4f40_MD5.jpg]]
+![[40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/50b52cf6e915bb909b33af23066a4f40_MD5.jpg]]
 
 图 3：计算机架构的三层。底部是机器硬件，中间是操作系统，顶部是应用。
 
 ## 在进程和线程上执行程序
 
-![[40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/a75e6ec9302992e727dfa968809c5f33_MD5.jpg]]
+![[40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/a75e6ec9302992e727dfa968809c5f33_MD5.jpg]]
 
 图 4：进程用作边界框，线程用作在进程内游动的抽象鱼
 
@@ -52,13 +52,13 @@ source: https://developer.chrome.com/blog/inside-browser-part1?hl=zh-cn&authuser
 
 启动应用时，系统会创建一个进程。该程序可能会创建线程来帮助其执行工作，但这并非必需。操作系统会向进程提供一块内存 "slab" 供其使用，并且所有应用状态都保留在此私有内存空间中。当您关闭应用时，该进程也会消失，并且操作系统会释放内存。
 
-![[40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/bc5d084badce8c9a11c3db34f8e08d1e_MD5.svg|800]]
+![[40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/bc5d084badce8c9a11c3db34f8e08d1e_MD5.svg|800]]
 
 图 5：使用内存空间并存储应用数据的进程示意图
 
 进程可以请求操作系统启动另一个进程来运行不同的任务。发生这种情况时，系统会为新进程分配内存的不同部分。如果两个进程需要通信，可以使用 **处理 **单元（GPU）** 是计算机的另一个部分。**的另一个部分。** 进行通信。许多应用都是以这种方式设计的，因此如果某个工作器进程无响应，可以重启该进程，而无需停止运行应用不同部分的其他进程。
 
-![[40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/4bd7b8b63adfaa31f7d5a7b47ac93c2e_MD5.svg|800]]
+![[40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/4bd7b8b63adfaa31f7d5a7b47ac93c2e_MD5.svg|800]]
 
 图 6：通过 IPC 通信的单独进程示意图
 
@@ -66,7 +66,7 @@ source: https://developer.chrome.com/blog/inside-browser-part1?hl=zh-cn&authuser
 
 那么，Web 浏览器是如何使用进程和线程构建的？它可以是包含许多不同线程的一个进程，也可以是包含少量通过 IPC 通信的线程的许多不同进程。
 
-![[40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/1592ba48c1f44efe49c96375375d3683_MD5.jpg]]
+![[40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/1592ba48c1f44efe49c96375375d3683_MD5.jpg]]
 
 图 7：进程 / 线程图中的不同浏览器架构
 
@@ -76,7 +76,7 @@ source: https://developer.chrome.com/blog/inside-browser-part1?hl=zh-cn&authuser
 
 顶部是浏览器进程，负责与负责处理应用不同部分的其他进程协调工作。对于渲染程序进程，系统会创建多个进程并将其分配给每个标签页。直到最近，Chrome 才会尽可能为每个标签页分配一个进程；现在，它会尝试为每个网站分配自己的进程，包括 iframe（请参阅 [网站隔离](https://developer.chrome.com/blog/inside-browser-part1?hl=zh-cn&authuser=1#site-isolation) ）。
 
-![[40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/1433ade15cfb26d19005e84060f783b9_MD5.jpg]]
+![[40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/1433ade15cfb26d19005e84060f783b9_MD5.jpg]]
 
 图 8：Chrome 的多进程架构示意图。在 " 渲染程序进程 " 下方显示了多个图层，表示 Chrome 为每个标签页运行多个渲染程序进程。
 
@@ -86,7 +86,7 @@ source: https://developer.chrome.com/blog/inside-browser-part1?hl=zh-cn&authuser
 
 <table><tbody><tr><th colspan="2">进程及其控制的内容</th></tr><tr><td>浏览器</td><td>控制应用的“Chrome”部分，包括地址栏、书签、返回和前进按钮。<br>还处理网络浏览器的不可见特权部分，例如网络请求和文件访问。</td></tr><tr><td>渲染程序</td><td>控制显示网站的标签页中的所有内容。</td></tr><tr><td>插件</td><td>控制网站使用的所有插件，例如 Flash。</td></tr><tr><td>GPU</td><td>隔离地处理 GPU 任务，不受其他进程的影响。它会分隔到不同的进程中，因为 GPU 会处理来自多个应用的请求，并在同一 Surface 中绘制这些请求。</td></tr></tbody></table>
 
-![[40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/458d3d4b606fab725b485a616ee9a812_MD5.jpg]]
+![[40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/458d3d4b606fab725b485a616ee9a812_MD5.jpg]]
 
 图 9：指向浏览器界面不同部分的不同进程
 
@@ -98,7 +98,7 @@ source: https://developer.chrome.com/blog/inside-browser-part1?hl=zh-cn&authuser
 
 如果某个标签页无响应，您可以关闭该标签页并继续操作，同时让其他标签页保持活跃状态。如果所有标签页都在一个进程中运行，当一个标签页无响应时，所有标签页都会无响应。这很遗憾。
 
-![[40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/40206d80a8bc4bfb616f30eaea478158_MD5.jpg]]
+![[40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/40206d80a8bc4bfb616f30eaea478158_MD5.jpg]]
 
 图 10：显示每个标签页运行的多个进程的示意图
 
@@ -112,7 +112,7 @@ source: https://developer.chrome.com/blog/inside-browser-part1?hl=zh-cn&authuser
 
 一般来说，当 Chrome 在强大的硬件上运行时，它可能会将每项服务拆分为不同的进程，以提高稳定性，但如果它在资源受限的设备上运行，Chrome 会将服务合并到一个进程中，以节省内存占用空间。在此变更之前，Android 等平台就已采用类似的方法来合并进程以减少内存用量。
 
-![[40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/a990b21921a5caa52316fdc54f530cb1_MD5.svg]]
+![[40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/a990b21921a5caa52316fdc54f530cb1_MD5.svg]]
 
 图 11：Chrome 服务化示意图，其中显示了将不同服务移至多个进程和单个浏览器进程的操作
 
@@ -120,7 +120,7 @@ source: https://developer.chrome.com/blog/inside-browser-part1?hl=zh-cn&authuser
 
 [网站隔离](https://developers.google.com/web/updates/2018/07/site-isolation?authuser=1&hl=zh-cn) 是 Chrome 中最近推出的一项功能，可为每个跨网站 iframe 运行单独的呈现程序进程。我们一直在讨论 " 每个标签页一个呈现程序 " 模型，该模型允许跨网站 iframe 在单个呈现程序中运行，并在不同网站之间共享内存空间。在同一渲染器进程中运行 a.com 和 b.com 似乎没什么问题。 [同源政策](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy) 是 Web 的核心安全模型；它可确保一个网站在未经同意的情况下无法访问其他网站的数据。绕过此政策是安全攻击的主要目标。进程隔离是分离网站的最有效方式。随着 [Meltdown 和 Spectre](https://developers.google.com/web/updates/2018/02/meltdown-spectre?authuser=1&hl=zh-cn) 的出现，我们更加明确地认识到，需要使用进程来隔离网站。从 Chrome 67 开始，桌面设备上默认启用了网站隔离功能，因此标签页中的每个跨网站 iframe 都会获得单独的呈现进程。
 
-![[40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/1d7ad09610f1731068da5544d7349190_MD5.jpg]]
+![[40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers/1d7ad09610f1731068da5544d7349190_MD5.jpg]]
 
 图 12：网站隔离示意图；多个渲染程序指向网站内的 iframe
 

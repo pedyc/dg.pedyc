@@ -97,7 +97,7 @@ console.log('Message from A: ', event.data);
 
 ## 问答卡片
 
-> 参见：[[MOC-网络协议相关问题]]
+> 参见：[[网络协议相关问题]]
 
 - Q1：什么是 CORS？如何解决跨域问题？
 - A：CORS (Cross-Origin Resource Sharing) 是一种安全机制，用于控制跨域请求。可以通过配置服务器的 HTTP 响应头来允许跨域请求。

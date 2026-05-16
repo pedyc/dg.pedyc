@@ -5,7 +5,7 @@ aliases: [C-Agent, 智能体]
 description: 能够感知环境、自主决策并执行行动的智能实体
 tags: [concept, AI, Agent]
 date-created: 2025-08-25
-date-modified: 2026-04-07
+date-modified: 2026-05-16
 status: active
 content-type: concept
 related: ["[[人工智能]]", "[[Prompt Engineering]]", "[[Harness]]"]

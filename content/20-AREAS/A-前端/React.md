@@ -137,7 +137,7 @@ mindmap
 
 > 该领域的常见问题
 
-- [[MOC-React面试题]] — React 常见面试问题汇总
+- [[React面试题]] — React 常见面试问题汇总
 
 ---
 

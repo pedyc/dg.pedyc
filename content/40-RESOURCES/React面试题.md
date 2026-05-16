@@ -1,5 +1,6 @@
 ---
-title: MOC-React面试题
+title: React面试题
+aliases: [MOC-React面试题]
 date-created: 2025-05-21
 date-modified: 2026-05-16
 content-type: [moc]
@@ -40,4 +41,4 @@ content-type: [moc]
 
 ### 相关链接
 
-- [[MOC-Vue 面试题]]
+- [[Vue 面试题]]

@@ -5,7 +5,7 @@ aliases: [C-Web安全, Web Security, 前端安全]
 description: Web安全是处理不被信任的输入，守住浏览器大门，防止恶意代码执行和数据泄露
 tags: [前端开发/安全]
 date-created: 2025-12-17
-date-modified: 2026-03-23
+date-modified: 2026-05-16
 status: active
 content-type: concept
 ---
@@ -105,7 +105,7 @@ graph TD
 
 ## FAQ
 
-![[MOC-Web安全问题]]
+![[Web安全问题]]
 
 ---
 

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-META/02 附录/怎样规划信息单元？.md",
+                "file": "40-RESOURCES/React面试题.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "怎样规划信息单元？"
+              "title": "React面试题"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "00-META/02 附录/怎样规划信息单元？.md",
+                "file": "40-RESOURCES/React面试题.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -94,12 +94,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.5359795996225935,
+                  "scale": 1.0534979423868314,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "怎样规划信息单元？ 的关系图"
+              "title": "React面试题 的关系图"
             }
           },
           {
@@ -108,13 +108,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "90-DIARY/2026-05-01.md",
+                "file": "40-RESOURCES/React面试题.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2026-05-01 的大纲"
+              "title": "React面试题 的大纲"
             }
           }
         ]
@@ -292,35 +292,40 @@
   },
   "active": "efec3ab117667ef2",
   "lastOpenFiles": [
-    "99-ASSETS/Bases/笔记状态管理.base",
-    "99-ASSETS/Bases/未命名.md",
-    "00-META/02 附录/怎样规划信息单元？.md",
-    "00-META/02 附录/Q-怎样规划信息单元？.md.nssyncsc",
-    "40-RESOURCES/props 和 state 有何区别？state 更新是同步还是异步？.md",
-    "_templates/template_question.md",
-    "40-RESOURCES/MOC-React面试题.md",
-    "40-RESOURCES/函数组件和类组件有什么区别？生命周期如何映射？.md",
-    "40-RESOURCES/React 函数组件 vs 类组件.md",
-    "20-AREAS/A-前端/React.md",
-    "40-RESOURCES/JSX 是什么？如何被转换？React 渲染过程是怎样的？.md",
-    "40-RESOURCES/SOP-开发一个最小PWA应用.md",
-    "40-RESOURCES/SOP-React性能优化.md",
-    "30-Zettelkasten/React 的 Diff 算法是怎么工作的？为什么性能很高？.md",
-    "40-RESOURCES/React 重新渲染.md",
-    "40-RESOURCES/Babel.md",
-    "50-ARCHIVE/理解 React 的渲染机制：为什么组件会重新渲染？.md",
-    "40-RESOURCES/React Context.md",
-    "40-RESOURCES/Fiber.md",
-    "40-RESOURCES/Harness.md",
-    "60-BLOGS/Agent与Harness.md",
-    "90-DIARY/2026-05-14.md",
-    "50-ARCHIVE/Vibe Coding Is Dead. Here’s What Replaced It.md",
+    "40-RESOURCES/MOC-前端面试真题库.md",
+    "40-RESOURCES/CSS相关问题.md",
+    "40-RESOURCES/前端场景实践.md",
+    "20-AREAS/A-前端/前端性能优化.md",
+    "40-RESOURCES/构建打包相关问题.md",
+    "40-RESOURCES/Webpack 的构建流程主要有哪些阶段？loader 和 plugin 的区别？.md",
+    "40-RESOURCES/MOC-Webpack相关问题.md",
+    "40-RESOURCES/浏览器原理与运行机制相关问题.md",
+    "40-RESOURCES/MOC-浏览器原理与运行机制相关问题.md",
+    "40-RESOURCES/MOC-浏览器原理与运行机制相关问题-冲突-暂忘忧烦_Win11.md",
+    "40-RESOURCES/MOC-浏览器原理与运行机制相关问题.md.nssyncsc",
+    "40-RESOURCES/手写经典功能.md",
+    "40-RESOURCES/Web安全问题.md",
+    "40-RESOURCES/Web安全.md",
+    "40-RESOURCES/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog 1",
+    "40-RESOURCES/JS&TS相关问题.md",
+    "40-RESOURCES/网络协议相关问题.md",
+    "40-RESOURCES/Vue 面试题.md",
+    "40-RESOURCES/React面试题.md",
+    "10-PROJECTS/P-求职前端岗位/P-求职前端岗位.md",
+    "10-PROJECTS/P-求职前端岗位/P-算法提升专项.md",
+    "10-PROJECTS/P-求职前端岗位/P-后端能力提升专项.md",
+    "40-RESOURCES/MOC-算法真题库.md",
+    "10-PROJECTS/P-求职前端岗位/P-前端能力提升专项.md",
+    "40-RESOURCES/MOC-前端面试知识清单.md",
     "20-AREAS/A-人工智能/人工智能.md",
-    "40-RESOURCES/作用域 vs 作用域链.md",
-    "40-RESOURCES/作用域链.md",
-    "40-RESOURCES/词法环境.md",
+    "40-RESOURCES/Agent.md",
+    "10-PROJECTS/P-AI学习计划/AI学习计划.md",
+    "10-PROJECTS/P-AI学习计划/_resources",
+    "10-PROJECTS/P-AI学习计划",
+    "99-ASSETS/Bases/笔记状态管理.base",
+    "00-META/02 附录/Q-怎样规划信息单元？.md.nssyncsc",
     "90-DIARY/_resources/2026-05-01",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
+    "40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
     "50-ARCHIVE/_resources/深入了解现代网络浏览器(1) 多进程机构",
     "60-BLOGS/_resources/阿拉伯世界没落的原因是什么/117f6e750ccda2fd70fcce241328c524_MD5.jpg",
     "60-BLOGS/_resources/阿拉伯世界没落的原因是什么",
@@ -328,17 +333,13 @@
     "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/8131b12ef701bb6d9e2251d0e9eba028_MD5.jpg",
     "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/78812283c2c8dc1138666487cb499402_MD5.jpg",
     "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog",
-    "50-ARCHIVE/_resources/Personal Knowledge Management Workflow for a Deeper Life — as a Computer Scientist",
-    "50-ARCHIVE/_resources/从采集到回顾，我用 AI 搭建了一套个人信息处理系统",
-    "50-ARCHIVE/_resources",
-    "Tags/#浏览器",
     "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",
     "Untitled.canvas",
     "//Untitled.canvas",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/600ff6634be835891546f905314fca3d_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/d7d515ec822266a0614895424a9e0bd3_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/c9ec14e5ce8c390328c3c724d6fdc561_MD5.jpg",
-    "40-RESOURCES/Inbox/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/d3fc5930828237eba3a33cabdf3a4443_MD5.jpg",
+    "40-RESOURCES/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/600ff6634be835891546f905314fca3d_MD5.jpg",
+    "40-RESOURCES/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/d7d515ec822266a0614895424a9e0bd3_MD5.jpg",
+    "40-RESOURCES/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/c9ec14e5ce8c390328c3c724d6fdc561_MD5.jpg",
+    "40-RESOURCES/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/d3fc5930828237eba3a33cabdf3a4443_MD5.jpg",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas"
   ]

@@ -5,7 +5,7 @@ aliases: [A-React, React.js, ReactJS]
 description: 用于构建用户界面的 JavaScript 库，采用组件化和 Virtual DOM
 tags: [前端开发/框架]
 date-created: 2025-05-21
-date-modified: 2026-05-15
+date-modified: 2026-05-16
 status: cultivating
 content-type: area
 up: "[[前端开发]]"
@@ -37,6 +37,33 @@ mindmap
             TypeScript
             ThreeJS
 ```
+
+---
+
+### 核心 API
+
+> 以下为 React 原理层面的核心 API，常见于面试问题。
+
+- **创建元素**
+	- `React.createElement()` — 手动创建 React 元素的底层方法
+	- `React.cloneElement()` — 克隆并修改已有 React 元素
+	- `React.isValidElement()` — 判断是否为有效的 React 元素
+- **组件基础**
+	- `React.Component` — 类组件基类
+	- `React.PureComponent` — 浅比较优化的类组件
+	- `React.Fragment` — 片段组件，避免额外 DOM 节点
+	- `React.StrictMode` — 严格模式，检测不安全的生命周期等
+- **渲染**
+	- `ReactDOM.render()` — 经典渲染入口（React 17 已不推荐）
+	- `ReactDOM.createRoot()` — React 18+ 并发模式根节点
+	- `ReactDOM.hydrateRoot()` — 服务端渲染水合
+- **悬念与异步**
+	- `React.Suspense` — 组件挂起与加载状态边界
+	- `React.lazy()` — 代码分割与动态导入
+	- `React.startTransition()` — 标记非紧急更新
+- **上下文**
+	- `React.createContext()` — 创建 Context 对象
+	- `React.useContext()` — 消费 Context 值
 
 ---
 
@@ -111,8 +138,6 @@ mindmap
 > 该领域的常见问题
 
 - [[MOC-React面试题]] — React 常见面试问题汇总
-- [[Q-React状态管理怎么选]] — Redux vs Zustand vs Jotai 选型
-- [[Q-Hook使用规则为什么必须遵守]] — Hooks 调用顺序的原理
 
 ---
 

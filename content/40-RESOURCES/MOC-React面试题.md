@@ -1,8 +1,8 @@
 ---
 title: MOC-React面试题
 date-created: 2025-05-21
-date-modified: 2026-05-15
-content-type: atomic
+date-modified: 2026-05-16
+content-type: [moc]
 ---
 
 ## MOC-React 面试题

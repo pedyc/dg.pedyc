@@ -4,27 +4,79 @@
     "type": "split",
     "children": [
       {
-        "id": "6143adddcbcdcb29",
+        "id": "28f6b74b134969c4",
         "type": "tabs",
         "children": [
           {
-            "id": "efec3ab117667ef2",
+            "id": "7a108807709abdd2",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "markdown",
+              "state": {
+                "file": "40-RESOURCES/MOC-Webpack相关问题.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "MOC-Webpack相关问题"
             }
           },
           {
-            "id": "a7821c3a3f9bff77",
+            "id": "d465ecb2efb1ff54",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "40-RESOURCES/Tree Shaking.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "Tree Shaking"
+            }
+          },
+          {
+            "id": "8c68fb10ac609850",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40-RESOURCES/设计模式.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "设计模式"
             }
           }
         ]
@@ -67,6 +119,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "40-RESOURCES/MOC-Webpack相关问题.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -94,7 +147,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "title": "MOC-Webpack相关问题 的关系图"
             }
           },
           {
@@ -190,7 +243,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 313.5,
+    "collapsed": true
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -285,36 +339,36 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "efec3ab117667ef2",
+  "active": "7a108807709abdd2",
   "lastOpenFiles": [
-    "99-ASSETS/copilot/copilot-custom-prompts/Rewrite as tweet.md",
-    "40-RESOURCES/React面试题.md",
-    "40-RESOURCES/props 和 state 有何区别？state 更新是同步还是异步？.md",
-    "30-Zettelkasten/React 的 Diff 算法是怎么工作的？为什么性能很高？.md",
-    "40-RESOURCES/为什么列表渲染需要设置 key？key 的作用是什么？.md",
-    "40-RESOURCES/Untitled.md",
-    "40-RESOURCES/MOC-前端面试真题库.md",
-    "40-RESOURCES/CSS相关问题.md",
-    "40-RESOURCES/前端场景实践.md",
-    "20-AREAS/A-前端/前端性能优化.md",
-    "40-RESOURCES/构建打包相关问题.md",
-    "40-RESOURCES/Webpack 的构建流程主要有哪些阶段？loader 和 plugin 的区别？.md",
+    "40-RESOURCES/MOC-Vite相关问题.md",
     "40-RESOURCES/MOC-Webpack相关问题.md",
-    "40-RESOURCES/浏览器原理与运行机制相关问题.md",
-    "40-RESOURCES/MOC-浏览器原理与运行机制相关问题.md",
-    "40-RESOURCES/MOC-浏览器原理与运行机制相关问题-冲突-暂忘忧烦_Win11.md",
+    "40-RESOURCES/Tree Shaking.md",
+    "40-RESOURCES/设计模式.md",
+    "40-RESOURCES/依赖注入.md",
+    "_templates/template_term.md",
+    "40-RESOURCES/Vite.md",
+    "40-RESOURCES/如何在Vite中进行手动拆包？.md",
+    "40-RESOURCES/SOP-如何在Vite中配置环境变量？.md",
+    "40-RESOURCES/SOP-Vite配置流程.md",
+    "40-RESOURCES/Vite 是如何实现原生 ESM 加载的？开发时不打包是怎么做到的？.md",
+    "40-RESOURCES/构建打包相关问题.md",
+    "40-RESOURCES/MOC-前端面试真题库.md",
+    "40-RESOURCES/Webpack.md",
+    "40-RESOURCES/你了解哪些构建优化手段？如何提升构建速度和最终产物体积？.md",
+    "40-RESOURCES/Webpack配置流程.md",
+    "30-Zettelkasten/Tree Shaking 的本质是 ESM 静态分析.md",
+    "30-Zettelkasten/Webpack模块打包的本质是建立依赖图并生成优化后的资源集合.md",
+    "40-RESOURCES/Webpack vs Vite.md",
+    "40-RESOURCES/Webpack 的构建流程主要有哪些阶段？loader 和 plugin 的区别？.md",
+    "40-RESOURCES/React面试题.md",
+    "40-RESOURCES/React 组件之间有哪些通信方式？适用于哪些场景？.md",
+    "20-AREAS/A-前端/React.md",
+    "40-RESOURCES/props 和 state 有何区别？state 更新是同步还是异步？.md",
+    "99-ASSETS/copilot/copilot-custom-prompts/Rewrite as tweet.md",
+    "30-Zettelkasten/React 的 Diff 算法是怎么工作的？为什么性能很高？.md",
     "40-RESOURCES/MOC-浏览器原理与运行机制相关问题.md.nssyncsc",
-    "40-RESOURCES/手写经典功能.md",
-    "40-RESOURCES/Web安全问题.md",
-    "40-RESOURCES/Web安全.md",
     "40-RESOURCES/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog 1",
-    "40-RESOURCES/JS&TS相关问题.md",
-    "40-RESOURCES/网络协议相关问题.md",
-    "40-RESOURCES/Vue 面试题.md",
-    "10-PROJECTS/P-求职前端岗位/P-求职前端岗位.md",
-    "10-PROJECTS/P-求职前端岗位/P-算法提升专项.md",
-    "10-PROJECTS/P-求职前端岗位/P-后端能力提升专项.md",
-    "40-RESOURCES/MOC-算法真题库.md",
     "10-PROJECTS/P-AI学习计划/_resources",
     "10-PROJECTS/P-AI学习计划",
     "99-ASSETS/Bases/笔记状态管理.base",

@@ -4,7 +4,7 @@ title: SOP-如何在Vite中配置环境变量？
 description: Vite 环境变量配置指南
 tags: [前端开发, Vite]
 date-created: 2025-06-16
-date-modified: 2026-03-21
+date-modified: 2026-05-18
 status: cultivating
 content-type: [sop]
 ---

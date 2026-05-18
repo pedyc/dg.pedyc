@@ -5,7 +5,7 @@ date-created: 2025-05-28
 date-modified: 2025-06-16
 ---
 
-- 什么是 [[Tree-shaking]]?
+- 什么是 [[Tree Shaking]]?
 
 > Tree-shaking 是一种 **静态分析技术**，在打包阶段移除 **未被使用的 ES Module 导出内容**，减少最终构建体积。
 

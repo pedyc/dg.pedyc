@@ -1,22 +1,15 @@
 ---
 uid: 202603301800
 title: Webpack vs Vite
-aliases:
-  - VS-Webpack vs Vite
+aliases: [VS-Webpack vs Vite]
 description: Webpack 是功能强大的模块打包器，Vite 是基于 ESM 的下一代构建工具
-tags:
-  - comparison
-  - 前端工程化
+tags: [comparison, 前端工程化]
 date-created: 2026-03-30
-date-modified: 2026-03-30
+date-modified: 2026-05-18
 status: active
-comparison:
-  - Webpack
-  - Vite
+comparison: [Webpack, Vite]
 content-type: comparison
-related:
-  - "[[前端工程]]"
-  - "[[T-Rspack]]"
+related: ["[[前端工程]]", "[[T-Rspack]]"]
 ---
 
 ## Webpack vs Vite
@@ -29,16 +22,16 @@ Webpack 通过将所有模块打包成 bundle 实现构建；Vite 利用浏览�
 
 ### 核心对比
 
-| 维度 | **[[Webpack]]** | **[[Vite]]** |
-|:---|:---|:---|
-| **定义** | 模块打包器，将所有资源打包成静态 bundle | 基于 ESM 的开发服务器 + Rollup 生产构建 |
-| **核心本质** | Bundle-based，构建时打包所有模块 | ESM-first，开发时按需编译 |
-| **适用场景** | 大型复杂项目、深度定制化需求 | 中小型项目、快速开发体验 |
-| **首次启动** | 慢（需构建完整 bundle） | 快（原生 ESM，即时响应） |
-| **热更新** | 较慢（重打包相关模块） | 极快（原生 ESM 模块热替换） |
-| **配置复杂度** | 高（大量配置项） | 低（开箱即用） |
-| **生态** | 成熟、插件丰富 | 快速成长、插件生态正在完善 |
-| **生产构建** | 优化成熟（tree-shaking、代码分割） | 基于 Rollup，优化成熟 |
+| 维度        | **[[Webpack]]**         | **[[Vite]]**                |
+|:-------- |:---------------------- |:-------------------------- |
+| **定义**    | 模块打包器，将所有资源打包成静态 bundle | 基于 ESM 的开发服务器 + Rollup 生产构建 |
+| **核心本质**  | Bundle-based，构建时打包所有模块  | ESM-first，开发时按需编译           |
+| **适用场景**  | 大型复杂项目、深度定制化需求          | 中小型项目、快速开发体验                |
+| **首次启动**  | 慢（需构建完整 bundle）         | 快（原生 ESM，即时响应）              |
+| **热更新**   | 较慢（重打包相关模块）             | 极快（原生 ESM 模块热替换）            |
+| **配置复杂度** | 高（大量配置项）                | 低（开箱即用）                     |
+| **生态**    | 成熟、插件丰富                 | 快速成长、插件生态正在完善               |
+| **生产构建**  | 优化成熟（tree-shaking、代码分割） | 基于 Rollup，优化成熟              |
 
 ---
 

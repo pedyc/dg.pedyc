@@ -5,7 +5,7 @@ aliases: ["C-Vite", "Vite"]
 description: 由尤雨溪开发的现代化前端构建工具，利用 ESM 实现快速冷启动和即时 HMR
 tags: [前端/构建工具]
 date-created: 2025-05-29
-date-modified: 2026-05-18
+date-modified: 2026-05-19
 status: active
 content-type: concept
 up: "[[前端工程]]"
@@ -37,7 +37,7 @@ up: "[[前端工程]]"
 Vite 分为开发阶段和生产阶段两套构建策略：
 
 ```mermaid
-flowchart TB
+flowchart LR
     subgraph dev["开发阶段（Dev Server）"]
         A[启动 dev server] --> B[esbuild 预构建<br/>依赖转换]
         B --> C[等待浏览器请求]
@@ -53,6 +53,8 @@ flowchart TB
         I --> J[代码优化<br/>Tree Shaking]
         J --> K[输出静态资源]
     end
+    
+    dev~~~prod
 ```
 
 **关键阶段说明**：

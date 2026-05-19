@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7a108807709abdd2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/Webpack 的 Code Splitting 和懒加载是如何实现的？.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Webpack 的 Code Splitting 和懒加载是如何实现的？"
-            }
-          },
-          {
             "id": "d465ecb2efb1ff54",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Tree Shaking.md",
+                "file": "20-AREAS/A-前端/前端工程.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Tree Shaking"
+              "title": "前端工程"
             }
           },
           {
@@ -119,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Webpack 的 Code Splitting 和懒加载是如何实现的？.md",
+                "file": "20-AREAS/A-前端/前端工程.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -147,7 +123,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Webpack 的 Code Splitting 和懒加载是如何实现的？ 的关系图"
+              "title": "前端工程 的关系图"
             }
           },
           {
@@ -243,8 +219,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5,
-    "collapsed": true
+    "width": 313.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -339,8 +314,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7a108807709abdd2",
+  "active": "d465ecb2efb1ff54",
   "lastOpenFiles": [
+    "40-RESOURCES/前端监控.md",
+    "20-AREAS/A-前端/前端工程.md",
+    "40-RESOURCES/埋点.md",
+    "40-RESOURCES/Vite.md",
+    "40-RESOURCES/前端工程化概述.md",
+    "40-RESOURCES/MOC-Vite相关问题.md",
+    "40-RESOURCES/Vite 是如何实现原生 ESM 加载的？开发时不打包是怎么做到的？.md",
+    "40-RESOURCES/Vite 是如何实现原生 ESM 加载的？开发时不打包是怎么做到的？.md.tmp.23712.656dec4f214a",
+    "40-RESOURCES/SOP-Vite配置流程.md",
+    "40-RESOURCES/Tree Shaking.md",
     "40-RESOURCES/MOC-Webpack相关问题.md",
     "40-RESOURCES/Webpack 的 Code Splitting 和懒加载是如何实现的？.md",
     "40-RESOURCES/你了解哪些构建优化手段？如何提升构建速度和最终产物体积？.md",
@@ -348,25 +333,16 @@
     "40-RESOURCES/Webpack 的构建流程主要有哪些阶段？loader 和 plugin 的区别？.md",
     "40-RESOURCES/Webpack 模块打包的本质是什么？依赖图是如何构建的？.md",
     "40-RESOURCES/什么是 Tree-shaking？它的前提条件是什么？在哪些情况下会失效？.md",
-    "40-RESOURCES/MOC-Vite相关问题.md",
-    "40-RESOURCES/Tree Shaking.md",
     "40-RESOURCES/设计模式.md",
     "40-RESOURCES/依赖注入.md",
     "_templates/template_term.md",
-    "40-RESOURCES/Vite.md",
     "40-RESOURCES/如何在Vite中进行手动拆包？.md",
     "40-RESOURCES/SOP-如何在Vite中配置环境变量？.md",
-    "40-RESOURCES/SOP-Vite配置流程.md",
-    "40-RESOURCES/Vite 是如何实现原生 ESM 加载的？开发时不打包是怎么做到的？.md",
     "40-RESOURCES/构建打包相关问题.md",
     "40-RESOURCES/MOC-前端面试真题库.md",
     "40-RESOURCES/Webpack.md",
     "40-RESOURCES/Webpack配置流程.md",
     "30-Zettelkasten/Tree Shaking 的本质是 ESM 静态分析.md",
-    "30-Zettelkasten/Webpack模块打包的本质是建立依赖图并生成优化后的资源集合.md",
-    "40-RESOURCES/Webpack vs Vite.md",
-    "40-RESOURCES/React面试题.md",
-    "40-RESOURCES/React 组件之间有哪些通信方式？适用于哪些场景？.md",
     "40-RESOURCES/MOC-浏览器原理与运行机制相关问题.md.nssyncsc",
     "40-RESOURCES/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog 1",
     "10-PROJECTS/P-AI学习计划/_resources",
@@ -381,7 +357,6 @@
     "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/c829b955bce686a696951ba18cef5002_MD5.jpg",
     "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/8131b12ef701bb6d9e2251d0e9eba028_MD5.jpg",
     "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/78812283c2c8dc1138666487cb499402_MD5.jpg",
-    "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog",
     "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",
     "Untitled.canvas",
     "//Untitled.canvas",

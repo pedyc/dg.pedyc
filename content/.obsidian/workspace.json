@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-前端/前端工程.md",
+                "file": "40-RESOURCES/微前端.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端工程"
+              "title": "微前端"
             }
           },
           {
@@ -95,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-前端/前端工程.md",
+                "file": "40-RESOURCES/微前端.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -118,12 +118,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.2726859917360067,
+                  "scale": 1.0534979423868314,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "前端工程 的关系图"
+              "title": "微前端 的关系图"
             }
           },
           {
@@ -316,8 +316,21 @@
   },
   "active": "d465ecb2efb1ff54",
   "lastOpenFiles": [
-    "40-RESOURCES/前端监控.md",
+    "40-RESOURCES/Q-何时选微前端或Monorepo.md",
+    "40-RESOURCES/微前端.md",
+    "30-Zettelkasten/Webpack模块打包的本质是建立依赖图并生成优化后的资源集合.md",
+    "30-Zettelkasten/XSS的本质是浏览器无法区分用户数据和开发者代码.md",
     "20-AREAS/A-前端/前端工程.md",
+    "40-RESOURCES/CI-CD流程.md",
+    "40-RESOURCES/Monorepo.md",
+    "40-RESOURCES/构建前端脚手架.md",
+    "40-RESOURCES/建立前端工程规范.md",
+    "40-RESOURCES/如何构建一个脚手架.md.tmp.23712.7db0d02d0f93",
+    "40-RESOURCES/MOC-前端工程化工具.md",
+    "40-RESOURCES/代码审查流程.md",
+    "40-RESOURCES/代码审查流程.md.tmp.23712.41ac018cbb1c",
+    "40-RESOURCES/如何建立前端工程规范.md.tmp.23712.07ee28235396",
+    "40-RESOURCES/前端监控.md",
     "40-RESOURCES/埋点.md",
     "40-RESOURCES/Vite.md",
     "40-RESOURCES/前端工程化概述.md",
@@ -333,27 +346,14 @@
     "40-RESOURCES/Webpack 的构建流程主要有哪些阶段？loader 和 plugin 的区别？.md",
     "40-RESOURCES/Webpack 模块打包的本质是什么？依赖图是如何构建的？.md",
     "40-RESOURCES/什么是 Tree-shaking？它的前提条件是什么？在哪些情况下会失效？.md",
-    "40-RESOURCES/设计模式.md",
-    "40-RESOURCES/依赖注入.md",
-    "_templates/template_term.md",
-    "40-RESOURCES/如何在Vite中进行手动拆包？.md",
-    "40-RESOURCES/SOP-如何在Vite中配置环境变量？.md",
-    "40-RESOURCES/构建打包相关问题.md",
-    "40-RESOURCES/MOC-前端面试真题库.md",
-    "40-RESOURCES/Webpack.md",
-    "40-RESOURCES/Webpack配置流程.md",
-    "30-Zettelkasten/Tree Shaking 的本质是 ESM 静态分析.md",
     "40-RESOURCES/MOC-浏览器原理与运行机制相关问题.md.nssyncsc",
     "40-RESOURCES/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog 1",
     "10-PROJECTS/P-AI学习计划/_resources",
     "10-PROJECTS/P-AI学习计划",
     "99-ASSETS/Bases/笔记状态管理.base",
     "00-META/02 附录/Q-怎样规划信息单元？.md.nssyncsc",
-    "90-DIARY/_resources/2026-05-01",
     "40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
-    "50-ARCHIVE/_resources/深入了解现代网络浏览器(1) 多进程机构",
     "60-BLOGS/_resources/阿拉伯世界没落的原因是什么/117f6e750ccda2fd70fcce241328c524_MD5.jpg",
-    "60-BLOGS/_resources/阿拉伯世界没落的原因是什么",
     "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/c829b955bce686a696951ba18cef5002_MD5.jpg",
     "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/8131b12ef701bb6d9e2251d0e9eba028_MD5.jpg",
     "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/78812283c2c8dc1138666487cb499402_MD5.jpg",

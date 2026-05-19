@@ -1,11 +1,11 @@
 ---
 uid: 202604131800
-title: Q-何时选微前端vsMonorepo
+title: Q-何时选微前端或Monorepo
 aliases: [Q-何时选微前端vsMonorepo]
 description: 多团队独立交付场景下，如何在微前端和 Monorepo 之间做选择
 tags: [前端工程/架构]
 date-created: 2026-04-13
-date-modified: 2026-04-13
+date-modified: 2026-05-19
 status: cultivating
 content-type: question
 ---

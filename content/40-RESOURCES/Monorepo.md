@@ -1,78 +1,72 @@
 ---
-content-type: atomic
+uid: 202605191600
 title: Monorepo
-aliases: [Monorepo, 单代码仓库]
+aliases: [T-Monorepo, 单代码仓库]
+description: 将多个项目代码存储在同一个代码仓库中的开发模式
 tags: [area/前端工程, area/Monorepo]
 date-created: 2025-04-29
-date-modified: 2026-03-12
-refresh: 月度｜季度
-type: [area]
+date-modified: 2026-05-19
+status: cultivating
+content-type: term
 ---
 
-## 🧱 核心组件 (Core Components)
+## 术语：Monorepo
 
-- **[[Monorepo架构]]**: 包含 Monorepo 的概念、优点、缺点、适用场景和常用工具。
-- **Monorepo 工具**:
-	- [[pnpm]]
-	- [[Lerna]]
-	- [[Yarn Workspaces]]
-	- [[Nx]]
-	- [[Bazel]]
-- **Monorepo 最佳实践**:
-		- [[Monorepo代码组织策略]]
-		- [[Monorepo依赖管理策略]]
-		- [[Monorepo构建优化策略]]
-		- [[Monorepo权限管理策略]]
-		- [[Monorepo测试策略]]
-		- [[Monorepo发布策略]]
+> **主题**：#软件工程/架构模式
 
-## 🔄 活跃连接 (Active Connections)
+### 定义
 
-### 关联领域
+Monorepo（Monolithic Repository，单代码仓库）是一种代码仓库管理策略，将多个相关项目（通常是一个组织内的多个前端/后端服务）存储在同一个版本控制仓库中。
 
-- [[前端工程]]
-- [[前端性能优化]] (协同点：Monorepo 项目的性能优化)
-- [[DevOps|DevOps]] (协同点：Monorepo 项目的 CI/CD 流水线整合)
-- [[代码管理领域]] (协同点：Monorepo 项目的代码管理策略)
-- [[项目管理领域]] (协同点：Monorepo 项目的项目管理策略)
+**核心特征**：
+- 所有代码保存在单一仓库
+- 共享依赖和工具链配置
+- 统一版本管理和发布流程
 
-## 📚 资源金字塔 (Resource Pyramid)
+### 核心特点
 
-### 🌟 顶级资产 (★★★★★)
+**优势**：
+- 代码共享便捷，跨项目引用容易
+- 统一依赖版本，避免版本冲突
+- 原子提交（Atomic Commit），一个 PR 修改多个相关包
+- 简化依赖管理，一个 node_modules 供所有项目使用
+- 便于大规模重构和 API 变更
 
-- [[Monorepo项目脚手架模板]]：经过验证的企业级 Monorepo 项目启动模板。
-- [[Monorepo代码组织最佳实践]]：系统性的 Monorepo 代码组织方案。
-- [[Monorepo构建优化方案]]：不同构建工具的 Monorepo 构建优化方案。
-- [[Monorepo CI/CD流水线最佳实践模板]]：可复用的 Monorepo 自动化部署流程配置。
+**挑战**：
+- 仓库体积膨胀，大团队可能达数 GB
+- CI/CD 复杂度增加，需要智能触发
+- 权限控制困难，所有人可访问全部代码
+- 构建时间可能增加，需要缓存策略
 
-### 💼 实用工具 (★★★☆☆)
+### 工具生态
 
-- [[Lerna/Nx配置速查手册]]：常用配置项和命令说明。
-- [[Yarn Workspaces配置速查手册]]：常用配置项和命令说明。
-- [[Monorepo依赖管理工具]]：用于管理 Monorepo 项目依赖的工具。
-- [[Monorepo权限管理工具]]：用于管理 Monorepo 项目权限的工具。
-- [[Monorepo测试工具]]：用于测试 Monorepo 项目的工具。
+| 工具 | 用途 |
+|:---|:---|
+| npm workspace | 简化包管理 |
+| pnpm workspace | 高效的 monorepo 包管理 |
+| Turborepo | 构建缓存和任务编排 |
+| Nx | 高级构建缓存和依赖分析 |
+| Lerna | 多包仓库管理（较少维护） |
 
-### 🧩 原始素材 (★☆☆☆☆)
+### 与 Polyrepo 对比
 
-- [[Monorepo架构设计文档]]：Monorepo 架构的设计文档。
-- [[Monorepo迁移方案]]：将现有 Multi-repo 项目迁移到 Monorepo 架构的方案。
-- [[Monorepo构建脚本]]：Monorepo 项目的构建脚本。
-- [[Monorepo测试用例]]：Monorepo 项目的测试用例。
+| 维度 | Monorepo | Polyrepo |
+|:---|:---|:---|
+| 代码共享 | 简单 | 复杂（需要发包） |
+| 依赖版本 | 统一 | 各自管理 |
+| 仓库大小 | 大 | 小 |
+| 权限控制 | 粗粒度 | 细粒度 |
+| CI 触发 | 需智能判断 | 按需触发 |
+| 适用规模 | 小到中团队 | 大型组织/多团队 |
 
-## ⚠️ 前线战报 (Frontline Report)
+### 适用场景
 
-### 近期挑战
+- 前端多组件库共享
+- 全栈应用（前后端同仓库）
+- 微前端多子应用统一管理
 
-- 技术选型：[[Lerna/Nx/Yarn Workspaces]] 等 Monorepo 工具的选择。
-- 工程复杂度：[[Monorepo架构]] 下依赖管理、构建和部署的复杂度提升。
-- 性能要求：[[Monorepo项目]] 的构建速度和性能优化。
-- 团队协作：[[Monorepo架构]] 下团队协作和代码审查的挑战。
+### 知识网络
 
-### 开放问题
-
-- 如何在大型项目中平衡 [[Monorepo架构]] 的优点和缺点？
-- [[Monorepo架构]] 的最佳实践和治理方案是什么？
-- [[Monorepo架构]] 如何与 [[微前端]] 架构结合？
-- [[Monorepo架构]] 如何与 [[Serverless/Edge Computing]] 结合？
-- 如何量化评估 [[Monorepo架构]] 的收益并进行有效改进？
+- **父级概念**：[[前端工程]] — Monorepo 是前端工程化的架构模式
+- **相关概念**：[[pnpm workspace]], [[Turborepo]], [[Lerna]]
+- **协作领域**：[[持续集成与持续部署|CI/CD]] — Monorepo 需要配套的 CI/CD 策略

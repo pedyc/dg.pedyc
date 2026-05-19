@@ -5,7 +5,7 @@ aliases: [MOC-前端工程化工具]
 description: 前端工程化相关工具与技术词条索引
 tags: [moc]
 date-created: 2026-03-12
-date-modified: 2026-05-11
+date-modified: 2026-05-19
 status: cultivating
 content-type: moc
 up: "[[前端工程]]"
@@ -15,13 +15,13 @@ up: "[[前端工程]]"
 
 ### 构建与编译
 
-- [[Webpack]] — 模块打包器（aliases: `T-Webpack`）
-- [[Vite]] — 下一代构建工具（aliases: `T-Vite`）
-- [[Rspack]] — 高性能打包器（aliases: `T-Rspack`）
-- [[Rollup]] — 库打包器（aliases: `T-Rollup`）
-- [[Babel]] — JavaScript 编译器（aliases: `T-Babel`）
-- [[SWC]] — Rust 编写的超快编译器（aliases: `T-SWC`）
-- [[ESBuild]] — Go 编写的极快构建工具（aliases: `T-ESBuild`）
+- [[Webpack]] — 模块打包器
+- [[Vite]] — 下一代构建工具，核心是 ESM 静态分析
+- [[Rspack]] — 高性能打包器
+- [[Rollup]] — 库打包器
+- [[Babel]] — JavaScript 编译器，将新语法转化为向后兼容的代码
+- [[SWC]] — Rust 编写的超快编译器
+- [[esbuild]] — Go 编写的极快构建工具
 
 ### 测试框架
 

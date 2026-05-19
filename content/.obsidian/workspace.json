@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/MOC-Webpack相关问题.md",
+                "file": "40-RESOURCES/Webpack 的 Code Splitting 和懒加载是如何实现的？.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "MOC-Webpack相关问题"
+              "title": "Webpack 的 Code Splitting 和懒加载是如何实现的？"
             }
           },
           {
@@ -119,7 +119,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/MOC-Webpack相关问题.md",
+                "file": "40-RESOURCES/Webpack 的 Code Splitting 和懒加载是如何实现的？.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -147,7 +147,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "MOC-Webpack相关问题 的关系图"
+              "title": "Webpack 的 Code Splitting 和懒加载是如何实现的？ 的关系图"
             }
           },
           {
@@ -341,8 +341,12 @@
   },
   "active": "7a108807709abdd2",
   "lastOpenFiles": [
-    "40-RESOURCES/Webpack 模块打包的本质是什么？依赖图是如何构建的？.md",
     "40-RESOURCES/MOC-Webpack相关问题.md",
+    "40-RESOURCES/Webpack 的 Code Splitting 和懒加载是如何实现的？.md",
+    "40-RESOURCES/你了解哪些构建优化手段？如何提升构建速度和最终产物体积？.md",
+    "40-RESOURCES/Webpack HMR 热模块替换是如何实现的？.md",
+    "40-RESOURCES/Webpack 的构建流程主要有哪些阶段？loader 和 plugin 的区别？.md",
+    "40-RESOURCES/Webpack 模块打包的本质是什么？依赖图是如何构建的？.md",
     "40-RESOURCES/什么是 Tree-shaking？它的前提条件是什么？在哪些情况下会失效？.md",
     "40-RESOURCES/MOC-Vite相关问题.md",
     "40-RESOURCES/Tree Shaking.md",
@@ -357,16 +361,12 @@
     "40-RESOURCES/构建打包相关问题.md",
     "40-RESOURCES/MOC-前端面试真题库.md",
     "40-RESOURCES/Webpack.md",
-    "40-RESOURCES/你了解哪些构建优化手段？如何提升构建速度和最终产物体积？.md",
     "40-RESOURCES/Webpack配置流程.md",
     "30-Zettelkasten/Tree Shaking 的本质是 ESM 静态分析.md",
     "30-Zettelkasten/Webpack模块打包的本质是建立依赖图并生成优化后的资源集合.md",
     "40-RESOURCES/Webpack vs Vite.md",
-    "40-RESOURCES/Webpack 的构建流程主要有哪些阶段？loader 和 plugin 的区别？.md",
     "40-RESOURCES/React面试题.md",
     "40-RESOURCES/React 组件之间有哪些通信方式？适用于哪些场景？.md",
-    "20-AREAS/A-前端/React.md",
-    "40-RESOURCES/props 和 state 有何区别？state 更新是同步还是异步？.md",
     "40-RESOURCES/MOC-浏览器原理与运行机制相关问题.md.nssyncsc",
     "40-RESOURCES/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog 1",
     "10-PROJECTS/P-AI学习计划/_resources",

@@ -11,27 +11,12 @@
             "id": "d465ecb2efb1ff54",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "image",
               "state": {
-                "file": "未命名.canvas",
-                "viewState": {
-                  "x": -65,
-                  "y": 136,
-                  "zoom": 0
-                }
+                "file": "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.svg"
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "未命名"
-            }
-          },
-          {
-            "id": "8c68fb10ac609850",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "icon": "lucide-image",
+              "title": "LLM Wiki.excalidraw"
             }
           }
         ]
@@ -74,7 +59,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "未命名.canvas",
+                "file": "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.svg",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -97,12 +82,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1.0534979423868314,
+                  "scale": 0.2726859917360067,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "未命名 的关系图"
+              "title": "LLM Wiki.excalidraw 的关系图"
             }
           },
           {
@@ -198,7 +183,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 313.5,
+    "collapsed": true
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -293,10 +279,32 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "60236dec7012791f",
+  "active": "d465ecb2efb1ff54",
   "lastOpenFiles": [
     "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.md",
+    "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.svg",
+    "99-ASSETS/Excalidraw/React版本演进.excalidraw.md",
+    "四象限.excalidraw.md",
+    "四象限.excalidraw.svg",
+    "banner.svg",
+    "excalibrain.md",
+    "index.md",
+    "LIST.md",
+    "00-META/wiki-index.md",
+    "00-META/wiki-log.md",
+    "00-META/wiki-log.md.tmp.17260.109b62c7133c",
+    "00-META/wiki-index.md.tmp.17260.f00c3f766d63",
+    "CLAUDE.md",
+    "PARA.md",
+    "20-AREAS/A-视觉思维/A-视觉思维.md",
     "未命名.canvas",
+    "00-META/llm-wiki-schema.md",
+    "00-META/本库指南.md",
+    "20-AREAS/A-政治经济/MOC-政治经济.md",
+    "20-AREAS/A-政治经济/MOC-时政.md",
+    "00-META/wiki-log.md.tmp.17260.a72f9e6f119f",
+    "00-META/llm-wiki-schema.md.tmp.17260.3c9259e14760",
+    "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.md",
     "99-ASSETS/Excalidraw/draw_knowledge_atomization.md",
     "50-ARCHIVE/LLM Wiki.md",
     "40-RESOURCES/微前端.md",
@@ -309,28 +317,9 @@
     "40-RESOURCES/发布订阅模式.md",
     "40-RESOURCES/设计模式.md",
     "40-RESOURCES/观察者模式.md",
-    "40-RESOURCES/Q-何时选微前端或Monorepo.md",
-    "30-Zettelkasten/Webpack模块打包的本质是建立依赖图并生成优化后的资源集合.md",
-    "30-Zettelkasten/XSS的本质是浏览器无法区分用户数据和开发者代码.md",
-    "20-AREAS/A-前端/前端工程.md",
-    "40-RESOURCES/CI-CD流程.md",
-    "40-RESOURCES/Monorepo.md",
-    "40-RESOURCES/构建前端脚手架.md",
-    "40-RESOURCES/建立前端工程规范.md",
     "40-RESOURCES/如何构建一个脚手架.md.tmp.23712.7db0d02d0f93",
-    "40-RESOURCES/MOC-前端工程化工具.md",
-    "40-RESOURCES/代码审查流程.md",
     "40-RESOURCES/代码审查流程.md.tmp.23712.41ac018cbb1c",
     "40-RESOURCES/如何建立前端工程规范.md.tmp.23712.07ee28235396",
-    "40-RESOURCES/前端监控.md",
-    "40-RESOURCES/埋点.md",
-    "40-RESOURCES/Vite.md",
-    "40-RESOURCES/前端工程化概述.md",
-    "40-RESOURCES/MOC-Vite相关问题.md",
-    "40-RESOURCES/Vite 是如何实现原生 ESM 加载的？开发时不打包是怎么做到的？.md.tmp.23712.656dec4f214a",
-    "40-RESOURCES/MOC-浏览器原理与运行机制相关问题.md.nssyncsc",
-    "40-RESOURCES/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog 1",
-    "10-PROJECTS/P-AI学习计划/_resources",
     "40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
     "60-BLOGS/_resources/阿拉伯世界没落的原因是什么/117f6e750ccda2fd70fcce241328c524_MD5.jpg",
     "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/c829b955bce686a696951ba18cef5002_MD5.jpg",
@@ -340,9 +329,6 @@
     "Untitled.canvas",
     "//Untitled.canvas",
     "40-RESOURCES/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/600ff6634be835891546f905314fca3d_MD5.jpg",
-    "40-RESOURCES/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/d7d515ec822266a0614895424a9e0bd3_MD5.jpg",
-    "40-RESOURCES/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/c9ec14e5ce8c390328c3c724d6fdc561_MD5.jpg",
-    "40-RESOURCES/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/d3fc5930828237eba3a33cabdf3a4443_MD5.jpg",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas"
   ]

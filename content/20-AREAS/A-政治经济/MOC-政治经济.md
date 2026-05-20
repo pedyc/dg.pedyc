@@ -5,7 +5,7 @@ aliases: [政治经济学]
 description: 政治与经济相关知识的索引，用于投资决策和增长见闻
 tags: [知识管理]
 date-created: 2026-03-13
-date-modified: 2026-03-13
+date-modified: 2026-05-20
 status: cultivating
 content-type: moc
 related: ["[[A-个人成长]]"]

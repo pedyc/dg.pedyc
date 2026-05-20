@@ -4,19 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "28f6b74b134969c4",
+        "id": "092841f09e91a2c6",
         "type": "tabs",
         "children": [
           {
-            "id": "d465ecb2efb1ff54",
+            "id": "9e96722bd72cbcde",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.svg"
+                "file": "00-META/wiki-index.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-image",
-              "title": "LLM Wiki.excalidraw"
+              "icon": "lucide-file",
+              "title": "wiki-index"
             }
           }
         ]
@@ -59,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.svg",
+                "file": "00-META/wiki-index.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -87,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "LLM Wiki.excalidraw 的关系图"
+              "title": "wiki-index 的关系图"
             }
           },
           {
@@ -183,8 +195,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5,
-    "collapsed": true
+    "width": 313.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -279,10 +290,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d465ecb2efb1ff54",
+  "active": "9e96722bd72cbcde",
   "lastOpenFiles": [
-    "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.md",
+    "00-META/本库指南.md.tmp.17260.04fd25f03e52",
+    "00-META/wiki-index.md.tmp.17260.f0ac66c9bdc1",
     "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.svg",
+    "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.md",
     "99-ASSETS/Excalidraw/React版本演进.excalidraw.md",
     "四象限.excalidraw.md",
     "四象限.excalidraw.svg",
@@ -319,7 +332,6 @@
     "40-RESOURCES/观察者模式.md",
     "40-RESOURCES/如何构建一个脚手架.md.tmp.23712.7db0d02d0f93",
     "40-RESOURCES/代码审查流程.md.tmp.23712.41ac018cbb1c",
-    "40-RESOURCES/如何建立前端工程规范.md.tmp.23712.07ee28235396",
     "40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
     "60-BLOGS/_resources/阿拉伯世界没落的原因是什么/117f6e750ccda2fd70fcce241328c524_MD5.jpg",
     "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/c829b955bce686a696951ba18cef5002_MD5.jpg",

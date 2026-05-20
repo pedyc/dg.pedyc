@@ -5,7 +5,7 @@
   "useCaptions": true,
   "pathInTags": "onlyRelative",
   "downUnknown": false,
-  "saveAttE": "nextToNoteS",
+  "saveAttE": "inFolderBelow",
   "realTimeUpdate": true,
   "filesizeLimit": 0,
   "tryCount": 2,

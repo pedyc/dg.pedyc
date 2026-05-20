@@ -5,13 +5,34 @@
   "showAttachments": false,
   "hideUnresolved": true,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:30-Zettelkasten  ",
+      "query": "[\"content-type\":atomic",
       "color": {
         "a": 1,
         "rgb": 14701138
+      }
+    },
+    {
+      "query": "[\"content-type\":concept",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "[\"content-type\":sop",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
+    },
+    {
+      "query": "[\"content-type\":question",
+      "color": {
+        "a": 1,
+        "rgb": 5431378
       }
     }
   ],
@@ -25,6 +46,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.11705964391564663,
+  "scale": 0.23008729080081655,
   "close": false
 }

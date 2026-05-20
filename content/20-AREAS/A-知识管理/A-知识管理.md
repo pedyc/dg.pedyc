@@ -1,14 +1,14 @@
 ---
-uid: '202603121028'
+uid: "202603121028"
 title: A-知识管理
-aliases: [A-知识管理]
+aliases: [A-知识管理, 知识管理]
 description: 捕捉、组织、提炼和应用知识，构建第二大脑
 tags: [area]
 date-created: 2025-04-30
-date-modified: 2026-04-09
+date-modified: 2026-05-20
 status: cultivating
 content-type: area
-up: 
+up:
 ---
 
 ## Area: 知识管理

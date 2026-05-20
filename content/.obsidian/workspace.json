@@ -11,48 +11,27 @@
             "id": "d465ecb2efb1ff54",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "40-RESOURCES/微前端.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
+                "file": "未命名.canvas",
+                "viewState": {
+                  "x": -65,
+                  "y": 136,
+                  "zoom": 0
                 }
               },
-              "icon": "lucide-file",
-              "title": "微前端"
+              "icon": "lucide-layout-dashboard",
+              "title": "未命名"
             }
           },
           {
             "id": "8c68fb10ac609850",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/设计模式.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "设计模式"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -95,7 +74,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/微前端.md",
+                "file": "未命名.canvas",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -123,7 +102,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "微前端 的关系图"
+              "title": "未命名 的关系图"
             }
           },
           {
@@ -174,7 +153,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#前端开发/工程化",
+                "query": "tag:方法论",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -314,10 +293,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d465ecb2efb1ff54",
+  "active": "60236dec7012791f",
   "lastOpenFiles": [
-    "40-RESOURCES/Q-何时选微前端或Monorepo.md",
+    "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.md",
+    "未命名.canvas",
+    "99-ASSETS/Excalidraw/draw_knowledge_atomization.md",
+    "50-ARCHIVE/LLM Wiki.md",
     "40-RESOURCES/微前端.md",
+    "60-BLOGS/我的知识管理工作流.md",
+    "60-BLOGS/我的知识管理工作流.md.tmp.23712.4671d50cdc6b",
+    "_resources/Personal Knowledge Management Workflow for a Deeper Life — as a Computer Scientist",
+    "_resources/从采集到回顾，我用 AI 搭建了一套个人信息处理系统",
+    "20-AREAS/A-知识管理/A-知识管理.md",
+    "40-RESOURCES/使用大模型构建结构化知识库.md",
+    "40-RESOURCES/发布订阅模式.md",
+    "40-RESOURCES/设计模式.md",
+    "40-RESOURCES/观察者模式.md",
+    "40-RESOURCES/Q-何时选微前端或Monorepo.md",
     "30-Zettelkasten/Webpack模块打包的本质是建立依赖图并生成优化后的资源集合.md",
     "30-Zettelkasten/XSS的本质是浏览器无法区分用户数据和开发者代码.md",
     "20-AREAS/A-前端/前端工程.md",
@@ -335,23 +327,10 @@
     "40-RESOURCES/Vite.md",
     "40-RESOURCES/前端工程化概述.md",
     "40-RESOURCES/MOC-Vite相关问题.md",
-    "40-RESOURCES/Vite 是如何实现原生 ESM 加载的？开发时不打包是怎么做到的？.md",
     "40-RESOURCES/Vite 是如何实现原生 ESM 加载的？开发时不打包是怎么做到的？.md.tmp.23712.656dec4f214a",
-    "40-RESOURCES/SOP-Vite配置流程.md",
-    "40-RESOURCES/Tree Shaking.md",
-    "40-RESOURCES/MOC-Webpack相关问题.md",
-    "40-RESOURCES/Webpack 的 Code Splitting 和懒加载是如何实现的？.md",
-    "40-RESOURCES/你了解哪些构建优化手段？如何提升构建速度和最终产物体积？.md",
-    "40-RESOURCES/Webpack HMR 热模块替换是如何实现的？.md",
-    "40-RESOURCES/Webpack 的构建流程主要有哪些阶段？loader 和 plugin 的区别？.md",
-    "40-RESOURCES/Webpack 模块打包的本质是什么？依赖图是如何构建的？.md",
-    "40-RESOURCES/什么是 Tree-shaking？它的前提条件是什么？在哪些情况下会失效？.md",
     "40-RESOURCES/MOC-浏览器原理与运行机制相关问题.md.nssyncsc",
     "40-RESOURCES/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog 1",
     "10-PROJECTS/P-AI学习计划/_resources",
-    "10-PROJECTS/P-AI学习计划",
-    "99-ASSETS/Bases/笔记状态管理.base",
-    "00-META/02 附录/Q-怎样规划信息单元？.md.nssyncsc",
     "40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
     "60-BLOGS/_resources/阿拉伯世界没落的原因是什么/117f6e750ccda2fd70fcce241328c524_MD5.jpg",
     "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/c829b955bce686a696951ba18cef5002_MD5.jpg",

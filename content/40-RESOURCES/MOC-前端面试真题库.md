@@ -3,7 +3,7 @@ title: MOC-前端面试真题库
 aliases: [前端面试题]
 tags: [工具模板, 案例参考]
 date-created: 2025-03-05
-date-modified: 2026-05-18
+date-modified: 2026-05-21
 ---
 
 ## 题单汇总
@@ -21,7 +21,6 @@ date-modified: 2026-05-18
 - [[Vue 面试题]]
 - [[前端场景实践]]
 - [[每日一题JS题单]]
-- [[三十天JS挑战题单]]
 
 ## 相关链接
 

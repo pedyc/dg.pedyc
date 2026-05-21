@@ -4,7 +4,7 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-05-20
+date-modified: 2026-05-21
 status: active
 content-type: [article]
 up: ["[[本库指南]]"]
@@ -58,6 +58,19 @@ up: ["[[本库指南]]"]
 	- 核心 SOP：
 		- [[SOP-CODE知识全生命周期工作流]] — Capture, Organize, Distill, Express
 	- 更新了 [[wiki-index]] 中的 Areas、Concepts、SOPs 分类
+
+---
+
+---
+
+## 2026-05
+
+### 2026-05-21
+
+- [2026-05-21] ingest | 完善 Q-note「Vite HMR 原理与 Webpack 区别」
+  - 内容：Vite HMR 基于原生 ESM 按需编译，Webpack HMR 需要重建依赖链
+  - 核心区别：更新范围、编译时机、实现机制
+  - 已收录于 [[MOC-Vite相关问题]] 索引
 
 ---
 

@@ -4,7 +4,7 @@ title: llm-wiki-schema
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-05-20
-date-modified: 2026-05-20
+date-modified: 2026-05-21
 status: active
 content-type: [article]
 up: "[[本库指南]]"
@@ -136,6 +136,69 @@ record      → 40-RESOURCES/      事件记录，aliases: R-xxx
 ## Lint 工作流
 
 定期检查知识库健康度。执行频率：每周一次或每新增 10+ 篇笔记后。
+
+---
+
+## Sync 工作流
+
+当笔记发生创建、修改、删除时，被动触发同步到 Wiki 层。
+
+### 触发条件
+
+- 用户或 LLM 创建了新笔记
+- 用户或 LLM 修改了现有笔记
+- 用户或 LLM 删除了笔记
+
+### 同步规则
+
+| content-type | 同步到 | 更新内容 |
+|-------------|--------|---------|
+| atomic | 相关 concept/moc | 添加引用链接 + 核心观点 |
+| concept | wiki-index | 检查分类位置 |
+| moc | wiki-index | 检查索引完整性 |
+| area | wiki-index | 检查领域分类 |
+| term/comparison/question | wiki-index | 检查术语/对比/问题分类 |
+
+### 工作流程
+
+#### 1. 检测变更类型
+
+- **create**：新增笔记，在相关 wiki 页面建立引用
+- **update**：修改笔记，检查是否需要更新 wiki 引用
+- **delete**：删除笔记，从 wiki 中移除引用
+
+#### 2. 确定关联页面
+
+1. 根据笔记的 content-type 确定目标 wiki 页面类型
+2. 在 wiki-index 中查找相关领域/concept
+3. 读取相关 concept/moc 页面
+
+#### 3. 同步 Wiki 层
+
+**create / update 时**：
+- 在相关 concept/moc 中追加或更新引用
+- 如果是 atomic，确保被相关 concept 引用
+- 更新 `[[up]]` 属性指向正确的父级
+
+**delete 时**：
+- 从相关 concept/moc 中移除引用
+- 检查是否有孤儿链接
+
+#### 4. 更新索引（如需要）
+
+- 新笔记类型未在 wiki-index 中出现 → 添加条目
+- 笔记 content-type 变更 → 更新对应分类
+
+#### 5. 记录日志
+
+追加条目到 `wiki-log.md`：
+```markdown
+- [日期] sync | 操作类型 | 笔记标题
+  - 变更内容简述
+  - 更新的 wiki 页面
+```
+
+---
 
 ### 检查清单
 

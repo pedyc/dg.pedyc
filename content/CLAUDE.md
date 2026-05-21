@@ -1,27 +1,40 @@
 ---
 title: CLAUDE
 date-created: 2026-03-25
-date-modified: 2026-05-20
+date-modified: 2026-05-21
 ---
 
 ## content/ Knowledge Base Guide
 
-This directory contains an Obsidian-based personal knowledge base.
+本目录是基于 Obsidian 的个人知识库，集成 LLM Wiki 维护系统。
 
 ### Quick Reference
 
 - **Main Guide**: [[本库指南]] - Complete methodology and conventions
 - **Templates**: `_templates/` directory
+- **LLM Wiki**: `00-META/llm-wiki-schema.md` - 工作流定义（ingest/query/lint）
 
 ### Key Conventions
 
 See [[本库指南]] for:
 - PARA + Zettelkasten methodology
+- Three-layer architecture: Raw sources → Wiki → Archive
 - Directory structure (00-META to 99-ASSETS)
 - content-type classification (atomic, concept, term, moc, sop, etc.)
 - Status lifecycle (fleeting → cultivating → active → completed → archived)
 - Naming conventions via aliases (P-, A-, Q-, MOC-, T-, C-, VS-)
 - Tag system (#父/子 format)
+
+### LLM Wiki System
+
+Skills 位于 `content/.claude/skills/`：
+- `llm-wiki-local` — ingest/query/lint/graph 工作流
+- `wiki-sync-local` — 笔记变更后自动同步到 Wiki 层
+- `content-evaluator-local` — 健康度评估
+- `content-verifier-local` — 内容质量核查
+- `obsidian-note-local` — 笔记创建
+
+详见 `00-META/llm-wiki-schema.md`。
 
 ### Templates
 

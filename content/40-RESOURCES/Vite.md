@@ -5,7 +5,7 @@ aliases: ["C-Vite", "Vite"]
 description: 由尤雨溪开发的现代化前端构建工具，利用 ESM 实现快速冷启动和即时 HMR
 tags: [前端/构建工具]
 date-created: 2025-05-29
-date-modified: 2026-05-19
+date-modified: 2026-05-21
 status: active
 content-type: concept
 up: "[[前端工程]]"
@@ -23,11 +23,11 @@ up: "[[前端工程]]"
 
 > 核心命题引用 atomic 笔记（陈述句观点），每个命题是一句话洞见
 
-- [[Vite 开发阶段利用浏览器 ESM 实现极速冷启动]]
+- [[Vite急速冷启动的本质是延迟编译]]
 	- **原理**：浏览器直接请求 ESM 模块，服务器按需编译（On-Demand Compilation），无需预打包整个应用
 - [[Vite 使用 esbuild 进行预构建]]
 	- **原理**：esbuild（Go 编写）将 CJS 依赖转为 ESM、规范化导入路径、合并小模块，解决浏览器 ESM 兼容性问题
-- [[Vite 生产阶段使用 Rollup 进行优化打包]]
+- [[Vite在生产阶段使用Rollup进行优化打包]]
 	- **原理**：Rollup 提供精确的 Tree Shaking 和代码分割，输出干净的生产构建产物
 
 ---

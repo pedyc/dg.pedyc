@@ -70,4 +70,4 @@ Layout is defined in `quartz.layout.ts` using components placed in sections: `he
 
 ---
 
-For knowledge base methodology and note organization, see `content/00-META/知识库指南.md` or `content/00-META/00-本库指南.md`.
+For knowledge base methodology and note organization, see `content/00-META/本库指南.md`.

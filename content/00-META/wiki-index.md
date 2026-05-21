@@ -4,10 +4,10 @@ title: wiki-index
 aliases: [wiki-index, wiki导航]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-05-20
+date-modified: 2026-05-21
 status: active
 content-type: [moc]
-up: [["本库指南"]]
+up: "[[本库指南]]"
 ---
 
 ## Wiki Index
@@ -242,7 +242,7 @@ up: [["本库指南"]]
 - [[管道化]] — Pipeline、并行处理
 - [[通货膨胀（Inflation）]] — 通胀、经济学基础
 - [[通货紧缩（Deflation）]] — 通缩、经济学基础
-- [[广义货币供应量（Broad measure of money supply）]] — M2、货币供应
+- [[广义货币供应量]] — M2、货币供应
 - [[信噪比]] — SNR、信号质量
 - [[间隔重复]] — 间隔复习、记忆曲线
 - [[高斯分布]] — 正态分布、统计分析

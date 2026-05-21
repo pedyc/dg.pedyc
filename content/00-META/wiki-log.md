@@ -71,6 +71,13 @@ up: ["[[本库指南]]"]
   - 内容：Vite HMR 基于原生 ESM 按需编译，Webpack HMR 需要重建依赖链
   - 核心区别：更新范围、编译时机、实现机制
   - 已收录于 [[MOC-Vite相关问题]] 索引
+- [2026-05-21] sync | 新增 concept「荣格心理学」
+  - 位置：`40-RESOURCES/荣格心理学.md`
+  - 更新 [[wiki-index]] 添加 Concepts 条目
+- [2026-05-21] sync | 重写 concept「存在主义」+ 新增 atomic「存在先于本质」
+  - 位置：`40-RESOURCES/存在主义.md`
+  - 新增 atomic：`30-ZETTELKASTEN/存在先于本质.md`
+  - 更新 [[wiki-index]] 添加 Concepts 条目
 
 ---
 

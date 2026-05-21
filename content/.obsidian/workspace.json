@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Vite.md",
+                "file": "40-RESOURCES/荣格心理学.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,17 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Vite"
+              "title": "荣格心理学"
+            }
+          },
+          {
+            "id": "280c574919421028",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           },
           {
@@ -37,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-META/wiki-index.md",
+                "file": "40-RESOURCES/荣格心理学.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,10 +62,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "wiki-index"
+              "title": "荣格心理学"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -95,7 +106,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Vite.md",
+                "file": "40-RESOURCES/荣格心理学.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -118,12 +129,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.2726859917360067,
+                  "scale": 0.1387322393266609,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Vite 的关系图"
+              "title": "荣格心理学 的关系图"
             }
           },
           {
@@ -314,16 +325,27 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9e96722bd72cbcde",
+  "active": "7be99c54f86de02a",
   "lastOpenFiles": [
-    "30-Zettelkasten/Vite急速冷启动的本质是延迟编译.md",
+    "40-RESOURCES/存在主义.md",
+    "40-RESOURCES/荣格心理学.md",
+    "00-META/wiki-index.md",
+    "40-RESOURCES/广义货币供应量.md",
+    "00-META/wiki-index.md.tmp.17260.e2cef5ba42b8",
+    "00-META/wiki-index.md.tmp.17260.f0e468570a96",
+    "30-Zettelkasten/存在先于本质.md",
+    "30-Zettelkasten/存在先于本质.md.tmp.17260.95f330ff3a0e",
+    "00-META/wiki-index.md.tmp.17260.8e5039ed31ec",
     "40-RESOURCES/Vite.md",
+    "40-RESOURCES/荣格心理学.md.tmp.17260.658d8c18b94b",
+    "20-AREAS/A-Linux/A-Linux.md",
+    "20-AREAS/A-常用工具/常用工具.md",
+    "30-Zettelkasten/Vite急速冷启动的本质是延迟编译.md",
     "40-RESOURCES/Vite在开发阶段利用ESM实现急速冷启动.md.tmp.17260.707273c15492",
     "40-RESOURCES/Vite在开发阶段利用ESM实现急速冷启动.md",
     "40-RESOURCES/Vite在开发阶段利用ESM实现急速冷启动.md.tmp.17260.f15ef345cac8",
     "40-RESOURCES/MOC-Vite相关问题.md",
     "40-RESOURCES/Vite 的 HMR（热模块替换）是如何实现的？与 Webpack HMR 的区别？.md",
-    "00-META/wiki-index.md",
     "LIST.md",
     "CLAUDE.md.tmp.17260.db7fea1fcb48",
     "00-META/llm-wiki-schema.md.tmp.17260.955da99180f1",
@@ -341,20 +363,10 @@
     "20-AREAS/A-视觉思维/A-视觉思维.md",
     "index.md",
     "excalibrain.md",
-    "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.md",
-    "00-META/本库指南.md",
-    "00-META/本库指南.md.tmp.17260.04fd25f03e52",
-    "00-META/wiki-index.md.tmp.17260.f0ac66c9bdc1",
     "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.svg",
-    "99-ASSETS/Excalidraw/React版本演进.excalidraw.md",
-    "四象限.excalidraw.md",
     "四象限.excalidraw.svg",
     "banner.svg",
-    "00-META/wiki-log.md",
-    "00-META/wiki-log.md.tmp.17260.109b62c7133c",
-    "00-META/wiki-index.md.tmp.17260.f00c3f766d63",
     "未命名.canvas",
-    "00-META/wiki-log.md.tmp.17260.a72f9e6f119f",
     "40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
     "60-BLOGS/_resources/阿拉伯世界没落的原因是什么/117f6e750ccda2fd70fcce241328c524_MD5.jpg",
     "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/c829b955bce686a696951ba18cef5002_MD5.jpg",

@@ -5,6 +5,7 @@ description: |
   使用 `content/_templates` 目录下的模板创建或追加 Obsidian 笔记内容。
   适配本库的 content-type 体系和 aliases 前缀规则。
   触发条件：用户要求创建新笔记、使用模板、或追加内容到现有笔记。
+  注意：创建/修改笔记后自动触发 wiki-sync-local 同步到 Wiki 层。
 argument-hint: "<content-type> <标题> [内容]"
 allowed-tools:
   - Read
@@ -24,3 +25,5 @@ allowed-tools:
 - article → `60-BLOGS/`
 - diary → `90-DIARY/`
 - record → `40-RESOURCES/`
+
+**创建/修改笔记后，自动触发 `wiki-sync-local` 同步到 Wiki 层（更新 wiki-index、wiki-log）。**

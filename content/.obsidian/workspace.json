@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/荣格心理学.md",
+                "file": "40-RESOURCES/MOC-前端面试知识清单.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -62,7 +62,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "荣格心理学"
+              "title": "MOC-前端面试知识清单"
             }
           }
         ],
@@ -106,7 +106,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/荣格心理学.md",
+                "file": "40-RESOURCES/MOC-前端面试知识清单.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -129,12 +129,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.1387322393266609,
+                  "scale": 0.5359795996225935,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "荣格心理学 的关系图"
+              "title": "MOC-前端面试知识清单 的关系图"
             }
           },
           {
@@ -327,9 +327,22 @@
   },
   "active": "7be99c54f86de02a",
   "lastOpenFiles": [
-    "40-RESOURCES/存在主义.md",
-    "40-RESOURCES/荣格心理学.md",
+    "40-RESOURCES/浏览器工作原理.md",
+    "40-RESOURCES/从输入URL到页面展示发生了什么.md",
+    "40-RESOURCES/网络协议相关问题.md",
+    "40-RESOURCES/VS-async vs defer.md",
+    "40-RESOURCES/Q-从输入URL到页面展示发生了什么.md.tmp.17260.3249f4b6ffe6",
+    "40-RESOURCES/MOC-前端面试知识清单.md",
+    "40-RESOURCES/浏览器.md",
+    "40-RESOURCES/HTTP.md",
+    "40-RESOURCES/快速排序.md",
+    "40-RESOURCES/Vue vs React.md",
+    "40-RESOURCES/Vue vs React.md.tmp.17260.a15e5c566d02",
+    "10-PROJECTS/P-求职前端岗位/P-算法提升专项.md",
+    "10-PROJECTS/P-求职前端岗位/P-求职前端岗位.md",
     "00-META/wiki-index.md",
+    "40-RESOURCES/荣格心理学.md",
+    "40-RESOURCES/存在主义.md",
     "40-RESOURCES/广义货币供应量.md",
     "00-META/wiki-index.md.tmp.17260.e2cef5ba42b8",
     "00-META/wiki-index.md.tmp.17260.f0e468570a96",
@@ -348,21 +361,8 @@
     "40-RESOURCES/Vite 的 HMR（热模块替换）是如何实现的？与 Webpack HMR 的区别？.md",
     "LIST.md",
     "CLAUDE.md.tmp.17260.db7fea1fcb48",
-    "00-META/llm-wiki-schema.md.tmp.17260.955da99180f1",
     "40-RESOURCES/Webpack 和 Vite 的核心构建理念有什么不同？为什么 Vite 启动更快？.md",
     "40-RESOURCES/MOC-Webpack相关问题.md",
-    "40-RESOURCES/构建打包相关问题.md",
-    "40-RESOURCES/MOC-前端面试真题库.md",
-    "40-RESOURCES/CSS相关问题.md",
-    "40-RESOURCES/Web安全问题.md",
-    "40-RESOURCES/网络协议相关问题.md",
-    "40-RESOURCES/JS&TS相关问题.md",
-    "40-RESOURCES/Vue 面试题.md",
-    "CLAUDE.md",
-    "CLAUDE.md.tmp.17260.74b663fbd040",
-    "20-AREAS/A-视觉思维/A-视觉思维.md",
-    "index.md",
-    "excalibrain.md",
     "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.svg",
     "四象限.excalidraw.svg",
     "banner.svg",

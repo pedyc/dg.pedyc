@@ -5,7 +5,7 @@ aliases: [C-HTTP, 超文本传输协议]
 description: HTTP是用于在Web服务器和客户端之间传输数据的应用层协议
 tags: [前端开发/网络协议]
 date-created: 2025-05-16
-date-modified: 2026-03-23
+date-modified: 2026-05-22
 status: active
 content-type: concept
 ---
@@ -81,6 +81,12 @@ sequenceDiagram
 - ⛔ **误用**
 	- **明文传输敏感信息**：应使用 HTTPS
 	- **频繁建立连接**：应使用持久连接或 HTTP/2
+
+---
+
+## FAQ
+
+- [[网络协议相关问题|MOC-网络协议相关问题]]
 
 ---
 

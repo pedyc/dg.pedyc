@@ -4,7 +4,7 @@ title: VS-async vs defer
 author: [AI]
 tags: [atomic, type/comparison, status/cultivating, topic/html, topic/javascript, topic/浏览器原理]
 date-created: 2026-03-08
-date-modified: 2026-03-15
+date-modified: 2026-05-22
 alias: [async与defer对比, 脚本加载对比, script-async-defer]
 comparison: ["[[script-async]]", "[[script-defer]]"]
 ---

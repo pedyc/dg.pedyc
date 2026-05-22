@@ -5,7 +5,7 @@ aliases: [Template Compilation, C-模板编译]
 description: Vue中将HTML模板转换为JavaScript渲染函数的核心技术
 tags: [前端/Vue, 前端/原理]
 date-created: 2026-03-24
-date-modified: 2026-03-24
+date-modified: 2026-05-22
 status: cultivating
 content-type: concept
 up: "[[Vue]]"
@@ -36,7 +36,7 @@ up: "[[Vue]]"
 ```mermaid
 flowchart TB
     subgraph 解析阶段 ["解析阶段 Parse"]
-        A["模板字符串<br/>`<div>{{ msg }}</div>`"] --> B[词法分析]
+        A["模板字符串<div>{{ msg }}</div>"] --> B[词法分析]
         B --> C[语法分析]
         C --> D[AST<br/>抽象语法树]
     end

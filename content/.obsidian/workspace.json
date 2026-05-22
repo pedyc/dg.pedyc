@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/MOC-前端面试知识清单.md",
+                "file": "40-RESOURCES/响应式原理(Vue3).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -62,7 +62,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "MOC-前端面试知识清单"
+              "title": "响应式原理(Vue3)"
             }
           }
         ],
@@ -106,7 +106,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/MOC-前端面试知识清单.md",
+                "file": "40-RESOURCES/响应式原理(Vue3).md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -134,7 +134,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "MOC-前端面试知识清单 的关系图"
+              "title": "响应式原理(Vue3) 的关系图"
             }
           },
           {
@@ -327,12 +327,15 @@
   },
   "active": "7be99c54f86de02a",
   "lastOpenFiles": [
+    "20-AREAS/A-前端/Vue.md",
+    "40-RESOURCES/Vue3 ref 和 reactive 的区别.md",
+    "40-RESOURCES/模板编译(Vue3).md",
+    "40-RESOURCES/MOC-前端面试知识清单.md",
     "40-RESOURCES/浏览器工作原理.md",
     "40-RESOURCES/从输入URL到页面展示发生了什么.md",
     "40-RESOURCES/网络协议相关问题.md",
     "40-RESOURCES/VS-async vs defer.md",
     "40-RESOURCES/Q-从输入URL到页面展示发生了什么.md.tmp.17260.3249f4b6ffe6",
-    "40-RESOURCES/MOC-前端面试知识清单.md",
     "40-RESOURCES/浏览器.md",
     "40-RESOURCES/HTTP.md",
     "40-RESOURCES/快速排序.md",
@@ -359,10 +362,7 @@
     "40-RESOURCES/Vite在开发阶段利用ESM实现急速冷启动.md.tmp.17260.f15ef345cac8",
     "40-RESOURCES/MOC-Vite相关问题.md",
     "40-RESOURCES/Vite 的 HMR（热模块替换）是如何实现的？与 Webpack HMR 的区别？.md",
-    "LIST.md",
     "CLAUDE.md.tmp.17260.db7fea1fcb48",
-    "40-RESOURCES/Webpack 和 Vite 的核心构建理念有什么不同？为什么 Vite 启动更快？.md",
-    "40-RESOURCES/MOC-Webpack相关问题.md",
     "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.svg",
     "四象限.excalidraw.svg",
     "banner.svg",

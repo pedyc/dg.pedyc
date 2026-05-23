@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/响应式原理(Vue3).md",
+                "file": "40-RESOURCES/Vue 面试题.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -62,7 +62,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "响应式原理(Vue3)"
+              "title": "Vue 面试题"
             }
           }
         ],
@@ -106,7 +106,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/响应式原理(Vue3).md",
+                "file": "40-RESOURCES/Vue 面试题.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -129,12 +129,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.5359795996225935,
+                  "scale": 0.2726859917360067,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "响应式原理(Vue3) 的关系图"
+              "title": "Vue 面试题 的关系图"
             }
           },
           {
@@ -327,13 +327,17 @@
   },
   "active": "7be99c54f86de02a",
   "lastOpenFiles": [
+    "40-RESOURCES/MOC-前端面试真题库.md",
     "20-AREAS/A-前端/Vue.md",
+    "40-RESOURCES/Q-Vapor Mode是什么.md",
+    "40-RESOURCES/Vue 面试题.md",
+    "40-RESOURCES/网络协议相关问题.md",
+    "40-RESOURCES/响应式原理(Vue3).md",
     "40-RESOURCES/Vue3 ref 和 reactive 的区别.md",
     "40-RESOURCES/模板编译(Vue3).md",
     "40-RESOURCES/MOC-前端面试知识清单.md",
     "40-RESOURCES/浏览器工作原理.md",
     "40-RESOURCES/从输入URL到页面展示发生了什么.md",
-    "40-RESOURCES/网络协议相关问题.md",
     "40-RESOURCES/VS-async vs defer.md",
     "40-RESOURCES/Q-从输入URL到页面展示发生了什么.md.tmp.17260.3249f4b6ffe6",
     "40-RESOURCES/浏览器.md",
@@ -356,12 +360,8 @@
     "40-RESOURCES/荣格心理学.md.tmp.17260.658d8c18b94b",
     "20-AREAS/A-Linux/A-Linux.md",
     "20-AREAS/A-常用工具/常用工具.md",
-    "30-Zettelkasten/Vite急速冷启动的本质是延迟编译.md",
     "40-RESOURCES/Vite在开发阶段利用ESM实现急速冷启动.md.tmp.17260.707273c15492",
-    "40-RESOURCES/Vite在开发阶段利用ESM实现急速冷启动.md",
     "40-RESOURCES/Vite在开发阶段利用ESM实现急速冷启动.md.tmp.17260.f15ef345cac8",
-    "40-RESOURCES/MOC-Vite相关问题.md",
-    "40-RESOURCES/Vite 的 HMR（热模块替换）是如何实现的？与 Webpack HMR 的区别？.md",
     "CLAUDE.md.tmp.17260.db7fea1fcb48",
     "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.svg",
     "四象限.excalidraw.svg",

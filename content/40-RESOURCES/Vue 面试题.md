@@ -2,7 +2,7 @@
 title: Vue 面试题
 aliases: [MOC-Vue面试题]
 date-created: 2026-03-15
-date-modified: 2026-05-23
+date-modified: 2026-05-24
 content-type: [moc]
 up: ["[[MOC-前端面试真题库|前端面试题]]"]
 ---
@@ -38,11 +38,11 @@ up: ["[[MOC-前端面试真题库|前端面试题]]"]
 
 ### 虚拟 DOM 与 Diff
 
-| 示例题目                        | 关联笔记            |
-| --------------------------- |:-------------- |
-| [[Virtual DOM]] 的本质是什么？     | [[Virtual DOM]] |
-| Vue 的 Diff 算法与 React 有哪些异同？ | [[Virtual DOM]] |
-| 为什么 data 更新后视图没立即变化？        | nextTick 机制     |
+| 示例题目                    | 关联笔记            |
+| ----------------------- |:-------------- |
+| [[Virtual DOM]] 的本质是什么？ | [[Virtual DOM]] |
+|                         | [[Virtual DOM]] |
+| 为什么 data 更新后视图没立即变化？    | nextTick 机制     |
 
 ---
 

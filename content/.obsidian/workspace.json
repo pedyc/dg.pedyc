@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Vue 面试题.md",
+                "file": "40-RESOURCES/MOC-前端面试真题库.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -62,7 +62,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Vue 面试题"
+              "title": "MOC-前端面试真题库"
             }
           }
         ],
@@ -106,7 +106,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Vue 面试题.md",
+                "file": "40-RESOURCES/MOC-前端面试真题库.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -134,7 +134,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Vue 面试题 的关系图"
+              "title": "MOC-前端面试真题库 的关系图"
             }
           },
           {
@@ -327,10 +327,10 @@
   },
   "active": "7be99c54f86de02a",
   "lastOpenFiles": [
+    "40-RESOURCES/Vue 面试题.md",
     "40-RESOURCES/MOC-前端面试真题库.md",
     "20-AREAS/A-前端/Vue.md",
     "40-RESOURCES/Q-Vapor Mode是什么.md",
-    "40-RESOURCES/Vue 面试题.md",
     "40-RESOURCES/网络协议相关问题.md",
     "40-RESOURCES/响应式原理(Vue3).md",
     "40-RESOURCES/Vue3 ref 和 reactive 的区别.md",

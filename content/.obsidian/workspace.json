@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-META/wiki-log.md",
+                "file": "50-ARCHIVE/00 Inbox规则.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "wiki-log"
+              "title": "00 Inbox规则"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "00-META/wiki-log.md",
+                "file": "50-ARCHIVE/00 Inbox规则.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "wiki-log 的关系图"
+              "title": "00 Inbox规则 的关系图"
             }
           },
           {
@@ -211,7 +211,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PARA/20-AREAS/03视觉思维/0300视觉思维.md",
+                "file": "50-ARCHIVE/00 Inbox规则.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -221,7 +221,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "0300视觉思维 的反向链接列表"
+              "title": "00 Inbox规则 的反向链接列表"
             }
           },
           {
@@ -230,12 +230,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PARA/20-AREAS/02前端/前端性能优化.md",
+                "file": "50-ARCHIVE/00 Inbox规则.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "前端性能优化 的出链列表"
+              "title": "00 Inbox规则 的出链列表"
             }
           },
           {
@@ -292,7 +292,24 @@
   },
   "active": "9e96722bd72cbcde",
   "lastOpenFiles": [
+    "00-META/wiki-log.md",
+    "60-BLOGS/聊聊网页断点调试及其扩展.md",
+    "60-BLOGS/聊聊前端模块化.md",
+    "60-BLOGS/新兴前端框架 Svelte 从入门到原理.md",
+    "60-BLOGS/教你如何构建自己的依赖注入工具.md",
+    "00-META/wiki-sync-state.json.tmp.30648.9e264090579f",
+    "00-META/wiki-sync-state.json.tmp.30648.bd403f6e41db",
     "00-META/wiki-index.md",
+    "00-META/llm-wiki-schema.md",
+    "00-META/wiki-sync-state.json.tmp.30648.59e0c4b7c404",
+    "00-META/wiki-sync-state.json.tmp.30648.bd55c5466d50",
+    "00-META/wiki-log.md.tmp.30648.7054a8686139",
+    "00-META/llm-wiki-schema.md.tmp.30648.61dad42eed46",
+    "00-META/llm-wiki-schema.md.tmp.30648.d24295c2707e",
+    "00-META/wiki-sync-state.json.tmp.30648.d92411865ef2",
+    "00-META/wiki-sync-state.json.tmp.30648.279071f6164d",
+    "00-META/wiki-sync-state.json.tmp.30648.15e6c5af627a",
+    "00-META/本库指南.md",
     "40-RESOURCES/Inbox/教你如何构建自己的依赖注入工具.md",
     "_resources/教你如何构建自己的依赖注入工具/5029778012ad150ba0478e34372f09bf_MD5.webp",
     "_resources/教你如何构建自己的依赖注入工具/f4119ac9a2036c8f1466f2839b2f10d0_MD5.webp",
@@ -304,17 +321,7 @@
     "_resources/教你如何构建自己的依赖注入工具/f0f01894cf611edbad54f4ee021e46ce_MD5.webp",
     "_resources/教你如何构建自己的依赖注入工具/9aaba3c758790827134c16e2b9f31509_MD5.webp",
     "_resources/教你如何构建自己的依赖注入工具/15181b877607d4c3d0b7583e4825f627_MD5.webp",
-    "_resources/教你如何构建自己的依赖注入工具",
-    "00-META/llm-wiki-schema.md",
-    "00-META/llm-wiki-schema.md.tmp.15252.757e6b56bfcb",
-    "00-META/llm-wiki-schema.md.tmp.15252.72fc6be80fb3",
-    "00-META/llm-wiki-schema.md.tmp.15252.edfcca489f97",
-    "00-META/llm-wiki-schema.md.tmp.15252.08914a5e08fc",
-    "00-META/wiki-log.md",
     "40-RESOURCES/Inbox/聊聊网页断点调试及其扩展.md",
-    "00-META/wiki-sync-state.json",
-    "00-META/wiki-sync-state.json.tmp.15252.f85f80d5960e",
-    "_resources/聊聊网页断点调试及其扩展",
     "40-RESOURCES/模块化与组件化开发.md",
     "60-BLOGS/JavaScript模块化系统解析.md",
     "40-RESOURCES/Inbox/聊聊前端模块化.md",
@@ -323,8 +330,6 @@
     "40-RESOURCES/Inbox/新兴前端框架 Svelte 从入门到原理.md",
     "40-RESOURCES/Svelte.md",
     "30-Zettelkasten/Svelte 无需虚拟 DOM，编译时直接生成 DOM 操作代码.md",
-    "00-META/wiki-log.md.tmp.15252.6222500e4690",
-    "30-Zettelkasten/Svelte 无需虚拟 DOM，编译时直接生成 DOM 操作代码.md.tmp.15252.17532a4d5576",
     "40-RESOURCES/Vite.md",
     "40-RESOURCES/前端框架.md",
     "30-Zettelkasten/Vite HMR 的本质是基于浏览器原生 ESM 的按需编译机制.md",
@@ -333,10 +338,6 @@
     "40-RESOURCES/构建打包相关问题.md",
     "40-RESOURCES/MOC-前端面试真题库.md",
     "40-RESOURCES/Vue 面试题.md",
-    "20-AREAS/A-前端/Vue.md",
-    "40-RESOURCES/Q-Vapor Mode是什么.md",
-    "40-RESOURCES/网络协议相关问题.md",
-    "40-RESOURCES/响应式原理(Vue3).md",
     "未命名.canvas",
     "Untitled.canvas",
     "//Untitled.canvas",

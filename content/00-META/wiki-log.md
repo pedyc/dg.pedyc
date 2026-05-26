@@ -26,6 +26,11 @@ up: ["[[本库指南]]"]
 	- 创建 `content-verifier-local` — 双层验证（atomic + wiki 一致性）
 	- 创建 `obsidian-note-local` — 对接 aliases 前缀规则和 content-type 模板
 	- 原版 skills 保留不动（全局共享）
+- [2026-05-26] update | 明确 ingest/sync 职责边界
+	- sync：只负责系统文件维护（状态/索引/日志），不处理 content 变更
+	- ingest：负责 content 整合到 wiki 层
+	- 简化 sync 工作流：检测变更 → 记录日志 → 标记待 ingest
+	- 更新 llm-wiki-schema.md 同步规则表
 - [2026-05-26] update | wiki-sync-local 增加主动 commit 机制
 	- 修改 SKILL.md：sync 完成后主动 commit wiki-sync-state.json 和 wiki-log.md
 	- 修改 llm-wiki-schema.md：明确说明状态更新后会立即 commit

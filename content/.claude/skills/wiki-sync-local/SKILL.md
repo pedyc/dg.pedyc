@@ -68,7 +68,9 @@ allowed-tools:
 
 ## 模式二：自动检测 Git 变更（推荐）
 
-当不带参数调用 skill 时，自动执行以下流程：
+当不带参数调用 skill 时，自动执行以下流程。
+
+**职责边界**：sync 只负责系统文件维护（状态/索引/日志），**不处理 content 变更**。内容更新由 ingest 工作流负责。
 
 ### 1. 读取同步状态
 
@@ -82,20 +84,21 @@ allowed-tools:
 git diff <lastCommit>..HEAD --name-status
 ```
 
-过滤 `content/` 目录下的 `.md` 文件，排除 `.obsidian/` 和 `00-META/wiki-sync-state.json` 自身。
+过滤 `content/` 目录下的 `.md` 文件，排除：
+- `.obsidian/` 目录
+- `00-META/wiki-sync-state.json` 自身
+- `00-META/wiki-log.md` 自身（由 skill 维护）
+- `00-META/wiki-index.md` 自身（由 skill 维护）
+- `Inbox/` 目录（pending 状态，由用户审核后处理）
 
-### 3. 对每个变更文件执行同步
+### 3. 变更分类处理
 
 根据 git status 确定操作类型：
-- `A`（新增）→ create 操作
-- `M`（修改）→ update 操作
-- `D`（删除）→ delete 操作
+- `A`（新增）→ 记录到日志，标记为 "待 ingest"
+- `M`（修改）→ 记录到日志
+- `D`（删除）→ 记录到日志
 
-对每个文件：
-1. 读取文件 front matter 获取 content-type 和 aliases
-2. 根据 content-type 确定同步目标（同「模式一」）
-3. 执行相应的同步逻辑
-4. 跳过 `00-META/wiki-log.md`、`wiki-index.md` 自身的变更（这些由 skill 内部维护）
+**注意**：sync 不再读取或修改变更文件的内容。只记录变更事件，由 ingest 工作流决定如何处理。
 
 ### 4. 更新同步状态
 

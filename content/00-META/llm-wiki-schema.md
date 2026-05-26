@@ -143,6 +143,15 @@ record      → 40-RESOURCES/      事件记录，aliases: R-xxx
 
 当笔记发生创建、修改、删除时，被动触发同步到 Wiki 层。
 
+### 职责边界
+
+**Sync 只负责系统文件维护**，不处理 content 变更：
+- 更新 `wiki-sync-state.json`
+- 追加到 `wiki-log.md`
+- 维护 `wiki-index.md`（仅系统条目）
+
+**Content 变更由 ingest 工作流处理**：sync 检测到变更后，标记到日志，由 ingest 决定如何整合到 wiki 层。
+
 ### 触发条件
 
 - 用户或 LLM 创建了新笔记
@@ -163,64 +172,32 @@ record      → 40-RESOURCES/      事件记录，aliases: R-xxx
 
 **重要**：sync 完成后会主动 commit 状态文件的变更（`git add` + `git commit`），确保 lastCommit 立即更新，不再依赖外部 vault backup。
 
-### 同步规则
+### 同步规则（简化版）
 
-| content-type | 同步到 | 更新内容 |
-|-------------|--------|---------|
-| atomic | 相关 concept/moc | 添加引用链接 + 核心观点 |
-| concept | wiki-index | 检查分类位置 |
-| moc | wiki-index | 检查索引完整性 |
-| area | wiki-index | 检查领域分类 |
-| term/comparison/question | wiki-index | 检查术语/对比/问题分类 |
+| 操作 | Sync 处理 | Ingest 处理 |
+|------|----------|-------------|
+| 新增笔记 | 记录到日志 | 整合到 wiki 层 |
+| 修改笔记 | 记录到日志 | 更新 wiki 引用 |
+| 删除笔记 | 记录到日志 | 从 wiki 移除引用 |
 
-### 工作流程
+**原则**：sync 检测变更、记录事件；ingest 分析内容、执行整合。
 
-#### 模式一：手动指定笔记
+### 工作流程（简化版）
 
-- **create**：新增笔记，在相关 wiki 页面建立引用
-- **update**：修改笔记，检查是否是否需要更新 wiki 引用
-- **delete**：删除笔记，从 wiki 中移除引用
-
-#### 模式二：自动检测 Git 变更（推荐）
+#### 自动检测 Git 变更
 
 1. 读取 `wiki-sync-state.json` 获取 `lastCommit`
 2. 执行 `git diff <lastCommit>..HEAD --name-status` 获取变更文件
-3. 过滤 `content/` 下 `.md` 文件（排除 `.obsidian/` 和 `wiki-sync-state.json`）
+3. 过滤 `content/` 下 `.md` 文件（排除系统文件和 Inbox）
 4. 根据 git status（A/M/D）确定操作类型
-5. 对每个变更文件执行相应同步
+5. 记录变更到 `wiki-log.md`（标记为待 ingest）
 6. 更新 `wiki-sync-state.json` 为当前 HEAD commit
+7. 主动 commit 状态变更
 
-#### 3. 确定关联页面
+#### 手动指定笔记（如需要）
 
-1. 根据笔记的 content-type 确定目标 wiki 页面类型
-2. 在 wiki-index 中查找相关领域/concept
-3. 读取相关 concept/moc 页面
-
-#### 4. 同步 Wiki 层
-
-**create / update 时**：
-- 在相关 concept/moc 中追加或更新引用
-- 如果是 atomic，确保被相关 concept 引用
-- 更新 `[[up]]` 属性指向正确的父级
-
-**delete 时**：
-- 从相关 concept/moc 中移除引用
-- 检查是否有孤儿链接
-
-#### 5. 更新索引（如需要）
-
-- 新笔记类型未在 wiki-index 中出现 → 添加条目
-- 笔记 content-type 变更 → 更新对应分类
-
-#### 6. 记录日志
-
-追加条目到 `wiki-log.md`：
-
-```markdown
-- [日期] sync | 操作类型 | 笔记标题
-  - 变更内容简述
-  - 更新的 wiki 页面
-```
+- **create/update/delete**：只记录到日志，不处理 content
+- 具体 content 处理由 ingest 工作流负责
 
 ---
 

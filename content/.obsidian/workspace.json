@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/荣格心理学.md",
+                "file": "00-META/wiki-log.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,59 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "荣格心理学"
-            }
-          },
-          {
-            "id": "280c574919421028",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
-            }
-          },
-          {
-            "id": "7be99c54f86de02a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/Svelte.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Svelte"
-            }
-          },
-          {
-            "id": "6ee2dc0e4f40d727",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://svelte.dev/blog/svelte-compile-time",
-                "title": "svelte.dev/blog/svelte-compile-time",
-                "mode": "error"
-              },
-              "icon": "globe-2",
-              "title": "svelte.dev/blog/svelte-compile-time"
+              "title": "wiki-log"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -120,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Svelte.md",
+                "file": "00-META/wiki-log.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Svelte 的关系图"
+              "title": "wiki-log 的关系图"
             }
           },
           {
@@ -339,25 +290,42 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7be99c54f86de02a",
+  "active": "9e96722bd72cbcde",
   "lastOpenFiles": [
-    "40-RESOURCES/Svelte.md",
+    "00-META/wiki-index.md",
+    "40-RESOURCES/Inbox/教你如何构建自己的依赖注入工具.md",
+    "_resources/教你如何构建自己的依赖注入工具/5029778012ad150ba0478e34372f09bf_MD5.webp",
+    "_resources/教你如何构建自己的依赖注入工具/f4119ac9a2036c8f1466f2839b2f10d0_MD5.webp",
+    "_resources/教你如何构建自己的依赖注入工具/912ceb3ef77fd67243e49eba8e36192d_MD5.webp",
+    "_resources/教你如何构建自己的依赖注入工具/f5d805cc945480a8822b1884901e207b_MD5.webp",
+    "_resources/教你如何构建自己的依赖注入工具/d295c5e7fbbc01c6f66967d13001318c_MD5.webp",
+    "_resources/教你如何构建自己的依赖注入工具/0c8eaeac777fcb49ca27ea5960657a7e_MD5.webp",
+    "_resources/教你如何构建自己的依赖注入工具/82c2227e233677b1225e6c6cfbc88d1c_MD5.webp",
+    "_resources/教你如何构建自己的依赖注入工具/f0f01894cf611edbad54f4ee021e46ce_MD5.webp",
+    "_resources/教你如何构建自己的依赖注入工具/9aaba3c758790827134c16e2b9f31509_MD5.webp",
+    "_resources/教你如何构建自己的依赖注入工具/15181b877607d4c3d0b7583e4825f627_MD5.webp",
+    "_resources/教你如何构建自己的依赖注入工具",
+    "00-META/llm-wiki-schema.md",
+    "00-META/llm-wiki-schema.md.tmp.15252.757e6b56bfcb",
+    "00-META/llm-wiki-schema.md.tmp.15252.72fc6be80fb3",
+    "00-META/llm-wiki-schema.md.tmp.15252.edfcca489f97",
+    "00-META/llm-wiki-schema.md.tmp.15252.08914a5e08fc",
+    "00-META/wiki-log.md",
+    "40-RESOURCES/Inbox/聊聊网页断点调试及其扩展.md",
+    "00-META/wiki-sync-state.json",
+    "00-META/wiki-sync-state.json.tmp.15252.f85f80d5960e",
+    "_resources/聊聊网页断点调试及其扩展",
+    "40-RESOURCES/模块化与组件化开发.md",
+    "60-BLOGS/JavaScript模块化系统解析.md",
+    "40-RESOURCES/Inbox/聊聊前端模块化.md",
+    "40-RESOURCES/荣格心理学.md",
+    "50-ARCHIVE/深入了解现代网络浏览器(4) 合成层.md",
     "40-RESOURCES/Inbox/新兴前端框架 Svelte 从入门到原理.md",
+    "40-RESOURCES/Svelte.md",
+    "30-Zettelkasten/Svelte 无需虚拟 DOM，编译时直接生成 DOM 操作代码.md",
+    "00-META/wiki-log.md.tmp.15252.6222500e4690",
+    "30-Zettelkasten/Svelte 无需虚拟 DOM，编译时直接生成 DOM 操作代码.md.tmp.15252.17532a4d5576",
     "40-RESOURCES/Vite.md",
-    "_resources/新兴前端框架 Svelte 从入门到原理/e950d3fbafa8b04b98f437056f8e2b81_MD5.webp",
-    "40-RESOURCES/Inbox/_resources",
-    "_resources/新兴前端框架 Svelte 从入门到原理/d305a8e8d89c91e0487f703a2884e71c_MD5.webp",
-    "_resources/新兴前端框架 Svelte 从入门到原理/c530e9684ac01f8d248326455b3b3205_MD5.webp",
-    "_resources/新兴前端框架 Svelte 从入门到原理/c92aa2e8d2e7105f1b859583d190adba_MD5.webp",
-    "_resources/新兴前端框架 Svelte 从入门到原理/cd67926bbe1fe4cb5acb4edb321baa27_MD5.webp",
-    "_resources/新兴前端框架 Svelte 从入门到原理/a0a1dddfd4fa615cb8b439b6f39b5a39_MD5.webp",
-    "_resources/新兴前端框架 Svelte 从入门到原理/c0daa6f2370c875579cf79bea13f2870_MD5.webp",
-    "_resources/新兴前端框架 Svelte 从入门到原理/9dfdaf923e3c2a9ec9b47f5d2209f410_MD5.webp",
-    "_resources/新兴前端框架 Svelte 从入门到原理/36375a085e013b2cb23996cdf46ff259_MD5.webp",
-    "_resources/新兴前端框架 Svelte 从入门到原理/99df7d9c7f523555b01ba92c3278bd4f_MD5.webp",
-    "_resources/新兴前端框架 Svelte 从入门到原理",
-    "00-META/wiki-log.md.tmp.15252.9f2c8f7ae058",
-    "00-META/wiki-index.md.tmp.15252.b4d555dc3c43",
     "40-RESOURCES/前端框架.md",
     "30-Zettelkasten/Vite HMR 的本质是基于浏览器原生 ESM 的按需编译机制.md",
     "40-RESOURCES/MOC-Vite相关问题.md",
@@ -369,23 +337,6 @@
     "40-RESOURCES/Q-Vapor Mode是什么.md",
     "40-RESOURCES/网络协议相关问题.md",
     "40-RESOURCES/响应式原理(Vue3).md",
-    "40-RESOURCES/Vue3 ref 和 reactive 的区别.md",
-    "40-RESOURCES/模板编译(Vue3).md",
-    "40-RESOURCES/MOC-前端面试知识清单.md",
-    "40-RESOURCES/浏览器工作原理.md",
-    "40-RESOURCES/从输入URL到页面展示发生了什么.md",
-    "40-RESOURCES/VS-async vs defer.md",
-    "40-RESOURCES/Q-从输入URL到页面展示发生了什么.md.tmp.17260.3249f4b6ffe6",
-    "40-RESOURCES/浏览器.md",
-    "40-RESOURCES/HTTP.md",
-    "40-RESOURCES/快速排序.md",
-    "40-RESOURCES/Vue vs React.md",
-    "40-RESOURCES/Vue vs React.md.tmp.17260.a15e5c566d02",
-    "10-PROJECTS/P-求职前端岗位/P-算法提升专项.md",
-    "00-META/wiki-index.md.tmp.17260.e2cef5ba42b8",
-    "00-META/wiki-index.md.tmp.17260.f0e468570a96",
-    "30-Zettelkasten/存在先于本质.md.tmp.17260.95f330ff3a0e",
-    "00-META/wiki-index.md.tmp.17260.8e5039ed31ec",
     "未命名.canvas",
     "Untitled.canvas",
     "//Untitled.canvas",

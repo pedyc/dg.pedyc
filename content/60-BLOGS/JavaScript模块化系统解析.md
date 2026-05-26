@@ -3,9 +3,9 @@ uid: 202409160930
 title: JavaScript模块化系统解析
 aliases: []
 description: JavaScript 模块化系统完全解析，探讨模块化的前世今生和实现原理
-tags: [前端开发/JavaScript, 前端开发/工程化]
+tags: [前端开发/JavaScript, 前端开发/工程化, 模块化]
 date-created: 2024-09-16
-date-modified: 2026-03-25
+date-modified: 2026-05-26
 status: completed
 category: blog
 content-type: article

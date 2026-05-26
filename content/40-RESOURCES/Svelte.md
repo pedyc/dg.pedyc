@@ -74,7 +74,7 @@ flowchart LR
 ### FAQ
 
 - [[Q-Svelte 和传统框架的核心区别是什么？]]
-- [[Q-Svelte 的编译器具体做了什么优化？]]  
+- [[Q-Svelte 的编译器具体做了什么优化？]]
 
 ---
 
@@ -93,4 +93,4 @@ flowchart LR
 ### 参考延伸
 
 - [Svelte 官方文档](https://svelte.js.cn/docs)
-- [[新兴前端框架 Svelte 从入门到原理]]
+- [[新兴前端框架 Svelte 从入门到原理]]⭐

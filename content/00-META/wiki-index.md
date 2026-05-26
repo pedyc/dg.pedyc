@@ -4,7 +4,7 @@ title: wiki-index
 aliases: [wiki-index, wiki导航]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-05-21
+date-modified: 2026-05-26
 status: active
 content-type: [moc]
 up: "[[本库指南]]"
@@ -259,7 +259,7 @@ up: "[[本库指南]]"
 
 - [[Webpack vs Vite]] — 构建工具对比、打包策略差异
 - [[Vue vs React]] — 渐进式框架 vs 声明式组件库，响应式系统、模板语法、生态策略差异
-- [[Svelte vs React]] — 编译时优化 vs 运行时虚拟DOM，体积、性能、开发体验差异
+- [[Svelte vs React]] — 编译时优化 vs 运行时虚拟 DOM，体积、性能、开发体验差异
 - [[VS-Vue2 vs Vue3]] — Vue2 和 Vue3 核心差异
 - [[Vue2 vs Vue3 Diff算法]] — Diff 算法优化、性能提升
 - [[Vue3 ref 和 reactive 的区别]] — 响应式系统对比、使用场景

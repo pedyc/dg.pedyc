@@ -4,7 +4,7 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-05-21
+date-modified: 2026-05-26
 status: active
 content-type: [article]
 up: ["[[本库指南]]"]
@@ -30,6 +30,9 @@ up: ["[[本库指南]]"]
 	- 新建 concept: [[Svelte]] — 编译时优化框架
 	- 更新 wiki-index — 添加 Svelte 到前端分类和 Comparisons 分类
 	- 关联 [[前端框架]] — 补充 Svelte 到框架对比表
+- [2026-05-26] sync | create | Svelte 无需虚拟 DOM，编译时直接生成 DOM 操作代码
+	- 新建 atomic: [[Svelte 无需虚拟 DOM，编译时直接生成 DOM 操作代码]]
+	- 已由 [[Svelte]] 在 核心命题 中引用
 - [2026-05-20] ingest | 批量导入所有 MOC/Area/SOP/Term/Comparison/Record 到 Wiki
 	- 扫描了所有 content-type 为 moc、area、sop、term、comparison、record 的页面
 	- 统计：
@@ -72,44 +75,41 @@ up: ["[[本库指南]]"]
 ### 2026-05-22
 
 - [2026-05-22] ingest | 新增 comparison「Vue vs React」
-  - 位置：`40-RESOURCES/Vue vs React.md`
-  - 更新 [[wiki-index]] 添加 Comparisons 条目
-- [2026-05-22] ingest | 新增 question「从输入URL到页面展示发生了什么？」
-  - 位置：`40-RESOURCES/Q-从输入URL到页面展示发生了什么.md`
-  - 已收录于 [[MOC-网络协议相关问题]] 索引
+	- 位置：`40-RESOURCES/Vue vs React.md`
+	- 更新 [[wiki-index]] 添加 Comparisons 条目
+- [2026-05-22] ingest | 新增 question「从输入 URL 到页面展示发生了什么？」
+	- 位置：`40-RESOURCES/Q-从输入URL到页面展示发生了什么.md`
+	- 已收录于 [[MOC-网络协议相关问题]] 索引
 
 ### 2026-05-21
 
 - [2026-05-21] ingest | 完善 Q-note「Vite HMR 原理与 Webpack 区别」
-  - 内容：Vite HMR 基于原生 ESM 按需编译，Webpack HMR 需要重建依赖链
-  - 核心区别：更新范围、编译时机、实现机制
-  - 已收录于 [[MOC-Vite相关问题]] 索引
+	- 内容：Vite HMR 基于原生 ESM 按需编译，Webpack HMR 需要重建依赖链
+	- 核心区别：更新范围、编译时机、实现机制
+	- 已收录于 [[MOC-Vite相关问题]] 索引
 - [2026-05-21] sync | 新增 concept「荣格心理学」
-  - 位置：`40-RESOURCES/荣格心理学.md`
-  - 更新 [[wiki-index]] 添加 Concepts 条目
+	- 位置：`40-RESOURCES/荣格心理学.md`
+	- 更新 [[wiki-index]] 添加 Concepts 条目
 - [2026-05-21] sync | 重写 concept「存在主义」+ 新增 atomic「存在先于本质」
-  - 位置：`40-RESOURCES/存在主义.md`
-  - 新增 atomic：`30-ZETTELKASTEN/存在先于本质.md`
-  - 更新 [[wiki-index]] 添加 Concepts 条目
+	- 位置：`40-RESOURCES/存在主义.md`
+	- 新增 atomic：`30-ZETTELKASTEN/存在先于本质.md`
+	- 更新 [[wiki-index]] 添加 Concepts 条目
 
 ---
 
 *Log 开始于 2026-05-20*
 
 - [2026-05-20] lint | 知识库健康检查报告
-  - 检查范围：wiki-index.md 中 152 个链接
-  - 发现断链 2 个（已修复）：
-    - 帧动画 → T-帧动画（文件存在，标题不同）
-    - 广义货币供应量 → 广义货币供应量（Broad measure of money supply）（文件存在，标题不同）
-  - 索引一致性：152/152 链接有效
-  - 孤儿页面：待进一步检查（需要扫描所有页面的 inbound links）
-  - 矛盾检测：未发现明显矛盾
-  - 概念缺口：待检查
-
-
+	- 检查范围：wiki-index.md 中 152 个链接
+	- 发现断链 2 个（已修复）：
+		- 帧动画 → T- 帧动画（文件存在，标题不同）
+		- 广义货币供应量 → 广义货币供应量（Broad measure of money supply）（文件存在，标题不同）
+	- 索引一致性：152/152 链接有效
+	- 孤儿页面：待进一步检查（需要扫描所有页面的 inbound links）
+	- 矛盾检测：未发现明显矛盾
+	- 概念缺口：待检查
 - [2026-05-20] update | 更新本库指南，加入 LLM Wiki 系统说明
-  - 在工具链后新增"LLM Wiki 系统"章节
-  - 描述三层架构（atomic/wiki/archive）
-  - 说明 ingest/query/lint 工作流
-  - 更新 date-modified 至 2026-05-20
-
+	- 在工具链后新增 "LLM Wiki 系统 " 章节
+	- 描述三层架构（atomic/wiki/archive）
+	- 说明 ingest/query/lint 工作流
+	- 更新 date-modified 至 2026-05-20

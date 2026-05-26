@@ -4,7 +4,7 @@ title: llm-wiki-schema
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-05-20
-date-modified: 2026-05-21
+date-modified: 2026-05-26
 status: active
 content-type: [article]
 up: "[[本库指南]]"
@@ -148,6 +148,18 @@ record      → 40-RESOURCES/      事件记录，aliases: R-xxx
 - 用户或 LLM 创建了新笔记
 - 用户或 LLM 修改了现有笔记
 - 用户或 LLM 删除了笔记
+- 手动调用 `/wiki-sync-local` 时，通过 git diff 自动检测所有变更（无需手动告知）
+
+### 状态文件
+
+同步状态记录在 `content/00-META/wiki-sync-state.json`：
+
+```json
+{
+  "lastCommit": "a74391a2",
+  "lastSyncTime": "2026-05-26T11:00:00Z"
+}
+```
 
 ### 同步规则
 
@@ -161,19 +173,28 @@ record      → 40-RESOURCES/      事件记录，aliases: R-xxx
 
 ### 工作流程
 
-#### 1. 检测变更类型
+#### 模式一：手动指定笔记
 
 - **create**：新增笔记，在相关 wiki 页面建立引用
-- **update**：修改笔记，检查是否需要更新 wiki 引用
+- **update**：修改笔记，检查是否是否需要更新 wiki 引用
 - **delete**：删除笔记，从 wiki 中移除引用
 
-#### 2. 确定关联页面
+#### 模式二：自动检测 Git 变更（推荐）
+
+1. 读取 `wiki-sync-state.json` 获取 `lastCommit`
+2. 执行 `git diff <lastCommit>..HEAD --name-status` 获取变更文件
+3. 过滤 `content/` 下 `.md` 文件（排除 `.obsidian/` 和 `wiki-sync-state.json`）
+4. 根据 git status（A/M/D）确定操作类型
+5. 对每个变更文件执行相应同步
+6. 更新 `wiki-sync-state.json` 为当前 HEAD commit
+
+#### 3. 确定关联页面
 
 1. 根据笔记的 content-type 确定目标 wiki 页面类型
 2. 在 wiki-index 中查找相关领域/concept
 3. 读取相关 concept/moc 页面
 
-#### 3. 同步 Wiki 层
+#### 4. 同步 Wiki 层
 
 **create / update 时**：
 - 在相关 concept/moc 中追加或更新引用
@@ -184,14 +205,15 @@ record      → 40-RESOURCES/      事件记录，aliases: R-xxx
 - 从相关 concept/moc 中移除引用
 - 检查是否有孤儿链接
 
-#### 4. 更新索引（如需要）
+#### 5. 更新索引（如需要）
 
 - 新笔记类型未在 wiki-index 中出现 → 添加条目
 - 笔记 content-type 变更 → 更新对应分类
 
-#### 5. 记录日志
+#### 6. 记录日志
 
 追加条目到 `wiki-log.md`：
+
 ```markdown
 - [日期] sync | 操作类型 | 笔记标题
   - 变更内容简述

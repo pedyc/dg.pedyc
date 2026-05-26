@@ -26,6 +26,16 @@ up: ["[[本库指南]]"]
 	- 创建 `content-verifier-local` — 双层验证（atomic + wiki 一致性）
 	- 创建 `obsidian-note-local` — 对接 aliases 前缀规则和 content-type 模板
 	- 原版 skills 保留不动（全局共享）
+- [2026-05-26] update | wiki-sync-local 增加主动 commit 机制
+	- 修改 SKILL.md：sync 完成后主动 commit wiki-sync-state.json 和 wiki-log.md
+	- 修改 llm-wiki-schema.md：明确说明状态更新后会立即 commit
+	- 解决 lastCommit 窗口期不一致问题
+- [2026-05-26] sync | auto | 批量变更检测
+	- 检测到 5 个文件变更（不含 Inbox 和资源文件）
+	- 更新的 wiki 页面：Svelte.md（去除尾随空格，补充参考标记）
+	- 更新的索引：wiki-index.md、llm-wiki-schema.md
+	- 上次同步点：a74391a2
+	- 本次同步点：ba806ff0
 - [2026-05-26] sync | create | Svelte
 	- 新建 concept: [[Svelte]] — 编译时优化框架
 	- 更新 wiki-index — 添加 Svelte 到前端分类和 Comparisons 分类

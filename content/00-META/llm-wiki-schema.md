@@ -161,6 +161,8 @@ record      → 40-RESOURCES/      事件记录，aliases: R-xxx
 }
 ```
 
+**重要**：sync 完成后会主动 commit 状态文件的变更（`git add` + `git commit`），确保 lastCommit 立即更新，不再依赖外部 vault backup。
+
 ### 同步规则
 
 | content-type | 同步到 | 更新内容 |

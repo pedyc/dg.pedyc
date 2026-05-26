@@ -101,6 +101,20 @@ git diff <lastCommit>..HEAD --name-status
 
 将 `wiki-sync-state.json` 的 `lastCommit` 更新为当前 HEAD commit，`lastSyncTime` 更新为当前时间。
 
+### 4.1 提交状态变更
+
+同步完成后，主动 commit wiki-sync-state.json 和 wiki-log.md 的变更：
+
+```bash
+git add content/00-META/wiki-sync-state.json content/00-META/wiki-log.md
+git commit -m "sync: update wiki-sync-state"
+```
+
+注意：
+- 如果 lastCommit 未变（无实际变更），跳过 commit
+- 使用简短的 commit message 格式
+- commit 由 Claude Code 执行，无需用户手动触发
+
 ### 5. 汇总报告
 
 输出本次同步的汇总信息：

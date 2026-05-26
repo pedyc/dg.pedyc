@@ -26,6 +26,10 @@ up: ["[[本库指南]]"]
 	- 创建 `content-verifier-local` — 双层验证（atomic + wiki 一致性）
 	- 创建 `obsidian-note-local` — 对接 aliases 前缀规则和 content-type 模板
 	- 原版 skills 保留不动（全局共享）
+- [2026-05-26] sync | create | Svelte
+	- 新建 concept: [[Svelte]] — 编译时优化框架
+	- 更新 wiki-index — 添加 Svelte 到前端分类和 Comparisons 分类
+	- 关联 [[前端框架]] — 补充 Svelte 到框架对比表
 - [2026-05-20] ingest | 批量导入所有 MOC/Area/SOP/Term/Comparison/Record 到 Wiki
 	- 扫描了所有 content-type 为 moc、area、sop、term、comparison、record 的页面
 	- 统计：

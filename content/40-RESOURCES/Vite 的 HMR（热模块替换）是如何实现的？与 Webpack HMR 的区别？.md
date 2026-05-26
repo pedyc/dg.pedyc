@@ -5,7 +5,7 @@ aliases: ["Q-Vite HMR", "Vite HMR vs Webpack HMR"]
 description: 理解 Vite 热模块替换的实现原理及其与 Webpack HMR 的核心差异
 tags: [前端工程, Vite, Webpack, HMR]
 date-created: 2026-05-21
-date-modified: 2026-05-21
+date-modified: 2026-05-26
 status: cultivating
 content-type: question
 up: "[[MOC-Vite相关问题]]"

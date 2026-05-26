@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/MOC-前端面试真题库.md",
+                "file": "40-RESOURCES/Svelte.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -62,7 +62,21 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "MOC-前端面试真题库"
+              "title": "Svelte"
+            }
+          },
+          {
+            "id": "6ee2dc0e4f40d727",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://svelte.dev/blog/svelte-compile-time",
+                "title": "svelte.dev/blog/svelte-compile-time",
+                "mode": "error"
+              },
+              "icon": "globe-2",
+              "title": "svelte.dev/blog/svelte-compile-time"
             }
           }
         ],
@@ -106,7 +120,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/MOC-前端面试真题库.md",
+                "file": "40-RESOURCES/Svelte.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -134,7 +148,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "MOC-前端面试真题库 的关系图"
+              "title": "Svelte 的关系图"
             }
           },
           {
@@ -327,8 +341,30 @@
   },
   "active": "7be99c54f86de02a",
   "lastOpenFiles": [
-    "40-RESOURCES/Vue 面试题.md",
+    "40-RESOURCES/Svelte.md",
+    "40-RESOURCES/Inbox/新兴前端框架 Svelte 从入门到原理.md",
+    "40-RESOURCES/Vite.md",
+    "_resources/新兴前端框架 Svelte 从入门到原理/e950d3fbafa8b04b98f437056f8e2b81_MD5.webp",
+    "40-RESOURCES/Inbox/_resources",
+    "_resources/新兴前端框架 Svelte 从入门到原理/d305a8e8d89c91e0487f703a2884e71c_MD5.webp",
+    "_resources/新兴前端框架 Svelte 从入门到原理/c530e9684ac01f8d248326455b3b3205_MD5.webp",
+    "_resources/新兴前端框架 Svelte 从入门到原理/c92aa2e8d2e7105f1b859583d190adba_MD5.webp",
+    "_resources/新兴前端框架 Svelte 从入门到原理/cd67926bbe1fe4cb5acb4edb321baa27_MD5.webp",
+    "_resources/新兴前端框架 Svelte 从入门到原理/a0a1dddfd4fa615cb8b439b6f39b5a39_MD5.webp",
+    "_resources/新兴前端框架 Svelte 从入门到原理/c0daa6f2370c875579cf79bea13f2870_MD5.webp",
+    "_resources/新兴前端框架 Svelte 从入门到原理/9dfdaf923e3c2a9ec9b47f5d2209f410_MD5.webp",
+    "_resources/新兴前端框架 Svelte 从入门到原理/36375a085e013b2cb23996cdf46ff259_MD5.webp",
+    "_resources/新兴前端框架 Svelte 从入门到原理/99df7d9c7f523555b01ba92c3278bd4f_MD5.webp",
+    "_resources/新兴前端框架 Svelte 从入门到原理",
+    "00-META/wiki-log.md.tmp.15252.9f2c8f7ae058",
+    "00-META/wiki-index.md.tmp.15252.b4d555dc3c43",
+    "40-RESOURCES/前端框架.md",
+    "30-Zettelkasten/Vite HMR 的本质是基于浏览器原生 ESM 的按需编译机制.md",
+    "40-RESOURCES/MOC-Vite相关问题.md",
+    "40-RESOURCES/Vite 的 HMR（热模块替换）是如何实现的？与 Webpack HMR 的区别？.md",
+    "40-RESOURCES/构建打包相关问题.md",
     "40-RESOURCES/MOC-前端面试真题库.md",
+    "40-RESOURCES/Vue 面试题.md",
     "20-AREAS/A-前端/Vue.md",
     "40-RESOURCES/Q-Vapor Mode是什么.md",
     "40-RESOURCES/网络协议相关问题.md",
@@ -346,36 +382,13 @@
     "40-RESOURCES/Vue vs React.md",
     "40-RESOURCES/Vue vs React.md.tmp.17260.a15e5c566d02",
     "10-PROJECTS/P-求职前端岗位/P-算法提升专项.md",
-    "10-PROJECTS/P-求职前端岗位/P-求职前端岗位.md",
-    "00-META/wiki-index.md",
-    "40-RESOURCES/荣格心理学.md",
-    "40-RESOURCES/存在主义.md",
-    "40-RESOURCES/广义货币供应量.md",
     "00-META/wiki-index.md.tmp.17260.e2cef5ba42b8",
     "00-META/wiki-index.md.tmp.17260.f0e468570a96",
-    "30-Zettelkasten/存在先于本质.md",
     "30-Zettelkasten/存在先于本质.md.tmp.17260.95f330ff3a0e",
     "00-META/wiki-index.md.tmp.17260.8e5039ed31ec",
-    "40-RESOURCES/Vite.md",
-    "40-RESOURCES/荣格心理学.md.tmp.17260.658d8c18b94b",
-    "20-AREAS/A-Linux/A-Linux.md",
-    "20-AREAS/A-常用工具/常用工具.md",
-    "40-RESOURCES/Vite在开发阶段利用ESM实现急速冷启动.md.tmp.17260.707273c15492",
-    "40-RESOURCES/Vite在开发阶段利用ESM实现急速冷启动.md.tmp.17260.f15ef345cac8",
-    "CLAUDE.md.tmp.17260.db7fea1fcb48",
-    "99-ASSETS/Excalidraw/LLM Wiki.excalidraw.svg",
-    "四象限.excalidraw.svg",
-    "banner.svg",
     "未命名.canvas",
-    "40-RESOURCES/_resources/深入了解现代网络浏览器（第 1 部分）    Blog/006c4947f3c40945a491e93b4f71c5d1_MD5.jpg",
-    "60-BLOGS/_resources/阿拉伯世界没落的原因是什么/117f6e750ccda2fd70fcce241328c524_MD5.jpg",
-    "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/c829b955bce686a696951ba18cef5002_MD5.jpg",
-    "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/8131b12ef701bb6d9e2251d0e9eba028_MD5.jpg",
-    "50-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/78812283c2c8dc1138666487cb499402_MD5.jpg",
-    "99-ASSETS/Excalidraw/Storyboard - Compare link-based DNP-based and list based PKM.excalidraw.svg",
     "Untitled.canvas",
     "//Untitled.canvas",
-    "40-RESOURCES/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/600ff6634be835891546f905314fca3d_MD5.jpg",
     "Diary/Untitled.canvas",
     "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas"
   ]

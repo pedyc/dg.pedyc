@@ -26,6 +26,12 @@ up: ["[[本库指南]]"]
 	- 创建 `content-verifier-local` — 双层验证（atomic + wiki 一致性）
 	- 创建 `obsidian-note-local` — 对接 aliases 前缀规则和 content-type 模板
 	- 原版 skills 保留不动（全局共享）
+- [2026-05-26] update | 设置主动健康检查定时任务
+	- Cron: `0 9 * * 1`（每周一 09:00）
+	- 调用 /content-evaluator-local full
+	- 检查结果追加到 wiki-log.md
+	- 预警条件：矛盾>3 或 孤儿>5 或 概念缺口>5
+	- Job ID: 28ed5e3a（7天后自动过期，需续期）
 - [2026-05-26] inbox-review | 移动 4 个文章到 BLOGS
 	- 教你如何构建自己的依赖注入工具.md → 60-BLOGS/
 	- 新兴前端框架 Svelte 从入门到原理.md → 60-BLOGS/

@@ -57,6 +57,53 @@ record      → 40-RESOURCES/      事件记录，aliases: R-xxx
 
 ---
 
+## Inbox Review 工作流
+
+当你要求"审核 Inbox"时，执行以下步骤：
+
+### 步骤 1：列出 Inbox 内容
+
+扫描 `40-RESOURCES/Inbox/` 目录，获取所有待审核文件。
+
+### 步骤 2：逐个判断类型
+
+读取文件 front matter，分析以下特征：
+
+| content-type | 特征 | 目标目录 |
+|--------------|------|----------|
+| article | 有 source、author、published=true | 60-BLOGS/ |
+| concept | 知识整合、核心命题、多概念关联 | 40-RESOURCES/ |
+| atomic | 一句话洞察、陈述句（如"X的本质是Y"） | 30-Zettelkasten/ |
+| term | 术语定义、"什么是X" | 40-RESOURCES/ (aliases: T-xxx) |
+| moc | 索引性质、链接集合 | 40-RESOURCES/ (aliases: MOC-xxx) |
+
+### 步骤 3：移动文件
+
+使用 git mv 保持历史：
+
+```bash
+git mv "40-RESOURCES/Inbox/xxx.md" "目标目录/xxx.md"
+```
+
+### 步骤 4：更新 front matter
+
+根据目标目录补充/修改 front matter：
+- 添加 `aliases` 前缀（如 C-xxx）
+- 确保 `content-type` 正确
+- 移除 `source` 字段（如果是摘录，保留作为 reference）
+
+### 步骤 5：记录日志
+
+追加到 `wiki-log.md`：
+
+```markdown
+- [日期] inbox-review | 文件名
+  - 原类型：xxx → 新类型：xxx
+  - 移动：Inbox → 目标目录
+```
+
+---
+
 ## Ingest 工作流
 
 当你添加新笔记时，执行以下步骤：

@@ -26,6 +26,16 @@ up: ["[[本库指南]]"]
 	- 创建 `content-verifier-local` — 双层验证（atomic + wiki 一致性）
 	- 创建 `obsidian-note-local` — 对接 aliases 前缀规则和 content-type 模板
 	- 原版 skills 保留不动（全局共享）
+- [2026-05-26] inbox-review | 移动 4 个文章到 BLOGS
+	- 教你如何构建自己的依赖注入工具.md → 60-BLOGS/
+	- 新兴前端框架 Svelte 从入门到原理.md → 60-BLOGS/
+	- 聊聊前端模块化.md → 60-BLOGS/
+	- 聊聊网页断点调试及其扩展.md → 60-BLOGS/
+	- 类型判断：均为 article（有 source、author、published）
+- [2026-05-26] inbox-review | 添加 Inbox Review 工作流
+	- llm-wiki-local SKILL.md 新增 review 路由
+	- llm-wiki-schema.md 新增 Inbox Review 章节
+	- 定义 content-type 判断规则和目标目录映射
 - [2026-05-26] update | 明确 ingest/sync 职责边界
 	- sync：只负责系统文件维护（状态/索引/日志），不处理 content 变更
 	- ingest：负责 content 整合到 wiki 层

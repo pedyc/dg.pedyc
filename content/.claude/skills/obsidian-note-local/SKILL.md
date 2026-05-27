@@ -26,4 +26,8 @@ allowed-tools:
 - diary → `90-DIARY/`
 - record → `40-RESOURCES/`
 
-**创建/修改笔记后，自动触发 `wiki-sync-local` 同步到 Wiki 层（更新 wiki-index、wiki-log）。**
+**注意**：
+- 创建笔记后，触发 `wiki-sync-local` 更新 wiki-sync-state.json（系统状态）
+- 笔记内容整合到 Wiki 层由 ingest 工作流负责
+- wiki-log 的更新由 ingest 工作流完成（在 digest 时记录）
+- 如需立即记录到 wiki-log，应主动调用 `/llm-wiki ingest` 或在创建笔记时说明

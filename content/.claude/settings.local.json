@@ -8,7 +8,8 @@
       "Bash(ls:*)",
       "Skill(content-verifier)",
       "mcp__MiniMax__web_search",
-      "Bash(git *)"
+      "Bash(git *)",
+      "Skill(content-evaluator-local)"
     ]
   }
 }

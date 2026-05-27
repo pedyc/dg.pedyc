@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50-ARCHIVE/00 Inbox规则.md",
+                "file": "40-RESOURCES/SOP-Babel使用指南.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00 Inbox规则"
+              "title": "SOP-Babel使用指南"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "50-ARCHIVE/00 Inbox规则.md",
+                "file": "40-RESOURCES/SOP-Babel使用指南.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "00 Inbox规则 的关系图"
+              "title": "SOP-Babel使用指南 的关系图"
             }
           },
           {
@@ -211,7 +211,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "50-ARCHIVE/00 Inbox规则.md",
+                "file": "40-RESOURCES/SOP-Babel使用指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -221,7 +221,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "00 Inbox规则 的反向链接列表"
+              "title": "SOP-Babel使用指南 的反向链接列表"
             }
           },
           {
@@ -230,12 +230,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "50-ARCHIVE/00 Inbox规则.md",
+                "file": "40-RESOURCES/SOP-Babel使用指南.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "00 Inbox规则 的出链列表"
+              "title": "SOP-Babel使用指南 的出链列表"
             }
           },
           {
@@ -292,24 +292,28 @@
   },
   "active": "9e96722bd72cbcde",
   "lastOpenFiles": [
+    "00-META/wiki-sync-state.json.tmp.30648.209ddbec8ab1",
+    "00-META/wiki-sync-state.json.tmp.30648.a1a5e73fbeee",
+    "00-META/wiki-index.md.tmp.30648.ec9915dcbd2f",
+    "40-RESOURCES/ESLint.md",
+    "40-RESOURCES/ESLint.md.tmp.30648.b86eca8025fd",
+    "40-RESOURCES/Babel.md",
+    "40-RESOURCES/SOP-Babel使用指南.md",
+    "00-META/wiki-sync-state.json.tmp.30648.cf1eaaded3aa",
+    "00-META/wiki-sync-state.json.tmp.30648.e94e3678828b",
+    "00-META/wiki-index.md.tmp.30648.bd06592116c9",
+    "40-RESOURCES/SOP-Babel使用指南.md.tmp.30648.8352016e4d1e",
+    "50-ARCHIVE/00 Inbox规则.md",
     "00-META/wiki-sync-state.json.tmp.30648.5a11348f6d67",
     "00-META/wiki-sync-state.json.tmp.30648.31f13e607fd4",
     "00-META/llm-wiki-schema.md.tmp.30648.79f7cab37999",
-    "00-META/wiki-sync-state.json.tmp.30648.21c58bfb3857",
-    "00-META/wiki-sync-state.json.tmp.30648.59c7e083e774",
-    "00-META/wiki-sync-state.json.tmp.30648.b692283d6d9a",
     "00-META/wiki-log.md",
     "60-BLOGS/聊聊网页断点调试及其扩展.md",
     "60-BLOGS/聊聊前端模块化.md",
     "60-BLOGS/新兴前端框架 Svelte 从入门到原理.md",
     "60-BLOGS/教你如何构建自己的依赖注入工具.md",
-    "00-META/wiki-sync-state.json.tmp.30648.9e264090579f",
-    "00-META/wiki-sync-state.json.tmp.30648.bd403f6e41db",
     "00-META/wiki-index.md",
     "00-META/llm-wiki-schema.md",
-    "00-META/wiki-sync-state.json.tmp.30648.59e0c4b7c404",
-    "00-META/wiki-sync-state.json.tmp.30648.bd55c5466d50",
-    "00-META/wiki-log.md.tmp.30648.7054a8686139",
     "00-META/本库指南.md",
     "40-RESOURCES/Inbox/教你如何构建自己的依赖注入工具.md",
     "_resources/教你如何构建自己的依赖注入工具/5029778012ad150ba0478e34372f09bf_MD5.webp",
@@ -334,10 +338,6 @@
     "40-RESOURCES/Vite.md",
     "40-RESOURCES/前端框架.md",
     "30-Zettelkasten/Vite HMR 的本质是基于浏览器原生 ESM 的按需编译机制.md",
-    "40-RESOURCES/MOC-Vite相关问题.md",
-    "40-RESOURCES/Vite 的 HMR（热模块替换）是如何实现的？与 Webpack HMR 的区别？.md",
-    "40-RESOURCES/构建打包相关问题.md",
-    "40-RESOURCES/MOC-前端面试真题库.md",
     "未命名.canvas",
     "Untitled.canvas",
     "//Untitled.canvas",

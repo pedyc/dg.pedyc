@@ -5,7 +5,7 @@ aliases: [Babel, T-Babel]
 description: JavaScript 编译器，用于将新版本语法转换为旧版本语法
 tags: [前端开发/工程化]
 date-created: 2026-03-16
-date-modified: 2026-05-15
+date-modified: 2026-05-27
 status: active
 content-type: term
 up: "[[前端工程]]"
@@ -37,6 +37,8 @@ flowchart LR
 | `presets` | 预设集合，如 `@babel/preset-env`、`@babel/preset-react` |
 | `plugins` | 语法转换插件                                           |
 | `targets` | 目标浏览器版本                                          |
+
+- [[SOP-Babel使用指南]]
 
 ### 锚点连接
 

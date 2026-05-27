@@ -9,7 +9,8 @@
       "Skill(content-verifier)",
       "mcp__MiniMax__web_search",
       "Bash(git *)",
-      "Skill(content-evaluator-local)"
+      "Skill(content-evaluator-local)",
+      "Skill(obsidian-note-local)"
     ]
   }
 }

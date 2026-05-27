@@ -4,7 +4,7 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-05-26
+date-modified: 2026-05-27
 status: active
 content-type: [article]
 up: ["[[本库指南]]"]
@@ -31,7 +31,7 @@ up: ["[[本库指南]]"]
 	- 调用 /content-evaluator-local full
 	- 检查结果追加到 wiki-log.md
 	- 预警条件：矛盾>3 或 孤儿>5 或 概念缺口>5
-	- Job ID: 28ed5e3a（7天后自动过期，需续期）
+	- Job ID: 28ed5e3a（7 天后自动过期，需续期）
 - [2026-05-26] lint | full 健康检查
 	- 检查范围：30-Zettelkasten、40-RESOURCES、20-AREAS
 	- **矛盾**：0 个
@@ -39,6 +39,14 @@ up: ["[[本库指南]]"]
 	- **概念缺口**：0 个（知识网络完整）
 	- **过时断言**：0 个
 	- **索引一致性**：通过
+- [2026-05-27] create | 新增 SOP-Babel使用指南
+	- 位置：`40-RESOURCES/SOP-Babel使用指南.md`
+	- 内容：Babel 配置与使用流程、preset/plugin 配置、常见问题排查
+	- 更新 wiki-index 添加 SOP 分类条目
+- [2026-05-27] create | 新增 ESLint 术语笔记
+	- 位置：`40-RESOURCES/ESLint.md`
+	- content-type：term，aliases：T-ESLint
+	- 更新 wiki-index 添加 Terms 分类条目
 - [2026-05-26] inbox-review | 移动 4 个文章到 BLOGS
 	- 教你如何构建自己的依赖注入工具.md → 60-BLOGS/
 	- 新兴前端框架 Svelte 从入门到原理.md → 60-BLOGS/

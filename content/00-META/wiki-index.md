@@ -184,6 +184,7 @@ up: "[[本库指南]]"
 - [[Monorepo]] — 单仓库管理、多包管理
 - [[依赖注入]] — 控制反转、依赖管理
 - [[Babel]] — JavaScript 编译器、转译工具
+- [[ESLint]] — JavaScript 静态代码分析、代码风格检查
 - [[PWA]] — Progressive Web App、离线能力、推送通知
 
 ### 浏览器与 Web

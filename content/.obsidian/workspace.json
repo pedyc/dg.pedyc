@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-META/wiki-index.md",
+                "file": "20-AREAS/A-知识管理/A-知识管理.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "wiki-index"
+              "title": "A-知识管理"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "00-META/wiki-index.md",
+                "file": "20-AREAS/A-知识管理/A-知识管理.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -94,12 +94,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.2726859917360067,
+                  "scale": 0.1387322393266609,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "wiki-index 的关系图"
+              "title": "A-知识管理 的关系图"
             }
           },
           {
@@ -211,7 +211,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00-META/wiki-index.md",
+                "file": "20-AREAS/A-知识管理/A-知识管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -221,7 +221,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "wiki-index 的反向链接列表"
+              "title": "A-知识管理 的反向链接列表"
             }
           },
           {
@@ -230,12 +230,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00-META/wiki-index.md",
+                "file": "20-AREAS/A-知识管理/A-知识管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "wiki-index 的出链列表"
+              "title": "A-知识管理 的出链列表"
             }
           },
           {
@@ -292,30 +292,42 @@
   },
   "active": "9e96722bd72cbcde",
   "lastOpenFiles": [
-    "00-META/llm-wiki-schema.md.tmp.30648.2cc69358b3c5",
-    "00-META/llm-wiki-schema.md.tmp.30648.109d3e49af23",
-    "00-META/llm-wiki-schema.md.tmp.30648.eff950e4ef01",
-    "00-META/llm-wiki-schema.md",
-    "00-META/wiki-index.md",
+    "00-META/本库子系统概述.md",
     "00-META/wiki-log.md",
-    "40-RESOURCES/ESLint.md",
-    "40-RESOURCES/SOP-Babel使用指南.md",
-    "00-META/wiki-sync-state.json.tmp.30648.5841d5f60512",
-    "00-META/wiki-sync-state.json.tmp.30648.209ddbec8ab1",
-    "00-META/wiki-sync-state.json.tmp.30648.a1a5e73fbeee",
-    "00-META/wiki-index.md.tmp.30648.ec9915dcbd2f",
-    "40-RESOURCES/ESLint.md.tmp.30648.b86eca8025fd",
-    "40-RESOURCES/Babel.md",
-    "00-META/wiki-sync-state.json.tmp.30648.cf1eaaded3aa",
-    "00-META/wiki-sync-state.json.tmp.30648.e94e3678828b",
-    "00-META/wiki-index.md.tmp.30648.bd06592116c9",
-    "50-ARCHIVE/00 Inbox规则.md",
-    "60-BLOGS/聊聊网页断点调试及其扩展.md",
-    "60-BLOGS/聊聊前端模块化.md",
-    "60-BLOGS/新兴前端框架 Svelte 从入门到原理.md",
-    "60-BLOGS/教你如何构建自己的依赖注入工具.md",
+    "00-META/wiki-index.md",
     "00-META/本库指南.md",
-    "40-RESOURCES/Inbox/教你如何构建自己的依赖注入工具.md",
+    "00-META/_sync-rules.md",
+    "00-META/_lint-rules.md",
+    "00-META/_ingest-rules.md",
+    "00-META/_content-type-rules.md",
+    "50-ARCHIVE/LLM Wiki.md",
+    "00-META/wiki-log.md.tmp.30648.0ff41929539a",
+    "00-META/_resources/本库架构指南.excalidraw.md",
+    "40-RESOURCES/META-模板系统.md",
+    "50-ARCHIVE/MOC-设计中碰到的问题.md",
+    "50-ARCHIVE/自动化方案.md",
+    "00-META/02 附录/怎样规划信息单元？.md",
+    "40-RESOURCES/怎样规划信息单元？.md",
+    "40-RESOURCES/Q-怎样控制信息冗余？.md",
+    "00-META/wiki-log.md.tmp.30648.230a0a49eec0",
+    "00-META/wiki-index.md.tmp.30648.36cbdea5b564",
+    "00-META/wiki-index.md.tmp.30648.c43ad116ce58",
+    "40-RESOURCES/本库子系统概述.md",
+    "00-META/wiki-log.md.tmp.30648.e875af166ffc",
+    "00-META/wiki-log.md.tmp.30648.3635a48fff3e",
+    "00-META/wiki-index.md.tmp.30648.5a87f178a517",
+    "00-META/wiki-index.md.tmp.30648.690f85364499",
+    "00-META/llm-wiki-schema.md",
+    "00-META/llm-wiki-schema.md.tmp.30648.57ffbc3ff566",
+    "00-META/_query-rules.md",
+    "00-META/_query-rules.md.tmp.30648.9bde7fc28158",
+    "_templates/template_comp.md",
+    "60-BLOGS/黑神话悟空歌词赏析：未竟.md",
+    "60-BLOGS/反者道之动.md",
+    "60-BLOGS/教你如何构建自己的依赖注入工具.md",
+    "40-RESOURCES/作用域链.md",
+    "index.md",
+    "CLAUDE.md",
     "_resources/教你如何构建自己的依赖注入工具/5029778012ad150ba0478e34372f09bf_MD5.webp",
     "_resources/教你如何构建自己的依赖注入工具/f4119ac9a2036c8f1466f2839b2f10d0_MD5.webp",
     "_resources/教你如何构建自己的依赖注入工具/912ceb3ef77fd67243e49eba8e36192d_MD5.webp",
@@ -326,18 +338,6 @@
     "_resources/教你如何构建自己的依赖注入工具/f0f01894cf611edbad54f4ee021e46ce_MD5.webp",
     "_resources/教你如何构建自己的依赖注入工具/9aaba3c758790827134c16e2b9f31509_MD5.webp",
     "_resources/教你如何构建自己的依赖注入工具/15181b877607d4c3d0b7583e4825f627_MD5.webp",
-    "40-RESOURCES/Inbox/聊聊网页断点调试及其扩展.md",
-    "40-RESOURCES/模块化与组件化开发.md",
-    "60-BLOGS/JavaScript模块化系统解析.md",
-    "40-RESOURCES/Inbox/聊聊前端模块化.md",
-    "40-RESOURCES/荣格心理学.md",
-    "50-ARCHIVE/深入了解现代网络浏览器(4) 合成层.md",
-    "40-RESOURCES/Inbox/新兴前端框架 Svelte 从入门到原理.md",
-    "40-RESOURCES/Svelte.md",
-    "30-Zettelkasten/Svelte 无需虚拟 DOM，编译时直接生成 DOM 操作代码.md",
-    "40-RESOURCES/Vite.md",
-    "40-RESOURCES/前端框架.md",
-    "30-Zettelkasten/Vite HMR 的本质是基于浏览器原生 ESM 的按需编译机制.md",
     "未命名.canvas",
     "Untitled.canvas",
     "//Untitled.canvas",

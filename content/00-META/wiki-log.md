@@ -34,6 +34,14 @@ up: ["[[本库指南]]"]
 	- 补全 SOP/term/comparison/record/question/moc/diary 的定位和内联规则
 	- 新增 content-type 定位速查表
 	- 定义各类型在 wiki-index 的位置和引用来源
+- [2026-05-28] refactor | 解耦 llm-wiki-schema 为主索引 + 5 个子文档
+	- llm-wiki-schema.md 降级为索引文件（~50 行）
+	- 新增 _content-type-rules.md（~150 行）
+	- 新增 _ingest-rules.md（~100 行）
+	- 新增 _query-rules.md（~50 行）
+	- 新增 _lint-rules.md（~100 行）
+	- 新增 _sync-rules.md（~80 行）
+	- LLM 可按需读取子文档，而非全量 400 行
 	- 补充到对应 concept：作用域链、浏览器核心架构、事件循环、NextJS
 	- 新增 atomic 引用：变量提升、浏览器渲染引擎与 JS 引擎分工、同步异步任务协调
 	- 检查了全部 56 个 atomic，确认 wiki 层引用完整

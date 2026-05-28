@@ -35,10 +35,11 @@ up: ["[[本库指南]]"]
 	- 新增 content-type 定位速查表
 	- 定义各类型在 wiki-index 的位置和引用来源
 - [2026-05-28] ingest | 创建概念「本库子系统概述」
-	- 位置：40-RESOURCES/本库子系统概述.md
+	- 位置：00-META/本库子系统概述.md
 	- content-type：concept，aliases：C-本库子系统概述
 	- 内容：记录 9 个子系统及其关联关系
-	- 更新 wiki-index 添加条目
+	- 更新 wiki-index 添加「本库指南」分类
+	- 移动到 00-META/ 方便检索
 - [2026-05-28] refactor | 解耦 llm-wiki-schema 为主索引 + 5 个子文档
 	- llm-wiki-schema.md 降级为索引文件（~50 行）
 	- 新增 _content-type-rules.md（~150 行）

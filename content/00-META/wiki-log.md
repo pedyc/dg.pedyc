@@ -4,7 +4,7 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-05-27
+date-modified: 2026-05-28
 status: active
 content-type: [article]
 up: ["[[本库指南]]"]
@@ -25,7 +25,7 @@ up: ["[[本库指南]]"]
 
 #### 2026-05-27
 
-- [2026-05-27] ingest | 创建了 SOP-Babel使用指南
+- [2026-05-27] ingest | 创建了 SOP-Babel 使用指南
 	- 位置：`40-RESOURCES/SOP-Babel使用指南.md`
 	- content-type：sop
 	- 内容：Babel 配置与使用流程、preset/plugin 配置、常见问题排查

@@ -24,7 +24,10 @@ content-type: concept
 
 - [[NextJS 的本质是 React 框架与服务端能力的深度融合]]
 	- **原理**：通过 React 组件服务端执行、直接查询数据库、API Routes 等机制实现前后端能力统一
-- （待补充更多 atomic 洞见）
+- [[NextJS 首屏渲染不需要 JS 引擎参与但 hydration 仍然需要]]
+	- **原理**：首屏 HTML 由服务端生成，浏览器直接显示内容无需等待 JS 执行，但后续交互（事件绑定、状态更新）仍需要 JS 引擎执行 Hydration
+- [[React RSC 是发动机技术而非完整汽车框架]]
+	- **原理**：RSC（React Server Components）只在服务端执行逻辑、返回序列化数据，本身不处理路由/状态/样式，需要 NextJS 等框架整合才能成为完整应用
 
 ---
 

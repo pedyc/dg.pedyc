@@ -4,7 +4,7 @@ title: llm-wiki-schema
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-05-20
-date-modified: 2026-05-26
+date-modified: 2026-05-27
 status: active
 content-type: [article]
 up: "[[本库指南]]"
@@ -23,6 +23,24 @@ up: "[[本库指南]]"
 | Archive     | `50-ARCHIVE/`      | 你 + LLM | 过时知识、已完成项目                                         |
 
 > **关键原则**：atomic 是 source of truth，永不修改。Wiki 层是 LLM 的作品，LLM 负责维护其一致性和完整性。
+
+### wiki-log 记录规范
+
+**目的**：wiki-log 是 append-only 时间线，记录**知识加工事件**，不是系统操作日志。
+
+**应记录的操作类型**：
+
+| 操作 | 说明 | 示例 |
+|------|------|------|
+| `ingest` | 新笔记整合到 wiki 层 | `ingest | 新增 concept「闭包」` |
+| `inbox-review` | Inbox 审核结果 | `inbox-review | 移动 4 个文章到 BLOGS` |
+| `lint` | 健康检查结果 | `lint | full 健康检查，矛盾 0 个` |
+| `query` | 有价值的查询结果 | `query | 关于闭包的回答，产生新洞见` |
+
+**不应记录的操作**：
+- `sync` — 系统状态同步（系统维护）
+- `update` — 常规文件编辑（系统维护）
+- `create` — 笔记创建（应归入 ingest）
 
 ### content-type 约定
 
@@ -59,7 +77,7 @@ record      → 40-RESOURCES/      事件记录，aliases: R-xxx
 
 ## Inbox Review 工作流
 
-当你要求"审核 Inbox"时，执行以下步骤：
+当你要求 " 审核 Inbox" 时，执行以下步骤：
 
 ### 步骤 1：列出 Inbox 内容
 
@@ -73,8 +91,8 @@ record      → 40-RESOURCES/      事件记录，aliases: R-xxx
 |--------------|------|----------|
 | article | 有 source、author、published=true | 60-BLOGS/ |
 | concept | 知识整合、核心命题、多概念关联 | 40-RESOURCES/ |
-| atomic | 一句话洞察、陈述句（如"X的本质是Y"） | 30-Zettelkasten/ |
-| term | 术语定义、"什么是X" | 40-RESOURCES/ (aliases: T-xxx) |
+| atomic | 一句话洞察、陈述句（如 "X 的本质是 Y"） | 30-Zettelkasten/ |
+| term | 术语定义、" 什么是 X" | 40-RESOURCES/ (aliases: T-xxx) |
 | moc | 索引性质、链接集合 | 40-RESOURCES/ (aliases: MOC-xxx) |
 
 ### 步骤 3：移动文件
@@ -194,10 +212,10 @@ git mv "40-RESOURCES/Inbox/xxx.md" "目标目录/xxx.md"
 
 **Sync 只负责系统文件维护**，不处理 content 变更：
 - 更新 `wiki-sync-state.json`
-- 追加到 `wiki-log.md`
+- **不记录 wiki-log**（这是系统维护，不是知识加工）
 - 维护 `wiki-index.md`（仅系统条目）
 
-**Content 变更由 ingest 工作流处理**：sync 检测到变更后，标记到日志，由 ingest 决定如何整合到 wiki 层。
+**Content 变更由 ingest 工作流处理**：sync 检测到变更后，由 ingest 工作流决定如何整合并记录到 wiki-log。
 
 ### 触发条件
 
@@ -237,7 +255,7 @@ git mv "40-RESOURCES/Inbox/xxx.md" "目标目录/xxx.md"
 2. 执行 `git diff <lastCommit>..HEAD --name-status` 获取变更文件
 3. 过滤 `content/` 下 `.md` 文件（排除系统文件和 Inbox）
 4. 根据 git status（A/M/D）确定操作类型
-5. 记录变更到 `wiki-log.md`（标记为待 ingest）
+5. **不记录 wiki-log**（变更检测是系统维护，不属于知识加工事件）
 6. 更新 `wiki-sync-state.json` 为当前 HEAD commit
 7. 主动 commit 状态变更
 
@@ -314,6 +332,7 @@ git mv "40-RESOURCES/Inbox/xxx.md" "目标目录/xxx.md"
 - 概念缺口 > 5 个
 
 **日志格式**：
+
 ```markdown
 ## Lint Report - [日期]
 

@@ -25,7 +25,7 @@ ESLint 是一种可配置的 JavaScript 静态代码分析工具，通过规则�
 | 概念 | 说明 |
 |------|------|
 | **规则 (Rules)** | ESLint 检查代码的核心，每个规则检测特定问题 |
-| **配置 (Config)** | .eslintrc 或 eslint.config.js，定义启用的规则 |
+| **配置 (Config)** |.eslintrc 或 eslint.config.js，定义启用的规则 |
 | **插件 (Plugins)** | 扩展 ESLint 功能的规则集合 |
 | **预设 (Extends)** | 预定义配置集合，如 eslint:recommended |
 

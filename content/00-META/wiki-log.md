@@ -29,6 +29,14 @@ up: ["[[本库指南]]"]
 	- 补充到对应 concept：作用域链、浏览器核心架构、事件循环、NextJS
 	- 新增 atomic 引用：变量提升、浏览器渲染引擎与 JS 引擎分工、同步异步任务协调
 	- 检查了全部 56 个 atomic，确认 wiki 层引用完整
+- [2026-05-28] ingest | 补充 Wiki 层内联规则
+	- 新增「Wiki 层内联规则」章节到 llm-wiki-schema.md
+	- 补全 SOP/term/comparison/record/question/moc/diary 的定位和内联规则
+	- 新增 content-type 定位速查表
+	- 定义各类型在 wiki-index 的位置和引用来源
+	- 补充到对应 concept：作用域链、浏览器核心架构、事件循环、NextJS
+	- 新增 atomic 引用：变量提升、浏览器渲染引擎与 JS 引擎分工、同步异步任务协调
+	- 检查了全部 56 个 atomic，确认 wiki 层引用完整
 
 #### 2026-05-27
 

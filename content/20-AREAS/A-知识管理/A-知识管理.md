@@ -5,12 +5,12 @@ aliases: [A-知识管理, 知识管理]
 description: 捕捉、组织、提炼和应用知识，构建第二大脑
 tags: [area]
 date-created: 2025-04-30
-date-modified: 2026-05-20
+date-modified: 2026-05-28
 status: cultivating
 content-type: area
 up:
 ---
-
+  
 ## Area: 知识管理
 
 > 对个人知识进行捕捉、组织、提炼和应用的持续责任，构建第二大脑服务于个人成长。

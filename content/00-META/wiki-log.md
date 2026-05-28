@@ -40,6 +40,12 @@ up: ["[[本库指南]]"]
 	- 内容：记录 9 个子系统及其关联关系
 	- 更新 wiki-index 添加「本库指南」分类
 	- 移动到 00-META/ 方便检索
+- [2026-05-28] refactor | 整理 00-META 目录结构
+	- 删除 01 索引/（5 个文件，与 wiki-index 重复）
+	- 删除 02 附录/（内容已分流到 40-RESOURCES/50-ARCHIVE/）
+	- 删除所有 .tmp.* 临时文件（22 个）
+	- 移动 Q- 问题笔记到 40-RESOURCES/
+	- 移动过时文档到 50-ARCHIVE/
 - [2026-05-28] refactor | 解耦 llm-wiki-schema 为主索引 + 5 个子文档
 	- llm-wiki-schema.md 降级为索引文件（~50 行）
 	- 新增 _content-type-rules.md（~150 行）

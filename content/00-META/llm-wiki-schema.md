@@ -198,6 +198,173 @@ git mv "40-RESOURCES/Inbox/xxx.md" "目标目录/xxx.md"
 
 ---
 
+## Wiki 层内联规则
+
+Wiki 层（`40-RESOURCES/`）包含多种 content-type，除 atomic 外的其他类型也需要遵循特定的引用和整合规则。
+
+### content-type 定位速查
+
+| content-type | 目录 | 父级引用 | wiki-index 位置 | 是否需要 ingest |
+|-------------|------|---------|----------------|----------------|
+| atomic | 30-ZETTELKASTEN/ | concept | — | ✅ atomic → concept |
+| concept | 40-RESOURCES/ | area | Concepts 章节 | ❌ wiki 内部类型 |
+| sop | 40-RESOURCES/ | area/concept | SOPs 章节 | ❌ wiki 内部类型 |
+| term | 40-RESOURCES/ | concept | Terms 章节 | ❌ wiki 内部类型 |
+| comparison | 40-RESOURCES/ | 相关 concept | Comparisons 章节 | ❌ wiki 内部类型 |
+| record | 40-RESOURCES/ | 时政/政治经济 area | Records 章节 | ❌ wiki 内部类型 |
+| moc | 40-RESOURCES/ | area | MOCs 章节 | ❌ wiki 内部类型 |
+| question | 混合 | area/moc | 关联 area 的 FAQ | ❌ wiki 内部类型 |
+| diary | 90-DIARY/ | — | — | ❌ 不需要 ingest |
+
+> **说明**：以上类型除 atomic 外都是 wiki 内部类型，它们的「ingest」是指被正确引用到 wiki-index 和相关 area/concept，而不是像 atomic 一样需要从外部消化。
+
+---
+
+### SOP（标准流程）
+
+**定位**：被 area/concept 引用，不独立存在
+
+**特征**：aliases 前缀 `SOP-`，目录 `40-RESOURCES/`
+
+**内联规则**：
+- SOP 创建后，在 `wiki-index.md` 的 SOPs 章节添加条目
+- 如 SOP 属于某 area，在该 area 页面的 SOPs 小节添加链接
+- 如 SOP 与某 concept 相关，在该 concept 的知识图谱中添加引用
+
+**典型结构**：
+
+```markdown
+## 知识图谱
+
+- **相关 SOP**：
+  - [[SOP-XXX使用流程]]
+```
+
+---
+
+### Term（术语）
+
+**定位**：被 concept 引用，是概念的组成部分
+
+**特征**：aliases 前缀 `T-`，目录 `40-RESOURCES/`
+
+**内联规则**：
+- Term 创建后，在 `wiki-index.md` 的 Terms 章节添加条目
+- Term 被某 concept 引用时，在该 concept 的知识图谱中添加「相关术语」条目
+- Term 不需要独立维护，随所属 concept 一起更新
+
+**典型结构**：
+
+```markdown
+## 知识图谱
+
+- **相关术语**：
+  - [[T-XXX]] — 术语说明
+```
+
+---
+
+### Comparison（比较分析）
+
+**定位**：被相关概念引用，出现在 wiki-index Comparisons 章节
+
+**特征**：aliases 前缀 `VS-xxx`，目录 `40-RESOURCES/`
+
+**内联规则**：
+- Comparison 创建后，在 `wiki-index.md` 的 Comparisons 章节添加条目
+- 如比较 "A vs B"，在 A 和 B 的 concept 页面的「并列概念」或「关键区别」中添加引用
+- 在 wiki-index 相关分类下添加条目（如框架对比出现在「框架对比」小节）
+
+**典型结构**：
+
+```markdown
+## 关键区别
+
+| 维度 | [[A]] | [[B]] |
+|:--- |:--- |:--- |
+| ... | ... | ... |
+```
+
+---
+
+### Record（事件记录）
+
+**定位**：被时政/政治经济领域引用
+
+**特征**：aliases 前缀 `R-xxx`，目录 `40-RESOURCES/`
+
+**内联规则**：
+- Record 创建后，在 `wiki-index.md` 的 Records 章节添加条目
+- 在时政/政治经济 area 页面添加引用
+- Record 保持时间线结构，作为事件溯源
+
+**典型结构**：
+
+```markdown
+## 事件时间线
+
+- [日期] 事件描述
+```
+
+---
+
+### Question（开放性问题）
+
+**定位**：被 area/moc 引用，与 SOP 互补
+
+**特征**：aliases 前缀 `Q-xxx`，目录混合（30/40）
+
+**内联规则**：
+- Question 创建后，在相关 area 或 moc 页面的 FAQ 小节添加条目
+- Question 与 SOP 的区别：SOP 是标准流程（已验证），Q 是开放性问题（待探索）
+- Q 不需要有最终答案，保持「待探索」状态
+
+**典型结构**：
+
+```markdown
+## FAQ
+
+> **待探索**：[[Q-XXX]] — 问题描述
+```
+
+---
+
+### MOC（领域入口）
+
+**定位**：area 的子级索引，串联同领域多个 concept/sop
+
+**特征**：aliases 前缀 `MOC-xxx`，目录 `40-RESOURCES/` 或 `20-AREAS/`
+
+**内联规则**：
+- MOC 作为 area 的入口，在 area 页面添加引用
+- MOC 内部链接到同领域 concept/sop/term
+- MOC 本身不消化 atomic，只做索引
+
+**典型结构**：
+
+```markdown
+## 核心原则
+
+- [[C-XXX]] — 概念说明
+
+## 链接集合
+
+- [[SOP-XXX]]
+- [[T-XXX]]
+```
+
+---
+
+### Diay（日记）
+
+**定位**：source of truth，不需要 ingest 到 wiki 层
+
+**特征**：目录 `90-DIARY/`
+
+**说明**：diary 是时间序列记录，wiki-index 不收录，由用户自行查阅。
+
+---
+
 ## Lint 工作流
 
 定期检查知识库健康度。执行频率：每周一次或每新增 10+ 篇笔记后。

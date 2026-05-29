@@ -15,8 +15,8 @@
   "templater-obsidian",
   "pdf-plus",
   "mermaid-tools",
-  "omnisearch",
   "obsidian-emoji-toolbar",
   "obsidian-git",
-  "virtual-linker"
+  "virtual-linker",
+  "omnisearch"
 ]

@@ -1,17 +1,12 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: template_comp
-aliases:
-  - "[VS-{{标题}}]"
-description: "{{一句话概括核心区别}}"
+title: "{{标题}}"
+aliases: ["MOC-{{标题名称}}"]
+description: "{ 一句话描述这个 MOC 的主题 }"
 tags: []
-status: cultivating
-comparison:
-  - "{{概念A}}"
-  - "{{概念B}}"
 content-type: comparison
-related:
-  - "[[父级话题]]"
+status: cultivating
+up: [["{{父级话题}}"]
 ---
 
 <!--
@@ -83,6 +78,7 @@ graph TD
 {{示例代码或者逻辑}}
 
 ---
+
 ### 知识图谱
 
 - **父级概念**：[[{{父级}}]]

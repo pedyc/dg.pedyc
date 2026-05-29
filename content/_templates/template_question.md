@@ -1,11 +1,12 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
-title: template_question
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+title: "{{问题名称}}"
 aliases: ["Q-{{问题名称}}"]
 description: "{ 一句话描述这个问题 }"
 tags: []
-status: fleeting
 content-type: question
+status: fleeting
+up: [["{{父级领域}}"]
 ---
 
 <!--

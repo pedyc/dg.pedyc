@@ -1,14 +1,13 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
-title: template_article
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+title: "{{文章标题}}"
 aliases: ["{{文章别名}}"]
 description: "{{一句话描述文章核心内容}}"
 tags: []
-date-created: Invalid date
-date-modified: 2026-03-16
-status: fleeting | cultivating | active | completed
-category: blog
 content-type: article
+status: fleeting
+up: [["{{父级主题}}"]
+category: blog
 published: false
 ---
 

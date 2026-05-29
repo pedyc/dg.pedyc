@@ -8,7 +8,7 @@ date-created: 2026-03-26
 date-modified: 2026-03-26
 status: cultivating
 content-type: moc
-up: "[[Claude Code|A-Claude Code]]"
+up: [["A-Claude Code"]]
 ---
 
 ## MOC：Claude 核心概念

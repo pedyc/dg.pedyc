@@ -1,14 +1,12 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
-title: template_area
-aliases: ["A-{{领域名称}}"]
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+title: "{{标题}}"
+aliases: [A-{{标题}}]
 description: "{ 一句话定义这个领域的核心范畴 }"
-tags: [area]
-date-created: Invalid date
-date-modified: 2026-04-14
-status: cultivating
+tags: []
 content-type: area
-up: ["[[{父级笔记}]]"]
+status: cultivating
+up: [["{{父级领域}}"]
 ---
 
 <!--
@@ -36,8 +34,6 @@ up: ["[[{父级笔记}]]"]
 ---
 
 ### 领域知识图谱
-
-> 该领域在知识网络中的定位。AI 生成时自动填充已存在的链接笔记。
 
 ```mermaid
 mindmap

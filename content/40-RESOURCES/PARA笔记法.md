@@ -1,9 +1,9 @@
 ---
 title: PARA笔记法
-aliases: [PARA Method, PARA System, C-PARA笔记法]
+aliases: [PARA Method, PARA System, C-PARA笔记法, PARA]
 tags: [知识管理/方法论]
 date-created: 2025-12-17
-date-modified: 2026-03-18
+date-modified: 2026-05-29
 al:
 content-type: atomic
 ---
@@ -12,7 +12,7 @@ content-type: atomic
 
 ### 1. 定义 (Definition)
 
-PARA 是一种由 *Tiago Forte* 提出的知识管理/信息组织方法论。其核心思想是颠覆传统的 " 基于主题（Topic-based）" 分类，转而采用**基于行动（Action-based）** 的动态分类逻辑。它主张将所有数字信息按照**" 可行动性 "**（Actionability）的程度，由高到低分为四个主要类别：**Projects（项目）、Areas（领域）、Resources（资源）和 Archives（归档）**。
+PARA 是一种由 *Tiago Forte* 提出的知识管理/信息组织方法论。其核心思想是颠覆传统的 " 基于主题（Topic-based）" 分类，转而采用**基于行动（Action-based）** 的动态分类逻辑。它主张 将所有数字信息按照**" 可行动性 "**（Actionability）的程度，由高到低分为四个主要类别：**Projects（项目）、Areas（领域）、Resources（资源）和 Archives（归档）**。
 
 ### 2. 核心原则 (Core Principles)
 
@@ -22,12 +22,12 @@ PARA 是一种由 *Tiago Forte* 提出的知识管理/信息组织方法论。�
 
 ### 3. 四维架构详解 (Attributes)
 
-| 维度 (Dimension) | 核心特征 (Key Feature) | 判别标准 (Criteria) | 典型示例 |
-|:--- |:--- |:--- |:--- |
-| **P - Projects**<br>(项目) | **短期、高关注** | 1. 有明确的**截止日期**<br>2. 有具体的**交付结果** (Deliverable) | `重构登录页面`<br>`2025前端面试准备` |
-| **A - Areas**<br>(领域) | **长期、持续维护** | 1. **无**截止日期<br>2. 需要维持某种**标准** (Standard) | `前端技术栈`<br>`健康管理`<br>`财务状况` |
-| **R - Resources**<br>(资源) | **未来潜在价值** | 1. 当前不急迫<br>2. 未来可能被引用或孵化 | `React Hooks 速查表`<br>`设计灵感截图` |
-| **A - Archives**<br>(归档) | **非活跃** | 1. 已完成的项目<br>2. 不再关注的领域 | `2023年年度总结`<br>`旧版博客源码` |
+| 维度 (Dimension)            | 核心特征 (Key Feature) | 判别标准 (Criteria)                                  | 典型示例                          |
+|:------------------------ |:----------------- |:----------------------------------------------- |:---------------------------- |
+| **P - Projects**<br>(项目)  | **短期、高关注**         | 1. 有明确的**截止日期**<br>2. 有具体的**交付结果** (Deliverable) | `重构登录页面`<br>`2025前端面试准备`      |
+| **A - Areas**<br>(领域)     | **长期、持续维护**        | 1. **无**截止日期<br>2. 需要维持某种**标准** (Standard)       | `前端技术栈`<br>`健康管理`<br>`财务状况`   |
+| **R - Resources**<br>(资源) | **未来潜在价值**         | 1. 当前不急迫<br>2. 未来可能被引用或孵化                        | `React Hooks 速查表`<br>`设计灵感截图` |
+| **A - Archives**<br>(归档)  | **非活跃**            | 1. 已完成的项目<br>2. 不再关注的领域                          | `2023年年度总结`<br>`旧版博客源码`       |
 
 ### 4. 辨析与误区 (Distinction)
 

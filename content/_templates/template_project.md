@@ -1,14 +1,16 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
-title: template_project
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+title: "{{项目名称}}"
 aliases: ["P-{{项目名称}}"]
 description: "{ 一句话描述项目目标 }"
-status: fleeting
-area: []
-consequence: 1
+tags: []
 content-type: project
+status: fleeting
+up: [["{{父级领域}}"]
+area: []
 expire: YYYY/MM/DD
 urgency: 1
+consequence: 1
 ---
 
 <!--

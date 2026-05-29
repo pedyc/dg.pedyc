@@ -1,13 +1,12 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: template_sop
-aliases:
-  - SOP-{{标题名称}}
+title: "{{动宾结构标题}}"
+aliases: ["SOP-{{标题名称}}"]
 description: "{ 一句话描述这个 SOP 的用途 }"
 tags: []
-status: cultivating
 content-type: sop
-up: ""
+status: cultivating
+up: [["{{父级领域}}"]
 ---
 
 <!--
@@ -61,6 +60,7 @@ flowchart TD
 ---
 
 ### 实践/示例
+
 {{实践或者代码示例}}
 
 ### 常见坑点

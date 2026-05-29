@@ -1,13 +1,12 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: template_concept
-aliases: ["C-概念名称"]
+aliases: ["C-{{概念名称}}"]
 description: "{ 一句话定义这个概念 }"
 tags: []
-date-created: 2026-04-08
-date-modified: 2026-04-15
-status: fleeting | cultivating | active | completed | archive
 content-type: concept
+status: fleeting
+up: [["{{父级概念}}"]
 ---
 
 <!--
@@ -95,6 +94,7 @@ graph LR
 
 - [[Q-{{相关问题1}}]]
 - [[Q-{{相关问题2}}]]
+
 ---
 
 ### 知识图谱

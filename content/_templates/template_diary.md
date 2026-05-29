@@ -1,11 +1,12 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: "{{日期}}"
+aliases: []
+description: ""
 tags: []
-status: active
-date-created: <% tp.date.now("YYYY-MM-DD") %>
-date-modified: <% tp.date.now("YYYY-MM-DD") %>
 content-type: diary
+status: active
+up: [["{{父级}}"]
 ---
 
 <%*
@@ -16,14 +17,14 @@ let 作者 = ""
 await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
 .then(response => response.json())
 .then(data => {
-    一言 = data.hitokoto
-    来源 = data.from
-    作者 = data.from_who === null? ' 佚名 ': data.from_who
+    一言 = data.hitokoto
+    来源 = data.from
+    作者 = data.from_who === null? ' 佚名 ': data.from_who
 })
 -%>
 
 > [!quote] 一言
->  <% 一言 %> —— 《<% 来源 %>》 · <% 作者 %>
+>  <% 一言 %> —— 《<% 来源 %>》 · <% 作者 %>
 
 ## ☁️行云（闪念笔记）
 
@@ -33,10 +34,10 @@ await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
 ## 👣跬步（任务列表）
 
 ```dataview
-TABLE 
+TABLE
 	urgency + consequence AS "评分",
-	status AS "状态", 
-	area AS "领域", 
+	status AS "状态",
+	area AS "领域",
 	expire AS "截止日期"
 FROM "10-PROJECTS"
 WHERE date(expire) >= date(this.file.frontmatter.title)

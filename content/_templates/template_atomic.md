@@ -1,12 +1,12 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: <% tp.file.title %>
+title: "{{一句话核心观点}}"
 aliases: []
 description: "{{一句话核心观点}}"
 tags: []
-status: fleeting, cultivating, active, completed, archived
 content-type: atomic
-up:
+status: fleeting
+up: [["{{父级概念}}"]
 ---
 
 <!--

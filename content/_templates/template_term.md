@@ -1,29 +1,27 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: "{ 术语名称 }"
+uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+title: template_term
+aliases: ["T-{{术语名称}}"]
 description: "{ 一句话定义这个术语 }"
 tags: []
-content-type: term
 status: fleeting
-date-created: <% tp.date.now("YYYY-MM-DD") %>
-date-modified: 2026-03-19
-aliases:
-  - T-{{术语名称}}
+content-type: term
+up: "[[{{父级概念}}]]"
 ---
 
 <!--
-  术语笔记 (Term Note) 设计原则：
+	术语笔记 (Term Note) 设计原则：
 
-  1. 术语笔记用于记录客观、中立的技术/学科术语
-  2. 核心是"定义"——准确、无歧义的定义
-  3. 不需要主观洞见——那是 atomic 或 concept 的职责
-  4. 包含跨学科/场景的含义——术语在不同领域的差异
-  5. 建立术语与原子笔记的连接——谁引用了这个术语
+	1. 术语笔记用于记录客观、中立的技术/学科术语
+	2. 核心是"定义"——准确、无歧义的定义
+	3. 不需要主观洞见——那是 atomic 或 concept 的职责
+	4. 包含跨学科/场景的含义——术语在不同领域的差异
+	5. 建立术语与原子笔记的连接——谁引用了这个术语
 
-  写作节奏：
-  - 先写定义（What）
-  - 再写跨学科含义（Variations）
-  - 最后写关联（Connections）
+	写作节奏：
+	- 先写定义（What）
+	- 再写跨学科含义（Variations）
+	- 最后写关联（Connections）
 -->
 
 ## 术语：{{术语名称}}
@@ -36,8 +34,8 @@ aliases:
 
 ### 跨学科含义
 
-- **在 {{领域A}} 中**：{{含义}}
-- **在 {{领域B}} 中**：{{含义}}
+- **在 {{领域 A}} 中**：{{含义}}
+- **在 {{领域 B}} 中**：{{含义}}
 
 ### 知识网络
 

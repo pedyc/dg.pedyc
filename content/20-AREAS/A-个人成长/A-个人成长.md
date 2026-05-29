@@ -5,7 +5,7 @@ aliases: [A-个人成长]
 description: 持续提升自我认知、技能和价值，实现个人潜能最大化
 tags: [area]
 date-created: 2025-03-05
-date-modified: 2026-03-30
+date-modified: 2026-05-29
 status: cultivating
 content-type: area
 up: [[]]

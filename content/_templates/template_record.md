@@ -1,11 +1,12 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: <% tp.file.title %>
+title: "{{事件名称}}"
 aliases: ["R-{{事件名称}}"]
 description: ""
 tags: []
-status: fleeting, cultivating, active, completed, archived
 content-type: record
+status: fleeting
+up: [["{{父级}}"]
 date: ""
 location: ""
 participants: ""

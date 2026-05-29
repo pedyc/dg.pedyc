@@ -1,13 +1,12 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: template_roadmap
-aliases:
-  - R-{{主题}}演进
+title: "{{主题}}演进"
+aliases: ["R-{{主题}}演进"]
 description: "{ 一句话定义这个演进历程的核心 }"
 tags: []
-status: cultivating | active | completed
 content-type: roadmap
-related: ["[[{{父级领域}}]]"]
+status: cultivating
+up: [["{{父级领域}}"]
 ---
 
 <!--

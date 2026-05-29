@@ -6,7 +6,7 @@ description: "{ 一句话描述这个 MOC 的主题 }"
 tags: []
 status: cultivating
 content-type: moc
-up: [["{{父级领域}}"]]
+up: [[{{父级领域}}]]
 ---
 
 <!--

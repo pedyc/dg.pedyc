@@ -1,12 +1,12 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: "{{标题}}"
-aliases: [A-{{标题}}]
+uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+title: template_area
+aliases: ["A-{{标题}}"]
 description: "{ 一句话定义这个领域的核心范畴 }"
 tags: []
-content-type: area
 status: cultivating
-up: [["{{父级领域}}"]
+content-type: area
+up: [[{{父级领域}}]]
 ---
 
 <!--

@@ -6,7 +6,7 @@ description: "{ 一句话定义这个概念 }"
 tags: []
 content-type: concept
 status: fleeting
-up: [["{{父级概念}}"]
+up: [[{{父级}}]]
 ---
 
 <!--

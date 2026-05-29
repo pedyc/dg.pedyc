@@ -6,7 +6,7 @@ description: "{ 一句话描述项目目标 }"
 tags: []
 content-type: project
 status: fleeting
-up: [["{{父级领域}}"]
+up: [[{{父级}}]]
 area: []
 expire: YYYY/MM/DD
 urgency: 1

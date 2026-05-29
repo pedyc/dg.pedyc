@@ -6,7 +6,7 @@ description: "{ 一句话描述这个 SOP 的用途 }"
 tags: []
 content-type: sop
 status: cultivating
-up: [["{{父级领域}}"]
+up: [[{{父级}}]]
 ---
 
 <!--

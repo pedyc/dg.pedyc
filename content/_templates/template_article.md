@@ -6,7 +6,7 @@ description: "{{一句话描述文章核心内容}}"
 tags: []
 content-type: article
 status: fleeting
-up: [["{{父级主题}}"]
+up: [[{{父级}}]]
 category: blog
 published: false
 ---

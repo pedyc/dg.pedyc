@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-META/Log/wiki-log.md",
+                "file": "00-META/Guide/本库常见问题解答汇总.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "wiki-log"
+              "title": "本库常见问题解答汇总"
             }
           },
           {
@@ -37,9 +37,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_templates/template_moc.md",
+                "file": "_templates/template_sop.md",
                 "mode": "source",
-                "source": true,
+                "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -52,11 +52,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "template_moc"
+              "title": "template_sop"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "_templates/template_moc.md",
+                "file": "00-META/Guide/本库常见问题解答汇总.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +123,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "template_moc 的关系图"
+              "title": "本库常见问题解答汇总 的关系图"
             }
           },
           {
@@ -315,44 +314,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6544da63f08bf955",
+  "active": "04630d253fffab4e",
   "lastOpenFiles": [
-    "_templates/template_project.md",
-    "_templates/template_new.md",
-    "_templates/template_question.md",
-    "_templates/template_record.md",
-    "_templates/template_roadmap.md",
+    "20-AREAS/Web安全.md",
+    "00-META/Log/wiki-log.md",
     "_templates/template_sop.md",
     "_templates/template_startup.md",
     "_templates/template_term.md",
-    "_templates/template_comp.md",
     "_templates/template_article.md",
-    "_templates/template_atomic.md",
     "_templates/template_area.md",
+    "_templates/template_atomic.md",
+    "_templates/template_comp.md",
+    "_templates/template_concept.md",
+    "_templates/template_diary.md",
+    "_templates/template_comp.md.tmp.7320.3733f731ca1c",
+    "_templates/template_record.md.tmp.7320.25436a918de4",
+    "_templates/template_question.md.tmp.7320.db2633235c5c",
+    "_templates/template_comp.md.tmp.7320.9cdaff2b66c1",
+    "_templates/template_article.md.tmp.7320.763ef53a4d4e",
+    "index.md",
+    "00-META/Index/本库看板索引.md",
+    "excalibrain.md",
+    "CLAUDE.md",
+    "_templates/template_moc.md",
+    "_templates/template_new.md",
+    "_templates/template_roadmap.md",
+    "_templates/template_record.md",
+    "_templates/template_project.md",
+    "_templates/seduRcUb4",
+    "_templates/seduuAMLT",
+    "_templates/sed13YHic",
+    "_templates/sedD3jzZN",
+    "_templates/sedB96UmZ",
+    "_templates/template_question.md",
     "00-META/Guide/本库指南.md",
-    "_templates/template_term.md.tmp.7320.43b18da36f57",
-    "_templates/template_area.md.tmp.7320.f52f12d0a222",
-    "20-AREAS/Web安全.md",
-    "20-AREAS/Web安全.md.tmp.7320.e11e5135e76f",
     "40-RESOURCES/MOC-OpenClaw.md",
     "40-RESOURCES/Claude核心概念.md",
     "40-RESOURCES/动画效果示例.md",
-    "00-META/Guide/本库指南.md.tmp.7320.88ba984b5df9",
-    "00-META/Log/_resources",
-    "00-META/Log/wiki-log.md",
-    "00-META/wiki-sync-state.json.tmp.7320.2a0cfd7259c7",
-    "00-META/Index/wiki-index.md.tmp.7320.87faeb008377",
-    "40-RESOURCES/HSTS.md",
-    "40-RESOURCES/Web安全策略.md",
-    "20-AREAS/A-Web安全.md.tmp.7320.41ea15a22333",
-    "40-RESOURCES/Web安全.md",
-    "CLAUDE.md",
-    "CLAUDE.md.tmp.7320.cd18d3764af2",
-    "40-RESOURCES/HSTS.md.tmp.7320.2ee1c4f4808f",
-    "40-RESOURCES/用最精炼的代码实现数组非零非负最小值.md",
-    "index.md",
-    "20-AREAS/A-个人成长/A-个人成长.md",
-    "00-META/Index/本库领域索引.md",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",
     "_resources/webkit-main-flow-b779d50c0cf28_856.png",
     "_resources/sw-lifecycle.svg",

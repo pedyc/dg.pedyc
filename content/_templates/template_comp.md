@@ -2,11 +2,11 @@
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: "{{标题}}"
 aliases: ["MOC-{{标题名称}}"]
-description: "{ 一句话描述这个 MOC 的主题 }"
+description: "{ 一句话概括核心区别 }"
 tags: []
 content-type: comparison
 status: cultivating
-up: [["{{父级话题}}"]
+up: [[{{父级}}]]
 ---
 
 <!--

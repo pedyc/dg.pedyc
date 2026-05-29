@@ -6,7 +6,7 @@ description: ""
 tags: []
 content-type: diary
 status: active
-up: [["{{父级}}"]
+up: [[{{父级}}]]
 ---
 
 <%*

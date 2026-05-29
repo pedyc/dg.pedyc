@@ -6,7 +6,7 @@ description: "{ 一句话定义这个术语 }"
 tags: []
 status: fleeting
 content-type: term
-up: "[[{{父级概念}}]]"
+up: [[{{父级概念}}]]
 ---
 
 <!--

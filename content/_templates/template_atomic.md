@@ -6,7 +6,7 @@ description: "{{一句话核心观点}}"
 tags: []
 content-type: atomic
 status: fleeting
-up: [["{{父级概念}}"]
+up: [[{{父级}}]]
 ---
 
 <!--

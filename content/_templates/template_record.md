@@ -6,7 +6,7 @@ description: ""
 tags: []
 content-type: record
 status: fleeting
-up: [["{{父级}}"]
+up: [[{{父级}}]]
 date: ""
 location: ""
 participants: ""

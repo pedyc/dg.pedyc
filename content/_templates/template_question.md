@@ -6,7 +6,7 @@ description: "{ 一句话描述这个问题 }"
 tags: []
 content-type: question
 status: fleeting
-up: [["{{父级领域}}"]
+up: [[{{父级}}]]
 ---
 
 <!--

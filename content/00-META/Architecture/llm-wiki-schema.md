@@ -7,7 +7,7 @@ date-created: 2026-05-20
 date-modified: 2026-05-28
 status: active
 content-type: [article]
-up: "[[本库指南]]"
+up: "[[Guide/本库指南]]"
 ---
 
 ## LLM Wiki Schema for 本库
@@ -15,11 +15,11 @@ up: "[[本库指南]]"
 本文档是 LLM 维护本知识库的作业指南。LLM 根据此 schema 消化 (ingest) 新笔记、回答查询 (query)、以及定期检查 (lint) 知识库健康度。
 
 > **详细规则**：本文件是索引，各工作流详细规则见子文档。
-> - [[_content-type-rules]] — content-type 定义、前缀规则、Wiki 层内联规则
-> - [[_ingest-rules]] — ingest 工作流 + inbox review 工作流
-> - [[_query-rules]] — query 工作流
-> - [[_lint-rules]] — lint 工作流 + 健康检查
-> - [[_sync-rules]] — sync 工作流
+> - [[Specification/_content-type-rules]] — content-type 定义、前缀规则、Wiki 层内联规则
+> - [[Specification/_ingest-rules]] — ingest 工作流 + inbox review 工作流
+> - [[Specification/_query-rules]] — query 工作流
+> - [[Specification/_lint-rules]] — lint 工作流 + 健康检查
+> - [[Specification/_sync-rules]] — sync 工作流
 
 ---
 

@@ -7,7 +7,7 @@ date-created: 2026-05-20
 date-modified: 2026-05-28
 status: active
 content-type: [article]
-up: [["llm-wiki-schema"]]
+up: [["Architecture/llm-wiki-schema"]]
 ---
 
 ## content-type 约定

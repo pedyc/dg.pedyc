@@ -5,7 +5,7 @@ aliases: [AIConceptsForFrontend]
 description: 系统梳理前端开发者需要掌握的 AI 核心概念，从 LLM 原理到智能体开发
 tags: [AI/Claude, 前端开发]
 date-created: 2026-03-26
-date-modified: 2026-04-07
+date-modified: 2026-05-30
 status: completed
 category: blog
 content-type: article

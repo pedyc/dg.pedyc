@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-META/Guide/本库常见问题解答汇总.md",
+                "file": "20-AREAS/A-人工智能/人工智能.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "本库常见问题解答汇总"
+              "title": "人工智能"
             }
           },
           {
@@ -95,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "00-META/Guide/本库常见问题解答汇总.md",
+                "file": "20-AREAS/A-人工智能/人工智能.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -123,7 +123,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "本库常见问题解答汇总 的关系图"
+              "title": "人工智能 的关系图"
             }
           },
           {
@@ -316,13 +316,22 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "40-RESOURCES/SOP-AI输出质量评估.md",
+    "40-RESOURCES/SOP-AI输出质量评估.md.tmp.21792.3de9d6641faf",
+    "40-RESOURCES/SOP-提示词工程最佳实践.md",
+    "99-ASSETS/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
+    "20-AREAS/A-人工智能/人工智能.md",
+    "60-BLOGS/前端开发者应知的AI概念.md",
+    "_templates/template_area.md",
+    "10-PROJECTS/P-AI学习计划/AI学习计划.md",
+    "00-META/Guide/_resources",
+    "00-META/Guide/本库常见问题解答汇总.md",
     "20-AREAS/Web安全.md",
     "00-META/Log/wiki-log.md",
     "_templates/template_sop.md",
     "_templates/template_startup.md",
     "_templates/template_term.md",
     "_templates/template_article.md",
-    "_templates/template_area.md",
     "_templates/template_atomic.md",
     "_templates/template_comp.md",
     "_templates/template_concept.md",
@@ -343,14 +352,6 @@
     "_templates/template_project.md",
     "_templates/seduRcUb4",
     "_templates/seduuAMLT",
-    "_templates/sed13YHic",
-    "_templates/sedD3jzZN",
-    "_templates/sedB96UmZ",
-    "_templates/template_question.md",
-    "00-META/Guide/本库指南.md",
-    "40-RESOURCES/MOC-OpenClaw.md",
-    "40-RESOURCES/Claude核心概念.md",
-    "40-RESOURCES/动画效果示例.md",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",
     "_resources/webkit-main-flow-b779d50c0cf28_856.png",
     "_resources/sw-lifecycle.svg",

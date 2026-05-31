@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-人工智能/人工智能.md",
+                "file": "00-META/00 Inbox规则.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "人工智能"
+              "title": "00 Inbox规则"
             }
           },
           {
@@ -95,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-人工智能/人工智能.md",
+                "file": "00-META/00 Inbox规则.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -123,7 +123,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "人工智能 的关系图"
+              "title": "00 Inbox规则 的关系图"
             }
           },
           {
@@ -316,11 +316,13 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "40-RESOURCES/Inbox/AI 如何影响你的审美？.pdf",
+    "00-META/00 Inbox规则.md",
+    "20-AREAS/A-人工智能/人工智能.md",
     "40-RESOURCES/SOP-AI输出质量评估.md",
     "40-RESOURCES/SOP-AI输出质量评估.md.tmp.21792.3de9d6641faf",
     "40-RESOURCES/SOP-提示词工程最佳实践.md",
     "99-ASSETS/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
-    "20-AREAS/A-人工智能/人工智能.md",
     "60-BLOGS/前端开发者应知的AI概念.md",
     "_templates/template_area.md",
     "10-PROJECTS/P-AI学习计划/AI学习计划.md",
@@ -348,8 +350,6 @@
     "_templates/template_moc.md",
     "_templates/template_new.md",
     "_templates/template_roadmap.md",
-    "_templates/template_record.md",
-    "_templates/template_project.md",
     "_templates/seduRcUb4",
     "_templates/seduuAMLT",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",

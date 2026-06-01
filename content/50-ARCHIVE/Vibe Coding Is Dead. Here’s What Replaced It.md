@@ -4,7 +4,7 @@ author: ["[[Ayesha Mughal]]"]
 description: Vibe Coding Is Dead. Here’s What Replaced It. Exactly one year ago, Andrej Karpathy posted a tweet.“There’s a new kind of coding I call ‘vibe coding’, where you fully give in to the vibes …
 tags: [clippings]
 date-created: 2026-04-07
-date-modified: 2026-05-14
+date-modified: 2026-06-01
 content-type: [article]
 created: 2026-04-07
 published: 2026-03-16

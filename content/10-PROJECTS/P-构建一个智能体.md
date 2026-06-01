@@ -2,10 +2,9 @@
 uid: 202603121028
 title: P-构建一个智能体
 date-created: 2026-03-08
-date-modified: 2026-03-12
+date-modified: 2026-06-01
 status: fleeting
-area:
-  - "[[人工智能|A-人工智能]]"
+area: ["[[人工智能|A-人工智能]]"]
 consequence: 7
 content-type: project
 expire: 2026-03-31

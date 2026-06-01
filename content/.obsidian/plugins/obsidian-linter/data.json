@@ -228,7 +228,7 @@
       "other-symbols": ""
     },
     "remove-space-before-or-after-characters": {
-      "enabled": true,
+      "enabled": false,
       "characters-to-remove-space-before": ",!?;:).’”]",
       "characters-to-remove-space-after": "¿¡‘“(["
     },
@@ -236,7 +236,7 @@
       "enabled": true
     },
     "space-between-chinese-japanese-or-korean-and-english-or-numbers": {
-      "enabled": true,
+      "enabled": false,
       "english-symbols-punctuation-before": "-+;:'\"°%$)]",
       "english-symbols-punctuation-after": "-+'\"([¥$"
     },
@@ -279,6 +279,7 @@
   "lintOnFileChange": true,
   "displayLintOnFileChangeNotice": true,
   "settingsConvertedToConfigKeyValues": true,
+  "additionalFileExtensions": [],
   "foldersToIgnore": [
     "_templates",
     "_resources",

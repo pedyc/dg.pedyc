@@ -4,7 +4,7 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-05-29
+date-modified: 2026-06-01
 status: active
 content-type: [article]
 up: ["[[本库指南]]"]
@@ -20,6 +20,19 @@ up: ["[[本库指南]]"]
 ---
 
 ## 2026
+
+### 2026-06
+
+#### 2026-06-01
+
+- [2026-06-01] lint | full 健康检查
+	- 检查范围：30-Zettelkasten、40-RESOURCES、20-AREAS
+	- **矛盾**：0 个
+	- **孤儿页面**：5 个（MOC-心流体验、MOC-神秘主义、MOC-时政、MOC-政治经济、MOC-OpenClaw）
+		- 均仅 wiki-index 自引用，建议补充相关页面引用或移至归档
+	- **概念缺口**：0 个
+	- **过时断言**：0 个
+	- **索引一致性**：通过
 
 ### 2026-05
 

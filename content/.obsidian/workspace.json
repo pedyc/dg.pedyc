@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_templates/template_sop.md",
+                "file": "00-META/Log/suggest-log.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,10 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "template_sop"
+              "title": "suggest-log"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -314,16 +315,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "04630d253fffab4e",
+  "active": "6544da63f08bf955",
   "lastOpenFiles": [
-    "50-ARCHIVE/P-构建PKM系统.md",
+    "CLAUDE.md",
+    "_templates/template_sop.md",
     "00-META/Log/suggest-log.md",
+    "50-ARCHIVE/P-健康重启计划.md",
+    "50-ARCHIVE/P-视觉化PKM.md",
+    "00-META/Log/wiki-log.md",
+    "50-ARCHIVE/P-构建PKM系统.md",
     "50-ARCHIVE/P-学习OpenClaw.md",
     "10-PROJECTS/P-构建一个智能体.md",
     "10-PROJECTS/10-PROJECTS.md",
     "00-META/Architecture/本库子系统概述.md",
     "40-RESOURCES/状态管理.md",
-    "00-META/Log/wiki-log.md",
     "50-ARCHIVE/Vibe Coding Is Dead. Here’s What Replaced It.md",
     "00-META/Log/suggest-log.md.tmp.17944.1a3f1f23bd1a",
     "00-META/Log/suggest-log.md.tmp.17944.bf664ac407dd",
@@ -342,13 +347,9 @@
     "10-PROJECTS/P-AI学习计划/AI学习计划.md",
     "00-META/Guide/_resources",
     "20-AREAS/Web安全.md",
-    "_templates/template_sop.md",
     "_templates/template_startup.md",
     "_templates/template_term.md",
     "_templates/template_article.md",
-    "_templates/template_atomic.md",
-    "_templates/template_comp.md",
-    "_templates/template_concept.md",
     "_templates/template_comp.md.tmp.7320.3733f731ca1c",
     "_templates/template_record.md.tmp.7320.25436a918de4",
     "_templates/template_question.md.tmp.7320.db2633235c5c",

@@ -4,7 +4,7 @@ title: P-学习OpenClaw
 tags: [Openclaw]
 date-created: 2026-03-06
 date-modified: 2026-06-01
-status: active
+status: archived
 area: ["[[人工智能|A-人工智能]]"]
 consequence: 5
 content-type: project

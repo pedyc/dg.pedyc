@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-构建一个智能体.md",
+                "file": "00-META/Log/suggest-log.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "P-构建一个智能体"
+              "title": "suggest-log"
             }
           },
           {
@@ -95,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-构建一个智能体.md",
+                "file": "00-META/Log/suggest-log.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -123,7 +123,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "P-构建一个智能体 的关系图"
+              "title": "suggest-log 的关系图"
             }
           },
           {
@@ -316,11 +316,11 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
-    "10-PROJECTS/10-PROJECTS.md",
-    "10-PROJECTS/P-构建一个智能体.md",
-    "00-META/Log/suggest-log.md",
-    "10-PROJECTS/P-学习OpenClaw/P-学习OpenClaw.md",
     "50-ARCHIVE/P-构建PKM系统.md",
+    "00-META/Log/suggest-log.md",
+    "50-ARCHIVE/P-学习OpenClaw.md",
+    "10-PROJECTS/P-构建一个智能体.md",
+    "10-PROJECTS/10-PROJECTS.md",
     "00-META/Architecture/本库子系统概述.md",
     "40-RESOURCES/状态管理.md",
     "00-META/Log/wiki-log.md",

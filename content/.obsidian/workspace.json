@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-META/Log/suggest-log.md",
+                "file": "10-PROJECTS/P-构建一个智能体.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "suggest-log"
+              "title": "P-构建一个智能体"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "00-META/Log/suggest-log.md",
+                "file": "10-PROJECTS/P-构建一个智能体.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "suggest-log 的关系图"
+              "title": "P-构建一个智能体 的关系图"
             }
           },
           {
@@ -317,9 +317,9 @@
   },
   "active": "6544da63f08bf955",
   "lastOpenFiles": [
+    "00-META/Log/suggest-log.md",
     "CLAUDE.md",
     "_templates/template_sop.md",
-    "00-META/Log/suggest-log.md",
     "50-ARCHIVE/P-健康重启计划.md",
     "50-ARCHIVE/P-视觉化PKM.md",
     "00-META/Log/wiki-log.md",

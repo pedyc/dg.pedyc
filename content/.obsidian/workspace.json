@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-构建一个智能体.md",
+                "file": "50-ARCHIVE/数字花园概述.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "P-构建一个智能体"
+              "title": "数字花园概述"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-构建一个智能体.md",
+                "file": "50-ARCHIVE/数字花园概述.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "P-构建一个智能体 的关系图"
+              "title": "数字花园概述 的关系图"
             }
           },
           {
@@ -317,16 +317,23 @@
   },
   "active": "6544da63f08bf955",
   "lastOpenFiles": [
-    "00-META/Log/suggest-log.md",
+    "index.md",
+    "LIST.md",
+    "excalibrain.md",
     "CLAUDE.md",
+    "banner.svg",
+    "Drawing 2026-06-03 09.06.13.excalidraw.md",
+    "Drawing 2026-06-03 09.06.13.excalidraw.svg",
+    "50-ARCHIVE/数字花园概述.md",
+    "10-PROJECTS/P-构建一个智能体.md",
+    "10-PROJECTS/10-PROJECTS.md",
+    "00-META/Log/suggest-log.md",
     "_templates/template_sop.md",
     "50-ARCHIVE/P-健康重启计划.md",
     "50-ARCHIVE/P-视觉化PKM.md",
     "00-META/Log/wiki-log.md",
     "50-ARCHIVE/P-构建PKM系统.md",
     "50-ARCHIVE/P-学习OpenClaw.md",
-    "10-PROJECTS/P-构建一个智能体.md",
-    "10-PROJECTS/10-PROJECTS.md",
     "00-META/Architecture/本库子系统概述.md",
     "40-RESOURCES/状态管理.md",
     "50-ARCHIVE/Vibe Coding Is Dead. Here’s What Replaced It.md",
@@ -344,12 +351,7 @@
     "99-ASSETS/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
     "60-BLOGS/前端开发者应知的AI概念.md",
     "_templates/template_area.md",
-    "10-PROJECTS/P-AI学习计划/AI学习计划.md",
     "00-META/Guide/_resources",
-    "20-AREAS/Web安全.md",
-    "_templates/template_startup.md",
-    "_templates/template_term.md",
-    "_templates/template_article.md",
     "_templates/template_comp.md.tmp.7320.3733f731ca1c",
     "_templates/template_record.md.tmp.7320.25436a918de4",
     "_templates/template_question.md.tmp.7320.db2633235c5c",
@@ -361,8 +363,6 @@
     "_resources/教你如何构建自己的依赖注入工具/912ceb3ef77fd67243e49eba8e36192d_MD5.webp",
     "_resources/教你如何构建自己的依赖注入工具/f5d805cc945480a8822b1884901e207b_MD5.webp",
     "_resources/教你如何构建自己的依赖注入工具/d295c5e7fbbc01c6f66967d13001318c_MD5.webp",
-    "_resources/教你如何构建自己的依赖注入工具/0c8eaeac777fcb49ca27ea5960657a7e_MD5.webp",
-    "_resources/教你如何构建自己的依赖注入工具/82c2227e233677b1225e6c6cfbc88d1c_MD5.webp",
     "未命名.canvas",
     "Untitled.canvas",
     "//Untitled.canvas",

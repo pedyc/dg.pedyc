@@ -142094,7 +142094,8 @@
   "taskboneEnabled": false,
   "taskboneAPIkey": "",
   "pinnedScripts": [
-    "Excalidraw/Scripts/Downloaded/Connect elements.md"
+    "Excalidraw/Scripts/Downloaded/Connect elements.md",
+    "99-ASSETS/Excalidraw/Scripts/Downloaded/Add Connector Point.md"
   ],
   "sidepanelTabs": [],
   "customPens": [

@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50-ARCHIVE/数字花园概述.md",
+                "file": "20-AREAS/A-人工智能/人工智能.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "数字花园概述"
+              "title": "人工智能"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "50-ARCHIVE/数字花园概述.md",
+                "file": "20-AREAS/A-人工智能/人工智能.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "数字花园概述 的关系图"
+              "title": "人工智能 的关系图"
             }
           },
           {
@@ -317,6 +317,8 @@
   },
   "active": "6544da63f08bf955",
   "lastOpenFiles": [
+    "50-ARCHIVE/数字花园概述.md",
+    "00-META/wiki-sync-state.json.tmp.26576.58e74d3964b4",
     "index.md",
     "LIST.md",
     "excalibrain.md",
@@ -324,7 +326,6 @@
     "banner.svg",
     "Drawing 2026-06-03 09.06.13.excalidraw.md",
     "Drawing 2026-06-03 09.06.13.excalidraw.svg",
-    "50-ARCHIVE/数字花园概述.md",
     "10-PROJECTS/P-构建一个智能体.md",
     "10-PROJECTS/10-PROJECTS.md",
     "00-META/Log/suggest-log.md",
@@ -350,11 +351,9 @@
     "40-RESOURCES/SOP-提示词工程最佳实践.md",
     "99-ASSETS/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
     "60-BLOGS/前端开发者应知的AI概念.md",
-    "_templates/template_area.md",
     "00-META/Guide/_resources",
     "_templates/template_comp.md.tmp.7320.3733f731ca1c",
     "_templates/template_record.md.tmp.7320.25436a918de4",
-    "_templates/template_question.md.tmp.7320.db2633235c5c",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",
     "_resources/webkit-main-flow-b779d50c0cf28_856.png",
     "_resources/sw-lifecycle.svg",

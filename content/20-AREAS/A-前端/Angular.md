@@ -5,7 +5,7 @@ aliases: [A-Angular]
 description: Angular 是 Google 维护的 TypeScript 优先企业级前端框架，提供完整的前端解决方案
 tags: [angular, "前端开发/框架"]
 date-created: 2026-04-20
-date-modified: 2026-04-20
+date-modified: 2026-06-12
 status: cultivating
 content-type: area
 up: "[[前端开发]]"
@@ -146,11 +146,7 @@ mindmap
 
 > 该领域的常见问题（链接 Question 或 MOC）
 
-- [[Q-Angular 变更检测如何工作]]
-- [[Q-Angular 中何时用 RxJS]]
-- [[Q-Angular 性能优化怎么做]]
-- [[Q-NgRx 是否必要]]
-- [[MOC-Angular知识索引]] — Angular 知识库的入口
+- [[Angular面试题]]
 
 ---
 

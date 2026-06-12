@@ -4,7 +4,7 @@ title: _lint-rules
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-05-20
-date-modified: 2026-05-28
+date-modified: 2026-06-12
 status: active
 content-type: [article]
 up: [["llm-wiki-schema"]]
@@ -79,16 +79,162 @@ up: [["llm-wiki-schema"]]
 - 孤儿页面 > 5 个
 - 概念缺口 > 5 个
 
-**日志格式**：
+---
 
-```markdown
-## Lint Report - [日期]
+### 分析脚本模板
 
-### 发现问题
-- 矛盾：X 个
-- 孤儿页面：Y 个
-- 概念缺口：Z 个
+以下 Python 脚本可在 lint 时直接运行，确保每次检查方法一致。
 
-### 建议
-- [[页面A]]: xxx
+#### 1. 孤儿页面检测
+
+```python
+import os, re
+from collections import defaultdict
+
+CONTENT = "/mnt/d/Workspace/pedyc/site/apps/dg/content"
+link_pattern = re.compile(r'\[\[([^\[\]]+)\]\]')
+inbound = defaultdict(set)
+
+for root, dirs, files in os.walk(CONTENT):
+    dirs[:] = [d for d in dirs if not d.startswith('.') and d != '_templates']
+    for f in files:
+        if not f.endswith('.md'): continue
+        src = f[:-3]
+        rel = os.path.relpath(os.path.join(root, f), CONTENT)
+        try:
+            with open(os.path.join(root, f), 'r') as fh:
+                for m in link_pattern.finditer(fh.read()):
+                    target = m.group(1).split('|')[0].split('#')[0].strip()
+                    if target and target != src:
+                        inbound[target].add(src)
+        except: pass
+
+orphans = []
+for title, rel in {f[:-3]: os.path.relpath(os.path.join(r, f), CONTENT)
+    for r, ds, fs in os.walk(CONTENT) for f in fs if f.endswith('.md')}.items():
+    if '/40-RESOURCES/' in rel or '/20-AREAS/' in rel:
+        real = {s for s in inbound.get(title, set()) if 'wiki-index' not in s}
+        if len(real) == 0:
+            orphans.append((title, rel))
+
+print(f"孤儿页面: {len(orphans)}")
+for t, r in sorted(orphans):
+    print(f"  [[{t}]] ({r})")
 ```
+
+#### 2. 概念缺口检测
+
+```python
+import os, re
+from collections import defaultdict
+
+CONTENT = "/mnt/d/Workspace/pedyc/site/apps/dg/content"
+link_pattern = re.compile(r'\[\[([^\[\]]+)\]\]')
+
+# 收集所有页面标题
+all_titles = {}
+for root, dirs, files in os.walk(CONTENT):
+    dirs[:] = [d for d in dirs if not d.startswith('.') and d != '_templates']
+    for f in files:
+        if f.endswith('.md'): all_titles[f[:-3]] = True
+
+# 统计 atomic 中链接到不存在的页面
+gaps = defaultdict(int)
+for root, dirs, files in os.walk(os.path.join(CONTENT, '30-Zettelkasten')):
+    for f in files:
+        if not f.endswith('.md'): continue
+        try:
+            with open(os.path.join(root, f), 'r') as fh:
+                for m in link_pattern.finditer(fh.read()):
+                    target = m.group(1).split('|')[0].split('#')[0].strip()
+                    if target and target not in all_titles:
+                        gaps[target] += 1
+        except: pass
+
+real_gaps = [(t, c) for t, c in gaps.items() if c >= 2]
+real_gaps.sort(key=lambda x: -x[1])
+print(f"概念缺口 (atomic 中提及 2+ 次但无页面): {len(real_gaps)}")
+for target, count in real_gaps:
+    print(f'  "{target}" ({count}x)')
+```
+
+#### 3. 过期引用检测
+
+```python
+import os, re
+from collections import defaultdict
+
+CONTENT = "/mnt/d/Workspace/pedyc/site/apps/dg/content"
+link_pattern = re.compile(r'\[\[([^\[\]]+)\]\]')
+inbound = defaultdict(set)
+
+for root, dirs, files in os.walk(CONTENT):
+    dirs[:] = [d for d in dirs if not d.startswith('.')]
+    for f in files:
+        if not f.endswith('.md'): continue
+        src = f[:-3]
+        rel = os.path.relpath(os.path.join(root, f), CONTENT)
+        try:
+            with open(os.path.join(root, f), 'r') as fh:
+                for m in link_pattern.finditer(fh.read()):
+                    target = m.group(1).split('|')[0].split('#')[0].strip()
+                    if target and target != src:
+                        inbound[target].add(src)
+        except: pass
+
+# 收集所有归档页面
+archive = set()
+store = {}
+for root, dirs, files in os.walk(CONTENT):
+    for f in files:
+        if not f.endswith('.md'): continue
+        t = f[:-3]; r = os.path.relpath(os.path.join(root, f), CONTENT)
+        store[t] = r
+        if '/50-ARCHIVE/' in r: archive.add(t)
+
+print("归档仍被 wiki 层引用:")
+for a in sorted(archive):
+    refs = {s for s in inbound.get(a, set())
+            if '/40-RESOURCES/' in store.get(s, '') or '/20-AREAS/' in store.get(s, '')}
+    if refs:
+        print(f"  [[{a}]] <- {list(refs)[:3]}")
+```
+
+#### 4. 索引一致性检查
+
+```python
+import os, re
+CONTENT = "/mnt/d/Workspace/pedyc/site/apps/dg/content"
+link_pattern = re.compile(r'\[\[([^\[\]]+)\]\]')
+
+all_pages = {}
+for root, dirs, files in os.walk(CONTENT):
+    dirs[:] = [d for d in dirs if not d.startswith('.') and d != '_templates']
+    for f in files:
+        if f.endswith('.md'): all_pages[f[:-3]] = True
+
+# 检查 wiki-index 中的断裂链接
+idx_path = os.path.join(CONTENT, "00-META/Index/wiki-index.md")
+if os.path.exists(idx_path):
+    with open(idx_path) as fh:
+        for m in link_pattern.finditer(fh.read()):
+            target = m.group(1).split('|')[0].split('#')[0].strip()
+            if target and target not in all_pages:
+                print(f"wiki-index 断裂链接: [[{target}]]")
+```
+
+---
+
+### 执行步骤
+
+```bash
+# 完整 lint 运行
+python3 lint_orphans.py    # 孤儿页面
+python3 lint_gaps.py       # 概念缺口
+python3 lint_stale.py      # 过期引用
+python3 lint_index.py      # 索引一致性
+```
+
+---
+
+### 日志格式

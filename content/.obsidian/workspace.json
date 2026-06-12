@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-人工智能/人工智能.md",
+                "file": "20-AREAS/A-知识管理/A-知识管理.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "人工智能"
+              "title": "A-知识管理"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-人工智能/人工智能.md",
+                "file": "20-AREAS/A-知识管理/A-知识管理.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -119,12 +119,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.2726859917360067,
+                  "scale": 0.07058167567046497,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "人工智能 的关系图"
+              "title": "A-知识管理 的关系图"
             }
           },
           {
@@ -264,16 +264,6 @@
             }
           },
           {
-            "id": "09edd99624caf564",
-            "type": "leaf",
-            "state": {
-              "type": "mermaid-toolbar-view",
-              "state": {},
-              "icon": "trident-custom",
-              "title": "Mermaid Toolbar"
-            }
-          },
-          {
             "id": "29313616ae432795",
             "type": "leaf",
             "state": {
@@ -284,7 +274,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -317,43 +307,44 @@
   },
   "active": "6544da63f08bf955",
   "lastOpenFiles": [
+    "40-RESOURCES/SOP-AI提问技巧.md",
+    "00-META/Log/wiki-log.md",
+    "CLAUDE.md",
+    "00-META/Specification/_skills-overview.md",
+    "CLAUDE.md.tmp.1138.1781232884727",
+    "CLAUDE.md.tmp.1138.1781232869043",
+    "00-META/Specification/_lint-rules.md",
+    "20-AREAS/A-前端/Angular.md",
+    "40-RESOURCES/MOC-前端面试真题库.md",
+    "40-RESOURCES/Angular面试题.md",
+    "00-META/Index/wiki-index.md",
+    "00-META/Log/suggest-log.md",
+    "40-RESOURCES/MOC-心流体验.md",
+    "40-RESOURCES/Web安全问题.md",
+    "40-RESOURCES/网络协议相关问题.md",
+    "40-RESOURCES/JS&TS相关问题.md",
+    "40-RESOURCES/前端场景实践.md",
+    "40-RESOURCES/事件循环.md",
+    "40-RESOURCES/React面试题.md",
+    "40-RESOURCES/Vue 面试题.md",
+    "20-AREAS/A-人工智能/_resources",
+    "20-AREAS/A-人工智能/人工智能.md",
     "50-ARCHIVE/数字花园概述.md",
     "00-META/wiki-sync-state.json.tmp.26576.58e74d3964b4",
     "index.md",
     "LIST.md",
     "excalibrain.md",
-    "CLAUDE.md",
     "banner.svg",
     "Drawing 2026-06-03 09.06.13.excalidraw.md",
     "Drawing 2026-06-03 09.06.13.excalidraw.svg",
     "10-PROJECTS/P-构建一个智能体.md",
     "10-PROJECTS/10-PROJECTS.md",
-    "00-META/Log/suggest-log.md",
-    "_templates/template_sop.md",
-    "50-ARCHIVE/P-健康重启计划.md",
-    "50-ARCHIVE/P-视觉化PKM.md",
-    "00-META/Log/wiki-log.md",
-    "50-ARCHIVE/P-构建PKM系统.md",
-    "50-ARCHIVE/P-学习OpenClaw.md",
-    "00-META/Architecture/本库子系统概述.md",
-    "40-RESOURCES/状态管理.md",
-    "50-ARCHIVE/Vibe Coding Is Dead. Here’s What Replaced It.md",
     "00-META/Log/suggest-log.md.tmp.17944.1a3f1f23bd1a",
     "00-META/Log/suggest-log.md.tmp.17944.bf664ac407dd",
-    "00-META/Guide/本库常见问题解答汇总.md",
     "00-META/Log/wiki-log.md.tmp.17944.f567aaaf3935",
-    "00-META/Specification/_content-type-rules.md",
-    "00-META/00 Inbox规则.md",
     "40-RESOURCES/Inbox/AI 如何影响你的审美？.pdf",
-    "20-AREAS/A-人工智能/人工智能.md",
-    "40-RESOURCES/SOP-AI输出质量评估.md",
     "40-RESOURCES/SOP-AI输出质量评估.md.tmp.21792.3de9d6641faf",
-    "40-RESOURCES/SOP-提示词工程最佳实践.md",
     "99-ASSETS/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
-    "60-BLOGS/前端开发者应知的AI概念.md",
-    "00-META/Guide/_resources",
-    "_templates/template_comp.md.tmp.7320.3733f731ca1c",
-    "_templates/template_record.md.tmp.7320.25436a918de4",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",
     "_resources/webkit-main-flow-b779d50c0cf28_856.png",
     "_resources/sw-lifecycle.svg",

@@ -4,7 +4,7 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-06-01
+date-modified: 2026-06-12
 status: active
 content-type: [article]
 up: ["[[本库指南]]"]
@@ -22,6 +22,52 @@ up: ["[[本库指南]]"]
 ## 2026
 
 ### 2026-06
+
+#### 2026-06-12
+
+- [2026-06-12] ingest | 新建 MOC「Angular面试题」
+	- 位置：40-RESOURCES/MOC-Angular面试题.md
+	- 父页面：[[MOC-前端面试真题库]]、[[A-前端/Angular]]
+	- 覆盖 14 个模块、7 个待探索问题
+- [2026-06-12] ingest | 新建 SOP「AI提问技巧」
+	- 位置：40-RESOURCES/SOP-AI提问技巧.md
+	- 父页面：[[A-知识管理]]
+- [2026-06-12] refactor | skill 三层分层重构
+	- obsidian-note-local v1.0.0 → v2.1.0：移除 wiki-index/wiki-log 职责，只负责创建 + 挂父页面
+	- wiki-sync-local v2.0.0 → v3.0.0：明确只碰 00-META/，接管 index/log 职责
+	- 新增 _skills-overview.md 作为所有 skill 的总览
+	- 更新 llm-wiki-schema.md、CLAUDE.md 硬规则
+	- 更新 _lint-rules.md 加入分析脚本模板
+	- 补充 wiki-log 支持 refactor 操作类型
+- [2026-06-12] lint | full 健康检查
+	- 检查范围：30-Zettelkasten、40-RESOURCES、20-AREAS、50-ARCHIVE
+	- **矛盾**：0 个
+	- **孤儿页面**：4 个（MOC-心流体验、MOC-时政、MOC-政治经济、MOC-前端缓存方案）
+		- 均仅 wiki-index 自引用，建议补充相关页面引用或移至归档
+		- MOC-OpenClaw 已由 [[P-学习OpenClaw]] 引用，解除孤儿状态
+		- MOC-神秘主义 已由 [[C-超验]] 引用，解除孤儿状态
+	- **概念缺口**：1 个
+		- [[Svelte vs React]]：wiki-index 和 [[Svelte]] 均引用此页面，但文件不存在。建议创建或在 wiki-index 中修正链接
+	- **过时断言**：0 个
+	- **索引一致性**：1 处断裂（[[Svelte vs React]] 链接无效）
+	- **预警**：无（矛盾 0/3、孤儿 4/5、概念缺口 1/5，均在安全线内）
+
+## Lint Report - 2026-06-12
+
+### 矛盾
+
+- 无
+
+### 孤儿页面
+
+- [[MOC-心流体验]]：仅 wiki-index 自引用，建议补充 inbound link 或归档
+- [[MOC-时政]]：仅 wiki-index 自引用，建议补充 inbound link 或归档
+- [[MOC-政治经济]]：仅 wiki-index 自引用，建议补充 inbound link 或归档
+- [[MOC-前端缓存方案]]：仅 wiki-index 自引用，建议补充 inbound link 或归档
+
+### 概念缺口
+
+- "Svelte vs React" 被 [[Svelte]] 和 [[wiki-index]] 引用 2 次但无专属页面，建议创建 [[Svelte vs React]]
 
 #### 2026-06-01
 

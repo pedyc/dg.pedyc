@@ -15,6 +15,7 @@ up: "[[Guide/本库指南]]"
 本文档是 LLM 维护本知识库的作业指南。LLM 根据此 schema 消化 (ingest) 新笔记、回答查询 (query)、以及定期检查 (lint) 知识库健康度。
 
 > **详细规则**：本文件是索引，各工作流详细规则见子文档。
+> - [[Specification/_skills-overview]] — 所有 skill 的用法总览
 > - [[Specification/_content-type-rules]] — content-type 定义、前缀规则、Wiki 层内联规则
 > - [[Specification/_ingest-rules]] — ingest 工作流 + inbox review 工作流
 > - [[Specification/_query-rules]] — query 工作流
@@ -45,6 +46,7 @@ up: "[[Guide/本库指南]]"
 | `inbox-review` | Inbox 审核结果 | `inbox-review | 移动 4 个文章到 BLOGS` |
 | `lint` | 健康检查结果 | `lint | full 健康检查，矛盾 0 个` |
 | `query` | 有价值的查询结果 | `query | 关于闭包的回答，产生新洞见` |
+| `refactor` | 系统重构（skill/spec/规则变更） | `refactor | skill 分层重构，obsidian-note-local v2.1.0` |
 
 **不应记录的操作**：
 - `sync` — 系统状态同步（系统维护）

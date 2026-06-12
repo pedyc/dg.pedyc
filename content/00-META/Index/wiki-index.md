@@ -4,7 +4,7 @@ title: wiki-index
 aliases: [wiki-index, wiki导航]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-05-29
+date-modified: 2026-06-12
 status: active
 content-type: [moc]
 up: "[[本库指南]]"
@@ -48,6 +48,7 @@ up: "[[本库指南]]"
 - [[Vue]] — Vue 生态、响应式原理、组件开发
 - [[ThreeJS]] — 3D 图形渲染、WebGL、应用开发
 - [[Angular]] — Angular 框架、TypeScript、依赖注入
+	- [[MOC-Angular面试题]] — Angular 面试题汇总
 - [[Svelte]] — 编译时优化框架、无虚拟 DOM
 - [[算法与数据结构]] — 常用算法、数据结构、复杂度分析
 
@@ -128,6 +129,7 @@ up: "[[本库指南]]"
 - [[SOP-CODE知识全生命周期工作流]] — Capture, Organize, Distill, Express 知识管理全流程
 - [[SOP-视觉思维工作流]] — 从发散到收敛的视觉化思考全流程
 - [[SOP-视觉工具选择矩阵]] — 根据问题类型选择合适的视觉化工具
+- [[SOP-AI提问技巧]] — 提高向 AI 提问质量的标准化流程
 - [[CI-CD流程]] — 持续集成、持续部署、自动化流水线
 - [[代码审查流程]] — 代码审查标准、Review 清单、最佳实践
 

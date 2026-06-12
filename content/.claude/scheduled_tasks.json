@@ -1,14 +1,3 @@
 {
-  "tasks": [
-    {
-      "id": "28ed5e3a",
-      "cron": "0 9 * * 1",
-      "prompt": "执行知识库健康检查：\n\n1. 调用 /content-evaluator-local full\n2. 检查结果追加到 content/00-META/wiki-log.md\n3. 格式：\n```markdown\n## Lint Report - [日期]\n\n### 矛盾\n- [[页面A]] vs [[页面B]]: xxx\n\n### 孤儿页面\n- [[页面C]]: 无 inbound link，建议补充引用或归档\n\n### 概念缺口\n- \"XXX\" 被提及 N 次但无专属页面，建议创建 [[C-XXX]]\n```\n\n4. 如发现问题超过预警线（矛盾>3 或 孤儿>5 或 概念缺口>5），发出提醒\n\n注意：这是每周定时任务，无需用户手动触发。",
-      "createdAt": 1779792316655,
-      "recurring": true,
-      "createdBySessionId": "018c1b9c-57b4-4754-b4f2-4241553894f7",
-      "createdByPid": 30648,
-      "lastFiredAt": 1780278992414
-    }
-  ]
+  "tasks": []
 }

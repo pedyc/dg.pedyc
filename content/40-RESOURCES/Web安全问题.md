@@ -3,12 +3,11 @@ uid: 202605290005
 title: Web安全问题
 aliases: [C-Web安全问题, MOC-Web安全问题]
 description: 常见的 Web 安全攻击类型及其防御策略
-tags:
-  - 前端/安全/攻击
-content-type: moc
-status: cultivating
+tags: [前端/安全/攻击]
 date-created: 2026-05-29
-date-modified: 2026-05-29
+date-modified: 2026-06-12
+status: cultivating
+content-type: moc
 up: [["A-Web安全"]]
 ---
 
@@ -51,6 +50,6 @@ up: [["A-Web安全"]]
 
 - **父级概念**：[[Web安全]]
 - **相关概念**：
-  - [[Web安全策略]] — 防御策略总览
-  - [[HSTS]] — 传输层安全策略
-  - [[CSP]] — 内容安全策略
+	- [[Web安全策略]] — 防御策略总览
+	- [[HSTS]] — 传输层安全策略
+	- [[CSP]] — 内容安全策略

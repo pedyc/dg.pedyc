@@ -1,9 +1,9 @@
 ---
 name: obsidian-note-local
-version: 2.1.0
+version: 2.0.0
 description: |
-  使用 `content/_templates` 下的模板创建笔记，完成后自动更新父 Area/MOC 的引用。
-  **职责边界：只创建内容页 + 更新直接父级引用。wiki-index / wiki-log 由 wiki-sync-local 负责。**
+  使用 `content/_templates` 下的模板创建笔记，完成后自动建立交叉引用：
+  更新父 Area/MOC、更新 wiki-index、记录 wiki-log。
   适配本库的 content-type 体系和 aliases 前缀规则。
 argument-hint: "<content-type> <标题> [内容]"
 allowed-tools:
@@ -47,21 +47,47 @@ allowed-tools:
 - diary → `90-DIARY/`
 - record → `40-RESOURCES/`
 
-### 步骤 3：更新父页面引用
+### 步骤 3：建立交叉引用
 
-读取 frontmatter 的 `up` 字段，确定父页面（如 `up: [[A-前端]]` 或 `up: [[MOC-前端面试真题库]]`），在父页面中添加引用：
+创建笔记后，自动更新相关页面的引用。
+
+#### 3a. 更新父 Area/MOC
+
+读取 frontmatter 的 `up` 字段，确定父页面（如 `up: [[A-前端]]` 或 `up: [[MOC-前端面试真题库]]`）：
 
 - 如果父页面是 **Area**（`20-AREAS/`）：
+  - 检查 Area 的 FAQ 章节是否有该类型笔记的条目
+  - 若无，添加 `- [[新笔记]] — 一句话说明`
   - 按类型插入对应章节（concept → 关键领域、sop → SOP、moc → FAQ）
-  - 格式：`- [[新笔记]] — 一句话说明`
 - 如果父页面是 **MOC**（`40-RESOURCES/MOC-*`）：
-  - 在链接列表末尾添加 `- [[新笔记]]`
+  - 在 MOC 的链接列表末尾添加 `- [[新笔记]]`
 - 如果父页面是 **Concept**（`40-RESOURCES/`，atomic 场景）：
-  - 在"相关原子笔记"章节添加 `- [[新笔记]]`
+  - 在其"相关原子笔记"或类似章节添加 `- [[新笔记]]`
 
-### 步骤 4：完成
+#### 3b. 更新 wiki-index
 
-创建完成。wiki-index 和 wiki-log 的更新由 `wiki-sync-local` 在后续同步中处理。
+读取 `00-META/Index/wiki-index.md`，找到对应分类（根据 content-type 和 up 字段）：
+- area → 对应 Area 分类下
+- moc → 对应父 Area 的子条目
+- concept → 对应父 Area 的子条目
+- sop → 对应父 Area 的子条目
+- atomic → 不需要（atomic 不直接出现在 wiki-index）
+
+在对应父条目下方添加缩进条目：`	- [[新笔记]] — 一句话说明`
+
+#### 3c. 记录 wiki-log
+
+追加条目到 `00-META/Log/wiki-log.md`，格式：
+
+```markdown
+- [YYYY-MM-DD] ingest | 新建 {{content-type}}「{{标题}}」
+	- 位置：{{相对路径}}
+	- 父页面：{{父页面链接}}
+```
+
+### 步骤 4：触发 wiki-sync-local
+
+触发 `wiki-sync-local` 更新 `wiki-sync-state.json`（系统状态）。
 
 ---
 
@@ -81,7 +107,7 @@ allowed-tools:
 | article | `60-BLOGS/` | 无 |
 | diary | `90-DIARY/` | 无 |
 
-### 父页面引用位置速查
+### 交叉引用位置速查
 
 | 新建类型 | 父类型 | 更新位置 | 插入方式 |
 |---|---|---|---|

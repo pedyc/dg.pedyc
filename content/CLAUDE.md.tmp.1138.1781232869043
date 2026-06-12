@@ -52,12 +52,3 @@ Located in `content/_templates/`:
 **每次创建或重写笔记时，必须先读取 `content/_templates/` 下的对应模板，严格按照模板章节生成内容。**
 
 不遵守此规则将导致笔记结构不完整、缺少必需字段。
-
-### 强制规则：修改 skill 必须同步 _skills-overview
-
-**每次修改 `content/.claude/skills/*/SKILL.md` 后，必须同步更新 `00-META/Specification/_skills-overview.md` 中的对应描述。**
-
-包括：
-- version 升级 → 更新版本号
-- description/职责变更 → 更新描述和分层归属
-- 新增/删除 skill → 更新总览表和 layer 分类

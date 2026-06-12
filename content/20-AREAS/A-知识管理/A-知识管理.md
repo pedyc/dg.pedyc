@@ -5,7 +5,7 @@ aliases: [A-知识管理, 知识管理]
 description: 捕捉、组织、提炼和应用知识，构建第二大脑
 tags: [area]
 date-created: 2025-04-30
-date-modified: 2026-05-29
+date-modified: 2026-06-12
 status: cultivating
 content-type: area
 up:
@@ -60,6 +60,7 @@ up:
 	- [[SOP-CODE知识全生命周期工作流]]：Capture, Organize, Distill, Express
 	- [[SOP-笔记标签命名与使用规范]]
 	- [[SOP-知识花园修剪指南]]
+	- [[SOP-AI提问技巧]]：提高向 AI 提问质量的标准化流程
 - **关键工具**
 	- Obsidian：笔记管理工具
 

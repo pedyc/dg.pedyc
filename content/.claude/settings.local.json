@@ -10,7 +10,10 @@
       "mcp__MiniMax__web_search",
       "Bash(git *)",
       "Skill(content-evaluator-local)",
-      "Skill(obsidian-note-local)"
+      "Skill(obsidian-note-local)",
+      "Bash(python3 *)",
+      "Bash(sed -i '32,35s/^.*$//' /mnt/d/Workspace/pedyc/site/apps/dg/content/00-META/Log/wiki-log.md)",
+      "Bash(sed -i '/^[[:space:]]*$/{ *)"
     ]
   }
 }

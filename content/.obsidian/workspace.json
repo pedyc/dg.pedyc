@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-知识管理/A-知识管理.md",
+                "file": "00-META/Guide/本库指南.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "A-知识管理"
+              "title": "本库指南"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-知识管理/A-知识管理.md",
+                "file": "00-META/Guide/本库指南.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "A-知识管理 的关系图"
+              "title": "本库指南 的关系图"
             }
           },
           {
@@ -307,8 +307,20 @@
   },
   "active": "6544da63f08bf955",
   "lastOpenFiles": [
-    "40-RESOURCES/SOP-AI提问技巧.md",
+    "00-META/Guide/命名规范.md",
+    "00-META/Guide/本库指南.md",
+    "00-META/Guide/元数据规范.md",
+    "00-META/Guide/快速开始.md",
+    "00-META/Guide/本库常见问题解答汇总.md",
+    "40-RESOURCES/知识获取工作流.md",
+    "00-META/Architecture/本库子系统概述.md",
+    "00-META/Architecture/llm-wiki-schema.md",
+    "00-META/Log/suggest-log.md",
     "00-META/Log/wiki-log.md",
+    "40-RESOURCES/SOP-AI提问技巧.md",
+    "20-AREAS/A-知识管理/A-知识管理.md",
+    "40-RESOURCES/荣格心理学.md",
+    "30-Zettelkasten/AI提问质量取决于上下文结构化程度.md",
     "CLAUDE.md",
     "00-META/Specification/_skills-overview.md",
     "CLAUDE.md.tmp.1138.1781232884727",
@@ -318,27 +330,15 @@
     "40-RESOURCES/MOC-前端面试真题库.md",
     "40-RESOURCES/Angular面试题.md",
     "00-META/Index/wiki-index.md",
-    "00-META/Log/suggest-log.md",
     "40-RESOURCES/MOC-心流体验.md",
     "40-RESOURCES/Web安全问题.md",
     "40-RESOURCES/网络协议相关问题.md",
     "40-RESOURCES/JS&TS相关问题.md",
     "40-RESOURCES/前端场景实践.md",
-    "40-RESOURCES/事件循环.md",
-    "40-RESOURCES/React面试题.md",
-    "40-RESOURCES/Vue 面试题.md",
     "20-AREAS/A-人工智能/_resources",
-    "20-AREAS/A-人工智能/人工智能.md",
-    "50-ARCHIVE/数字花园概述.md",
     "00-META/wiki-sync-state.json.tmp.26576.58e74d3964b4",
-    "index.md",
-    "LIST.md",
-    "excalibrain.md",
     "banner.svg",
-    "Drawing 2026-06-03 09.06.13.excalidraw.md",
     "Drawing 2026-06-03 09.06.13.excalidraw.svg",
-    "10-PROJECTS/P-构建一个智能体.md",
-    "10-PROJECTS/10-PROJECTS.md",
     "00-META/Log/suggest-log.md.tmp.17944.1a3f1f23bd1a",
     "00-META/Log/suggest-log.md.tmp.17944.bf664ac407dd",
     "00-META/Log/wiki-log.md.tmp.17944.f567aaaf3935",

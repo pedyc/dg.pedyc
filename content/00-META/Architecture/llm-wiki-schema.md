@@ -4,7 +4,7 @@ title: llm-wiki-schema
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-05-20
-date-modified: 2026-05-28
+date-modified: 2026-06-12
 status: active
 content-type: [article]
 up: "[[Guide/本库指南]]"

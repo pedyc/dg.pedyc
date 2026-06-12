@@ -32,6 +32,20 @@ up: ["[[本库指南]]"]
 - [2026-06-12] ingest | 新建 SOP「AI提问技巧」
 	- 位置：40-RESOURCES/SOP-AI提问技巧.md
 	- 父页面：[[A-知识管理]]
+- [2026-06-12] ingest | 新增 atomic「AI提问质量取决于上下文结构化程度」
+	- 位置：30-ZETTELKASTEN/AI提问质量取决于上下文结构化程度.md
+	- 父页面：[[SOP-AI提问技巧]]
+- [2026-06-12] refactor | 重写知识获取工作流为 SOP
+	- 位置：40-RESOURCES/知识获取工作流.md
+	- 变更：atomic → sop，覆盖剪藏 + AI 对话两种模式
+	- 更新引用：MOC-知识获取、wiki-index
+- [2026-06-12] refactor | 新增本库指南「系统设计」章节
+- [2026-06-12] refactor | 本库指南重构为 MOC 入口
+	- 拆分元数据规范 → 00-META/Guide/元数据规范.md
+	- 拆分命名规范 → 00-META/Guide/命名规范.md
+	- 本库指南保留核心理念/目录/模板/标签/工作流/系统设计/工具链/LLM Wiki 及索引链接
+	- 位置：00-META/Guide/本库指南.md
+	- 内容：架构总览 mermaid 图 + 组件总览表 + 导航指引
 - [2026-06-12] refactor | skill 三层分层重构
 	- obsidian-note-local v1.0.0 → v2.1.0：移除 wiki-index/wiki-log 职责，只负责创建 + 挂父页面
 	- wiki-sync-local v2.0.0 → v3.0.0：明确只碰 00-META/，接管 index/log 职责

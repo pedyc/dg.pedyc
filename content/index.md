@@ -6,7 +6,7 @@ author: ped_yc
 description:
 tags: []
 date-created: 2024-08-23
-date-modified: 2026-05-29
+date-modified: 2026-06-13
 content-type: [MOC]
 ---
 
@@ -16,6 +16,7 @@ content-type: [MOC]
 	style="width: 100%" />
 
 ✌Hello，我是 pedyc，欢迎来到我的 [[数字花园概述|数字花园]]。
+
 
 这里是我延展思维的空间，我利用这个花园来捕捉灵感，整合观点。
 
@@ -28,10 +29,12 @@ content-type: [MOC]
 >
 > 点击此处 [[快速开始]]
 >
-> 如果你希望对本库有更多的了解，欢迎查看 [[本库指南|关于本库]]。
+> 如果你希望对本库有更多的了解，欢迎查看 [[本库指南]]。
 >
 > 纵览本库主题：[[本库看板索引]]，[[本库领域索引]]
 >
 > 这里是我的博客地址：[ped-Yc's Blog](https://blog.ped-yc.site/)
 >
 > 这是我的 github 地址：[ped-Yc (风熏人醉) (github.com)](https://github.com/ped-Yc)
+
+> 查看[[wiki-log]]

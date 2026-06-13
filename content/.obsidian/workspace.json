@@ -307,8 +307,9 @@
   },
   "active": "6544da63f08bf955",
   "lastOpenFiles": [
-    "00-META/Guide/命名规范.md",
+    "00-META/Index/本库领域索引.md",
     "00-META/Guide/本库指南.md",
+    "00-META/Guide/命名规范.md",
     "00-META/Guide/元数据规范.md",
     "00-META/Guide/快速开始.md",
     "00-META/Guide/本库常见问题解答汇总.md",
@@ -334,7 +335,6 @@
     "40-RESOURCES/Web安全问题.md",
     "40-RESOURCES/网络协议相关问题.md",
     "40-RESOURCES/JS&TS相关问题.md",
-    "40-RESOURCES/前端场景实践.md",
     "20-AREAS/A-人工智能/_resources",
     "00-META/wiki-sync-state.json.tmp.26576.58e74d3964b4",
     "banner.svg",

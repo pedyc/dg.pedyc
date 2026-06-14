@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "00-META/Log/suggest-log.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "suggest-log"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "index.md",
+                "file": "00-META/Log/suggest-log.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "index 的关系图"
+              "title": "suggest-log 的关系图"
             }
           },
           {
@@ -298,7 +298,6 @@
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
-      "mermaid-tools:Open Mermaid Toolbar": false,
       "random-note:开始漫游笔记": false,
       "omnisearch:Omnisearch": false,
       "cmdr:堆叠/取消堆叠标签页": false,
@@ -307,9 +306,13 @@
   },
   "active": "6544da63f08bf955",
   "lastOpenFiles": [
-    "00-META/Guide/本库指南.md",
-    "index.md",
+    "50-ARCHIVE/P-学习OpenClaw.md",
+    "00-META/Log/suggest-log.md",
+    "50-ARCHIVE/3月健康目标.md",
+    "00-META/Log/suggest-log.md.tmp.21632.63ee9278c587",
     "00-META/Log/wiki-log.md",
+    "index.md",
+    "00-META/Guide/本库指南.md",
     "00-META/Index/本库领域索引.md",
     "00-META/Guide/命名规范.md",
     "00-META/Guide/元数据规范.md",
@@ -318,7 +321,6 @@
     "40-RESOURCES/知识获取工作流.md",
     "00-META/Architecture/本库子系统概述.md",
     "00-META/Architecture/llm-wiki-schema.md",
-    "00-META/Log/suggest-log.md",
     "40-RESOURCES/SOP-AI提问技巧.md",
     "20-AREAS/A-知识管理/A-知识管理.md",
     "40-RESOURCES/荣格心理学.md",
@@ -333,8 +335,6 @@
     "40-RESOURCES/Angular面试题.md",
     "00-META/Index/wiki-index.md",
     "40-RESOURCES/MOC-心流体验.md",
-    "40-RESOURCES/Web安全问题.md",
-    "40-RESOURCES/网络协议相关问题.md",
     "20-AREAS/A-人工智能/_resources",
     "00-META/wiki-sync-state.json.tmp.26576.58e74d3964b4",
     "banner.svg",
@@ -344,7 +344,6 @@
     "00-META/Log/wiki-log.md.tmp.17944.f567aaaf3935",
     "40-RESOURCES/Inbox/AI 如何影响你的审美？.pdf",
     "40-RESOURCES/SOP-AI输出质量评估.md.tmp.21792.3de9d6641faf",
-    "99-ASSETS/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",
     "_resources/webkit-main-flow-b779d50c0cf28_856.png",
     "_resources/sw-lifecycle.svg",

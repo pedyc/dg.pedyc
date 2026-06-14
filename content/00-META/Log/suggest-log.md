@@ -4,7 +4,7 @@ title: suggest-log
 aliases: [suggest-log, 行动建议日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-06-01
-date-modified: 2026-06-12
+date-modified: 2026-06-14
 status: active
 content-type: [article]
 up: ["[[本库指南]]"]
@@ -40,5 +40,19 @@ up: ["[[本库指南]]"]
 	- **P3 维护**
 		- 5 个孤儿 MOC（见上次 lint 报告）
 		- ![[wiki-log#2026-06-01]]
+
+#### 2026-06-14
+
+- [2026-06-14] suggest | 行动建议（v1.4 - 基于 06-12 lint + 项目状态）
+	- **P0 逾期归档**
+		- [x] [[P-学习OpenClaw]]（上次建议 06-01 确认 ✅，文件仍在 10-PROJECTS）— 建议移至 50-ARCHIVE ✅ 2026-06-14
+		- [x] [[3月健康目标]]（94 天未更新，3月目标已过时）— 建议移至 50-ARCHIVE ✅ 2026-06-14
+	- **P1 紧急停滞**
+		- [ ] [[P-构建一个智能体]]（fleeting 98天，内容为模板占位符）— 建议补充目标/KR，推进到 cultivating，或直接归档
+	- **P2 重要继续**
+		- [ ] [[P-求职前端岗位]]（active，29天未更新，expired 45天）— 阶段三面试冲刺未启动，建议更新投递记录，推进面试准备
+		- [ ] [[P-前端能力提升专项]]（80% 完成，KR1-KR4 ✅，还剩 KR5）— 建议冲刺收尾 KR5，完成阶段四/五剩余待办
+	- **P3 维护**
+		- [ ] 孤儿 MOC（[[MOC-心流体验]]、[[MOC-前端缓存方案]]）+ 概念缺口 [[Svelte vs React]] — 建议补充引用或归档
 
 *Log 开始于 2026-06-01*

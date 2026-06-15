@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-知识管理/知识组织.md",
+                "file": "20-AREAS/A-知识管理/A-知识管理.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "知识组织"
+              "title": "A-知识管理"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-知识管理/知识组织.md",
+                "file": "20-AREAS/A-知识管理/A-知识管理.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "知识组织 的关系图"
+              "title": "A-知识管理 的关系图"
             }
           },
           {
@@ -307,7 +307,12 @@
   "active": "6544da63f08bf955",
   "lastOpenFiles": [
     "20-AREAS/A-知识管理/知识获取.md",
+    "40-RESOURCES/信息收集工作流.md",
     "40-RESOURCES/知识获取工作流.md",
+    "40-RESOURCES/Q-如何在信息过载时代保持高信噪比.md",
+    "00-META/Log/wiki-log.md.tmp.21632.5b7f6d8ecafe",
+    "20-AREAS/A-知识管理/A-知识管理.md",
+    "20-AREAS/A-知识管理/知识组织.md",
     "00-META/Log/suggest-log.md",
     "50-ARCHIVE/P-学习OpenClaw.md",
     "50-ARCHIVE/3月健康目标.md",
@@ -323,7 +328,6 @@
     "00-META/Architecture/本库子系统概述.md",
     "00-META/Architecture/llm-wiki-schema.md",
     "40-RESOURCES/SOP-AI提问技巧.md",
-    "20-AREAS/A-知识管理/A-知识管理.md",
     "40-RESOURCES/荣格心理学.md",
     "30-Zettelkasten/AI提问质量取决于上下文结构化程度.md",
     "CLAUDE.md",
@@ -332,9 +336,6 @@
     "CLAUDE.md.tmp.1138.1781232869043",
     "00-META/Specification/_lint-rules.md",
     "20-AREAS/A-前端/Angular.md",
-    "40-RESOURCES/MOC-前端面试真题库.md",
-    "40-RESOURCES/Angular面试题.md",
-    "00-META/Index/wiki-index.md",
     "20-AREAS/A-人工智能/_resources",
     "00-META/wiki-sync-state.json.tmp.26576.58e74d3964b4",
     "banner.svg",
@@ -343,7 +344,6 @@
     "00-META/Log/suggest-log.md.tmp.17944.bf664ac407dd",
     "00-META/Log/wiki-log.md.tmp.17944.f567aaaf3935",
     "40-RESOURCES/Inbox/AI 如何影响你的审美？.pdf",
-    "40-RESOURCES/SOP-AI输出质量评估.md.tmp.21792.3de9d6641faf",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",
     "_resources/webkit-main-flow-b779d50c0cf28_856.png",
     "_resources/sw-lifecycle.svg",

@@ -2,7 +2,7 @@
 title: 如何处理 Ajax 请求在不同浏览器中的兼容性问题？
 date-created: 2025-06-16
 date-modified: 2026-03-21
-content-type: atomic
+content-type: question
 ---
 
 ## 回答

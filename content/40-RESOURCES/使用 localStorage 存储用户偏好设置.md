@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: 使用 localStorage 存储用户偏好设置
 date-created: 2025-05-23
 date-modified: 2025-05-23

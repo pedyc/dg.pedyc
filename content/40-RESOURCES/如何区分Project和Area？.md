@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: question
 title: 如何区分Project和Area？
 date-created: 2025-12-12
 date-modified: 2025-12-18

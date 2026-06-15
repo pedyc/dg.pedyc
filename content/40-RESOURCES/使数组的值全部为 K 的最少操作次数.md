@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: 使数组的值全部为 K 的最少操作次数
 tags: [数组]
 date-created: 2025-04-04

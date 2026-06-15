@@ -2,7 +2,7 @@
 title: 生态系统（Vue）
 date-created: 2025-06-02
 date-modified: 2026-03-23
-content-type: atomic
+content-type: concept
 ---
 
 ## 定义

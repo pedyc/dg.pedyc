@@ -1,7 +1,7 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: "{{主题}}演进"
-aliases: ["R-{{主题}}演进"]
+aliases: []
 description: "{ 一句话定义这个演进历程的核心 }"
 tags: []
 content-type: roadmap

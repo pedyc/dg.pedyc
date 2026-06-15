@@ -1,7 +1,7 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: "{{标题}}"
-aliases: ["MOC-{{标题名称}}"]
+aliases: ["VS-{{简短标题}}"]
 description: "{ 一句话概括核心区别 }"
 tags: []
 content-type: comparison

@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: term
 title: Pinia
 date-created: 2025-06-02
 date-modified: 2025-06-02

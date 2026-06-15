@@ -4,7 +4,7 @@ title: TypeScript的类型是编译时约束
 description: TypeScript 的类型检查发生在编译阶段，编译后的 JavaScript 代码不包含类型信息
 tags: [前端/TypeScript]
 date-created: 2026-03-16
-date-modified: 2026-04-15
+date-modified: 2026-06-15
 status: fleeting
 content-type: atomic
 up: "[[TypeScript]]"

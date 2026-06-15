@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: PARA FAQ：多重归属难题
 date-created: 2025-05-07
 date-modified: 2025-12-16

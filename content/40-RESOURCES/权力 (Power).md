@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: 权力 (Power)
 tags: [政治学/核心概念, 社会学/权力关系]
 date-created: 2025-04-30

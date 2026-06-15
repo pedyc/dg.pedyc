@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: 广度优先搜索 (BFS)
 date-created: 2025-04-04
 date-modified: 2025-12-10

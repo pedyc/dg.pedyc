@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: Monorepo架构
 description: Monorepo 架构的详细介绍，包括概念、优点、缺点、适用场景和常用工具。
 tags:

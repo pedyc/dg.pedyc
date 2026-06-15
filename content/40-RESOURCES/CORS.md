@@ -5,7 +5,7 @@ aliases: [C-CORS, 跨域资源共享]
 description: CORS是一种机制，允许服务端通过HTTP响应头控制跨域访问
 tags: [前端开发/安全]
 date-created: 2025-05-23
-date-modified: 2026-03-23
+date-modified: 2026-06-15
 status: active
 content-type: concept
 up: [[浏览器安全机制]]

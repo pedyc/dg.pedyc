@@ -1,14 +1,15 @@
 ---
 uid:
-title: SOP-CODE知识全生命周期工作流
+title: CODE知识全生命周期工作流
 aliases: [SOP-CODE知识全生命周期工作流, 知识管理工作流]
 author:
 description:
-tags: ["知识管理/工作流"]
+tags: [知识管理/工作流]
 date-created: 2025-02-20
-date-modified: 2026-05-29
+date-modified: 2026-06-15
 status: completed
 content-type: sop
+up: ["[[A-知识管理|知识管理]]"]
 ---
 
 ![[知识管理工作流.excalidraw|800]]
@@ -18,17 +19,17 @@ content-type: sop
 
 ### 知识获取 (Capture)
 
-- 参见：[[知识获取]]
+- 参见：[[知识获取]]、[[信息收集工作流]]
 - 概念：通过高质量 [[信息源]] 来收集优质信息
 - 工具：
-	- 简悦：浏览器插件，阅读模式、稍后读、本地导出
-	- [[RSS]]：RSSHub Radar + Follow/Inoreader/Tidyread/Readwise
+	- [[RSS]]：RSSHub Radar + Follow
 - 我的方案：
-	- 简悦 + RSS 方案，实现本地和云端的双向同步，因为本地化，所以可以非常快
+	- Follow（主力 RSS）+ 被动推送（抖音/掘金）+ 个人博客深读
+	- 详见 [[信息收集工作流]]
 
 ### 知识组织 (Organization)
 
-- 参见：[[知识组织]]
+- 参见：[[知识组织]]、[[PARA笔记法]]、[[卡片盒笔记法]]、[[本库指南]]
 - 概念：将知识以一定方式组织起来，关注的知识的管理成本和检索成本，一般而言，管理成本和检索成本成反比
 - 工具：
 	- Obsidian
@@ -43,9 +44,8 @@ content-type: sop
 - 工具：
 	- ==Obsidian Copilot：Obsidian AI 集成插件==
 	- Anki：间隔重复学习软件
-	- Follow：开源 RSS 阅读器，可以导出文章（不能做笔记，目前不支持 AI 解构）
-	- 简悦稍后读：高亮 + 笔记，可以做笔记，体验一般，AI 支持不够友好
-	- Tidyread：浏览器插件，AI 解构 + 提炼，不能做笔记
+	- Follow：开源 RSS 阅读器，可以导出文章
+	- Tidyread：浏览器插件，AI 解构 + 提炼
 - 我的方案：
 	- Obsidian Copilot + Anki：通过 AI 拆分知识，在 Anki 中消化重点（制卡也是学习的一部分，可以应用费曼技巧）
 	- [[信息拆分工作流]]

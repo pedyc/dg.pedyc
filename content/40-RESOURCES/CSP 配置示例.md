@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: CSP 配置示例
 date-created: 2025-05-23
 date-modified: 2025-05-23

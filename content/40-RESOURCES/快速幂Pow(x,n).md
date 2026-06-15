@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: 快速幂Pow(x,n)
 tags: [数组]
 date-created: 2025-04-04

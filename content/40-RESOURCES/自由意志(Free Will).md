@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: 自由意志(Free Will)
 description: 自由意志是指我们拥有在多种可能性中进行选择并自主行动的能力。这是一个备受争议的哲学问题，涉及到我们对自身、道德和责任的理解。
 tags:

@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: Git命令与工作流速查
 description: "Git 常用命令和工作流的速查表，方便快速查找和使用。"
 tags: ["Git", "版本控制", "工作流", "前端工程", "速查表"]

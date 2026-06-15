@@ -7,7 +7,7 @@ tags: [atomic, topic/待分类]
 date-created: 2026-03-07
 date-modified: 2026-03-09
 status: 🌲 evergreen
-content-type: atomic
+content-type: term
 up: "[[Linux]]"
 ---
 

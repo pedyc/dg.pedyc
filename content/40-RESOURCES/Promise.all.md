@@ -2,7 +2,7 @@
 title: Promise.all
 date-created: 2025-05-20
 date-modified: 2026-05-10
-content-type: atomic
+content-type: term
 ---
 
 ## 实现

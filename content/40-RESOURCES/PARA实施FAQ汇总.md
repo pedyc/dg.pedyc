@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: PARA实施FAQ汇总
 date-created: 2025-04-23
 date-modified: 2025-12-16

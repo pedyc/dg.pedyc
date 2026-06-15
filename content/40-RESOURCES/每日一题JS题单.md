@@ -3,7 +3,7 @@ title: 每日一题JS题单
 tags: [算法题单]
 date-created: 2025-04-10
 date-modified: 2026-03-16
-content-type: atomic
+content-type: concept
 ---
 
 https://github.com/haizlin/fe-interview/labels/js?page=50&q=is%3Aopen+label%3Ajs

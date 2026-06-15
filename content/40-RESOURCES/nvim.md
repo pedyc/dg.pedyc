@@ -1,8 +1,8 @@
 ---
-content-type: atomic
+content-type: term
 uid: null
 title: nvim
-aliases: []
+aliases: ["T-nvim", ]
 author: null
 description: null
 tags:

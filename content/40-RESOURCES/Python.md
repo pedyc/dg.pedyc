@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: term
 title: Python
 description: 一种高级编程语言，广泛应用于Web开发、数据科学、人工智能等领域。
 date-created: 2025-06-14

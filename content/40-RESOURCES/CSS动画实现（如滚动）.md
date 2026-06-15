@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: CSS动画实现（如滚动）
 date-created: 2025-05-19
 date-modified: 2025-05-21

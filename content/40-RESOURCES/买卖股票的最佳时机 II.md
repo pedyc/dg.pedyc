@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: 买卖股票的最佳时机 II
 tags: [数组]
 date-created: 2025-04-04

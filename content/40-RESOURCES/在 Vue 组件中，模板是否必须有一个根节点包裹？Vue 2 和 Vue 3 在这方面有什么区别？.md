@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: question
 title: 在 Vue 组件中，模板是否必须有一个根节点包裹？Vue 2 和 Vue 3 在这方面有什么区别？
 date-created: 2025-06-04
 date-modified: 2025-06-04

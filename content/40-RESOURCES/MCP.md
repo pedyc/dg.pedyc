@@ -1,7 +1,7 @@
 ---
-content-type: atomic
+content-type: term
 title: MCP
-aliases: [Model Context Protocol]
+aliases: ["T-MCP", Model Context Protocol]
 date-created: 2026-03-01
 date-modified: 2026-03-07
 status: 🌰 seed

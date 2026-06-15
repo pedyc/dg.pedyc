@@ -2,7 +2,7 @@
 title: Claude Code 注意事项
 date-created: 2026-03-03
 date-modified: 2026-03-15
-content-type: atomic
+content-type: concept
 ---
 
 **上下文**

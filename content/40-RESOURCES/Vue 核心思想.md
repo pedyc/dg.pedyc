@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: Vue 核心思想
 date-created: 2025-06-16
 date-modified: 2025-06-16

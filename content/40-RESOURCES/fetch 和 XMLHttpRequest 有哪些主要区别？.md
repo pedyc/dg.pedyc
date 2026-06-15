@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: question
 title: fetch 和 XMLHttpRequest 有哪些主要区别？
 date-created: 2025-05-28
 date-modified: 2025-05-28

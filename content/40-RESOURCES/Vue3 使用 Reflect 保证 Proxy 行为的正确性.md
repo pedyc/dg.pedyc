@@ -6,7 +6,7 @@ tags: [前端/Vue]
 date-created: 2026-03-17
 date-modified: 2026-03-16
 status: fleeting
-content-type: atomic
+content-type: term
 ---
 
 ## Vue3 使用 Reflect 保证 Proxy 行为的正确性

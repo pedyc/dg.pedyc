@@ -1,11 +1,11 @@
 ---
 uid: 202606121500
-title: SOP-AI提问技巧
+title: AI提问技巧
 aliases: [SOP-AI提问技巧]
 description: 提高向 AI 提问质量的标准化流程，帮助获得更精准有效的回答
 tags: [方法论, AI]
 date-created: 2026-06-12
-date-modified: 2026-06-12
+date-modified: 2026-06-15
 status: cultivating
 content-type: sop
 up: "[[A-知识管理]]"
@@ -128,7 +128,7 @@ flowchart TD
 
 - **相关概念**：
 	- [[提示词工程]] — 提示词编写方法论
-	- [[SOP-CODE知识全生命周期工作流]] — 知识管理整体流程
+	- [[CODE知识全生命周期工作流]] — 知识管理整体流程
 	- [[A-知识管理]] — 知识管理领域
 	- [[AI提问质量取决于上下文结构化程度]] — 结构化上下文决定回答质量（atomic）
 - **相关 MOC**：

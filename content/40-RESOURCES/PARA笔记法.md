@@ -3,16 +3,16 @@ title: PARA笔记法
 aliases: [PARA Method, PARA System, C-PARA笔记法, PARA]
 tags: [知识管理/方法论]
 date-created: 2025-12-17
-date-modified: 2026-05-29
+date-modified: 2026-06-15
 al:
-content-type: atomic
+content-type: concept
 ---
 
 ## 概念：PARA 笔记法
 
 ### 1. 定义 (Definition)
 
-PARA 是一种由 *Tiago Forte* 提出的知识管理/信息组织方法论。其核心思想是颠覆传统的 " 基于主题（Topic-based）" 分类，转而采用**基于行动（Action-based）** 的动态分类逻辑。它主张 将所有数字信息按照**" 可行动性 "**（Actionability）的程度，由高到低分为四个主要类别：**Projects（项目）、Areas（领域）、Resources（资源）和 Archives（归档）**。
+PARA 是一种由 *Tiago Forte* 提出的知识管理/信息组织方法论。其核心思想是颠覆传统的 " 基于主题（Topic-based）" 分类，转而采用**基于行动（Action-based）** 的动态分类逻辑。它主张 将所有数字信息按照 **" 可行动性 "**（Actionability）的程度，由高到低分为四个主要类别 **Projects（项目）、Areas（领域）、Resources（资源）和 Archives（归档）**。
 
 ### 2. 核心原则 (Core Principles)
 
@@ -47,5 +47,5 @@ PARA 是一种由 *Tiago Forte* 提出的知识管理/信息组织方法论。�
 
 * 提出者：[[Tiago Forte]]
 * 来源书籍：[[构建第二大脑]]
-* 关联概念：[[GTD]] (PARA 类似于 GTD 在资料管理层面的投射)
+* 关联概念：[[GTD]] (PARA 类似于 GTD 在资料管理层面的投射)、[[卡片盒笔记法]]
 * 实践应用：[[如何区分Project和Area？]]

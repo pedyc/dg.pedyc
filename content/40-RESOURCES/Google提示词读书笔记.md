@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: Google提示词读书笔记
 date-created: 2025-08-28
 date-modified: 2025-08-28

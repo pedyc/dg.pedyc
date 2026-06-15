@@ -1,9 +1,9 @@
 ---
-content-type: atomic
+content-type: term
 topic: 
 uid: 202502251203
 title: AbortController API
-aliases: []
+aliases: ["T-AbortController API", ]
 author: ped_yc
 description: 
 tags: []

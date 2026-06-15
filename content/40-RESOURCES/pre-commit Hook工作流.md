@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: pre-commit Hook工作流
 tags: [workflow/git, tool/husky, tool/lint-staged, practice/linting, practice/formatting, area/frontend-engineering]
 date-created: 2025-04-24

@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: term
 title: OAuth
 date-created: 2025-06-15
 date-modified: 2025-06-15

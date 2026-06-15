@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: 存在 (Being)
 description: 在哲学中，“存在”是最基本、最普遍的概念之一。它指的是事物具有现实性、客观性或真实性的状态。对“存在”的探讨构成了本体论的核心。
 tags:

@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: 协作（Collaboration）
 date-created: 2025-05-13
 date-modified: 2025-05-13

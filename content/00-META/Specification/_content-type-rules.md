@@ -4,7 +4,7 @@ title: _content-type-rules
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-05-20
-date-modified: 2026-06-01
+date-modified: 2026-06-15
 status: active
 content-type: [article]
 up: [["Architecture/llm-wiki-schema"]]
@@ -185,7 +185,7 @@ Wiki 层（`40-RESOURCES/`）除 atomic 外的其他类型也需要遵循特定�
 - [[T-XXX]]
 ```
 
-### Diay（日记）
+### Diary（日记）
 
 **定位**：source of truth，不需要 ingest 到 wiki 层
 

@@ -1,12 +1,12 @@
 ---
 uid: "202604211743"
 title: React Context 可搭配 React.memo 使用
-aliases: []
+aliases: ["C-React Context 可搭配 React.memo 使用", ]
 tags: []
 date-created: 2026-04-21
 date-modified: 2026-04-21
 status: fleeting
-content-type: atomic
+content-type: concept
 up: "[[React Context]]"
 ---
 

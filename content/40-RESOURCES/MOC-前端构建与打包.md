@@ -7,7 +7,7 @@ description: 通过工具和流程，自动完成前端代码的构建、打包�
 date-created: 2025-05-18
 date-modified: 2026-03-13
 status: active
-content-type: atomic
+content-type: moc
 para: area
 related:
   - "[[前端工程]]"

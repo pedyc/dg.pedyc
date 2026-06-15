@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: 虚无主义（Nihilism）
 description: 虚无主义是一种哲学立场，它否定客观的价值、意义和知识的存在。它认为世界是无意义的，人生是空虚的。
 tags:

@@ -2,12 +2,12 @@
 topic: 
 uid: 202502251159
 title: Intersection Observer
-aliases: [IO]
+aliases: ["T-Intersection Observer", IO]
 description: Intersection Observer API 提供了一种异步检测目标元素与祖先元素或 viewport 相交情况的方法。
 tags: [前端开发, API, 性能优化]
 date-created: 2025-05-18
 date-modified: 2026-05-09
-content-type: atomic
+content-type: term
 keywords: [Intersection Observer, 懒加载, 可视区域]
 para: Resource
 related: ["[[DOM]]", "[[性能优化]]"]

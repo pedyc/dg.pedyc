@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: question
 title: axios 和 fetch 的主要区别？
 date-created: 2025-05-28
 date-modified: 2025-05-28

@@ -1,5 +1,5 @@
 ---
-content-type: atomic
+content-type: concept
 title: 我对赢学的一些总结与思考@ds
 tags: []
 date-created: 2025-04-06

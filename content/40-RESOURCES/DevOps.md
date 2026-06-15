@@ -1,7 +1,7 @@
 ---
-content-type: atomic
+content-type: term
 title: DevOps
-aliases: []
+aliases: ["T-DevOps", ]
 tags: [专业技术/DevOps工作流]
 date-created: 2025-03-05
 date-modified: 2025-12-25

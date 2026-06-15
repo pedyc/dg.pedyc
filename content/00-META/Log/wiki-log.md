@@ -4,7 +4,7 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-06-12
+date-modified: 2026-06-15
 status: active
 content-type: [article]
 up: ["[[本库指南]]"]
@@ -26,14 +26,79 @@ up: ["[[本库指南]]"]
 #### 2026-06-15
 
 - [2026-06-15] ingest | 创建 Q-note「如何在信息过载时代保持高信噪比」
-	- 位置：40-RESOURCES/Q-如何在信息过载时代保持高信噪比.md
+	- 位置：40-RESOURCES/如何在信息过载时代保持高信噪比.md
 	- 父页面：[[A-知识管理]]（已纳入"待解问题"章节）
 	- 覆盖 3 套策略（Gatekeeping、分层处理、Pull 驱动）+ 探索路径
 - [2026-06-15] ingest | 创建 SOP「信息收集工作流」
-	- 位置：40-RESOURCES/SOP-信息收集工作流.md
+	- 位置：40-RESOURCES/信息收集工作流.md
 	- 父页面：[[知识获取|MOC-知识获取]]
 	- 覆盖三层管道：Follow RSS（主力）→ 抖音/掘金（补充）→ 个人博客（深读）
 	- 包含 mermaid 流程图和三管道核心步骤
+- [2026-06-15] ingest | 创建 Q-note「双向链接如何从引用变成思维脚手架」
+	- 位置：40-RESOURCES/双向链接如何从引用变成思维脚手架.md
+	- 父页面：[[A-知识管理]]（已纳入"待解问题"章节）
+	- 覆盖 3 套策略：理由化链接、链接类型语义、被动浮现
+- [2026-06-15] refactor | 知识管理领域全面修复（创建5个缺失笔记 + 移动2条atomic + 更新领域页）
+	- 创建：认知心理学（concept）、SOP-知识花园修剪指南、SOP-笔记标签命名与使用规范
+	- 创建：常用工具（MOC）、Q-知识管理的ROI如何衡量（question）
+	- 移动：知识只有被调用时才产生价值、信息应按可行动性而非主题分类 → 30-ZETTELKASTEN
+	- 更新：SOP-CODE知识全生命周期工作流（移除简悦，对齐Follow）
+	- 更新：A-知识管理（Q3里程碑、健康度指标、复盘v2.0）
+	- 修复：知识组织MOC引用（维护清单→修剪指南）
+- [2026-06-15] ingest | 创建 SOP「全渠道快速捕获工作流」
+	- 位置：40-RESOURCES/SOP-全渠道快速捕获工作流.md
+	- 父页面：[[知识获取]]
+	- 覆盖手机/电脑/离线三端捕获场景
+- [2026-06-15] ingest | 创建 SOP「PARA笔记归档流程」
+	- 位置：40-RESOURCES/SOP-PARA笔记归档流程.md
+	- 父页面：[[知识组织]]
+	- 覆盖项目完成后按 PARA 四象限归档的完整流程
+- [2026-06-15] ingest | 创建 SOP「原子笔记拆分标准」
+	- 位置：40-RESOURCES/SOP-原子笔记拆分标准.md
+	- 父页面：[[知识组织]]
+	- 覆盖单一性检查、拆分红线、关联重建
+- [2026-06-15] ingest | 创建 SOP「渐进式总结法」
+	- 位置：40-RESOURCES/SOP-渐进式总结法.md
+	- 父页面：[[知识内化]]
+	- 覆盖四层提炼：摘录→加粗→批注→重构
+- [2026-06-15] ingest | 创建 SOP「卡片盒笔记链接法」
+	- 位置：40-RESOURCES/SOP-卡片盒笔记链接法.md
+	- 父页面：[[知识内化]]
+	- 覆盖反向检索、理由化链接、类型标注
+- [2026-06-15] ingest | 创建 atomic「笔记的价值取决于连接」
+	- 位置：30-ZETTELKASTEN/笔记的价值取决于连接.md
+	- 父页面：[[卡片盒笔记法]]
+	- 核心观点：笔记的连接密度决定了知识库的活性
+- [2026-06-15] ingest | 创建 atomic「收敛过程本质上的熵减过程」
+	- 位置：30-ZETTELKASTEN/收敛过程本质上的熵减过程.md
+	- 父页面：[[A-知识管理]]
+	- 核心观点：收敛（算法/思维/知识）本质上是系统熵减的过程
+
+- [2026-06-15] ingest | 创建 atomic「熵减必然有信息代价」
+	- 位置：30-ZETTELKASTEN/熵减必然有信息代价.md
+	- 父页面：[[收敛过程本质上是熵减过程]]
+	- 核心观点：任何熵减操作都伴随着信息的舍弃——收敛必有取舍
+
+- [2026-06-15] ingest | 创建 SOP「信源质量审计标准」
+	- 位置：40-RESOURCES/信源质量审计标准.md
+	- 父页面：[[知识获取]]
+	- 覆盖五维评分（密度/时效/深度/独特性/产出率）+ 四级判定
+
+- [2026-06-15] refactor | 重写「经过验证的高信噪比信源」按五维评分标准评级
+	- 位置：20-AREAS/A-知识管理/经过验证的高信噪比信源.md
+	- 评分：Zsolt A级、PKMer B级、阮一峰 B级、潮流周刊 C级
+	- 遗留：B站信源评分待补充，X/知乎/播客暂缺
+
+- [2026-06-15] ingest | 创建 concept「信息论」
+	- 位置：40-RESOURCES/信息论.md
+	- 父页面：[[知识获取]]
+	- 覆盖香农信息论核心概念 + 知识管理应用映射 + 信噪比/熵的学科源头
+	- 更新信噪比.md 添加「上游学科」反向链接
+
+- [2026-06-15] ingest | 创建 atomic「信噪比决定了信息传递的有效性」
+	- 位置：30-ZETTELKASTEN/信噪比决定了信息传递的有效性.md
+	- 父页面：[[信息论]]
+	- 核心观点：香农公式 C = B×log2(1+S/N) 是知识管理信噪比策略的数学原点
 
 #### 2026-06-12
 
@@ -46,7 +111,7 @@ up: ["[[本库指南]]"]
 	- 父页面：[[A-知识管理]]
 - [2026-06-12] ingest | 新增 atomic「AI提问质量取决于上下文结构化程度」
 	- 位置：30-ZETTELKASTEN/AI提问质量取决于上下文结构化程度.md
-	- 父页面：[[SOP-AI提问技巧]]
+	- 父页面：[[AI提问技巧]]
 - [2026-06-12] refactor | 重写知识获取工作流为 SOP
 	- 位置：40-RESOURCES/知识获取工作流.md
 	- 变更：atomic → sop，覆盖剪藏 + AI 对话两种模式
@@ -197,6 +262,33 @@ up: ["[[本库指南]]"]
 	- 新增 atomic：`30-ZETTELKASTEN/存在先于本质.md`
 	- 更新 [[wiki-index]] 添加 Concepts 条目
 
+- [2026-06-15] ingest | 创建 concept「GTD」
+	- 位置：40-RESOURCES/GTD.md
+	- 父页面：[[A-时间管理]]
+	- 覆盖 GTD 五阶段工作流（收集→厘清→组织→反思→执行）+ 核心原则（心如止水、2 分钟原则、每周回顾）
+	- 关联：[[四象限法则]]、[[PARA笔记法]]、[[番茄工作法]]
+
+- [2026-06-15] ingest | 创建 atomic「痛点是知识管理的唯一动力源」
+	- 位置：30-ZETTELKASTEN/痛点是知识管理的唯一动力源.md
+	- 父页面：[[A-知识管理]]（已纳入核心心智模型 → 原子洞见）
+	- 核心观点：没有真实痛点驱动的知识管理系统注定无法持续
+
+- [2026-06-15] refactor | 重写「怎样架构混合型知识库」sop → concept
+	- 位置：40-RESOURCES/怎样架构混合型知识库.md
+	- 变更：sop → concept（内容实质是架构设计，非标准流程）
+	- aliases：SOP-怎样架构混合型知识库 → C-混合型知识库架构
+	- 更新：wiki-index（SOP → Concepts）、补全核心命题/运行机制/知识图谱
+
+- [2026-06-15] refactor | 修复 _templates 目录前缀规范（2 处）
+	- template_comp.md: aliases MOC- → VS-（comparison 应使用 VS- 前缀）
+	- template_roadmap.md: aliases R- → []（roadmap 无定义前缀，不应使用 R-）
+
+- [2026-06-15] refactor | 清除模板正文中的前缀 Wikilink
+	- template_area.md: SOP-/Q-/MOC- 前缀引用 → {{纯标题占位符}}
+	- template_concept.md: SOP-/Q- 前缀引用 → {{纯标题占位符}}
+	- 原则：前缀只在 aliases 字段使用，正文引用用纯标题
+
+
 #### 2026-05-20
 
 - [2026-05-20] ingest | 批量导入所有 MOC/Area/SOP/Term/Comparison/Record 到 Wiki
@@ -225,7 +317,7 @@ up: ["[[本库指南]]"]
 		- [[费曼技巧]] — 通过教学加深理解
 		- [[认知负荷]] — 已有，复用
 	- 核心 SOP：
-		- [[SOP-CODE知识全生命周期工作流]] — Capture, Organize, Distill, Express
+		- [[CODE知识全生命周期工作流]] — Capture, Organize, Distill, Express
 	- 更新了 [[wiki-index]] 中的 Areas、Concepts、SOPs 分类
 - [2026-05-20] init | 初始化 LLM Wiki 系统
 	- 创建 [[llm-wiki-schema]]
@@ -233,3 +325,14 @@ up: ["[[本库指南]]"]
 	- 创建 [[wiki-log]]
 
 *Log 开始于 2026-05-20*
+
+- [2026-06-15] refactor | 批量重分类 163 条笔记的 content-type
+		- 原子笔记以陈述句命名，大量笔记误标为 atomic
+		- 重分类结果：concept × 126、term × 17、question × 16、sop × 3、moc × 1
+		- 保留 atomic × 3（TypeScript的类型是编译时约束、Vue3 响应式系统分为 effect 和 reactive 两部分、执行上下文分为创建阶段和执行阶段）
+		- 自动为无前缀的文件补齐 aliases 前缀
+
+- [2026-06-15] refactor | 修复 00-META 规格文档与实操的不一致
+		- settings.local.json: Skill(content-verifier) → Skill(content-verifier-local)，去掉冗余 skill(obsidian-note)
+		- _content-type-rules.md: "Diay" 拼写修正为 "Diary"
+		- 命名规范.md: 前缀表格中的空格清理（P- 求职 → P-求职 等）

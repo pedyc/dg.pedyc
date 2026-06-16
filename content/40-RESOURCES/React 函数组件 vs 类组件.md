@@ -145,4 +145,4 @@ class Counter extends React.Component {
 
 - **父级概念**：[[React]]
 - **相关对比**：[[函数组件和类组件有什么区别？生命周期如何映射？]]
-- **核心关联**：[[Hooks (React)]] / [[React.Component]]
+- **核心关联**：[[Hooks(React)]] / [[React.Component]]

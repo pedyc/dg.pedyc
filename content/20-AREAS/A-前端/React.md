@@ -97,7 +97,7 @@ mindmap
 	- [[React版本演进]] — 各版本核心差异与演进路线
 	- [[虚拟DOM(React)]] — Virtual DOM 的原理与 Diff 算法
 	- [[Fiber]] — React 16+ 的协调引擎
-	- [[Hooks (React)]] — useState / useEffect / useRef 等
+	- [[Hooks(React)]] — useState / useEffect / useRef 等
 	- [[Refs(React)]] — DOM 节点和组件实例
 	- [[useCallback]] — 回调函数缓存
 	- [[useMemo]] — 计算结果缓存
@@ -126,7 +126,7 @@ mindmap
 > 该领域的标准化操作流程
 
 - [[React最佳实践|SOP-React最佳实践]] — 开发 React 应用需要遵循的规范
-- [[SOP-React性能优化]] — 开发 React 应用需要注意的性能优化方法
+- [[React性能优化]] — 开发 React 应用需要注意的性能优化方法
 - [[SOP-使用Claude-Code开发React组件]] — Claude Code 开发 React 组件的工作流
 - [[SOP-在React中实现文字故障效果]] — React 中的 Glitch 文字动画
 - [[SOP-在React中实现ASCII动画]] — React 中的 ASCII 动画效果

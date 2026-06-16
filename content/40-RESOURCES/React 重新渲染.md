@@ -150,7 +150,7 @@ function Parent() {
 	- [[React 状态管理]] — useState、useReducer、Zustand 等
 - **相关概念**：
 	- [[React.memo]] — 避免不必要的子组件渲染
-	- [[Hooks (React)]] — useState、useEffect、useCallback 等
+	- [[Hooks(React)]] — useState、useEffect、useCallback 等
 - **参考文章**
 	- [React 官方文档 - Reconciliation](https://react.dev/learn/preserving-and-resetting-state)
 	- [React 官方文档 - useCallback](https://react.dev/reference/react/useCallback)

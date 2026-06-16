@@ -310,6 +310,25 @@ up: ["[[本库指南]]"]
 	- 保留 40-RESOURCES/数字花园概述.md（已修复完整内容）
 	- [[数字花园]] 引用通过别名正常解析到数字花园概述
 
+- [2026-06-16] ingest | 创建 comparison「Angular vs React」
+	- 位置：40-RESOURCES/Angular vs React.md
+	- 父页面：[[MOC-前端面试真题库]]
+	- 覆盖架构哲学/响应式模型/变更检测/表单/HTTP/状态管理 8 维对比
+	- 更新：wiki-index Comparisons 章节
+
+- [2026-06-16] ingest | 创建 term「Signal(Angular)」
+	- 位置：40-RESOURCES/Signal(Angular).md
+	- aliases：T-Angular-Signal
+	- 父页面：[[Angular|A-前端/Angular]]
+	- 覆盖核心 API（signal/computed/effect/input/output/model 等 9 个）+ RxJS 互通 + 使用示例
+
+- [2026-06-16] ingest | 创建 concept「Angular变更检测」
+	- 位置：40-RESOURCES/Angular变更检测.md
+	- aliases：C-Angular-变更检测
+	- 父页面：[[Angular|A-前端/Angular]]
+	- 覆盖 Zone.js 触发 → Default/OnPush 策略 → Signal 模式演进
+	- 包含性能优化示例代码（OnPush / runOutsideAngular / Signal）
+
 
 #### 2026-05-20
 

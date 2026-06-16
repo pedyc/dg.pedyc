@@ -1,14 +1,14 @@
 ---
 uid: 202604210000
-title: SOP-创建自定义Hooks
+title: 创建自定义Hooks
 aliases: [SOP-创建自定义Hooks]
 description: 创建可复用的 React 自定义 Hooks 的标准化流程
 tags: [react, hooks, frontend]
 date-created: 2026-04-21
-date-modified: 2026-04-21
+date-modified: 2026-06-16
 status: cultivating
 content-type: sop
-up: "[[Hooks (React)|React Hooks]]"
+up: "[[Hooks(React)|React Hooks]]"
 ---
 
 ## SOP：创建自定义 Hooks
@@ -125,7 +125,7 @@ function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T) => voi
 
 ### 知识图谱
 
-- **父级概念**：[[React Hooks]]
+- **父级概念**：[[Hooks(React)|React Hooks]]
 - **关联概念**：[[useState 与 useReducer]]
 - **关联概念**：[[useEffect 最佳实践]]
 - **关联概念**：[[自定义 Hooks 模式]]

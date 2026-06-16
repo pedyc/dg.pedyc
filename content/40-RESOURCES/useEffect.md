@@ -1,14 +1,16 @@
 ---
 uid: 202604180001
 title: useEffect
-aliases: [C-useEffect]
+aliases:
+  - C-useEffect
 description: React Hooks 中用于处理副作用的核心 API，在渲染后执行清理和订阅逻辑
-tags: [前端开发/框架/React]
+tags:
+  - 前端开发/框架/React
 date-created: 2026-04-18
 date-modified: 2026-04-21
 status: cultivating
 content-type: concept
-related: "[[Hooks (React)]]"
+related: "[[Hooks(React)]]"
 ---
 
 ## 概念：useEffect
@@ -104,7 +106,7 @@ graph LR
 
 ### 知识图谱
 
-- **父级概念**：[[Hooks (React)]] — useEffect 是 React Hooks 之一
+- **父级概念**：[[Hooks(React)]] — useEffect 是 React Hooks 之一
 - **相关概念**：
 	- [[useState]] — useEffect 常配合 useState 使用
 	- [[useCallback]] — 缓存回调函数，防止 effect 重新执行

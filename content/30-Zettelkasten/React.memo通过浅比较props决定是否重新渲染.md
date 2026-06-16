@@ -64,4 +64,4 @@ const MyComponent = React.memo(
 ## 关联
 
 - [[Refs(React)|React Refs]] — Ref 概念总览
-- [[SOP-React性能优化]] — 性能优化 SOP
+- [[React性能优化]] — 性能优化 SOP

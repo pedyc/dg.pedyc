@@ -97,7 +97,7 @@ function useCallback(fn, deps) {
 > useCallback 的标准操作流程，通过实践辅助理解
 
 - [[SOP-useCallback使用示例]]
-- [[SOP-React性能优化]] — 何时使用 useCallback 的判断流程
+- [[React性能优化]] — 何时使用 useCallback 的判断流程
 - [[SOP-避免不必要的重新渲]] — useCallback 与 React.memo 配合使用
 
 ---
@@ -117,7 +117,7 @@ function useCallback(fn, deps) {
 
 - **父级概念**：[[React]] — React Hooks 之一
 - **父级 Hook**：
-	- [[Hooks (React)]] — useCallback 所属的 Hooks 体系
+	- [[Hooks(React)]] — useCallback 所属的 Hooks 体系
 - **相关概念**：
 	- [[useMemo]] — 值缓存，与 useCallback 机制类似但缓存的是值
 	- [[React.memo]] — 组件记忆化，需要配合 useCallback 使用

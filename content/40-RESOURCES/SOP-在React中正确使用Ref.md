@@ -172,4 +172,4 @@ function CallbackRefInput() {
 - [[Refs(React)|React Refs]] — Ref 概念总览
 - [[useRef变化不会触发重新渲染]] — atomic 笔记
 - [[在React中有哪些更改数据不触发重新渲染的方式]] — question 笔记
-- [[SOP-React性能优化]] — 性能优化相关
+- [[React性能优化]] — 性能优化相关

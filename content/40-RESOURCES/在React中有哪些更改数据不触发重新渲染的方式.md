@@ -1,14 +1,17 @@
 ---
 uid: "202604290002"
 title: 在React中有哪些更改数据不触发重新渲染的方式
-aliases: [Q-在React中有哪些更改数据不触发重新渲染的方式？]
+aliases:
+  - Q-在React中有哪些更改数据不触发重新渲染的方式？
 description: 探索 React 中修改数据但不触发组件重新渲染的方式
-tags: [react, react/性能优化]
+tags:
+  - react
+  - react/性能优化
 date-created: 2026-04-29
 date-modified: 2026-04-29
 status: cultivating
 content-type: question
-up: "[[SOP-React性能优化|SOP-React性能优化]]"
+up: "[[React性能优化|SOP-React性能优化]]"
 ---
 
 > 在 React 中有哪些更改数据不触发重新渲染的方式？

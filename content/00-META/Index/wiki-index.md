@@ -144,9 +144,9 @@ up: "[[本库指南]]"
 
 ### React
 
-- [[SOP-React性能优化]] — React 性能优化技巧、memo、useMemo
+- [[React性能优化]] — React 性能优化技巧、memo、useMemo
 - [[SOP-在React中正确使用Ref]] — useRef、forwardRef、ref 进阶用法
-- [[SOP-创建自定义Hooks]] — 自定义 Hook 设计原则和实践
+- [[创建自定义Hooks]] — 自定义 Hook 设计原则和实践
 - [[SOP-useCallback使用示例]] — useCallback 使用场景和注意事项
 - [[React最佳实践]] — React 组件设计、状态管理、最佳实践
 - [[SOP-在Next.js中使用Hydration]] — Next.js 水合原理、问题排查
@@ -200,6 +200,7 @@ up: "[[本库指南]]"
 - [[依赖注入]] — 控制反转、依赖管理
 - [[Babel]] — JavaScript 编译器、转译工具
 - [[ESLint]] — JavaScript 静态代码分析、代码风格检查
+- [[Signal(Angular)]] — Angular 响应式原始类型，自动追踪依赖
 - [[PWA]] — Progressive Web App、离线能力、推送通知
 
 ### 浏览器与 Web
@@ -276,6 +277,7 @@ up: "[[本库指南]]"
 
 - [[Webpack vs Vite]] — 构建工具对比、打包策略差异
 - [[Vue vs React]] — 渐进式框架 vs 声明式组件库，响应式系统、模板语法、生态策略差异
+- [[Angular vs React]] — 全面框架 vs UI 库，架构哲学到开发体验的系统对比
 - [[Svelte vs React]] — 编译时优化 vs 运行时虚拟 DOM，体积、性能、开发体验差异
 - [[VS-Vue2 vs Vue3]] — Vue2 和 Vue3 核心差异
 - [[Vue2 vs Vue3 Diff算法]] — Diff 算法优化、性能提升
@@ -317,6 +319,7 @@ up: "[[本库指南]]"
 - [[存在主义]] — 在无意义的宇宙中人通过自由选择定义自己
 - [[数字花园]] — 公开的知识生长哲学，融合双向链接与状态标记
 - [[混合型知识库架构]] — PARA + 卡片盒 + Anki 四阶段流水线架构
+- [[Angular变更检测]] — Zone.js 到 Signal 的 Angular DOM 更新机制演进
 - [[GTD]] — 大卫·艾伦的个人生产力方法论，通过建立可信外部系统实现"心如止水"
 
 ---

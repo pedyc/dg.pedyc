@@ -1,14 +1,18 @@
 ---
 uid: 202604210030
 title: React.memo vs useMemo
-aliases: [VS-React.memo vs useMemo]
+aliases:
+  - VS-React.memo vs useMemo
 description: React.memo 和 useMemo 都是性能优化手段，但作用于不同的层面
-tags: [react, hooks, performance]
+tags:
+  - react
+  - hooks
+  - performance
 date-created: 2026-04-21
 date-modified: 2026-04-22
 status: cultivating
 content-type: comparison
-up: "[[Hooks (React)|React Hooks]]"
+up: "[[Hooks(React)|React Hooks]]"
 ---
 
 ## React.memo vs useMemo
@@ -152,8 +156,8 @@ const ThemedButton = React.memo(({ onClick }: { onClick: () => void }) => {
 
 ### 知识图谱
 
-- **父级概念**：[[Hooks (React)|React Hooks]] — 两者都是 React 性能优化相关的 API
+- **父级概念**：[[Hooks(React)|React Hooks]] — 两者都是 React 性能优化相关的 API
 - **相关概念**：
 	- [[React.memo]] — 组件记忆化高阶组件
 	- [[useMemo]] — 值记忆化 Hook
-	- [[SOP-React性能优化]] — 性能优化的完整策略
+	- [[React性能优化]] — 性能优化的完整策略

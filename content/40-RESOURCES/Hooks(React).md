@@ -1,11 +1,11 @@
 ---
 uid: 202504270000
-title: Hooks (React)
+title: Hooks(React)
 aliases: [C-Hooks, React Hooks]
 description: 'React 16.8 引入的函数组件状态逻辑复用机制，通过函数调用在函数组件中"钩入" React 状态和生命周期'
 tags: [前端开发/框架/React]
 date-created: 2025-09-09
-date-modified: 2026-04-21
+date-modified: 2026-06-16
 status: cultivating
 content-type: concept
 related: "[[React]]"
@@ -106,9 +106,9 @@ graph LR
 
 > Hooks 的标准操作流程，通过实践辅助理解
 
-- [[SOP-创建自定义Hooks]] — 如何创建可复用的自定义 Hooks
+- [[创建自定义Hooks]] — 如何创建可复用的自定义 Hooks
 - [[SOP-正确使用useEffect]] — useEffect 的正确使用模式和常见误区
-- [[SOP-React性能优化]] — 使用 useCallback、useMemo 进行性能优化
+- [[React性能优化]] — 使用 useCallback、useMemo 进行性能优化
 
 ---
 

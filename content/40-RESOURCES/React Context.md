@@ -1,14 +1,18 @@
 ---
 uid: 202604210020
 title: React Context
-aliases: [C-React Context]
+aliases:
+  - C-React Context
 description: React Context 提供了在组件树间共享数据的方式，避免 prop drilling
-tags: [react, hooks, state-management]
+tags:
+  - react
+  - hooks
+  - state-management
 date-created: 2026-04-21
 date-modified: 2026-05-15
 status: cultivating
 content-type: concept
-up: "[[Hooks (React)|React Hooks]]"
+up: "[[Hooks(React)|React Hooks]]"
 ---
 
 ## 概念：React Context
@@ -99,7 +103,7 @@ graph TB
 
 > 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
 
-- **父级概念**：[[Hooks (React)|React Hooks]] — Context 依赖 useContext Hook
+- **父级概念**：[[Hooks(React)|React Hooks]] — Context 依赖 useContext Hook
 - **子级概念**：
 	- [[useContext]] — 消费 Context 的 Hook
 - **并列概念**：

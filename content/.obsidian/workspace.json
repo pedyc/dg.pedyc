@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50-ARCHIVE/数字花园概述.md",
+                "file": "00-META/Index/本库看板索引.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "数字花园概述"
+              "title": "本库看板索引"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "50-ARCHIVE/数字花园概述.md",
+                "file": "00-META/Index/本库看板索引.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "数字花园概述 的关系图"
+              "title": "本库看板索引 的关系图"
             }
           },
           {
@@ -306,7 +306,21 @@
   },
   "active": "dc54f68319d7a76a",
   "lastOpenFiles": [
+    "50-ARCHIVE/3月健康目标.md",
+    "00-META/Index/本库看板索引.md",
     "index.md",
+    "40-RESOURCES/数字花园.md",
+    "index.md.tmp.21632.5f57b8f5a71e",
+    "00-META/Guide/快速开始.md",
+    "40-RESOURCES/第二大脑.md",
+    "40-RESOURCES/渐进式总结.md",
+    "40-RESOURCES/渐进式总结法.md",
+    "50-ARCHIVE/数字花园概述.md",
+    "30-Zettelkasten/数字花园的状态反映了知识的成熟度.md",
+    "30-Zettelkasten/数字花园的状态反映了知识的成熟度.md.tmp.21632.a7443656a7aa",
+    "30-Zettelkasten/数字花园是第二大脑和博客的中间态.md",
+    "30-Zettelkasten/数字花园强调观点间的紧密联系.md",
+    "30-Zettelkasten/数字花园强调观点间的紧密联系.md.tmp.21632.227ff41c48b1",
     "_templates/template_diary.md",
     "_templates/template_concept.md.tmp.21632.62c017c61bf5",
     "_templates/template_area.md.tmp.21632.03956ebd9f2d",
@@ -325,23 +339,9 @@
     "30-Zettelkasten/Vue3 响应式系统分为 effect 和 reactive 两部分.md",
     "30-Zettelkasten/执行上下文分为创建阶段和执行阶段.md",
     "30-Zettelkasten/TypeScript的类型是编译时约束.md",
-    "40-RESOURCES/CORS.md",
-    "40-RESOURCES/深度优先搜索 (DFS).md",
-    "40-RESOURCES/CORS凭证与跨域.md",
     "__classification.json",
-    "20-AREAS/A-知识管理/知识组织.md",
     "__atomic_list.json",
     "__atomic_audit.json",
-    "20-AREAS/A-知识管理/A-知识管理.md",
-    "20-AREAS/A-知识管理/知识获取.md",
-    "40-RESOURCES/CODE知识全生命周期工作流.md",
-    "40-RESOURCES/信息论.md",
-    "00-META/Log/wiki-log.md.bak.nssyncsc",
-    "00-META/Log/wiki-log.md.bak",
-    "30-Zettelkasten/信噪比决定了信息传递的有效性.md",
-    "40-RESOURCES/信噪比.md.tmp.21632.4c4c3e7fd2b3",
-    "20-AREAS/A-知识管理/经过验证的高信噪比信源.md",
-    "40-RESOURCES/信息收集工作流.md",
     "banner.svg",
     "Drawing 2026-06-03 09.06.13.excalidraw.svg",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",

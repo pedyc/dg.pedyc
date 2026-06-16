@@ -288,6 +288,28 @@ up: ["[[本库指南]]"]
 	- template_concept.md: SOP-/Q- 前缀引用 → {{纯标题占位符}}
 	- 原则：前缀只在 aliases 字段使用，正文引用用纯标题
 
+- [2026-06-15] refactor | 修复数字花园概述（归档→资源 + 4 类问题）
+	- 位置：50-ARCHIVE/ → 40-RESOURCES/（active 状态不应在归档）
+	- 来源更正："Maggie Appleton 提出" → Mark Bernstein(1998) 源头 + Appleton 系统阐述
+	- 创建 3 条 atomic 补充核心命题：中间态/观点联系/状态标记
+	- 重写运行机制 mermaid：消除花圃/花朵的混乱比喻
+	- 重写关键区别表格：统一对比维度为内容粒度/公开程度/更新方式/发布门槛/组织逻辑
+	- 补充关键人物（Bernstein/Appleton/Critchlow）、状态标记特征
+	- 更新：wiki-index Concepts 章节
+
+- [2026-06-15] refactor | 修复第二大脑笔记（来源/运行机制/对比/FAQ/局限性）
+	- 来源更正："Tiago Forte 提出 PARA 方法" → "Tiago Forte, Building a Second Brain"
+	- 运行机制补充：渐进式总结（4 层提炼法）+ PARA 组织框架
+	- 关键区别：范围"主要是私有"→"完全私有"，新增与卡片盒的定位对比表
+	- 新增局限性章节：维护成本/工具绑定/过度外化/投入产出比
+	- 新增 FAQ 章节（2 个 Q-note 引用）
+	- 更新：知识图谱补充卡片盒笔记法和认知负荷
+
+- [2026-06-16] refactor | 去重数字花园笔记（删除旧版，保留已修复版）
+	- 删除 40-RESOURCES/数字花园.md（旧版残留 uid 重复）
+	- 保留 40-RESOURCES/数字花园概述.md（已修复完整内容）
+	- [[数字花园]] 引用通过别名正常解析到数字花园概述
+
 
 #### 2026-05-20
 

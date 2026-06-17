@@ -5,7 +5,7 @@ aliases: ["C-Angular-变更检测", "Change Detection Angular"]
 description: Angular 的 DOM 更新机制，从 Zone.js 自动检测到 Signal 精细粒度的演进
 tags: [前端/Angular]
 date-created: 2026-06-16
-date-modified: 2026-06-16
+date-modified: 2026-06-17
 status: cultivating
 content-type: concept
 up: "[[Angular|A-前端/Angular]]"
@@ -26,7 +26,7 @@ up: "[[Angular|A-前端/Angular]]"
 - [[OnPush 策略将变更检测从全量遍历缩小到输入变更]]
 	- **原理**：默认策略每次检查整棵组件树；OnPush 只在 @Input 引用变化时检查该组件及其子树
 - [[Signal 将变更检测从"框架轮询"变为"数据推送"]]
-	- **原理**：信号变化时主动通知消费组件，无需 Zone.js 介入，粒度精确到单个表达式  
+	- **原理**：信号变化时主动通知消费组件，无需 Zone.js 介入，粒度精确到单个表达式
 
 ---
 

@@ -329,6 +329,19 @@ up: ["[[本库指南]]"]
 	- 覆盖 Zone.js 触发 → Default/OnPush 策略 → Signal 模式演进
 	- 包含性能优化示例代码（OnPush / runOutsideAngular / Signal）
 
+- [2026-06-17] ingest | 创建 concept「Angular依赖注入」
+	- 位置：40-RESOURCES/Angular依赖注入.md
+	- aliases：C-Angular-依赖注入
+	- 父页面：[[Angular|A-前端/Angular]]
+	- 覆盖注入器树层级（root/module/component）+ 3 种注册方式 + 4 种提供者语法 + 令牌类型
+
+- [2026-06-17] ingest | 创建 concept「控制反转」
+	- 位置：40-RESOURCES/控制反转.md
+	- aliases：C-控制反转
+	- 父页面：[[设计模式]]
+	- 覆盖 4 种实现方式（DI/模板方法/策略/事件）+ IoC vs DI 关键区别
+	- 修复 2 处断链：[[依赖注入]]、[[Angular依赖注入]] 中的 [[控制反转]] 引用
+
 
 #### 2026-05-20
 

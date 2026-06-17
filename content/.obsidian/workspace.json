@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Angular变更检测.md",
+                "file": "40-RESOURCES/设计模式.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Angular变更检测"
+              "title": "设计模式"
             }
           },
           {
@@ -120,7 +120,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Angular变更检测.md",
+                "file": "40-RESOURCES/设计模式.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +148,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Angular变更检测 的关系图"
+              "title": "设计模式 的关系图"
             }
           },
           {
@@ -330,7 +330,12 @@
   },
   "active": "dc54f68319d7a76a",
   "lastOpenFiles": [
+    "40-RESOURCES/控制反转.md",
+    "40-RESOURCES/设计模式.md",
+    "40-RESOURCES/Angular依赖注入.md",
+    "40-RESOURCES/控制反转.md.tmp.21632.c82a0122f168",
     "20-AREAS/A-前端/Angular.md",
+    "40-RESOURCES/Angular依赖注入.md.tmp.21632.8b4e388b4465",
     "40-RESOURCES/Angular变更检测.md",
     "40-RESOURCES/Angular变更检测.md.tmp.21632.0a2e8e12e98e",
     "40-RESOURCES/Angular vs React.md",
@@ -358,14 +363,9 @@
     "40-RESOURCES/AI提问技巧.md",
     "30-Zettelkasten/笔记的价值取决于连接.md",
     "30-Zettelkasten/知识只有被调用时才产生价值.md",
-    "30-Zettelkasten/痛点是知识管理的唯一动力源.md",
-    "30-Zettelkasten/熵减必然有信息代价.md",
-    "30-Zettelkasten/数字花园的状态反映了知识的成熟度.md",
     "index.md.tmp.21632.5f57b8f5a71e",
     "30-Zettelkasten/数字花园的状态反映了知识的成熟度.md.tmp.21632.a7443656a7aa",
     "30-Zettelkasten/数字花园强调观点间的紧密联系.md.tmp.21632.227ff41c48b1",
-    "_templates/template_concept.md.tmp.21632.62c017c61bf5",
-    "_templates/template_area.md.tmp.21632.03956ebd9f2d",
     "banner.svg",
     "Drawing 2026-06-03 09.06.13.excalidraw.svg",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",

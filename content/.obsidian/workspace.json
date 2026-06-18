@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/设计模式.md",
+                "file": "40-RESOURCES/发布订阅模式.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "设计模式"
+              "title": "发布订阅模式"
             }
           },
           {
@@ -120,7 +120,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/设计模式.md",
+                "file": "40-RESOURCES/发布订阅模式.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +148,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "设计模式 的关系图"
+              "title": "发布订阅模式 的关系图"
             }
           },
           {
@@ -330,8 +330,8 @@
   },
   "active": "dc54f68319d7a76a",
   "lastOpenFiles": [
-    "40-RESOURCES/控制反转.md",
     "40-RESOURCES/设计模式.md",
+    "40-RESOURCES/控制反转.md",
     "40-RESOURCES/Angular依赖注入.md",
     "40-RESOURCES/控制反转.md.tmp.21632.c82a0122f168",
     "20-AREAS/A-前端/Angular.md",

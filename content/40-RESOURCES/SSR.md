@@ -1,14 +1,24 @@
 ---
 uid: 202604080300
 title: SSR
-aliases: [C-SSR, Server-Side Rendering, 服务端渲染]
+aliases:
+  - C-SSR
+  - Server-Side Rendering
+  - 服务端渲染
 description: 在服务器端生成完整 HTML 内容后返回给客户端的渲染模式
-tags: [concept, 前端, 渲染模式, SSR]
+tags:
+  - concept
+  - 前端
+  - 渲染模式
+  - SSR
 date-created: 2026-04-08
 date-modified: 2026-05-06
 status: cultivating
 content-type: concept
-related: ["[[CSR]]", "[[SSG]]", "[[前端开发]]"]
+related:
+  - "[[CSR]]"
+  - "[[SSG]]"
+  - "[[前端]]"
 ---
 
 ## 概念：SSR
@@ -93,7 +103,7 @@ flowchart TB
 
 ### 知识图谱
 
-- **父级概念**：[[前端开发]] — SSR 是一种渲染模式
+- **父级概念**：[[前端]] — SSR 是一种渲染模式
 - **子级概念**：
 	- [[Hydration]] — 客户端 JavaScript 接管 SSR 输出的过程
 	- 流式 SSR — 利用 HTTP 流式传输加速渲染

@@ -1,23 +1,23 @@
 ---
 uid: 202605290004
 title: Web安全
-aliases: [A-Web安全]
+aliases: [C-Web安全, Web安全]
 description: 保护 Web 应用免受常见攻击的安全知识体系
 tags: [前端/安全]
 date-created: 2026-05-29
-date-modified: 2026-05-29
+date-modified: 2026-06-19
 status: cultivating
-content-type: area
-up: [["A-前端"]]
+content-type: concept
+up: "[[A-前端]]"
 ---
 
-## Area: Web 安全
+## 概念： Web 安全
 
 > 保护 Web 应用免受常见攻击的安全知识体系，涵盖传输层、渲染层、认证层等多个维度。
 
 ---
 
-### 领域知识图谱
+### 知识图谱
 
 ```mermaid
 mindmap
@@ -32,7 +32,7 @@ mindmap
 
 ---
 
-### 领域定义
+### 定义
 
 - **核心范畴**：通过技术手段防止 Web 应用遭受恶意攻击
 - **不包括**：后端安全（如数据库加固）、物理安全
@@ -81,11 +81,3 @@ mindmap
 - [[MOC-Web安全策略]] — 安全策略索引
 
 ---
-
-### 领域健康度
-
-| 维度 | 状态 | 说明 |
-|:---:|:---:|:---|
-| 目标进展 | 🟡 | 策略笔记已创建，问题笔记待补充 |
-| 认知更新 | 🟢 | 建立了基本框架 |
-| 行动频率 | 🟢 | 结合实际项目学习 |

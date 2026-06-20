@@ -29,7 +29,7 @@ title: P-算法提升专项
 aliases: [前端算法面试指南, LeetCode刷题计划]
 content-type: project
 status: active
-up: "[[前端开发]]"
+up: "[[前端]]"
 tags:
   - type/project
   - topic/算法
@@ -46,7 +46,7 @@ review-date: 2026-03-09
 
 ## 🔗关联领域
 
-- [[前端开发]]
+- [[前端]]
 - [[P-求职前端岗位]]
 
 ## 🎯 核心靶心（项目的主要目标）

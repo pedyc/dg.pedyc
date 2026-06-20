@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-META/Log/suggest-log.md",
+                "file": "20-AREAS/A-个人成长/时间管理.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,59 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "suggest-log"
-            }
-          },
-          {
-            "id": "dc54f68319d7a76a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/发布订阅模式.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "发布订阅模式"
-            }
-          },
-          {
-            "id": "dd358e7291e0fdff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-RESOURCES/Hooks(React).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Hooks(React)"
+              "title": "时间管理"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -120,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/发布订阅模式.md",
+                "file": "20-AREAS/A-个人成长/时间管理.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -143,12 +94,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.2726859917360067,
+                  "scale": 0.5359795996225935,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "发布订阅模式 的关系图"
+              "title": "时间管理 的关系图"
             }
           },
           {
@@ -293,8 +244,8 @@
             "state": {
               "type": "git-history-view",
               "state": {},
-              "icon": "history",
-              "title": "History"
+              "icon": "lucide-ghost",
+              "title": "git-history-view"
             }
           }
         ],
@@ -328,46 +279,46 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dc54f68319d7a76a",
+  "active": "60236dec7012791f",
   "lastOpenFiles": [
-    "40-RESOURCES/设计模式.md",
-    "40-RESOURCES/控制反转.md",
-    "40-RESOURCES/Angular依赖注入.md",
-    "40-RESOURCES/控制反转.md.tmp.21632.c82a0122f168",
-    "20-AREAS/A-前端/Angular.md",
-    "40-RESOURCES/Angular依赖注入.md.tmp.21632.8b4e388b4465",
-    "40-RESOURCES/Angular变更检测.md",
-    "40-RESOURCES/Angular变更检测.md.tmp.21632.0a2e8e12e98e",
-    "40-RESOURCES/Angular vs React.md",
-    "40-RESOURCES/Signal(Angular).md",
-    "40-RESOURCES/Signal(Angular).md.tmp.21632.15836e520973",
+    "20-AREAS/A-设计/设计.md",
+    "20-AREAS/A-设计/设计.md.tmp.21632.1650989794fd",
+    "20-AREAS/A-设计",
+    "20-AREAS/A-个人成长/个人成长.md",
+    "20-AREAS/A-个人成长/个人博客.md",
+    "20-AREAS/A-前端/前端.md",
+    "40-RESOURCES/视觉思维.md",
+    "20-AREAS/A-政治经济/政治经济.md",
+    "20-AREAS/A-政治经济/MOC-政治经济.md",
+    "00-META/Log/suggest-log.md",
+    "Drawing 2026-06-03 09.06.13.excalidraw.md",
+    "Drawing 2026-06-03 09.06.13.excalidraw.svg",
     "40-RESOURCES/Hooks(React).md",
-    "40-RESOURCES/React性能优化.md",
-    "40-RESOURCES/创建自定义Hooks.md",
+    "20-AREAS/A-知识管理/A-视觉思维.md",
+    "20-AREAS/A-宗教与神秘学/宗教与神秘学.md",
+    "20-AREAS/A-知识管理/知识管理.md",
+    "20-AREAS/A-健康管理/健康管理.md",
+    "20-AREAS/A-个人成长/时间管理.md",
+    "20-AREAS/A-知识管理/视觉思维.md",
+    "40-RESOURCES/双重编码理论.md",
+    "20-AREAS/A-前端/A-前端.md",
+    "40-RESOURCES/Angular.md",
+    "40-RESOURCES/算法与数据结构.md",
+    "40-RESOURCES/前端性能优化.md",
+    "40-RESOURCES/前端工程.md",
+    "40-RESOURCES/前端交互.md",
+    "40-RESOURCES/Web安全.md",
+    "40-RESOURCES/ThreeJS.md",
+    "40-RESOURCES/CSS.md",
+    "40-RESOURCES/控制反转.md.tmp.21632.c82a0122f168",
+    "40-RESOURCES/Angular依赖注入.md.tmp.21632.8b4e388b4465",
+    "40-RESOURCES/Angular变更检测.md.tmp.21632.0a2e8e12e98e",
+    "40-RESOURCES/Signal(Angular).md.tmp.21632.15836e520973",
     "40-RESOURCES/Angular vs React.md.tmp.21632.6200ff800eb7",
-    "00-META/Index/本库看板索引.md",
     "CLAUDE.md.tmp.1138.1781232884727",
     "CLAUDE.md.tmp.1138.1781232869043",
-    "50-ARCHIVE/3月健康目标.md",
-    "40-RESOURCES/认知心理学.md",
-    "40-RESOURCES/笔记标签命名与使用规范.md",
-    "40-RESOURCES/数字花园.md",
-    "40-RESOURCES/常用工具.md",
-    "40-RESOURCES/如何在信息过载时代保持高信噪比.md",
-    "40-RESOURCES/双向链接如何从引用变成思维脚手架.md",
-    "40-RESOURCES/原子笔记拆分标准.md",
-    "40-RESOURCES/卡片盒笔记链接法.md",
-    "40-RESOURCES/PARA笔记归档流程.md",
-    "40-RESOURCES/CODE知识全生命周期工作流.md",
-    "40-RESOURCES/Angular面试题.md",
-    "40-RESOURCES/AI提问技巧.md",
-    "30-Zettelkasten/笔记的价值取决于连接.md",
-    "30-Zettelkasten/知识只有被调用时才产生价值.md",
     "index.md.tmp.21632.5f57b8f5a71e",
-    "30-Zettelkasten/数字花园的状态反映了知识的成熟度.md.tmp.21632.a7443656a7aa",
-    "30-Zettelkasten/数字花园强调观点间的紧密联系.md.tmp.21632.227ff41c48b1",
     "banner.svg",
-    "Drawing 2026-06-03 09.06.13.excalidraw.svg",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",
     "_resources/webkit-main-flow-b779d50c0cf28_856.png",
     "_resources/sw-lifecycle.svg",

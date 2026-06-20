@@ -1,23 +1,23 @@
 ---
 uid: 202603200004
 title: ThreeJS
-aliases: [A-ThreeJS, Three.js, three.js]
+aliases: [C-ThreeJS, Three.js, three.js]
 description: 使用 Three.js 在浏览器中创建和展示 3D 图形的领域
 tags: [前端开发/图形]
 date-created: 2026-03-20
-date-modified: 2026-05-07
+date-modified: 2026-06-19
 status: cultivating
-content-type: area
-up: ["[[WebGL]]"]
+content-type: concept
+up: ["[[A-前端]]"]
 ---
 
-## Area: Three.js 3D 图形
+## 概念： Three.js 3D 图形
 
 > Three.js 是一个基于 WebGL 的 JavaScript 3D 图形库，简化了浏览器中的 3D 图形开发。
 
 ---
 
-### 领域知识图谱
+### 知识图谱
 
 ```mermaid
 mindmap
@@ -40,7 +40,7 @@ mindmap
 
 ---
 
-### 领域定义
+### 定义
 
 - **核心范畴**：使用 Three.js 构建 3D 场景、角色、动画、特效，并在浏览器中实时渲染
 - **不包括**：原生 WebGL 底层开发（属于 WebGL 领域）、2D 图形渲染（属于 Canvas/SVG 领域）、游戏逻辑/物理引擎本身
@@ -106,14 +106,6 @@ mindmap
 - [[Q-ThreeJS性能瓶颈在哪]] — draw call / 纹理 / 着色器优化
 
 ---
-
-### 领域健康度
-
-| 维度 | 状态 | 说明 |
-|:---:|:---:|:---|
-| 目标进展 | 🟡 | SOP 已创建 4 个，液体交汇待创建 |
-| 认知更新 | 🟢 | 核心概念（场景图/材质/光照）已覆盖 |
-| 行动频率 | 🟢 | 持续有示例驱动更新 |
 
 ---
 

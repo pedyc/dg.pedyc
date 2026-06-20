@@ -1,23 +1,23 @@
 ---
 uid: 202505211000
 title: React
-aliases: [A-React, React.js, ReactJS]
+aliases: [C-React, React.js, ReactJS]
 description: 用于构建用户界面的 JavaScript 库，采用组件化和 Virtual DOM
 tags: [前端开发/框架]
 date-created: 2025-05-21
-date-modified: 2026-05-16
+date-modified: 2026-06-19
 status: cultivating
-content-type: area
-up: "[[前端开发]]"
+content-type: concept
+up: "[[A-前端]]"
 ---
 
-## Area: React
+## 概念： React
 
 > 用于构建用户界面的 JavaScript 库，由 Facebook 开发和维护，采用组件化和 Virtual DOM。
 
 ---
 
-### 领域知识图谱
+### 知识图谱
 
 ```mermaid
 mindmap
@@ -67,7 +67,7 @@ mindmap
 
 ---
 
-### 领域定义
+### 定义
 
 - **核心范畴**：React 核心概念、组件开发、Hooks、状态管理、生态工具
 - **不包括**：后端开发、移动端原生开发（React Native 除外）
@@ -140,11 +140,3 @@ mindmap
 - [[React面试题]] — React 常见面试问题汇总
 
 ---
-
-### 领域健康度
-
-| 维度 | 状态 | 说明 |
-|:---:|:---:|:---|
-| 目标进展 | 🟡 | 核心 Hooks 已掌握，状态管理待深入 |
-| 认知更新 | 🟢 | 持续补充新特性和最佳实践 |
-| 行动频率 | 🟢 | 日常开发中使用 |

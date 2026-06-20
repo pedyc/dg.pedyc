@@ -1,15 +1,23 @@
 ---
 uid: 202605220001
 title: Vue vs React
-aliases: [VS-Vue vs React]
+aliases:
+  - VS-Vue vs React
 description: Vue 是渐进式响应式框架，React 是声明式组件化库
-tags: [comparison, 前端, 框架对比]
+tags:
+  - comparison
+  - 前端
+  - 框架对比
 date-created: 2026-05-22
 date-modified: 2026-05-22
 status: active
-comparison: [Vue, React]
+comparison:
+  - Vue
+  - React
 content-type: comparison
-related: ["[[前端开发]]", "[[MOC-前端面试知识清单]]"]
+related:
+  - "[[前端]]"
+  - "[[MOC-前端面试知识清单]]"
 ---
 
 ## Vue vs React
@@ -105,7 +113,7 @@ graph TD
 
 ### 知识图谱
 
-- **父级概念**：[[前端开发]] — 同属前端框架领域
+- **父级概念**：[[前端]] — 同属前端框架领域
 - **相关对比**：
 	- [[Vue2 vs Vue3]] — Vue 内部版本对比
 	- [[React 函数组件 vs 类组件]] — React 组件形式对比

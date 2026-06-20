@@ -1,15 +1,23 @@
 ---
 uid: 202506020001
 title: 观察者模式 vs 发布订阅模式
-aliases: [Observer Pattern vs Pub/Sub, 观察者 vs 发布订阅]
+aliases:
+  - Observer Pattern vs Pub/Sub
+  - 观察者 vs 发布订阅
 description: 观察者模式和发布-订阅模式的核心区别与适用场景对比
-tags: [前端开发, 设计模式]
+tags:
+  - 前端开发
+  - 设计模式
 date-created: 2026-03-25
 date-modified: 2026-03-25
 status: cultivating
-comparison: ["观察者模式", "发布-订阅模式"]
+comparison:
+  - 观察者模式
+  - 发布-订阅模式
 content-type: comparison
-related: ["[[前端开发]]", "[[设计模式]]"]
+related:
+  - "[[前端]]"
+  - "[[设计模式]]"
 ---
 
 ## 观察者模式 vs 发布订阅模式
@@ -163,7 +171,7 @@ graph TD
 
 ## 🔗 关联网络
 
-- **父级话题**：[[前端开发]], [[设计模式]]
+- **父级话题**：[[前端]], [[设计模式]]
 - **相关概念**：
 	- [[观察者模式]]
 	- [[发布订阅模式]]

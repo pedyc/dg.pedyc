@@ -1,15 +1,22 @@
 ---
 uid: 202603130000
 title: VS-Vue2 vs Vue3
-aliases: [Vue2 vs Vue3]
+aliases:
+  - Vue2 vs Vue3
 description: Vue2 和 Vue3 在核心特性、API、性能等方面的全面对比
-tags: [前端/Vue]
+tags:
+  - 前端/Vue
 date-created: 2026-03-13
 date-modified: 2026-03-23
 status: cultivating
-comparison: [Vue2, Vue3]
+comparison:
+  - Vue2
+  - Vue3
 content-type: comparison
-related: ["[[前端开发]]", "[[P-复习vue3]]", "[[Vue3-响应式系统原理]]"]
+related:
+  - "[[前端]]"
+  - "[[P-复习vue3]]"
+  - "[[Vue3-响应式系统原理]]"
 ---
 
 ## Vue2 vs Vue3
@@ -122,7 +129,7 @@ graph TD
 
 ## 🔗 关联网络
 
-- **父级话题**：[[前端开发]]
+- **父级话题**：[[前端]]
 - **相关对比**：
 	- Vue2 Options API vs Vue3 Composition API
 	- [[VS-Vuex vs Pinia]]

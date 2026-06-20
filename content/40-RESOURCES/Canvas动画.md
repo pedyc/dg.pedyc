@@ -1,14 +1,24 @@
 ---
 uid: 202604100000
 title: Canvas动画
-aliases: [C-Canvas动画, Canvas Animation]
+aliases:
+  - C-Canvas动画
+  - Canvas Animation
 description: 使用 HTML5 Canvas API 实现高性能动画的技术
-tags: [concept, Canvas, 动画, 前端, 图形]
+tags:
+  - concept
+  - Canvas
+  - 动画
+  - 前端
+  - 图形
 date-created: 2026-04-10
 date-modified: 2026-04-17
 status: cultivating
 content-type: concept
-related: ["[[动画原理]]", "[[CSS Animation]]", "[[前端开发]]"]
+related:
+  - "[[动画原理]]"
+  - "[[CSS Animation]]"
+  - "[[前端]]"
 ---
 
 ## 概念：Canvas 动画
@@ -90,7 +100,7 @@ flowchart LR
 
 ### 知识图谱
 
-- **父级概念**：[[前端开发]] — Canvas 动画是前端图形开发的重要组成
+- **父级概念**：[[前端]] — Canvas 动画是前端图形开发的重要组成
 - **子级概念**：
 	- requestAnimationFrame — 帧同步核心 API
 	- Canvas 2D Context — 绑制 API

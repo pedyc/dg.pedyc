@@ -1,14 +1,22 @@
 ---
 uid: 202604080200
 title: TailwindCSS
-aliases: [C-TailwindCSS, Tailwind]
+aliases:
+  - C-TailwindCSS
+  - Tailwind
 description: 原子化 CSS 框架，通过组合预定义工具类构建用户界面
-tags: [concept, CSS, 前端, 框架]
+tags:
+  - concept
+  - CSS
+  - 前端
+  - 框架
 date-created: 2026-04-08
 date-modified: 2026-04-08
 status: cultivating
 content-type: concept
-related: ["[[CSS]]", "[[前端开发]]"]
+related:
+  - "[[CSS]]"
+  - "[[前端]]"
 ---
 
 ## 概念：TailwindCSS
@@ -93,7 +101,7 @@ flowchart LR
 	- SCSS/Sass — CSS 预处理器
 	- CSS-in-JS — 样式绑定 JavaScript 的方案
 - **相关概念**：
-	- [[前端开发]] — TailwindCSS 的应用领域
+	- [[前端]] — TailwindCSS 的应用领域
 	- [[前端交互]] — 交互样式实现
 
 ---

@@ -1,14 +1,18 @@
 ---
 uid: 202603130000
 title: MOC-前端面试知识清单
-aliases: [MOC-前端面试Roadmap]
+aliases:
+  - MOC-前端面试Roadmap
 description: 前端工程师求职面试所需掌握的知识体系地图
-tags: [前端/面试]
+tags:
+  - 前端/面试
 date-created: 2026-03-13
 date-modified: 2026-05-22
 status: cultivating
 content-type: moc
-related: ["[[前端开发]]", "[[P-复习vue3]]"]
+related:
+  - "[[前端]]"
+  - "[[P-复习vue3]]"
 ---
 
 ## 🔥 核心知识（面试占比 70% 精力）

@@ -1,14 +1,20 @@
 ---
-uid: '202604170003'
+uid: "202604170003"
 title: Javascript版本演进
-aliases: ["ECMAScript版本演进", "JavaScript版本演进", "R-JavaScript演进"]
-description: "记录 JavaScript/ECMAScript 语言从 ES3 到 ES2026 的版本演进历程"
-tags: ["计算机科学", "前端开发", "JavaScript"]
+aliases:
+  - ECMAScript版本演进
+  - JavaScript版本演进
+  - R-JavaScript演进
+description: 记录 JavaScript/ECMAScript 语言从 ES3 到 ES2026 的版本演进历程
+tags:
+  - 计算机科学
+  - 前端开发
+  - JavaScript
 date-created: 2026-04-17
 date-modified: 2026-04-17
 status: cultivating
 content-type: roadmap
-related: "[[前端开发]]"
+related: "[[前端]]"
 ---
 
 ## JavaScript 版本演进

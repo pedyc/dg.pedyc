@@ -1,12 +1,15 @@
 ---
 uid: 202603130930
 title: P-后端能力提升专项
-description: '前端开发者后端能力提升指南，从"会接口"到"懂架构"'
-tags: [前端/后端, 求职]
+description: 前端开发者后端能力提升指南，从"会接口"到"懂架构"
+tags:
+  - 前端/后端
+  - 求职
 date-created: 2026-03-13
 date-modified: 2026-05-16
 status: cultivating
-area: ["[[前端开发|A-前端开发]]"]
+area:
+  - "[[前端|A-前端开发]]"
 consequence: 7
 content-type: project
 expire: 2026-04-20
@@ -16,7 +19,7 @@ urgency: 6
 
 ## 🔗关联领域
 
-- [[前端开发|A-前端开发]]
+- [[前端|A-前端开发]]
 - [[P-求职前端岗位]]
 
 ## 🎯 核心靶心

@@ -1,14 +1,18 @@
 ---
 uid: 202603111734
 title: JavaScript
-aliases: [JS, A-JavaScript]
+aliases:
+  - JS
+  - A-JavaScript
 description: JavaScript 知识领域，包含核心概念、运行机制、生态工具
-tags: [前端开发/JavaScript]
+tags:
+  - 前端开发/JavaScript
 date-created: 2025-05-19
 date-modified: 2026-05-12
 status: active
 content-type: area
-up: ["[[前端开发]]"]
+up:
+  - "[[前端]]"
 ---
 
 ## Area: JavaScript

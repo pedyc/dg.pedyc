@@ -2,11 +2,13 @@
 uid: 202603121028
 title: P-求职前端岗位
 description: 求职前端岗位的系统性准备计划，包含技术提升、简历优化和面试冲刺
-tags: [求职/前端]
+tags:
+  - 求职/前端
 date-created: 2025-04-30
 date-modified: 2026-05-16
 status: active
-area: ["[[前端开发|A-前端开发]]"]
+area:
+  - "[[前端|A-前端开发]]"
 consequence: 10
 content-type: project
 expire: 2026-04-30
@@ -15,7 +17,7 @@ urgency: 9
 
 ## 🔗关联领域
 
-- [[前端开发|A-前端开发]]
+- [[前端|A-前端开发]]
 
 ## 🎯 核心靶心（项目的主要目标）
 

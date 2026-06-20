@@ -1,13 +1,14 @@
 ---
 uid: 202603120000
-title: MOC-神秘主义
+title: 神秘主义
 aliases:
   - Mysticism
+  - MOC-神秘主义
 description: 研究人类通过直接体验与超验实在（神性、终极实在）建立联结的信仰体系与实践
 tags:
   - area
 date-created: 2026-03-12
-date-modified: 2026-03-13
+date-modified: 2026-06-19
 status: cultivating
 related:
   - "[[A-宗教与神秘学]]"

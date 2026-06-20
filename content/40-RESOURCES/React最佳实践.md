@@ -1,14 +1,18 @@
 ---
 uid: 202604210010
 title: React最佳实践
-aliases: [SOP-React最佳实践]
-description: "React 开发中的最佳实践标准化流程，涵盖组件设计、状态管理、性能优化"
-tags: [react, frontend, best-practices]
+aliases:
+  - SOP-React最佳实践
+description: React 开发中的最佳实践标准化流程，涵盖组件设计、状态管理、性能优化
+tags:
+  - react
+  - frontend
+  - best-practices
 date-created: 2026-04-21
 date-modified: 2026-04-21
 status: cultivating
 content-type: sop
-up: "[[前端开发]]"
+up: "[[前端]]"
 ---
 
 ## SOP：React 最佳实践

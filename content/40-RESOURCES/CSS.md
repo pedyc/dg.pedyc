@@ -1,23 +1,23 @@
 ---
 uid: 202512170000
 title: CSS
-aliases: [Cascading Style Sheets, 层叠样式表]
+aliases: [C-CSS, Cascading Style Sheets, 层叠样式表]
 description: Web 的表现层语言，通过层叠和继承机制决定 HTML 文档的渲染方式
 tags: [前端开发/CSS]
 date-created: 2025-12-17
-date-modified: 2026-04-20
+date-modified: 2026-06-19
 status: active
-content-type: area
-up: "[[前端开发]]"
+content-type: concept
+up: "[[A-前端]]"
 ---
 
-## Area: CSS
+## 概念： CSS
 
 > CSS (Cascading Style Sheets) 是 Web 的表现层语言，通过层叠和继承机制决定 HTML 文档在屏幕、打印等媒介上的渲染方式。
 
 ---
 
-### 领域定义
+### 定义
 
 - **核心范畴**：样式语言、布局系统、视觉特效、工程化
 - **不包括**：JavaScript 逻辑、后端样式处理
@@ -63,16 +63,8 @@ up: "[[前端开发]]"
 - **上游支撑**（理论基础）
 	- [[HTML]]：样式承载的基础
 - **下游应用**（实际使用）
-	- [[前端开发]]：实际项目应用
+	- [[前端]]：实际项目应用
 - **协同领域**
 	- [[JavaScript]]：动态样式操作
 
 ---
-
-### 领域健康度
-
-| 维度 | 状态 | 说明 |
-|:---:|:---:|:---|
-| 目标进展 | 🟡 | 需按里程碑推进 |
-| 认知更新 | 🟢 | 持续补充新特性 |
-| 行动频率 | 🟢 | 日常开发使用 |

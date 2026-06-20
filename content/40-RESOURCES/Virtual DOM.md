@@ -1,14 +1,19 @@
 ---
 uid: 202603240000
 title: Virtual DOM
-aliases: [VDOM, 虚拟DOM, C-Virtual DOM]
+aliases:
+  - VDOM
+  - 虚拟DOM
+  - C-Virtual DOM
 description: Vue中用于优化DOM操作的核心技术，通过JavaScript对象模拟真实DOM结构
-tags: [前端/Vue, 前端/原理]
+tags:
+  - 前端/Vue
+  - 前端/原理
 date-created: 2026-03-24
 date-modified: 2026-05-09
 status: cultivating
 content-type: concept
-up: "[[前端开发]]"
+up: "[[前端]]"
 ---
 
 ## 概念：虚拟 DOM
@@ -113,7 +118,7 @@ const vnode = {
 
 ### 知识图谱
 
-- **父级概念**：[[前端开发]]
+- **父级概念**：[[前端]]
 - **子级概念**：
 	- [[Diff算法(Vue3)]]
 - **关联概念**：

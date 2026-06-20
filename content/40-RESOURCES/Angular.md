@@ -1,23 +1,23 @@
 ---
 uid: "202604201200"
 title: Angular
-aliases: [A-Angular]
+aliases: [C-Angular]
 description: Angular 是 Google 维护的 TypeScript 优先企业级前端框架，提供完整的前端解决方案
 tags: [angular, "前端开发/框架"]
 date-created: 2026-04-20
-date-modified: 2026-06-17
+date-modified: 2026-06-19
 status: cultivating
-content-type: area
-up: "[[前端开发]]"
+content-type: concept
+up: "[[A-前端]]"
 ---
 
-## Area: Angular
+## 概念： Angular
 
 > Angular 是 Google 维护的 TypeScript 优先企业级前端框架，提供完整的前端解决方案
 
 ---
 
-### 领域知识图谱
+### 知识图谱
 
 ```mermaid
 mindmap
@@ -51,7 +51,7 @@ mindmap
 
 ---
 
-### 领域定义
+### 定义
 
 - **核心范畴**：
 	- TypeScript 优先的企业级前端应用开发
@@ -150,11 +150,3 @@ mindmap
 - [[Angular面试题]]
 
 ---
-
-### 领域健康度
-
-| 维度 | 状态 | 说明 |
-|:---:|:---:|:---|
-| 目标进展 | 🟡 | 刚创建领域笔记，长期目标待开始执行 |
-| 认知更新 | 🟢 | 核心概念框架已建立 |
-| 行动频率 | 🔴 | 暂无实际项目实践 |

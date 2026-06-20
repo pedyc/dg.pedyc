@@ -1,11 +1,11 @@
 ---
 uid: '202603220240'
-title: MOC-时政
-aliases: []
+title: 时政
+aliases: [MOC-时政]
 description: "时政地图"
 tags: []
 date-created: 2026-03-21
-date-modified: 2026-05-20
+date-modified: 2026-06-19
 status: cultivating
 content-type: moc
 ---

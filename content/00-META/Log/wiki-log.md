@@ -342,7 +342,40 @@ up: ["[[本库指南]]"]
 	- 覆盖 4 种实现方式（DI/模板方法/策略/事件）+ IoC vs DI 关键区别
 	- 修复 2 处断链：[[依赖注入]]、[[Angular依赖注入]] 中的 [[控制反转]] 引用
 
+- [2026-06-19] ingest | 创建 atomic「权力是资源分配的核心驱动力」
+	- 位置：30-ZETTELKASTEN/权力是资源分配的核心驱动力.md
+	- 父页面：[[政治经济|MOC-政治经济]]
+	- 覆盖 5 个论据：市场规则/预算博弈/注意力经济/公共财政/稀缺性制造
 
+- [2026-06-19] ingest | 创建 atomic「权力的日常形态是共识，终极担保是暴力」
+	- 位置：30-ZETTELKASTEN/权力的日常形态是共识，终极担保是暴力.md
+	- 父页面：[[政治经济|MOC-政治经济]]
+	- 论据覆盖韦伯/阿伦特/日常体验/征税逻辑/暴力-共识反比关系
+
+
+- [2026-06-19] ingest | 消化 2 条政治经济原子笔记到 Wiki 层
+	- 更新 A-政治经济 原子洞见：纳入 [[权力的日常形态是共识，终极担保是暴力]]
+	- 更新 MOC-政治经济：新增「原子洞见」章节，收录 2 条 atomic
+	- 父页面：[[政治经济|MOC-政治经济]]、[[政治经济|A-政治经济]]
+
+- [2026-06-19] refactor | A-前端 Area 架构重构 + 冗余合并
+	- 合并 A-前端.md → 前端开发.md（A-前端 已作为 alias）
+	- 删除 A-前端.md，保持单一顶层 Area：前端开发
+	- 降级 4 个子 Area 为 MOC → 40-RESOURCES：前端工程、前端交互、前端性能优化、算法与数据结构
+	- 迁移 6 个框架/工具 Area 为 Concept → 40-RESOURCES：Angular、React、Vue、CSS、ThreeJS、Web安全
+	- 更新 wiki-index（Areas → 前端 精简，新增 Concepts/MOCs 条目）
+
+
+
+- [2026-06-19] refactor | 20-AREAS 全面审计修复 + A-知识管理重构
+	- 重命名 6 个 area 文件（去掉文件名中 A- 前缀）：个人成长、个人博客、时间管理、健康管理、知识管理、宗教与神秘学
+	- 修正 3 个 MOC title 前缀（MOC-政治经济→政治经济，MOC-时政→时政，MOC-神秘主义→神秘主义）
+	- 补齐 3 个 MOC aliases 缺失的 MOC- 前缀
+	- 删除重复文件：A-视觉思维.md
+	- 修复 A-宗教与神秘学 缺失的 content-type 字段
+	- 修复 3 处 broken up 字段（个人博客→A-个人成长，个人成长/健康管理 设为顶层）
+	- 视觉思维(area) → concept，迁移到 40-RESOURCES
+	- 更新 wiki-index
 #### 2026-05-20
 
 - [2026-05-20] ingest | 批量导入所有 MOC/Area/SOP/Term/Comparison/Record 到 Wiki
@@ -390,3 +423,8 @@ up: ["[[本库指南]]"]
 		- settings.local.json: Skill(content-verifier) → Skill(content-verifier-local)，去掉冗余 skill(obsidian-note)
 		- _content-type-rules.md: "Diay" 拼写修正为 "Diary"
 		- 命名规范.md: 前缀表格中的空格清理（P- 求职 → P-求职 等）
+
+- [2026-06-19] ingest | 消化 2 条政治经济原子笔记到 Wiki 层
+		- 更新 A-政治经济 原子洞见：纳入 [[权力的日常形态是共识，终极担保是暴力]]
+		- 更新 MOC-政治经济：新增「原子洞见」章节，收录 2 条 atomic
+		- 父页面：[[政治经济|MOC-政治经济]]、[[政治经济|A-政治经济]]

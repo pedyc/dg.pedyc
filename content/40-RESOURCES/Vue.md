@@ -1,23 +1,23 @@
 ---
 uid: 202505291000
 title: Vue
-aliases: [A-Vue, Vue.js, vue]
+aliases: [C-Vue, Vue.js, vue]
 description: 用于构建用户界面的渐进式 JavaScript 框架，专注于数据驱动和组件化
 tags: [前端开发/框架]
 date-created: 2025-05-29
-date-modified: 2026-05-22
+date-modified: 2026-06-19
 status: cultivating
-content-type: area
-up: ["[[前端开发]]"]
+content-type: concept
+up: "[[A-前端]]"
 ---
 
-## Area: Vue
+## 概念： Vue
 
 > Vue 是一套用于构建用户界面的渐进式框架，采用数据驱动和组件化思想。
 
 ---
 
-### 领域知识图谱
+### 知识图谱
 
 ```mermaid
 mindmap
@@ -40,7 +40,7 @@ mindmap
 
 ---
 
-### 领域定义
+### 定义
 
 - **核心范畴**：Vue 响应式系统、组合式 API、单文件组件、路由与状态管理
 - **不包括**：服务端渲染（Nuxt 属于独立领域）、Node.js 后端开发
@@ -102,11 +102,3 @@ mindmap
 - [[Q-Vapor Mode是什么]] — Vue 新的编译策略
 
 ---
-
-### 领域健康度
-
-| 维度 | 状态 | 说明 |
-|:---:|:---:|:---|
-| 目标进展 | 🟡 | 基础已掌握，响应式原理待深入 |
-| 认知更新 | 🟢 | 持续补充 Vue 3 新特性 |
-| 行动频率 | 🟡 | 需要更多项目实践 |

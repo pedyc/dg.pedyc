@@ -18,7 +18,7 @@ content-type: concept
 related:
   - "[[CSR]]"
   - "[[SSG]]"
-  - "[[前端]]"
+  - "[[前端开发]]"
 ---
 
 ## 概念：SSR
@@ -103,7 +103,7 @@ flowchart TB
 
 ### 知识图谱
 
-- **父级概念**：[[前端]] — SSR 是一种渲染模式
+- **父级概念**：[[前端开发]] — SSR 是一种渲染模式
 - **子级概念**：
 	- [[Hydration]] — 客户端 JavaScript 接管 SSR 输出的过程
 	- 流式 SSR — 利用 HTTP 流式传输加速渲染

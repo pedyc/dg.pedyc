@@ -11,7 +11,7 @@ date-created: 2026-03-24
 date-modified: 2026-03-24
 status: cultivating
 content-type: concept
-up: "[[前端]]"
+up: "[[前端开发]]"
 ---
 
 ## 概念：AJAX
@@ -97,7 +97,7 @@ async function getData() {
 
 ### 知识图谱
 
-- **父级概念**：[[前端]]
+- **父级概念**：[[前端开发]]
 - **关联概念**：
   - [[HTTP]] — 通信协议
   - [[CORS]] — 跨域资源共享

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-个人成长/时间管理.md",
+                "file": "60-BLOGS/反者道之动.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "时间管理"
+              "title": "反者道之动"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-个人成长/时间管理.md",
+                "file": "60-BLOGS/反者道之动.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -94,12 +94,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.5359795996225935,
+                  "scale": 0.2726859917360067,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "时间管理 的关系图"
+              "title": "反者道之动 的关系图"
             }
           },
           {
@@ -279,15 +279,30 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "60236dec7012791f",
+  "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "40-RESOURCES/否定之否定.md",
+    "40-RESOURCES/虚无主义.md",
+    "40-RESOURCES/存在.md",
+    "30-Zettelkasten/否定是扬弃，既克服又保留.md",
+    "_templates/template_concept.md",
+    "60-BLOGS/反者道之动.md",
+    "00-META/Index/wiki-index.md.tmp.21632.8e5ae2c1f1b9",
+    "20-AREAS/A-个人成长/健康管理.md",
+    "20-AREAS/A-个人成长/个人博客.md",
+    "20-AREAS/A-个人成长/个人成长.md",
+    "20-AREAS/A-个人成长/时间管理.md",
+    "40-RESOURCES/SOP-如何在四象限中应用精力成本.md",
+    "30-Zettelkasten/习惯由触发、行为、奖励构成.md",
+    "20-AREAS/A-宗教与神秘学/宗教与神秘学.md",
+    "30-Zettelkasten/笔记的价值取决于连接.md",
+    "40-RESOURCES/视觉思维.md",
     "20-AREAS/A-设计/设计.md",
+    "40-RESOURCES/色彩理论.md",
+    "40-RESOURCES/色彩心理学.md",
+    "20-AREAS/A-前端/前端开发.md",
     "20-AREAS/A-设计/设计.md.tmp.21632.1650989794fd",
     "20-AREAS/A-设计",
-    "20-AREAS/A-个人成长/个人成长.md",
-    "20-AREAS/A-个人成长/个人博客.md",
-    "20-AREAS/A-前端/前端.md",
-    "40-RESOURCES/视觉思维.md",
     "20-AREAS/A-政治经济/政治经济.md",
     "20-AREAS/A-政治经济/MOC-政治经济.md",
     "00-META/Log/suggest-log.md",
@@ -295,21 +310,7 @@
     "Drawing 2026-06-03 09.06.13.excalidraw.svg",
     "40-RESOURCES/Hooks(React).md",
     "20-AREAS/A-知识管理/A-视觉思维.md",
-    "20-AREAS/A-宗教与神秘学/宗教与神秘学.md",
     "20-AREAS/A-知识管理/知识管理.md",
-    "20-AREAS/A-健康管理/健康管理.md",
-    "20-AREAS/A-个人成长/时间管理.md",
-    "20-AREAS/A-知识管理/视觉思维.md",
-    "40-RESOURCES/双重编码理论.md",
-    "20-AREAS/A-前端/A-前端.md",
-    "40-RESOURCES/Angular.md",
-    "40-RESOURCES/算法与数据结构.md",
-    "40-RESOURCES/前端性能优化.md",
-    "40-RESOURCES/前端工程.md",
-    "40-RESOURCES/前端交互.md",
-    "40-RESOURCES/Web安全.md",
-    "40-RESOURCES/ThreeJS.md",
-    "40-RESOURCES/CSS.md",
     "40-RESOURCES/控制反转.md.tmp.21632.c82a0122f168",
     "40-RESOURCES/Angular依赖注入.md.tmp.21632.8b4e388b4465",
     "40-RESOURCES/Angular变更检测.md.tmp.21632.0a2e8e12e98e",
@@ -317,7 +318,6 @@
     "40-RESOURCES/Angular vs React.md.tmp.21632.6200ff800eb7",
     "CLAUDE.md.tmp.1138.1781232884727",
     "CLAUDE.md.tmp.1138.1781232869043",
-    "index.md.tmp.21632.5f57b8f5a71e",
     "banner.svg",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",
     "_resources/webkit-main-flow-b779d50c0cf28_856.png",

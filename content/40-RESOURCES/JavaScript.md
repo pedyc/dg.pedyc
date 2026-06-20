@@ -12,7 +12,7 @@ date-modified: 2026-05-12
 status: active
 content-type: area
 up:
-  - "[[前端]]"
+  - "[[前端开发]]"
 ---
 
 ## Area: JavaScript

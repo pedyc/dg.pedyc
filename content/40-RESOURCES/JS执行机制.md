@@ -14,7 +14,7 @@ date-created: 2025-12-17
 date-modified: 2026-03-20
 status: 🌱 sprout
 content-type: concept
-up: "[[前端|前端开发]]"
+up: "[[前端开发|前端开发]]"
 ---
 
 ## 🧩 概念：JavaScript 执行机制

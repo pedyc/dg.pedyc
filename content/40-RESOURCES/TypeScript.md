@@ -11,7 +11,7 @@ date-created: 2025-05-29
 date-modified: 2026-05-11
 status: cultivating
 content-type: area
-up: "[[前端]]"
+up: "[[前端开发]]"
 ---
 
 ## Area: TypeScript

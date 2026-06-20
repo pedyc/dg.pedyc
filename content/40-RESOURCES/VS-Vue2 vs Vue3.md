@@ -14,7 +14,7 @@ comparison:
   - Vue3
 content-type: comparison
 related:
-  - "[[前端]]"
+  - "[[前端开发]]"
   - "[[P-复习vue3]]"
   - "[[Vue3-响应式系统原理]]"
 ---
@@ -129,7 +129,7 @@ graph TD
 
 ## 🔗 关联网络
 
-- **父级话题**：[[前端]]
+- **父级话题**：[[前端开发]]
 - **相关对比**：
 	- Vue2 Options API vs Vue3 Composition API
 	- [[VS-Vuex vs Pinia]]

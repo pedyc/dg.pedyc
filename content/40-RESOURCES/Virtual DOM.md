@@ -13,7 +13,7 @@ date-created: 2026-03-24
 date-modified: 2026-05-09
 status: cultivating
 content-type: concept
-up: "[[前端]]"
+up: "[[前端开发]]"
 ---
 
 ## 概念：虚拟 DOM
@@ -118,7 +118,7 @@ const vnode = {
 
 ### 知识图谱
 
-- **父级概念**：[[前端]]
+- **父级概念**：[[前端开发]]
 - **子级概念**：
 	- [[Diff算法(Vue3)]]
 - **关联概念**：

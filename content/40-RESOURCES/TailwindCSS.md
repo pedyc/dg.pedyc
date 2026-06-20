@@ -16,7 +16,7 @@ status: cultivating
 content-type: concept
 related:
   - "[[CSS]]"
-  - "[[前端]]"
+  - "[[前端开发]]"
 ---
 
 ## 概念：TailwindCSS
@@ -101,7 +101,7 @@ flowchart LR
 	- SCSS/Sass — CSS 预处理器
 	- CSS-in-JS — 样式绑定 JavaScript 的方案
 - **相关概念**：
-	- [[前端]] — TailwindCSS 的应用领域
+	- [[前端开发]] — TailwindCSS 的应用领域
 	- [[前端交互]] — 交互样式实现
 
 ---

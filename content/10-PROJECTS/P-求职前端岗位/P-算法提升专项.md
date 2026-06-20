@@ -8,7 +8,7 @@ date-created: 2026-03-09
 date-modified: 2026-05-22
 status: cultivating
 area:
-  - "[[前端|A-前端开发]]"
+  - "[[前端开发|A-前端开发]]"
 consequence: 8
 content-type: project
 energy-type: ⚡
@@ -21,7 +21,7 @@ urgency: 7
 
 ## 🔗 关联领域
 
-- [[前端]]
+- [[前端开发]]
 - [[P-求职前端岗位]]
 
 ## 🎯 核心靶心（项目的主要目标）

@@ -12,7 +12,7 @@ date-created: 2026-03-13
 date-modified: 2026-05-23
 status: cultivating
 content-type: concept
-up: "[[前端]]"
+up: "[[前端开发]]"
 ---
 
 ## 概念：响应式原理（Vue3）
@@ -202,7 +202,7 @@ function trigger(target, key) {
 
 ### 知识图谱
 
-- **父级概念**：[[前端]]
+- **父级概念**：[[前端开发]]
 - **关联概念**：
 	- [[Vue3 ref 和 reactive 的区别]]
 	- [[Virtual DOM]] — 响应式数据变化后通过 render 函数生成新的 VNode

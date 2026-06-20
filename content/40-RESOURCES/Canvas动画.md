@@ -18,7 +18,7 @@ content-type: concept
 related:
   - "[[动画原理]]"
   - "[[CSS Animation]]"
-  - "[[前端]]"
+  - "[[前端开发]]"
 ---
 
 ## 概念：Canvas 动画
@@ -100,7 +100,7 @@ flowchart LR
 
 ### 知识图谱
 
-- **父级概念**：[[前端]] — Canvas 动画是前端图形开发的重要组成
+- **父级概念**：[[前端开发]] — Canvas 动画是前端图形开发的重要组成
 - **子级概念**：
 	- requestAnimationFrame — 帧同步核心 API
 	- Canvas 2D Context — 绑制 API

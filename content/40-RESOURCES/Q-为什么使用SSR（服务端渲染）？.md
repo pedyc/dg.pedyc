@@ -14,7 +14,7 @@ date-modified: 2026-04-08
 status: cultivating
 content-type: question
 related:
-  - "[[前端]]"
+  - "[[前端开发]]"
   - "[[NextJS]]"
 ---
 
@@ -80,7 +80,7 @@ SSR 不是银弹，它的核心价值在于**内容为核心且依赖搜索流�
 ## 关联
 
 - **相关问题**：[[Q-CSR 与 SSR 的性能对比]]
-- **相关概念**：[[前端]] — SSR 是前端渲染模式的一种
+- **相关概念**：[[前端开发]] — SSR 是前端渲染模式的一种
 - **参考资料**：
 	- [Next.js SSR 文档](https://nextjs.org/docs/app/building-your-application/rendering)
 	- [The Benefits and Drawbacks of SSR](https://web.dev/articles/rendering-on-the-web)

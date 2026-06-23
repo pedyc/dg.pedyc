@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-知识管理/知识获取.md",
+                "file": "40-RESOURCES/词法作用域.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "知识获取"
-            }
-          },
-          {
-            "id": "4209f96a39f364bd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "20-AREAS/A-知识管理/知识获取.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "知识获取"
+              "title": "词法作用域"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-知识管理/知识获取.md",
+                "file": "40-RESOURCES/词法作用域.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "知识获取 的关系图"
+              "title": "词法作用域 的关系图"
             }
           },
           {
@@ -236,7 +211,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "20-AREAS/A-知识管理/A-知识管理.md",
+                "file": "40-RESOURCES/词法作用域.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -246,7 +221,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "A-知识管理 的反向链接列表"
+              "title": "词法作用域 的反向链接列表"
             }
           },
           {
@@ -255,12 +230,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "20-AREAS/A-知识管理/A-知识管理.md",
+                "file": "40-RESOURCES/词法作用域.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "A-知识管理 的出链列表"
+              "title": "词法作用域 的出链列表"
             }
           },
           {
@@ -269,12 +244,11 @@
             "state": {
               "type": "git-history-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-history-view"
+              "icon": "history",
+              "title": "History"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -304,10 +278,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4209f96a39f364bd",
+  "active": "04630d253fffab4e",
   "lastOpenFiles": [
-    "40-RESOURCES/全渠道快速捕获工作流.md",
+    "40-RESOURCES/闭包.md",
+    "40-RESOURCES/原型链.md",
+    "_resources/原型链.excalidraw.md",
     "20-AREAS/A-知识管理/知识获取.md",
+    "_resources/原型链.excalidraw.svg",
+    "_resources/思维分类及视觉工具.excalidraw.md",
+    "40-RESOURCES/批判性思维.md",
+    "40-RESOURCES/全渠道快速捕获工作流.md",
     "00-META/Log/wiki-log.md",
     "00-META/Log/suggest-log.md",
     "00-META/Specification/_skills-overview.md",
@@ -332,11 +312,6 @@
     "30-Zettelkasten/否定是扬弃，既克服又保留.md",
     "_templates/template_concept.md",
     "00-META/Index/wiki-index.md.tmp.21632.8e5ae2c1f1b9",
-    "20-AREAS/A-个人成长/健康管理.md",
-    "20-AREAS/A-个人成长/个人博客.md",
-    "20-AREAS/A-个人成长/个人成长.md",
-    "20-AREAS/A-个人成长/时间管理.md",
-    "40-RESOURCES/SOP-如何在四象限中应用精力成本.md",
     "20-AREAS/A-设计/设计.md.tmp.21632.1650989794fd",
     "20-AREAS/A-设计",
     "Drawing 2026-06-03 09.06.13.excalidraw.svg",
@@ -351,7 +326,6 @@
     "_resources/教你如何构建自己的依赖注入工具/f4119ac9a2036c8f1466f2839b2f10d0_MD5.webp",
     "_resources/教你如何构建自己的依赖注入工具/912ceb3ef77fd67243e49eba8e36192d_MD5.webp",
     "_resources/教你如何构建自己的依赖注入工具/f5d805cc945480a8822b1884901e207b_MD5.webp",
-    "_resources/教你如何构建自己的依赖注入工具/d295c5e7fbbc01c6f66967d13001318c_MD5.webp",
     "未命名.canvas",
     "Untitled.canvas",
     "//Untitled.canvas",

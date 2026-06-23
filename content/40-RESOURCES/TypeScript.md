@@ -1,14 +1,11 @@
 ---
 uid: 202505290000
 title: TypeScript
-aliases:
-  - TS
-  - A-TypeScript
+aliases: [TS, A-TypeScript]
 description: JavaScript 的超集，添加了类型系统和其他高级特性
-tags:
-  - 前端开发/TypeScript
+tags: [前端开发/TypeScript]
 date-created: 2025-05-29
-date-modified: 2026-05-11
+date-modified: 2026-06-23
 status: cultivating
 content-type: area
 up: "[[前端开发]]"
@@ -67,7 +64,6 @@ up: "[[前端开发]]"
 - **上游**（理论支撑）：[[JavaScript]]
 - **下游**（实际应用）：[[Vue]]（Vue3 原生支持）、[[React]]
 - **协同**（配合领域）：[[前端工程化[[前端工程]]### 探索前沿
-
 - **待解问题**
 	- TypeScript 5.x 新特性应用
 	- 类型体操最佳实践

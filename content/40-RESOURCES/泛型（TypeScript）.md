@@ -4,7 +4,7 @@ title: 泛型（TypeScript）
 description: 泛型允许创建可复用的组件，能够支持多种类型而非单一类型
 tags: [前端/TypeScript]
 date-created: 2026-03-16
-date-modified: 2026-03-17
+date-modified: 2026-06-23
 status: fleeting
 content-type: term
 up: "[[TypeScript]]"

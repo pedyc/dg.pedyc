@@ -4,7 +4,7 @@ title: _skills-overview
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-06-12
-date-modified: 2026-06-12
+date-modified: 2026-06-23
 status: active
 content-type: article
 up: [["llm-wiki-schema"]]

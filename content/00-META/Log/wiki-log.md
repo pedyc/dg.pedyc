@@ -4,7 +4,7 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-06-15
+date-modified: 2026-06-23
 status: active
 content-type: [article]
 up: ["[[本库指南]]"]
@@ -73,28 +73,23 @@ up: ["[[本库指南]]"]
 	- 位置：30-ZETTELKASTEN/收敛过程本质上的熵减过程.md
 	- 父页面：[[A-知识管理]]
 	- 核心观点：收敛（算法/思维/知识）本质上是系统熵减的过程
-
 - [2026-06-15] ingest | 创建 atomic「熵减必然有信息代价」
 	- 位置：30-ZETTELKASTEN/熵减必然有信息代价.md
 	- 父页面：[[收敛过程本质上是熵减过程]]
 	- 核心观点：任何熵减操作都伴随着信息的舍弃——收敛必有取舍
-
 - [2026-06-15] ingest | 创建 SOP「信源质量审计标准」
 	- 位置：40-RESOURCES/信源质量审计标准.md
 	- 父页面：[[知识获取]]
 	- 覆盖五维评分（密度/时效/深度/独特性/产出率）+ 四级判定
-
 - [2026-06-15] refactor | 重写「经过验证的高信噪比信源」按五维评分标准评级
 	- 位置：20-AREAS/A-知识管理/经过验证的高信噪比信源.md
 	- 评分：Zsolt A级、PKMer B级、阮一峰 B级、潮流周刊 C级
 	- 遗留：B站信源评分待补充，X/知乎/播客暂缺
-
 - [2026-06-15] ingest | 创建 concept「信息论」
 	- 位置：40-RESOURCES/信息论.md
 	- 父页面：[[知识获取]]
 	- 覆盖香农信息论核心概念 + 知识管理应用映射 + 信噪比/熵的学科源头
 	- 更新信噪比.md 添加「上游学科」反向链接
-
 - [2026-06-15] ingest | 创建 atomic「信噪比决定了信息传递的有效性」
 	- 位置：30-ZETTELKASTEN/信噪比决定了信息传递的有效性.md
 	- 父页面：[[信息论]]
@@ -261,33 +256,27 @@ up: ["[[本库指南]]"]
 	- 位置：`40-RESOURCES/存在主义.md`
 	- 新增 atomic：`30-ZETTELKASTEN/存在先于本质.md`
 	- 更新 [[wiki-index]] 添加 Concepts 条目
-
 - [2026-06-15] ingest | 创建 concept「GTD」
 	- 位置：40-RESOURCES/GTD.md
 	- 父页面：[[A-时间管理]]
 	- 覆盖 GTD 五阶段工作流（收集→厘清→组织→反思→执行）+ 核心原则（心如止水、2 分钟原则、每周回顾）
 	- 关联：[[四象限法则]]、[[PARA笔记法]]、[[番茄工作法]]
-
 - [2026-06-15] ingest | 创建 atomic「痛点是知识管理的唯一动力源」
 	- 位置：30-ZETTELKASTEN/痛点是知识管理的唯一动力源.md
 	- 父页面：[[A-知识管理]]（已纳入核心心智模型 → 原子洞见）
 	- 核心观点：没有真实痛点驱动的知识管理系统注定无法持续
-
 - [2026-06-15] refactor | 重写「怎样架构混合型知识库」sop → concept
 	- 位置：40-RESOURCES/怎样架构混合型知识库.md
 	- 变更：sop → concept（内容实质是架构设计，非标准流程）
 	- aliases：SOP-怎样架构混合型知识库 → C-混合型知识库架构
 	- 更新：wiki-index（SOP → Concepts）、补全核心命题/运行机制/知识图谱
-
 - [2026-06-15] refactor | 修复 _templates 目录前缀规范（2 处）
 	- template_comp.md: aliases MOC- → VS-（comparison 应使用 VS- 前缀）
 	- template_roadmap.md: aliases R- → []（roadmap 无定义前缀，不应使用 R-）
-
 - [2026-06-15] refactor | 清除模板正文中的前缀 Wikilink
 	- template_area.md: SOP-/Q-/MOC- 前缀引用 → {{纯标题占位符}}
 	- template_concept.md: SOP-/Q- 前缀引用 → {{纯标题占位符}}
 	- 原则：前缀只在 aliases 字段使用，正文引用用纯标题
-
 - [2026-06-15] refactor | 修复数字花园概述（归档→资源 + 4 类问题）
 	- 位置：50-ARCHIVE/ → 40-RESOURCES/（active 状态不应在归档）
 	- 来源更正："Maggie Appleton 提出" → Mark Bernstein(1998) 源头 + Appleton 系统阐述
@@ -296,7 +285,6 @@ up: ["[[本库指南]]"]
 	- 重写关键区别表格：统一对比维度为内容粒度/公开程度/更新方式/发布门槛/组织逻辑
 	- 补充关键人物（Bernstein/Appleton/Critchlow）、状态标记特征
 	- 更新：wiki-index Concepts 章节
-
 - [2026-06-15] refactor | 修复第二大脑笔记（来源/运行机制/对比/FAQ/局限性）
 	- 来源更正："Tiago Forte 提出 PARA 方法" → "Tiago Forte, Building a Second Brain"
 	- 运行机制补充：渐进式总结（4 层提炼法）+ PARA 组织框架
@@ -304,69 +292,55 @@ up: ["[[本库指南]]"]
 	- 新增局限性章节：维护成本/工具绑定/过度外化/投入产出比
 	- 新增 FAQ 章节（2 个 Q-note 引用）
 	- 更新：知识图谱补充卡片盒笔记法和认知负荷
-
 - [2026-06-16] refactor | 去重数字花园笔记（删除旧版，保留已修复版）
 	- 删除 40-RESOURCES/数字花园.md（旧版残留 uid 重复）
 	- 保留 40-RESOURCES/数字花园概述.md（已修复完整内容）
 	- [[数字花园]] 引用通过别名正常解析到数字花园概述
-
 - [2026-06-16] ingest | 创建 comparison「Angular vs React」
 	- 位置：40-RESOURCES/Angular vs React.md
 	- 父页面：[[MOC-前端面试真题库]]
 	- 覆盖架构哲学/响应式模型/变更检测/表单/HTTP/状态管理 8 维对比
 	- 更新：wiki-index Comparisons 章节
-
 - [2026-06-16] ingest | 创建 term「Signal(Angular)」
 	- 位置：40-RESOURCES/Signal(Angular).md
 	- aliases：T-Angular-Signal
 	- 父页面：[[Angular|A-前端/Angular]]
 	- 覆盖核心 API（signal/computed/effect/input/output/model 等 9 个）+ RxJS 互通 + 使用示例
-
 - [2026-06-16] ingest | 创建 concept「Angular变更检测」
 	- 位置：40-RESOURCES/Angular变更检测.md
 	- aliases：C-Angular-变更检测
 	- 父页面：[[Angular|A-前端/Angular]]
 	- 覆盖 Zone.js 触发 → Default/OnPush 策略 → Signal 模式演进
 	- 包含性能优化示例代码（OnPush / runOutsideAngular / Signal）
-
 - [2026-06-17] ingest | 创建 concept「Angular依赖注入」
 	- 位置：40-RESOURCES/Angular依赖注入.md
 	- aliases：C-Angular-依赖注入
 	- 父页面：[[Angular|A-前端/Angular]]
 	- 覆盖注入器树层级（root/module/component）+ 3 种注册方式 + 4 种提供者语法 + 令牌类型
-
 - [2026-06-17] ingest | 创建 concept「控制反转」
 	- 位置：40-RESOURCES/控制反转.md
 	- aliases：C-控制反转
 	- 父页面：[[设计模式]]
 	- 覆盖 4 种实现方式（DI/模板方法/策略/事件）+ IoC vs DI 关键区别
 	- 修复 2 处断链：[[依赖注入]]、[[Angular依赖注入]] 中的 [[控制反转]] 引用
-
 - [2026-06-19] ingest | 创建 atomic「权力是资源分配的核心驱动力」
 	- 位置：30-ZETTELKASTEN/权力是资源分配的核心驱动力.md
 	- 父页面：[[政治经济|MOC-政治经济]]
 	- 覆盖 5 个论据：市场规则/预算博弈/注意力经济/公共财政/稀缺性制造
-
 - [2026-06-19] ingest | 创建 atomic「权力的日常形态是共识，终极担保是暴力」
 	- 位置：30-ZETTELKASTEN/权力的日常形态是共识，终极担保是暴力.md
 	- 父页面：[[政治经济|MOC-政治经济]]
 	- 论据覆盖韦伯/阿伦特/日常体验/征税逻辑/暴力-共识反比关系
-
-
 - [2026-06-19] ingest | 消化 2 条政治经济原子笔记到 Wiki 层
 	- 更新 A-政治经济 原子洞见：纳入 [[权力的日常形态是共识，终极担保是暴力]]
 	- 更新 MOC-政治经济：新增「原子洞见」章节，收录 2 条 atomic
 	- 父页面：[[政治经济|MOC-政治经济]]、[[政治经济|A-政治经济]]
-
 - [2026-06-19] refactor | A-前端 Area 架构重构 + 冗余合并
 	- 合并 A-前端.md → 前端开发.md（A-前端 已作为 alias）
 	- 删除 A-前端.md，保持单一顶层 Area：前端开发
 	- 降级 4 个子 Area 为 MOC → 40-RESOURCES：前端工程、前端交互、前端性能优化、算法与数据结构
 	- 迁移 6 个框架/工具 Area 为 Concept → 40-RESOURCES：Angular、React、Vue、CSS、ThreeJS、Web安全
 	- 更新 wiki-index（Areas → 前端 精简，新增 Concepts/MOCs 条目）
-
-
-
 - [2026-06-19] refactor | 20-AREAS 全面审计修复 + A-知识管理重构
 	- 重命名 6 个 area 文件（去掉文件名中 A- 前缀）：个人成长、个人博客、时间管理、健康管理、知识管理、宗教与神秘学
 	- 修正 3 个 MOC title 前缀（MOC-政治经济→政治经济，MOC-时政→时政，MOC-神秘主义→神秘主义）
@@ -381,24 +355,20 @@ up: ["[[本库指南]]"]
 	- 整合已有概念：视觉设计、视觉设计原则、色彩心理学、设计系统与组件库工程实践
 	- 为 4 个概念笔记添加 up: [[A-设计]]
 	- 标记 5 个待创建概念：排版基础、布局系统、交互设计模式、无障碍设计、Figma
-
 - [2026-06-20] ingest | 创建概念「色彩理论」C-色彩理论
 	- 位置：40-RESOURCES/色彩理论.md
 	- 父页面：[[A-设计]]
 	- 覆盖色彩模型（RGB/CMYK/HSL）、配色模式（互补/类似/三等分/四边形）、感知理论、实用法则
 	- 更新 A-设计 核心心智模型
-
 - [2026-06-20] ingest | 创建 atomic「习惯由触发、行为、奖励构成」
 	- 位置：30-ZETTELKASTEN/习惯由触发、行为、奖励构成.md
 	- 父页面：[[A-个人成长]]
 	- 核心观点：习惯回路三要素（Cue→Routine→Reward），改变习惯是替换行为而非消除
-
 	- [2026-06-20] ingest | 创建概念「否定之否定」C-否定之否定
 		- 位置：40-RESOURCES/否定之否定.md
 		- 父页面：[[政治经济|A-政治经济]]
 		- 覆盖三阶段模型（肯定→否定→否定之否定）、螺旋上升运行机制、与形而上学发展观的对比
 		- 关联：[[反者道之动]]、[[形而上学]]、[[逻辑学]]
-
 	- [2026-06-20] ingest | 创建 atomic「否定是扬弃，既克服又保留」
 		- 位置：30-ZETTELKASTEN/否定是扬弃，既克服又保留.md
 		- 父页面：[[否定之否定]]
@@ -439,6 +409,30 @@ up: ["[[本库指南]]"]
 	- 创建 [[llm-wiki-schema]]
 	- 创建 [[wiki-index]]
 	- 创建 [[wiki-log]]
+- [2026-06-23] ingest | 创建 comparison「Svelte vs React」
+	- 位置：40-RESOURCES/Svelte vs React.md
+	- 父页面：[[前端框架]]
+	- 覆盖架构哲学/响应式机制/DOM 更新/组件模型/状态管理/生命周期/TypeScript/生态 8 维对比
+	- 更新：wiki-index 断裂链接[[Svelte vs React]] 已恢复
+
+#### 2026-06-23
+
+- [2026-06-23] lint | full 健康检查
+	- 检查范围：30-ZETTELKASTEN、40-RESOURCES、20-AREAS
+	- **矛盾**：0 个
+	- **孤儿页面**：0 个
+	- **概念缺口**：3 个
+		- [[数字花园概述]] (3x) — 原子笔记引用，但文件实际为 `数字花园.md`（别名无"数字花园概述"）
+		- [[localStorage]] (2x) — 无专用 term 页面
+		- [[Scope]] (2x) — 无专用页面
+	- **半缺口**：1 个（[[变量提升]] (3x) — 有对应文件但无"变量提升"别名）
+	- **过时断言**：0 个
+	- **索引断裂链接**：3 个
+		- [[MOC-政治经济]] — 6/19 refactor 已删除，`政治经济.md` 未包含该别名
+		- [[MOC-动画效果SOP]] — 页面不存在
+		- [[Svelte vs React]] — 页面不存在（上次 lint 已知）
+	- **归档引用**：无
+	- **预警**：无（均在安全线内）
 
 *Log 开始于 2026-05-20*
 
@@ -447,12 +441,10 @@ up: ["[[本库指南]]"]
 		- 重分类结果：concept × 126、term × 17、question × 16、sop × 3、moc × 1
 		- 保留 atomic × 3（TypeScript的类型是编译时约束、Vue3 响应式系统分为 effect 和 reactive 两部分、执行上下文分为创建阶段和执行阶段）
 		- 自动为无前缀的文件补齐 aliases 前缀
-
 - [2026-06-15] refactor | 修复 00-META 规格文档与实操的不一致
 		- settings.local.json: Skill(content-verifier) → Skill(content-verifier-local)，去掉冗余 skill(obsidian-note)
 		- _content-type-rules.md: "Diay" 拼写修正为 "Diary"
 		- 命名规范.md: 前缀表格中的空格清理（P- 求职 → P-求职 等）
-
 - [2026-06-19] ingest | 消化 2 条政治经济原子笔记到 Wiki 层
 		- 更新 A-政治经济 原子洞见：纳入 [[权力的日常形态是共识，终极担保是暴力]]
 		- 更新 MOC-政治经济：新增「原子洞见」章节，收录 2 条 atomic

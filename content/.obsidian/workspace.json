@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/词法作用域.md",
+                "file": "LIST.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "词法作用域"
+              "title": "LIST"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/词法作用域.md",
+                "file": "LIST.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "词法作用域 的关系图"
+              "title": "LIST 的关系图"
             }
           },
           {
@@ -150,7 +150,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:方法论",
+                "query": "tag:哲学/形而上学/本体论",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -191,7 +191,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -211,7 +211,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "40-RESOURCES/词法作用域.md",
+                "file": "LIST.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -221,7 +221,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "词法作用域 的反向链接列表"
+              "title": "LIST 的反向链接列表"
             }
           },
           {
@@ -230,12 +230,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "40-RESOURCES/词法作用域.md",
+                "file": "LIST.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "词法作用域 的出链列表"
+              "title": "LIST 的出链列表"
             }
           },
           {
@@ -280,6 +280,14 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "index.md",
+    "Drawing 2026-06-03 09.06.13.excalidraw.md",
+    "40-RESOURCES/知识论.md",
+    "40-RESOURCES/本体论.md",
+    "30-Zettelkasten/本体论承诺决定了理论的解释力.md",
+    "30-Zettelkasten/存在是最普遍的概念，不能被定义，只能被描述.md",
+    "40-RESOURCES/形而上学.md",
+    "40-RESOURCES/词法作用域.md",
     "40-RESOURCES/闭包.md",
     "40-RESOURCES/原型链.md",
     "_resources/原型链.excalidraw.md",
@@ -292,7 +300,6 @@
     "00-META/Log/suggest-log.md",
     "00-META/Specification/_skills-overview.md",
     "CLAUDE.md",
-    "index.md",
     "excalibrain.md",
     "40-RESOURCES/泛型（TypeScript）.md",
     "40-RESOURCES/TypeScript.md",
@@ -300,17 +307,10 @@
     "30-Zettelkasten/泛型的本质是类型参数化.md",
     "40-RESOURCES/Svelte vs React.md",
     "20-AREAS/A-政治经济/政治经济.md",
-    "40-RESOURCES/数字花园.md",
-    "60-BLOGS/反者道之动.md",
     "lint_index_analysis.json",
     "lint_analysis.json",
     "lint_index.json",
     "lint_gaps.json",
-    "40-RESOURCES/否定之否定.md",
-    "40-RESOURCES/虚无主义.md",
-    "40-RESOURCES/存在.md",
-    "30-Zettelkasten/否定是扬弃，既克服又保留.md",
-    "_templates/template_concept.md",
     "00-META/Index/wiki-index.md.tmp.21632.8e5ae2c1f1b9",
     "20-AREAS/A-设计/设计.md.tmp.21632.1650989794fd",
     "20-AREAS/A-设计",

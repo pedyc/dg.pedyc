@@ -1,16 +1,17 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: "{{项目名称}}"
-aliases: ["P-{{项目名称}}"]
+title: template_project
+aliases:
+  - "{{P-项目名称}}"
 description: "{ 一句话描述项目目标 }"
 tags: []
-content-type: project
 status: fleeting
-up: [[{{父级}}]]
 area: []
-expire: YYYY/MM/DD
-urgency: 1
 consequence: 1
+content-type: project
+expire: YYYY/MM/DD
+up: "[[{{父级}}]]"
+urgency: 1
 ---
 
 <!--
@@ -28,16 +29,16 @@ consequence: 1
 	- 最后写复盘（What we learned）
 -->
 
-## 关联领域
+## 背景
 
-- [[{{领域1}}]]
-- [[{{领域2}}]]
+{{项目相关背景}}
 
 ---
 
 ## 核心目标
 
-- [ ] {{量化目标}}
+- [ ] {{量化目标1}}
+- [ ] {{量化目标2}}
 - **成功标准**：{{可衡量的结果}}
 
 ---
@@ -72,6 +73,13 @@ consequence: 1
 
 - **工具**：[[{{工具名}}]]
 - **参考**：[[{{参考资料}}]]
+
+---
+
+## 关联领域
+
+- [[{{领域1}}]]
+- [[{{领域2}}]]
 
 ---
 

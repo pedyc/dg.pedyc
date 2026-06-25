@@ -1,96 +1,128 @@
 ---
-uid: '202605160001'
+uid: "202605160001"
 title: AI学习计划
-aliases: ["P-AI学习计划"]
-description: "系统学习AI，成功上岸AI相关岗位"
+aliases: [P-AI学习计划]
+description: 前端工程师掌握 AI 能力的系统学习路径：提示词工程、Harness 工程、LLM 集成
 date-created: 2026-05-16
-date-modified: 2026-05-16
+date-modified: 2026-06-24
 status: fleeting
-area: []
+area: ["[[人工智能|A-人工智能]]"]
 consequence: 5
 content-type: project
 expire: 2026/12/31
 urgency: 5
 ---
 
-## 关联领域
+## 背景
 
-- [[人工智能|A-人工智能]]
-- [[C-机器学习]]
+作为前端开发工程师，目标不是转行 AI 研究员，而是掌握能落地到前端工作中的 AI 工程能力。核心方向：提示词工程、Harness 工程、LLM 集成、AI Agent 开发。
+
+> **定位**：不做调参侠，做最懂 AI 工程化的前端。
 
 ---
 
 ## 核心目标
 
-- [ ] 斩获 AI/NLP/ML engineer offer
-- **成功标准**：收到至少 3 个 AI 相关岗位的 offer
+- [ ] 独立开发生产级 AI 前端功能（AI 搜索/对话/RAG 应用）
+- [ ] 掌握 Harness 工程方法论，能构建可靠的 AI Agent 应用
+- [ ] 将 AI 能力整合到日常工作流（代码生成、测试、审查）
+- **成功标准**：交付 2 个以上可用 AI 应用 / 工具，且团队开始复用你的 AI 方案
 
 ---
 
-## 战略地图
+## 执行计划（对应 KR）
 
-- [ ] KR1：完成 ML 基础理论体系（权重 25%）
-- [ ] KR2：完成深度学习核心知识（权重 25%）
-- [ ] KR3：完成 NLP/大模型专项（权重 25%）
-- [ ] KR4：完成 2 个实战项目 + 代码作品集（权重 15%）
-- [ ] KR5：完成面试准备（权重 10%）
+### 阶段一：LLM 基础与提示词工程（现在 ~ 2026/07/31）
 
----
+*对应 KR1：掌握 LLM 基础 + Prompt Engineering*
 
-## 执行计划
+- [ ] LLM 工作原理（2 天）
+	- 理解 Token、上下文窗口、温度、Top-P 等核心参数
+	- 了解 Transformer 基本架构（不需要数学推导）
+- [ ] 提示词工程系统学习（2 周）
+	- 结构化提示词：角色/任务/格式/约束/示例
+	- 进阶技巧：思维链、Few-shot、思维树
+	- 阅读 [[提示词工程]]
+- [ ] LLM API 实践（1 周）
+	- OpenAI / Anthropic API：Chat Completions、Streaming
+	- Function Calling / Tool Use
+	- Token 计算与成本优化
+- [ ] 输出：整理自己的 Prompt 模板库 + SOP
 
-### 阶段一：机器学习基础（现在 -2026/07/31）
+### 阶段二：Harness 工程与 Agent 开发（2026/08/01 ~ 2026/09/30）
 
-- [ ] 线性代数与矩阵运算（3 周）
-- [ ] 概率论与统计学（2 周）
-- [ ] 经典机器学习算法（4 周）
-	- 回归、分类、聚类
-	- 决策树、随机森林、XGBoost
-	- SVM、PCA
-- [ ] sklearn 实战（2 周）
+*对应 KR2：掌握 Harness 工程 + AI Agent*
 
-### 阶段二：深度学习核心（2026/08/01-2026/09/30）
+- [ ] Harness 工程系统学习（2 周）
+	- 阅读 [[Harness]]、[[Agent]]、[[LLM]]
+	- 理解 Agent 循环：感知 → 推理 → 行动 → 观察
+	- Tool Use / Function Calling 工程实现
+	- Guardrails 与输出验证
+- [ ] 主流框架实践（3 周）
+	- LangChain / LangGraph：Chain、Agent、Tool
+	- MCP（Model Context Protocol）理解与接入
+	- Vercel AI SDK：前端 AI 集成的标准方案
+- [ ] 输出：搭建 Agent 脚手架模板 + Harness 实践总结
 
-- [ ] 神经网络基础（2 周）
-	- BP 算法、激活函数、损失函数
-	- 优化器（SGD、Adam）
-- [ ] CNN 实战（2 周）
-- [ ] RNN/LSTM/GRU（2 周）
-- [ ] PyTorch 框架（2 周）
+### 阶段三：RAG 与知识检索（2026/10/01 ~ 2026/10/31）
 
-### 阶段三：NLP 与大模型（2026/10/01-2026/11/30）
+*对应 KR3：掌握 RAG 工程*
 
-- [ ] NLP 基础（2 周）
-	- 文本预处理、词向量
-	- Word2Vec、FastText
-- [ ] Transformer 架构（2 周）
-- [ ] BERT/GPT 系列（2 周）
-- [ ] LangChain / RAG（1 周）
-- [ ] 大模型微调（1 周）
+- [ ] 向量数据库与 Embedding（1 周）
+	- Embedding 模型选择（text-embedding-3-small, etc.）
+	- Vector DB 实践（Chroma / pgvector / Milvus）
+	- 相似度搜索与混合检索
+- [ ] RAG 工程实践（2 周）
+	- Chunking 策略 + 文档解析
+	- 检索增强生成全链路
+	- RAG 评估：命中率、忠实度、幻觉检测
+- [ ] 输出：RAG 知识库问答 Demo
 
-### 阶段四：项目实战（2026/12/01-2026/12/31）
+### 阶段四：前端 AI 特性实战（2026/11/01 ~ 2026/12/31）
 
-- [ ] 项目 1：情感分析/文本分类（CNN/RNN/BERT）
-- [ ] 项目 2：RAG 知识库问答系统
-- [ ] GitHub 代码作品集整理
-- [ ] 简历优化
+*对应 KR4：交付生产级 AI 前端功能*
+
+- [ ] AI 前端交互模式（2 周）
+	- 流式渲染（Streaming UI）：SSE / WebSocket
+	- Chat UI 架构：消息管理、状态持久化、中断恢复
+	- AI 搜索结果展示（引用标注、置信度、来源）
+- [ ] AI 工具链整合（2 周）
+	- Claude Code / Cursor 高阶使用
+	- AI 驱动测试生成与代码审查
+	- 个人 AI 工作流搭建
+- [ ] 综合项目（4 周）
+	- 选择其一：AI 编程助手 / AI Chat 应用 / RAG 知识库
+	- 从前端到后端的全栈 AI 应用
+	- 部署与监控
 
 ---
 
 ## 资源
 
-- **课程**：吴恩达 ML、深度学习；李宏毅 ML/DL
-- **书籍**：《统计学习方法》《深度学习入门》《Hands-on ML》
-- **刷题**：LeetCode（剑指 offer）、CodeTop
-- **项目**：Kaggle、天池
+- **课程**：DeepLearning.AI《Building Systems with ChatGPT》、《LangChain for LLM App Development》、吴恩达《提示词工程》
+- **文档**：Anthropic API Docs、OpenAI API Docs、Vercel AI SDK Docs、LangChain Docs
+- **书籍**：《提示工程指南》、《LLM 应用开发实战》
+- **工具**：Claude Code、Cursor、OpenAI API、LangChain、Chroma、Vercel AI SDK
+
+---
+
+## 关联领域
+
+- [[A-人工智能]]
+- [[A-前端]]
+- [[Harness]]
+- [[提示词工程]]
+- [[Agent]]
 
 ---
 
 ## 交付物
 
-- 笔记体系：MOC- 机器学习知识地图、MOC-NLP 知识地图
-- 代码作品集：GitHub 仓库
-- 面经总结：30+ 常见面试题答案
+- ⼝ Prompt 模板库（SOP）
+- ⼝ Agent 脚手架模板（Harness 实践）
+- ⼝ RAG 知识库 Demo
+- ⼝ 生产级 AI 前端应用 x1
+- ⼝ AI 工作流 SOP（代码生成 / 审查 / 测试）
 
 ---
 

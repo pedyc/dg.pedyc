@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LIST.md",
+                "file": "10-PROJECTS/P-求职前端岗位/腾讯音乐前端岗位模拟面试.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "LIST"
+              "title": "腾讯音乐前端岗位模拟面试"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "LIST.md",
+                "file": "10-PROJECTS/P-求职前端岗位/腾讯音乐前端岗位模拟面试.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "LIST 的关系图"
+              "title": "腾讯音乐前端岗位模拟面试 的关系图"
             }
           },
           {
@@ -211,7 +211,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LIST.md",
+                "file": "10-PROJECTS/P-求职前端岗位/腾讯音乐前端岗位模拟面试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -221,7 +221,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "LIST 的反向链接列表"
+              "title": "腾讯音乐前端岗位模拟面试 的反向链接列表"
             }
           },
           {
@@ -230,12 +230,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LIST.md",
+                "file": "10-PROJECTS/P-求职前端岗位/腾讯音乐前端岗位模拟面试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "LIST 的出链列表"
+              "title": "腾讯音乐前端岗位模拟面试 的出链列表"
             }
           },
           {
@@ -280,6 +280,20 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "_resources/腾讯音乐前端岗位模拟面试/1e4508d724106cc79e460814af5f3a3f_MD5.webp",
+    "10-PROJECTS/P-求职前端岗位/腾讯音乐前端岗位模拟面试.md",
+    "_resources/腾讯音乐前端岗位模拟面试",
+    "50-ARCHIVE/_resources/Pasted image 20260624181058.png",
+    "10-PROJECTS/P-求职前端岗位/P-求职前端岗位.md",
+    "10-PROJECTS/P-求职前端岗位/P-前端能力提升专项.md",
+    "10-PROJECTS/P-AI学习计划/AI学习计划.md",
+    "_templates/template_project.md",
+    "40-RESOURCES/Vue 面试题.md",
+    "40-RESOURCES/在响应式对象频繁更新的场景下如何减少不必要的响应式开销？.md",
+    "40-RESOURCES/MOC-前端面试真题库.md",
+    "40-RESOURCES/性能优化方法.md",
+    "40-RESOURCES/响应式原理(Vue3).md",
+    "LIST.md",
     "index.md",
     "Drawing 2026-06-03 09.06.13.excalidraw.md",
     "40-RESOURCES/知识论.md",
@@ -295,18 +309,6 @@
     "_resources/原型链.excalidraw.svg",
     "_resources/思维分类及视觉工具.excalidraw.md",
     "40-RESOURCES/批判性思维.md",
-    "40-RESOURCES/全渠道快速捕获工作流.md",
-    "00-META/Log/wiki-log.md",
-    "00-META/Log/suggest-log.md",
-    "00-META/Specification/_skills-overview.md",
-    "CLAUDE.md",
-    "excalibrain.md",
-    "40-RESOURCES/泛型（TypeScript）.md",
-    "40-RESOURCES/TypeScript.md",
-    "40-RESOURCES/基础类型和接口（TypeScript）.md",
-    "30-Zettelkasten/泛型的本质是类型参数化.md",
-    "40-RESOURCES/Svelte vs React.md",
-    "20-AREAS/A-政治经济/政治经济.md",
     "lint_index_analysis.json",
     "lint_analysis.json",
     "lint_index.json",
@@ -317,15 +319,12 @@
     "Drawing 2026-06-03 09.06.13.excalidraw.svg",
     "40-RESOURCES/控制反转.md.tmp.21632.c82a0122f168",
     "40-RESOURCES/Angular依赖注入.md.tmp.21632.8b4e388b4465",
-    "40-RESOURCES/Angular变更检测.md.tmp.21632.0a2e8e12e98e",
     "banner.svg",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",
     "_resources/webkit-main-flow-b779d50c0cf28_856.png",
     "_resources/sw-lifecycle.svg",
     "_resources/教你如何构建自己的依赖注入工具/5029778012ad150ba0478e34372f09bf_MD5.webp",
     "_resources/教你如何构建自己的依赖注入工具/f4119ac9a2036c8f1466f2839b2f10d0_MD5.webp",
-    "_resources/教你如何构建自己的依赖注入工具/912ceb3ef77fd67243e49eba8e36192d_MD5.webp",
-    "_resources/教你如何构建自己的依赖注入工具/f5d805cc945480a8822b1884901e207b_MD5.webp",
     "未命名.canvas",
     "Untitled.canvas",
     "//Untitled.canvas",

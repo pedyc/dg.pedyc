@@ -4,7 +4,7 @@ title: P-求职前端岗位
 description: 求职前端岗位的系统性准备计划，包含技术提升、简历优化和面试冲刺
 tags: [求职/前端]
 date-created: 2025-04-30
-date-modified: 2026-06-24
+date-modified: 2026-06-25
 status: active
 area: ["[[前端开发|A-前端开发]]"]
 consequence: 10

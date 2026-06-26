@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-求职前端岗位/腾讯音乐前端岗位模拟面试.md",
+                "file": "40-RESOURCES/滑动窗口解题心得.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "腾讯音乐前端岗位模拟面试"
+              "title": "滑动窗口解题心得"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-求职前端岗位/腾讯音乐前端岗位模拟面试.md",
+                "file": "40-RESOURCES/滑动窗口解题心得.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "腾讯音乐前端岗位模拟面试 的关系图"
+              "title": "滑动窗口解题心得 的关系图"
             }
           },
           {
@@ -211,7 +211,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10-PROJECTS/P-求职前端岗位/腾讯音乐前端岗位模拟面试.md",
+                "file": "40-RESOURCES/滑动窗口解题心得.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -221,7 +221,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "腾讯音乐前端岗位模拟面试 的反向链接列表"
+              "title": "滑动窗口解题心得 的反向链接列表"
             }
           },
           {
@@ -230,12 +230,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10-PROJECTS/P-求职前端岗位/腾讯音乐前端岗位模拟面试.md",
+                "file": "40-RESOURCES/滑动窗口解题心得.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "腾讯音乐前端岗位模拟面试 的出链列表"
+              "title": "滑动窗口解题心得 的出链列表"
             }
           },
           {
@@ -280,17 +280,19 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
-    "_resources/腾讯音乐前端岗位模拟面试/1e4508d724106cc79e460814af5f3a3f_MD5.webp",
+    "10-PROJECTS/P-求职前端岗位/P-算法提升专项.md",
+    "10-PROJECTS/P-求职前端岗位/P-求职前端岗位.md",
+    "40-RESOURCES/MOC-算法真题库.md",
+    "40-RESOURCES/MOC-前端面试真题库.md",
     "10-PROJECTS/P-求职前端岗位/腾讯音乐前端岗位模拟面试.md",
+    "_resources/腾讯音乐前端岗位模拟面试/1e4508d724106cc79e460814af5f3a3f_MD5.webp",
     "_resources/腾讯音乐前端岗位模拟面试",
     "50-ARCHIVE/_resources/Pasted image 20260624181058.png",
-    "10-PROJECTS/P-求职前端岗位/P-求职前端岗位.md",
     "10-PROJECTS/P-求职前端岗位/P-前端能力提升专项.md",
     "10-PROJECTS/P-AI学习计划/AI学习计划.md",
     "_templates/template_project.md",
     "40-RESOURCES/Vue 面试题.md",
     "40-RESOURCES/在响应式对象频繁更新的场景下如何减少不必要的响应式开销？.md",
-    "40-RESOURCES/MOC-前端面试真题库.md",
     "40-RESOURCES/性能优化方法.md",
     "40-RESOURCES/响应式原理(Vue3).md",
     "LIST.md",
@@ -308,7 +310,6 @@
     "20-AREAS/A-知识管理/知识获取.md",
     "_resources/原型链.excalidraw.svg",
     "_resources/思维分类及视觉工具.excalidraw.md",
-    "40-RESOURCES/批判性思维.md",
     "lint_index_analysis.json",
     "lint_analysis.json",
     "lint_index.json",

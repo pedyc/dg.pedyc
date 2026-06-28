@@ -4,7 +4,7 @@ title: P-AI学习计划
 aliases: [P-AI学习计划]
 description: 前端工程师掌握 AI 能力的系统学习路径：提示词工程、Harness 工程、LLM 集成
 date-created: 2026-05-16
-date-modified: 2026-06-27
+date-modified: 2026-06-28
 status: fleeting
 area: ["[[人工智能|A-人工智能]]"]
 consequence: 5
@@ -38,7 +38,7 @@ urgency: 5
 
 - [ ] LLM 工作原理（2 天）
 	- 理解 Token、上下文窗口、温度、Top-P 等核心参数
-	- 了解 Transformer 基本架构（不需要数学推导）
+	- 了解 [[Transformer基本架构]]（不需要数学推导）
 - [ ] 提示词工程系统学习（2 周）
 	- 结构化提示词：角色/任务/格式/约束/示例
 	- 进阶技巧：思维链、Few-shot、思维树

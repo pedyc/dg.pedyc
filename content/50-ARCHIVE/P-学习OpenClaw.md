@@ -97,7 +97,7 @@ urgency: 2
 - [[MOC-OpenClaw]]
 - [[MOC-OpenClaw-Skills清单]]
 - Telegram 对话截图/录屏💎 成果展示
-	- ![[10-PROJECTS/_resources/P-学习OpenClaw/30dc0c3697e6afecaa957f91b3e8daac_MD5.jpg]]
+	- ![[30dc0c3697e6afecaa957f91b3e8daac_MD5.jpg]]
 
 ## 💡 项目总结（复盘）
 

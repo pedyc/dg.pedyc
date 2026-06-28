@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/哈希表.md",
+                "file": "10-PROJECTS/P-求职前端岗位/腾讯音乐前端岗位模拟面试.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "哈希表"
+              "title": "腾讯音乐前端岗位模拟面试"
+            }
+          },
+          {
+            "id": "617cb4b21292d488",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40-RESOURCES/WebSocket.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "WebSocket"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -71,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/哈希表.md",
+                "file": "40-RESOURCES/WebSocket.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "哈希表 的关系图"
+              "title": "WebSocket 的关系图"
             }
           },
           {
@@ -211,7 +236,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "40-RESOURCES/哈希表.md",
+                "file": "40-RESOURCES/WebSocket.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -221,7 +246,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "哈希表 的反向链接列表"
+              "title": "WebSocket 的反向链接列表"
             }
           },
           {
@@ -230,12 +255,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "40-RESOURCES/哈希表.md",
+                "file": "40-RESOURCES/WebSocket.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "哈希表 的出链列表"
+              "title": "WebSocket 的出链列表"
             }
           },
           {
@@ -278,19 +303,29 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "04630d253fffab4e",
+  "active": "617cb4b21292d488",
   "lastOpenFiles": [
-    "40-RESOURCES/滑动窗口解题心得.md",
-    "10-PROJECTS/P-求职前端岗位/P-算法提升专项.md",
+    "40-RESOURCES/前端场景实践.md",
+    "40-RESOURCES/高并发场景下的前端优化.md",
+    "40-RESOURCES/图片加载优化策略.md",
+    "_resources/P-学习OpenClaw/30dc0c3697e6afecaa957f91b3e8daac_MD5.jpg",
+    "10-PROJECTS/PROJECTS.canvas",
     "10-PROJECTS/P-求职前端岗位/P-求职前端岗位.md",
-    "40-RESOURCES/MOC-算法真题库.md",
+    "10-PROJECTS/P-AI学习计划/P-AI学习计划.md",
+    "10-PROJECTS/P-AI学习计划/P-构建一个智能体.md",
+    "10-PROJECTS/10-PROJECTS.md",
+    "40-RESOURCES/优惠券发放、领取、核销的前端实现逻辑.md",
     "40-RESOURCES/MOC-前端面试真题库.md",
     "10-PROJECTS/P-求职前端岗位/腾讯音乐前端岗位模拟面试.md",
+    "40-RESOURCES/如何实现一个带并发限制的异步任务调度器（Scheduler）.md",
+    "40-RESOURCES/哈希表.md",
+    "40-RESOURCES/滑动窗口解题心得.md",
+    "10-PROJECTS/P-求职前端岗位/P-算法提升专项.md",
+    "40-RESOURCES/MOC-算法真题库.md",
     "_resources/腾讯音乐前端岗位模拟面试/1e4508d724106cc79e460814af5f3a3f_MD5.webp",
     "_resources/腾讯音乐前端岗位模拟面试",
     "50-ARCHIVE/_resources/Pasted image 20260624181058.png",
     "10-PROJECTS/P-求职前端岗位/P-前端能力提升专项.md",
-    "10-PROJECTS/P-AI学习计划/AI学习计划.md",
     "_templates/template_project.md",
     "40-RESOURCES/Vue 面试题.md",
     "40-RESOURCES/在响应式对象频繁更新的场景下如何减少不必要的响应式开销？.md",
@@ -300,15 +335,6 @@
     "index.md",
     "Drawing 2026-06-03 09.06.13.excalidraw.md",
     "40-RESOURCES/知识论.md",
-    "40-RESOURCES/本体论.md",
-    "30-Zettelkasten/本体论承诺决定了理论的解释力.md",
-    "30-Zettelkasten/存在是最普遍的概念，不能被定义，只能被描述.md",
-    "40-RESOURCES/形而上学.md",
-    "40-RESOURCES/词法作用域.md",
-    "40-RESOURCES/闭包.md",
-    "40-RESOURCES/原型链.md",
-    "_resources/原型链.excalidraw.md",
-    "20-AREAS/A-知识管理/知识获取.md",
     "_resources/原型链.excalidraw.svg",
     "lint_index_analysis.json",
     "lint_analysis.json",
@@ -325,7 +351,6 @@
     "_resources/webkit-main-flow-b779d50c0cf28_856.png",
     "_resources/sw-lifecycle.svg",
     "_resources/教你如何构建自己的依赖注入工具/5029778012ad150ba0478e34372f09bf_MD5.webp",
-    "_resources/教你如何构建自己的依赖注入工具/f4119ac9a2036c8f1466f2839b2f10d0_MD5.webp",
     "未命名.canvas",
     "Untitled.canvas",
     "//Untitled.canvas",

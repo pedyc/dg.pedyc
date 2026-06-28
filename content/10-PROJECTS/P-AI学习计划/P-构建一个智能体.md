@@ -2,7 +2,7 @@
 uid: 202603121028
 title: P-构建一个智能体
 date-created: 2026-03-08
-date-modified: 2026-06-03
+date-modified: 2026-06-27
 status: fleeting
 area: ["[[人工智能|A-人工智能]]"]
 consequence: 7

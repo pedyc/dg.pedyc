@@ -1,10 +1,10 @@
 ---
 uid: "202605160001"
-title: AI学习计划
+title: P-AI学习计划
 aliases: [P-AI学习计划]
 description: 前端工程师掌握 AI 能力的系统学习路径：提示词工程、Harness 工程、LLM 集成
 date-created: 2026-05-16
-date-modified: 2026-06-24
+date-modified: 2026-06-27
 status: fleeting
 area: ["[[人工智能|A-人工智能]]"]
 consequence: 5

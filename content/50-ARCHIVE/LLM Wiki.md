@@ -4,10 +4,10 @@ title: LLM Wiki
 aliases: []
 tags: [方法论, 知识管理]
 date-created: 2026-05-20
-date-modified: 2026-05-28
+date-modified: 2026-06-28
 status: archived
 content-type: [article]
-up: ["[[A-知识管理|知识管理]]"]
+up: ["[[知识管理|知识管理]]"]
 ---
 
 ## LLM Wiki

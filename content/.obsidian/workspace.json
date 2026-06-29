@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Top-P.md",
+                "file": "20-AREAS/A-人工智能/人工智能.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Top-P"
+              "title": "人工智能"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Top-P.md",
+                "file": "20-AREAS/A-人工智能/人工智能.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Top-P 的关系图"
+              "title": "人工智能 的关系图"
             }
           },
           {
@@ -305,9 +305,11 @@
   },
   "active": "617cb4b21292d488",
   "lastOpenFiles": [
-    "40-RESOURCES/LLM.md",
-    "40-RESOURCES/Top-P.md",
+    "40-RESOURCES/RAG.md",
+    "50-ARCHIVE/LLM Wiki.md",
     "20-AREAS/A-人工智能/人工智能.md",
+    "40-RESOURCES/Top-P.md",
+    "40-RESOURCES/LLM.md",
     "40-RESOURCES/温度.md",
     "40-RESOURCES/上下文窗口.md",
     "10-PROJECTS/P-AI学习计划/P-AI学习计划.md",
@@ -334,8 +336,6 @@
     "_resources/腾讯音乐前端岗位模拟面试",
     "50-ARCHIVE/_resources/Pasted image 20260624181058.png",
     "_templates/template_project.md",
-    "40-RESOURCES/Vue 面试题.md",
-    "40-RESOURCES/在响应式对象频繁更新的场景下如何减少不必要的响应式开销？.md",
     "_resources/原型链.excalidraw.svg",
     "lint_index_analysis.json",
     "lint_analysis.json",

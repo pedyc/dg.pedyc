@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-人工智能/人工智能.md",
+                "file": "40-RESOURCES/前端能力提升指南.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "人工智能"
+              "title": "前端能力提升指南"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-人工智能/人工智能.md",
+                "file": "40-RESOURCES/前端能力提升指南.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "人工智能 的关系图"
+              "title": "前端能力提升指南 的关系图"
             }
           },
           {
@@ -305,18 +305,18 @@
   },
   "active": "617cb4b21292d488",
   "lastOpenFiles": [
+    "10-PROJECTS/P-求职前端岗位/P-前端能力提升专项.md",
+    "40-RESOURCES/LLM.md",
+    "10-PROJECTS/P-AI学习计划/P-AI学习计划.md",
+    "20-AREAS/A-人工智能/人工智能.md",
     "20-AREAS/A-知识管理/A-知识管理.md",
     "20-AREAS/A-政治经济/MOC-政治经济.md",
     "20-AREAS/A-宗教与神秘学/A-宗教与神秘学.md",
     "40-RESOURCES/RAG.md",
     "50-ARCHIVE/LLM Wiki.md",
-    "20-AREAS/A-人工智能/人工智能.md",
     "40-RESOURCES/Top-P.md",
-    "40-RESOURCES/LLM.md",
     "40-RESOURCES/温度.md",
     "40-RESOURCES/上下文窗口.md",
-    "10-PROJECTS/P-AI学习计划/P-AI学习计划.md",
-    "10-PROJECTS/P-求职前端岗位/P-前端能力提升专项.md",
     "10-PROJECTS/P-求职前端岗位/P-求职前端岗位.md",
     "40-RESOURCES/滑动窗口解题心得.md",
     "10-PROJECTS/P-求职前端岗位/P-算法提升专项.md",

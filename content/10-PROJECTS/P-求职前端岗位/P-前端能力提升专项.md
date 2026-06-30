@@ -4,7 +4,7 @@ title: P-前端能力提升专项
 description: AI 时代前端能力提升指南，区分核心护城河与 AI 辅助技能
 tags: [前端/面试, 求职, AI时代]
 date-created: 2026-03-13
-date-modified: 2026-06-24
+date-modified: 2026-06-30
 status: active
 area: ["[[前端开发|A-前端开发]]"]
 consequence: 8
@@ -43,7 +43,7 @@ urgency: 8
 - [x] 学习 HTML/CSS 核心概念（语义化、A11Y、布局、BFC） ✅ 2026-03-14
 - [x] 学习 JavaScript 核心原理（闭包、原型链、事件循环、this） ✅ 2026-05-29
 - [x] 练习手写题：防抖节流、Promise.all、call/apply/bind、深拷贝 ✅ 2026-05-29
-- [ ] 整理错题笔记 → [[算法-筑基期错题集]]
+- [ ] 整理错题笔记 → [[算法错题集]]
 
 **参考**：![[前端能力提升指南#一、 基础三件套]]]
 

@@ -5,7 +5,7 @@ aliases: [C-LLM, 大型语言模型]
 description: 基于 Transformer 架构的海量文本预训练模型，能够理解和生成人类语言
 tags: [concept, AI, LLM, NLP]
 date-created: 2025-04-25
-date-modified: 2026-06-28
+date-modified: 2026-06-30
 status: active
 content-type: concept
 related: ["[[Agent]]", "[[人工智能]]", "[[提示词工程]]"]
@@ -99,7 +99,7 @@ flowchart TB
 - **父级概念**：[[人工智能]] — LLM 是深度学习在 NLP 领域的重大突破
 - **子级概念**：
 	- [[Agent]] — LLM 作为 Agent 的推理引擎
-\t- [[RAG]] — 检索增强生成，扩展 LLM 知识边界
+	- [[RAG]] — 检索增强生成，扩展 LLM 知识边界
 	- [[提示词工程]] — 激发 LLM 能力的工程技术
 	- [[上下文窗口]] — LLM 的令牌处理能力上限
 	- [[温度]] — 控制 LLM 输出随机性的采样参数

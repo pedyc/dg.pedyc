@@ -5,7 +5,7 @@ aliases: [SOP-磁力光标实现流程]
 description: 实现具有磁力跟随效果的自定义光标的标准流程
 tags: [sop, 前端交互]
 date-created: 2026-03-30
-date-modified: 2026-04-07
+date-modified: 2026-07-01
 status: cultivating
 content-type: sop
 up: "[[前端交互]]"

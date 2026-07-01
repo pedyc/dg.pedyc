@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/前端能力提升指南.md",
+                "file": "40-RESOURCES/状态管理.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端能力提升指南"
+              "title": "状态管理"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/前端能力提升指南.md",
+                "file": "40-RESOURCES/状态管理.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "前端能力提升指南 的关系图"
+              "title": "状态管理 的关系图"
             }
           },
           {
@@ -305,6 +305,9 @@
   },
   "active": "617cb4b21292d488",
   "lastOpenFiles": [
+    "40-RESOURCES/SOP-实现磁吸式光标.md",
+    "40-RESOURCES/合成层.md",
+    "40-RESOURCES/前端能力提升指南.md",
     "10-PROJECTS/P-求职前端岗位/P-前端能力提升专项.md",
     "40-RESOURCES/LLM.md",
     "10-PROJECTS/P-AI学习计划/P-AI学习计划.md",
@@ -330,9 +333,6 @@
     "10-PROJECTS/P-AI学习计划/P-构建一个智能体.md",
     "10-PROJECTS/10-PROJECTS.md",
     "40-RESOURCES/优惠券发放、领取、核销的前端实现逻辑.md",
-    "40-RESOURCES/MOC-前端面试真题库.md",
-    "10-PROJECTS/P-求职前端岗位/腾讯音乐前端岗位模拟面试.md",
-    "40-RESOURCES/如何实现一个带并发限制的异步任务调度器（Scheduler）.md",
     "_resources/腾讯音乐前端岗位模拟面试/1e4508d724106cc79e460814af5f3a3f_MD5.webp",
     "_resources/腾讯音乐前端岗位模拟面试",
     "50-ARCHIVE/_resources/Pasted image 20260624181058.png",

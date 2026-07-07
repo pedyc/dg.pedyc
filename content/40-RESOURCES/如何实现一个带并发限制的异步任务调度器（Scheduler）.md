@@ -5,7 +5,7 @@ aliases: ["Q-异步任务调度器", "Async Scheduler", "并发限制调度器"]
 description: 实现同时最多执行 N 个异步任务的调度器，控制并发量，避免资源耗尽
 tags: [前端/JavaScript/异步编程, 面试题]
 date-created: 2026-06-27
-date-modified: 2026-06-27
+date-modified: 2026-07-07
 status: fleeting
 content-type: question
 up: "[[MOC-前端面试真题库]]"

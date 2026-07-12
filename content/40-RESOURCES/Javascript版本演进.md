@@ -1,17 +1,11 @@
 ---
 uid: "202604170003"
 title: Javascript版本演进
-aliases:
-  - ECMAScript版本演进
-  - JavaScript版本演进
-  - R-JavaScript演进
+aliases: [ECMAScript版本演进, JavaScript版本演进, R-JavaScript演进]
 description: 记录 JavaScript/ECMAScript 语言从 ES3 到 ES2026 的版本演进历程
-tags:
-  - 计算机科学
-  - 前端开发
-  - JavaScript
+tags: [计算机科学, 前端开发, JavaScript]
 date-created: 2026-04-17
-date-modified: 2026-04-17
+date-modified: 2026-07-10
 status: cultivating
 content-type: roadmap
 related: "[[前端开发]]"
@@ -114,6 +108,7 @@ timeline
 - **解决的关键问题**：优化大型应用首屏性能 + 简化异步错误处理
 - **相关概念**：
 	- [[async/await]] — 异步编程
+	- [[What's new in ECMAScript 2025]]
 
 #### ES2026 (2026)
 
@@ -130,6 +125,7 @@ timeline
 	- [[using 声明]] — 资源管理
 	- [[Temporal API]] — 全新的日期 API，代替 Date
 	- [[Error.isError]] — 精确判断错误类型
+	- [[What's new in ECMAScript 2026]]
 
 ---
 

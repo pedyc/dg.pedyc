@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/手写经典功能.md",
+                "file": "40-RESOURCES/Inbox/What's new in ECMAScript 2026.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "手写经典功能"
+              "title": "What's new in ECMAScript 2026"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/手写经典功能.md",
+                "file": "40-RESOURCES/Inbox/What's new in ECMAScript 2026.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "手写经典功能 的关系图"
+              "title": "What's new in ECMAScript 2026 的关系图"
             }
           },
           {
@@ -279,13 +279,20 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "40-RESOURCES/Javascript版本演进.md",
+    "40-RESOURCES/JavaScript.md",
+    "40-RESOURCES/ES2025.md",
+    "40-RESOURCES/Inbox/What's new in ECMAScript 2026.md",
+    "40-RESOURCES/Inbox/What's new in ECMAScript 2025.md",
+    "40-RESOURCES/Inbox/_resources",
+    "40-RESOURCES/手写经典功能.md",
+    "40-RESOURCES/Inbox",
     "40-RESOURCES/实现简易虚拟列表.md",
     "40-RESOURCES/虚拟列表.md",
     "30-Zettelkasten/虚拟列表采用DOM回收而非销毁重建.md",
     "30-Zettelkasten/虚拟列表通过滚动位置计算可见项.md",
     "30-Zettelkasten/虚拟列表的核心思想是只渲染可见区域.md",
     "30-Zettelkasten/虚拟列表采用 DOM 回收而非销毁重建.md.tmp.26032.537c5e9f760d",
-    "40-RESOURCES/手写经典功能.md",
     "40-RESOURCES/MOC-前端面试真题库.md",
     "40-RESOURCES/前端场景实践.md",
     "40-RESOURCES/如何实现断点续传.md",
@@ -302,11 +309,6 @@
     "10-PROJECTS/P-AI学习计划/P-AI学习计划.md",
     "20-AREAS/A-人工智能/人工智能.md",
     "20-AREAS/A-知识管理/A-知识管理.md",
-    "20-AREAS/A-政治经济/MOC-政治经济.md",
-    "20-AREAS/A-宗教与神秘学/A-宗教与神秘学.md",
-    "40-RESOURCES/RAG.md",
-    "50-ARCHIVE/LLM Wiki.md",
-    "40-RESOURCES/Top-P.md",
     "_resources/P-学习OpenClaw/30dc0c3697e6afecaa957f91b3e8daac_MD5.jpg",
     "10-PROJECTS/PROJECTS.canvas",
     "_resources/腾讯音乐前端岗位模拟面试/1e4508d724106cc79e460814af5f3a3f_MD5.webp",
@@ -318,8 +320,6 @@
     "lint_index.json",
     "lint_gaps.json",
     "00-META/Index/wiki-index.md.tmp.21632.8e5ae2c1f1b9",
-    "20-AREAS/A-设计/设计.md.tmp.21632.1650989794fd",
-    "20-AREAS/A-设计",
     "Drawing 2026-06-03 09.06.13.excalidraw.svg",
     "banner.svg",
     "_resources/本库设计中碰到的问题/4397e8abae4b8cb3469a578560feea77_MD5.jpeg",

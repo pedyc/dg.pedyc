@@ -18,10 +18,10 @@ up: [["llm-wiki-schema"]]
 
 | 层 | Skill | 版本 | 职责 | 操作范围 |
 |---|---|---|---|---|
-| **创建层** | `obsidian-note-local` | v2.1.0 | 模板创建 + 挂载到父页面 | 内容页 + 父页面引用 |
+| **创建层** | `obsidian-note-local` | v2.2.0 | 模板创建 + 挂载到父页面 | 内容页 + 父页面引用 |
 | **元数据层** | `wiki-sync-local` | v3.0.0 | 维护索引、日志、同步状态 | 仅 `00-META/` |
-| | `content-evaluator-local` | v1.0.0 | 健康检查（lint） | 全库只读 |
-| | `content-verifier-local` | v1.0.0 | 内容质量核查 | 指定笔记 |
+| | `content-evaluator-local` | v1.1.0 | 健康检查（lint），含 content-type 模板对比 | 全库只读 |
+| | `content-verifier-local` | v1.1.0 | 内容质量核查，按模板章节对比 | 指定笔记 |
 | **内容层** | `llm-wiki-local` | v1.0.0 | ingest / query / lint / graph | 内容页 |
 | | `action-suggest` | v1.0.0 | 基于状态生成行动建议 | 全库只读 |
 

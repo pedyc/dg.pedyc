@@ -5,7 +5,7 @@ aliases: [C-Angular]
 description: Angular 是 Google 维护的 TypeScript 优先企业级前端框架，提供完整的前端解决方案
 tags: [angular, "前端开发/框架"]
 date-created: 2026-04-20
-date-modified: 2026-06-19
+date-modified: 2026-07-13
 status: cultivating
 content-type: concept
 up: "[[A-前端]]"
@@ -89,6 +89,8 @@ mindmap
 
 > 该领域的核心知识主题（链接 Concept 或子领域 Area）
 
+- **版本**
+	- [[Angular版本演进]]
 - **核心概念**
 	- [[Signal(Angular)|Angular Signal]] — Angular 应用的状态跟踪方式
 	- [[Angular Component]] — Angular 应用的基本构建块

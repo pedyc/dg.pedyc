@@ -1,7 +1,7 @@
 ---
 title: CLAUDE
 date-created: 2026-03-25
-date-modified: 2026-06-23
+date-modified: 2026-07-13
 ---
 
 ## content/ Knowledge Base Guide
@@ -61,3 +61,13 @@ Located in `content/_templates/`:
 - version 升级 → 更新版本号
 - description/职责变更 → 更新描述和分层归属
 - 新增/删除 skill → 更新总览表和 layer 分类
+
+### 强制规则：创建笔记后必须执行同步与核查
+
+**每次创建或重写笔记后，必须依次调用以下三个 skill：**
+
+1. `wiki-sync-local` — 更新 wiki-index、wiki-log、sync-state
+2. `content-evaluator-local` — 评估笔记在知识库中的健康度
+3. `content-verifier-local [light|full]` — 核查内容质量（新增笔记用 light，重写用 full）
+
+不遵守此规则将导致 wiki-index 滞后、孤立笔记堆积、内容质量无法保障。

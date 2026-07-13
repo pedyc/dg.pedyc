@@ -26,6 +26,7 @@ up: [["Architecture/llm-wiki-schema"]]
 | record | `40-RESOURCES/` | R-xxx | 事件记录 |
 | question | 混合 | Q-xxx | 开放性问题 |
 | diary | `90-DIARY/` | 无 | 日记 |
+| roadmap | `40-RESOURCES/` | R-xxx | 线性演进路线图，版本迭代/技术发展时间线 |
 
 ### 前缀规则
 
@@ -40,6 +41,7 @@ up: [["Architecture/llm-wiki-schema"]]
 | C- | concept | `C-闭包` |
 | VS- | comparison | `VS-React vs Vue` |
 | R- | record | `R-俄乌冲突` |
+| R- | roadmap | `R-Angular-版本演进`（同 record 共享 R- 前缀，语义不冲突） |
 
 子主题需加父级前缀（如 `C-React-Fiber`、`T-链表-虚拟头节点`）。
 
@@ -62,6 +64,7 @@ Wiki 层（`40-RESOURCES/`）除 atomic 外的其他类型也需要遵循特定�
 | moc | 40-RESOURCES/ | area | MOCs 章节 | ❌ wiki 内部类型 |
 | question | 混合 | area/moc | 关联 area 的 FAQ | ❌ wiki 内部类型 |
 | diary | 90-DIARY/ | — | — | ❌ 不需要 ingest |
+| roadmap | 40-RESOURCES/ | concept/area | Concepts 章节 | ❌ wiki 内部类型 |
 
 ### SOP（标准流程）
 

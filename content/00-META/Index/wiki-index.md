@@ -4,7 +4,7 @@ title: wiki-index
 aliases: [wiki-index, wiki导航]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-06-20
+date-modified: 2026-07-13
 status: active
 content-type: [moc]
 up: "[[本库指南]]"
@@ -13,7 +13,7 @@ up: "[[本库指南]]"
 ## Wiki Index
 
 本文件是知识库的导航索引，由 LLM 维护。每个条目包含页面链接和一句话说明。
-**最后更新：2026-07-12** — 补充 ES2025/ES2026 term 笔记 + 消化 Inbox 文章
+**最后更新：2026-07-13** — 补充 Angular版本演进 roadmap 笔记
 
 ---
 
@@ -335,6 +335,7 @@ n- [[Array.fromAsync() vs Promise.all()]] — 异步数组构造 vs 并发协调
 ### 前端框架与工具
 
 - [[Angular]] — 企业级前端框架（TypeScript、依赖注入、模块化）
+- [[Angular版本演进]] — Angular 从 AngularJS 到 v22 的演进路线图与未来方向
 - [[React]] — 函数式 UI 库（组件化、Hooks、Virtual DOM）
 - [[Vue]] — 渐进式前端框架（响应式系统、组合式 API）
 - [[CSS]] — 层叠样式表（布局系统、视觉特效、工程化）

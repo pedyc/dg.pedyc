@@ -5,7 +5,7 @@ aliases: [ECMAScript版本演进, JavaScript版本演进, R-JavaScript演进]
 description: 记录 JavaScript/ECMAScript 语言从 ES3 到 ES2026 的版本演进历程
 tags: [计算机科学, 前端开发, JavaScript]
 date-created: 2026-04-17
-date-modified: 2026-07-12
+date-modified: 2026-07-13
 status: cultivating
 content-type: roadmap
 related: "[[前端开发]]"
@@ -90,14 +90,12 @@ timeline
 
 #### ES2021 - ES2024
 
-
 | 版本     | 时间   | 核心特性                                               |
 | :----- | :--- | :------------------------------------------------- |
 | ES2021 | 2021 | 逻辑赋值运算符 `\|\|=`、`&&=`、`??=`、数字分隔符 `_`              |
 | ES2022 | 2022 | 顶层 `await`、Class 私有字段 `#field`、正则 `d` 标志           |
 | ES2023 | 2023 | `Array.prototype.toSorted`、`toReversed`、哈希 bang 语法 |
 | ES2024 | 2024 | `Array.prototype.groupBy`、`Promise.withResolvers`  |
-
 
 #### ES2025 (2025)
 

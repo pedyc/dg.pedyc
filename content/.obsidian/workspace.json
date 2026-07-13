@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Generator.md",
+                "file": "00-META/Index/wiki-index.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Generator"
+              "title": "wiki-index"
             }
           },
           {
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Javascript版本演进.md",
+                "file": "CLAUDE.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +52,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Javascript版本演进"
+              "title": "CLAUDE"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Javascript版本演进.md",
+                "file": "00-META/Index/wiki-index.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +123,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Javascript版本演进 的关系图"
+              "title": "wiki-index 的关系图"
             }
           },
           {
@@ -303,10 +302,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "97784637ca968d8c",
+  "active": "04630d253fffab4e",
   "lastOpenFiles": [
-    "60-BLOGS/What's new in ECMAScript 2026.md",
+    "00-META/Log/wiki-log.md",
     "40-RESOURCES/Javascript版本演进.md",
+    "CLAUDE.md",
+    "40-RESOURCES/Angular版本演进.md.tmp.23404.997b510fd1b3",
+    "00-META/Specification/_content-type-rules.md.tmp.23404.aa077f0d8c95",
+    "00-META/Specification/_content-type-rules.md.tmp.23404.af9c3e3ac7c4",
+    "00-META/Specification/_skills-overview.md.tmp.23404.e80a68783509",
+    "00-META/Specification/_content-type-rules.md.tmp.23404.ec1401b83ba6",
+    "CLAUDE.md.tmp.23404.dd0b39d4e61b",
+    "40-RESOURCES/Angular版本演进.md",
+    "40-RESOURCES/Generator.md",
+    "40-RESOURCES/Angular.md",
+    "60-BLOGS/What's new in ECMAScript 2026.md",
     "40-RESOURCES/JavaScript.md",
     "40-RESOURCES/ES2025.md",
     "40-RESOURCES/Set 原型方法.md",
@@ -315,31 +325,21 @@
     "00-META/Index/_resources",
     "sed7GpkpC",
     "sed8onz4B",
-    "40-RESOURCES/ES2025.md.tmp.12116.2598a6c143eb",
-    "40-RESOURCES/ES2025.md.tmp.12116.afd9e4d34dd5",
     "40-RESOURCES/RegExp.escape.md",
     "40-RESOURCES/Promise.try.md",
-    "40-RESOURCES/Promise.try.md.tmp.12116.13b0cf5e56f2",
-    "sedblUxIS",
-    "sedIB43Lq",
     "40-RESOURCES/ES2026.md",
     "40-RESOURCES/Array.fromAsync() vs Promise.all().md",
-    "sedrPL83a",
     "40-RESOURCES/Iterator.concat.md",
     "40-RESOURCES/Map.getOrInsert.md",
     "40-RESOURCES/Math.sumPrecise.md",
     "60-BLOGS/What's new in ECMAScript 2025.md",
     "40-RESOURCES/Inbox/What's new in ECMAScript 2026.md",
-    "40-RESOURCES/Generator.md",
     "40-RESOURCES/Inbox/What's new in ECMAScript 2025.md",
     "40-RESOURCES/手写经典功能.md",
     "40-RESOURCES/实现简易虚拟列表.md",
     "40-RESOURCES/虚拟列表.md",
     "30-Zettelkasten/虚拟列表采用DOM回收而非销毁重建.md",
     "30-Zettelkasten/虚拟列表通过滚动位置计算可见项.md",
-    "30-Zettelkasten/虚拟列表的核心思想是只渲染可见区域.md",
-    "40-RESOURCES/MOC-前端面试真题库.md",
-    "40-RESOURCES/前端场景实践.md",
     "_resources/P-学习OpenClaw/30dc0c3697e6afecaa957f91b3e8daac_MD5.jpg",
     "10-PROJECTS/PROJECTS.canvas",
     "_resources/腾讯音乐前端岗位模拟面试/1e4508d724106cc79e460814af5f3a3f_MD5.webp",

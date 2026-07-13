@@ -1,9 +1,9 @@
 ---
 name: obsidian-note-local
-version: 2.1.0
+version: 2.2.0
 description: |
   使用 `content/_templates` 下的模板创建笔记，完成后自动更新父 Area/MOC 的引用。
-  **职责边界：只创建内容页 + 更新直接父级引用。wiki-index / wiki-log 由 wiki-sync-local 负责。**
+  支持所有 content-type 包括 roadmap。**职责边界：只创建内容页 + 更新直接父级引用。wiki-index / wiki-log 由 wiki-sync-local 负责。**
   适配本库的 content-type 体系和 aliases 前缀规则。
 argument-hint: "<content-type> <标题> [内容]"
 allowed-tools:
@@ -33,6 +33,7 @@ allowed-tools:
 - article → `template_article.md`
 - comparison → `template_comp.md`
 - diary → `template_diary.md`
+- roadmap → `template_roadmap.md`
 
 ### 步骤 2：创建笔记
 
@@ -46,6 +47,7 @@ allowed-tools:
 - article → `60-BLOGS/`
 - diary → `90-DIARY/`
 - record → `40-RESOURCES/`
+- roadmap → `40-RESOURCES/`
 
 ### 步骤 3：更新父页面引用
 
@@ -80,6 +82,7 @@ allowed-tools:
 | project | `10-PROJECTS/` | `P-` |
 | article | `60-BLOGS/` | 无 |
 | diary | `90-DIARY/` | 无 |
+| roadmap | `40-RESOURCES/` | `R-`（同 record 共享） |
 
 ### 父页面引用位置速查
 

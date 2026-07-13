@@ -13,7 +13,7 @@ up: "[[本库指南]]"
 ## Wiki Index
 
 本文件是知识库的导航索引，由 LLM 维护。每个条目包含页面链接和一句话说明。
-**最后更新：2026-05-20** — 初始批量导入所有 content-type 页面
+**最后更新：2026-07-12** — 补充 ES2025/ES2026 term 笔记 + 消化 Inbox 文章
 
 ---
 
@@ -218,6 +218,19 @@ up: "[[本库指南]]"
 - [[最优子结构]] — 动态规划、递归求解
 - [[原型链]] — 原型继承、属性查找
 
+### ECMAScript
+
+- [[ES2026]] — ECMAScript 2026 概念总览
+- [[Promise.try]] — ES2025 统一包装同步/异步函数到 Promise 链
+- [[Set 原型方法]] — ES2025 Set 集合运算方法
+- [[RegExp.escape]] — ES2025 正则字面量转义
+- [[Math.sumPrecise]] — ES2026 精确浮点数求和
+- [[Map.getOrInsert]] — ES2026 Map upsert 方法
+- [[Iterator.concat]] — ES2026 迭代器串联
+- [[JSON.rawJSON]] — ES2026 JSON 源文本访问
+- [[Array.fromAsync() vs Promise.all()]] — 异步数组构造 vs 并发协调
+- [[Error.isError]] — 错误判断、跨 realm 类型检查
+
 ### HTTP 与网络
 
 - [[队头阻塞]] — HOLB、TCP/QUIC、并发限制
@@ -306,6 +319,7 @@ up: "[[本库指南]]"
 ### 设计模式
 
 - [[观察者模式 vs 发布订阅模式]] — 两种模式的区别、适用场景
+n- [[Array.fromAsync() vs Promise.all()]] — 异步数组构造 vs 并发协调器
 
 ---
 

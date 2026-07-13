@@ -4,7 +4,7 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-06-23
+date-modified: 2026-07-12
 status: active
 content-type: [article]
 up: ["[[本库指南]]"]
@@ -21,6 +21,54 @@ up: ["[[本库指南]]"]
 
 ## 2026
 
+### 2026-07
+
+#### 2026-07-12
+
+- [2026-07-12] inbox-review | 移动 2 篇 ECMAScript 文章到 BLOGS
+	- What's new in ECMAScript 2025.md → 60-BLOGS/
+	- What's new in ECMAScript 2026.md → 60-BLOGS/
+	- 更新 front matter（移除 clippings 标签，添加 article/content-type/category/up）
+
+- [2026-07-12] ingest | 新建 term「Math.sumPrecise」— ES2026 精确求和
+	- 位置：40-RESOURCES/Math.sumPrecise.md
+	- 父页面：[[ES2026]]
+
+- [2026-07-12] ingest | 新建 term「Map.getOrInsert」— ES2026 Map upsert
+	- 位置：40-RESOURCES/Map.getOrInsert.md
+	- 父页面：[[ES2026]]
+
+- [2026-07-12] ingest | 新建 term「Iterator.concat」— ES2026 迭代器串联
+	- 位置：40-RESOURCES/Iterator.concat.md
+	- 父页面：[[ES2026]]
+
+- [2026-07-12] ingest | 新建 term「JSON.rawJSON」— ES2026 JSON 源文本访问
+	- 位置：40-RESOURCES/JSON.rawJSON.md
+	- 父页面：[[ES2026]]
+
+- [2026-07-12] ingest | 新建 term「Promise.try」— ES2025 Promise 统一包装
+	- 位置：40-RESOURCES/Promise.try.md
+	- 父页面：[[ES2025]]
+
+- [2026-07-12] ingest | 新建 term「Set 原型方法」— ES2025 集合运算
+	- 位置：40-RESOURCES/Set 原型方法.md
+	- 父页面：[[ES2025]]
+
+- [2026-07-12] ingest | 新建 term「RegExp.escape」— ES2025 正则转义
+	- 位置：40-RESOURCES/RegExp.escape.md
+	- 父页面：[[ES2025]]
+
+- [2026-07-12] ingest | 新建 comparison「Array.fromAsync() vs Promise.all()」
+	- 位置：40-RESOURCES/Array.fromAsync() vs Promise.all().md
+	- 父页面：[[JavaScript]]
+
+- [2026-07-12] ingest | 更新 concept「ES2026」补充缺失特性
+	- 新增：Math.sumPrecise、Iterator.concat、JSON.rawJSON、Map.getOrInsert
+	- 更新：运行机制 mermaid、应用场景、知识图谱
+
+- [2026-07-12] ingest | 更新 term「ES2025」补充正确特性
+	- 新增：Duplicate Named Capturing Groups、Set 方法、Pattern Modifiers、Import Attributes、Promise.try、Float16Array、RegExp.escape
+	- 更新：特性表格
 ### 2026-06
 
 #### 2026-06-15

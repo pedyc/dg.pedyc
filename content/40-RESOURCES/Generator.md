@@ -5,7 +5,7 @@ aliases: ["C-Generator", 生成器]
 description: "JavaScript 中可暂停和恢复执行的函数类型"
 tags: [前端开发/JavaScript]
 date-created: 2026-03-22
-date-modified: 2026-03-22
+date-modified: 2026-07-12
 status: cultivating
 content-type: concept
 ---

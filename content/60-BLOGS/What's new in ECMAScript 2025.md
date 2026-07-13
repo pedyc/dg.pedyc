@@ -2,11 +2,14 @@
 title: "What's new in ECMAScript 2025"
 author: ["[[Pawel Grzybek]]"]
 description: "A short summary of every new feature added to the ECMAScript specification this year, with easy-to-follow, illustrative examples. A bunch of great new features."
-tags: ["clippings"]
+tags: ["#前端开发/JavaScript", "#ECMAScript"]
 date-created: 2026-07-10
-date-modified: 2026-07-10
+date-modified: 2026-07-12
 created: 2026-07-11
 published: 2025-07-01
+content-type: article
+category: blog
+up: [[JavaScript]]
 source: "https://pawelgrzybek.com/whats-new-in-ecmascript-2025/"
 ---
 

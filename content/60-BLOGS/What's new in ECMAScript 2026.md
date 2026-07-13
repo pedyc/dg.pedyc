@@ -2,12 +2,15 @@
 title: "What's new in ECMAScript 2026"
 author: ["[[Pawel Grzybek]]"]
 description: "Every year after the final language specification approval, I publish about the latest additions to the language. Here is a full list."
-tags: ["clippings"]
+tags: ["前端开发/JavaScript", "ECMAScript"]
 date-created: 2026-07-10
-date-modified: 2026-07-10
+date-modified: 2026-07-12
+category: blog
+content-type: article
 created: 2026-07-11
 published: 2026-07-06
 source: "https://pawelgrzybek.com/whats-new-in-ecmascript-2026/?ref=dailydev"
+up: [[JavaScript]]
 ---
 
 Published: · 6 minutes read

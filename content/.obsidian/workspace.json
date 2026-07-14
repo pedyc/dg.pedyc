@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Zoneless变更检测.md",
+                "file": "40-RESOURCES/React.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Zoneless变更检测"
+              "title": "React"
             }
           },
           {
@@ -95,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Zoneless变更检测.md",
+                "file": "40-RESOURCES/React.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -123,7 +123,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Zoneless变更检测 的关系图"
+              "title": "React 的关系图"
             }
           },
           {
@@ -304,9 +304,14 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
-    "40-RESOURCES/Angular.md",
+    "30-Zettelkasten/React Fiber 采用链表结构代替递归.md",
+    "40-RESOURCES/Fiber.md",
+    "10-PROJECTS/P-求职前端岗位/P-前端能力提升专项.md",
+    "10-PROJECTS/P-求职前端岗位/P-求职前端岗位.md",
+    "40-RESOURCES/Angular vs React.md",
     "40-RESOURCES/Angular变更检测.md",
     "40-RESOURCES/Zoneless变更检测.md",
+    "40-RESOURCES/Angular.md",
     "40-RESOURCES/Angular版本演进.md",
     "00-META/wiki-sync-state.json.tmp.23404.cb369663e33e",
     "00-META/Log/sedRXaq71",
@@ -335,11 +340,6 @@
     "40-RESOURCES/ES2026.md",
     "40-RESOURCES/Array.fromAsync() vs Promise.all().md",
     "40-RESOURCES/Iterator.concat.md",
-    "40-RESOURCES/Map.getOrInsert.md",
-    "40-RESOURCES/Math.sumPrecise.md",
-    "60-BLOGS/What's new in ECMAScript 2025.md",
-    "40-RESOURCES/Inbox/What's new in ECMAScript 2026.md",
-    "40-RESOURCES/Inbox/What's new in ECMAScript 2025.md",
     "_resources/P-学习OpenClaw/30dc0c3697e6afecaa957f91b3e8daac_MD5.jpg",
     "10-PROJECTS/PROJECTS.canvas",
     "_resources/腾讯音乐前端岗位模拟面试/1e4508d724106cc79e460814af5f3a3f_MD5.webp",

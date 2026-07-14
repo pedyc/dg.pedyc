@@ -5,7 +5,7 @@ aliases: ["C-Angular-变更检测", "Change Detection Angular"]
 description: Angular 的 DOM 更新机制，从 Zone.js 自动检测到 Signal 精细粒度的演进
 tags: [前端/Angular]
 date-created: 2026-06-16
-date-modified: 2026-07-13
+date-modified: 2026-07-14
 status: cultivating
 content-type: concept
 up: "[[Angular|A-前端/Angular]]"
@@ -139,6 +139,7 @@ count = signal(0);
 - **基础组件**：
 	- [[Zone.js]] — 变更检测的触发机制
 	- [[Signal(Angular)]] — 下一代变更检测的基础
+	- [[Zoneless变更检测]] — 变更检测的触发机制
 - **相关概念**：
 	- [[Virtual DOM]] — React 的变更检测方案，与 Angular 对比
 	- [[RxJS]] — 可与 `ChangeDetectorRef` 配合使用

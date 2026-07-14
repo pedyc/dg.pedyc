@@ -1,17 +1,17 @@
 ---
 uid: 202604150100
 title: Fiber
-aliases: [Fiber Architecture, Fiber, React Fiber, C-React-Fiber]
+aliases: [Fiber Architecture, Fiber, React Fiber, C-React-Fiber, Fiber架构]
 description: React 16 引入的新协调引擎，将同步整树渲染改为异步可中断的链表遍历
 tags: [前端开发/框架/React]
 date-created: 2026-04-15
-date-modified: 2026-05-09
+date-modified: 2026-07-14
 status: cultivating
 content-type: concept
 related: "[[React]]"
 ---
 
-## 概念：Fiber 架构
+## 概念：Fiber架构
 
 > React 16 引入的新协调引擎，将同步整树渲染改为异步可中断的链表遍历，使得渲染任务可以分片执行。
 

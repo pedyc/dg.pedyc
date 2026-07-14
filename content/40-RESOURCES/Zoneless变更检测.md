@@ -5,7 +5,7 @@ aliases: [C-Angular-Zoneless变更检测, Zoneless变更检测]
 description: Angular 从 v18 实验到 v19 稳定的无 Zone.js 变更检测新范式
 tags: [angular, change-detection, zoneless, signals]
 date-created: 2026-07-13
-date-modified: 2026-07-13
+date-modified: 2026-07-14
 status: active
 content-type: concept
 up: ["[[Angular变更检测]]"]
@@ -119,8 +119,8 @@ bootstrapApplication(AppComponent, {
 - **父级概念**：[[Angular]] — Angular 企业级前端框架
 - **子级概念**：无
 - **并列概念**：
-	- [[Angular Signals]] — Zoneless 的前置依赖，提供细粒度响应式能力
-	- [[变更检测机制]] — 变更检测的通用概念
+	- [[Signal(Angular)|Angular Signals]] — Zoneless 的前置依赖，提供细粒度响应式能力
+	- [[Angular变更检测]] — 变更检测的通用概念
 - **相关概念**：
 	- [[Zone.js]] — Zoneless 试图替代的运行时补丁库
 	- [[SSR演进]] — Zoneless 在 SSR 场景下的优势

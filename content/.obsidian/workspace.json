@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Angular版本演进.md",
+                "file": "40-RESOURCES/Zoneless变更检测.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Angular版本演进"
+              "title": "Zoneless变更检测"
             }
           },
           {
@@ -95,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Angular版本演进.md",
+                "file": "40-RESOURCES/Zoneless变更检测.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -123,7 +123,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Angular版本演进 的关系图"
+              "title": "Zoneless变更检测 的关系图"
             }
           },
           {
@@ -304,6 +304,16 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "40-RESOURCES/Angular.md",
+    "40-RESOURCES/Angular变更检测.md",
+    "40-RESOURCES/Zoneless变更检测.md",
+    "40-RESOURCES/Angular版本演进.md",
+    "00-META/wiki-sync-state.json.tmp.23404.cb369663e33e",
+    "00-META/Log/sedRXaq71",
+    "00-META/Index/wiki-index.md.tmp.23404.2d7cc8333281",
+    "40-RESOURCES/Zoneless变更检测.md.tmp.23404.8159313b36b2",
+    "40-RESOURCES/Signal(Angular).md",
+    "40-RESOURCES/前端框架.md",
     "40-RESOURCES/Angular版本演进.md.tmp.23404.f0cff856141a",
     "00-META/Index/wiki-index.md",
     "40-RESOURCES/Angular版本演进.md.tmp.23404.ea4d4bf1ba20",
@@ -311,17 +321,10 @@
     "40-RESOURCES/Angular版本演进.md.tmp.23404.516e5cb2db8b",
     "40-RESOURCES/Angular版本演进.md.tmp.23404.0d7ceaa79ae3",
     "40-RESOURCES/Angular版本演进.md.tmp.23404.565292e58dcb",
-    "40-RESOURCES/Angular版本演进.md.tmp.23404.9db25ccbec40",
     "00-META/Log/wiki-log.md",
     "40-RESOURCES/Javascript版本演进.md",
     "CLAUDE.md",
-    "40-RESOURCES/Angular版本演进.md.tmp.23404.997b510fd1b3",
-    "00-META/Specification/_content-type-rules.md.tmp.23404.aa077f0d8c95",
-    "00-META/Specification/_content-type-rules.md.tmp.23404.af9c3e3ac7c4",
-    "00-META/Specification/_skills-overview.md.tmp.23404.e80a68783509",
-    "40-RESOURCES/Angular版本演进.md",
     "40-RESOURCES/Generator.md",
-    "40-RESOURCES/Angular.md",
     "60-BLOGS/What's new in ECMAScript 2026.md",
     "40-RESOURCES/JavaScript.md",
     "40-RESOURCES/ES2025.md",
@@ -337,9 +340,6 @@
     "60-BLOGS/What's new in ECMAScript 2025.md",
     "40-RESOURCES/Inbox/What's new in ECMAScript 2026.md",
     "40-RESOURCES/Inbox/What's new in ECMAScript 2025.md",
-    "40-RESOURCES/手写经典功能.md",
-    "40-RESOURCES/实现简易虚拟列表.md",
-    "40-RESOURCES/虚拟列表.md",
     "_resources/P-学习OpenClaw/30dc0c3697e6afecaa957f91b3e8daac_MD5.jpg",
     "10-PROJECTS/PROJECTS.canvas",
     "_resources/腾讯音乐前端岗位模拟面试/1e4508d724106cc79e460814af5f3a3f_MD5.webp",

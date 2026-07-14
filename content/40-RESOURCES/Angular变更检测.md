@@ -5,7 +5,7 @@ aliases: ["C-Angular-变更检测", "Change Detection Angular"]
 description: Angular 的 DOM 更新机制，从 Zone.js 自动检测到 Signal 精细粒度的演进
 tags: [前端/Angular]
 date-created: 2026-06-16
-date-modified: 2026-06-17
+date-modified: 2026-07-13
 status: cultivating
 content-type: concept
 up: "[[Angular|A-前端/Angular]]"

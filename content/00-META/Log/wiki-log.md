@@ -29,6 +29,9 @@ up: ["[[本库指南]]"]
 	- 位置：40-RESOURCES/Angular版本演进.md
 	- 父页面：[[Angular]]
 	- 覆盖 AngularJS 到 v22 五代架构演进路线图
+- [2026-07-13] ingest | 新建 concept「Zoneless变更检测」
+	- 位置：40-RESOURCES/Zoneless变更检测.md
+	- 父页面：[[Angular]]
 
 #### 2026-07-12
 

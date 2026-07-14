@@ -334,6 +334,7 @@ n- [[Array.fromAsync() vs Promise.all()]] — 异步数组构造 vs 并发协调
 
 - [[Angular]] — 企业级前端框架（TypeScript、依赖注入、模块化）
 - [[Angular版本演进]] — Angular 从 AngularJS 到 v22 的演进路线图与未来方向
+- [[Zoneless变更检测]] — Angular 从 v18 实验到 v19 稳定的无 Zone.js 变更检测新范式
 - [[React]] — 函数式 UI 库（组件化、Hooks、Virtual DOM）
 - [[Vue]] — 渐进式前端框架（响应式系统、组合式 API）
 - [[CSS]] — 层叠样式表（布局系统、视觉特效、工程化）

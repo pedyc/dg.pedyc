@@ -139,9 +139,9 @@ graph TD
 
 - **时间**：Angular 20 (2025.05) — Angular 22 (2026.06)
 - **核心变化**：
-  - v20：Signal Forms 稳定、图片指令、应用级 DI 范围增强
-  - v21：esbuild 全面覆盖 AOT、SSR 流式渲染优化、开发者工具重做
-  - **v22**：Signal Forms 正式 GA、`@Service()` 装饰器 + `injectAsync()` 懒加载、Fetch 替代 XHR 为默认 HTTP 实现、OnPush 成为默认变更检测策略（Eager 作为重命名的降级选项）、`linkedSignal()` 支持 custom set 选项、Signal debounce 支持、增量水合默认启用、Resource API 获得 SSR 传输缓存和 stream 资源支持、Karma→Vitest 迁移 schematic 稳定、chunk 优化默认、TS 6.0 + Node.js 26 支持、移除 ComponentFactoryResolver / Hammer.js / provideRoutes()
+	- v20：Signal Forms 稳定、图片指令、应用级 DI 范围增强
+	- v21：esbuild 全面覆盖 AOT、SSR 流式渲染优化、开发者工具重做
+	- **v22**：Signal Forms 正式 GA、`@Service()` 装饰器 + `injectAsync()` 懒加载、Fetch 替代 XHR 为默认 HTTP 实现、OnPush 成为默认变更检测策略（Eager 作为重命名的降级选项）、`linkedSignal()` 支持 custom set 选项、Signal debounce 支持、增量水合默认启用、Resource API 获得 SSR 传输缓存和 stream 资源支持、Karma→Vitest 迁移 schematic 稳定、chunk 优化默认、TS 6.0 + Node.js 26 支持、移除 ComponentFactoryResolver / Hammer.js / provideRoutes()
 - **解决的关键问题**：Signal 生态的最后拼图——表单和 HTTP 的 Signal 原生支持、构建工具链统一、Zone.js 全面可移除
 - **相关概念**：[[Angular Signals]] [[SSR演进]] [[Vite]]
 
@@ -167,15 +167,15 @@ graph TD
 ### 未来展望
 
 - **趋势**：
-  - Signal 继续向深层社区生态渗透（状态管理库、组件库中的 Signal-first 模式）
-  - 编译时优化更进一步：更多模板分析前移到编译阶段（类似 Svelte 的方向）
-  - SSR 和边缘渲染的融合（Angular + Cloudflare Workers / Deno）
+	- Signal 继续向深层社区生态渗透（状态管理库、组件库中的 Signal-first 模式）
+	- 编译时优化更进一步：更多模板分析前移到编译阶段（类似 Svelte 的方向）
+	- SSR 和边缘渲染的融合（Angular + Cloudflare Workers / Deno）
 - **待解决**：
-  - rxjs 与 Signals 两套体系在大型项目中的共存策略仍需规范
-  - 微前端场景下 Signal 跨应用边界传递尚无标准方案
-  - 旧 API（NgModule、`*ngIf`、zone.js 依赖库）的清理和 LTS 退役计划
+	- rxjs 与 Signals 两套体系在大型项目中的共存策略仍需规范
+	- 微前端场景下 Signal 跨应用边界传递尚无标准方案
+	- 旧 API（NgModule、`*ngIf`、zone.js 依赖库）的清理和 LTS 退役计划
 - **值得关注**：
-  - v23 可能的方向：Signal-based 路由守卫、编译时模板错误分析、对 React Server Components 风格的探索
+	- v23 可能的方向：Signal-based 路由守卫、编译时模板错误分析、对 React Server Components 风格的探索
 
 ### 核心命题
 
@@ -229,7 +229,7 @@ graph TD
 
 - **父级概念**：[[前端框架]] — Angular 所属的上位领域
 - **子级概念**：
-	- [[Angular Signals]] — v16 引入的细粒度响应式原语
+	- [[Signal(Angular)|Angular Signals]] — v16 引入的细粒度响应式原语
 	- [[Ivy渲染引擎]] — v8-v9 引入的第三代编译与渲染引擎
 	- [[Zoneless变更检测]] — v18-v19 稳定化的无 Zone.js 新范式
 - **并列概念**：

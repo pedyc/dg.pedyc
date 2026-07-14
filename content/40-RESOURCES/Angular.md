@@ -3,12 +3,12 @@ uid: "202604201200"
 title: Angular
 aliases: [C-Angular]
 description: Angular 是 Google 维护的 TypeScript 优先企业级前端框架，提供完整的前端解决方案
-tags: [angular, "前端开发/框架"]
+tags: [angular, 前端开发/框架]
 date-created: 2026-04-20
 date-modified: 2026-07-13
 status: cultivating
 content-type: concept
-up: "[[A-前端]]"
+up: ["[[前端框架]]"]
 ---
 
 ## 概念： Angular
@@ -98,6 +98,7 @@ mindmap
 	- [[Angular Service]] — 依赖注入与服务层
 	- [[Angular依赖注入]] — Angular 的核心特性
 	- [[Angular变更检测]] — 理解 Angular 如何追踪状态变化
+		- [[Zoneless变更检测]] — 取代zone.js
 - **路由与导航**
 	- [[Angular路由]] — 路由配置、懒加载、路由守卫
 	- [[Angular路由动画]] — 路由切换动画

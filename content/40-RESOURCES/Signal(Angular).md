@@ -1,17 +1,17 @@
 ---
 uid: 202606160002
 title: Signal(Angular)
-aliases: ["T-Angular-Signal", "Angular Signal"]
+aliases: [T-Angular-Signal, Angular Signals]
 description: Angular 的响应式原始类型，自动追踪依赖的高性能状态管理方案
 tags: [前端/Angular]
 date-created: 2026-06-16
-date-modified: 2026-06-16
+date-modified: 2026-07-13
 status: cultivating
 content-type: term
 up: "[[Angular]]"
 ---
 
-## 术语：Signal（Angular）
+## 术语：Angular Signals
 
 > Angular 16+ 引入的响应式原始类型（Reactive Primitive），持有值并在值变更时通知所有消费者，替代 Zone.js 成为 Angular 的新响应式基础。
 

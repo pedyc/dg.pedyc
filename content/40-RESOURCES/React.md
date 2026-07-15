@@ -18,7 +18,8 @@ up:
 
 ## 概念： React
 
-> 用于构建用户界面的 JavaScript 库，由 Facebook 开发和维护，采用组件化和 Virtual DOM。
+> 用于构建用户界面的 JavaScript 库，由 Facebook 开发和维护，采
+> 用组件化和 Virtual DOM。
 
 ---
 

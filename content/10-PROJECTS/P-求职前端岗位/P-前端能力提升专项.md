@@ -4,7 +4,7 @@ title: P-前端能力提升专项
 description: AI 时代前端能力提升指南，区分核心护城河与 AI 辅助技能
 tags: [前端/面试, 求职, AI时代]
 date-created: 2026-03-13
-date-modified: 2026-07-14
+date-modified: 2026-07-15
 status: active
 area: ["[[前端开发|A-前端开发]]"]
 consequence: 8
@@ -13,6 +13,8 @@ expire: 2026-04-20
 up: "[[P-求职前端岗位]]"
 urgency: 8
 ---
+
+.
 
 > [!tip]
 > AI 时代学习策略：用🟢构建护城河，用🟡过面试关，用🔴解放生产力

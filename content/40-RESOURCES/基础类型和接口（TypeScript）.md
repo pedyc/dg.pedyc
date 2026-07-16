@@ -4,7 +4,7 @@ title: 基础类型和接口（TypeScript）
 description: TypeScript 基础类型包括 string、number、boolean 等，接口用于定义对象的结构
 tags: [前端/TypeScript]
 date-created: 2026-03-16
-date-modified: 2026-06-23
+date-modified: 2026-07-15
 status: fleeting
 content-type: term
 up: "[[TypeScript]]"

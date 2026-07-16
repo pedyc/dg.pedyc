@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/TypeScript.md",
+                "file": "00-META/Index/wiki-index.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "TypeScript"
+              "title": "wiki-index"
             }
           },
           {
@@ -95,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/TypeScript.md",
+                "file": "00-META/Index/wiki-index.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -118,12 +118,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.2726859917360067,
+                  "scale": 0.1387322393266609,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "TypeScript 的关系图"
+              "title": "wiki-index 的关系图"
             }
           },
           {
@@ -304,9 +304,10 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
-    "40-RESOURCES/泛型（TypeScript）.md",
+    "00-META/00 Inbox规则.md",
     "40-RESOURCES/基础类型和接口（TypeScript）.md",
     "40-RESOURCES/TypeScript.md",
+    "40-RESOURCES/泛型（TypeScript）.md",
     "10-PROJECTS/P-求职前端岗位/P-前端能力提升专项.md",
     "40-RESOURCES/React.md",
     "30-Zettelkasten/React Fiber 采用链表结构代替递归.md",
@@ -339,7 +340,6 @@
     "40-RESOURCES/ES2025.md",
     "40-RESOURCES/Set 原型方法.md",
     "40-RESOURCES/JSON.rawJSON.md",
-    "40-RESOURCES/RegExp.escape.md",
     "_resources/P-学习OpenClaw/30dc0c3697e6afecaa957f91b3e8daac_MD5.jpg",
     "10-PROJECTS/PROJECTS.canvas",
     "_resources/腾讯音乐前端岗位模拟面试/1e4508d724106cc79e460814af5f3a3f_MD5.webp",

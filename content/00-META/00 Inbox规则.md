@@ -1,7 +1,7 @@
 ---
 title: 00 Inbox规则
 date-created: 2026-02-09
-date-modified: 2026-05-27
+date-modified: 2026-07-16
 ---
 
 > 定期归档机制：

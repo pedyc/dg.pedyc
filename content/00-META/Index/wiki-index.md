@@ -4,7 +4,7 @@ title: wiki-index
 aliases: [wiki-index, wiki导航]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-07-13
+date-modified: 2026-07-16
 status: active
 content-type: [moc]
 up: "[[本库指南]]"
@@ -132,7 +132,7 @@ up: "[[本库指南]]"
 - [[CODE知识全生命周期工作流]] — Capture, Organize, Distill, Express 知识管理全流程
 - [[SOP-视觉思维工作流]] — 从发散到收敛的视觉化思考全流程
 - [[SOP-视觉工具选择矩阵]] — 根据问题类型选择合适的视觉化工具
-- [[SOP-知识获取工作流]] — 浏览器剪藏 + AI 对话两种知识获取模式
+- [[知识获取工作流|SOP-知识获取工作流]] — 浏览器剪藏 + AI 对话两种知识获取模式
 - [[AI提问技巧]] — 提高向 AI 提问质量的标准化流程
 - [[CI-CD流程]] — 持续集成、持续部署、自动化流水线
 - [[代码审查流程]] — 代码审查标准、Review 清单、最佳实践

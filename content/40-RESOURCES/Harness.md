@@ -5,7 +5,7 @@ aliases: [C-Harness]
 description: 用于围绕 AI Agent 构建工程化体系的框架和方法论
 tags: [concept, AI, Agent]
 date-created: 2026-04-01
-date-modified: 2026-05-14
+date-modified: 2026-07-17
 status: cultivating
 content-type: concept
 related: ["[[Agent]]", "[[Claude Code]]", "[[前端交互]]"]
@@ -29,13 +29,13 @@ related: ["[[Agent]]", "[[Claude Code]]", "[[前端交互]]"]
 
 ### 核心要素
 
-| 要素 | 说明 |
-|:---|:---|
-| **输入契约 (Input Contract)** | 定义 Agent 接受的输入格式、约束条件 |
-| **输出契约 (Output Contract)** | 定义 Agent 返回的输出格式、质量标准 |
-| **执行管道 (Pipeline)** | Agent 执行的工作流、决策分支、回退策略 |
-| **错误处理 (Error Handling)** | Agent 失败时的降级、重试、人工介入机制 |
-| **评估标准 (Evaluation)** | 如何衡量 Agent 输出的质量、一致性 |
+| 要素                         | 说明                     |
+| :------------------------- | :--------------------- |
+| **输入契约 (Input Contract)**  | 定义 Agent 接受的输入格式、约束条件  |
+| **输出契约 (Output Contract)** | 定义 Agent 返回的输出格式、质量标准  |
+| **执行管道 (Pipeline)**        | Agent 执行的工作流、决策分支、回退策略 |
+| **错误处理 (Error Handling)**  | Agent 失败时的降级、重试、人工介入机制 |
+| **评估标准 (Evaluation)**      | 如何衡量 Agent 输出的质量、一致性   |
 
 #### Harness 工程要做些什么？
 

@@ -23,6 +23,23 @@ up: ["[[本库指南]]"]
 
 ### 2026-07
 
+#### 2026-07-17
+
+- [2026-07-17] refactor | 重写「Claude Code」area → concept
+	- 位置：20-AREAS/A-人工智能/Claude Code.md
+	- 变更：area → concept，新增核心命题/运行机制/适用范围/知识图谱
+	- 保留：核心要素八项能力组件
+	- 更新：wiki-index（Areas → Concepts）
+- [2026-07-17] ingest | 新建 sop「使用Claude Code自动化CI/CD流水线」
+	- 位置：40-RESOURCES/SOP-使用Claude-Code自动化CI-CD流水线.md
+	- 父页面：[[Claude Code]]、[[CI-CD流程]]
+	- 覆盖 Headless 模式配置、GitHub Actions 集成示例、常见坑点
+- [2026-07-17] refactor | 合并笔记类型规范，消除 3 处冗余
+	- 新建 _笔记类型规范.md 作为类型规范的唯一可信源
+	- 更新 Guide/元数据规范.md、命名规范.md、本库常见问题解答汇总.md 引用新规范，移除重复内容
+	- 更新 _content-type-rules.md、_skills-overview.md、llm-wiki-schema.md 指向新规范
+	- 归档快速开始.md（内容已被其他 Guide 覆盖）
+
 #### 2026-07-13
 
 - [2026-07-13] ingest | 新建 roadmap「Angular版本演进」

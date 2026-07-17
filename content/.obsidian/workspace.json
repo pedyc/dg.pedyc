@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-META/Index/wiki-index.md",
+                "file": "00-META/Architecture/llm-wiki-schema.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "wiki-index"
+              "title": "llm-wiki-schema"
             }
           },
           {
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "00-META/Guide/本库指南.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,10 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "CLAUDE"
+              "title": "本库指南"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -95,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "00-META/Index/wiki-index.md",
+                "file": "00-META/Guide/本库指南.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -123,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "wiki-index 的关系图"
+              "title": "本库指南 的关系图"
             }
           },
           {
@@ -302,44 +303,44 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "04630d253fffab4e",
+  "active": "97784637ca968d8c",
   "lastOpenFiles": [
+    "00-META/Guide/快速开始.md",
+    "00-META/Guide/本库指南.md",
+    "00-META/Architecture/本库子系统概述.md",
+    "40-RESOURCES/Harness.md",
+    "20-AREAS/A-人工智能/人工智能.md",
+    "20-AREAS/A-人工智能/Claude Code.md",
+    "60-BLOGS/Claude Code 进阶使用.md",
+    "60-BLOGS/Claude Code 进阶使用.md.tmp.14424.f550c75a9fac",
+    "60-BLOGS/Claude Code 使用指南.md",
     "00-META/00 Inbox规则.md",
+    "00-META/Architecture/llm-wiki-schema.md",
+    "40-RESOURCES/SOP-提示词工程最佳实践.md",
+    "00-META/Specification/_笔记类型规范.md",
+    "_templates/template_concept.md.tmp.14424.3c66cb77cd46",
+    "_templates/template_sop.md.tmp.14424.2b99b21fc178",
+    "CLAUDE.md",
+    "00-META/wiki-sync-state.json.tmp.14424.06c4bb038490",
+    "00-META/Log/wiki-log.md.tmp.14424.116e0dc79a2e",
+    "00-META/Index/wiki-index.md.tmp.14424.090ce6d3bbfe",
+    "00-META/Specification/_content-type-rules.md",
+    "00-META/Guide/本库常见问题解答汇总.md.tmp.14424.3804062542b2",
+    "00-META/Specification/_sync-rules.md",
+    "00-META/Specification/_笔记类型规范.md.tmp.14424.f30ccf1a2359",
+    "00-META/Specification/_skills-overview.md",
+    "00-META/Specification/_query-rules.md",
+    "00-META/Specification/_lint-rules.md",
+    "00-META/Specification/_ingest-rules.md",
+    "00-META/Guide/命名规范.md",
+    "00-META/Guide/元数据规范.md",
+    "40-RESOURCES/SOP-使用Claude-Code自动化CI-CD流水线.md",
+    "00-META/wiki-sync-state.json.tmp.14424.872deb093ed1",
+    "00-META/Index/wiki-index.md.tmp.14424.b150f1ffa263",
+    "40-RESOURCES/Claude核心概念.md",
+    "00-META/Index/wiki-index.md",
     "40-RESOURCES/基础类型和接口（TypeScript）.md",
     "40-RESOURCES/TypeScript.md",
-    "40-RESOURCES/泛型（TypeScript）.md",
-    "10-PROJECTS/P-求职前端岗位/P-前端能力提升专项.md",
-    "40-RESOURCES/React.md",
-    "30-Zettelkasten/React Fiber 采用链表结构代替递归.md",
-    "40-RESOURCES/Fiber.md",
-    "10-PROJECTS/P-求职前端岗位/P-求职前端岗位.md",
-    "40-RESOURCES/Angular vs React.md",
-    "40-RESOURCES/Angular变更检测.md",
-    "40-RESOURCES/Zoneless变更检测.md",
-    "40-RESOURCES/Angular.md",
-    "40-RESOURCES/Angular版本演进.md",
-    "00-META/wiki-sync-state.json.tmp.23404.cb369663e33e",
-    "00-META/Log/sedRXaq71",
-    "00-META/Index/wiki-index.md.tmp.23404.2d7cc8333281",
-    "40-RESOURCES/Zoneless变更检测.md.tmp.23404.8159313b36b2",
-    "40-RESOURCES/Signal(Angular).md",
-    "40-RESOURCES/前端框架.md",
-    "40-RESOURCES/Angular版本演进.md.tmp.23404.f0cff856141a",
-    "00-META/Index/wiki-index.md",
-    "40-RESOURCES/Angular版本演进.md.tmp.23404.ea4d4bf1ba20",
-    "40-RESOURCES/Angular版本演进.md.tmp.23404.29b82dbc58cd",
-    "40-RESOURCES/Angular版本演进.md.tmp.23404.516e5cb2db8b",
-    "40-RESOURCES/Angular版本演进.md.tmp.23404.0d7ceaa79ae3",
-    "40-RESOURCES/Angular版本演进.md.tmp.23404.565292e58dcb",
-    "00-META/Log/wiki-log.md",
-    "40-RESOURCES/Javascript版本演进.md",
-    "CLAUDE.md",
-    "40-RESOURCES/Generator.md",
-    "60-BLOGS/What's new in ECMAScript 2026.md",
-    "40-RESOURCES/JavaScript.md",
-    "40-RESOURCES/ES2025.md",
-    "40-RESOURCES/Set 原型方法.md",
-    "40-RESOURCES/JSON.rawJSON.md",
     "_resources/P-学习OpenClaw/30dc0c3697e6afecaa957f91b3e8daac_MD5.jpg",
     "10-PROJECTS/PROJECTS.canvas",
     "_resources/腾讯音乐前端岗位模拟面试/1e4508d724106cc79e460814af5f3a3f_MD5.webp",

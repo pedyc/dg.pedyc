@@ -5,7 +5,7 @@ aliases: [ClaudeCodeGuide]
 description: 前端开发者的 Claude Code 入门到进阶指南，从环境配置到自定义工作流构建
 tags: [AI/Claude, 前端开发]
 date-created: 2026-03-26
-date-modified: 2026-03-25
+date-modified: 2026-07-17
 status: completed
 category: blog
 content-type: article
@@ -193,6 +193,5 @@ Claude Code 不仅仅是一个 AI 编程工具，它是编程工作流的 " 操�
 ## 相关阅读
 
 - [[Claude Code]]
-- [[Claude核心概念]]
 - [[Claude Code 辅助编程]]
 - [[Claude Code 如何工作]]

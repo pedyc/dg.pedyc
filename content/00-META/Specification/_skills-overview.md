@@ -4,7 +4,7 @@ title: _skills-overview
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-06-12
-date-modified: 2026-06-23
+date-modified: 2026-07-17
 status: active
 content-type: article
 up: [["llm-wiki-schema"]]
@@ -152,6 +152,7 @@ flowchart LR
 - `llm-wiki-schema.md` — 知识库工作流整体架构
 - `_ingest-rules.md` — ingest 工作流详细规则
 - `_lint-rules.md` — lint 工作流 + 分析脚本
-- `_content-type-rules.md` — content-type 定义和前缀规则
+- `_笔记类型规范.md` — content-type 定义、前缀规则、类型对比、状态流转（**唯一可信源**）
+- `_content-type-rules.md` — 同上（兼容入口，已合并）
 - `_query-rules.md` — query 工作流
 - `_sync-rules.md` — sync 工作流

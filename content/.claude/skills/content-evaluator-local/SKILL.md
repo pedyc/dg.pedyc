@@ -16,7 +16,7 @@ allowed-tools:
 # content-evaluator-local
 
 执行前读取 `content/00-META/llm-wiki-schema.md` 获取 lint 检查清单。
-同时读取 `content/00-META/Specification/_content-type-rules.md` 获取 content-type 定义和模板对应关系。
+同时读取 `content/00-META/Specification/_笔记类型规范.md`（或兼容入口 `_content-type-rules.md`）获取 content-type 定义和模板对应关系。
 
 详细评估维度见 `llm-wiki-schema.md` 第 4 节。
 

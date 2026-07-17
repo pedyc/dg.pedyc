@@ -5,10 +5,10 @@ aliases: [SOP-提示词工程]
 description: 在前端开发场景中编写稳定、可复用 Prompt 的标准流程
 tags: [sop, AI, 提示词, 前端]
 date-created: 2026-05-30
-date-modified: 2026-05-30
+date-modified: 2026-07-17
 status: cultivating
 content-type: sop
-up: [[人工智能]]
+up: ["[[人工智能]]"]
 ---
 
 ## SOP：提示词工程最佳实践
@@ -34,25 +34,25 @@ up: [[人工智能]]
 
 ```mermaid
 flowchart TD
-    A[明确任务类型] --> B[选择对应模板]
-    B --> C[填入角色定义]
-    C --> D[明确约束条件]
-    D --> E[添加 Few-shot 示例]
-    E --> F[执行 Prompt]
-    F --> G{输出质量合格?}
-    G -->|是| H[交付]
-    G -->|否| I[分析问题类型]
-    I -->|约束不足| J[加强约束]
-    I -->|示例不清| K[补充示例]
-    I -->|任务模糊| L[拆分任务]
-    J --> F
-    K --> F
-    L --> F
+A[明确任务类型] --> B[选择对应模板]
+B --> C[填入角色定义]
+C --> D[明确约束条件]
+D --> E[添加 Few-shot 示例]
+E --> F[执行 Prompt]
+F --> G{输出质量合格?}
+G -->|是| H[交付]
+G -->|否| I[分析问题类型]
+I -->|约束不足| J[加强约束]
+I -->|示例不清| K[补充示例]
+I -->|任务模糊| L[拆分任务]
+J --> F
+K --> F
+L --> F
 
-    style A fill:#e1f5fe
-    style G fill:#fff3e0
-    style H fill:#e8f5e9
-    style I fill:#fce4ec
+style A fill:#e1f5fe
+style G fill:#fff3e0
+style H fill:#e8f5e9
+style I fill:#fce4ec
 ```
 
 ---
@@ -63,16 +63,16 @@ flowchart TD
 
 | 任务类型 | Prompt 策略 | 示例模板 |
 |:---|:---|:---|
-| **组件生成** | 角色 + 技术栈 + 约束 | "你是 React 专家，帮我创建一个 Button 组件..." |
-| **代码审查** | 约束 + 关注点 | "审查以下代码，关注性能和安全..." |
-| **Bug 修复** | 现象 + 上下文 + 约束 | "这个组件报错：{错误信息}，在 {场景} 下..." |
-| **文档生成** | 格式 + 内容范围 | "生成 JSDoc，格式如下..." |
+| **组件生成** | 角色 + 技术栈 + 约束 | "你是 React 专家，帮我创建一个 Button 组件…" |
+| **代码审查** | 约束 + 关注点 | "审查以下代码，关注性能和安全…" |
+| **Bug 修复** | 现象 + 上下文 + 约束 | "这个组件报错：{错误信息}，在 {场景} 下…" |
+| **文档生成** | 格式 + 内容范围 | "生成 JSDoc，格式如下…" |
 
 #### 步骤 2：选择对应模板
 
 **组件生成模板**：
 
-```
+```bash
 你是 {{角色}}，帮我创建一个 {{组件名}} 组件：
 
 技术要求：
@@ -93,7 +93,7 @@ flowchart TD
 
 **代码审查模板**：
 
-```
+```bash
 审查以下代码，专注于：
 
 关注点：
@@ -123,7 +123,7 @@ flowchart TD
 
 **角色定义示例**：
 
-```
+```bash
 你是资深 React 专家：
 - 5 年以上 React 开发经验
 - 熟悉 React 18 新特性（Suspense、Server Components）
@@ -142,7 +142,7 @@ flowchart TD
 
 **约束表达示例**：
 
-```
+```bash
 约束：
 - 不使用 any 类型
 - 组件必须支持 Tree-shaking
@@ -161,26 +161,25 @@ flowchart TD
 
 **示例格式**：
 
-```
+```bash
 示例：
 
 输入：Button 组件需要支持 5 种变体（primary, secondary, ghost, danger, link）
-输出：
-```tsx
-type Variant = 'primary' | 'secondary' | 'ghost' | 'danger' | 'link';
-```
+输出：type Variant = 'primary' | 'secondary' | 'ghost' | 'danger' | 'link';
+
 ```
 
 #### 步骤 6：执行与迭代
 
 **迭代决策树**：
 
-```
+```bash
 输出质量不合格？
 ├── 约束不足 → 加强约束（明确禁止项）
 ├── 示例不清 → 补充典型示例
 ├── 任务模糊 → 拆分为多个子任务
 └── 模型限制 → 尝试换模型或调整 Temperature
+
 ```
 
 ---
@@ -189,7 +188,8 @@ type Variant = 'primary' | 'secondary' | 'ghost' | 'danger' | 'link';
 
 **示例 1：React 组件生成**
 
-```
+```bash
+
 你是资深 React 专家，帮我创建一个 Modal 组件：
 
 技术要求：
@@ -207,11 +207,13 @@ type Variant = 'primary' | 'secondary' | 'ghost' | 'danger' | 'link';
 - 不使用 any
 - 遵循 aria-modal 规范
 - 支持 React 18 Strict Mode
+
 ```
 
 **示例 2：Bug 修复**
 
-```
+```bash
+
 帮我分析这个错误：
 
 错误现象：
@@ -229,6 +231,7 @@ TypeError: Cannot read properties of undefined (reading 'map')
 1. 分析可能原因
 2. 给出修复方案
 3. 提供预防建议
+
 ```
 
 ---
@@ -236,24 +239,20 @@ TypeError: Cannot read properties of undefined (reading 'map')
 ### 常见坑点
 
 - ⛔ **约束不足导致输出不稳定**
-  - **排查**：检查是否明确定义了技术栈、版本、输出格式
-  - **修复**：添加「禁止使用 xxx」类型的负面约束
-
+- **排查**：检查是否明确定义了技术栈、版本、输出格式
+- **修复**：添加「禁止使用 xxx」类型的负面约束
 - ⛔ **任务过于宽泛**
-  - **排查**：Prompt 超过 3 句话还没明确核心任务
-  - **修复**：拆分为「先做 X，再做 Y」的分步 Prompt
-
+- **排查**：Prompt 超过 3 句话还没明确核心任务
+- **修复**：拆分为「先做 X，再做 Y」的分步 Prompt
 - ⛔ **缺少边界条件说明**
-  - **排查**：AI 生成代码在边界情况下出错
-  - **修复**：添加「如果 X 情况，输出 Y」的条件约束
-
+- **排查**：AI 生成代码在边界情况下出错
+- **修复**：添加「如果 X 情况，输出 Y」的条件约束
 - ⛔ **角色定义过于模糊**
-  - **排查**：AI 给出的建议与团队规范不符
-  - **修复**：在角色定义中加入具体规范名称和链接
-
+- **排查**：AI 给出的建议与团队规范不符
+- **修复**：在角色定义中加入具体规范名称和链接
 - 🔧 **上下文丢失**
-  - **排查**：长对话后 AI 忘记早期约束
-  - **修复**：在后续 Prompt 中复述关键约束（如「继续实现，注意不支持 any 类型」）
+- **排查**：长对话后 AI 忘记早期约束
+- **修复**：在后续 Prompt 中复述关键约束（如「继续实现，注意不支持 any 类型」）
 
 ---
 
@@ -261,9 +260,9 @@ TypeError: Cannot read properties of undefined (reading 'map')
 
 - **父级概念**：[[人工智能]] — 本 SOP 是 AI 应用层的基础技能
 - **关联概念**：
-  - [[提示词工程]] — Prompt Engineering 理论支撑
-  - [[LLM]] — 理解 LLM 能力边界有助于写出更好约束
-  - [[Claude Code]] — Claude Code 内置了优化过的 Prompt 模板
+- [[提示词工程]] — Prompt Engineering 理论支撑
+- [[LLM]] — 理解 LLM 能力边界有助于写出更好约束
+- [[Claude Code]] — Claude Code 内置了优化过的 Prompt 模板
 - **相关 SOP**：
-  - [[SOP-使用Claude-Code开发React组件]] — 组件开发的完整 SOP
-  - [[SOP-AI 输出质量评估]] — 评估 AI 生成结果的标准流程（待创建）
+- [[SOP-使用Claude-Code开发React组件]] — 组件开发的完整 SOP
+- [[SOP-AI 输出质量评估]] — 评估 AI 生成结果的标准流程（待创建）

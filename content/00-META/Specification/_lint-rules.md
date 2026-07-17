@@ -4,7 +4,7 @@ title: _lint-rules
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-05-20
-date-modified: 2026-06-12
+date-modified: 2026-07-17
 status: active
 content-type: [article]
 up: [["llm-wiki-schema"]]

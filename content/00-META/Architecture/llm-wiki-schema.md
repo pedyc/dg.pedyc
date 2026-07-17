@@ -4,7 +4,7 @@ title: llm-wiki-schema
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-05-20
-date-modified: 2026-06-12
+date-modified: 2026-07-17
 status: active
 content-type: [article]
 up: "[[Guide/本库指南]]"
@@ -16,7 +16,8 @@ up: "[[Guide/本库指南]]"
 
 > **详细规则**：本文件是索引，各工作流详细规则见子文档。
 > - [[Specification/_skills-overview]] — 所有 skill 的用法总览
-> - [[Specification/_content-type-rules]] — content-type 定义、前缀规则、Wiki 层内联规则
+> - [[Specification/_笔记类型规范]] — content-type 定义、前缀规则、Wiki 层内联规则、类型对比、状态流转（**单一可信源**）
+> - [[Specification/_content-type-rules]] — content-type 定义和前缀规则（兼容入口，已合并到 _笔记类型规范）
 > - [[Specification/_ingest-rules]] — ingest 工作流 + inbox review 工作流
 > - [[Specification/_query-rules]] — query 工作流
 > - [[Specification/_lint-rules]] — lint 工作流 + 健康检查

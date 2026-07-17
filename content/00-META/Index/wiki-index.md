@@ -29,7 +29,8 @@ up: "[[本库指南]]"
 
 - [[本库子系统概述]] — 本库的 9 个子系统架构及其关联关系
 - [[llm-wiki-schema]] — LLM 维护知识库的作业指南索引
-- [[_content-type-rules]] — content-type 定义和内联规则
+- [[_笔记类型规范]] — content-type 定义、前缀规则、类型对比、状态流转（唯一可信源）
+- [[_content-type-rules]] — content-type 定义和内联规则（兼容入口）
 - [[_ingest-rules]] — ingest 工作流
 - [[_lint-rules]] — lint 工作流
 - [[_sync-rules]] — sync 工作流
@@ -46,8 +47,6 @@ up: "[[本库指南]]"
 ### AI 与工具
 
 - [[人工智能]] — AI 基础、机器学习、深度学习
-- [[Claude Code]] — Claude Code 使用技巧、最佳实践
-
 ### 生活与成长
 
 - [[个人成长]] — 个人发展、学习策略、习惯养成（aliases: A-个人成长）
@@ -98,6 +97,7 @@ up: "[[本库指南]]"
 
 ### AI 与 Claude
 
+- [[Claude Code]] — AI 代理编码工具的核心范畴和工作方式
 - [[MOC-OpenClaw]] — OpenClaw 生态、Agent 开发
 - [[Claude核心概念]] — Claude 核心概念、API 使用
 
@@ -135,6 +135,7 @@ up: "[[本库指南]]"
 - [[知识获取工作流|SOP-知识获取工作流]] — 浏览器剪藏 + AI 对话两种知识获取模式
 - [[AI提问技巧]] — 提高向 AI 提问质量的标准化流程
 - [[CI-CD流程]] — 持续集成、持续部署、自动化流水线
+	- [[SOP-使用Claude-Code自动化CI-CD流水线]] — AI 驱动代码审查与修复的 CI/CD 集成
 - [[代码审查流程]] — 代码审查标准、Review 清单、最佳实践
 
 ### 前端工程
@@ -184,6 +185,7 @@ up: "[[本库指南]]"
 
 - [[Claude Code 辅助编程]] — Claude Code 使用技巧、工作流
 - [[SOP-使用Claude-Code开发React组件]] — Claude Code 开发 React 组件流程
+- [[SOP-使用Claude-Code自动化CI-CD流水线]] — Claude Code Headless 模式 CI/CD 集成
 
 ### 其他
 

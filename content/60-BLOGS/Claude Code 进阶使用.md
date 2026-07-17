@@ -5,7 +5,7 @@ aliases: [ClaudeCodeAdvanced]
 description: 深入探讨 Claude Code 进阶功能，包括 MCP、Hooks、Subagents 和复杂工作流构建
 tags: [AI/Claude, 前端开发]
 date-created: 2026-03-26
-date-modified: 2026-03-25
+date-modified: 2026-07-17
 status: completed
 category: blog
 content-type: article
@@ -39,13 +39,13 @@ MCP (Model Context Protocol) 是一个标准化协议，让 Claude 能安全地�
 
 **架构**：
 
-```bash
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│   Host      │────▶│   Client    │────▶│   Server    │
-│ (Claude)    │     │             │     │ (Node.js)   │
-└─────────────┘     └─────────────┘     └─────────────┘
-                                              │
-                                        文件/数据库/API
+```mermaid
+graph LR
+    H["Host (Claude)"] --> C["Client (MCP 协议)"]
+    C --> S["Server (Node.js)"]
+    S --> F["文件系统"]
+    S --> D["数据库"]
+    S --> A["外部 API"]
 ```
 
 #### 1.2 常用 MCP 服务器
@@ -268,6 +268,5 @@ allowed-tools:
 
 - [[Claude Code 使用指南]]
 - [[Claude Code]]
-- [[Claude核心概念]]
 - [[MCP]]
 - [[Skills 最佳实践(Claude Code).md]]

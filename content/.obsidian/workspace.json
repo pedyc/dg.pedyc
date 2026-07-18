@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-META/Guide/本库指南.md",
+                "file": "40-RESOURCES/Inbox/ML Job Interviews The Ultimate Guide.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "本库指南"
+              "title": "ML Job Interviews The Ultimate Guide"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "00-META/Guide/本库指南.md",
+                "file": "40-RESOURCES/Inbox/ML Job Interviews The Ultimate Guide.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "本库指南 的关系图"
+              "title": "ML Job Interviews The Ultimate Guide 的关系图"
             }
           },
           {
@@ -305,8 +305,9 @@
   },
   "active": "97784637ca968d8c",
   "lastOpenFiles": [
-    "00-META/Guide/快速开始.md",
     "00-META/Guide/本库指南.md",
+    "40-RESOURCES/Inbox/ML Job Interviews The Ultimate Guide.md",
+    "00-META/Guide/快速开始.md",
     "00-META/Architecture/本库子系统概述.md",
     "40-RESOURCES/Harness.md",
     "20-AREAS/A-人工智能/人工智能.md",
@@ -340,7 +341,6 @@
     "40-RESOURCES/Claude核心概念.md",
     "00-META/Index/wiki-index.md",
     "40-RESOURCES/基础类型和接口（TypeScript）.md",
-    "40-RESOURCES/TypeScript.md",
     "_resources/P-学习OpenClaw/30dc0c3697e6afecaa957f91b3e8daac_MD5.jpg",
     "10-PROJECTS/PROJECTS.canvas",
     "_resources/腾讯音乐前端岗位模拟面试/1e4508d724106cc79e460814af5f3a3f_MD5.webp",

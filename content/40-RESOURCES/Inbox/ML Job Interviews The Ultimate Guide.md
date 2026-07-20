@@ -1,32 +1,35 @@
 ---
-title: "ML Job Interviews: The Ultimate Guide"
-source: "https://silviasapora.github.io/blog/ml-interviews.html#intro"
+title: ML Job Interviews The Ultimate Guide
 author:
-published:
-created: 2026-07-18
 description:
-tags:
-  - "clippings"
+tags: [clippings]
+date-created: 2026-07-18
+date-modified: 2026-07-18
+content-type: [article]
+created: 2026-07-18
+published:
+source: https://silviasapora.github.io/blog/ml-interviews.html#intro
 ---
-I thought it might be helpful to write about my experience finding a job as a Research Scientist after a PhD in Machine Learning. There's [almost](https://gordicaleksa.medium.com/how-i-got-a-job-at-deepmind-as-a-research-engineer-without-a-machine-learning-degree-1a45f2a781de) zero information out there on this, and I wish someone had written it when I was starting out. I hope this is useful whether you're in the thick of it or just thinking about getting started.我觉得写一写自己在获得机器学习博士学位后寻找研究科学家工作的经历可能会有所帮助。目前关于这方面的信息 [几乎](https://gordicaleksa.medium.com/how-i-got-a-job-at-deepmind-as-a-research-engineer-without-a-machine-learning-degree-1a45f2a781de) 为零，真希望在我刚开始找工作时有人能写点这样的内容。无论你正深陷求职困境，还是刚刚萌生求职的想法，都希望这篇分享能对你有所帮助。
 
-My process was, overall, successful: I received offers from every company I completed interviews with including: DeepMind (which I accepted), Isomorphic Labs, Cohere, Meta, and a startup in stealth. A few caveats to the first claim: Anthropic, Mistral, and TeslaAI got back to me too late and I didn't complete those processes. ReflectionAI, the one genuine rejection: they didn't like me for the RS role but switched me to their Engineering track instead.总的来说，我的求职过程非常成功：我完成面试的所有公司都给了我录用通知，包括：DeepMind（我已接受）、Isomorphic Labs、Cohere、Meta 以及一家处于隐身状态的初创公司。不过有几点需要说明：Anthropic、Mistral 和 TeslaAI 给我回复的时间太晚，我没能完成这些公司的面试流程。而 ReflectionAI 是我唯一一次真正被拒绝：他们觉得我不适合推荐系统（RS）岗位，但转而将我调整到了工程岗。
+I thought it might be helpful to write about my experience finding a job as a Research Scientist after a PhD in Machine Learning. There's [almost](https://gordicaleksa.medium.com/how-i-got-a-job-at-deepmind-as-a-research-engineer-without-a-machine-learning-degree-1a45f2a781de) zero information out there on this, and I wish someone had written it when I was starting out. I hope this is useful whether you're in the thick of it or just thinking about getting started.
 
-Most companies I applied to invited me for interviews, with the exception of: SpaceXAI, Waymo and Wayve. For SpaceXAI, I did let a friend write my application as a joke, but I didn't think it was that bad. For Waymo and Wayve: I love self-driving cars. I applied to Waymo every six months throughout my PhD (internships, then full-time) and never heard back once, despite people in my own lab getting replies. Waymo, if you're reading this, I'm open to forgiveness. My 我申请的大多数公司都邀请我参加了面试，只有以下几家除外：SpaceXAI、Waymo 和 Wayve。至于 SpaceXAI，我确实曾开玩笑让朋友帮我写了申请，但我觉得也没那么糟糕。而 Waymo 和 Wayve：我热爱自动驾驶汽车。在我读博期间，我每六个月就会申请一次 Waymo（先是实习，然后是全职），但始终没有收到过任何回复，而我自己实验室的人却都收到了回复。Waymo，如果你看到了这条信息，我愿意接受你的原谅。我的 ~~love~~ cover letters were works of art. You can reach me at the email you already have on file, multiple times. 求职信堪称艺术品。你可以通过你已存档的邮箱多次联系我。
+My process was, overall, successful: I received offers from every company I completed interviews with including: DeepMind (which I accepted), Isomorphic Labs, Cohere, Meta, and a startup in stealth. A few caveats to the first claim: Anthropic, Mistral, and TeslaAI got back to me too late and I didn't complete those processes. ReflectionAI, the one genuine rejection: they didn't like me for the RS role but switched me to their Engineering track instead.
+
+Most companies I applied to invited me for interviews, with the exception of: SpaceXAI, Waymo and Wayve. For SpaceXAI, I did let a friend write my application as a joke, but I didn't think it was that bad. For Waymo and Wayve: I love self-driving cars. I applied to Waymo every six months throughout my PhD (internships, then full-time) and never heard back once, despite people in my own lab getting replies. Waymo, if you're reading this, I'm open to forgiveness. My ~~love~~ cover letters were works of art. You can reach me at the email you already have on file, multiple times.
 
 ---
 
 ## Getting Interviews
 
-Getting interviews is its own challenge, and if you're struggling with it, the levers are the usual ones: more papers, trendier topics, and better internships. You can look at my CV on my website for reference, but briefly: I had 4 first-author (or co-first) papers from my PhD, published at ICLR / NeurIPS / ICML, covering a mix of trendy topics (LLMs, RL) and less fashionable ones (Meta-Learning, Evolution Strategies). I also had an internship at Apple and prior industry experience as a Software Engineer at Meta. If I had to give a rough benchmark: 3+ first-author papers and at least one internship or industry role seems to be the threshold for consistently getting callbacks at top labs.获得面试机会本身就是一项挑战，如果你在这方面遇到困难，常用的解决办法有：发表更多论文、研究更热门的课题、积累更好的实习经历。你可以去我的网站查看我的简历作为参考，简单来说：我博士期间发表了4篇第一作者（或共同第一作者）论文，均发表在ICLR、NeurIPS、ICML等顶会，研究内容涵盖热门方向（大语言模型、强化学习）和相对冷门的方向（元学习、进化策略）。我还曾在苹果公司实习，并有在Meta担任软件工程师的前期行业工作经历。如果非要给出一个大致的参考标准：3篇及以上第一作者论文，加上至少一段实习经历或行业工作经历，似乎是能持续获得顶尖实验室面试邀请的门槛。
+Getting interviews is its own challenge, and if you're struggling with it, the levers are the usual ones: more papers, trendier topics, and better internships. You can look at my CV on my website for reference, but briefly: I had 4 first-author (or co-first) papers from my PhD, published at ICLR / NeurIPS / ICML, covering a mix of trendy topics (LLMs, RL) and less fashionable ones (Meta-Learning, Evolution Strategies). I also had an internship at Apple and prior industry experience as a Software Engineer at Meta. If I had to give a rough benchmark: 3+ first-author papers and at least one internship or industry role seems to be the threshold for consistently getting callbacks at top labs.
 
-That said, if you're already getting interviews: more papers will not help you at this point. You need to pass the interviews, and often the people interviewing you won't even look at your CV. So, stop focusing on your research and your papers, and start focusing on interview prep! I understand the feeling of wanting to postpone, but you are never going to feel ready, so just start prepping **now**.话虽如此，如果你已经能拿到面试机会了：再多的论文在这个阶段也帮不了你。你需要通过面试，而且面试你的人往往甚至不会看你的简历。所以，别再把精力放在研究和论文上了，开始专注于面试准备吧！我理解你想拖延的心情，但你永远不会觉得自己准备得足够充分，所以现在就开始准备 **吧** 。
+That said, if you're already getting interviews: more papers will not help you at this point. You need to pass the interviews, and often the people interviewing you won't even look at your CV. So, stop focusing on your research and your papers, and start focusing on interview prep! I understand the feeling of wanting to postpone, but you are never going to feel ready, so just start prepping **now**.
 
-### A few other details worth knowing: cover letters, referrals, cold emails, and LinkedIn/X.
+### A few other details worth knowing: cover letters, referrals, cold emails, and LinkedIn/X
 
-**LinkedIn / X:** A lot of companies advertise roles here, and for internships in particular it's sometimes the only way to apply. You have to fill out a Google form linked from the post for your application to actually count. Follow the people you admire at the companies you're interested in so you don't miss these.**领英 / X 平台：** 很多公司会在这里发布职位招聘，尤其是实习岗位，有时这是唯一的申请渠道。你需要填写帖子中附带的谷歌表单，申请才会被正式受理。关注你感兴趣的公司里你欣赏的人，这样就不会错过这类招聘信息。
+**LinkedIn / X:** A lot of companies advertise roles here, and for internships in particular it's sometimes the only way to apply. You have to fill out a Google form linked from the post for your application to actually count. Follow the people you admire at the companies you're interested in so you don't miss these.
 
-**Referrals:** Nice to have, but not necessary. At DeepMind I had a referral for two roles and none for a third, I got invited to interview for one referred role and the unreferred one. At Anthropic, I heard nothing until I discovered an ex-collegue of mine had recently joined and asked him to put in a referral for me. So, worth getting if you can, but don't let the absence of one stop you from applying.**内推：** 有则加分，非必需。在 DeepMind 时，我有两个职位获得了内推，第三个没有，最终只收到了一个有内推职位的面试邀请，无内推的那个也拿到了面试机会。在 Anthropic 时，我一直没收到任何消息，直到发现我的一位前同事刚加入该公司，便请他为我提交内推。所以，若有机会获取内推值得争取，但没有内推也别因此放弃申请。
+**Referrals:** Nice to have, but not necessary. At DeepMind I had a referral for two roles and none for a third, I got invited to interview for one referred role and the unreferred one. At Anthropic, I heard nothing until I discovered an ex-collegue of mine had recently joined and asked him to put in a referral for me. So, worth getting if you can, but don't let the absence of one stop you from applying.
 
 **Cold emails:** Emailing the hiring manager or someone on the team directly (if you know who they are) is often appreciated. Don't just repeat your CV (you can attach it), use the email to explain why you'd be a good fit for that specific team and what genuinely excites you about their work. For this: at Deepmind I emailed my Hiring Manager, he was happy about it and replied. For another role, I saw the Hiring Manager explicitly encourage people to email him on X… but I could just not be bothered, since I was already going through interviews with the other team. I ended up getting an interview with them despite not sending the email.
 
@@ -38,11 +41,11 @@ That said, if you're already getting interviews: more papers will not help you a
 
 The summary is: it depends, more than any generic pros/cons list I can write will tell you. But here are the main factors to consider.
 
-**Finding startups is harder.** There's no central place to look. Ask your labmates, friends, and former colleagues... Word of mouth is the best way to find good ones in your area of research. At the same time, because they are harder to find, competition is generally less fierce for these positions.**寻找初创公司更难。** 没有一个集中的渠道可以去寻找。你可以问问实验室的同事、朋友和前同事……在你的研究领域内，口碑是找到优质初创公司的最佳方式。同时，由于它们更难被发现，这些岗位的竞争通常没那么激烈。
+**Finding startups is harder.** There's no central place to look. Ask your labmates, friends, and former colleagues… Word of mouth is the best way to find good ones in your area of research. At the same time, because they are harder to find, competition is generally less fierce for these positions.
 
 **Interview processes vary more at startups.** Big tech follows a fairly predictable structure, while startups do their own thing. The difficulty level is comparable on average, but variance is high. Pay attention to what the interview process tells you about the company: if it feels too easy, that might be a signal about the complexity of the work you'd actually be doing. As with the interviews, I think there's simply more variance in the quality of work and people at startups compared to big tech.
 
-**The work itself can go either way.** At the right startup, the research might be more interesting and more impactful than anything you'd work on at a big lab. But it can also come with more pressure, more engineering and infrastructure work you didn't sign up for, and a research agenda that shifts often. Ask questions in interviews! Who decides research priorities? What is the path to profitability? Who are the competitors? What if OpenAI wakes up tomorrow and decides to do the same thing?**这份工作本身可能有两种截然不同的结果。** 在合适的初创公司，研究工作可能比在大型实验室里做的任何事都更有趣、更具影响力。但这也可能意味着更大的压力、更多超出你预期的工程和基础设施工作，以及频繁变动的研究方向。面试时一定要多提问！谁来决定研究优先级？实现盈利的路径是什么？竞争对手都有谁？如果OpenAI明天突然决定做同样的事，该怎么办？
+**The work itself can go either way.** At the right startup, the research might be more interesting and more impactful than anything you'd work on at a big lab. But it can also come with more pressure, more engineering and infrastructure work you didn't sign up for, and a research agenda that shifts often. Ask questions in interviews! Who decides research priorities? What is the path to profitability? Who are the competitors? What if OpenAI wakes up tomorrow and decides to do the same thing?
 
 **Room for growth.** Startups generally offer more opportunity to grow quickly, take on responsibility, and shape the direction of the work. At a big lab you're one of many, at a startup you're much more visible. This can be a big deal (I know it was for me).
 
@@ -54,7 +57,7 @@ The summary is: it depends, more than any generic pros/cons list I can write wil
 
 This took me an embarrassingly long time to understand, so I'll try to save you the confusion. I'm speaking to UK law and taxation here.
 
-With **RSUs** (typical at big tech), you receive actual shares in the company on a vesting schedule. When they vest, you can sell them or hold them. About half get sold immediately to cover income tax (because yes, to the absolute shock of 23-year-old me getting her first Meta shares... RSUs count as income).
+With **RSUs** (typical at big tech), you receive actual shares in the company on a vesting schedule. When they vest, you can sell them or hold them. About half get sold immediately to cover income tax (because yes, to the absolute shock of 23-year-old me getting her first Meta shares… RSUs count as income).
 
 With **stock options** (typical at startups), you're not getting shares. You're getting the *opportunity* to buy shares at a fixed price X, regardless of what the market price Y is at the time. If Y > X, great! You can exercise your option, buy at X, sell at Y, and pocket the difference. If Y < X, your options are worthless.
 
@@ -80,7 +83,7 @@ Most companies follow roughly the same structure, though the weight given to eac
 - *ML coding and debugging.* Implementing attention, writing backward passes, spotting bugs in training loops
 - *ML knowledge.* Fundamentals, theory, applied ML, system design
 
-**Behavioural interviews.** They split into two flavours, classic behavioural questions (“tell me about a time you had a conflict”, "tell me a time you received feedback"...), research-style interviews ("what topics are you interested in?", "where do you see the field going?"). These are more casual compared to the technical interviews, but make sure to not underestimate these interviews and reflect on / prepare your answers.
+**Behavioural interviews.** They split into two flavours, classic behavioural questions ("tell me about a time you had a conflict", "tell me a time you received feedback"…), research-style interviews ("what topics are you interested in?", "where do you see the field going?"). These are more casual compared to the technical interviews, but make sure to not underestimate these interviews and reflect on / prepare your answers.
 
 ---
 
@@ -98,11 +101,11 @@ For ML fundamentals, applied ML, and research discussions. I tried Anki first an
 
 ### LLM mock interviews (Claude / Gemini)
 
-Before each interview, I'd paste a description of the role, interview and company into my favourite LLM for the day (usually Claude) and ask it to interview me. There was surprisingly frequent overlap between those practice questions and what interviewers actually asked. I'd recommend doing this for every interview. If the difficulty feels off, start a new chat and specify your level and background more explicitly. I think Claude was the best LLM for learning, and I thought its feedback was generally fair, Gemini was a bit too flattering (“they are lucky to be interviewing you” ~ cit Gemini).
+Before each interview, I'd paste a description of the role, interview and company into my favourite LLM for the day (usually Claude) and ask it to interview me. There was surprisingly frequent overlap between those practice questions and what interviewers actually asked. I'd recommend doing this for every interview. If the difficulty feels off, start a new chat and specify your level and background more explicitly. I think Claude was the best LLM for learning, and I thought its feedback was generally fair, Gemini was a bit too flattering ("they are lucky to be interviewing you" ~ cit Gemini).
 
 ### LeetCode / NeetCode
 
-Do at least Blind 75 and optionally NeetCode 150, focusing on Mediums. Try to get the optimal solution for each question, an O(N²) solution for TwoSum doesn’t count as a solution. Don't spend much time on Hards. If you haven't done LeetCode before: it will feel awful at first, you'll feel stupid, that's normal and it passes. By question 100 you'll feel much more confident. Just make sure to know the basic patterns (DFS, BFS, Graphs, Backtracking, DP, Binary Search...) and make sure you can implement them confidently and very quickly. Target 20 minutes or less per Medium. If you're stuck for more than 15 minutes, look up the solution, understand it, flag it for review, and move on. **Breadth matters more than depth here!** I did around 150 Mediums total
+Do at least Blind 75 and optionally NeetCode 150, focusing on Mediums. Try to get the optimal solution for each question, an O(N²) solution for TwoSum doesn't count as a solution. Don't spend much time on Hards. If you haven't done LeetCode before: it will feel awful at first, you'll feel stupid, that's normal and it passes. By question 100 you'll feel much more confident. Just make sure to know the basic patterns (DFS, BFS, Graphs, Backtracking, DP, Binary Search…) and make sure you can implement them confidently and very quickly. Target 20 minutes or less per Medium. If you're stuck for more than 15 minutes, look up the solution, understand it, flag it for review, and move on. **Breadth matters more than depth here!** I did around 150 Mediums total
 
 ### Books
 
@@ -117,7 +120,7 @@ Do at least Blind 75 and optionally NeetCode 150, focusing on Mediums. Try to ge
 
 ### ML coding and debugging
 
-This is where I found the fewest good resources, and where actual experience matters most. The debugging interviews were especially hard to practice, LLMs couldn't reliably generate convincingly buggy code when asked. Reviewing your own codebase (or a friend's) is probably your best bet. [DeepML](https://www.deep-ml.com/problems) has some good questions but there is also a lot of useless ones. I also found these [Tensor Puzzles](https://github.com/srush/Tensor-Puzzles) quite helpful. The baseline you should aim for:这是我找到优质资源最少的领域，也是实际经验最为重要的地方。调试类面试尤其难以练习，让大语言模型生成看似漏洞百出的代码时，效果往往不够可靠。复盘你自己的代码库（或朋友的）或许是最佳选择。 [DeepML](https://www.deep-ml.com/problems) 上有一些不错的题目，但也夹杂着大量无用的内容。我还发现这些 [Tensor 谜题](https://github.com/srush/Tensor-Puzzles) 也很有帮助。你需要达到的基础水平如下：
+This is where I found the fewest good resources, and where actual experience matters most. The debugging interviews were especially hard to practice, LLMs couldn't reliably generate convincingly buggy code when asked. Reviewing your own codebase (or a friend's) is probably your best bet. [DeepML](https://www.deep-ml.com/problems) has some good questions but there is also a lot of useless ones. I also found these [Tensor Puzzles](https://github.com/srush/Tensor-Puzzles) quite helpful. The baseline you should aim for:
 
 - Implement a transformer end-to-end
 - Implement causal, cross, and self attention
@@ -132,7 +135,7 @@ If you can do all of these from scratch under time pressure, you're in good shap
 
 ## How I Prepared: Emotional
 
-I can't speak for everyone, but for me this process was where my resilience went to die. I've always handled interviews and exams well without any particular strategy... not this time.
+I can't speak for everyone, but for me this process was where my resilience went to die. I've always handled interviews and exams well without any particular strategy… not this time.
 
 If you're doing okay emotionally, skip this section. I don't want to plant anxiety where there isn't any.
 
@@ -176,7 +179,7 @@ I found [this blog post](https://haseebq.com/my-ten-rules-for-negotiating-a-job-
 
 A few things I learned:
 
-**Companies can move their numbers significantly if they want you**... more than I expected. It's always worth asking. Most companies were open to negotiating.
+**Companies can move their numbers significantly if they want you**… more than I expected. It's always worth asking. Most companies were open to negotiating.
 
 **Deadlines varied** from one week to two weeks to a vague "take a reasonable amount of time." In my experience companies weren't flexible about extending them (but they were for some friends of mine!), so factor that into your timing.
 
@@ -210,9 +213,9 @@ Even if the process was successful overall, there is a few things I would change
 
 ## Technical Topics
 
-Here is a list of topics I created before I started interviewing. Personally, I was asked a lot about LLMs and RL, reflecting my background. If you have a diffusion background, expect more questions there. I was asked (in some form or capacity) about pretty much all the topics I studied in at least one interview. So... make sure to cover everything well!
+Here is a list of topics I created before I started interviewing. Personally, I was asked a lot about LLMs and RL, reflecting my background. If you have a diffusion background, expect more questions there. I was asked (in some form or capacity) about pretty much all the topics I studied in at least one interview. So… make sure to cover everything well!
 
-#### Reinforcement Learning
+### Reinforcement Learning
 
 - Q-Learning / TD Learning
 - Bellman Equations
@@ -238,7 +241,7 @@ Here is a list of topics I created before I started interviewing. Personally, I 
 - Markov Decision Process
 - Curriculum Learning
 
-#### LLMs
+### LLMs
 
 - Flash Attention
 - LoRA
@@ -260,7 +263,7 @@ Here is a list of topics I created before I started interviewing. Personally, I 
 - Causal Attention
 - Cross Attention
 
-#### Generative Modelling
+### Generative Modelling
 
 - GANs
 - VAEs and VAE ELBO
@@ -271,7 +274,7 @@ Here is a list of topics I created before I started interviewing. Personally, I 
 - Flow Matching ODE
 - Classifier Free Guidance
 
-#### Applied ML
+### Applied ML
 
 - Tensor Parallelism
 - FSDP
@@ -289,7 +292,7 @@ Here is a list of topics I created before I started interviewing. Personally, I 
 - JIT compiling
 - JAX, PyTorch, TensorFlow
 
-#### General ML
+### General ML
 
 - Curse of dimensionality
 - S4
@@ -338,7 +341,7 @@ Here is a list of topics I created before I started interviewing. Personally, I 
 - PDF / PMF
 - Confidence Intervals
 
-#### Linear Algebra
+### Linear Algebra
 
 - Positive Semi-Definite
 - Jacobian

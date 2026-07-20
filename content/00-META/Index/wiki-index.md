@@ -171,13 +171,13 @@ up: "[[本库指南]]"
 ### ThreeJS
 
 - [[SOP-ThreeJS实现平面凹凸效果]] — 凹凸贴图、法线贴图
-- [[SOP-ThreeJS实现气泡粒子]] — 粒子系统、GPU 加速
+- [[ThreeJS实现气泡粒子]] — 粒子系统、GPU 加速
 - [[SOP-ThreeJS实现3D视差滚动]] — 3D 视差、滚动动画
-- [[SOP-ThreeJS实现光影滤镜]] — 光影效果、后期处理
+- [[ThreeJS实现光影滤镜]] — 光影效果、后期处理
 
 ### Canvas 与动画
 
-- [[SOP-使用Canvas实现网页无限滑动效果]] — Canvas 无限滚动、性能优化
+- [[Canvas实现无限滑动效果]] — Canvas 无限滚动、性能优化
 - [[SOP-实现磁吸式光标]] — 磁吸效果、交互动画
 - [[SOP-CSS实现文字横向滚动效果]] — CSS 动画、文字滚动
 
@@ -186,6 +186,7 @@ up: "[[本库指南]]"
 - [[Claude Code 辅助编程]] — Claude Code 使用技巧、工作流
 - [[SOP-使用Claude-Code开发React组件]] — Claude Code 开发 React 组件流程
 - [[SOP-使用Claude-Code自动化CI-CD流水线]] — Claude Code Headless 模式 CI/CD 集成
+- [[使用Claude Code进行大型代码迁移|SOP-使用Claude Code进行大型代码迁移]] — AI agent 驱动的跨语言/跨框架大型代码迁移标准流程
 
 ### 其他
 
@@ -327,6 +328,12 @@ n- [[Array.fromAsync() vs Promise.all()]] — 异步数组构造 vs 并发协调
 
 - [[俄乌冲突]] — 俄乌战争时间线、事件记录
 - [[美以袭击伊朗]] — 中东局势、重要事件
+
+---
+
+## Questions (待探索)
+
+- [[如何进行代码重构？|Q-如何进行代码重构？]] — 探索代码重构的系统性方法、策略和最佳实践
 
 ---
 

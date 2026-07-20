@@ -1,11 +1,11 @@
 ---
 uid: 202604131100
-title: SOP-ThreeJS实现光影滤镜
+title: ThreeJS实现光影滤镜
 aliases: [SOP-ThreeJS实现光影滤镜]
 description: 使用 Three.js 实现光照、阴影与后处理滤镜效果的标准流程
 tags: [前端开发/图形, ThreeJS]
 date-created: 2026-04-13
-date-modified: 2026-04-13
+date-modified: 2026-07-20
 status: cultivating
 content-type: sop
 up: "[[ThreeJS]]"
@@ -255,5 +255,5 @@ function animate() {
 - **父级概念**：[[ThreeJS]] — 本 SOP 是 Three.js 光照与后处理系统的应用
 - **关联 SOP**：
 	- [[SOP-ThreeJS实现3D视差滚动]] — Three.js 的动态场景应用
-	- [[SOP-使用Canvas实现网页无限滑动效果]] — Canvas 2D 渲染方案对比
+	- [[Canvas实现无限滑动效果]] — Canvas 2D 渲染方案对比
 	- [[SOP-CSS实现文字横向滚动效果]] — CSS 动画方案对比

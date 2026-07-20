@@ -1,11 +1,11 @@
 ---
 name: obsidian-note-local
-version: 2.2.0
+version: 3.1.0
 description: |
-  使用 `content/_templates` 下的模板创建笔记，完成后自动更新父 Area/MOC 的引用。
-  支持所有 content-type 包括 roadmap。**职责边界：只创建内容页 + 更新直接父级引用。wiki-index / wiki-log 由 wiki-sync-local 负责。**
-  适配本库的 content-type 体系和 aliases 前缀规则。
-argument-hint: "<content-type> <标题> [内容]"
+  创建/更新笔记全流程：读取模板 → 生成/修改笔记 → 更新父级引用 → 同步 wiki 元数据 → 评估健康度 → 核查内容质量。
+  **一条命令完成从创建/更新到知识网络挂载的全链路，无需再单独调用其他 skill。**
+  支持所有 content-type 包括 roadmap。
+argument-hint: "<create|update> <content-type> <标题/路径> [内容]"
 allowed-tools:
   - Read
   - Write
@@ -13,11 +13,20 @@ allowed-tools:
   - Grep
   - Glob
   - Bash
+  - Agent
 ---
 
-# obsidian-note-local
+# obsidian-note-local v3.1
 
-## 流程
+## 模式选择
+
+根据第一个参数决定操作类型：
+- `create` — 新建笔记（默认流程）
+- `update` — 重写/修改已有笔记
+
+---
+
+## 模式一：create（新建）
 
 ### 步骤 1：读取模板
 
@@ -51,19 +60,51 @@ allowed-tools:
 
 ### 步骤 3：更新父页面引用
 
-读取 frontmatter 的 `up` 字段，确定父页面（如 `up: [[A-前端]]` 或 `up: [[MOC-前端面试真题库]]`），在父页面中添加引用：
+读取 frontmatter 的 `up` 字段，确定父页面，在父页面对应章节追加引用：
 
-- 如果父页面是 **Area**（`20-AREAS/`）：
-  - 按类型插入对应章节（concept → 关键领域、sop → SOP、moc → FAQ）
-  - 格式：`- [[新笔记]] — 一句话说明`
-- 如果父页面是 **MOC**（`40-RESOURCES/MOC-*`）：
-  - 在链接列表末尾添加 `- [[新笔记]]`
-- 如果父页面是 **Concept**（`40-RESOURCES/`，atomic 场景）：
-  - 在"相关原子笔记"章节添加 `- [[新笔记]]`
+| 新建类型 | 父类型 | 更新位置 | 插入方式 |
+|---|---|---|---|
+| moc | Area | FAQ 章节 | `- [[MOC-X]] — 描述` |
+| concept | Area | 关键领域章节 | 按子分类插入 |
+| sop | Area | SOP 章节 | `- [[SOP-X]] — 描述` |
+| question | Area | FAQ 章节 | `- [[Q-X]] — 描述` |
+| term | Area | 关键领域（如适用） | 或直接由 wiki-index 管理 |
+| atomic | concept | 相关原子笔记章节 | `- [[atomic-title]]` |
+| moc | MOC | 列表末尾 | `- [[MOC-X]]` |
+| concept/question | MOC | 列表末尾 | `- [[笔记]]` |
 
-### 步骤 4：完成
+---
 
-创建完成。wiki-index 和 wiki-log 的更新由 `wiki-sync-local` 在后续同步中处理。
+## 模式二：update（更新）
+
+### 步骤 1：读取现有笔记
+
+读取要修改的笔记文件，获取当前 frontmatter（uid、title、aliases、up、date-created 等）。
+
+如果 content-type 变更，读取新模板进行对比。
+
+### 步骤 2：应用修改
+
+使用 Edit/Write 修改笔记内容。保留 uid 和 date-created 不变，更新 date-modified。
+如果 content-type 或目录变更，移动文件到新目录。
+
+### 步骤 3：更新父页面引用
+
+检查 `up` 字段是否变化：
+- **未变** → 跳过
+- **变了** → 从旧父页面移除引用，在新父页面添加引用（格式同 create 步骤 3）
+
+---
+
+## 步骤 4：同步与核查（subagent）
+
+创建或更新完成后，启动 subagent 依次执行以下任务：
+
+1. **wiki-sync-local** — 更新 wiki-index、wiki-log、sync-state
+2. **content-evaluator-local** — 评估笔记健康度（模板结构对比）
+3. **content-verifier-local** — 核查内容质量（create 用 light，update 用 full）
+
+subagent 关闭时自动清理上下文，不污染主会话。
 
 ---
 
@@ -83,15 +124,3 @@ allowed-tools:
 | article | `60-BLOGS/` | 无 |
 | diary | `90-DIARY/` | 无 |
 | roadmap | `40-RESOURCES/` | `R-`（同 record 共享） |
-
-### 父页面引用位置速查
-
-| 新建类型 | 父类型 | 更新位置 | 插入方式 |
-|---|---|---|---|
-| moc | Area | FAQ 章节 | `- [[MOC-X]] — 描述` |
-| concept | Area | 关键领域章节 | 按子分类插入 |
-| sop | Area | SOP 章节 | `- [[SOP-X]] — 描述` |
-| term | Area | 关键领域（如适用） | 或直接由 wiki-index 管理 |
-| atomic | concept | 相关原子笔记章节 | `- [[atomic-title]]` |
-| moc | MOC | 列表末尾 | `- [[MOC-X]]` |
-| concept/question | MOC | 列表末尾 | `- [[笔记]]` |

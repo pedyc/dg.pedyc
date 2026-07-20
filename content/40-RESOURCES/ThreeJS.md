@@ -91,8 +91,8 @@ mindmap
 > 该领域的标准化操作流程
 
 - [[SOP-ThreeJS实现3D视差滚动]] — 3D 多层视差滚动
-- [[SOP-ThreeJS实现气泡粒子]] — 透射材质粒子系统
-- [[SOP-ThreeJS实现光影滤镜]] — 光照与后处理滤镜
+- [[ThreeJS实现气泡粒子]] — 透射材质粒子系统
+- [[ThreeJS实现光影滤镜]] — 光照与后处理滤镜
 - [[SOP-ThreeJS实现平面凹凸效果]] — ShaderMaterial 自定义变形
 
 ---

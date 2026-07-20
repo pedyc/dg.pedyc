@@ -1,11 +1,11 @@
 ---
 uid: 202604111200
-title: SOP-使用Canvas实现网页无限滑动效果
-aliases: [SOP-使用Canvas实现网页无限滑动效果]
+title: Canvas实现无限滑动效果
+aliases: [SOP-Canvas实现无限滑动效果, Canvas无限滑动]
 description: 使用 Canvas 实现可拖拽的双向无限滑动图片墙的标准流程
 tags: [Canvas, 前端开发/动画]
 date-created: 2026-04-11
-date-modified: 2026-04-12
+date-modified: 2026-07-20
 status: cultivating
 content-type: sop
 up: "[[Canvas动画]]"

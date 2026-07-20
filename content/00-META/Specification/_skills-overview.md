@@ -18,8 +18,8 @@ up: [["llm-wiki-schema"]]
 
 | 层 | Skill | 版本 | 职责 | 操作范围 |
 |---|---|---|---|---|
-| **创建层** | `obsidian-note-local` | v2.2.0 | 模板创建 + 挂载到父页面 | 内容页 + 父页面引用 |
-| **元数据层** | `wiki-sync-local` | v3.0.0 | 维护索引、日志、同步状态 | 仅 `00-META/` |
+| **创建层** | `obsidian-note-local` | v3.1.0 | 创建/更新笔记 + 挂载父页面 + 同步元数据 + 评估 + 核查 | 内容页 + 父页面 + 00-META |
+| **元数据层** | `wiki-sync-local` | v3.0.0 | 维护 wiki-index、wiki-log、suggest-log、sync-state | 仅 `00-META/` |
 | | `content-evaluator-local` | v1.1.0 | 健康检查（lint），含 content-type 模板对比 | 全库只读 |
 | | `content-verifier-local` | v1.1.0 | 内容质量核查，按模板章节对比 | 指定笔记 |
 | **内容层** | `llm-wiki-local` | v1.0.0 | ingest / query / lint / graph | 内容页 |
@@ -29,35 +29,40 @@ up: [["llm-wiki-schema"]]
 
 ```mermaid
 flowchart LR
-    A[/obsidian-note-local/] --> B[/wiki-sync-local/]
-    B --> C[/llm-wiki-local ingest/]
-    C --> D[/content-verifier-local/]
-    D --> E[/content-evaluator-local/]
+    A[/obsidian-note-local v3/]
+    A --> B[创建笔记 + 挂载父页面]
+    A --> C[wiki-sync-local]
+    A --> D[content-evaluator-local]
+    A --> E[content-verifier-local]
+    B -.-> F[(内容页)]
+    C -.-> G[(00-META)]
 ```
 
 ```bash
-创建笔记 → 更新索引和日志 → 内容整合 → 质量核查 → 定期健康检查
+obsidian-note-local → 创建 + 挂父页面 + 同步 + 评估 + 核查（一键完成）
 ```
 
 ### 各 skill 详解
 
 #### obsidian-note-local
 
-**用途**：创建新笔记，自动挂载到父页面。
+**用途**：一键创建/更新笔记全流程。支持两种模式：
 
 ```bash
-/obsidian-note-local moc "Angular面试题"
-/obsidian-note-local concept "闭包"
-/obsidian-note-local atomic "变量提升的本质是变量对象在创建阶段的初始化"
+# 创建模式
+/obsidian-note-local create concept "闭包"
+/obsidian-note-local create question "如何进行代码重构？"
+
+# 更新模式
+/obsidian-note-local update 40-RESOURCES/闭包.md "新的内容"
 ```
 
 **做了什么**：
-1. 按 content-type 读取对应模板
-2. 生成 frontmatter（uid、aliases、日期等）
-3. 写入对应目录
-4. 读取 `up` 字段，在父页面中追加引用
-
-**不做什么**：不碰 wiki-index、wiki-log、sync-state。
+1. 按 content-type 读取对应模板，生成/修改笔记
+2. 读取 `up` 字段，更新父页面引用
+3. 内部调用 `wiki-sync-local`：更新 wiki-index、wiki-log、sync-state
+4. 内部调用 `content-evaluator-local`：评估笔记健康度
+5. 内部调用 `content-verifier-local`：核查内容质量（create 用 light，update 用 full）
 
 ---
 

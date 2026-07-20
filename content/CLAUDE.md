@@ -32,7 +32,7 @@ Skills 位于 `content/.claude/skills/`：
 - `wiki-sync-local` — 维护索引、日志、同步状态（元数据层）
 - `content-evaluator-local` — 健康度评估（元数据层）
 - `content-verifier-local` — 内容质量核查（元数据层）
-- `obsidian-note-local` — 模板创建笔记，自动挂载到父页面（创建层）
+- `obsidian-note-local` — 创建/更新笔记全流程（创建层）
 - `action-suggest` — 基于状态生成行动建议
 
 详见 `00-META/Specification/_skills-overview.md` 和 `00-META/llm-wiki-schema.md`。
@@ -47,11 +47,16 @@ Located in `content/_templates/`:
 - template_diary.md, template_week.md
 - template_article.md
 
-### 强制规则：创建笔记必须读取模板
+### 强制规则：创建笔记使用 obsidian-note-local skill
 
-**每次创建或重写笔记时，必须先读取 `content/_templates/` 下的对应模板，严格按照模板章节生成内容。**
+**每次创建或重写笔记时，必须调用 `obsidian-note-local` skill。** 该 skill 一步完成：
+1. 读取对应模板生成笔记内容
+2. 自动更新 `up` 指向的父级页面引用
+3. 同步 wiki-index / wiki-log / sync-state（内部调用 `wiki-sync-local`）
+4. 评估笔记健康度（内部调用 `content-evaluator-local`）
+5. 核查内容质量（内部调用 `content-verifier-local [light|full]`）
 
-不遵守此规则将导致笔记结构不完整、缺少必需字段。
+不遵守此规则将导致笔记结构不完整、父页面引用滞后、wiki-index 不同步。
 
 ### 强制规则：修改 skill 必须同步 _skills-overview
 
@@ -61,13 +66,3 @@ Located in `content/_templates/`:
 - version 升级 → 更新版本号
 - description/职责变更 → 更新描述和分层归属
 - 新增/删除 skill → 更新总览表和 layer 分类
-
-### 强制规则：创建笔记后必须执行同步与核查
-
-**每次创建或重写笔记后，必须依次调用以下三个 skill：**
-
-1. `wiki-sync-local` — 更新 wiki-index、wiki-log、sync-state
-2. `content-evaluator-local` — 评估笔记在知识库中的健康度
-3. `content-verifier-local [light|full]` — 核查内容质量（新增笔记用 light，重写用 full）
-
-不遵守此规则将导致 wiki-index 滞后、孤立笔记堆积、内容质量无法保障。

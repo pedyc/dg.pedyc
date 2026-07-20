@@ -4,6 +4,7 @@ version: 3.0.0
 description: |
   维护系统元数据层：更新 wiki-index、记录 wiki-log、同步 wiki-sync-state。
   **职责边界：只碰 00-META/ 下的系统文件。不碰内容页（20-AREAS/ / 30-Zettelkasten/ / 40-RESOURCES/ / 60-BLOGS/）。**
+**维护清单**：wiki-index.md、wiki-log.md、wiki-sync-state.json、**suggest-log.md**
   手动触发：创建/删除笔记后补充 wiki-index 和 wiki-log。
   自动触发：会话启动时检测 git 变更，同步状态文件。
 argument-hint: "[create|update|delete <笔记路径>]"

@@ -1,11 +1,11 @@
 ---
 uid: 202604131834
-title: SOP-ThreeJS实现气泡粒子
+title: ThreeJS实现气泡粒子
 aliases: [SOP-ThreeJS实现气泡粒子]
 description: 使用 Three.js 实现水下气泡粒子上升动画效果的标准流程
 tags: [前端开发/动画, ThreeJS]
 date-created: 2026-04-13
-date-modified: 2026-05-06
+date-modified: 2026-07-20
 status: cultivating
 content-type: sop
 up: "[[ThreeJS]]"
@@ -349,5 +349,5 @@ replayBtn.addEventListener('click', resetAnimation)
 
 - **父级概念**：[[ThreeJS]]
 - **关联概念**：
-	- [[SOP-ThreeJS实现光影滤镜]] — 光照与材质的进阶应用
+	- [[ThreeJS实现光影滤镜]] — 光照与材质的进阶应用
 	- [[SOP-ThreeJS实现3D视差滚动]] — Three.js 的动态场景应用

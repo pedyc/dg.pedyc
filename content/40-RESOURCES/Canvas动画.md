@@ -8,11 +8,12 @@ date-created: 2026-04-10
 date-modified: 2026-07-20
 status: cultivating
 content-type: concept
-up: [[前端开发]]
 related: ["[[动画原理]]", "[[CSS Animation]]", "[[前端开发]]"]
+up: "[[前端开发]]"
 ---
 
 ## 概念：Canvas 动画
+
 
 > Canvas 动画是使用 HTML5 Canvas API，通过在画布上**逐帧绘制图形**来实现动画效果的技术。
 
@@ -88,11 +89,11 @@ flowchart LR
 
 #### 实战场景
 
-| 技巧 | 说明 |
-|:---|:---|
+| 技巧               | 说明                                              |
+| :--------------- | :---------------------------------------------- |
 | **Canvas 截图/导出** | toDataURL / toBlob 导出为图片，canvas.toBlob() 可上传或下载 |
-| **Canvas + 视频** | drawImage(videoElement) 逐帧绘制视频画面，可叠加滤镜或标注 |
-| **Canvas 转 PDF** | 通过图片中间格式（toDataURL）嵌入 PDF，或使用 jsPDF 直接绘制 |
+| **Canvas + 视频**  | drawImage(videoElement) 逐帧绘制视频画面，可叠加滤镜或标注       |
+| **Canvas 转 PDF** | 通过图片中间格式（toDataURL）嵌入 PDF，或使用 jsPDF 直接绘制        |
 
 | 维度 | Canvas 动画 | CSS 动画 | DOM 动画 |
 |:---|:---|:---|:---|

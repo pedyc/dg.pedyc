@@ -5,7 +5,7 @@ aliases: ["C-Vite", "Vite"]
 description: 由尤雨溪开发的现代化前端构建工具，利用 ESM 实现快速冷启动和即时 HMR
 tags: [前端/构建工具]
 date-created: 2025-05-29
-date-modified: 2026-05-26
+date-modified: 2026-07-21
 status: active
 content-type: concept
 up: "[[前端工程]]"

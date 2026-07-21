@@ -5,7 +5,7 @@ aliases: [C-Canvas动画, Canvas Animation]
 description: 使用 HTML5 Canvas API 实现高性能动画的技术
 tags: [concept, Canvas, 动画, 前端, 图形]
 date-created: 2026-04-10
-date-modified: 2026-07-20
+date-modified: 2026-07-21
 status: cultivating
 content-type: concept
 related: ["[[动画原理]]", "[[CSS Animation]]", "[[前端开发]]"]
@@ -13,7 +13,6 @@ up: "[[前端开发]]"
 ---
 
 ## 概念：Canvas 动画
-
 
 > Canvas 动画是使用 HTML5 Canvas API，通过在画布上**逐帧绘制图形**来实现动画效果的技术。
 
@@ -49,13 +48,13 @@ flowchart LR
 
 #### 核心技术
 
-| 技术 | 说明 |
-|:---|:---|
-| **requestAnimationFrame** | 浏览器提供的帧同步 API，与屏幕刷新率同步，自动暂停于后台标签页 |
-| **Canvas 2D Context** | 绘制矩形、弧线、文字、图片、像素等 2D 图形 API |
+| 技术                              | 说明                                 |
+| :------------------------------ | :--------------------------------- |
+| **requestAnimationFrame**       | 浏览器提供的帧同步 API，与屏幕刷新率同步，自动暂停于后台标签页  |
+| **Canvas 2D Context**           | 绘制矩形、弧线、文字、图片、像素等 2D 图形 API        |
 | **离屏 Canvas / OffscreenCanvas** | 在 Worker 线程中独立绘制，避免阻塞主线程，适合计算密集型场景 |
-| **分层渲染** | 静态层 + 动态层分离，静态内容只绘制一次，减少每帧重绘面积 |
-| **脏矩形（Dirty Rect）** | 只重绘变化区域而非全画布，适合大量静态元素中局部变动的场景 |
+| **分层渲染**                        | 静态层 + 动态层分离，静态内容只绘制一次，减少每帧重绘面积     |
+| **脏矩形（Dirty Rect）**             | 只重绘变化区域而非全画布，适合大量静态元素中局部变动的场景      |
 
 ---
 

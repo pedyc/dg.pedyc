@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Canvas动画.md",
+                "file": "30-Zettelkasten/UI本质上是状态的函数.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Canvas动画"
+              "title": "UI本质上是状态的函数"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Canvas动画.md",
+                "file": "30-Zettelkasten/UI本质上是状态的函数.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Canvas动画 的关系图"
+              "title": "UI本质上是状态的函数 的关系图"
             }
           },
           {
@@ -305,8 +305,28 @@
   },
   "active": "97784637ca968d8c",
   "lastOpenFiles": [
-    "20-AREAS/A-前端/前端开发.md",
+    "40-RESOURCES/为什么更倾向函数组件.md",
+    "40-RESOURCES/为什么更倾向函数组件.md.tmp.11272.518d0fc164f0",
+    "30-Zettelkasten/UI本质上是状态的函数.md",
+    "40-RESOURCES/React面试题.md.tmp.11272.c9aad8ae6c0d",
+    "40-RESOURCES/为什么更倾向函数组件.md.tmp.11272.c50b24b07f6c",
+    "40-RESOURCES/React 函数组件 vs 类组件.md",
+    "40-RESOURCES/为什么更倾向函数组件.md.tmp.11272.3845ada614e1",
+    "40-RESOURCES/函数组件和类组件有什么区别？生命周期如何映射？.md",
+    "40-RESOURCES/事件循环.md",
+    "40-RESOURCES/执行栈.md",
+    "40-RESOURCES/JavaScript.md",
+    "40-RESOURCES/ESModule.md",
+    "40-RESOURCES/Vite.md",
+    "40-RESOURCES/Webpack vs Vite.md",
+    "40-RESOURCES/Webpack.md",
+    "40-RESOURCES/MOC-Webpack相关问题.md",
+    "40-RESOURCES/Webpack 的构建流程主要有哪些阶段？loader 和 plugin 的区别？.md",
+    "40-RESOURCES/前端工程.md",
+    "40-RESOURCES/微前端.md",
     "40-RESOURCES/Canvas动画.md",
+    "_resources/Canvas动画",
+    "20-AREAS/A-前端/前端开发.md",
     "40-RESOURCES/Canvas动画.md.tmp.12592.959c48546af2",
     "40-RESOURCES/Canvas实现无限滑动效果.md",
     "40-RESOURCES/动画效果示例.md",
@@ -319,33 +339,13 @@
     "CLAUDE.md.tmp.12592.5720d8b7a5d2",
     "00-META/Specification/_skills-overview.md.tmp.12592.7789df5ffd9c",
     "00-META/Specification/_skills-overview.md",
-    "00-META/Specification/_query-rules.md",
-    "00-META/Specification/_content-type-rules.md",
-    "00-META/Specification/_ingest-rules.md",
-    "00-META/Specification/_lint-rules.md",
-    "40-RESOURCES/如何进行代码重构？.md",
-    "_templates/template_question.md",
     "00-META/wiki-sync-state.json.tmp.12592.3d89bc435377",
-    "_templates/template_area.md",
-    "_templates/template_concept.md",
-    "40-RESOURCES/TypeScript.md",
-    "40-RESOURCES/Inbox/How Anthropic runs large-scale code migrations with Claude Code.md",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/0fc2fe5f3f970bf75306c34ebca5ebfa_MD5.webp",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/3cf7feeb51bd4750ee68a2889906e967_MD5.webp",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/5ee6f2bb75d4431cb42431d667cd7485_MD5.jpg",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/d00a3025b2dc47406804b24b56d3e61f_MD5.jpg",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/addc4f0dadb8cce47f9ce9e1cd22d22d_MD5.jpg",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/dc9c24c91b83d0f964581d587b6d1d0a_MD5.jpg",
-    "_resources/How Anthropic runs large-scale code migrations with Claude Code",
-    "40-RESOURCES/Inbox/ML Job Interviews The Ultimate Guide.md",
-    "00-META/Guide/本库指南.md",
-    "00-META/Guide/快速开始.md",
-    "00-META/Architecture/本库子系统概述.md",
-    "40-RESOURCES/Harness.md",
-    "60-BLOGS/Claude Code 进阶使用.md.tmp.14424.f550c75a9fac",
-    "_templates/template_concept.md.tmp.14424.3c66cb77cd46",
-    "_templates/template_sop.md.tmp.14424.2b99b21fc178",
-    "00-META/wiki-sync-state.json.tmp.14424.06c4bb038490",
     "_resources/P-学习OpenClaw/30dc0c3697e6afecaa957f91b3e8daac_MD5.jpg",
     "10-PROJECTS/PROJECTS.canvas",
     "_resources/腾讯音乐前端岗位模拟面试/1e4508d724106cc79e460814af5f3a3f_MD5.webp",

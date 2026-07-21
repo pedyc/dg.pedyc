@@ -5,7 +5,7 @@ aliases: [VS-React函数组件vs类组件, 函数组件与类组件对比]
 description: 函数组件与类组件的核心差异与场景选择
 tags: [前端开发/框架/React]
 date-created: 2026-05-16
-date-modified: 2026-05-16
+date-modified: 2026-07-21
 status: cultivating
 comparison: [函数组件, 类组件]
 content-type: comparison
@@ -22,11 +22,11 @@ related: ["[[React]]"]
 
 ### 核心对比
 
-| 维度 | **[[函数组件]]** | **[[类组件]]** |
-|:---|:---|:---|
-| **定义** | 普通 JavaScript 函数，接收 props 返回 JSX | 继承 `React.Component`，必须定义 `render()` 方法 |
-| **核心本质** | 纯函数，无状态（Hooks 之前），通过 Hooks 获得能力 | 有状态组件，有完整生命周期方法 |
-| **适用场景** | 新项目默认选择，逻辑复用、自定义 Hooks | 遗留代码、需要 ErrorBoundary 的场景 |
+| 维度       | **[[函数组件]]**                     | **[[类组件]]**                             |
+| :------- | :------------------------------- | :-------------------------------------- |
+| **定义**   | 普通 JavaScript 函数，接收 props 返回 JSX | 继承 `React.Component`，必须定义 `render()` 方法 |
+| **核心本质** | 纯函数，无状态（Hooks 之前），通过 Hooks 获得能力  | 有状态组件，有完整生命周期方法                         |
+| **适用场景** | 新项目默认选择，逻辑复用、自定义 Hooks           | 遗留代码、需要 ErrorBoundary 的场景               |
 
 ### 差异点
 
@@ -144,5 +144,7 @@ class Counter extends React.Component {
 ### 知识图谱
 
 - **父级概念**：[[React]]
-- **相关对比**：[[函数组件和类组件有什么区别？生命周期如何映射？]]
+- **相关概念**：
+	- [[函数组件和类组件有什么区别？生命周期如何映射？]]
+	- [[为什么更倾向函数组件]]
 - **核心关联**：[[Hooks(React)]] / [[React.Component]]

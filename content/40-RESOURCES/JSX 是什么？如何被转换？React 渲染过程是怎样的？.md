@@ -5,7 +5,7 @@ aliases: ["Q-JSX是什么？"]
 description: "理解 JSX 语法糖本质、babel 编译过程和 React 虚拟 DOM 渲染机制"
 tags: [面试题, React]
 date-created: 2026-05-15
-date-modified: 2026-05-15
+date-modified: 2026-07-22
 status: cultivating
 content-type: question
 up: "[[React]]"
@@ -140,7 +140,7 @@ JSX 的本质是**语法糖**，它让组件结构声明更直观，但运行时
 ## 关联
 
 - **相关概念**：[[React]] — 虚拟 DOM 是 React 的核心机制
-- **相关问题**：[[虚拟 DOM 的原理是什么？]] — 深入 Diff 算法
+- **相关问题**：[[虚拟 DOM 的原理是什么？]] — 深入 Diff 算法 
 - **参考资料**：
 	- [React 官方文档 - JSX 简介](https://react.dev/learn/writing-markup-with-jsx)
 	- [Babel 官网 - JSX 编译器](https://babeljs.io/docs/babel-plugin-transform-react-jsx)

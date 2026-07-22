@@ -2,13 +2,16 @@
 uid: 202607211012
 title: UI本质上是状态的函数
 aliases: []
-description: "UI 是状态到视图的映射函数，而非面向对象的手动操作"
-tags: ["React", "编程范式", "UI"]
+description: UI 是状态到视图的映射函数，而非面向对象的手动操作
+tags:
+  - React
+  - 编程范式
+  - UI
 date-created: 2026-07-21
-date-modified: 2026-07-21
+date-modified: 2026-07-22
 status: fleeting
 content-type: atomic
-up: "[[为什么更倾向函数组件]]"
+up: "[[为什么社区更倾向函数组件]]"
 ---
 
 > UI 本质上是状态到视图的映射函数：`UI = f(state)`
@@ -27,12 +30,6 @@ up: "[[为什么更倾向函数组件]]"
 - 自动 memo 编译器的核心假设：组件是纯函数，给定相同输入必然返回相同输出
 - 基于此才能安全地跳过不必要的重新渲染
 
-**类比 — Excel 单元格**：
-- Excel 单元格 = `UI = f(state)` 的直观体现
-- 
-- `=A1+B1` 是一个纯函数，A1/B1 变化时自动重算
-- 函数组件也是同样的声明式思维：声明"当状态 X 变化时显示 Y"，而不是"在状态变化后手动更新 DOM"
-
 ```tsx
 // Class 组件 — 侧重"什么时候做什么"
 class Counter extends React.Component {
@@ -48,4 +45,4 @@ function Counter({ count }) {
 
 ## 关联
 
-- [[为什么更倾向函数组件]] — 函数组件流行背后正是 `UI = f(state)` 这个心智模型的优势
+- [[为什么社区更倾向函数组件]] — 函数组件流行背后正是 `UI = f(state)` 这个心智模型的优势

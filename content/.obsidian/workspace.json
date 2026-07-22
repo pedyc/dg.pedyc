@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-Zettelkasten/UI本质上是状态的函数.md",
+                "file": "40-RESOURCES/React面试题.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "UI本质上是状态的函数"
+              "title": "React面试题"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-Zettelkasten/UI本质上是状态的函数.md",
+                "file": "40-RESOURCES/React面试题.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "UI本质上是状态的函数 的关系图"
+              "title": "React面试题 的关系图"
             }
           },
           {
@@ -305,9 +305,9 @@
   },
   "active": "97784637ca968d8c",
   "lastOpenFiles": [
-    "40-RESOURCES/为什么更倾向函数组件.md",
-    "40-RESOURCES/为什么更倾向函数组件.md.tmp.11272.518d0fc164f0",
+    "40-RESOURCES/为什么社区更倾向函数组件.md",
     "30-Zettelkasten/UI本质上是状态的函数.md",
+    "40-RESOURCES/为什么更倾向函数组件.md.tmp.11272.518d0fc164f0",
     "40-RESOURCES/React面试题.md.tmp.11272.c9aad8ae6c0d",
     "40-RESOURCES/为什么更倾向函数组件.md.tmp.11272.c50b24b07f6c",
     "40-RESOURCES/React 函数组件 vs 类组件.md",

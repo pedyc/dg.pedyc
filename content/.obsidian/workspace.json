@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/React面试题.md",
+                "file": "40-RESOURCES/JSX 是什么？如何被转换？React 渲染过程是怎样的？.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "React面试题"
+              "title": "JSX 是什么？如何被转换？React 渲染过程是怎样的？"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/React面试题.md",
+                "file": "40-RESOURCES/JSX 是什么？如何被转换？React 渲染过程是怎样的？.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "React面试题 的关系图"
+              "title": "JSX 是什么？如何被转换？React 渲染过程是怎样的？ 的关系图"
             }
           },
           {
@@ -305,6 +305,7 @@
   },
   "active": "97784637ca968d8c",
   "lastOpenFiles": [
+    "40-RESOURCES/React面试题.md",
     "40-RESOURCES/为什么社区更倾向函数组件.md",
     "30-Zettelkasten/UI本质上是状态的函数.md",
     "40-RESOURCES/为什么更倾向函数组件.md.tmp.11272.518d0fc164f0",

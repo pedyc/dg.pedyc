@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/JSX 是什么？如何被转换？React 渲染过程是怎样的？.md",
+                "file": "40-RESOURCES/Vue3 混合文件夹结构.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "JSX 是什么？如何被转换？React 渲染过程是怎样的？"
+              "title": "Vue3 混合文件夹结构"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/JSX 是什么？如何被转换？React 渲染过程是怎样的？.md",
+                "file": "40-RESOURCES/Vue3 混合文件夹结构.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "JSX 是什么？如何被转换？React 渲染过程是怎样的？ 的关系图"
+              "title": "Vue3 混合文件夹结构 的关系图"
             }
           },
           {
@@ -305,6 +305,18 @@
   },
   "active": "97784637ca968d8c",
   "lastOpenFiles": [
+    "40-RESOURCES/Inbox/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure.md",
+    "40-RESOURCES/Vue3 混合文件夹结构.md",
+    "40-RESOURCES/Vue3 混合文件夹结构.md.tmp.30052.3cb609a03d17",
+    "40-RESOURCES/Vue3 混合文件夹结构.md.tmp.30052.1224c9c944a4",
+    "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
+    "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",
+    "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/5922f21cbfa6306a1d1dd8b4b924631e_MD5.webp",
+    "40-RESOURCES/Inbox/How Anthropic runs large-scale code migrations with Claude Code.md",
+    "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/9977399c198c6319755040441f004288_MD5.webp",
+    "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/9a1f8150af1dffbc56100f8ea4902d1f_MD5.webp",
+    "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure",
+    "40-RESOURCES/JSX 是什么？如何被转换？React 渲染过程是怎样的？.md",
     "40-RESOURCES/React面试题.md",
     "40-RESOURCES/为什么社区更倾向函数组件.md",
     "30-Zettelkasten/UI本质上是状态的函数.md",
@@ -332,26 +344,13 @@
     "40-RESOURCES/Canvas实现无限滑动效果.md",
     "40-RESOURCES/动画效果示例.md",
     "00-META/Architecture/llm-wiki-schema.md",
-    "40-RESOURCES/ThreeJS实现光影滤镜.md",
-    "40-RESOURCES/ThreeJS实现气泡粒子.md",
-    "40-RESOURCES/前端交互.md",
-    "40-RESOURCES/使用Claude Code进行大型代码迁移.md",
     "00-META/Specification/_skills-overview.md.tmp.12592.99ca02125c8a",
-    "CLAUDE.md.tmp.12592.5720d8b7a5d2",
-    "00-META/Specification/_skills-overview.md.tmp.12592.7789df5ffd9c",
-    "00-META/Specification/_skills-overview.md",
-    "00-META/wiki-sync-state.json.tmp.12592.3d89bc435377",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/0fc2fe5f3f970bf75306c34ebca5ebfa_MD5.webp",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/3cf7feeb51bd4750ee68a2889906e967_MD5.webp",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/5ee6f2bb75d4431cb42431d667cd7485_MD5.jpg",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/d00a3025b2dc47406804b24b56d3e61f_MD5.jpg",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/addc4f0dadb8cce47f9ce9e1cd22d22d_MD5.jpg",
-    "_resources/How Anthropic runs large-scale code migrations with Claude Code/dc9c24c91b83d0f964581d587b6d1d0a_MD5.jpg",
-    "_resources/P-学习OpenClaw/30dc0c3697e6afecaa957f91b3e8daac_MD5.jpg",
     "10-PROJECTS/PROJECTS.canvas",
-    "_resources/腾讯音乐前端岗位模拟面试/1e4508d724106cc79e460814af5f3a3f_MD5.webp",
-    "50-ARCHIVE/_resources/Pasted image 20260624181058.png",
-    "_resources/原型链.excalidraw.svg",
     "未命名.canvas",
     "Untitled.canvas",
     "//Untitled.canvas",

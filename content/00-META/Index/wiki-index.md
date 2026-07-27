@@ -144,6 +144,7 @@ up: "[[本库指南]]"
 - [[SOP-Vite配置流程]] — Vite 项目初始化、配置、优化
 - [[Webpack配置流程]] — Webpack 配置、插件开发、性能优化
 - [[构建前端脚手架]] — 前端项目初始化、模板搭建
+- [[SOP-Vue3-混合文件夹结构]] — 根按职责、内按领域的 Vue 3 项目结构搭建流程
 - [[建立前端工程规范]] — 代码规范、Git 规范、提交规范
 
 ### React
@@ -378,4 +379,4 @@ n- [[Array.fromAsync() vs Promise.all()]] — 异步数组构造 vs 并发协调
 
 ---
 
-*Wiki Index 最后更新：2026-05-28 by LLM sync*
+*Wiki Index 最后更新：2026-07-25 by LLM sync*

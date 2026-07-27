@@ -23,6 +23,20 @@ up: ["[[本库指南]]"]
 
 ### 2026-07
 
+#### 2026-07-25
+
+- [2026-07-25] refactor | Vue3 混合文件夹结构 concept → sop
+    - 位置：40-RESOURCES/Vue3 混合文件夹结构.md
+    - 变更：concept → sop，aliases: C- → SOP-
+    - 更新：Vue.md（关键领域 → SOP 章节）、wiki-index（Concepts → SOPs）
+    - 来源：_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/
+
+- [2026-07-25] ingest | 新建 concept「Vue3 混合文件夹结构」
+    - 位置：40-RESOURCES/Vue3 混合文件夹结构.md
+    - 父页面：[[Vue]]
+    - 来源：_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/
+    - 核心观点：根目录按技术职责划分，内部按业务领域分组，兼顾可维护性与可发现性
+
 #### 2026-07-21
 
 - [2026-07-21] ingest | 新建 atomic「UI本质上是状态的函数」

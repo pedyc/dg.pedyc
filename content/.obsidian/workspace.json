@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Vue3 混合文件夹结构.md",
+                "file": "00-META/Specification/_ingest-rules.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Vue3 混合文件夹结构"
+              "title": "_ingest-rules"
             }
           }
         ],
@@ -96,7 +96,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Vue3 混合文件夹结构.md",
+                "file": "00-META/Specification/_ingest-rules.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Vue3 混合文件夹结构 的关系图"
+              "title": "_ingest-rules 的关系图"
             }
           },
           {
@@ -305,14 +305,27 @@
   },
   "active": "97784637ca968d8c",
   "lastOpenFiles": [
+    "40-RESOURCES/使用Claude Code进行大型代码迁移.md",
+    "50-ARCHIVE/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure.md",
+    "50-ARCHIVE/How Anthropic runs large-scale code migrations with Claude Code.md",
+    "50-ARCHIVE/ML Job Interviews The Ultimate Guide.md",
+    "40-RESOURCES/ML求职面试指南.md",
+    "40-RESOURCES/Inbox/How Anthropic runs large-scale code migrations with Claude Code.md",
+    "40-RESOURCES/Vue3 混合文件夹结构.md.tmp.22568.c2ae29851b84",
+    "40-RESOURCES/ML求职面试指南.md.tmp.22568.f6328bdaf035",
     "40-RESOURCES/Inbox/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure.md",
+    "40-RESOURCES/Inbox/ML Job Interviews The Ultimate Guide.md",
+    "40-RESOURCES/3D高斯泼溅.md",
     "40-RESOURCES/Vue3 混合文件夹结构.md",
+    "40-RESOURCES/软件工程.md",
+    "40-RESOURCES/Monorepo.md",
+    "40-RESOURCES/Monorepo架构.md",
+    "40-RESOURCES/软件工程.md.tmp.22568.8ebf8ff81df4",
     "40-RESOURCES/Vue3 混合文件夹结构.md.tmp.30052.3cb609a03d17",
     "40-RESOURCES/Vue3 混合文件夹结构.md.tmp.30052.1224c9c944a4",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/5922f21cbfa6306a1d1dd8b4b924631e_MD5.webp",
-    "40-RESOURCES/Inbox/How Anthropic runs large-scale code migrations with Claude Code.md",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/9977399c198c6319755040441f004288_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/9a1f8150af1dffbc56100f8ea4902d1f_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure",
@@ -333,18 +346,6 @@
     "40-RESOURCES/Vite.md",
     "40-RESOURCES/Webpack vs Vite.md",
     "40-RESOURCES/Webpack.md",
-    "40-RESOURCES/MOC-Webpack相关问题.md",
-    "40-RESOURCES/Webpack 的构建流程主要有哪些阶段？loader 和 plugin 的区别？.md",
-    "40-RESOURCES/前端工程.md",
-    "40-RESOURCES/微前端.md",
-    "40-RESOURCES/Canvas动画.md",
-    "_resources/Canvas动画",
-    "20-AREAS/A-前端/前端开发.md",
-    "40-RESOURCES/Canvas动画.md.tmp.12592.959c48546af2",
-    "40-RESOURCES/Canvas实现无限滑动效果.md",
-    "40-RESOURCES/动画效果示例.md",
-    "00-META/Architecture/llm-wiki-schema.md",
-    "00-META/Specification/_skills-overview.md.tmp.12592.99ca02125c8a",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/0fc2fe5f3f970bf75306c34ebca5ebfa_MD5.webp",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/3cf7feeb51bd4750ee68a2889906e967_MD5.webp",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/5ee6f2bb75d4431cb42431d667cd7485_MD5.jpg",

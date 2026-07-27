@@ -1,7 +1,7 @@
 ---
 uid: 202605210001
 title: Vite 的 HMR（热模块替换）是如何实现的？与 Webpack HMR 的区别？
-aliases: ["Q-Vite HMR", "Vite HMR vs Webpack HMR"]
+aliases: ["Q-Vite HMR", "Vite HMR vs Webpack HMR", "Vite 的 HMR"]
 description: 理解 Vite 热模块替换的实现原理及其与 Webpack HMR 的核心差异
 tags: [前端工程, Vite, Webpack, HMR]
 date-created: 2026-05-21

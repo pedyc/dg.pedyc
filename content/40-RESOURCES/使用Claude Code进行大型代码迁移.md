@@ -5,10 +5,10 @@ aliases: [SOP-使用Claude Code进行大型代码迁移]
 description: 使用 Claude Code 的 AI agent 工作流，将大型代码库系统性地迁移到新语言/新框架的标准流程
 tags: [AI/Claude]
 date-created: 2026-07-20
-date-modified: 2026-07-20
+date-modified: 2026-07-27
 status: cultivating
 content-type: sop
-up: ["[[Claude Code 实战案例]]"]
+up: "[[Claude Code]]"
 ---
 
 > **问题溯源**：本 SOP 是 Anthropic 在迁移 Bun（Zig→Rust，百万行）和内部 Python→TypeScript（16.5 万行）项目中的实践总结。核心洞察是：**不修复代码，修复产生代码的循环（loop）**。
@@ -22,6 +22,16 @@ up: ["[[Claude Code 实战案例]]"]
 - 需要并行翻译数百到数千个文件的跨语言迁移项目
 
 **不适合**：小型重构、单一文件修改、不需要编译器/测试套件验证的简单翻译
+
+### 何时值得迁移
+
+代码迁移的决策已从"多季度、数百万预算"的 mega-project，进化为"风险可控、失败即删分支"的常规操作：
+
+- **慢性痛点积累**：一年内反复出现同一类 bug（如内存泄漏），或某个构建瓶颈持续拖累团队效率
+- **生态变迁**：原始技术栈的生态萎缩，或更好的替代方案已经成熟
+- **消除系统性风险**：新语言能通过编译器/类型系统在开发阶段就拦截原有运行时问题
+
+> 核心理念转移：**不修复代码，修复产生代码的循环（loop）**。关注模式而非单个失败。
 
 ---
 
@@ -155,5 +165,7 @@ flowchart TD
 	- [[Agent工作流模式]]
 	- [[代码库迁移策略]]
 	- [[代码重构策略]]
+- **参考文章**：[[How Anthropic runs large-scale code migrations with Claude Code]] — 完整来源文章
+- **官方工具包**：[Migration starter kit](https://github.com/anthropics/code-migration-kit-with-claude-code)
 - **问题来源**：
 	- [[How Anthropic runs large-scale code migrations with Claude Code]] — 此 SOP 的来源文章

@@ -5,7 +5,7 @@ aliases: [T-Monorepo, 单代码仓库]
 description: 将多个项目代码存储在同一个代码仓库中的开发模式
 tags: [area/前端工程, area/Monorepo]
 date-created: 2025-04-29
-date-modified: 2026-05-19
+date-modified: 2026-07-27
 status: cultivating
 content-type: term
 ---

@@ -5,7 +5,7 @@ aliases: ["SOP-Vue3-混合文件夹结构", "Hybrid Folder Structure", "Vue Hybr
 description: "为 Vue 3 应用搭建混合文件夹结构：根目录按技术职责划分，内部按业务领域分组"
 tags: [前端开发/Vue, 前端开发/工程化]
 date-created: 2026-07-25
-date-modified: 2026-07-25
+date-modified: 2026-07-27
 status: cultivating
 content-type: sop
 up: "[[Vue]]"
@@ -26,6 +26,20 @@ up: "[[Vue]]"
 - **多领域产品**：涉及 billing、pricing、sessions 等多个独立业务模块
 
 ---
+
+### 核心原则
+
+> **Responsibility first. Feature second.**
+>
+> 根目录按**技术职责**（responsibility）组织，回答"这是什么类型的文件"；职责内部按**业务领域**（feature/domain）分组，回答"它属于哪个功能"。
+
+#### 两种常见方案的权衡
+
+| 方案 | 核心逻辑 | 优势 | 劣势 |
+|:---|:---|:---|:---|
+| 纯按职责（responsibility-first） | `components/`、`services/`、`store/`... | 找某类文件非常直观 | 一个功能分散在多个目录 |
+| 纯按领域（feature-first） | `billing/`、`users/`、`products/`... | 一个功能的代码都在一处 | 跨领域通用代码难组织 |
+| **混合（hybrid）** | 外层职责，内层领域 | 兼顾预测性与聚合性 | 需团队共识和纪律 |
 
 ### 流程图解
 
@@ -161,6 +175,7 @@ src/
 - **相关概念**：
 	- [[Vue]] — Vue 3 应用架构的父级框架
 	- [[Monorepo]] — 更大的组织单元，一个仓库管理多个应用/包
+	- [[软件工程]] — 软件工程总入口 MOC，项目结构设计章节包含本笔记引用
 - **对比方案**：
 	- 纯按特性组织 — 仅按业务领域组织（无技术职责层），适合小型项目
 	- 纯按职责组织 — 仅按技术职责组织（无领域聚合），适合有复用需求但不按领域分工的项目

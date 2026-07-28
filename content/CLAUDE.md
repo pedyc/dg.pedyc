@@ -1,7 +1,7 @@
 ---
 title: CLAUDE
 date-created: 2026-03-25
-date-modified: 2026-07-17
+date-modified: 2026-07-28
 ---
 
 ## content/ Knowledge Base Guide
@@ -12,7 +12,7 @@ date-modified: 2026-07-17
 
 - **Main Guide**: [[本库指南]] - Complete methodology and conventions
 - **Templates**: `_templates/` directory
-- **LLM Wiki**: `00-META/llm-wiki-schema.md` - 工作流定义（ingest/query/lint）
+- **LLM Wiki Schema**: `00-META/Architecture/llm-wiki-schema.md` — 工作流定义（ingest/query/lint），**每次 llm-wiki 相关操作前必须阅读**
 
 ### Key Conventions
 
@@ -21,7 +21,7 @@ See [[本库指南]] for:
 - Three-layer architecture: Raw sources → Wiki → Archive
 - Directory structure (00-META to 99-ASSETS)
 - content-type classification (atomic, concept, term, moc, sop, etc.)
-- Status lifecycle (fleeting → cultivating → active → completed → archived)
+- Status lifecycle (fleeting → cultivating → active → completed → archived)  
 - Naming conventions via aliases (P-, A-, Q-, MOC-, T-, C-, VS-)
 - Tag system (#父/子 format)
 
@@ -29,13 +29,13 @@ See [[本库指南]] for:
 
 Skills 位于 `content/.claude/skills/`：
 - `llm-wiki-local` — ingest/query/lint/graph 工作流（内容层）
-- `wiki-sync-local` — 维护索引、日志、同步状态（元数据层）
+- `wiki-sync-local` — 维护索引、日志、同步状态（元数据层）.
 - `content-evaluator-local` — 健康度评估（元数据层）
 - `content-verifier-local` — 内容质量核查（元数据层）
 - `obsidian-note-local` — 创建/更新笔记全流程（创建层）
 - `action-suggest` — 基于状态生成行动建议
 
-详见 `00-META/Specification/_skills-overview.md` 和 `00-META/llm-wiki-schema.md`。
+详见 `00-META/Specification/_skills-overview.md` 和 `00-META/Architecture/llm-wiki-schema.md`。
 
 ### Templates
 
@@ -66,3 +66,12 @@ Located in `content/_templates/`:
 - version 升级 → 更新版本号
 - description/职责变更 → 更新描述和分层归属
 - 新增/删除 skill → 更新总览表和 layer 分类
+
+### 强制规则：llm-wiki 操作前阅读 schema
+
+**每次执行 llm-wiki 相关工作前（ingest/query/lint/笔记创建更新），必须先阅读 `00-META/Architecture/llm-wiki-schema.md`。** 该文档定义了：
+- 三层架构职责（raw sources → wiki → archive）
+- wiki-log 记录规范（哪些操作该记、不该记）
+- 协作约定（你负责判断价值，LLM 负责 bookkeeping）
+
+不遵守此规则可能导致操作不符合知识库架构约定。

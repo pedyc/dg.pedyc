@@ -4,7 +4,7 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-07-13
+date-modified: 2026-07-28
 status: active
 content-type: [article]
 up: ["[[本库指南]]"]
@@ -25,112 +25,114 @@ up: ["[[本库指南]]"]
 
 #### 2026-07-28
 
+- [2026-07-28] ingest | 新建 concept「软件工程三大基石」
+		- 位置：40-RESOURCES/软件工程三大基石.md
+		- 父页面：[[软件工程]]
+		- 更新：wiki-index（Concepts > 软件工程 新增条目）
 - [2026-07-28] archive | 移除 area「软件工程」
-    - 位置：20-AREAS/软件工程.md
-    - 原因：文件已删除，恢复 moc 版本位于 40-RESOURCES/软件工程.md
+		- 位置：20-AREAS/软件工程.md
+		- 原因：文件已删除，恢复 moc 版本位于 40-RESOURCES/软件工程.md
 - [2026-07-28] update | 更新 moc「软件工程」(新增核心原则、知识网络章节)
-    - 位置：40-RESOURCES/软件工程.md
-    - 变更：新增核心原则、知识网络章节，up: [[前端开发]]
+		- 位置：40-RESOURCES/软件工程.md
+		- 变更：新增核心原则、知识网络章节，up: [[前端开发]]
 - [2026-07-28] refactor | 软件工程 moc → area
-    - 位置：20-AREAS/软件工程.md
-    - 变更：moc → area，aliases: MOC-软件工程 → A-软件工程
-    - 更新：wiki-index（MOCs → Areas）
+		- 位置：20-AREAS/软件工程.md
+		- 变更：moc → area，aliases: MOC-软件工程 → A-软件工程
+		- 更新：wiki-index（MOCs → Areas）
 - [2026-07-28] refactor | 设计模式 concept → term
-    - 位置：40-RESOURCES/设计模式.md
-    - 变更：concept → term，aliases: C-设计模式 → T-设计模式
-    - 更新：wiki-index（添加 Terms 条目）
+		- 位置：40-RESOURCES/设计模式.md
+		- 变更：concept → term，aliases: C-设计模式 → T-设计模式
+		- 更新：wiki-index（添加 Terms 条目）
 - [2026-07-28] refactor | 设计模式 term → moc
-    - 位置：40-RESOURCES/设计模式.md
-    - 变更：term → moc，aliases: T-设计模式 → MOC-设计模式，status: active → cultivating
-    - 更新：wiki-index（Terms → MOCs）
+		- 位置：40-RESOURCES/设计模式.md
+		- 变更：term → moc，aliases: T-设计模式 → MOC-设计模式，status: active → cultivating
+		- 更新：wiki-index（Terms → MOCs）
 - [2026-07-28] refactor | 设计模式 MOC 新增知识网络章节
-    - 位置：40-RESOURCES/设计模式.md
-    - 变更：新增知识网络章节，关联 软件工程/SOLID原则/重构/面向对象编程
-    - 更新：wiki-index（条目已存在，description 不变）
+		- 位置：40-RESOURCES/设计模式.md
+		- 变更：新增知识网络章节，关联 软件工程/SOLID原则/重构/面向对象编程
+		- 更新：wiki-index（条目已存在，description 不变）
 - [2026-07-28] ingest | 新建 area「软件工程」
-    - 位置：20-AREAS/软件工程.md
-    - 父页面：无（顶层 Area）
-    - 更新：wiki-index（Areas 条目已存在，内容充实）
+		- 位置：20-AREAS/软件工程.md
+		- 父页面：无（顶层 Area）
+		- 更新：wiki-index（Areas 条目已存在，内容充实）
 - [2026-07-28] ingest | 新建 term「工厂模式」
-    - 位置：40-RESOURCES/工厂模式.md
-    - 父页面：[[设计模式]]
-    - 更新：wiki-index（Terms > 设计模式 新增条目）
+		- 位置：40-RESOURCES/工厂模式.md
+		- 父页面：[[设计模式]]
+		- 更新：wiki-index（Terms > 设计模式 新增条目）
 - [2026-07-28] ingest | 新建 term「建造者模式」
-    - 位置：40-RESOURCES/建造者模式.md
-    - 父页面：[[设计模式]]
-    - 更新：wiki-index（Terms > 设计模式 新增条目）
+		- 位置：40-RESOURCES/建造者模式.md
+		- 父页面：[[设计模式]]
+		- 更新：wiki-index（Terms > 设计模式 新增条目）
 - [2026-07-28] ingest | 新建 term「装饰器模式」
-    - 位置：40-RESOURCES/装饰器模式.md
-    - 父页面：[[设计模式]]
-    - 更新：wiki-index（Terms > 设计模式 新增条目）
+		- 位置：40-RESOURCES/装饰器模式.md
+		- 父页面：[[设计模式]]
+		- 更新：wiki-index（Terms > 设计模式 新增条目）
 - [2026-07-28] ingest | 新建 term「组合模式」
-    - 位置：40-RESOURCES/组合模式.md
-    - 父页面：[[设计模式]]
-    - 更新：wiki-index（Terms > 设计模式 新增条目）
+		- 位置：40-RESOURCES/组合模式.md
+		- 父页面：[[设计模式]]
+		- 更新：wiki-index（Terms > 设计模式 新增条目）
 - [2026-07-28] ingest | 新建 term「适配器模式」
-    - 位置：40-RESOURCES/适配器模式.md
-    - 父页面：[[设计模式]]
-    - 更新：wiki-index（Terms > 设计模式 新增条目）
+		- 位置：40-RESOURCES/适配器模式.md
+		- 父页面：[[设计模式]]
+		- 更新：wiki-index（Terms > 设计模式 新增条目）
 - [2026-07-28] ingest | 新建 term「策略模式」
-    - 位置：40-RESOURCES/策略模式.md
-    - 父页面：[[设计模式]]
-    - 更新：wiki-index（Terms > 设计模式 新增条目）
+		- 位置：40-RESOURCES/策略模式.md
+		- 父页面：[[设计模式]]
+		- 更新：wiki-index（Terms > 设计模式 新增条目）
 - [2026-07-28] ingest | 新建 concept「SOLID 原则」
-    - 位置：40-RESOURCES/SOLID 原则.md
-    - 父页面：[[软件工程]]
-    - 更新：wiki-index（Concepts > 软件工程 新增条目）
+		- 位置：40-RESOURCES/SOLID 原则.md
+		- 父页面：[[软件工程]]
+		- 更新：wiki-index（Concepts > 软件工程 新增条目）
 - [2026-07-28] ingest | 新建 concept「重构」
-    - 位置：40-RESOURCES/重构.md
-    - 父页面：[[软件工程]]
-    - 更新：wiki-index（Concepts > 软件工程 新增条目）
+		- 位置：40-RESOURCES/重构.md
+		- 父页面：[[软件工程]]
+		- 更新：wiki-index（Concepts > 软件工程 新增条目）
 - [2026-07-28] ingest | 新建 concept「面向对象编程」
-    - 位置：40-RESOURCES/面向对象编程.md
-    - 父页面：[[软件工程]]
-    - 更新：wiki-index（Concepts > 软件工程 新增条目）
+		- 位置：40-RESOURCES/面向对象编程.md
+		- 父页面：[[软件工程]]
+		- 更新：wiki-index（Concepts > 软件工程 新增条目）
 - [2026-07-28] update | 更新 concept「单例模式」(添加 up: 设计模式)
-    - 位置：40-RESOURCES/单例模式.md
-    - 变更：添加 up: ["[[设计模式]]"]
-    - 更新：wiki-index（Concepts > 软件工程 新增条目）
+		- 位置：40-RESOURCES/单例模式.md
+		- 变更：添加 up: ["[[设计模式]]"]
+		- 更新：wiki-index（Concepts > 软件工程 新增条目）
 - [2026-07-28] update | 更新 term「观察者模式」(修复 frontmatter, 添加 up: 设计模式)
-    - 位置：40-RESOURCES/观察者模式.md
-    - 变更：修复 tags 引号问题，添加 up: ["[[设计模式]]"]
-    - 更新：wiki-index（Terms > 设计模式 新增条目）
+		- 位置：40-RESOURCES/观察者模式.md
+		- 变更：修复 tags 引号问题，添加 up: ["[[设计模式]]"]
+		- 更新：wiki-index（Terms > 设计模式 新增条目）
 
 #### 2026-07-27
 
 - [2026-07-27] ingest | 新建 moc「软件工程」
-    - 位置：40-RESOURCES/软件工程.md
-    - 父页面：无（独立顶层 MOC）
+		- 位置：40-RESOURCES/软件工程.md
+		- 父页面：无（独立顶层 MOC）
 - [2026-07-27] ingest | 消化 Inbox 素材（3篇）
-  - 新建 [[ML求职面试指南]] — 从 ML Job Interviews The Ultimate Guide 提炼
-  - 更新 [[使用Claude Code进行大型代码迁移]] — 追加业务场景判断和最佳实践
-  - 更新 [[Vue3 混合文件夹结构]] — 追加核心原则和方案对比
+	- 新建 [[ML求职面试指南]] — 从 ML Job Interviews The Ultimate Guide 提炼
+	- 更新 [[使用Claude Code进行大型代码迁移]] — 追加业务场景判断和最佳实践
+	- 更新 [[Vue3 混合文件夹结构]] — 追加核心原则和方案对比
 
 #### 2026-07-25
 
 - [2026-07-25] refactor | Vue3 混合文件夹结构 concept → sop
-    - 位置：40-RESOURCES/Vue3 混合文件夹结构.md
-    - 变更：concept → sop，aliases: C- → SOP-
-    - 更新：Vue.md（关键领域 → SOP 章节）、wiki-index（Concepts → SOPs）
-    - 来源：_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/
-
+		- 位置：40-RESOURCES/Vue3 混合文件夹结构.md
+		- 变更：concept → sop，aliases: C- → SOP-
+		- 更新：Vue.md（关键领域 → SOP 章节）、wiki-index（Concepts → SOPs）
+		- 来源：_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/
 - [2026-07-25] ingest | 新建 concept「Vue3 混合文件夹结构」
-    - 位置：40-RESOURCES/Vue3 混合文件夹结构.md
-    - 父页面：[[Vue]]
-    - 来源：_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/
-    - 核心观点：根目录按技术职责划分，内部按业务领域分组，兼顾可维护性与可发现性
+		- 位置：40-RESOURCES/Vue3 混合文件夹结构.md
+		- 父页面：[[Vue]]
+		- 来源：_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/
+		- 核心观点：根目录按技术职责划分，内部按业务领域分组，兼顾可维护性与可发现性
 
 #### 2026-07-21
 
 - [2026-07-21] ingest | 新建 atomic「UI本质上是状态的函数」
-    - 位置：30-Zettelkasten/UI本质上是状态的函数.md
-    - 父页面：[[为什么社区更倾向函数组件]]
-    - 核心观点：UI 是状态到视图的映射函数 `UI = f(state)`，函数组件比 Class 组件更贴近这一模型
-
+		- 位置：30-Zettelkasten/UI本质上是状态的函数.md
+		- 父页面：[[为什么社区更倾向函数组件]]
+		- 核心观点：UI 是状态到视图的映射函数 `UI = f(state)`，函数组件比 Class 组件更贴近这一模型
 - [2026-07-21] ingest | 新建 question「为什么更倾向函数组件」
-    - 位置：40-RESOURCES/为什么更倾向函数组件.md
-    - 父页面：[[React面试题|MOC-React面试题]]
-    - 覆盖 4 个答案（认知负担、Hooks 优势、官方方向、TypeScript 契合）+ 探索路径与待验证点
+		- 位置：40-RESOURCES/为什么更倾向函数组件.md
+		- 父页面：[[React面试题|MOC-React面试题]]
+		- 覆盖 4 个答案（认知负担、Hooks 优势、官方方向、TypeScript 契合）+ 探索路径与待验证点
 
 #### 2026-07-20
 

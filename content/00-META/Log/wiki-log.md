@@ -23,6 +23,13 @@ up: ["[[本库指南]]"]
 
 ### 2026-07
 
+#### 2026-07-28
+
+- [2026-07-28] refactor | 设计模式 concept → term
+    - 位置：40-RESOURCES/设计模式.md
+    - 变更：concept → term，aliases: C-设计模式 → T-设计模式
+    - 更新：wiki-index（添加 Terms 条目）
+
 #### 2026-07-27
 
 - [2026-07-27] ingest | 新建 moc「软件工程」

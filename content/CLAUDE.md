@@ -21,7 +21,7 @@ See [[本库指南]] for:
 - Three-layer architecture: Raw sources → Wiki → Archive
 - Directory structure (00-META to 99-ASSETS)
 - content-type classification (atomic, concept, term, moc, sop, etc.)
-- Status lifecycle (fleeting → cultivating → active → completed → archived)  
+- Status lifecycle (fleeting → cultivating → active → completed → archived)
 - Naming conventions via aliases (P-, A-, Q-, MOC-, T-, C-, VS-)
 - Tag system (#父/子 format)
 

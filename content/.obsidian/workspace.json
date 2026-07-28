@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "40-RESOURCES/SOP-微前端路由分发模式.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "CLAUDE"
+              "title": "SOP-微前端路由分发模式"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "40-RESOURCES/SOP-微前端路由分发模式.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "CLAUDE 的关系图"
+              "title": "SOP-微前端路由分发模式 的关系图"
             }
           },
           {
@@ -280,11 +280,13 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "00-META/Index/wiki-index.md",
+    "index.md",
+    "CLAUDE.md",
     "CLAUDE.md.tmp.21416.f0e07abca25f",
     "CLAUDE.md.tmp.21416.15429bfd8825",
     "00-META/Architecture/llm-wiki-schema.md",
     "00-META/Architecture/本库子系统概述.md",
-    "00-META/Index/wiki-index.md",
     "00-META/Log/wiki-log.md",
     "40-RESOURCES/软件工程.md",
     "40-RESOURCES/SOLID 原则.md",
@@ -305,7 +307,6 @@
     "40-RESOURCES/组合模式.md",
     "40-RESOURCES/组合模式.md.tmp.21416.7e02ba1727a6",
     "40-RESOURCES/装饰器模式.md",
-    "40-RESOURCES/装饰器模式.md.tmp.21416.252684d32959",
     "40-RESOURCES/建造者模式.md",
     "40-RESOURCES/设计模式.md",
     "40-RESOURCES/观察者模式.md",
@@ -315,7 +316,6 @@
     "50-ARCHIVE/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure.md",
     "50-ARCHIVE/How Anthropic runs large-scale code migrations with Claude Code.md",
     "50-ARCHIVE/ML Job Interviews The Ultimate Guide.md",
-    "40-RESOURCES/ML求职面试指南.md",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/5922f21cbfa6306a1d1dd8b4b924631e_MD5.webp",

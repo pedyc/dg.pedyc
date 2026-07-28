@@ -5,7 +5,7 @@ aliases: [SOP-微前端路由分发模式]
 description: 使用路由分发方式实现微前端的标准流程
 tags: [前端工程/架构]
 date-created: 2026-04-13
-date-modified: 2026-04-13
+date-modified: 2026-07-28
 status: cultivating
 content-type: sop
 up: "[[微前端]]"
@@ -28,7 +28,7 @@ up: "[[微前端]]"
 ### 流程图解
 
 ```mermaid
-flowchart LR
+flowchart TB
     A[用户访问路径] --> B{主应用路由匹配}
     B -->|匹配 /app-a/*| C[加载 微应用 A]
     B -->|匹配 /app-b/*| D[加载 微应用 B]

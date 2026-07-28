@@ -25,6 +25,10 @@ up: ["[[本库指南]]"]
 
 #### 2026-07-28
 
+- [2026-07-28] refactor | 软件工程 moc → area
+    - 位置：20-AREAS/软件工程.md
+    - 变更：moc → area，aliases: MOC-软件工程 → A-软件工程
+    - 更新：wiki-index（MOCs → Areas）
 - [2026-07-28] refactor | 设计模式 concept → term
     - 位置：40-RESOURCES/设计模式.md
     - 变更：concept → term，aliases: C-设计模式 → T-设计模式

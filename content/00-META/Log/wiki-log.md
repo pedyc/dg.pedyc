@@ -29,6 +29,14 @@ up: ["[[本库指南]]"]
     - 位置：40-RESOURCES/设计模式.md
     - 变更：concept → term，aliases: C-设计模式 → T-设计模式
     - 更新：wiki-index（添加 Terms 条目）
+- [2026-07-28] refactor | 设计模式 term → moc
+    - 位置：40-RESOURCES/设计模式.md
+    - 变更：term → moc，aliases: T-设计模式 → MOC-设计模式，status: active → cultivating
+    - 更新：wiki-index（Terms → MOCs）
+- [2026-07-28] refactor | 设计模式 MOC 新增知识网络章节
+    - 位置：40-RESOURCES/设计模式.md
+    - 变更：新增知识网络章节，关联 软件工程/SOLID原则/重构/面向对象编程
+    - 更新：wiki-index（条目已存在，description 不变）
 
 #### 2026-07-27
 

@@ -41,6 +41,54 @@ up: ["[[本库指南]]"]
     - 位置：40-RESOURCES/设计模式.md
     - 变更：新增知识网络章节，关联 软件工程/SOLID原则/重构/面向对象编程
     - 更新：wiki-index（条目已存在，description 不变）
+- [2026-07-28] ingest | 新建 area「软件工程」
+    - 位置：20-AREAS/软件工程.md
+    - 父页面：无（顶层 Area）
+    - 更新：wiki-index（Areas 条目已存在，内容充实）
+- [2026-07-28] ingest | 新建 term「工厂模式」
+    - 位置：40-RESOURCES/工厂模式.md
+    - 父页面：[[设计模式]]
+    - 更新：wiki-index（Terms > 设计模式 新增条目）
+- [2026-07-28] ingest | 新建 term「建造者模式」
+    - 位置：40-RESOURCES/建造者模式.md
+    - 父页面：[[设计模式]]
+    - 更新：wiki-index（Terms > 设计模式 新增条目）
+- [2026-07-28] ingest | 新建 term「装饰器模式」
+    - 位置：40-RESOURCES/装饰器模式.md
+    - 父页面：[[设计模式]]
+    - 更新：wiki-index（Terms > 设计模式 新增条目）
+- [2026-07-28] ingest | 新建 term「组合模式」
+    - 位置：40-RESOURCES/组合模式.md
+    - 父页面：[[设计模式]]
+    - 更新：wiki-index（Terms > 设计模式 新增条目）
+- [2026-07-28] ingest | 新建 term「适配器模式」
+    - 位置：40-RESOURCES/适配器模式.md
+    - 父页面：[[设计模式]]
+    - 更新：wiki-index（Terms > 设计模式 新增条目）
+- [2026-07-28] ingest | 新建 term「策略模式」
+    - 位置：40-RESOURCES/策略模式.md
+    - 父页面：[[设计模式]]
+    - 更新：wiki-index（Terms > 设计模式 新增条目）
+- [2026-07-28] ingest | 新建 concept「SOLID 原则」
+    - 位置：40-RESOURCES/SOLID 原则.md
+    - 父页面：[[软件工程]]
+    - 更新：wiki-index（Concepts > 软件工程 新增条目）
+- [2026-07-28] ingest | 新建 concept「重构」
+    - 位置：40-RESOURCES/重构.md
+    - 父页面：[[软件工程]]
+    - 更新：wiki-index（Concepts > 软件工程 新增条目）
+- [2026-07-28] ingest | 新建 concept「面向对象编程」
+    - 位置：40-RESOURCES/面向对象编程.md
+    - 父页面：[[软件工程]]
+    - 更新：wiki-index（Concepts > 软件工程 新增条目）
+- [2026-07-28] update | 更新 concept「单例模式」(添加 up: 设计模式)
+    - 位置：40-RESOURCES/单例模式.md
+    - 变更：添加 up: ["[[设计模式]]"]
+    - 更新：wiki-index（Concepts > 软件工程 新增条目）
+- [2026-07-28] update | 更新 term「观察者模式」(修复 frontmatter, 添加 up: 设计模式)
+    - 位置：40-RESOURCES/观察者模式.md
+    - 变更：修复 tags 引号问题，添加 up: ["[[设计模式]]"]
+    - 更新：wiki-index（Terms > 设计模式 新增条目）
 
 #### 2026-07-27
 

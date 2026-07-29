@@ -5,7 +5,7 @@ aliases: [C-React, React.js, ReactJS]
 description: 用于构建用户界面的 JavaScript 库，采用组件化和 Virtual DOM
 tags: [前端开发/框架]
 date-created: 2025-05-21
-date-modified: 2026-07-15
+date-modified: 2026-07-28
 status: cultivating
 content-type: concept
 up: ["[[前端开发|前端]]"]

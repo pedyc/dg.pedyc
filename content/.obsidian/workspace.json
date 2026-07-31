@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/MOC-哲学与认知.md",
+                "file": "40-RESOURCES/精力成本.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "MOC-哲学与认知"
+              "title": "精力成本"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/MOC-哲学与认知.md",
+                "file": "40-RESOURCES/精力成本.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "MOC-哲学与认知 的关系图"
+              "title": "精力成本 的关系图"
             }
           },
           {
@@ -280,15 +280,27 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "20-AREAS/A-个人成长/健康管理.md",
+    "00-META/Index/wiki-index.md",
+    "40-RESOURCES/LLM.md",
+    "20-AREAS/A-个人成长/个人成长.md",
+    "00-META/wiki-sync-state.json.tmp.4820.070f7efb5c01",
+    "00-META/Log/wiki-log.md.tmp.4820.9a6345d5b498",
+    "00-META/Index/wiki-index.md.tmp.4820.7bd7a14a684e",
+    "00-META/Index/wiki-index.md.tmp.4820.3f021582c7e3",
+    "00-META/Index/wiki-index.md.tmp.4820.11af761925a5",
+    "00-META/Index/wiki-index.md.tmp.4820.79de86ede32d",
+    "20-AREAS/A-个人成长/个人成长.md.tmp.4820.bf28cd7305a8",
+    "20-AREAS/A-知识管理/知识管理.md.tmp.4820.12da316e01c2",
+    "40-RESOURCES/个人博客.md",
+    "40-RESOURCES/个人博客.md.tmp.4820.ad8d2e113709",
+    "00-META/Specification/_wiki-index-format.md",
+    "00-META/Index/wiki-index.md.tmp.4820.a9d9978b5ec1",
+    "00-META/Specification/_sync-rules.md",
+    "20-AREAS/A-求职/求职.md",
+    "40-RESOURCES/MOC-哲学与认知.md",
     "40-RESOURCES/哲学.md",
     "40-RESOURCES/尤雨溪.md",
-    "40-RESOURCES/MOC-哲学与认知.md",
-    "00-META/Index/本库领域索引.md.tmp.4820.4e1ddec7adca",
-    "20-AREAS/A-求职/求职.md",
-    "20-AREAS/A-求职",
-    "40-RESOURCES/知识组织.md.tmp.4820.e19b8875cda6",
-    "40-RESOURCES/Claude Code.md.tmp.4820.e78f09f3d8e4",
-    "20-AREAS/A-政治经济/政治经济.md.tmp.4820.82d6b009a895",
     "20-AREAS/A-前端/TypeScript.md",
     "20-AREAS/A-前端/JavaScript.md",
     "20-AREAS/A-前端/浏览器.md",
@@ -302,20 +314,8 @@
     "40-RESOURCES/知识获取.md",
     "50-ARCHIVE/Element.closet().md",
     "50-ARCHIVE/我对赢学的一些总结与思考@ds.md",
-    "40-RESOURCES/我对赢学的一些总结与思考.md.tmp.4820.81cf9b88781a",
-    "40-RESOURCES/我对赢学的一些总结与思考.md.tmp.4820.d17561b1b9fc",
     "50-ARCHIVE/前端监控与告警实践.md",
-    "40-RESOURCES/网络协议.md.tmp.4820.be66b199f0a9",
-    "40-RESOURCES/前端监控.md.tmp.4820.e7adacb8daa8",
-    "40-RESOURCES/知识组织概述.md.tmp.4820.8c0fbf2a2df3",
     "50-ARCHIVE/Web通信方式.md",
-    "50-ARCHIVE/广度优先搜索 (BFS).md",
-    "50-ARCHIVE/Web Storage API.md",
-    "50-ARCHIVE/类比思维（Metaphorical Thinking）.md",
-    "00-META/Index/wiki-index.md",
-    "40-RESOURCES/Vue.md",
-    "40-RESOURCES/Zsolt Viczian.md",
-    "40-RESOURCES/zsolt.blog.md",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/5922f21cbfa6306a1d1dd8b4b924631e_MD5.webp",

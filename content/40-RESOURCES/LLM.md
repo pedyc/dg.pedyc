@@ -5,7 +5,7 @@ aliases: [C-LLM, 大型语言模型]
 description: 基于 Transformer 架构的海量文本预训练模型，能够理解和生成人类语言
 tags: [concept, AI, LLM, NLP]
 date-created: 2025-04-25
-date-modified: 2026-06-30
+date-modified: 2026-07-31
 status: active
 content-type: concept
 related: ["[[Agent]]", "[[人工智能]]", "[[提示词工程]]"]

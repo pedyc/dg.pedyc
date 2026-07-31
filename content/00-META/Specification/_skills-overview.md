@@ -18,9 +18,9 @@ up: [["llm-wiki-schema"]]
 
 | 层 | Skill | 版本 | 职责 | 操作范围 |
 |---|---|---|---|---|
-| **创建层** | `obsidian-note-local` | v3.1.0 | 创建/更新笔记 + 挂载父页面 + 同步元数据 + 评估 + 核查 | 内容页 + 父页面 + 00-META |
+| **创建层** | `obsidian-note-local` | v3.3.0 | 创建/更新笔记 + 挂载父页面 + 同步元数据 + 评估 + 核查 | 内容页 + 父页面 + 00-META |
 | **元数据层** | `wiki-sync-local` | v3.0.0 | 维护 wiki-index、wiki-log、suggest-log、sync-state | 仅 `00-META/` |
-| | `content-evaluator-local` | v1.1.0 | 健康检查（lint），含 content-type 模板对比 | 全库只读 |
+| | `content-evaluator-local` | v1.2.0 | 健康检查（lint），含 content-type 模板对比 | 全库只读 |
 | | `content-verifier-local` | v1.1.0 | 内容质量核查，按模板章节对比 | 指定笔记 |
 | **内容层** | `llm-wiki-local` | v1.0.0 | ingest / query / lint / graph | 内容页 |
 | | `action-suggest` | v1.0.0 | 基于状态生成行动建议 | 全库只读 |

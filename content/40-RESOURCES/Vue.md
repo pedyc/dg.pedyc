@@ -5,7 +5,7 @@ aliases: [C-Vue, Vue.js, vue]
 description: 用于构建用户界面的渐进式 JavaScript 框架，专注于数据驱动和组件化
 tags: [前端开发/框架]
 date-created: 2025-05-29
-date-modified: 2026-06-19
+date-modified: 2026-07-31
 status: cultivating
 content-type: concept
 up: "[[A-前端]]"
@@ -103,3 +103,7 @@ mindmap
 - [[Q-Vapor Mode是什么]] — Vue 新的编译策略
 
 ---
+
+### 人物
+
+- [[尤雨溪]] — Vue.js 与 Vite 的创建者，渐进式框架理念的提出者

@@ -1,6 +1,6 @@
 ---
 name: content-evaluator-local
-version: 1.1.0
+version: 1.2.0
 description: |
   评估笔记在知识库中的健康度，对接 llm-wiki-schema.md 的 lint 工作流。
   支持按 content-type 对比模板结构完整性。
@@ -35,6 +35,7 @@ allowed-tools:
 | comparison | template_comp.md | 40-RESOURCES/ |
 | record | template_record.md | 40-RESOURCES/ |
 | roadmap | template_roadmap.md | 40-RESOURCES/ |
+| person | template_person.md | 40-RESOURCES/ |
 | area | template_area.md | 20-AREAS/ |
 | project | template_project.md | 10-PROJECTS/ |
 | article | template_article.md | 60-BLOGS/ |

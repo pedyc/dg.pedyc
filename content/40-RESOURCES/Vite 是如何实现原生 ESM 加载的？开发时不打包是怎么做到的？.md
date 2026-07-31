@@ -4,8 +4,8 @@ title: Vite 是如何实现原生 ESM 加载的？开发时不打包是怎么做
 aliases: []
 date-created: 2025-05-28
 date-modified: 2026-05-19
-status: fleeting | cultivating | active | completed | archive
-content-type: project | area | moc | sop | question | atomic | comparison | term | article
+status: cultivating
+content-type: [question]
 up: ["[[MOC-Vite相关问题]]"]
 ---
 

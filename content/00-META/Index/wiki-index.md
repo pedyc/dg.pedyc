@@ -4,7 +4,7 @@ title: wiki-index
 aliases: [wiki-index, wiki导航]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-07-28
+date-modified: 2026-07-31
 status: active
 content-type: [moc]
 up: "[[本库指南]]"
@@ -13,7 +13,7 @@ up: "[[本库指南]]"
 ## Wiki Index
 
 本文件是知识库的导航索引，由 LLM 维护。每个条目包含页面链接和一句话说明。
-**最后更新：2026-07-28** — 设计模式 term → moc 重分类
+**最后更新：2026-07-31** — 同步 person 索引（尤雨溪 / 李新野 / Andrej Karpathy / Zsolt Viczian）
 
 ---
 
@@ -97,6 +97,8 @@ up: "[[本库指南]]"
 - [[知识组织]] — 知识分类、标签系统、结构化
 - [[知识分享]] — 知识输出、写作、演讲
 - [[知识内化]] — 知识内化过程、深度学习
+	- [[Andrej Karpathy]] — 前特斯拉 AI 总监、OpenAI 创始成员，LLM Wiki 个人知识库方法论的提出者
+	- [[Zsolt Viczian]] — Obsidian Excalidraw 插件作者，Visual PKM YouTube 频道创始人，视觉化知识管理（Visual PKM）领域代表人物
 
 ### AI 与 Claude
 
@@ -108,6 +110,7 @@ up: "[[本库指南]]"
 
 - [[MOC-政治经济]] — 政治经济学的核心概念和理论
 - [[MOC-时政]] — 时政分析、事件追踪
+	- [[李新野]] — 清华姚班出身、转型 AI 量化交易的人物，因写作《人约》引发广泛争议
 
 ### 其他
 
@@ -359,6 +362,7 @@ n- [[Array.fromAsync() vs Promise.all()]] — 异步数组构造 vs 并发协调
 - [[Zoneless变更检测]] — Angular 从 v18 实验到 v19 稳定的无 Zone.js 变更检测新范式
 - [[React]] — 函数式 UI 库（组件化、Hooks、Virtual DOM）
 - [[Vue]] — 渐进式前端框架（响应式系统、组合式 API）
+	- [[尤雨溪]] — Vue.js 与 Vite 的创建者，渐进式前端框架理念的提出者，前端开源生态核心人物
 - [[CSS]] — 层叠样式表（布局系统、视觉特效、工程化）
 - [[ThreeJS]] — 3D 图形库（场景图、材质、光照、后处理）
 - [[Web安全]] — Web 安全知识体系（策略、攻击类型、防御原则）
@@ -401,4 +405,4 @@ n- [[Array.fromAsync() vs Promise.all()]] — 异步数组构造 vs 并发协调
 
 ---
 
-*Wiki Index 最后更新：2026-07-28 by LLM sync (term→moc)*
+*Wiki Index 最后更新：2026-07-31 by LLM sync (person：尤雨溪 / 李新野 / Andrej Karpathy / Zsolt Viczian)*

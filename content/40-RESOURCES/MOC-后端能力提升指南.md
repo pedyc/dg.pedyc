@@ -4,8 +4,8 @@ title: MOC-后端能力提升指南
 aliases: []
 date-created: 2026-03-13
 date-modified: 2026-03-15
-status: fleeting | cultivating | active | archive
-content-type: project | area | moc | sop | question | atomic | comparison | term
+status: cultivating
+content-type: [moc]
 up:
 ---
 

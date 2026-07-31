@@ -1,8 +1,13 @@
 ---
 title: Web通信
+aliases: [Web通信方式, C-Web通信方式]
+description: Web通信方式包括HTTP请求、跨域通信、实时通信等多种方式
+tags: [前端开发/网络]
 date-created: 2025-06-07
-date-modified: 2026-03-23
+date-modified: 2026-07-31
+status: active
 content-type: [concept]
+up: [[前端开发]]
 ---
 
 ## 定义
@@ -21,12 +26,15 @@ Web 通信是指 Web 应用程序与服务器、第三方服务或其他客户�
 	- [[Fetch API]]: 现代 Web API，用于发起 HTTP 请求。
 	- [[Axios]]: 基于 Promise 的 HTTP 客户端，支持更多高级特性。
 	- [[RESTful API]]: 一种设计风格，用于构建可扩展的网络服务。
+	- **XHR** (XMLHttpRequest): 一种古老的 HTTP 请求 API。
 - **持久连接**:
 	- [[WebSocket]]: 一种全双工通信协议，允许服务器主动向客户端推送数据。
 	- [[SSE]]（Server-Sent Events）: 一种单向通信协议，允许服务器向客户端推送数据。
+	- **HTTP/2 Server Push**: 服务器主动推送资源。
 - **跨域通信**:
 	- [[CORS]] (Cross-Origin Resource Sharing): 一种安全机制，允许跨域请求。
 	- [[JSONP]] (JSON with Padding): 一种古老的跨域解决方案，利用 `<script>` 标签的跨域特性。
+	- [[同源策略]]: 跨域限制的基础机制。
 - **客户端内通信**:
 	- [[postMessage]]: 允许不同源的窗口之间进行通信。
 	- [[Broadcast Channel API]]: 允许同一浏览器的不同窗口或标签页之间进行通信。
@@ -35,8 +43,6 @@ Web 通信是指 Web 应用程序与服务器、第三方服务或其他客户�
 - **服务端通信**:
 	- [[WebRTC]] (Web Real-Time Communication): 允许浏览器之间进行点对点通信。
 	- [[GraphQL]]: 一种查询语言，用于从服务器获取数据。
-
-> 参见：[[Web通信方式]]
 
 ## 应用
 
@@ -61,6 +67,7 @@ Web 通信是指 Web 应用程序与服务器、第三方服务或其他客户�
 - [[HTTP]]: 一种用于传输超文本的协议。
 - [[WebSocket]]: 一种全双工通信协议。
 - [[CORS]]: 一种安全机制，允许跨域请求。
+- [[同源策略]]: 浏览器安全的同源限制，是跨域通信的基础。
 
 ## 案例
 

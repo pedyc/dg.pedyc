@@ -1,11 +1,11 @@
 ---
 uid: 202603121028
 title: Claude Code
-aliases: [C-Claude Code, A-Claude Code]
+aliases: [C-Claude Code]
 description: Claude Code 代理编码工具的核心范畴、工作方式和最佳实践
 tags: [concept]
 date-created: 2026-03-03
-date-modified: 2026-07-17
+date-modified: 2026-07-31
 content-type: concept
 source: https://code.claude.com/docs/zh-CN/overview
 up: "[[人工智能|A-人工智能]]"

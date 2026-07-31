@@ -4,7 +4,7 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-07-28
+date-modified: 2026-07-31
 status: active
 content-type: [article]
 up: ["[[本库指南]]"]
@@ -22,6 +22,25 @@ up: ["[[本库指南]]"]
 ## 2026
 
 ### 2026-07
+
+#### 2026-07-31
+
+- [2026-07-31] refactor | 新增 content-type「person」并集成创建工作流
+	- 新建模板：`_templates/template_person.md`
+	- 注册规范：`_笔记类型规范.md` / `_content-type-rules.md` 新增 person 类型（R- 前缀与 record/roadmap 共享）
+	- 升级 skill：`obsidian-note-local` v3.1.0 → v3.2.0，`content-evaluator-local` v1.1.0 → v1.2.0
+- [2026-07-31] refactor | person 挂载规则改为 MOC 主挂载
+	- `_笔记类型规范.md` 内联规则与 `obsidian-note-local` 映射更新；skill v3.2.0 → v3.3.0
+- [2026-07-31] ingest | 新建 person「Andrej Karpathy」
+	- 位置：40-RESOURCES/Andrej Karpathy.md，父级：[[知识内化]]（MOC-知识内化）
+- [2026-07-31] ingest | 新建 person「李新野」
+	- 位置：40-RESOURCES/李新野.md，父级：[[MOC-时政]]
+- [2026-07-31] ingest | 新建 atomic「视觉思维能降低认知负荷」
+	- 位置：30-ZETTELKASTEN/视觉思维能降低认知负荷.md，父级：[[视觉思维]]
+- [2026-07-31] ingest | 新建 person「Zsolt Viczian」
+	- 位置：40-RESOURCES/Zsolt Viczian.md，父级：[[知识内化]]（MOC-知识内化）
+- [2026-07-31] ingest | 新建 person「尤雨溪」
+	- 位置：40-RESOURCES/尤雨溪.md，父级：[[Vue]]
 
 #### 2026-07-28
 

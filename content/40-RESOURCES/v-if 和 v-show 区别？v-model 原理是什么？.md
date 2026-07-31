@@ -1,11 +1,11 @@
 ---
-content-type: project | area | moc | sop | question | atomic | comparison | term | article
-title: "{{标题}}"
+content-type: [question]
+title: v-if 和 v-show 区别？v-model 原理是什么？
 date-created: 2025-05-30
 date-modified: 2025-05-30
 uid: 202603130110
 aliases:
-status: fleeting | cultivating | active | completed | archive
+status: cultivating
 up:
 ---
 

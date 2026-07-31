@@ -4,7 +4,7 @@ title: _content-type-rules
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-05-20
-date-modified: 2026-07-17
+date-modified: 2026-07-31
 status: active
 content-type: [article]
 up: [["Architecture/llm-wiki-schema"]]
@@ -29,6 +29,7 @@ up: [["Architecture/llm-wiki-schema"]]
 | question | 混合 | Q-xxx | 开放性问题 |
 | diary | `90-DIARY/` | 无 | 日记 |
 | roadmap | `40-RESOURCES/` | R-xxx | 线性演进路线图，版本迭代/技术发展时间线 |
+| person | `40-RESOURCES/` | R-xxx | 人物生平与思想记录 |
 
 ### 前缀规则
 
@@ -44,6 +45,7 @@ up: [["Architecture/llm-wiki-schema"]]
 | VS- | comparison | `VS-React vs Vue` |
 | R- | record | `R-俄乌冲突` |
 | R- | roadmap | `R-Angular-版本演进`（同 record 共享 R- 前缀，语义不冲突） |
+| R- | person | `R-爱因斯坦`（同 record/roadmap 共享 R- 前缀，语义不冲突） |
 
 子主题需加父级前缀（如 `C-React-Fiber`、`T-链表-虚拟头节点`）。
 

@@ -6,10 +6,11 @@ aliases:
   - MOC-神秘主义
 description: 研究人类通过直接体验与超验实在（神性、终极实在）建立联结的信仰体系与实践
 tags:
-  - area
+  - 神秘主义
 date-created: 2026-03-12
-date-modified: 2026-06-19
+date-modified: 2026-07-31
 status: cultivating
+content-type: moc
 related:
   - "[[A-宗教与神秘学]]"
   - "[[C-超验]]"

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "60-BLOGS/前端开发中的位运算技巧.md",
+                "file": "40-RESOURCES/MOC-哲学与认知.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端开发中的位运算技巧"
+              "title": "MOC-哲学与认知"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "60-BLOGS/前端开发中的位运算技巧.md",
+                "file": "40-RESOURCES/MOC-哲学与认知.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "前端开发中的位运算技巧 的关系图"
+              "title": "MOC-哲学与认知 的关系图"
             }
           },
           {
@@ -280,42 +280,42 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
-    "40-RESOURCES/状态管理.md",
-    "40-RESOURCES/React.md",
-    "40-RESOURCES/适配器模式.md",
-    "40-RESOURCES/设计模式.md",
-    "40-RESOURCES/装饰器模式.md",
-    "40-RESOURCES/SOP-微前端路由分发模式.md",
+    "40-RESOURCES/哲学.md",
+    "40-RESOURCES/尤雨溪.md",
+    "40-RESOURCES/MOC-哲学与认知.md",
+    "00-META/Index/本库领域索引.md.tmp.4820.4e1ddec7adca",
+    "20-AREAS/A-求职/求职.md",
+    "20-AREAS/A-求职",
+    "40-RESOURCES/知识组织.md.tmp.4820.e19b8875cda6",
+    "40-RESOURCES/Claude Code.md.tmp.4820.e78f09f3d8e4",
+    "20-AREAS/A-政治经济/政治经济.md.tmp.4820.82d6b009a895",
+    "20-AREAS/A-前端/TypeScript.md",
+    "20-AREAS/A-前端/JavaScript.md",
+    "20-AREAS/A-前端/浏览器.md",
+    "40-RESOURCES/Claude Code.md",
+    "40-RESOURCES/MOC-神秘主义.md",
+    "40-RESOURCES/MOC-时政.md",
+    "40-RESOURCES/经过验证的高信噪比信源.md",
+    "40-RESOURCES/知识内化.md",
+    "40-RESOURCES/知识分享.md",
+    "40-RESOURCES/知识组织.md",
+    "40-RESOURCES/知识获取.md",
+    "50-ARCHIVE/Element.closet().md",
+    "50-ARCHIVE/我对赢学的一些总结与思考@ds.md",
+    "40-RESOURCES/我对赢学的一些总结与思考.md.tmp.4820.81cf9b88781a",
+    "40-RESOURCES/我对赢学的一些总结与思考.md.tmp.4820.d17561b1b9fc",
+    "50-ARCHIVE/前端监控与告警实践.md",
+    "40-RESOURCES/网络协议.md.tmp.4820.be66b199f0a9",
+    "40-RESOURCES/前端监控.md.tmp.4820.e7adacb8daa8",
+    "40-RESOURCES/知识组织概述.md.tmp.4820.8c0fbf2a2df3",
+    "50-ARCHIVE/Web通信方式.md",
+    "50-ARCHIVE/广度优先搜索 (BFS).md",
+    "50-ARCHIVE/Web Storage API.md",
+    "50-ARCHIVE/类比思维（Metaphorical Thinking）.md",
     "00-META/Index/wiki-index.md",
-    "index.md",
-    "CLAUDE.md",
-    "CLAUDE.md.tmp.21416.f0e07abca25f",
-    "CLAUDE.md.tmp.21416.15429bfd8825",
-    "00-META/Architecture/llm-wiki-schema.md",
-    "00-META/Architecture/本库子系统概述.md",
-    "00-META/Log/wiki-log.md",
-    "40-RESOURCES/软件工程.md",
-    "40-RESOURCES/SOLID 原则.md",
-    "40-RESOURCES/软件工程三大基石.md",
-    "40-RESOURCES/重构.md",
-    "40-RESOURCES/软件工程.md.tmp.21416.cc20fdf581c9",
-    "40-RESOURCES/软件工程.md.tmp.21416.2f1b40aee471",
-    "40-RESOURCES/软件工程三大基石.md.tmp.21416.7d3b7f3634b9",
-    "40-RESOURCES/软件工程.md.tmp.21416.531c4a3d498e",
-    "40-RESOURCES/软件工程.md.tmp.21416.97f0d4fdf7bf",
-    "00-META/wiki-sync-state.json.tmp.21416.7cbff01f1bce",
-    "20-AREAS/软件工程.md",
-    "20-AREAS/软件工程.md.tmp.21416.af22bb5f4e6f",
-    "40-RESOURCES/工厂模式.md",
-    "40-RESOURCES/面向对象编程.md",
-    "40-RESOURCES/策略模式.md",
-    "40-RESOURCES/组合模式.md",
-    "40-RESOURCES/组合模式.md.tmp.21416.7e02ba1727a6",
-    "40-RESOURCES/建造者模式.md",
-    "40-RESOURCES/观察者模式.md",
-    "40-RESOURCES/单例模式.md",
-    "00-META/Specification/_ingest-rules.md",
-    "40-RESOURCES/使用Claude Code进行大型代码迁移.md",
+    "40-RESOURCES/Vue.md",
+    "40-RESOURCES/Zsolt Viczian.md",
+    "40-RESOURCES/zsolt.blog.md",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/5922f21cbfa6306a1d1dd8b4b924631e_MD5.webp",

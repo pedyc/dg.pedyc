@@ -2,7 +2,7 @@
 title: SOP-从问题到图形的决策路径
 tags: [sop, visualization, thinking-model]
 date-created: 2025-12-18
-date-modified: 2026-03-21
+date-modified: 2026-07-31
 content-type: sop
 type: sop
 up: "[[视觉思维]]"

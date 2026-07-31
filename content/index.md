@@ -7,7 +7,7 @@ description:
 tags: []
 date-created: 2024-08-23
 date-modified: 2026-07-28
-content-type: [MOC]
+content-type: [moc]
 ---
 
 <img src="./banner.svg" alt="banner" style="width: 100%" />

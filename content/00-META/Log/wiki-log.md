@@ -25,6 +25,11 @@ up: ["[[本库指南]]"]
 
 #### 2026-07-31
 
+- [2026-07-31] refactor | 收敛空壳领域：个人博客 area→MOC，个人成长重新定义
+	- 个人博客（area→moc）：`20-AREAS/A-个人成长/个人博客.md` → `40-RESOURCES/个人博客.md`，挂 [[知识管理]]；写作选题/流程收敛为 MOC，发布工作流留待探索
+	- 个人成长：重新定义核心范畴（认知提升/习惯养成/自我管理），移除"个人品牌"（让给博客 MOC），迁移至新 area 模板
+	- 健康管理：保留 area 并标注「待培育（2026-07）」
+	- wiki-index：Areas 14→13，MOCs 45→46
 - [2026-07-31] refactor | 全量重建 wiki-index（按 _wiki-index-format 规范）
 	- 重排 9 区顺序（Areas→MOCs→Concepts→Terms→SOPs→Comparisons→Questions→Records→Meta），修正 Areas 子区嵌套错误
 	- 修正计数（MOC 45 / Concepts 36 / Terms 70 / SOPs 41 / Comparisons 11 / Questions 2 / Records 3）

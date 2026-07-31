@@ -22,6 +22,7 @@ up: "[[Guide/本库指南]]"
 > - [[Specification/_query-rules]] — query 工作流
 > - [[Specification/_lint-rules]] — lint 工作流 + 健康检查
 > - [[Specification/_sync-rules]] — sync 工作流
+> - [[Specification/_wiki-index-format]] — wiki-index 索引格式规范
 
 ---
 

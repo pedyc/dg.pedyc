@@ -1,9 +1,10 @@
 ---
 name: wiki-sync-local
-version: 3.0.0
+version: 3.1.0
 description: |
   维护系统元数据层：更新 wiki-index、记录 wiki-log、同步 wiki-sync-state。
   **职责边界：只碰 00-META/ 下的系统文件。不碰内容页（20-AREAS/ / 30-Zettelkasten/ / 40-RESOURCES/ / 60-BLOGS/）。**
+  **wiki-index 格式一律遵守 [[_wiki-index-format]] 规范（分区顺序/条目格式/缩进/计数/更新标记）。**
 **维护清单**：wiki-index.md、wiki-log.md、wiki-sync-state.json、**suggest-log.md**
   手动触发：创建/删除笔记后补充 wiki-index 和 wiki-log。
   自动触发：会话启动时检测 git 变更，同步状态文件。
@@ -25,6 +26,8 @@ allowed-tools:
 - 用户删除笔记后，从 wiki-index 移除条目并记录 wiki-log
 - 会话启动时自动检测 git 变更并更新状态
 
+> **格式约束**：wiki-index 的更新必须遵守 `00-META/Specification/_wiki-index-format.md`（单一可信源）。本 skill 只定义同步流程，格式细节以该规范为准。
+
 ## 模式一：手动触发（由 obsidian-note-local 或用户调用）
 
 在笔记创建/删除后调用，只处理元数据层（index + log + state），不修改笔记内容。
@@ -40,7 +43,7 @@ allowed-tools:
 
 ### 2. 更新 wiki-index
 
-读取 `00-META/Index/wiki-index.md`，按操作类型处理：
+按 `_wiki-index-format.md` 规范处理。读取 `00-META/Index/wiki-index.md`，按操作类型处理：
 
 **create**：
 - 根据 content-type 和 up 字段找到对应分类

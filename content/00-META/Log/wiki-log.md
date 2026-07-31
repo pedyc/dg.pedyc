@@ -25,6 +25,14 @@ up: ["[[本库指南]]"]
 
 #### 2026-07-31
 
+- [2026-07-31] refactor | 全量重建 wiki-index（按 _wiki-index-format 规范）
+	- 重排 9 区顺序（Areas→MOCs→Concepts→Terms→SOPs→Comparisons→Questions→Records→Meta），修正 Areas 子区嵌套错误
+	- 修正计数（MOC 45 / Concepts 36 / Terms 70 / SOPs 41 / Comparisons 11 / Questions 2 / Records 3）
+	- 补入 12 个缺失 MOC、移除 2 个悬空链接（Claude核心概念 / MOC-动画效果SOP）、修正 1 处错误链接目标
+	- 移除内联别名标注，子条目统一 1-tab 缩进，仅保留头部更新标记
+- [2026-07-31] refactor | 起草 wiki-index 索引格式规范 `_wiki-index-format.md`
+	- 新建规范：`00-META/Specification/_wiki-index-format.md`，定义分区顺序 / 条目格式 / 排序 / 计数 / 更新标记
+	- 接入引用：`llm-wiki-schema` 详细规则列表、wiki-index Meta 分区
 - [2026-07-31] refactor | 新增 content-type「person」并集成创建工作流
 	- 新建模板：`_templates/template_person.md`
 	- 注册规范：`_笔记类型规范.md` / `_content-type-rules.md` 新增 person 类型（R- 前缀与 record/roadmap 共享）
@@ -41,6 +49,20 @@ up: ["[[本库指南]]"]
 	- 位置：40-RESOURCES/Zsolt Viczian.md，父级：[[知识内化]]（MOC-知识内化）
 - [2026-07-31] ingest | 新建 person「尤雨溪」
 	- 位置：40-RESOURCES/尤雨溪.md，父级：[[Vue]]
+- [2026-07-31] refactor | 全库去重与 content-type 规范修复
+	- 合并归档 7 组重复/残桩笔记至 50-ARCHIVE（类比思维、广度优先搜索、Web存储、Web通信、前端监控、赢学@ds、Element.closet）
+	- 判定 知识组织概述/原则/方法、网络协议+网络协议相关问题 为互补保留
+	- 修复 14 个 content-type 违规（大写 MOC / mco / method / tool / 模板残留 → 规范类型）
+- [2026-07-31] refactor | 领域/角色边界归位（严格按 content-type）
+	- 迁出至 40-RESOURCES：知识获取/组织/分享/内化、经过验证的高信噪比信源、MOC-时政、MOC-神秘主义、Claude Code
+	- 迁入 A-前端：浏览器、JavaScript、TypeScript（area 类型）
+	- 修双前缀别名（知识内化/政治经济/Claude Code）、补迁出 MOC 的 up、修悬空 up（人工智能）
+- [2026-07-31] ingest | 新建 area「求职」+ moc「哲学与认知」
+	- 位置：20-AREAS/A-求职/求职.md（收拢面试题库/算法/职业规划 MOC 集群）
+	- 位置：40-RESOURCES/MOC-哲学与认知.md（存在论/认识论/思维方法论/认知心理学/哲学人物）
+- [2026-07-31] refactor | 重建 wiki-index
+	- 头部计数对齐真实状态（Areas 14 / MOCs 45 / SOPs 70 / Terms 119 / Comparisons 15 / Records 3）
+	- 删内部重复条目、悬空 [[MOC-政治经济]]、笔误；补 A-求职 / MOC-哲学与认知 / 前端子领域
 
 #### 2026-07-28
 

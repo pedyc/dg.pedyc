@@ -19,7 +19,7 @@ up: [["llm-wiki-schema"]]
 | 层 | Skill | 版本 | 职责 | 操作范围 |
 |---|---|---|---|---|
 | **创建层** | `obsidian-note-local` | v3.3.0 | 创建/更新笔记 + 挂载父页面 + 同步元数据 + 评估 + 核查 | 内容页 + 父页面 + 00-META |
-| **元数据层** | `wiki-sync-local` | v3.0.0 | 维护 wiki-index、wiki-log、suggest-log、sync-state | 仅 `00-META/` |
+| **元数据层** | `wiki-sync-local` | v3.1.0 | 维护 wiki-index、wiki-log、suggest-log、sync-state（wiki-index 格式遵守 `_wiki-index-format`） | 仅 `00-META/` |
 | | `content-evaluator-local` | v1.2.0 | 健康检查（lint），含 content-type 模板对比 | 全库只读 |
 | | `content-verifier-local` | v1.1.0 | 内容质量核查，按模板章节对比 | 指定笔记 |
 | **内容层** | `llm-wiki-local` | v1.0.0 | ingest / query / lint / graph | 内容页 |
@@ -161,3 +161,4 @@ obsidian-note-local → 创建 + 挂父页面 + 同步 + 评估 + 核查（一�
 - `_content-type-rules.md` — 同上（兼容入口，已合并）
 - `_query-rules.md` — query 工作流
 - `_sync-rules.md` — sync 工作流
+- `_wiki-index-format.md` — wiki-index 索引格式规范

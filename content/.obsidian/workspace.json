@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/状态管理.md",
+                "file": "60-BLOGS/前端开发中的位运算技巧.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "状态管理"
+              "title": "前端开发中的位运算技巧"
             }
           }
         ]
@@ -71,7 +71,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/状态管理.md",
+                "file": "60-BLOGS/前端开发中的位运算技巧.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +99,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "状态管理 的关系图"
+              "title": "前端开发中的位运算技巧 的关系图"
             }
           },
           {
@@ -280,6 +280,7 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "40-RESOURCES/状态管理.md",
     "40-RESOURCES/React.md",
     "40-RESOURCES/适配器模式.md",
     "40-RESOURCES/设计模式.md",
@@ -315,7 +316,6 @@
     "40-RESOURCES/单例模式.md",
     "00-META/Specification/_ingest-rules.md",
     "40-RESOURCES/使用Claude Code进行大型代码迁移.md",
-    "50-ARCHIVE/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure.md",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/5922f21cbfa6306a1d1dd8b4b924631e_MD5.webp",

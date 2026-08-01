@@ -35,16 +35,13 @@
             "id": "928b06c3598d100c",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.13.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.13.4"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -293,12 +290,23 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "928b06c3598d100c",
+  "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "50-ARCHIVE/vueSourceCodeStudy04.md",
+    "40-RESOURCES/软件工程.md.tmp.16808.64c3285bf4a5",
+    "40-RESOURCES/Vue.md.tmp.16808.673ac1edeae4",
+    "40-RESOURCES/算法与数据结构.md.tmp.16808.e8de4ff87716",
+    "_tmp_mapping.json",
+    "40-RESOURCES/构建分析与优化（Vite）.md",
+    "60-BLOGS/Agent与Harness.md",
+    "00-META/Index/wiki-index.md",
+    "40-RESOURCES/MOC-前端面试真题库.md",
+    "10-PROJECTS/P-求职前端岗位/_resources",
+    "10-PROJECTS/P-求职前端岗位/P-前端能力提升专项.md",
+    "10-PROJECTS/PROJECTS.canvas",
     "40-RESOURCES/Harness.md",
     "40-RESOURCES/精力成本.md",
     "20-AREAS/A-个人成长/健康管理.md",
-    "00-META/Index/wiki-index.md",
     "40-RESOURCES/LLM.md",
     "20-AREAS/A-个人成长/个人成长.md",
     "00-META/wiki-sync-state.json.tmp.4820.070f7efb5c01",
@@ -306,13 +314,8 @@
     "00-META/Index/wiki-index.md.tmp.4820.7bd7a14a684e",
     "00-META/Index/wiki-index.md.tmp.4820.3f021582c7e3",
     "00-META/Index/wiki-index.md.tmp.4820.11af761925a5",
-    "00-META/Index/wiki-index.md.tmp.4820.79de86ede32d",
-    "20-AREAS/A-个人成长/个人成长.md.tmp.4820.bf28cd7305a8",
-    "20-AREAS/A-知识管理/知识管理.md.tmp.4820.12da316e01c2",
     "40-RESOURCES/个人博客.md",
-    "40-RESOURCES/个人博客.md.tmp.4820.ad8d2e113709",
     "00-META/Specification/_wiki-index-format.md",
-    "00-META/Index/wiki-index.md.tmp.4820.a9d9978b5ec1",
     "00-META/Specification/_sync-rules.md",
     "20-AREAS/A-求职/求职.md",
     "40-RESOURCES/MOC-哲学与认知.md",
@@ -326,11 +329,6 @@
     "40-RESOURCES/MOC-时政.md",
     "40-RESOURCES/经过验证的高信噪比信源.md",
     "40-RESOURCES/知识内化.md",
-    "40-RESOURCES/知识分享.md",
-    "40-RESOURCES/知识组织.md",
-    "40-RESOURCES/知识获取.md",
-    "50-ARCHIVE/Element.closet().md",
-    "50-ARCHIVE/我对赢学的一些总结与思考@ds.md",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/5922f21cbfa6306a1d1dd8b4b924631e_MD5.webp",
@@ -341,7 +339,6 @@
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/5ee6f2bb75d4431cb42431d667cd7485_MD5.jpg",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/d00a3025b2dc47406804b24b56d3e61f_MD5.jpg",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/addc4f0dadb8cce47f9ce9e1cd22d22d_MD5.jpg",
-    "10-PROJECTS/PROJECTS.canvas",
     "未命名.canvas",
     "Untitled.canvas",
     "//Untitled.canvas",

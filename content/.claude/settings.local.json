@@ -19,7 +19,8 @@
       "Skill(llm-wiki-local)",
       "Bash(awk '/\t\t- \\\\[\\\\[Error.isError\\\\]\\\\]/ && !found {print \"\\\\t\\\\t- [[Error.isError]] — ES2026 错误判断方法\"; print \"\\\\t\\\\t- [[Math.sumPrecise]] — ES2026 精确求和\"; print \"\\\\t\\\\t- [[Map.getOrInsert]] — ES2026 Map upsert\"; print \"\\\\t\\\\t- [[Iterator.concat]] — ES2026 迭代器串联\"; print \"\\\\t\\\\t- [[JSON.rawJSON]] — ES2026 JSON 源文本访问\"; found=1; next} 1' 40-RESOURCES/ES2026.md)",
       "Bash(mv /tmp/es2026_fixed.md 40-RESOURCES/ES2026.md)",
-      "Skill(wiki-sync-local)"
+      "Skill(wiki-sync-local)",
+      "Bash(python *)"
     ]
   }
 }

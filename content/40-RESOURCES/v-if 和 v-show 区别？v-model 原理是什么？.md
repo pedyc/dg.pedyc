@@ -6,7 +6,7 @@ date-modified: 2025-05-30
 uid: 202603130110
 aliases:
 status: cultivating
-up:
+up: "[[Vue]]"
 ---
 
 <!--

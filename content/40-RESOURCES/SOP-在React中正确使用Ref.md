@@ -8,7 +8,7 @@ date-created: 2026-04-29
 date-modified: 2026-04-29
 status: active
 content-type: sop
-up: ["[[Refs(React)|React Refs]]"]
+up: "[[Refs(React)]]"
 ---
 
 > 在 React 中正确使用 Ref 的标准操作流程

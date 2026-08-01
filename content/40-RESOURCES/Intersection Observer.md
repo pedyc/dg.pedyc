@@ -8,6 +8,7 @@ tags: [前端开发, API, 性能优化]
 date-created: 2025-05-18
 date-modified: 2026-05-09
 content-type: term
+up: "[[Web API]]"
 keywords: [Intersection Observer, 懒加载, 可视区域]
 para: Resource
 related: ["[[DOM]]", "[[性能优化]]"]

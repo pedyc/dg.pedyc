@@ -1,5 +1,6 @@
 ---
 content-type: concept
+up: "[[政治经济]]"
 title: 协作（Collaboration）
 date-created: 2025-05-13
 date-modified: 2025-05-13

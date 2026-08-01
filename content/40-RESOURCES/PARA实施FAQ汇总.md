@@ -1,5 +1,6 @@
 ---
 content-type: concept
+up: "[[PARA笔记法]]"
 title: PARA实施FAQ汇总
 date-created: 2025-04-23
 date-modified: 2025-12-16

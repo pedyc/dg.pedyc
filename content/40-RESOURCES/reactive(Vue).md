@@ -8,6 +8,7 @@ date-created: 2026-03-17
 date-modified: 2026-03-17
 status: fleeting
 content-type: term
+up: "[[Vue]]"
 ---
 
 ## 术语：reactive

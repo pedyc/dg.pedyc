@@ -5,6 +5,7 @@ tags: [政治经济, 社会学, 权力, 不平等]
 date-created: 2025-04-25
 date-modified: 2025-05-13
 content-type: term
+up: "[[政治经济]]"
 keywords: [阶级, 阶级斗争, 生产资料, 剥削]
 para: resource
 related: [社会分层, 收入分配, 权力结构]

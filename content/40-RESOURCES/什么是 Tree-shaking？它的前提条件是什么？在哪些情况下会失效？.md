@@ -3,6 +3,7 @@ title: 什么是 Tree-shaking？它的前提条件是什么？在哪些情况下
 date-created: 2025-05-28
 date-modified: 2026-05-18
 content-type: question
+up: "[[MOC-Webpack相关问题]]"
 ---
 
 - 什么是 [[Tree Shaking]]?

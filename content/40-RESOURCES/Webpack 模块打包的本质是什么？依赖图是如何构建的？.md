@@ -6,7 +6,7 @@ date-created: 2026-05-18
 date-modified: 2026-05-18
 status: cultivating
 content-type: question
-up: ["[[MOC-Webpack相关问题]]"]
+up: "[[MOC-Webpack相关问题]]"
 ---
 
 ## 问题：Webpack 模块打包的本质是什么？依赖图是如何构建的？

@@ -8,6 +8,7 @@ date-created: 2025-02-22
 date-modified: 2026-03-12
 status: cultivating
 content-type: concept
+up: "[[PARA笔记法]]"
 ---
 
 > [!success] 核心

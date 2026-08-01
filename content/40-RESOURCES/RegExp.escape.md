@@ -6,7 +6,7 @@ description: "ES2025 新增的正则转义方法，安全地将字面量字符�
 tags: ["#JavaScript/API", "#ECMAScript/ES2025"]
 status: fleeting
 content-type: term
-up: [[ES2025]]
+up: "[[ES2025]]"
 ---
 
 ## 术语：RegExp.escape

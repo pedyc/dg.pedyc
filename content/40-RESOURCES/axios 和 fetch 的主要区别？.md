@@ -1,5 +1,6 @@
 ---
 content-type: question
+up: "[[网络协议相关问题]]"
 title: axios 和 fetch 的主要区别？
 date-created: 2025-05-28
 date-modified: 2025-05-28

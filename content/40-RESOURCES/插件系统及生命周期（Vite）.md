@@ -1,5 +1,6 @@
 ---
 content-type: concept
+up: "[[MOC-Vite相关问题]]"
 title: 插件系统及生命周期（Vite）
 date-created: 2025-05-29
 date-modified: 2025-12-25

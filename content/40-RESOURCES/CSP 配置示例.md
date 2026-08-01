@@ -1,5 +1,6 @@
 ---
 content-type: concept
+up: "[[CSP]]"
 title: CSP 配置示例
 date-created: 2025-05-23
 date-modified: 2025-05-23

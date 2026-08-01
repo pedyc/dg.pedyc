@@ -3,6 +3,7 @@ title: Webpack 和 Vite 的核心构建理念有什么不同？为什么 Vite �
 date-created: 2025-05-28
 date-modified: 2026-05-21
 content-type: question
+up: "[[MOC-Webpack相关问题]]"
 ---
 
 Webpack 的核心是==构建模块依赖图并一次性打包输出静态资源==，构建流程包括 loader、plugin、多阶段优化，适合大型项目。

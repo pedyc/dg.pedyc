@@ -8,7 +8,7 @@ date-created: 2026-07-31
 date-modified: 2026-07-31
 status: cultivating
 content-type: moc
-up:
+up: "[[个人成长]]"
 ---
 
 ## MOC：哲学与认知

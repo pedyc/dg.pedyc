@@ -3,6 +3,7 @@ title: 环境变量（Vite）
 date-created: 2025-05-29
 date-modified: 2026-03-19
 content-type: concept
+up: "[[MOC-Vite相关问题]]"
 ---
 
 Vite 支持使用 `.env` 文件来管理不同模式下的环境变量。

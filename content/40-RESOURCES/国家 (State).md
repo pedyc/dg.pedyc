@@ -1,5 +1,6 @@
 ---
 content-type: concept
+up: "[[政治经济]]"
 title: 国家 (State)
 description: 对“国家”这一核心政治和社会概念的定义、要素、起源、形式及功能的探讨。
 tags: [政治学, 社会学, 国际关系, 术语, 概念]

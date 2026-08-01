@@ -8,6 +8,7 @@ date-created: 2026-03-12
 date-modified: 2026-03-12
 status: fleeting
 content-type: term
+up: "[[常用工具]]"
 ---
 
 ## 📖 术语：AutoHotKey

@@ -1,5 +1,6 @@
 ---
 content-type: concept
+up: "[[政治经济]]"
 title: 意识形态 (Ideology)
 description: 意识形态是特定社会群体或阶级所持有的信念、价值观和思想体系，它塑造了人们对世界的认知，并为政治行动提供合法性。
 tags: [政治, 社会, 思想, 权力, 文化]

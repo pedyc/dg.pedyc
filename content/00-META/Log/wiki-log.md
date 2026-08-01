@@ -4,7 +4,7 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-07-31
+date-modified: 2026-08-01
 status: active
 content-type: [article]
 up: ["[[本库指南]]"]
@@ -254,6 +254,17 @@ up: ["[[本库指南]]"]
 - [2026-07-12] ingest | 更新 term「ES2025」补充正确特性
 	- 新增：Duplicate Named Capturing Groups、Set 方法、Pattern Modifiers、Import Attributes、Promise.try、Float16Array、RegExp.escape
 	- 更新：特性表格
+
+### 2026-08
+
+#### 2026-08-01
+
+- [2026-08-01] refactor | 孤儿笔记修复：126 个孤儿接入父级（双向链接）
+	- 检测：40-RESOURCES 与 20-AREAS 中无内容入链的页面，共 126 个孤儿、143 个弱连接
+	- 孤儿侧：为 123 个孤儿补充 `up` 字段指向父级（3 个跳过：已挂载/无父级）
+	- 父级侧：为 33 个父级页面补充反向引用（MOC/area/concept 的对应章节）
+	- 顺带修正死链：网络协议 Q- 前缀错链 ×3、Tailwind CSS→TailwindCSS、类型守卫大小写、SOP-在React中正确使用Ref 空格差异
+	- 结果：126 个孤儿全部获得入链，孤儿数为 0
 
 ### 2026-06
 

@@ -1,5 +1,6 @@
 ---
 content-type: concept
+up: "[[PARA笔记法]]"
 title: 以需求推动的PARA笔记法
 date-created: 2025-12-12
 date-modified: 2025-12-12

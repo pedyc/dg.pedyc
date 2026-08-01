@@ -8,7 +8,7 @@ date-created: 2026-07-12
 date-modified: 2026-07-12
 status: fleeting
 content-type: term
-up: [[ES2025]]
+up: "[[ES2025]]"
 ---
 
 ## 术语：Set 原型方法

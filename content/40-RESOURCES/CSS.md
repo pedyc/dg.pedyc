@@ -47,13 +47,14 @@ up: "[[A-前端]]"
 	- [[层叠上下文]] — z-index 层级
 	- [[BFC]] — 块级格式化上下文
 	- [[CSS选择器]] — 权重与 specificity
+	- [[T-will-change]] — will-change 优化合成层提升性能
 - **布局系统**
 	- [[Flexbox]] — 一维布局
 	- [[CSS Grid]] — 二维布局
 	- [[CSS定位]] — Position 定位
 - **工程化**
 	- [[Sass]] — CSS 预处理器
-	- [[Tailwind CSS]] — 原子化 CSS
+	- [[TailwindCSS]] — 原子化 CSS
 	- [[CSS Modules]] — 模块化方案
 
 ---

@@ -8,6 +8,7 @@ date-created: 2026-05-12
 date-modified: 2026-05-12
 status: cultivating
 content-type: moc
+up: "[[前端性能优化]]"
 ---
 
 ## MOC：前端缓存方案
@@ -52,6 +53,7 @@ content-type: moc
 
 - [[前端性能优化]] — 缓存策略的终极目标
 - [[SOP-调试JavaScript内存泄漏]] — 缓存导致的内存问题排查
+- [[内容缓存示例]] — 具体场景的缓存配置示例
 
 ---
 

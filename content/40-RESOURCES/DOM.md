@@ -87,6 +87,7 @@ document
 - **下位概念**：
 	- [[DOM API]] — 操作 DOM 的 JavaScript 接口
 	- [[Virtual DOM]] — DOM 的虚拟映射，React/Vue 的实现技术
+	- [[Range API]] — 操作文档范围的 API
 - **并列概念**：
 	- [[BOM]] — 浏览器对象模型，操作用于 window/navigator/location
 	- [[CSSOM]] — CSS 对象模型，样式计算的树结构

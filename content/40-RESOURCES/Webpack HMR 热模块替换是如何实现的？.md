@@ -6,7 +6,7 @@ date-created: 2026-05-18
 date-modified: 2026-05-18
 status: cultivating
 content-type: question
-up: ["[[MOC-Webpack相关问题]]"]
+up: "[[MOC-Webpack相关问题]]"
 ---
 
 ## 问题：Webpack HMR 热模块替换是如何实现的？

@@ -1,5 +1,6 @@
 ---
 content-type: concept
+up: "[[提示词工程]]"
 title: Google提示词读书笔记
 date-created: 2025-08-28
 date-modified: 2025-08-28

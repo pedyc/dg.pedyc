@@ -6,7 +6,7 @@ description: "ES2025 新增的 Promise 静态方法，将任意函数包装为�
 tags: ["#JavaScript/API", "#ECMAScript/ES2025"]
 status: fleeting
 content-type: term
-up: [[ES2025]]
+up: "[[ES2025]]"
 ---
 
 ## 术语：Promise.try

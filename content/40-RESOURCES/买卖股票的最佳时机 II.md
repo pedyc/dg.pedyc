@@ -1,5 +1,6 @@
 ---
 content-type: concept
+up: "[[算法与数据结构]]"
 title: 买卖股票的最佳时机 II
 tags: [数组]
 date-created: 2025-04-04

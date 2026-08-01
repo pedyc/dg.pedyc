@@ -81,6 +81,8 @@ flowchart TB
 	- [[Web Animations API]]
 - **相关概念**：
 	- [[合成层]]
+	- [[T-帧动画]]
+	- [[动效排版]]
 
 ---
 

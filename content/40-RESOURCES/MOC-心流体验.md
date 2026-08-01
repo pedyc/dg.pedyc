@@ -7,6 +7,7 @@ date-created: 2025-04-26
 date-modified: 2026-06-12
 status: cultivating
 content-type: moc
+up: "[[个人成长]]"
 related: ["[[A-个人成长]]"]
 ---
 

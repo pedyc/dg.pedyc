@@ -1,5 +1,6 @@
 ---
 content-type: concept
+up: "[[PARA笔记法]]"
 title: PARA笔记转化工作流
 tags:
   - 知识管理/PARA

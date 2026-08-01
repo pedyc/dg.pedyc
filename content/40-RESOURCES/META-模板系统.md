@@ -3,6 +3,7 @@ uid: 202603160216
 title: META-模板系统
 date-created: 2026-03-15
 date-modified: 2026-03-28
+up: "[[知识管理]]"
 ---
 
 ## 模板评判标准

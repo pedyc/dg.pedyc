@@ -8,6 +8,7 @@ date-created: 2025-06-16
 date-modified: 2026-03-23
 status: completed
 content-type: question
+up: "[[MOC-浏览器兼容性问题]]"
 ---
 
 > 如何解决不同浏览器对 CSS 属性的支持差异？

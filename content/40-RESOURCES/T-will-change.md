@@ -5,6 +5,7 @@ description: "CSS 属性，用于提示浏览器提前优化指定元素的渲�
 tags:
   - CSS/性能
 content-type: term
+up: "[[CSS]]"
 status: active
 date-created: 2026-03-27
 date-modified: 2026-03-27

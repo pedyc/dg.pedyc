@@ -8,7 +8,7 @@ date-created: 2026-05-21
 date-modified: 2026-05-21
 status: cultivating
 content-type: question
-up: [["MOC-Vite相关问题"]]
+up: "[[MOC-Vite相关问题]]"
 ---
 
 ## 问题

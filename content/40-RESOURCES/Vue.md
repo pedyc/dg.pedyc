@@ -70,6 +70,7 @@ mindmap
 	- [[响应式原理(Vue3)]] — Vue 3 的 Proxy 响应式原理
 	- [[Vue3 ref 和 reactive 的区别]] — 两种响应式引用的区别与适用场景
 	- [[effect与reactive]] — 响应式系统分为 effect 和 reactive 两部分
+	- [[reactive(Vue)]] — Vue 3 的 reactive 响应式 API
 - **模板编译**
 	- [[模板编译(Vue3)]] — 模板到渲染函数的转换过程
 	- [[Vue编译器优化]] — 编译器的静态分析与优化
@@ -82,6 +83,8 @@ mindmap
 	- [[Pinia]] — 状态管理（独立领域）
 - **未来方向**
 	- [[Vapor Mode]] — Vue 新的编译策略
+- **生态系统**
+	- [[生态系统（Vue）]] — Vue 生态全景
 
 ---
 
@@ -99,6 +102,8 @@ mindmap
 > 该领域的常见问题
 
 - [[Vue 面试题]] — Vue 常见面试问题汇总
+- [[v-if 和 v-show 区别？v-model 原理是什么？]] — 指令条件渲染与双向绑定原理
+- [[在 Vue 组件中，模板是否必须有一个根节点包裹？Vue 2 和 Vue 3 在这方面有什么区别？]] — 模板根节点要求与 Vue 2/3 差异
 - [[Q-Vue编译器如何优化]] — Vue 编译器的优化原理
 - [[Q-Vapor Mode是什么]] — Vue 新的编译策略
 

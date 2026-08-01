@@ -1,5 +1,6 @@
 ---
 content-type: term
+up: "[[常用工具]]"
 uid: null
 title: nvim
 aliases: ["T-nvim", ]

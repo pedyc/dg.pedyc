@@ -24,6 +24,7 @@ _页面的骨架与窗口交互_
 - [[BOM]] — 浏览器对象模型，操作浏览器内置对象（window/location/history/navigator）
 - [[Shadow DOM]] — 组件隔离的 DOM 结构
 - [[IntersectionObserver]] — 懒加载、曝光埋点
+- [[Intersection Observer]] — 观察元素进入视口（懒加载/曝光埋点）
 - [[ResizeObserver]] — 监听元素尺寸变化
 - [[MutationObserver]] — 监听 DOM 变动
 
@@ -39,6 +40,7 @@ _数据的获取与实时交换_
 - [[WebSocket]] — 全双工实时通信
 - [[WebRTC]] — 点对点音视频传输
 - [[SSE]] — 服务端单向推送
+- [[Speculation Rules API]] — 预测性预取/预渲染
 
 ---
 

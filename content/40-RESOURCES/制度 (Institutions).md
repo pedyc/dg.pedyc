@@ -1,5 +1,6 @@
 ---
 content-type: concept
+up: "[[政治经济]]"
 title: 制度 (Institutions)
 description: 本笔记定义了制度的概念，并探讨了制度的类型、功能和重要性。
 tags: [制度, 社会科学, 规则, 组织]

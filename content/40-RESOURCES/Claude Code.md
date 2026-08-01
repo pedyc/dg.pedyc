@@ -127,6 +127,7 @@ Claude Code 的工作流程：
 	- [[CLAUDE.md]] — 项目级持久记忆配置
 	- [[Skills]] — 可复用的行为配置
 	- [[MCP]] — 外部服务集成协议
+	- [[Skills 最佳实践(Claude Code)]] — Skills 最佳实践指南
 - **并列概念**：
 	- [[GitHub Copilot]] — IDE 内联代码补全
 	- [[Claude API]] — 底层 API 接入方式

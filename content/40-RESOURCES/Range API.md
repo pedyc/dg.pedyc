@@ -5,6 +5,7 @@ tags: [前端开发, DOM]
 date-created: 2025-06-02
 date-modified: 2025-06-12
 content-type: concept
+up: "[[DOM]]"
 keywords: [Range, DOM API]
 para: AREA
 related: ["[[DOM]]"]

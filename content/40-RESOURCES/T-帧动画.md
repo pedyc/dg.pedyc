@@ -5,6 +5,7 @@ description: "利用人眼视觉残留特性，通过快速连续播放静态图
 tags:
   - 动画/前端
 content-type: term
+up: "[[CSS Animation]]"
 status: active
 date-created: 2026-03-27
 date-modified: 2026-03-27

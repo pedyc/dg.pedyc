@@ -1,5 +1,6 @@
 ---
 content-type: concept
+up: "[[JavaScript]]"
 title: JS引擎
 aliases: ["C-JS引擎", JavaScript Engine, JS Virtual Machine]
 tags: [领域/前端, 核心概念, 工具/运行时]

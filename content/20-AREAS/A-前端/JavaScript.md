@@ -70,10 +70,12 @@ mindmap
 	- [[事件循环]] — 单线程非阻塞的异步调度机制
 	- [[执行上下文]] — 代码执行时的运行环境
 	- [[V8 引擎]] — JavaScript 引擎的编译和执行过程
+	- [[JS引擎]] — JavaScript 引擎概述
 - **异步编程**
 	- [[Promise]] — 异步编程的基础抽象
 	- [[async-await|async/await]] — Promise 的语法糖
 	- [[柯里化]] — 函数式编程技巧
+	- [[Array.fromAsync() vs Promise.all()]] — 两种异步批处理方式对比
 - **版本演进**
 	- [[Javascript版本演进]]
 

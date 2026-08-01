@@ -54,6 +54,10 @@ Content-Security-Policy: script-src 'self'
 
 ---
 
+## 配置示例
+
+- [[CSP 配置示例]] — 各种场景下的 CSP 配置
+
 ## 知识图谱
 
 - **父级概念**：[[浏览器安全机制]] — CSP 是浏览器安全策略的一部分

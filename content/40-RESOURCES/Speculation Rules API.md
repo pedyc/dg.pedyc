@@ -8,6 +8,7 @@ date-created: 2026-05-12
 date-modified: 2026-05-12
 status: cultivating
 content-type: term
+up: "[[Web API]]"
 ---
 
 ## 术语：Speculation Rules API

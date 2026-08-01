@@ -5,7 +5,7 @@ aliases: ["C-RxJS"]
 description: "RxJS 是 JavaScript 的响应式编程库，通过 Observable 序列处理异步事件流"
 tags: [rxjs, reactive-programming, javascript]
 date-created: 2026-04-20
-date-modified: 2026-04-20
+date-modified: 2026-08-01
 status: cultivating
 content-type: concept
 ---
@@ -20,7 +20,7 @@ content-type: concept
 
 ### 核心命题
 
-> 核心命题引用 atomic 笔记（陈述句观点），每个命题是一句话洞见
+> 核心命题引用 atomic 笔记（陈述句观点），每个命题是一句话洞见 
 
 - [[RxJS中一切皆为流]]
 	- **原理**：在 RxJS 世界里，一切数据都是 Observable 序列，包括用户点击、HTTP 请求、定时器等

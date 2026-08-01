@@ -5,7 +5,7 @@ aliases: [响应式原理, C-响应式原理(Vue3)]
 description: Vue3 响应式系统的核心实现原理
 tags: [前端/Vue, 前端/原理]
 date-created: 2026-03-13
-date-modified: 2026-06-24
+date-modified: 2026-08-01
 status: cultivating
 content-type: concept
 up: "[[前端开发]]"

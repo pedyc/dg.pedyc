@@ -5,7 +5,7 @@ aliases: [T-Angular-Signal, Angular Signals]
 description: Angular 的响应式原始类型，自动追踪依赖的高性能状态管理方案
 tags: [前端/Angular]
 date-created: 2026-06-16
-date-modified: 2026-07-13
+date-modified: 2026-08-01
 status: cultivating
 content-type: term
 up: "[[Angular]]"

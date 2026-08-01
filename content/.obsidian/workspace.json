@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/精力成本.md",
+                "file": "60-BLOGS/Agent与Harness.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,23 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "精力成本"
+              "title": "Agent与Harness"
+            }
+          },
+          {
+            "id": "928b06c3598d100c",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.13.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.13.4"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -52,7 +65,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -71,7 +86,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/精力成本.md",
+                "file": "60-BLOGS/Agent与Harness.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -99,7 +114,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "精力成本 的关系图"
+              "title": "局部关系图谱"
             }
           },
           {
@@ -278,8 +293,10 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "04630d253fffab4e",
+  "active": "928b06c3598d100c",
   "lastOpenFiles": [
+    "40-RESOURCES/Harness.md",
+    "40-RESOURCES/精力成本.md",
     "20-AREAS/A-个人成长/健康管理.md",
     "00-META/Index/wiki-index.md",
     "40-RESOURCES/LLM.md",
@@ -314,8 +331,6 @@
     "40-RESOURCES/知识获取.md",
     "50-ARCHIVE/Element.closet().md",
     "50-ARCHIVE/我对赢学的一些总结与思考@ds.md",
-    "50-ARCHIVE/前端监控与告警实践.md",
-    "50-ARCHIVE/Web通信方式.md",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/5922f21cbfa6306a1d1dd8b4b924631e_MD5.webp",

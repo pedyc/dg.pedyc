@@ -1,13 +1,13 @@
 ---
 uid: 202603240009
-title: Vue编译器如何优化
+title: Q-Vue编译器如何优化
 aliases: [Q-Vue编译器如何优化]
 description: Vue 编译器的内部优化原理
 tags: [前端开发/Vue]
+date-created: 2026-03-24
+date-modified: 2026-08-02
 status: active
 content-type: question
-date-created: 2026-03-24
-date-modified: 2026-03-24
 ---
 
 > Vue 编译器如何优化？

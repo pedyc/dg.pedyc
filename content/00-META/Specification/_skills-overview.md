@@ -161,4 +161,5 @@ obsidian-note-local → 创建 + 挂父页面 + 同步 + 评估 + 核查（一�
 - `_content-type-rules.md` — 同上（兼容入口，已合并）
 - `_query-rules.md` — query 工作流
 - `_sync-rules.md` — sync 工作流
+- `_anki-sync-rules.md` — Anki 集成规则（卡片来源、格式、同步工作流）
 - `_wiki-index-format.md` — wiki-index 索引格式规范

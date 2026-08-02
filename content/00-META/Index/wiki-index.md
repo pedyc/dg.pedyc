@@ -4,7 +4,7 @@ title: wiki-index
 aliases: [wiki-index, wiki导航]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-07-31
+date-modified: 2026-08-02
 status: active
 content-type: [moc]
 up: "[[本库指南]]"
@@ -13,7 +13,7 @@ up: "[[本库指南]]"
 ## Wiki Index
 
 本文件是知识库的导航索引，由 LLM 维护。每个条目包含页面链接和一句话说明。
-**最后更新：2026-07-31** — 全量重建（按 _wiki-index-format 规范）+ 个人博客 area→MOC 收敛（Areas 13 / MOCs 46）
+**最后更新：2026-08-02** — 新增 concept「Vapor Mode」「Vue编译器优化」（Concepts 37→39）/ Meta 新增 _anki-sync-rules
 
 ---
 
@@ -147,7 +147,7 @@ up: "[[本库指南]]"
 
 ---
 
-## Concepts (概念) — 36 个
+## Concepts (概念) — 39 个
 
 ### 前端框架与工具
 
@@ -157,6 +157,9 @@ up: "[[本库指南]]"
 - [[React]] — 函数式 UI 库（组件化、Hooks、Virtual DOM）
 - [[Vue]] — 渐进式前端框架（响应式系统、组合式 API）
 	- [[尤雨溪]] — Vue.js 与 Vite 的创建者，渐进式前端框架理念的提出者，前端开源生态核心人物
+- [[Vue版本演进]] — Vue 各版本核心差异与演进路线
+- [[Vue编译器优化]] — Vue 编译器静态分析优化模板，减少运行时开销
+- [[Vapor Mode]] — Vue 无 Virtual DOM 编译策略，直接编译为命令式 DOM 操作
 - [[CSS]] — 层叠样式表（布局系统、视觉特效、工程化）
 - [[ThreeJS]] — 3D 图形库（场景图、材质、光照、后处理）
 - [[Web安全]] — Web 安全知识体系（策略、攻击类型、防御原则）
@@ -429,6 +432,7 @@ up: "[[本库指南]]"
 - [[_ingest-rules]] — ingest 工作流
 - [[_lint-rules]] — lint 工作流
 - [[_sync-rules]] — sync 工作流
+- [[_anki-sync-rules]] — Anki 集成规则（哪些笔记生成卡片、卡片格式、同步工作流）
 - [[_wiki-index-format]] — wiki-index 索引格式规范
 - [[_query-rules]] — query 工作流
 - [[_skills-overview]] — 所有 skill 的用途与分层总览

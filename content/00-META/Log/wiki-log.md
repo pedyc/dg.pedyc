@@ -4,7 +4,7 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-08-01
+date-modified: 2026-08-02
 status: active
 content-type: [article]
 up: ["[[本库指南]]"]
@@ -256,6 +256,24 @@ up: ["[[本库指南]]"]
 	- 更新：特性表格
 
 ### 2026-08
+
+#### 2026-08-02
+
+- [2026-08-02] ingest | 新增 roadmap「Vue版本演进」
+	- 位置：40-RESOURCES/Vue版本演进.md
+	- 父页面：[[Vue]]
+- [2026-08-02] ingest | 新增 concept「Vapor Mode」
+	- 位置：40-RESOURCES/Vapor Mode.md
+	- 父页面：[[Vue]]
+- [2026-08-02] ingest | 新增 concept「Vue编译器优化」
+	- 位置：40-RESOURCES/Vue编译器优化.md
+	- 父页面：[[Vue]]
+- [2026-08-02] refactor | Anki 集成子系统落地，新增 _anki-sync-rules
+	- 新建规范：00-META/Specification/_anki-sync-rules.md（content-type: article，Anki 集成规则）
+	- 接入引用：llm-wiki-schema（详细规则列表）、_skills-overview、本库子系统概述、wiki-index（Meta 分区）
+- [2026-08-02] refactor | _anki-sync-rules 补充 Deck 分类原则与前端面试示例
+	- 变更：新增「Deck 分类原则」（deck 是调度容器非知识索引，少量 deck + 主题子 deck，不复制 PARA/MOC 目录）、「实践示例：前端面试复习」（deck 结构 / 卡片优先级表 / 手写代码卡注意点）
+	- 引用：[[MOC-前端面试知识清单]]（70/20/10 精力分配）
 
 #### 2026-08-01
 

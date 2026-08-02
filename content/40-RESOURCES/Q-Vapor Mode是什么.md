@@ -5,7 +5,7 @@ aliases: [Q-Vapor Mode是什么]
 description: Vue 新的编译策略 Vapor Mode
 tags: [前端开发/Vue]
 date-created: 2026-03-24
-date-modified: 2026-05-23
+date-modified: 2026-08-02
 status: active
 content-type: question
 ---

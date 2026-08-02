@@ -4,7 +4,7 @@ title: Vue3 使用 Proxy 实现响应式
 description: Vue3 通过 Proxy 实现对对象操作的全面监听
 tags: [前端/Vue]
 date-created: 2026-03-17
-date-modified: 2026-03-16
+date-modified: 2026-08-02
 status: fleeting
 content-type: term
 ---
@@ -12,6 +12,9 @@ content-type: term
 ## Vue3 使用 Proxy 实现响应式
 
 > Proxy 可以监听对象的任何操作，包括新增属性、删除属性、数组索引变化
+
+> Vue3 为什么用 Proxy 实现响应式？ #card
+> Proxy 能监听对象的任何操作，包括新增属性、删除属性、数组索引变化（Object.defineProperty 需要提前递归劫持已有属性，无法感知新增/删除）。
 
 ### 论据 / 示例
 

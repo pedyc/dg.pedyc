@@ -5,7 +5,7 @@ aliases: [C-Harness]
 description: 用于围绕 AI Agent 构建工程化体系的框架和方法论
 tags: [concept, AI, Agent]
 date-created: 2026-04-01
-date-modified: 2026-07-17
+date-modified: 2026-08-02
 status: cultivating
 content-type: concept
 related: ["[[Agent]]", "[[Claude Code]]", "[[前端交互]]"]
@@ -91,7 +91,8 @@ flowchart LR
 
 #### SOP
 
-- [[SOP-使用Claude-Code开发React组件]]
+- [[SOP-使用Claude-Code开发React组件]] — React 组件开发
+- [[搭建Vue工程的Claude Code Harness]] — 以 Vue+TS 为例的 Harness 工程化落地
 
 #### FAQ
 

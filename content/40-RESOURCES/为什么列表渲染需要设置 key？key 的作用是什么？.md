@@ -5,7 +5,7 @@ aliases: [Q-列表渲染 key]
 description: "React 中列表渲染为什么需要 key？key 的作用是什么？"
 tags: [React, 列表渲染, 性能优化]
 date-created: 2026-05-17
-date-modified: 2026-05-17
+date-modified: 2026-08-02
 status: cultivating
 content-type: question
 up: "[[React面试题|MOC-React面试题]]"
@@ -60,6 +60,9 @@ React 通过 key 识别 " 这是同一个元素 "，而不是 " 这个位置上�
 | **身份标识** | 让 React 跨渲染轮次追踪每个列表项的唯一身份 |
 | **DOM 复用** | 减少不必要的 DOM 创建/销毁，降低重绘重排 |
 | **算法优化** | 使 Diff 算法在 O(n) 时间内完成列表对比 |
+
+> key 在列表渲染中有哪三大作用？ #card
+> 身份标识（跨渲染轮次追踪列表项唯一身份）、DOM 复用（减少创建/销毁）、让 Diff 算法在 O(n) 内完成列表对比。
 
 ### 原理补充
 

@@ -9,7 +9,7 @@ tags:
   - 前端
   - 框架对比
 date-created: 2026-05-22
-date-modified: 2026-05-22
+date-modified: 2026-08-02
 status: active
 comparison:
   - Vue
@@ -25,6 +25,9 @@ related:
 ### 一句话对比
 
 Vue 是一个 [^1] 渐进式响应式框架，通过响应式依赖追踪实现自动更新；React 是一个声明式组件化库，通过虚拟 DOM 和状态驱动 UI 更新。
+
+> Vue 和 React 的核心本质区别是什么？ #card
+> Vue：响应式依赖追踪 + 模板语法编译，修改即自动更新；React：状态驱动 + 虚拟 DOM，setState/useState 后触发重渲染。
 
 ---
 

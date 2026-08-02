@@ -4,7 +4,7 @@ title: This绑定
 aliases: [T-This绑定, this binding]
 tags: [前端/JavaScript]
 date-created: 2025-05-19
-date-modified: 2026-05-12
+date-modified: 2026-08-02
 status: active
 content-type: [term]
 up: "[[JavaScript]]"
@@ -26,6 +26,9 @@ up: "[[JavaScript]]"
 > - 不同调用方式创建不同的执行上下文，因此 this 不同
 > - 箭头函数没有自己的执行上下文，从外层普通函数继承
 > - 异步回调创建新的执行上下文，this 重新绑定
+
+> this 的值是在什么时候确定的？有哪几种绑定规则？ #card
+> 在调用时（创建执行上下文时）确定，而非定义时。规则：默认绑定（全局）、隐式绑定（对象方法）、显式绑定（call/apply/bind）、new 绑定；箭头函数没有自己的执行上下文，从外层作用域继承 this。
 
 **示例**：
 

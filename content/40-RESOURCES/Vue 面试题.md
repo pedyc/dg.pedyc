@@ -2,7 +2,7 @@
 title: Vue 面试题
 aliases: [MOC-Vue面试题]
 date-created: 2026-03-15
-date-modified: 2026-06-24
+date-modified: 2026-08-02
 content-type: [moc]
 up: ["[[MOC-前端面试真题库|前端面试题]]"]
 ---

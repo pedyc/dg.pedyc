@@ -120,7 +120,8 @@ Vue 3 的响应式基于 {{c1::Proxy}} 实现。
 ```js
 const unique = arr => [...new Set(arr)];
 ```
-```
+
+```bash
 
 ### 边界
 

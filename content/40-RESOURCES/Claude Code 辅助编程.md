@@ -4,7 +4,7 @@ title: Claude Code 辅助编程
 description: Claude Code 的安装配置和核心命令使用指南
 tags: [人工智能, 工具]
 date-created: 2025-08-26
-date-modified: 2026-03-25
+date-modified: 2026-08-02
 status: cultivating
 content-type: sop
 ---

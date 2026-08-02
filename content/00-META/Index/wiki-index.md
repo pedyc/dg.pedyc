@@ -13,7 +13,7 @@ up: "[[本库指南]]"
 ## Wiki Index
 
 本文件是知识库的导航索引，由 LLM 维护。每个条目包含页面链接和一句话说明。
-**最后更新：2026-08-02** — 新增 concept「Vapor Mode」「Vue编译器优化」（Concepts 37→39）/ Meta 新增 _anki-sync-rules
+**最后更新：2026-08-02** — 新增 MOC「前端工程化相关面试题」（MOCs 46→47）；新增 concept「Vapor Mode」「Vue编译器优化」（Concepts 37→39）/ Meta 新增 _anki-sync-rules；新增 SOP「搭建Vue工程的Claude Code Harness」（SOPs 41→42）
 
 ---
 
@@ -58,13 +58,14 @@ up: "[[本库指南]]"
 
 ---
 
-## MOCs (领域入口) — 46 个
+## MOCs (领域入口) — 47 个
 
 ### 前端工程
 
 - [[前端工程]] — MOC：工程化体系（构建、测试、CI/CD、监控）
 - [[软件工程]] — MOC：软件工程知识体系的总入口，涵盖项目结构设计、架构模式、代码质量、工程化工具链、设计模式等核心领域
 - [[前端能力提升指南]] — 前端能力提升知识索引
+- [[前端工程化相关面试题]] — 前端工程化相关面试题聚合索引（构建打包、架构选型、工程治理）
 - [[MOC-前端工程化工具]] — 工程化工具链、构建系统、开发和部署流程
 - [[MOC-前端构建与打包]] — 打包工具、模块化、代码分割
 - [[MOC-前端缓存方案]] — 缓存策略、CDN、离线存储
@@ -307,7 +308,7 @@ up: "[[本库指南]]"
 
 ---
 
-## SOPs (标准流程) — 41 个
+## SOPs (标准流程) — 42 个
 
 ### 开发流程
 
@@ -369,6 +370,7 @@ up: "[[本库指南]]"
 - [[SOP-使用Claude-Code开发React组件]] — Claude Code 开发 React 组件流程
 - [[SOP-使用Claude-Code自动化CI-CD流水线]] — Claude Code Headless 模式 CI/CD 集成
 - [[使用Claude Code进行大型代码迁移|SOP-使用Claude Code进行大型代码迁移]] — AI agent 驱动的跨语言/跨框架大型代码迁移标准流程
+- [[搭建Vue工程的Claude Code Harness|SOP-搭建Vue工程的ClaudeCode-Harness]] — 为 Vue 工程搭建 Agent Harness 的标准流程（知识/工具/契约/上下文权限/评估）
 
 ### 其他
 

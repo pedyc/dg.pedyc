@@ -8,7 +8,6 @@
   "obsidian-local-images-plus",
   "obsidian-minimal-settings",
   "quickadd",
-  "obsidian-to-anki-plugin",
   "simpread",
   "obsidian-style-settings",
   "obsidian-tasks-plugin",
@@ -17,5 +16,6 @@
   "obsidian-emoji-toolbar",
   "obsidian-git",
   "virtual-linker",
-  "omnisearch"
+  "omnisearch",
+  "obsidian-to-anki-plugin"
 ]

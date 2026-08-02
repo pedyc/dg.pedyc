@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/RxJS.md",
+                "file": "40-RESOURCES/闭包.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "RxJS"
+              "title": "闭包"
             }
           },
           {
@@ -83,7 +83,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/RxJS.md",
+                "file": "40-RESOURCES/闭包.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -292,6 +292,8 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "40-RESOURCES/防抖和节流.md",
+    "40-RESOURCES/RxJS.md",
     "40-RESOURCES/Signal(Angular).md",
     "40-RESOURCES/Angular.md",
     "40-RESOURCES/前端框架.md",
@@ -327,8 +329,6 @@
     "40-RESOURCES/哲学.md",
     "40-RESOURCES/尤雨溪.md",
     "20-AREAS/A-前端/TypeScript.md",
-    "20-AREAS/A-前端/JavaScript.md",
-    "20-AREAS/A-前端/浏览器.md",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/5922f21cbfa6306a1d1dd8b4b924631e_MD5.webp",

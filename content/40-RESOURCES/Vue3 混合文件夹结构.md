@@ -5,12 +5,12 @@ aliases: ["SOP-Vue3-混合文件夹结构", "Hybrid Folder Structure", "Vue Hybr
 description: "为 Vue 3 应用搭建混合文件夹结构：根目录按技术职责划分，内部按业务领域分组"
 tags: [前端开发/Vue, 前端开发/工程化]
 date-created: 2026-07-25
-date-modified: 2026-07-27
+date-modified: 2026-08-02
 status: cultivating
 content-type: sop
 up: "[[Vue]]"
 ---
-
+  
 ## SOP：搭建 Vue3 混合文件夹结构
 
 > 为中大型 Vue 3 应用搭建兼顾职责分离与领域聚合的项目结构

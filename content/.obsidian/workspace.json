@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/如何实现垂直居中？.md",
+                "file": "40-RESOURCES/Canvas实现无限滑动效果.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,17 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "如何实现垂直居中？"
-            }
-          },
-          {
-            "id": "928b06c3598d100c",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "title": "Canvas实现无限滑动效果"
             }
           }
         ]
@@ -83,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/如何实现垂直居中？.md",
+                "file": "40-RESOURCES/Canvas实现无限滑动效果.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -293,9 +283,14 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "40-RESOURCES/Canvas实现无限滑动效果.md",
+    "40-RESOURCES/前端交互.md",
+    "40-RESOURCES/Javascript版本演进.md",
+    "20-AREAS/A-前端/JavaScript.md",
+    "40-RESOURCES/ESModule.md",
+    "40-RESOURCES/如何实现垂直居中？.md",
     "40-RESOURCES/will-change.md",
     "40-RESOURCES/requestAnimationFrame.md",
-    "40-RESOURCES/前端交互.md",
     "40-RESOURCES/ASCII动画.md",
     "40-RESOURCES/SOP-在React中实现ASCII动画.md",
     "40-RESOURCES/Vue3 混合文件夹结构.md",
@@ -321,14 +316,9 @@
     "40-RESOURCES/跨域.md",
     "40-RESOURCES/闭包.md",
     "40-RESOURCES/HTTP~2.md.tmp.16464.35a6d1849b5f",
-    "40-RESOURCES/MOC-前端面试真题库.md",
     "40-RESOURCES/闭包.md.tmp.16464.3e812ce20c97",
-    "20-AREAS/A-求职/求职.md",
     "00-META/wiki-sync-state.json.tmp.16464.358e838144f4",
-    "00-META/Architecture/本库子系统概述.md",
     "00-META/wiki-sync-state.json.tmp.16464.6af95cca4fb0",
-    "40-RESOURCES/知识卡片制作原则.md",
-    "40-RESOURCES/Vapor Mode.md",
     "10-PROJECTS/PROJECTS.canvas",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",

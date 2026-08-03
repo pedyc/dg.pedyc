@@ -10,7 +10,7 @@ status: cultivating
 content-type: sop
 up: "[[Vue]]"
 ---
-  
+
 ## SOP：搭建 Vue3 混合文件夹结构
 
 > 为中大型 Vue 3 应用搭建兼顾职责分离与领域聚合的项目结构
@@ -37,8 +37,8 @@ up: "[[Vue]]"
 
 | 方案 | 核心逻辑 | 优势 | 劣势 |
 |:---|:---|:---|:---|
-| 纯按职责（responsibility-first） | `components/`、`services/`、`store/`... | 找某类文件非常直观 | 一个功能分散在多个目录 |
-| 纯按领域（feature-first） | `billing/`、`users/`、`products/`... | 一个功能的代码都在一处 | 跨领域通用代码难组织 |
+| 纯按职责（responsibility-first） | `components/`、`services/`、`store/`… | 找某类文件非常直观 | 一个功能分散在多个目录 |
+| 纯按领域（feature-first） | `billing/`、`users/`、`products/`… | 一个功能的代码都在一处 | 跨领域通用代码难组织 |
 | **混合（hybrid）** | 外层职责，内层领域 | 兼顾预测性与聚合性 | 需团队共识和纪律 |
 
 ### 流程图解

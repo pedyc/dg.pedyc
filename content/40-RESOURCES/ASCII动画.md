@@ -5,7 +5,7 @@ aliases: [C-ASCII动画, ASCII Animation]
 description: 使用 ASCII 字符在终端或浏览器中创建动画效果的技术
 tags: [concept, terminal, animation, cli]
 date-created: 2026-04-08
-date-modified: 2026-04-09
+date-modified: 2026-08-02
 status: cultivating
 content-type: concept
 related: ["[[终端工具]]", "[[动画原理]]"]

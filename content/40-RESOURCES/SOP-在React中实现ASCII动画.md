@@ -5,7 +5,7 @@ aliases: [SOP-在React中实现ASCII动画]
 description: 在 React 中实现终端风格 ASCII 动画的标准流程
 tags: [sop, React, ASCII, 动画, 前端]
 date-created: 2026-04-09
-date-modified: 2026-04-11
+date-modified: 2026-08-02
 status: cultivating
 content-type: sop
 up: "[[React]]"

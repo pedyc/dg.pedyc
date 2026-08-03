@@ -5,7 +5,7 @@ aliases: [T-requestAnimationFrame]
 description: "浏览器提供的用于动画的 API，在下一次重绘前调用回调"
 tags: [JavaScript/浏览器API]
 date-created: 2026-03-27
-date-modified: 2026-03-27
+date-modified: 2026-08-02
 status: active
 content-type: term
 ---

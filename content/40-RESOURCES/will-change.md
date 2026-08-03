@@ -5,7 +5,7 @@ aliases: [T-will-change]
 description: CSS 属性，用于告诉浏览器元素即将发生的变化，提前进行性能优化
 tags: [term, 前端, 性能优化]
 date-created: 2026-03-30
-date-modified: 2026-04-07
+date-modified: 2026-08-02
 status: active
 content-type: term
 ---

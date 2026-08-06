@@ -4,7 +4,7 @@ title: wiki-index
 aliases: [wiki-index, wiki导航]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-08-02
+date-modified: 2026-08-06
 status: active
 content-type: [moc]
 up: "[[本库指南]]"
@@ -13,7 +13,7 @@ up: "[[本库指南]]"
 ## Wiki Index
 
 本文件是知识库的导航索引，由 LLM 维护。每个条目包含页面链接和一句话说明。
-**最后更新：2026-08-02** — 新增 MOC「前端工程化相关面试题」（MOCs 46→47）；新增 concept「Vapor Mode」「Vue编译器优化」（Concepts 37→39）/ Meta 新增 _anki-sync-rules；新增 SOP「搭建Vue工程的Claude Code Harness」（SOPs 41→42）；动画效果示例 归位「前端交互」子级
+**最后更新：2026-08-06** — 新增 record「简历素材」（Records 3→4）
 
 ---
 
@@ -416,11 +416,12 @@ up: "[[本库指南]]"
 
 ---
 
-## Records (事件记录) — 3 个
+## Records (事件记录) — 4 个
 
 - [[俄乌冲突]] — 俄乌战争时间线、事件记录
 - [[美以袭击伊朗]] — 中东局势、重要事件
 - [[电影收藏]] — 电影收藏与观影记录
+- [[简历素材]] — 前端岗位简历信息素材：个人定位、技能清单、项目经历、AI 能力、技术写作
 
 ---
 

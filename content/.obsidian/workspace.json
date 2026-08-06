@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Canvas实现无限滑动效果.md",
+                "file": "40-RESOURCES/Canvas动画.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Canvas实现无限滑动效果"
+              "title": "Canvas动画"
             }
           }
         ]
@@ -73,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Canvas实现无限滑动效果.md",
+                "file": "40-RESOURCES/Canvas动画.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",

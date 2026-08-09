@@ -257,6 +257,13 @@ up: ["[[本库指南]]"]
 
 ### 2026-08
 
+#### 2026-08-09
+
+- [2026-08-09] ingest | 新增 concept「HTML in Canvas」
+	- 位置：40-RESOURCES/HTML in Canvas.md
+	- 父页面：[[前端开发]]
+	- 更新：wiki-index（Concepts > 前端框架与工具 新增条目）
+
 #### 2026-08-06
 
 - [2026-08-06] ingest | 新增 record「简历素材」

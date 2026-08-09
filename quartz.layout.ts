@@ -4,7 +4,7 @@ import { SimpleSlug } from "./quartz/util/path"
 
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
+  header: [Component.FloatingNav()],
   afterBody: [Component.RecentNotes()],
   footer: Component.Footer({
     links: {

@@ -2,10 +2,15 @@
   "compilerOptions": {
     "lib": ["esnext", "DOM", "DOM.Iterable"],
     "experimentalDecorators": true,
-    "baseUrl": ".",
     "module": "esnext",
     "target": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
+    "paths": {
+      "micromorph": ["./node_modules/micromorph/index.d.ts"],
+      "remark-parse/lib": ["./node_modules/remark-parse/lib/index.d.ts"],
+      "satori/wasm": ["./node_modules/satori/dist/index.d.ts"],
+      "preact/src/jsx": ["./node_modules/preact/src/jsx.d.ts"]
+    },
     "strict": true,
     "incremental": true,
     "resolveJsonModule": true,

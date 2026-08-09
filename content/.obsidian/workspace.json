@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Canvas动画.md",
+                "file": "40-RESOURCES/R-简历素材.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Canvas动画"
+              "title": "R-简历素材"
             }
           }
         ]
@@ -73,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Canvas动画.md",
+                "file": "40-RESOURCES/R-简历素材.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -283,6 +283,18 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "80-PRIVATE/我的简历.md",
+    "40-RESOURCES/R-简历素材.md",
+    "40-RESOURCES/R-简历素材.md.tmp.28356.7db1f9fb2d29",
+    "40-RESOURCES/R-简历素材.md.tmp.28356.7dc9d1e2b7a3",
+    "40-RESOURCES/R-简历素材.md.tmp.28356.01a984b4707e",
+    "40-RESOURCES/R-简历素材.md.tmp.28356.2573afdd4ea2",
+    "40-RESOURCES/Canvas动画.md",
+    "40-RESOURCES/R-简历素材.md.tmp.28356.2bb0bdf92d78",
+    "40-RESOURCES/R-简历素材.md.tmp.28356.734a7fd08921",
+    "00-META/wiki-sync-state.json.tmp.28356.18561d42c2c6",
+    "20-AREAS/A-求职/_resources",
+    "40-RESOURCES/R-简历素材.md.tmp.28356.ccab2af81c7b",
     "40-RESOURCES/Canvas实现无限滑动效果.md",
     "40-RESOURCES/前端交互.md",
     "40-RESOURCES/Javascript版本演进.md",
@@ -298,8 +310,6 @@
     "40-RESOURCES/搭建Vue工程的Claude Code Harness.md",
     "40-RESOURCES/Harness.md",
     "40-RESOURCES/Harness.md.tmp.16464.6482d11d543c",
-    "40-RESOURCES/Harness.md.tmp.16464.b7980dd7270c",
-    "40-RESOURCES/搭建Vue工程的Claude Code Harness.md.tmp.16464.10b54db010e0",
     "40-RESOURCES/Agent.md",
     "40-RESOURCES/智能体编排.md",
     "40-RESOURCES/Skills 最佳实践(Claude Code).md",
@@ -308,17 +318,6 @@
     "40-RESOURCES/前端工程.md",
     "40-RESOURCES/前端工程化相关面试题.md",
     "40-RESOURCES/Vue 面试题.md",
-    "40-RESOURCES/前端工程.md.tmp.16464.7b927123f7cf",
-    "40-RESOURCES/前端工程.md.tmp.16464.881107874864",
-    "40-RESOURCES/前端工程化相关面试题.md.tmp.16464.f805129a403b",
-    "40-RESOURCES/防抖和节流.md",
-    "00-META/Specification/_anki-sync-rules.md",
-    "40-RESOURCES/跨域.md",
-    "40-RESOURCES/闭包.md",
-    "40-RESOURCES/HTTP~2.md.tmp.16464.35a6d1849b5f",
-    "40-RESOURCES/闭包.md.tmp.16464.3e812ce20c97",
-    "00-META/wiki-sync-state.json.tmp.16464.358e838144f4",
-    "00-META/wiki-sync-state.json.tmp.16464.6af95cca4fb0",
     "10-PROJECTS/PROJECTS.canvas",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",

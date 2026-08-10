@@ -1,0 +1,38 @@
+{
+  "name": "floating-nav",
+  "version": "1.0.0",
+  "description": "Floating pill navigation bar for Quartz v5",
+  "type": "module",
+  "private": true,
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./components": "./dist/components.js",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "peerDependencies": {
+    "preact": "^10.0.0"
+  },
+  "dependencies": {
+    "@quartz-community/types": "^0.3.0",
+    "@quartz-community/utils": "^0.1.0"
+  },
+  "quartz": {
+    "name": "floating-nav",
+    "displayName": "Floating Nav",
+    "description": "Floating pill navigation bar with glassmorphism styling",
+    "version": "1.0.0",
+    "category": [
+      "component"
+    ],
+    "components": {
+      "FloatingNav": {
+        "displayName": "FloatingNav",
+        "description": "Floating pill navigation bar",
+        "defaultPosition": "header",
+        "defaultPriority": 10
+      }
+    }
+  }
+}

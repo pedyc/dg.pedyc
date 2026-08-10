@@ -1,0 +1,140 @@
+---
+uid: 202504270000
+title: Hooks(React)
+aliases: [C-Hooks, React Hooks]
+description: 'React 16.8 引入的函数组件状态逻辑复用机制，通过函数调用在函数组件中"钩入" React 状态和生命周期'
+tags: [前端开发/框架/React]
+date-created: 2025-09-09
+date-modified: 2026-06-16
+status: cultivating
+content-type: concept
+related: "[[React]]"
+---
+
+## 概念：React Hooks
+
+> React 16.8 引入的函数组件状态逻辑复用机制，通过函数调用在函数组件中 " 钩入 " React 状态和生命周期。
+
+**解决的核心痛点**：在 Hooks 之前，复用状态逻辑只能通过 Class 组件的 HOC 或 Render Props，导致组件嵌套地狱（Wrapper Hell）；Hooks 允许在函数组件中使用状态和其他 React 特性，无需编写 Class。
+
+---
+
+### 核心命题
+
+- **状态钩入**：`useState` 等 Hooks 让函数组件 " 记住 " 状态，类似 Class 组件的 `this.state`
+- **副作用管理**：`useEffect` 在渲染后执行副作用，替代 Class 的生命周期方法
+- **自定义逻辑复用**：自定义 Hooks（以 `use` 开头的函数）将可复用逻辑提取为独立函数
+- **渲染 Props 替代**：Hook 可以替代 Render Props 的逻辑共享模式，避免嵌套
+
+---
+
+### 运行机制
+
+```mermaid
+graph TD
+    A[函数组件首次渲染] --> B[按顺序调用Hooks]
+    B --> C{useState}
+    C --> D[初始化状态值]
+    D --> E[返回 state + setState]
+    E --> F{useEffect}
+    F --> G[设置副作用 cleanup 函数]
+    G --> H[组件更新]
+    H --> I{状态变化?}
+    I -->|是| J[重新渲染]
+    I -->|否| K[跳过更新]
+    J --> L[按顺序重新调用Hooks<br/>通过链表匹配]
+    K --> M[检查下一个Effect]
+    L --> M
+```
+
+#### Hooks 调用规则
+
+```mermaid
+graph LR
+    A[Hooks 只在顶层调用] --> B[不要在循环/条件/嵌套中调用]
+    B --> C[只在 React 函数中调用]
+    C --> D[组件顶层]
+    C --> E[自定义 Hook 顶层]
+```
+
+---
+
+### 关键 API
+
+| Hook                  | 用途          | 核心机制                                    |
+|:-------------------- |:---------- |:-------------------------------------- |
+| `useState`            | 状态管理        | 返回 `[state, setState]`，setState 支持函数式更新 |
+| `useEffect`           | 副作用         | 渲染后执行，返回 cleanup 函数用于清理                 |
+| `useCallback`         | 函数缓存        | 依赖不变时返回相同函数引用                           |
+| `useMemo`             | 值缓存         | 依赖不变时返回缓存的计算结果                          |
+| `useRef`              | 引用存储        | 变更不触发重新渲染，可存储可变值                        |
+| `useContext`          | 上下文读取       | 读取最近的 Context 值                         |
+| `useReducer`          | 复杂状态逻辑      | 基于 reducer 的状态管理                        |
+| `useLayoutEffect`     | 同步副作用       | DOM 更新后同步执行，类似 componentDidMount/Update |
+| `useImperativeHandle` | 暴露 DOM/实例方法 | 与 `forwardRef` 配合使用                     |
+
+---
+
+### 关键区别
+
+| 维度 | Class 组件 | 函数组件 + Hooks |
+|:---|:---|:---|
+| **状态管理** | `this.state` + `this.setState` | `useState` |
+| **副作用** | `componentDidMount` 等生命周期 | `useEffect` |
+| **逻辑复用** | HOC / Render Props | 自定义 Hooks |
+| **代码量** | 较多（需要 constructor、this 绑定） | 较少（函数式写法） |
+| **渲染触发** | 依赖 `shouldComponentUpdate` | 依赖 React.memo / useMemo |
+| **this 指向** | 需要 bind 或箭头函数 | 无 this 问题 |
+
+---
+
+### 应用场景
+
+- ✅ **适用场景**
+	- **状态管理**：组件内局部状态使用 `useState`，复杂状态使用 `useReducer`
+	- **副作用操作**：数据获取、订阅、手动 DOM 操作使用 `useEffect`
+	- **性能优化**：`useCallback` 缓存回调函数，`useMemo` 缓存计算结果
+	- **跨组件逻辑复用**：提取为自定义 Hooks
+- ⛔ **误用**
+	- **过度优化**：`useCallback`/`useMemo` 在简单组件中反而增加开销
+	- **滥用 useEffect**：用 useEffect 处理同步逻辑，或在 effect 中处理应属于渲染的逻辑
+	- **破坏 Hooks 调用规则**：在条件/循环中调用 Hooks 导致状态错乱
+
+---
+
+### SOP
+
+> Hooks 的标准操作流程，通过实践辅助理解
+
+- [[创建自定义Hooks]] — 如何创建可复用的自定义 Hooks
+- [[SOP-正确使用useEffect]] — useEffect 的正确使用模式和常见误区
+- [[React性能优化]] — 使用 useCallback、useMemo 进行性能优化
+
+---
+
+### FAQ
+
+> 关于 Hooks 的常见问题，待进一步探索
+
+- [[Q-Hooks 的依赖数组为空时和 componentDidMount 有什么区别？]]
+- [[Q-useCallback 和 useMemo 的性能优化原理是什么？]]
+- [[Q-自定义 Hooks 如何实现逻辑复用？]]
+- [[Q-Hooks 能否完全替代 Class 组件？]]
+- [[Q-为什么 useEffect 的 cleanup 函数需要返回函数？]]
+
+---
+
+### 知识图谱
+
+- **父级概念**：[[React]] — React 生态的核心特性
+- **演进关系**：[[React版本演进]] — Hooks 在 React 16.8 中引入
+- **相关概念**：
+	- [[Fiber]] — Hooks 依赖 Fiber 的链表结构实现
+	- [[虚拟DOM(React)]] — Hooks 操作的 state 影响 Virtual DOM 更新
+	- [[useState]] — 基础状态 Hook
+	- [[useReducer]]
+	- [[useEffect]] — 副作用 Hook
+	- [[useCallback]] — 回调缓存 Hook
+	- [[useMemo]] — 值缓存 Hook
+	- [[useTransition]] — React 18 并发模式 Hook
+	- [[useActionState]] — React 19 表单状态 Hook

@@ -1,5 +1,5 @@
 {
-  "name": "@jackyzha0/quartz",
+  "name": "dg",
   "description": "🌱 publish your digital garden and notes as a website",
   "private": true,
   "version": "5.0.0",
@@ -14,12 +14,21 @@
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
     "docs": "npx quartz build --serve -d docs",
+    "dev": "npx quartz build --serve -d content",
+    "server": "npx quartz build --serve -d content",
+    "build": "npx quartz build -d content",
+    "build:main": "npx quartz build -d content",
+    "subset-fonts": "node quartz/scripts/subset_fonts.js",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "install-plugins": "npx tsx ./quartz/plugins/loader/install-plugins.ts",
-    "prebuild": "npm run install-plugins"
+    "prebuild": "npm run build:custom && npm run install-plugins",
+    "type-check": "tsc --noEmit",
+    "memory:clean": "node scripts/memory-optimize.js clean",
+    "memory:monitor": "node scripts/memory-optimize.js monitor",
+    "build:custom": "node custom/build.mjs"
   },
   "engines": {
     "npm": ">=10.9.2",
@@ -54,7 +63,6 @@
     "@quartz-community/content-meta": "^0.1.0",
     "@quartz-community/content-page": "^0.1.0",
     "@quartz-community/crawl-links": "^0.1.0",
-    "@quartz-themes/core": "^1.0.0",
     "@quartz-community/created-modified-date": "^0.1.0",
     "@quartz-community/darkmode": "^0.1.0",
     "@quartz-community/description": "^0.1.0",
@@ -86,6 +94,7 @@
     "@quartz-community/tag-list": "^0.1.0",
     "@quartz-community/tag-page": "^0.1.0",
     "@quartz-community/unlisted-pages": "^0.1.0",
+    "@quartz-themes/core": "^1.0.0",
     "ansi-truncate": "^1.4.0",
     "async-mutex": "^0.5.0",
     "chokidar": "^5.0.0",
@@ -121,6 +130,7 @@
     "@quartz-community/types": "^0.3.0",
     "@quartz-community/utils": "^0.1.0",
     "@types/hast": "^3.0.4",
+    "@types/mdast": "^4.0.4",
     "@types/node": "^25.0.10",
     "@types/pretty-time": "^1.1.5",
     "@types/source-map-support": "^0.5.10",

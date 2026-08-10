@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "ctime": 1739327079148,
+      "path": "Follow/如何拥有一个无限制、可联网、带本地知识库.md"
+    },
+    {
+      "type": "group",
+      "ctime": 1774290527156,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1774235280317,
+          "path": "40-RESOURCES/MOC-浏览器兼容性问题.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1774290512653,
+          "path": "40-RESOURCES/Virtual DOM.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1776874086556,
+          "path": "40-RESOURCES/渲染进程.md"
+        }
+      ],
+      "title": "前端"
+    },
+    {
+      "type": "file",
+      "ctime": 1740245395831,
+      "path": "30-ZETTELKASTEN/_resources/提示词Prompt.png",
+      "title": "deepseek提示词指南"
+    },
+    {
+      "type": "file",
+      "ctime": 1779248522311,
+      "path": "50-ARCHIVE/LLM Wiki.md"
+    }
+  ]
+}

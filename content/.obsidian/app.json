@@ -1,0 +1,26 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "promptDelete": false,
+  "fileSortOrder": "alphabetical",
+  "vimMode": false,
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "showLineNumber": false,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "./_resources",
+  "newFileLocation": "current",
+  "showUnsupportedFiles": true,
+  "tabSize": 2,
+  "propertiesInDocument": "visible",
+  "uriCallbacks": true,
+  "userIgnoreFilters": [
+    "80-PRIVATE/",
+    "40-RESOURCES/SimpRead/",
+    "/CLAUDE/"
+  ]
+}

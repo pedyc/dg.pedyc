@@ -423,6 +423,30 @@ interface PluginInstallResult {
 }
 
 /**
+ * Marker file written inside copied local plugins (Windows symlink fallback)
+ * to record the source directory mtime at copy time.
+ */
+const COPY_STAMP_FILE = ".quartz-copied-stamp"
+
+/**
+ * Recursively remove a directory, retrying on transient Windows errors
+ * (EBUSY/ENOTEMPTY/EPERM) which fs.rmSync can hit when files are briefly locked.
+ */
+function removeDirRobust(dir: string): void {
+  const maxAttempts = 5
+  for (let attempt = 1; ; attempt++) {
+    try {
+      fs.rmSync(dir, { recursive: true, force: true })
+      return
+    } catch (err) {
+      if (attempt >= maxAttempts) throw err
+      // brief synchronous backoff before retrying
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 50)
+    }
+  }
+}
+
+/**
  * Install a plugin from a Git repository, or symlink a local plugin.
  * Returns the plugin directory and any native dependencies it requires.
  */
@@ -451,15 +475,32 @@ export async function installPlugin(
       } catch {
         // stat failed, recreate
       }
+
+      // Fork-local: if this is a copy we made earlier (Windows symlink fallback)
+      // and the source hasn't changed since, reuse it instead of re-copying.
+      try {
+        const stampPath = path.join(pluginDir, COPY_STAMP_FILE)
+        const stamp = Number(fs.readFileSync(stampPath, "utf-8"))
+        if (fs.statSync(spec.repo).mtimeMs <= stamp) {
+          if (options.verbose) {
+            console.log(styleText("cyan", `→`), `Plugin ${spec.name} copy is up to date`)
+          }
+          return { pluginDir, nativeDeps: collectNativeDeps(pluginDir) }
+        }
+      } catch {
+        // no stamp — recreate below
+      }
     }
 
-    // Clean up if force reinstall or existing non-symlink entry
+    // Clean up if force reinstall or existing non-symlink entry.
+    // fs.rmSync recursive can transiently fail on Windows (EBUSY/ENOTEMPTY),
+    // so retry a few times before giving up.
     if (fs.existsSync(pluginDir)) {
       const stat = fs.lstatSync(pluginDir)
       if (stat.isSymbolicLink()) {
         fs.unlinkSync(pluginDir)
       } else {
-        fs.rmSync(pluginDir, { recursive: true })
+        removeDirRobust(pluginDir)
       }
     }
 
@@ -473,7 +514,26 @@ export async function installPlugin(
       console.log(styleText("cyan", `→`), `Linking ${spec.name} from ${spec.repo}...`)
     }
 
-    fs.symlinkSync(spec.repo, pluginDir, "dir")
+    // Fork-local: on Windows without Developer Mode / admin privileges,
+    // fs.symlinkSync throws EPERM. Fall back to a directory copy so local
+    // plugins still load (they are small; the copy is cheap).
+    try {
+      fs.symlinkSync(spec.repo, pluginDir, "dir")
+    } catch (err) {
+      const code = (err as NodeJS.ErrnoException).code
+      if (code !== "EPERM" && code !== "EACCES") {
+        throw err
+      }
+      fs.cpSync(spec.repo, pluginDir, { recursive: true })
+      // Stamp the copy so subsequent runs can reuse it when the source is unchanged.
+      fs.writeFileSync(
+        path.join(pluginDir, COPY_STAMP_FILE),
+        String(fs.statSync(spec.repo).mtimeMs),
+      )
+      if (options.verbose) {
+        console.log(styleText("yellow", `↯`), `Symlink not permitted; copied ${spec.name} instead`)
+      }
+    }
 
     if (options.verbose) {
       console.log(styleText("green", `✓`), `Linked ${spec.name}`)

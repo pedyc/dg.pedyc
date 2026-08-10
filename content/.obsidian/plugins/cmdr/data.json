@@ -1,0 +1,88 @@
+{
+  "confirmDeletion": false,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [
+    {
+      "id": "graph:open",
+      "icon": "lucide-git-fork",
+      "name": "关系图谱: 查看关系图谱",
+      "mode": "any"
+    }
+  ],
+  "fileMenu": [],
+  "leftRibbon": [
+    {
+      "id": "workspace:toggle-stacked-tabs",
+      "icon": "lucide-layers",
+      "name": "堆叠/取消堆叠标签页",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [
+    {
+      "id": "workspace:copy-url",
+      "icon": "lucide-copy",
+      "name": "复制 Obsidian URI",
+      "mode": "any"
+    },
+    {
+      "id": "app:toggle-ribbon",
+      "icon": "lucide-arrow-left-right",
+      "name": "显示/隐藏功能区",
+      "mode": "any"
+    }
+  ],
+  "pageHeader": [
+    {
+      "id": "open-with-default-app:show",
+      "icon": "lucide-app-window",
+      "name": "在系统资源管理器中显示",
+      "mode": "any"
+    },
+    {
+      "id": "file-explorer:reveal-active-file",
+      "icon": "lucide-arrow-up-right-from-square",
+      "name": "文件列表: 在文件列表中显示当前文件",
+      "mode": "any",
+      "color": "#22d889"
+    },
+    {
+      "id": "obsidian-minimal-settings:toggle-minimal-switch",
+      "icon": "lucide-sun",
+      "name": "Minimal Theme Settings: Switch between light and dark mode",
+      "mode": "any"
+    },
+    {
+      "id": "bookmarks:bookmark-current-view",
+      "icon": "lucide-bookmark-plus",
+      "name": "书签: 收藏",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-emoji-toolbar:emoji-picker:open-picker",
+      "icon": "lucide-aperture",
+      "name": "Emoji Toolbar: Open emoji picker",
+      "mode": "any"
+    }
+  ],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

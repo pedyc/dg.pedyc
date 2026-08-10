@@ -29,6 +29,55 @@ interface RenderComponents {
   frame?: string
 }
 
+// Decorative dappled-light background, rendered as a sibling of #quartz-root.
+// This is a fork-local customization (originally embedded in v4's renderPage).
+function DappledLight() {
+  return (
+    <div id="dappled-light">
+      <div id="glow"></div>
+      <div id="glow-bounce"></div>
+      <div class="perspective">
+        <div id="leaves"></div>
+        <div id="blinds">
+          <div class="shutters">
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+          </div>
+          <div class="vertical">
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+      <div id="progressive-blur">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  )
+}
+
 const headerRegex = new RegExp(/h[1-6]/)
 export function pageResources(
   baseDir: FullSlug | RelativeURL,
@@ -347,6 +396,7 @@ export function renderPage(
     <html lang={lang} dir={direction}>
       <Head {...componentData} />
       <body data-slug={slug} data-basepath={basePath}>
+        <DappledLight />
         {frame.css && <style dangerouslySetInnerHTML={{ __html: frame.css }} />}
         <div id="quartz-root" class="page" data-frame={frame.name}>
           <Body {...componentData}>

@@ -1,0 +1,16 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.links.isEmpty()
+    order:
+      - file.name
+      - file.links
+      - content-type
+      - file.folder
+    sort:
+      - property: content
+        direction: ASC
+      - property: file.name
+        direction: ASC

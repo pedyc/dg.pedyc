@@ -1,0 +1,25 @@
+{
+  "name": "poetry",
+  "version": "1.0.0",
+  "description": "Poetry code block transformer for Quartz v5",
+  "type": "module",
+  "private": true,
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@quartz-community/types": "^0.3.0",
+    "unist-util-visit": "^5.0.0"
+  },
+  "quartz": {
+    "name": "poetry",
+    "displayName": "Poetry",
+    "description": "Converts fenced ```poetry code blocks into styled <pre class=\"poetry\"> elements",
+    "version": "1.0.0",
+    "category": "transformer",
+    "defaultOrder": 15
+  }
+}

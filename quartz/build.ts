@@ -76,7 +76,18 @@ async function buildQuartz(argv: Argv, mut: Mutex, clientRefresh: () => void) {
 
   const release = await mut.acquire()
   perf.addEvent("clean")
-  await rm(output, { recursive: true, force: true })
+  // Fork-local: fs.rm recursive can transiently fail on Windows (EBUSY/ENOTEMPTY)
+  // when the output dir is briefly locked (e.g. by an antivirus/indexer scan).
+  // Retry a few times before giving up.
+  for (let attempt = 1; ; attempt++) {
+    try {
+      await rm(output, { recursive: true, force: true })
+      break
+    } catch (err) {
+      if (attempt >= 5) throw err
+      await new Promise((r) => setTimeout(r, 200 * attempt))
+    }
+  }
   console.log(`Cleaned output directory \`${output}\` in ${perf.timeSince("clean")}`)
 
   perf.addEvent("glob")

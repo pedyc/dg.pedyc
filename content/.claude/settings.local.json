@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "Read(//d/Workspace/pedyc/site/apps/dg/**)",
+      "Bash(npm run type-check)",
+      "Bash(ls:*)",
+      "Skill(content-verifier-local)",
+      "mcp__MiniMax__web_search",
+      "Bash(git *)",
+      "Skill(content-evaluator-local)",
+      "Skill(obsidian-note-local)",
+      "Bash(python3 *)",
+      "Bash(sed -i '32,35s/^.*$//' /mnt/d/Workspace/pedyc/site/apps/dg/content/00-META/Log/wiki-log.md)",
+      "Bash(sed -i '/^[[:space:]]*$/{ *)",
+      "Bash(mv /d/Workspace/pedyc/site/apps/dg/content/40-RESOURCES/知识只有被调用时才产生价值.md /d/Workspace/pedyc/site/apps/dg/content/30-ZETTELKASTEN/知识只有被调用时才产生价值.md)",
+      "Bash(mv /d/Workspace/pedyc/site/apps/dg/content/40-RESOURCES/信息应按可行动性而非主题分类.md /d/Workspace/pedyc/site/apps/dg/content/30-ZETTELKASTEN/信息应按可行动性而非主题分类.md)",
+      "Bash(python -c ' *)",
+      "Skill(llm-wiki-local)",
+      "Bash(awk '/\t\t- \\\\[\\\\[Error.isError\\\\]\\\\]/ && !found {print \"\\\\t\\\\t- [[Error.isError]] — ES2026 错误判断方法\"; print \"\\\\t\\\\t- [[Math.sumPrecise]] — ES2026 精确求和\"; print \"\\\\t\\\\t- [[Map.getOrInsert]] — ES2026 Map upsert\"; print \"\\\\t\\\\t- [[Iterator.concat]] — ES2026 迭代器串联\"; print \"\\\\t\\\\t- [[JSON.rawJSON]] — ES2026 JSON 源文本访问\"; found=1; next} 1' 40-RESOURCES/ES2026.md)",
+      "Bash(mv /tmp/es2026_fixed.md 40-RESOURCES/ES2026.md)",
+      "Skill(wiki-sync-local)",
+      "Bash(python *)",
+      "Bash(npx vue-tsc *)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(curl -s http://localhost:5199/)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\" http://localhost:5199/users)"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+.virtual-link-a { 
+    /* color: #fb9026!important; */
+    text-decoration: none;
+}
+
+.virtual-link:hover {
+    /* text-decoration: underline; */
+}
+
+/* 设置所有嵌入的 SVG 图片默认显示宽度为 800px */
+/* 适用于阅读模式 */
+.markdown-preview-view .image-embed[src$=".svg"] img,
+.markdown-reading-view .image-embed[src$=".svg"] img {
+    width: 800px !important;
+    height: auto !important; /* 保持图片原始宽高比 */
+}
+
+/* 适用于实时编辑模式（源代码模式和实时预览） */
+.markdown-source-view .image-embed[src$=".svg"] img,
+.cm-s-obsidian .cm-embed-block .image-embed[src$=".svg"] img {
+    width: 800px !important;
+    height: auto !important;
+}
+
+/* 隐藏嵌入内容的标题 */
+.internal-embed .markdown-embed-title {
+    display: none;
+}

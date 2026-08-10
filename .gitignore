@@ -4,7 +4,6 @@ node_modules
 public
 prof
 tsconfig.tsbuildinfo
-.obsidian
 .quartz-cache
 private/
 .replit
@@ -12,3 +11,12 @@ replit.nix
 .quartz/
 quartz/cli/tui/dist/
 .turbo/
+
+# Private vault content (matches v4 behavior)
+**/80-PRIVATE/**/*
+
+# Obsidian Copilot plugin cache
+**/.obsidian/plugins/copilot/*
+
+# Local plugin build artifacts
+custom/*/dist/

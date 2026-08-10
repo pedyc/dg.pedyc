@@ -1,0 +1,338 @@
+{
+  "main": {
+    "id": "c045ca460385c05f",
+    "type": "split",
+    "children": [
+      {
+        "id": "092841f09e91a2c6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "04630d253fffab4e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40-RESOURCES/R-简历素材.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "R-简历素材"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7b26de4fecaee6fd",
+    "type": "split",
+    "children": [
+      {
+        "id": "63f7c57bcc006028",
+        "type": "tabs",
+        "dimension": 57.81350482315113,
+        "children": [
+          {
+            "id": "60236dec7012791f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          }
+        ]
+      },
+      {
+        "id": "0add37d9a842f039",
+        "type": "tabs",
+        "dimension": 19.742765273311896,
+        "children": [
+          {
+            "id": "716cea69c1af23f6",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "40-RESOURCES/R-简历素材.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.5359795996225935,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "局部关系图谱"
+            }
+          },
+          {
+            "id": "3690ad53e5842d0d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "40-RESOURCES/React面试题.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "React面试题 的大纲"
+            }
+          }
+        ]
+      },
+      {
+        "id": "5e0950099d64d5f6",
+        "type": "tabs",
+        "dimension": 22.443729903536976,
+        "children": [
+          {
+            "id": "5dc3cef7701d1aec",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "72e989063b9157ff",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          },
+          {
+            "id": "060ef919fc54c6f9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "#card",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "0dac9794e58d9572",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "60011dc7fd9da14a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 315.5
+  },
+  "right": {
+    "id": "6f965a0263edffe0",
+    "type": "split",
+    "children": [
+      {
+        "id": "c8dd81782f60cc9f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "82d310b6843f6e6e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "40-RESOURCES/WebSocket.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "WebSocket 的反向链接列表"
+            }
+          },
+          {
+            "id": "b1ad71e698b9ad0c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "40-RESOURCES/WebSocket.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "WebSocket 的出链列表"
+            }
+          },
+          {
+            "id": "29313616ae432795",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {},
+              "icon": "history",
+              "title": "History"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 519.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:新建数据库": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "obsidian-local-images-plus:Local Images Plus  0.16.4\r\nLocalize attachments (plugin folder)": false,
+      "templater-obsidian:Templater": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "publish:发布更改": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false,
+      "random-note:开始漫游笔记": false,
+      "omnisearch:Omnisearch": false,
+      "obsidian-git:Open Git source control": false,
+      "cmdr:堆叠/取消堆叠标签页": false,
+      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
+    }
+  },
+  "active": "04630d253fffab4e",
+  "lastOpenFiles": [
+    "80-PRIVATE/我的简历.md",
+    "40-RESOURCES/R-简历素材.md",
+    "40-RESOURCES/R-简历素材.md.tmp.28356.7db1f9fb2d29",
+    "40-RESOURCES/R-简历素材.md.tmp.28356.7dc9d1e2b7a3",
+    "40-RESOURCES/R-简历素材.md.tmp.28356.01a984b4707e",
+    "40-RESOURCES/R-简历素材.md.tmp.28356.2573afdd4ea2",
+    "40-RESOURCES/Canvas动画.md",
+    "40-RESOURCES/R-简历素材.md.tmp.28356.2bb0bdf92d78",
+    "40-RESOURCES/R-简历素材.md.tmp.28356.734a7fd08921",
+    "00-META/wiki-sync-state.json.tmp.28356.18561d42c2c6",
+    "20-AREAS/A-求职/_resources",
+    "40-RESOURCES/R-简历素材.md.tmp.28356.ccab2af81c7b",
+    "40-RESOURCES/Canvas实现无限滑动效果.md",
+    "40-RESOURCES/前端交互.md",
+    "40-RESOURCES/Javascript版本演进.md",
+    "20-AREAS/A-前端/JavaScript.md",
+    "40-RESOURCES/ESModule.md",
+    "40-RESOURCES/如何实现垂直居中？.md",
+    "40-RESOURCES/will-change.md",
+    "40-RESOURCES/requestAnimationFrame.md",
+    "40-RESOURCES/ASCII动画.md",
+    "40-RESOURCES/SOP-在React中实现ASCII动画.md",
+    "40-RESOURCES/Vue3 混合文件夹结构.md",
+    "40-RESOURCES/Vue.md",
+    "40-RESOURCES/搭建Vue工程的Claude Code Harness.md",
+    "40-RESOURCES/Harness.md",
+    "40-RESOURCES/Harness.md.tmp.16464.6482d11d543c",
+    "40-RESOURCES/Agent.md",
+    "40-RESOURCES/智能体编排.md",
+    "40-RESOURCES/Skills 最佳实践(Claude Code).md",
+    "40-RESOURCES/Claude Code 辅助编程.md",
+    "40-RESOURCES/AI辅助编程.md",
+    "40-RESOURCES/前端工程.md",
+    "40-RESOURCES/前端工程化相关面试题.md",
+    "40-RESOURCES/Vue 面试题.md",
+    "10-PROJECTS/PROJECTS.canvas",
+    "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
+    "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",
+    "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/5922f21cbfa6306a1d1dd8b4b924631e_MD5.webp",
+    "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/9977399c198c6319755040441f004288_MD5.webp",
+    "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/9a1f8150af1dffbc56100f8ea4902d1f_MD5.webp",
+    "_resources/How Anthropic runs large-scale code migrations with Claude Code/0fc2fe5f3f970bf75306c34ebca5ebfa_MD5.webp",
+    "_resources/How Anthropic runs large-scale code migrations with Claude Code/3cf7feeb51bd4750ee68a2889906e967_MD5.webp",
+    "_resources/How Anthropic runs large-scale code migrations with Claude Code/5ee6f2bb75d4431cb42431d667cd7485_MD5.jpg",
+    "_resources/How Anthropic runs large-scale code migrations with Claude Code/d00a3025b2dc47406804b24b56d3e61f_MD5.jpg",
+    "_resources/How Anthropic runs large-scale code migrations with Claude Code/addc4f0dadb8cce47f9ce9e1cd22d22d_MD5.jpg",
+    "未命名.canvas",
+    "Untitled.canvas",
+    "//Untitled.canvas",
+    "Diary/Untitled.canvas",
+    "PARA/20-AREAS/知识管理/03-RESOURCES/Untitled.canvas"
+  ]
+}

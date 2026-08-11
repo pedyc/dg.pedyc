@@ -1,6 +1,13 @@
 import os
 import re
 
+# CJK/fullwidth punctuation that lives outside [一-鿿] and must be kept in the subset.
+PUNCTUATION = set(
+    "，。！？、；："
+    "“”‘’（）【】《》〈〉「」『』"
+    "…—–―·・×÷"
+)
+
 def extract_chinese_chars(directory):
     """
     Scans Markdown and HTML files in the given directory and extracts unique Chinese characters.
@@ -26,6 +33,8 @@ def extract_chinese_chars(directory):
                                 chinese_chars.add(char)
                 except Exception as e:
                     print(f"Error reading file {filepath}: {e}")
+    # Always retain CJK punctuation even if no current note uses it
+    chinese_chars |= PUNCTUATION
     return chinese_chars
 
 if __name__ == "__main__":

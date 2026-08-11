@@ -267,7 +267,7 @@ plugins:
       priority: 50
       display: all
   - source: "./custom/floating-nav"
-    enabled: true
+    enabled: false
     options:
       items:
         - label: "博客"

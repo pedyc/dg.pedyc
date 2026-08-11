@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/R-简历素材.md",
+                "file": "40-RESOURCES/Inbox/Experiments in procedural dappled light shaders.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "R-简历素材"
+              "title": "Experiments in procedural dappled light shaders"
             }
           }
         ]
@@ -73,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/R-简历素材.md",
+                "file": "40-RESOURCES/Inbox/Experiments in procedural dappled light shaders.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -283,8 +283,15 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
-    "80-PRIVATE/我的简历.md",
+    "_resources/Experiments in procedural dappled light shaders/2b7c5414bbca3d0516f2ad2ecf23a9c0_MD5.webp",
+    "40-RESOURCES/Inbox/Experiments in procedural dappled light shaders.md",
+    "_resources/Experiments in procedural dappled light shaders/e5951ca2badc262c67e3ff3f45a6ff41_MD5.webp",
+    "_resources/Experiments in procedural dappled light shaders/b521b293f565f374020812c1d5afe1e7_MD5.gif",
+    "_resources/Experiments in procedural dappled light shaders/558b71a7e5dbaeb7857a506444903f37_MD5.webp",
+    "_resources/Experiments in procedural dappled light shaders",
     "40-RESOURCES/R-简历素材.md",
+    "99-ASSETS/HelloAgents/第一章 初识智能体.md",
+    "80-PRIVATE/我的简历.md",
     "40-RESOURCES/R-简历素材.md.tmp.28356.7db1f9fb2d29",
     "40-RESOURCES/R-简历素材.md.tmp.28356.7dc9d1e2b7a3",
     "40-RESOURCES/R-简历素材.md.tmp.28356.01a984b4707e",
@@ -309,15 +316,12 @@
     "40-RESOURCES/Vue.md",
     "40-RESOURCES/搭建Vue工程的Claude Code Harness.md",
     "40-RESOURCES/Harness.md",
-    "40-RESOURCES/Harness.md.tmp.16464.6482d11d543c",
     "40-RESOURCES/Agent.md",
     "40-RESOURCES/智能体编排.md",
     "40-RESOURCES/Skills 最佳实践(Claude Code).md",
     "40-RESOURCES/Claude Code 辅助编程.md",
     "40-RESOURCES/AI辅助编程.md",
     "40-RESOURCES/前端工程.md",
-    "40-RESOURCES/前端工程化相关面试题.md",
-    "40-RESOURCES/Vue 面试题.md",
     "10-PROJECTS/PROJECTS.canvas",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",
@@ -325,10 +329,6 @@
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/9977399c198c6319755040441f004288_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/9a1f8150af1dffbc56100f8ea4902d1f_MD5.webp",
     "_resources/How Anthropic runs large-scale code migrations with Claude Code/0fc2fe5f3f970bf75306c34ebca5ebfa_MD5.webp",
-    "_resources/How Anthropic runs large-scale code migrations with Claude Code/3cf7feeb51bd4750ee68a2889906e967_MD5.webp",
-    "_resources/How Anthropic runs large-scale code migrations with Claude Code/5ee6f2bb75d4431cb42431d667cd7485_MD5.jpg",
-    "_resources/How Anthropic runs large-scale code migrations with Claude Code/d00a3025b2dc47406804b24b56d3e61f_MD5.jpg",
-    "_resources/How Anthropic runs large-scale code migrations with Claude Code/addc4f0dadb8cce47f9ce9e1cd22d22d_MD5.jpg",
     "未命名.canvas",
     "Untitled.canvas",
     "//Untitled.canvas",

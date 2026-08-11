@@ -5,7 +5,7 @@ aliases: [R-简历素材]
 description: 前端岗位简历信息素材：个人定位、技能清单、项目经历、AI 能力、技术写作
 tags: [求职, 简历]
 date-created: 2026-08-06
-date-modified: 2026-08-06
+date-modified: 2026-08-11
 status: cultivating
 content-type: record
 up: "[[求职]]"

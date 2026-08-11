@@ -21,6 +21,21 @@ up: ["[[本库指南]]"]
 
 ## 2026
 
+### 2026-08
+
+#### 2026-08-11
+
+- [2026-08-11] ingest | 新建 SOP「实现网页斑驳光背景效果」
+	- 位置：40-RESOURCES/实现网页斑驳光背景效果.md
+	- 父页面：[[斑驳光]]
+	- 覆盖：Canvas/Shader 初始化、五层渲染流水线（噪点→暖边→L系统→半影→视差）、CSS 自定义属性集成、性能优化、常见坑点
+	- 更新：wiki-index（SOPs 42→43）、斑驳光（SOP 章节）
+- [2026-08-11] ingest | 消化 Inbox 文章「Experiments in procedural dappled light shaders」
+	- 新建 concept「[[斑驳光]]」— 程序化着色器模拟自然光斑驳效果（木漏れ日），覆盖噪点抖动/金色暖边/L系统树枝/半影模糊/深度视差 五层流水线
+	- 新建 term「[[L系统]]」— Lindenmayer 并行重写系统，概率 L 系统用于程序化树枝生成
+	- 归档原始素材：40-RESOURCES/Inbox/Experiments in procedural dappled light shaders.md → 50-ARCHIVE/
+	- 更新：wiki-index（Concepts 40→41, Terms 70→71）
+
 ### 2026-07
 
 #### 2026-07-31

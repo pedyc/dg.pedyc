@@ -1,14 +1,17 @@
 ---
 title: Experiments in procedural dappled light shaders
-author:
+author: [jzhao]
 description: "One of my personal philosophies is that one's personal site should feel like a digital home. As someone who stops to enjoy the light a lot, I felt it was very important that my digital home have nice lighting too."
-tags: ["clippings"]
+tags: [clippings]
 date-created: 2026-08-11
 date-modified: 2026-08-11
+status: archived
 created: 2026-08-11
 published: 2026-08-02
-source: "https://jzhao.xyz/posts/dappled-light"
+source: https://jzhao.xyz/posts/dappled-light
 ---
+
+> 已收斂：[[斑驳光]]、[[L系统]]
 
 One of my personal philosophies is that [one’s personal site should feel like a digital home](https://jzhao.xyz/thoughts/websites-as-homes). As someone who stops to enjoy the light a lot, I felt it was very important that my digital home have nice lighting too. For a long time, I had this dappled light effect on my website [that I made and open-sourced](https://github.com/jackyzha0/sunlit).
 
@@ -90,7 +93,8 @@ rules:
 (X -> F[+X][-X]X)    p = 0.21    fork: leader + two side branches
 ```
 
-Unlike most L-systems though, this algorithm continues unrolling until all branches hit a terminal width. The output is a string of symbols which we can write as a list of branch/trunk segments. Then, the fragment shader just takes the resulting list of segments and, for each pixel, renders the color based on the distance to the nearest segment. I kept the leaf layer as thresholded noise.
+Unlike most L-systems though, this algorithm continues unrolling until all branches hit a terminal width. The output is a string of symbols which we can write as a list of branch/trunk segments. Then, the fragment shader just takes the resulting list of segments and, for each pixel, renders the color based on the distance to the nearest segment. I kep
+t the leaf layer as thresholded noise.
 
 ## da Vinci and the Golden Ratio
 

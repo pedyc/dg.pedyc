@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Inbox/Experiments in procedural dappled light shaders.md",
+                "file": "40-RESOURCES/实现网页斑驳光背景效果.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Experiments in procedural dappled light shaders"
+              "title": "实现网页斑驳光背景效果"
             }
           }
         ]
@@ -73,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Inbox/Experiments in procedural dappled light shaders.md",
+                "file": "40-RESOURCES/实现网页斑驳光背景效果.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -283,8 +283,18 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
-    "_resources/Experiments in procedural dappled light shaders/2b7c5414bbca3d0516f2ad2ecf23a9c0_MD5.webp",
+    "40-RESOURCES/斑驳光.md",
+    "00-META/Index/wiki-index.md.tmp.19740.318e908e8f4d",
+    "40-RESOURCES/实现网页斑驳光背景效果.md",
+    "40-RESOURCES/实现网页斑驳光背景效果.md.tmp.19740.b48193e7b464",
+    "50-ARCHIVE/Experiments in procedural dappled light shaders.md",
+    "40-RESOURCES/L系统.md",
+    "00-META/Index/wiki-index.md.tmp.19740.78de778753af",
+    "00-META/Index/wiki-index.md.tmp.19740.3c22d9954d95",
+    "40-RESOURCES/L系统.md.tmp.19740.0d43578989ca",
     "40-RESOURCES/Inbox/Experiments in procedural dappled light shaders.md",
+    "40-RESOURCES/斑驳光.md.tmp.19740.08f06ccb83d0",
+    "_resources/Experiments in procedural dappled light shaders/2b7c5414bbca3d0516f2ad2ecf23a9c0_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/e5951ca2badc262c67e3ff3f45a6ff41_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/b521b293f565f374020812c1d5afe1e7_MD5.gif",
     "_resources/Experiments in procedural dappled light shaders/558b71a7e5dbaeb7857a506444903f37_MD5.webp",
@@ -295,13 +305,7 @@
     "40-RESOURCES/R-简历素材.md.tmp.28356.7db1f9fb2d29",
     "40-RESOURCES/R-简历素材.md.tmp.28356.7dc9d1e2b7a3",
     "40-RESOURCES/R-简历素材.md.tmp.28356.01a984b4707e",
-    "40-RESOURCES/R-简历素材.md.tmp.28356.2573afdd4ea2",
     "40-RESOURCES/Canvas动画.md",
-    "40-RESOURCES/R-简历素材.md.tmp.28356.2bb0bdf92d78",
-    "40-RESOURCES/R-简历素材.md.tmp.28356.734a7fd08921",
-    "00-META/wiki-sync-state.json.tmp.28356.18561d42c2c6",
-    "20-AREAS/A-求职/_resources",
-    "40-RESOURCES/R-简历素材.md.tmp.28356.ccab2af81c7b",
     "40-RESOURCES/Canvas实现无限滑动效果.md",
     "40-RESOURCES/前端交互.md",
     "40-RESOURCES/Javascript版本演进.md",
@@ -318,10 +322,6 @@
     "40-RESOURCES/Harness.md",
     "40-RESOURCES/Agent.md",
     "40-RESOURCES/智能体编排.md",
-    "40-RESOURCES/Skills 最佳实践(Claude Code).md",
-    "40-RESOURCES/Claude Code 辅助编程.md",
-    "40-RESOURCES/AI辅助编程.md",
-    "40-RESOURCES/前端工程.md",
     "10-PROJECTS/PROJECTS.canvas",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",

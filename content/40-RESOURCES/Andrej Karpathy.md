@@ -5,7 +5,7 @@ aliases: ["R-Andrej Karpathy", "Karpathy", "安德烈·卡帕西"]
 description: "前特斯拉 AI 总监、OpenAI 创始成员，LLM Wiki 个人知识库方法论的提出者"
 tags: [人物, 人工智能, 知识管理]
 date-created: 2026-07-31
-date-modified: 2026-07-31
+date-modified: 2026-08-14
 status: fleeting
 birth: ""
 content-type: person

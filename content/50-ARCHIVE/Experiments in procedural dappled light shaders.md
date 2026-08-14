@@ -1,10 +1,10 @@
 ---
 title: Experiments in procedural dappled light shaders
-author: [jzhao]
+author: ["[[Jacky Zhao|jackyzha0]]"]
 description: "One of my personal philosophies is that one's personal site should feel like a digital home. As someone who stops to enjoy the light a lot, I felt it was very important that my digital home have nice lighting too."
 tags: [clippings]
 date-created: 2026-08-11
-date-modified: 2026-08-11
+date-modified: 2026-08-14
 status: archived
 created: 2026-08-11
 published: 2026-08-02

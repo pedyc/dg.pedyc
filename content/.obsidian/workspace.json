@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/实现网页斑驳光背景效果.md",
+                "file": "20-AREAS/A-前端/前端开发.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "实现网页斑驳光背景效果"
+              "title": "前端开发"
             }
           }
         ]
@@ -73,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/实现网页斑驳光背景效果.md",
+                "file": "20-AREAS/A-前端/前端开发.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,7 +152,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "#card",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -283,11 +283,20 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "10-PROJECTS/P-斑驳光背景实现/P-斑驳光背景实现.md",
+    "50-ARCHIVE/ML Job Interviews The Ultimate Guide.md",
+    "40-RESOURCES/李新野.md",
+    "40-RESOURCES/Andrej Karpathy.md",
+    "40-RESOURCES/Jacky Zhao.md",
+    "50-ARCHIVE/Experiments in procedural dappled light shaders.md",
+    "40-RESOURCES/MOC-哲学与认知.md",
+    "40-RESOURCES/哲学.md",
+    "40-RESOURCES/实现网页斑驳光背景效果.md",
+    "40-RESOURCES/实现网页斑驳光背景效果.md.tmp.19740.09c108a0906e",
+    "10-PROJECTS/P-斑驳光背景实现",
     "40-RESOURCES/斑驳光.md",
     "00-META/Index/wiki-index.md.tmp.19740.318e908e8f4d",
-    "40-RESOURCES/实现网页斑驳光背景效果.md",
     "40-RESOURCES/实现网页斑驳光背景效果.md.tmp.19740.b48193e7b464",
-    "50-ARCHIVE/Experiments in procedural dappled light shaders.md",
     "40-RESOURCES/L系统.md",
     "00-META/Index/wiki-index.md.tmp.19740.78de778753af",
     "00-META/Index/wiki-index.md.tmp.19740.3c22d9954d95",
@@ -303,8 +312,6 @@
     "99-ASSETS/HelloAgents/第一章 初识智能体.md",
     "80-PRIVATE/我的简历.md",
     "40-RESOURCES/R-简历素材.md.tmp.28356.7db1f9fb2d29",
-    "40-RESOURCES/R-简历素材.md.tmp.28356.7dc9d1e2b7a3",
-    "40-RESOURCES/R-简历素材.md.tmp.28356.01a984b4707e",
     "40-RESOURCES/Canvas动画.md",
     "40-RESOURCES/Canvas实现无限滑动效果.md",
     "40-RESOURCES/前端交互.md",
@@ -316,12 +323,6 @@
     "40-RESOURCES/requestAnimationFrame.md",
     "40-RESOURCES/ASCII动画.md",
     "40-RESOURCES/SOP-在React中实现ASCII动画.md",
-    "40-RESOURCES/Vue3 混合文件夹结构.md",
-    "40-RESOURCES/Vue.md",
-    "40-RESOURCES/搭建Vue工程的Claude Code Harness.md",
-    "40-RESOURCES/Harness.md",
-    "40-RESOURCES/Agent.md",
-    "40-RESOURCES/智能体编排.md",
     "10-PROJECTS/PROJECTS.canvas",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",

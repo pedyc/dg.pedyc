@@ -1,11 +1,11 @@
 ---
 uid: 202607312100
 title: MOC-哲学与认知
-aliases: [MOC-哲学与认知, 哲学, 认知科学]
+aliases: [MOC-哲学与认知, 认知科学]
 description: 哲学与认知科学的主题索引：存在论、形而上学、认识论、思维方法论与认知心理学
 tags: [哲学, 认知科学]
 date-created: 2026-07-31
-date-modified: 2026-07-31
+date-modified: 2026-08-14
 status: cultivating
 content-type: moc
 up: "[[个人成长]]"

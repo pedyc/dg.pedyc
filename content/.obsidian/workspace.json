@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/分税制改革.md",
+                "file": "00-META/Log/wiki-log.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "分税制改革"
+              "title": "wiki-log"
             }
           }
         ]
@@ -73,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/分税制改革.md",
+                "file": "00-META/Log/wiki-log.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -283,9 +283,13 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
-    "20-AREAS/A-政治经济/政治经济.md",
-    "40-RESOURCES/分税制改革.md",
+    "00-META/Index/wiki-index.md",
+    "40-RESOURCES/SOP-视觉思维工作流.md",
+    "00-META/Log/wiki-log.md",
+    "00-META/Guide/本库指南.md",
     "00-META/Specification/_笔记类型规范.md",
+    "40-RESOURCES/分税制改革.md",
+    "20-AREAS/A-政治经济/政治经济.md",
     "00-META/Index/wiki-index.md.tmp.19740.2d57c023e076",
     "00-META/Index/wiki-index.md.tmp.19740.4b9c68e92db6",
     "40-RESOURCES/哲学.md",
@@ -319,10 +323,6 @@
     "40-RESOURCES/R-简历素材.md",
     "99-ASSETS/HelloAgents/第一章 初识智能体.md",
     "80-PRIVATE/我的简历.md",
-    "40-RESOURCES/Canvas动画.md",
-    "40-RESOURCES/Canvas实现无限滑动效果.md",
-    "40-RESOURCES/前端交互.md",
-    "40-RESOURCES/Javascript版本演进.md",
     "10-PROJECTS/PROJECTS.canvas",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",

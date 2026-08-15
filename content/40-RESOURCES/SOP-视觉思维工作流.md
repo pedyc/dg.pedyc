@@ -2,7 +2,7 @@
 title: SOP-视觉思维工作流
 tags: [sop, visualization, workflow, problem-solving]
 date-created: 2025-12-17
-date-modified: 2026-04-23
+date-modified: 2026-08-15
 status: cultivating
 content-type: sop
 type: sop

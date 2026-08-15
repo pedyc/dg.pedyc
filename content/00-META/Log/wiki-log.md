@@ -4,7 +4,7 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-08-02
+date-modified: 2026-08-15
 status: active
 content-type: [article]
 up: ["[[本库指南]]"]
@@ -35,6 +35,27 @@ up: ["[[本库指南]]"]
 	- 新建 term「[[L系统]]」— Lindenmayer 并行重写系统，概率 L 系统用于程序化树枝生成
 	- 归档原始素材：40-RESOURCES/Inbox/Experiments in procedural dappled light shaders.md → 50-ARCHIVE/
 	- 更新：wiki-index（Concepts 40→41, Terms 70→71）
+
+#### 2026-08-14
+
+- [2026-08-14] ingest | 新建 person「Jacky Zhao」
+	- 位置：40-RESOURCES/Jacky Zhao.md
+	- 父页面：[[数字花园]]
+	- 覆盖：Quartz 作者，Replit 工程师，斑驳光着色器文章作者
+	- 更新：数字花园（关键人物章节）
+
+#### 2026-08-15
+
+- [2026-08-15] ingest | 新建 person「朱镕基」
+	- 位置：40-RESOURCES/朱镕基.md
+	- 父页面：[[MOC-时政]]
+	- 覆盖：第九届国务院总理（1998–2003），国企改革/金融改革/加入 WTO，2026-08-12 逝世
+	- 更新：MOC-时政（人物章节）
+- [2026-08-15] ingest | 新建 concept「分税制改革」
+	- 位置：40-RESOURCES/分税制改革.md
+	- 父页面：[[政治经济]]
+	- 覆盖：1994 财政体制改革，税种划分、增值税分成、土地财政根源
+	- 更新：wiki-index（Concepts 41→42）、政治经济（概念词典）、朱镕基（主要成就链接）
 
 ### 2026-07
 

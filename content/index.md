@@ -6,18 +6,11 @@ author: ped_yc
 description:
 tags: []
 date-created: 2024-08-23
-date-modified: 2026-07-28
+date-modified: 2026-08-14
 content-type: [moc]
 ---
 
 <img src="./banner.svg" alt="banner" style="width: 100%" />
-
-```bash
-  ╭─────────────────────────────────────╮
-  │                         pedyc 的数字花园                                 │
-  │                  捕捉灵感  ·  整合观点  ·  延展思维                      │
-  ╰─────────────────────────────────────╯
-```
 
 你好，欢迎来访。这里是我公开思考的地方——笔记在持续生长，而非一次性完成。
 

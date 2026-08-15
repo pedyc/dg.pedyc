@@ -1,11 +1,11 @@
 ---
 uid: '202603220240'
-title: 时政
+title: MOC-时政
 aliases: [MOC-时政]
 description: "时政地图"
 tags: []
 date-created: 2026-03-21
-date-modified: 2026-07-31
+date-modified: 2026-08-14
 status: cultivating
 content-type: moc
 up: "[[政治经济]]"
@@ -26,3 +26,4 @@ up: "[[政治经济]]"
 ### 人物
 
 - [[李新野]] — 键政作者，著《人约》，清华姚班出身
+- [[朱镕基]] — 第九届国务院总理（1998–2003），主导国企改革与加入 WTO

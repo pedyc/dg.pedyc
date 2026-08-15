@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-前端/前端开发.md",
+                "file": "40-RESOURCES/分税制改革.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端开发"
+              "title": "分税制改革"
             }
           }
         ]
@@ -73,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-前端/前端开发.md",
+                "file": "40-RESOURCES/分税制改革.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -283,14 +283,24 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "20-AREAS/A-政治经济/政治经济.md",
+    "40-RESOURCES/分税制改革.md",
+    "00-META/Specification/_笔记类型规范.md",
+    "00-META/Index/wiki-index.md.tmp.19740.2d57c023e076",
+    "00-META/Index/wiki-index.md.tmp.19740.4b9c68e92db6",
+    "40-RESOURCES/哲学.md",
+    "40-RESOURCES/MOC-哲学与认知.md",
+    "40-RESOURCES/MOC-时政.md",
+    "40-RESOURCES/朱镕基.md",
     "10-PROJECTS/P-斑驳光背景实现/P-斑驳光背景实现.md",
+    "40-RESOURCES/MOC-时政.md.tmp.19740.f3d42f3617be",
+    "index.md",
+    "20-AREAS/A-前端/前端开发.md",
     "50-ARCHIVE/ML Job Interviews The Ultimate Guide.md",
     "40-RESOURCES/李新野.md",
     "40-RESOURCES/Andrej Karpathy.md",
     "40-RESOURCES/Jacky Zhao.md",
     "50-ARCHIVE/Experiments in procedural dappled light shaders.md",
-    "40-RESOURCES/MOC-哲学与认知.md",
-    "40-RESOURCES/哲学.md",
     "40-RESOURCES/实现网页斑驳光背景效果.md",
     "40-RESOURCES/实现网页斑驳光背景效果.md.tmp.19740.09c108a0906e",
     "10-PROJECTS/P-斑驳光背景实现",
@@ -302,27 +312,17 @@
     "00-META/Index/wiki-index.md.tmp.19740.3c22d9954d95",
     "40-RESOURCES/L系统.md.tmp.19740.0d43578989ca",
     "40-RESOURCES/Inbox/Experiments in procedural dappled light shaders.md",
-    "40-RESOURCES/斑驳光.md.tmp.19740.08f06ccb83d0",
     "_resources/Experiments in procedural dappled light shaders/2b7c5414bbca3d0516f2ad2ecf23a9c0_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/e5951ca2badc262c67e3ff3f45a6ff41_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/b521b293f565f374020812c1d5afe1e7_MD5.gif",
     "_resources/Experiments in procedural dappled light shaders/558b71a7e5dbaeb7857a506444903f37_MD5.webp",
-    "_resources/Experiments in procedural dappled light shaders",
     "40-RESOURCES/R-简历素材.md",
     "99-ASSETS/HelloAgents/第一章 初识智能体.md",
     "80-PRIVATE/我的简历.md",
-    "40-RESOURCES/R-简历素材.md.tmp.28356.7db1f9fb2d29",
     "40-RESOURCES/Canvas动画.md",
     "40-RESOURCES/Canvas实现无限滑动效果.md",
     "40-RESOURCES/前端交互.md",
     "40-RESOURCES/Javascript版本演进.md",
-    "20-AREAS/A-前端/JavaScript.md",
-    "40-RESOURCES/ESModule.md",
-    "40-RESOURCES/如何实现垂直居中？.md",
-    "40-RESOURCES/will-change.md",
-    "40-RESOURCES/requestAnimationFrame.md",
-    "40-RESOURCES/ASCII动画.md",
-    "40-RESOURCES/SOP-在React中实现ASCII动画.md",
     "10-PROJECTS/PROJECTS.canvas",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",

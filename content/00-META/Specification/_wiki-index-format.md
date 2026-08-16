@@ -6,7 +6,7 @@ tags: [方法论, llm-wiki]
 date-created: 2026-07-31
 date-modified: 2026-07-31
 status: active
-content-type: [article]
+content-type: article
 up: [["llm-wiki-schema"]]
 ---
 

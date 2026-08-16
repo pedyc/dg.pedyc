@@ -4,7 +4,7 @@ aliases: [Web通信方式, C-Web通信方式]
 description: Web通信方式包括HTTP请求、跨域通信、实时通信等多种方式
 tags: [前端开发/网络]
 date-created: 2025-06-07
-date-modified: 2026-07-31
+date-modified: 2026-08-16
 status: active
 content-type: [concept]
 up: [[前端开发]]
@@ -30,7 +30,9 @@ Web 通信是指 Web 应用程序与服务器、第三方服务或其他客户�
 - **持久连接**:
 	- [[WebSocket]]: 一种全双工通信协议，允许服务器主动向客户端推送数据。
 	- [[SSE]]（Server-Sent Events）: 一种单向通信协议，允许服务器向客户端推送数据。
+	- **Long Polling**（长轮询）: 客户端发起请求后服务器挂起直到有数据再返回，HTTP/2 下成本可控。
 	- **HTTP/2 Server Push**: 服务器主动推送资源。
+- **实时通信选型**: [[WebSocket vs SSE vs Long Polling]]: 三方案实测成本对比。
 - **跨域通信**:
 	- [[CORS]] (Cross-Origin Resource Sharing): 一种安全机制，允许跨域请求。
 	- [[JSONP]] (JSON with Padding): 一种古老的跨域解决方案，利用 `<script>` 标签的跨域特性。

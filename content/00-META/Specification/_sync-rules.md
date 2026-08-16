@@ -6,7 +6,7 @@ tags: [方法论, llm-wiki]
 date-created: 2026-05-20
 date-modified: 2026-07-17
 status: active
-content-type: [article]
+content-type: article
 up: [["llm-wiki-schema"]]
 ---
 
@@ -47,9 +47,9 @@ up: [["llm-wiki-schema"]]
 
 | 操作 | Sync 处理 | Ingest 处理 |
 |------|----------|-------------|
-| 新增笔记 | 记录到日志 | 整合到 wiki 层 |
-| 修改笔记 | 记录到日志 | 更新 wiki 引用 |
-| 删除笔记 | 记录到日志 | 从 wiki 移除引用 |
+| 新增笔记 | 更新 sync-state | 整合到 wiki 层 |
+| 修改笔记 | 更新 sync-state | 更新 wiki 引用 |
+| 删除笔记 | 更新 sync-state | 从 wiki 移除引用 |
 
 **原则**：sync 检测变更、记录事件；ingest 分析内容、执行整合。
 
@@ -67,5 +67,5 @@ up: [["llm-wiki-schema"]]
 
 #### 手动指定笔记（如需要）
 
-- **create/update/delete**：只记录到日志，不处理 content
+- **create/update/delete**：只更新 sync-state，不处理 content
 - 具体 content 处理由 ingest 工作流负责

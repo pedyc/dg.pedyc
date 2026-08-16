@@ -6,7 +6,7 @@ tags: [前端, CSS, Canvas, Shader, Quartz]
 date-created: 2026-08-14
 date-modified: 2026-08-14
 status: active
-area: ["[[前端开发|A-前端开发]]"]
+area: ["[[dg.pedyc|A-dg.pedyc]]"]
 consequence: 5
 content-type: project
 expire: 2026-09-14
@@ -31,7 +31,8 @@ urgency: 3
 
 ## 🔗关联领域
 
-- [[前端开发|A-前端开发]]
+- [[dg.pedyc|A-dg.pedyc]]（主领域：站点载体）
+- [[前端开发|A-前端开发]]（技术领域）
 
 ## 🎯 核心靶心（项目的主要目标）
 

@@ -6,7 +6,7 @@ tags: [llm-wiki, 元数据]
 date-created: 2026-06-01
 date-modified: 2026-06-23
 status: active
-content-type: [article]
+content-type: article
 up: ["[[本库指南]]"]
 ---
 

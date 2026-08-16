@@ -4,24 +4,25 @@ title: wiki-index
 aliases: [wiki-index, wiki导航]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-08-15
+date-modified: 2026-08-16
 status: active
-content-type: [moc]
+content-type: moc
 up: "[[本库指南]]"
 ---
 
 ## Wiki Index
 
 本文件是知识库的导航索引，由 LLM 维护。每个条目包含页面链接和一句话说明。
-**最后更新：2026-08-15** — 新增 concept「分税制改革」（Concepts 41→42）
+**最后更新：2026-08-16** — 新增 area「dg.pedyc」（Areas 13→14）
 
 ---
 
-## Areas (领域) — 13 个
+## Areas (领域) — 14 个
 
 ### 知识管理
 
 - [[知识管理]] — 捕捉、组织、提炼和应用知识，构建第二大脑
+- [[dg.pedyc]] — 个人数字花园站点（Quartz 静态站），持续维护与经营
 
 ### 前端
 
@@ -315,7 +316,7 @@ up: "[[本库指南]]"
 
 ---
 
-## SOPs (标准流程) — 43 个
+## SOPs (标准流程) — 44 个
 
 ### 开发流程
 
@@ -380,6 +381,10 @@ up: "[[本库指南]]"
 - [[使用Claude Code进行大型代码迁移|SOP-使用Claude Code进行大型代码迁移]] — AI agent 驱动的跨语言/跨框架大型代码迁移标准流程
 - [[搭建Vue工程的Claude Code Harness|SOP-搭建Vue工程的ClaudeCode-Harness]] — 为 Vue 工程搭建 Agent Harness 的标准流程（知识/工具/契约/上下文权限/评估）
 
+### 网络通信
+
+- [[SOP-使用WebSocket实现实时双向通信]] — 从握手到心跳保活、断线重连的完整 WebSocket 前后端使用流程
+
 ### 其他
 
 - [[优惠券发放、领取、核销的前端实现逻辑]] — 业务逻辑实现
@@ -389,7 +394,7 @@ up: "[[本库指南]]"
 
 ---
 
-## Comparisons (比较分析) — 11 个
+## Comparisons (比较分析) — 12 个
 
 ### 框架对比
 
@@ -413,6 +418,10 @@ up: "[[本库指南]]"
 ### 设计模式
 
 - [[观察者模式 vs 发布订阅模式]] — 两种模式的区别、适用场景
+
+### 网络协议
+
+- [[WebSocket vs SSE vs Long Polling]] — 三种实时传输方案的实测成本对比与选型
 
 ---
 

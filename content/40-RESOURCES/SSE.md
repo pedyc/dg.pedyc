@@ -37,6 +37,7 @@ SSE (Server-Sent Events) 是一种服务器推送技术，允许服务器单向�
 
 - [[WebSocket]]: 一种双向通信协议，允许客户端和服务器之间进行实时的双向数据传输。
 - [[HTTP]]: 一种应用层协议，用于在客户端和服务器之间传输数据。
+- [[WebSocket vs SSE vs Long Polling]]: 三方案实测成本对比，结论是单向文本推送默认选 SSE。
 
 ## 案例
 

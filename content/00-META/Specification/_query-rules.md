@@ -6,7 +6,7 @@ tags: [方法论, llm-wiki]
 date-created: 2026-05-20
 date-modified: 2026-07-17
 status: active
-content-type: [article]
+content-type: article
 up: [["llm-wiki-schema"]]
 ---
 
@@ -24,7 +24,7 @@ up: [["llm-wiki-schema"]]
 
 ### 步骤 3：深入 Raw Sources
 
-如需更多细节，再进入 `30-ZETTELKASTEN/` 读具体 atomic 笔记。
+如需更多细节，再进入 `30-Zettelkasten/` 读具体 atomic 笔记。
 
 ### 步骤 4：合成回答
 
@@ -33,9 +33,9 @@ up: [["llm-wiki-schema"]]
 - Wiki 层引用：`[[C-闭包]]`
 - Atomic 层引用：`[[变量提升的本质是...]]`
 
-### 步骤 5：归档有价值结论
+### 步骤 5：沉淀有价值结论（query 只读，写入交给 ingest）
 
-如果回答中产生了新的洞见、对比、或综合：
+如果回答中产生了新的洞见、对比、或综合，query 本身不写库，只标记建议：
 
-- **值得整合** → 更新相关 concept/moc 页面
+- **值得整合** → 建议更新相关 concept/moc 页面（交由 ingest / obsidian-note 执行）
 - **值得记录** → 建议创建新 atomic 或 concept

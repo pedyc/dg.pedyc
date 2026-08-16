@@ -5,7 +5,7 @@ aliases: [C-WebSocket]
 description: 全双工通信协议，实现服务器主动推送
 tags: [前端, 网络协议]
 date-created: 2025-05-20
-date-modified: 2026-08-02
+date-modified: 2026-08-16
 status: cultivating
 content-type: concept
 up: ""
@@ -21,11 +21,11 @@ up: ""
 
 ### 核心命题
 
-- **全双工优于半双工**：WebSocket 建立后，客户端和服务器可以互相主动发送消息，无需轮询
+- [[WebSocket的全双工让服务器无需轮询即可主动推送]]
 	- **原理**：HTTP 是请求 - 响应模型，只有客户端能主动发起请求；WebSocket 握手后升级为 TCP 连接，双方平等
-- **连接建立成本低**：WebSocket 只需一次握手，后续消息无需重复建立连接
+- [[WebSocket只需一次握手后续消息无需重复建立连接]]
 	- **原理**：HTTP 每次请求都需要 TCP 握手，而 WebSocket 握手后保持 TCP 连接
-- **协议头开销小**：WebSocket 数据帧使用掩码传输，头部仅 2-14 字节
+- [[WebSocket帧头相比HTTP头部大幅减少重复开销]]
 	- **原理**：相比 HTTP 的 Header 重复传输，WebSocket 使用帧格式大幅减少开销
 
 ---
@@ -86,6 +86,7 @@ sequenceDiagram
 > 与本概念相关的标准操作流程，通过实践辅助理解
 
 - [[优惠券发放、领取、核销的前端实现逻辑|SOP-优惠券发放领取核销]] — 优惠券领取通知使用 WebSocket 实现
+- [[使用 WebSocket 实现实时双向通信|SOP-使用WebSocket实现实时双向通信]] — 从握手到重连的完整 WebSocket 前后端使用流程
 
 ---
 
@@ -106,6 +107,7 @@ sequenceDiagram
 - **并列概念**：
 	- [[SSE]] — 服务器推送的另一种方案
 	- [[HTTP]] — 请求 - 响应模型
+	- [[WebSocket vs SSE vs Long Polling]] — 三方案实测成本对比与选型
 - **相关概念**：
 	- [[WebSocket心跳机制]] — 保活策略
 	- [[WebSocket断线重连]] — 容错处理

@@ -4,9 +4,9 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-08-15
+date-modified: 2026-08-16
 status: active
-content-type: [article]
+content-type: article
 up: ["[[本库指南]]"]
 ---
 
@@ -56,6 +56,39 @@ up: ["[[本库指南]]"]
 	- 父页面：[[政治经济]]
 	- 覆盖：1994 财政体制改革，税种划分、增值税分成、土地财政根源
 	- 更新：wiki-index（Concepts 41→42）、政治经济（概念词典）、朱镕基（主要成就链接）
+
+#### 2026-08-16
+
+- [2026-08-16] ingest | 消化 Inbox 文章「WebSocket vs SSE vs Long Polling: The Real Cost of 1,000 Events」
+	- 新建 comparison「[[WebSocket vs SSE vs Long Polling]]」— 三种实时传输方案的实测字节/延迟/内存成本对比，结论：默认用 SSE，需上行/二进制才上 WebSocket
+	- 归档原始素材：40-RESOURCES/Inbox/WebSocket vs SSE vs Long Polling The Real Cost of 1,000 Events.md → 50-ARCHIVE/
+	- 更新：wiki-index（Comparisons 11→12）、WebSocket（并列概念）、SSE（相关概念）、Web通信（持久连接 + 实时通信选型）
+- [2026-08-16] ingest | 新建 SOP「使用 WebSocket 实现实时双向通信」
+	- 位置：40-RESOURCES/使用 WebSocket 实现实时双向通信.md
+	- 父页面：[[WebSocket]]
+	- 覆盖：握手建立、消息收发、心跳保活、断线重连、优雅关闭（Node `ws` + 浏览器原生 API）
+	- 更新：wiki-index（SOPs 43→44）、WebSocket（SOP 章节）
+- [2026-08-16] ingest | 提炼 5 个 atomic 笔记（WebSocket 核心命题 + 文章洞察）
+	- 新建 atomic：
+		- [[WebSocket的全双工让服务器无需轮询即可主动推送]]
+		- [[WebSocket只需一次握手后续消息无需重复建立连接]]
+		- [[WebSocket帧头相比HTTP头部大幅减少重复开销]]
+		- [[长轮询的坏名声来自请求头的重复而非轮询模式本身]]
+		- [[SSE比WebSocket只贵10%字节却换来免费的断线重连与续传]]
+	- 对齐：WebSocket.md 核心命题改为引用 atomic 形式（对齐 HTTP.md 写法）
+	- 挂载：comparison 笔记知识图谱新增「原子洞见」小节
+- [2026-08-16] refactor | _ingest-rules 增加「外部文章消化与 atomic 分工」收尾判断
+	- 明确两条路径：外部文章→wiki 层（LLM）vs 你的洞察→atomic（你）；digest 收尾加「有没有想长期持有的话」判断
+- [2026-08-16] refactor | 方法论审计修正（目录名 / content-type / atomic 本质 / 工作流职责）
+	- 统一目录名：30-ZETTELKASTEN → 30-Zettelkasten（规范/指南文档，wiki-log 历史保留）
+	- 统一 content-type 数组→标量（18 个 META 文档）；本库指南 [sop]→moc；补齐 person/record 定义（本库指南、元数据规范）
+	- 明确 atomic 本质为「已内化的洞见」（llm-wiki-schema、本库子系统概述、本库指南的 Raw sources 表述统一）
+	- 修正 _sync-rules 日志职责矛盾（记录到日志→更新 sync-state）、_query-rules 越界写入（query 只读）
+- [2026-08-16] ingest | 新建 area「dg.pedyc」
+	- 位置：20-AREAS/A-dg.pedyc/dg.pedyc.md
+	- 父页面：[[知识管理]]
+	- 覆盖：个人数字花园站点（Quartz 静态站）的持续维护责任，以专名 dg.pedyc 区分 concept [[数字花园]]
+	- 更新：wiki-index（Areas 13→14）、知识管理（知识网络下游）、P-斑驳光背景实现（area 重挂 dg.pedyc）
 
 ### 2026-07
 

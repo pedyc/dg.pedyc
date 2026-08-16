@@ -6,7 +6,7 @@ tags: [方法论, llm-wiki]
 date-created: 2026-05-20
 date-modified: 2026-07-17
 status: active
-content-type: [article]
+content-type: article
 up: [["llm-wiki-schema"]]
 ---
 
@@ -91,7 +91,7 @@ up: [["llm-wiki-schema"]]
 import os, re
 from collections import defaultdict
 
-CONTENT = "/mnt/d/Workspace/pedyc/site/apps/dg/content"
+CONTENT = r"D:\Workspace\pedyc\site\apps\dg\content"  # content 根目录；换环境时改为 Path(__file__) 相对定位
 link_pattern = re.compile(r'\[\[([^\[\]]+)\]\]')
 inbound = defaultdict(set)
 
@@ -128,7 +128,7 @@ for t, r in sorted(orphans):
 import os, re
 from collections import defaultdict
 
-CONTENT = "/mnt/d/Workspace/pedyc/site/apps/dg/content"
+CONTENT = r"D:\Workspace\pedyc\site\apps\dg\content"  # content 根目录；换环境时改为 Path(__file__) 相对定位
 link_pattern = re.compile(r'\[\[([^\[\]]+)\]\]')
 
 # 收集所有页面标题
@@ -164,7 +164,7 @@ for target, count in real_gaps:
 import os, re
 from collections import defaultdict
 
-CONTENT = "/mnt/d/Workspace/pedyc/site/apps/dg/content"
+CONTENT = r"D:\Workspace\pedyc\site\apps\dg\content"  # content 根目录；换环境时改为 Path(__file__) 相对定位
 link_pattern = re.compile(r'\[\[([^\[\]]+)\]\]')
 inbound = defaultdict(set)
 
@@ -204,7 +204,7 @@ for a in sorted(archive):
 
 ```python
 import os, re
-CONTENT = "/mnt/d/Workspace/pedyc/site/apps/dg/content"
+CONTENT = r"D:\Workspace\pedyc\site\apps\dg\content"  # content 根目录；换环境时改为 Path(__file__) 相对定位
 link_pattern = re.compile(r'\[\[([^\[\]]+)\]\]')
 
 all_pages = {}

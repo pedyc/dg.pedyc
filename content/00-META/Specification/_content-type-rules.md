@@ -6,7 +6,7 @@ tags: [方法论, llm-wiki]
 date-created: 2026-05-20
 date-modified: 2026-07-31
 status: active
-content-type: [article]
+content-type: article
 up: [["Architecture/llm-wiki-schema"]]
 ---
 
@@ -16,7 +16,7 @@ up: [["Architecture/llm-wiki-schema"]]
 
 | 类型 | 目录 | aliases 前缀 | 说明 |
 |------|------|-------------|------|
-| atomic | `30-ZETTELKASTEN/` | 无 | 一句话洞察，陈述句观点 |
+| atomic | `30-Zettelkasten/` | 无 | 一句话洞察，陈述句观点 |
 | concept | `40-RESOURCES/` | C-xxx | 概念整合，核心命题 |
 | moc | `40-RESOURCES/` | MOC-xxx | 领域入口，索引集合 |
 | sop | `40-RESOURCES/` | SOP-xxx | 标准流程 |

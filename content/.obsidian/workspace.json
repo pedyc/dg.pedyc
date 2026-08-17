@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-dg.pedyc/dg.pedyc.md",
+                "file": "10-PROJECTS/P-斑驳光背景实现/P-斑驳光背景实现.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "dg.pedyc"
+              "title": "P-斑驳光背景实现"
             }
           }
         ]
@@ -73,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-dg.pedyc/dg.pedyc.md",
+                "file": "10-PROJECTS/P-斑驳光背景实现/P-斑驳光背景实现.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -283,8 +283,8 @@
   },
   "active": "04630d253fffab4e",
   "lastOpenFiles": [
-    "40-RESOURCES/数字花园.md",
     "20-AREAS/A-dg.pedyc/dg.pedyc.md",
+    "40-RESOURCES/数字花园.md",
     "00-META/Guide/本库指南.md",
     "00-META/Log/wiki-log.md.tmp.19740.5800117dbcdd",
     "00-META/Index/wiki-index.md.tmp.19740.50352fc25159",

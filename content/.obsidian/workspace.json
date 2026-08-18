@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-META/Architecture/知识粒度子系统.md",
+                "file": "30-RESOURCES/Webpack.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "知识粒度子系统"
-            }
-          },
-          {
-            "id": "8f60d21e35425b0c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "30-RESOURCES/Webpack配置流程.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Webpack配置流程"
+              "title": "Webpack"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/Webpack配置流程.md",
+                "file": "30-RESOURCES/Webpack.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -135,7 +110,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30-RESOURCES/Webpack配置流程.md",
+                "file": "30-RESOURCES/Webpack.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -307,9 +282,13 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "8f60d21e35425b0c",
+  "active": "04630d253fffab4e",
   "lastOpenFiles": [
+    "00-META/Architecture/知识粒度子系统.md",
+    "_templates/template_sop.md",
     "30-RESOURCES/Webpack.md",
+    "30-RESOURCES/Webpack配置流程.md",
+    "30-RESOURCES/Webpack vs Vite.md",
     "30-RESOURCES/斑驳光.md",
     "20-AREAS/A-dg.pedyc/dg.pedyc.md",
     "00-META/wiki-sync-state.json.tmp.22596.23181c62cab2",
@@ -330,7 +309,6 @@
     "30-RESOURCES/以需求推动的PARA笔记法.md",
     "30-RESOURCES/需求决定论.md",
     "99-ASSETS/copilot/copilot-conversations/根据标题完善原子笔记@20251212_092839.md",
-    "00-META/Architecture/知识粒度子系统.md",
     "00-META/Architecture/本库子系统概述.md",
     "20-AREAS/A-前端/前端开发.md",
     "20-AREAS/A-前端/JavaScript.md",
@@ -342,9 +320,6 @@
     "30-RESOURCES/Inbox/AI Agent架构与开发工具调研.md",
     "10-PROJECTS/P-斑驳光背景实现/P-斑驳光背景实现.md",
     "30-RESOURCES/数字花园.md",
-    "30-RESOURCES/使用 WebSocket 实现实时双向通信.md",
-    "30-RESOURCES/WebSocket vs SSE vs Long Polling.md",
-    "50-ZETTELCASTEN/长轮询的坏名声来自请求头的重复而非轮询模式本身.md",
     "_resources/Experiments in procedural dappled light shaders/2b7c5414bbca3d0516f2ad2ecf23a9c0_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/e5951ca2badc262c67e3ff3f45a6ff41_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/b521b293f565f374020812c1d5afe1e7_MD5.gif",

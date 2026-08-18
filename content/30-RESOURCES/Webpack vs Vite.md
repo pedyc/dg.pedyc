@@ -5,7 +5,7 @@ aliases: [VS-Webpack vs Vite]
 description: Webpack 是功能强大的模块打包器，Vite 是基于 ESM 的下一代构建工具
 tags: [comparison, 前端工程化]
 date-created: 2026-03-30
-date-modified: 2026-07-21
+date-modified: 2026-08-18
 status: active
 comparison: [Webpack, Vite]
 content-type: comparison

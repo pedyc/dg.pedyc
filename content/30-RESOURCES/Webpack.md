@@ -13,7 +13,10 @@ up: "[[前端工程]]"
 
 ## 概念：Webpack
 
-> Webpack 是开源的 JavaScript 模块打包器，将项目中的各种资源（JS、CSS、图片等）视为模块，分析依赖关系后打包成静态资源。
+Webpack 本质上是一个现代Javascript应用程序的静态模块打包器（Static Module Bundler）。整个构建体系围绕三个核心角色展开：
+1. Compiler（编译器）：包含Webpack环境的所有配置信息（options、loaders、plugins），在Webpack启动时实例化并且唯一，负责控制构建的生命周期和调度。
+2. Compilation（单次编译实例）：代表每一次独立的编译过程。包含当前模块资源、编译生成资产（assets）、变化的文件以及被跟踪依赖的状态。在开发环境每次触发热更新或文件变更时，都会创建一个新的实例。
+3. Tapable（微内核事件流引擎）：Webpack的骨架与灵魂。Compiler和Compilation都继承自Tapable。通过在不同生命周期节点广播Hook事件，插件（Plugin）只需监听（`tap`/`tapAsync`/`tapPromise`）对应Hook即可介入事件流。
 
 **解决的核心痛点**：现代前端项目依赖众多模块文件，浏览器需要分别请求导致性能问题；不同资源类型（ESM、CommonJS、CSS、图片）需要统一模块化方案。
 
@@ -85,6 +88,7 @@ graph TD
 ### SOP
 
 - [[Webpack配置流程]]
+- [[Webpack性能优化]]
 ---
 
 ### FAQ

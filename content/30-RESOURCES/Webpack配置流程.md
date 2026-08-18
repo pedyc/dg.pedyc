@@ -5,7 +5,7 @@ aliases: ["SOP-Webpack配置流程"]
 description: 标准 Webpack 配置流程，从初始化到生产优化
 tags: [前端/构建工具]
 date-created: 2026-05-18
-date-modified: 2026-05-18
+date-modified: 2026-08-18
 status: active
 content-type: sop
 up: "[[Webpack]]"

@@ -31,9 +31,9 @@ up: "[[Guide/本库指南]]"
 
 | 层级 | 位置 | 负责方 | 说明 |
 |------|------|--------|------|
-| 原子笔记层 | `30-Zettelkasten/` | 你 | 已内化的洞见（atomic），source of truth，不修改 |
-| Wiki | `40-RESOURCES/` | LLM | concept/moc/SOP/term/comparison，由 LLM 持续维护 |
-| Archive | `50-ARCHIVE/` | 你 + LLM | 过时知识、已完成项目 |
+| 原子笔记层 | `50-ZETTELCASTEN/` | 你 | 已内化的洞见（atomic），source of truth，不修改 |
+| Wiki | `30-RESOURCES/` | LLM | concept/moc/SOP/term/comparison，由 LLM 持续维护 |
+| Archive | `40-ARCHIVE/` | 你 + LLM | 过时知识、已完成项目 |
 
 > **关键原则**：atomic 是已内化的洞见、source of truth，永不修改。Wiki 层是 LLM 的作品，LLM 负责维护其一致性和完整性。
 

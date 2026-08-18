@@ -27,7 +27,7 @@ up: [["llm-wiki-schema"]]
 - 检查没有 inbound link 的 concept/moc/area
 - 对孤儿页面：
 	- 如有价值但缺少引用 → 补充相关页面的引用
-	- 如已过时 → 移动到 `50-ARCHIVE/`
+	- 如已过时 → 移动到 `40-ARCHIVE/`
 	- 如无价值 → 询问是否删除
 
 #### 3. 概念缺口
@@ -112,7 +112,7 @@ for root, dirs, files in os.walk(CONTENT):
 orphans = []
 for title, rel in {f[:-3]: os.path.relpath(os.path.join(r, f), CONTENT)
     for r, ds, fs in os.walk(CONTENT) for f in fs if f.endswith('.md')}.items():
-    if '/40-RESOURCES/' in rel or '/20-AREAS/' in rel:
+    if '/30-RESOURCES/' in rel or '/20-AREAS/' in rel:
         real = {s for s in inbound.get(title, set()) if 'wiki-index' not in s}
         if len(real) == 0:
             orphans.append((title, rel))
@@ -140,7 +140,7 @@ for root, dirs, files in os.walk(CONTENT):
 
 # 统计 atomic 中链接到不存在的页面
 gaps = defaultdict(int)
-for root, dirs, files in os.walk(os.path.join(CONTENT, '30-Zettelkasten')):
+for root, dirs, files in os.walk(os.path.join(CONTENT, '50-ZETTELCASTEN')):
     for f in files:
         if not f.endswith('.md'): continue
         try:
@@ -190,12 +190,12 @@ for root, dirs, files in os.walk(CONTENT):
         if not f.endswith('.md'): continue
         t = f[:-3]; r = os.path.relpath(os.path.join(root, f), CONTENT)
         store[t] = r
-        if '/50-ARCHIVE/' in r: archive.add(t)
+        if '/40-ARCHIVE/' in r: archive.add(t)
 
 print("归档仍被 wiki 层引用:")
 for a in sorted(archive):
     refs = {s for s in inbound.get(a, set())
-            if '/40-RESOURCES/' in store.get(s, '') or '/20-AREAS/' in store.get(s, '')}
+            if '/30-RESOURCES/' in store.get(s, '') or '/20-AREAS/' in store.get(s, '')}
     if refs:
         print(f"  [[{a}]] <- {list(refs)[:3]}")
 ```

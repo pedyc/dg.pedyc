@@ -269,4 +269,4 @@ allowed-tools:
 - [[Claude Code 使用指南]]
 - [[Claude Code]]
 - [[MCP]]
-- [[Skills 最佳实践(Claude Code).md]]
+- [[Skills 最佳实践(Claude Code)]]

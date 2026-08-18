@@ -4,7 +4,7 @@ title: P-斑驳光背景实现
 description: 在 Quartz 数字花园中实现程序化斑驳光（Dappled Light）着色器背景，用五层渲染流水线替换现有纯 CSS 近似方案
 tags: [前端, CSS, Canvas, Shader, Quartz]
 date-created: 2026-08-14
-date-modified: 2026-08-14
+date-modified: 2026-08-18
 status: active
 area: ["[[dg.pedyc|A-dg.pedyc]]"]
 consequence: 5

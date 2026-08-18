@@ -5,7 +5,7 @@ aliases: [JS, A-JavaScript]
 description: JavaScript 知识领域，包含核心概念、运行机制、生态工具
 tags: [前端开发/JavaScript]
 date-created: 2025-05-19
-date-modified: 2026-08-03
+date-modified: 2026-08-18
 status: active
 content-type: area
 up: ["[[前端开发]]"]
@@ -47,7 +47,7 @@ mindmap
 
 ---
 
-### 长期目标
+### 里程碑
 
 - **愿景**：深入掌握 JavaScript 核心原理，能够编写高质量、可维护的代码
 - **里程碑**：
@@ -57,9 +57,9 @@ mindmap
 
 ---
 
-### 关键领域
+### 专题导航
 
-> 该领域的核心知识主题（链接 Concept 或子领域 Area）
+> 子领域（Area）已是中观层粒度，直接聚合本主题下的关键概念（已按主题分组）。
 
 - **语言核心**
 	- [[闭包]] — 模块化、私有变量、内存泄漏

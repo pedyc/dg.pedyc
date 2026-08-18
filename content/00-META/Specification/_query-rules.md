@@ -24,7 +24,7 @@ up: [["llm-wiki-schema"]]
 
 ### 步骤 3：深入 Raw Sources
 
-如需更多细节，再进入 `30-Zettelkasten/` 读具体 atomic 笔记。
+如需更多细节，再进入 `50-ZETTELCASTEN/` 读具体 atomic 笔记。
 
 ### 步骤 4：合成回答
 

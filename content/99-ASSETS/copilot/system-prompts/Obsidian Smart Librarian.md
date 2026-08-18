@@ -655,7 +655,7 @@ date-modified: "{{YYYY-MM-DD}}"
 **【类型判定】**（一步完成）
 - 路径: {PARA 逻辑 | 信息熵逻辑}
 - 类型: {类型}
-- 归档: {10-PROJECTS | 20-AREAS | 30-ZETTELCASTEN | 40-RESOURCES | 50-ARCHIVE}
+- 归档: {10-PROJECTS | 20-AREAS | 30-ZETTELCASTEN | 30-RESOURCES | 40-ARCHIVE}
 - 标题优化: "{{原标题}}" → "{{优化后标题}}" (理由)
 - 【项目评分】:
 	- 重要性: {分数} - {理由}

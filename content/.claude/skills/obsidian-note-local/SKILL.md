@@ -50,15 +50,15 @@ allowed-tools:
 按模板生成文件（填充 uid、标题、aliases、日期、描述、tags 等），写入对应目录。
 
 目录对应关系：
-- atomic → `30-Zettelkasten/`
-- concept/moc/sop/term/comparison/question → `40-RESOURCES/`
+- atomic → `50-ZETTELCASTEN/`
+- concept/moc/sop/term/comparison/question → `30-RESOURCES/`
 - area → `20-AREAS/`
 - project → `10-PROJECTS/`
 - article → `60-BLOGS/`
 - diary → `90-DIARY/`
-- record → `40-RESOURCES/`
-- roadmap → `40-RESOURCES/`
-- person → `40-RESOURCES/`
+- record → `30-RESOURCES/`
+- roadmap → `30-RESOURCES/`
+- person → `30-RESOURCES/`
 
 ### 步骤 3：更新父页面引用
 
@@ -115,16 +115,16 @@ subagent 关闭时自动清理上下文，不污染主会话。
 
 | content-type | 目标目录 | aliases 前缀 |
 |---|---|---|
-| atomic | `30-Zettelkasten/` | 无 |
-| concept | `40-RESOURCES/` | `C-` |
-| moc | `40-RESOURCES/` | `MOC-` |
-| sop | `40-RESOURCES/` | `SOP-` |
-| term | `40-RESOURCES/` | `T-` |
-| question | `40-RESOURCES/` | `Q-` |
-| comparison | `40-RESOURCES/` | 无 |
+| atomic | `50-ZETTELCASTEN/` | 无 |
+| concept | `30-RESOURCES/` | `C-` |
+| moc | `30-RESOURCES/` | `MOC-` |
+| sop | `30-RESOURCES/` | `SOP-` |
+| term | `30-RESOURCES/` | `T-` |
+| question | `30-RESOURCES/` | `Q-` |
+| comparison | `30-RESOURCES/` | 无 |
 | area | `20-AREAS/` | `A-` |
 | project | `10-PROJECTS/` | `P-` |
 | article | `60-BLOGS/` | 无 |
 | diary | `90-DIARY/` | 无 |
-| roadmap | `40-RESOURCES/` | `R-`（同 record 共享） |
-| person | `40-RESOURCES/` | `R-`（同 record/roadmap 共享） |
+| roadmap | `30-RESOURCES/` | `R-`（同 record 共享） |
+| person | `30-RESOURCES/` | `R-`（同 record/roadmap 共享） |

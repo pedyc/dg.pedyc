@@ -16,20 +16,20 @@ up: [["Architecture/llm-wiki-schema"]]
 
 | 类型 | 目录 | aliases 前缀 | 说明 |
 |------|------|-------------|------|
-| atomic | `30-Zettelkasten/` | 无 | 一句话洞察，陈述句观点 |
-| concept | `40-RESOURCES/` | C-xxx | 概念整合，核心命题 |
-| moc | `40-RESOURCES/` | MOC-xxx | 领域入口，索引集合 |
-| sop | `40-RESOURCES/` | SOP-xxx | 标准流程 |
-| term | `40-RESOURCES/` | T-xxx | 术语定义 |
-| comparison | `40-RESOURCES/` | VS-xxx | 比较分析 |
+| atomic | `50-ZETTELCASTEN/` | 无 | 一句话洞察，陈述句观点 |
+| concept | `30-RESOURCES/` | C-xxx | 概念整合，核心命题 |
+| moc | `30-RESOURCES/` | MOC-xxx | 领域入口，索引集合 |
+| sop | `30-RESOURCES/` | SOP-xxx | 标准流程 |
+| term | `30-RESOURCES/` | T-xxx | 术语定义 |
+| comparison | `30-RESOURCES/` | VS-xxx | 比较分析 |
 | area | `20-AREAS/` | A-xxx | 领域定义 |
 | project | `10-PROJECTS/` | P-xxx | 项目 |
 | article | `60-BLOGS/` | 无 | 博客文章 |
-| record | `40-RESOURCES/` | R-xxx | 事件记录 |
+| record | `30-RESOURCES/` | R-xxx | 事件记录 |
 | question | 混合 | Q-xxx | 开放性问题 |
 | diary | `90-DIARY/` | 无 | 日记 |
-| roadmap | `40-RESOURCES/` | R-xxx | 线性演进路线图，版本迭代/技术发展时间线 |
-| person | `40-RESOURCES/` | R-xxx | 人物生平与思想记录 |
+| roadmap | `30-RESOURCES/` | R-xxx | 线性演进路线图，版本迭代/技术发展时间线 |
+| person | `30-RESOURCES/` | R-xxx | 人物生平与思想记录 |
 
 ### 前缀规则
 

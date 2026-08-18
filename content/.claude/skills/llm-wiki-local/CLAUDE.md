@@ -16,9 +16,9 @@ content/
 ├── 00-META/           # 系统元数据（schema、index、log）
 ├── 10-PROJECTS/       # 项目
 ├── 20-AREAS/          # 领域
-├── 30-Zettelkasten/   # 原子笔记（raw sources）
-├── 40-RESOURCES/      # wiki 层（concept, moc, sop, term, comparison）
-├── 50-ARCHIVE/         # 归档
+├── 50-ZETTELCASTEN/   # 原子笔记（raw sources）
+├── 30-RESOURCES/      # wiki 层（concept, moc, sop, term, comparison）
+├── 40-ARCHIVE/         # 归档
 ├── 60-BLOGS/           # 博客文章
 ├── 90-DIARY/           # 日记
 └── 99-ASSETS/          # 附件

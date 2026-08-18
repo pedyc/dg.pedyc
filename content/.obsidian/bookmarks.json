@@ -12,17 +12,17 @@
         {
           "type": "file",
           "ctime": 1774235280317,
-          "path": "40-RESOURCES/MOC-浏览器兼容性问题.md"
+          "path": "30-RESOURCES/MOC-浏览器兼容性问题.md"
         },
         {
           "type": "file",
           "ctime": 1774290512653,
-          "path": "40-RESOURCES/Virtual DOM.md"
+          "path": "30-RESOURCES/Virtual DOM.md"
         },
         {
           "type": "file",
           "ctime": 1776874086556,
-          "path": "40-RESOURCES/渲染进程.md"
+          "path": "30-RESOURCES/渲染进程.md"
         }
       ],
       "title": "前端"
@@ -36,7 +36,7 @@
     {
       "type": "file",
       "ctime": 1779248522311,
-      "path": "50-ARCHIVE/LLM Wiki.md"
+      "path": "40-ARCHIVE/LLM Wiki.md"
     }
   ]
 }

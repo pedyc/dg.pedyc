@@ -4,7 +4,7 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-08-16
+date-modified: 2026-08-18
 status: active
 content-type: article
 up: ["[[本库指南]]"]
@@ -22,6 +22,47 @@ up: ["[[本库指南]]"]
 ## 2026
 
 ### 2026-08
+
+#### 2026-08-18
+
+- [2026-08-18] refactor | 前端领域三层粒度重构（area 管责任 / MOC 管地图）
+	- 依据：三层粒度模型（领域 → 专题 → 原子），详见《本库子系统概述#知识粒度子系统》
+	- 前端开发 area「关键领域」→「专题导航」：只列子领域 Area 与专题 MOC 链接，不再平铺 concept
+	- concept→moc：前端框架 / Web通信 / Web存储（修复 catch-all concept 冒充中观层）
+		- Web通信 修复畸形 content-type `[concept]` → `moc`，补 uid
+	- 更新：wiki-index（MOCs 47→50, Concepts 42→43）、浏览器（存储机制小节挂 Web存储 MOC）
+	- 规范：本库子系统概述新增"知识粒度子系统"、template_area 关键领域→专题导航、本库指南核心理念新增三层粒度
+- [2026-08-18] ingest | 新建 concept「HTML」
+	- 位置：40-RESOURCES/HTML.md
+	- 父页面：[[前端开发]]
+	- 覆盖：Web 结构层标记语言、语义化标签、HTML/CSS/JS 三层职责划分
+	- 更新：wiki-index（Concepts 42→43）、前端开发（专题导航·前端基础）
+- [2026-08-18] refactor | 补全「知识粒度子系统」文档（三层粒度模型）
+	- 位置：00-META/Architecture/知识粒度子系统.md（存根 → concept 文档，修复 content-type 数组）
+	- 覆盖：三层粒度模型、area 管责任 / MOC 管地图、粒度判定三问、前端领域落地示例、NotebookLM 对接
+	- 更新：wiki-index（Meta 分区）、本库子系统概述（核心命题链接 + 子系统 8 详注）
+- [2026-08-18] ingest | 新建 question「为什么使用PARA笔记法」
+	- 位置：00-META/Faq/为什么使用PARA笔记法.md
+	- 父页面：[[PARA笔记法]]
+	- 覆盖：PARA 基于行动分类、主题分类稀释精力、需求推动立项集中精力、领域/项目双轨、与三层粒度一致
+	- 更新：wiki-index（Questions 2→3）、本库常见问题解答汇总（方法论小节）
+- [2026-08-18] refactor | 三层粒度全库审计 + 优先修复（AI / TypeScript / 健康·时间）
+	- 审计：14 个 area 全量核查——符合 2（前端开发/浏览器）、接近 3（求职/个人成长/dg.pedyc）、需调整 9
+	- AI：新建 moc「[[MOC-LLM 基础]]」「[[MOC-AI Agent 与工具]]」，area 关键领域→专题导航
+	- TypeScript：修复 `[[前端工程化[[前端工程]]` 语法损坏，长期目标→里程碑、知识网络→专题导航
+	- 健康管理 / 时间管理：知识网络→专题导航（GTD / 精力成本 / 习惯 atomic），补待探索
+	- 更新：wiki-index（MOCs 50→52）
+- [2026-08-18] refactor | 三层粒度全库落地（剩余 8 领域对齐）
+	- 求职 / 个人成长 / dg.pedyc / JavaScript：关键领域→专题导航（内容已聚合 MOC）
+	- 知识管理：知识网络→专题导航（获取 / 组织 / 内化 / 分享 MOC 入口）
+	- 政治经济：概念词典→专题导航（政治理论 / 经济体系 / 社会与制度 / 时政 MOC-时政）
+	- 设计：核心心智模型→专题导航（视觉基础 / 设计系统 / 认知基础）+ 待探索
+	- 宗教与神秘学：修复悬空「哲学 MOC」→[[MOC-哲学与认知]]，挂 [[MOC-神秘主义]]，重写模板
+	- 结果：14/14 area 均使用专题导航 + 里程碑，无残留「关键领域 / 长期目标」
+- [2026-08-18] refactor | 目录重命名迁移（40-RESOURCES→30-RESOURCES / 50-ARCHIVE→40-ARCHIVE / 30-Zettelkasten→50-ZETTELCASTEN）
+	- 更新 33 个功能性文件：skills×4、00-META 指南/规范/架构×15、内容笔记×11、Obsidian 配置×3
+	- 指南目录树/编号对齐新数字顺序（30-RESOURCES < 40-ARCHIVE < 50-ZETTELCASTEN）
+	- 跳过（历史/状态，不更新）：wiki-log 历史、suggest-log、copilot 对话、Obsidian UI 状态（workspace/bookmarks/copilot-index）、settings.local.json 权限授权串
 
 #### 2026-08-11
 

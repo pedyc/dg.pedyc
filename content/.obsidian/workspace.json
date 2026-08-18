@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-斑驳光背景实现/P-斑驳光背景实现.md",
+                "file": "00-META/Architecture/知识粒度子系统.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "P-斑驳光背景实现"
+              "title": "知识粒度子系统"
+            }
+          },
+          {
+            "id": "8f60d21e35425b0c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "30-RESOURCES/Webpack配置流程.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Webpack配置流程"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -73,7 +98,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-斑驳光背景实现/P-斑驳光背景实现.md",
+                "file": "30-RESOURCES/Webpack配置流程.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -110,16 +135,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "40-RESOURCES/React面试题.md",
+                "file": "30-RESOURCES/Webpack配置流程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "React面试题 的大纲"
+              "title": "大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "5e0950099d64d5f6",
@@ -281,44 +307,44 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "04630d253fffab4e",
+  "active": "8f60d21e35425b0c",
   "lastOpenFiles": [
+    "30-RESOURCES/Webpack.md",
+    "30-RESOURCES/斑驳光.md",
     "20-AREAS/A-dg.pedyc/dg.pedyc.md",
-    "40-RESOURCES/数字花园.md",
+    "00-META/wiki-sync-state.json.tmp.22596.23181c62cab2",
+    "00-META/Log/wiki-log.md.tmp.22596.41f8dfda16d3",
+    "00-META/Guide/本库指南.md.tmp.22596.3f983aaae58c",
+    "00-META/Guide/本库指南.md.tmp.22596.cecbf00bd3d8",
+    "00-META/Architecture/本库子系统概述.md.tmp.22596.187949b488cc",
+    "00-META/Architecture/本库子系统概述.md.tmp.22596.2c1823af352a",
+    "20-AREAS/A-人工智能/人工智能.md",
+    "00-META/wiki-sync-state.json.tmp.22596.82da21a64d2b",
+    "00-META/Log/wiki-log.md.tmp.22596.1e487da70996",
+    "00-META/Index/wiki-index.md.tmp.22596.bfaa20b06911",
+    "20-AREAS/A-设计/设计.md.tmp.22596.d355d02e1de9",
+    "30-RESOURCES/MOC-AI Agent 与工具.md",
+    "30-RESOURCES/MOC-LLM 基础.md",
+    "00-META/Faq/为什么使用PARA笔记法.md",
+    "30-RESOURCES/PARA笔记法.md",
+    "30-RESOURCES/以需求推动的PARA笔记法.md",
+    "30-RESOURCES/需求决定论.md",
+    "99-ASSETS/copilot/copilot-conversations/根据标题完善原子笔记@20251212_092839.md",
+    "00-META/Architecture/知识粒度子系统.md",
+    "00-META/Architecture/本库子系统概述.md",
+    "20-AREAS/A-前端/前端开发.md",
+    "20-AREAS/A-前端/JavaScript.md",
+    "30-RESOURCES/HTML.md",
+    "00-META/Faq/本库设计中遇到的问题汇总.md",
+    "00-META/Faq/本库常见问题解答汇总.md",
     "00-META/Guide/本库指南.md",
-    "00-META/Log/wiki-log.md.tmp.19740.5800117dbcdd",
-    "00-META/Index/wiki-index.md.tmp.19740.50352fc25159",
-    "00-META/Index/wiki-index.md.tmp.19740.609ebe0b582b",
-    "00-META/Index/wiki-index.md.tmp.19740.717d4a1e3cde",
-    "10-PROJECTS/P-斑驳光背景实现/P-斑驳光背景实现.md.tmp.19740.a95466199d4f",
-    "10-PROJECTS/P-斑驳光背景实现/P-斑驳光背景实现.md.tmp.19740.293e95bb2232",
-    "20-AREAS/A-dg.pedyc/dg.pedyc.md.tmp.19740.d93aafdba6e1",
-    "20-AREAS/A-dg.pedyc",
-    "00-META/Specification/_lint-rules.md.tmp.19740.e909b04c331f",
-    "00-META/Specification/_query-rules.md.tmp.19740.3f28949cc066",
-    "40-RESOURCES/使用 WebSocket 实现实时双向通信.md",
-    "40-RESOURCES/WebSocket vs SSE vs Long Polling.md",
-    "30-Zettelkasten/长轮询的坏名声来自请求头的重复而非轮询模式本身.md",
-    "40-RESOURCES/WebSocket.md",
-    "30-Zettelkasten/SSE比WebSocket只贵10%字节却换来免费的断线重连与续传.md",
-    "30-Zettelkasten/WebSocket帧头相比HTTP头部大幅减少重复开销.md",
-    "30-Zettelkasten/WebSocket只需一次握手后续消息无需重复建立连接.md",
-    "30-Zettelkasten/WebSocket的全双工让服务器无需轮询即可主动推送.md",
-    "40-RESOURCES/Web通信.md",
-    "00-META/Log/wiki-log.md",
-    "40-RESOURCES/Inbox/WebSocket vs SSE vs Long Polling The Real Cost of 1,000 Events.md",
-    "50-ARCHIVE/WebSocket vs SSE vs Long Polling The Real Cost of 1,000 Events.md",
-    "00-META/Index/wiki-index.md",
-    "40-RESOURCES/SOP-视觉思维工作流.md",
-    "00-META/Specification/_笔记类型规范.md",
-    "40-RESOURCES/分税制改革.md",
-    "20-AREAS/A-政治经济/政治经济.md",
-    "40-RESOURCES/哲学.md",
-    "40-RESOURCES/MOC-哲学与认知.md",
-    "40-RESOURCES/MOC-时政.md",
-    "40-RESOURCES/朱镕基.md",
+    "_templates/template_moc.md",
+    "30-RESOURCES/Inbox/AI Agent架构与开发工具调研.md",
     "10-PROJECTS/P-斑驳光背景实现/P-斑驳光背景实现.md",
-    "index.md",
+    "30-RESOURCES/数字花园.md",
+    "30-RESOURCES/使用 WebSocket 实现实时双向通信.md",
+    "30-RESOURCES/WebSocket vs SSE vs Long Polling.md",
+    "50-ZETTELCASTEN/长轮询的坏名声来自请求头的重复而非轮询模式本身.md",
     "_resources/Experiments in procedural dappled light shaders/2b7c5414bbca3d0516f2ad2ecf23a9c0_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/e5951ca2badc262c67e3ff3f45a6ff41_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/b521b293f565f374020812c1d5afe1e7_MD5.gif",

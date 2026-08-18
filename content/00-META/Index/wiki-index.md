@@ -13,7 +13,7 @@ up: "[[本库指南]]"
 ## Wiki Index
 
 本文件是知识库的导航索引，由 LLM 维护。每个条目包含页面链接和一句话说明。
-**最后更新：2026-08-16** — 新增 area「dg.pedyc」（Areas 13→14）
+**最后更新：2026-08-18** — 三层粒度全库落地：14/14 领域对齐（关键领域→专题导航、长期目标→里程碑）；AI 拆中观层 MOC×2（MOCs 50→52）、前端 3 concept→moc（MOCs 47→50）、新建 HTML、TypeScript 修复、健康/时间补知识层
 
 ---
 
@@ -59,7 +59,13 @@ up: "[[本库指南]]"
 
 ---
 
-## MOCs (领域入口) — 47 个
+## MOCs (领域入口) — 52 个
+
+### 前端专题（中观层）
+
+- [[前端框架]] — MOC：Vue / React / Angular / Svelte / ThreeJS 原理、对比与选型
+- [[Web通信]] — MOC：HTTP 协议族 / 实时通信 / 跨域通信
+- [[Web存储]] — MOC：Cookie / localStorage / IndexedDB 客户端存储专题
 
 ### 前端工程
 
@@ -120,6 +126,8 @@ up: "[[本库指南]]"
 ### AI 与 Claude
 
 - [[MOC-OpenClaw]] — OpenClaw 生态、Agent 开发
+- [[MOC-LLM 基础]] — LLM 基础原理：模型 / 上下文窗口 / 采样参数 / 提示词 / RAG
+- [[MOC-AI Agent 与工具]] — 智能体与 AI 编码工具：Agent / MCP / Harness / Claude Code
 
 ### 前端交互
 
@@ -149,10 +157,11 @@ up: "[[本库指南]]"
 
 ---
 
-## Concepts (概念) — 42 个
+## Concepts (概念) — 43 个
 
 ### 前端框架与工具
 
+- [[HTML]] — 超文本标记语言，Web 结构层基础
 - [[Angular]] — 企业级前端框架（TypeScript、依赖注入、模块化）
 - [[Angular版本演进]] — Angular 从 AngularJS 到 v22 的演进路线图与未来方向
 - [[Zoneless变更检测]] — Angular 从 v18 实验到 v19 稳定的无 Zone.js 变更检测新范式
@@ -425,8 +434,9 @@ up: "[[本库指南]]"
 
 ---
 
-## Questions (待探索) — 2 个
+## Questions (待探索) — 3 个
 
+- [[为什么使用PARA笔记法|Q-为什么使用PARA笔记法]] — 本库选择 PARA 的原因：基于行动组织知识、需求推动立项、集中精力
 - [[如何进行代码重构？|Q-如何进行代码重构？]] — 探索代码重构的系统性方法、策略和最佳实践
 - [[为什么社区更倾向函数组件|Q-为什么更倾向函数组件]] — 分析 React 社区从 Class 组件转向函数组件 + Hooks 的核心原因
 	- [[UI本质上是状态的函数]] — UI 是状态到视图的映射函数，而非面向对象的手动操作
@@ -446,6 +456,7 @@ up: "[[本库指南]]"
 
 - [[本库指南]] — 知识库方法论与命名规范（单一可信源）
 - [[本库子系统概述]] — 本库的 9 个子系统架构及其关联关系
+- [[知识粒度子系统]] — 三层粒度模型：领域(area)→专题(moc)→原子(concept/atomic)
 - [[llm-wiki-schema]] — LLM 维护知识库的作业指南索引
 - [[_笔记类型规范]] — content-type 定义、前缀规则、类型对比、状态流转（唯一可信源）
 - [[_content-type-rules]] — content-type 定义和内联规则（兼容入口）

@@ -54,7 +54,7 @@ obsidian-note-local → 创建 + 挂父页面 + 同步 + 评估 + 核查（一�
 /obsidian-note-local create question "如何进行代码重构？"
 
 # 更新模式
-/obsidian-note-local update 40-RESOURCES/闭包.md "新的内容"
+/obsidian-note-local update 30-RESOURCES/闭包.md "新的内容"
 ```
 
 **做了什么**：
@@ -73,8 +73,8 @@ obsidian-note-local → 创建 + 挂父页面 + 同步 + 评估 + 核查（一�
 **手动模式**：
 
 ```bash
-/wiki-sync-local create "40-RESOURCES/MOC-Angular面试题.md"
-/wiki-sync-local delete "40-RESOURCES/某页面.md"
+/wiki-sync-local create "30-RESOURCES/MOC-Angular面试题.md"
+/wiki-sync-local delete "30-RESOURCES/某页面.md"
 ```
 
 **做了什么**：
@@ -130,7 +130,7 @@ obsidian-note-local → 创建 + 挂父页面 + 同步 + 评估 + 核查（一�
 **用途**：逐层核查单篇笔记质量。
 
 ```bash
-/content-verifier-local "40-RESOURCES/闭包.md"
+/content-verifier-local "30-RESOURCES/闭包.md"
 ```
 
 **检查维度**（由浅到深）：

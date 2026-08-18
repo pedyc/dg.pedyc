@@ -26,16 +26,16 @@ allowed-tools:
 
 | content-type | 模板 | 目录 |
 |---|---|---|
-| atomic | template_atomic.md | 30-ZETTELKASTEN/ |
-| concept | template_concept.md | 40-RESOURCES/ |
-| moc | template_moc.md | 40-RESOURCES/ |
-| sop | template_sop.md | 40-RESOURCES/ |
-| term | template_term.md | 40-RESOURCES/ |
-| question | template_question.md | 40-RESOURCES/ |
-| comparison | template_comp.md | 40-RESOURCES/ |
-| record | template_record.md | 40-RESOURCES/ |
-| roadmap | template_roadmap.md | 40-RESOURCES/ |
-| person | template_person.md | 40-RESOURCES/ |
+| atomic | template_atomic.md | 50-ZETTELCASTEN/ |
+| concept | template_concept.md | 30-RESOURCES/ |
+| moc | template_moc.md | 30-RESOURCES/ |
+| sop | template_sop.md | 30-RESOURCES/ |
+| term | template_term.md | 30-RESOURCES/ |
+| question | template_question.md | 30-RESOURCES/ |
+| comparison | template_comp.md | 30-RESOURCES/ |
+| record | template_record.md | 30-RESOURCES/ |
+| roadmap | template_roadmap.md | 30-RESOURCES/ |
+| person | template_person.md | 30-RESOURCES/ |
 | area | template_area.md | 20-AREAS/ |
 | project | template_project.md | 10-PROJECTS/ |
 | article | template_article.md | 60-BLOGS/ |

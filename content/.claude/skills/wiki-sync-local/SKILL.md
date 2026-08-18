@@ -3,7 +3,7 @@ name: wiki-sync-local
 version: 3.1.0
 description: |
   维护系统元数据层：更新 wiki-index、记录 wiki-log、同步 wiki-sync-state。
-  **职责边界：只碰 00-META/ 下的系统文件。不碰内容页（20-AREAS/ / 30-Zettelkasten/ / 40-RESOURCES/ / 60-BLOGS/）。**
+  **职责边界：只碰 00-META/ 下的系统文件。不碰内容页（20-AREAS/ / 50-ZETTELCASTEN/ / 30-RESOURCES/ / 60-BLOGS/）。**
   **wiki-index 格式一律遵守 [[_wiki-index-format]] 规范（分区顺序/条目格式/缩进/计数/更新标记）。**
 **维护清单**：wiki-index.md、wiki-log.md、wiki-sync-state.json、**suggest-log.md**
   手动触发：创建/删除笔记后补充 wiki-index 和 wiki-log。

@@ -78,7 +78,7 @@ flowchart LR
 
 > 与 Hydration 相关的标准操作流程，通过实践辅助理解
 
-- [[SOP-在Next.js中使用Hydration]] — Next.js 中使用 Hydration 的标准流程
+- [[在Next.js中使用Hydration]] — Next.js 中使用 Hydration 的标准流程
 
 #### FAQ
 

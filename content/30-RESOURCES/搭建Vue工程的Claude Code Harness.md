@@ -173,5 +173,5 @@ defineProps<{ name: string; avatar?: string }>()
 	- [[Claude Code]] — Harness 的 Agent 实现载体
 	- [[Agent]] — 能力基础
 	- [[Vue]] — 示例技术栈
-	- [[SOP-使用Claude-Code开发React组件]] — React 版本对照示例
+	- [[使用Claude-Code开发React组件]] — React 版本对照示例
 	- [[提示词工程]] — 与 Harness 互补：Prompt 优化能力，Harness 优化可靠性

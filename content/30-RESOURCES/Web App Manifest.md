@@ -75,4 +75,4 @@ Web App Manifest（应用清单）是 PWA 的配置文件，以 JSON 格式定�
 	- [[HTTPS]] — PWA 安全基础
 - **相关概念**：
 	- [[前端性能优化]] — Manifest 优化可缩短首屏渲染时间
-	- [[SOP-开发一个最小PWA应用]] — Manifest 在 PWA 开发中的使用
+	- [[开发一个最小PWA应用]] — Manifest 在 PWA 开发中的使用

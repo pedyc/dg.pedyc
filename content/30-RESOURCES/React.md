@@ -128,9 +128,9 @@ mindmap
 
 - [[React最佳实践|SOP-React最佳实践]] — 开发 React 应用需要遵循的规范
 - [[React性能优化]] — 开发 React 应用需要注意的性能优化方法
-- [[SOP-使用Claude-Code开发React组件]] — Claude Code 开发 React 组件的工作流
-- [[SOP-在React中实现文字故障效果]] — React 中的 Glitch 文字动画
-- [[SOP-在React中实现ASCII动画]] — React 中的 ASCII 动画效果
+- [[使用Claude-Code开发React组件]] — Claude Code 开发 React 组件的工作流
+- [[在React中实现文字故障效果]] — React 中的 Glitch 文字动画
+- [[在React中实现ASCII动画]] — React 中的 ASCII 动画效果
 
 ---
 

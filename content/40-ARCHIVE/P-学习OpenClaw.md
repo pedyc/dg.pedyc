@@ -79,7 +79,7 @@ urgency: 2
 
 ## 📦 关联资源（输入资源）
 
-- [[SOP-在WSL2中安装OpenClaw]]🔨 核心指南（部署前必读）
+- [[在WSL2中安装OpenClaw]]🔨 核心指南（部署前必读）
 - [[systemd]] 🔨 核心工具（部署前必读）
 - [[DBus]] 🔨 核心工具（理解底层机制）
 - [[Telegram Bot API文档]] 📚 灵感来源（机器人高级功能）
@@ -94,8 +94,8 @@ urgency: 2
 - [[OpenClaw-Telegram配置参数]]💎 配置模板可直接复用
 - [[OpenClaw-AI测试用例库]]💎 包含成功和失败案例
 - [[SOP-用Openclaw处理Github PR]]
-- [[MOC-OpenClaw]]
-- [[MOC-OpenClaw-Skills清单]]
+- [[OpenClaw]]
+- [[OpenClaw-Skills清单]]
 - Telegram 对话截图/录屏💎 成果展示
 	- ![[30dc0c3697e6afecaa957f91b3e8daac_MD5.jpg]]
 

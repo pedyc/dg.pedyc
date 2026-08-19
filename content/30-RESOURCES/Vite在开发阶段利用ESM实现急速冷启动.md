@@ -8,7 +8,7 @@ date-created: 2026-05-21
 date-modified: 2026-05-21
 status: cultivating
 content-type: question
-up: "[[MOC-Vite相关问题]]"
+up: "[[Vite相关问题]]"
 ---
 
 ## 问题
@@ -71,7 +71,7 @@ Vite 的冷启动优化本质上是将编译时机从 " 启动时 " 推迟到 " 
 ## 关联
 
 - **相关概念**：
-	- [[MOC-Vite相关问题]]
+	- [[Vite相关问题]]
 	- [[esbuild]] — Vite 预构建依赖的工具
 	- [[Vite急速冷启动的本质是延迟编译]] — atomic 笔记，核心洞察
 	- [[Vite 的 HMR（热模块替换）是如何实现的？与 Webpack HMR 的区别？]]

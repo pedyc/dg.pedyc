@@ -99,7 +99,7 @@ graph LR
 
 ### FAQ
 
-- [[Q-Vapor Mode是什么]] — Vue 新编译策略的问题与探索路径
+- [[Vapor Mode是什么]] — Vue 新编译策略的问题与探索路径
 
 ---
 

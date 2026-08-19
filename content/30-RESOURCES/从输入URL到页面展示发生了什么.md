@@ -8,7 +8,7 @@ date-created: 2026-05-22
 date-modified: 2026-05-22
 status: active
 content-type: question
-up: ["[[MOC-前端面试真题库|前端面试题]]", "[[网络协议相关问题|MOC-网络协议相关问题]]"]
+up: ["[[前端面试真题库|前端面试题]]", "[[网络协议相关问题|MOC-网络协议相关问题]]"]
 ---
 
 ## 问题

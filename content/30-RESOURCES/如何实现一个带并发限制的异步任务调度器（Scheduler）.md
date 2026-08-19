@@ -5,10 +5,10 @@ aliases: ["Q-异步任务调度器", "Async Scheduler", "并发限制调度器"]
 description: 实现同时最多执行 N 个异步任务的调度器，控制并发量，避免资源耗尽
 tags: [前端/JavaScript/异步编程, 面试题]
 date-created: 2026-06-27
-date-modified: 2026-07-07
+date-modified: 2026-08-19
 status: fleeting
 content-type: question
-up: "[[MOC-前端面试真题库]]"
+up: "[[前端面试真题库]]"
 ---
 
 ## 问题
@@ -139,7 +139,7 @@ class Semaphore {
 
 ## 关联
 
-- **父级**：[[MOC-前端面试真题库]]
+- **父级**：[[前端面试真题库]]
 - **相关问题**：
 	- [[在响应式对象频繁更新的场景下如何减少不必要的响应式开销？]]
 - **前置知识**：

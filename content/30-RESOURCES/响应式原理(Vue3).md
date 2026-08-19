@@ -5,10 +5,10 @@ aliases: [响应式原理, C-响应式原理(Vue3)]
 description: Vue3 响应式系统的核心实现原理
 tags: [前端/Vue, 前端/原理]
 date-created: 2026-03-13
-date-modified: 2026-08-01
+date-modified: 2026-08-19
 status: cultivating
 content-type: concept
-up: "[[前端开发]]"
+up: ["[[Vue|vue]]"]
 ---
 
 ## 概念：响应式原理（Vue3）
@@ -28,6 +28,7 @@ up: "[[前端开发]]"
 - [[Vue3 响应式系统分为 effect 和 reactive 两部分]]
 	- **effect** 负责收集依赖和触发更新
 	- **reactive** 负责将普通对象转换为响应式对象
+- [[在Vue3中解构响应式对象会丢失响应性]]
 
 ---
 

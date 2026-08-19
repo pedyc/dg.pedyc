@@ -5,7 +5,7 @@ aliases: [C-XSS, Cross-Site Scripting, 跨站脚本攻击]
 description: XSS是一种代码注入攻击，攻击者往Web页面插入恶意脚本代码执行
 tags: [前端开发/安全]
 date-created: 2025-12-17
-date-modified: 2026-03-23
+date-modified: 2026-08-19
 status: active
 content-type: concept
 up: [[浏览器安全机制]]

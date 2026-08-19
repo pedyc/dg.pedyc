@@ -61,4 +61,4 @@ WantedBy=multi-user.target
 - **MOC 索引**: [[A-Linux]], [[DevOps 实务]]
 - **技术支撑**: [[cgroups]], [[Init System 演进史]]
 - **对比反面**: [[SysVinit]], [[OpenRC]]
-- **SOP**: [[SOP-如何在WSL中配置并运行自定义systemd服务？]]
+- **SOP**: [[如何在WSL中配置并运行自定义systemd服务？]]

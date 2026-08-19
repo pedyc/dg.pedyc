@@ -5,7 +5,7 @@ aliases: [C-Vue编译器优化, Vue Compiler Optimization]
 description: Vue 编译器在编译期对模板进行静态分析与优化的技术，减少运行时开销
 tags: [前端开发/框架/Vue]
 date-created: 2026-08-02
-date-modified: 2026-08-02
+date-modified: 2026-08-19
 status: cultivating
 content-type: concept
 up: "[[Vue]]"
@@ -107,7 +107,7 @@ flowchart TB
 
 ### FAQ
 
-- [[Q-Vue编译器如何优化]] — 编译器优化原理的问题与探索路径
+- [[Vue编译器如何优化]] — 编译器优化原理的问题与探索路径
 
 ---
 

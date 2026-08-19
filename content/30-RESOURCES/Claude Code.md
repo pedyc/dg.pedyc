@@ -114,9 +114,9 @@ Claude Code 的工作流程：
 
 > 标准操作流程——是 FAQ 中问题经过实践验证后的收敛成果
 
-- [[SOP-使用Claude-Code自动化CI-CD流水线]] — CI/CD 集成、Headless 自动化审查与修复
-- [[SOP-使用Claude-Code开发React组件]] — 利用 Claude Code 的 Agent 能力高效开发组件
-- [[SOP-提示词工程最佳实践]] — Claude Code 提示词设计与优化通用流程
+- [[使用Claude-Code自动化CI-CD流水线]] — CI/CD 集成、Headless 自动化审查与修复
+- [[使用Claude-Code开发React组件]] — 利用 Claude Code 的 Agent 能力高效开发组件
+- [[提示词工程最佳实践]] — Claude Code 提示词设计与优化通用流程
 
 ---
 

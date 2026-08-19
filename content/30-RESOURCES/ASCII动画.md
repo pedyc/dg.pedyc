@@ -76,7 +76,7 @@ flowchart LR
 
 #### SOP
 
-- [[SOP-在React中实现ASCII动画]]
+- [[在React中实现ASCII动画]]
 
 #### FAQ
 

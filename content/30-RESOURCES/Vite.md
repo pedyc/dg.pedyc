@@ -95,15 +95,15 @@ flowchart LR
 
 ### SOP
 
-- [[SOP-Vite配置流程]] — Vite 标准配置流程
-- [[SOP-如何在Vite中配置环境变量？]]
+- [[Vite配置流程]] — Vite 标准配置流程
+- [[如何在Vite中配置环境变量？]]
 
 ---
 
 ### FAQ
 
 - [[Webpack vs Vite]]
-- [[MOC-Vite相关问题]]
+- [[Vite相关问题]]
 
 ---
 

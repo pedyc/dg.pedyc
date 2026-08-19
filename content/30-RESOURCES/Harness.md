@@ -91,7 +91,7 @@ flowchart LR
 
 #### SOP
 
-- [[SOP-使用Claude-Code开发React组件]] — React 组件开发
+- [[使用Claude-Code开发React组件]] — React 组件开发
 - [[搭建Vue工程的Claude Code Harness]] — 以 Vue+TS 为例的 Harness 工程化落地
 
 #### FAQ

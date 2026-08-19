@@ -4,7 +4,7 @@ aliases: [MOC-Vue面试题]
 date-created: 2026-03-15
 date-modified: 2026-08-02
 content-type: [moc]
-up: ["[[MOC-前端面试真题库|前端面试题]]"]
+up: ["[[前端面试真题库|前端面试题]]"]
 ---
 
 ## MOC-Vue 面试题
@@ -93,7 +93,7 @@ up: ["[[MOC-前端面试真题库|前端面试题]]"]
 | 示例题目 | 关联笔记 |
 |---|:---|
 | [[Pinia]] 的核心概念有哪些？ | [[Pinia]] |
-| [[VS-Vuex vs Pinia]] | [[Pinia]] |
+| [[Vuex vs Pinia]] | [[Pinia]] |
 
 ---
 

@@ -3,7 +3,7 @@ title: 如何在Vite中进行手动拆包？
 date-created: 2025-06-16
 date-modified: 2026-05-18
 content-type: question
-up: "[[MOC-Vite相关问题]]"
+up: "[[Vite相关问题]]"
 ---
 
 ## 回答

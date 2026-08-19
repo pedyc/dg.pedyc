@@ -5,7 +5,7 @@ aliases: [C-HTTP/2, HTTP/2]
 description: HTTP/2 是 HTTP 协议的第三个主要版本，通过多路复用、头部压缩等特性大幅提升 Web 性能
 tags: [前端开发/网络协议]
 date-created: 2025-06-02
-date-modified: 2026-08-02
+date-modified: 2026-08-19
 status: active
 content-type: concept
 up: "[[HTTP]]"
@@ -24,6 +24,7 @@ up: "[[HTTP]]"
 
 > HTTP/2 解决了 HTTP/1.1 的什么问题？通过什么手段？ #card
 > 应用层队头阻塞（响应需有序返回）。手段：二进制帧 + 多路复用（同一连接并行多个请求-响应）+ HPACK 头部压缩。
+
 - [[HTTP/2 通过 HPACK 压缩头部减少传输开销]]
 	- **原理**：静态表 + 动态表 + 哈夫曼编码，极大减少重复头部传输
 - [[HTTP/2 服务器推送可以提前发送资源]]

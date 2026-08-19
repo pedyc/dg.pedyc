@@ -8,7 +8,7 @@ date-created: 2026-05-21
 date-modified: 2026-05-21
 status: cultivating
 content-type: atomic
-up: "[[MOC-Vite相关问题]]"
+up: "[[Vite相关问题]]"
 ---
 
 Vite 急速冷启动的本质是把编译从 " 启动时全量打包 " 推迟到 " 浏览器请求时按需编译 "，浏览器原生 ESM 支持是这个策略可行的底层基础。

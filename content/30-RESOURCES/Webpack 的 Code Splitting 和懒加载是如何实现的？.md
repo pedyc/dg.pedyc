@@ -6,7 +6,7 @@ date-created: 2026-05-18
 date-modified: 2026-05-18
 status: cultivating
 content-type: question
-up: "[[MOC-Webpack相关问题]]"
+up: "[[Webpack相关问题]]"
 ---
 
 ## 问题：Webpack 的 Code Splitting 和懒加载是如何实现的？

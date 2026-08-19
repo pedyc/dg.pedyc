@@ -5,7 +5,7 @@ aliases: [Template Compilation, C-模板编译]
 description: Vue中将HTML模板转换为JavaScript渲染函数的核心技术
 tags: [前端/Vue, 前端/原理]
 date-created: 2026-03-24
-date-modified: 2026-05-22
+date-modified: 2026-08-19
 status: cultivating
 content-type: concept
 up: "[[Vue]]"

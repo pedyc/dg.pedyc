@@ -38,7 +38,7 @@ flowchart LR
 | `plugins` | 语法转换插件                                           |
 | `targets` | 目标浏览器版本                                          |
 
-- [[SOP-Babel使用指南]]
+- [[Babel使用指南]]
 
 ### 锚点连接
 

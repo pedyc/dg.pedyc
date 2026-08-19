@@ -98,9 +98,9 @@ graph LR
 
 > useEffect 相关的常见问题，通过独立笔记进行深入探索。
 
-- [[Q-useEffect依赖数组为什么不能使用对象]] — 对象引用比较的问题
-- [[Q-为什么useEffect需要return-cleanup函数]] — cleanup 函数的必要性
-- [[Q-useState的参数为什么不能直接用对象写法]] — 对象状态更新的不可变性原则
+- [[useEffect依赖数组为什么不能使用对象]] — 对象引用比较的问题
+- [[为什么useEffect需要return-cleanup函数]] — cleanup 函数的必要性
+- [[useState的参数为什么不能直接用对象写法]] — 对象状态更新的不可变性原则
 
 ---
 

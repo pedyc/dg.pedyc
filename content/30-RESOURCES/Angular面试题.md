@@ -9,7 +9,7 @@ date-modified: 2026-06-12
 status: cultivating
 content-type: moc
 up:
-  - - MOC-前端面试真题库|前端面试题
+  - - 前端面试真题库|前端面试题
 ---
 
 ## MOC-Angular 面试题

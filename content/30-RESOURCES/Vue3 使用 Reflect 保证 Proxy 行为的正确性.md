@@ -4,7 +4,7 @@ title: Vue3 使用 Reflect 保证 Proxy 行为的正确性
 description: Reflect 提供了统一的 API 操作对象，确保 this 指向正确
 tags: [前端/Vue]
 date-created: 2026-03-17
-date-modified: 2026-03-16
+date-modified: 2026-08-19
 status: fleeting
 content-type: term
 ---

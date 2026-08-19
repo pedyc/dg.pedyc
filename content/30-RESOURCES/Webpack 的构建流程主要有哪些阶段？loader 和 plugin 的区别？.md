@@ -3,7 +3,7 @@ title: Webpack 的构建流程主要有哪些阶段？loader 和 plugin 的区�
 date-created: 2025-05-28
 date-modified: 2026-07-21
 content-type: [question]
-up: "[[MOC-Webpack相关问题]]"
+up: "[[Webpack相关问题]]"
 ---
 
 - Webpack 的构建流程主要有哪些阶段？

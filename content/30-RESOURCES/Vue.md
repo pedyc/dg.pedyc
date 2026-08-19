@@ -5,7 +5,7 @@ aliases: [C-Vue, Vue.js, vue]
 description: 用于构建用户界面的渐进式 JavaScript 框架，专注于数据驱动和组件化
 tags: [前端开发/框架]
 date-created: 2025-05-29
-date-modified: 2026-08-02
+date-modified: 2026-08-19
 status: cultivating
 content-type: concept
 up: "[[A-前端]]"
@@ -105,8 +105,8 @@ mindmap
 - [[Vue 面试题]] — Vue 常见面试问题汇总
 - [[v-if 和 v-show 区别？v-model 原理是什么？]] — 指令条件渲染与双向绑定原理
 - [[在 Vue 组件中，模板是否必须有一个根节点包裹？Vue 2 和 Vue 3 在这方面有什么区别？]] — 模板根节点要求与 Vue 2/3 差异
-- [[Q-Vue编译器如何优化]] — Vue 编译器的优化原理
-- [[Q-Vapor Mode是什么]] — Vue 新的编译策略
+- [[Vue编译器如何优化]] — Vue 编译器的优化原理
+- [[Vapor Mode是什么]] — Vue 新的编译策略
 
 ---
 

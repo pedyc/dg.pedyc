@@ -124,7 +124,7 @@ flowchart LR
   - [[DOM]] — HTML 结构的来源
   - [[前端交互]] — 交互与图形技术的聚合
 - **相关概念**：
-  - [[C-语义化 HTML]] — HTML 结构设计
+  - [[语义化 HTML]] — HTML 结构设计
 - **参考文章**
   - [MDN - foreignObject](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject)
   - [html2canvas 官方文档](https://html2canvas.hertzen.com/)

@@ -6,7 +6,7 @@ date-created: 2026-05-18
 date-modified: 2026-05-18
 status: cultivating
 content-type: question
-up: "[[MOC-Webpack相关问题]]"
+up: "[[Webpack相关问题]]"
 ---
 
 ## 问题：Webpack HMR 热模块替换是如何实现的？
@@ -96,4 +96,4 @@ if (module.hot) {
 - [[Webpack]] — 上位概念
 - [[Vite]] — 对比学习
 - [[Webpack vs Vite]] — 核心差异对比
-- [[MOC-Vite相关问题]] — Vite 相关面试题
+- [[Vite相关问题]] — Vite 相关面试题

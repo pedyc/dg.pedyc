@@ -89,4 +89,4 @@ content-type: term
 	- [[CSS]] — 属性来源
 	- [[transform]] — 最常配合使用的属性
 - **关联笔记**：
-	- [[SOP-实现磁吸式光标]] — 使用 will-change 的实践
+	- [[实现磁吸式光标]] — 使用 will-change 的实践

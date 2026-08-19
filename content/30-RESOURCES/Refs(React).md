@@ -78,7 +78,7 @@ graph LR
 
 > 与本概念相关的标准操作流程，通过实践辅助理解
 
-- [[SOP-在React中正确使用Ref]] — useRef 的正确用法和注意事项
+- [[在React中正确使用Ref]] — useRef 的正确用法和注意事项
 - [[SOP-React 类组件中的 Ref]] — createRef 的使用场景
 
 ---

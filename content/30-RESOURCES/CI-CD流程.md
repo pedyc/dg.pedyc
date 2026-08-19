@@ -154,4 +154,4 @@ module.exports = {
 	- [[建立前端工程规范]]
 	- [[Git 工作流]]
 - **相关 SOP**：
-	- [[SOP-使用Claude-Code自动化CI-CD流水线]] — AI 驱动的代码审查/修复 CI 集成
+	- [[使用Claude-Code自动化CI-CD流水线]] — AI 驱动的代码审查/修复 CI 集成

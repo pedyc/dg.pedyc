@@ -3,7 +3,7 @@ title: 如何使用 Babel 将 ES6+ 代码转换为 ES5 代码，以兼容旧版�
 date-created: 2025-06-16
 date-modified: 2026-03-21
 content-type: question
-up: "[[MOC-浏览器兼容性问题]]"
+up: "[[浏览器兼容性问题]]"
 ---
 
 ## 回答

@@ -8,7 +8,7 @@ date-created: 2026-05-21
 date-modified: 2026-05-26
 status: cultivating
 content-type: question
-up: "[[MOC-Vite相关问题]]"
+up: "[[Vite相关问题]]"
 ---
 
 ## 问题
@@ -65,8 +65,8 @@ Webpack 的 HMR 则采用了完全不同的思路。Webpack 在启动时就会�
 ## 关联
 
 - **相关概念**：
-	- [[MOC-Vite相关问题]]
-	- [[MOC-Webpack相关问题]]
+	- [[Vite相关问题]]
+	- [[Webpack相关问题]]
 	- [[esbuild]] — Vite 预构建依赖的工具
 	- [[HMR]] — 热模块替换概念
 - **参考**：

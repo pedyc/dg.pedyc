@@ -3,7 +3,7 @@ title: 构建分析与优化（Vite）
 date-created: 2025-05-29
 date-modified: 2026-08-01
 content-type: concept
-up: "[[MOC-Vite相关问题]]"
+up: "[[Vite相关问题]]"
 ---
 
 ## 一、构建分析

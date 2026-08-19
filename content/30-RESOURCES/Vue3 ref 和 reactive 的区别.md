@@ -5,7 +5,7 @@ aliases: [VS-Vue3 ref vs reactive]
 description: Vue3 两种响应式 API 的核心区别与选择指南
 tags: [前端开发/Vue]
 date-created: 2026-03-24
-date-modified: 2026-05-22
+date-modified: 2026-08-19
 status: active
 comparison: [ref, reactive]
 content-type: comparison

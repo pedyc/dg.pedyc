@@ -47,7 +47,7 @@ up: "[[A-前端]]"
 	- [[层叠上下文]] — z-index 层级
 	- [[BFC]] — 块级格式化上下文
 	- [[CSS选择器]] — 权重与 specificity
-	- [[T-will-change]] — will-change 优化合成层提升性能
+	- [[will-change]] — will-change 优化合成层提升性能
 - **布局系统**
 	- [[Flexbox]] — 一维布局
 	- [[CSS Grid]] — 二维布局

@@ -40,6 +40,17 @@ up: ["[[本库指南]]"]
 	- 父页面：[[前端场景实践]]
 	- 覆盖：前端登录闭环场景题：表单校验、登录态存储（Cookie vs localStorage）、路由守卫、安全与刷新机制
 	- 更新：前端场景实践（权限与安全）；wiki-index 不单独索引 question（遵循既有 Q- 笔记惯例）
+- [2026-08-19] refactor | 全量迁移：文件名与 title 去除类型前缀（前缀只保留在 aliases）
+	- 依据：前缀规则「前缀仅用于 aliases 字段，title 与文件名用纯标题」（见 [[命名规范]]）
+	- 迁移：76 个文件重命名为纯标题，frontmatter title 转纯标题，aliases 保留前缀变体（prefix+纯名 + 原 title + 原 aliases，去重）
+	- 引用：全库 198 个活跃 .md 的 [[旧前缀名]] 引用改写为纯标题（排除 40-ARCHIVE / 99-ASSETS / _templates / .obsidian / wiki-log、suggest-log）
+	- 修正：迁移后复核发现引用改写规则误剥了列表末尾 aliases 的前缀，已修复 74 个文件的别名并补齐 2 个畸形 frontmatter（帧动画缺闭合 ---、算法提升指南 aliases 为空）
+	- 验证：76 个旧前缀名全部可经 aliases 解析；迁移断裂 0；残留前缀引用 104 处经别名可解析、349 处为迁移前即存在的规划中悬空引用
+	- 冲突消解（3 处，用户决策）：
+		- 神秘主义：合并 C-神秘主义（concept 为主体）与 MOC-神秘主义，MOC 导航并入 concept 新增「领域网络与探索前沿」，删除 MOC，concept 改名 神秘主义.md（aliases 含 C-神秘主义 / MOC-神秘主义）
+		- 浏览器原理：删除重复 MOC-浏览器原理与运行机制相关问题.md，保留 浏览器原理与运行机制相关问题.md（aliases 补入 MOC-/FAQ- 前缀变体，up 修正为 [[浏览器]]）
+		- will-change：删除重复 T-will-change.md，保留 will-change.md（已含别名 T-will-change）
+	- 修复：引用改写曾误剥 aliases 末尾前缀（74 文件已修复）与 2 处畸形 frontmatter；坏链接 0 残留
 
 #### 2026-08-18
 

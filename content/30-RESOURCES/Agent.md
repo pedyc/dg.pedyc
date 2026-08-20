@@ -5,10 +5,10 @@ aliases: [C-Agent, 智能体]
 description: 能够感知环境、自主决策并执行行动的智能实体
 tags: [concept, AI, Agent]
 date-created: 2025-08-25
-date-modified: 2026-08-02
+date-modified: 2026-08-20
 status: active
 content-type: concept
-related: ["[[人工智能]]", "[[Prompt Engineering]]", "[[Harness]]"]
+related: ["[[人工智能]]", "[[Harness]]"]
 ---
 
 ## 概念：Agent
@@ -21,6 +21,7 @@ related: ["[[人工智能]]", "[[Prompt Engineering]]", "[[Harness]]"]
 
 ### 核心命题
 
+- [[Agent = LLM + 上下文 + 工具]]
 - Agent 的本质是「感知 - 推理 - 执行」的闭环系统，而非单一工具调用
 - Agent 的可靠性取决于 Harness（工程化框架），而非单纯的 Prompt 优化
 - 好的 Agent 设计是在「灵活性」与「可控性」之间找到平衡

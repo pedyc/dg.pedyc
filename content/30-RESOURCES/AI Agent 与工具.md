@@ -5,7 +5,7 @@ aliases: [MOC-AI Agent 与工具, MOC-AI Agent与工具, AIAgent与工具]
 description: AI 智能体与应用工具专题 MOC：聚合 Agent、MCP、Harness、Claude Code 与 OpenClaw 生态
 tags: [AI, Agent]
 date-created: 2026-08-18
-date-modified: 2026-08-18
+date-modified: 2026-08-20
 status: cultivating
 content-type: moc
 up: "[[人工智能]]"

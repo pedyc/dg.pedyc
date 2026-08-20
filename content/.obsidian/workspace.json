@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/实现简易虚拟列表.md",
+                "file": "30-RESOURCES/Agent = LLM + 上下文 + 工具.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "实现简易虚拟列表"
+              "title": "Agent = LLM + 上下文 + 工具"
             }
           },
           {
@@ -87,7 +87,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/Webpack.md",
+                "file": "30-RESOURCES/Agent = LLM + 上下文 + 工具.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -110,7 +110,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.5359795996225935,
+                  "scale": 1.0534979423868314,
                   "close": true
                 }
               },
@@ -124,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30-RESOURCES/实现简易虚拟列表.md",
+                "file": "30-RESOURCES/Agent = LLM + 上下文 + 工具.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -133,8 +133,7 @@
               "title": "大纲"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "5e0950099d64d5f6",
@@ -212,7 +211,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 315.5
+    "width": 367.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -298,6 +297,12 @@
   },
   "active": "97333969f1494e1d",
   "lastOpenFiles": [
+    "30-RESOURCES/Agent.md",
+    "30-RESOURCES/Agent = LLM + 上下文 + 工具.md",
+    "30-RESOURCES/AI Agent 与工具.md",
+    "20-AREAS/A-人工智能/人工智能.md",
+    "_templates/template_area.md",
+    "30-RESOURCES/实现简易虚拟列表.md",
     "30-RESOURCES/虚拟列表.md",
     "30-RESOURCES/如何利用API采集并计算LCP值.md",
     "30-RESOURCES/模拟面试03.md",
@@ -322,12 +327,6 @@
     "30-RESOURCES/浏览器兼容性问题.md",
     "30-RESOURCES/时政.md",
     "30-RESOURCES/撒旦教.md",
-    "30-RESOURCES/心流体验.md",
-    "30-RESOURCES/微前端沙箱隔离.md",
-    "30-RESOURCES/微前端WebComponents封装.md",
-    "30-RESOURCES/微前端vsMonorepo性能对比.md",
-    "30-RESOURCES/微前端ModuleFederation方案.md",
-    "30-RESOURCES/开发一个最小PWA应用.md",
     "30-RESOURCES/前端场景实践.md.tmp.32244.79ee39cef4ea",
     "30-RESOURCES/Q-登录页面怎么做.md.tmp.32244.5dc01b29dc6b",
     "30-RESOURCES/前端能力提升指南.md.tmp.32244.3ee8cc7818fa",

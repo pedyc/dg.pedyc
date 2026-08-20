@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/如何利用API采集并计算LCP值.md",
+                "file": "30-RESOURCES/实现简易虚拟列表.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "如何利用API采集并计算LCP值"
+              "title": "实现简易虚拟列表"
             }
           },
           {
@@ -124,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30-RESOURCES/如何利用API采集并计算LCP值.md",
+                "file": "30-RESOURCES/实现简易虚拟列表.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -298,10 +298,11 @@
   },
   "active": "97333969f1494e1d",
   "lastOpenFiles": [
+    "30-RESOURCES/虚拟列表.md",
+    "30-RESOURCES/如何利用API采集并计算LCP值.md",
     "30-RESOURCES/模拟面试03.md",
     "30-RESOURCES/模拟面试02.md",
     "30-RESOURCES/登录页面怎么做.md",
-    "30-RESOURCES/如何利用API采集并计算LCP值.md",
     "30-RESOURCES/手写经典功能.md",
     "30-RESOURCES/前端面试真题库.md",
     "30-RESOURCES/用最精炼的代码实现数组非零非负最小值.md",
@@ -327,7 +328,6 @@
     "30-RESOURCES/微前端vsMonorepo性能对比.md",
     "30-RESOURCES/微前端ModuleFederation方案.md",
     "30-RESOURCES/开发一个最小PWA应用.md",
-    "30-RESOURCES/实现磁吸式光标.md",
     "30-RESOURCES/前端场景实践.md.tmp.32244.79ee39cef4ea",
     "30-RESOURCES/Q-登录页面怎么做.md.tmp.32244.5dc01b29dc6b",
     "30-RESOURCES/前端能力提升指南.md.tmp.32244.3ee8cc7818fa",

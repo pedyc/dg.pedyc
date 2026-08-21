@@ -11,24 +11,12 @@
             "id": "97333969f1494e1d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "30-RESOURCES/Agent = LLM + 上下文 + 工具.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "99-ASSETS/AI-Agents-in-Depth-zh-CN.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Agent = LLM + 上下文 + 工具"
+              "icon": "lucide-file-text",
+              "title": "AI-Agents-in-Depth-zh-CN"
             }
           },
           {
@@ -87,7 +75,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/Agent = LLM + 上下文 + 工具.md",
+                "file": "99-ASSETS/AI-Agents-in-Depth-zh-CN.pdf",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30-RESOURCES/Agent = LLM + 上下文 + 工具.md",
+                "file": "99-ASSETS/AI-Agents-in-Depth-zh-CN.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -166,7 +154,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#card",
+                "query": "path:\"99-ASSETS/\" ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -291,13 +279,15 @@
       "random-note:开始漫游笔记": false,
       "omnisearch:Omnisearch": false,
       "obsidian-git:Open Git source control": false,
-      "cmdr:堆叠/取消堆叠标签页": false,
-      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
+      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false,
+      "cmdr:堆叠/取消堆叠标签页": false
     }
   },
   "active": "97333969f1494e1d",
   "lastOpenFiles": [
+    "99-ASSETS/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
     "30-RESOURCES/Agent.md",
+    "99-ASSETS/AI-Agents-in-Depth-zh-CN.pdf",
     "30-RESOURCES/Agent = LLM + 上下文 + 工具.md",
     "30-RESOURCES/AI Agent 与工具.md",
     "20-AREAS/A-人工智能/人工智能.md",
@@ -326,13 +316,11 @@
     "30-RESOURCES/神秘主义.md",
     "30-RESOURCES/浏览器兼容性问题.md",
     "30-RESOURCES/时政.md",
-    "30-RESOURCES/撒旦教.md",
     "30-RESOURCES/前端场景实践.md.tmp.32244.79ee39cef4ea",
     "30-RESOURCES/Q-登录页面怎么做.md.tmp.32244.5dc01b29dc6b",
     "30-RESOURCES/前端能力提升指南.md.tmp.32244.3ee8cc7818fa",
     "30-RESOURCES/前端能力提升指南.md.tmp.32244.3acc17ddb5fd",
     "30-RESOURCES/前端能力提升指南.md.tmp.32244.847874a0e3a7",
-    "30-RESOURCES/前端能力提升指南.md.tmp.32244.13785126aeea",
     "_resources/Experiments in procedural dappled light shaders/2b7c5414bbca3d0516f2ad2ecf23a9c0_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/e5951ca2badc262c67e3ff3f45a6ff41_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/b521b293f565f374020812c1d5afe1e7_MD5.gif",

@@ -3,7 +3,6 @@
   "darkStyle": "minimal-dark",
   "lightScheme": "minimal-ayu-light",
   "darkScheme": "minimal-things-dark",
-  "editorFont": "",
   "lineHeight": 1.5,
   "lineWidth": 40,
   "lineWidthWide": 50,
@@ -30,5 +29,6 @@
   "folding": true,
   "lineNumbers": false,
   "readableLineLength": true,
+  "editorFont": "",
   "devBlockWidth": true
 }

@@ -187,6 +187,7 @@
         "properties": {
           "source": {
             "oneOf": [
+              
               {
                 "type": "string",
                 "description": "Plugin source path or identifier. Supports github:user/repo, git+https://, and https:// URLs. Append #ref to pin to a specific branch or tag (e.g., github:user/repo#my-branch). Local file paths (e.g., ./my-plugin, ../sibling-plugin, /absolute/path) are also supported for local development or airgapped environments."

@@ -1,25 +1,19 @@
 {
+  "data_version": 2,
   "command_timeout": 5,
   "templates_folder": "_templates",
-  "templates_pairs": [
-    [
-      "",
-      ""
-    ]
-  ],
-  "trigger_on_file_creation": true,
+  "templates_pairs": [],
+  "trigger_on_file_creation_mode": "regex",
   "auto_jump_to_cursor": false,
-  "enable_system_commands": true,
+  "jump_to_cursor_after_file_name": false,
   "shell_path": "",
   "user_scripts_folder": "_scripts",
-  "enable_folder_templates": false,
   "folder_templates": [
     {
       "folder": "10-PROJECTS",
       "template": "_templates/template_project.md"
     }
   ],
-  "enable_file_templates": true,
   "file_templates": [
     {
       "regex": "/*/",
@@ -28,11 +22,10 @@
   ],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
-  "enabled_templates_hotkeys": [
-    ""
-  ],
+  "enabled_templates_hotkeys": [],
   "startup_templates": [
     "_templates/template_startup.md"
   ],
-  "intellisense_render": 1
+  "intellisense_render": "1",
+  "ignore_folders_on_creation": []
 }

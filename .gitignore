@@ -12,6 +12,7 @@ replit.nix
 .quartz/
 quartz/cli/tui/dist/
 .turbo/
+.pdf
 
 # Private vault content (matches v4 behavior)
 **/80-PRIVATE/**/*

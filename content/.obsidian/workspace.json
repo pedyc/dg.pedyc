@@ -11,12 +11,24 @@
             "id": "97333969f1494e1d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "99-ASSETS/AI-Agents-in-Depth-zh-CN.pdf"
+                "file": "10-PROJECTS/P-完善编辑器配置/完善编辑器配置.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "AI-Agents-in-Depth-zh-CN"
+              "icon": "lucide-file",
+              "title": "完善编辑器配置"
             }
           },
           {
@@ -75,7 +87,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "99-ASSETS/AI-Agents-in-Depth-zh-CN.pdf",
+                "file": "10-PROJECTS/P-完善编辑器配置/完善编辑器配置.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -285,9 +297,11 @@
   },
   "active": "97333969f1494e1d",
   "lastOpenFiles": [
+    "99-ASSETS/AI-Agents-in-Depth-zh-CN.pdf",
+    "10-PROJECTS/P-完善编辑器配置/完善编辑器配置.md",
+    "10-PROJECTS/P-完善编辑器配置",
     "99-ASSETS/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
     "30-RESOURCES/Agent.md",
-    "99-ASSETS/AI-Agents-in-Depth-zh-CN.pdf",
     "30-RESOURCES/Agent = LLM + 上下文 + 工具.md",
     "30-RESOURCES/AI Agent 与工具.md",
     "20-AREAS/A-人工智能/人工智能.md",
@@ -315,12 +329,9 @@
     "30-RESOURCES/简历素材.md",
     "30-RESOURCES/神秘主义.md",
     "30-RESOURCES/浏览器兼容性问题.md",
-    "30-RESOURCES/时政.md",
     "30-RESOURCES/前端场景实践.md.tmp.32244.79ee39cef4ea",
     "30-RESOURCES/Q-登录页面怎么做.md.tmp.32244.5dc01b29dc6b",
     "30-RESOURCES/前端能力提升指南.md.tmp.32244.3ee8cc7818fa",
-    "30-RESOURCES/前端能力提升指南.md.tmp.32244.3acc17ddb5fd",
-    "30-RESOURCES/前端能力提升指南.md.tmp.32244.847874a0e3a7",
     "_resources/Experiments in procedural dappled light shaders/2b7c5414bbca3d0516f2ad2ecf23a9c0_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/e5951ca2badc262c67e3ff3f45a6ff41_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/b521b293f565f374020812c1d5afe1e7_MD5.gif",

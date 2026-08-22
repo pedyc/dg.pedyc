@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-完善编辑器配置/完善编辑器配置.md",
+                "file": "30-RESOURCES/前端性能优化.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "完善编辑器配置"
+              "title": "前端性能优化"
             }
           },
           {
@@ -87,7 +87,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-完善编辑器配置/完善编辑器配置.md",
+                "file": "30-RESOURCES/前端性能优化.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -110,7 +110,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1.0534979423868314,
+                  "scale": 0.5359795996225935,
                   "close": true
                 }
               },
@@ -297,8 +297,16 @@
   },
   "active": "97333969f1494e1d",
   "lastOpenFiles": [
-    "99-ASSETS/AI-Agents-in-Depth-zh-CN.pdf",
+    "20-AREAS/A-前端/前端开发.md",
+    "30-RESOURCES/Inbox/AI Agent架构与开发工具调研.md",
+    "50-ZETTELCASTEN/本体论承诺决定了理论的解释力.md",
     "10-PROJECTS/P-完善编辑器配置/完善编辑器配置.md",
+    "40-ARCHIVE/图灵斑图.md",
+    "40-ARCHIVE/变量对象.md",
+    "40-ARCHIVE/黏菌智能.md",
+    "40-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/8131b12ef701bb6d9e2251d0e9eba028_MD5.jpg",
+    "10-PROJECTS/P-完善编辑器配置/_resources",
+    "99-ASSETS/AI-Agents-in-Depth-zh-CN.pdf",
     "10-PROJECTS/P-完善编辑器配置",
     "99-ASSETS/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
     "30-RESOURCES/Agent.md",
@@ -324,14 +332,8 @@
     "_tmp_verify_migration.py",
     "_tmp_verify_migration.py.tmp.32244.49a86d4345bc",
     "30-RESOURCES/XSS.md",
-    "30-RESOURCES/超验.md",
-    "30-RESOURCES/算法真题库.md",
-    "30-RESOURCES/简历素材.md",
-    "30-RESOURCES/神秘主义.md",
-    "30-RESOURCES/浏览器兼容性问题.md",
     "30-RESOURCES/前端场景实践.md.tmp.32244.79ee39cef4ea",
     "30-RESOURCES/Q-登录页面怎么做.md.tmp.32244.5dc01b29dc6b",
-    "30-RESOURCES/前端能力提升指南.md.tmp.32244.3ee8cc7818fa",
     "_resources/Experiments in procedural dappled light shaders/2b7c5414bbca3d0516f2ad2ecf23a9c0_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/e5951ca2badc262c67e3ff3f45a6ff41_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/b521b293f565f374020812c1d5afe1e7_MD5.gif",
@@ -342,7 +344,6 @@
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/5922f21cbfa6306a1d1dd8b4b924631e_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/9977399c198c6319755040441f004288_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/9a1f8150af1dffbc56100f8ea4902d1f_MD5.webp",
-    "_resources/How Anthropic runs large-scale code migrations with Claude Code/0fc2fe5f3f970bf75306c34ebca5ebfa_MD5.webp",
     "未命名.canvas",
     "Untitled.canvas",
     "//Untitled.canvas",

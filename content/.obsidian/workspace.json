@@ -110,7 +110,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.5359795996225935,
+                  "scale": 0.2726859917360067,
                   "close": true
                 }
               },
@@ -295,7 +295,7 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "97333969f1494e1d",
+  "active": "60236dec7012791f",
   "lastOpenFiles": [
     "20-AREAS/A-前端/前端开发.md",
     "30-RESOURCES/Inbox/AI Agent架构与开发工具调研.md",

@@ -1,30 +1,13 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: "{{日期}}"
-aliases: []
-description: ""
-tags: []
-content-type: diary
+title: template_diary
+tags: ["#diary"]
 status: active
-up: [[{{父级}}]]
+content-type: diary
 ---
 
-<%*
-let 一言 = ""
-let 来源 = ""
-let 作者 = ""
-
-await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i&c=j')
-.then(response => response.json())
-.then(data => {
-    一言 = data.hitokoto
-    来源 = data.from
-    作者 = data.from_who === null? ' 佚名 ': data.from_who
-})
--%>
-
-> [!quote] 一言
->  <% 一言 %> —— 《<% 来源 %>》 · <% 作者 %>
+> [!quote] 新知
+> <% 一言 %> —— 《<% 来源 %>》 · <% 作者 %>
 
 ## ☁️行云（闪念笔记）
 

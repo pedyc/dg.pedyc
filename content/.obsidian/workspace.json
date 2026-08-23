@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/前端性能优化.md",
+                "file": "90-DIARY/2026-08-23.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端性能优化"
+              "title": "2026-08-23"
             }
           },
           {
@@ -87,7 +87,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/前端性能优化.md",
+                "file": "90-DIARY/2026-08-23.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -206,8 +206,7 @@
               "title": "添加笔记属性"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -295,8 +294,15 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "60236dec7012791f",
+  "active": "97333969f1494e1d",
   "lastOpenFiles": [
+    "_templates/template_diary.md",
+    "_templates/template_moc.md",
+    "90-DIARY/2026-08-22.md",
+    "90-DIARY/2026-08-23.md",
+    "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
+    "_resources/2026-08-22",
+    "30-RESOURCES/前端性能优化.md",
     "20-AREAS/A-前端/前端开发.md",
     "30-RESOURCES/Inbox/AI Agent架构与开发工具调研.md",
     "50-ZETTELCASTEN/本体论承诺决定了理论的解释力.md",
@@ -323,17 +329,11 @@
     "30-RESOURCES/手写经典功能.md",
     "30-RESOURCES/前端面试真题库.md",
     "30-RESOURCES/用最精炼的代码实现数组非零非负最小值.md",
-    "30-RESOURCES/算法与数据结构.md",
-    "10-PROJECTS/P-斑驳光背景实现/斑驳光背景实现.md",
-    "30-RESOURCES/哲学与认知.md",
-    "30-RESOURCES/Babel使用指南.md",
     "_tmp_final_verify.py",
     "_tmp_final_verify.py.tmp.32244.26aea7587eac",
     "_tmp_verify_migration.py",
     "_tmp_verify_migration.py.tmp.32244.49a86d4345bc",
-    "30-RESOURCES/XSS.md",
     "30-RESOURCES/前端场景实践.md.tmp.32244.79ee39cef4ea",
-    "30-RESOURCES/Q-登录页面怎么做.md.tmp.32244.5dc01b29dc6b",
     "_resources/Experiments in procedural dappled light shaders/2b7c5414bbca3d0516f2ad2ecf23a9c0_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/e5951ca2badc262c67e3ff3f45a6ff41_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/b521b293f565f374020812c1d5afe1e7_MD5.gif",
@@ -343,7 +343,6 @@
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/5922f21cbfa6306a1d1dd8b4b924631e_MD5.webp",
     "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/9977399c198c6319755040441f004288_MD5.webp",
-    "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/9a1f8150af1dffbc56100f8ea4902d1f_MD5.webp",
     "未命名.canvas",
     "Untitled.canvas",
     "//Untitled.canvas",

@@ -5,7 +5,7 @@ aliases: [Q-如何利用API采集并计算LCP值？, 计算LCP]
 description:
 tags: ["面试题"]
 date-created: 2026-08-19
-date-modified: 2026-08-19
+date-modified: 2026-08-25
 status: fleeting
 content-type: question
 up: ["[[手写经典功能|MOC-手写经典功能]]"]
@@ -137,7 +137,7 @@ onLCP((metric) => {
 ## 关联
 
 * **相关问题**：
-	* [[前端核心 Web Vitals 指标详解（FCP、LCP、CLS、INP）]]
+	* [[核心Web指标]]
 	* [[如何优化 LCP：从 TTFB 到资源渲染的四阶段拆解]]
 	* [[前端埋点监控中的 sendBeacon 与 keepalive 上报机制]]
 * **参考资料**：

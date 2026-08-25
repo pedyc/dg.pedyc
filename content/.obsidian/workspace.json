@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-斑驳光背景实现/斑驳光背景实现.md",
+                "file": "30-RESOURCES/前端性能优化.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,21 +28,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "斑驳光背景实现"
+              "title": "前端性能优化"
             }
           },
           {
-            "id": "d13e00df19f82506",
+            "id": "ed201b7fd77c7a74",
             "type": "leaf",
             "state": {
-              "type": "webviewer",
+              "type": "markdown",
               "state": {
-                "url": "https://web.dev/articles/optimize-lcp?hl=zh-cn",
-                "title": "优化 Largest Contentful Paint  |  Articles  |  web.dev",
-                "mode": "webview"
+                "file": "30-RESOURCES/Webpack配置流程.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "globe-2",
-              "title": "优化 Largest Contentful Paint  |  Articles  |  web.dev"
+              "icon": "lucide-file",
+              "title": "Webpack配置流程"
             }
           }
         ]
@@ -87,7 +97,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-斑驳光背景实现/斑驳光背景实现.md",
+                "file": "30-RESOURCES/前端性能优化.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99-ASSETS/AI-Agents-in-Depth-zh-CN.pdf",
+                "file": "30-RESOURCES/前端性能优化.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -133,7 +143,8 @@
               "title": "大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "5e0950099d64d5f6",
@@ -296,15 +307,24 @@
   },
   "active": "97333969f1494e1d",
   "lastOpenFiles": [
+    "30-RESOURCES/核心Web指标.md",
+    "30-RESOURCES/前端性能优化.md",
+    "30-RESOURCES/Chrome DevTools Performance 实战.md",
+    "90-DIARY/2026-08-25.md",
     "90-DIARY/2026-08-24.md",
     "90-DIARY/2026-08-23.md",
-    "_templates/template_diary.md",
+    "_templates/template_sop.md",
+    "30-RESOURCES/如何利用API采集并计算LCP值.md",
     "_templates/template_moc.md",
+    "30-RESOURCES/性能优化方法.md",
+    "30-RESOURCES/Webpack配置流程.md",
+    "30-RESOURCES/Webpack.md",
+    "20-AREAS/A-前端/前端开发.md",
+    "10-PROJECTS/P-斑驳光背景实现/斑驳光背景实现.md",
+    "_templates/template_diary.md",
     "90-DIARY/2026-08-22.md",
     "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
     "_resources/2026-08-22",
-    "30-RESOURCES/前端性能优化.md",
-    "20-AREAS/A-前端/前端开发.md",
     "30-RESOURCES/Inbox/AI Agent架构与开发工具调研.md",
     "50-ZETTELCASTEN/本体论承诺决定了理论的解释力.md",
     "10-PROJECTS/P-完善编辑器配置/完善编辑器配置.md",
@@ -320,15 +340,6 @@
     "30-RESOURCES/Agent = LLM + 上下文 + 工具.md",
     "30-RESOURCES/AI Agent 与工具.md",
     "20-AREAS/A-人工智能/人工智能.md",
-    "_templates/template_area.md",
-    "30-RESOURCES/实现简易虚拟列表.md",
-    "30-RESOURCES/虚拟列表.md",
-    "30-RESOURCES/如何利用API采集并计算LCP值.md",
-    "30-RESOURCES/模拟面试03.md",
-    "30-RESOURCES/模拟面试02.md",
-    "30-RESOURCES/登录页面怎么做.md",
-    "30-RESOURCES/手写经典功能.md",
-    "30-RESOURCES/前端面试真题库.md",
     "_tmp_final_verify.py",
     "_tmp_final_verify.py.tmp.32244.26aea7587eac",
     "_tmp_verify_migration.py",

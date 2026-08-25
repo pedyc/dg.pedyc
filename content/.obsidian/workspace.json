@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-08-23.md",
+                "file": "10-PROJECTS/P-斑驳光背景实现/斑驳光背景实现.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-08-23"
+              "title": "斑驳光背景实现"
             }
           },
           {
@@ -87,7 +87,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "90-DIARY/2026-08-23.md",
+                "file": "10-PROJECTS/P-斑驳光背景实现/斑驳光背景实现.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -296,10 +296,11 @@
   },
   "active": "97333969f1494e1d",
   "lastOpenFiles": [
+    "90-DIARY/2026-08-24.md",
+    "90-DIARY/2026-08-23.md",
     "_templates/template_diary.md",
     "_templates/template_moc.md",
     "90-DIARY/2026-08-22.md",
-    "90-DIARY/2026-08-23.md",
     "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
     "_resources/2026-08-22",
     "30-RESOURCES/前端性能优化.md",
@@ -328,7 +329,6 @@
     "30-RESOURCES/登录页面怎么做.md",
     "30-RESOURCES/手写经典功能.md",
     "30-RESOURCES/前端面试真题库.md",
-    "30-RESOURCES/用最精炼的代码实现数组非零非负最小值.md",
     "_tmp_final_verify.py",
     "_tmp_final_verify.py.tmp.32244.26aea7587eac",
     "_tmp_verify_migration.py",

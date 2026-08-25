@@ -5,7 +5,7 @@ aliases: ["T-浏览器API-Scheduler", "Scheduler", "任务调度器"]
 description: "Scheduler 是浏览器提供的任务调度 API，支持优先级任务队列"
 tags: [前端开发/浏览器API]
 date-created: 2026-05-09
-date-modified: 2026-05-09
+date-modified: 2026-08-25
 status: fleeting
 content-type: term
 ---

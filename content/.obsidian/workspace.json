@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/前端性能优化.md",
+                "file": "30-RESOURCES/HPACK.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端性能优化"
+              "title": "HPACK"
             }
           },
           {
@@ -97,7 +97,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/前端性能优化.md",
+                "file": "30-RESOURCES/HPACK.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30-RESOURCES/前端性能优化.md",
+                "file": "30-RESOURCES/HPACK.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -307,44 +307,44 @@
   },
   "active": "97333969f1494e1d",
   "lastOpenFiles": [
-    "30-RESOURCES/核心Web指标.md",
+    "30-RESOURCES/HTTP.md",
+    "30-RESOURCES/网络协议.md",
+    "30-RESOURCES/队头阻塞.md",
+    "30-RESOURCES/Subjects/计算机网络与协议专题/00-网络协议全景导图.md",
+    "30-RESOURCES/Subjects",
+    "30-RESOURCES/Subjects/计算机网络与协议专题/01-应用层核心（HTTP&缓存）",
+    "30-RESOURCES/网络协议相关问题.md",
+    "30-RESOURCES/Subjects/计算机网络与协议专题",
+    "70-SUBJECTS",
+    "30-RESOURCES/HTTP2丢包性能倒退.md",
+    "30-RESOURCES/Inbox/AI Agent架构与开发工具调研.md",
+    "30-RESOURCES/分布式集群ETag缓存失效.md",
+    "_templates/template_question.md",
     "30-RESOURCES/前端性能优化.md",
+    "30-RESOURCES/资源加载与网络优化.md",
+    "30-RESOURCES/主线程让渡与异步调度.md",
+    "30-RESOURCES/Scheduler.md",
+    "30-RESOURCES/性能优化方法.md",
     "30-RESOURCES/Chrome DevTools Performance 实战.md",
+    "30-RESOURCES/核心Web指标.md",
     "90-DIARY/2026-08-25.md",
     "90-DIARY/2026-08-24.md",
     "90-DIARY/2026-08-23.md",
     "_templates/template_sop.md",
     "30-RESOURCES/如何利用API采集并计算LCP值.md",
     "_templates/template_moc.md",
-    "30-RESOURCES/性能优化方法.md",
     "30-RESOURCES/Webpack配置流程.md",
     "30-RESOURCES/Webpack.md",
     "20-AREAS/A-前端/前端开发.md",
     "10-PROJECTS/P-斑驳光背景实现/斑驳光背景实现.md",
-    "_templates/template_diary.md",
-    "90-DIARY/2026-08-22.md",
     "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
     "_resources/2026-08-22",
-    "30-RESOURCES/Inbox/AI Agent架构与开发工具调研.md",
-    "50-ZETTELCASTEN/本体论承诺决定了理论的解释力.md",
-    "10-PROJECTS/P-完善编辑器配置/完善编辑器配置.md",
-    "40-ARCHIVE/图灵斑图.md",
-    "40-ARCHIVE/变量对象.md",
-    "40-ARCHIVE/黏菌智能.md",
     "40-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/8131b12ef701bb6d9e2251d0e9eba028_MD5.jpg",
     "10-PROJECTS/P-完善编辑器配置/_resources",
     "99-ASSETS/AI-Agents-in-Depth-zh-CN.pdf",
     "10-PROJECTS/P-完善编辑器配置",
     "99-ASSETS/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
-    "30-RESOURCES/Agent.md",
-    "30-RESOURCES/Agent = LLM + 上下文 + 工具.md",
-    "30-RESOURCES/AI Agent 与工具.md",
-    "20-AREAS/A-人工智能/人工智能.md",
     "_tmp_final_verify.py",
-    "_tmp_final_verify.py.tmp.32244.26aea7587eac",
-    "_tmp_verify_migration.py",
-    "_tmp_verify_migration.py.tmp.32244.49a86d4345bc",
-    "30-RESOURCES/前端场景实践.md.tmp.32244.79ee39cef4ea",
     "_resources/Experiments in procedural dappled light shaders/2b7c5414bbca3d0516f2ad2ecf23a9c0_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/e5951ca2badc262c67e3ff3f45a6ff41_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/b521b293f565f374020812c1d5afe1e7_MD5.gif",

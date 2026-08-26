@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/HTTP.md",
+                "file": "90-DIARY/2026-08-26.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "HTTP"
+              "title": "2026-08-26"
             }
           },
           {
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30-RESOURCES/HTTP.md",
+                "file": "90-DIARY/2026-08-26.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -307,8 +307,11 @@
   },
   "active": "97333969f1494e1d",
   "lastOpenFiles": [
-    "30-RESOURCES/HPACK.md",
+    "90-DIARY/2026-08-25.md",
+    "90-DIARY/2026-08-26.md",
+    "90-DIARY/2026-08-24.md",
     "30-RESOURCES/HTTP.md",
+    "30-RESOURCES/HPACK.md",
     "30-RESOURCES/网络协议.md",
     "30-RESOURCES/队头阻塞.md",
     "30-RESOURCES/Subjects/计算机网络与协议专题/00-网络协议全景导图.md",
@@ -328,15 +331,12 @@
     "30-RESOURCES/性能优化方法.md",
     "30-RESOURCES/Chrome DevTools Performance 实战.md",
     "30-RESOURCES/核心Web指标.md",
-    "90-DIARY/2026-08-25.md",
-    "90-DIARY/2026-08-24.md",
     "90-DIARY/2026-08-23.md",
     "_templates/template_sop.md",
     "30-RESOURCES/如何利用API采集并计算LCP值.md",
     "_templates/template_moc.md",
     "30-RESOURCES/Webpack配置流程.md",
     "30-RESOURCES/Webpack.md",
-    "20-AREAS/A-前端/前端开发.md",
     "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
     "_resources/2026-08-22",
     "40-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/8131b12ef701bb6d9e2251d0e9eba028_MD5.jpg",

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/HPACK.md",
+                "file": "30-RESOURCES/HTTP.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "HPACK"
+              "title": "HTTP"
             }
           },
           {
@@ -97,7 +97,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/HPACK.md",
+                "file": "30-RESOURCES/HTTP.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30-RESOURCES/HPACK.md",
+                "file": "30-RESOURCES/HTTP.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -307,6 +307,7 @@
   },
   "active": "97333969f1494e1d",
   "lastOpenFiles": [
+    "30-RESOURCES/HPACK.md",
     "30-RESOURCES/HTTP.md",
     "30-RESOURCES/网络协议.md",
     "30-RESOURCES/队头阻塞.md",
@@ -336,7 +337,6 @@
     "30-RESOURCES/Webpack配置流程.md",
     "30-RESOURCES/Webpack.md",
     "20-AREAS/A-前端/前端开发.md",
-    "10-PROJECTS/P-斑驳光背景实现/斑驳光背景实现.md",
     "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
     "_resources/2026-08-22",
     "40-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/8131b12ef701bb6d9e2251d0e9eba028_MD5.jpg",

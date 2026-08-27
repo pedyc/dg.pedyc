@@ -5,7 +5,7 @@ aliases: [C-Web安全, Web安全]
 description: 保护 Web 应用免受常见攻击的安全知识体系
 tags: [前端/安全]
 date-created: 2026-05-29
-date-modified: 2026-06-19
+date-modified: 2026-08-27
 status: cultivating
 content-type: concept
 up: "[[A-前端]]"

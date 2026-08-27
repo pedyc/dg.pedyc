@@ -5,7 +5,7 @@ aliases: [C-HTTP, 超文本传输协议]
 description: HTTP是用于在Web服务器和客户端之间传输数据的应用层协议
 tags: [前端开发/网络协议]
 date-created: 2025-05-16
-date-modified: 2026-08-25
+date-modified: 2026-08-27
 status: active
 content-type: concept
 ---
@@ -97,12 +97,12 @@ sequenceDiagram
 	- [[HTTP~1.0]]
 	- [[HTTP~1.1]]
 	- [[HTTP~2]]
+	- [[HTTP缓存机制]]
 - **并列概念**：
 	- [[WebSocket]] — 双向通信协议
 - **相关概念**：
 	- [[HTTPS]] — HTTP 的安全版本
 	- [[RESTful API]] — 基于 HTTP 的 API 设计风格
-	- [[HTTP缓存]]
 
 ---
 

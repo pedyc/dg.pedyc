@@ -5,7 +5,7 @@ aliases: []
 description: 携带凭证时不能使用通配符，必须指定具体 origin
 tags: [前端开发/安全/原子]
 date-created: 2026-03-24
-date-modified: 2026-06-15
+date-modified: 2026-08-27
 status: active
 content-type: [term]
 up: "[[CORS]]"

@@ -5,10 +5,10 @@ aliases: []
 description: 浏览器根据请求条件决定是否先发送 OPTIONS 预检请求
 tags: [前端开发/安全/原子]
 date-created: 2026-03-24
-date-modified: 2026-03-24
+date-modified: 2026-08-27
 status: active
 content-type: atomic
-up: [[CORS]]
+up: "[[CORS]]"
 ---
 
 > CORS 简单请求不发送预检，而复杂请求会发送预检请求
@@ -20,10 +20,10 @@ up: [[CORS]]
 **全部满足**：
 - 请求方法：GET、HEAD、POST
 - 请求头：只能是以下之一
-  - Accept
-  - Accept-Language
-  - Content-Language
-  - Content-Type（仅限 `application/x-www-form-urlencoded`、`multipart/form-data`、`text/plain`）
+	- Accept
+	- Accept-Language
+	- Content-Language
+	- Content-Type（仅限 `application/x-www-form-urlencoded`、`multipart/form-data`、`text/plain`）
 
 ## 复杂请求（需预检）
 

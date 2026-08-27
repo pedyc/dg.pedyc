@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50-ZETTELCASTEN/TCP.md",
+                "file": "30-RESOURCES/Web安全.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "TCP"
+              "title": "Web安全"
             }
           },
           {
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/HTTP~1.1.md",
+                "file": "50-ZETTELCASTEN/SameSite Cookie可以限制Cookie在跨站请求中的发送.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "HTTP~1.1"
+              "title": "SameSite Cookie可以限制Cookie在跨站请求中的发送"
             }
           },
           {
@@ -93,7 +93,8 @@
               "title": "Webpack配置流程"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -135,7 +136,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "50-ZETTELCASTEN/TCP.md",
+                "file": "50-ZETTELCASTEN/SameSite Cookie可以限制Cookie在跨站请求中的发送.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -172,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "50-ZETTELCASTEN/TCP.md",
+                "file": "50-ZETTELCASTEN/SameSite Cookie可以限制Cookie在跨站请求中的发送.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -342,11 +343,26 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "97333969f1494e1d",
+  "active": "6b1c56ab4bf22c45",
   "lastOpenFiles": [
-    "50-ZETTELCASTEN/网络协议.md",
-    "50-ZETTELCASTEN/TCP.md",
+    "30-RESOURCES/CSRF.md",
+    "30-RESOURCES/Web安全问题.md",
+    "30-RESOURCES/HTTP3基于QUIC协议消除传输层队头阻塞.md",
+    "30-RESOURCES/HTTP~3.md",
+    "30-RESOURCES/CORS.md",
+    "30-RESOURCES/CORS凭证与跨域.md",
+    "50-ZETTELCASTEN/CORS简单请求不发送预检而复杂请求会发送预检请求.md",
+    "30-RESOURCES/浏览器安全机制.md",
+    "30-RESOURCES/HTTP缓存机制.md",
+    "30-RESOURCES/SPA.md",
+    "30-RESOURCES/HTTP.md",
+    "30-RESOURCES/TCP拥塞控制.md",
+    "30-RESOURCES/HTTP协商缓存.md",
+    "30-RESOURCES/分布式集群ETag缓存失效.md",
     "30-RESOURCES/HTTP~1.1.md",
+    "30-RESOURCES/Web安全.md",
+    "30-RESOURCES/TCP.md",
+    "50-ZETTELCASTEN/网络协议.md",
     "30-RESOURCES/HTTP~1.0.md",
     "30-RESOURCES/多路复用.md",
     "30-RESOURCES/HTTP2在丢包环境下为什么会性能倒退.md",
@@ -355,26 +371,11 @@
     "HTTP/HTTP2 通过多路复用实现真正的并发请求.md",
     "30-RESOURCES/HTTP~2.md",
     "HTTP",
-    "30-RESOURCES/HTTP.md",
     "30-RESOURCES/HTTP2在极端丢包环境下会导致传输层队头阻塞.md",
-    "90-DIARY/2026-08-26.md",
-    "30-RESOURCES/HTTP1.1管道化要求服务端必须按序回传，导致应用层队头阻塞.md",
-    "90-DIARY/2026-08-25.md",
-    "_templates/template_atomic.md",
-    "90-DIARY/2026-08-24.md",
-    "30-RESOURCES/HPACK.md",
-    "30-RESOURCES/队头阻塞.md",
-    "30-RESOURCES/Subjects/计算机网络与协议专题/00-网络协议全景导图.md",
     "30-RESOURCES/Subjects",
     "30-RESOURCES/Subjects/计算机网络与协议专题/01-应用层核心（HTTP&缓存）",
     "30-RESOURCES/Subjects/计算机网络与协议专题",
     "70-SUBJECTS",
-    "30-RESOURCES/Inbox/AI Agent架构与开发工具调研.md",
-    "30-RESOURCES/分布式集群ETag缓存失效.md",
-    "_templates/template_question.md",
-    "30-RESOURCES/前端性能优化.md",
-    "30-RESOURCES/资源加载与网络优化.md",
-    "30-RESOURCES/主线程让渡与异步调度.md",
     "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
     "_resources/2026-08-22",
     "40-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/8131b12ef701bb6d9e2251d0e9eba028_MD5.jpg",

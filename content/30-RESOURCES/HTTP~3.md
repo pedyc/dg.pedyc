@@ -1,11 +1,11 @@
 ---
 uid: 202603230007
 title: HTTP~3
-aliases: [C-HTTP/3]
+aliases: [C-HTTP/3, HTTP3, HTTP/3]
 description: HTTP/3 是 HTTP 协议的第三个主要版本，基于 QUIC 协议彻底解决了队头阻塞问题
 tags: [前端开发/网络协议]
 date-created: 2026-03-23
-date-modified: 2026-03-23
+date-modified: 2026-08-27
 status: active
 content-type: concept
 up: "[[HTTP]]"
@@ -19,7 +19,7 @@ up: "[[HTTP]]"
 
 ## 核心命题
 
-- HTTP/3 基于 [[QUIC]] 协议消除队头阻塞
+- [[HTTP3基于QUIC协议消除传输层队头阻塞]]
 	- **原理**：QUIC 基于 UDP，每个数据流独立传输，单一流丢包只阻塞该流，其他流不受影响
 - [[HTTP/3 支持 0-RTT 连接建立]]
 	- **原理**：客户端可缓存服务器密钥，无需等待握手完成即可发送数据

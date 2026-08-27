@@ -1,25 +1,14 @@
 ---
 title: SPA
-aliases:
-  - Single Page Application
+aliases: [Single Page Application]
 description: 单页应用（Single Page Application, SPA）是一种Web应用程序或网站，它通过动态重写当前页面而不是从服务器加载整个新页面来与用户交互。
-tags:
-  - 前端
-  - Web开发
-  - 架构
+tags: [前端, Web开发, 架构]
 date-created: 2025-07-24
-date-modified: 2025-12-16
+date-modified: 2026-08-27
 content-type: concept
-keywords:
-  - SPA
-  - 单页应用
-  - 前端框架
-  - 用户体验
+keywords: [SPA, 单页应用, 前端框架, 用户体验]
 para: area
-related:
-  - "[[多页应用 (MPA)]]"
-  - "[[前端路由]]"
-  - "[[AJAX]]"
+related: ["[[多页应用 (MPA)]]", "[[前端路由]]", "[[AJAX]]"]
 zettel: permanent
 ---
 

@@ -5,7 +5,7 @@ aliases: [C-HTTP/1.1, HTTP/1.1]
 description: HTTP/1.1 是 HTTP 协议的第二个主要版本，通过持久连接、管道化等特性提升了 Web 性能
 tags: [前端开发/网络协议]
 date-created: 2025-06-02
-date-modified: 2026-08-26
+date-modified: 2026-08-27
 status: active
 content-type: concept
 ---

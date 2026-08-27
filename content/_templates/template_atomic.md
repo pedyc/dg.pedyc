@@ -1,12 +1,10 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: "{{一句话核心观点}}"
-aliases: []
-description: "{{一句话核心观点}}"
+title: template_atomic
 tags: []
-content-type: atomic
 status: fleeting
-up: [[{{父级}}]]
+content-type: atomic
+up: "[[{{父级}}]]"
 ---
 
 <!--
@@ -31,10 +29,10 @@ up: [[{{父级}}]]
 
 > {{一句话核心观点}}
 
-### 论据/示例
+## 论据/示例
 
 <!-- 代码示例、案例、数据等支撑观点 -->
 
-### 关联
+## 关联
 
 - [[{{相关笔记}}]]

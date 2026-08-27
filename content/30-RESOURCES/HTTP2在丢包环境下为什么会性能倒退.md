@@ -1,11 +1,11 @@
 ---
 uid: 202608251500
-title: HTTP2丢包性能倒退
+title: HTTP2在丢包环境下为什么会性能倒退
 aliases: ["Q-HTTP2丢包性能倒退"]
 description: "分析HTTP/2在极端丢包环境下性能表现甚至不如HTTP/1.1这一现象背后的根本原因。"
 tags: [HTTP/2, 网络协议, 性能优化, TCP, 队头阻塞]
 date-created: 2026-08-25
-date-modified: 2026-08-25
+date-modified: 2026-08-26
 status: fleeting
 content-type: question
 up: "[[HTTP]]"
@@ -73,6 +73,7 @@ HTTP/2 的核心优势之一是多路复用，它允许在**同一个 TCP 连接
 > 经过实践验证后，此问题的解决方案可固化为 SOP。标记已验证的方案。
 
 - [ ] **已收敛** → [[SOP-HTTP协议选型与网络质量评估]] — 根据业务主要用户群体的网络质量，制定 HTTP/1.1 与 HTTP/2 的选型策略。
+- [ ] 已收敛 → [[HTTP2在极端丢包环境下会导致传输层队头阻塞]]
 
 ---
 

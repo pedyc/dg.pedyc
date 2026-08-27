@@ -5,7 +5,7 @@ aliases: [T-ESModule, ESM]
 description: ECMAScript 模块化标准，使用 import/export 语法实现模块导入导出
 tags: [前端/JavaScript]
 date-created: 2026-03-16
-date-modified: 2026-07-21
+date-modified: 2026-08-27
 status: active
 content-type: term
 up: "[[JavaScript]]"

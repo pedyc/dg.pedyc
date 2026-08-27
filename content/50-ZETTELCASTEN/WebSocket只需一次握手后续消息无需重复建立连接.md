@@ -5,7 +5,7 @@ aliases: []
 description: 一次握手建立持久连接，后续消息复用同一条 TCP 连接
 tags: [前端, 网络协议]
 date-created: 2026-08-16
-date-modified: 2026-08-16
+date-modified: 2026-08-27
 status: fleeting
 content-type: atomic
 up: "[[WebSocket]]"
@@ -18,6 +18,9 @@ HTTP 每次请求都要经历一次完整的 TCP 握手（即便 Keep-Alive 复�
 ## 论据/示例
 
 - 握手流程：客户端发 `Upgrade: websocket` + `Sec-WebSocket-Key` → 服务器回 `101 Switching Protocols` → 升级完成
+
+> Websocket 握手阶段，客户端发送的`Sec-WebSocket-Key` 与固定魔数拼接后，进行 SHA-1 加密并作 Base64编码 #card
+
 - 实测：1000 个事件走 WebSocket 只建 1 条 TCP 连接、0 个额外 HTTP 请求；长轮询 HTTP/1.1 无 Keep-Alive 则要开 1000 条连接
 
 ## 关联

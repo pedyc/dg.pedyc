@@ -23,6 +23,15 @@ up: ["[[本库指南]]"]
 
 ### 2026-08
 
+#### 2026-08-28
+
+- [2026-08-28] sync | 同步 8-19~8-27 变更（上次同步点 ecbe6d67）
+	- 基线：wiki-sync-state lastCommit ecbe6d67（8-19 09:11）→ bb356b8f（8-27 23:15），间隔 17 commit
+	- 检测变更：新增 34（含 25 内容笔记）、修改 174、重命名 78（去前缀 refactor）、删除 7
+	- 重命名/删除说明：78 重命名为「文件名去前缀、前缀入 aliases」整理，index 纯标题链接不受影响；3 个删除（MOC-浏览器原理/MOC-神秘主义/T-will-change）是 8-19 refactor 成果，纯标题文件保留，index 引用仍有效，未移除
+	- wiki-index 更新：Concepts 43→49（新增 AI First + 网络与缓存子分区 5 概念）、SOPs 44→47（新增性能优化子分区 3 SOP）、Questions 3→6、Records 6→7、MOCs 52→53（网络协议全景导图）
+	- 待 ingest：新增 25 个内容笔记未消化（网络/HTTP 专题、性能 SOP、AI First、模拟面试03 等），见后续 ingest 流程
+
 #### 2026-08-19
 
 - [2026-08-19] ingest | 新建 record「模拟面试02」

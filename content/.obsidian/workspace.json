@@ -32,6 +32,30 @@
             }
           },
           {
+            "id": "d03eb2eaf6b111b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "30-RESOURCES/模块模式.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "模块模式"
+            }
+          },
+          {
             "id": "6b1c56ab4bf22c45",
             "type": "leaf",
             "state": {
@@ -344,8 +368,15 @@
   },
   "active": "97333969f1494e1d",
   "lastOpenFiles": [
-    "30-RESOURCES/版本控制与协作流程.md",
+    "30-RESOURCES/HTTP2 通过多路复用实现真正的并发请求.md",
+    "30-RESOURCES/前端工程演进.md.tmp.26572.8ae9c4df11cb",
+    "30-RESOURCES/前端工程演进.md",
+    "30-RESOURCES/ESModule.md",
+    "30-RESOURCES/模块模式.md",
+    "60-BLOGS/聊聊前端模块化.md",
+    "30-RESOURCES/Untitled.md",
     "30-RESOURCES/前端工程.md",
+    "30-RESOURCES/版本控制与协作流程.md",
     "30-RESOURCES/前端工程化与前端开发生命周期.excalidraw.md",
     "99-ASSETS/Excalidraw/Lib/local-library.excalidrawlib",
     "30-RESOURCES/Web安全.md",
@@ -365,12 +396,6 @@
     "30-RESOURCES/多级缓存示例.md",
     "30-RESOURCES/前端缓存方案.md",
     "30-RESOURCES/HTTP缓存机制.md",
-    "30-RESOURCES/WebSocket.md",
-    "50-ZETTELCASTEN/WebSocket只需一次握手后续消息无需重复建立连接.md",
-    "30-RESOURCES/使用 WebSocket 实现实时双向通信.md",
-    "30-RESOURCES/CSRF.md",
-    "50-ZETTELCASTEN/SameSite Cookie可以限制Cookie在跨站请求中的发送.md",
-    "30-RESOURCES/Web安全问题.md",
     "HTTP",
     "30-RESOURCES/Subjects",
     "30-RESOURCES/Subjects/计算机网络与协议专题/01-应用层核心（HTTP&缓存）",
@@ -381,7 +406,6 @@
     "40-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/8131b12ef701bb6d9e2251d0e9eba028_MD5.jpg",
     "10-PROJECTS/P-完善编辑器配置/_resources",
     "99-ASSETS/AI-Agents-in-Depth-zh-CN.pdf",
-    "10-PROJECTS/P-完善编辑器配置",
     "_resources/Experiments in procedural dappled light shaders/2b7c5414bbca3d0516f2ad2ecf23a9c0_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/e5951ca2badc262c67e3ff3f45a6ff41_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/b521b293f565f374020812c1d5afe1e7_MD5.gif",

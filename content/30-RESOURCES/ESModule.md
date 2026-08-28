@@ -5,7 +5,7 @@ aliases: [T-ESModule, ESM]
 description: ECMAScript 模块化标准，使用 import/export 语法实现模块导入导出
 tags: [前端/JavaScript]
 date-created: 2026-03-16
-date-modified: 2026-08-27
+date-modified: 2026-08-28
 status: active
 content-type: term
 up: "[[JavaScript]]"
@@ -31,6 +31,9 @@ import defaultExport from './module.js';
 ### 核心特性
 
 - **静态结构**：`import`/`export` 必须在模块顶层，不能在条件语句中
+
+> ESM的静态解析解构允许工具在不运行代码的情况下分析出未使用的导出项，这是TreeShaking的前提 #card
+
 - **引用导出**：导入的是值的引用，而非拷贝
 - **异步加载**：浏览器中异步加载模块，不阻塞渲染
 - **严格模式**：自动启用严格模式
@@ -43,6 +46,12 @@ import defaultExport from './module.js';
 | 加载 | 异步 | 同步 |
 | 解析 | 静态 | 动态 |
 | 运行环境 | 浏览器/Node.js | Node.js |
+
+### FAQ
+
+- CommonJS模块试图通过`require()`加载一个纯ESM模块会怎样？
+
+> CJS的`require()`是同步的，无法加载具有异步特性的ESM模块，抛出`ERR_REQUIRE_ESM`错误
 
 ### 关联
 

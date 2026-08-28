@@ -31,6 +31,12 @@ up: ["[[本库指南]]"]
 	- 重命名/删除说明：78 重命名为「文件名去前缀、前缀入 aliases」整理，index 纯标题链接不受影响；3 个删除（MOC-浏览器原理/MOC-神秘主义/T-will-change）是 8-19 refactor 成果，纯标题文件保留，index 引用仍有效，未移除
 	- wiki-index 更新：Concepts 43→49（新增 AI First + 网络与缓存子分区 5 概念）、SOPs 44→47（新增性能优化子分区 3 SOP）、Questions 3→6、Records 6→7、MOCs 52→53（网络协议全景导图）
 	- 待 ingest：新增 25 个内容笔记未消化（网络/HTTP 专题、性能 SOP、AI First、模拟面试03 等），见后续 ingest 流程
+- [2026-08-28] ingest | 核查并收录 concept「iframe在微前端中的应用与演进」
+	- 位置：30-RESOURCES/iframe在微前端中的应用与演进.md
+	- 父页面：[[前端工程演进]]
+	- 修正：content-type technical-reference（非法类型）→ concept；aliases 补 C- 前缀；移除 15 处无来源悬空编号 [2,7]/[7]；关联概念标题 H4→H3、缩进归一
+	- 更新：wiki-index（Concepts 50→51，微前端子分区新增条目）、前端工程演进（阶段三相关概念补链）
+	- 待核查：iframe.md（term）仅含 title/date，缺完整 frontmatter 且未收录 wiki-index
 
 #### 2026-08-19
 

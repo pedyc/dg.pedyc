@@ -3,7 +3,7 @@ title: Husky
 tags: [engineering/git-hooks, code-quality, front-end]
 date-created: 2026-08-29
 date-modified: 2026-08-29
-status: evergreen
+status: active
 created: 2026-08-29
 type: concept
 ---
@@ -36,13 +36,13 @@ type: concept
 
 ### 4. 协同生态与技术配合
 
-* **[[SOP-通过husky+lint-staged进行代码质量防护]]**：Husky 负责**触发**，`lint-staged` 负责**精准作用于增量代码（Staged files）**，避免每次提交全量扫描导致的性能瓶颈。
+* **[[通过husky+lint-staged进行代码质量防护]]**：Husky 负责**触发**，`lint-staged` 负责**精准作用于增量代码（Staged files）**，避免每次提交全量扫描导致的性能瓶颈。
 * **Commitlint**：结合 `commit-msg` 钩子，确保版本历史符合语义化规范（如 `feat:`, `fix:`, `refactor:`）。
 
 ---
 
 ### 5. 关联与延伸
 
-* **Upstream / 依赖概念**：`Git Hooks`、`Git 内部机制 (core.hooksPath)`
-* **Downstream / 落地实践**：[[SOP-通过husky+lint-staged进行代码质量防护]]
+* **Upstream / 依赖概念**：[[Git Hooks]]、`Git 内部机制 (core.hooksPath)`
+* **Downstream / 落地实践**：[[通过husky+lint-staged进行代码质量防护]]
 * **相关工具**：`lint-staged`、`commitlint`、`simple-git-hooks`

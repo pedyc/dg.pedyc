@@ -4,6 +4,8 @@ title: template_area
 aliases: ["A-{{标题}}"]
 description: "{ 一句话定义这个领域的核心范畴 }"
 tags: []
+date-created: 2026-08-18
+date-modified: 2026-08-29
 status: cultivating
 content-type: area
 up: [[{{父级领域}}]]
@@ -85,15 +87,6 @@ mindmap
 
 ---
 
-### SOP
-
-> 该领域的标准化操作流程（SOP）。SOP 放 Area，Question 放 Concept。
-
-- [[{{SOP名称1}}]] — {{简短描述}}
-- [[{{SOP名称2}}]] — {{简短描述}}
-
----
-
 ### FAQ
 
 > 该领域的常见问题（链接 Question 或 MOC）
@@ -101,6 +94,15 @@ mindmap
 - [[{{问题1}}]]
 - [[{{问题2}}]]
 - [[{{MOC名称}}]]
+
+---
+
+### SOP
+
+> 该领域的标准化操作流程（SOP）。SOP 放 Area，Question 放 Concept。
+
+- [[{{SOP名称1}}]] — {{简短描述}}
+- [[{{SOP名称2}}]] — {{简短描述}}
 
 ---
 

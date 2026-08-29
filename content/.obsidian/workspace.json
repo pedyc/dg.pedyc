@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/微前端.md",
+                "file": "30-RESOURCES/Husky.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "微前端"
+              "title": "Husky"
             }
           },
           {
@@ -145,7 +145,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/微前端.md",
+                "file": "30-RESOURCES/Husky.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -182,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30-RESOURCES/微前端.md",
+                "file": "30-RESOURCES/Husky.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -355,6 +355,8 @@
   "active": "97333969f1494e1d",
   "lastOpenFiles": [
     "30-RESOURCES/前端工程.md",
+    "30-RESOURCES/Husky.md",
+    "30-RESOURCES/Git命令与工作流速查.md",
     "30-RESOURCES/微前端.md",
     "30-RESOURCES/何时选微前端或Monorepo.md",
     "30-RESOURCES/微前端沙箱隔离.md",
@@ -383,8 +385,6 @@
     "90-DIARY/2026-08-25.md",
     "90-DIARY/2026-08-26.md",
     "90-DIARY/2026-08-27.md",
-    "30-RESOURCES/AI First.md",
-    "30-RESOURCES/持续集成与持续部署.md",
     "HTTP",
     "30-RESOURCES/Subjects",
     "30-RESOURCES/Subjects/计算机网络与协议专题/01-应用层核心（HTTP&缓存）",

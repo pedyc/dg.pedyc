@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/前端工程.md",
+                "file": "30-RESOURCES/微前端.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端工程"
+              "title": "微前端"
             }
           },
           {
@@ -145,7 +145,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/前端工程.md",
+                "file": "30-RESOURCES/微前端.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -182,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30-RESOURCES/前端工程.md",
+                "file": "30-RESOURCES/微前端.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -354,10 +354,10 @@
   },
   "active": "97333969f1494e1d",
   "lastOpenFiles": [
+    "30-RESOURCES/前端工程.md",
     "30-RESOURCES/微前端.md",
     "30-RESOURCES/何时选微前端或Monorepo.md",
     "30-RESOURCES/微前端沙箱隔离.md",
-    "30-RESOURCES/前端工程.md",
     "30-RESOURCES/前端工程演进.md",
     "30-RESOURCES/iframe在微前端中的应用与演进.md",
     "30-RESOURCES/模块模式.md",

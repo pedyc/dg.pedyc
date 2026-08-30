@@ -253,6 +253,12 @@
         "value": 10,
         "description": "Padding between the bounding box of the selected elements, and the box the script creates"
       }
+    },
+    "Downloaded/Add Link to Existing File and Open": {
+      "Open link in active pane": {
+        "value": false,
+        "description": "Open the link in the current active pane (on) or a new pane (off)."
+      }
     }
   },
   "previousRelease": "2.26.4",

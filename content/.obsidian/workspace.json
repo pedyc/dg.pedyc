@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/浏览器核心架构.md",
+                "file": "LIST.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "浏览器核心架构"
+              "title": "LIST"
             }
           },
           {
@@ -121,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/浏览器核心架构.md",
+                "file": "LIST.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30-RESOURCES/浏览器核心架构.md",
+                "file": "LIST.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -330,6 +330,21 @@
   },
   "active": "d03eb2eaf6b111b8",
   "lastOpenFiles": [
+    "index.md",
+    "excalibrain.md",
+    "CLAUDE.md",
+    "收藏.md",
+    "简历.md",
+    "关于我.md",
+    "本地知识库联动NotebookLM.md",
+    "本地知识库联动NotebookLM.svg",
+    "_resources/Split Ellipse/d0040d5393b24285e8aca9728f711196_MD5.webp",
+    "_resources/Split Ellipse/62e72f8e471144f0a05fa9d693b3e4d4_MD5.webp",
+    "_resources/Split Ellipse",
+    "99-ASSETS/Excalidraw/Scripts/Downloaded/Split Ellipse.svg",
+    "99-ASSETS/Excalidraw/Scripts/Downloaded/Split Ellipse.md",
+    "30-RESOURCES/渲染进程.md",
+    "30-RESOURCES/浏览器核心架构.md",
     "30-RESOURCES/浏览器渲染流程.md",
     "30-RESOURCES/前端工程.md",
     "30-RESOURCES/模块模式.md",
@@ -349,34 +364,19 @@
     "_resources/iframe在微前端中的应用与演进/97eda646a4a132bf45133db8f6372f6e_MD5.svg",
     "_resources/iframe在微前端中的应用与演进",
     "30-RESOURCES/iframe.md",
-    "30-RESOURCES/qiankun.md",
-    "30-RESOURCES/pnpm.md",
-    "30-RESOURCES/ESModule.md",
-    "30-RESOURCES/HTTP2 通过多路复用实现真正的并发请求.md",
     "30-RESOURCES/前端工程演进.md.tmp.26572.8ae9c4df11cb",
-    "60-BLOGS/聊聊前端模块化.md",
-    "30-RESOURCES/Untitled.md",
-    "30-RESOURCES/版本控制与协作流程.md",
-    "30-RESOURCES/前端工程化与前端开发生命周期.excalidraw.md",
     "99-ASSETS/Excalidraw/Lib/local-library.excalidrawlib",
-    "30-RESOURCES/Web安全.md",
-    "90-DIARY/2026-08-22.md",
     "HTTP",
     "30-RESOURCES/Subjects",
     "30-RESOURCES/Subjects/计算机网络与协议专题/01-应用层核心（HTTP&缓存）",
     "30-RESOURCES/Subjects/计算机网络与协议专题",
     "70-SUBJECTS",
     "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
-    "_resources/2026-08-22",
     "40-ARCHIVE/_resources/Diving Into Reactive Programming in Node.js  AppSignal Blog/8131b12ef701bb6d9e2251d0e9eba028_MD5.jpg",
     "_resources/Experiments in procedural dappled light shaders/2b7c5414bbca3d0516f2ad2ecf23a9c0_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/e5951ca2badc262c67e3ff3f45a6ff41_MD5.webp",
     "_resources/Experiments in procedural dappled light shaders/b521b293f565f374020812c1d5afe1e7_MD5.gif",
-    "_resources/Experiments in procedural dappled light shaders/558b71a7e5dbaeb7857a506444903f37_MD5.webp",
     "10-PROJECTS/PROJECTS.canvas",
-    "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/3484705978f821b752e1d89631ec4417_MD5.webp",
-    "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/7b6b48d978fa659574af2e38db54ba3c_MD5.webp",
-    "_resources/How I Build Vue 3 Applications (Part 1) Why I Use a Hybrid Folder Structure/5922f21cbfa6306a1d1dd8b4b924631e_MD5.webp",
     "未命名.canvas",
     "Untitled.canvas",
     "//Untitled.canvas",

@@ -5,7 +5,7 @@ aliases: [Fiber Architecture, Fiber, React Fiber, C-React-Fiber, Fiber架构]
 description: React 16 引入的新协调引擎，将同步整树渲染改为异步可中断的链表遍历
 tags: [前端开发/框架/React]
 date-created: 2026-04-15
-date-modified: 2026-07-14
+date-modified: 2026-08-30
 status: cultivating
 content-type: concept
 related: "[[React]]"

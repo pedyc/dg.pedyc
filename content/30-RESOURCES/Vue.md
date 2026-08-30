@@ -5,7 +5,7 @@ aliases: [C-Vue, Vue.js, vue]
 description: 用于构建用户界面的渐进式 JavaScript 框架，专注于数据驱动和组件化
 tags: [前端开发/框架]
 date-created: 2025-05-29
-date-modified: 2026-08-19
+date-modified: 2026-08-30
 status: cultivating
 content-type: concept
 up: "[[A-前端]]"

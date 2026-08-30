@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LIST.md",
+                "file": "关于我.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "LIST"
+              "title": "关于我"
             }
           },
           {
@@ -121,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "LIST.md",
+                "file": "关于我.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LIST.md",
+                "file": "关于我.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -330,6 +330,7 @@
   },
   "active": "d03eb2eaf6b111b8",
   "lastOpenFiles": [
+    "LIST.md",
     "index.md",
     "excalibrain.md",
     "CLAUDE.md",
@@ -363,7 +364,6 @@
     "30-RESOURCES/06SHHEMA",
     "_resources/iframe在微前端中的应用与演进/97eda646a4a132bf45133db8f6372f6e_MD5.svg",
     "_resources/iframe在微前端中的应用与演进",
-    "30-RESOURCES/iframe.md",
     "30-RESOURCES/前端工程演进.md.tmp.26572.8ae9c4df11cb",
     "99-ASSETS/Excalidraw/Lib/local-library.excalidrawlib",
     "HTTP",

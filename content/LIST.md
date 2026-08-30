@@ -1,7 +1,7 @@
 ---
 title: LIST
 date-created: 2026-03-10
-date-modified: 2026-06-24
+date-modified: 2026-08-30
 ---
 
 ## PROJECTS

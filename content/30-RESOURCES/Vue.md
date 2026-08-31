@@ -5,10 +5,10 @@ aliases: [C-Vue, Vue.js, vue]
 description: 用于构建用户界面的渐进式 JavaScript 框架，专注于数据驱动和组件化
 tags: [前端开发/框架]
 date-created: 2025-05-29
-date-modified: 2026-08-30
+date-modified: 2026-08-31
 status: cultivating
 content-type: concept
-up: "[[A-前端]]"
+up: ["[[前端开发|前端]]"]
 ---
 
 ## 概念： Vue
@@ -55,8 +55,8 @@ mindmap
 - **愿景**：掌握 Vue 3 生态，能够独立构建中大型 Vue 应用
 - **里程碑**：
 	- [x] 掌握 Vue 3 基础 + 组合式 API
-	- [ ] 完成 Vue 3 + Vite + Pinia 项目实战
-	- [ ] 深入响应式原理源码（Proxy / effect / reactive）
+	- [x] 完成 Vue 3 + Vite + Pinia 项目实战 ✅ 2026-08-31
+	- [x] 深入响应式原理源码（Proxy / effect / reactive） ✅ 2026-08-31
 	- [ ] 掌握 Vue 编译器优化原理
 	- [ ] 了解 Vue 未来方向（Vapor Mode）
 
@@ -89,15 +89,6 @@ mindmap
 
 ---
 
-### SOP
-
-> 该领域的标准化操作流程
-
-- [[SOP-Vue3项目搭建]] — 待创建：Vue 3 + Vite + Pinia 标准项目结构
-- [[SOP-Vue3-混合文件夹结构]] — 根按职责、内按领域的混合文件夹组织流程
-
----
-
 ### FAQ
 
 > 该领域的常见问题
@@ -107,6 +98,16 @@ mindmap
 - [[在 Vue 组件中，模板是否必须有一个根节点包裹？Vue 2 和 Vue 3 在这方面有什么区别？]] — 模板根节点要求与 Vue 2/3 差异
 - [[Vue编译器如何优化]] — Vue 编译器的优化原理
 - [[Vapor Mode是什么]] — Vue 新的编译策略
+- [[Vue2 vs Vue3|VS-Vue2 vs Vue3]]
+
+---
+
+### SOP
+
+> 该领域的标准化操作流程
+
+- [[SOP-Vue3项目搭建]] — 待创建：Vue 3 + Vite + Pinia 标准项目结构
+- [[Vue3 混合文件夹结构|SOP-Vue3-混合文件夹结构]] — 根按职责、内按领域的混合文件夹组织流程
 
 ---
 

@@ -5,7 +5,7 @@ aliases: [响应式原理, C-响应式原理(Vue3)]
 description: Vue3 响应式系统的核心实现原理
 tags: [前端/Vue, 前端/原理]
 date-created: 2026-03-13
-date-modified: 2026-08-19
+date-modified: 2026-08-31
 status: cultivating
 content-type: concept
 up: ["[[Vue|vue]]"]
@@ -202,6 +202,7 @@ function trigger(target, key) {
 - **父级概念**：[[前端开发]]
 - **关联概念**：
 	- [[Vue3 ref 和 reactive 的区别]]
+	- [[Vue2 与 Vue3 数组响应式原理深度剖析]]
 	- [[Virtual DOM]] — 响应式数据变化后通过 render 函数生成新的 VNode
 - **相关问题**：
 	- [[为什么Vue3的响应式系统要使用WeakMap]]

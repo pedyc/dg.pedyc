@@ -5,7 +5,7 @@ aliases: []
 description: "React Fiber 通过优先级队列调度工作单元，高优先级可打断低优先级"
 tags: []
 date-created: 2026-05-06
-date-modified: 2026-05-06
+date-modified: 2026-08-31
 status: fleeting
 content-type: atomic
 up:

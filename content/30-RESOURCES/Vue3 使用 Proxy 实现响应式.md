@@ -4,9 +4,10 @@ title: Vue3 使用 Proxy 实现响应式
 description: Vue3 通过 Proxy 实现对对象操作的全面监听
 tags: [前端/Vue]
 date-created: 2026-03-17
-date-modified: 2026-08-19
+date-modified: 2026-08-31
 status: fleeting
 content-type: term
+up: ["[[Vue]]"]
 ---
 
 ## Vue3 使用 Proxy 实现响应式

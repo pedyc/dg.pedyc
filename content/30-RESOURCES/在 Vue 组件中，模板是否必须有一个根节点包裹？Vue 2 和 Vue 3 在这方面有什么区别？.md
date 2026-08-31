@@ -1,9 +1,9 @@
 ---
-content-type: question
-up: "[[Vue]]"
 title: 在 Vue 组件中，模板是否必须有一个根节点包裹？Vue 2 和 Vue 3 在这方面有什么区别？
 date-created: 2025-06-04
-date-modified: 2025-06-04
+date-modified: 2026-08-31
+content-type: question
+up: "[[Vue]]"
 ---
 
 在 Vue2 中，组件模板必须有一个根节点包裹，因为 Vue2 的渲染机制需要一个单一的根节点作为入口，如果组件存在多个根节点，Vue2 无法确定哪一个是组件的主元素，会导致编译错误。例如路由加载失败。

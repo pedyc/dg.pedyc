@@ -5,7 +5,7 @@ aliases: [VS-Vue2 vs Vue3]
 description: Vue2 和 Vue3 在核心特性、API、性能等方面的全面对比
 tags: [前端/Vue]
 date-created: 2026-03-13
-date-modified: 2026-08-30
+date-modified: 2026-08-31
 status: cultivating
 comparison: [Vue2, Vue3]
 content-type: comparison
@@ -127,7 +127,7 @@ graph TD
 	- Vue2 Options API vs Vue3 Composition API
 	- [[Vuex vs Pinia]]
 - **前置知识**：
-	- [[Vue3 响应式原理]]
+	- [[响应式原理(Vue3)|响应式原理]]
 	- JavaScript ES6
 
 ---

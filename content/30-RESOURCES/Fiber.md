@@ -5,7 +5,7 @@ aliases: [Fiber Architecture, Fiber, React Fiber, C-React-Fiber, Fiber架构]
 description: React 16 引入的新协调引擎，将同步整树渲染改为异步可中断的链表遍历
 tags: [前端开发/框架/React]
 date-created: 2026-04-15
-date-modified: 2026-08-30
+date-modified: 2026-08-31
 status: cultivating
 content-type: concept
 related: "[[React]]"
@@ -119,3 +119,4 @@ graph LR
 	- [[Virtual DOM|VDOM]] — Fiber 操作的底层对象
 	- [[Concurrent Mode]] — Fiber 的能力扩展
 	- [[useTransition]] — 基于 Fiber 优先级的 API
+	- [[Scheduler|Scheduler]] — Fiber 的优先级调度基于Scheduler

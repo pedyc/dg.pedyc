@@ -307,8 +307,8 @@
   "lintCommands": [],
   "customRegexes": [],
   "commonStyles": {
-    "aliasArrayStyle": "single-line",
-    "tagArrayStyle": "single-line",
+    "aliasArrayStyle": "multi-line",
+    "tagArrayStyle": "multi-line",
     "minimumNumberOfDollarSignsToBeAMathBlock": 2,
     "escapeCharacter": "\"",
     "removeUnnecessaryEscapeCharsForMultiLineArrays": true

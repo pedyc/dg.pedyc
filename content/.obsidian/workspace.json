@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/Shadow DOM在微前端中会导致弹窗丢样与事件委托失效等问题.md",
+                "file": "30-RESOURCES/快速排序.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Shadow DOM在微前端中会导致弹窗丢样与事件委托失效等问题"
+              "title": "快速排序"
             }
           },
           {
@@ -170,7 +170,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/Shadow DOM在微前端中会导致弹窗丢样与事件委托失效等问题.md",
+                "file": "30-RESOURCES/快速排序.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -378,6 +378,10 @@
   },
   "active": "c80a606ca1e3edb2",
   "lastOpenFiles": [
+    "30-RESOURCES/排序算法.md",
+    "30-RESOURCES/算法与数据结构.md",
+    "30-RESOURCES/实现简易虚拟列表.md",
+    "30-RESOURCES/虚拟列表.md",
     "30-RESOURCES/Shadow DOM在微前端中会导致弹窗丢样与事件委托失效等问题.md",
     "30-RESOURCES/微前端架构下的ShadowDOM样式物理隔离研究.md",
     "30-RESOURCES/渲染进程.md",
@@ -396,14 +400,10 @@
     "20-AREAS/A-前端/JavaScript.md",
     "30-RESOURCES/资源加载与网络优化.md",
     "90-DIARY/2026-08-22.md",
-    "30-RESOURCES/虚拟列表.md",
-    "30-RESOURCES/实现简易虚拟列表.md",
     "30-RESOURCES/性能优化方法.md",
     "30-RESOURCES/如何通过CSS属性规避图片加载导致的CLS偏移.md",
     "20-AREAS/A-前端/浏览器.md",
     "30-RESOURCES/CSS相关问题.md",
-    "30-RESOURCES/CSS.md",
-    "50-ZETTELCASTEN/React Fiber 的时间切片基于优先级调度.md",
     "_resources/SOP-前端高性能动画与渲染节流实施指南/981e4329bc20b14f94d3714c0a777726_MD5.webp",
     "_resources/SOP-前端高性能动画与渲染节流实施指南",
     "本地知识库联动NotebookLM.svg",

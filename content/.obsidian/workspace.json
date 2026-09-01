@@ -56,36 +56,12 @@
             }
           },
           {
-            "id": "c80a606ca1e3edb2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "30-RESOURCES/快速排序.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "快速排序"
-            }
-          },
-          {
             "id": "6b1c56ab4bf22c45",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-08-22.md",
+                "file": "90-DIARY/2026-09-01.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-08-22"
+              "title": "2026-09-01"
             }
           },
           {
@@ -170,7 +146,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/快速排序.md",
+                "file": "90-DIARY/2026-09-01.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -376,15 +352,21 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "c80a606ca1e3edb2",
+  "active": "6b1c56ab4bf22c45",
   "lastOpenFiles": [
+    "90-DIARY/2026-08-22.md",
+    "_templates/template_diary.md",
+    "90-DIARY/2026-09-01.md",
+    "30-RESOURCES/Subjects/计算机网络与协议专题/00-网络协议全景导图.md",
+    "30-RESOURCES/Webpack配置流程.md",
+    "30-RESOURCES/渲染进程.md",
+    "30-RESOURCES/微前端架构下的ShadowDOM样式物理隔离研究.md",
+    "30-RESOURCES/快速排序.md",
     "30-RESOURCES/排序算法.md",
     "30-RESOURCES/算法与数据结构.md",
     "30-RESOURCES/实现简易虚拟列表.md",
     "30-RESOURCES/虚拟列表.md",
     "30-RESOURCES/Shadow DOM在微前端中会导致弹窗丢样与事件委托失效等问题.md",
-    "30-RESOURCES/微前端架构下的ShadowDOM样式物理隔离研究.md",
-    "30-RESOURCES/渲染进程.md",
     "30-RESOURCES/Shadow DOM.md",
     "30-RESOURCES/Q-微前端架构下样式隔离方案的技术选型与权衡.md",
     "30-RESOURCES/DOM.md",
@@ -398,12 +380,6 @@
     "30-RESOURCES/主线程让渡与异步调度.md",
     "30-RESOURCES/图片与多媒体渐进加载.md",
     "20-AREAS/A-前端/JavaScript.md",
-    "30-RESOURCES/资源加载与网络优化.md",
-    "90-DIARY/2026-08-22.md",
-    "30-RESOURCES/性能优化方法.md",
-    "30-RESOURCES/如何通过CSS属性规避图片加载导致的CLS偏移.md",
-    "20-AREAS/A-前端/浏览器.md",
-    "30-RESOURCES/CSS相关问题.md",
     "_resources/SOP-前端高性能动画与渲染节流实施指南/981e4329bc20b14f94d3714c0a777726_MD5.webp",
     "_resources/SOP-前端高性能动画与渲染节流实施指南",
     "本地知识库联动NotebookLM.svg",

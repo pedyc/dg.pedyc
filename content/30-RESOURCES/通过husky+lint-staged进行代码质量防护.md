@@ -1,11 +1,16 @@
 ---
 uid: '202608291706'
 title: 通过husky+lint-staged进行代码质量防护
-aliases: [SOP-使用Husky与lint-staged进行代码质量防护]
+aliases:
+  - SOP-使用Husky与lint-staged进行代码质量防护
 description: 配置 Git Hooks 拦截机制，在提交暂存区代码时自动执行 ESLint/Prettier 等检查与修复
-tags: [前端工程化, 代码质量, GitHooks, SOP]
+tags:
+  - 前端工程化
+  - 代码质量
+  - GitHooks
+  - SOP
 date-created: 2026-08-29
-date-modified: 2026-08-29
+date-modified: 2026-09-01
 status: cultivating
 content-type: sop
 up: ["[[前端工程]]"]

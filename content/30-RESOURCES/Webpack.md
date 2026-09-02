@@ -1,11 +1,14 @@
 ---
 uid: 202505290000
 title: Webpack
-aliases: ["C-Webpack", "模块打包器"]
+aliases:
+  - C-Webpack
+  - 模块打包器
 description: Webpack 是开源的 JavaScript 模块打包器，将各种资源打包成静态资源
-tags: [前端/构建工具]
+tags:
+  - 前端/构建工具
 date-created: 2025-05-29
-date-modified: 2026-08-25
+date-modified: 2026-09-01
 status: active
 content-type: concept
 up: "[[前端工程]]"

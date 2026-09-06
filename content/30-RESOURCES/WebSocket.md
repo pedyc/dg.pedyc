@@ -1,11 +1,14 @@
 ---
 uid: 202505200001
 title: WebSocket
-aliases: [C-WebSocket]
+aliases:
+  - C-WebSocket
 description: 全双工通信协议，实现服务器主动推送
-tags: [前端, 网络协议]
+tags:
+  - 前端
+  - 网络协议
 date-created: 2025-05-20
-date-modified: 2026-08-16
+date-modified: 2026-09-02
 status: cultivating
 content-type: concept
 up: ""

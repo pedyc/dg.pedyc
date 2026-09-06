@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-09-01.md",
+                "file": "90-DIARY/2026-09-03.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-09-01"
+              "title": "2026-09-03"
             }
           }
         ],
@@ -146,7 +146,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "90-DIARY/2026-09-01.md",
+                "file": "90-DIARY/2026-09-03.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -355,10 +355,13 @@
   "active": "ed201b7fd77c7a74",
   "lastOpenFiles": [
     "90-DIARY/2026-09-02.md",
+    "90-DIARY/2026-09-03.md",
+    "30-RESOURCES/WebSocket.md",
+    "30-RESOURCES/全栈项目技术选型指南.md",
+    "90-DIARY/2026-09-01.md",
     "30-RESOURCES/纳什均衡.md",
     "30-RESOURCES/大模型流式输出前端如何做到既流畅又防卡顿.md",
     "30-RESOURCES/大模型流式打字机效果实现及渲染性能优化.md",
-    "90-DIARY/2026-09-01.md",
     "30-RESOURCES/前端工程.md",
     "30-RESOURCES/package.json.md",
     "30-RESOURCES/tsconfig.json.md",
@@ -369,7 +372,6 @@
     "10-PROJECTS/P-AI狼人杀项目实现/wiki-AI狼人杀.md",
     "10-PROJECTS/P-AI狼人杀项目实现",
     "30-RESOURCES/AI全栈项目如何科学选型前端与后端框架.md",
-    "30-RESOURCES/全栈项目技术选型指南.md",
     "30-RESOURCES/微前端架构下的ShadowDOM样式物理隔离研究.md",
     "90-DIARY/2026-03-16.md",
     "90-DIARY/前端工程化.md",
@@ -379,8 +381,6 @@
     "_templates/template_diary.md",
     "30-RESOURCES/Subjects/计算机网络与协议专题/00-网络协议全景导图.md",
     "30-RESOURCES/快速排序.md",
-    "30-RESOURCES/排序算法.md",
-    "30-RESOURCES/算法与数据结构.md",
     "_resources/SOP-前端高性能动画与渲染节流实施指南/981e4329bc20b14f94d3714c0a777726_MD5.webp",
     "_resources/SOP-前端高性能动画与渲染节流实施指南",
     "本地知识库联动NotebookLM.svg",

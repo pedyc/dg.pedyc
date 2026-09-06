@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40-RESOURCES/Inbox/Best Three.js Websites 2026 8 Sites + Techniques.md",
+                "file": "30-RESOURCES/R3F.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Best Three.js Websites 2026 8 Sites + Techniques"
+              "title": "R3F"
             }
           }
         ],
@@ -146,7 +146,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40-RESOURCES/Inbox/Best Three.js Websites 2026 8 Sites + Techniques.md",
+                "file": "30-RESOURCES/R3F.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -354,6 +354,7 @@
   },
   "active": "ed201b7fd77c7a74",
   "lastOpenFiles": [
+    "40-RESOURCES/Inbox/Best Three.js Websites 2026 8 Sites + Techniques.md",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/575c242259dffcf12b2f189d171b0688_MD5.webp",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/d98f8ca71794b186a52ac98bb96f8c03_MD5.webp",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/fe47b5c72395e620356e70ca7d13453a_MD5.webp",
@@ -367,7 +368,6 @@
     "40-RESOURCES/Inbox/_resources",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques",
     "90-DIARY/2026-09-03.md",
-    "40-RESOURCES/Inbox/Best Three.js Websites 2026 8 Sites + Techniques.md",
     "40-RESOURCES/Inbox",
     "40-RESOURCES",
     "90-DIARY/2026-09-02.md",
@@ -394,7 +394,6 @@
     "30-RESOURCES/跨端与跨框架工程实践.md",
     "90-DIARY/2026-08-22.md",
     "_templates/template_diary.md",
-    "_resources/SOP-前端高性能动画与渲染节流实施指南/981e4329bc20b14f94d3714c0a777726_MD5.webp",
     "_resources/SOP-前端高性能动画与渲染节流实施指南",
     "_resources/Split Ellipse",
     "30-RESOURCES/06SHHEMA",

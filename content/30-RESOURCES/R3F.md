@@ -1,11 +1,16 @@
 ---
 uid: 202604011000
 title: R3F
-aliases: [C-R3F, React Three Fiber]
+aliases:
+  - C-R3F
+  - React Three Fiber
 description: React 中使用 Three.js 的声明式组件化方案，将 3D 场景作为 React 组件树来管理
-tags: [concept, 前端, 3D图形]
+tags:
+  - concept
+  - 前端
+  - 3D图形
 date-created: 2026-04-01
-date-modified: 2026-04-15
+date-modified: 2026-09-07
 status: cultivating
 content-type: concept
 related: ["[[ThreeJS]]", "[[WebGL]]", "[[前端交互]]", "[[React]]"]

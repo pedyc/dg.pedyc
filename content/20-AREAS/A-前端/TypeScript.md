@@ -1,11 +1,14 @@
 ---
 uid: 202505290000
 title: TypeScript
-aliases: [TS, A-TypeScript]
+aliases:
+  - TS
+  - A-TypeScript
 description: JavaScript 的超集，添加了类型系统和其他高级特性
-tags: [前端开发/TypeScript]
+tags:
+  - 前端开发/TypeScript
 date-created: 2025-05-29
-date-modified: 2026-08-18
+date-modified: 2026-09-07
 status: cultivating
 content-type: area
 up: "[[前端开发]]"
@@ -45,7 +48,7 @@ up: "[[前端开发]]"
 	- [[泛型的本质是类型参数化]]：复用不同类型的同一逻辑
 	- [[类型推断减少显式标注]]：编译器能自动推断类型时无需手动声明
 - **关键概念**
-	- 类型注解、接口、[[泛型（TypeScript）]]、[[类型守卫（TypeScript）]]
+	- 类型注解、接口、[[泛型（TypeScript）]]、[[类型守卫（TypeScript）]]、[[类型擦除]]、[[单一真实数据源]]
 
 ---
 

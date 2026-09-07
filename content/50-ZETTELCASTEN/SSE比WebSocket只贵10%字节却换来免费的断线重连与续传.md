@@ -3,9 +3,12 @@ uid: 202608161320
 title: SSE比WebSocket只贵10%字节却换来免费的断线重连与续传
 aliases: []
 description: SSE 只比 WebSocket 贵约 10% 字节，但 EventSource 自动重连并回传 Last-Event-ID 续传
-tags: [前端, 网络协议, 实时通信]
+tags:
+  - 前端
+  - 网络协议
+  - 实时通信
 date-created: 2026-08-16
-date-modified: 2026-08-16
+date-modified: 2026-09-07
 status: fleeting
 content-type: atomic
 up: "[[WebSocket vs SSE vs Long Polling]]"

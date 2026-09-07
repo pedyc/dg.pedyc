@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-前端/端到端类型安全.md",
+                "file": "10-PROJECTS/P-求职前端岗位/前端能力提升专项.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "端到端类型安全"
+              "title": "前端能力提升专项"
             }
           }
         ],
@@ -146,7 +146,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-前端/端到端类型安全.md",
+                "file": "10-PROJECTS/P-求职前端岗位/前端能力提升专项.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -354,8 +354,15 @@
   },
   "active": "ed201b7fd77c7a74",
   "lastOpenFiles": [
-    "20-AREAS/A-前端/反向类型提取.md",
+    "30-RESOURCES/第三方库.md",
     "20-AREAS/A-前端/端到端类型安全.md",
+    "20-AREAS/A-前端/数据清洗.md",
+    "20-AREAS/A-前端/结构化输出契约.md",
+    "20-AREAS/A-前端/类型收窄.md",
+    "30-RESOURCES/WebSocket.md",
+    "30-RESOURCES/WebSocket vs SSE vs Long Polling.md",
+    "50-ZETTELCASTEN/SSE比WebSocket只贵10%字节却换来免费的断线重连与续传.md",
+    "20-AREAS/A-前端/反向类型提取.md",
     "20-AREAS/A-前端/单一真实数据源.md",
     "20-AREAS/A-前端/运行时类型校验.md",
     "20-AREAS/A-前端/TypeScript.md",
@@ -373,8 +380,6 @@
     "90-DIARY/2026-09-01.md",
     "90-DIARY/盖尔定律.md",
     "90-DIARY/Untitled.md",
-    "30-RESOURCES/R3F.md",
-    "40-RESOURCES/Inbox/Best Three.js Websites 2026 8 Sites + Techniques.md",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/575c242259dffcf12b2f189d171b0688_MD5.webp",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/d98f8ca71794b186a52ac98bb96f8c03_MD5.webp",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/fe47b5c72395e620356e70ca7d13453a_MD5.webp",
@@ -389,11 +394,6 @@
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques",
     "40-RESOURCES/Inbox",
     "40-RESOURCES",
-    "30-RESOURCES/WebSocket.md",
-    "30-RESOURCES/全栈项目技术选型指南.md",
-    "30-RESOURCES/纳什均衡.md",
-    "30-RESOURCES/大模型流式输出前端如何做到既流畅又防卡顿.md",
-    "30-RESOURCES/大模型流式打字机效果实现及渲染性能优化.md",
     "10-PROJECTS/P-AI狼人杀项目实现",
     "_resources/SOP-前端高性能动画与渲染节流实施指南",
     "_resources/Split Ellipse",

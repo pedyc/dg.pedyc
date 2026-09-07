@@ -1,11 +1,15 @@
 ---
 uid: 202608161030
 title: WebSocket vs SSE vs Long Polling
-aliases: ["VS-WebSocket-SSE-LongPolling"]
+aliases:
+  - VS-WebSocket-SSE-LongPolling
 description: 实测对比三种实时传输方案的字节开销、延迟与服务器内存成本：默认用 SSE，需要上行或二进制时才上 WebSocket
-tags: [前端, 网络协议, 实时通信]
+tags:
+  - 前端
+  - 网络协议
+  - 实时通信
 date-created: 2026-08-16
-date-modified: 2026-08-16
+date-modified: 2026-09-07
 status: cultivating
 content-type: comparison
 up: "[[Web通信]]"

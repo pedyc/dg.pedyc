@@ -27,7 +27,7 @@ up: "[[人工智能]]"
 ### 工程化体系
 
 - [[Harness]] — AI 工程化体系
-- [[搭建Vue工程的Claude Code Harness]] — Claude Code Harness 实践
+- [[搭建前端Harness]] — Claude Code Harness 实践
 
 ---
 

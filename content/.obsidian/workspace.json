@@ -78,33 +78,8 @@
               "icon": "lucide-file",
               "title": "wiki-AI狼人杀"
             }
-          },
-          {
-            "id": "ed201b7fd77c7a74",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "20-AREAS/A-人工智能/人工智能.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "人工智能"
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -146,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-人工智能/人工智能.md",
+                "file": "30-RESOURCES/渲染进程.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -322,7 +297,8 @@
               "title": "History"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -352,25 +328,26 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "ed201b7fd77c7a74",
+  "active": "d03eb2eaf6b111b8",
   "lastOpenFiles": [
+    "10-PROJECTS/P-AI狼人杀项目实现/wiki-AI狼人杀.md",
+    "30-RESOURCES/微前端架构下的ShadowDOM样式物理隔离研究.md",
+    "30-RESOURCES/搭建前端Harness.md",
+    "90-DIARY/2026-09-08.md",
+    "_templates/template_sop.md",
     "30-RESOURCES/AI工具与提效生态地图.md",
     "20-AREAS/A-人工智能/人工智能.md",
-    "30-RESOURCES/盖尔定律.md",
-    "30-RESOURCES/搭建Vue工程的Claude Code Harness.md",
     "30-RESOURCES/Harness.md",
+    "30-RESOURCES/盖尔定律.md",
     "30-RESOURCES/第三方库.md",
     "20-AREAS/A-前端/端到端类型安全.md",
     "10-PROJECTS/P-求职前端岗位/前端工程师能力地图.md",
     "90-DIARY/2026-09-07.md",
-    "90-DIARY/2026-09-08.md",
     "30-RESOURCES/前端工程.md",
     "10-PROJECTS/P-求职前端岗位/网络抓包与接口分析.md",
     "30-RESOURCES/大模型流式输出前端如何做到既流畅又防卡顿.md",
     "index.md",
     "30-RESOURCES/渲染进程.md",
-    "10-PROJECTS/P-AI狼人杀项目实现/wiki-AI狼人杀.md",
-    "30-RESOURCES/微前端架构下的ShadowDOM样式物理隔离研究.md",
     "LIST.md",
     "10-PROJECTS/P-求职前端岗位/前端能力提升专项.md",
     "20-AREAS/A-前端/数据清洗.md",
@@ -379,7 +356,6 @@
     "30-RESOURCES/WebSocket.md",
     "30-RESOURCES/WebSocket vs SSE vs Long Polling.md",
     "50-ZETTELCASTEN/SSE比WebSocket只贵10%字节却换来免费的断线重连与续传.md",
-    "20-AREAS/A-前端/反向类型提取.md",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/575c242259dffcf12b2f189d171b0688_MD5.webp",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/d98f8ca71794b186a52ac98bb96f8c03_MD5.webp",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/fe47b5c72395e620356e70ca7d13453a_MD5.webp",

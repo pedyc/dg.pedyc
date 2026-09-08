@@ -125,7 +125,9 @@
       "查找 “类型收窄”",
       "查找 “结构化输出契约”",
       "查找 “数据清洗与转换”",
-      "查找 “网络抓包”"
+      "查找 “网络抓包”",
+      "查找 “Harness 通过五个运行时要素保证任务可执行…”",
+      "查找 “五个运行时要素”"
     ],
     "seenFileMenuItems": [
       "重命名",
@@ -164,7 +166,22 @@
       "格式化文件夹",
       "Ignore folder in Linter",
       "Create new note from template",
-      "[Virtual Linker] Exclude this directory"
+      "[Virtual Linker] Exclude this directory",
+      "左右分屏",
+      "上下分屏",
+      "删除文件",
+      "打开局部关系图",
+      "在新标签页中打开反向链接列表",
+      "在标签页中显示反向链接",
+      "在新标签页中打开出链列表",
+      "打开笔记属性",
+      "打开大纲",
+      "阅读视图",
+      "增加笔记属性",
+      "源码模式",
+      "查找…",
+      "替换…",
+      "导出为 PDF"
     ]
   },
   "spacing": 0,

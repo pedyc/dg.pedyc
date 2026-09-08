@@ -1,12 +1,13 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: "{{动宾结构标题}}"
-aliases: ["SOP-{{标题名称}}"]
+uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+title: template_sop
+aliases:
+  - SOP-{{标题名称}}
 description: "{ 一句话描述这个 SOP 的用途 }"
 tags: []
-content-type: sop
 status: cultivating
-up: [[{{父级}}]]
+content-type: sop
+up: "[[{{父级}}]]"
 ---
 
 <!--
@@ -23,11 +24,12 @@ up: [[{{父级}}]]
 ## SOP：{{动宾结构标题}}
 
 > 一句话描述这个 SOP 的目标和适用场景
+> **问题溯源**：本 SOP 是 [[Q-{{源问题}}]] 的收敛成果——经过多方案对比和实践验证，固化为标准流程。
+
+### 目标与边界
 
 目标：{{要实现的目标}}
-实现：{{实践示例}}
-
-> **问题溯源**：本 SOP 是 [[Q-{{源问题}}]] 的收敛成果——经过多方案对比和实践验证，固化为标准流程。
+边界：{{本SOP的边界}}
 
 ---
 

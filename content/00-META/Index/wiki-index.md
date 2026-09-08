@@ -406,7 +406,7 @@ up: "[[本库指南]]"
 - [[使用Claude-Code开发React组件]] — Claude Code 开发 React 组件流程
 - [[使用Claude-Code自动化CI-CD流水线]] — Claude Code Headless 模式 CI/CD 集成
 - [[使用Claude Code进行大型代码迁移|SOP-使用Claude Code进行大型代码迁移]] — AI agent 驱动的跨语言/跨框架大型代码迁移标准流程
-- [[搭建Vue工程的Claude Code Harness|SOP-搭建Vue工程的ClaudeCode-Harness]] — 为 Vue 工程搭建 Agent Harness 的标准流程（知识/工具/契约/上下文权限/评估）
+- [[搭建前端Harness|SOP-搭建Vue工程的ClaudeCode-Harness]] — 为 Vue 工程搭建 Agent Harness 的标准流程（知识/工具/契约/上下文权限/评估）
 
 ### 网络通信
 

@@ -1,11 +1,15 @@
 ---
 uid: 202604011100
 title: Harness
-aliases: [C-Harness]
+aliases:
+  - C-Harness
 description: 用于围绕 AI Agent 构建工程化体系的框架和方法论
-tags: [concept, AI, Agent]
+tags:
+  - concept
+  - AI
+  - Agent
 date-created: 2026-04-01
-date-modified: 2026-08-02
+date-modified: 2026-09-08
 status: cultivating
 content-type: concept
 related: ["[[Agent]]", "[[Claude Code]]", "[[前端交互]]"]
@@ -88,17 +92,19 @@ flowchart LR
 - ✅ **生产级 Agent**：需要稳定输出的商业应用
 - ✅ **Agent 评估**：建立可量化的 Agent 质量标准
 - ⛔ **简单单次任务**：直接 Prompt 即可，无需 Harness
+- ⛔ **过度工程化**：简单任务不需要复杂 Harness
+- ⛔ **限制 Agent 灵活性**：Harness 约束过多导致 Agent 无法发挥能力
+- ⛔ **忽视评估**：没有量化标准就无法迭代优化
+
+#### FAQ
+
+---
 
 #### SOP
 
 - [[使用Claude-Code开发React组件]] — React 组件开发
 - [[搭建Vue工程的Claude Code Harness]] — 以 Vue+TS 为例的 Harness 工程化落地
 
-#### FAQ
-
-- ⛔ **过度工程化**：简单任务不需要复杂 Harness
-- ⛔ **限制 Agent 灵活性**：Harness 约束过多导致 Agent 无法发挥能力
-- ⛔ **忽视评估**：没有量化标准就无法迭代优化
 ---
 
 ### 知识图谱

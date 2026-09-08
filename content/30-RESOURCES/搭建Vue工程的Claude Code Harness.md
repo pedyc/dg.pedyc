@@ -1,11 +1,16 @@
 ---
 uid: 202608021300
 title: 搭建Vue工程的Claude Code Harness
-aliases: ["SOP-搭建Vue工程的ClaudeCode-Harness"]
+aliases:
+  - SOP-搭建Vue工程的ClaudeCode-Harness
 description: 围绕 Claude Code 为 Vue+TypeScript 工程搭建 Agent Harness 的标准流程：知识策划、工具实现、输入输出契约、上下文与权限、评估迭代
-tags: [sop, AI/Claude, 前端, Vue]
+tags:
+  - sop
+  - AI/Claude
+  - 前端
+  - Vue
 date-created: 2026-08-02
-date-modified: 2026-08-02
+date-modified: 2026-09-08
 status: cultivating
 content-type: sop
 up: "[[Harness]]"

@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-求职前端岗位/前端能力提升专项.md",
+                "file": "30-RESOURCES/前端工程.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端能力提升专项"
+              "title": "前端工程"
             }
           }
         ],
@@ -146,7 +146,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-求职前端岗位/前端能力提升专项.md",
+                "file": "30-RESOURCES/前端工程.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -354,6 +354,16 @@
   },
   "active": "ed201b7fd77c7a74",
   "lastOpenFiles": [
+    "10-PROJECTS/P-求职前端岗位/前端工程师能力地图.md",
+    "30-RESOURCES/前端工程.md",
+    "10-PROJECTS/P-求职前端岗位/网络抓包与接口分析.md",
+    "30-RESOURCES/大模型流式输出前端如何做到既流畅又防卡顿.md",
+    "index.md",
+    "30-RESOURCES/渲染进程.md",
+    "10-PROJECTS/P-AI狼人杀项目实现/wiki-AI狼人杀.md",
+    "30-RESOURCES/微前端架构下的ShadowDOM样式物理隔离研究.md",
+    "LIST.md",
+    "10-PROJECTS/P-求职前端岗位/前端能力提升专项.md",
     "30-RESOURCES/第三方库.md",
     "20-AREAS/A-前端/端到端类型安全.md",
     "20-AREAS/A-前端/数据清洗.md",
@@ -370,16 +380,6 @@
     "30-RESOURCES/哈希表.md",
     "40-RESOURCES/Inbox/Frontend Development Trends 2026 AI, Edge & TypeScript.md",
     "00-META/Guide/本库指南.md",
-    "30-RESOURCES/后序遍历.md",
-    "90-DIARY/2026-09-07.md",
-    "90-DIARY/2026-09-06.md",
-    "90-DIARY/2026-09-05.md",
-    "90-DIARY/2026-09-04.md",
-    "90-DIARY/2026-09-03.md",
-    "90-DIARY/2026-09-02.md",
-    "90-DIARY/2026-09-01.md",
-    "90-DIARY/盖尔定律.md",
-    "90-DIARY/Untitled.md",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/575c242259dffcf12b2f189d171b0688_MD5.webp",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/d98f8ca71794b186a52ac98bb96f8c03_MD5.webp",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/fe47b5c72395e620356e70ca7d13453a_MD5.webp",

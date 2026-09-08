@@ -1,12 +1,13 @@
 ---
 uid: 202408232037
 title: index
-aliases: [Welcome!]
+aliases:
+  - Welcome!
 author: ped_yc
 description:
 tags: []
 date-created: 2024-08-23
-date-modified: 2026-08-29
+date-modified: 2026-09-07
 content-type: [moc]
 ---
 

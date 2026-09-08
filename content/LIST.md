@@ -1,7 +1,7 @@
 ---
 title: LIST
 date-created: 2026-03-10
-date-modified: 2026-08-30
+date-modified: 2026-09-07
 ---
 
 ## PROJECTS
@@ -15,4 +15,12 @@ TABLE
 FROM "10-PROJECTS"
 WHERE date(expire) >= date(this.file.frontmatter.title)
 SORT urgency + consequence DESC
+```
+
+## ROADMAPS
+
+```dataview
+LIST
+FROM "30-RESOURCES"
+WHERE content-type = "roadmap"
 ```

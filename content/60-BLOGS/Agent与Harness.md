@@ -2,9 +2,11 @@
 title: Agent与Harness
 author: ["[[GitHub]]"]
 description: 介绍Agent和Harness
-tags: [clippings, 转载]
+tags:
+  - clippings
+  - 转载
 date-created: 2026-04-01
-date-modified: 2026-07-31
+date-modified: 2026-09-09
 content-type: [article]
 created: 2026-04-01
 published: true

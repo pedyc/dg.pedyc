@@ -1,11 +1,14 @@
 ---
 uid: 202605261030
 title: Svelte
-aliases: [C-Svelte]
+aliases:
+  - C-Svelte
 description: Svelte 是编译时优化框架，无需虚拟DOM，在编译阶段生成优化代码，应用运行时体积小、性能高
-tags: [前端开发, 前端框架]
+tags:
+  - 前端开发
+  - 前端框架
 date-created: 2026-05-26
-date-modified: 2026-05-26
+date-modified: 2026-09-09
 status: fleeting
 content-type: concept
 up: "[[前端框架]]"

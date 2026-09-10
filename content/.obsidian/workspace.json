@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-09-10.md",
+                "file": "30-RESOURCES/第三方库.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-09-10"
+              "title": "第三方库"
             }
           },
           {
@@ -121,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "90-DIARY/2026-09-10.md",
+                "file": "30-RESOURCES/第三方库.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -330,10 +330,10 @@
   },
   "active": "d03eb2eaf6b111b8",
   "lastOpenFiles": [
+    "90-DIARY/2026-09-10.md",
     "30-RESOURCES/Inbox/贝叶斯定理.md",
     "30-RESOURCES/Inbox/Frontend Development Trends 2026 AI, Edge & TypeScript.md",
     "30-RESOURCES/Inbox/Best Three.js Websites 2026 8 Sites + Techniques.md",
-    "90-DIARY/2026-09-10.md",
     "90-DIARY/2026-09-09.md",
     "30-RESOURCES/Agent.md",
     "60-BLOGS/Agent与Harness.md",

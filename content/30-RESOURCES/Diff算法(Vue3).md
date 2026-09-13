@@ -10,7 +10,7 @@ tags:
   - 前端/Vue
   - 前端/原理
 date-created: 2026-03-24
-date-modified: 2026-03-24
+date-modified: 2026-09-13
 status: cultivating
 content-type: concept
 up: "[[Virtual DOM]]"

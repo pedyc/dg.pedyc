@@ -1,9 +1,14 @@
 ---
 title: Git命令与工作流速查
 description: "Git 常用命令和工作流的速查表，方便快速查找和使用。"
-tags: ["Git", "版本控制", "工作流", "前端工程", "速查表"]
+tags:
+  - Git
+  - 版本控制
+  - 工作流
+  - 前端工程
+  - 速查表
 date-created: 2025-04-29
-date-modified: 2026-08-29
+date-modified: 2026-09-14
 content-type: concept
 keywords: [Git 命令, 工作流, 分支管理, 版本控制, 代码管理]
 para: "Area"

@@ -1,5 +1,5 @@
 {
-  "template": "_templates/template_diary",
+  "template": "_templates/template_diary.md",
   "folder": "90-DIARY",
   "autorun": false
 }

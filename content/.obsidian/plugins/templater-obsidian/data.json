@@ -22,5 +22,9 @@
     "_templates/template_startup.md"
   ],
   "intellisense_render": "1",
-  "ignore_folders_on_creation": []
+  "ignore_folders_on_creation": [
+    {
+      "folder": "_templates"
+    }
+  ]
 }

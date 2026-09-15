@@ -278,6 +278,7 @@
   "recordLintOnSaveLogs": true,
   "displayChanged": true,
   "suppressMessageWhenNoChange": false,
+  "enableDiffPreviewView": true,
   "suppressLintAllFilesConfirmationModal": false,
   "suppressLintAllFilesInFolderConfirmationModal": false,
   "lintOnFileChange": true,
@@ -293,12 +294,12 @@
   "filesToIgnore": [
     {
       "label": "排除绘图文件",
-      "match": ".excalidraw",
+      "match": "*.excalidraw",
       "flags": "g"
     },
     {
-      "label": "排除绘图文件1",
-      "match": "excalibrain",
+      "label": "排除模板文件",
+      "match": "tempate_*",
       "flags": "g"
     }
   ],

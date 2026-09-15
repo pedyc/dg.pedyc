@@ -1,11 +1,13 @@
 ---
 uid: 202605121400
 title: PWA
-aliases: [T-PWA, Progressive-Web-App]
+aliases:
+  - T-PWA
+  - Progressive-Web-App
 description: 渐进式网页应用，结合 Web 与原生应用优势的网页开发技术
 tags: []
 date-created: 2026-05-12
-date-modified: 2026-05-12
+date-modified: 2026-09-15
 status: cultivating
 content-type: term
 ---
@@ -41,6 +43,10 @@ PWA（Progressive Web App，渐进式网页应用）是一种结合 Web 与原�
 - **在移动开发中**：PWA 是跨平台开发的方案之一，与 React Native、Flutter 不同，无需应用商店分发
 - **在前端性能中**：通过缓存和预加载策略实现快速加载和离线访问
 - **在用户体验中**：提供类似原生应用的首屏、导航和交互体验
+
+### SOP
+
+- [[实现一个PWA应用]]
 
 ### 知识网络
 

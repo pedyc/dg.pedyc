@@ -1,7 +1,10 @@
 ---
 uid: 202605191500
 title: CI-CD流程
-aliases: [SOP-CI/CD流程, CI/CD流程]
+aliases:
+  - SOP-CI/CD流程
+  - CI/CD流程
+  - CI/CD流水线
 description: 前端项目持续集成与持续部署的标准化流程
 tags: []
 date-created: 2026-05-19

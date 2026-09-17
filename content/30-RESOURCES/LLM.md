@@ -1,11 +1,17 @@
 ---
 uid: 202504250000
 title: LLM
-aliases: [C-LLM, 大型语言模型]
+aliases:
+  - C-LLM
+  - 大型语言模型
 description: 基于 Transformer 架构的海量文本预训练模型，能够理解和生成人类语言
-tags: [concept, AI, LLM, NLP]
+tags:
+  - concept
+  - AI
+  - LLM
+  - NLP
 date-created: 2025-04-25
-date-modified: 2026-07-31
+date-modified: 2026-09-16
 status: active
 content-type: concept
 related: ["[[Agent]]", "[[人工智能]]", "[[提示词工程]]"]
@@ -104,6 +110,7 @@ flowchart TB
 	- [[上下文窗口]] — LLM 的令牌处理能力上限
 	- [[温度]] — 控制 LLM 输出随机性的采样参数
 	- [[Top-P]] — 动态截断采样的解码策略
+	- [[大模型缓存命中率]] — 一般来说缓存命中率越高，成本越低
 - **并列概念**：
 	- CV 模型 — 计算机视觉模型（如 ResNet、VIT）
 	- 多模态模型 — 融合文本、图像、音频的模型

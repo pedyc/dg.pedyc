@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-09-18.md",
+                "file": "90-DIARY/2026-09-19.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-09-18"
+              "title": "2026-09-19"
             }
           },
           {
@@ -182,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "90-DIARY/2026-09-18.md",
+                "file": "90-DIARY/2026-09-19.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -355,17 +355,18 @@
   },
   "active": "d03eb2eaf6b111b8",
   "lastOpenFiles": [
-    "90-DIARY/2026-W38.md",
-    "50-ZETTELCASTEN/设计冒烟测试主要权衡业务核心链路与外部强依赖.md",
     "90-DIARY/2026-09-18.md",
+    "90-DIARY/2026-09-17.md",
+    "90-DIARY/2026-09-16.md",
+    "90-DIARY/2026-09-15.md",
+    "90-DIARY/2026-09-14.md",
+    "90-DIARY/2026-W38.md",
+    "90-DIARY/2026-09-19.md",
+    "50-ZETTELCASTEN/设计冒烟测试主要权衡业务核心链路与外部强依赖.md",
     "30-RESOURCES/贝叶斯定理.md",
     "30-RESOURCES/软件测试体系.md",
     "30-RESOURCES/冒烟测试.md",
     "50-ZETTELCASTEN/冒烟测试的本质是以极低成本快速证伪而非证明系统合格.md",
-    "90-DIARY/2026-09-17.md",
-    "90-DIARY/2026-09-14.md",
-    "90-DIARY/2026-09-15.md",
-    "90-DIARY/2026-09-16.md",
     "_templates/template_diary.md",
     "10-PROJECTS/P-完善编辑器配置/完善编辑器配置.md",
     "90-DIARY/2026-W36.md",
@@ -380,7 +381,6 @@
     "30-RESOURCES/集成测试.md",
     "30-RESOURCES/单元测试.md",
     "30-RESOURCES/软件工程.md",
-    "30-RESOURCES/CI-CD流程.md",
     "90-DIARY/_resources",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/575c242259dffcf12b2f189d171b0688_MD5.webp",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/d98f8ca71794b186a52ac98bb96f8c03_MD5.webp",

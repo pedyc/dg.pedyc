@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-09-20.md",
+                "file": "90-DIARY/2026-09-21.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-09-20"
+              "title": "2026-09-21"
             }
           },
           {
@@ -182,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "90-DIARY/2026-09-20.md",
+                "file": "90-DIARY/2026-09-21.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -355,14 +355,16 @@
   },
   "active": "d03eb2eaf6b111b8",
   "lastOpenFiles": [
-    "90-DIARY/2026-09-19.md",
+    "90-DIARY/2026-W39.md",
+    "90-DIARY/2026-09-21.md",
+    "90-DIARY/2026-W38.md",
     "90-DIARY/2026-09-20.md",
+    "90-DIARY/2026-09-19.md",
     "90-DIARY/2026-09-18.md",
     "90-DIARY/2026-09-17.md",
     "90-DIARY/2026-09-16.md",
     "90-DIARY/2026-09-15.md",
     "90-DIARY/2026-09-14.md",
-    "90-DIARY/2026-W38.md",
     "50-ZETTELCASTEN/设计冒烟测试主要权衡业务核心链路与外部强依赖.md",
     "30-RESOURCES/贝叶斯定理.md",
     "30-RESOURCES/软件测试体系.md",
@@ -379,8 +381,6 @@
     "30-RESOURCES/每日一题JS题单.md",
     "30-RESOURCES/每日一题题单.md",
     "30-RESOURCES/大模型缓存命中率.md",
-    "30-RESOURCES/集成测试.md",
-    "30-RESOURCES/单元测试.md",
     "90-DIARY/_resources",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/575c242259dffcf12b2f189d171b0688_MD5.webp",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/d98f8ca71794b186a52ac98bb96f8c03_MD5.webp",

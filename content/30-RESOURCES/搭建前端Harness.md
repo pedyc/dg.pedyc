@@ -1,10 +1,10 @@
 ---
-uid: '202608101155'
+uid: "202608101155"
 title: 搭建前端Harness
 aliases:
   - SOP-搭建前端AgentHarness体系
   - SOP-前端Harness搭建
-description: "为前端工程配置基于模式契约、阶段分工（Planner/Coder/Tester/Reviewer）与确定性真实验证门禁的 Agent Harness 自动化管道"
+description: 为前端工程配置基于模式契约、阶段分工（Planner/Coder/Tester/Reviewer）与确定性真实验证门禁的 Agent Harness 自动化管道
 tags:
   - 前端工程化
   - AI全栈工程化
@@ -13,10 +13,10 @@ tags:
   - 代码质量
   - SOP
 date-created: 2026-08-10
-date-modified: 2026-09-09
+date-modified: 2026-09-21
 status: cultivating
 content-type: sop
-up: "[[AI全栈工程化]]"
+up: ["[[Harness]]"]
 ---
 
 ## SOP：搭建可验证的前端 Agent Harness
@@ -339,4 +339,4 @@ node scripts/harness/run.mjs --input .harness/task.example.json --json
 	- [[Vue]]
 	- [[提示词工程]]
 - **问题来源**：
-	- [[Q-如何让 LLM 稳定完成前端开发任务]] — 本 SOP 解决的核心问题来源
+	- [[Q-如何让 LLM 稳定完成开发任务]] — 本 SOP 解决的核心问题来源

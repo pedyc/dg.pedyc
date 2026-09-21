@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-09-21.md",
+                "file": "30-RESOURCES/DSH的的一切皆插件架构是如何实现的？.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-09-21"
+              "title": "DSH的的一切皆插件架构是如何实现的？"
             }
           },
           {
@@ -182,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "90-DIARY/2026-09-21.md",
+                "file": "30-RESOURCES/DSH的的一切皆插件架构是如何实现的？.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -355,8 +355,13 @@
   },
   "active": "d03eb2eaf6b111b8",
   "lastOpenFiles": [
+    "30-RESOURCES/DeepSeek Harness.md",
+    "30-RESOURCES/DSH的的一切皆插件架构是如何实现的？.md",
     "90-DIARY/2026-W39.md",
     "90-DIARY/2026-09-21.md",
+    "30-RESOURCES/Q-如何让 LLM 稳定完成开发任务.md",
+    "30-RESOURCES/搭建前端Harness.md",
+    "30-RESOURCES/Harness.md",
     "90-DIARY/2026-W38.md",
     "90-DIARY/2026-09-20.md",
     "90-DIARY/2026-09-19.md",
@@ -376,11 +381,6 @@
     "30-RESOURCES/纳什均衡.md",
     "30-RESOURCES/package.json.md",
     "90-DIARY/2026-W37.md",
-    "30-RESOURCES/领域驱动设计.md",
-    "30-RESOURCES/微前端架构下的ShadowDOM样式物理隔离研究.md",
-    "30-RESOURCES/每日一题JS题单.md",
-    "30-RESOURCES/每日一题题单.md",
-    "30-RESOURCES/大模型缓存命中率.md",
     "90-DIARY/_resources",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/575c242259dffcf12b2f189d171b0688_MD5.webp",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/d98f8ca71794b186a52ac98bb96f8c03_MD5.webp",

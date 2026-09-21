@@ -9,7 +9,7 @@ tags:
   - AI
   - Agent
 date-created: 2026-04-01
-date-modified: 2026-09-08
+date-modified: 2026-09-21
 status: cultivating
 content-type: concept
 related: ["[[Agent]]", "[[Claude Code]]", "[[前端交互]]"]
@@ -20,6 +20,12 @@ related: ["[[Agent]]", "[[Claude Code]]", "[[前端交互]]"]
 > 用于围绕 AI Agent 构建工程化体系的框架和方法论，类似于传统软件开发中的框架、库、工具链在 Agent 开发中的作用。
 
 **解决的核心痛点**：Agent 虽然具备强大的推理和执行能力，但缺乏工程化约束导致输出不稳定、难以复用、无法规模化。Harness 提供结构化方法来构建可靠的 Agent 应用。
+
+**一些著名的Harness实现**：
+- [[Claude Code]]：**"产品化 Harness"的代表**。它优化端到端的编码会话，将规划、编辑、测试、提交等流程打包成一个高度整合、体验流畅的成品，让你开箱即用。它的设计偏向"垂直整合"，核心是做好一个产品。
+- [[Deep Agents]]：**"模型中立"的复制品**。它试图在开源库中复刻 Claude Code 的 Harness 模式，但保持与任何支持工具调用的模型兼容。它更像是一个供开发者集成到自身系统中的**库**。
+- [[OpenCode]]
+- [[DeepSeek Harness]]
 
 ---
 

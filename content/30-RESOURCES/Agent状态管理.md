@@ -1,7 +1,10 @@
 ---
-title: 状态管理
+title: Agent状态管理
+aliases:
+  - 状态管理
+  - C-Agent状态管理
 date-created: 2025-06-02
-date-modified: 2026-07-29
+date-modified: 2026-09-22
 content-type: concept
 ---
 

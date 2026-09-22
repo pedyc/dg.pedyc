@@ -2,7 +2,6 @@
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: "{{标题}}"
 aliases: []
-description: ""
 tags: []
 content-type: atomic
 status: fleeting

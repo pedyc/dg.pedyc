@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/中间件.md",
+                "file": "10-PROJECTS/P-AI学习计划/AI学习计划.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "中间件"
+              "title": "AI学习计划"
+            }
+          },
+          {
+            "id": "95d35bcfd1fffc48",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "30-RESOURCES/前端状态管理.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "前端状态管理"
             }
           },
           {
@@ -85,7 +109,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/微前端架构下的ShadowDOM样式物理隔离研究.md",
+                "file": "30-RESOURCES/React中应该如何选择useState、useReducer和Context？.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +124,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "微前端架构下的ShadowDOM样式物理隔离研究"
+              "title": "React中应该如何选择useState、useReducer和Context？"
             }
           },
           {
@@ -128,7 +152,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -170,7 +194,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "90-DIARY/中间件.md",
+                "file": "30-RESOURCES/React中应该如何选择useState、useReducer和Context？.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -207,7 +231,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "90-DIARY/中间件.md",
+                "file": "30-RESOURCES/React中应该如何选择useState、useReducer和Context？.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -249,7 +273,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:\"99-ASSETS/\" ",
+                "query": "tag:状态管理",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -289,7 +313,8 @@
               "title": "添加笔记属性"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -377,34 +402,34 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "9b1e144ac3a63d1f",
+  "active": "9c1db43a6adf8b56",
   "lastOpenFiles": [
-    "90-DIARY/中间件.md",
+    "30-RESOURCES/前端状态管理.md",
+    "30-RESOURCES/React中应该如何选择useState、useReducer和Context？.md",
+    "30-RESOURCES/微前端架构下的ShadowDOM样式物理隔离研究.md",
+    "30-RESOURCES/什么时候应该将组件状态提升到全局状态？.md",
+    "30-RESOURCES/服务端状态与客户端状态具有不同的生命周期.md",
+    "30-RESOURCES/Agent状态管理.md",
     "90-DIARY/2026-09-22.md",
-    "30-RESOURCES/构建一个无特权内核架构的MVP实现.md",
-    "30-RESOURCES/DeepSeek Harness.md",
-    "90-DIARY/2026-09-21.md",
-    "30-RESOURCES/为什么要在Proxy中使用Reflect？.md",
-    "30-RESOURCES/Reflect.md",
-    "30-RESOURCES/为什么需要Reflect？.md",
-    "30-RESOURCES/ES2015.md",
-    "30-RESOURCES/ES2025.md",
-    "30-RESOURCES/Vue3 使用 Reflect 保证 Proxy 行为的正确性.md",
     "90-DIARY/2026-W38.md",
-    "30-RESOURCES/必然王国.md",
-    "30-RESOURCES/闭包.md",
-    "_templates/template_concept.md",
-    "30-RESOURCES/tsconfig.json.md",
-    "20-AREAS/A-前端/TypeScript.md",
-    "30-RESOURCES/DSH的的一切皆插件架构是如何实现的？.md",
     "90-DIARY/2026-W39.md",
-    "30-RESOURCES/Q-如何让 LLM 稳定完成开发任务.md",
-    "30-RESOURCES/搭建前端Harness.md",
-    "30-RESOURCES/Harness.md",
-    "90-DIARY/2026-09-20.md",
-    "90-DIARY/2026-09-19.md",
-    "90-DIARY/2026-09-18.md",
-    "90-DIARY/2026-09-17.md",
+    "30-RESOURCES/派生状态应尽可能从源状态计算得到.md",
+    "30-RESOURCES/状态应该由最接近其使用边界的合适所有者持有.md",
+    "_templates/template_atomic.md",
+    "_templates/template_new.md",
+    "90-DIARY/中间件.md",
+    "30-RESOURCES/Vue 面试题.md",
+    "30-RESOURCES/前端框架.md",
+    "10-PROJECTS/P-AI学习计划/Agent学习专项1.md",
+    "30-RESOURCES/Agent.md",
+    "30-RESOURCES/LLM.md",
+    "10-PROJECTS/P-AI学习计划/AI学习清单.md",
+    "10-PROJECTS/P-AI学习计划/构建一个智能体.md",
+    "10-PROJECTS/P-AI学习计划/AI学习计划.md",
+    "30-RESOURCES/结构化输出.md",
+    "10-PROJECTS/dg.pedyc.md",
+    "40-ARCHIVE/P-求职前端岗位/求职前端岗位.md",
+    "40-ARCHIVE/P-求职前端岗位/后端能力提升专项.md",
     "90-DIARY/_resources",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/575c242259dffcf12b2f189d171b0688_MD5.webp",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/d98f8ca71794b186a52ac98bb96f8c03_MD5.webp",

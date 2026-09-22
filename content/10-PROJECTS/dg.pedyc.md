@@ -1,17 +1,21 @@
 ---
 uid: 202608161400
 title: dg.pedyc
-aliases: ["A-dg.pedyc", "数字花园站点"]
+aliases: []
 description: 我的个人数字花园站点（Quartz 静态站），持续维护与经营
-tags: [数字花园, 知识管理, 前端]
+tags:
+  - 数字花园
+  - 知识管理
+  - 前端
 date-created: 2026-08-16
-date-modified: 2026-08-18
+date-modified: 2026-09-22
 status: active
-content-type: area
+content-type:
+  - project
 up: "[[知识管理]]"
 ---
 
-## Area: dg.pedyc
+## Project: dg.pedyc
 
 > 我的个人数字花园——基于 Quartz v5 的公开知识站点，是「数字花园」理念的具体落地，持续经营与维护
 
@@ -29,9 +33,9 @@ up: "[[知识管理]]"
 
 - **愿景**：一个可持续生长、个性化、长期可维护的个人数字花园
 - **里程碑**：
-	- [ ] 阶段 1：框架稳定（Quartz v5 迁移、主题与字体定制）
-	- [ ] 阶段 2：个性化增强（斑驳光背景、浮动导航等 fork 定制）
-	- [ ] 阶段 3：内容与方法论协同（LLM Wiki 维护体系成熟）
+	- [x] 阶段 1：框架稳定（Quartz v5 迁移、主题与字体定制） ✅ 2026-09-22
+	- [x] 阶段 2：个性化增强（斑驳光背景、浮动导航等 fork 定制） ✅ 2026-09-22
+	- [x] 阶段 3：内容与方法论协同（LLM Wiki 维护体系成熟） ✅ 2026-09-22
 
 ---
 

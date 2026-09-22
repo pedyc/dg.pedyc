@@ -10,7 +10,7 @@ tags:
   - AI
   - Agent
 date-created: 2025-08-25
-date-modified: 2026-09-09
+date-modified: 2026-09-22
 status: active
 content-type: concept
 related: ["[[人工智能]]", "[[Harness]]"]
@@ -26,7 +26,8 @@ related: ["[[人工智能]]", "[[Harness]]"]
 
 ### 核心命题
 
-- [[Agent = LLM + 上下文 + 工具]]
+- [[Agent = LLM + 上下文 + 工具]] — 通用Agent定义
+- Agent = LLM + Harness — DSH对Agent的定义
 - Agent 的本质是「感知 - 推理 - 执行」的闭环系统，而非单一工具调用
 - Agent 的可靠性取决于 Harness（工程化框架），而非单纯的 Prompt 优化
 - 好的 Agent 设计是在「灵活性」与「可控性」之间找到平衡
@@ -160,6 +161,5 @@ flowchart TB
 
 ### 参考延伸
 
-- Russell, S., & Norvig, P. *Artificial Intelligence: A Modern Approach*
-- Wooldridge, M. *An Introduction to MultiAgent Systems*
 - [Anthropic - Building Effective Agents](https://docs.anthropic.com/)
+- [Hello-Agents](https://hello-agents.datawhale.cc/#/)

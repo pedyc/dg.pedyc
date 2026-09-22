@@ -14,7 +14,7 @@ tags:
   - 静态类型
   - 概念
 date-created: 2026-09-01
-date-modified: 2026-09-01
+date-modified: 2026-09-21
 status: cultivating
 content-type: concept
 up: ["[[TypeScript]]", "[[前端工程]]"]
@@ -149,5 +149,5 @@ flowchart TD
 	* [[package.json]] — Node.js 项目元数据与依赖清单
 	* [[ESLint]] — 代码规范与静态分析工具
 * **相关概念**：
-	* [[前端工程化]] — 现代构建体系与质量卡点基础设施
+	* [[前端工程]] — 现代构建体系与质量卡点基础设施
 	* [[Vite]] — 下一代前端工具链

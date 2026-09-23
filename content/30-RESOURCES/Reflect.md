@@ -86,7 +86,7 @@ up: ["[[ES2015|ES6]]"]
 	- [[Proxy]] — 拦截操作的代理对象，与 Reflect 一一对应、配合使用
 	- [[Object]] — 面向普通对象操作的同名方法集合
 - **相关概念**：
-	- [[响应式原理(Vue3)]] — Vue3 等基于 Proxy + Reflect 的实现
+	- [[Vue3响应式原理]] — Vue3 等基于 Proxy + Reflect 的实现
 	- [[陷阱（trap）]] — Proxy 中的拦截钩子
 	- [[Reflect.ownKeys]] — 获取对象自身所有键（含 Symbol）
 - **参考文章**

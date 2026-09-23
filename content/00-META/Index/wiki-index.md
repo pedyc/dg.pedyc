@@ -431,7 +431,7 @@ up: "[[本库指南]]"
 - [[Svelte vs React]] — 编译时优化 vs 运行时虚拟 DOM，体积、性能、开发体验差异
 - [[Vue2 vs Vue3]] — Vue2 和 Vue3 核心差异
 - [[Vue2 vs Vue3 Diff算法]] — Diff 算法优化、性能提升
-- [[Vue3 ref 和 reactive 的区别]] — 响应式系统对比、使用场景
+- [[Vue3-ref和reactive的区别]] — 响应式系统对比、使用场景
 
 ### React 对比
 

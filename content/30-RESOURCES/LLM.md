@@ -11,7 +11,7 @@ tags:
   - LLM
   - NLP
 date-created: 2025-04-25
-date-modified: 2026-09-16
+date-modified: 2026-09-22
 status: active
 content-type: concept
 related: ["[[Agent]]", "[[人工智能]]", "[[提示词工程]]"]
@@ -30,28 +30,13 @@ related: ["[[Agent]]", "[[人工智能]]", "[[提示词工程]]"]
 - LLM 的本质是「规模涌现」—— 当模型参数达到一定量级时，会涌现出在小模型中不存在的推理能力
 - LLM 是「世界知识的压缩器」—— 通过预训练将海量文本中的知识压缩到模型权重中
 - LLM 的能力边界取决于「预训练数据的多样性和质量」，而非单纯的参数规模
+- LLM是神经符号主义的极佳实践范例
 
 ---
 
-### 运行机制
+### 核心概念
 
-```mermaid
-flowchart TB
-    A[海量文本数据] --> B[预训练 Pre-training]
-    B --> C[基座模型 Base Model]
-    C --> D[指令微调 SFT]
-    D --> E[对齐 Alignment]
-    E --> F[可部署 LLM]
-
-    G[特定任务] --> H[检索增强生成 RAG]
-    G --> I[提示词工程 Prompt]
-    G --> J[微调 Fine-tuning]
-
-    style A fill:#e1f5fe
-    style B fill:#fff3e0
-    style C fill:#e8f5e9
-    style F fill:#fce4ec
-```
+- 
 
 #### 技术栈
 

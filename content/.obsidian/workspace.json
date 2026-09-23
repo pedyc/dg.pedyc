@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/Vue3 使用 Reflect 保证 Proxy 行为的正确性.md",
+                "file": "30-RESOURCES/Vue3使用Reflect保证Proxy行为的正确性.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Vue3 使用 Reflect 保证 Proxy 行为的正确性"
+              "title": "Vue3使用Reflect保证Proxy行为的正确性"
             }
           },
           {
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-09-22.md",
+                "file": "30-RESOURCES/第三方库.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-09-22"
+              "title": "第三方库"
             }
           },
           {
@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-AI学习计划/AI学习计划.md",
+                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "AI学习计划"
+              "title": "Agent求职"
             }
           },
           {
@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/前端状态管理.md",
+                "file": "20-AREAS/A-人工智能/人工智能.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +100,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端状态管理"
+              "title": "人工智能"
+            }
+          },
+          {
+            "id": "0af4f8ffe3041707",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Agent求职"
             }
           },
           {
@@ -109,7 +133,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/React中应该如何选择useState、useReducer和Context？.md",
+                "file": "10-PROJECTS/P-Agent求职/Agent学习专项-基本概念与架构.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -124,7 +148,19 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "React中应该如何选择useState、useReducer和Context？"
+              "title": "Agent学习专项-基本概念与架构"
+            }
+          },
+          {
+            "id": "f4663eae15debbe2",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "10-PROJECTS/P-Agent求职/_resources/Agent架构.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Agent架构.excalidraw"
             }
           },
           {
@@ -152,7 +188,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -194,7 +230,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/React中应该如何选择useState、useReducer和Context？.md",
+                "file": "10-PROJECTS/P-Agent求职/_resources/Agent架构.excalidraw.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -231,7 +267,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30-RESOURCES/React中应该如何选择useState、useReducer和Context？.md",
+                "file": "10-PROJECTS/P-Agent求职/_resources/Agent架构.excalidraw.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -240,7 +276,8 @@
               "title": "大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "5e0950099d64d5f6",
@@ -313,8 +350,7 @@
               "title": "添加笔记属性"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -402,34 +438,47 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "9c1db43a6adf8b56",
+  "active": "f4663eae15debbe2",
   "lastOpenFiles": [
-    "30-RESOURCES/前端状态管理.md",
-    "30-RESOURCES/React中应该如何选择useState、useReducer和Context？.md",
-    "30-RESOURCES/微前端架构下的ShadowDOM样式物理隔离研究.md",
-    "30-RESOURCES/什么时候应该将组件状态提升到全局状态？.md",
-    "30-RESOURCES/服务端状态与客户端状态具有不同的生命周期.md",
-    "30-RESOURCES/Agent状态管理.md",
-    "90-DIARY/2026-09-22.md",
-    "90-DIARY/2026-W38.md",
-    "90-DIARY/2026-W39.md",
-    "30-RESOURCES/派生状态应尽可能从源状态计算得到.md",
-    "30-RESOURCES/状态应该由最接近其使用边界的合适所有者持有.md",
-    "_templates/template_atomic.md",
-    "_templates/template_new.md",
-    "90-DIARY/中间件.md",
-    "30-RESOURCES/Vue 面试题.md",
-    "30-RESOURCES/前端框架.md",
-    "10-PROJECTS/P-AI学习计划/Agent学习专项1.md",
+    "_resources/Boolean Operations/f18c044d27f2f3db6cd80b1f61a152ec_MD5.webp",
+    "_resources/Boolean Operations/f79cc2f0ef3155eb752115b690bb4627_MD5.webp",
+    "_resources/Boolean Operations",
+    "99-ASSETS/Excalidraw/Scripts/Downloaded/Boolean Operations.svg",
+    "99-ASSETS/Excalidraw/Scripts/Downloaded/Boolean Operations.md",
+    "10-PROJECTS/P-Agent求职/_resources/Agent架构.excalidraw.svg",
+    "10-PROJECTS/P-Agent求职/Agent学习专项-基本概念与架构.md",
+    "10-PROJECTS/P-Agent求职/Agent求职.md",
+    "10-PROJECTS/P-Agent求职/_resources/Agent架构.excalidraw.md",
+    "10-PROJECTS/P-Agent求职/Agent学习清单.md",
+    "_templates/template_sub_project.md",
+    "10-PROJECTS/P-Agent求职/Agent求职项目推进进展.md",
+    "10-PROJECTS/P-Agent求职/Agent学习专项清单.md",
+    "_templates/template_project.md",
+    "00-META/Specification/_sync-rules.md",
+    "00-META/Specification/_skills-overview.md",
+    "00-META/Specification/_anki-sync-rules.md",
+    "10-PROJECTS/P-Agent求职/S1-Agent基础与核心机制/学习专项：理解Agent基本概念与架构.md",
+    "10-PROJECTS/P-Agent求职/02-学习专项",
+    "10-PROJECTS/P-Agent求职/01-专项清单",
+    "10-PROJECTS/P-Agent求职/S1-Agent基础与核心机制/实践专项：实现Agent Loop MVP.md",
+    "10-PROJECTS/P-Agent求职/S1-Agent基础与核心机制/学习专项：Agent Loop.md",
+    "10-PROJECTS/P-Agent求职/S6-求职执行",
+    "10-PROJECTS/P-Agent求职/S5-Agent求职能力",
+    "10-PROJECTS/P-Agent求职/S4-Agent项目实践",
+    "10-PROJECTS/P-Agent求职/S3-Agent工程化与可靠性",
+    "10-PROJECTS/P-Agent求职/S2-Agent核心技术实践",
+    "10-PROJECTS/P-Agent求职/S1-Agent基础与核心机制",
     "30-RESOURCES/Agent.md",
+    "20-AREAS/A-人工智能/智能体运行机制.md",
+    "20-AREAS/A-人工智能/人工智能.md",
+    "20-AREAS/A-人工智能/PEAS模型.md",
+    "20-AREAS/A-人工智能/为什么PEAS很重要？.md",
+    "20-AREAS/A-人工智能/PEAS.excalidraw.md",
+    "20-AREAS/A-人工智能/PEAS.excalidraw.svg",
+    "20-AREAS/A-人工智能/AI核心概念.md",
     "30-RESOURCES/LLM.md",
-    "10-PROJECTS/P-AI学习计划/AI学习清单.md",
-    "10-PROJECTS/P-AI学习计划/构建一个智能体.md",
-    "10-PROJECTS/P-AI学习计划/AI学习计划.md",
-    "30-RESOURCES/结构化输出.md",
-    "10-PROJECTS/dg.pedyc.md",
-    "40-ARCHIVE/P-求职前端岗位/求职前端岗位.md",
-    "40-ARCHIVE/P-求职前端岗位/后端能力提升专项.md",
+    "30-RESOURCES/前端状态管理.md",
+    "30-RESOURCES/LLM 基础.md",
     "90-DIARY/_resources",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/575c242259dffcf12b2f189d171b0688_MD5.webp",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/d98f8ca71794b186a52ac98bb96f8c03_MD5.webp",
@@ -437,19 +486,6 @@
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/dcbbe4eda7ad56a32e4d08567ce8b251_MD5.webp",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/9ab1f6b32198714e0916b73f1f34b700_MD5.webp",
     "_resources/Best Three.js Websites 2026 8 Sites + Techniques/c633472abd755fa5b398de2e47a6fc58_MD5.webp",
-    "_resources/Best Three.js Websites 2026 8 Sites + Techniques/152590e7db18afa7b584dc74c5a56388_MD5.webp",
-    "_resources/Best Three.js Websites 2026 8 Sites + Techniques/d559e0dbed6f7286d39ac7b1c5cf08f6_MD5.webp",
-    "_resources/Best Three.js Websites 2026 8 Sites + Techniques/e6e6f2fd02ce1a93bb9106c51e1be028_MD5.webp",
-    "_resources/Best Three.js Websites 2026 8 Sites + Techniques/8c3374c2da5aa9528a443b9be4793664_MD5.webp",
-    "40-RESOURCES/Inbox/_resources",
-    "_resources/Best Three.js Websites 2026 8 Sites + Techniques",
-    "40-RESOURCES/Inbox",
-    "40-RESOURCES",
-    "10-PROJECTS/P-AI狼人杀项目实现",
-    "_resources/SOP-前端高性能动画与渲染节流实施指南",
-    "_resources/Split Ellipse",
-    "30-RESOURCES/06SHHEMA",
-    "_resources/iframe在微前端中的应用与演进",
     "10-PROJECTS/PROJECTS.canvas",
     "未命名.canvas",
     "Untitled.canvas",

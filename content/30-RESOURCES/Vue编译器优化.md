@@ -127,7 +127,7 @@ flowchart TB
 - **并列概念**：
 	- [[Vapor Mode]] — 范式级替代方案
 - **相关概念**：
-	- [[响应式原理(Vue3)]] — 优化后的更新路径依赖响应式依赖收集
+	- [[Vue3响应式原理]] — 优化后的更新路径依赖响应式依赖收集
 	- [[Diff算法(Vue3)]] — patchFlag 优化的是 diff 的检查范围
 - **参考文章**
 	- Vue 官方文档：Template Compilation

@@ -1,11 +1,16 @@
 ---
 uid: 202603130000
-title: 响应式原理(Vue3)
-aliases: [响应式原理, C-响应式原理(Vue3)]
+title: Vue3响应式原理
+aliases:
+  - 响应式原理
+  - C-Vue3响应式原理
+  - Vue3响应式系统
 description: Vue3 响应式系统的核心实现原理
-tags: [前端/Vue, 前端/原理]
+tags:
+  - 前端/Vue
+  - 前端/原理
 date-created: 2026-03-13
-date-modified: 2026-08-31
+date-modified: 2026-09-22
 status: cultivating
 content-type: concept
 up: ["[[Vue|vue]]"]
@@ -21,11 +26,11 @@ up: ["[[Vue|vue]]"]
 
 ### 核心命题
 
-- [[Vue3 使用 Proxy 实现响应式]]
+- [[Vue3使用Proxy实现响应式]]
 	- **原理**：Proxy 可以监听对象的任何操作，包括新增属性、删除属性、数组索引变化
-- [[Vue3 使用 Reflect 保证 Proxy 行为的正确性]]
+- [[Vue3使用Reflect保证Proxy行为的正确性]]
 	- **原理**：Reflect 提供了统一的 API 操作对象，确保 this 指向正确
-- [[Vue3 响应式系统分为 effect 和 reactive 两部分]]
+- [[Vue3响应式系统分为effect和reactive两部分]]
 	- **effect** 负责收集依赖和触发更新
 	- **reactive** 负责将普通对象转换为响应式对象
 - [[在Vue3中解构响应式对象会丢失响应性]]
@@ -74,6 +79,39 @@ flowchart TB
     style B fill:#e1f5fe
     style L fill:#ffebee
     style S fill:#e8f5e9
+```
+
+#### 简图
+
+```bash
+Vue Reactive System
+
+                          状态
+                            │
+              ┌──────┴──────┐
+              │                          │
+            读取                         修改
+              │                          │
+              ▼                          ▼
+            track                      trigger
+              │                          │
+              ▼                          ▼
+          建立依赖                     找到依赖
+              │                          │
+              └──────┬──────┘
+                            ▼
+                          Effect
+                            │
+          ┌────────┼──────────┐
+          ▼                ▼                    ▼
+       Component         computed                watch
+        render                                 callback
+          │
+          ▼
+       Virtual DOM
+          │
+          ▼
+       DOM Patch
 ```
 
 #### 1. 收集依赖（track）
@@ -201,8 +239,8 @@ function trigger(target, key) {
 
 - **父级概念**：[[前端开发]]
 - **关联概念**：
-	- [[Vue3 ref 和 reactive 的区别]]
-	- [[Vue2 与 Vue3 数组响应式原理深度剖析]]
+	- [[Vue3-ref和reactive的区别]]
+	- [[Vue2与Vue3 数组响应式原理深度剖析]]
 	- [[Virtual DOM]] — 响应式数据变化后通过 render 函数生成新的 VNode
 - **相关问题**：
 	- [[为什么Vue3的响应式系统要使用WeakMap]]

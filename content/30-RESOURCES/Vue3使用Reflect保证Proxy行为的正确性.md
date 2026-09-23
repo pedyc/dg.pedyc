@@ -1,10 +1,11 @@
 ---
 uid: 20260317000010
-title: Vue3 使用 Reflect 保证 Proxy 行为的正确性
+title: Vue3使用Reflect保证Proxy行为的正确性
 description: Reflect 提供了统一的 API 操作对象，确保 this 指向正确
-tags: [前端/Vue]
+tags:
+  - 前端/Vue
 date-created: 2026-03-17
-date-modified: 2026-08-19
+date-modified: 2026-09-22
 status: fleeting
 content-type: term
 ---
@@ -35,5 +36,5 @@ proxy.value; // 正确返回 proxy._value
 
 ### 关联
 
-- **父级**：[[响应式原理(Vue3)]]
+- **父级**：[[Vue3响应式原理]]
 - **相关**：[[Reflect]]

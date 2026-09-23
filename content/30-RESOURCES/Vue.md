@@ -67,8 +67,8 @@ mindmap
 > 该领域的核心知识主题。链接指向尚未创建的 concept，表明尚未掌握。
 
 - **响应式系统**
-	- [[响应式原理(Vue3)]] — Vue 3 的 Proxy 响应式原理
-	- [[Vue3 ref 和 reactive 的区别]] — 两种响应式引用的区别与适用场景
+	- [[Vue3响应式原理]] — Vue 3 的 Proxy 响应式原理
+	- [[Vue3-ref和reactive的区别]] — 两种响应式引用的区别与适用场景
 	- [[effect与reactive]] — 响应式系统分为 effect 和 reactive 两部分
 	- [[reactive(Vue)]] — Vue 3 的 reactive 响应式 API
 - **模板编译**

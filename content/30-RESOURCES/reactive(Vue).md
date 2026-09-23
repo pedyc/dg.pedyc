@@ -35,5 +35,5 @@ state.count++; // 视图自动更新
 
 ### 关联
 
-- **属于**：[[响应式原理(Vue3)]]
-- **引用**：[[Vue3 ref 和 reactive 的区别]]，[[怎样实现reactive方法]]
+- **属于**：[[Vue3响应式原理]]
+- **引用**：[[Vue3-ref和reactive的区别]]，[[怎样实现reactive方法]]

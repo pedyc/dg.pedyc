@@ -61,7 +61,7 @@ timeline
 - **时间**：2020 年 9 月
 - **核心变化**：基于 Proxy 重写响应式系统、组合式 API、全面 TypeScript 支持、性能大幅提升
 - **解决的关键问题**：defineProperty 的响应式局限（新增属性、数组索引）、逻辑复用困难、类型推导薄弱
-- **相关概念**：[[响应式原理(Vue3)]] [[组合式API]]
+- **相关概念**：[[Vue3响应式原理]] [[组合式API]]
 
 #### Vue 3.2（script setup 稳定）
 
@@ -82,7 +82,7 @@ timeline
 - **时间**：2026 年 7 月（3.6.0-rc.1）
 - **核心变化**：Vapor Mode 无 Virtual DOM 编译策略、alien-signals 响应式引擎重写、无破坏性变更
 - **解决的关键问题**：VNode diffing 的性能与内存开销，向编译时生成命令式 DOM 操作（类 SolidJS/Svelte）演进
-- **相关概念**：[[Vapor Mode]] [[响应式原理(Vue3)]]
+- **相关概念**：[[Vapor Mode]] [[Vue3响应式原理]]
 
 ---
 
@@ -110,7 +110,7 @@ timeline
 
 - **父级领域**：[[Vue]]
 - **相关概念**：
-	- [[响应式原理(Vue3)]] — Proxy 响应式原理
+	- [[Vue3响应式原理]] — Proxy 响应式原理
 	- [[组合式API]] — Composition API 使用模式
 	- [[模板编译(Vue3)]] — 模板到渲染函数的转换
 	- [[Vue编译器优化]] — 编译器的静态分析与优化

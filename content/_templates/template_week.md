@@ -19,71 +19,217 @@ const titleStr = dv.current().title || dv.current().file.name;
 const weekMatch = titleStr.match(/(\d{4})-[wW](\d{1,2})/);
 
 if (!weekMatch) {
-  dv.paragraph("⚠️ **无法从标题解析周数**：请确保周记标题符合 `YYYY-Www` 格式（例如 `2026-W36`）");
+
+    dv.paragraph(
+        "⚠️ **无法从标题解析周数**：请确保周记标题符合 `YYYY-Www` 格式（例如 `2026-W36`）"
+    );
+
 } else {
-  const year = parseInt(weekMatch[1], 10);
-  const week = parseInt(weekMatch[2], 10);
 
-  // 3. 计算该 ISO 周的周一 00:00 与周日 23:59
-  const startOfWeek = moment().year(year).isoWeek(week).startOf('isoWeek');
-  const endOfWeek = moment().year(year).isoWeek(week).endOf('isoWeek');
+    const year = parseInt(weekMatch[1], 10);
+    const week = parseInt(weekMatch[2], 10);
 
-  dv.paragraph(`> 📅 **本周知识沉淀统计周期**：\`${startOfWeek.format('YYYY-MM-DD')}\` ～ \`${endOfWeek.format('YYYY-MM-DD')}\``);
+    // 3. 计算该 ISO 周的周一 00:00 与周日 23:59
+    const startOfWeek = moment()
+        .year(year)
+        .isoWeek(week)
+        .startOf('isoWeek');
 
-  // 4. 一次性获取并过滤两个目录下的全部页面（50-ZETTELCASTEN 与 30-RESOURCES）
-  const pages = dv.pages('"50-ZETTELCASTEN" or "30-RESOURCES"')
-    .where(p => {
-      const type = p['content-type'];
-      // 仅保留 atomic 与 concept
-      if (type !== 'atomic' && type !== 'concept') return false;
+    const endOfWeek = moment()
+        .year(year)
+        .isoWeek(week)
+        .endOf('isoWeek');
 
-      // 优先读取 frontmatter 的 date-created，缺失则以文件系统创建时间 cday 为准
-      const createdStr = p['date-created'] ? p['date-created'].toString() : null;
-      const noteDate = createdStr 
-        ? moment(createdStr, 'YYYY-MM-DD') 
-        : moment(p.file.cday.toISODate());
-
-      // 严格校验是否落在当前自然周范围内
-      return noteDate.isBetween(startOfWeek, endOfWeek, null, '[]');
-    })
-    .sort(p => p['date-created'] || p.file.cday, 'desc');
-
-  // 5. 按 content-type 分组
-  const grouped = pages.groupBy(p => p['content-type']);
-
-  // ----------------- 分组 A：渲染 Atomic（原子洞察） -----------------
-  const atomicGroup = grouped.find(g => g.key === 'atomic');
-  dv.header(4, `🧠 本周原子洞察（Atomic · ${atomicGroup ? atomicGroup.rows.length : 0} 篇）`);
-  if (atomicGroup && atomicGroup.rows.length > 0) {
-    dv.table(
-      ["新增原子笔记（陈述句核心观点）", "挂载父级(Concept)", "状态", "创建日期"],
-      atomicGroup.rows.map(p => [
-        p.file.link,
-        p.up || "-",
-        p.status || "cultivating",
-        p['date-created'] || p.file.cday.toISODate()
-      ])
+    dv.paragraph(
+        `> 📅 **本周知识沉淀统计周期**：` +
+        `\`${startOfWeek.format('YYYY-MM-DD')}\` ～ ` +
+        `\`${endOfWeek.format('YYYY-MM-DD')}\``
     );
-  } else {
-    dv.paragraph("*(本周暂无新增原子洞察)*");
-  }
 
-  // ----------------- 分组 B：渲染 Concept（概念整合） -----------------
-  const conceptGroup = grouped.find(g => g.key === 'concept');
-  dv.header(4, `📚 本周概念整合（Concept · ${conceptGroup ? conceptGroup.rows.length : 0} 篇）`);
-  if (conceptGroup && conceptGroup.rows.length > 0) {
-    dv.table(
-      ["新增概念笔记", "一句话定义", "挂载父级(Area)", "状态", "创建日期"],
-      conceptGroup.rows.map(p => [
-        p.file.link,
-        p.description || "-",
-        p.up || "-",
-        p.status || "cultivating",
-        p['date-created'] || p.file.cday.toISODate()
-      ])
+    // 4. 获取两个目录下的全部页面
+    //    只保留 atomic / concept / question / sop
+    const pages = dv.pages('"50-ZETTELCASTEN" or "30-RESOURCES"')
+        .where(p => {
+
+            const type = p['content-type'];
+
+            if (
+                type !== 'atomic' &&
+                type !== 'concept' &&
+                type !== 'question' &&
+                type !== 'sop'
+            ) {
+                return false;
+            }
+
+            // 优先使用 date-created
+            // 缺失时使用文件系统创建时间 cday
+            const createdStr = p['date-created']
+                ? p['date-created'].toString()
+                : null;
+
+            const noteDate = createdStr
+                ? moment(createdStr, 'YYYY-MM-DD')
+                : moment(p.file.cday.toISODate());
+
+            // 严格限制在当前 ISO 周
+            return noteDate.isBetween(
+                startOfWeek,
+                endOfWeek,
+                null,
+                '[]'
+            );
+        })
+        .sort(
+            p => p['date-created'] || p.file.cday,
+            'desc'
+        );
+
+    // 5. 按 content-type 分组
+    const grouped = pages.groupBy(p => p['content-type']);
+
+    // ============================================================
+    // A. Atomic
+    // ============================================================
+
+    const atomicGroup = grouped.find(g => g.key === 'atomic');
+
+    dv.header(
+        4,
+        `🧠 本周原子洞察（Atomic · ${
+            atomicGroup ? atomicGroup.rows.length : 0
+        } 篇）`
     );
-  } else {
-    dv.paragraph("*(本周暂无新增概念笔记)*");
-  }
+
+    if (atomicGroup && atomicGroup.rows.length > 0) {
+
+        dv.table(
+            [
+                "新增原子笔记（陈述句核心观点）",
+                "挂载父级（Concept）",
+                "状态",
+                "创建日期"
+            ],
+            atomicGroup.rows.map(p => [
+                p.file.link,
+                p.up || "-",
+                p.status || "cultivating",
+                p['date-created'] || p.file.cday.toISODate()
+            ])
+        );
+
+    } else {
+
+        dv.paragraph("*(本周暂无新增原子洞察)*");
+    }
+
+    // ============================================================
+    // B. Concept
+    // ============================================================
+
+    const conceptGroup = grouped.find(g => g.key === 'concept');
+
+    dv.header(
+        4,
+        `📚 本周概念整合（Concept · ${
+            conceptGroup ? conceptGroup.rows.length : 0
+        } 篇）`
+    );
+
+    if (conceptGroup && conceptGroup.rows.length > 0) {
+
+        dv.table(
+            [
+                "新增概念笔记",
+                "一句话定义",
+                "挂载父级（Area）",
+                "状态",
+                "创建日期"
+            ],
+            conceptGroup.rows.map(p => [
+                p.file.link,
+                p.description || "-",
+                p.up || "-",
+                p.status || "cultivating",
+                p['date-created'] || p.file.cday.toISODate()
+            ])
+        );
+
+    } else {
+
+        dv.paragraph("*(本周暂无新增概念笔记)*");
+    }
+
+    // ============================================================
+    // C. Question
+    // ============================================================
+
+    const questionGroup = grouped.find(g => g.key === 'question');
+
+    dv.header(
+        4,
+        `❓ 本周问题沉淀（Question · ${
+            questionGroup ? questionGroup.rows.length : 0
+        } 篇）`
+    );
+
+    if (questionGroup && questionGroup.rows.length > 0) {
+
+        dv.table(
+            [
+                "问题",
+                "关联主题",
+                "状态",
+                "创建日期"
+            ],
+            questionGroup.rows.map(p => [
+                p.file.link,
+                p.up || "-",
+                p.status || "open",
+                p['date-created'] || p.file.cday.toISODate()
+            ])
+        );
+
+    } else {
+
+        dv.paragraph("*(本周暂无新增问题)*");
+    }
+
+    // ============================================================
+    // D. SOP
+    // ============================================================
+
+    const sopGroup = grouped.find(g => g.key === 'sop');
+
+    dv.header(
+        4,
+        `🛠️ 本周流程沉淀（SOP · ${
+            sopGroup ? sopGroup.rows.length : 0
+        } 篇）`
+    );
+
+    if (sopGroup && sopGroup.rows.length > 0) {
+
+        dv.table(
+            [
+                "SOP",
+                "主题介绍",
+                "关联问题",
+                "状态",
+                "创建日期"
+            ],
+            sopGroup.rows.map(p => [
+                p.file.link,
+                p.description || "-",
+                p.up || "-",
+                p.status || "draft",
+                p['date-created'] || p.file.cday.toISODate()
+            ])
+        );
+
+    } else {
+
+        dv.paragraph("*(本周暂无新增 SOP)*");
+    }
 }
 ```

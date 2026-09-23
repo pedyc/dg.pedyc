@@ -3,9 +3,10 @@ uid: "202609212100"
 title: 构建一个无特权内核架构的MVP实现
 aliases:
   - SOP-构建一个无特权内核架构的MVP实现
+description: 参考DSH的无特权内核架构MVP实现
 tags: []
 date-created: 2026-09-21
-date-modified: 2026-09-21
+date-modified: 2026-09-22
 status: cultivating
 content-type: sop
 up: ["[[DSH的的一切皆插件架构是如何实现的？|Q-DSH的一切皆插件架构是如何实现的]]"]
@@ -195,7 +196,6 @@ root.plugin({
 ```
 
 如果把 `db-provider` 的 `ctx.provide` 用 `effect` 包一层，并在若干帧后手动 dispose 该 provider 的 Fiber，就能看到 `user-service` 被级联卸载——这就是"依赖消失时自动失活"的最小验证。
-
 
 ---
 

@@ -127,7 +127,7 @@ graph TD
 	- Vue2 Options API vs Vue3 Composition API
 	- [[Vuex vs Pinia]]
 - **前置知识**：
-	- [[响应式原理(Vue3)|响应式原理]]
+	- [[Vue3响应式原理|响应式原理]]
 	- JavaScript ES6
 
 ---

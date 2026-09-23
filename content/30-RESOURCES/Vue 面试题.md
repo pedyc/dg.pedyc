@@ -17,11 +17,11 @@ up: ["[[前端面试真题库|前端面试题]]"]
 
 | 示例题目 | 关联笔记 |
 |---|:---|
-| [[Vue3 使用 Proxy 实现响应式]] | [[响应式原理(Vue3)]] |
-| [[Vue3 ref 和 reactive 的区别]] | [[响应式原理(Vue3)]] |
-| [[Vue3 响应式系统分为 effect 和 reactive 两部分]] | [[响应式原理(Vue3)]] |
-| [[为什么Vue3的响应式系统要使用WeakMap]] | [[响应式原理(Vue3)]] |
-| [[Vue3 使用 Reflect 保证 Proxy 行为的正确性]] | [[响应式原理(Vue3)]] |
+| [[Vue3使用Proxy实现响应式]] | [[Vue3响应式原理]] |
+| [[Vue3-ref和reactive的区别]] | [[Vue3响应式原理]] |
+| [[Vue3响应式系统分为effect和reactive两部分]] | [[Vue3响应式原理]] |
+| [[为什么Vue3的响应式系统要使用WeakMap]] | [[Vue3响应式原理]] |
+| [[Vue3使用Reflect保证Proxy行为的正确性]] | [[Vue3响应式原理]] |
 
 ---
 
@@ -63,7 +63,7 @@ up: ["[[前端面试真题库|前端面试题]]"]
 | ---------------------------------- |:-------------------------- |
 | v-if 和 v-show 区别？                  | 条件渲染                        |
 | [[v-model 原理是什么？]]                 | 双向绑定                        |
-| watch 和 watchEffect 有什么区别？         | [[Vue3 ref 和 reactive 的区别]] |
+| watch 和 watchEffect 有什么区别？         | [[Vue3-ref和reactive的区别]] |
 | 如何监听组件内部的自定义事件？.stop 和.prevent 区别？ | 事件机制                        |
 
 ---
@@ -72,9 +72,9 @@ up: ["[[前端面试真题库|前端面试题]]"]
 
 | 示例题目 | 关联笔记 |
 |---|:---|
-| [[Vue3 ref 和 reactive 的区别]] | [[响应式原理(Vue3)]] |
+| [[Vue3-ref和reactive的区别]] | [[Vue3响应式原理]] |
 | setup 函数的作用是什么？ | Composition API |
-| ref 和 reactive 有什么区别？watchEffect 是怎么工作的？ | [[Vue3 ref 和 reactive 的区别]] |
+| ref 和 reactive 有什么区别？watchEffect 是怎么工作的？ | [[Vue3-ref和reactive的区别]] |
 
 ---
 

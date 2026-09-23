@@ -154,7 +154,7 @@ function updateChildren(oldChildren, newChildren) {
 
 - **父级概念**：[[Virtual DOM]]
 - **关联概念**：
-	- [[响应式原理(Vue3)]] — 数据变化触发重新渲染
+	- [[Vue3响应式原理]] — 数据变化触发重新渲染
 	- [[模板编译(Vue3)]] — 生成 render 函数
 	- [[Block管理]] — Vue3 的优化机制
 - **相关问题**：

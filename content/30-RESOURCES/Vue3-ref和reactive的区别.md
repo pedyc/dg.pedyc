@@ -1,11 +1,13 @@
 ---
 uid: 202603240008
-title: Vue3 ref 和 reactive 的区别
-aliases: [VS-Vue3 ref vs reactive]
+title: Vue3-ref和reactive的区别
+aliases:
+  - VS-Vue3 ref vs reactive
 description: Vue3 两种响应式 API 的核心区别与选择指南
-tags: [前端开发/Vue]
+tags:
+  - 前端开发/Vue
 date-created: 2026-03-24
-date-modified: 2026-08-19
+date-modified: 2026-09-22
 status: active
 comparison: [ref, reactive]
 content-type: comparison

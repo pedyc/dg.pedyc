@@ -1,10 +1,11 @@
 ---
 uid: 20260317000008
-title: Vue3 使用 Proxy 实现响应式
+title: Vue3使用Proxy实现响应式
 description: Vue3 通过 Proxy 实现对对象操作的全面监听
-tags: [前端/Vue]
+tags:
+  - 前端/Vue
 date-created: 2026-03-17
-date-modified: 2026-08-31
+date-modified: 2026-09-22
 status: fleeting
 content-type: term
 up: ["[[Vue]]"]
@@ -37,5 +38,5 @@ console.log(reactiveObj.name); // 触发 get，输出：读取 name
 
 ### 关联
 
-- **父级**：[[响应式原理(Vue3)]]
+- **父级**：[[Vue3响应式原理]]
 - **相关**：[[Proxy]]

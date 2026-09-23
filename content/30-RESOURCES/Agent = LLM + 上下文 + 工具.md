@@ -8,7 +8,8 @@ date-created: 2026-08-20
 date-modified: 2026-08-20
 status: fleeting
 content-type: atomic
-up: []
+up:
+  - "[[Agent]]"
 ---
 
 LLM 负责思考和决策。

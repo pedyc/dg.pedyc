@@ -10,7 +10,7 @@ tags:
   - AI
   - Agent
 date-created: 2025-08-25
-date-modified: 2026-09-22
+date-modified: 2026-09-23
 status: active
 content-type: concept
 related: ["[[人工智能]]", "[[Harness]]"]
@@ -48,7 +48,7 @@ Agent Runtime
 
 ### 运行机制
 
-> [[智能体运行机制]]
+> [[Agent Loop]]
 
 ```mermaid
 flowchart LR

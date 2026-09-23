@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/Vue3使用Reflect保证Proxy行为的正确性.md",
+                "file": "30-RESOURCES/Claude Code.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,227 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Vue3使用Reflect保证Proxy行为的正确性"
-            }
-          },
-          {
-            "id": "5398015d32693d89",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "30-RESOURCES/第三方库.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "第三方库"
-            }
-          },
-          {
-            "id": "9b1e144ac3a63d1f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Agent求职"
-            }
-          },
-          {
-            "id": "95d35bcfd1fffc48",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "20-AREAS/A-人工智能/人工智能.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "人工智能"
-            }
-          },
-          {
-            "id": "0af4f8ffe3041707",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Agent求职"
-            }
-          },
-          {
-            "id": "9c1db43a6adf8b56",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent学习专项-基本概念与架构.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Agent学习专项-基本概念与架构"
-            }
-          },
-          {
-            "id": "0e37c466e57273bf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent学习专项-DSH源码学习.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Agent学习专项-DSH源码学习"
-            }
-          },
-          {
-            "id": "57a565922eadeae9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent学习专项-DSH源码学习.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Agent学习专项-DSH源码学习"
-            }
-          },
-          {
-            "id": "43a1d46a78c6deb4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "30-RESOURCES/DeepSeek Harness.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "DeepSeek Harness"
-            }
-          },
-          {
-            "id": "a263ca9209c18bf1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "30-RESOURCES/DeepSeek Harness.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "DeepSeek Harness"
+              "title": "Claude Code"
             }
           }
-        ],
-        "currentTab": 9
+        ]
       }
     ],
     "direction": "vertical"
@@ -290,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/DeepSeek Harness.md",
+                "file": "30-RESOURCES/Claude Code.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -327,7 +110,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30-RESOURCES/DeepSeek Harness.md",
+                "file": "30-RESOURCES/Claude Code.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -497,20 +280,39 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "a263ca9209c18bf1",
+  "active": "d03eb2eaf6b111b8",
   "lastOpenFiles": [
-    "10-PROJECTS/P-Agent求职/DSH-Agent-Loop.md",
-    "30-RESOURCES/DeepSeek Harness.md",
+    "_resources/Claude Code/10e6559a6a3fc17b8fc30859c810232b_MD5.webp",
+    "_resources/Claude Code",
+    "30-RESOURCES/_resources/screenshot-architecture.png",
+    "30-RESOURCES/_resources/Pasted image 20260923182859.png",
+    "10-PROJECTS/P-Agent求职/Agent学习专项-ClaudeCode源码学习.md",
+    "10-PROJECTS/P-Agent求职/Agent学习专项-基本概念与架构.md",
+    "10-PROJECTS/P-Agent求职/Agent求职.md",
+    "20-AREAS/A-人工智能/Agent Loop.md",
+    "90-DIARY/2026-09-23.md",
+    "90-DIARY/2026-09-21.md",
+    "90-DIARY/2026-09-22.md",
+    "30-RESOURCES/Agent.md",
+    "30-RESOURCES/智能体编排.md",
+    "60-BLOGS/Agent与Harness.md",
+    "30-RESOURCES/Vue3使用Reflect保证Proxy行为的正确性.md",
+    "30-RESOURCES/第三方库.md",
+    "20-AREAS/A-人工智能/人工智能.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-DSH源码学习.md",
+    "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.svg",
+    "30-RESOURCES/DeepSeek Harness.md",
+    "_resources/Agent Loop/f017fb5f816873ea29602b6a778b35c8_MD5.webp",
+    "_resources/Agent Loop",
+    "20-AREAS/A-人工智能/_resources/Pasted image 20260923162821.png",
+    "30-RESOURCES/Agent = LLM + 上下文 + 工具.md",
+    "10-PROJECTS/P-Agent求职/DSH-Agent-Loop.md",
     "10-PROJECTS/P-Agent求职/AI Agent架构与开发工具调研.md",
     "10-PROJECTS/P-Agent求职/_resources/DSH核心架构.excalidraw.md",
-    "10-PROJECTS/P-Agent求职/Agent学习专项-ClaudeCode源码学习.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-AgentLoop.md",
-    "10-PROJECTS/P-Agent求职/Agent求职.md",
     "10-PROJECTS/P-Agent求职/_resources/DSH核心架构.excalidraw.svg",
     "30-RESOURCES/DSH的的一切皆插件架构是如何实现的？.md",
     "30-RESOURCES/构建一个无特权内核架构的MVP实现.md",
-    "10-PROJECTS/P-Agent求职/Agent学习专项-基本概念与架构.md",
     "10-PROJECTS/P-Agent求职/_resources/ClaudeCode核心架构.excalidraw.md",
     "10-PROJECTS/P-Agent求职/Agent求职项目推进进展.md",
     "10-PROJECTS/P-Agent求职/_resources/Agent Architecture.excalidraw.md",
@@ -518,33 +320,14 @@
     "10-PROJECTS/P-Agent求职/_resources/Agent Architecture.excalidraw.svg",
     "99-ASSETS/Excalidraw/Scripts/Downloaded/Add Next Step in Process.svg",
     "99-ASSETS/Excalidraw/Scripts/Downloaded/Auto Layout.svg",
-    "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.md",
-    "_resources/Boolean Operations/f18c044d27f2f3db6cd80b1f61a152ec_MD5.webp",
-    "_resources/Boolean Operations/f79cc2f0ef3155eb752115b690bb4627_MD5.webp",
     "_resources/Boolean Operations",
-    "99-ASSETS/Excalidraw/Scripts/Downloaded/Boolean Operations.md",
-    "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.svg",
-    "10-PROJECTS/P-Agent求职/Agent学习清单.md",
-    "_templates/template_sub_project.md",
-    "10-PROJECTS/P-Agent求职/Agent学习专项清单.md",
-    "_templates/template_project.md",
-    "00-META/Specification/_sync-rules.md",
-    "00-META/Specification/_skills-overview.md",
-    "00-META/Specification/_anki-sync-rules.md",
-    "10-PROJECTS/P-Agent求职/S1-Agent基础与核心机制/学习专项：理解Agent基本概念与架构.md",
     "10-PROJECTS/P-Agent求职/02-学习专项",
     "10-PROJECTS/P-Agent求职/01-专项清单",
-    "10-PROJECTS/P-Agent求职/S1-Agent基础与核心机制/实践专项：实现Agent Loop MVP.md",
-    "10-PROJECTS/P-Agent求职/S1-Agent基础与核心机制/学习专项：Agent Loop.md",
     "10-PROJECTS/P-Agent求职/S6-求职执行",
     "10-PROJECTS/P-Agent求职/S5-Agent求职能力",
     "10-PROJECTS/P-Agent求职/S4-Agent项目实践",
     "10-PROJECTS/P-Agent求职/S3-Agent工程化与可靠性",
     "10-PROJECTS/P-Agent求职/S2-Agent核心技术实践",
-    "10-PROJECTS/P-Agent求职/S1-Agent基础与核心机制",
-    "20-AREAS/A-人工智能/PEAS.excalidraw.svg",
-    "90-DIARY/_resources",
-    "_resources/Best Three.js Websites 2026 8 Sites + Techniques/575c242259dffcf12b2f189d171b0688_MD5.webp",
     "10-PROJECTS/PROJECTS.canvas",
     "未命名.canvas",
     "Untitled.canvas",

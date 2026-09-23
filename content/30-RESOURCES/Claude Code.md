@@ -1,11 +1,13 @@
 ---
 uid: 202603121028
 title: Claude Code
-aliases: [C-Claude Code]
+aliases:
+  - C-Claude Code
 description: Claude Code 代理编码工具的核心范畴、工作方式和最佳实践
-tags: [concept]
+tags:
+  - concept
 date-created: 2026-03-03
-date-modified: 2026-07-31
+date-modified: 2026-09-23
 content-type: concept
 source: https://code.claude.com/docs/zh-CN/overview
 up: "[[人工智能|A-人工智能]]"
@@ -32,35 +34,7 @@ up: "[[人工智能|A-人工智能]]"
 
 ### 运行机制
 
-```mermaid
-graph LR
-    U[用户输入] --> C[核心引擎]
-    C --> T[工具调用]
-    T --> R[代码库读取]
-    T --> F[文件编辑]
-    T --> S[Shell 命令]
-    T --> M[MCP 外部服务]
-    C --> A[Agent/SubAgent]
-    A --> T
-```
-
-Claude Code 的工作流程：
-
-1. **感知**：接收用户输入，读取项目 CLAUDE.md 和上下文
-2. **推理**：规划执行步骤，决定调用哪些工具
-3. **执行**：通过工具调用（读文件、编辑、运行命令）完成操作
-4. **反馈**：将结果返回用户，或继续下一轮推理
-
----
-
-### 关键区别
-
-| 维度 | Claude Code | [[GitHub Copilot]] | [[ChatGPT]] |
-|:--- |:--- |:--- |:--- |
-| **交互模式** | 代理自主执行 | 行内代码补全 | 对话式问答 |
-| **项目感知** | 完整代码库理解 | 当前打开文件 | 无项目上下文 |
-| **工具调用** | 原生 CLI + MCP | 仅 IDE 内操作 | 依赖插件 |
-| **自动化** | CI/CD Headless | 无 | 无 |
+![[../_resources/Claude Code/10e6559a6a3fc17b8fc30859c810232b_MD5.webp]]
 
 ---
 
@@ -128,6 +102,7 @@ Claude Code 的工作流程：
 	- [[Skills]] — 可复用的行为配置
 	- [[MCP]] — 外部服务集成协议
 	- [[Skills 最佳实践(Claude Code)]] — Skills 最佳实践指南
+	- [[Claude-Code-Agent-Loop]]
 - **并列概念**：
 	- [[GitHub Copilot]] — IDE 内联代码补全
 	- [[Claude API]] — 底层 API 接入方式

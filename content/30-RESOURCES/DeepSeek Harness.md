@@ -10,7 +10,7 @@ tags:
   - Agent
   - DeepSeek
 date-created: 2026-09-21
-date-modified: 2026-09-21
+date-modified: 2026-09-23
 status: fleeting
 content-type: concept
 up: ["[[Harness]]"]
@@ -132,6 +132,7 @@ graph TB
 	- [[Capability Seam]] — 能力接口契约，解耦定义、实现与消费
 	- [[Revertible Effect]] — 可回退的注册副作用，保证插件可干净卸载
 	- [[Typed Event]] — 类型化事件系统，支持多种分发模式
+	- [[DSH-Agent-Loop]]
 - **并列概念**：
 	- [[Claude Code]] — Anthropic 的闭源 Coding Agent 产品
 	- [[OpenAI Codex]] — OpenAI 的 Agent 产品线

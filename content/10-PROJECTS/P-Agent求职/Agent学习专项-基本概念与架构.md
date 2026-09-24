@@ -40,7 +40,8 @@ date-modified: 2026-09-23
 > 终止条件：代码修改完成，相关验收条件得到验证，且没有尚未处理的阻塞问题。若验证失败，则继续修复或报告问题；不能仅凭LLM自我声明认定任务完成
 
 ## 进阶探索
-> 从抽象Agent架构映射到真实Agent R
+
+> 从抽象Agent架构映射到真实Agent Runtime
 
 - 在Claude Code中，Agent架构是怎么表现的?
 	![[Agent学习专项-ClaudeCode源码学习#CC核心架构]]

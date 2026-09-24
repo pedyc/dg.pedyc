@@ -56,19 +56,19 @@ urgency: 5
 
 **专项：**
 
-- [[Agent学习专项-基本概念与架构]]：Agent 基本概念与架构
-- [[Agent学习专项-LLM与ToolCalling]]：理解模型与工具之间的交互机制，并完成工具调用实验。
-- [[Agent学习专项-AgentLoop]]：理解 Agent 的循环执行机制，并实现最小 Agent Loop。
-- [[Agent学习专项-ContextEngineering]]：理解上下文组织、信息选择和上下文限制。
-- [[Agent学习专项-AgentMemory]]：理解 Agent 状态与记忆机制，并完成简单实践。
-- [[Agent学习专项-Planning与Workflow]]：研究任务规划、工作流及其适用场景。
-- [[Agent实践专项-RAG]]：理解并实现检索增强生成流程。
-- [[Agent实践专项-MCP]]：理解 MCP 架构并完成基本交互实验。
-- [[Agent实践专项-MultiAgent]]：研究多 Agent 协作模式及其工程成本。
-- [[Agent实践专项-AgentEvaluation]]：建立基本评估案例和评估指标。
-- [[Agent实践专项-AgentReliability]]：研究超时、重试、失败恢复等可靠性问题。
-- [[Agent实践专项-AgentObservability]]：实现执行记录与关键事件追踪。
-- [[Agent实践专项-AgentHarness]]：研究 Harness 的职责边界、执行约束与独立验证机制。
+- [x] [[Agent学习专项-基本概念与架构]]：Agent 基本概念与架构 ✅ 2026-09-23
+- [ ] [[Agent学习专项-LLM与ToolCalling]]：理解模型与工具之间的交互机制，并完成工具调用实验。
+- [ ] [[Agent学习专项-AgentLoop]]：理解 Agent 的循环执行机制，并实现最小 Agent Loop。
+- [ ] [[Agent学习专项-ContextEngineering]]：理解上下文组织、信息选择和上下文限制。
+- [ ] [[Agent学习专项-AgentMemory]]：理解 Agent 状态与记忆机制，并完成简单实践。
+- [ ] [[Agent学习专项-Planning与Workflow]]：研究任务规划、工作流及其适用场景。
+- [ ] [[Agent实践专项-RAG]]：理解并实现检索增强生成流程。
+- [ ] [[Agent实践专项-MCP]]：理解 MCP 架构并完成基本交互实验。
+- [ ] [[Agent实践专项-MultiAgent]]：研究多 Agent 协作模式及其工程成本。
+- [ ] [[Agent实践专项-AgentEvaluation]]：建立基本评估案例和评估指标。
+- [ ] [[Agent实践专项-AgentReliability]]：研究超时、重试、失败恢复等可靠性问题。
+- [ ] [[Agent实践专项-AgentObservability]]：实现执行记录与关键事件追踪。
+- [ ] [[Agent实践专项-AgentHarness]]：研究 Harness 的职责边界、执行约束与独立验证机制。
 **进阶专项**：
 - [[Agent学习专项-DSH源码学习]]
 - [[Agent学习专项-ClaudeCode源码学习]]

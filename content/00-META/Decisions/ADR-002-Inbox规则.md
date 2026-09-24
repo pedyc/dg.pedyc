@@ -1,7 +1,7 @@
 ---
-title: 00 Inbox规则
+title: ADR-002-Inbox规则
 date-created: 2026-02-09
-date-modified: 2026-07-16
+date-modified: 2026-09-23
 ---
 
 > 定期归档机制：

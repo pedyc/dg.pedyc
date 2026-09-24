@@ -32,6 +32,14 @@ related: ["[[人工智能]]", "[[Harness]]"]
 - Agent 的可靠性取决于 Harness（工程化框架），而非单纯的 Prompt 优化
 - 好的 Agent 设计是在「灵活性」与「可控性」之间找到平衡
 
+### 核心部件
+```
+Agent
+- 
+```
+
+### 运行时架构
+
 ```bash
 Agent Runtime
   ├── Session
@@ -48,7 +56,7 @@ Agent Runtime
 
 ### 运行机制
 
-> [[Agent Loop]]
+> [[AgentLoop]]
 
 ```mermaid
 flowchart LR

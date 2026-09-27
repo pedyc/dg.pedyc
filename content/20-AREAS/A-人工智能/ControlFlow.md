@@ -5,7 +5,7 @@ aliases:
   - 控制流分析
   - C-ControlFlow
 date-created: 2026-09-24
-date-modified: 2026-09-24
+date-modified: 2026-09-27
 content-type: [concept]
 ---
 
@@ -22,31 +22,35 @@ AgentLoop是「宏观骨架」，决定了Agent整体上「循环决策-行动�
 ## 控制流简化流程
 
 ```bash
-接收任务
+User Task
    │
    ▼
-准备上下文
+Context
    │
    ▼
-调用 LLM
+LLM Decision 
    │
    ▼
-处理模型输出
+Rutime Control 处理模型输出
    │
-   ├── 工具调用请求 ──► 权限检查 ──► 执行工具
-   │                                  │
-   │                                  ▼
-   │                            获取执行结果
-   │                                  │
-   │                                  ▼
-   │                            更新上下文
-   │                                  │
-   │                                  └──► 再次调用 LLM
+   ├── Tool Call ──► 权限检查 ──► 执行工具
+   │                                     │
+   │                                     ▼
+   │                               Observation 获取执行结果
+   │                                     │
+   │                                     ▼
+   │                               更新上下文
+   │                                     │
+   │                                     └──► 再次调用 LLM
    │
    ├── 结束请求 ──► 检查终止条件 ──► 结束或继续
    │
    └── 其他输出 ──► 按运行时规则处理
 ```
+
+- LLM Decision：根据当前Context决定下一步做什么
+- Runtime Control：控制AgentLoop是否以及如何执行
+- Environment / Tools Action：真正改变或观察环境
 
 ## 示例：给登录按钮添加loading状态
 

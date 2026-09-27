@@ -4,7 +4,7 @@ aliases:
   - C-Agent-Loop
   - 智能体循环
 date-created: 2026-09-22
-date-modified: 2026-09-24
+date-modified: 2026-09-27
 content-type: [concept]
 up: ["[[Agent]]"]
 ---

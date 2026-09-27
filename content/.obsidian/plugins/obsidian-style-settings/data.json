@@ -36,5 +36,6 @@
   "blue-topaz-theme@@link-underline-external": false,
   "blue-topaz-theme@@link-underline-unresolved": false,
   "blue-topaz-theme@@color-scheme-options": "color-scheme-options-simplicity-topaz",
-  "blue-topaz-theme@@fancy-hr": "default-hr"
+  "blue-topaz-theme@@fancy-hr": "default-hr",
+  "blue-topaz-theme@@blockquote-style-change-options": "blockquote-style-default"
 }

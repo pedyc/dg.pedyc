@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-人工智能/AgentLoop-终止与异常处理.md",
+                "file": "10-PROJECTS/P-Agent求职/Agent学习专项-AgentLoop.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,11 +76,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "AgentLoop-终止与异常处理"
+              "title": "Agent学习专项-AgentLoop"
+            }
+          },
+          {
+            "id": "19945004a6b14c9f",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Agent Loop.excalidraw"
+            }
+          },
+          {
+            "id": "81eaf7440ae7baf8",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Agent Loop.excalidraw"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -159,7 +183,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20-AREAS/A-人工智能/AgentLoop-终止与异常处理.md",
+                "file": "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -330,15 +354,18 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "bc13665cb127b075",
+  "active": "19945004a6b14c9f",
   "lastOpenFiles": [
-    "20-AREAS/A-人工智能/AgentLoop.md",
-    "20-AREAS/A-人工智能/AgentLoop-终止与异常处理.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-AgentLoop.md",
-    "20-AREAS/A-人工智能/ControlFlow.md",
-    "10-PROJECTS/P-Agent求职/Agent学习专项-基本概念与架构.md",
+    "20-AREAS/A-人工智能/AgentLoop-终止与异常处理.md",
+    "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.md",
     "90-DIARY/2026-09-24.md",
     "10-PROJECTS/P-Agent求职/Agent求职.md",
+    "90-DIARY/2026-09-27.md",
+    "90-DIARY/2026-W39.md",
+    "20-AREAS/A-人工智能/AgentLoop.md",
+    "20-AREAS/A-人工智能/ControlFlow.md",
+    "10-PROJECTS/P-Agent求职/Agent学习专项-基本概念与架构.md",
     "90-DIARY/开源Agent清单.md",
     "30-RESOURCES/Agent.md",
     "20-AREAS/A-人工智能/为什么Agent需要循环？.md",
@@ -347,8 +374,6 @@
     "00-META/Decisions/ADR-002-Inbox规则.md",
     "30-RESOURCES/费曼技巧.md",
     "00-META/Decisions",
-    "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.md",
-    "90-DIARY/2026-W39.md",
     "10-PROJECTS/P-Agent求职/Agent学习清单.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-ClaudeCode源码学习.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-DSH源码学习.md",
@@ -362,7 +387,6 @@
     "30-RESOURCES/_resources/Pasted image 20260923182859.png",
     "90-DIARY/2026-09-23.md",
     "90-DIARY/2026-09-21.md",
-    "90-DIARY/2026-09-22.md",
     "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.svg",
     "_resources/Agent Loop/f017fb5f816873ea29602b6a778b35c8_MD5.webp",
     "_resources/Agent Loop",

@@ -13,6 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "90-DIARY/2026-09-24.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-09-24"
+            }
+          },
+          {
+            "id": "1a1b86e134ef725b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "20-AREAS/A-人工智能/AgentLoop.md",
                 "mode": "source",
                 "source": false,
@@ -30,8 +54,33 @@
               "icon": "lucide-file",
               "title": "AgentLoop"
             }
+          },
+          {
+            "id": "bc13665cb127b075",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20-AREAS/A-人工智能/AgentLoop-终止与异常处理.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "AgentLoop-终止与异常处理"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -73,7 +122,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-人工智能/AgentLoop.md",
+                "file": "20-AREAS/A-人工智能/AgentLoop-终止与异常处理.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -110,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent面试题库.md",
+                "file": "20-AREAS/A-人工智能/AgentLoop-终止与异常处理.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -119,7 +168,8 @@
               "title": "大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "5e0950099d64d5f6",
@@ -280,19 +330,23 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "d03eb2eaf6b111b8",
+  "active": "bc13665cb127b075",
   "lastOpenFiles": [
-    "10-PROJECTS/P-Agent求职/Agent学习专项-AgentLoop.md",
     "20-AREAS/A-人工智能/AgentLoop.md",
-    "20-AREAS/A-人工智能/为什么Agent需要循环？.md",
+    "20-AREAS/A-人工智能/AgentLoop-终止与异常处理.md",
+    "10-PROJECTS/P-Agent求职/Agent学习专项-AgentLoop.md",
+    "20-AREAS/A-人工智能/ControlFlow.md",
+    "10-PROJECTS/P-Agent求职/Agent学习专项-基本概念与架构.md",
+    "90-DIARY/2026-09-24.md",
     "10-PROJECTS/P-Agent求职/Agent求职.md",
+    "90-DIARY/开源Agent清单.md",
+    "30-RESOURCES/Agent.md",
+    "20-AREAS/A-人工智能/为什么Agent需要循环？.md",
     "00-META/Decisions/ADR-001-手写笔记规则.md",
     "00-META/Faq/怎样降低手写笔记的心智负担？.md",
     "00-META/Decisions/ADR-002-Inbox规则.md",
     "30-RESOURCES/费曼技巧.md",
     "00-META/Decisions",
-    "90-DIARY/2026-09-24.md",
-    "10-PROJECTS/P-Agent求职/Agent学习专项-基本概念与架构.md",
     "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.md",
     "90-DIARY/2026-W39.md",
     "10-PROJECTS/P-Agent求职/Agent学习清单.md",
@@ -301,7 +355,6 @@
     "10-PROJECTS/P-Agent求职/AI Agent架构与开发工具调研.md",
     "10-PROJECTS/P-Agent求职/DSH-Agent-Loop.md",
     "10-PROJECTS/P-Agent求职/Agent面试题库.md",
-    "30-RESOURCES/Agent.md",
     "30-RESOURCES/Claude Code.md",
     "_resources/Claude Code/10e6559a6a3fc17b8fc30859c810232b_MD5.webp",
     "_resources/Claude Code",
@@ -310,9 +363,6 @@
     "90-DIARY/2026-09-23.md",
     "90-DIARY/2026-09-21.md",
     "90-DIARY/2026-09-22.md",
-    "30-RESOURCES/智能体编排.md",
-    "60-BLOGS/Agent与Harness.md",
-    "30-RESOURCES/Vue3使用Reflect保证Proxy行为的正确性.md",
     "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.svg",
     "_resources/Agent Loop/f017fb5f816873ea29602b6a778b35c8_MD5.webp",
     "_resources/Agent Loop",

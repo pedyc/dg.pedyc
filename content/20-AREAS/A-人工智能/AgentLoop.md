@@ -4,14 +4,12 @@ aliases:
   - C-Agent-Loop
   - 智能体循环
 date-created: 2026-09-22
-date-modified: 2026-09-23
+date-modified: 2026-09-24
 content-type: [concept]
 up: ["[[Agent]]"]
 ---
 
 ## AgentLoo核心概念
-
-> Re-Act
 
 | 概念                   | 含义             | 登录按钮示例           |
 | -------------------- | -------------- | ---------------- |
@@ -25,20 +23,27 @@ up: ["[[Agent]]"]
 
 ## AgentLoop基本运行机制
 
-核心流程：获取上下文（Observe）→模型决策（Think）→执行动作（Act）→观察结果（Observe）→更新上下文（Think）→再次决策（Act）
+核心流程：感知/观察→决策→调用工具→观察结果→下一轮循环→直到终止
 
 ![[../../_resources/Agent Loop/f017fb5f816873ea29602b6a778b35c8_MD5.webp]]
 
-## AgentLoop控制流（Control Flow）
+### 进阶：实际项目中的AgentLoop
 
-> 在AgentLoop中，究竟是谁决定下一步做什么、谁负责执行，以及谁决定循环何时继续或结束？
+- [[ClaudeCode怎么实现AgentLoop？]]
+- [[CrewAI怎么实现AgentLoop？]]
+- [[DSH怎么实现AgentLoop？]]
 
-**三个核心概念**：
-- 模型决策：LLM 根据上下文提出下一步行动。
-- 运行时控制：Runtime/Orchestrator 根据系统规则协调和执行流程。
-- 任务完成判断：模型可能提出完成请求，但系统仍需根据中止条件决定是否结束，并在必要时验证。
+## 控制流分析（Control Flow）
 
+![[ControlFlow#控制流和AgentLoop是什么关系？]]
+
+## 终止与异常
+
+![[AgentLoop-终止与异常处理]]
 
 ## FAQ
 
 - [[为什么Agent需要循环？]]
+- [[ClaudeCode怎么实现AgentLoop？]]
+- [[CrewAI怎么实现AgentLoop？]]
+- [[DSH怎么实现AgentLoop？]]

@@ -10,7 +10,7 @@ tags:
   - AI
   - Agent
 date-created: 2025-08-25
-date-modified: 2026-09-23
+date-modified: 2026-09-24
 status: active
 content-type: concept
 related: ["[[人工智能]]", "[[Harness]]"]
@@ -33,7 +33,8 @@ related: ["[[人工智能]]", "[[Harness]]"]
 - 好的 Agent 设计是在「灵活性」与「可控性」之间找到平衡
 
 ### 核心部件
-```
+
+```bash
 Agent
 - 
 ```
@@ -117,6 +118,7 @@ flowchart LR
 - **子级概念**：
 	- [[Harness]] — Agent 工程化框架
 	- [[智能体编排]] — 多个 Agent 协作
+	- [[开源Agent清单]]
 - **并列概念**：
 	- [[提示词工程|Prompt Engineering]] — 优化模型输出
 	- [[RAG]] — 检索增强生成

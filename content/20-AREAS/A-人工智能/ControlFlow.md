@@ -92,51 +92,6 @@ Agent 并不是预先固定执行"搜索、读取、修改、测试"四个步骤
 
 > LLM输出"任务已经完成"，不代表控制流认为任务已经完成，控制流会检查测试的完成情况，如果必须的测试未完成，Runtime会将未完成的测试信息加入上下文回传给LLM，要求LLM进行下一轮决策。体现了：==LLM的输出会影响控制流分支，例如提出工具调用或结束请求；Runtime则负责依据运行机制、系统规则和执行难状态推进或终止AgentLoop。==
 
-## 进阶：AgentLoop是状态机吗？
-
-可以把AgentLoop建模为一个状态机，帮助我们更严谨的分析执行过程。
-
-状态间的转化由事件和规则决定。
-
-### AgentLoop状态机示例
-
-定义如下状态：
-
-|状态|含义|
-|---|---|
-|`Ready`|已准备好处理任务|
-|`Thinking`|正在等待或处理 LLM 输出|
-|`Executing`|正在执行工具|
-|`AwaitingApproval`|正在等待用户授权|
-|`HandlingFailure`|正在处理执行失败|
-|`Verifying`|正在进行任务验证|
-|`Completed`|任务已结束|
-|`Aborted`|任务被中止|
-
-控制流示意如下：
-
-```bash
-Ready
-  │
-  ▼
-Thinking
-  │
-  ├── 请求工具 ──► Executing
-  │                   │
-  │                   ├── 成功 ──► Thinking
-  │                   └── 失败 ──► HandlingFailure
-  │
-  ├── 请求授权 ──► AwaitingApproval
-  │                   │
-  │                   ├── 批准 ──► Executing
-  │                   └── 拒绝 ──► Aborted
-  │
-  └── 请求结束 ──► Verifying
-                      │
-                      ├── 满足条件 ──► Completed
-                      └── 未满足 ──► Thinking
-```
-
 ## 测验
 
 假设 Runtime 规定：

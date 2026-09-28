@@ -36,7 +36,11 @@ related: ["[[人工智能]]", "[[Harness]]"]
 
 ```bash
 Agent
-- 
+- LLM
+- AgentRuntime
+- AgentLoop
+- Memory
+- Tools
 ```
 
 ### 运行时架构
@@ -118,6 +122,8 @@ flowchart LR
 - **子级概念**：
 	- [[Harness]] — Agent 工程化框架
 	- [[智能体编排]] — 多个 Agent 协作
+	- [[AgentTool]]
+	- [[ToolCalling]]
 	- [[开源Agent清单]]
 - **并列概念**：
 	- [[提示词工程|Prompt Engineering]] — 优化模型输出

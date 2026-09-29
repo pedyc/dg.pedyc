@@ -368,6 +368,7 @@
   },
   "active": "813535a04d25c3a6",
   "lastOpenFiles": [
+    "_resources/AgentLoop",
     "20-AREAS/A-人工智能/AgentLoop-状态机.md",
     "20-AREAS/A-人工智能/AgentLoop.md",
     "20-AREAS/A-人工智能/ControlFlow.md",
@@ -395,7 +396,6 @@
     "_templates/template_sub_project.md",
     "10-PROJECTS/P-Agent求职/_resources/Agent Architecture.excalidraw.md",
     "20-AREAS/A-人工智能/AgentLoop-终止与异常处理.md",
-    "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.md",
     "00-META/Decisions",
     "_resources/Claude Code/10e6559a6a3fc17b8fc30859c810232b_MD5.webp",
     "_resources/Claude Code",

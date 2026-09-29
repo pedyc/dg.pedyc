@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-人工智能/AgentLoop.md",
+                "file": "90-DIARY/2026-09-29.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "AgentLoop"
+              "title": "2026-09-29"
             }
           },
           {
@@ -195,7 +195,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20-AREAS/A-人工智能/AgentLoop.md",
+                "file": "90-DIARY/2026-09-29.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -368,9 +368,10 @@
   },
   "active": "813535a04d25c3a6",
   "lastOpenFiles": [
+    "20-AREAS/A-人工智能/AgentLoop.md",
+    "90-DIARY/2026-09-29.md",
     "_resources/AgentLoop",
     "20-AREAS/A-人工智能/AgentLoop-状态机.md",
-    "20-AREAS/A-人工智能/AgentLoop.md",
     "20-AREAS/A-人工智能/ControlFlow.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-AgentLoop.md",
     "10-PROJECTS/P-Agent求职/Agent求职.md",
@@ -413,7 +414,6 @@
     "10-PROJECTS/P-Agent求职/01-专项清单",
     "10-PROJECTS/P-Agent求职/S6-求职执行",
     "10-PROJECTS/P-Agent求职/S5-Agent求职能力",
-    "10-PROJECTS/P-Agent求职/S4-Agent项目实践",
     "10-PROJECTS/PROJECTS.canvas",
     "未命名.canvas",
     "Untitled.canvas",

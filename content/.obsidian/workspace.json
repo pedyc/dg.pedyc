@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-09-29.md",
+                "file": "90-DIARY/2026-09-30.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-09-29"
+              "title": "2026-09-30"
+            }
+          },
+          {
+            "id": "e845280c580678db",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40-ARCHIVE/存在主义困境下的伦理决断：从《SOMA》出发的讨论总结.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "存在主义困境下的伦理决断：从《SOMA》出发的讨论总结"
             }
           },
           {
@@ -116,7 +140,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -195,7 +219,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "90-DIARY/2026-09-29.md",
+                "file": "10-PROJECTS/P-Agent求职/ToolCalling的并发和依赖.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -366,10 +390,12 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "813535a04d25c3a6",
+  "active": "389005f9bd747440",
   "lastOpenFiles": [
-    "20-AREAS/A-人工智能/AgentLoop.md",
+    "40-ARCHIVE/存在主义困境下的伦理决断：从《SOMA》出发的讨论总结.md",
+    "90-DIARY/2026-09-30.md",
     "90-DIARY/2026-09-29.md",
+    "20-AREAS/A-人工智能/AgentLoop.md",
     "_resources/AgentLoop",
     "20-AREAS/A-人工智能/AgentLoop-状态机.md",
     "20-AREAS/A-人工智能/ControlFlow.md",
@@ -395,8 +421,6 @@
     "10-PROJECTS/P-Agent求职/LLM是怎么知道有哪些Tool可以调用，以及应该生成什么样的ToolCall？.md",
     "30-RESOURCES/LLM.md",
     "_templates/template_sub_project.md",
-    "10-PROJECTS/P-Agent求职/_resources/Agent Architecture.excalidraw.md",
-    "20-AREAS/A-人工智能/AgentLoop-终止与异常处理.md",
     "00-META/Decisions",
     "_resources/Claude Code/10e6559a6a3fc17b8fc30859c810232b_MD5.webp",
     "_resources/Claude Code",

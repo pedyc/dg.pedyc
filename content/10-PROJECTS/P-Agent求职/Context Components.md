@@ -5,7 +5,7 @@ aliases:
   - 上下文组成与构建流程
   - C-Context Components
 date-created: 2026-10-02
-date-modified: 2026-10-02
+date-modified: 2026-10-03
 ---
 
 ## Context 的基本组成
@@ -43,8 +43,8 @@ Context
 > **这些并不意味着每次都全部存在。**
 > Runtime 会根据当前任务选择需要的信息。
 
-## Context 构建流程
+## Context 组装与构建流程
 
-> 多种信息来源 → Runtime 选择/组装 → Context → LLM → ToolCall → ToolResult → Context 更新。
+> 多种信息来源 → Runtime 选择/组装（Context Builder） → Context → LLM → ToolCall → ToolResult → Context 更新。
 
-![[Agent Context.excalidraw]]
+![[../../_resources/Context Components/b357c4e770eb366366cb150186f1c698_MD5.webp]]

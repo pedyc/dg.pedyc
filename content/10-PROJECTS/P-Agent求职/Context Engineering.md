@@ -4,7 +4,7 @@ aliases:
   - 上下文工程
   - C-Context Engineering
 date-created: 2026-10-02
-date-modified: 2026-10-02
+date-modified: 2026-10-03
 up: ["[[Agent]]"]
 ---
 
@@ -13,7 +13,7 @@ up: ["[[Agent]]"]
 > Context Engineering 是围绕 LLM 当前推理需求，对 Context 进行选择、组织、压缩、更新和注入的工程。
 
 对于Agent来说，LLM每轮推理时看到的输入，通常可能包含：
-![[#Context Components ：上下文组成]]
+![[#Context Components ：上下文组成与构建流程]]
 
 ### 关键区别
 
@@ -33,15 +33,7 @@ Agent与普通Chatbot的核心区别在于：
 
 ### 质量指标
 
-可以把上下文质量指标抽象为：
-
-```bash
-Context Quality = 
-Relevant Information + 
-Sufficient Information - 
-Irrelevant Information
-```
-
+![[#Context Quality ：上下文质量]]
 据此可以[[构建高质量上下文]]
 
 ## 为什么需要 Context Engineering
@@ -94,17 +86,6 @@ LLM
 …
 ```
 
-### Context Engineering真正解决的问题
-
-What?
-应该提供什么信息？
-
-When?
-什么时候提供？
-
-How?
-以什么结构和形式提供？
-
 ## 核心概念
 
 ### [[上下文窗口|Context Window]]：上下文窗口
@@ -113,7 +94,7 @@ How?
 - 是Context Engineering的**硬约束**
 - 需要区分：系统提示、对话历史、工具输出、检索内容、当前任务描述等各占多少
 
-### [[Context Components]]：上下文组成
+### [[Context Components]]：上下文组成与构建流程
 
 一个Agent的上下文通常包含以下几类：
 
@@ -181,3 +162,20 @@ How?
 - 为每类上下文分配token配额
 - 例如：System 10%、Memory 20%、Tools 30%、History 40%
 - 超预算时触发压缩或丢弃策略
+
+### [[Context Quality]]：上下文质量
+
+可以把上下文质量指标抽象为：
+
+```bash
+Context Quality = 
+Relevant Information + 
+Sufficient Information - 
+Irrelevant Information
+```
+
+## FAQ
+
+## SOP
+
+- [[构建高质量上下文]]

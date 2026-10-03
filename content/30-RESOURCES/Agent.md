@@ -10,7 +10,7 @@ tags:
   - AI
   - Agent
 date-created: 2025-08-25
-date-modified: 2026-09-24
+date-modified: 2026-10-02
 status: active
 content-type: concept
 related: ["[[人工智能]]", "[[Harness]]"]
@@ -124,13 +124,14 @@ flowchart LR
 	- [[智能体编排]] — 多个 Agent 协作
 	- [[AgentTool]]
 	- [[ToolCalling]]
-	- [[开源Agent清单]]
+	- [[Context Engineering]]
 - **并列概念**：
 	- [[提示词工程|Prompt Engineering]] — 优化模型输出
 	- [[RAG]] — 检索增强生成
 - **相关领域**：
 	- [[强化学习]] — Agent 的学习方法论
 	- [[Claude Code]] — Agent 的具体实现
+	- [[开源Agent清单]]
 
 ---
 

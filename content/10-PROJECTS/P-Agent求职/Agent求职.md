@@ -5,7 +5,7 @@ aliases:
   - P-Agent求职
 description: 前端工程师掌握 AI 能力的系统学习路径：提示词工程、Harness 工程、LLM 集成
 date-created: 2026-05-16
-date-modified: 2026-09-23
+date-modified: 2026-10-02
 status: fleeting
 area: ["[[人工智能|A-人工智能]]"]
 consequence: 5

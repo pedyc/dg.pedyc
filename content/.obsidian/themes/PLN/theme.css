@@ -815,17 +815,17 @@ settings:
     --accent-dark-hsl-s: 34%;
     --accent-dark-hsl-l: 63%;
 
-    --color-red-rgb: 191, 97, 106;
-    --color-orange-rgb: 208, 135, 112;
-    --color-yellow-light-rgb: 235, 203, 139;
-    --color-yellow-dark-rgb: 228, 184, 96;
-    --color-green-rgb: 163, 190, 140;
-    --color-purple-rgb: 180, 142, 173;
+    --color-red-rgb: rgb(191, 97, 106);
+    --color-orange-rgb: rgb(208, 135, 112);
+    --color-yellow-light-rgb: rgb(235, 203, 139);
+    --color-yellow-dark-rgb: rgb(228, 184, 96);
+    --color-green-rgb: rgb(163, 190, 140);
+    --color-purple-rgb: rgb(180, 142, 173);
     --color-sea-green-rgb: 143, 188, 187;
-    --color-cyan-rgb: 136, 192, 208;
-    --color-frost-rgb: 129, 161, 193;
-    --color-blue-rgb: 94, 129, 172;
-    --color-salmon-rgb: 252, 110, 104;
+    --color-cyan-rgb: rgb(136, 192, 208);
+    --color-frost-rgb: rgb(129, 161, 193);
+    --color-blue-rgb: rgb(94, 129, 172);
+    --color-salmon-rgb: rgb(252, 110, 104);
 
     --b0: #2E3440;
     --b1: #3B4252;
@@ -837,8 +837,8 @@ settings:
     --w2: #ECEFF4;
     --w3: #f5f7f9;
 
-    --w0-rgb: 216, 222, 233;
-    --b3-rgb: 76, 86, 106;
+    --w0-rgb: rgb(216, 222, 233);
+    --b3-rgb: rgb(76, 86, 106);
 
     --text-error: var(--color-salmon);
     --text-accent: var(--color-accent);
@@ -1056,19 +1056,19 @@ body {
 /* properties container*/
 body {
     & {
-        --metadata-border-color: rgb(var(--pln-cards-color-rgb));
+        --metadata-border-color: var(--pln-cards-color-rgb);
         --metadata-border-radius: 5px;
-        --metadata-background: rgba(var(--pln-cards-color-rgb),0.4);
+        --metadata-background: rgb(from var(--pln-cards-color-rgb) r g b / 0.4);
         --metadata-property-radius: 5px;
     }
     & .metadata-container {
-        border-top: 4px solid rgb(var(--pln-cards-color-rgb));
-        border-left: 2px solid rgb(var(--pln-cards-color-rgb));
+        border-top: 4px solid var(--pln-cards-color-rgb);
+        border-left: 2px solid var(--pln-cards-color-rgb);
         /* 1.3.7 adding --p-spacing but I remove it, this fixes the header being to oclose to the box*/
         margin-bottom: 10px;
     }
     & .metadata-property-key {
-        border-right: 2px solid rgb(var(--pln-cards-color-rgb));
+        border-right: 2px solid var(--pln-cards-color-rgb);
     }
     /* hide the placeholder values in metadata*/
     &.pln-props-emptyval .metadata-input-longtext:empty:before,
@@ -1364,9 +1364,9 @@ body {
 }
 .cards.pln-cards-borders table.dataview > tbody > tr,
 .pln-cards-borders .cards table.dataview > tbody > tr {
-    background-color: rgba(var(--pln-cards-color-rgb), 0.4) !important;
-    border-top: 4px solid rgb(var(--pln-cards-color-rgb)) !important;
-    border-left: 2px solid rgb(var(--pln-cards-color-rgb)) !important;
+    background-color: rgb(from var(--pln-cards-color-rgb) r g b / 0.4) !important;
+    border-top: 4px solid var(--pln-cards-color-rgb) !important;
+    border-left: 2px solid var(--pln-cards-color-rgb) !important;
     border-right: none !important;
     border-bottom: none !important;
 }
@@ -1790,8 +1790,8 @@ body {
 }
 
 .callout {
-    border-top: 4px solid rgba(var(--callout-color), 1.0);
-    border-left: 2px solid rgba(var(--callout-color), 1.0);
+    border-top: 4px solid color-mix(in srgb, var(--callout-color) 100%, transparent);
+    border-left: 2px solid color-mix(in srgb, var(--callout-color) 100%, transparent);
 }
 
 /* make quotes look like callouts too */
@@ -1950,7 +1950,7 @@ div[data-callout*="plain_columns"] {
     & .markdown-rendered mark,
     & .cm-s-obsidian span.cm-highlight {
         color: inherit;
-        background: rgba(var(--color-yellow-rgb),0.2);
+        background: rgb(from var(--color-yellow-rgb) r g b / 0.2);
         border-radius: 5px;
         border: 2px solid;
         border-color: var(--color-yellow);
@@ -1968,7 +1968,7 @@ div[data-callout*="plain_columns"] {
     /*Red highlighter (edit)*/
     & mark.edit { 
         border-color: var(--color-red);
-        background: rgba(var(--color-red-rgb),0.2);
+        background: color-mix(in srgb, var(--color-red-rgb) 20%, transparent);
     }
     & mark.edit::before {
         color: var(--color-red);
@@ -1978,7 +1978,7 @@ div[data-callout*="plain_columns"] {
     /*Orange highlighter (unfinished)*/
     & mark.unfinished { 
         border-color: var(--color-orange);
-        background: rgba(var(--color-orange-rgb),0.2);
+        background: color-mix(in srgb, var(--color-orange-rgb) 20%, transparent);
     }
     & mark.unfinished::before {
         color: var(--color-orange);
@@ -1988,7 +1988,7 @@ div[data-callout*="plain_columns"] {
     /*Pink highlighter (verify)*/
     & mark.verify { 
         border-color: var(--color-purple);
-        background: rgba(var(--color-purple-rgb),0.2);
+        background: color-mix(in srgb, var(--color-purple-rgb) 20%, transparent);
     }
     & mark.verify::before {
         color: var(--color-purple);
@@ -1998,7 +1998,7 @@ div[data-callout*="plain_columns"] {
     /* Green highlighter (important)*/
     & mark.important { 
         border-color: var(--color-green);
-        background: rgba(var(--color-green-rgb),0.2);
+        background: color-mix(in srgb, var(--color-green-rgb) 20%, transparent);
     }
     & mark.important::before {
         color: var(--color-green);

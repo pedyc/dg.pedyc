@@ -10,7 +10,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "showLineNumber": false,
+  "showLineNumber": true,
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "./_resources",
   "newFileLocation": "current",

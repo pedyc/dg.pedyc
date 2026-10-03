@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/ToolCalling.md",
+                "file": "10-PROJECTS/P-Agent求职/Context Engineering.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "ToolCalling"
+              "title": "Context Engineering"
             }
           },
           {
-            "id": "813535a04d25c3a6",
+            "id": "10cad6db33707730",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-09-30.md",
+                "file": "10-PROJECTS/P-Agent求职/Context Components.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,71 +76,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-09-30"
-            }
-          },
-          {
-            "id": "e845280c580678db",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40-ARCHIVE/存在主义困境下的伦理决断：从《SOMA》出发的讨论总结.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "存在主义困境下的伦理决断：从《SOMA》出发的讨论总结"
-            }
-          },
-          {
-            "id": "389005f9bd747440",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10-PROJECTS/P-Agent求职/ToolCalling的并发和依赖.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "ToolCalling的并发和依赖"
-            }
-          },
-          {
-            "id": "839b96cb2b296aa5",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "10-PROJECTS/P-Agent求职/_resources/ToolCalling.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "ToolCalling.excalidraw"
+              "title": "Context Components"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -182,7 +122,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-人工智能/AgentLoop-终止与异常处理.md",
+                "file": "10-PROJECTS/P-Agent求职/Context Components.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -219,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/ToolCalling的并发和依赖.md",
+                "file": "10-PROJECTS/P-Agent求职/Context Components.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -228,8 +168,7 @@
               "title": "大纲"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "5e0950099d64d5f6",
@@ -262,7 +201,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:状态管理",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -306,7 +245,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 292.5
+    "width": 307.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -390,37 +329,38 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "389005f9bd747440",
+  "active": "10cad6db33707730",
   "lastOpenFiles": [
-    "40-ARCHIVE/存在主义困境下的伦理决断：从《SOMA》出发的讨论总结.md",
+    "30-RESOURCES/选择.md",
+    "10-PROJECTS/P-Agent求职/Context Components.md",
+    "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.md",
     "90-DIARY/2026-09-30.md",
+    "40-ARCHIVE/存在主义困境下的伦理决断：从《SOMA》出发的讨论总结.md",
+    "10-PROJECTS/P-Agent求职/_resources/ToolCalling.excalidraw.md",
+    "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.svg",
+    "10-PROJECTS/P-Agent求职/Context Engineering.md",
+    "90-DIARY/2026-10-02.md",
+    "10-PROJECTS/P-Agent求职/构建高质量上下文.md",
+    "30-RESOURCES/Agent.md",
+    "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
+    "_templates/template_sop.md",
+    "10-PROJECTS/P-Agent求职/Agent求职.md",
+    "10-PROJECTS/P-Agent求职/ToolCalling.md",
+    "30-RESOURCES/LLM 基础.md",
+    "30-RESOURCES/设计.md",
+    "10-PROJECTS/P-Agent求职/Agent学习专项-LLM与ToolCalling.md",
+    "10-PROJECTS/P-Agent求职/ToolCalling的并发和依赖.md",
     "90-DIARY/2026-09-29.md",
     "20-AREAS/A-人工智能/AgentLoop.md",
     "_resources/AgentLoop",
     "20-AREAS/A-人工智能/AgentLoop-状态机.md",
     "20-AREAS/A-人工智能/ControlFlow.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-AgentLoop.md",
-    "10-PROJECTS/P-Agent求职/Agent求职.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-基本概念与架构.md",
     "10-PROJECTS/P-Agent求职/ToolCalling与Permission、Policy.md",
-    "10-PROJECTS/P-Agent求职/ToolCalling.md",
     "ToolCalling与Permission/Policy.md",
     "ToolCalling与Permission",
-    "10-PROJECTS/P-Agent求职/ToolCalling错误处理.md",
-    "10-PROJECTS/P-Agent求职/ToolCalling的并发和依赖.md",
-    "10-PROJECTS/P-Agent求职/ToolCalling中的同步和异步.md",
-    "10-PROJECTS/P-Agent求职/Agent学习专项-LLM与ToolCalling.md",
-    "30-RESOURCES/Agent.md",
-    "30-RESOURCES/AgentTool.md",
-    "10-PROJECTS/P-Agent求职/ToolDefinition.md",
-    "10-PROJECTS/P-Agent求职/LLM为什么能够选择正确的Tool？.md",
-    "10-PROJECTS/P-Agent求职/ToolCalling为什么需要结构化输出？.md",
-    "10-PROJECTS/P-Agent求职/_resources/ToolCalling.excalidraw.md",
-    "90-DIARY/2026-09-24.md",
     "10-PROJECTS/P-Agent求职/_resources/ToolCalling.excalidraw.svg",
-    "10-PROJECTS/P-Agent求职/LLM是怎么知道有哪些Tool可以调用，以及应该生成什么样的ToolCall？.md",
-    "30-RESOURCES/LLM.md",
-    "_templates/template_sub_project.md",
     "00-META/Decisions",
     "_resources/Claude Code/10e6559a6a3fc17b8fc30859c810232b_MD5.webp",
     "_resources/Claude Code",
@@ -432,7 +372,6 @@
     "20-AREAS/A-人工智能/_resources/Pasted image 20260923162821.png",
     "10-PROJECTS/P-Agent求职/_resources/DSH核心架构.excalidraw.svg",
     "99-ASSETS/Excalidraw/Scripts/Downloaded/Boolean Operations.svg",
-    "10-PROJECTS/P-Agent求职/_resources/Agent Architecture.excalidraw.svg",
     "_resources/Boolean Operations",
     "10-PROJECTS/P-Agent求职/02-学习专项",
     "10-PROJECTS/P-Agent求职/01-专项清单",

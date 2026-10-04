@@ -29,7 +29,11 @@ up: ["[[Agent]]"]
 ## FAQ
 
 - [[为什么需要Context Engineering？]]
+- [[ContextEngineering和RAG是什么关系？]]
+- [[ContextEngineering和PromptEngineering 有什么区别？]]
 - [[什么是“Lost in the Middle”现象？]]
+- [[如何设计一个Context更新策略？]]
+- [[LLM如何理解Context？为什么冲突信息会让Agent决策失灵？]]
 
 ## SOP
 

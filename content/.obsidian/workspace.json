@@ -54,57 +54,9 @@
               "icon": "lucide-file",
               "title": "Agent学习专项-ContextEngineering"
             }
-          },
-          {
-            "id": "7eb58b939addae47",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10-PROJECTS/P-Agent求职/Context Quality.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Context Quality"
-            }
-          },
-          {
-            "id": "30a4edd01c39f085",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10-PROJECTS/P-Agent求职/Context过长会怎样？.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Context过长会怎样？"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -146,7 +98,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Context过长会怎样？.md",
+                "file": "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -183,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Context过长会怎样？.md",
+                "file": "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -353,36 +305,36 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "30a4edd01c39f085",
+  "active": "1a1b86e134ef725b",
   "lastOpenFiles": [
-    "10-PROJECTS/P-Agent求职/Lost in the Middle现象.md",
-    "10-PROJECTS/P-Agent求职/Context过长会怎样？.md",
-    "10-PROJECTS/P-Agent求职/Context Quality.md",
-    "10-PROJECTS/P-Agent求职/Context Window用完之后会怎样？.md",
-    "_templates/template_question.md",
+    "10-PROJECTS/P-Agent求职/Agent求职.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.md",
-    "10-PROJECTS/P-Agent求职/什么是“Lost in the Middle”现象？.md",
-    "_templates/template_concept.md",
+    "10-PROJECTS/P-Agent求职/Context Quality.md",
     "10-PROJECTS/P-Agent求职/构建高质量上下文.md",
-    "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.md",
-    "10-PROJECTS/P-Agent求职/LLM为什么能够选择正确的Tool？.md",
-    "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
-    "10-PROJECTS/P-Agent求职/LLM是怎么知道有哪些Tool可以调用，以及应该生成什么样的ToolCall？.md",
-    "10-PROJECTS/P-Agent求职/Context Isolation.md",
-    "10-PROJECTS/P-Agent求职/Token Budgeting.md",
-    "10-PROJECTS/P-Agent求职/Context Rot.md",
-    "10-PROJECTS/P-Agent求职/Memory Management.md",
-    "10-PROJECTS/P-Agent求职/Dynamic Context.md",
-    "10-PROJECTS/P-Agent求职/Context Ordering & Formatting.md",
-    "10-PROJECTS/P-Agent求职/Context Compression.md",
-    "10-PROJECTS/P-Agent求职/为什么需要Context Engineering？.md",
-    "_templates/template_sub_project.md",
-    "_templates/template_project.md",
     "10-PROJECTS/P-Agent求职/Context Components.md",
-    "90-DIARY/2026-10-02.md",
+    "10-PROJECTS/P-Agent求职/Context中出现冲突信息会怎样？.md",
+    "10-PROJECTS/P-Agent求职/LLM如何理解Context？为什么冲突信息会让Agent决策失灵？.md",
+    "10-PROJECTS/P-Agent求职/Context太长时应该优先压缩哪一部分？.md",
+    "10-PROJECTS/P-Agent求职/如果Context缺失信息应该怎么办？.md",
+    "10-PROJECTS/P-Agent求职/Context过长会怎样？.md",
+    "10-PROJECTS/P-Agent求职/Context中什么信息才算缺失？.md",
+    "10-PROJECTS/P-Agent求职/ContextEngineering和PromptEngineering 有什么区别？.md",
+    "10-PROJECTS/P-Agent求职/ContextEngineering和RAG是什么关系？.md",
+    "10-PROJECTS/P-Agent求职/如何设计一个Context更新策略？.md",
+    "10-PROJECTS/P-Agent求职/Context中信息缺失和信息冲突有什么区别？.md",
+    "10-PROJECTS/P-Agent求职/压缩Context时怎样避免丢失关键信息？.md",
+    "50-ZETTELCASTEN/应该只把提炼后的ToolResult放入Context.md",
+    "_templates/template_atomic.md",
+    "10-PROJECTS/P-Agent求职/关键信息应该怎样放入Context？.md",
+    "10-PROJECTS/P-Agent求职/Context缺少关键信息会发生什么？.md",
+    "10-PROJECTS/P-Agent求职/Context长度管理与降级策略.md",
+    "_templates/template_sop.md",
+    "10-PROJECTS/P-Agent求职/Lost in the Middle现象.md",
+    "10-PROJECTS/P-Agent求职/Context Window用完之后会怎样？.md",
+    "_templates/template_question.md",
+    "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.svg",
-    "10-PROJECTS/P-Agent求职/Agent求职.md",
     "10-PROJECTS/P-Agent求职/_resources/_resources/d7897f85-838e-46ed-95de-aa83123f36ce.png",
     "_resources/Context Components/b357c4e770eb366366cb150186f1c698_MD5.webp",
     "_resources/Context Components",

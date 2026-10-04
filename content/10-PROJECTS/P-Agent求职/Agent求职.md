@@ -59,7 +59,7 @@ urgency: 5
 - [x] [[Agent学习专项-基本概念与架构]]：Agent 基本概念与架构 ✅ 2026-09-23
 - [x] [[Agent学习专项-AgentLoop]]：理解 Agent 的循环执行机制，并实现最小 Agent Loop。 ✅ 2026-09-27
 - [x] [[Agent学习专项-LLM与ToolCalling]]：理解模型与工具之间的交互机制，并完成工具调用实验。 ✅ 2026-09-28
-- [ ] [[Agent学习专项-ContextEngineering]]：理解上下文组织、信息选择和上下文限制。
+- [x] [[Agent学习专项-ContextEngineering]]：理解上下文组织、信息选择和上下文限制。 ✅ 2026-10-04
 - [ ] [[Agent学习专项-AgentMemory]]：理解 Agent 状态与记忆机制，并完成简单实践。
 - [ ] [[Agent学习专项-Planning与Workflow]]：研究任务规划、工作流及其适用场景。
 - [ ] [[Agent实践专项-RAG]]：理解并实现检索增强生成流程。

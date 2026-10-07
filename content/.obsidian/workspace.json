@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
+                "file": "30-RESOURCES/广度优先搜索.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +52,23 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Agent学习专项-ContextEngineering"
+              "title": "广度优先搜索"
+            }
+          },
+          {
+            "id": "690eac7285f14177",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.14.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.14.4"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -294,7 +305,6 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
       "publish:发布更改": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
@@ -305,10 +315,12 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "1a1b86e134ef725b",
+  "active": "690eac7285f14177",
   "lastOpenFiles": [
-    "10-PROJECTS/P-Agent求职/Agent求职.md",
+    "30-RESOURCES/深度优先搜索.md",
+    "30-RESOURCES/广度优先搜索.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
+    "10-PROJECTS/P-Agent求职/Agent求职.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.md",
     "10-PROJECTS/P-Agent求职/Context Quality.md",
     "10-PROJECTS/P-Agent求职/构建高质量上下文.md",
@@ -331,8 +343,6 @@
     "10-PROJECTS/P-Agent求职/Context长度管理与降级策略.md",
     "_templates/template_sop.md",
     "10-PROJECTS/P-Agent求职/Lost in the Middle现象.md",
-    "10-PROJECTS/P-Agent求职/Context Window用完之后会怎样？.md",
-    "_templates/template_question.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.svg",
     "10-PROJECTS/P-Agent求职/_resources/_resources/d7897f85-838e-46ed-95de-aa83123f36ce.png",

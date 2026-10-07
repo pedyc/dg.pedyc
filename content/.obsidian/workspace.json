@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/广度优先搜索.md",
+                "file": "30-RESOURCES/二叉搜索树的应用场景.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,23 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "广度优先搜索"
-            }
-          },
-          {
-            "id": "690eac7285f14177",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.14.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.14.4"
+              "title": "二叉搜索树的应用场景"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,6 +98,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "30-RESOURCES/二叉搜索树的应用场景.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -315,10 +304,13 @@
       "cmdr:堆叠/取消堆叠标签页": false
     }
   },
-  "active": "690eac7285f14177",
+  "active": "1a1b86e134ef725b",
   "lastOpenFiles": [
-    "30-RESOURCES/深度优先搜索.md",
+    "30-RESOURCES/二叉搜索树.md",
+    "30-RESOURCES/二叉搜索树的应用场景.md",
+    "30-RESOURCES/二叉树.md",
     "30-RESOURCES/广度优先搜索.md",
+    "30-RESOURCES/深度优先搜索.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
     "10-PROJECTS/P-Agent求职/Agent求职.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.md",
@@ -340,9 +332,6 @@
     "_templates/template_atomic.md",
     "10-PROJECTS/P-Agent求职/关键信息应该怎样放入Context？.md",
     "10-PROJECTS/P-Agent求职/Context缺少关键信息会发生什么？.md",
-    "10-PROJECTS/P-Agent求职/Context长度管理与降级策略.md",
-    "_templates/template_sop.md",
-    "10-PROJECTS/P-Agent求职/Lost in the Middle现象.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.svg",
     "10-PROJECTS/P-Agent求职/_resources/_resources/d7897f85-838e-46ed-95de-aa83123f36ce.png",

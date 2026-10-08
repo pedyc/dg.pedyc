@@ -1,19 +1,20 @@
 ---
-content-type: term
 title: DevOps
-aliases: ["T-DevOps", ]
-tags: [专业技术/DevOps工作流]
+aliases:
+  - T-DevOps
+tags:
+  - 专业技术/DevOps工作流
 date-created: 2025-03-05
-date-modified: 2025-12-25
+date-modified: 2026-10-08
+content-type: [moc]
 refresh: 季度
-type: [area]
 ---
 
 ## 专业技术领域/DevOps 工作流
 
 ### 🧱 核心组件
 
-- [[CI/CD理论框架]]（领域基石：持续集成/持续部署原则、流水线设计模式）
+- [[持续集成与持续部署|CI/CD]]（领域基石：持续集成/持续部署原则、流水线设计模式）
 - [[DevOps工具链]]（高频工具：GitHub Actions/Jenkins/Docker/K8s/Terraform）
 - [[云原生最佳实践]]（实战宝典：容器化部署、不可变基础设施、混沌工程）
 

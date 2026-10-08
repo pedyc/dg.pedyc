@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent面试题库.md",
+                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Agent面试题库"
+              "title": "Agent求职"
             }
           }
         ],
@@ -98,7 +98,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent面试题库.md",
+                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -284,6 +284,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "omnisearch:Omnisearch": false,
       "bases:新建数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
@@ -305,6 +306,9 @@
   },
   "active": "1a1b86e134ef725b",
   "lastOpenFiles": [
+    "30-RESOURCES/DevOps.md",
+    "30-RESOURCES/持续集成与持续部署.md",
+    "30-RESOURCES/GitHub Actions.md",
     "10-PROJECTS/P-Agent求职/Agent面试题库.md",
     "10-PROJECTS/P-Agent求职/_resources/ClaudeCode核心架构.excalidraw.md",
     "10-PROJECTS/P-Agent求职/_resources/_resources",
@@ -330,8 +334,6 @@
     "10-PROJECTS/P-Agent求职/Context中什么信息才算缺失？.md",
     "10-PROJECTS/P-Agent求职/ContextEngineering和PromptEngineering 有什么区别？.md",
     "10-PROJECTS/P-Agent求职/ContextEngineering和RAG是什么关系？.md",
-    "10-PROJECTS/P-Agent求职/如何设计一个Context更新策略？.md",
-    "10-PROJECTS/P-Agent求职/Context中信息缺失和信息冲突有什么区别？.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.svg",
     "10-PROJECTS/P-Agent求职/_resources/_resources/d7897f85-838e-46ed-95de-aa83123f36ce.png",

@@ -5187,85 +5187,6 @@ isSvg$2.exports.default = isSvg;
 var isSvgExports = isSvg$2.exports;
 var isSvg$1 = /*@__PURE__*/getDefaultExportFromCjs(isSvgExports);
 
-var matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
-
-var escapeStringRegexp$2 = function (str) {
-	if (typeof str !== 'string') {
-		throw new TypeError('Expected a string');
-	}
-
-	return str.replace(matchOperatorsRe, '\\$&');
-};
-
-var escapeStringRegexp$1 = escapeStringRegexp$2;
-
-var trimRepeated = function (str, target) {
-	if (typeof str !== 'string' || typeof target !== 'string') {
-		throw new TypeError('Expected a string');
-	}
-
-	return str.replace(new RegExp('(?:' + escapeStringRegexp$1(target) + '){2,}', 'g'), target);
-};
-
-var trimRepeated$1 = /*@__PURE__*/getDefaultExportFromCjs(trimRepeated);
-
-var filenameReservedRegex$1 = {exports: {}};
-
-/* eslint-disable no-control-regex */
-// TODO: remove parens when Node.js 6 is targeted. Node.js 4 barfs at it.
-filenameReservedRegex$1.exports = () => (/[<>:"\/\\|?*\x00-\x1F]/g);
-filenameReservedRegex$1.exports.windowsNames = () => (/^(con|prn|aux|nul|com[0-9]|lpt[0-9])$/i);
-
-var filenameReservedRegexExports = filenameReservedRegex$1.exports;
-var filenameReservedRegex = /*@__PURE__*/getDefaultExportFromCjs(filenameReservedRegexExports);
-
-var escapeStringRegexp = escapeStringRegexp$2;
-
-var stripOuter = function (str, sub) {
-	if (typeof str !== 'string' || typeof sub !== 'string') {
-		throw new TypeError();
-	}
-
-	sub = escapeStringRegexp(sub);
-	return str.replace(new RegExp('^' + sub + '|' + sub + '$', 'g'), '');
-};
-
-var stripOuter$1 = /*@__PURE__*/getDefaultExportFromCjs(stripOuter);
-
-// Doesn't make sense to have longer filenames
-const MAX_FILENAME_LENGTH = 100;
-
-const reControlChars = /[\u0000-\u001F\u0080-\u009F]/g; // eslint-disable-line no-control-regex
-const reRelativePath = /^\.+/;
-const reTrailingPeriods = /\.+$/;
-
-function filenamify(string, options = {}) {
-	if (typeof string !== 'string') {
-		throw new TypeError('Expected a string');
-	}
-
-	const replacement = options.replacement === undefined ? '!' : options.replacement;
-
-	if (filenameReservedRegex().test(replacement) && reControlChars.test(replacement)) {
-		throw new Error('Replacement string cannot contain reserved filename characters');
-	}
-
-	string = string.replace(filenameReservedRegex(), replacement);
-	string = string.replace(reControlChars, replacement);
-	string = string.replace(reRelativePath, replacement);
-	string = string.replace(reTrailingPeriods, '');
-
-	if (replacement.length > 0) {
-		string = trimRepeated$1(string, replacement);
-		string = string.length > 1 ? stripOuter$1(string, replacement) : string;
-	}
-
-	string = filenameReservedRegex.windowsNames().test(string) ? string + replacement : string;
-	string = string.slice(0, typeof options.maxLength === 'number' ? options.maxLength : MAX_FILENAME_LENGTH);
-
-	return string;
-}
-
 var md5$1 = {exports: {}};
 
 function commonjsRequire(path) {
@@ -6362,7 +6283,7 @@ md5$1.exports;
 var md5Exports = md5$1.exports;
 var md5 = /*@__PURE__*/getDefaultExportFromCjs(md5Exports);
 
-const APP_TITLE = "Local Images Plus  0.16.4";
+const APP_TITLE = "Local Images Plus  0.16.8";
 //Option to enable debugging
 let VERBOSE = false;
 function setDebug(value = false) {
@@ -6370,26 +6291,46 @@ function setDebug(value = false) {
 }
 const SUPPORTED_OS = { "win": "win32", "unix": "linux,darwin,freebsd,openbsd" };
 const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82  Safari/537.36';
-const MD_SEARCH_PATTERN = [
+const MD_CORE_SEARCH_PATTERN = [
     //file link
     /\!\[(?<anchor>(.{0}|(?!^file\:\/)+?))\]\((?<link>((file\:\/)[^\!]+?(\.{1}.{3,4}\) {0,1}|\)$|\)\n|\)])))/gm,
     //hypertext link
-    ///\!\[(?<anchor>(.{0}|[^\[]+?))\]\((?<link>((http(s){0,1}).+?(\) |\..{3,4}\)|\)$|\)\n|\)\]|\)\[)))/gm,
-    /\!\[(?<anchor>([^\]]*))\]\((?<link>((http(s){0,1}).+?(\) |\..{3,4}\)|\)$|\)\n|\)\]|\)\[)))/gm,
+    //\!\[(?<anchor>([^\]]*))\]\((?<link>((http(s){0,1}).+?(\) |\..{3,4}\)|\)$|\)\n|\)\]|\)\[)))/gm,
+    /\!\[(?<anchor>([^\]]*))\]\((?<link>((http(s){0,1}\:).+?(\) |\..{3,4}\)|\)$|\)\n|\)\]|\)\[|\/[^(]+?\))))/gm,
     //Base64 encoded data
     /\!\[[^\[](?<anchor>(.{0}|[^\[]+?))\]\((?<link>((data\:.+?base64\,).+?(\) |\..{3,4}\)|\)$|\)\n|\)\]|\)\[)))/gm,
-    /\!\[(?<anchor>(.{0}|[^\[]+?))\]\((?<link>((http(s){0,1}|(data\:.+?base64\,)).+?\)))/gm
+    /\!\[(?<anchor>(.{0}|[^\[]+?))\]\((?<link>((http(s){0,1}|(data\:.+?base64\,)).+?\)))/gm,
+];
+//wikilink embed with remote url: ![[https://host/path.png]] or ![[https://host/path.png|300]]
+const WIKILINK_SEARCH_PATTERN = /\!\[\[(?<anchor>(?<link>https?:\/\/[^\]\|]+)(?:\|[^\]\|]*)?)\]\]/gm;
+const SOURCE_KEY_EXCLUSION = "(?!(?:[sS][oO][uU][rR][cC][eE])[ \\t]*:)";
+//frontmatter value that is an embed: cover: ![[https://...]] or cover: "![[https://...]]"
+const FM_EMBED_SEARCH_PATTERN = new RegExp("^(?<keypart>[ \\t]*" + SOURCE_KEY_EXCLUSION + "[^\\s:#'\"][^:\\r\\n]*?[ \\t]*:[ \\t]*)" +
+    "(?<q1>['\"]?)!\\[\\[(?<anchor>(?<link>https?:\\/\\/[^\\]\\|]+)(?:\\|[^\\]\\|]*)?)\\]\\](?<q2>['\"]?)", "gm");
+//frontmatter value that is a bare url with a media extension: hero: "https://host/img.jpg"
+const FM_BARE_URL_SEARCH_PATTERN = new RegExp("^(?<keypart>[ \\t]*" + SOURCE_KEY_EXCLUSION + "[^\\s:#'\"][^:\\r\\n]*?[ \\t]*:[ \\t]*)" +
+    "(?<anchor>)(?<q1>['\"]?)" +
+    "(?<link>https?:\\/\\/[^\\s'\"]+\\.(?:png|jpe?g|gif|webp|svg|avif|bmp|tiff?|ico|pdf|epub|mp3|mp4|m4a|ogg|wav|webm|mov|docx?|xlsx?|pptx?|zip)(?:[?#][^\\s'\"]*)?)" +
+    "(?<q2>['\"]?)", "gm");
+const MD_SEARCH_PATTERN = [...MD_CORE_SEARCH_PATTERN, WIKILINK_SEARCH_PATTERN];
+//patterns for the frontmatter part of a note (local links stay untouched)
+const FRONTMATTER_DOWNLOAD_PATTERN = [FM_EMBED_SEARCH_PATTERN, FM_BARE_URL_SEARCH_PATTERN, ...MD_CORE_SEARCH_PATTERN];
+const FRONTMATTER_SEARCH_PATTERN = [
+    /\[{2}(?<urllink>((http(s){0,1}).+?(\) |\..{3,4}\]{2}|\]{2}|\]{2}$|\]{2}\n)))/g,
+    /\[{2}(?<loclink>(.+?(\) |\..{3,4}\]{2}|\]{2}|\]{2}$|\]{2}\n)))/g,
 ];
 const MD_LINK = /\http(s){0,1}.+?( {1}|\)\n)/g;
+const URL_PATTERN = /^(https?:\/\/)?[^\/]+/g;
 const ATT_SIZE_ACHOR = /(^(?<attdesc>.{1,})\|(?<attsize>[0-9]{2,4})$)|(?<attsize2>^[0-9]{2,4}$)/gm;
+const TIME_DIFF = 500;
 // Looks like timeouts in Obsidian API are set in milliseconds
 const NOTICE_TIMEOUT = 5 * 1000;
 const TIMEOUT_LIKE_INFINITY = 24 * 60 * 60 * 1000;
-const FORBIDDEN_SYMBOLS_FILENAME_PATTERN = /\s+/g;
 const DEFAULT_SETTINGS = {
     processCreated: true,
     ignoredExt: "cnt|php|htm|html",
     processAll: true,
+    processFrontmatter: true,
     useCaptions: true,
     pathInTags: "fullDirPath",
     downUnknown: false,
@@ -6398,13 +6339,13 @@ const DEFAULT_SETTINGS = {
     filesizeLimit: 0,
     tryCount: 2,
     realTimeUpdateInterval: 5,
-    addNameOfFile: true,
     showNotifications: true,
+    contextMenuDownload: true,
     includeps: "md|canvas",
     includepattern: "(?<md>.*\\.md)|(?<canvas>.*\\.canvas)",
     mediaRootDir: "_resources/${notename}",
     disAddCom: false,
-    useMD5ForNewAtt: true,
+    FileNameTemplate: "${md5}_MD5",
     removeMediaFolder: true,
     removeOrphansCompl: false,
     PngToJpeg: false,
@@ -6463,12 +6404,45 @@ function md5Sig(contentData = undefined) {
             contentData.slice(arrMid, arrMid + chunk),
             contentData.slice(-chunk)
         ].map(x => dec.decode(x)).join()).toString();
-        return signature + "_MD5";
+        return signature;
     }
     catch (e) {
         logError("Cannot generate md5: " + e, false);
         return null;
     }
+}
+function MarkdownLinkParser(match) {
+    var _a, _b, _c, _d, _e, _f, _g, _h;
+    let link, anchor, replp, caption = "", AttSize = "";
+    const keypart = (_a = match.groups) === null || _a === void 0 ? void 0 : _a.keypart;
+    const q1 = (_b = match.groups) === null || _b === void 0 ? void 0 : _b.q1;
+    const q2 = (_c = match.groups) === null || _c === void 0 ? void 0 : _c.q2;
+    const isWikiEmbed = match[0].includes("![[");
+    logError("Match: " + match);
+    anchor = CtagsBrcks((_e = (_d = match.groups) === null || _d === void 0 ? void 0 : _d.anchor) !== null && _e !== void 0 ? _e : "");
+    for (const attmatch of anchor.matchAll(ATT_SIZE_ACHOR)) {
+        AttSize = (attmatch.groups.attsize !== undefined) ? CtagsBrcks(attmatch.groups.attsize) :
+            (attmatch.groups.attsize2 !== undefined) ? CtagsBrcks(attmatch.groups.attsize2) :
+                "";
+    }
+    //a wikilink embed carries no alt text: the anchor must stay empty in markdown output mode
+    if (isWikiEmbed) {
+        anchor = "";
+    }
+    link = CtagsBrcks((_g = (_f = match.groups.link.match(MD_LINK)) === null || _f === void 0 ? void 0 : _f[0]) !== null && _g !== void 0 ? _g : match.groups.link);
+    const protocol = link.slice(0, 5);
+    caption = CtagsBrcks(MD_LINK.test(match.groups.link) ? ((_h = match.groups.link.split(link)[1]) !== null && _h !== void 0 ? _h : "") : "");
+    //keep the exact match text for frontmatter keys and wiki brackets: replaceAll searches for it literally
+    replp = (keypart !== undefined || isWikiEmbed) ? match[0] : trimAny(match[0], ["[", "(", "]"]);
+    if (protocol == "file:") {
+        SUPPORTED_OS.win.includes(process.platform) ? link.replace("file:///", "") :
+            SUPPORTED_OS.unix.includes(process.platform) ? link.replace("file://", "") :
+                link.replace("file://", "");
+        const parsedPath = path__default["default"].parse(link);
+        link = parsedPath.dir + "/" + parsedPath.name + trimTags(parsedPath.ext);
+    }
+    logError({ replp: replp, anchor: anchor, link: link, protocol: protocol, caption: caption, AttSize: AttSize, keypart: keypart }, true);
+    return { replp: replp, anchor: anchor, link: link, protocol: protocol, caption: caption, AttSize: AttSize, keypart: keypart, q1: q1, q2: q2 };
 }
 function replaceAsync(str, regex, asyncFn) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -6476,57 +6450,42 @@ function replaceAsync(str, regex, asyncFn) {
         logError(regex, true);
         let errorflag = false;
         const promises = [];
-        let dictPatt = [];
-        let link;
-        let anchor;
-        let replp;
-        let caption = "";
         let filesArr = [];
-        let AttSize = "";
-        regex.forEach((element) => {
-            var _a;
-            logError("cur regex:  " + element);
-            const matches = str.matchAll(element);
+        const seen = new Set();
+        regex.forEach((regex_pattern) => {
+            //a shared /g regex may keep lastIndex from an earlier .test() call
+            regex_pattern.lastIndex = 0;
+            const matches = str.matchAll(regex_pattern);
             for (const match of matches) {
-                logError("match: " + match);
-                anchor = trimAny(match.groups.anchor, [")", "(", "]", "[", " "]);
-                const AttSizeMatch = anchor.matchAll(ATT_SIZE_ACHOR);
-                for (const match of AttSizeMatch) {
-                    AttSize = (match.groups.attsize !== undefined) ? trimAny(match.groups.attsize, [")", "(", "]", "[", " "]) :
-                        (match.groups.attsize2 !== undefined) ? trimAny(match.groups.attsize2, [")", "(", "]", "[", " "]) :
-                            "";
+                const ReplaceObj = MarkdownLinkParser(match);
+                logError(ReplaceObj);
+                //the same match text can be produced by several patterns: download it only once
+                if (seen.has(ReplaceObj.replp)) {
+                    continue;
                 }
-                link = ((_a = match.groups.link.match(MD_LINK)) !== null && _a !== void 0 ? _a : [match.groups.link])[0];
-                caption = trimAny((match.groups.link.match(MD_LINK) !== null ?
-                    (match.groups.link.split(link).length > 1 ?
-                        match.groups.link.split(link)[1] : "") :
-                    ""), [")", "]", "(", "[", " "]);
-                link = trimAny(link, [")", "(", "]", "[", " "]);
-                replp = trimAny(match[0], ["[", "(", "]"]);
-                logError("repl: " + replp +
-                    "\r\nahc: " + anchor +
-                    "\r\nlink: " + link +
-                    "\r\ncaption: " + caption +
-                    "\r\nAttSize: " + AttSize);
-                dictPatt[replp] = [anchor, link, caption, AttSize];
+                seen.add(ReplaceObj.replp);
+                const promise = asyncFn(ReplaceObj);
+                logError(promise, true);
+                promises.push(promise);
             }
         });
-        for (var key in dictPatt) {
-            const promise = asyncFn(key, dictPatt[key][0], dictPatt[key][1], dictPatt[key][2], dictPatt[key][3]);
-            logError(promise, true);
-            promises.push(promise);
-        }
         const data = yield Promise.all(promises);
         logError("Promises: ");
         logError(data, true);
         //  return str.replace((reg: RegExp, str: String) => { 
+        const replaced = new Set();
         data.forEach((element) => {
-            if (element !== null) {
-                logError("el: " + element[0] + "  el2: " + element[1] + element[2]);
-                str = str.replaceAll(element[0], element[1] + element[2]);
-                filesArr.push(element[1]);
+            if (Array.isArray(element)) {
+                if (replaced.has(element[0])) {
+                    return;
+                }
+                replaced.add(element[0]);
+                logError("Replacing " + element[0] + " to " + element[1]);
+                str = str.replaceAll(element[0], element[1]);
+                //the bare tag is what the metadata cache reports as an embed (no frontmatter key)
+                filesArr.push((element[2] !== undefined && element[2] !== "") ? element[2] : element[1]);
             }
-            else {
+            else if (element === null) {
                 errorflag = true;
             }
         });
@@ -6549,7 +6508,7 @@ function base64ToBuff(data) {
         try {
             const BufferData = Buffer.from(data.split("base64,")[1], 'base64');
             logError(BufferData);
-            return BufferData;
+            return bufferToArrayBuffer(BufferData);
         }
         catch (e) {
             logError("Cannot read base64: " + e, false);
@@ -6565,7 +6524,7 @@ function readFromDiskB(file, count = undefined) {
             fs__default["default"].readSync(fd, buffer, 0, buffer.length, 0);
             logError(buffer);
             fs__default["default"].closeSync(fd);
-            return buffer;
+            return bufferToArrayBuffer(buffer);
         }
         catch (e) {
             logError("Cannot read the file: " + e, false);
@@ -6578,7 +6537,7 @@ function readFromDisk(file) {
         logError("readFromDisk: " + file, false);
         try {
             const data = yield fs2.readFile(file, null);
-            return Buffer.from(data);
+            return bufferToArrayBuffer(Buffer.from(data));
         }
         catch (e) {
             logError("Cannot read the file: " + e, false);
@@ -6586,16 +6545,25 @@ function readFromDisk(file) {
         }
     });
 }
-function downloadImage(url) {
+function downloadImage(url, referer = "") {
     return __awaiter(this, void 0, void 0, function* () {
-        logError("Downloading: " + url, false);
+        logError("Downloading: " + url + " referer: " + referer, false);
         const headers = {
             'method': 'GET',
-            'User-Agent': USER_AGENT
+            'User-Agent': USER_AGENT,
+            'Referer': referer
         };
         try {
             const res = yield obsidian.requestUrl({ url: url, headers });
             logError(res, true);
+            //requestUrl may resolve instead of throwing on 4xx/5xx: never treat an error page as an image
+            if (!(res.status >= 200 && res.status < 300)) {
+                logError("HTTP status " + res.status + " for " + url, false);
+                return null;
+            }
+            if (res.arrayBuffer == null || res.arrayBuffer.byteLength == 0) {
+                return null;
+            }
             return res.arrayBuffer;
         }
         catch (e) {
@@ -6603,6 +6571,9 @@ function downloadImage(url) {
             return null;
         }
     });
+}
+function bufferToArrayBuffer(buffer) {
+    return buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength);
 }
 function getFileExt(content, link) {
     var _a;
@@ -6635,13 +6606,77 @@ function trimAny(str, chars) {
         --end;
     return (start > 0 || end < str.length) ? str.substring(start, end) : str;
 }
-function cFileName(name) {
-    const cleanedName = name.replace(/(\)|\(|\"|\'|\#|\]|\[|\:|\>|\<|\*|\|)/g, " ");
+function CtagsBrcks(str) {
+    return trimAny(str, [")", "(", "]", "[", " "]);
+}
+function CtagsWhS(str) {
+    return trimAny(str, [" "]);
+}
+function cFileName(name, sep = " ") {
+    const cleanedName = name.replace(/(\)|\(|\"|\'|\#|\]|\[|\:|\>|\<|\*|\|)/g, sep);
     return cleanedName;
 }
-function cleanFileName(name) {
-    const cleanedName = filenamify(name).replace(FORBIDDEN_SYMBOLS_FILENAME_PATTERN, "_");
-    return cleanedName;
+const NAME_TEMPLATE_PATTERN = /\$\{(\w+)(?::(\d+))?\}/g;
+//kind: "file" - result is a sanitized file name base (no extension), "path" - result is a folder path (kept as is)
+function renderNameTemplate(template, ctx, kind = "file") {
+    let rendered = (template || "").replace(NAME_TEMPLATE_PATTERN, (match, name, lenStr) => {
+        const value = ctx[name];
+        if (value === undefined || value === null) {
+            return match;
+        }
+        if (lenStr !== undefined) {
+            const len = parseInt(lenStr, 10);
+            return len > 0 ? value.slice(0, len) : value;
+        }
+        return value;
+    });
+    if (kind !== "file") {
+        return rendered;
+    }
+    rendered = cFileName(rendered.replace(/[/\\?]+/g, " "));
+    rendered = rendered.replace(/\s+/g, " ").trim();
+    if (rendered.length > 200) {
+        rendered = rendered.slice(0, 200).replace(/[.\s]+$/, "");
+    }
+    rendered = rendered.replace(/^[.\s]+/, "").replace(/[.\s]+$/, "");
+    if (!rendered) {
+        rendered = ctx.md5 || "";
+    }
+    if (!rendered) {
+        rendered = "image";
+    }
+    return rendered;
+}
+//picks a file name: base + ext, appending " (N)" on collision.
+//if the candidate exists and holds the same content (contentHash), it is reused: needWrite = false
+function resolveUniqueName(adapter, dir, baseName, fileExt, contentHash, readExisting = undefined) {
+    return __awaiter(this, void 0, void 0, function* () {
+        let ext = fileExt ? (fileExt.startsWith(".") ? fileExt : "." + fileExt) : "";
+        if (ext && baseName.toLowerCase().endsWith(ext.toLowerCase())) {
+            ext = "";
+        }
+        const reader = readExisting || ((filePath) => adapter.readBinary(filePath));
+        for (let counter = 0; counter < 10000; counter++) {
+            const suffix = counter ? ` (${counter})` : "";
+            const candidate = pathJoin([dir, baseName + suffix + ext]);
+            if (!(yield adapter.exists(candidate, false))) {
+                return { fileName: candidate, needWrite: true };
+            }
+            try {
+                const existing = yield reader(candidate);
+                if (existing && md5Sig(existing) === contentHash) {
+                    return { fileName: candidate, needWrite: false };
+                }
+            }
+            catch (e) {
+                logError("Cannot read existing file: " + e, false);
+            }
+        }
+        throw new Error(`Cannot generate a unique file name: ${baseName}${ext}`);
+    });
+}
+function trimTags(link) {
+    return link.split(/[#?&\s]+/)[0];
 }
 function pathJoin(parts) {
     const result = path__default["default"].join(...parts);
@@ -6662,37 +6697,45 @@ function encObsURI(e) {
  * @param imgQuality - The quality of the image (0 to 1).
  * @returns A promise that resolves to an ArrayBuffer.
  */
-function blobToJpegArrayBuffer(blob, imgQuality, imgType = "image/jpeg") {
+function blobToJpegArrayBuffer(Data, imgQuality, imgType) {
     return __awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve) => {
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                const image = new Image();
-                image.onload = () => {
-                    const canvas = document.createElement('canvas');
-                    const context = canvas.getContext('2d');
-                    if (!context) {
-                        throw new Error('Could not get 2D context.');
-                    }
-                    const imageWidth = image.width;
-                    const imageHeight = image.height;
-                    let data = '';
-                    canvas.width = imageWidth;
-                    canvas.height = imageHeight;
-                    context.fillStyle = '#fff';
-                    context.fillRect(0, 0, imageWidth, imageHeight);
-                    context.save();
-                    context.translate(imageWidth / 2, imageHeight / 2);
-                    context.drawImage(image, 0, 0, imageWidth, imageHeight, -imageWidth / 2, -imageHeight / 2, imageWidth, imageHeight);
-                    context.restore();
-                    data = canvas.toDataURL(imgType, imgQuality);
-                    const arrayBuffer = base64ToBuff(data);
-                    resolve(arrayBuffer);
+        try {
+            const blob = new Blob([new Uint8Array(Data)]);
+            imgType = (imgType.length == 0) ? "image/jpeg" : imgType;
+            return new Promise((resolve) => {
+                const reader = new FileReader();
+                reader.onloadend = () => {
+                    const image = new Image();
+                    image.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        const context = canvas.getContext('2d');
+                        if (!context) {
+                            throw new Error('Could not get 2D context.');
+                        }
+                        const imageWidth = image.width;
+                        const imageHeight = image.height;
+                        let data = '';
+                        canvas.width = imageWidth;
+                        canvas.height = imageHeight;
+                        context.fillStyle = '#fff';
+                        context.fillRect(0, 0, imageWidth, imageHeight);
+                        context.save();
+                        context.translate(imageWidth / 2, imageHeight / 2);
+                        context.drawImage(image, 0, 0, imageWidth, imageHeight, -imageWidth / 2, -imageHeight / 2, imageWidth, imageHeight);
+                        context.restore();
+                        data = canvas.toDataURL(imgType, imgQuality);
+                        const arrayBuffer = base64ToBuff(data);
+                        resolve(arrayBuffer);
+                    };
+                    image.src = reader.result;
                 };
-                image.src = reader.result;
-            };
-            reader.readAsDataURL(blob);
-        });
+                reader.readAsDataURL(blob);
+            });
+        }
+        catch (e) {
+            logError("Cannot compress: " + e, false);
+            return null;
+        }
     });
 }
 
@@ -13998,8 +14041,8 @@ class SettingTab extends obsidian.PluginSettingTab {
         let { containerEl } = this;
         containerEl.empty();
         containerEl.createEl("h1", { text: APP_TITLE });
-        containerEl.createEl("div");
-        // donheader.createEl("a", { text: "Support the project! ", href: "https://www.buymeacoffee.com/sergeikorneev", cls: "donheader_txt" })
+        const donheader = containerEl.createEl("div");
+        donheader.createEl("a", { text: "Support the project on Buy Me a Coffee", href: "https://www.buymeacoffee.com/sergeikorneev", cls: "donheader_txt", target: "_blank" });
         containerEl.createEl("h3", { text: "Interface settings" });
         new obsidian.Setting(containerEl)
             .setName("Show notifications")
@@ -14008,6 +14051,15 @@ class SettingTab extends obsidian.PluginSettingTab {
             .setValue(this.plugin.settings.showNotifications)
             .onChange((value) => __awaiter(this, void 0, void 0, function* () {
             this.plugin.settings.showNotifications = value;
+            yield this.plugin.saveSettings();
+        })));
+        new obsidian.Setting(containerEl)
+            .setName("Context menu: download single image")
+            .setDesc("Show 'Download this image' when right-clicking a remote image in Live Preview. Downloads only that image and replaces its link.")
+            .addToggle((toggle) => toggle
+            .setValue(this.plugin.settings.contextMenuDownload)
+            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
+            this.plugin.settings.contextMenuDownload = value;
             yield this.plugin.saveSettings();
         })));
         new obsidian.Setting(containerEl)
@@ -14029,6 +14081,15 @@ class SettingTab extends obsidian.PluginSettingTab {
             this.plugin.settings.realTimeUpdate = value;
             yield this.plugin.saveSettings();
             this.plugin.setupQueueInterval();
+        })));
+        new obsidian.Setting(containerEl)
+            .setName("Process images in frontmatter")
+            .setDesc("Download and localize image links in the YAML frontmatter. When disabled the frontmatter block is left untouched ('source' key is still used as referer for body images).")
+            .addToggle((toggle) => toggle
+            .setValue(this.plugin.settings.processFrontmatter)
+            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
+            this.plugin.settings.processFrontmatter = value;
+            yield this.plugin.saveSettings();
         })));
         new obsidian.Setting(containerEl)
             .setName("Automatic processing interval")
@@ -14087,14 +14148,20 @@ class SettingTab extends obsidian.PluginSettingTab {
             yield this.plugin.saveSettings();
         })));
         new obsidian.Setting(containerEl)
-            .setName("Use MD5 for new attachments (Pasted images and files)")
-            .setDesc("The plugin will use MD5 when renaming all new attachments.")
-            .addToggle((toggle) => toggle
-            .setValue(this.plugin.settings.useMD5ForNewAtt)
+            .setName("File name template")
+            .setDesc("Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use 'Folder to save new attachments' for subfolders.")
+            .addText((text) => text
+            .setPlaceholder("${md5}_MD5")
+            .setValue(this.plugin.settings.FileNameTemplate)
             .onChange((value) => __awaiter(this, void 0, void 0, function* () {
-            this.plugin.settings.useMD5ForNewAtt = value;
+            if (value.includes("/") || value.includes("\\")) {
+                displayError("File name template cannot contain path separators. Use 'Folder to save new attachments' to set subfolders.");
+                return;
+            }
+            this.plugin.settings.FileNameTemplate = value;
             yield this.plugin.saveSettings();
-        })));
+        })))
+            .setDesc("Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.");
         new obsidian.Setting(containerEl)
             .setName("Download unknown filetypes")
             .setDesc("Download unknown filetypes and save them with .unknown extension.")
@@ -14151,7 +14218,7 @@ class SettingTab extends obsidian.PluginSettingTab {
                     this.plugin.settings.ExcludedFoldersList = value;
                     this.plugin.settings.ExcludedFoldersListRegexp = regexconverted;
                     yield this.plugin.saveSettings();
-                    console.log("Excluded folders regex:", regexconverted);
+                    logError("Excluded folders regex:" + regexconverted);
                 }
             }));
             text.inputEl.rows = 4;
@@ -14219,15 +14286,6 @@ class SettingTab extends obsidian.PluginSettingTab {
             .setValue(this.plugin.settings.useCaptions)
             .onChange((value) => __awaiter(this, void 0, void 0, function* () {
             this.plugin.settings.useCaptions = value;
-            yield this.plugin.saveSettings();
-        })));
-        new obsidian.Setting(containerEl)
-            .setName("Add original filename or 'Open file' tag")
-            .setDesc("Add [[original filename]] or [original filename](link to attachment) after replaced tag (only for file:// protocol or dropped/pasted files ).")
-            .addToggle((toggle) => toggle
-            .setValue(this.plugin.settings.addNameOfFile)
-            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
-            this.plugin.settings.addNameOfFile = value;
             yield this.plugin.saveSettings();
         })));
         new obsidian.Setting(containerEl)
@@ -20344,48 +20402,47 @@ moment$1.exports;
 var momentExports = moment$1.exports;
 var moment = /*@__PURE__*/getDefaultExportFromCjs(momentExports);
 
-function imageTagProcessor(app, noteFile, settings, defaultdir) {
+function imageTagProcessor(app, noteFile, settings, defaultdir, source = "") {
+    //////////??????????????????????????????
     const unique = Math.random().toString(16).slice(2);
-    function processImageTag(match, anchor, link, caption, imgsize) {
+    const lock = new AsyncLock();
+    function processImageTag(replPattern) {
         return __awaiter(this, void 0, void 0, function* () {
-            logError("processImageTag: " + match);
+            let { replp, anchor, link, protocol, caption, AttSize, keypart, q1, q2 } = replPattern;
+            logError("processImageTag: " + replp);
+            logError(replPattern);
             if (!isUrl(link)) {
-                return match;
+                return replp;
             }
             try {
-                var lock = new AsyncLock();
-                let fpath;
+                let fpath = link.replace(protocol, "");
                 let fileData;
-                const opsys = process.platform;
-                const mediaDir = yield getMDir(app.app, noteFile, settings, defaultdir, unique);
-                yield app.ensureFolderExists(mediaDir);
-                const protocol = link.slice(0, 5);
                 if (protocol == "data:") {
-                    logError("ReadBase64: \r\n" + fpath, false);
+                    logError("ReadBase64: \r\n" + link, false);
                     fileData = yield base64ToBuff(link);
                 }
                 else if (protocol == "file:") {
                     logError("Readlocal: \r\n" + fpath, false);
-                    if (SUPPORTED_OS.win.includes(opsys)) {
-                        fpath = link.replace("file:///", "");
-                    }
-                    else if (SUPPORTED_OS.unix.includes(opsys)) {
-                        fpath = link.replace("file://", "");
-                    }
-                    else {
-                        fpath = link.replace("file://", "");
-                    }
                     fileData = yield readFromDisk(fpath);
                     if (fileData === null) {
                         fileData = yield readFromDisk(decodeURI(fpath));
                     }
                 }
                 else {
-                    //Try to download several times
+                    //Try to download several times, rotating the referer: origin first, then frontmatter 'source'
+                    const origin = link.match(URL_PATTERN) ? link.match(URL_PATTERN)[0] : "";
+                    const referers = [];
+                    for (const candidate of [origin, source]) {
+                        const value = String(candidate !== null && candidate !== void 0 ? candidate : "").trim();
+                        if (value.length != 0 && !referers.includes(value)) {
+                            referers.push(value);
+                        }
+                    }
                     let trycount = 0;
                     while (trycount < settings.tryCount) {
-                        fileData = yield downloadImage(link);
-                        logError("\r\n\nDownloading (try): " + trycount + "\r\n\n");
+                        const referer = (referers.length != 0) ? referers[trycount % referers.length] : "";
+                        fileData = yield downloadImage(link, referer);
+                        logError("\r\n\nDownloading (try): " + trycount + " referer: " + referer + "\r\n\n");
                         if (fileData !== null) {
                             break;
                         }
@@ -20393,7 +20450,8 @@ function imageTagProcessor(app, noteFile, settings, defaultdir) {
                     }
                 }
                 if (fileData === null) {
-                    logError("Cannot get an attachment content!", false);
+                    logError("Cannot copy/download an attachment! Try to add referer in frontmatter 'source' field.", false);
+                    showBalloon("Cannot copy/download an attachment! Try to add referer in frontmatter 'source' field.", settings.showNotifications, NOTICE_TIMEOUT);
                     return null;
                 }
                 if (Math.round(fileData.byteLength / 1024) < settings.filesizeLimit) {
@@ -20401,58 +20459,55 @@ function imageTagProcessor(app, noteFile, settings, defaultdir) {
                     return null;
                 }
                 try {
-                    const { fileName, needWrite } = yield lock.acquire(match, function () {
+                    const mediaDir = yield getMDir(app.app, noteFile, settings, defaultdir, unique);
+                    const { fileName, needWrite } = yield lock.acquire(link, function () {
                         return __awaiter(this, void 0, void 0, function* () {
                             const parsedUrl = new url.URL(link);
                             let fileExt = yield getFileExt(fileData, parsedUrl.pathname);
                             if (fileExt == "png" && settings.PngToJpeg) {
-                                let compType = "image/jpeg";
-                                if (settings.ImgCompressionType == "image/webp") {
-                                    compType = "image/webp";
-                                }
-                                const blob = new Blob([new Uint8Array(fileData)]);
-                                fileData = yield blobToJpegArrayBuffer(blob, settings.JpegQuality * 0.01, compType);
+                                fileData = yield blobToJpegArrayBuffer(fileData, settings.JpegQuality * 0.01, settings.ImgCompressionType);
                                 logError("arbuf: ");
                                 logError(fileData);
                             }
-                            const { fileName, needWrite } = yield chooseFileName(app.app.vault.adapter, mediaDir, link, fileData, settings);
+                            const { fileName, needWrite } = yield chooseFileName(app.app.vault.adapter, mediaDir, link, fileData, settings, {
+                                notename: noteFile.basename,
+                                date: moment().format(settings.DateFormat)
+                            });
+                            if (needWrite && fileName) {
+                                yield app.ensureFolderExists(mediaDir);
+                                yield app.app.vault.createBinary(fileName, fileData);
+                            }
                             return { fileName, needWrite };
                         });
                     });
-                    if (needWrite && fileName) {
-                        yield app.app.vault.createBinary(fileName, fileData);
-                    }
                     if (fileName) {
-                        let shortName = "";
-                        const rdir = yield getRDir(noteFile, settings, fileName, link);
-                        let pathWiki = rdir[0];
-                        let pathMd = rdir[1];
-                        if (settings.addNameOfFile && protocol == "file:") {
-                            if (!app.app.vault.getConfig("useMarkdownLinks")) {
-                                shortName = "\r\n[[" +
-                                    fileName +
-                                    "\|" +
-                                    rdir[2]["lnkurid"] + "]]\r\n";
+                        let { pathWiki, pathMd } = yield getRDir(noteFile, settings, fileName, link);
+                        let imageTag = "";
+                        if (!app.app.vault.getConfig("useMarkdownLinks")) {
+                            // image size has higher priority, otherwise the caption is kept
+                            if (!settings.useCaptions) {
+                                caption = "";
+                            }
+                            else if (AttSize.length) {
+                                caption = "\|" + AttSize;
                             }
                             else {
-                                shortName = "\r\n[" +
-                                    rdir[2]["lnkurid"] +
-                                    "](" +
-                                    rdir[2]["pathuri"] +
-                                    ")\r\n";
+                                caption = caption.length ? "\|" + caption : "";
                             }
-                        }
-                        if (!app.app.vault.getConfig("useMarkdownLinks")) {
-                            // image caption
-                            (!settings.useCaptions || !caption.length) ? caption = "" : caption = "\|" + caption;
-                            // image size has higher priority
-                            (!settings.useCaptions || !imgsize.length) ? caption = "" : caption = "\|" + imgsize;
-                            return [match, `![[${pathWiki}${caption}]]`, `${shortName}`];
+                            imageTag = `![[${pathWiki}${caption}]]`;
                         }
                         else {
                             (!settings.useCaptions || !caption.length) ? caption = "" : caption = " " + caption;
-                            return [match, `![${anchor}](${pathMd}${caption})`, `${shortName}`];
+                            imageTag = `![${anchor}](${pathMd}${caption})`;
                         }
+                        //the tag without the frontmatter key: what the metadata cache reports as the embed
+                        const bareImageTag = imageTag;
+                        //frontmatter values must stay a valid yaml scalar: restore the key and the quotes
+                        if (keypart !== undefined && keypart !== "") {
+                            const quote = (q1 || q2) || `"`;
+                            imageTag = keypart + quote + imageTag + quote;
+                        }
+                        return [replp, imageTag, bareImageTag];
                     }
                     else {
                         return null;
@@ -20496,14 +20551,14 @@ function getRDir(noteFile, settings, fileName, link = undefined) {
                 pathMd = encodeURI(pathWiki);
                 break;
             case "fullDirPath":
-                pathWiki = fileName.replace(/\\/g, "/");
+                pathWiki = normalizePath(fileName);
                 pathMd = parsedPathE["pathuri"];
                 break;
             default:
                 pathWiki = fileName;
                 pathMd = parsedPathE["pathuri"];
         }
-        return [pathWiki, pathMd, parsedPathE];
+        return { pathWiki: pathWiki, pathMd: pathMd, parsedPathE: parsedPathE };
     });
 }
 function getMDir(app, noteFile, settings, defaultdir = false, unique = "") {
@@ -20517,37 +20572,29 @@ function getMDir(app, noteFile, settings, defaultdir = false, unique = "") {
             attdir = "";
         }
         let root = "/";
+        const pathCtx = {
+            notename: noteFile.basename,
+            unique: unique,
+            date: current_date
+        };
         switch (attdir) {
             case 'inFolderBelow':
-                root = mediadir
-                    .replace("${notename}", noteFile.basename)
-                    .replace("${unique}", unique)
-                    .replace("${date}", current_date);
+                root = renderNameTemplate(mediadir, pathCtx, "path");
                 break;
             case 'nextToNoteS':
-                root = (pathJoin([noteFile.parent.path, mediadir]))
-                    .replace("${notename}", noteFile.basename)
-                    .replace("${unique}", unique)
-                    .replace("${date}", current_date);
+                root = pathJoin([noteFile.parent.path, renderNameTemplate(mediadir, pathCtx, "path")]);
                 break;
             default:
-                if (obsmediadir === '/') {
-                    root = obsmediadir;
-                }
-                else if (obsmediadir === './') {
-                    root = pathJoin([noteFile.parent.path]);
-                }
-                else if (obsmediadir.match(/\.\/.+/g) !== null) {
-                    root = pathJoin([noteFile.parent.path, obsmediadir.replace('\.\/', '')]);
-                }
-                else {
-                    root = normalizePath(obsmediadir);
-                }
+                root =
+                    (obsmediadir === '/') ? obsmediadir :
+                        (obsmediadir === './') ? pathJoin([noteFile.parent.path]) :
+                            (obsmediadir.match(/\.\/.+/g) !== null) ? pathJoin([noteFile.parent.path, obsmediadir.replace('\.\/', '')]) :
+                                root = normalizePath(obsmediadir);
         }
         return trimAny(root, ["/", "\\"]);
     });
 }
-function chooseFileName(adapter, dir, link, contentData, settings) {
+function chooseFileName(adapter, dir, link, contentData, settings, ctx = {}) {
     return __awaiter(this, void 0, void 0, function* () {
         const parsedUrl = new url.URL(link);
         const ignoredExt = settings.ignoredExt.split("|");
@@ -20559,30 +20606,72 @@ function chooseFileName(adapter, dir, link, contentData, settings) {
         if (ignoredExt.includes(fileExt)) {
             return { fileName: "", needWrite: false };
         }
-        const baseName = md5Sig(contentData);
-        let needWrite = true;
-        let fileName = "";
-        const suggestedName = pathJoin([dir, cleanFileName(`${baseName}` + `.${fileExt}`)]);
-        if (yield adapter.exists(suggestedName, false)) {
-            const fileData = yield adapter.readBinary(suggestedName);
-            const existing_file_md5 = md5Sig(fileData);
-            if (existing_file_md5 === baseName) {
-                fileName = suggestedName;
-                needWrite = false;
-            }
-            else {
-                fileName = pathJoin([dir, cleanFileName(Math.random().toString(9).slice(2) + `.${fileExt}`)]);
-            }
+        let rawName = parsedUrl.pathname;
+        try {
+            rawName = decodeURI(parsedUrl.pathname);
         }
-        else {
-            fileName = suggestedName;
-        }
+        catch (e) { }
+        const originalname = rawName.endsWith("/") ? "" : path__default["default"].parse(rawName).name;
+        const nameCtx = Object.assign(Object.assign({}, ctx), { md5: md5Sig(contentData), originalname: originalname, unique: Math.random().toString(16).slice(2) });
+        const baseName = renderNameTemplate(settings.FileNameTemplate, nameCtx, "file");
+        const { fileName, needWrite } = yield resolveUniqueName(adapter, dir, baseName, fileExt, nameCtx.md5);
         logError("File name: " + fileName, false);
         if (!fileName) {
             throw new Error("Failed to generate file name for media file.");
         }
-        //linkHashes.ensureHashGenerated(link, contentData);
         return { fileName, needWrite };
+    });
+}
+//frontmatter block only: from the leading "---" line up to and including the closing "---" line
+const FRONTMATTER_SPLIT_PATTERN = /^---[ \t]*\r?\n(?:[\s\S]*?\r?\n)?---[ \t]*(?:\r?\n|$)/;
+function splitFrontmatter(content) {
+    const match = content.match(FRONTMATTER_SPLIT_PATTERN);
+    if (!match) {
+        return ["", content];
+    }
+    return [content.slice(0, match[0].length), content.slice(match[0].length)];
+}
+function getFrontmatterSource(fmPart) {
+    if (!fmPart) {
+        return "";
+    }
+    const match = fmPart.match(/^[ \t]*source[ \t]*:[ \t]*(.*)$/im);
+    if (!match) {
+        return "";
+    }
+    return match[1].trim().replace(/^['"](.*)['"]$/, "$1").trim();
+}
+function FrontMatterParser(app, noteFile, SearchPattern) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const FrontMatterEmbeds = { files: new Array, urls: new Array };
+        yield app.app.fileManager.processFrontMatter(noteFile, (frontmatter) => {
+            if (!frontmatter) {
+                return FrontMatterEmbeds;
+            }
+            Object.entries(frontmatter).forEach(([key, value]) => {
+                var _a, _b;
+                for (const reg_p of SearchPattern) {
+                    //a /g regex keeps lastIndex after .test() and would miss the next value
+                    reg_p.lastIndex = 0;
+                    const m = reg_p.exec(String(value));
+                    if (m !== null) {
+                        const LocLinkfound = (_a = m.groups) === null || _a === void 0 ? void 0 : _a.loclink;
+                        const UrlLinkfound = (_b = m.groups) === null || _b === void 0 ? void 0 : _b.urllink;
+                        if (LocLinkfound != undefined) {
+                            const FileBaseName = CtagsBrcks(LocLinkfound);
+                            const MDMatch = CtagsWhS(m[0]);
+                            FrontMatterEmbeds.files.push({ "key": key, "match": MDMatch, "link": FileBaseName });
+                        }
+                        if (UrlLinkfound != undefined) {
+                            const FileBaseName = CtagsBrcks(UrlLinkfound);
+                            const MDMatch = CtagsWhS(m[0]);
+                            FrontMatterEmbeds.urls.push({ "key": key, "match": MDMatch, "link": FileBaseName });
+                        }
+                    }
+                }
+            });
+        });
+        return FrontMatterEmbeds;
     });
 }
 
@@ -20660,10 +20749,14 @@ class LocalImagesPlugin extends obsidian.Plugin {
         super(...arguments);
         this.modifiedQueue = new UniqueQueue();
         this.intervalId = 0;
+        this.newfProcInt = 0;
         this.newfCreated = [];
         this.noteModified = [];
         this.newfMoveReq = true;
         this.newfCreatedByDownloader = [];
+        this.ctxMenuImageSrc = "";
+        this.ctxMenuImageFile = null;
+        this.origMenuShow = null;
         // using arrow syntax for callbacks to correctly pass this context
         this.processActivePage = (defaultdir = false) => () => __awaiter(this, void 0, void 0, function* () {
             logError("processActivePage");
@@ -20700,7 +20793,7 @@ class LocalImagesPlugin extends obsidian.Plugin {
             }
         });
         this.removeOrphans = (type = undefined, filesToRemove = undefined, noteFile = undefined) => () => __awaiter(this, void 0, void 0, function* () {
-            var _a, _b, _c, _d, _e;
+            var _a, _b, _c, _d, _e, _f, _g;
             const obsmediadir = app.vault.getConfig("attachmentFolderPath");
             const allFiles = this.app.vault.getFiles();
             let oldRootdir = this.settings.mediaRootDir;
@@ -20731,24 +20824,42 @@ class LocalImagesPlugin extends obsidian.Plugin {
                     const metaCache = this.app.metadataCache.getFileCache(noteFile);
                     const embeds = metaCache === null || metaCache === void 0 ? void 0 : metaCache.embeds;
                     const links = metaCache === null || metaCache === void 0 ? void 0 : metaCache.links;
+                    let frembeds = { files: [], urls: [] };
+                    try {
+                        frembeds = yield FrontMatterParser(this, noteFile, FRONTMATTER_SEARCH_PATTERN);
+                    }
+                    catch (e) {
+                        logError("Frontmatter of " + noteFile.path + " skipped: " + e);
+                        showBalloon("Frontmatter of '" + noteFile.path + "' skipped (parse error)", this.settings.showNotifications);
+                    }
+                    logError(embeds);
+                    logError(links);
+                    if (((_d = frembeds.files) === null || _d === void 0 ? void 0 : _d.length) > 0) {
+                        for (const frembed of frembeds.files) {
+                            allAttachmentsLinks.push(frembed.link);
+                        }
+                    }
                     if (embeds) {
                         for (const embed of embeds) {
-                            allAttachmentsLinks.push(path__default["default"].basename(embed.link));
+                            allAttachmentsLinks.push(path__default["default"].parse(embed.link).name + trimTags(path__default["default"].parse(embed.link).ext));
+                            logError(path__default["default"].basename(embed.link));
                         }
                     }
                     if (links) {
                         for (const link of links) {
-                            allAttachmentsLinks.push(path__default["default"].basename(link.link));
+                            allAttachmentsLinks.push(path__default["default"].parse(link.link).name + trimTags(path__default["default"].parse(link.link).ext));
+                            logError(path__default["default"].basename(link.link));
                         }
                     }
                     if (allAttachments) {
                         for (const attach of allAttachments) {
                             if (!allAttachmentsLinks.includes(attach.name) && attach.children == undefined) {
-                                logError("orph: " + attach.basename);
+                                logError("An orphan: " + attach.name);
                                 orphanedAttachments.push(attach);
                             }
                         }
                     }
+                    logError(allAttachments);
                     if (orphanedAttachments.length > 0) {
                         const mod = new ModalW1(this.app);
                         mod.messg = "Confirm remove " + orphanedAttachments.length + " orphan(s) from '" + oldRootdir + "'\r\n\r\n      ";
@@ -20766,7 +20877,7 @@ class LocalImagesPlugin extends obsidian.Plugin {
                     showBalloon("This command cannot run on vault's root or on subfolder next to note!\nPlease, change settings first!\r\n", this.settings.showNotifications);
                     return;
                 }
-                const allAttachments = (_d = this.app.vault.getAbstractFileByPath(obsmediadir)) === null || _d === void 0 ? void 0 : _d.children;
+                const allAttachments = (_e = this.app.vault.getAbstractFileByPath(obsmediadir)) === null || _e === void 0 ? void 0 : _e.children;
                 let orphanedAttachments = [];
                 let allAttachmentsLinks = [];
                 if (allFiles) {
@@ -20793,8 +20904,8 @@ class LocalImagesPlugin extends obsidian.Plugin {
                                     else if (node.type == "text") {
                                         logError("text json");
                                         //https://github.com/Fevol/obsidian-typings
-                                        //Undocumented API may be altered in the future
-                                        const AllNodeLinks = (_e = (yield this.app.internalPlugins.plugins.canvas.instance.index.parseText(node.text))) === null || _e === void 0 ? void 0 : _e.links;
+                                        //Undocumented API, may be altered in the future
+                                        const AllNodeLinks = (_f = (yield this.app.internalPlugins.plugins.canvas.instance.index.parseText(node.text))) === null || _f === void 0 ? void 0 : _f.links;
                                         logError(AllNodeLinks);
                                         if (AllNodeLinks === undefined) {
                                             continue;
@@ -20810,20 +20921,36 @@ class LocalImagesPlugin extends obsidian.Plugin {
                             const metaCache = this.app.metadataCache.getCache(file.path);
                             const embeds = metaCache === null || metaCache === void 0 ? void 0 : metaCache.embeds;
                             const links = metaCache === null || metaCache === void 0 ? void 0 : metaCache.links;
+                            let frembeds = { files: [], urls: [] };
+                            try {
+                                frembeds = yield FrontMatterParser(this, file, FRONTMATTER_SEARCH_PATTERN);
+                            }
+                            catch (e) {
+                                logError("Frontmatter of " + file.path + " skipped: " + e);
+                                showBalloon("Frontmatter of '" + file.path + "' skipped (parse error)", this.settings.showNotifications);
+                            }
                             logError(embeds);
                             logError(links);
+                            if (((_g = frembeds.files) === null || _g === void 0 ? void 0 : _g.length) > 0) {
+                                for (const frembed of frembeds.files) {
+                                    allAttachmentsLinks.push(frembed.link);
+                                }
+                            }
                             if (embeds) {
                                 for (const embed of embeds) {
-                                    allAttachmentsLinks.push(path__default["default"].basename(embed.link));
+                                    const parsedPath = path__default["default"].parse(embed.link);
+                                    allAttachmentsLinks.push(parsedPath.name + trimTags(parsedPath.ext));
                                 }
                             }
                             if (links) {
                                 for (const link of links) {
-                                    allAttachmentsLinks.push(path__default["default"].basename(link.link));
+                                    const parsedPath = path__default["default"].parse(link.link);
+                                    allAttachmentsLinks.push(parsedPath.name + trimTags(parsedPath.ext));
                                 }
                             }
                         }
                     }
+                    logError(allAttachments);
                     for (const attach of allAttachments) {
                         if (!allAttachmentsLinks.includes(attach.name) && attach.children == undefined) {
                             logError(allAttachmentsLinks);
@@ -20879,132 +21006,90 @@ class LocalImagesPlugin extends obsidian.Plugin {
             mod.open();
         };
         this.processMdFilesOnTimer = () => __awaiter(this, void 0, void 0, function* () {
-            var _f;
-            const th = this;
-            function onRet() {
-                th.newfCreated = [];
-                th.newfCreatedByDownloader = [];
-                th.noteModified = [];
-                th.newfMoveReq = false;
-                window.clearInterval(th.newfProcInt);
-                th.newfProcInt = 0;
-            }
-            logError("func processMdFilesOnTimer:\r\n");
-            logError(this.noteModified, true);
+            var _h, _j;
+            logError("processMdFilesOnTimer: \r\nNote:\r\n");
             try {
                 window.clearInterval(this.newfProcInt);
                 this.newfProcInt = 0;
                 this.newfMoveReq = false;
                 let itemcount = 0;
-                const useMdLinks = this.app.vault.getConfig("useMarkdownLinks");
-                for (let note of this.noteModified) {
+                for (const note of this.noteModified) {
                     const metaCache = this.app.metadataCache.getFileCache(note);
                     let filedata = yield this.app.vault.cachedRead(note);
-                    let pr = false;
-                    for (const reg_p of MD_SEARCH_PATTERN) {
-                        if (reg_p.test(filedata)) {
-                            pr = true;
-                            break;
-                        }
-                    }
                     const mdir = yield getMDir(this.app, note, this.settings);
                     const obsmdir = yield getMDir(this.app, note, this.settings, true);
-                    let embeds = metaCache === null || metaCache === void 0 ? void 0 : metaCache.embeds;
+                    const embeds = metaCache === null || metaCache === void 0 ? void 0 : metaCache.embeds;
                     if (obsmdir != "" && !(yield this.app.vault.adapter.exists(obsmdir))) {
                         if (!this.settings.DoNotCreateObsFolder) {
                             this.ensureFolderExists(obsmdir);
-                            showBalloon("You obsidian media folder set to '" + obsmdir + "', and has been created by the plugin. Please, try again. ", this.settings.showNotifications);
-                            onRet();
+                            showBalloon(`You obsidian media folder set to ${obsmdir}, and has been created by the plugin. Please, try again. `, this.settings.showNotifications);
+                            this.onRet();
                         }
                         return;
                     }
-                    if (embeds || pr) {
+                    if (embeds || MD_SEARCH_PATTERN.some(reg_p => reg_p.test(filedata))) {
                         yield this.ensureFolderExists(mdir);
-                        for (let el of embeds) {
+                        for (let el of embeds !== null && embeds !== void 0 ? embeds : []) {
                             logError(el);
-                            let oldpath = pathJoin([obsmdir, path__default["default"].basename(el.link)]);
-                            let oldtag = el["original"];
-                            logError(useMdLinks);
+                            const elBaseName = path__default["default"].basename(el.link);
+                            let oldpath = pathJoin([obsmdir, elBaseName]);
+                            let oldtag = el.original;
                             logError(this.newfCreated);
-                            if ((this.newfCreated.indexOf(el.link) != -1 || (obsmdir != "" && (this.newfCreated.includes(oldpath) || this.newfCreated.includes(el.link)))) &&
-                                !this.newfCreatedByDownloader.includes(oldtag)) {
+                            if ((this.newfCreated.indexOf(el.link) != -1 || (obsmdir != "" && (this.newfCreated.includes(oldpath) || this.newfCreated.includes(el.link)))) && !this.newfCreatedByDownloader.includes(oldtag)) {
                                 if (!(yield this.app.vault.adapter.exists(oldpath))) {
-                                    logError("Cannot find " + el.link + " skipping...");
+                                    logError(`Cannot find ${el.link} skipping...`);
                                     continue;
                                 }
-                                let newpath = pathJoin([mdir, cFileName(path__default["default"].basename(el.link))]);
-                                let newlink = yield getRDir(note, this.settings, newpath);
-                                logError(el.link);
-                                //let newBinData: Buffer | null = null
-                                let newBinData = null;
-                                let newMD5 = null;
                                 const oldBinData = yield readFromDiskB(pathJoin([this.app.vault.adapter.basePath, oldpath]), 5000);
                                 const oldMD5 = md5Sig(oldBinData);
                                 const fileExt = yield getFileExt(oldBinData, oldpath);
-                                logError("oldbindata: " + oldBinData);
+                                logError("oldbindata: ");
+                                logError(oldBinData);
                                 logError("oldext: " + fileExt);
+                                let newBinData = null;
+                                let contentHash = oldMD5;
+                                let readExisting = (filePath) => readFromDiskB(pathJoin([this.app.vault.adapter.basePath, filePath]), 5000);
+                                let targetExt = path__default["default"].extname(el.link);
+                                if (!targetExt && fileExt && fileExt != "unknown") {
+                                    targetExt = "." + fileExt;
+                                }
                                 if (this.settings.PngToJpegLocal && fileExt == "png") {
-                                    let compType = "image/jpg";
-                                    let compExt = ".jpg";
-                                    if (this.settings.ImgCompressionType == "image/webp") {
-                                        compType = "image/webp";
-                                        compExt = ".webp";
-                                    }
-                                    logError("Compressing image to ");
-                                    const blob = new Blob([new Uint8Array(yield this.app.vault.adapter.readBinary(oldpath))]);
-                                    newBinData = yield blobToJpegArrayBuffer(blob, this.settings.JpegQuality * 0.01, compType);
-                                    newMD5 = md5Sig(newBinData);
+                                    const compExt = (this.settings.ImgCompressionType == "image/webp") ? ".webp" : ".jpeg";
+                                    logError("Compressing image to " + compExt);
+                                    newBinData = yield blobToJpegArrayBuffer(yield this.app.vault.adapter.readBinary(oldpath), this.settings.JpegQuality * 0.01, this.settings.ImgCompressionType);
+                                    logError("newBinData: ");
                                     logError(newBinData);
                                     if (newBinData != null) {
-                                        if (this.settings.useMD5ForNewAtt) {
-                                            newpath = pathJoin([mdir, newMD5 + compExt]);
-                                        }
-                                        else {
-                                            newpath = pathJoin([mdir, cFileName(((_f = path__default["default"].parse(el.link)) === null || _f === void 0 ? void 0 : _f.name) + compExt)]);
-                                        }
-                                        newlink = yield getRDir(note, this.settings, newpath);
+                                        contentHash = md5Sig(newBinData);
+                                        targetExt = compExt;
+                                        readExisting = (filePath) => this.app.vault.adapter.readBinary(filePath);
                                     }
                                 }
-                                else if (this.settings.useMD5ForNewAtt) {
-                                    newpath = pathJoin([mdir, oldMD5 + path__default["default"].extname(el.link)]);
-                                    newlink = yield getRDir(note, this.settings, newpath);
-                                }
-                                else if (!this.settings.useMD5ForNewAtt) {
-                                    newpath = pathJoin([mdir, cFileName(path__default["default"].basename(el.link))]);
-                                    newlink = yield getRDir(note, this.settings, newpath);
-                                }
-                                if (yield this.app.vault.adapter.exists(newpath)) {
-                                    let newFMD5;
-                                    if (newBinData != null) {
-                                        newFMD5 = md5Sig(yield this.app.vault.adapter.readBinary(newpath));
-                                    }
-                                    else {
-                                        newFMD5 = md5Sig(yield readFromDiskB(pathJoin([this.app.vault.adapter.basePath, newpath]), 5000));
-                                    }
-                                    if (newMD5 === newFMD5 || (oldMD5 === newFMD5 && oldpath != newpath)) {
+                                const nameCtx = {
+                                    md5: contentHash,
+                                    originalname: (_j = (_h = path__default["default"].parse(el.link)) === null || _h === void 0 ? void 0 : _h.name) !== null && _j !== void 0 ? _j : "",
+                                    notename: note.basename,
+                                    date: moment().format(this.settings.DateFormat),
+                                    unique: Math.random().toString(16).slice(2)
+                                };
+                                const baseName = renderNameTemplate(this.settings.FileNameTemplate, nameCtx, "file");
+                                const resolved = yield resolveUniqueName(this.app.vault.adapter, mdir, baseName, targetExt, contentHash, readExisting);
+                                const newpath = resolved.fileName;
+                                const needWrite = resolved.needWrite;
+                                let { pathWiki, pathMd } = yield getRDir(note, this.settings, newpath);
+                                if (!needWrite) {
+                                    if (oldpath != newpath) {
                                         logError(path__default["default"].dirname(oldpath));
                                         logError("Deleting duplicate file: " + oldpath);
                                         yield this.app.vault.adapter.remove(oldpath);
                                     }
-                                    else if (oldpath != newpath) {
-                                        logError("Renaming existing: " + oldpath);
-                                        let inc = 1;
-                                        while (yield this.app.vault.adapter.exists(newpath)) {
-                                            newpath = pathJoin([mdir, `(${inc}) ` + cFileName(path__default["default"].basename(el.link))]);
-                                            inc++;
-                                        }
-                                        newlink = yield getRDir(note, this.settings, newpath);
-                                        yield this.app.vault.adapter.rename(oldpath, newpath);
-                                    }
                                 }
-                                else {
+                                else if (newpath != oldpath) {
                                     logError(`renaming  ${oldpath}  to  ${newpath}`);
                                     try {
                                         if (newBinData != null) {
-                                            yield this.app.vault.adapter.writeBinary(newpath, newBinData).then();
-                                            {
-                                                yield this.app.vault.adapter.remove(oldpath);
-                                            }
+                                            yield this.app.vault.adapter.writeBinary(newpath, newBinData);
+                                            yield this.app.vault.adapter.remove(oldpath);
                                         }
                                         else {
                                             yield this.app.vault.adapter.rename(oldpath, newpath);
@@ -21014,18 +21099,16 @@ class LocalImagesPlugin extends obsidian.Plugin {
                                         logError(error);
                                     }
                                 }
-                                let addName = "";
-                                if (this.settings.addNameOfFile) {
-                                    if (useMdLinks) {
-                                        addName = `[Open: ${path__default["default"].basename(el.link)}](${newlink[1]})\r\n`;
-                                    }
-                                    else {
-                                        addName = `[[${newlink[0]}|Open: ${path__default["default"].basename(el.link)}]]\r\n`;
-                                    }
-                                }
-                                let newtag = addName + oldtag.replace(el.link, newlink[0]);
+                                const TagsParams = {
+                                    OldTag: oldtag,
+                                    pathMd: pathMd,
+                                    pathWiki: pathWiki
+                                };
+                                // const vvv = MarkdownLinkParser(el.link);
+                                const useMdLinks = this.app.vault.getConfig("useMarkdownLinks");
+                                let newtag = oldtag.replace(el.link, pathWiki);
                                 if (useMdLinks) {
-                                    newtag = addName + oldtag.replace(encObsURI(el.link), newlink[1]);
+                                    newtag = oldtag.replace(encObsURI(el.link), pathMd);
                                 }
                                 filedata = filedata.replaceAll(oldtag, newtag);
                                 itemcount++;
@@ -21041,9 +21124,9 @@ class LocalImagesPlugin extends obsidian.Plugin {
             }
             catch (e) {
                 logError(e);
-                onRet();
+                this.onRet();
             }
-            onRet();
+            this.onRet();
         });
         this.setTitleAsName = () => __awaiter(this, void 0, void 0, function* () {
             try {
@@ -21132,6 +21215,48 @@ class LocalImagesPlugin extends obsidian.Plugin {
                     callback: () => { this.removeOrphans("plugin")(); },
                 });
             }
+            //the image widget builds its own context menu and never triggers workspace "editor-menu",
+            //so remember the clicked remote image here and inject the item when the menu is about to show
+            this.registerDomEvent(document, "contextmenu", (evt) => {
+                var _a;
+                this.ctxMenuImageSrc = "";
+                this.ctxMenuImageFile = null;
+                if (!this.settings.contextMenuDownload) {
+                    return;
+                }
+                const target = evt.target;
+                if (!(target instanceof HTMLImageElement)) {
+                    return;
+                }
+                try {
+                    const proto = new URL(target.src).protocol;
+                    if (proto === "http:" || proto === "https:" || proto === "data:") {
+                        this.ctxMenuImageSrc = target.src;
+                        const view = this.app.workspace.getActiveViewOfType(obsidian.MarkdownView);
+                        this.ctxMenuImageFile = (_a = view === null || view === void 0 ? void 0 : view.file) !== null && _a !== void 0 ? _a : null;
+                    }
+                }
+                catch (e) {
+                    logError("contextmenu: not an absolute url: " + target.src);
+                }
+            }, true);
+            const plugin = this;
+            this.origMenuShow = obsidian.Menu.prototype.showAtMouseEvent;
+            obsidian.Menu.prototype.showAtMouseEvent = function (evt) {
+                const src = plugin.ctxMenuImageSrc;
+                const file = plugin.ctxMenuImageFile;
+                plugin.ctxMenuImageSrc = "";
+                plugin.ctxMenuImageFile = null;
+                if (src && file && plugin.settings.contextMenuDownload) {
+                    this.addItem((item) => {
+                        item.setTitle("Download this image")
+                            .setSection("image")
+                            .setIcon("download")
+                            .onClick(() => { plugin.downloadSingleImage(file, src); });
+                    });
+                }
+                return plugin.origMenuShow.call(this, evt);
+            };
             // Some file has been created
             this.app.vault.on('create', (file) => __awaiter(this, void 0, void 0, function* () {
                 var _a;
@@ -21237,6 +21362,9 @@ class LocalImagesPlugin extends obsidian.Plugin {
             this.app.workspace.on("editor-paste", (evt, editor, info) => {
                 this.onPasteFunc(evt, editor, info);
             });
+            this.app.workspace.on("editor-drop", (evt, editor, info) => {
+                this.onPasteFunc(evt, editor, info);
+            });
             this.setupQueueInterval();
             this.addSettingTab(new SettingTab(this.app, this));
         });
@@ -21263,6 +21391,79 @@ class LocalImagesPlugin extends obsidian.Plugin {
         }
         return null;
     }
+    normalizeRemoteUrl(link) {
+        const value = String(link !== null && link !== void 0 ? link : "").trim();
+        try {
+            return decodeURI(value);
+        }
+        catch (e) {
+            return value;
+        }
+    }
+    //frontmatter 'source' is used as the second referer when downloading
+    noteSource(file, fmPart) {
+        var _a;
+        let source = "";
+        const cachedFm = (_a = this.app.metadataCache.getFileCache(file)) === null || _a === void 0 ? void 0 : _a.frontmatter;
+        if (cachedFm) {
+            for (const key of Object.keys(cachedFm)) {
+                if (key.toLowerCase() === "source" && typeof cachedFm[key] === "string") {
+                    source = String(cachedFm[key]).trim();
+                    break;
+                }
+            }
+        }
+        if (!source) {
+            source = getFrontmatterSource(fmPart);
+        }
+        return source;
+    }
+    //issue #125: download only the image the user right-clicked, keep the rest of the note untouched
+    downloadSingleImage(file, targetUrl) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (file == null) {
+                return;
+            }
+            try {
+                const content = yield this.app.vault.cachedRead(file);
+                if (content.length == 0) {
+                    return;
+                }
+                const [fmPart, bodyPart] = splitFrontmatter(content);
+                const source = this.noteSource(file, fmPart);
+                const processor = imageTagProcessor(this, file, this.settings, false, source);
+                const target = this.normalizeRemoteUrl(targetUrl);
+                const onlyTarget = (replPattern) => {
+                    var _a;
+                    if (this.normalizeRemoteUrl(String((_a = replPattern.link) !== null && _a !== void 0 ? _a : "")) !== target) {
+                        return replPattern.replp;
+                    }
+                    return processor(replPattern);
+                };
+                let newFm = fmPart;
+                let failed = false;
+                if (this.settings.processFrontmatter) {
+                    const fmFixed = yield replaceAsync(fmPart, FRONTMATTER_DOWNLOAD_PATTERN, onlyTarget);
+                    newFm = fmFixed[0];
+                    failed = failed || fmFixed[1];
+                }
+                const bodyFixed = yield replaceAsync(bodyPart, MD_SEARCH_PATTERN, onlyTarget);
+                failed = failed || bodyFixed[1];
+                const newContent = newFm + bodyFixed[0];
+                if (newContent !== content) {
+                    yield this.app.vault.modify(file, newContent);
+                    showBalloon(`Image downloaded and linked in "${file.path}".`, this.settings.showNotifications);
+                }
+                else if (!failed) {
+                    showBalloon(`Remote image not found in "${file.path}" or it is already local.`, this.settings.showNotifications);
+                }
+            }
+            catch (e) {
+                logError("Single image download failed: " + e, false);
+                showBalloon("Single image download failed: " + e.message, this.settings.showNotifications);
+            }
+        });
+    }
     processPage(file, defaultdir = false) {
         return __awaiter(this, void 0, void 0, function* () {
             if (file == null) {
@@ -21272,7 +21473,19 @@ class LocalImagesPlugin extends obsidian.Plugin {
             if (content.length == 0) {
                 return null;
             }
-            const fixedContent = yield replaceAsync(content, MD_SEARCH_PATTERN, imageTagProcessor(this, file, this.settings, defaultdir));
+            const [fmPart, bodyPart] = splitFrontmatter(content);
+            const source = this.noteSource(file, fmPart);
+            const processor = imageTagProcessor(this, file, this.settings, defaultdir, source);
+            //the frontmatter is processed first: a bare url match inside the body must not touch the yaml header
+            const fmFixed = (this.settings.processFrontmatter) ?
+                yield replaceAsync(fmPart, FRONTMATTER_DOWNLOAD_PATTERN, processor) :
+                [fmPart, false, []];
+            const bodyFixed = yield replaceAsync(bodyPart, MD_SEARCH_PATTERN, processor);
+            const fixedContent = [
+                fmFixed[0] + bodyFixed[0],
+                fmFixed[1] || bodyFixed[1],
+                [...fmFixed[2], ...bodyFixed[2]]
+            ];
             if (content != fixedContent[0] && fixedContent[1] === false) {
                 this.modifiedQueue.remove(file);
                 yield this.app.vault.modify(file, fixedContent[0]);
@@ -21346,7 +21559,7 @@ class LocalImagesPlugin extends obsidian.Plugin {
                 !this.ExemplaryOfMD(file.path))
                 return;
             const timeGapMs = Math.abs(Date.now() - file.stat.ctime);
-            if (timeGapMs > 1000)
+            if (timeGapMs > TIME_DIFF)
                 return;
             logError("func onMdCreateFunc: " + file.path);
             logError(file, true);
@@ -21368,7 +21581,7 @@ class LocalImagesPlugin extends obsidian.Plugin {
             if (!file.stat.ctime)
                 return;
             const timeGapMs = Math.abs(Date.now() - file.stat.mtime);
-            if (timeGapMs > 1000)
+            if (timeGapMs > TIME_DIFF)
                 return;
             this.newfCreated.push(file.path);
             this.newfMoveReq = true;
@@ -21389,9 +21602,17 @@ class LocalImagesPlugin extends obsidian.Plugin {
     ThePathExcluded(pat) {
         const includeRegex = new RegExp(this.settings.ExcludedFoldersListRegexp, "i");
         logError(pat.match(includeRegex));
-        // if (pat.match(includeRegex) != null && trimAny(this.settings.ExcludedFoldersList, [" "]).length != 0){
-        //    showBalloon("The path " + pat + " is excluded in your settings. ", true)}
         return (pat.match(includeRegex) != null && trimAny(this.settings.ExcludedFoldersList, [" "]).length != 0);
+    }
+    onRet() {
+        logError("onret");
+        logError("noteModified");
+        this.newfCreated = [];
+        this.newfCreatedByDownloader = [];
+        this.noteModified = [];
+        this.newfMoveReq = false;
+        window.clearInterval(this.newfProcInt);
+        this.newfProcInt = 0;
     }
     setupNewMdFilesProcInterval() {
         logError("func setupNewFilesProcInterval: \r\n");
@@ -21407,6 +21628,10 @@ class LocalImagesPlugin extends obsidian.Plugin {
     // ------------  Load / Save settings -----------------
     onunload() {
         return __awaiter(this, void 0, void 0, function* () {
+            if (this.origMenuShow) {
+                obsidian.Menu.prototype.showAtMouseEvent = this.origMenuShow;
+                this.origMenuShow = null;
+            }
             this.app.workspace.off("editor-drop", null);
             this.app.workspace.off("editor-paste", null);
             this.app.workspace.off('file-menu', null);
@@ -21416,7 +21641,14 @@ class LocalImagesPlugin extends obsidian.Plugin {
     }
     loadSettings() {
         return __awaiter(this, void 0, void 0, function* () {
-            this.settings = Object.assign({}, DEFAULT_SETTINGS, yield this.loadData());
+            const data = yield this.loadData();
+            this.settings = Object.assign({}, DEFAULT_SETTINGS, data);
+            if (data && typeof data.FileNameTemplate !== "string" && typeof data.useMD5ForNewAtt === "boolean") {
+                this.settings.FileNameTemplate = data.useMD5ForNewAtt ? "${md5}_MD5" : "${originalname}";
+            }
+            if ("useMD5ForNewAtt" in this.settings) {
+                delete this.settings.useMD5ForNewAtt;
+            }
             this.setupQueueInterval();
         });
     }

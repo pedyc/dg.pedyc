@@ -1,7 +1,7 @@
 ---
 title: Agent面试题库
 date-created: 2026-09-23
-date-modified: 2026-09-23
+date-modified: 2026-10-08
 content-type: [moc]
 ---
 
@@ -107,4 +107,7 @@ content-type: [moc]
 9. 设计一个客服/研究/编码 Agent。
 10. 成功率下降如何系统排查。
 
-需要的话，我可以继续给你 **每道题的参考答案要点**，或者按 **初级/中级/高级** 重新整理成一套模拟面试。
+## 面试题单
+
+- [面试鸭Agent面试题单](https://www.mianshiya.com/bank/2052284728362414082?shareCode=5Stv3Y)
+- [[Agent面试题单，字节一面]]

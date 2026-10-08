@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
+                "file": "10-PROJECTS/P-Agent求职/Agent面试题库.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Agent求职"
+              "title": "Agent面试题库"
             }
           }
         ],
@@ -98,7 +98,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
+                "file": "10-PROJECTS/P-Agent求职/Agent面试题库.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -270,8 +270,8 @@
             "state": {
               "type": "git-history-view",
               "state": {},
-              "icon": "history",
-              "title": "History"
+              "icon": "lucide-ghost",
+              "title": "git-history-view"
             }
           }
         ],
@@ -285,9 +285,6 @@
   "left-ribbon": {
     "hiddenItems": {
       "bases:新建数据库": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "obsidian-local-images-plus:Local Images Plus  0.16.4\r\nLocalize attachments (plugin folder)": false,
-      "templater-obsidian:Templater": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -295,17 +292,25 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "publish:发布更改": false,
+      "random-note:开始漫游笔记": false,
+      "cmdr:堆叠/取消堆叠标签页": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "obsidian-local-images-plus:Local Images Plus  0.16.8\r\nLocalize attachments (plugin folder)": false,
+      "templater-obsidian:Templater": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
-      "random-note:开始漫游笔记": false,
-      "omnisearch:Omnisearch": false,
-      "obsidian-git:Open Git source control": false,
-      "cmdr:堆叠/取消堆叠标签页": false
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "1a1b86e134ef725b",
   "lastOpenFiles": [
+    "10-PROJECTS/P-Agent求职/Agent面试题库.md",
+    "10-PROJECTS/P-Agent求职/_resources/ClaudeCode核心架构.excalidraw.md",
+    "10-PROJECTS/P-Agent求职/_resources/_resources",
+    "10-PROJECTS/P-Agent求职/_resources/ClaudeCode核心架构.excalidraw.svg",
+    "10-PROJECTS/P-Agent求职/Agent面试题单，字节一面.md",
+    "10-PROJECTS/P-Agent求职/Agent求职.md",
     "60-BLOGS/前端开发需要掌握的算法.md",
     "30-RESOURCES/二叉搜索树的应用场景.md",
     "30-RESOURCES/二叉搜索树.md",
@@ -313,7 +318,6 @@
     "30-RESOURCES/广度优先搜索.md",
     "30-RESOURCES/深度优先搜索.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
-    "10-PROJECTS/P-Agent求职/Agent求职.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.md",
     "10-PROJECTS/P-Agent求职/Context Quality.md",
     "10-PROJECTS/P-Agent求职/构建高质量上下文.md",
@@ -328,10 +332,6 @@
     "10-PROJECTS/P-Agent求职/ContextEngineering和RAG是什么关系？.md",
     "10-PROJECTS/P-Agent求职/如何设计一个Context更新策略？.md",
     "10-PROJECTS/P-Agent求职/Context中信息缺失和信息冲突有什么区别？.md",
-    "10-PROJECTS/P-Agent求职/压缩Context时怎样避免丢失关键信息？.md",
-    "50-ZETTELCASTEN/应该只把提炼后的ToolResult放入Context.md",
-    "_templates/template_atomic.md",
-    "10-PROJECTS/P-Agent求职/关键信息应该怎样放入Context？.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.svg",
     "10-PROJECTS/P-Agent求职/_resources/_resources/d7897f85-838e-46ed-95de-aa83123f36ce.png",
@@ -339,7 +339,6 @@
     "_resources/Context Components",
     "10-PROJECTS/P-Agent求职/_resources/d7897f85-838e-46ed-95de-aa83123f36ce.png",
     "10-PROJECTS/P-Agent求职/_resources/_resources/W6AR9bLmsQcq6UyFa3Won9mVTVe3MXLjKrlFydk5YMgXTH3bqmNSZK2M_ujGbcM1zK8AHgVxQbLC3bjT3euR2OGFOCigvQOPaun_8cvTgKxapLwKWot2B9TIGbBDui3R2qqY_mPoIX_j6MulQ7KgHkpHDCXy9zURbzTL1CcZjv_hmCQR7H-lTy100rl8rdHr.jfif",
-    "10-PROJECTS/P-Agent求职/_resources/_resources",
     "_resources/AgentLoop",
     "ToolCalling与Permission",
     "10-PROJECTS/P-Agent求职/_resources/ToolCalling.excalidraw.svg",
@@ -349,7 +348,6 @@
     "30-RESOURCES/_resources/screenshot-architecture.png",
     "30-RESOURCES/_resources/Pasted image 20260923182859.png",
     "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.svg",
-    "_resources/Agent Loop/f017fb5f816873ea29602b6a778b35c8_MD5.webp",
     "_resources/Agent Loop",
     "_resources/Boolean Operations",
     "10-PROJECTS/P-Agent求职/02-学习专项",

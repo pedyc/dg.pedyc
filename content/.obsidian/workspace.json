@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/二叉搜索树的应用场景.md",
+                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "二叉搜索树的应用场景"
+              "title": "Agent求职"
             }
           }
         ],
@@ -98,7 +98,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/二叉搜索树的应用场景.md",
+                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -306,8 +306,9 @@
   },
   "active": "1a1b86e134ef725b",
   "lastOpenFiles": [
-    "30-RESOURCES/二叉搜索树.md",
+    "60-BLOGS/前端开发需要掌握的算法.md",
     "30-RESOURCES/二叉搜索树的应用场景.md",
+    "30-RESOURCES/二叉搜索树.md",
     "30-RESOURCES/二叉树.md",
     "30-RESOURCES/广度优先搜索.md",
     "30-RESOURCES/深度优先搜索.md",
@@ -331,7 +332,6 @@
     "50-ZETTELCASTEN/应该只把提炼后的ToolResult放入Context.md",
     "_templates/template_atomic.md",
     "10-PROJECTS/P-Agent求职/关键信息应该怎样放入Context？.md",
-    "10-PROJECTS/P-Agent求职/Context缺少关键信息会发生什么？.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.svg",
     "10-PROJECTS/P-Agent求职/_resources/_resources/d7897f85-838e-46ed-95de-aa83123f36ce.png",

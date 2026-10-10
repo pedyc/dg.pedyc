@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
+                "file": "30-RESOURCES/广度优先搜索.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Agent求职"
+              "title": "广度优先搜索"
             }
           }
         ],
@@ -98,7 +98,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
+                "file": "30-RESOURCES/广度优先搜索.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -306,6 +306,8 @@
   },
   "active": "1a1b86e134ef725b",
   "lastOpenFiles": [
+    "30-RESOURCES/深度优先搜索.md",
+    "10-PROJECTS/P-Agent求职/Agent求职.md",
     "30-RESOURCES/DevOps.md",
     "30-RESOURCES/持续集成与持续部署.md",
     "30-RESOURCES/GitHub Actions.md",
@@ -314,13 +316,11 @@
     "10-PROJECTS/P-Agent求职/_resources/_resources",
     "10-PROJECTS/P-Agent求职/_resources/ClaudeCode核心架构.excalidraw.svg",
     "10-PROJECTS/P-Agent求职/Agent面试题单，字节一面.md",
-    "10-PROJECTS/P-Agent求职/Agent求职.md",
     "60-BLOGS/前端开发需要掌握的算法.md",
     "30-RESOURCES/二叉搜索树的应用场景.md",
     "30-RESOURCES/二叉搜索树.md",
     "30-RESOURCES/二叉树.md",
     "30-RESOURCES/广度优先搜索.md",
-    "30-RESOURCES/深度优先搜索.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.md",
     "10-PROJECTS/P-Agent求职/Context Quality.md",

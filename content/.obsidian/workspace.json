@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-09-24.md",
+                "file": "30-RESOURCES/回溯.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,24 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-09-24"
+              "title": "回溯"
             }
           },
           {
-            "id": "1a1b86e134ef725b",
+            "id": "ce15d427920b2064",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "webviewer",
               "state": {
-                "file": "30-RESOURCES/广度优先搜索.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "url": "https://developer.mozilla.org/zh-CN/docs/Glossary/Deep_copy",
+                "title": "深拷贝 - MDN Web 文档术语表：Web 相关术语的定义 | MDN",
+                "mode": "webview"
               },
-              "icon": "lucide-file",
-              "title": "广度优先搜索"
+              "icon": "globe-2",
+              "title": "深拷贝 - MDN Web 文档术语表：Web 相关术语的定义 | MDN"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +87,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/广度优先搜索.md",
+                "file": "30-RESOURCES/回溯.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -304,8 +293,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1a1b86e134ef725b",
+  "active": "d03eb2eaf6b111b8",
   "lastOpenFiles": [
+    "30-RESOURCES/常用算法汇总.md",
+    "30-RESOURCES/回溯.md",
+    "90-DIARY/2026-09-24.md",
+    "30-RESOURCES/算法选择与调优.md",
+    "30-RESOURCES/算法与数据结构.md",
+    "40-ARCHIVE/P-求职前端岗位/算法提升专项.md",
+    "60-BLOGS/前端开发需要掌握的算法.md",
+    "30-RESOURCES/深拷贝和浅拷贝.md",
+    "30-RESOURCES/广度优先搜索.md",
     "30-RESOURCES/深度优先搜索.md",
     "10-PROJECTS/P-Agent求职/Agent求职.md",
     "30-RESOURCES/DevOps.md",
@@ -316,24 +314,15 @@
     "10-PROJECTS/P-Agent求职/_resources/_resources",
     "10-PROJECTS/P-Agent求职/_resources/ClaudeCode核心架构.excalidraw.svg",
     "10-PROJECTS/P-Agent求职/Agent面试题单，字节一面.md",
-    "60-BLOGS/前端开发需要掌握的算法.md",
     "30-RESOURCES/二叉搜索树的应用场景.md",
     "30-RESOURCES/二叉搜索树.md",
     "30-RESOURCES/二叉树.md",
-    "30-RESOURCES/广度优先搜索.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.md",
     "10-PROJECTS/P-Agent求职/Context Quality.md",
     "10-PROJECTS/P-Agent求职/构建高质量上下文.md",
     "10-PROJECTS/P-Agent求职/Context Components.md",
     "10-PROJECTS/P-Agent求职/Context中出现冲突信息会怎样？.md",
-    "10-PROJECTS/P-Agent求职/LLM如何理解Context？为什么冲突信息会让Agent决策失灵？.md",
-    "10-PROJECTS/P-Agent求职/Context太长时应该优先压缩哪一部分？.md",
-    "10-PROJECTS/P-Agent求职/如果Context缺失信息应该怎么办？.md",
-    "10-PROJECTS/P-Agent求职/Context过长会怎样？.md",
-    "10-PROJECTS/P-Agent求职/Context中什么信息才算缺失？.md",
-    "10-PROJECTS/P-Agent求职/ContextEngineering和PromptEngineering 有什么区别？.md",
-    "10-PROJECTS/P-Agent求职/ContextEngineering和RAG是什么关系？.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.svg",
     "10-PROJECTS/P-Agent求职/_resources/_resources/d7897f85-838e-46ed-95de-aa83123f36ce.png",

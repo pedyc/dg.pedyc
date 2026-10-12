@@ -295,8 +295,9 @@
   },
   "active": "d03eb2eaf6b111b8",
   "lastOpenFiles": [
-    "30-RESOURCES/常用算法汇总.md",
+    "30-RESOURCES/深度优先搜索.md",
     "30-RESOURCES/回溯.md",
+    "30-RESOURCES/常用算法汇总.md",
     "90-DIARY/2026-09-24.md",
     "30-RESOURCES/算法选择与调优.md",
     "30-RESOURCES/算法与数据结构.md",
@@ -304,7 +305,6 @@
     "60-BLOGS/前端开发需要掌握的算法.md",
     "30-RESOURCES/深拷贝和浅拷贝.md",
     "30-RESOURCES/广度优先搜索.md",
-    "30-RESOURCES/深度优先搜索.md",
     "10-PROJECTS/P-Agent求职/Agent求职.md",
     "30-RESOURCES/DevOps.md",
     "30-RESOURCES/持续集成与持续部署.md",

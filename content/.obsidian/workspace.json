@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/回溯.md",
+                "file": "30-RESOURCES/从“打家劫舍”看递归到递推.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "回溯"
+              "title": "从“打家劫舍”看递归到递推"
             }
           },
           {
@@ -87,7 +87,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/回溯.md",
+                "file": "30-RESOURCES/从“打家劫舍”看递归到递推.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -166,7 +166,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:算法",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -206,7 +206,8 @@
               "title": "添加笔记属性"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -295,12 +296,14 @@
   },
   "active": "d03eb2eaf6b111b8",
   "lastOpenFiles": [
-    "30-RESOURCES/深度优先搜索.md",
-    "30-RESOURCES/回溯.md",
+    "30-RESOURCES/动态规划.md",
+    "30-RESOURCES/从“打家劫舍”看递归到递推.md",
+    "30-RESOURCES/算法与数据结构.md",
     "30-RESOURCES/常用算法汇总.md",
+    "30-RESOURCES/回溯算法.md",
+    "30-RESOURCES/深度优先搜索.md",
     "90-DIARY/2026-09-24.md",
     "30-RESOURCES/算法选择与调优.md",
-    "30-RESOURCES/算法与数据结构.md",
     "40-ARCHIVE/P-求职前端岗位/算法提升专项.md",
     "60-BLOGS/前端开发需要掌握的算法.md",
     "30-RESOURCES/深拷贝和浅拷贝.md",
@@ -321,8 +324,6 @@
     "10-PROJECTS/P-Agent求职/Context Engineering.md",
     "10-PROJECTS/P-Agent求职/Context Quality.md",
     "10-PROJECTS/P-Agent求职/构建高质量上下文.md",
-    "10-PROJECTS/P-Agent求职/Context Components.md",
-    "10-PROJECTS/P-Agent求职/Context中出现冲突信息会怎样？.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.svg",
     "10-PROJECTS/P-Agent求职/_resources/_resources/d7897f85-838e-46ed-95de-aa83123f36ce.png",

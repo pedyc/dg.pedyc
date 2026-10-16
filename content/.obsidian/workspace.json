@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/从“打家劫舍”看递归到递推.md",
+                "file": "30-RESOURCES/动态规划.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "从“打家劫舍”看递归到递推"
+              "title": "动态规划"
             }
           },
           {
@@ -87,7 +87,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/从“打家劫舍”看递归到递推.md",
+                "file": "30-RESOURCES/动态规划.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -296,8 +296,8 @@
   },
   "active": "d03eb2eaf6b111b8",
   "lastOpenFiles": [
-    "30-RESOURCES/动态规划.md",
     "30-RESOURCES/从“打家劫舍”看递归到递推.md",
+    "30-RESOURCES/动态规划.md",
     "30-RESOURCES/算法与数据结构.md",
     "30-RESOURCES/常用算法汇总.md",
     "30-RESOURCES/回溯算法.md",

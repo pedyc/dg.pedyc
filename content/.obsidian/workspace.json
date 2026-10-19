@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/动态规划.md",
+                "file": "60-BLOGS/前端开发需要掌握的算法.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,21 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "动态规划"
-            }
-          },
-          {
-            "id": "ce15d427920b2064",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://developer.mozilla.org/zh-CN/docs/Glossary/Deep_copy",
-                "title": "深拷贝 - MDN Web 文档术语表：Web 相关术语的定义 | MDN",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "深拷贝 - MDN Web 文档术语表：Web 相关术语的定义 | MDN"
+              "title": "前端开发需要掌握的算法"
             }
           }
         ]
@@ -57,7 +43,7 @@
       {
         "id": "63f7c57bcc006028",
         "type": "tabs",
-        "dimension": 57.84061696658098,
+        "dimension": 50.771208226221084,
         "children": [
           {
             "id": "60236dec7012791f",
@@ -79,7 +65,7 @@
       {
         "id": "0add37d9a842f039",
         "type": "tabs",
-        "dimension": 18.76606683804627,
+        "dimension": 25.514138817480724,
         "children": [
           {
             "id": "716cea69c1af23f6",
@@ -87,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/动态规划.md",
+                "file": "60-BLOGS/前端开发需要掌握的算法.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +110,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
+                "file": "60-BLOGS/前端开发需要掌握的算法.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -138,7 +124,7 @@
       {
         "id": "5e0950099d64d5f6",
         "type": "tabs",
-        "dimension": 23.393316195372748,
+        "dimension": 23.714652956298202,
         "children": [
           {
             "id": "5dc3cef7701d1aec",
@@ -166,7 +152,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:算法",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -206,8 +192,7 @@
               "title": "添加笔记属性"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -222,12 +207,22 @@
         "type": "tabs",
         "children": [
           {
-            "id": "82d310b6843f6e6e",
+            "id": "29313616ae432795",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {},
+              "icon": "history",
+              "title": "History"
+            }
+          },
+          {
+            "id": "9054baa2df3f682a",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "40-RESOURCES/WebSocket.md",
+                "file": "60-BLOGS/前端开发需要掌握的算法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -237,40 +232,28 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "WebSocket 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
-            "id": "b1ad71e698b9ad0c",
+            "id": "d9167682db4da9b5",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "40-RESOURCES/WebSocket.md",
+                "file": "60-BLOGS/前端开发需要掌握的算法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "WebSocket 的出链列表"
-            }
-          },
-          {
-            "id": "29313616ae432795",
-            "type": "leaf",
-            "state": {
-              "type": "git-history-view",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-history-view"
+              "title": "出链"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 519.5,
-    "collapsed": true
+    "width": 519.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -284,20 +267,35 @@
       "command-palette:打开命令面板": false,
       "publish:发布更改": false,
       "random-note:开始漫游笔记": false,
-      "cmdr:堆叠/取消堆叠标签页": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "obsidian-local-images-plus:Local Images Plus  0.16.8\r\nLocalize attachments (plugin folder)": false,
       "templater-obsidian:Templater": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "cmdr:堆叠/取消堆叠标签页": false,
+      "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "60236dec7012791f",
+  "active": "716cea69c1af23f6",
   "lastOpenFiles": [
-    "30-RESOURCES/从“打家劫舍”看递归到递推.md",
+    "60-BLOGS/教你如何构建自己的依赖注入工具.md",
+    "60-BLOGS/前端开发需要掌握的算法.md",
+    "关于我.md",
+    "TaskNotes/Tasks/Review my TaskNotes setup.md",
+    "TaskNotes/Views/tasks-default.base",
+    "TaskNotes/Views/relationships.base",
+    "TaskNotes/Views/pomodoro-stats.base",
+    "TaskNotes/Views/mini-calendar-default.base",
+    "TaskNotes/Views/kanban-default.base",
+    "TaskNotes/Views/calendar-default.base",
+    "TaskNotes/Views/agenda-default.base",
+    "TaskNotes/Start Here.md",
+    "TaskNotes/Tasks",
+    "TaskNotes/Views",
+    "TaskNotes",
     "30-RESOURCES/动态规划.md",
+    "30-RESOURCES/从“打家劫舍”看递归到递推.md",
     "30-RESOURCES/算法与数据结构.md",
     "30-RESOURCES/常用算法汇总.md",
     "30-RESOURCES/回溯算法.md",
@@ -305,7 +303,6 @@
     "90-DIARY/2026-09-24.md",
     "30-RESOURCES/算法选择与调优.md",
     "40-ARCHIVE/P-求职前端岗位/算法提升专项.md",
-    "60-BLOGS/前端开发需要掌握的算法.md",
     "30-RESOURCES/深拷贝和浅拷贝.md",
     "30-RESOURCES/广度优先搜索.md",
     "10-PROJECTS/P-Agent求职/Agent求职.md",
@@ -314,35 +311,21 @@
     "30-RESOURCES/GitHub Actions.md",
     "10-PROJECTS/P-Agent求职/Agent面试题库.md",
     "10-PROJECTS/P-Agent求职/_resources/ClaudeCode核心架构.excalidraw.md",
-    "10-PROJECTS/P-Agent求职/_resources/_resources",
     "10-PROJECTS/P-Agent求职/_resources/ClaudeCode核心架构.excalidraw.svg",
     "10-PROJECTS/P-Agent求职/Agent面试题单，字节一面.md",
     "30-RESOURCES/二叉搜索树的应用场景.md",
     "30-RESOURCES/二叉搜索树.md",
     "30-RESOURCES/二叉树.md",
-    "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
-    "10-PROJECTS/P-Agent求职/Context Engineering.md",
-    "10-PROJECTS/P-Agent求职/Context Quality.md",
-    "10-PROJECTS/P-Agent求职/构建高质量上下文.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.svg",
     "10-PROJECTS/P-Agent求职/_resources/_resources/d7897f85-838e-46ed-95de-aa83123f36ce.png",
     "_resources/Context Components/b357c4e770eb366366cb150186f1c698_MD5.webp",
-    "_resources/Context Components",
     "10-PROJECTS/P-Agent求职/_resources/d7897f85-838e-46ed-95de-aa83123f36ce.png",
-    "10-PROJECTS/P-Agent求职/_resources/_resources/W6AR9bLmsQcq6UyFa3Won9mVTVe3MXLjKrlFydk5YMgXTH3bqmNSZK2M_ujGbcM1zK8AHgVxQbLC3bjT3euR2OGFOCigvQOPaun_8cvTgKxapLwKWot2B9TIGbBDui3R2qqY_mPoIX_j6MulQ7KgHkpHDCXy9zURbzTL1CcZjv_hmCQR7H-lTy100rl8rdHr.jfif",
-    "_resources/AgentLoop",
-    "ToolCalling与Permission",
     "10-PROJECTS/P-Agent求职/_resources/ToolCalling.excalidraw.svg",
-    "00-META/Decisions",
     "_resources/Claude Code/10e6559a6a3fc17b8fc30859c810232b_MD5.webp",
-    "_resources/Claude Code",
     "30-RESOURCES/_resources/screenshot-architecture.png",
     "30-RESOURCES/_resources/Pasted image 20260923182859.png",
     "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.svg",
-    "_resources/Agent Loop",
-    "_resources/Boolean Operations",
-    "10-PROJECTS/P-Agent求职/02-学习专项",
     "10-PROJECTS/PROJECTS.canvas",
     "未命名.canvas",
     "Untitled.canvas",

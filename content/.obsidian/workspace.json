@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "60-BLOGS/前端开发需要掌握的算法.md",
+                "file": "00-META/Architecture/本库子系统概述.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端开发需要掌握的算法"
+              "title": "本库子系统概述"
             }
           }
         ]
@@ -65,7 +65,7 @@
       {
         "id": "0add37d9a842f039",
         "type": "tabs",
-        "dimension": 25.514138817480724,
+        "dimension": 25.51413881748072,
         "children": [
           {
             "id": "716cea69c1af23f6",
@@ -73,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "60-BLOGS/前端开发需要掌握的算法.md",
+                "file": "00-META/Architecture/本库子系统概述.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
       {
         "id": "5e0950099d64d5f6",
         "type": "tabs",
-        "dimension": 23.714652956298202,
+        "dimension": 23.714652956298195,
         "children": [
           {
             "id": "5dc3cef7701d1aec",
@@ -222,7 +222,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "60-BLOGS/前端开发需要掌握的算法.md",
+                "file": "00-META/Architecture/本库子系统概述.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "60-BLOGS/前端开发需要掌握的算法.md",
+                "file": "00-META/Architecture/本库子系统概述.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -253,7 +253,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 519.5
+    "width": 519.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -277,10 +278,19 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "716cea69c1af23f6",
+  "active": "d03eb2eaf6b111b8",
   "lastOpenFiles": [
-    "60-BLOGS/教你如何构建自己的依赖注入工具.md",
+    "00-META/Architecture/本库设计原则.md",
+    "30-RESOURCES/卡片盒笔记法.md",
+    "20-AREAS/A-知识管理/知识管理.md",
+    "30-RESOURCES/A-知识管理.md",
+    "00-META/Architecture/本库子系统概述.md",
+    "90-DIARY/2026-10-19.md",
     "60-BLOGS/前端开发需要掌握的算法.md",
+    "30-RESOURCES/回溯算法.md",
+    "30-RESOURCES/深度优先搜索.md",
+    "30-RESOURCES/深拷贝和浅拷贝.md",
+    "60-BLOGS/教你如何构建自己的依赖注入工具.md",
     "关于我.md",
     "TaskNotes/Tasks/Review my TaskNotes setup.md",
     "TaskNotes/Views/tasks-default.base",
@@ -298,24 +308,15 @@
     "30-RESOURCES/从“打家劫舍”看递归到递推.md",
     "30-RESOURCES/算法与数据结构.md",
     "30-RESOURCES/常用算法汇总.md",
-    "30-RESOURCES/回溯算法.md",
-    "30-RESOURCES/深度优先搜索.md",
     "90-DIARY/2026-09-24.md",
     "30-RESOURCES/算法选择与调优.md",
     "40-ARCHIVE/P-求职前端岗位/算法提升专项.md",
-    "30-RESOURCES/深拷贝和浅拷贝.md",
     "30-RESOURCES/广度优先搜索.md",
     "10-PROJECTS/P-Agent求职/Agent求职.md",
     "30-RESOURCES/DevOps.md",
     "30-RESOURCES/持续集成与持续部署.md",
     "30-RESOURCES/GitHub Actions.md",
-    "10-PROJECTS/P-Agent求职/Agent面试题库.md",
-    "10-PROJECTS/P-Agent求职/_resources/ClaudeCode核心架构.excalidraw.md",
     "10-PROJECTS/P-Agent求职/_resources/ClaudeCode核心架构.excalidraw.svg",
-    "10-PROJECTS/P-Agent求职/Agent面试题单，字节一面.md",
-    "30-RESOURCES/二叉搜索树的应用场景.md",
-    "30-RESOURCES/二叉搜索树.md",
-    "30-RESOURCES/二叉树.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.svg",
     "10-PROJECTS/P-Agent求职/_resources/_resources/d7897f85-838e-46ed-95de-aa83123f36ce.png",

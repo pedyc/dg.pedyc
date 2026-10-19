@@ -10,7 +10,9 @@ content-type: article
 up: [["Architecture/llm-wiki-schema"]]
 ---
 
-> **内容已合并到 [[Specification/_笔记类型规范]]** — 本文件作为兼容入口保留，AI 应优先读取 _笔记类型规范。
+> [!warning] **本文件已废弃（DEPRECATED）**
+> content-type 的唯一真值已迁移至 [[Truth/笔记类型规范]]。本文件仅作为历史兼容入口保留，**不应再被引用或更新**。请一律改读 [[Truth/笔记类型规范]]。
+> 原说明：内容曾合并到 [[Specification/_笔记类型规范]]（详细版）。
 
 ## content-type 约定
 

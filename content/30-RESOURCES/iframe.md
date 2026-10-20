@@ -1,5 +1,11 @@
 ---
 title: iframe
+aliases: [C-iframe, iframe元素]
+description: 拥有独立 window 上下文与浏览历史的 HTML 内嵌框架元素
+tags: [HTML, 浏览器, 微前端, 概念]
+status: cultivating
+content-type: concept
+up: ["[[HTML]]", "[[微前端]]"]
 date-created: 2026-08-28
 date-modified: 2026-08-28
 ---

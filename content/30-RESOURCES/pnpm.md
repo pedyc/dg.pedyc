@@ -1,5 +1,11 @@
 ---
 title: pnpm
+aliases: [C-pnpm]
+description: 基于全局内容寻址存储 + 硬链接 + 符号链接实现高效、隔离幽灵依赖的包管理器
+tags: [包管理, 前端工程化, Node, 概念]
+status: cultivating
+content-type: concept
+up: ["[[前端工程]]"]
 date-created: 2026-08-28
 date-modified: 2026-08-28
 ---

@@ -9,12 +9,7 @@
   "shell_path": "",
   "user_scripts_folder": "_scripts",
   "folder_templates": [],
-  "file_templates": [
-    {
-      "regex": "/*/",
-      "template": "_templates/template_new.md"
-    }
-  ],
+  "file_templates": [],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [],

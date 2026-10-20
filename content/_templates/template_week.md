@@ -1,16 +1,18 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-title: "<% tp.file.title %>"
-aliases: ["<% tp.file.title %>"]
-description: "第 <% tp.date.now('gggg-[W]ww') %> 周周期性回顾与原子知识洞察流转图谱"
-tags: [周回顾, weekly, diary]
+title: <% tp.file.title %>
+aliases:
+  - <% tp.file.title %>
+description: 周期性回顾与知识洞察流转图谱
+tags:
+  - 周回顾
+  - weekly
+  - diary
 status: active
 content-type: diary
-date-created: <% tp.date.now("YYYY-MM-DD") %>
-# 选填备用字段：如果想自定义或跨自然周，可显式填写，Dataview 会优先采用它
-date-range: [<% tp.date.weekday("YYYY-MM-DD", 0) %>, <% tp.date.weekday("YYYY-MM-DD", 6) %>]
 up: "[[90-DIARY/]]"
 ---
+
 ```dataviewjs
 // 1. 获取当前笔记的标题（兼容 title 属性与实际文件名）
 const titleStr = dv.current().title || dv.current().file.name;
@@ -47,7 +49,7 @@ if (!weekMatch) {
     );
 
     // 4. 获取两个目录下的全部页面
-    //    只保留 atomic / concept / question / sop
+    //    只保留 30-RESOURCES 与 50-ZETTELCASTEN 下可沉淀的知识类型
     const pages = dv.pages('"50-ZETTELCASTEN" or "30-RESOURCES"')
         .where(p => {
 
@@ -56,8 +58,14 @@ if (!weekMatch) {
             if (
                 type !== 'atomic' &&
                 type !== 'concept' &&
+                type !== 'term' &&
                 type !== 'question' &&
-                type !== 'sop'
+                type !== 'sop' &&
+                type !== 'comparison' &&
+                type !== 'record' &&
+                type !== 'roadmap' &&
+                type !== 'person' &&
+                type !== 'moc'
             ) {
                 return false;
             }
@@ -92,7 +100,7 @@ if (!weekMatch) {
     // A. Atomic
     // ============================================================
 
-    const atomicGroup = grouped.find(g => g.key === 'atomic');
+    const atomicGroup = grouped.filter(g => g.key === 'atomic').first();
 
     dv.header(
         4,
@@ -127,7 +135,7 @@ if (!weekMatch) {
     // B. Concept
     // ============================================================
 
-    const conceptGroup = grouped.find(g => g.key === 'concept');
+    const conceptGroup = grouped.filter(g => g.key === 'concept').first();
 
     dv.header(
         4,
@@ -164,7 +172,7 @@ if (!weekMatch) {
     // C. Question
     // ============================================================
 
-    const questionGroup = grouped.find(g => g.key === 'question');
+    const questionGroup = grouped.filter(g => g.key === 'question').first();
 
     dv.header(
         4,
@@ -199,7 +207,7 @@ if (!weekMatch) {
     // D. SOP
     // ============================================================
 
-    const sopGroup = grouped.find(g => g.key === 'sop');
+    const sopGroup = grouped.filter(g => g.key === 'sop').first();
 
     dv.header(
         4,
@@ -231,5 +239,46 @@ if (!weekMatch) {
 
         dv.paragraph("*(本周暂无新增 SOP)*");
     }
+
+    // ============================================================
+    // E. 其他知识类型（term / comparison / record / roadmap / person / moc）
+    // ============================================================
+
+    const otherTypes = ['term', 'comparison', 'record', 'roadmap', 'person', 'moc'];
+
+    const otherGroup = grouped
+        .filter(g => otherTypes.includes(g.key))
+        .flatMap(g => g.rows);
+
+    dv.header(
+        4,
+        '🧩 本周其他知识沉淀（Term/对比/记录/演进/人物/MOC · ' + otherGroup.length + ' 篇）'
+    );
+
+    if (otherGroup.length > 0) {
+
+        dv.table(
+            [
+                "笔记",
+                "类型",
+                "描述",
+                "状态",
+                "创建日期"
+            ],
+            otherGroup.map(p => [
+                p.file.link,
+                p['content-type'],
+                p.description || "-",
+                p.status || "cultivating",
+                p['date-created'] || p.file.cday.toISODate()
+            ])
+        );
+
+    } else {
+
+        dv.paragraph("*(本周暂无其他类型知识沉淀)*");
+    }
 }
 ```
+
+<!-- 本模板真值来源：[[笔记类型规范]]（diary 的「周记」模板） -->

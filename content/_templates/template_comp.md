@@ -5,8 +5,9 @@ aliases: ["VS-{{简短标题}}"]
 description: "{ 一句话概括核心区别 }"
 tags: []
 content-type: comparison
+category: learning
 status: cultivating
-up: [[{{父级}}]]
+up: "[[{{父级}}]]"
 ---
 
 <!--
@@ -26,6 +27,8 @@ up: [[{{父级}}]]
 	命名规范：
 	- 标题：{{概念A}} vs {{概念B}}
 	- aliases：VS-{{简短标题}}
+
+	本模板真值来源：[[笔记类型规范]]
 -->
 
 ## {{概念 A}} vs {{概念 B}}

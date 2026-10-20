@@ -5,9 +5,9 @@
 ## 核心文件
 
 - `SKILL.md` — skill 定义和核心工作流
-- schema: `content/00-META/llm-wiki-schema.md` — 详细工作流指南
-- index: `content/00-META/wiki-index.md` — 知识库导航
-- log: `content/00-META/wiki-log.md` — 时间线日志
+- schema: `content/00-META/Guide/llm-wiki-schema.md` — 详细工作流指南
+- index: `content/00-META/Index/wiki-index.md` — 知识库导航
+- log: `content/00-META/Log/wiki-log.md` — 时间线日志
 
 ## 目录结构
 

@@ -1,12 +1,13 @@
 ---
 uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: "{{主题}}演进"
-aliases: []
+aliases: ["R-{{主题}}演进"]
 description: "{ 一句话定义这个演进历程的核心 }"
 tags: []
 content-type: roadmap
+category: learning
 status: cultivating
-up: [[{{父级}}]]
+up: "[[{{父级}}]]"
 ---
 
 <!--
@@ -20,6 +21,7 @@ up: [[{{父级}}]]
 
 	章节顺序：
 	定义 → 演进概览 → 阶段详情 → 时间线 → 关键转折点 → 未来展望 → 关联概念
+  本模板真值来源：[[笔记类型规范]]
 -->
 
 ## {{主题}}演进

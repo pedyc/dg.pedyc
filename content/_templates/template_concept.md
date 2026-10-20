@@ -5,6 +5,7 @@ aliases: ["C-{{概念名称}}"]
 description: "{ 一句话定义这个概念 }"
 tags: []
 content-type: concept
+category: learning
 status: fleeting
 up: "[[{{父级}}]]"
 ---
@@ -27,6 +28,8 @@ up: "[[{{父级}}]]"
 
 	章节顺序：
 	概念定义 → 核心命题 → 运行机制 → 关键区别 → 适用范围 → 批判 → SOP → FAQ → 知识图谱 → 参考延伸
+
+	本模板真值来源：[[笔记类型规范]]
 -->
 
 ## 概念：{{概念名称}}

@@ -1,3 +1,15 @@
+---
+title: GitHub Actions
+aliases: [C-GitHub-Actions]
+description: GitHub 官方的 CI/CD 服务，通过 Workflow/Job/Step/Action 模型在仓库内配置自动化流程
+tags: [Git, 前端工程化, CI/CD, 概念]
+status: cultivating
+content-type: concept
+up: ["[[前端工程]]", "[[DevOps]]"]
+date-created: 2026-09-27
+date-modified: 2026-09-27
+---
+
 GitHub Actions 是 GitHub 提供的 CI/CD 服务，可以直接在 GitHub 仓库中配置和运行 CI/CD 流程。
 
 #### 核心概念

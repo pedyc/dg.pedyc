@@ -6,12 +6,15 @@ aliases:
 description: "{ 一句话描述项目目标 }"
 tags: []
 status: fleeting
-area: []
-consequence: 1
 content-type: project
-expire: YYYY/MM/DD
-up: "[[{{父级}}]]"
+category: work
+consequence: 1
 urgency: 1
+energy-type: 🔄 常规
+quadrant: Q2
+expire: YYYY/MM/DD
+area: []
+up: "[[{{父级}}]]"
 ---
 
 <!--
@@ -24,9 +27,10 @@ urgency: 1
 	- 先写目标（Why）
 	- 再写执行（How）
 	- 最后写复盘（What we learned）
+  本模板真值来源：[[笔记类型规范]]
 -->
 
-## ## 背景
+## 背景
 
 {{为什么需要这个项目}}
 

@@ -90,8 +90,9 @@ up: [["llm-wiki-schema"]]
 ```python
 import os, re
 from collections import defaultdict
+from pathlib import Path
 
-CONTENT = r"D:\Workspace\pedyc\site\apps\dg\content"  # content 根目录；换环境时改为 Path(__file__) 相对定位
+CONTENT = str(Path(__file__).resolve().parent.parent.parent)  # content 根目录（相对本文件向上三级定位）
 link_pattern = re.compile(r'\[\[([^\[\]]+)\]\]')
 inbound = defaultdict(set)
 
@@ -127,8 +128,9 @@ for t, r in sorted(orphans):
 ```python
 import os, re
 from collections import defaultdict
+from pathlib import Path
 
-CONTENT = r"D:\Workspace\pedyc\site\apps\dg\content"  # content 根目录；换环境时改为 Path(__file__) 相对定位
+CONTENT = str(Path(__file__).resolve().parent.parent.parent)  # content 根目录（相对本文件向上三级定位）
 link_pattern = re.compile(r'\[\[([^\[\]]+)\]\]')
 
 # 收集所有页面标题
@@ -163,8 +165,9 @@ for target, count in real_gaps:
 ```python
 import os, re
 from collections import defaultdict
+from pathlib import Path
 
-CONTENT = r"D:\Workspace\pedyc\site\apps\dg\content"  # content 根目录；换环境时改为 Path(__file__) 相对定位
+CONTENT = str(Path(__file__).resolve().parent.parent.parent)  # content 根目录（相对本文件向上三级定位）
 link_pattern = re.compile(r'\[\[([^\[\]]+)\]\]')
 inbound = defaultdict(set)
 
@@ -204,7 +207,8 @@ for a in sorted(archive):
 
 ```python
 import os, re
-CONTENT = r"D:\Workspace\pedyc\site\apps\dg\content"  # content 根目录；换环境时改为 Path(__file__) 相对定位
+from pathlib import Path
+CONTENT = str(Path(__file__).resolve().parent.parent.parent)  # content 根目录（相对本文件向上三级定位）
 link_pattern = re.compile(r'\[\[([^\[\]]+)\]\]')
 
 all_pages = {}

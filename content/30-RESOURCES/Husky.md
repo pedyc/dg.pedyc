@@ -1,11 +1,14 @@
 ---
 title: Husky
+aliases: [C-Husky]
+description: 将 Git Hooks 抽象为可版本化配置文件（.husky/）的现代 Git 钩子管理工具
 tags: [engineering/git-hooks, code-quality, front-end]
 date-created: 2026-08-29
 date-modified: 2026-08-29
 status: active
+content-type: concept
+up: ["[[Git Hooks]]", "[[前端工程]]"]
 created: 2026-08-29
-type: concept
 ---
 
 ## Husky

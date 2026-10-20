@@ -80,7 +80,7 @@ allowed-tools:
 ### 5. 提交状态变更
 
 ```bash
-git add content/00-META/wiki-sync-state.json content/00-META/wiki-log.md content/00-META/Index/wiki-index.md
+git add content/00-META/wiki-sync-state.json content/00-META/Log/wiki-log.md content/00-META/Index/wiki-index.md
 git commit -m "sync: update wiki-sync-state"
 ```
 
@@ -99,8 +99,8 @@ git diff <lastCommit>..HEAD --name-status
 过滤 `content/` 目录下的 `.md` 文件，排除：
 - `.obsidian/` 目录
 - `00-META/wiki-sync-state.json` 自身
-- `00-META/wiki-log.md` 自身
-- `00-META/wiki-index.md` 自身
+- `00-META/Log/wiki-log.md` 自身
+- `00-META/Index/wiki-index.md` 自身
 - `Inbox/` 目录
 
 ### 3. 变更分类处理

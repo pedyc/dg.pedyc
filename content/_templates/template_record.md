@@ -5,8 +5,9 @@ aliases: ["R-{{事件名称}}"]
 description: ""
 tags: []
 content-type: record
+category: learning
 status: fleeting
-up: [[{{父级}}]]
+up: "[[{{父级}}]]"
 date: ""
 location: ""
 participants: ""
@@ -31,6 +32,8 @@ participants: ""
 	- 重要会议记录
 	- 历史事件归档
 	- 个人里程碑记录
+
+	本模板真值来源：[[笔记类型规范]]
 -->
 
 > {{事件一句话概述}}
@@ -52,9 +55,12 @@ participants: ""
 
 {{具体影响}}
 
-### 全球影响
+<!-- 以下「延伸影响」为可选章节，仅在事件确有跨区域/跨领域影响时保留 -->
+<!--
+### 延伸影响
 
-{{对全球的影响}}
+{{对更大范围或更长期的影响}}
+-->
 
 ## 引申
 

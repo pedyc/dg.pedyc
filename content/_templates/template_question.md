@@ -5,8 +5,9 @@ aliases: ["Q-{{问题名称}}"]
 description: "{ 一句话描述这个问题 }"
 tags: []
 content-type: question
+category: learning
 status: fleeting
-up: [[{{父级}}]]
+up: "[[{{父级}}]]"
 ---
 
 <!--
@@ -22,6 +23,7 @@ up: [[{{父级}}]]
 	- 先写问题背景（Why this question）
 	- 再写现有答案（What we know）
 	- 最后写探索路径（How to find out）
+  本模板真值来源：[[笔记类型规范]]
 -->
 
 ## 问题

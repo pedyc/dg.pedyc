@@ -4,14 +4,14 @@
       "enabled": true
     },
     "dedupe-yaml-array-values": {
-      "enabled": true,
+      "enabled": false,
       "dedupe-alias-key": true,
       "dedupe-tag-key": true,
       "dedupe-array-keys": true,
       "ignore-keys": []
     },
     "escape-yaml-special-characters": {
-      "enabled": true,
+      "enabled": false,
       "try-to-escape-single-line-arrays": true
     },
     "force-yaml-escape": {
@@ -67,7 +67,7 @@
       "sort-order": "Ascending Alphabetical"
     },
     "yaml-key-sort": {
-      "enabled": true,
+      "enabled": false,
       "yaml-key-priority-sort-order": [
         "topic:",
         "uid:",
@@ -858,7 +858,7 @@
   "enableDiffPreviewView": true,
   "suppressLintAllFilesConfirmationModal": false,
   "suppressLintAllFilesInFolderConfirmationModal": false,
-  "lintOnFileChange": true,
+  "lintOnFileChange": false,
   "displayLintOnFileChangeNotice": true,
   "settingsConvertedToConfigKeyValues": true,
   "textAreaSettingsConvertedToListItemSettings": true,
@@ -873,13 +873,13 @@
   "filesToIgnore": [
     {
       "label": "排除绘图文件",
-      "match": "*.excalidraw",
-      "flags": "g"
+      "match": ".*\\.excalidraw",
+      "flags": ""
     },
     {
       "label": "排除模板文件",
-      "match": "tempate_*",
-      "flags": "g"
+      "match": ".*template_.*",
+      "flags": ""
     }
   ],
   "linterLocale": "system-default",

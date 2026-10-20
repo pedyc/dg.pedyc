@@ -7,48 +7,18 @@ date-created: 2026-05-20
 date-modified: 2026-07-31
 status: active
 content-type: article
-up: [["Architecture/llm-wiki-schema"]]
+up: [["llm-wiki-schema"]]
 ---
 
 > [!warning] **本文件已废弃（DEPRECATED）**
-> content-type 的唯一真值已迁移至 [[Truth/笔记类型规范]]。本文件仅作为历史兼容入口保留，**不应再被引用或更新**。请一律改读 [[Truth/笔记类型规范]]。
-> 原说明：内容曾合并到 [[Specification/_笔记类型规范]]（详细版）。
+> content-type 的唯一真值已迁移至 [[笔记类型规范]]。本文件仅作为历史兼容入口保留，**不应再被引用或更新**。请一律改读 [[笔记类型规范]]。
 
-## content-type 约定
+## 迁移说明
 
-| 类型 | 目录 | aliases 前缀 | 说明 |
-|------|------|-------------|------|
-| atomic | `50-ZETTELCASTEN/` | 无 | 一句话洞察，陈述句观点 |
-| concept | `30-RESOURCES/` | C-xxx | 概念整合，核心命题 |
-| moc | `30-RESOURCES/` | MOC-xxx | 领域入口，索引集合 |
-| sop | `30-RESOURCES/` | SOP-xxx | 标准流程 |
-| term | `30-RESOURCES/` | T-xxx | 术语定义 |
-| comparison | `30-RESOURCES/` | VS-xxx | 比较分析 |
-| area | `20-AREAS/` | A-xxx | 领域定义 |
-| project | `10-PROJECTS/` | P-xxx | 项目 |
-| article | `60-BLOGS/` | 无 | 博客文章 |
-| record | `30-RESOURCES/` | R-xxx | 事件记录 |
-| question | 混合 | Q-xxx | 开放性问题 |
-| diary | `90-DIARY/` | 无 | 日记 |
-| roadmap | `30-RESOURCES/` | R-xxx | 线性演进路线图，版本迭代/技术发展时间线 |
-| person | `30-RESOURCES/` | R-xxx | 人物生平与思想记录 |
+本文件历史上曾定义 content-type 的目录、aliases 前缀、说明，现已全部收敛到真值层：
 
-### 前缀规则
+- **content-type 定义**（目录、前缀、模板、定位）→ [[笔记类型规范]]
+- **Wiki 层内联规则**（各类型如何挂载、如何在 wiki-index 登记）→ [[_笔记类型规范]]
+- **文件命名与 aliases 前缀速查** → [[命名规范]]
 
-| 前缀 | content-type | aliases 示例 |
-|------|-------------|--------------|
-| A- | area | `A-人工智能` |
-| P- | project | `P-求职` |
-| Q- | question | `Q-如何学习编程` |
-| MOC- | moc | `MOC-前端知识地图` |
-| SOP- | sop | `SOP-周回顾` |
-| T- | term | `T-TCP` |
-| C- | concept | `C-闭包` |
-| VS- | comparison | `VS-React vs Vue` |
-| R- | record | `R-俄乌冲突` |
-| R- | roadmap | `R-Angular-版本演进`（同 record 共享 R- 前缀，语义不冲突） |
-| R- | person | `R-爱因斯坦`（同 record/roadmap 共享 R- 前缀，语义不冲突） |
-
-子主题需加父级前缀（如 `C-React-Fiber`、`T-链表-虚拟头节点`）。
-
-> **完整细则（含内联规则、SOP-Q 关联、状态流转等）→ [[Specification/_笔记类型规范]]**
+以下内容仅作历史存档，**不再作为权威定义**，任何出入以真值文件为准。

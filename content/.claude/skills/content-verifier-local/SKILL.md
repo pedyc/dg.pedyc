@@ -14,8 +14,8 @@ allowed-tools:
 
 # content-verifier-local
 
-分层检查体系详细定义见 `content/00-META/llm-wiki-schema.md` 第 3 节。
-content-type 与模板映射关系见 `content/00-META/Specification/_笔记类型规范.md`（或兼容入口 `_content-type-rules.md`）。
+分层检查体系详细定义见 `content/00-META/Guide/llm-wiki-schema.md` 第 3 节。
+content-type 与模板映射关系见 `content/00-META/Truth/笔记类型规范.md`（Wiki 层内联规则见 `content/00-META/Specification/_笔记类型规范.md`）。
 模板文件位于 `content/_templates/`，评估时根据 content-type 读取对应模板对比章节结构。
 
 ## 快速检查（light）

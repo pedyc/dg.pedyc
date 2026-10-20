@@ -16,7 +16,7 @@ allowed-tools:
 
 # llm-wiki-local
 
-执行前读取 `content/00-META/llm-wiki-schema.md` 获取完整工作流定义。
+执行前读取 `content/00-META/Guide/llm-wiki-schema.md` 获取完整工作流定义。
 
 ## 工作流路由
 
@@ -28,4 +28,4 @@ allowed-tools:
 | "检查知识库"、"健康检查"、"lint" | → lint |
 | "画个图谱"、"看看关联" | → graph |
 
-详细步骤见 `content/00-META/llm-wiki-schema.md`。
+详细步骤见 `content/00-META/Guide/llm-wiki-schema.md`。

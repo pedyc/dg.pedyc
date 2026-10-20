@@ -1,7 +1,11 @@
 ---
-title: ADR-002-Inbox规则
+title: Inbox规则
 date-created: 2026-02-09
 date-modified: 2026-09-23
+tags: [META/FAQ]
+status: active
+content-type: article
+up: "[[本库常见问题解答汇总]]"
 ---
 
 > 定期归档机制：

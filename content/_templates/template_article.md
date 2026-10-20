@@ -6,7 +6,7 @@ description: "{{一句话描述文章核心内容}}"
 tags: []
 content-type: article
 status: fleeting
-up: [[{{父级}}]]
+up: "[[{{父级}}]]"
 category: blog
 published: false
 ---
@@ -24,6 +24,7 @@ published: false
 	- 先写核心观点（What）
 	- 再写论据和案例（Why/How）
 	- 最后写总结和延伸（What's next）
+  本模板真值来源：[[笔记类型规范]]
 -->
 
 ## {{文章标题}}

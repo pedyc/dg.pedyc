@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b52ee4714346f6e9",
+        "id": "1a9d313e9aeca67b",
         "type": "tabs",
         "children": [
           {
-            "id": "d03eb2eaf6b111b8",
+            "id": "d6989494e7d1cd0e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-META/Architecture/本库子系统概述.md",
+                "file": "90-DIARY/2026-10-24.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "本库子系统概述"
+              "title": "2026-10-24"
             }
           }
         ]
@@ -43,7 +43,7 @@
       {
         "id": "63f7c57bcc006028",
         "type": "tabs",
-        "dimension": 50.771208226221084,
+        "dimension": 50.77120822622109,
         "children": [
           {
             "id": "60236dec7012791f",
@@ -65,7 +65,7 @@
       {
         "id": "0add37d9a842f039",
         "type": "tabs",
-        "dimension": 25.51413881748072,
+        "dimension": 25.514138817480717,
         "children": [
           {
             "id": "716cea69c1af23f6",
@@ -73,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "00-META/Architecture/本库子系统概述.md",
+                "file": "90-DIARY/2026-10-24.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +124,7 @@
       {
         "id": "5e0950099d64d5f6",
         "type": "tabs",
-        "dimension": 23.714652956298195,
+        "dimension": 23.714652956298192,
         "children": [
           {
             "id": "5dc3cef7701d1aec",
@@ -278,21 +278,37 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "d03eb2eaf6b111b8",
+  "active": "d6989494e7d1cd0e",
   "lastOpenFiles": [
-    "00-META/Architecture/本库设计原则.md",
-    "30-RESOURCES/卡片盒笔记法.md",
-    "20-AREAS/A-知识管理/知识管理.md",
-    "30-RESOURCES/A-知识管理.md",
-    "00-META/Architecture/本库子系统概述.md",
+    "90-DIARY/2026-10-23.md",
+    "90-DIARY/2026-10-24.md",
+    "90-DIARY/2026-10-22.md",
+    "90-DIARY/2026-W43.md",
+    "90-DIARY/2026-10-21.md",
+    "90-DIARY/2026-10-20.md",
+    "_templates/template_week.md",
     "90-DIARY/2026-10-19.md",
-    "60-BLOGS/前端开发需要掌握的算法.md",
-    "30-RESOURCES/回溯算法.md",
-    "30-RESOURCES/深度优先搜索.md",
-    "30-RESOURCES/深拷贝和浅拷贝.md",
-    "60-BLOGS/教你如何构建自己的依赖注入工具.md",
+    "90-DIARY/2026-W42.md",
+    "CLAUDE.md",
+    "_templates/template_startup.md",
     "关于我.md",
-    "TaskNotes/Tasks/Review my TaskNotes setup.md",
+    "banner.svg",
+    "本地知识库联动NotebookLM.md",
+    "本地知识库联动NotebookLM.svg",
+    "_templates/template_diary.md",
+    "30-RESOURCES/Agent.md",
+    "_scripts/template_startup.md",
+    "50-ZETTELCASTEN/Agent 的循环控制由 Runtime 决定而非模型自行决定.md",
+    "20-AREAS/A-人工智能/AgentLoop.md",
+    "50-ZETTELCASTEN/Agent = LLM + 上下文 + 工具.md",
+    "_templates/template_atomic.md",
+    "50-ZETTELCASTEN/Tool 的执行权在 Runtime 手中而非 LLM.md",
+    "50-ZETTELCASTEN/Context 是 Agent 对 LLM 可见信息的动态选择而非静态快照.md",
+    "50-ZETTELCASTEN/原子笔记的价值在于信息增量而非主题概括.md",
+    "00-META/Log/wiki-log.md",
+    "00-META/Truth/人机分工规范.md",
+    "00-META/Truth/元数据规范.md",
+    "00-META/Guide/_resources",
     "TaskNotes/Views/tasks-default.base",
     "TaskNotes/Views/relationships.base",
     "TaskNotes/Views/pomodoro-stats.base",
@@ -300,22 +316,8 @@
     "TaskNotes/Views/kanban-default.base",
     "TaskNotes/Views/calendar-default.base",
     "TaskNotes/Views/agenda-default.base",
-    "TaskNotes/Start Here.md",
     "TaskNotes/Tasks",
     "TaskNotes/Views",
-    "TaskNotes",
-    "30-RESOURCES/动态规划.md",
-    "30-RESOURCES/从“打家劫舍”看递归到递推.md",
-    "30-RESOURCES/算法与数据结构.md",
-    "30-RESOURCES/常用算法汇总.md",
-    "90-DIARY/2026-09-24.md",
-    "30-RESOURCES/算法选择与调优.md",
-    "40-ARCHIVE/P-求职前端岗位/算法提升专项.md",
-    "30-RESOURCES/广度优先搜索.md",
-    "10-PROJECTS/P-Agent求职/Agent求职.md",
-    "30-RESOURCES/DevOps.md",
-    "30-RESOURCES/持续集成与持续部署.md",
-    "30-RESOURCES/GitHub Actions.md",
     "10-PROJECTS/P-Agent求职/_resources/ClaudeCode核心架构.excalidraw.svg",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.svg",
@@ -325,8 +327,6 @@
     "10-PROJECTS/P-Agent求职/_resources/ToolCalling.excalidraw.svg",
     "_resources/Claude Code/10e6559a6a3fc17b8fc30859c810232b_MD5.webp",
     "30-RESOURCES/_resources/screenshot-architecture.png",
-    "30-RESOURCES/_resources/Pasted image 20260923182859.png",
-    "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.svg",
     "10-PROJECTS/PROJECTS.canvas",
     "未命名.canvas",
     "Untitled.canvas",

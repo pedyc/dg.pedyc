@@ -1,5 +1,5 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+uid: 202609160000
 title: DAG
 aliases:
   - C-DAG

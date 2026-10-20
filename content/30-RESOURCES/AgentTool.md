@@ -1,5 +1,11 @@
 ---
 title: AgentTool
+aliases: [C-AgentTool, C-Agent-Tool]
+description: Agent 可调用的、能与外部环境产生实际交互的能力（函数/工具封装）
+tags: [AI, Agent, LLM, 概念]
+status: cultivating
+content-type: concept
+up: ["[[Agent]]", "[[LLM]]"]
 date-created: 2026-09-27
 date-modified: 2026-09-27
 ---

@@ -6,7 +6,8 @@ description: "{ 一句话定义这个术语 }"
 tags: []
 status: fleeting
 content-type: term
-up: [[{{父级概念}}]]
+category: learning
+up: "[[{{父级概念}}]]"
 ---
 
 <!--
@@ -22,6 +23,7 @@ up: [[{{父级概念}}]]
 	- 先写定义（What）
 	- 再写跨学科含义（Variations）
 	- 最后写关联（Connections）
+  本模板真值来源：[[笔记类型规范]]
 -->
 
 ## 术语：{{术语名称}}

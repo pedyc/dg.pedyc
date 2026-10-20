@@ -920,3 +920,15 @@ up: ["[[本库指南]]"]
 		- 更新 A-政治经济 原子洞见：纳入 [[权力的日常形态是共识，终极担保是暴力]]
 		- 更新 MOC-政治经济：新增「原子洞见」章节，收录 2 条 atomic
 		- 父页面：[[政治经济|MOC-政治经济]]、[[政治经济|A-政治经济]]
+
+#### 2026-10-20
+
+- [2026-10-20] ingest | 同步 8-28~10-19 期间新增的 17 篇 Wiki 层概念
+	- 新增 concept：Shadow DOM、iframe、qiankun、Git Hooks、Husky、GitHub Actions、package.json、pnpm、tsconfig.json、DAG、Reflect、AgentTool、DeepSeek Harness
+	- 更新：wiki-index Concepts 分区登记 13 篇，计数 51 → 63
+	- 补全 frontmatter：GitHub Actions（缺 frontmatter）、AgentTool/iframe/pnpm/qiankun（补 content-type/description/up）、Husky（type: → content-type:）
+	- 修复模板残留：DAG、Git Hooks 的 uid 占位符 `<% tp.file.creation_date %>` → 固定值
+- [2026-10-20] inbox-review | 识别 2 篇外部剪藏（暂未消化）
+	- Best Three.js Websites 2026（clippings，source=utsubo.com）→ 待消化为 ThreeJS 相关 concept
+	- Frontend Development Trends 2026（clippings，source=talent500.com）→ 待消化为前端架构 concept
+	- 决策：本次仅标注，不移动/不删除，留待专门 ingest 操作消化

@@ -1,5 +1,5 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+uid: 202608290000
 title: Git Hooks
 aliases: [C-Git-Hooks, C-Git-Hook机制, Git Hooks机制]
 description: Git 提供的在特定事件发生时自动触发自定义脚本的生命周期拦截机制

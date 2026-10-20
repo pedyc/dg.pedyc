@@ -7,6 +7,8 @@ status: active
 content-type: diary
 ---
 
+<!-- 本模板真值来源：[[笔记类型规范]] -->
+
 ## ☁️行云（闪念笔记）
 
 - TODO

@@ -5,8 +5,9 @@ aliases: ["R-{{人物姓名}}"]
 description: "{ 一句话概括这个人物 }"
 tags: []
 content-type: person
+category: learning
 status: fleeting
-up: [[{{父级}}]]
+up: "[[{{父级}}]]"
 birth: ""
 death: ""
 nationality: ""
@@ -30,6 +31,7 @@ occupation: ""
 
 	章节顺序：
 	人物卡片 → 生平简介 → 人生时间线 → 主要成就 → 思想与观点 → 代表作品 → 关系网络 → 名言 → 评价与争议 → 知识图谱
+  本模板真值来源：[[笔记类型规范]]
 -->
 
 > {{人物一句话概述}}

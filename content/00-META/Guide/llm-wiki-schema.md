@@ -7,7 +7,7 @@ date-created: 2026-05-20
 date-modified: 2026-07-17
 status: active
 content-type: article
-up: "[[Guide/本库指南]]"
+up: "[[本库指南]]"
 ---
 
 ## LLM Wiki Schema for 本库
@@ -15,15 +15,15 @@ up: "[[Guide/本库指南]]"
 本文档是 LLM 维护本知识库的作业指南。LLM 根据此 schema 消化 (ingest) 新笔记、回答查询 (query)、以及定期检查 (lint) 知识库健康度。
 
 > **详细规则**：本文件是索引，各工作流详细规则见子文档。
-> - [[Specification/_skills-overview]] — 所有 skill 的用法总览
-> - [[Specification/_笔记类型规范]] — content-type 定义、前缀规则、Wiki 层内联规则、类型对比、状态流转（**单一可信源**）
-> - [[Specification/_anki-sync-rules]] — Anki 集成规则（哪些笔记生成卡片、卡片格式、同步工作流）
-> - [[Specification/_content-type-rules]] — content-type 定义和前缀规则（兼容入口，已合并到 _笔记类型规范）
-> - [[Specification/_ingest-rules]] — ingest 工作流 + inbox review 工作流
-> - [[Specification/_query-rules]] — query 工作流
-> - [[Specification/_lint-rules]] — lint 工作流 + 健康检查
-> - [[Specification/_sync-rules]] — sync 工作流
-> - [[Specification/_wiki-index-format]] — wiki-index 索引格式规范
+> - [[_skills-overview]] — 所有 skill 的用法总览
+> - [[_笔记类型规范]] — content-type 的 Wiki 层内联规则、类型对比、状态流转（定义部分见 [[笔记类型规范]]）
+> - [[_anki-sync-rules]] — Anki 集成规则（哪些笔记生成卡片、卡片格式、同步工作流）
+> - [[_content-type-rules]] — content-type 定义和前缀规则（兼容入口，已合并到 _笔记类型规范）
+> - [[_ingest-rules]] — ingest 工作流 + inbox review 工作流
+> - [[_query-rules]] — query 工作流
+> - [[_lint-rules]] — lint 工作流 + 健康检查
+> - [[_sync-rules]] — sync 工作流
+> - [[_wiki-index-format]] — wiki-index 索引格式规范
 
 ---
 
@@ -32,7 +32,7 @@ up: "[[Guide/本库指南]]"
 | 层级 | 位置 | 负责方 | 说明 |
 |------|------|--------|------|
 | 原子笔记层 | `50-ZETTELCASTEN/` | 你 | 已内化的洞见（atomic），source of truth，不修改 |
-| Wiki | `30-RESOURCES/` | LLM | concept/moc/SOP/term/comparison，由 LLM 持续维护 |
+| Wiki | `30-RESOURCES/` | LLM | concept/moc/SOP/term/comparison/question/record/roadmap/person，由 LLM 持续维护 |
 | Archive | `40-ARCHIVE/` | 你 + LLM | 过时知识、已完成项目 |
 
 > **关键原则**：atomic 是已内化的洞见、source of truth，永不修改。Wiki 层是 LLM 的作品，LLM 负责维护其一致性和完整性。

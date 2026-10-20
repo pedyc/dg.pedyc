@@ -4,11 +4,10 @@ title: template_area
 aliases: ["A-{{标题}}"]
 description: "{ 一句话定义这个领域的核心范畴 }"
 tags: []
-date-created: 2026-08-18
-date-modified: 2026-08-29
 status: cultivating
 content-type: area
-up: [[{{父级领域}}]]
+category: work
+up: "[[{{父级领域}}]]"
 ---
 
 <!--
@@ -33,6 +32,7 @@ up: [[{{父级领域}}]]
 	SOP vs Question 的定位：
 	- SOP（标准操作）：放 Area，说明领域有哪些标准流程
 	- Question（问答）：放 Concept，深化概念理解
+  本模板真值来源：[[笔记类型规范]]
 -->
 
 ## Area: {{领域名称}}

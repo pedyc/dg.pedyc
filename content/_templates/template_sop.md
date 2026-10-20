@@ -7,6 +7,7 @@ description: "{ 一句话描述这个 SOP 的用途 }"
 tags: []
 status: cultivating
 content-type: sop
+category: work
 up: "[[{{父级}}]]"
 ---
 
@@ -19,6 +20,8 @@ up: "[[{{父级}}]]"
 
 	视觉化支持：
 	- Mermaid图标：流程图形式，展示达到目标的标准流程
+
+	本模板真值来源：[[笔记类型规范]]
 -->
 
 ## SOP：{{动宾结构标题}}

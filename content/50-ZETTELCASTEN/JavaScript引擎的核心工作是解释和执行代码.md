@@ -3,15 +3,17 @@ uid: 202603160000
 title: JavaScript引擎的核心工作是解释和执行代码
 aliases: []
 description: JavaScript 引擎通过解析、编译和执行将 JS 代码转换为机器码
-tags: [前端开发/JavaScript]
+tags:
+  - 前端开发/JavaScript
 date-created: 2026-03-15
 date-modified: 2026-03-21
 status: active
 content-type: atomic
 up: "[[JavaScript 引擎]]"
+noteId: 1792465707008
 ---
 
-> JavaScript 引擎读取源代码，通过词法分析、语法分析生成抽象语法树 (AST)，然后解释执行或编译执行。
+> JavaScript 引擎读取源代码，通过词法分析、语法分析生成抽象语法树 (AST)，然后~~解释执行~~或~~编译执行~~。
 
 ### 论据/示例
 

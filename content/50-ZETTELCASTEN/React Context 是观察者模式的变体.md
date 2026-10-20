@@ -8,9 +8,10 @@ date-modified: 2026-04-22
 status: fleeting
 content-type: atomic
 up: "[[React Context]]"
+noteId: 1792465708472
 ---
 
-> React Context 是观察者模式的变体，Provider（主题）提供数据，Consumer（观察者）消费数据，Provider 持有 Consumer 的引用
+> React Context 是~~观察者模式~~的变体，Provider（主题）提供数据，Consumer（观察者）消费数据，Provider 持有 Consumer 的引用
 
 ## 论据/示例
 

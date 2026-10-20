@@ -8,11 +8,14 @@ date-created: 2026-05-12
 date-modified: 2026-05-12
 status: cultivating
 content-type: atomic
+up:
+  - "[[PWA]]"
+noteId: 1792465707911
 ---
 
 ## 定义
 
-PWA 的持续更新本质是 Service Worker 生命周期与页面生命周期的完全解耦——页面持续运行，Service Worker 在后台独立完成安装、激活、替换，实现类原生应用的无缝热更新。
+PWA 的持续更新本质是 Service Worker 生命周期与页面生命周期的完全~~解耦~~——页面持续运行，Service Worker 在后台独立完成安装、激活、替换，实现类原生应用的无缝热更新。
 
 ## 论据
 

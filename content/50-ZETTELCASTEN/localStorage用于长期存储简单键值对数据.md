@@ -3,15 +3,18 @@ uid: 202603230020
 title: localStorage 用于长期存储简单键值对数据
 aliases: []
 description: localStorage 提供持久化的键值对存储，数据除非手动删除否则永不过期
-tags: [前端开发/浏览器]
+tags:
+  - 前端开发/浏览器
 date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up: [[Web存储]]
+up:
+  - - Web存储
+noteId: 1792465707403
 ---
 
-> localStorage 提供持久化的键值对存储，数据除非手动删除否则永不过期，同源策略下数据共享。
+> localStorage 提供~~持久化~~的键值对存储，数据除非手动删除否则永不过期，同源策略下数据共享。
 
 ### 论据/示例
 

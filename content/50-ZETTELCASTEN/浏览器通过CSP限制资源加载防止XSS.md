@@ -3,15 +3,18 @@ uid: 202603230018
 title: 浏览器通过 CSP 限制资源加载防止 XSS
 aliases: []
 description: CSP 是白名单机制，通过响应头告诉浏览器允许加载哪些资源
-tags: [前端开发/浏览器]
+tags:
+  - 前端开发/浏览器
 date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up: [[浏览器安全机制]]
+up:
+  - - 浏览器安全机制
+noteId: 1792465698877
 ---
 
-> 浏览器通过 CSP（Content Security Policy，内容安全策略）限制资源加载和脚本执行，防止 XSS（跨站脚本攻击）。
+> 浏览器通过 ~~CSP（Content Security Policy，内容安全策略）~~ 限制资源加载和脚本执行，防止 XSS（跨站脚本攻击）。
 
 ### 论据/示例
 

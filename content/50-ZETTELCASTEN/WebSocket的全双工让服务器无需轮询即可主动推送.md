@@ -3,15 +3,18 @@ uid: 202608161300
 title: WebSocket的全双工让服务器无需轮询即可主动推送
 aliases: []
 description: 全双工消除了 HTTP 请求-响应的单向约束，服务器可随时主动推送
-tags: [前端, 网络协议]
+tags:
+  - 前端
+  - 网络协议
 date-created: 2026-08-16
 date-modified: 2026-08-16
 status: fleeting
 content-type: atomic
 up: "[[WebSocket]]"
+noteId: 1792465712185
 ---
 
-> WebSocket 的全双工让服务器无需客户端轮询即可主动推送消息
+> WebSocket 的~~全双工~~让服务器无需客户端轮询即可主动推送消息
 
 HTTP 是请求-响应模型，只有客户端能主动发起请求，服务器只能被动应答；要实现「服务器推送」，只能靠客户端反复轮询。WebSocket 握手后把 HTTP 升级为对等的 TCP 连接，客户端和服务器地位平等，任何一方都可以随时发消息，从而根除了「被动等待」这个约束。
 

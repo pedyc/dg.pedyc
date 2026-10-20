@@ -12,9 +12,10 @@ date-modified: 2026-09-07
 status: fleeting
 content-type: atomic
 up: "[[WebSocket vs SSE vs Long Polling]]"
+noteId: 1792465709964
 ---
 
-> SSE 比 WebSocket 只贵约 10% 字节，却换来浏览器自动的断线重连与续传
+> SSE 比 WebSocket 只贵约 10% 字节，却换来浏览器自动的~~断线重连~~与~~续传~~
 
 SSE 与 WebSocket 的字节差几乎可以忽略，但 SSE 的 `EventSource` 由 HTML 规范强制自动重连，并把上次收到的 `id` 作为 `Last-Event-ID` 请求头回传，让服务器从中断点续传。WebSocket 这些都得自己写——重连循环、退避、续传游标、去重，每次都要重写一遍。
 

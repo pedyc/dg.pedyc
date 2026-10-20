@@ -31,6 +31,7 @@ up: "[[CSS]]"
 	- `position` 为 `absolute`/`fixed`
 	- `display` 为 `inline-block`/`flex`/`grid` 等
 	- `overflow` 不为 `visible`
+- [[BFC 通过创建独立渲染上下文隔离浮动与边距折叠]] — 独立渲染上下文包含浮动、阻止边距折叠
 
 ---
 

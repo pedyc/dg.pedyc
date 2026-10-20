@@ -1,19 +1,19 @@
 ---
 uid: 202506150001
 title: Web存储
-aliases: [MOC-Web存储, Web Storage, Web Storage API]
-description: Web存储专题 MOC：聚合 Cookie、Web Storage API 与 IndexedDB 等客户端存储技术
+aliases: [C-Web存储, Web Storage, Web Storage API]
+description: Web存储概念：聚合 Cookie、Web Storage API 与 IndexedDB 等客户端存储技术，解释各自原理与区别
 tags: [前端开发/浏览器]
 date-created: 2025-06-15
 date-modified: 2026-08-18
 status: active
-content-type: moc
+content-type: concept
 up: [[浏览器]]
 ---
 
-## MOC：Web存储
+## 概念：Web存储
 
-> Web 存储专题入口：聚合在浏览器客户端存储数据的技术，包括 Cookie（与服务端通信）、Web Storage API（localStorage/sessionStorage）和 IndexedDB。中观层专题，研究边界为「客户端数据持久化」，攻关粒度 5~20 篇高价值资料。
+> Web 存储概念：聚合在浏览器客户端存储数据的技术，包括 Cookie（与服务端通信）、Web Storage API（localStorage/sessionStorage）和 IndexedDB，解释各自的运行原理、区别与适用场景。
 
 **解决的核心痛点**：如何在客户端存储数据以提高性能、减少服务器请求、支持离线应用？
 

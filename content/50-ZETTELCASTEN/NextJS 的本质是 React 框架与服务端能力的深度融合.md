@@ -2,16 +2,17 @@
 uid: 202605060800
 title: NextJS 的本质是 React 框架与服务端能力的深度融合
 aliases: []
-description: "NextJS 的本质是 React 框架与 Node.js 服务端能力的深度融合"
+description: NextJS 的本质是 React 框架与 Node.js 服务端能力的深度融合
 tags: []
 date-created: 2026-05-06
 date-modified: 2026-05-06
 status: fleeting
 content-type: atomic
-up:
+up: null
+noteId: 1792465707572
 ---
 
-> NextJS 的本质是 React 框架与 Node.js 服务端能力的深度融合
+> NextJS 的本质是 React 框架与 Node.js 服务端能力的~~深度融合~~
 
 ## 论据/示例
 

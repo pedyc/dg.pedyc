@@ -2,14 +2,15 @@
 uid: 202605061000
 title: NextJS 首屏渲染不需要 JS 引擎参与但 hydration 仍然需要
 aliases: []
-description: "NextJS 首屏快是因为内容生成在服务端完成，hydration 仍需 JS 引擎"
+description: NextJS 首屏快是因为内容生成在服务端完成，hydration 仍需 JS 引擎
 tags: []
 status: fleeting
 content-type: atomic
-up:
+up: null
+noteId: 1792465707749
 ---
 
-> NextJS 首屏渲染不需要 JS 引擎参与，但 hydration 仍然需要
+> NextJS 首屏渲染不需要 JS 引擎参与，但~~hydration~~仍然需要
 
 ### 论据/示例
 

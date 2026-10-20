@@ -7,10 +7,12 @@ date-created: 2026-05-06
 date-modified: 2026-07-14
 status: active
 content-type: atomic
-up: ["[[Fiber]]"]
+up:
+  - "[[Fiber]]"
+noteId: 1792465708630
 ---
 
-> React Fiber 用链表代替递归树遍历，使渲染过程可中断、可恢复
+> React Fiber 用~~链表~~代替~~递归~~树遍历，使渲染过程可中断、可恢复
 
 ## 论据/示例
 

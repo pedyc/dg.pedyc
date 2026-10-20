@@ -2,16 +2,19 @@
 uid: 202610200118
 title: Context 是 Agent 对 LLM 可见信息的动态选择而非静态快照
 aliases: []
-description: "Context Engineering 的核心目标是在有限窗口内动态选择、组装、压缩、更新、注入信息，确定最适合 LLM 当前推理目标的可靠上下文"
-tags: [AI, Agent]
+description: Context Engineering 的核心目标是在有限窗口内动态选择、组装、压缩、更新、注入信息，确定最适合 LLM 当前推理目标的可靠上下文
+tags:
+  - AI
+  - Agent
 date-created: 2026-10-20
 date-modified: 2026-10-20
 status: active
 content-type: atomic
 up: "[[Context Engineering]]"
+noteId: 1792465705747
 ---
 
-> Context 是 Agent 对 LLM 可见信息的动态选择，而非静态快照。
+> Context 是 Agent 对 LLM 可见信息的~~动态选择~~，而非~~静态快照~~。
 
 ## 论据/示例（可选）
 

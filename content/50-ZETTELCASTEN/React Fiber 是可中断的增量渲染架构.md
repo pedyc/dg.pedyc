@@ -7,10 +7,11 @@ date-created: 2026-05-06
 date-modified: 2026-08-30
 status: fleeting
 content-type: atomic
-up:
+up: null
+noteId: 1792465709002
 ---
 
-> React Fiber 是把渲染工作拆成小任务，利用浏览器空闲时间执行，实现可中断的增量渲染架构
+> React Fiber 是把渲染工作拆成小任务，利用浏览器空闲时间执行，实现~~可中断~~的~~增量渲染~~架构
 
 ## 论据/示例
 

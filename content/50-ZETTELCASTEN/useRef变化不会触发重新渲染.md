@@ -9,9 +9,10 @@ date-modified: 2026-04-29
 status: cultivating
 content-type: atomic
 up: "[[Refs(React)]]"
+noteId: 1792465711305
 ---
 
-> useRef 变化不会触发重新渲染，可用于存储不需要渲染的可变值
+> useRef 变化不会触发~~重新渲染~~，可用于存储不需要渲染的可变值
 
 ## 论据/示例
 

@@ -3,15 +3,18 @@ uid: 202603230022
 title: IndexedDB 用于存储大量结构化数据
 aliases: []
 description: IndexedDB 是浏览器内置的数据库，支持存储大量结构化数据、事务和索引
-tags: [前端开发/浏览器]
+tags:
+  - 前端开发/浏览器
 date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up: [[Web存储]]
+up:
+  - - Web存储
+noteId: 1792465706811
 ---
 
-> IndexedDB 是浏览器内置的 NoSQL 数据库，支持存储大量结构化对象、事务操作和索引查询，适合离线应用和大数据存储场景。
+> IndexedDB 是浏览器内置的 NoSQL 数据库，支持存储大量结构化对象、~~事务操作~~和~~索引查询~~，适合离线应用和大数据存储场景。
 
 ### 论据/示例
 

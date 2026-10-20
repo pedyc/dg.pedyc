@@ -1,17 +1,20 @@
 ---
 uid: 202604180002
 title: useEffect的return语句在组件卸载和依赖变化时都会被调用
-aliases: [A-useEffect-cleanup调用时机]
-description: "useEffect 返回的 cleanup 函数在组件卸载和依赖变化时都会被调用，确保副作用被正确清理"
-tags: [前端开发/框架/React]
+aliases:
+  - A-useEffect-cleanup调用时机
+description: useEffect 返回的 cleanup 函数在组件卸载和依赖变化时都会被调用，确保副作用被正确清理
+tags:
+  - 前端开发/框架/React
 date-created: 2026-04-18
 date-modified: 2026-04-18
 status: active
 content-type: atomic
 up: "[[useEffect]]"
+noteId: 1792465711055
 ---
 
-> useEffect 返回的 cleanup 函数在组件卸载和依赖变化时都会被调用，确保副作用被正确清理。
+> useEffect 返回的~~cleanup~~函数在组件卸载和依赖变化时都会被调用，确保副作用被正确清理。
 
 ## 论据/示例
 

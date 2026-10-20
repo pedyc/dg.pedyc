@@ -3,15 +3,17 @@ uid: 202603240004
 title: CORS简单请求不发送预检而复杂请求会发送预检请求
 aliases: []
 description: 浏览器根据请求条件决定是否先发送 OPTIONS 预检请求
-tags: [前端开发/安全/原子]
+tags:
+  - 前端开发/安全/原子
 date-created: 2026-03-24
 date-modified: 2026-08-27
 status: active
 content-type: atomic
 up: "[[CORS]]"
+noteId: 1792465706102
 ---
 
-> CORS 简单请求不发送预检，而复杂请求会发送预检请求
+> CORS 简单请求不发送~~预检~~，而复杂请求会发送~~预检~~请求
 
 浏览器根据请求条件判断是简单请求还是复杂请求（需预检）。
 

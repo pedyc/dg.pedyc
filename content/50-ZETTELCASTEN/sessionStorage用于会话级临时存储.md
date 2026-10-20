@@ -3,15 +3,18 @@ uid: 202603230021
 title: sessionStorage 用于会话级临时存储
 aliases: []
 description: sessionStorage 数据仅在当前会话有效，关闭标签页后自动清除
-tags: [前端开发/浏览器]
+tags:
+  - 前端开发/浏览器
 date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up: [[Web存储]]
+up:
+  - - Web存储
+noteId: 1792465709775
 ---
 
-> sessionStorage 提供会话级的键值对存储，数据仅在当前标签页会话中有效，关闭标签页后自动清除。
+> sessionStorage 提供~~会话级~~的键值对存储，数据仅在当前标签页会话中有效，关闭标签页后自动清除。
 
 ### 论据/示例
 

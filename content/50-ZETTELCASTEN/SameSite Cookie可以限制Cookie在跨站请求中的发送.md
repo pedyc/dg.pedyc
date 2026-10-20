@@ -3,15 +3,17 @@ uid: 202603240002
 title: SameSite Cookie可以限制Cookie在跨站请求中的发送
 aliases: []
 description: Lax/Strict 模式下，浏览器不会在跨站请求中发送 Cookie
-tags: [前端开发/安全/原子]
+tags:
+  - 前端开发/安全/原子
 date-created: 2026-03-24
 date-modified: 2026-08-27
 status: active
 content-type: atomic
 up: "[[CSRF]]"
+noteId: 1792465709591
 ---
 
-> SameSite Cookie 可以限制 Cookie 在跨站请求中的发送，在服务端进行设置
+> SameSite Cookie 可以限制 Cookie 在~~跨站请求~~中的发送，在服务端进行设置
 
 SameSite 是 Cookie 的一个属性，用于控制 Cookie 是否在跨站请求中被发送，从而有效防御 CSRF 攻击。
 

@@ -3,15 +3,17 @@ uid: 202603230011
 title: 浏览器通过渲染引擎和JS引擎分工处理页面
 aliases: []
 description: 渲染引擎负责 HTML/CSS 解析和布局，JS 引擎负责执行 JavaScript
-tags: [前端开发/浏览器]
+tags:
+  - 前端开发/浏览器
 date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
 up: "[[浏览器]]"
+noteId: 1792465698652
 ---
 
-> 浏览器通过渲染引擎和 JS 引擎分工处理页面，前者负责解析 HTML/CSS 和布局，后者负责执行 JavaScript 逻辑。
+> 浏览器通过~~渲染引擎~~和 ~~JS 引擎~~分工处理页面，前者负责解析 HTML/CSS 和布局，后者负责执行 JavaScript 逻辑。
 
 ## 论据/示例
 

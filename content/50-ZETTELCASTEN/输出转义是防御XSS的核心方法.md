@@ -3,15 +3,18 @@ uid: 202603230002
 title: 输出转义是防御XSS的核心方法
 aliases: []
 description: 将特殊字符转换为 HTML 实体，使脚本不会被执行
-tags: [前端开发/安全/原子]
+tags:
+  - 前端开发/安全/原子
 date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up: [[XSS]]
+up:
+  - - XSS
+noteId: 1792465701061
 ---
 
-> 输出转义是防御 XSS 的核心方法
+> ~~输出转义~~是防御 XSS 的核心方法
 
 将用户输入的特殊字符转换为 HTML 实体，使浏览器将其作为纯文本而非代码解析，从而防止脚本执行。
 

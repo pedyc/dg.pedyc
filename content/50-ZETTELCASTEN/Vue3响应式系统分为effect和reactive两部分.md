@@ -8,11 +8,14 @@ date-created: 2026-03-17
 date-modified: 2026-09-22
 status: fleeting
 content-type: atomic
+up:
+  - "[[Vue3响应式原理]]"
+noteId: 1792465711812
 ---
 
 ## Vue3 响应式系统分为 effect 和 reactive 两部分
 
-> effect 负责收集依赖和触发更新，reactive 负责将普通对象转换为响应式对象
+> effect 负责~~收集依赖~~和~~触发更新~~，reactive 负责将普通对象转换为响应式对象
 
 ### 论据 / 示例
 

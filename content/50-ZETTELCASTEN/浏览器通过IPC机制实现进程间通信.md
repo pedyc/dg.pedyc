@@ -3,15 +3,17 @@ uid: 202603230013
 title: 浏览器通过IPC机制实现进程间通信
 aliases: []
 description: 浏览器通过 IPC 机制实现主进程与渲染进程之间的通信
-tags: [前端开发/浏览器]
+tags:
+  - 前端开发/浏览器
 date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
 up: "[[浏览器核心架构]]"
+noteId: 1792465699227
 ---
 
-> 浏览器通过 IPC（Inter-Process Communication，进程间通信）机制实现主进程与渲染进程之间的数据交换。
+> 浏览器通过 ~~IPC（Inter-Process Communication，进程间通信）~~ 机制实现主进程与渲染进程之间的数据交换。
 
 ## 论据/示例
 

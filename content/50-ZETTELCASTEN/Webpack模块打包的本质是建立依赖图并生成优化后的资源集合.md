@@ -2,16 +2,18 @@
 uid: 202605180001
 title: Webpack模块打包的本质是建立依赖图并生成优化后的资源集合
 aliases: []
-description: "Webpack 通过递归解析模块依赖构建依赖图，再生成优化后的资源集合"
-tags: [前端/构建工具]
+description: Webpack 通过递归解析模块依赖构建依赖图，再生成优化后的资源集合
+tags:
+  - 前端/构建工具
 date-created: 2026-05-18
 date-modified: 2026-05-18
 status: active
 content-type: atomic
 up: "[[Webpack]]"
+noteId: 1792465712060
 ---
 
-> Webpack 模块打包的本质是建立依赖图并生成优化后的资源集合。
+> Webpack 模块打包的本质是建立~~依赖图~~并生成优化后的资源集合。
 
 ## 论据/示例
 

@@ -25,6 +25,9 @@ related: "[[React]]"
 - **副作用管理**：`useEffect` 在渲染后执行副作用，替代 Class 的生命周期方法
 - **自定义逻辑复用**：自定义 Hooks（以 `use` 开头的函数）将可复用逻辑提取为独立函数
 - **渲染 Props 替代**：Hook 可以替代 Render Props 的逻辑共享模式，避免嵌套
+- [[useState 的状态保存在 Fiber 节点的 Hook 链表中而非函数作用域]] — 状态由 Fiber 节点持久保存，而非函数作用域
+- [[自定义 Hooks 通过函数复用状态逻辑从而消除包装器地狱]] — 用函数复用替代 HOC/Render Props 嵌套
+- [[Hooks 必须在顶层调用因为 React 依赖调用顺序匹配 Hook]] — 依赖调用顺序而非名称匹配 Hook 节点
 
 ---
 

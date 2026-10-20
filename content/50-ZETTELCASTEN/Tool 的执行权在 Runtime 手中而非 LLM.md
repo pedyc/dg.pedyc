@@ -2,16 +2,19 @@
 uid: 202610200117
 title: Tool 的执行权在 Runtime 手中而非 LLM
 aliases: []
-description: "LLM 输出 Tool Call 只是请求执行，不代表工具真的执行、更不代表执行成功；执行权、权限校验都在 Runtime 手中"
-tags: [AI, Agent]
+description: LLM 输出 Tool Call 只是请求执行，不代表工具真的执行、更不代表执行成功；执行权、权限校验都在 Runtime 手中
+tags:
+  - AI
+  - Agent
 date-created: 2026-10-20
 date-modified: 2026-10-20
 status: active
 content-type: atomic
 up: "[[ToolCalling]]"
+noteId: 1792465710322
 ---
 
-> Tool 的执行权在 Runtime 手中，而非 LLM。
+> Tool 的执行权在 ~~Runtime~~ 手中，而非 LLM。
 
 ## 论据/示例（可选）
 

@@ -2,16 +2,18 @@
 uid: 202605180002
 title: Tree Shaking 的本质是 ESM 静态分析
 aliases: []
-description: "Tree Shaking 利用 ES Module 的静态结构在打包阶段移除未使用的导出"
-tags: [前端/构建工具]
+description: Tree Shaking 利用 ES Module 的静态结构在打包阶段移除未使用的导出
+tags:
+  - 前端/构建工具
 date-created: 2026-05-18
 date-modified: 2026-05-18
 status: active
 content-type: atomic
 up: "[[Webpack]]"
+noteId: 1792465710541
 ---
 
-> Tree Shaking 的本质是 ESM 静态分析。
+> Tree Shaking 的本质是 ESM~~静态分析~~。
 
 ## 论据/示例
 

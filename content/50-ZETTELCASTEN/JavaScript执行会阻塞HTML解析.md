@@ -3,15 +3,18 @@ uid: 202603230016
 title: JavaScript 执行会阻塞 HTML 解析
 aliases: []
 description: JavaScript 可能修改 DOM 或 CSSOM，因此渲染引擎在执行 JS 时会暂停 HTML 解析
-tags: [前端开发/浏览器]
+tags:
+  - 前端开发/浏览器
 date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up: [[浏览器渲染流程]]
+up:
+  - - 浏览器渲染流程
+noteId: 1792465707184
 ---
 
-> JavaScript 可能修改 DOM 或 CSSOM，因此渲染引擎在执行 JavaScript 时会暂停 HTML 解析，直到 JS 执行完成。
+> JavaScript 可能修改 DOM 或 CSSOM，因此渲染引擎在执行 JavaScript 时会暂停~~HTML 解析~~，直到 JS 执行完成。
 
 ### 论据/示例
 

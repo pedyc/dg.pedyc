@@ -3,15 +3,18 @@ uid: 202603240001
 title: CSRF Token是防御CSRF的核心方法
 aliases: []
 description: 攻击者无法读取页面中的 Token，无法伪造请求
-tags: [前端开发/安全/原子]
+tags:
+  - 前端开发/安全/原子
 date-created: 2026-03-24
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up: [[CSRF]]
+up:
+  - - CSRF
+noteId: 1792465706475
 ---
 
-> CSRF Token 是防御 CSRF 的核心方法
+> ~~CSRF Token~~ 是防御 CSRF 的核心方法
 
 攻击者无法读取目标页面的内容，因此无法获取页面中嵌入的 CSRF Token，从而无法伪造有效的请求。
 

@@ -8,10 +8,12 @@ date-created: 2026-04-30
 date-modified: 2026-05-01
 status: cultivating
 content-type: atomic
-up: ["[[React]]"]
+up:
+  - "[[React]]"
+noteId: 1792465709381
 ---
 
-> React.memo 通过浅比较 props 决定是否重新渲染
+> React.memo 通过~~浅比较~~props 决定是否重新渲染
 
 ## 论据/示例
 

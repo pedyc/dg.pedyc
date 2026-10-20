@@ -2,16 +2,18 @@
 uid: 202607071532
 title: 虚拟列表采用DOM回收而非销毁重建
 aliases: []
-description: "虚拟列表对离开视口的 DOM 节点采取复用策略，避免频繁的创建和销毁带来的 GC 压力"
-tags: [前端开发/性能优化]
+description: 虚拟列表对离开视口的 DOM 节点采取复用策略，避免频繁的创建和销毁带来的 GC 压力
+tags:
+  - 前端开发/性能优化
 date-created: 2026-07-07
 date-modified: 2026-07-07
 status: fleeting
 content-type: atomic
 up: "[[虚拟列表]]"
+noteId: 1792465703223
 ---
 
-> 虚拟列表采用 DOM 回收而非销毁重建——滚动时离开视口的节点不销毁，而是移动到另一端的缓冲区复用，避免频繁的 createElement/removeChild 和 GC 抖动。
+> 虚拟列表采用 DOM ~~回收~~而非销毁重建——滚动时离开视口的节点不销毁，而是移动到另一端的缓冲区复用，避免频繁的 createElement/removeChild 和 GC 抖动。
 
 ## 论据/示例
 

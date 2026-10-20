@@ -3,15 +3,18 @@ uid: 202603230003
 title: 现代框架默认防御XSS但危险API仍需注意
 aliases: []
 description: React dangerouslySetInnerHTML、Vue v-html 等会绕过转义
-tags: [前端开发/安全/原子]
+tags:
+  - 前端开发/安全/原子
 date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up: [[XSS]]
+up:
+  - - XSS
+noteId: 1792465702663
 ---
 
-> 现代框架默认防御XSS，但危险API仍需注意
+> 现代框架默认防御XSS，但~~危险API~~仍需注意
 
 React、Vue 等现代前端框架默认对用户输入进行转义处理，但在某些场景下仍需谨慎：
 

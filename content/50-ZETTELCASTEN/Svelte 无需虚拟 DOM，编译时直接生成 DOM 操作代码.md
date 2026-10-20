@@ -3,15 +3,18 @@ uid: 202605261100
 title: Svelte 无需虚拟 DOM，编译时直接生成 DOM 操作代码
 aliases: []
 description: Svelte 在编译阶段分析组件模板，生成精准的原生 JavaScript DOM 操作指令，无需虚拟 DOM 运行时
-tags: [前端开发, Svelte]
+tags:
+  - 前端开发
+  - Svelte
 date-created: 2026-05-26
 date-modified: 2026-05-26
 status: fleeting
 content-type: atomic
 up: "[[Svelte]]"
+noteId: 1792465710167
 ---
 
-> Svelte 在编译阶段分析组件模板，生成精准的原生 JavaScript DOM 操作指令，无需虚拟 DOM 运行时
+> Svelte 在~~编译阶段~~分析组件模板，生成精准的原生 JavaScript DOM 操作指令，无需虚拟 DOM 运行时
 
 ## 论据/示例
 

@@ -3,15 +3,19 @@ uid: 202605261000
 title: Vite HMR 的本质是基于浏览器原生 ESM 的按需编译机制
 aliases: []
 description: Vite HMR 利用浏览器原生 ESM 支持，模块变更时只编译变更模块，通过 WebSocket 通知浏览器，浏览器请求新模块后直接替换，无需重建整个依赖图
-tags: [前端工程, Vite, HMR]
+tags:
+  - 前端工程
+  - Vite
+  - HMR
 date-created: 2026-05-26
 date-modified: 2026-05-26
 status: fleeting
 content-type: atomic
 up: "[[Vite]]"
+noteId: 1792465711431
 ---
 
-> Vite HMR 利用浏览器原生 ESM 支持，模块变更时只编译变更模块，通过 WebSocket 通知浏览器，浏览器请求新模块后直接替换，无需重建整个依赖图
+> Vite HMR 利用浏览器~~原生 ESM~~支持，模块变更时只编译变更模块，通过 WebSocket 通知浏览器，浏览器请求新模块后直接替换，无需重建整个依赖图
 
 ## 论据/示例
 

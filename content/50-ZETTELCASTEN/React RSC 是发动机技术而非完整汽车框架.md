@@ -2,16 +2,17 @@
 uid: 202605061030
 title: React RSC 是发动机技术而非完整汽车框架
 aliases: []
-description: "React 19 RSC 提供了服务端渲染能力，但完整开发体验仍需 NextJS"
+description: React 19 RSC 提供了服务端渲染能力，但完整开发体验仍需 NextJS
 tags: []
 date-created: 2026-05-06
 date-modified: 2026-05-06
 status: fleeting
 content-type: atomic
-up:
+up: null
+noteId: 1792465709213
 ---
 
-> React 19 RSC 是发动机技术，而非完整汽车框架，完整开发体验仍需 NextJS
+> React 19 RSC 是~~发动机技术~~，而非~~完整汽车框架~~，完整开发体验仍需 NextJS
 
 ## 论据/示例
 

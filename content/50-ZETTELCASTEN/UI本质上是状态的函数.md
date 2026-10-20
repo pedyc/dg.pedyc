@@ -12,9 +12,10 @@ date-modified: 2026-07-22
 status: fleeting
 content-type: atomic
 up: "[[为什么社区更倾向函数组件]]"
+noteId: 1792465710931
 ---
 
-> UI 本质上是状态到视图的映射函数：`UI = f(state)`
+> UI 本质上是状态到视图的~~映射函数~~：`UI = f(state)`
 
 ## 论据/示例
 

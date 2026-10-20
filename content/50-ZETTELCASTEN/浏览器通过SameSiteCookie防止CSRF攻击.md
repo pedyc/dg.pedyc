@@ -3,15 +3,18 @@ uid: 202603230019
 title: 浏览器通过 SameSite Cookie 防止 CSRF 攻击
 aliases: []
 description: Cookie 的 SameSite 属性限制跨站请求时 Cookie 的发送
-tags: [前端开发/浏览器]
+tags:
+  - 前端开发/浏览器
 date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up: [[浏览器安全机制]]
+up:
+  - - 浏览器安全机制
+noteId: 1792465699400
 ---
 
-> 浏览器通过 Cookie 的 SameSite 属性限制跨站请求时 Cookie 的发送，从而防止 CSRF（跨站请求伪造）攻击。
+> 浏览器通过 Cookie 的 ~~SameSite~~ 属性限制跨站请求时 Cookie 的发送，从而防止 CSRF（跨站请求伪造）攻击。
 
 ### 论据/示例
 

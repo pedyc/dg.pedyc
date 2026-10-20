@@ -1,14 +1,26 @@
 ---
 title: AgentTool
-aliases: [C-AgentTool, C-Agent-Tool]
+aliases:
+  - C-AgentTool
+  - C-Agent-Tool
 description: Agent 可调用的、能与外部环境产生实际交互的能力（函数/工具封装）
-tags: [AI, Agent, LLM, 概念]
+tags:
+  - AI
+  - Agent
+  - LLM
+  - 概念
 status: cultivating
 content-type: concept
 up: ["[[Agent]]", "[[LLM]]"]
 date-created: 2026-09-27
-date-modified: 2026-09-27
+date-modified: 2026-10-20
 ---
+
+## 核心命题
+
+- [[AgentTool是Agent与外部环境交互的接口]] — 定义
+- [[AgentTool是能力，ToolCall是对能力的一次调用请求]] — 能力 vs 调用
+- Tool 不只是函数，工程上至少包含「定义」和「实现」
 
 ## 什么是AgentTool？
 

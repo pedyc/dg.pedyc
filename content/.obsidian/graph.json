@@ -22,37 +22,30 @@
       }
     },
     {
-      "query": "[\"content-type\":sop",
-      "color": {
-        "a": 1,
-        "rgb": 11657298
-      }
-    },
-    {
-      "query": "[\"content-type\":question",
-      "color": {
-        "a": 1,
-        "rgb": 5431378
-      }
-    },
-    {
-      "query": "[\"area\":*",
+      "query": "[\"content-type\":area",
       "color": {
         "a": 1,
         "rgb": 10965728
+      }
+    },
+    {
+      "query": "[\"content-type\":moc",
+      "color": {
+        "a": 1,
+        "rgb": 5431378
       }
     }
   ],
   "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
+  "nodeSizeMultiplier": 1.9923670160174,
+  "lineSizeMultiplier": 0.504053786830136,
   "collapse-forces": false,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
-  "linkStrength": 1,
+  "centerStrength": 0.487443148111529,
+  "repelStrength": 11.080603224129,
+  "linkStrength": 0.702590468657307,
   "linkDistance": 250,
-  "scale": 0.23008729080081655,
+  "scale": 0.11705964391564663,
   "close": false
 }

@@ -3,15 +3,18 @@ uid: 202603240003
 title: CORS是浏览器允许服务端控制跨域访问的机制
 aliases: []
 description: 服务端通过响应头声明允许哪些源访问，浏览器执行控制
-tags: [前端开发/安全/原子]
+tags:
+  - 前端开发/安全/原子
 date-created: 2026-03-24
 date-modified: 2026-03-24
 status: active
 content-type: atomic
-up: [[CORS]]
+up:
+  - - CORS
+noteId: 1792465706284
 ---
 
-> CORS 是浏览器允许服务端控制跨域访问的机制
+> CORS 是浏览器允许~~服务端~~控制跨域访问的机制
 
 CORS（Cross-Origin Resource Sharing，跨域资源共享）让服务端通过 HTTP 响应头声明允许哪些源（origin）访问资源，浏览器根据这些响应头决定是否允许跨域请求。
 

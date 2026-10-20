@@ -3,9 +3,12 @@ title: React 中的 setState 是同步还是异步的？为什么有时候打印
 date-created: 2025-05-21
 date-modified: 2026-03-21
 content-type: atomic
+up:
+  - "[[React面试题]]"
+noteId: 1792465708279
 ---
 
-> setState 方法本身不是异步，但批量更新是异步调度——setState 会立即执行，但不会立即触发组件渲染，状态会被放入更新队列中等待当前事件执行完毕统一处理。
+> setState 方法本身不是异步，但~~批量更新~~是异步调度——setState 会立即执行，但不会立即触发组件渲染，状态会被放入更新队列中等待当前事件执行完毕统一处理。
 
 ### 论据/示例
 

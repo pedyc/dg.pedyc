@@ -2,16 +2,17 @@
 uid: 202605061500
 title: React Fiber 的时间切片基于优先级调度
 aliases: []
-description: "React Fiber 通过优先级队列调度工作单元，高优先级可打断低优先级"
+description: React Fiber 通过优先级队列调度工作单元，高优先级可打断低优先级
 tags: []
 date-created: 2026-05-06
 date-modified: 2026-08-31
 status: fleeting
 content-type: atomic
-up:
+up: null
+noteId: 1792465708846
 ---
 
-> React Fiber 的时间切片通过优先级调度实现，高优先级任务（如用户输入）可打断低优先级任务（如列表渲染）
+> React Fiber 的时间切片通过~~优先级调度~~实现，高优先级任务（如用户输入）可打断低优先级任务（如列表渲染）
 
 ## 论据/示例
 

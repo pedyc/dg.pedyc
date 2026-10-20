@@ -2,6 +2,7 @@
 title: 为什么需要Context Engineering？
 date-created: 2026-10-03
 date-modified: 2026-10-03
+content-type: question
 ---
 
 ## 为什么需要 Context Engineering？

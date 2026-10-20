@@ -3,6 +3,7 @@ title: Context中什么信息才算缺失？
 date-created: 2026-10-03
 date-modified: 2026-10-03
 up: ["[[Context Quality]]"]
+content-type: question
 ---
 
 ## 问题

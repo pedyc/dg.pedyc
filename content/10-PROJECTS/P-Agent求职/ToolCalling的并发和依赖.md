@@ -2,6 +2,7 @@
 title: ToolCalling的并发和依赖
 date-created: 2026-09-27
 date-modified: 2026-09-27
+content-type: concept
 ---
 
 原则：

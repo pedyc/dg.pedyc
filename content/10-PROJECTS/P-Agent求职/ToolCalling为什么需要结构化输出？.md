@@ -2,6 +2,7 @@
 title: ToolCalling为什么需要结构化输出？
 date-created: 2026-09-27
 date-modified: 2026-09-27
+content-type: question
 ---
 
 ## 背景

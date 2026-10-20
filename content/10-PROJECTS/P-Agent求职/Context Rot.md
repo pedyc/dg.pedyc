@@ -2,6 +2,7 @@
 title: Context Rot
 date-created: 2026-10-03
 date-modified: 2026-10-03
+content-type: concept
 ---
 
 - 随着轮次增加，上下文被无关信息污染

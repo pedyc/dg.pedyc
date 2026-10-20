@@ -2,6 +2,7 @@
 title: Context Isolation
 date-created: 2026-10-03
 date-modified: 2026-10-03
+content-type: concept
 ---
 
 - 不同子Agent/子任务使用**独立上下文**

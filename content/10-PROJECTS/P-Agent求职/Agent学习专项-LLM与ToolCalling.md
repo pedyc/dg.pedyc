@@ -2,6 +2,7 @@
 title: Agent学习专项-LLM与ToolCalling
 date-created: 2026-09-27
 date-modified: 2026-09-27
+content-type: record
 ---
 
 - [x] 完成状态 ✅ 2026-09-28

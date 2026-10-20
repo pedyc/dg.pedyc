@@ -6,6 +6,7 @@ aliases:
 date-created: 2026-10-02
 date-modified: 2026-10-03
 up: ["[[Agent]]"]
+content-type: concept
 ---
 
 ## 什么是 Context Engineering

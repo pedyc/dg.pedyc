@@ -2,6 +2,7 @@
 title: ToolCalling错误处理
 date-created: 2026-09-27
 date-modified: 2026-09-27
+content-type: concept
 ---
 
 考虑一个情况：

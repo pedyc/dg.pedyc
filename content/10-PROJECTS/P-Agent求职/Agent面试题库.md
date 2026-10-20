@@ -2,7 +2,7 @@
 title: Agent面试题库
 date-created: 2026-09-23
 date-modified: 2026-10-08
-content-type: [moc]
+content-type: moc
 ---
 
 以下按 **AI/LLM Agent 方向**整理。每题后括号是面试官通常想听的考察点。如果你说的是 Java Agent、监控 Agent 或别的方向，我也可以另出一份。

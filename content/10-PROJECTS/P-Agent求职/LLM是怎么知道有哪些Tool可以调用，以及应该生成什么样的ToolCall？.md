@@ -2,6 +2,7 @@
 title: LLM是怎么知道有哪些Tool可以调用，以及应该生成什么样的ToolCall？
 date-created: 2026-09-27
 date-modified: 2026-10-03
+content-type: question
 ---
 
 ## 背景

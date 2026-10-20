@@ -2,6 +2,7 @@
 title: LLM为什么能够选择正确的Tool？
 date-created: 2026-09-27
 date-modified: 2026-09-27
+content-type: question
 ---
 
 ## 背景

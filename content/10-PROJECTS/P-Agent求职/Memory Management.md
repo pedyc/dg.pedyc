@@ -2,6 +2,7 @@
 title: Memory Management
 date-created: 2026-10-03
 date-modified: 2026-10-03
+content-type: concept
 ---
 
 - **短期记忆**：当前会话的对话历史

@@ -2,6 +2,7 @@
 title: Token Budgeting
 date-created: 2026-10-03
 date-modified: 2026-10-03
+content-type: concept
 ---
 
 - 为每类上下文分配token配额

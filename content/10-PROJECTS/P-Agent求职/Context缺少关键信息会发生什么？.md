@@ -2,7 +2,7 @@
 title: Context缺少关键信息会发生什么？
 date-created: 2026-10-03
 date-modified: 2026-10-03
-content-type: [question]
+content-type: question
 up: ["[[Context Quality]]"]
 ---
 

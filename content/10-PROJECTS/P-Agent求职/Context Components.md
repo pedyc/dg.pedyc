@@ -6,6 +6,7 @@ aliases:
   - C-Context Components
 date-created: 2026-10-02
 date-modified: 2026-10-03
+content-type: concept
 ---
 
 ## Context 的基本组成

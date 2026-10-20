@@ -2,6 +2,7 @@
 title: Dynamic Context
 date-created: 2026-10-03
 date-modified: 2026-10-03
+content-type: concept
 ---
 
 - 不预先塞入所有信息，而是**在需要时动态注入**

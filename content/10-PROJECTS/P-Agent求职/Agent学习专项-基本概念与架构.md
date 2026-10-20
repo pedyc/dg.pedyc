@@ -2,6 +2,7 @@
 title: Agent学习专项-基本概念与架构
 date-created: 2026-09-22
 date-modified: 2026-09-24
+content-type: record
 ---
 
 - [x] 完成状态 ✅ 2026-09-23

@@ -2,6 +2,7 @@
 title: Agent学习专项-ClaudeCode源码学习
 date-created: 2026-09-23
 date-modified: 2026-09-23
+content-type: record
 ---
 
 ## 背景

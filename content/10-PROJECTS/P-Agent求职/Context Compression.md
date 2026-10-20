@@ -2,6 +2,7 @@
 title: Context Compression
 date-created: 2026-10-03
 date-modified: 2026-10-03
+content-type: concept
 ---
 
 当信息量超过窗口时：

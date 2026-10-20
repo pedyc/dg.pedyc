@@ -3,6 +3,7 @@ title: Context Quality
 date-created: 2026-10-03
 date-modified: 2026-10-03
 up: ["[[Context Engineering]]"]
+content-type: concept
 ---
 
 ## 怎样评价Context质量？

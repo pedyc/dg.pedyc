@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Context Rot.md",
+                "file": "10-PROJECTS/P-Agent求职/Context缺少关键信息会发生什么？.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Context Rot"
+              "title": "Context缺少关键信息会发生什么？"
             }
           }
         ]
@@ -73,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Context Rot.md",
+                "file": "10-PROJECTS/P-Agent求职/Context缺少关键信息会发生什么？.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -280,32 +280,32 @@
   },
   "active": "a6b5e0808e8840a7",
   "lastOpenFiles": [
-    "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
+    "10-PROJECTS/P-Agent求职/Context过长会怎样？.md",
+    "10-PROJECTS/P-Agent求职/Context Window用完之后会怎样？.md",
+    "10-PROJECTS/P-Agent求职/Context Rot.md",
+    "10-PROJECTS/P-Agent求职/Context Quality.md",
+    "10-PROJECTS/P-Agent求职/Context Ordering & Formatting.md",
+    "10-PROJECTS/P-Agent求职/Context Isolation.md",
+    "10-PROJECTS/P-Agent求职/Context Engineering.md",
+    "10-PROJECTS/P-Agent求职/Context Compression.md",
+    "10-PROJECTS/P-Agent求职/Context Components.md",
+    "10-PROJECTS/P-Agent求职/Agent学习专项-LLM与ToolCalling.md",
+    "10-PROJECTS/P-Agent求职/AI Agent架构与开发工具调研.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-ClaudeCode源码学习.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-AgentLoop.md",
     "10-PROJECTS/P-Agent求职/Agent学习专项-基本概念与架构.md",
+    "10-PROJECTS/P-Agent求职/Agent学习清单.md",
+    "10-PROJECTS/P-Agent求职/压缩Context时怎样避免丢失关键信息？.md",
+    "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
     "10-PROJECTS/P-Agent求职/Agent求职.md",
     "30-RESOURCES/Agent.md",
     "30-RESOURCES/AgentTool.md",
     "50-ZETTELCASTEN/AgentTool是Agent与外部环境交互的接口.md",
     "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.md",
-    "10-PROJECTS/P-Agent求职/Agent学习专项-LLM与ToolCalling.md",
-    "10-PROJECTS/P-Agent求职/Agent学习清单.md",
     "20-AREAS/A-人工智能/人工智能.md",
     "20-AREAS/A-前端/前端开发.md",
     "30-RESOURCES/AI工具与提效生态地图.md",
     "30-RESOURCES/Inbox/Frontend Development Trends 2026 AI, Edge & TypeScript.md",
-    "40-ARCHIVE/WSL2配置代理.md",
-    "30-RESOURCES/Inbox/Best Three.js Websites 2026 8 Sites + Techniques.md",
-    "30-RESOURCES/Subjects/计算机网络与协议专题/00-网络协议全景导图.md",
-    "99-ASSETS/Excalidraw/前端框架对比：Vue&React.excalidraw.md",
-    "20-AREAS/A-前端/TypeScript.md",
-    "30-RESOURCES/AgentLoop.md",
-    "30-RESOURCES/PEAS模型.md",
-    "90-DIARY/2026-10-20.md",
-    "20-AREAS/A-前端/Web安全.md",
-    "20-AREAS/A-前端/Vue.md",
-    "20-AREAS/A-前端/ThreeJS.md",
     "30-RESOURCES/PEAS.excalidraw.svg",
     "_scripts/fix_uid.py",
     "banner.svg",

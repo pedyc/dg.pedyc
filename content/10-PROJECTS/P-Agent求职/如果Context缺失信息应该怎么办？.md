@@ -2,7 +2,7 @@
 title: 如果Context缺失信息应该怎么办？
 date-created: 2026-10-03
 date-modified: 2026-10-03
-content-type: [question]
+content-type: question
 up: ["[[Context Quality]]"]
 ---
 

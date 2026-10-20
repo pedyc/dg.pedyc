@@ -2,6 +2,7 @@
 title: Agent面试题单，字节一面
 date-created: 2026-10-08
 date-modified: 2026-10-08
+content-type: record
 ---
 
 📌 字节跳动 · AI应用开发一面（2026.08）

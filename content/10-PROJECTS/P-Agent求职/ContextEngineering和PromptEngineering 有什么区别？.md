@@ -2,7 +2,7 @@
 title: ContextEngineering和PromptEngineering 有什么区别？
 date-created: 2026-10-03
 date-modified: 2026-10-03
-content-type: [question]
+content-type: question
 up: ["[[Context Engineering]]"]
 ---
 

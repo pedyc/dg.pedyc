@@ -2,13 +2,15 @@
 uid: 202608181125
 title: AI Agent架构与开发工具调研
 aliases: []
-author: [gemini]
+author:
+  - gemini
 description: ""
 tags: []
 date-created: 2026-08-18
-date-modified: 2026-08-18
+date-modified: 2026-10-20
 status: fleeting
-content-type: [article]
+content-type:
+  - record
 up: []
 ---
 

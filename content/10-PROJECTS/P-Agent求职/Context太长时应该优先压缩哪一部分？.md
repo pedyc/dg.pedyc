@@ -2,7 +2,7 @@
 title: Context太长时应该优先压缩哪一部分？
 date-created: 2026-10-03
 date-modified: 2026-10-03
-content-type: [question]
+content-type: question
 up: ["[[Context Quality]]"]
 ---
 

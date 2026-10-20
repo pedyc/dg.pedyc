@@ -2,7 +2,7 @@
 title: Agent学习清单
 date-created: 2026-09-22
 date-modified: 2026-09-22
-content-type: [moc]
+content-type: moc
 ---
 
 ## Agent学习清单

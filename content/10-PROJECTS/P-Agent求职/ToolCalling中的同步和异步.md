@@ -1,3 +1,13 @@
+---
+title: ToolCalling中的同步和异步
+aliases:
+  - C-ToolCalling中的同步和异步
+date-created: 2026-09-27
+date-modified: 2026-10-20
+content-type: concept
+up: "[[ToolCalling]]"
+---
+
 先看最简单的情况：
 
 ```bash

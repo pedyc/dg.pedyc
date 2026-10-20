@@ -2,6 +2,7 @@
 title: Context Ordering & Formatting
 date-created: 2026-10-03
 date-modified: 2026-10-03
+content-type: concept
 ---
 
 - LLM对**位置敏感**（Lost in the Middle现象）

@@ -2,6 +2,7 @@
 title: ToolCalling与Permission、Policy
 date-created: 2026-09-27
 date-modified: 2026-09-27
+content-type: concept
 ---
 
 假设 LLM 产生：

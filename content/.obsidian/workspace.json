@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Context中信息缺失和信息冲突有什么区别？.md",
+                "file": "50-ZETTELCASTEN/现代前端缓存的最佳实践是入口HTML协商缓存配合资产文件永不过期强缓存.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Context中信息缺失和信息冲突有什么区别？"
+              "title": "现代前端缓存的最佳实践是入口HTML协商缓存配合资产文件永不过期强缓存"
             }
           }
         ],
@@ -98,7 +98,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Context中信息缺失和信息冲突有什么区别？.md",
+                "file": "50-ZETTELCASTEN/现代前端缓存的最佳实践是入口HTML协商缓存配合资产文件永不过期强缓存.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -305,6 +305,15 @@
   },
   "active": "9bacabd11ea9bb1c",
   "lastOpenFiles": [
+    "30-RESOURCES/HTTP缓存机制.md",
+    "50-ZETTELCASTEN/现代前端缓存的最佳实践是入口HTML协商缓存配合资产文件永不过期强缓存.md",
+    "90-DIARY/2026-W43.md",
+    "90-DIARY/2026-10-21.md",
+    "90-DIARY/2026-10-24.md",
+    "90-DIARY/2026-10-23.md",
+    "90-DIARY/2026-10-22.md",
+    "90-DIARY/2026-10-20.md",
+    "10-PROJECTS/P-Agent求职/Context中信息缺失和信息冲突有什么区别？.md",
     "10-PROJECTS/P-Agent求职/Context Quality.md",
     "10-PROJECTS/P-Agent求职/Context缺少关键信息会发生什么？.md",
     "10-PROJECTS/P-Agent求职/Context过长会怎样？.md",
@@ -322,15 +331,6 @@
     "10-PROJECTS/P-Agent求职/Agent学习专项-基本概念与架构.md",
     "10-PROJECTS/P-Agent求职/Agent学习清单.md",
     "10-PROJECTS/P-Agent求职/压缩Context时怎样避免丢失关键信息？.md",
-    "10-PROJECTS/P-Agent求职/Agent学习专项-ContextEngineering.md",
-    "10-PROJECTS/P-Agent求职/Agent求职.md",
-    "30-RESOURCES/Agent.md",
-    "30-RESOURCES/AgentTool.md",
-    "50-ZETTELCASTEN/AgentTool是Agent与外部环境交互的接口.md",
-    "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.md",
-    "20-AREAS/A-人工智能/人工智能.md",
-    "20-AREAS/A-前端/前端开发.md",
-    "30-RESOURCES/AI工具与提效生态地图.md",
     "30-RESOURCES/PEAS.excalidraw.svg",
     "_scripts/fix_uid.py",
     "banner.svg",

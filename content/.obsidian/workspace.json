@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Context缺少关键信息会发生什么？.md",
+                "file": "10-PROJECTS/P-Agent求职/Context Quality.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Context缺少关键信息会发生什么？"
+              "title": "Context Quality"
+            }
+          },
+          {
+            "id": "9bacabd11ea9bb1c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10-PROJECTS/P-Agent求职/Context中信息缺失和信息冲突有什么区别？.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Context中信息缺失和信息冲突有什么区别？"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -73,7 +98,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Context缺少关键信息会发生什么？.md",
+                "file": "10-PROJECTS/P-Agent求职/Context中信息缺失和信息冲突有什么区别？.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -278,12 +303,13 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "a6b5e0808e8840a7",
+  "active": "9bacabd11ea9bb1c",
   "lastOpenFiles": [
+    "10-PROJECTS/P-Agent求职/Context Quality.md",
+    "10-PROJECTS/P-Agent求职/Context缺少关键信息会发生什么？.md",
     "10-PROJECTS/P-Agent求职/Context过长会怎样？.md",
     "10-PROJECTS/P-Agent求职/Context Window用完之后会怎样？.md",
     "10-PROJECTS/P-Agent求职/Context Rot.md",
-    "10-PROJECTS/P-Agent求职/Context Quality.md",
     "10-PROJECTS/P-Agent求职/Context Ordering & Formatting.md",
     "10-PROJECTS/P-Agent求职/Context Isolation.md",
     "10-PROJECTS/P-Agent求职/Context Engineering.md",
@@ -305,7 +331,6 @@
     "20-AREAS/A-人工智能/人工智能.md",
     "20-AREAS/A-前端/前端开发.md",
     "30-RESOURCES/AI工具与提效生态地图.md",
-    "30-RESOURCES/Inbox/Frontend Development Trends 2026 AI, Edge & TypeScript.md",
     "30-RESOURCES/PEAS.excalidraw.svg",
     "_scripts/fix_uid.py",
     "banner.svg",

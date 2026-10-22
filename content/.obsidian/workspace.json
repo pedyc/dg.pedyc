@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50-ZETTELCASTEN/现代前端缓存的最佳实践是入口HTML协商缓存配合资产文件永不过期强缓存.md",
+                "file": "90-DIARY/2026-10-22.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +52,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "现代前端缓存的最佳实践是入口HTML协商缓存配合资产文件永不过期强缓存"
+              "title": "2026-10-22"
+            }
+          },
+          {
+            "id": "15280d0439adcebc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "90-DIARY/2026-10-22.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-10-22"
+            }
+          },
+          {
+            "id": "d3b264f2b22c774e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "index"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +146,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "50-ZETTELCASTEN/现代前端缓存的最佳实践是入口HTML协商缓存配合资产文件永不过期强缓存.md",
+                "file": "90-DIARY/2026-10-22.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -303,15 +351,27 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "9bacabd11ea9bb1c",
+  "active": "15280d0439adcebc",
   "lastOpenFiles": [
-    "30-RESOURCES/HTTP缓存机制.md",
+    "20-AREAS/A-个人成长/个人成长.md",
+    "30-RESOURCES/心流体验.md",
+    "我的收藏清单.md",
+    "index.md",
+    "LIST.md",
+    "excalibrain.md",
+    "30-RESOURCES/我的简历.md",
+    "30-RESOURCES/关于我.md",
+    "90-DIARY/2026-10-22.md",
+    "30-RESOURCES/电影收藏.md",
+    "30-RESOURCES/Inbox/我的游戏收藏.md",
+    "30-RESOURCES/Inbox/笔记收藏.md",
+    "30-RESOURCES/Inbox/软件收藏.md",
     "50-ZETTELCASTEN/现代前端缓存的最佳实践是入口HTML协商缓存配合资产文件永不过期强缓存.md",
+    "30-RESOURCES/HTTP缓存机制.md",
     "90-DIARY/2026-W43.md",
     "90-DIARY/2026-10-21.md",
     "90-DIARY/2026-10-24.md",
     "90-DIARY/2026-10-23.md",
-    "90-DIARY/2026-10-22.md",
     "90-DIARY/2026-10-20.md",
     "10-PROJECTS/P-Agent求职/Context中信息缺失和信息冲突有什么区别？.md",
     "10-PROJECTS/P-Agent求职/Context Quality.md",
@@ -319,18 +379,6 @@
     "10-PROJECTS/P-Agent求职/Context过长会怎样？.md",
     "10-PROJECTS/P-Agent求职/Context Window用完之后会怎样？.md",
     "10-PROJECTS/P-Agent求职/Context Rot.md",
-    "10-PROJECTS/P-Agent求职/Context Ordering & Formatting.md",
-    "10-PROJECTS/P-Agent求职/Context Isolation.md",
-    "10-PROJECTS/P-Agent求职/Context Engineering.md",
-    "10-PROJECTS/P-Agent求职/Context Compression.md",
-    "10-PROJECTS/P-Agent求职/Context Components.md",
-    "10-PROJECTS/P-Agent求职/Agent学习专项-LLM与ToolCalling.md",
-    "10-PROJECTS/P-Agent求职/AI Agent架构与开发工具调研.md",
-    "10-PROJECTS/P-Agent求职/Agent学习专项-ClaudeCode源码学习.md",
-    "10-PROJECTS/P-Agent求职/Agent学习专项-AgentLoop.md",
-    "10-PROJECTS/P-Agent求职/Agent学习专项-基本概念与架构.md",
-    "10-PROJECTS/P-Agent求职/Agent学习清单.md",
-    "10-PROJECTS/P-Agent求职/压缩Context时怎样避免丢失关键信息？.md",
     "30-RESOURCES/PEAS.excalidraw.svg",
     "_scripts/fix_uid.py",
     "banner.svg",

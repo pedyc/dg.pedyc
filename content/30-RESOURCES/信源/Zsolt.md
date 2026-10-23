@@ -3,7 +3,7 @@ uid: 202610231751
 title: Zsolt
 aliases:
   - R-Zsolt
-description: "方法论可迁移，但手绘图不能照搬成索引——本库的索引是自动生成的"
+description: 方法论可迁移，但手绘图不能照搬成索引——本库的索引是自动生成的
 content-type: record
 status: active
 source_type: YouTube
@@ -16,7 +16,9 @@ uniqueness: 5
 output_rate: 2
 scored_at: 2026-06-15
 url: https://www.youtube.com/@ZsoltViczián
-up: "[[经过验证的高信噪比信源]]"
+up:
+  - "[[经过验证的高信噪比信源]]"
+  - "[[信源.base]]"
 date-created: 2026-10-23
 date-modified: 2026-10-23
 ---
@@ -36,6 +38,10 @@ const d = f.scored_at ? String(f.scored_at).slice(0, 10) : "—";
 dv.paragraph(`评分时间 **${d}** · 采信风险 **${f.source_risk ?? "—"}** · 状态 **${f.verify_status ?? "—"}**`);
 ```
 
+## 类型
+
+- 知识管理
+
 ## 评价
 
 Obsidian 视觉化知识管理领域的天花板。核心不在"怎么用插件"，而在**用 Excalidraw 把思考过程外化**——他画图是为了想清楚，不是为了展示结果。这个区分是它区别于其他 PKM 频道的地方（独特性 5）。
@@ -50,4 +56,5 @@ Obsidian 视觉化知识管理领域的天花板。核心不在"怎么用插件"
 
 ## 下一动作
 
-- [ ] 提炼一条可迁移的"图 vs 文"分工原则，写入 atomic
+- [x] 提炼一条可迁移的"图 vs 文"分工原则，写入 atomic ✅ 2026-10-23
+- [[视觉思维能降低认知负荷]]

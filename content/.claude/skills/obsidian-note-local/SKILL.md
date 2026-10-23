@@ -47,18 +47,19 @@ allowed-tools:
 
 ### 步骤 2：创建笔记
 
-按模板生成文件（填充 uid、标题、aliases、日期、描述、tags 等），写入对应目录。
+按模板生成文件（填充 uid、标题、aliases、日期、描述、tags 等），写入判定出的**归属目录**。
 
-目录对应关系：
-- atomic → `50-ZETTELCASTEN/`
-- concept/moc/sop/term/comparison/question → `30-RESOURCES/`
-- area → `20-AREAS/`
-- project → `10-PROJECTS/`
-- article → `60-BLOGS/`
-- diary → `90-DIARY/`
-- record → `30-RESOURCES/`
-- roadmap → `30-RESOURCES/`
-- person → `30-RESOURCES/`
+**目录不按类型推导**——归属与形态是两个正交维度（真值见 `01-META/Truth/本库目录结构.md`）。按以下顺序判定归属：
+
+1. 属于某个已有项目的工作过程 → 该项目目录 `10-PROJECTS/P-XXX/`
+2. 是某个领域的主页或周边资料 → `20-AREAS/A-XXX/`（边界见「20-AREAS 边界」）
+3. 原创洞见（标题即陈述句观点）→ `50-ZETTELCASTEN/`
+4. 对外发布的长文 → `60-BLOGS/`
+5. 当天的时间记录 → `90-DIARY/`
+6. 其余独立知识 → `30-RESOURCES/`
+7. 尚未判断 → `00-INBOX/`
+
+归属定完，再单独填 `content-type`。**不存在「选了 concept，所以必须放 30-RESOURCES」的反向约束**：项目或领域里提炼的概念，留在原工作区即可，形态照填。
 
 ### 步骤 3：更新父页面引用
 
@@ -111,20 +112,23 @@ subagent 关闭时自动清理上下文，不污染主会话。
 
 ---
 
-### 目录对应关系速查
+### 形态速查（aliases 前缀）
 
-| content-type | 目标目录 | aliases 前缀 |
+> `content-type` 只定形态，不改归属。下表「常见归属」仅供独立新知识参考，不构成约束。
+
+| content-type | aliases 前缀 | 常见归属（非约束） |
 |---|---|---|
-| atomic | `50-ZETTELCASTEN/` | 无 |
-| concept | `30-RESOURCES/` | `C-` |
-| moc | `30-RESOURCES/` | `MOC-` |
-| sop | `30-RESOURCES/` | `SOP-` |
-| term | `30-RESOURCES/` | `T-` |
-| question | `30-RESOURCES/` | `Q-` |
-| comparison | `30-RESOURCES/` | 无 |
-| area | `20-AREAS/` | `A-` |
-| project | `10-PROJECTS/` | `P-` |
-| article | `60-BLOGS/` | 无 |
-| diary | `90-DIARY/` | 无 |
-| roadmap | `30-RESOURCES/` | `R-`（同 record 共享） |
-| person | `30-RESOURCES/` | `R-`（同 record/roadmap 共享） |
+| atomic | 无 | `50-ZETTELCASTEN/`（单形态目录） |
+| concept | `C-` | `30-RESOURCES/` |
+| moc | `MOC-` | `30-RESOURCES/` |
+| sop | `SOP-` | `30-RESOURCES/` |
+| term | `T-` | `30-RESOURCES/` |
+| question | `Q-` | `30-RESOURCES/` |
+| comparison | `VS-` | `30-RESOURCES/` |
+| record | `R-` | `30-RESOURCES/` |
+| roadmap | `R-`（同 record 共享） | `30-RESOURCES/` |
+| person | `R-`（同 record/roadmap 共享） | `30-RESOURCES/` |
+| area | `A-` | `20-AREAS/A-XXX/`（领域主页） |
+| project | `P-` | `10-PROJECTS/P-XXX/`（工作区主页） |
+| article | 无 | `60-BLOGS/`（单形态目录） |
+| diary | 无 | `90-DIARY/`（单形态目录） |

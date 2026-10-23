@@ -3,7 +3,7 @@ name: wiki-sync-local
 version: 3.1.0
 description: |
   维护系统元数据层：更新 wiki-index、记录 wiki-log、同步 wiki-sync-state。
-  **职责边界：只碰 00-META/ 下的系统文件。不碰内容页（20-AREAS/ / 50-ZETTELCASTEN/ / 30-RESOURCES/ / 60-BLOGS/）。**
+  **职责边界：只碰 01-META/ 下的系统文件。不碰内容页（20-AREAS/ / 50-ZETTELCASTEN/ / 30-RESOURCES/ / 60-BLOGS/）。**
   **wiki-index 格式一律遵守 [[_wiki-index-format]] 规范（分区顺序/条目格式/缩进/计数/更新标记）。**
 **维护清单**：wiki-index.md、wiki-log.md、wiki-sync-state.json、**suggest-log.md**
   手动触发：创建/删除笔记后补充 wiki-index 和 wiki-log。
@@ -26,7 +26,7 @@ allowed-tools:
 - 用户删除笔记后，从 wiki-index 移除条目并记录 wiki-log
 - 会话启动时自动检测 git 变更并更新状态
 
-> **格式约束**：wiki-index 的更新必须遵守 `00-META/Specification/_wiki-index-format.md`（单一可信源）。本 skill 只定义同步流程，格式细节以该规范为准。
+> **格式约束**：wiki-index 的更新必须遵守 `01-META/Specification/_wiki-index-format.md`（单一可信源）。本 skill 只定义同步流程，格式细节以该规范为准。
 
 ## 模式一：手动触发（由 obsidian-note-local 或用户调用）
 
@@ -43,7 +43,7 @@ allowed-tools:
 
 ### 2. 更新 wiki-index
 
-按 `_wiki-index-format.md` 规范处理。读取 `00-META/Index/wiki-index.md`，按操作类型处理：
+按 `_wiki-index-format.md` 规范处理。读取 `01-META/Index/wiki-index.md`，按操作类型处理：
 
 **create**：
 - 根据 content-type 和 up 字段找到对应分类
@@ -56,7 +56,7 @@ allowed-tools:
 
 ### 3. 记录 wiki-log
 
-追加条目到 `00-META/Log/wiki-log.md`，格式：
+追加条目到 `01-META/Log/wiki-log.md`，格式：
 
 **create**：
 ```markdown
@@ -80,7 +80,7 @@ allowed-tools:
 ### 5. 提交状态变更
 
 ```bash
-git add content/00-META/wiki-sync-state.json content/00-META/Log/wiki-log.md content/00-META/Index/wiki-index.md
+git add content/01-META/wiki-sync-state.json content/01-META/Log/wiki-log.md content/01-META/Index/wiki-index.md
 git commit -m "sync: update wiki-sync-state"
 ```
 
@@ -88,7 +88,7 @@ git commit -m "sync: update wiki-sync-state"
 
 ### 1. 读取同步状态
 
-读取 `content/00-META/wiki-sync-state.json`，获取 `lastCommit`（上次同步的 commit hash）。
+读取 `content/01-META/wiki-sync-state.json`，获取 `lastCommit`（上次同步的 commit hash）。
 
 ### 2. 检测变更文件
 
@@ -98,10 +98,10 @@ git diff <lastCommit>..HEAD --name-status
 
 过滤 `content/` 目录下的 `.md` 文件，排除：
 - `.obsidian/` 目录
-- `00-META/wiki-sync-state.json` 自身
-- `00-META/Log/wiki-log.md` 自身
-- `00-META/Index/wiki-index.md` 自身
-- `Inbox/` 目录
+- `01-META/wiki-sync-state.json` 自身
+- `01-META/Log/wiki-log.md` 自身
+- `01-META/Index/wiki-index.md` 自身
+- `00-INBOX/` 目录
 
 ### 3. 变更分类处理
 
@@ -119,7 +119,7 @@ git diff <lastCommit>..HEAD --name-status
 ### 5. 提交状态变更
 
 ```bash
-git add content/00-META/wiki-sync-state.json
+git add content/01-META/wiki-sync-state.json
 git commit -m "sync: update wiki-sync-state"
 ```
 

@@ -51,7 +51,7 @@ fleeting → cultivating → active → completed → archived
 
 1. 扫描 `10-PROJECTS/` 和 `20-AREAS/` 获取 status、consequence、urgency、expire、quadrant、date-modified
 2. 读取项目文件的"阶段一/二/三"结构，识别当前阶段
-3. 读取 `00-META/Log/wiki-log.md` 最近一次 lint 报告
+3. 读取 `01-META/Log/wiki-log.md` 最近一次 lint 报告
 
 ## 建议生成逻辑
 
@@ -104,4 +104,4 @@ fleeting → cultivating → active → completed → archived
 
 ## 写入 suggest-log
 
-每次调用后，将建议追加到 `00-META/Log/suggest-log.md`。
+每次调用后，将建议追加到 `01-META/Log/suggest-log.md`。

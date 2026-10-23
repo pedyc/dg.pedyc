@@ -12,8 +12,8 @@
   },
   "showLineNumber": true,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./_resources",
-  "newFileLocation": "current",
+  "attachmentFolderPath": "_resources",
+  "newFileLocation": "folder",
   "showUnsupportedFiles": true,
   "tabSize": 2,
   "propertiesInDocument": "visible",
@@ -22,5 +22,6 @@
     "80-PRIVATE/",
     "30-RESOURCES/SimpRead/",
     "/CLAUDE/"
-  ]
+  ],
+  "newFileFolderPath": "00-INBOX"
 }

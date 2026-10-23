@@ -12,14 +12,14 @@ date-modified: 2026-08-29
 
 - **Main Guide**: [[本库指南]] - Complete methodology and conventions
 - **Templates**: `_templates/` directory
-- **LLM Wiki Schema**: `00-META/Guide/llm-wiki-schema.md` — 工作流定义（ingest/query/lint），**每次 llm-wiki 相关操作前必须阅读**
+- **LLM Wiki Schema**: `01-META/Guide/llm-wiki-schema.md` — 工作流定义（ingest/query/lint），**每次 llm-wiki 相关操作前必须阅读**
 
 ### Key Conventions
 
 See [[本库指南]] for:
 - PARA + Zettelkasten methodology
 - Three-layer architecture: Raw sources → Wiki → Archive
-- Directory structure (00-META to 99-ASSETS)
+- Directory structure (01-META to 99-ASSETS)
 - content-type classification (atomic, concept, term, moc, sop, etc.)
 - Status lifecycle (fleeting → cultivating → active → completed → archived)
 - Naming conventions via aliases (P-, A-, Q-, MOC-, T-, C-, VS-)
@@ -35,7 +35,7 @@ Skills 位于 `content/.claude/skills/`：
 - `obsidian-note-local` — 创建/更新笔记全流程（创建层）
 - `action-suggest` — 基于状态生成行动建议
 
-详见 `00-META/Specification/_skills-overview.md` 和 `00-META/Guide/llm-wiki-schema.md`。
+详见 `01-META/Specification/_skills-overview.md` 和 `01-META/Guide/llm-wiki-schema.md`。
 
 ### Templates
 
@@ -60,7 +60,7 @@ Located in `content/_templates/`:
 
 ### 强制规则：修改 skill 必须同步 _skills-overview
 
-**每次修改 `content/.claude/skills/*/SKILL.md` 后，必须同步更新 `00-META/Specification/_skills-overview.md` 中的对应描述。**
+**每次修改 `content/.claude/skills/*/SKILL.md` 后，必须同步更新 `01-META/Specification/_skills-overview.md` 中的对应描述。**
 
 包括：
 - version 升级 → 更新版本号
@@ -69,7 +69,7 @@ Located in `content/_templates/`:
 
 ### 强制规则：llm-wiki 操作前阅读 schema
 
-**每次执行 llm-wiki 相关工作前（ingest/query/lint/笔记创建更新），必须先阅读 `00-META/Guide/llm-wiki-schema.md`。** 该文档定义了：
+**每次执行 llm-wiki 相关工作前（ingest/query/lint/笔记创建更新），必须先阅读 `01-META/Guide/llm-wiki-schema.md`。** 该文档定义了：
 - 三层架构职责（raw sources → wiki → archive）
 - wiki-log 记录规范（哪些操作该记、不该记）
 - 协作约定（你负责判断价值，LLM 负责 bookkeeping）

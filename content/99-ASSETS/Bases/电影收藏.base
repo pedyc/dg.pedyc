@@ -1,0 +1,17 @@
+filters:
+  and:
+    - file.inFolder("30-RESOURCES/电影收藏")
+views:
+  - type: table
+    name: 片单
+    order:
+      - file.name
+      - note.movie_genre
+      - note.year
+      - note.watch_status
+      - note.rating
+    sort:
+      - property: note.rating
+        direction: DESC
+      - property: note.year
+        direction: DESC

@@ -24,7 +24,7 @@
       "key": "C"
     }
   ],
-  "templater-obsidian:create-new-note-from-template": [
+  "file-explorer:new-file": [
     {
       "modifiers": [
         "Mod"
@@ -32,7 +32,6 @@
       "key": "N"
     }
   ],
-  "file-explorer:new-file": [],
   "templater-obsidian:create-_template/template_article.md": [
     {
       "modifiers": [
@@ -81,14 +80,6 @@
         "Mod"
       ],
       "key": "R"
-    }
-  ],
-  "obsidian-linter:lint-file": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "S"
     }
   ],
   "file-explorer:move-file": [
@@ -141,14 +132,6 @@
     }
   ],
   "templater-obsidian:_template/template_project.md": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "N"
-    }
-  ],
-  "insert-template": [
     {
       "modifiers": [
         "Alt"
@@ -209,5 +192,13 @@
       "key": "R"
     }
   ],
-  "obsidian-excalidraw-plugin:save": []
+  "obsidian-excalidraw-plugin:save": [],
+  "templater-obsidian:create-new-note-from-template": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "N"
+    }
+  ]
 }

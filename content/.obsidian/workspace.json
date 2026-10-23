@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "1a9d313e9aeca67b",
+        "id": "19ee9773adff6dbb",
         "type": "tabs",
         "children": [
           {
-            "id": "a6b5e0808e8840a7",
+            "id": "5f36d5d1b221e53d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Context Quality.md",
+                "file": "30-RESOURCES/在四象限中应用精力成本.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Context Quality"
+              "title": "在四象限中应用精力成本"
             }
           },
           {
-            "id": "9bacabd11ea9bb1c",
+            "id": "227d261d53c1b133",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-10-22.md",
+                "file": "10-PROJECTS/任务总览.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,59 +52,23 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-10-22"
+              "title": "任务总览"
             }
           },
           {
-            "id": "15280d0439adcebc",
+            "id": "ef498078bb62c9de",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "20-AREAS/A-前端/TypeScript.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "00-INBOX/四象限示意图.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "TypeScript"
-            }
-          },
-          {
-            "id": "d3b264f2b22c774e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "index"
+              "icon": "excalidraw-icon",
+              "title": "四象限示意图.excalidraw"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -146,7 +110,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-前端/TypeScript.md",
+                "file": "10-PROJECTS/任务总览.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -351,56 +315,56 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "15280d0439adcebc",
+  "active": "227d261d53c1b133",
   "lastOpenFiles": [
-    "90-DIARY/2026-10-22.md",
+    "10-PROJECTS/P-斑驳光背景实现/斑驳光背景实现.md",
+    "10-PROJECTS/任务总览.md",
+    "00-INBOX/四象限示意图.excalidraw.md",
+    "30-RESOURCES/在四象限中应用精力成本.md",
     "20-AREAS/A-个人成长/个人成长.md",
-    "30-RESOURCES/心流体验.md",
-    "我的收藏清单.md",
+    "00-INBOX/四象限示意图.excalidraw.svg",
+    "_resources/未命名.md",
+    "20-AREAS/领域总览.md",
+    "20-AREAS/A-知识管理/知识管理.md",
+    "30-RESOURCES/算法真题库.md",
     "index.md",
-    "LIST.md",
-    "excalibrain.md",
-    "30-RESOURCES/我的简历.md",
-    "30-RESOURCES/关于我.md",
-    "30-RESOURCES/电影收藏.md",
-    "30-RESOURCES/Inbox/我的游戏收藏.md",
-    "30-RESOURCES/Inbox/笔记收藏.md",
-    "30-RESOURCES/Inbox/软件收藏.md",
-    "50-ZETTELCASTEN/现代前端缓存的最佳实践是入口HTML协商缓存配合资产文件永不过期强缓存.md",
-    "30-RESOURCES/HTTP缓存机制.md",
-    "90-DIARY/2026-W43.md",
-    "90-DIARY/2026-10-21.md",
-    "90-DIARY/2026-10-24.md",
-    "90-DIARY/2026-10-23.md",
-    "90-DIARY/2026-10-20.md",
-    "10-PROJECTS/P-Agent求职/Context中信息缺失和信息冲突有什么区别？.md",
-    "10-PROJECTS/P-Agent求职/Context Quality.md",
-    "10-PROJECTS/P-Agent求职/Context缺少关键信息会发生什么？.md",
-    "10-PROJECTS/P-Agent求职/Context过长会怎样？.md",
-    "10-PROJECTS/P-Agent求职/Context Window用完之后会怎样？.md",
-    "10-PROJECTS/P-Agent求职/Context Rot.md",
-    "30-RESOURCES/PEAS.excalidraw.svg",
-    "_scripts/fix_uid.py",
-    "banner.svg",
-    "本地知识库联动NotebookLM.svg",
-    "00-META/Guide/_resources",
-    "TaskNotes/Views/tasks-default.base",
-    "TaskNotes/Views/relationships.base",
-    "TaskNotes/Views/pomodoro-stats.base",
-    "TaskNotes/Views/mini-calendar-default.base",
-    "TaskNotes/Views/kanban-default.base",
-    "TaskNotes/Views/calendar-default.base",
-    "TaskNotes/Views/agenda-default.base",
-    "TaskNotes/Tasks",
-    "10-PROJECTS/P-Agent求职/_resources/ClaudeCode核心架构.excalidraw.svg",
-    "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
-    "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.svg",
-    "10-PROJECTS/P-Agent求职/_resources/_resources/d7897f85-838e-46ed-95de-aa83123f36ce.png",
-    "_resources/Context Components/b357c4e770eb366366cb150186f1c698_MD5.webp",
-    "10-PROJECTS/P-Agent求职/_resources/d7897f85-838e-46ed-95de-aa83123f36ce.png",
-    "10-PROJECTS/P-Agent求职/_resources/ToolCalling.excalidraw.svg",
-    "_resources/Claude Code/10e6559a6a3fc17b8fc30859c810232b_MD5.webp",
+    "99-ASSETS/Bases/书单.base",
+    "30-RESOURCES/书单/八次危机.md",
+    "30-RESOURCES/书单/曼昆经济学原理.md",
+    "99-ASSETS/书籍/八次危机  1949-2009  中国的真实经验.pdf",
+    "99-ASSETS/书籍/曼昆经济学原理 (N.格里高利·曼昆) (Z-Library).epub",
+    "99-ASSETS/Bases/求职投递.base",
+    "99-ASSETS/Bases/电影收藏.base",
+    "99-ASSETS/Bases/笔记状态管理.base",
+    "99-ASSETS/Bases/元数据巡检.base",
+    "01-META/Guide/快速开始.md",
     "10-PROJECTS/PROJECTS.canvas",
+    "30-RESOURCES/书单/The Complete Guide to Building Skills for Claude.md",
+    "30-RESOURCES/书单/Google Prompt Engineering v7.md",
+    "30-RESOURCES/书单/Cherry's 3 Rules of Card Creation.md",
+    "30-RESOURCES/书单/AI Agents in Depth（中文版）.md",
+    "_templates/template_term.md",
+    "_templates/template_week.md",
+    "_templates/template_sub_project.md",
+    "_templates/template_question.md",
+    "_templates/template_diary.md",
+    "_templates/template_moc.md",
+    "00-INBOX/Frontend Development Trends 2026 AI, Edge & TypeScript.md",
+    "_templates/template_concept.md",
+    "_scripts/template_startup.md",
+    "30-RESOURCES/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/19ba4a157b41291c747cb12d964f195a_MD5.jpg",
+    "30-RESOURCES/电影收藏",
+    "10-PROJECTS/P-Agent求职/投递记录",
+    "99-ASSETS/Bases/游戏收藏.base",
+    "99-ASSETS/Excalidraw/_resources/Pasted Image 20250506104448_191.svg",
+    "99-ASSETS/Excalidraw/_resources/Pasted Image 20250506104448_547.svg",
+    "99-ASSETS/Excalidraw/_resources/Pasted Image 20250506104448_524.jpg",
+    "99-ASSETS/Excalidraw/_resources/Pasted Image 20250506104448_039.svg",
+    "99-ASSETS/Excalidraw/_resources/Pasted Image 20250506104447_962.svg",
+    "01-META/_resources/本库项目看板.excalidraw.svg",
+    "01-META/_resources/本库架构指南.excalidraw.svg",
+    "000-META/_resources/本库项目看板.excalidraw.svg",
+    "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "未命名.canvas",
     "Untitled.canvas",
     "//Untitled.canvas",

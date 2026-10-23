@@ -27,7 +27,8 @@ views:
     name: 缺 status
     filters:
       and:
-        - note.status.isEmpty()
+        - status.isEmpty()
+        - 'file.ext != ".excalidraw" '
     order:
       - file.name
       - content-type

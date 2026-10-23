@@ -6,12 +6,12 @@ views:
     name: 片单
     order:
       - file.name
-      - note.movie_genre
-      - note.year
-      - note.watch_status
-      - note.rating
+      - movie_genre
+      - year
+      - watch_status
+      - rating
     sort:
-      - property: note.rating
+      - property: rating
         direction: DESC
-      - property: note.year
+      - property: year
         direction: DESC

@@ -7,7 +7,7 @@ author: ped_yc
 description:
 tags: []
 date-created: 2024-08-23
-date-modified: 2026-09-07
+date-modified: 2026-10-23
 content-type: [moc]
 ---
 
@@ -19,6 +19,8 @@ content-type: [moc]
 
 - [[快速开始]] — 初来此地，从这里入手
 - [[本库指南]] — 了解花园的设计与理念
+- [[任务总览]]
+- [[领域总览]] 
 - [[wiki-index]] — 纵览全库的主题与领域
 - [[wiki-log]] — 查看最近的变更记录
 

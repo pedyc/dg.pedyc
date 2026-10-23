@@ -5,7 +5,7 @@ views:
   - type: kanban
     name: 投递进度
     groupBy:
-      property: note.apply_status
+      property: apply_status
       direction: ASC
     groupOrder:
       - 投递
@@ -15,19 +15,19 @@ views:
       - 已拒
     order:
       - file.name
-      - note.company
-      - note.next_action
+      - company
+      - next_action
   - type: table
     name: 总表
     order:
       - file.name
-      - note.company
-      - note.position
-      - note.apply_status
-      - note.interview_round
-      - note.channel
-      - note.applied_date
-      - note.next_action
+      - company
+      - position
+      - apply_status
+      - interview_round
+      - channel
+      - applied_date
+      - next_action
     sort:
-      - property: note.applied_date
+      - property: applied_date
         direction: DESC

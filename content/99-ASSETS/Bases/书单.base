@@ -5,7 +5,7 @@ views:
   - type: kanban
     name: 阅读进度
     groupBy:
-      property: note.read_status
+      property: read_status
       direction: ASC
     groupOrder:
       - 想读
@@ -14,19 +14,19 @@ views:
       - 弃读
     order:
       - file.name
-      - note.book_genre
-      - note.rating
+      - book_genre
+      - rating
   - type: table
     name: 总表
     order:
       - file.name
-      - note.book_genre
-      - note.read_status
-      - note.rating
-      - note.book_format
-      - note.pdf
+      - book_genre
+      - read_status
+      - rating
+      - book_format
+      - pdf
     sort:
-      - property: note.book_genre
+      - property: book_genre
         direction: ASC
       - property: file.name
         direction: ASC

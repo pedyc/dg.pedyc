@@ -25,14 +25,14 @@
       "query": "[\"content-type\":area",
       "color": {
         "a": 1,
-        "rgb": 10965728
+        "rgb": 5431378
       }
     },
     {
       "query": "[\"content-type\":moc",
       "color": {
         "a": 1,
-        "rgb": 5431378
+        "rgb": 16777215
       }
     }
   ],

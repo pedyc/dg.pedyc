@@ -57,7 +57,7 @@ up: [["llm-wiki-schema"]]
 消化完成后，将 Inbox 中的原始素材移动到 `40-ARCHIVE/`：
 
 ```bash
-git mv "30-RESOURCES/Inbox/源文件名.md" "40-ARCHIVE/"
+git mv "00-INBOX/源文件名.md" "40-ARCHIVE/"
 ```
 
 > **原则**：已消化的原始素材不再保留在 Inbox 中，避免重复处理。之后如需查阅原文，通过消化笔记中的 `参考来源` 章节追溯。
@@ -79,7 +79,7 @@ git mv "30-RESOURCES/Inbox/源文件名.md" "40-ARCHIVE/"
 
 ### 步骤 1：列出 Inbox 内容
 
-扫描 `30-RESOURCES/Inbox/` 目录，获取所有待审核文件。
+扫描 `00-INBOX/` 目录，获取所有待审核文件。
 
 ### 步骤 2：逐个判断类型
 
@@ -98,7 +98,7 @@ git mv "30-RESOURCES/Inbox/源文件名.md" "40-ARCHIVE/"
 使用 git mv 保持历史：
 
 ```bash
-git mv "30-RESOURCES/Inbox/xxx.md" "目标目录/xxx.md"
+git mv "00-INBOX/xxx.md" "目标目录/xxx.md"
 ```
 
 ### 步骤 4：更新 front matter

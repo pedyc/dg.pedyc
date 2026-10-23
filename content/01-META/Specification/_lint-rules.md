@@ -218,7 +218,7 @@ for root, dirs, files in os.walk(CONTENT):
         if f.endswith('.md'): all_pages[f[:-3]] = True
 
 # 检查 wiki-index 中的断裂链接
-idx_path = os.path.join(CONTENT, "00-META/Index/wiki-index.md")
+idx_path = os.path.join(CONTENT, "01-META/Index/wiki-index.md")
 if os.path.exists(idx_path):
     with open(idx_path) as fh:
         for m in link_pattern.finditer(fh.read()):

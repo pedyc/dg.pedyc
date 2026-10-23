@@ -932,3 +932,42 @@ up: ["[[本库指南]]"]
 	- Best Three.js Websites 2026（clippings，source=utsubo.com）→ 待消化为 ThreeJS 相关 concept
 	- Frontend Development Trends 2026（clippings，source=talent500.com）→ 待消化为前端架构 concept
 	- 决策：本次仅标注，不移动/不删除，留待专门 ingest 操作消化
+
+#### 2026-10-23
+
+- [2026-10-23] refactor | 顶层目录结构调整：00-META → 01-META，Inbox 提升为顶层 00-INBOX
+	- `00-META/` 更名为 `01-META/`，`30-RESOURCES/Inbox/` 提升为顶层 `00-INBOX/`；`0x` 档位拆为两个槽位：00 = 每日入口，01 = 系统元数据
+	- 确立「前缀语义」：十位 = 档位（0x 系统入口 / 1x 现在 / 2x 长期 / 3x 参考 / 4x 退役 / 5x 沉淀 / 6x 输出 / 8x 私密 / 9x 附属），个位 = 档内序号，宽度统一 2 位；写入 `01-META/Truth/本库目录结构.md`
+	- 取舍：选 2 位统一而非 3 位全量重排——多数派已是 2 位，2 位化改 1 个目录 / 约 97 处引用，3 位重排需改 9 个目录 / 约 660 处引用 + 51 处 dv.pages() + 插件硬编码，收益仅视觉整齐
+	- 同步更新 46 个文件的路径引用：Truth/本库目录结构、Specification/*、Guide/*、Faq/Inbox规则、CLAUDE.md、_templates/template_diary.md、90-DIARY（21 篇的 dataviewjs 排除条件）、.claude/skills/*
+	- 日记「今日知识资产沉淀」排除条件定为 `-"01-META" and -"_templates" and -"00-INBOX"`（21 篇日记 + 模板共 22 处）：Inbox 属未加工原料，不计入当日沉淀；同时修正原 `-"templates"` 与实际目录 `_templates` 不符的失效排除
+	- 配置同步：SimpRead 剪藏目录 → `00-INBOX`；obsidian-to-anki 的 23 条路径映射 → `01-META/`
+	- 修复 _scripts/autoArchiveInbox.js：INBOX_PATH 由过期的 `40-RESOURCES/Inbox` 改为 `00-INBOX`；ARCHIVE_PATH 由错误的 `50-ARCHIVE` 改为 `40-ARCHIVE`
+	- 本日志历史条目保留旧路径（时间线不改写）；改名过程因 Obsidian 占用目录句柄，META 目录一度改用 robocopy /MOVE 完成，git 仍正确识别为 rename
+
+- [2026-10-23] refactor | 解耦目录与 content-type：从「一一映射」改为「归属／形态两个正交维度」
+	- 删除 `Truth/本库目录结构.md` 的「目录 ↔ content-type 映射」表与「特定型/通用型」规则，新增「归属与形态：两个正交维度」「目录侧约定」「归属判定顺序」
+	- 删除 `Truth/笔记类型规范.md` 总览表的「目录」列，新增「形态与归属的边界」三条约定；`Specification/_笔记类型规范.md` 的 17 处「目录」行改为「常见归属（非约束）」，第六节重写为「归属速查（不绑定形态）」
+	- 依据（实测）：`10-PROJECTS/` 59 篇中仅 2 篇为 `project`，其余 `question`(19)/`concept`(18)/`record`(7)；`01-META/` 含 23 篇 `article`、7 篇 `moc`。旧映射在实践中已被证伪
+	- 语义收窄：`project`/`area` 从「位置标签」改为「工作区主页角色」；`10-PROJECTS/`、`20-AREAS/` 明确为工作区/容器，形态不限
+	- 校验口径：不再比对「目录与类型是否一致」，只校验 14 种合法枚举 + 三个单形态目录（50-ZETTELCASTEN/atomic、60-BLOGS/article、90-DIARY/diary）
+	- 连带更新：`Guide/本库子系统概述.md`（核心命题 + 子系统表 + mermaid 流程图）、`Guide/本库指南.md`（原则 3 与 content-type 条）、`Truth/真值索引.md`、`.claude/skills/obsidian-note-local/SKILL.md`（目录选择改为归属判定顺序，速查表去掉「目标目录」列）
+	- 存量 frontmatter 不动：字段本身仍然有效，只是不再承担位置判断
+
+- [2026-10-23] refactor | 命名规范体系收口：清理 Truth/Guide 同名僵尸文件，明确三层的职责边界
+	- 根因：Truth/ 建立后 Guide/ 下的同名旧版未清理，`[[命名规范]]`/`[[元数据规范]]` 各有两个候选文件，链接解析不可预测
+	- 删除 `Guide/命名规范.md`（内容 100% 被 Truth 版覆盖，且正文写着「唯一真值在 [[命名规范]]」，形成自指）
+	- 删除 `Guide/元数据规范.md`（纯指针页，导航价值已由本库指南的两个小节承担）
+	- 连带修复断链：`Truth/笔记类型规范.md` 的 4 个锚点 `[[元数据规范#project项目笔记]]` 等，只在 Truth 版存在；若解析到 Guide 版则全部失效
+	- 修复前缀取值错误：`.claude/skills/obsidian-note-local/SKILL.md` 中 `comparison` 前缀误写为「无」，实际为 `VS-`（实测 8 篇 comparison 中 5 篇使用 `VS-`）
+	- `Truth/命名规范.md` 新增「适用范围」：明确本文件只定义**文件名 + aliases**，目录名归 `本库目录结构`，`atomic` 陈述句归 `笔记类型规范`
+	- 软化 SSOT 表述：由「其他文件不得复制本表」改为「前缀取值只在本表定义，允许速查副本但冲突以本表为准」——强约束与技能内联需求冲突，且未被遵守
+	- `Truth/元数据规范.md` 的 `aliases` 行由「方便检索」改为指向 `[[命名规范]]`；修正「目录前缀」节中解耦后遗留的「content-type 映射」表述
+	- 保留的已知冗余：`Specification/_笔记类型规范.md` 内 3 张前缀表 + 14 处「aliases 前缀」行（约 38 处）——属执行细则的自包含需要，暂不动
+
+- [2026-10-23] refactor | `Truth/命名规范.md` 改名为 `Truth/文件名与别名规范.md`，并清理空目录
+	- 改名理由：原名覆盖过宽，实际只定义「文件名 + aliases」，目录名归 `本库目录结构`、`atomic` 陈述句归 `笔记类型规范`，叫「命名规范」会让人以为管全部命名
+	- 旧名保留为 alias：`aliases: [Truth/文件名与别名规范, 命名规范, 命名规范真值]`——老链接 `[[命名规范]]` 仍可解析
+	- 同步改写 8 处引用：`Guide/本库指南`（章节标题 `## 命名规范` → `## 文件名与别名`）、`Guide/本库子系统概述`、`Specification/_content-type-rules`、`Truth/元数据规范`、`Truth/真值索引`（2 处，含正文示例路径）、`Truth/笔记类型规范`（2 处）、`Truth/人机分工规范`
+	- wiki-log 历史条目中的 `[[命名规范]]` 保留不改（时间线不改写）
+	- 删除空目录 `10-PROJECTS/P-Agent求职/_resources/_resources`（嵌套冗余，无内容）

@@ -32,7 +32,7 @@ up: [["llm-wiki-schema"]]
 
 ### 状态文件
 
-同步状态记录在 `content/00-META/wiki-sync-state.json`：
+同步状态记录在 `content/01-META/wiki-sync-state.json`：
 
 ```json
 {

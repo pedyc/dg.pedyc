@@ -1,15 +1,17 @@
 ---
 title: Inbox规则
 date-created: 2026-02-09
-date-modified: 2026-09-23
+date-modified: 2026-10-23
 tags: [META/FAQ]
 status: active
 content-type: article
 up: "[[本库常见问题解答汇总]]"
 ---
 
+> 位置：`00-INBOX/`（顶层捕获篮，全库唯一入口；原 `30-RESOURCES/Inbox/` 已迁出）
+
 > 定期归档机制：
-> 如果 Inbox 中的某个笔记在两周内未被转化为 `Zettelkasten` 或移动到 `Areas`，说明它目前的 " 信噪比 " 较低，应直接移动到 `30-RESOURCES/Archive`
+> 如果 Inbox 中的某个笔记在两周内未被转化为 `Zettelkasten` 或移动到 `Areas`，说明它目前的 " 信噪比 " 较低，应直接移动到 `40-ARCHIVE/`
 
 实现：
 

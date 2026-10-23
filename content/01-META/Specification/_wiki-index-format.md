@@ -12,7 +12,7 @@ up: [["llm-wiki-schema"]]
 
 ## Wiki Index 格式规范
 
-`00-META/Index/wiki-index.md` 是知识库的导航索引，由 LLM 维护。本文档定义其**唯一格式标准**。wiki-sync-local 每次更新 index、LLM 每次全量重建 index 时都必须遵守本规范。
+`01-META/Index/wiki-index.md` 是知识库的导航索引，由 LLM 维护。本文档定义其**唯一格式标准**。wiki-sync-local 每次更新 index、LLM 每次全量重建 index 时都必须遵守本规范。
 
 ### 1. 文档结构
 

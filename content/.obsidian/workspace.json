@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-10-22.md",
+                "file": "20-AREAS/A-前端/TypeScript.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-10-22"
+              "title": "TypeScript"
             }
           },
           {
@@ -146,7 +146,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "90-DIARY/2026-10-22.md",
+                "file": "20-AREAS/A-前端/TypeScript.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -353,6 +353,7 @@
   },
   "active": "15280d0439adcebc",
   "lastOpenFiles": [
+    "90-DIARY/2026-10-22.md",
     "20-AREAS/A-个人成长/个人成长.md",
     "30-RESOURCES/心流体验.md",
     "我的收藏清单.md",
@@ -361,7 +362,6 @@
     "excalibrain.md",
     "30-RESOURCES/我的简历.md",
     "30-RESOURCES/关于我.md",
-    "90-DIARY/2026-10-22.md",
     "30-RESOURCES/电影收藏.md",
     "30-RESOURCES/Inbox/我的游戏收藏.md",
     "30-RESOURCES/Inbox/笔记收藏.md",

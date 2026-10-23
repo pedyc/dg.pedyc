@@ -12,7 +12,31 @@ replit.nix
 .quartz/
 quartz/cli/tui/dist/
 .turbo/
-.pdf
+
+# 大体积二进制：笔记只引用路径，文件本身留在本地
+# 注意：原来的 `.pdf`（无通配符）只匹配文件名恰好叫 .pdf 的文件，等于没生效
+*.pdf
+*.epub
+*.mobi
+*.azw3
+*.djvu
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.zip
+*.7z
+*.rar
+*.dmg
+*.exe
+*.msi
+*.psd
+*.ai
+
+# 本地缓存与回收站
+**/.trash/
+**/.smart-env/
+**/copilot-index/
 
 # Private vault content (matches v4 behavior)
 **/80-PRIVATE/**/*

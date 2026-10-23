@@ -183,7 +183,7 @@ const useStore = create<Store>((set) => ({
 
 ### 知识图谱
 
-- [[React Hooks]]
+- [[Hooks(React)]]
 - [[React 状态管理]]
 - [[创建自定义Hooks]]
 - [[useState 与 useReducer]]

@@ -102,7 +102,7 @@ graph TB
 	- [[React]] — NextJS 的 UI 渲染基础
 	- [[NodeJS]] — NextJS 运行的服务端环境
 - **子级概念**：
-	- [[服务端渲染]] — NextJS 的核心渲染模式
+	- [[SSR]] — NextJS 的核心渲染模式
 	- [[React Server Components]] — NextJS App Router 的核心技术
 - **并列概念**：
 	- [[Nuxt]] — Vue 生态的对标框架

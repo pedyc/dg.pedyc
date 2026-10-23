@@ -125,7 +125,7 @@ flowchart LR
 	- [[MobX]] — 响应式状态管理
 	- [[Jotai]] — 原子化状态管理
 - **相关概念**：
-	- [[React Hooks]] — 组件连接 Redux 的桥梁
+	- [[Hooks(React)]] — 组件连接 Redux 的桥梁
 	- [[单向数据流]] — Redux 的核心架构原则
 	- [[函数式编程]] — Reducer 纯函数背后的编程范式
 - **参考文章**

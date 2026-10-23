@@ -78,6 +78,6 @@ mindmap
 
 - [[Q-如何防止CSRF攻击]] — CSRF 防御策略
 - [[Q-HSTS的max-age应该如何设置]] — HSTS 最佳配置
-- [[MOC-Web安全策略]] — 安全策略索引
+- [[Web安全策略]] — 安全策略索引
 
 ---

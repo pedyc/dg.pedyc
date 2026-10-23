@@ -56,7 +56,7 @@ sequenceDiagram
 
 ## 关键区别
 
-| 维度 | yield | [[return]] | [[async/await]] |
+| 维度 | yield | [[return]] | [[async-await]] |
 |:--- |:--- |:--- |:--- |
 | **作用** | 暂停并产出值 | 返回结果并结束 | 等待 Promise |
 | **后续执行** | 可通过 next() 恢复 | 函数结束，不可恢复 | 自动继续 |

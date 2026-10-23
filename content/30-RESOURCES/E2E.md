@@ -16,7 +16,7 @@ status: active
 content-type: concept
 related:
   - "[[前端工程]]"
-  - "[[T-Playwright]]"
+  - "[[Playwright]]"
   - "[[T-Cypress]]"
 ---
 
@@ -86,7 +86,7 @@ flowchart TB
 
 | 工具 | 特点 | 适用场景 |
 |:---|:---|:---|
-| [[T-Playwright]] | 微软出品，支持多浏览器，API 现代 | 现代 Web 应用 |
+| [[Playwright]] | 微软出品，支持多浏览器，API 现代 | 现代 Web 应用 |
 | [[T-Cypress]] | 实时 reload，调试友好 | 快速开发迭代 |
 | Selenium | 老牌工具，生态丰富 | 传统 Web 应用 |
 
@@ -99,7 +99,7 @@ flowchart TB
 	- 单元测试 — 测试粒度更细
 	- 集成测试 — 模块间接口验证
 - **工具链**：
-	- [[T-Playwright]]
+	- [[Playwright]]
 	- [[T-Cypress]]
 
 ---

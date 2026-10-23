@@ -149,6 +149,6 @@ async function readConfig() {
 - **相关概念**：
 	- [[Promise]] — 异步资源管理依赖 Promise
 	- [[Symbol.dispose]] — 资源释放的核心协议
-	- [[async/await]] — 异步资源管理语法
+	- [[async-await]] — 异步资源管理语法
 - **参考文章**
 	- [MDN - using](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/using)

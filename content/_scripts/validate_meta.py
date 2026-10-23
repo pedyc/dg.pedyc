@@ -9,6 +9,7 @@
 用法（在 vault 根目录执行）：
     python _scripts/validate_meta.py            # 只校验模板
     python _scripts/validate_meta.py --all      # 同时统计全库脏值（只报数，不改）
+    python _scripts/validate_meta.py --links    # 检查链接规范（别名引用 / 假前缀引用）
     python _scripts/validate_meta.py --fix      # 不做修改，见下方说明
 
 设计约束：本脚本只报告，不自动修改。规范符合性是判断，不是计算——
@@ -123,6 +124,146 @@ def load_categories():
     if not m:
         return None
     return {c.strip() for c in m.group(1).split("/") if c.strip()}
+
+
+def check_links():
+    """检查两类链接违规（Truth/文件名与别名规范：「前缀仅用于 aliases 检索，
+    WikiLink 引用使用纯标题」）。
+
+    A. 别名引用：[[C-闭包]] —— 用别名建立的链接。
+       别名是检索标签，随时可能换成更贴切的词；一旦被链接依赖，改名就产生断链。
+    B. 假前缀引用：[[A-宗教与神秘学]] —— 目标文件存在，但它的 aliases 里
+       从未定义过这个前缀别名。写的人以为有，实际直接断链。
+
+    排除：规范文档里的反例示例、AI 对话存档、配置示例、流水日志、围栏代码块。
+    """
+    link_re = re.compile(r"(!?\[\[)([^\]\n]+?)(\]\])")
+    fence_re = re.compile(r"^\s*(```|~~~)")
+    prefix_re = re.compile(r"^([A-Za-z]+|[\u4e00-\u9fa5]{1,4})[-－—](.+)$")
+    skip_dirs = {".obsidian", ".trash", ".git", ".workbuddy"}
+    # 反例示例所在文件：里面的 [[C-闭包]] 正在演示「不要这么写」
+    exclude_files = {
+        "01-META/Truth/文件名与别名规范.md",
+        "01-META/Specification/_笔记类型规范.md",
+        "01-META/Faq/本库常见问题解答汇总.md",
+    }
+    exclude_prefixes = ("99-ASSETS/copilot/", ".claude/", "01-META/Log/")
+
+    files = [p for p in ROOT.rglob("*.md")
+             if not any(part in skip_dirs for part in p.relative_to(ROOT).parts)]
+    stems = {p.stem for p in files}
+    paths = {p.relative_to(ROOT).as_posix()[:-3] for p in files}
+    dup = {s for s, n in _count(p.stem for p in files).items() if n > 1}
+
+    alias_map = {}
+    for p in files:
+        text = p.read_bytes().decode("utf-8", errors="ignore")
+        m = re.match(r"^---\n(.*?)\n---", text, re.S)
+        if not m:
+            continue
+        for a in _aliases_of(m.group(1)):
+            if a in stems:      # 与某文件名同名时链接走文件名，不算别名引用
+                continue
+            alias_map.setdefault(a, []).append(p)
+
+    bad_alias = {}
+    bad_prefix = {}
+    for p in files:
+        rel = p.relative_to(ROOT).as_posix()
+        if rel in exclude_files or any(rel.startswith(x) for x in exclude_prefixes):
+            continue
+        text = p.read_bytes().decode("utf-8", errors="ignore")
+        inside, state = set(), False
+        for i, line in enumerate(text.splitlines()):
+            if fence_re.match(line):
+                state = not state
+                inside.add(i)
+                continue
+            if state:
+                inside.add(i)
+        line_starts = [0]
+        for line in text.splitlines(keepends=True):
+            line_starts.append(line_starts[-1] + len(line))
+
+        def lineno(pos):
+            lo, hi = 0, len(line_starts) - 1
+            while lo < hi:
+                mid = (lo + hi + 1) // 2
+                if line_starts[mid] <= pos:
+                    lo = mid
+                else:
+                    hi = mid - 1
+            return lo
+
+        for m in link_re.finditer(text):
+            if lineno(m.start()) in inside:
+                continue
+            raw = m.group(0)
+            target = m.group(2).split("|")[0].split("#")[0].strip()
+            if not target:
+                continue
+            t2 = target[:-3] if target.lower().endswith(".md") else target
+            if t2 in paths or t2 in stems or t2.split("/")[-1] in stems:
+                continue        # 已能按文件名/路径解析
+            if target in alias_map and len(alias_map[target]) == 1:
+                bad_alias.setdefault(raw, []).append(rel)
+                continue
+            mm = prefix_re.match(target)
+            if mm:
+                rest = mm.group(2).strip()
+                if rest in stems and rest not in dup:
+                    bad_prefix.setdefault(raw, []).append(rel)
+
+    print("\n== 链接规范（别名不用于链接） ==")
+    if bad_alias:
+        total = sum(len(v) for v in bad_alias.values())
+        print(f"  别名引用 {total} 处 / {len(bad_alias)} 种写法：")
+        for raw, ws in sorted(bad_alias.items(), key=lambda x: -len(x[1]))[:10]:
+            print(f"    {len(ws):>3}x {raw}   例：{ws[0]}")
+    else:
+        print("  别名引用 0 处 ✓")
+
+    if bad_prefix:
+        total = sum(len(v) for v in bad_prefix.values())
+        print(f"  假前缀引用 {total} 处 / {len(bad_prefix)} 种写法（目标存在但没定义该别名）：")
+        for raw, ws in sorted(bad_prefix.items(), key=lambda x: -len(x[1]))[:10]:
+            print(f"    {len(ws):>3}x {raw}   例：{ws[0]}")
+    else:
+        print("  假前缀引用 0 处 ✓")
+
+    return len(bad_alias) + len(bad_prefix)
+
+
+def _count(seq):
+    out = {}
+    for x in seq:
+        out[x] = out.get(x, 0) + 1
+    return out
+
+
+def _aliases_of(fm_text):
+    """从 frontmatter 文本里取 aliases，支持 [a, b] / 单行 / 多行列表。"""
+    lines = fm_text.splitlines()
+    for i, line in enumerate(lines):
+        m = re.match(r"^aliases:\s*(.*)$", line)
+        if not m:
+            continue
+        rest = m.group(1).strip()
+        if rest.startswith("["):
+            return [x.strip().strip("\"'").strip()
+                    for x in rest.strip("[]").split(",") if x.strip().strip("\"'").strip()]
+        if rest and not rest.startswith("#"):
+            return [rest.strip("\"'").strip()]
+        out = []
+        for j in range(i + 1, len(lines)):
+            lm = re.match(r"^\s+-\s*(.+)$", lines[j])
+            if not lm:
+                break
+            v = lm.group(1).strip().strip("\"'").strip()
+            if v:
+                out.append(v)
+        return out
+    return []
 
 
 def main():
@@ -248,7 +389,11 @@ def main():
             if style_type:
                 print(f"    content-type × {len(style_type)}  例：{', '.join(style_type[:3])}")
 
-    # ---------- 3. 待登记字段 ----------
+    # ---------- 3. 链接规范 ----------
+    if "--links" in args:
+        problems += check_links()
+
+    # ---------- 4. 待登记字段 ----------
     if unregistered:
         print("\n== 扩展字段（模板在用，但 Truth/元数据规范 未登记） ==")
         for k, v in sorted(unregistered.items()):

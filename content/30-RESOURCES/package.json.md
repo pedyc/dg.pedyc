@@ -134,7 +134,7 @@ flowchart TD
 
 ### SOP
 
-* [[SOP-使用Husky与lint-staged进行代码质量防护]] — 利用 package.json scripts 与 prepare 钩子注入提交拦截
+* [[通过husky+lint-staged进行代码质量防护]] — 利用 package.json scripts 与 prepare 钩子注入提交拦截
 * [[SOP-配置现代NPM开源库标准发布流程]] — 覆盖 package.json 规范化检查、构建与语义化发版
 
 ### 知识图谱

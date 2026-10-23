@@ -8,7 +8,7 @@ date-created: 2026-06-15
 date-modified: 2026-06-15
 status: fleeting
 content-type: question
-up: "[[A-知识管理]]"
+up: "[[知识管理]]"
 ---
 
 ## 问题

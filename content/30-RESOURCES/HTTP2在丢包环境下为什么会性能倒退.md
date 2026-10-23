@@ -79,7 +79,7 @@ HTTP/2 的核心优势之一是多路复用，它允许在**同一个 TCP 连接
 
 ## 关联
 
-- **相关问题**：[[Q-分布式集群ETag缓存失效]]、[[Q-HTTP/3 QUIC协议如何解决队头阻塞]]
+- **相关问题**：[[分布式集群ETag缓存失效]]、[[Q-HTTP/3 QUIC协议如何解决队头阻塞]]
 - **参考资料**：
 		- [RFC 9113: HTTP/2](https://httpwg.org/specs/rfc9113.html)
 		- [HTTP/2 Explained - TCP Head-of-Line Blocking](https://http3-explained.haxx.se/zh/why-quic/why-tcphol)

@@ -129,5 +129,5 @@ key 是 React 列表渲染的 " 身份证号 "——让 Diff 算法通过身份�
 ## 关联
 
 - **相关问题**：[[React 的 Diff 算法是怎么工作的？为什么性能很高？]]
-- **相关概念**：[[React 重新渲染]]、[[React Fiber]]
+- **相关概念**：[[React 重新渲染]]、[[Fiber]]
 - **参考资料**：[React 官方文档 - Reconciliation](https://reactjs.org/docs/reconciliation.html)

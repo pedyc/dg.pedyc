@@ -94,7 +94,7 @@ flowchart TB
 
 ### SOP
 
-* [[SOP-使用Husky与lint-staged进行代码质量防护]] — 本地 Git Hooks 质量防护落地配置标准
+* [[通过husky+lint-staged进行代码质量防护]] — 本地 Git Hooks 质量防护落地配置标准
 * [[SOP-配置commitlint规范团队Git提交信息]] — 拦截并校验 Commit Message 标准流程
 
 ### 知识图谱

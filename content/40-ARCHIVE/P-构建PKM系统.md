@@ -5,7 +5,7 @@ aliases: [PKM系统搭建, P 构建PKM系统]
 date-created: 2024-08-01
 date-modified: 2026-06-01
 status: completed
-area: ["[[A-知识管理]]"]
+area: ["[[知识管理]]"]
 consequence: 4
 content-type: project
 expire: 2026-03-31

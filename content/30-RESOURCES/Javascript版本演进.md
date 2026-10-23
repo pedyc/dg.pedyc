@@ -107,7 +107,7 @@ timeline
 	- 原生 JSON 模块导入：`import json from './config.json' with { type: 'json' }`
 - **解决的关键问题**：优化大型应用首屏性能 + 简化异步错误处理
 - **相关概念**：
-	- [[async/await]] — 异步编程
+	- [[async-await]] — 异步编程
 	- [[What's new in ECMAScript 2025]]
 
 #### ES2026 (2026)

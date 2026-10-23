@@ -4,7 +4,7 @@ title: P-健康重启计划
 date-created: 2026-03-08
 date-modified: 2026-06-01
 status: cultivating
-area: ["[[A-健康管理]]"]
+area: ["[[健康管理]]"]
 consequence: 9
 content-type: project
 expire: 2026-03-31
@@ -13,7 +13,7 @@ urgency: 2
 
 ## 🔗关联领域
 
-- [[A-健康管理]]
+- [[健康管理]]
 - [[个人效能]]
 - [[习惯养成]]
 

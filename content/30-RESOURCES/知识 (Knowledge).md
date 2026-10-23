@@ -8,7 +8,7 @@ content-type: term
 up: "[[哲学与认知]]"
 keywords: [知识, 认识, 真理, 信念, 哲学]
 para: "resource"
-related: ["[[认识论]]", "[[真理]]", "[[信念]]", "[[信息]]"]
+related: ["[[知识论]]", "[[真理]]", "[[信念]]", "[[信息]]"]
 zettel: "permanent"
 ---
 
@@ -25,5 +25,5 @@ zettel: "permanent"
 
 ## 参考资料
 
-- [[认识论]]
+- [[知识论]]
 - [[真理]]

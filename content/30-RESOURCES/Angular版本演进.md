@@ -133,7 +133,7 @@ graph TD
 - **时间**：Angular 16 (2023.05) — Angular 19 (2024.11)
 - **核心变化**：`signal()` / `effect()` 细粒度响应式、`@if`/`@for` 模板语法、Zoneless 变更检测
 - **解决的关键问题**：Zone.js 无法感知数据流路径，必须全树 `markForCheck`；rxjs 在模板场景的过度抽象
-- **相关概念**：[[Angular Signals]] [[Zoneless变更检测]]
+- **相关概念**：[[Signal(Angular)]] [[Zoneless变更检测]]
 
 #### 第五代：全栈收敛 + Signal 全面成熟（2025-2026）
 
@@ -143,7 +143,7 @@ graph TD
 	- v21：esbuild 全面覆盖 AOT、SSR 流式渲染优化、开发者工具重做
 	- **v22**：Signal Forms 正式 GA、`@Service()` 装饰器 + `injectAsync()` 懒加载、Fetch 替代 XHR 为默认 HTTP 实现、OnPush 成为默认变更检测策略（Eager 作为重命名的降级选项）、`linkedSignal()` 支持 custom set 选项、Signal debounce 支持、增量水合默认启用、Resource API 获得 SSR 传输缓存和 stream 资源支持、Karma→Vitest 迁移 schematic 稳定、chunk 优化默认、TS 6.0 + Node.js 26 支持、移除 ComponentFactoryResolver / Hammer.js / provideRoutes()
 - **解决的关键问题**：Signal 生态的最后拼图——表单和 HTTP 的 Signal 原生支持、构建工具链统一、Zone.js 全面可移除
-- **相关概念**：[[Angular Signals]] [[SSR演进]] [[Vite]]
+- **相关概念**：[[Signal(Angular)]] [[SSR演进]] [[Vite]]
 
 ---
 

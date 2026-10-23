@@ -114,7 +114,7 @@ flowchart LR
 	- [[Jotai]] — 原子化状态管理
 	- [[Valtio]] — 响应式状态管理
 - **相关概念**：
-	- [[React Hooks]] — Zustand 暴露状态的基础
+	- [[Hooks(React)]] — Zustand 暴露状态的基础
 	- [[状态管理模式]] — 不同状态管理范式
 - **参考文章**
 	- [Zustand 官方文档](https://zustand-demo.pmnd.rs/)

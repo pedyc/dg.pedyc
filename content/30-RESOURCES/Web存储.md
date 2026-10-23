@@ -89,7 +89,7 @@ graph TD
 
 - **父级**：[[浏览器]] — Web 存储是浏览器的客户端存储能力
 - **子级**：[[Cookie 用于服务端通信和会话状态管理]] · [[localStorage 用于长期存储简单键值对数据]] · [[sessionStorage 用于会话级临时存储]] · [[IndexedDB 用于存储大量结构化数据]]
-- **相关**：[[Cache API]] — 资源缓存（Service Worker）；[[MOC-前端性能优化]] — 缓存与性能
+- **相关**：[[Cache API]] — 资源缓存（Service Worker）；[[前端性能优化]] — 缓存与性能
 
 ---
 

@@ -9,7 +9,7 @@ date-modified: 2025-12-16
 category: 知识管理/PARA
 rating: ★★★★☆
 source:
-  - "[[A-知识管理]]"
+  - "[[知识管理]]"
 type:
   - resource
 ---

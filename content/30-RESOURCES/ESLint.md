@@ -67,4 +67,4 @@ export default [
 
 ### 相关 SOP
 
-- [[SOP-代码审查流程]] — 代码审查中如何使用 ESLint
+- [[代码审查流程]] — 代码审查中如何使用 ESLint

@@ -8,7 +8,7 @@ date-created: 2026-06-15
 date-modified: 2026-06-15
 status: fleeting
 content-type: concept
-up: [[A-时间管理]]
+up: [[时间管理]]
 ---
 
 ## 概念：GTD（Getting Things Done）
@@ -145,7 +145,7 @@ graph LR
 
 ### 知识图谱
 
-- **父级概念**：[[A-时间管理]] — 时间管理方法论的核心组成部分
+- **父级概念**：[[时间管理]] — 时间管理方法论的核心组成部分
 - **子级概念**：
 	- [[2 分钟原则]] — GTD 中"立即执行"的判断标准
 	- [[每周回顾]] — GTD 的关键成功因素

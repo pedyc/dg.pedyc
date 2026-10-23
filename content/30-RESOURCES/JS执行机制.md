@@ -12,7 +12,7 @@ tags:
   - status/cultivating
 date-created: 2025-12-17
 date-modified: 2026-08-02
-status: 🌱 sprout
+status: cultivating
 content-type: concept
 up: "[[前端开发|前端开发]]"
 ---

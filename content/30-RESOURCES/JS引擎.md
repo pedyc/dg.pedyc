@@ -6,7 +6,7 @@ aliases: ["C-JS引擎", JavaScript Engine, JS Virtual Machine]
 tags: [领域/前端, 核心概念, 工具/运行时]
 date-created: 2025-12-26
 date-modified: 2025-12-28
-status: 🟢 活跃
+status: active
 related: ["[[V8引擎工作原理]]", "[[JS执行机制]]", "[[垃圾回收机制]]", "[[浏览器工作原理]]"]
 ---
 

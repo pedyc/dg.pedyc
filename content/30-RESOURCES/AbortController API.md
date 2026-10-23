@@ -9,7 +9,7 @@ description:
 tags: []
 date-created: 2025-02-25
 date-modified: 2025-12-10
-status: YCTODO
+status: fleeting
 ---
 
 MDN: https://developer.mozilla.org/zh-CN/docs/Web/API/AbortController

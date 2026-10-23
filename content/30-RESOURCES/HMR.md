@@ -6,7 +6,7 @@ description: 热模块替换——应用中模块/文件变更时，无需刷新
 tags: [前端/工程化/HMR]
 date-created: 2025-05-29
 date-modified: 2026-05-29
-status: cultivated
+status: active
 content-type: term
 ---
 

@@ -6,7 +6,7 @@ description: 通过 CSS aspect-ratio、HTML 尺寸映射及现代布局占位机
 tags: [Web性能优化, CSS, CoreWebVitals, CLS, 前端工程]
 date-created: 2026-08-31
 date-modified: 2026-08-31
-status: permanent
+status: active
 content-type: question
 up: ["[[前端性能优化]]"]
 ---

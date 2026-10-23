@@ -4,7 +4,7 @@ title: MCP
 aliases: ["T-MCP", Model Context Protocol]
 date-created: 2026-03-01
 date-modified: 2026-03-07
-status: 🌰 seed
+status: fleeting
 ---
 
 ## MCP (Model Context Protocol)

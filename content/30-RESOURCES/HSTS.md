@@ -6,7 +6,7 @@ description: HTTP 严格传输安全——强制浏览器使用 HTTPS 访问站�
 tags: [前端/安全/HSTS]
 date-created: 2025-05-26
 date-modified: 2026-05-29
-status: cultivated
+status: active
 content-type: term
 ---
 

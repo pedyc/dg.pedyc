@@ -6,7 +6,7 @@ description: 原子笔记：最小单位的知识点/术语/API
 tags: [atomic, topic/linux, topic/ipc]
 date-created: 2026-03-07
 date-modified: 2026-03-07
-status: 🌰 seed
+status: fleeting
 class: atomic
 up: "[[Linux-IPC]]"
 ---

@@ -6,7 +6,7 @@ description: 通过 HTTP 响应头声明式配置的安全策略，保护 Web �
 tags: [前端/安全/策略]
 date-created: 2026-05-29
 date-modified: 2026-05-29
-status: cultivated
+status: active
 content-type: concept
 ---
 

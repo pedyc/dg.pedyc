@@ -6,7 +6,7 @@ description: 原子笔记类型定义最小单位的知识点、术语、API接�
 tags: [atomic, topic/待分类]
 date-created: 2026-03-07
 date-modified: 2026-03-09
-status: 🌲 evergreen
+status: active
 content-type: term
 up: "[[Linux]]"
 ---

@@ -5,7 +5,7 @@ aliases: ["T-WebAssembly", WASM, Web Assembly]
 tags: [领域/前端, 核心概念, 性能优化]
 date-created: 2025-12-27
 date-modified: 2025-12-27
-status: 🟢 活跃
+status: active
 related: ["[[机器码]]", "[[V8引擎工作原理]]", "[[前端性能优化]]", "[[编译原理]]"]
 ---
 

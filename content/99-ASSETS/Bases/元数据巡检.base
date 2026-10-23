@@ -1,0 +1,41 @@
+filters:
+  or:
+    - file.inFolder("30-RESOURCES")
+    - file.inFolder("50-ZETTELCASTEN")
+    - file.inFolder("20-AREAS")
+    - file.inFolder("10-PROJECTS")
+views:
+  - type: table
+    name: 非法 status
+    filters:
+      and:
+        - note.status
+        - 'note.status != "fleeting"'
+        - 'note.status != "cultivating"'
+        - 'note.status != "active"'
+        - 'note.status != "completed"'
+        - 'note.status != "archived"'
+    order:
+      - file.name
+      - note.status
+      - note.content-type
+      - file.folder
+    sort:
+      - property: file.folder
+        direction: ASC
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: 缺 status
+    filters:
+      and:
+        - note.status.isEmpty()
+    order:
+      - file.name
+      - note.content-type
+      - file.folder
+    sort:
+      - property: file.folder
+        direction: ASC
+      - property: file.name
+        direction: ASC

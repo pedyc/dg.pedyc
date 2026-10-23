@@ -74,4 +74,5 @@
   - **三个必须知道的坑**：① dataview 用**纯字符串匹配**检测异步等待关键字，一旦出现就把整份文件包进 async IIFE，任何 `return` 被静默吞掉——注释里出现该词也会触发，所以脚本文件里连注释都别写它；② 非空返回值会被 `renderValue` **二次渲染**，务必只靠 `dv.xxx` 渲染、不 return；③ 路径写库内相对路径（如 `_scripts/scorecard`），不带 `.js`。三处都不能靠「看起来对」判断，用 `new Function` 在 node 里 stub 掉 `dv` 跑一遍即可等价验证。
   - 信源评分速览即用此机制：逻辑在 `_scripts/scorecard.js`，卡片正文只留一行。改评分规则只改一处。
   - **领域页看板**同理：`_scripts/areaBacklinks.js`（3 个领域页 + `template_area.md`）。它收口的理由与日记不同——写在模板里的逻辑**副本数会随新建领域线性增长**，属于"未来型重复"。分组顺序按知识粒度（moc → area → project → concept → comparison → atomic → term → question → sop → roadmap → person → record → article → diary），「未分类」置顶，未登记类型垫底但不隐藏。**新建领域时不要把这 17 行贴回模板**。
+  - **`dv.pages("[[名字]]")` 不计别名，是这类反查的默认陷阱**（2026-10-23 实测：知识管理页只显示 28，应为 82）。本库领域页都带 `A-xxx` 别名，实测 82 条引用里 54 条（66%）走别名——别名链接被 Obsidian 解析后指向文件完整路径，与「名字」对不上，整批静默丢弃，**没有报错**。正确做法是遍历 `p.file.inlinks` 用去 `.md` 的路径精确比对 `dv.current().file.path`。凡是「按名字反查反链」的 dataview 都要按这个写。
 - 双副本：活跃 `D:\Workspace\pedyc\dg,pedyc\content`，旧副本 `D:\Workspace\pedyc\site\apps\dg\content`。

@@ -160,5 +160,5 @@ flowchart TD
 
 ### Wiki 内联与配套指引[cite: 5]
 1. **Frontmatter 格式**：`content-type: concept`，别名携带 `C-` 前缀规范，父级锚定 `[[前端工程化]]`[cite: 5, 12]。
-2. **Wiki 索引挂载**：根据内联规则，可在 `00-META/Index/wiki-index.md` 的 `## Concepts (概念)` 章节下追加条目 `- [[package.json]] — Node.js项目核心元数据与依赖契约`[cite: 5, 13]。
+2. **Wiki 索引挂载**：根据内联规则，可在 `01-META/Index/wiki-index.md` 的 `## Concepts (概念)` 章节下追加条目 `- [[package.json]] — Node.js项目核心元数据与依赖契约`[cite: 5, 13]。
 ```

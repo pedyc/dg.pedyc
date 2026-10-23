@@ -23,7 +23,7 @@ related: "[[React]]"
 ### 演进概览
 
 ![[React版本演进.excalidraw.svg]]
-%%[[React版本演进.excalidraw.md|🖋 Edit in Excalidraw]]%%
+%%[[React版本演进.excalidraw|🖋 Edit in Excalidraw]]%%
 
 ---
 

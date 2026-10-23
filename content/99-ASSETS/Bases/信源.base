@@ -1,0 +1,40 @@
+filters:
+  and:
+    - file.inFolder("30-RESOURCES/信源")
+formulas:
+  total: 'if(density == null || timeliness == null || depth == null || uniqueness == null || output_rate == null, null, density + timeliness + depth + uniqueness + output_rate)'
+  grade: 'if(formula.total == null, "待评", if(formula.total >= 20, "A", if(formula.total >= 15, "B", if(formula.total >= 10, "C", "D"))))'
+views:
+  - type: kanban
+    name: 验证状态
+    groupBy:
+      property: verify_status
+      direction: ASC
+    groupOrder:
+      - 待验证
+      - 已验证
+    order:
+      - file.name
+      - source_type
+      - formula.total
+      - formula.grade
+      - source_risk
+  - type: table
+    name: 五维评分
+    order:
+      - file.name
+      - source_type
+      - density
+      - timeliness
+      - depth
+      - uniqueness
+      - output_rate
+      - formula.total
+      - formula.grade
+      - source_risk
+      - verify_status
+    sort:
+      - property: formula.total
+        direction: DESC
+      - property: file.name
+        direction: ASC

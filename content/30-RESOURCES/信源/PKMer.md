@@ -21,6 +21,21 @@ date-created: 2026-10-23
 date-modified: 2026-10-23
 ---
 
+```dataviewjs
+// 评分速览：全部数值由 frontmatter 实时计算，本块不含任何手填数据
+const f = dv.current();
+const dims = [["信息密度","density"],["时效性","timeliness"],["深度","depth"],["独特性","uniqueness"],["产出率","output_rate"]];
+const pts = dims.map(([label, key]) => [label, f[key] == null ? null : Number(f[key])]);
+const miss = pts.filter(([, v]) => v === null || Number.isNaN(v));
+const total = miss.length ? null : pts.map(([, v]) => v).reduce((a, b) => a + b, 0);
+const grade = total == null ? "待评（五维未齐）" : total >= 20 ? "A 级 · 保留" : total >= 15 ? "B 级 · 观察" : total >= 10 ? "C 级 · 待砍" : "D 级 · 立即砍";
+const rows = pts.map(([l, v]) => [l, v === null || Number.isNaN(v) ? "—（待补）" : String(v)]);
+rows.push(["**综合**", total == null ? "**—**　" + grade : `**${total} / 25**　${grade}`]);
+dv.table(["维度", "分值"], rows);
+const d = f.scored_at ? String(f.scored_at).slice(0, 10) : "—";
+dv.paragraph(`评分时间 **${d}** · 采信风险 **${f.source_risk ?? "—"}** · 状态 **${f.verify_status ?? "—"}**`);
+```
+
 ## 评价
 
 PKM 领域中文社区，五维都在 3 分以上，是本次盘点里最均衡的一个（19 分，B 级）。优势在**独家一手经验**：插件评测和真实工作流分享，是英文社区覆盖不到的部分——中文排版、中文字体、国内同步盘这些坑，只有这里有人踩过。

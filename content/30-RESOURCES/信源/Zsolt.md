@@ -21,6 +21,21 @@ date-created: 2026-10-23
 date-modified: 2026-10-23
 ---
 
+```dataviewjs
+// 评分速览：全部数值由 frontmatter 实时计算，本块不含任何手填数据
+const f = dv.current();
+const dims = [["信息密度","density"],["时效性","timeliness"],["深度","depth"],["独特性","uniqueness"],["产出率","output_rate"]];
+const pts = dims.map(([label, key]) => [label, f[key] == null ? null : Number(f[key])]);
+const miss = pts.filter(([, v]) => v === null || Number.isNaN(v));
+const total = miss.length ? null : pts.map(([, v]) => v).reduce((a, b) => a + b, 0);
+const grade = total == null ? "待评（五维未齐）" : total >= 20 ? "A 级 · 保留" : total >= 15 ? "B 级 · 观察" : total >= 10 ? "C 级 · 待砍" : "D 级 · 立即砍";
+const rows = pts.map(([l, v]) => [l, v === null || Number.isNaN(v) ? "—（待补）" : String(v)]);
+rows.push(["**综合**", total == null ? "**—**　" + grade : `**${total} / 25**　${grade}`]);
+dv.table(["维度", "分值"], rows);
+const d = f.scored_at ? String(f.scored_at).slice(0, 10) : "—";
+dv.paragraph(`评分时间 **${d}** · 采信风险 **${f.source_risk ?? "—"}** · 状态 **${f.verify_status ?? "—"}**`);
+```
+
 ## 评价
 
 Obsidian 视觉化知识管理领域的天花板。核心不在"怎么用插件"，而在**用 Excalidraw 把思考过程外化**——他画图是为了想清楚，不是为了展示结果。这个区分是它区别于其他 PKM 频道的地方（独特性 5）。

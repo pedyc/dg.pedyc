@@ -14,7 +14,7 @@
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [],
   "startup_templates": [
-    "_templates/template_startup.md"
+    "_scripts/template_startup.md"
   ],
   "intellisense_render": "1",
   "ignore_folders_on_creation": [

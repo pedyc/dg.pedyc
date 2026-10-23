@@ -34,6 +34,9 @@ properties:
 views:
   - type: table
     name: 总览
+    filters:
+      and:
+        - verify_status != "已弃"
     order:
       - file.name
       - source_type
@@ -44,20 +47,18 @@ views:
       - scored_at
       - source_risk
     sort:
-      - property: formula.grade
-        direction: ASC
       - property: formula.total
         direction: DESC
-      - property: file.name
-        direction: ASC
   - type: kanban
     name: 验证状态
     groupBy:
       property: verify_status
       direction: ASC
     groupOrder:
+      - 候选
       - 待验证
       - 已验证
+      - 已弃
     order:
       - file.name
       - source_type

@@ -5,7 +5,7 @@ aliases: [T-QUIC, QUIC Protocol]
 description: QUIC是基于UDP的安全传输协议，是HTTP/3的底层协议，解决了TCP的队头阻塞和连接迁移问题
 tags: [前端开发/网络协议]
 date-created: 2026-03-23
-date-modified: 2026-03-23
+date-modified: 2026-10-23
 status: active
 content-type: term
 ---
@@ -38,5 +38,5 @@ QUIC（Quick UDP Internet Connections）是 Google 开发的基于 UDP 的安全
 - **相关概念**：
 	- [[UDP]] — QUIC 基于 UDP
 	- [[HTTP~2]] — TCP 协议，HTTP/3 的前身
-	- [[队头阻塞]] — QUIC 解决了 TCP 的队头阻塞
+	- [[队头阻塞]] — QUIC 切断了跨流级联阻塞，单流内的有序等待仍在（见 [[QUIC只缩小阻塞粒度而不消除单流内的有序等待]]）
 	- [[TLS]] — QUIC 内置 TLS 1.3

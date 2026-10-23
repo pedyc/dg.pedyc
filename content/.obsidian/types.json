@@ -56,7 +56,7 @@
     "related": "multitext",
     "excalidraw-embed-md": "checkbox",
     "excalidraw-export-internal-links": "checkbox",
-    "content-type": "multitext",
+    "content-type": "text",
     "TQ_show_toolbar": "checkbox",
     "expire": "date",
     "urgency": "number",

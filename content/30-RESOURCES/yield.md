@@ -6,7 +6,7 @@ description: "JavaScript 中 Generator 函数的暂停和值产出关键字"
 tags: [前端开发/JavaScript]
 date-created: 2026-03-22
 date-modified: 2026-03-22
-status: cultivating
+status: active
 content-type: concept
 ---
 

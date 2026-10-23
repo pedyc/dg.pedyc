@@ -6,7 +6,7 @@ description: 使用 Three.js 实现水下气泡粒子上升动画效果的标准
 tags: [前端开发/动画, ThreeJS]
 date-created: 2026-04-13
 date-modified: 2026-07-20
-status: cultivating
+status: active
 content-type: sop
 up: "[[ThreeJS]]"
 ---

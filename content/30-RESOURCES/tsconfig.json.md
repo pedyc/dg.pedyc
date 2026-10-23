@@ -15,7 +15,7 @@ tags:
   - 概念
 date-created: 2026-09-01
 date-modified: 2026-09-21
-status: cultivating
+status: active
 content-type: concept
 up: ["[[TypeScript]]", "[[前端工程]]"]
 ---

@@ -5,7 +5,7 @@ description: Angular 框架学习笔记，重新认识 Angular 的设计理念�
 tags: [前端开发/Angular]
 date-created: 2026-01-30
 date-modified: 2026-05-29
-status: completed
+status: active
 category: blog
 content-type: article
 published: true

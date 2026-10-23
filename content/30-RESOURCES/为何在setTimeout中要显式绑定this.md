@@ -6,7 +6,7 @@ description: setTimeout 的回调函数 this 默认指向 window，需用 bind/�
 tags: [topic/JavaScript, type/question]
 date-created: 2026-03-20
 date-modified: 2026-03-21
-status: cultivating
+status: active
 content-type: question
 up: "[[JavaScript]]"
 ---

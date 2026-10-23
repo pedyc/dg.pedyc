@@ -6,7 +6,7 @@ description: 理解 Vite 如何利用原生 ESM 实现极快的开发服务器�
 tags: [前端工程, Vite, ESM, 冷启动]
 date-created: 2026-05-21
 date-modified: 2026-05-21
-status: cultivating
+status: active
 content-type: question
 up: "[[Vite相关问题]]"
 ---

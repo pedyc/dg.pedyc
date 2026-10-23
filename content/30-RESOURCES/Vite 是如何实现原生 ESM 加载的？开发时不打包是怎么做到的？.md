@@ -4,7 +4,7 @@ title: Vite 是如何实现原生 ESM 加载的？开发时不打包是怎么做
 aliases: []
 date-created: 2025-05-28
 date-modified: 2026-05-19
-status: cultivating
+status: active
 content-type: [question]
 up: ["[[Vite相关问题]]"]
 ---

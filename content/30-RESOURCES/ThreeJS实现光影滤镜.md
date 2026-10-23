@@ -6,7 +6,7 @@ description: 使用 Three.js 实现光照、阴影与后处理滤镜效果的标
 tags: [前端开发/图形, ThreeJS]
 date-created: 2026-04-13
 date-modified: 2026-07-20
-status: cultivating
+status: active
 content-type: sop
 up: "[[ThreeJS]]"
 ---

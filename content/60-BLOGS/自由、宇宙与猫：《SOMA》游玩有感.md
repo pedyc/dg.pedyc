@@ -6,7 +6,7 @@ description: 探讨存在主义与虚无主义的游戏观后感，关于意识�
 tags: [生活/思考, 游戏/观后感, 意识流]
 date-created: 2024-11-19
 date-modified: 2026-03-25
-status: completed
+status: active
 category: blog
 content-type: article
 published: true

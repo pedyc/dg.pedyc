@@ -6,7 +6,7 @@ description: 本库选择 PARA 笔记法的原因：基于行动而非主题组�
 tags: [知识管理/方法论]
 date-created: 2026-08-18
 date-modified: 2026-08-18
-status: cultivating
+status: active
 content-type: question
 up: "[[PARA笔记法]]"
 ---

@@ -10,7 +10,7 @@ tags:
   - 设计模式
 date-created: 2026-03-25
 date-modified: 2026-03-25
-status: cultivating
+status: active
 comparison:
   - 观察者模式
   - 发布-订阅模式

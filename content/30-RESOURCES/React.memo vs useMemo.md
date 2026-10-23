@@ -10,7 +10,7 @@ tags:
   - performance
 date-created: 2026-04-21
 date-modified: 2026-04-22
-status: cultivating
+status: active
 content-type: comparison
 up: "[[Hooks(React)|React Hooks]]"
 ---

@@ -10,7 +10,7 @@ tags:
   - 前端/组件
 date-created: 2026-03-24
 date-modified: 2026-03-24
-status: cultivating
+status: active
 content-type: concept
 up: "[[Vue]]"
 ---

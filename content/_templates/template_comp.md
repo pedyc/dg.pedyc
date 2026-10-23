@@ -6,7 +6,7 @@ description: "{ 一句话概括核心区别 }"
 tags: []
 content-type: comparison
 category: learning
-status: cultivating
+status: active
 up: "[[{{父级}}]]"
 ---
 

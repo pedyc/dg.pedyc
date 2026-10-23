@@ -11,7 +11,7 @@ tags:
   - 前端/原理
 date-created: 2026-03-13
 date-modified: 2026-09-22
-status: cultivating
+status: active
 content-type: concept
 up: ["[[Vue|vue]]"]
 ---

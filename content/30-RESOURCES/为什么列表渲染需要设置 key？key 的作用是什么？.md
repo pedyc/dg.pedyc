@@ -6,7 +6,7 @@ description: "React 中列表渲染为什么需要 key？key 的作用是什么�
 tags: [React, 列表渲染, 性能优化]
 date-created: 2026-05-17
 date-modified: 2026-08-02
-status: cultivating
+status: active
 content-type: question
 up: "[[React面试题|MOC-React面试题]]"
 ---

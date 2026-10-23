@@ -6,7 +6,7 @@ description: Vue2 和 Vue3 在核心特性、API、性能等方面的全面对�
 tags: [前端/Vue]
 date-created: 2026-03-13
 date-modified: 2026-08-31
-status: cultivating
+status: active
 comparison: [Vue2, Vue3]
 content-type: comparison
 related: ["[[前端开发]]", "[[P-复习vue3]]", "[[Vue3-响应式系统原理]]", "[[Vue]]"]

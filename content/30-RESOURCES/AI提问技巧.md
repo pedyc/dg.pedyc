@@ -6,7 +6,7 @@ description: 提高向 AI 提问质量的标准化流程，帮助获得更精准
 tags: [方法论, AI]
 date-created: 2026-06-12
 date-modified: 2026-06-15
-status: cultivating
+status: active
 content-type: sop
 up: "[[A-知识管理]]"
 ---

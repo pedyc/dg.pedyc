@@ -6,7 +6,7 @@ description: "requestIdleCallback 是浏览器 API，在空闲时执行低优先
 tags: [前端开发/浏览器API]
 date-created: 2025-02-25
 date-modified: 2026-05-09
-status: cultivating
+status: active
 content-type: term
 ---
 

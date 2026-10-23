@@ -6,7 +6,7 @@ description: 在运行时隔离方案 qiankun 和依赖共享方案 Module Feder
 tags: [前端工程/架构]
 date-created: 2026-04-13
 date-modified: 2026-04-13
-status: cultivating
+status: active
 content-type: question
 ---
 

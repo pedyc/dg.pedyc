@@ -6,7 +6,7 @@ description: 使用 HTML5 Canvas API 实现高性能动画的技术
 tags: [concept, Canvas, 动画, 前端, 图形]
 date-created: 2026-04-10
 date-modified: 2026-07-21
-status: cultivating
+status: active
 content-type: concept
 related: ["[[动画原理]]", "[[CSS Animation]]", "[[前端开发]]"]
 up: "[[前端开发]]"

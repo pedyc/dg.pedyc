@@ -6,7 +6,7 @@ description: "RxJS 是 JavaScript 的响应式编程库，通过 Observable 序�
 tags: [rxjs, reactive-programming, javascript]
 date-created: 2026-04-20
 date-modified: 2026-08-01
-status: cultivating
+status: active
 content-type: concept
 ---
 

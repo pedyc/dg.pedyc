@@ -6,7 +6,7 @@ description: PARA方法的核心原则
 tags: [知识管理, PARA]
 date-created: 2025-02-22
 date-modified: 2026-03-12
-status: cultivating
+status: active
 content-type: concept
 up: "[[PARA笔记法]]"
 ---

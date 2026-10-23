@@ -7,7 +7,7 @@ description: 长任务 Agent 的 Context 长度监控、压缩与超窗降级的
 tags: []
 date-created: 2026-10-03
 date-modified: 2026-10-03
-status: cultivating
+status: active
 content-type: sop
 up: "[[Context Engineering]]"
 ---

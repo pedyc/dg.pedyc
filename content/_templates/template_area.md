@@ -4,7 +4,7 @@ title: template_area
 aliases: ["A-{{标题}}"]
 description: "{ 一句话定义这个领域的核心范畴 }"
 tags: []
-status: cultivating
+status: active
 content-type: area
 category: work
 up: "[[{{父级领域}}]]"

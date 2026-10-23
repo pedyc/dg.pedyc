@@ -6,7 +6,7 @@ description: 将多个项目代码存储在同一个代码仓库中的开发模�
 tags: [area/前端工程, area/Monorepo]
 date-created: 2025-04-29
 date-modified: 2026-07-27
-status: cultivating
+status: active
 content-type: term
 ---
 

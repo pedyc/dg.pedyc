@@ -6,7 +6,7 @@ description: HTTP/1.0是HTTP协议的第一个广泛使用版本，采用短连�
 tags: [前端开发/网络协议]
 date-created: 2025-06-02
 date-modified: 2026-08-26
-status: completed
+status: active
 content-type: concept
 ---
 

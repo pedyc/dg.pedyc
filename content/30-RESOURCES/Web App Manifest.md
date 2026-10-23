@@ -6,7 +6,7 @@ description: PWA 的配置文件，定义应用元数据实现可安装性
 tags: []
 date-created: 2026-05-12
 date-modified: 2026-05-12
-status: cultivating
+status: active
 content-type: term
 ---
 

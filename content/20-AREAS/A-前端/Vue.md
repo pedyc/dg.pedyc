@@ -6,7 +6,7 @@ description: 用于构建用户界面的渐进式 JavaScript 框架，专注于�
 tags: [前端开发/框架]
 date-created: 2025-05-29
 date-modified: 2026-08-31
-status: cultivating
+status: active
 content-type: area
 up: "[[前端开发]]"
 ---

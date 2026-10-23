@@ -6,7 +6,7 @@ description: "Zustand 是 React 轻量级状态管理库，以极简 API 和 Hoo
 tags: [zustand, state-management, react]
 date-created: 2026-04-20
 date-modified: 2026-04-20
-status: cultivating
+status: active
 content-type: concept
 ---
 

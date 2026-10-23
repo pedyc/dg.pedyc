@@ -6,7 +6,7 @@ description: 软件即服务，通过订阅模式提供云端软件服务
 tags: []
 date-created: 2026-05-11
 date-modified: 2026-05-11
-status: cultivating
+status: active
 content-type: term
 up: "[[软件工程]]"
 ---

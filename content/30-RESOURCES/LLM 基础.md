@@ -6,7 +6,7 @@ description: LLM 基础原理专题 MOC：聚合大语言模型原理、上下�
 tags: [AI, LLM]
 date-created: 2026-08-18
 date-modified: 2026-08-18
-status: cultivating
+status: active
 content-type: moc
 up: "[[人工智能]]"
 ---

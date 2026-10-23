@@ -4,7 +4,7 @@ title: Webpack HMR 热模块替换是如何实现的？
 aliases: ["Q-Webpack HMR 热模块替换是如何实现的？"]
 date-created: 2026-05-18
 date-modified: 2026-05-18
-status: cultivating
+status: active
 content-type: question
 up: "[[Webpack相关问题]]"
 ---

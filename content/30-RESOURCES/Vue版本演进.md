@@ -6,7 +6,7 @@ description: Vue 从轻量响应式框架到组合式 API 平台再到编译时�
 tags: [前端开发/框架/Vue]
 date-created: 2026-08-02
 date-modified: 2026-08-02
-status: cultivating
+status: active
 content-type: roadmap
 up: "[[Vue]]"
 ---

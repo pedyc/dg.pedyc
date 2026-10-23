@@ -7,7 +7,7 @@ tags:
   - 前端/Vue
 date-created: 2026-03-13
 date-modified: 2026-03-13
-status: cultivating
+status: active
 comparison:
   - Vuex
   - Pinia

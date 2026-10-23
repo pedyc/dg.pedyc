@@ -6,7 +6,7 @@ description: 编译时框架 vs 运行时框架，从架构哲学到开发体验
 tags: [前端/框架对比]
 date-created: 2026-06-23
 date-modified: 2026-06-23
-status: cultivating
+status: active
 content-type: comparison
 up: "[[前端框架]]"
 ---

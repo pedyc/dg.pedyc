@@ -38,18 +38,18 @@ quadrant_boost = Q1 ? 1.5 : (Q2 ? 1.2 : (Q3 ? 0.8 : 0.5))
 ## 状态流转链
 
 ```
-fleeting → cultivating → active → completed → archived
+fleeting → active → archived
 ```
 
-**时间触发规则**：
-- `fleeting > 30d` → 建议推进到 cultivating
-- `cultivating > 60d` → 建议推进到 active 或归档
-- `active` 项目停滞 > 14d → 建议继续或标记 completed
-- `completed > 30d` 未归档 → 建议移至归档
+**时间触发规则**（2026-10-23 起为三值模型，原 cultivating / completed 已并入 active）：
+- `fleeting > 30d` → 建议推进到 active，或判断为废稿直接归档
+- `active` 停滞 > 90d → 建议复核内容是否过时，过时则归档
+- `active` 项目停滞 > 14d → 建议继续或标记归档
+- `archived` 为终态，不再产生动作
 
 ## 数据来源
 
-1. 扫描 `10-PROJECTS/` 和 `20-AREAS/` 获取 status、consequence、urgency、expire、quadrant、date-modified
+1. 扫描 `10-PROJECTS/` 和 `20-AREAS/` 获取 status、consequence、urgency、expire、date-modified（`quadrant` 已于 2026-10-23 移除，改为由 consequence × urgency 派生；`date-modified` 是判断陈旧的主要依据）
 2. 读取项目文件的"阶段一/二/三"结构，识别当前阶段
 3. 读取 `01-META/Log/wiki-log.md` 最近一次 lint 报告
 
@@ -57,9 +57,9 @@ fleeting → cultivating → active → completed → archived
 
 ### 优先级排序
 
-1. **P0 - 逾期归档**：`completed/done > 30d` 未归档，或 `expire` 已过期且无实质进展
-2. **P1 - 紧急停滞**：`fleeting > 30d` 或 `cultivating > 60d`（按停滞时长降序）
-3. **P2 - 重要继续**：按 `final_priority` 降序，Q1 项目优先，top 3
+1. **P0 - 逾期归档**：`expire` 已过期且无实质进展（`completed` 状态已不存在，改看 `date-modified` 停滞时长）
+2. **P1 - 紧急停滞**：`fleeting > 30d` 未加工，或 `active` 停滞 > 90d 待复核（按停滞时长降序）
+3. **P2 - 重要继续**：按 `consequence × urgency` 算出的优先级降序，Q1 项目优先，top 3（`quadrant` 字段已移除，此处为派生值）
 4. **P3 - 维护任务**：孤儿 MOC 页面
 
 ### 具体化建议规则

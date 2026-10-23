@@ -6,7 +6,7 @@ description: 深入解析 requestAnimationFrame (rAF) 与 setTimeout 在事件�
 tags: [JavaScript, EventLoop, 浏览器渲染, 性能优化, Web动画]
 date-created: 2026-08-30
 date-modified: 2026-08-30
-status: completed
+status: active
 content-type: question
 up: ["[[事件循环]]"]
 ---

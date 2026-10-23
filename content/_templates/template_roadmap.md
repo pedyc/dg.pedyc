@@ -6,7 +6,7 @@ description: "{ 一句话定义这个演进历程的核心 }"
 tags: []
 content-type: roadmap
 category: learning
-status: cultivating
+status: active
 up: "[[{{父级}}]]"
 ---
 

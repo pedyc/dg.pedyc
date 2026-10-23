@@ -6,7 +6,7 @@ description: Angular 面试题目汇总，按模块分类，关联知识库笔�
 tags: [前端开发/Angular, 前端面试]
 date-created: 2026-06-12
 date-modified: 2026-06-12
-status: cultivating
+status: active
 content-type: moc
 up:
   - - 前端面试真题库|前端面试题

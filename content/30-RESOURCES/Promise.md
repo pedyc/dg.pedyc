@@ -6,7 +6,7 @@ description: Promise 是 JavaScript 中用于处理异步操作的对象，代�
 tags: ["前端/JavaScript"]
 date-created: 2026-03-20
 date-modified: 2026-03-20
-status: cultivating
+status: active
 content-type: concept
 up: "[[JavaScript]]"
 ---

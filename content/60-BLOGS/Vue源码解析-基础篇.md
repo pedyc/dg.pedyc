@@ -6,7 +6,7 @@ description: Vue 源码学习笔记，探讨如何高效学习框架源码
 tags: [前端开发/Vue, 前端开发/源码]
 date-created: 2025-02-15
 date-modified: 2025-04-29
-status: completed
+status: active
 content-type: article
 category: blog
 published: true

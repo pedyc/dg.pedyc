@@ -6,7 +6,7 @@ description: Babel 编译器配置与使用流程，涵盖 preset/plugin 配置�
 tags: [前端开发/工程化, SOP]
 date-created: 2026-05-27
 date-modified: 2026-05-27
-status: cultivating
+status: active
 content-type: sop
 up: "[[前端工程]]"
 ---

@@ -11,7 +11,7 @@ tags:
   - 3D图形
 date-created: 2026-04-01
 date-modified: 2026-09-07
-status: cultivating
+status: active
 content-type: concept
 related: ["[[ThreeJS]]", "[[WebGL]]", "[[前端交互]]", "[[React]]"]
 ---

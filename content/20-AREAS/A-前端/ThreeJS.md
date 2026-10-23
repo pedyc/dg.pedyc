@@ -6,7 +6,7 @@ description: 使用 Three.js 在浏览器中创建和展示 3D 图形的领域
 tags: [前端开发/图形]
 date-created: 2026-03-20
 date-modified: 2026-06-19
-status: cultivating
+status: active
 content-type: area
 up: "[[前端开发]]"
 ---

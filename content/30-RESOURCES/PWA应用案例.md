@@ -6,7 +6,7 @@ description: PWA 实际应用案例索引，按行业和应用场景分类
 tags: []
 date-created: 2026-05-12
 date-modified: 2026-05-12
-status: cultivating
+status: active
 content-type: moc
 ---
 

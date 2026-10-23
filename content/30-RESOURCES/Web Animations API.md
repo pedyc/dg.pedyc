@@ -6,7 +6,7 @@ description: Web Animations API 是浏览器原生的动画 API，提供命令�
 tags: [前端开发/动画]
 date-created: 2026-05-08
 date-modified: 2026-05-08
-status: cultivating
+status: active
 content-type: concept
 up: [Web API]
 ---

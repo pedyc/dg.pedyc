@@ -6,7 +6,7 @@ description: "CDN 是内容分发网络，通过全球节点缓存静态资源�
 tags: []
 date-created: 2026-05-06
 date-modified: 2026-05-06
-status: cultivating
+status: active
 content-type: concept
 ---
 

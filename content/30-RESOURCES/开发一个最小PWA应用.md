@@ -6,7 +6,7 @@ description: 从零开始开发一个最小可运行的 PWA 应用，包含必�
 tags: []
 date-created: 2026-05-12
 date-modified: 2026-05-12
-status: cultivating
+status: active
 content-type: sop
 up: ""
 ---

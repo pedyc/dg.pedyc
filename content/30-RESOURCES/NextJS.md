@@ -6,7 +6,7 @@ description: NextJS 是 React 生态与 Node.js 服务端能力的深度融合�
 tags: ["前端/框架"]
 date-created: 2026-04-08
 date-modified: 2026-05-06
-status: cultivating
+status: active
 content-type: concept
 ---
 

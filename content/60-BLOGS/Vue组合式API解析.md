@@ -6,7 +6,7 @@ description: Vue3 组合式 API 解析，探讨函数式组件和状态逻辑复
 tags: [前端开发/Vue, 前端开发/API]
 date-created: 2024-09-23
 date-modified: 2024-10-08
-status: completed
+status: active
 content-type: article
 category: blog
 published: true

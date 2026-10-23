@@ -11,7 +11,7 @@ tags:
   - atomic
 date-created: 2026-08-31
 date-modified: 2026-08-31
-status: cultivating
+status: active
 content-type: atomic
 up: "[[微前端]]"
 noteId: 1792475167232

@@ -6,7 +6,7 @@ description: 移动端设备像素比导致1px边框显示过粗的解决方案
 tags: [前端/CSS, 前端/移动端]
 date-created: 2026-03-24
 date-modified: 2026-03-28
-status: completed
+status: active
 content-type: question
 up: "[[CSS]]"
 ---

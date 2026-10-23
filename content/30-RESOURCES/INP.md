@@ -6,7 +6,7 @@ description: INP 衡量网页对用户交互的响应速度，是 2024 年取代
 tags: [performance, core-web-vitals]
 date-created: 2026-04-22
 date-modified: 2026-05-12
-status: cultivating
+status: active
 content-type: concept
 up: "[[核心Web指标]]"
 ---

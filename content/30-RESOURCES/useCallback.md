@@ -6,7 +6,7 @@ description: React Hooks 之一，缓存函数引用，只有依赖变化时才�
 tags: [前端开发/框架/React]
 date-created: 2025-09-09
 date-modified: 2026-04-29
-status: cultivating
+status: active
 content-type: concept
 related: "[[React]]"
 ---

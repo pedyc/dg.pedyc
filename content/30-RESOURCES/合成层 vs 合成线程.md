@@ -6,7 +6,7 @@ description: 合成层是浏览器为 GPU 加速创建的数据结构，合成�
 tags: [browser, rendering, performance]
 date-created: 2026-04-23
 date-modified: 2026-05-09
-status: cultivating
+status: active
 comparison: [合成层, 合成线程]
 content-type: comparison
 up: "[[渲染进程]]"

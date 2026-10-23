@@ -3,7 +3,7 @@ title: qiankun
 aliases: [C-qiankun]
 description: 基于 Proxy 沙箱与 HTML Entry 加载的微前端框架，解决子应用全局隔离与路由同步
 tags: [微前端, 前端架构, 概念]
-status: cultivating
+status: active
 content-type: concept
 up: ["[[微前端]]"]
 date-created: 2026-08-28

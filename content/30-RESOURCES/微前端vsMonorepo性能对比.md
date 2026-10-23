@@ -6,7 +6,7 @@ description: 微前端是否一定比 Monorepo 性能差？性能差异的根源
 tags: [前端工程/架构]
 date-created: 2026-04-13
 date-modified: 2026-04-13
-status: cultivating
+status: active
 content-type: question
 ---
 

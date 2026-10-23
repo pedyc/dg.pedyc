@@ -6,7 +6,7 @@ description: 运行在浏览器后台的脚本，独立于网页，作为代理�
 tags: []
 date-created: 2025-05-30
 date-modified: 2026-05-12
-status: cultivating
+status: active
 content-type: term
 ---
 

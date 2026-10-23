@@ -6,7 +6,7 @@ description: Git 提供的在特定事件发生时自动触发自定义脚本的
 tags: [Git, 前端工程化, 代码质量, 概念]
 date-created: 2026-08-29
 date-modified: 2026-08-29
-status: cultivating
+status: active
 content-type: concept
 up: ["[[前端工程]]"]
 ---

@@ -6,7 +6,7 @@ description: "深度剖析浏览器原生隔离方案 iframe 在微前端架构�
 tags: [微前端, 架构演进, 沙箱隔离, iframe]
 date-created: 2026-08-28 
 date-modified: 2026-08-28
-status: cultivating 
+status: active
 content-type: concept 
 up: ["[[前端工程演进]]"]
 ---

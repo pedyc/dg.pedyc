@@ -6,7 +6,7 @@ description: AI 智能体与应用工具专题 MOC：聚合 Agent、MCP、Harnes
 tags: [AI, Agent]
 date-created: 2026-08-18
 date-modified: 2026-08-20
-status: cultivating
+status: active
 content-type: moc
 up: "[[人工智能]]"
 ---

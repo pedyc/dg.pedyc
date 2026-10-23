@@ -6,7 +6,7 @@ description: React 提供的高阶组件，用于缓存函数组件，避免 pro
 tags: [前端开发/框架/React]
 date-created: 2026-04-19
 date-modified: 2026-04-30
-status: cultivating
+status: active
 content-type: concept
 related: "[[React]]"
 ---

@@ -6,7 +6,7 @@ description: "使用 AI 工具（Claude Code、Cursor 等）根据设计稿高�
 tags: [AI, 前端开发/图形]
 date-created: 2026-03-29
 date-modified: 2026-03-30
-status: cultivating
+status: active
 content-type: sop
 up: "[[前端开发]]"
 ---

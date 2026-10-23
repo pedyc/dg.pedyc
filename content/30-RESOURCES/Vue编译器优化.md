@@ -6,7 +6,7 @@ description: Vue 编译器在编译期对模板进行静态分析与优化的技
 tags: [前端开发/框架/Vue]
 date-created: 2026-08-02
 date-modified: 2026-08-19
-status: cultivating
+status: active
 content-type: concept
 up: "[[Vue]]"
 ---

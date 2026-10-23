@@ -6,7 +6,7 @@ description: 浏览器对象模型，提供与浏览器窗口交互的 API
 tags: []
 date-created: 2025-06-02
 date-modified: 2026-05-11
-status: cultivating
+status: active
 content-type: term
 up: ""
 ---

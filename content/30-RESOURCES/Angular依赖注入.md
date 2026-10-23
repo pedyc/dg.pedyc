@@ -6,7 +6,7 @@ description: Angular 内置的依赖注入系统，通过构造函数自动解�
 tags: [前端/Angular]
 date-created: 2026-06-17
 date-modified: 2026-06-17
-status: cultivating
+status: active
 content-type: concept
 up: "[[Angular|A-前端/Angular]]"
 ---

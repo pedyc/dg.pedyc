@@ -6,7 +6,7 @@ description: 客户端 JavaScript 接管 SSR 输出的过程，使页面具有�
 tags: [concept, 前端, SSR, 渲染模式]
 date-created: 2026-04-08
 date-modified: 2026-05-06
-status: cultivating
+status: active
 content-type: concept
 related: ["[[SSR]]", "[[CSR]]", "[[NextJS]]"]
 ---

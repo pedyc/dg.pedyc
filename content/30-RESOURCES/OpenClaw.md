@@ -6,7 +6,7 @@ description: OpenClaw AI 助手领域知识索引
 tags: ["AI/OpenClaw"]
 date-created: 2026-03-08
 date-modified: 2026-03-16
-status: cultivating
+status: active
 content-type: moc
 up: "[[人工智能]]"
 ---

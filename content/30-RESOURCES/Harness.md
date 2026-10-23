@@ -10,7 +10,7 @@ tags:
   - Agent
 date-created: 2026-04-01
 date-modified: 2026-09-21
-status: cultivating
+status: active
 content-type: concept
 related: ["[[Agent]]", "[[Claude Code]]", "[[前端交互]]"]
 ---

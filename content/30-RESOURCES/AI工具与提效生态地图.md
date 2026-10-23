@@ -15,7 +15,7 @@ tags:
   - MOC
 date-created: 2026-09-08
 date-modified: 2026-09-08
-status: cultivating
+status: active
 content-type: moc
 up: "[[人工智能|AI]]"
 ---

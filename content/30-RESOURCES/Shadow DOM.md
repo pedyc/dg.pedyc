@@ -6,7 +6,7 @@ description: Web Components 核心规范之一，提供原生的 DOM 树与 CSS 
 tags: [WebComponents, 浏览器API, DOM, 前端架构, 概念]
 date-created: 2026-08-31
 date-modified: 2026-08-31
-status: cultivating
+status: active
 content-type: concept
 up: ["[[Web Components]]", "[[微前端]]"]
 ---

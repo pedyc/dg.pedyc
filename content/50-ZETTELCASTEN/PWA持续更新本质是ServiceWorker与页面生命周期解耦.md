@@ -6,7 +6,7 @@ description: PWA 持续更新的本质是 Service Worker 生命周期与页面�
 tags: []
 date-created: 2026-05-12
 date-modified: 2026-05-12
-status: cultivating
+status: active
 content-type: atomic
 up:
   - "[[PWA]]"

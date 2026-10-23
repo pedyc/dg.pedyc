@@ -10,7 +10,7 @@ tags:
   - state-management
 date-created: 2026-04-21
 date-modified: 2026-05-15
-status: cultivating
+status: active
 content-type: concept
 up: "[[Hooks(React)|React Hooks]]"
 ---

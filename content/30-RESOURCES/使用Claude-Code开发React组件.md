@@ -6,7 +6,7 @@ description: 使用 Claude Code 和 Agent 能力开发 React 组件的标准流�
 tags: [sop, AI/Claude, 前端]
 date-created: 2026-04-07
 date-modified: 2026-04-07
-status: cultivating
+status: active
 content-type: sop
 up: "[[Claude Code]]"
 ---

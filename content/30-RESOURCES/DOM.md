@@ -6,7 +6,7 @@ description: "DOM 是将 HTML/XML 文档解析为树状结构的数据模型"
 tags: [前端开发/概念]
 date-created: 2025-05-22
 date-modified: 2026-08-31
-status: cultivating
+status: active
 content-type: term
 ---
 

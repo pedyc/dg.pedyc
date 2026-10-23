@@ -7,7 +7,7 @@ description:
 tags: [知识管理/工作流]
 date-created: 2025-02-20
 date-modified: 2026-06-15
-status: completed
+status: active
 content-type: sop
 up: ["[[A-知识管理|知识管理]]"]
 ---

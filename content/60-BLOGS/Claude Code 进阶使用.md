@@ -6,7 +6,7 @@ description: 深入探讨 Claude Code 进阶功能，包括 MCP、Hooks、Subage
 tags: [AI/Claude, 前端开发]
 date-created: 2026-03-26
 date-modified: 2026-07-17
-status: completed
+status: active
 category: blog
 content-type: article
 published: true

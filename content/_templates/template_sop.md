@@ -5,7 +5,7 @@ aliases:
   - SOP-{{标题名称}}
 description: "{ 一句话描述这个 SOP 的用途 }"
 tags: []
-status: cultivating
+status: active
 content-type: sop
 category: work
 up: "[[{{父级}}]]"

@@ -10,7 +10,7 @@ tags:
   - comparison
 date-created: 2026-04-20
 date-modified: 2026-04-20
-status: cultivating
+status: active
 content-type: comparison
 comparison:
   - "Zustand"

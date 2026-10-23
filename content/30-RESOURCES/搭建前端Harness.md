@@ -14,7 +14,7 @@ tags:
   - SOP
 date-created: 2026-08-10
 date-modified: 2026-09-21
-status: cultivating
+status: active
 content-type: sop
 up: ["[[Harness]]"]
 ---

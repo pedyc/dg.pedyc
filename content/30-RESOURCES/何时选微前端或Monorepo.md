@@ -6,7 +6,7 @@ description: 多团队独立交付场景下，如何在微前端和 Monorepo 之
 tags: [前端工程/架构]
 date-created: 2026-04-13
 date-modified: 2026-08-28
-status: cultivating
+status: active
 content-type: question
 ---
 

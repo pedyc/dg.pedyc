@@ -6,7 +6,7 @@ description: JavaScript 中基于 Promise 的异步编程语法糖，使异步�
 tags: [前端开发/JavaScript]
 date-created: 2026-03-22
 date-modified: 2026-04-17
-status: cultivating
+status: active
 content-type: concept
 ---
 

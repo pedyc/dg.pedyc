@@ -6,7 +6,7 @@ description: Angular 的 DOM 更新机制，从 Zone.js 自动检测到 Signal �
 tags: [前端/Angular]
 date-created: 2026-06-16
 date-modified: 2026-07-14
-status: cultivating
+status: active
 content-type: concept
 up: "[[Angular|A-前端/Angular]]"
 ---

@@ -6,7 +6,7 @@ description: 全面框架 vs UI 库，从架构哲学到开发体验的系统对
 tags: [前端/框架对比]
 date-created: 2026-06-16
 date-modified: 2026-07-14
-status: cultivating
+status: active
 content-type: comparison
 up: ["[[前端面试真题库|前端面试题]]"]
 ---

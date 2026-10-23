@@ -6,7 +6,7 @@ description: "Redux 是 React 生态最广泛使用的可预测状态容器，�
 tags: [redux, state-management, react]
 date-created: 2026-04-20
 date-modified: 2026-04-20
-status: cultivating
+status: active
 content-type: concept
 ---
 

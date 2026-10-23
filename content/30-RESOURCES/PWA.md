@@ -8,7 +8,7 @@ description: 渐进式网页应用，结合 Web 与原生应用优势的网页�
 tags: []
 date-created: 2026-05-12
 date-modified: 2026-09-15
-status: cultivating
+status: active
 content-type: term
 ---
 

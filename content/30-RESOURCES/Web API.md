@@ -6,7 +6,7 @@ description: Web API 是浏览器提供给 JavaScript 调用的接口，用于�
 tags: [前端开发/浏览器API]
 date-created: 2026-05-09
 date-modified: 2026-05-12
-status: cultivating
+status: active
 content-type: moc
 ---
 

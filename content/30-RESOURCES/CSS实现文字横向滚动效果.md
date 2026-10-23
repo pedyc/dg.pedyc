@@ -6,7 +6,7 @@ description: 使用纯 CSS 实现无限循环文字横向滚动（跑马灯）�
 tags: [CSS, 前端开发/动画]
 date-created: 2026-04-11
 date-modified: 2026-04-12
-status: cultivating
+status: active
 content-type: sop
 up: "[[CSS Animation]]"
 ---

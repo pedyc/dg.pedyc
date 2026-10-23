@@ -13,7 +13,7 @@ tags:
   - SSR
 date-created: 2026-04-08
 date-modified: 2026-05-06
-status: cultivating
+status: active
 content-type: concept
 related:
   - "[[CSR]]"

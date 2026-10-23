@@ -6,7 +6,7 @@ description: 前端开发者的 Claude Code 入门到进阶指南，从环境配
 tags: [AI/Claude, 前端开发]
 date-created: 2026-03-26
 date-modified: 2026-07-17
-status: completed
+status: active
 category: blog
 content-type: article
 published: true

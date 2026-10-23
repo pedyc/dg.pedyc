@@ -6,7 +6,7 @@ description: 使用 Three.js ShaderMaterial 和滚动事件，实现页面滚动
 tags: [前端开发/动画, ThreeJS]
 date-created: 2026-04-14
 date-modified: 2026-05-06
-status: cultivating
+status: active
 content-type: sop
 up: "[[ThreeJS]]"
 ---

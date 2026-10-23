@@ -9,10 +9,10 @@ tags:
   - type/concept
   - topic/前端开发
   - topic/JavaScript
-  - status/cultivating
+  - status/active
 date-created: 2025-12-17
 date-modified: 2026-08-02
-status: cultivating
+status: active
 content-type: concept
 up: "[[前端开发|前端开发]]"
 ---

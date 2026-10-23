@@ -6,7 +6,7 @@ description: Edge Runtime 是在全球边缘节点运行的轻量级 JavaScript 
 tags: ["CDN/Edge-Runtime"]
 date-created: 2026-05-06
 date-modified: 2026-05-06
-status: cultivating
+status: active
 content-type: concept
 ---
 

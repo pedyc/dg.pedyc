@@ -6,7 +6,7 @@ description: "理解 JSX 语法糖本质、babel 编译过程和 React 虚拟 DO
 tags: [面试题, React]
 date-created: 2026-05-15
 date-modified: 2026-07-25
-status: cultivating
+status: active
 content-type: question
 up: "[[React]]"
 ---

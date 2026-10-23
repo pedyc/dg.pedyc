@@ -6,7 +6,7 @@ description: 记录 JavaScript/ECMAScript 语言从 ES3 到 ES2026 的版本演�
 tags: [计算机科学, 前端开发, JavaScript]
 date-created: 2026-04-17
 date-modified: 2026-08-03
-status: cultivating
+status: active
 content-type: roadmap
 related: "[[前端开发]]"
 ---

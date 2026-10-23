@@ -9,7 +9,7 @@ tags:
   - Agent
   - LLM
   - 概念
-status: cultivating
+status: active
 content-type: concept
 up: ["[[Agent]]", "[[LLM]]"]
 date-created: 2026-09-27

@@ -6,7 +6,7 @@ description: "React 中 props 和 state 的区别？setState 是同步还是异�
 tags: [React, props, state, 状态管理, 批量更新]
 date-created: 2026-05-16
 date-modified: 2026-05-17
-status: cultivating
+status: active
 content-type: question
 up: "[[React面试题|MOC-React面试题]]"
 ---

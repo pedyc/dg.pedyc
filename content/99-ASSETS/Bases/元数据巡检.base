@@ -10,15 +10,13 @@ views:
     filters:
       and:
         - note.status
-        - 'note.status != "fleeting"'
-        - 'note.status != "cultivating"'
-        - 'note.status != "active"'
-        - 'note.status != "completed"'
-        - 'note.status != "archived"'
+        - note.status != "fleeting"
+        - note.status != "active"
+        - note.status != "archived"
     order:
       - file.name
-      - note.status
-      - note.content-type
+      - status
+      - content-type
       - file.folder
     sort:
       - property: file.folder
@@ -32,7 +30,7 @@ views:
         - note.status.isEmpty()
     order:
       - file.name
-      - note.content-type
+      - content-type
       - file.folder
     sort:
       - property: file.folder

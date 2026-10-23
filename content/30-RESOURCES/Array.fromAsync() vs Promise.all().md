@@ -6,7 +6,7 @@ description: "Array.fromAsync 将异步数据源按序转换为数组；Promise.
 tags: ["JavaScript/异步", "JavaScript/API"]
 date-created: 2026-07-12
 date-modified: 2026-07-12
-status: cultivating
+status: active
 content-type: comparison
 up: "[[JavaScript]]"
 ---

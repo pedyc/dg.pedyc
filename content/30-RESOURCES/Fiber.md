@@ -6,7 +6,7 @@ description: React 16 引入的新协调引擎，将同步整树渲染改为异�
 tags: [前端开发/框架/React]
 date-created: 2026-04-15
 date-modified: 2026-08-31
-status: cultivating
+status: active
 content-type: concept
 related: "[[React]]"
 ---

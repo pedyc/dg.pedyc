@@ -4,7 +4,7 @@ title: Webpack 的 Code Splitting 和懒加载是如何实现的？
 aliases: ["Q-Webpack Code Splitting 懒加载是如何实现的？"]
 date-created: 2026-05-18
 date-modified: 2026-05-18
-status: cultivating
+status: active
 content-type: question
 up: "[[Webpack相关问题]]"
 ---

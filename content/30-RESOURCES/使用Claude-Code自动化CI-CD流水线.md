@@ -6,7 +6,7 @@ description: 在 CI/CD 流水线中集成 Claude Code Headless 模式，实现�
 tags: [sop, ci-cd, claude]
 date-created: 2026-07-17
 date-modified: 2026-07-17
-status: cultivating
+status: active
 content-type: sop
 up: ["[[Claude Code]]", "[[CI-CD流程]]"]
 ---

@@ -6,7 +6,7 @@ description: Vue3的Diff算法相比Vue2做了哪些优化
 tags: [前端/Vue, 前端/原理]
 date-created: 2026-03-24
 date-modified: 2026-03-24
-status: cultivating
+status: active
 content-type: comparison
 up: "[[Diff算法(Vue3)]]"
 ---

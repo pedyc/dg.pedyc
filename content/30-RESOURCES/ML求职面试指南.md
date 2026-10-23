@@ -6,7 +6,7 @@ description: "面向 AI/ML 研究岗（Research Scientist/Engineer）的系统�
 tags: [AI/职业生涯, AI/面试]
 date-created: 2026-07-27
 date-modified: 2026-07-27
-status: cultivating
+status: active
 content-type: concept
 up: "[[人工智能]]"
 ---

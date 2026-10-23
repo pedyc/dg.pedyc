@@ -27,7 +27,7 @@ title: "{{标题}}"
 description: "{{一句话描述}}"
 tags: []
 content-type: {term | concept | atomic | comparison | sop | moc | project | area}
-status: {fleeting | cultivating | active | completed | archived}
+status: {fleeting | active | archived}
 date-created: "{{YYYY-MM-DD}}"
 date-modified: "{{YYYY-MM-DD}}"
 aliases: []

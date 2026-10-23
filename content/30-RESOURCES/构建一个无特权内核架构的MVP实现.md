@@ -7,7 +7,7 @@ description: 参考DSH的无特权内核架构MVP实现
 tags: []
 date-created: 2026-09-21
 date-modified: 2026-09-22
-status: cultivating
+status: active
 content-type: sop
 up: ["[[DSH的的一切皆插件架构是如何实现的？|Q-DSH的一切皆插件架构是如何实现的]]"]
 ---

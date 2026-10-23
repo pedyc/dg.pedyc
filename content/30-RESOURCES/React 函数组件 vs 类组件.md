@@ -6,7 +6,7 @@ description: 函数组件与类组件的核心差异与场景选择
 tags: [前端开发/框架/React]
 date-created: 2026-05-16
 date-modified: 2026-07-21
-status: cultivating
+status: active
 comparison: [函数组件, 类组件]
 content-type: comparison
 related: ["[[React]]"]

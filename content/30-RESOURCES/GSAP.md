@@ -6,7 +6,7 @@ description: 专业的高性能 Web 动画库，提供流畅的动画控制和�
 tags: [前端开发/动画]
 date-created: 2026-03-20
 date-modified: 2026-03-30
-status: cultivating
+status: active
 content-type: concept
 ---
 

@@ -6,7 +6,7 @@ description: 在 React 中实现文字故障动画的标准流程（颜色分离
 tags: [React, 前端开发/动画]
 date-created: 2026-04-10
 date-modified: 2026-04-11
-status: cultivating
+status: active
 content-type: sop
 up: "[[Web动画|Web 动画]]"
 ---

@@ -6,7 +6,7 @@ description: 在 Web 平台上创建动态视觉效果的技术和方法
 tags: [前端开发/动画]
 date-created: 2026-03-20
 date-modified: 2026-05-08
-status: cultivating
+status: active
 content-type: concept
 up: ["[[前端交互]]"]
 ---

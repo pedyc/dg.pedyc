@@ -6,7 +6,7 @@ description: "为 Vue 3 应用搭建混合文件夹结构：根目录按技术�
 tags: [前端开发/Vue, 前端开发/工程化]
 date-created: 2026-07-25
 date-modified: 2026-08-02
-status: cultivating
+status: active
 content-type: sop
 up: "[[Vue]]"
 ---

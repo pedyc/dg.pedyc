@@ -6,7 +6,7 @@ description: "一种并行重写系统（形式语法），由 Aristid Lindenmay
 tags: [算法, 程序化生成, 计算机图形学, 数学]
 date-created: 2026-08-11
 date-modified: 2026-08-11
-status: cultivating
+status: active
 content-type: term
 up: "[[斑驳光]]"
 ---

@@ -6,7 +6,7 @@ description: TypeScript 装饰器完全指南，了解装饰器的使用场景�
 tags: [前端开发/TypeScript]
 date-created: 2024-09-16
 date-modified: 2026-03-25
-status: completed
+status: active
 category: blog
 content-type: article
 published: true

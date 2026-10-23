@@ -4,7 +4,7 @@ title: Webpack 模块打包的本质是什么？依赖图是如何构建的？
 aliases: ["Q-Webpack模块打包的本质是什么？"]
 date-created: 2026-05-18
 date-modified: 2026-05-18
-status: cultivating
+status: active
 content-type: question
 up: "[[Webpack相关问题]]"
 ---

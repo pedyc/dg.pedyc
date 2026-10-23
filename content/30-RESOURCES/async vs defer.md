@@ -3,7 +3,7 @@ uid: "202603082245"
 title: async vs defer
 aliases: [VS-async vs defer]
 author: [AI]
-tags: [atomic, type/comparison, status/cultivating, topic/html, topic/javascript, topic/浏览器原理]
+tags: [atomic, type/comparison, status/active, topic/html, topic/javascript, topic/浏览器原理]
 date-created: 2026-03-08
 date-modified: 2026-05-22
 alias: [async与defer对比, 脚本加载对比, script-async-defer]

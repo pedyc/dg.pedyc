@@ -6,7 +6,7 @@ description: 浏览器预取/预渲染 API，通过声明式规则提前加载�
 tags: []
 date-created: 2026-05-12
 date-modified: 2026-05-12
-status: cultivating
+status: active
 content-type: term
 up: "[[Web API]]"
 ---

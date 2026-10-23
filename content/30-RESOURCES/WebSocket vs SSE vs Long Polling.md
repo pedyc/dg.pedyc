@@ -10,7 +10,7 @@ tags:
   - 实时通信
 date-created: 2026-08-16
 date-modified: 2026-09-07
-status: cultivating
+status: active
 content-type: comparison
 up: "[[Web通信]]"
 ---

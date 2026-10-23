@@ -6,7 +6,7 @@ description: 解决不同浏览器对 JavaScript API 支持差异的方法
 tags: [前端开发/浏览器]
 date-created: 2025-06-16
 date-modified: 2026-03-23
-status: completed
+status: active
 content-type: question
 up: "[[浏览器兼容性问题]]"
 ---

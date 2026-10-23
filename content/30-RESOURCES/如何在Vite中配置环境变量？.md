@@ -6,7 +6,7 @@ description: Vite 环境变量配置指南
 tags: [前端开发, Vite]
 date-created: 2025-06-16
 date-modified: 2026-05-18
-status: cultivating
+status: active
 content-type: [sop]
 ---
 

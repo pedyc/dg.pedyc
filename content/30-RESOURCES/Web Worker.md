@@ -6,7 +6,7 @@ description: 浏览器后台运行的独立线程，用于处理耗时计算而�
 tags: []
 date-created: 2026-05-12
 date-modified: 2026-05-12
-status: cultivating
+status: active
 content-type: term
 ---
 

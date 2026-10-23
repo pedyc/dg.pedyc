@@ -5,7 +5,7 @@ description: 使用 Claude Code Skill 的规范和原则
 tags: ["AI/Claude"]
 date-created: 2025-05-19
 date-modified: 2026-08-02
-status: cultivating
+status: active
 content-type: concept
 up: "[[Claude Code]]"
 ---

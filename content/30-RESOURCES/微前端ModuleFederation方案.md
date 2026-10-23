@@ -6,7 +6,7 @@ description: 使用 Webpack 5 Module Federation 实现微前端的标准流程
 tags: [前端工程/架构]
 date-created: 2026-04-13
 date-modified: 2026-04-13
-status: cultivating
+status: active
 content-type: sop
 up: "[[微前端]]"
 ---

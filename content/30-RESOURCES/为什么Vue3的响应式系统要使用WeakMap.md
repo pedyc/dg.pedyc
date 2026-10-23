@@ -6,7 +6,7 @@ description: 探讨 Vue3 响应式系统选择 WeakMap 的原因
 tags: [前端/框架]
 date-created: 2026-03-17
 date-modified: 2026-03-21
-status: completed
+status: active
 content-type: question
 ---
 

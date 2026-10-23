@@ -6,7 +6,7 @@ description: 使用 Chrome 开发者工具的 Performance 面板排查运行时�
 tags: [sop, devtools, performance, troubleshooting]
 date-created: 2026-08-25
 date-modified: 2026-08-25
-status: cultivating
+status: active
 content-type: sop
 up: ["[[前端性能优化|MOC-前端性能优化]]"]
 ---

@@ -6,7 +6,7 @@ description: 'React 16.8 引入的函数组件状态逻辑复用机制，通过�
 tags: [前端开发/框架/React]
 date-created: 2025-09-09
 date-modified: 2026-06-16
-status: cultivating
+status: active
 content-type: concept
 related: "[[React]]"
 ---

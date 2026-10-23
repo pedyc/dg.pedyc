@@ -6,7 +6,7 @@ description: 评估 AI 生成结果可靠性的标准流程，适用于代码审
 tags: [sop, AI, 代码审查, 质量评估]
 date-created: 2026-05-30
 date-modified: 2026-05-30
-status: cultivating
+status: active
 content-type: sop
 up: [[人工智能]]
 ---

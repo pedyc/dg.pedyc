@@ -9,7 +9,7 @@ tags:
   - ESM
 date-created: 2026-05-21
 date-modified: 2026-05-21
-status: cultivating
+status: active
 content-type: atomic
 up: "[[Vite相关问题]]"
 noteId: 1792465711684

@@ -6,7 +6,7 @@ description: React 不同版本之间的核心差异与演进路线
 tags: [前端开发/框架/React]
 date-created: 2026-04-14
 date-modified: 2026-04-14
-status: cultivating
+status: active
 content-type: roadmap
 related: "[[React]]"
 ---

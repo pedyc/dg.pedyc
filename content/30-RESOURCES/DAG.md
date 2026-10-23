@@ -16,7 +16,7 @@ tags:
   - 概念
 date-created: 2026-09-16
 date-modified: 2026-09-16
-status: cultivating
+status: active
 content-type: concept
 up: "[[图论]]"
 ---

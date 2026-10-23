@@ -6,7 +6,7 @@ description: React.memo 通过浅比较 props 决定是否重新渲染
 tags: []
 date-created: 2026-04-30
 date-modified: 2026-05-01
-status: cultivating
+status: active
 content-type: atomic
 up:
   - "[[React]]"

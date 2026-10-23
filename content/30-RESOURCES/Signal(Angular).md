@@ -6,7 +6,7 @@ description: Angular 的响应式原始类型，自动追踪依赖的高性能�
 tags: [前端/Angular]
 date-created: 2026-06-16
 date-modified: 2026-08-01
-status: cultivating
+status: active
 content-type: term
 up: "[[Angular]]"
 ---

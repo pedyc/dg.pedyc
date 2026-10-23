@@ -6,7 +6,7 @@ description: 使用 Canvas 实现可拖拽的双向无限滑动图片墙的标�
 tags: [Canvas, 前端开发/动画]
 date-created: 2026-04-11
 date-modified: 2026-07-20
-status: cultivating
+status: active
 content-type: sop
 up: "[[Canvas动画]]"
 ---

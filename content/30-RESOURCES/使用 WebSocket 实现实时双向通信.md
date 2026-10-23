@@ -6,7 +6,7 @@ description: 从握手建立到心跳保活、断线重连的完整 WebSocket �
 tags: [前端, 网络协议, 实时通信]
 date-created: 2026-08-16
 date-modified: 2026-08-16
-status: cultivating
+status: active
 content-type: sop
 up: "[[WebSocket]]"
 ---

@@ -5,7 +5,7 @@ description: 结合传统软件工程与机器学习技术的综合开发方法�
 tags: [人工智能]
 date-created: 2025-08-20
 date-modified: 2026-08-02
-status: cultivating
+status: active
 content-type: concept
 ---
 

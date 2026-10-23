@@ -6,7 +6,7 @@ description: Vue 新的无 Virtual DOM 编译策略，将模板直接编译为�
 tags: [前端开发/框架/Vue]
 date-created: 2026-08-02
 date-modified: 2026-08-02
-status: cultivating
+status: active
 content-type: concept
 up: "[[Vue]]"
 ---

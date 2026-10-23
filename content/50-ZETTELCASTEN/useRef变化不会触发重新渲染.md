@@ -6,7 +6,7 @@ description: useRef 变化不会触发重新渲染，可用于存储不需要渲
 tags: []
 date-created: 2026-04-29
 date-modified: 2026-04-29
-status: cultivating
+status: active
 content-type: atomic
 up: "[[Refs(React)]]"
 noteId: 1792465711305

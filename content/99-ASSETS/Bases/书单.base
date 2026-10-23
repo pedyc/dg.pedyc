@@ -1,0 +1,32 @@
+filters:
+  and:
+    - file.inFolder("30-RESOURCES/书单")
+views:
+  - type: kanban
+    name: 阅读进度
+    groupBy:
+      property: note.read_status
+      direction: ASC
+    groupOrder:
+      - 想读
+      - 在读
+      - 已读
+      - 弃读
+    order:
+      - file.name
+      - note.book_genre
+      - note.rating
+  - type: table
+    name: 总表
+    order:
+      - file.name
+      - note.book_genre
+      - note.read_status
+      - note.rating
+      - note.book_format
+      - note.pdf
+    sort:
+      - property: note.book_genre
+        direction: ASC
+      - property: file.name
+        direction: ASC

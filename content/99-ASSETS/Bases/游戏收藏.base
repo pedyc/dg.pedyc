@@ -1,0 +1,29 @@
+filters:
+  and:
+    - file.inFolder("30-RESOURCES/游戏收藏")
+views:
+  - type: kanban
+    name: 游玩进度
+    groupBy:
+      property: play_status
+      direction: ASC
+    groupOrder:
+      - 想玩
+      - 在玩
+      - 已通关
+    order:
+      - file.name
+      - game_genre
+      - rating
+  - type: table
+    name: 总表
+    order:
+      - file.name
+      - game_genre
+      - play_status
+      - rating
+    sort:
+      - property: game_genre
+        direction: ASC
+      - property: file.name
+        direction: ASC

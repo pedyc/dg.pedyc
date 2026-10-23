@@ -11,7 +11,6 @@ category: work
 consequence: 1
 urgency: 1
 energy-type: 🔄 常规
-quadrant: Q2
 expire: YYYY/MM/DD
 area: []
 up: "[[{{父级}}]]"

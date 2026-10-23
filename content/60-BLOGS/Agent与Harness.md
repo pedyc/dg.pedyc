@@ -7,7 +7,7 @@ tags:
   - 转载
 date-created: 2026-04-01
 date-modified: 2026-09-09
-content-type: [article]
+content-type: article
 created: 2026-04-01
 published: true
 source: https://github.com/shareAI-lab/learn-claude-code/blob/main/README-zh.md

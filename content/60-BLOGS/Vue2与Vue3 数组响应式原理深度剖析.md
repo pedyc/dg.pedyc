@@ -3,7 +3,7 @@ title: Vue2与Vue3 数组响应式原理深度剖析
 date-created: 2026-08-31
 date-modified: 2026-09-22
 status: active
-content-type: [article]
+content-type: article
 ---
 
 ## 一、 为什么无法拦截"通过索引直接修改值"？

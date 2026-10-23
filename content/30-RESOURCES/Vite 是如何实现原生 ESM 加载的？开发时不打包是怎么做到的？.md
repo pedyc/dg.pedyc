@@ -5,7 +5,7 @@ aliases: []
 date-created: 2025-05-28
 date-modified: 2026-05-19
 status: active
-content-type: [question]
+content-type: question
 up: ["[[Vite相关问题]]"]
 ---
 

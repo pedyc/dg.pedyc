@@ -5,7 +5,7 @@ description: 在这篇文章中，我们将会介绍 Svelte 框架的特性、�
 tags: [clippings, "前端框架", Svelte]
 date-created: 2026-05-26
 date-modified: 2026-05-26
-content-type: [article]
+content-type: article
 created: 2026-05-26
 published:
 source: https://zhuanlan.zhihu.com/p/350507037

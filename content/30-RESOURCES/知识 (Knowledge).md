@@ -4,7 +4,7 @@ description: "对“知识”这一核心哲学概念的精炼定义。"
 tags: ["哲学/认识论", "核心概念", "术语"]
 date-created: 2025-10-23
 date-modified: 2025-10-23
-content-type: "term"
+content-type: term
 up: "[[哲学与认知]]"
 keywords: [知识, 认识, 真理, 信念, 哲学]
 para: "resource"

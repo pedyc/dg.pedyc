@@ -3,7 +3,7 @@ title: Webpack相关问题
 aliases: [MOC-Webpack相关问题]
 date-created: 2025-06-16
 date-modified: 2026-07-21
-content-type: [moc]
+content-type: moc
 up: ["[[Webpack]]"]
 ---
 

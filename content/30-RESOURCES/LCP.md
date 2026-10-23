@@ -5,7 +5,7 @@ description: 最大内容渲染时间 (LCP) 衡量的是在页面首次开始加
 tags: [Web, 性能, 性能指标]
 date-created: 2025-05-06
 date-modified: 2026-05-11
-content-type: [term]
+content-type: term
 keywords: [LCP, Largest Contentful Paint]
 related: ["[[核心Web指标]]"]
 ---

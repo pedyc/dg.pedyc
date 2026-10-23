@@ -2,7 +2,7 @@
 title: Webpack 的构建流程主要有哪些阶段？loader 和 plugin 的区别？
 date-created: 2025-05-28
 date-modified: 2026-07-21
-content-type: [question]
+content-type: question
 up: "[[Webpack相关问题]]"
 ---
 

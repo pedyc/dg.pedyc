@@ -4,7 +4,7 @@ aliases: [MOC-JS&TS相关问题]
 tags: [算法题单]
 date-created: 2025-04-10
 date-modified: 2026-06-12
-content-type: [moc]
+content-type: moc
 ---
 
 | 示例题目                                          | 模块         | 知识点说明                                                                                                                                       | 备注         |

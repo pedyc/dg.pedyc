@@ -3,7 +3,7 @@ title: Vite相关问题
 aliases: [MOC-Vite相关问题]
 date-created: 2025-06-16
 date-modified: 2026-05-21
-content-type: [moc]
+content-type: moc
 up: ["[[Vite]]"]
 ---
 

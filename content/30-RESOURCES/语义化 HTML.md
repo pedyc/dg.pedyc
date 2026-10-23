@@ -6,7 +6,7 @@ tags: [前端/HTML]
 date-created: 2026-03-13
 date-modified: 2026-08-19
 status: fleeting
-content-type: [concept]
+content-type: concept
 up:
 ---
 

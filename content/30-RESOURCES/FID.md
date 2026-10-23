@@ -5,7 +5,7 @@ description: 首次输入延迟（FID）是衡量用户首次与页面交互时�
 tags: [Web性能, 用户体验, 性能指标]
 date-created: 2025-05-06
 date-modified: 2026-04-22
-content-type: [term]
+content-type: term
 keywords: [FID, First Input Delay, 输入响应]
 related: ["[[核心Web指标]]"]
 ---

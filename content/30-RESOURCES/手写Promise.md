@@ -4,7 +4,7 @@ title: 手写Promise
 aliases: [SOP-手写Promise]
 date-created: 2026-03-20
 date-modified: 2026-05-10
-content-type: [sop]
+content-type: sop
 ---
 
 ## 手写 Promise 核心要点总结

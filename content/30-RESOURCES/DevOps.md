@@ -6,7 +6,7 @@ tags:
   - 专业技术/DevOps工作流
 date-created: 2025-03-05
 date-modified: 2026-10-08
-content-type: [moc]
+content-type: moc
 refresh: 季度
 ---
 

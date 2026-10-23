@@ -3,7 +3,7 @@ title: JWT
 aliases: [JSON Web Token, T-JWT]
 date-created: 2025-06-15
 date-modified: 2026-05-06
-content-type: [term]
+content-type: term
 ---
 
 ## 定义

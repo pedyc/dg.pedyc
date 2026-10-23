@@ -2,7 +2,7 @@
 title: React 组件之间有哪些通信方式？适用于哪些场景？
 date-created: 2025-05-21
 date-modified: 2026-05-18
-content-type: [question]
+content-type: question
 ---
 
 ## React 组件之间有哪些通信方式？适用于哪些场景？

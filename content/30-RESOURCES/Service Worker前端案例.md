@@ -2,7 +2,7 @@
 title: Service Worker前端案例
 date-created: 2025-06-15
 date-modified: 2026-05-12
-content-type: [sop]
+content-type: sop
 ---
 
 ## 离线应用

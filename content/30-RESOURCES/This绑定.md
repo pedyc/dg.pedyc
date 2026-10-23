@@ -6,7 +6,7 @@ tags: [前端/JavaScript]
 date-created: 2025-05-19
 date-modified: 2026-08-02
 status: active
-content-type: [term]
+content-type: term
 up: "[[JavaScript]]"
 ---
 

@@ -5,7 +5,7 @@ description: 累计布局偏移（CLS）是衡量网页视觉稳定性的指标�
 tags: [Web性能, 用户体验, 布局稳定性]
 date-created: 2025-05-06
 date-modified: 2026-04-22
-content-type: [term]
+content-type: term
 keywords: [CLS, Cumulative Layout Shift, 布局偏移]
 related: ["[[核心Web指标]]"]
 ---

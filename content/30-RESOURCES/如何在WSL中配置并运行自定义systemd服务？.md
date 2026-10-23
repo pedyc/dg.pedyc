@@ -4,7 +4,7 @@ aliases: [SOP-如何在WSL中配置并运行自定义systemd服务？]
 author: [AI]
 date-created: 2026-03-07
 date-modified: 2026-04-07
-content-type: [sop]
+content-type: sop
 ---
 
 ## 🚀 SOP：如何在 WSL 中配置并运行自定义 systemd 服务

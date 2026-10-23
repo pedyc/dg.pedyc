@@ -7,7 +7,7 @@ tags: [angular, frontend, roadmap, 版本历史]
 date-created: 2026-07-13
 date-modified: 2026-07-13
 status: active
-content-type: [roadmap]
+content-type: roadmap
 up: ["[[Angular]]"]
 ---
 

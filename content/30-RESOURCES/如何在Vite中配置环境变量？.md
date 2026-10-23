@@ -7,7 +7,7 @@ tags: [前端开发, Vite]
 date-created: 2025-06-16
 date-modified: 2026-05-18
 status: active
-content-type: [sop]
+content-type: sop
 ---
 
 ## 回答

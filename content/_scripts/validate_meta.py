@@ -1,0 +1,268 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+元数据校验器 —— 检查模板与笔记的 frontmatter 是否符合 Truth/ 里的规范。
+
+为什么需要它：改规范时必然漏改模板。2026-10-23 把 status 从 5 值收窄到 3 值时，
+一次改动了 8 个模板；下次再改，靠人记是不可靠的。
+
+用法（在 vault 根目录执行）：
+    python _scripts/validate_meta.py            # 只校验模板
+    python _scripts/validate_meta.py --all      # 同时统计全库脏值（只报数，不改）
+    python _scripts/validate_meta.py --fix      # 不做修改，见下方说明
+
+设计约束：本脚本只报告，不自动修改。规范符合性是判断，不是计算——
+「这个字段该不该留」需要人决定，脚本只负责把不一致摆出来。
+退出码：0 = 全部通过，1 = 有问题。
+
+字段清单与枚举值全部**从 Truth/ 现场解析**，不在此硬编码。规范改了，脚本自动跟随；
+解析不到会明确报错，而不是静默放过。
+"""
+
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+TRUTH = ROOT / "01-META" / "Truth"
+TEMPLATES = ROOT / "_templates"
+
+# 已知的"扩展字段"：实践中长出来、尚未登记进 Truth 的字段。
+# 列在这里是为了让输出区分「违规」与「待登记」，不是认可它们。
+KNOWN_EXTENSIONS = {
+    # 信源卡
+    "source_type", "verify_status", "source_risk", "scored_at",
+    "density", "timeliness", "depth", "uniqueness", "output_rate",
+    # 收藏 / 台账类
+    "play_status", "game_genre", "read_status", "book_genre", "book_format",
+    "watch_status", "rating", "pdf", "interview_round", "play_status",
+    # 日记 / 周记 / 其他
+    "mood", "weather", "week", "noteId",
+}
+
+
+def read(path):
+    return path.read_text(encoding="utf-8")
+
+
+def parse_frontmatter(text):
+    """返回 (字段名列表, {字段: 原始值})，解析失败返回 (None, None)。"""
+    m = re.match(r"^---\n(.*?)\n---", text, re.S)
+    if not m:
+        return None, None
+    body = m.group(1)
+    keys, vals = [], {}
+    for line in body.splitlines():
+        km = re.match(r"^([A-Za-z][\w\-]*):\s*(.*)$", line)
+        if km:
+            keys.append(km.group(1))
+            vals[km.group(1)] = km.group(2).strip()
+    return keys, vals
+
+
+def norm_val(v):
+    """规范化 YAML 标量，并报告是否用了引号/方括号写法。
+
+    必须区分两件事：
+      - 真脏值 —— 规范化之后仍然不在枚举内（YCTODO、已完成、🌰 seed）
+      - 写法问题 —— 值本身合法，但写成了 ["article"] 或 "concept"
+    后者在 Obsidian 里会被解析成数组，导致 `.base` 的 content-type 过滤失效，
+    是真问题，但不是"非法值"，混在一起报会淹没真正要修的东西。
+    """
+    raw = (v or "").strip()
+    style = False
+    val = raw
+
+    if val.startswith("[") and val.endswith("]"):
+        style = True
+        val = val[1:-1]
+    # 注意：val 为空时 `val[:1] in "\"'"` 会返回 True（空串是任意串的子串），
+    # 会把"没填值"误判成"写法不规范"。必须先判空。
+    if val and (val[:1] in "\"'" or val[-1:] in "\"'"):
+        style = True
+        val = val.strip().strip("\"").strip("'")
+
+    return val.strip(), style
+
+
+def load_allowed_fields():
+    """从 Truth/元数据规范.md 抓表格首列的 `字段名`。
+
+    字段名允许下划线（source_type / output_rate 这类），早先只写了连字符，
+    导致这批字段全部漏抓、被误报成"未登记"。
+    """
+    text = read(TRUTH / "元数据规范.md")
+    fields = set(re.findall(r"^\|\s*`([a-z][a-z0-9_\-]*)`\s*\|", text, re.M))
+    if not fields:
+        sys.exit("✗ 无法从 Truth/元数据规范.md 解析字段表，请检查文件格式")
+    return fields
+
+
+def load_status_values():
+    text = read(TRUTH / "元数据规范.md")
+    block = text.split("## status：笔记状态")[-1].split("## 按 content-type")[0]
+    vals = set(re.findall(r"^\|\s*`([a-z]+)`\s*\|", block, re.M))
+    if not vals:
+        sys.exit("✗ 无法从 Truth/元数据规范.md 解析 status 枚举")
+    return vals
+
+
+def load_content_types():
+    text = read(TRUTH / "笔记类型规范.md")
+    # 总览表形如：| `atomic` | ... |
+    vals = set(re.findall(r"^\|\s*`([a-z\-]+)`\s*\|", text, re.M))
+    vals = {v for v in vals if v.islower() and len(v) > 2}
+    if not vals:
+        sys.exit("✗ 无法从 Truth/笔记类型规范.md 解析 content-type 枚举")
+    return vals
+
+
+def load_categories():
+    text = read(TRUTH / "元数据规范.md")
+    m = re.search(r"`category`\s*\|[^|]*\|([^|]+)\|", text)
+    if not m:
+        return None
+    return {c.strip() for c in m.group(1).split("/") if c.strip()}
+
+
+def main():
+    args = set(sys.argv[1:])
+    allowed = load_allowed_fields()
+    statuses = load_status_values()
+    ctypes = load_content_types()
+    cats = load_categories()
+    # yaml 里允许出现但不属于"元数据字段"的（模板占位等）
+    allowed |= {"publish", "permalink", "draft"}
+
+    print(f"真值来源：{TRUTH.relative_to(ROOT)}")
+    print(f"  合法字段 {len(allowed)} 个 · status {len(statuses)} 值 · content-type {len(ctypes)} 种")
+    if cats:
+        print(f"  category {len(cats)} 值：{' / '.join(sorted(cats))}")
+    print()
+
+    problems = 0
+    unregistered = {}
+
+    # ---------- 1. 模板校验 ----------
+    print("== 模板校验 ==")
+    tpls = sorted(TEMPLATES.glob("template_*.md"))
+    if not tpls:
+        print("  （未找到模板）")
+    for p in tpls:
+        keys, vals = parse_frontmatter(read(p))
+        issues = []
+        if keys is None:
+            issues.append("无法解析 frontmatter（缺 --- 定界或无内容）")
+        else:
+            for k in keys:
+                if k not in allowed and k not in KNOWN_EXTENSIONS:
+                    issues.append(f"字段 `{k}` 不在 Truth/元数据规范 的合法字段集内")
+                elif k in KNOWN_EXTENSIONS and k not in allowed:
+                    unregistered.setdefault(k, []).append(p.name)
+
+            st, st_style = norm_val(vals.get("status", ""))
+            if st and "<%" not in st and st not in statuses:
+                issues.append(f"status 值 `{st}` 非法（合法：{' / '.join(sorted(statuses))}）")
+            elif st_style:
+                issues.append(f"status 写法不规范：`{vals.get('status')}` 应写成纯字符串")
+
+            ct, ct_style = norm_val(vals.get("content-type", ""))
+            if ct and "<%" not in ct and ct not in ctypes:
+                issues.append(f"content-type 值 `{ct}` 非法")
+            elif ct_style:
+                issues.append(f"content-type 写法不规范：`{vals.get('content-type')}` 应写成纯字符串")
+
+            ca, ca_style = norm_val(vals.get("category", ""))
+            if ca and cats and "<%" not in ca and ca not in cats:
+                issues.append(f"category 值 `{ca}` 非法（合法：{' / '.join(sorted(cats))}）")
+
+            for need in ("uid", "title", "content-type", "status"):
+                if need not in keys:
+                    issues.append(f"缺必填字段 `{need}`")
+
+        if issues:
+            problems += len(issues)
+            print(f"  ✗ {p.name}")
+            for i in issues:
+                print(f"      - {i}")
+    if problems == 0:
+        print(f"  ✓ {len(tpls)} 个模板全部通过")
+
+    # ---------- 2. 全库脏值统计 ----------
+    if "--all" in args:
+        print("\n== 全库脏值（只报数，不改） ==")
+        # 40-ARCHIVE 按免维护原则不参与治理，旧值保留
+        skip_dirs = {".obsidian", ".trash", ".workbuddy", ".git", ".claude", "_templates", "40-ARCHIVE"}
+        dirty_status = {}
+        style_status = []
+        dirty_type = {}
+        style_type = []
+        miss_status = 0
+        miss_uid = 0
+        total = 0
+        for p in ROOT.rglob("*.md"):
+            if any(part in skip_dirs for part in p.parts):
+                continue
+            keys, vals = parse_frontmatter(read(p))
+            if keys is None:
+                continue
+            total += 1
+            st, st_style = norm_val(vals.get("status", ""))
+            if not st:
+                miss_status += 1
+            elif st not in statuses:
+                dirty_status.setdefault(st, []).append(p.name)
+            elif st_style:
+                style_status.append(p.name)
+            if "uid" not in keys:
+                miss_uid += 1
+            ct, ct_style = norm_val(vals.get("content-type", ""))
+            if ct and ct not in ctypes and "<%" not in ct:
+                dirty_type.setdefault(ct, []).append(p.name)
+            elif ct_style:
+                style_type.append(p.name)
+
+        print(f"  扫描 {total} 篇（已排除 01-META/_templates/40-ARCHIVE/.claude 等）")
+        print(f"  缺 status：{miss_status} 篇 · 缺 uid：{miss_uid} 篇")
+
+        if dirty_status:
+            print("\n  status 真脏值：")
+            for k, v in sorted(dirty_status.items(), key=lambda x: -len(x[1])):
+                print(f"    `{k}` × {len(v)}  例：{', '.join(v[:3])}")
+            problems += sum(len(v) for v in dirty_status.values())
+        else:
+            print("\n  status 无脏值 ✓")
+
+        if dirty_type:
+            print("\n  content-type 真脏值：")
+            for k, v in sorted(dirty_type.items(), key=lambda x: -len(x[1])):
+                print(f"    `{k}` × {len(v)}  例：{', '.join(v[:3])}")
+            problems += sum(len(v) for v in dirty_type.values())
+        else:
+            print("  content-type 无脏值 ✓")
+
+        if style_status or style_type:
+            print("\n  写法不规范（值合法但用了引号/方括号，会让 .base 过滤失效）：")
+            if style_status:
+                print(f"    status × {len(style_status)}  例：{', '.join(style_status[:3])}")
+            if style_type:
+                print(f"    content-type × {len(style_type)}  例：{', '.join(style_type[:3])}")
+
+    # ---------- 3. 待登记字段 ----------
+    if unregistered:
+        print("\n== 扩展字段（模板在用，但 Truth/元数据规范 未登记） ==")
+        for k, v in sorted(unregistered.items()):
+            print(f"  `{k}` ← {', '.join(sorted(set(v)))}")
+        print("  提示：这些是实践中长出来的字段。若确认长期保留，应登记进 Truth/元数据规范，")
+        print("        否则下一个读规范的人不会知道它们存在。")
+
+    print()
+    if problems:
+        print(f"✗ 共 {problems} 处问题")
+        return 1
+    print("✓ 校验通过")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

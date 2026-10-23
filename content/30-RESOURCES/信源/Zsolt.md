@@ -3,7 +3,7 @@ uid: 202610231751
 title: Zsolt
 aliases:
   - R-Zsolt
-description: "YouTube：Obsidian / PKM 视觉化知识管理，深度极高、更新频率低"
+description: "方法论可迁移，但手绘图不能照搬成索引——本库的索引是自动生成的"
 content-type: record
 status: active
 source_type: YouTube
@@ -14,6 +14,7 @@ timeliness: 3
 depth: 5
 uniqueness: 5
 output_rate: 2
+scored_at: 2026-06-15
 url: https://www.youtube.com/@ZsoltViczián
 up: "[[经过验证的高信噪比信源]]"
 date-created: 2026-10-23

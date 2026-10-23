@@ -3,7 +3,7 @@ uid: 202610231755
 title: PKMer
 aliases:
   - R-PKMer
-description: "中文 PKM 社区：Obsidian 插件评测与工作流分享，有独家一手经验，B 级观察"
+description: "中文 Obsidian 生态的第一手经验源，插件选型与踩坑经验可直接采信"
 content-type: record
 status: active
 source_type: 社区
@@ -15,6 +15,7 @@ depth: 4
 uniqueness: 4
 output_rate: 3
 url: https://pkmer.cn/page/
+scored_at: 2026-06-15
 up: "[[经过验证的高信噪比信源]]"
 date-created: 2026-10-23
 date-modified: 2026-10-23

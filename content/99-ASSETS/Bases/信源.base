@@ -2,9 +2,54 @@ filters:
   and:
     - file.inFolder("30-RESOURCES/信源")
 formulas:
-  total: 'if(density == null || timeliness == null || depth == null || uniqueness == null || output_rate == null, null, density + timeliness + depth + uniqueness + output_rate)'
-  grade: 'if(formula.total == null, "待评", if(formula.total >= 20, "A", if(formula.total >= 15, "B", if(formula.total >= 10, "C", "D"))))'
+  total: if(density == null || timeliness == null || depth == null || uniqueness == null || output_rate == null, null, density + timeliness + depth + uniqueness + output_rate)
+  grade: if(formula.total == null, "待评", if(formula.total >= 20, "A", if(formula.total >= 15, "B", if(formula.total >= 10, "C", "D"))))
+properties:
+  file.name:
+    displayName: 信源
+  source_type:
+    displayName: 类型
+  verify_status:
+    displayName: 状态
+  formula.total:
+    displayName: 评分
+  formula.grade:
+    displayName: 评级
+  description:
+    displayName: 结论
+  scored_at:
+    displayName: 评分时间
+  source_risk:
+    displayName: 采信风险
+  density:
+    displayName: 密度
+  timeliness:
+    displayName: 时效
+  depth:
+    displayName: 深度
+  uniqueness:
+    displayName: 独特性
+  output_rate:
+    displayName: 产出率
 views:
+  - type: table
+    name: 总览
+    order:
+      - file.name
+      - source_type
+      - verify_status
+      - formula.total
+      - formula.grade
+      - description
+      - scored_at
+      - source_risk
+    sort:
+      - property: formula.grade
+        direction: ASC
+      - property: formula.total
+        direction: DESC
+      - property: file.name
+        direction: ASC
   - type: kanban
     name: 验证状态
     groupBy:
@@ -20,10 +65,9 @@ views:
       - formula.grade
       - source_risk
   - type: table
-    name: 五维评分
+    name: 五维明细
     order:
       - file.name
-      - source_type
       - density
       - timeliness
       - depth
@@ -31,10 +75,7 @@ views:
       - output_rate
       - formula.total
       - formula.grade
-      - source_risk
-      - verify_status
+      - scored_at
     sort:
       - property: formula.total
         direction: DESC
-      - property: file.name
-        direction: ASC

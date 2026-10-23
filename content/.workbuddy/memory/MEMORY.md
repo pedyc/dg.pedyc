@@ -62,4 +62,8 @@
 - **模板正文分隔线约定（2026-10-23）**：frontmatter 的 `---` 必需；正文只用 `---` 分隔 `##` 一级章节，`##` 与 `###` 之间不要加——否则三级标题被抬到与二级等权。现状 15 处（article/project/question 各 4/4/6 + moc 1）。
 - **Templater 启动模板在 `_scripts/template_startup.md`，不在 `_templates/`**：放模板目录会被收进「插入模板」列表，误选即把当前笔记归档走。其路径登记在 `.obsidian/plugins/templater-obsidian/data.json` 的 `startup_templates`，移动文件必须同步改那里（插件按库内路径解析，不要求位于 templates_folder）。
 - dataviewjs 的 DataArray 无 reduce/find，用 flatMap/first。
+- **`dv.view()` 可抽出共享 dataviewjs 逻辑**（dataview 0.5.68 实测，实现见 `main.js:18953`）：`async view(viewName, input)` 按 `{name}.js` → `{name}/view.js` 两级用 `getFirstLinkpathDest` 解析，再 `new Function("dv","input",contents)` 执行。故：
+  - 脚本内 `dv` 直接可用，**不含 `input` 以外的外部变量**
+  - **三个必须知道的坑**：① dataview 用**纯字符串匹配**检测异步等待关键字，一旦出现就把整份文件包进 async IIFE，任何 `return` 被静默吞掉——注释里出现该词也会触发，所以脚本文件里连注释都别写它；② 非空返回值会被 `renderValue` **二次渲染**，务必只靠 `dv.xxx` 渲染、不 return；③ 路径写库内相对路径（如 `_scripts/scorecard`），不带 `.js`。三处都不能靠「看起来对」判断，用 `new Function` 在 node 里 stub 掉 `dv` 跑一遍即可等价验证。
+  - 信源评分速览即用此机制：逻辑在 `_scripts/scorecard.js`，卡片正文只留一行。改评分规则只改一处。
 - 双副本：活跃 `D:\Workspace\pedyc\dg,pedyc\content`，旧副本 `D:\Workspace\pedyc\site\apps\dg\content`。

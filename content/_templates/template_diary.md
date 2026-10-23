@@ -17,79 +17,8 @@ content-type: diary
 ## 👣跬步（任务列表）
 
 ```dataviewjs
-// 1. 安全获取当前日记的基准日期（彻底防御类型异常）
-let diaryDateStr = "";
-const current = dv.current();
-
-// 辅助函数：安全转为纯字符串并提取日期
-function extractDate(val) {
-  if (!val) return null;
-  // 若为 Dataview Link 对象则取 path 或 display，否则强制 toString
-  const str = typeof val === 'object' ? (val.path || val.fileName || JSON.stringify(val)) : String(val);
-  const match = str.match(/\d{4}-\d{2}-\d{2}/);
-  return match ? match[0] : null;
-}
-
-// 多级降级安全提取
-diaryDateStr = extractDate(current.title) 
-  || extractDate(current.file ? current.file.name : null)
-  || extractDate(app.workspace.getActiveFile() ? app.workspace.getActiveFile().basename : null)
-  || extractDate(current['date-created'])
-  || (current.file && current.file.cday ? moment(current.file.cday.toISODate()).format("YYYY-MM-DD") : moment().format("YYYY-MM-DD"));
-
-const baseMoment = moment(diaryDateStr, "YYYY-MM-DD");
-dv.paragraph(`> 🎯 **当前行动基准日**：\`${diaryDateStr}\` · 聚焦未逾期且活跃的项目任务`);
-
-// 2. 筛选 10-PROJECTS 目录下的有效项目
-const projects = dv.pages('"10-PROJECTS"')
-  .where(p => {
-    // 过滤 content-type 为 project
-    if (p['content-type'] !== 'project') return false;
-
-    // 过滤生命周期：排除已完成和已归档
-    const st = String(p.status || "").toLowerCase();
-    if (st === 'completed' || st === 'archived') return false;
-
-    // 校验截止日期 expire（支持 YYYY-MM-DD 或 YYYY/MM/DD）
-    if (!p.expire) return true; // 未设截止日期的项目默认保留在行动池
-    const cleanExpireStr = String(p.expire).replace(/\//g, "-");
-    const expireMoment = moment(cleanExpireStr, "YYYY-MM-DD");
-
-    // 筛选：项目截止日期 >= 当前日记日期（未逾期）
-    return expireMoment.isSameOrAfter(baseMoment, 'day');
-  })
-  .sort(p => {
-    // 综合评分：urgency + consequence 降序
-    const score = (Number(p.urgency) || 0) + (Number(p.consequence) || 0);
-    return score;
-  }, 'desc');
-
-// 3. 渲染结构化分发表格
-dv.table(
-  ["综合评分", "推进项目 (Project)", "状态", "关联领域", "截止日期", "工期状态"],
-  projects.map(p => {
-    const score = (Number(p.urgency) || 0) + (Number(p.consequence) || 0);
-    
-    // 计算剩余工期
-    let daysLeft = "-";
-    if (p.expire) {
-      const cleanExpireStr = String(p.expire).replace(/\//g, "-");
-      const diff = moment(cleanExpireStr, "YYYY-MM-DD").diff(baseMoment, 'days');
-      if (diff === 0) daysLeft = "🔥 今天截止";
-      else if (diff > 0) daysLeft = `⏳ 剩 ${diff} 天`;
-      else daysLeft = `⚠️ 逾期 ${Math.abs(diff)} 天`;
-    }
-
-    return [
-      `⭐ ${score}`,
-      p.file.link,
-      p.status || "active",
-      p.area || p.up || "-",
-      p.expire || "长期",
-      daysLeft
-    ];
-  })
-);
+// 跬步：项目任务分发（逻辑在 _scripts/diaryPanel.js）
+await dv.view("_scripts/diaryPanel", { part: "tasks" })
 ```
 
 ## 🌞日新（行动记录）
@@ -102,72 +31,8 @@ dv.table(
 ### 📊 今日知识资产沉淀（Today's Artifacts）
 
 ```dataviewjs
-// 1. 安全获取当前日记的基准日期字符串 (YYYY-MM-DD)
-const current = dv.current();
-
-function extractDate(val) {
-  if (!val) return null;
-  const str = typeof val === 'object' ? (val.path || val.fileName || JSON.stringify(val)) : String(val);
-  const match = str.match(/\d{4}-\d{2}-\d{2}/);
-  return match ? match[0] : null;
-}
-
-// 提取当前日记日期，优先从标题提取
-const targetDateStr = extractDate(current.title) 
-  || extractDate(current.file ? current.file.name : null)
-  || extractDate(app.workspace.getActiveFile() ? app.workspace.getActiveFile().basename : null)
-  || extractDate(current['date-created'])
-  || moment().format("YYYY-MM-DD");
-
-// 2. 筛选笔记
-// 排除系统目录、模板目录与当前日记本身
-const touchedPages = dv.pages('-"01-META" and -"_templates" and -"00-INBOX"')
-  .where(p => {
-    // 排除当前正在浏览的这篇日记
-    if (p.file.path === current.file.path) return false;
-
-    // --- A. 创建日期比对（优先读取 frontmatter 中的 date-created，备用系统 cday） ---
-    let createdStr = "";
-    if (p['date-created']) {
-      createdStr = extractDate(p['date-created']);
-    } else if (p.file.cday) {
-      // dv 的 cday 是 DateTime 对象，直接使用 format 或 toFormat
-      createdStr = moment(p.file.cday.ts).format("YYYY-MM-DD");
-    }
-    const isCreatedToday = (createdStr === targetDateStr);
-
-    // --- B. 修改日期比对（优先读取 frontmatter 中的 date-modified，备用系统 mtime 时间戳） ---
-    let modifiedStr = "";
-    if (p['date-modified']) {
-      modifiedStr = extractDate(p['date-modified']);
-    } else if (p.file.mtime) {
-      // 正确用法：使用时间戳 ts 转为 moment
-      modifiedStr = moment(p.file.mtime.ts).format("YYYY-MM-DD");
-    }
-    const isModifiedToday = (modifiedStr === targetDateStr);
-
-    // 只有在当天显式创建或修改的才纳入
-    return isCreatedToday || isModifiedToday;
-  })
-  .sort(p => p.file.mtime ? p.file.mtime.ts : 0, 'desc');
-
-// 3. 渲染结果
-dv.paragraph(`> 📅 **当日沉淀捕获基准**：\`${targetDateStr}\` · 共筛选出 \`${touchedPages.length}\` 篇相关资产`);
-
-dv.table(
-  ["笔记资产", "类型 (content-type)", "状态", "所属目录", "最后更新时间"],
-  touchedPages.map(p => {
-    // 格式化时间
-    const timeDisplay = p.file.mtime ? moment(p.file.mtime.ts).format("HH:mm") : "-";
-    return [
-      p.file.link,
-      p['content-type'] || "note",
-      p.status || "-",
-      p.file.folder,
-      timeDisplay
-    ];
-  })
-);
+// 温故：当日知识资产（逻辑在 _scripts/diaryPanel.js）
+await dv.view("_scripts/diaryPanel", { part: "artifacts" })
 ```
 
 ### 🧭 知识回流与闭环自检（Ingest & Maintenance）

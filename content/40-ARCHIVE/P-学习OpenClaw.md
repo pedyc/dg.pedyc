@@ -5,7 +5,7 @@ tags: [Openclaw]
 date-created: 2026-03-06
 date-modified: 2026-06-14
 status: archived
-area: ["[[人工智能|A-人工智能]]"]
+area: ["[[人工智能]]"]
 consequence: 5
 content-type: project
 expire: 2026-03-11
@@ -14,8 +14,8 @@ urgency: 2
 
 ## 🔗关联领域
 
-- [[人工智能|A-人工智能]]
-- [[A-Linux|A-Linux]]
+- [[人工智能]]
+- [[A-Linux]]
 
 ## 🎯 核心靶心（项目的主要目标）
 

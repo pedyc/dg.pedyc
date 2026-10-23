@@ -6,7 +6,7 @@ description: "ES2026 新增的迭代器串联方法，将多个迭代器顺序�
 tags: ["#JavaScript/API", "#ECMAScript/ES2026"]
 status: fleeting
 content-type: term
-up: [[ES2026]]
+up: "[[ES2026]]"
 ---
 
 ## 术语：Iterator.concat (Iterator Sequencing)

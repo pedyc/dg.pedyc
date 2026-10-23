@@ -8,7 +8,7 @@ date-created: 2026-07-12
 date-modified: 2026-07-12
 status: fleeting
 content-type: term
-up: [[ES2026]]
+up: "[[ES2026]]"
 ---
 
 ## 术语：JSON.parse source text access

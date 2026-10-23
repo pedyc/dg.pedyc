@@ -8,7 +8,7 @@ date-created: 2026-03-17
 date-modified: 2026-09-22
 status: fleeting
 content-type: term
-up: ["[[Vue]]"]
+up: "[[Vue]]"
 ---
 
 ## Vue3 使用 Proxy 实现响应式

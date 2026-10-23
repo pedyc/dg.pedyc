@@ -4,7 +4,7 @@ aliases: [MOC-Webpack相关问题]
 date-created: 2025-06-16
 date-modified: 2026-07-21
 content-type: moc
-up: ["[[Webpack]]"]
+up: "[[Webpack]]"
 ---
 
 | 编号  | 问题                                                  | 重要性 | 分类   |

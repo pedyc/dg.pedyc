@@ -8,7 +8,7 @@ date-created: 2025-06-07
 date-modified: 2026-08-18
 status: active
 content-type: moc
-up: [[前端开发]]
+up: "[[前端开发]]"
 ---
 
 ## MOC：Web通信

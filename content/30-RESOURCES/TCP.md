@@ -8,7 +8,7 @@ date-created: 2026-08-26
 date-modified: 2026-08-27
 status: fleeting
 content-type: concept
-up: ["[[网络协议]]"]
+up: "[[网络协议]]"
 ---
 
 ## 概念：TCP (Transmission Control Protocol)

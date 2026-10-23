@@ -4,7 +4,7 @@ aliases: [MOC-Vue面试题]
 date-created: 2026-03-15
 date-modified: 2026-08-31
 content-type: moc
-up: ["[[前端面试真题库|前端面试题]]"]
+up: "[[前端面试真题库|前端面试题]]"
 ---
 
 ## MOC-Vue 面试题

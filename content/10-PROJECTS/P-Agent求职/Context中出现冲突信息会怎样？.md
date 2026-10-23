@@ -3,7 +3,7 @@ title: Context中出现冲突信息会怎样？
 date-created: 2026-10-03
 date-modified: 2026-10-03
 content-type: question
-up: ["[[Context Quality]]"]
+up: "[[Context Quality]]"
 ---
 
 ## 问题

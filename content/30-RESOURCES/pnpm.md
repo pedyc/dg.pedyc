@@ -5,7 +5,7 @@ description: 基于全局内容寻址存储 + 硬链接 + 符号链接实现高�
 tags: [包管理, 前端工程化, Node, 概念]
 status: active
 content-type: concept
-up: ["[[前端工程]]"]
+up: "[[前端工程]]"
 date-created: 2026-08-28
 date-modified: 2026-08-28
 ---

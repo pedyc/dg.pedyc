@@ -4,7 +4,7 @@ title: P-学习Obsidian CLI、Skills
 date-created: 2026-03-02
 date-modified: 2026-03-28
 status: archived
-area: ["[[常用工具|A-常用工具]]", "[[知识管理]]"]
+area: ["[[常用工具]]", "[[知识管理]]"]
 consequence: 3
 content-type: project
 expire: 2026-03-31
@@ -13,7 +13,7 @@ urgency: 1
 
 ## 🔗关联领域
 
-- [[常用工具|A-常用工具]]
+- [[常用工具]]
 
 ## 🎯 核心靶心（项目的主要目标）
 

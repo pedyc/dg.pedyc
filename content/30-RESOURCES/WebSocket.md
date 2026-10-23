@@ -11,7 +11,7 @@ date-created: 2025-05-20
 date-modified: 2026-09-07
 status: active
 content-type: concept
-up: ""
+up:
 ---
 
 ## 概念：WebSocket
@@ -88,8 +88,8 @@ sequenceDiagram
 
 > 与本概念相关的标准操作流程，通过实践辅助理解
 
-- [[优惠券发放、领取、核销的前端实现逻辑|SOP-优惠券发放领取核销]] — 优惠券领取通知使用 WebSocket 实现
-- [[使用 WebSocket 实现实时双向通信|SOP-使用WebSocket实现实时双向通信]] — 从握手到重连的完整 WebSocket 前后端使用流程
+- [[优惠券发放、领取、核销的前端实现逻辑]] — 优惠券领取通知使用 WebSocket 实现
+- [[使用 WebSocket 实现实时双向通信]] — 从握手到重连的完整 WebSocket 前后端使用流程
 
 ---
 

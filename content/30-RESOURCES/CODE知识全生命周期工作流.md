@@ -9,7 +9,7 @@ date-created: 2025-02-20
 date-modified: 2026-06-15
 status: active
 content-type: sop
-up: ["[[知识管理]]"]
+up: "[[知识管理]]"
 ---
 
 ![[知识管理工作流.excalidraw|800]]

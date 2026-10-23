@@ -8,7 +8,7 @@ date-created: 2026-03-20
 date-modified: 2026-05-08
 status: active
 content-type: concept
-up: ["[[Web动画]]"]
+up: "[[Web动画]]"
 ---
 
 ## 概念：CSS Animation

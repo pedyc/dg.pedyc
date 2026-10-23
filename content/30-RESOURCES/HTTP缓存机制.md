@@ -8,7 +8,7 @@ date-created: 2026-08-27
 date-modified: 2026-08-27
 status: fleeting
 content-type: concept
-up: ["[[HTTP]]"]
+up: "[[HTTP]]"
 ---
 
 ## 概念：HTTP缓存机制

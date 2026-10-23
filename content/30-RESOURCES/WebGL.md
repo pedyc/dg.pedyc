@@ -9,7 +9,7 @@ date-modified: 2026-05-07
 status: active
 content-type: concept
 related: ["[[OpenGL]]", "[[Canvas]]", "[[着色器]]", "[[ThreeJS]]"]
-up: ["[[前端交互]]"]
+up: "[[前端交互]]"
 ---
 
 ## 概念：WebGL

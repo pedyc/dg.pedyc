@@ -8,7 +8,7 @@ date-created: 2026-07-13
 date-modified: 2026-07-13
 status: active
 content-type: roadmap
-up: ["[[Angular]]"]
+up: "[[Angular]]"
 ---
 
 ## Angular 版本演进路线图

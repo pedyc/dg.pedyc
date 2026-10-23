@@ -8,7 +8,7 @@ date-created: 2026-08-31
 date-modified: 2026-08-31
 status: active
 content-type: question
-up: ["[[前端性能优化]]"]
+up: "[[前端性能优化]]"
 ---
 
 ## 问题

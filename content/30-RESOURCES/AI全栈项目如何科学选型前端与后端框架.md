@@ -16,7 +16,7 @@ date-created: 2026-09-01
 date-modified: 2026-09-01
 status: active
 content-type: question
-up: ["[[前端工程]]"]
+up: "[[前端工程]]"
 ---
 
 ## 问题

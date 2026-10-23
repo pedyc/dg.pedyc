@@ -130,7 +130,7 @@ mindmap
 
 > 该领域的标准化操作流程
 
-- [[React最佳实践|SOP-React最佳实践]] — 开发 React 应用需要遵循的规范
+- [[React最佳实践]] — 开发 React 应用需要遵循的规范
 - [[React性能优化]] — 开发 React 应用需要注意的性能优化方法
 - [[使用Claude-Code开发React组件]] — Claude Code 开发 React 组件的工作流
 - [[在React中实现文字故障效果]] — React 中的 Glitch 文字动画

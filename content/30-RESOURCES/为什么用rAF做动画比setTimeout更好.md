@@ -8,7 +8,7 @@ date-created: 2026-08-30
 date-modified: 2026-08-30
 status: active
 content-type: question
-up: ["[[事件循环]]"]
+up: "[[事件循环]]"
 ---
 
 ## 问题

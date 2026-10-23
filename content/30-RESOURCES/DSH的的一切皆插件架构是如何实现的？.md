@@ -11,7 +11,7 @@ date-created: 2026-09-21
 date-modified: 2026-09-23
 status: fleeting
 content-type: question
-up: ["[[DeepSeek Harness]]"]
+up: "[[DeepSeek Harness]]"
 ---
 
 ## 问题

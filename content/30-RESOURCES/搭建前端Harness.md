@@ -16,7 +16,7 @@ date-created: 2026-08-10
 date-modified: 2026-09-21
 status: active
 content-type: sop
-up: ["[[Harness]]"]
+up: "[[Harness]]"
 ---
 
 ## SOP：搭建可验证的前端 Agent Harness

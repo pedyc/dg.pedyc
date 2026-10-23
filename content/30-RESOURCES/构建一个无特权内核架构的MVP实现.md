@@ -9,13 +9,13 @@ date-created: 2026-09-21
 date-modified: 2026-09-22
 status: active
 content-type: sop
-up: ["[[DSH的的一切皆插件架构是如何实现的？|Q-DSH的一切皆插件架构是如何实现的]]"]
+up: "[[DSH的的一切皆插件架构是如何实现的？]]"
 ---
 
 ## SOP：构建一个无特权内核架构的MVP实现
 
 > 用一个极简的 TypeScript 运行时（Context 容器 + 插件生命周期 + 依赖分发 + 可回退 Effect），让所有功能以插件形式挂载，核心内核不包含任何业务特权。
-> **问题溯源**：本 SOP 是 [[DSH的的一切皆插件架构是如何实现的？|Q-DSH的一切皆插件架构是如何实现的]] 的收敛成果——经过对 Cordis 生命周期、Effect 回退、inject 依赖收敛三套机制的理解，固化为一个可运行的最小实现。
+> **问题溯源**：本 SOP 是 [[DSH的的一切皆插件架构是如何实现的？]] 的收敛成果——经过对 Cordis 生命周期、Effect 回退、inject 依赖收敛三套机制的理解，固化为一个可运行的最小实现。
 
 ### 目标与边界
 
@@ -216,4 +216,4 @@ root.plugin({
 	- [[Capability Seam]] — 服务作为能力接口，Definition/Provider/Consumer 三角色解耦
 	- [[Revertible Effect]] — 可回退的注册副作用，保证插件干净卸载
 - **问题来源**：
-	- [[DSH的的一切皆插件架构是如何实现的？|Q-DSH的一切皆插件架构是如何实现的]] — 此 SOP 解决的问题来源
+	- [[DSH的的一切皆插件架构是如何实现的？]] — 此 SOP 解决的问题来源

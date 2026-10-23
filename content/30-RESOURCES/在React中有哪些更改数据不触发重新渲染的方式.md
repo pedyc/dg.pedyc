@@ -11,7 +11,7 @@ date-created: 2026-04-29
 date-modified: 2026-04-29
 status: active
 content-type: question
-up: "[[React性能优化|SOP-React性能优化]]"
+up: "[[React性能优化]]"
 ---
 
 > 在 React 中有哪些更改数据不触发重新渲染的方式？

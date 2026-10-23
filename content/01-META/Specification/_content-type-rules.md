@@ -7,7 +7,7 @@ date-created: 2026-05-20
 date-modified: 2026-07-31
 status: active
 content-type: article
-up: [["llm-wiki-schema"]]
+up: "[[llm-wiki-schema]]"
 ---
 
 > [!warning] **本文件已废弃（DEPRECATED）**

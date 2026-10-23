@@ -8,7 +8,7 @@ date-created: 2026-08-27
 date-modified: 2026-08-27
 status: fleeting
 content-type: concept
-up: ["[[HTTP缓存机制]]"]
+up: "[[HTTP缓存机制]]"
 ---
 
 ## 概念：HTTP协商缓存

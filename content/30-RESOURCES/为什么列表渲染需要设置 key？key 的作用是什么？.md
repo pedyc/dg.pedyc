@@ -8,7 +8,7 @@ date-created: 2026-05-17
 date-modified: 2026-08-02
 status: active
 content-type: question
-up: "[[React面试题|MOC-React面试题]]"
+up: "[[React面试题]]"
 ---
 
 ## 问题

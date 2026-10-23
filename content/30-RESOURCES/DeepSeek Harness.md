@@ -13,7 +13,7 @@ date-created: 2026-09-21
 date-modified: 2026-09-23
 status: fleeting
 content-type: concept
-up: ["[[Harness]]"]
+up: "[[Harness]]"
 ---
 
 ## 概念：DeepSeek Harness

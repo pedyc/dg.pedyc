@@ -2,7 +2,7 @@
 title: Context Quality
 date-created: 2026-10-03
 date-modified: 2026-10-03
-up: ["[[Context Engineering]]"]
+up: "[[Context Engineering]]"
 content-type: concept
 ---
 
@@ -58,4 +58,4 @@ Context Quality
 
 ## SOP
 
-- [[构建高质量上下文|SOP-Context质量标准]]
+- [[构建高质量上下文]]

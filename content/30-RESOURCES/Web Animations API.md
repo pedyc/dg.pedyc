@@ -8,7 +8,7 @@ date-created: 2026-05-08
 date-modified: 2026-05-08
 status: active
 content-type: concept
-up: [Web API]
+up: "[[Web API]]"
 ---
 
 > Web Animations API（WAAPI）是浏览器原生的动画接口，通过 JavaScript 提供可编程的动画控制

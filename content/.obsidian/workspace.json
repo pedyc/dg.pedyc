@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/任务总览.md",
+                "file": "30-RESOURCES/经过验证的高信噪比信源.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "任务总览"
+              "title": "经过验证的高信噪比信源"
+            }
+          },
+          {
+            "id": "663393353d288ce7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20-AREAS/A-知识管理/知识管理.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "知识管理"
             }
           },
           {
@@ -68,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -110,7 +134,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/任务总览.md",
+                "file": "20-AREAS/A-知识管理/知识管理.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -315,47 +339,47 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "227d261d53c1b133",
+  "active": "60236dec7012791f",
   "lastOpenFiles": [
-    "10-PROJECTS/P-斑驳光背景实现/斑驳光背景实现.md",
-    "10-PROJECTS/任务总览.md",
-    "00-INBOX/四象限示意图.excalidraw.md",
-    "30-RESOURCES/在四象限中应用精力成本.md",
-    "20-AREAS/A-个人成长/个人成长.md",
-    "00-INBOX/四象限示意图.excalidraw.svg",
-    "_resources/未命名.md",
-    "20-AREAS/领域总览.md",
+    "00-INBOX/_tmp_link_check.md",
+    "30-RESOURCES/个人知识管理助手.md",
     "20-AREAS/A-知识管理/知识管理.md",
-    "30-RESOURCES/算法真题库.md",
-    "index.md",
-    "99-ASSETS/Bases/书单.base",
-    "30-RESOURCES/书单/八次危机.md",
-    "30-RESOURCES/书单/曼昆经济学原理.md",
-    "99-ASSETS/书籍/八次危机  1949-2009  中国的真实经验.pdf",
-    "99-ASSETS/书籍/曼昆经济学原理 (N.格里高利·曼昆) (Z-Library).epub",
-    "99-ASSETS/Bases/求职投递.base",
-    "99-ASSETS/Bases/电影收藏.base",
-    "99-ASSETS/Bases/笔记状态管理.base",
-    "99-ASSETS/Bases/元数据巡检.base",
-    "01-META/Guide/快速开始.md",
-    "10-PROJECTS/PROJECTS.canvas",
-    "30-RESOURCES/书单/The Complete Guide to Building Skills for Claude.md",
-    "30-RESOURCES/书单/Google Prompt Engineering v7.md",
-    "30-RESOURCES/书单/Cherry's 3 Rules of Card Creation.md",
-    "30-RESOURCES/书单/AI Agents in Depth（中文版）.md",
-    "_templates/template_term.md",
-    "_templates/template_week.md",
-    "_templates/template_sub_project.md",
-    "_templates/template_question.md",
-    "_templates/template_diary.md",
-    "_templates/template_moc.md",
-    "00-INBOX/Frontend Development Trends 2026 AI, Edge & TypeScript.md",
+    "20-AREAS/A-个人成长/个人成长.md",
+    "40-ARCHIVE/META-模板系统.md",
+    "40-ARCHIVE/使用大模型构建结构化知识库.md",
+    "30-RESOURCES/知识管理的ROI如何衡量.md",
+    "30-RESOURCES/双向链接如何从引用变成思维脚手架.md",
     "_templates/template_concept.md",
-    "_scripts/template_startup.md",
+    "30-RESOURCES/如何在信息过载时代保持高信噪比.md",
+    "00-INBOX/原子笔记本身已经是高信噪比产物.md",
+    "30-RESOURCES/Zsolt Viczian.md",
+    "20-AREAS/A-知识管理/视觉思维.md",
+    "30-RESOURCES/双重编码理论.md",
+    "_scripts/areaBacklinks.js",
+    "30-RESOURCES/关于我.md",
+    "30-RESOURCES/我的简历.md",
+    "60-BLOGS/正视平庸：记录一次早餐时的思考.md",
+    "40-ARCHIVE/信息源.md",
+    "40-ARCHIVE/正视平庸：记录一次早餐时的思考.md",
+    "01-META/Index/知识缺口.md",
+    "01-META/Truth/真值索引.md",
+    "01-META/Truth/标签规范.md",
+    "01-META/Truth/元数据规范.md",
+    "90-DIARY/2026-10-23.md",
+    "90-DIARY/2026-10-20.md",
+    "90-DIARY/2026-10-19.md",
+    "_scripts/validate_meta.py",
+    "_scripts/brokenLinks.js",
+    "_scripts/weekPanel.js",
+    "_scripts/diaryPanel.js",
+    "_scripts/scorecard.js",
+    "99-ASSETS/Bases/信源.base",
+    "30-RESOURCES/信源",
+    "00-INBOX/四象限示意图.excalidraw.svg",
+    "99-ASSETS/Bases/书单.base",
+    "99-ASSETS/书籍/八次危机  1949-2009  中国的真实经验.pdf",
+    "10-PROJECTS/PROJECTS.canvas",
     "30-RESOURCES/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/19ba4a157b41291c747cb12d964f195a_MD5.jpg",
-    "30-RESOURCES/电影收藏",
-    "10-PROJECTS/P-Agent求职/投递记录",
-    "99-ASSETS/Bases/游戏收藏.base",
     "99-ASSETS/Excalidraw/_resources/Pasted Image 20250506104448_191.svg",
     "99-ASSETS/Excalidraw/_resources/Pasted Image 20250506104448_547.svg",
     "99-ASSETS/Excalidraw/_resources/Pasted Image 20250506104448_524.jpg",

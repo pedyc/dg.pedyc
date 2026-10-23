@@ -8,7 +8,7 @@ date-created: 2025-06-02
 date-modified: 2026-05-11
 status: active
 content-type: term
-up: ""
+up:
 ---
 
 ## 术语：BOM

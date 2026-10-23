@@ -9,7 +9,7 @@ created: 2026-07-11
 published: 2025-07-01
 content-type: article
 category: blog
-up: [[JavaScript]]
+up: "[[JavaScript]]"
 source: "https://pawelgrzybek.com/whats-new-in-ecmascript-2025/"
 ---
 

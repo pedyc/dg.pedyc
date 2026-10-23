@@ -8,7 +8,7 @@ date-created: 2026-08-27
 date-modified: 2026-08-27
 status: fleeting
 content-type: concept
-up: ["[[TCP]]"]
+up: "[[TCP]]"
 ---
 
 ## 概念：TCP拥塞控制

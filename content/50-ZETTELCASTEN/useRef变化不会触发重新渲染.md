@@ -65,4 +65,4 @@ function Counter() {
 
 - [[Refs(React)]] — Ref 概念总览
 - [[Ref 的 current 属性是响应式与非响应式的分界线]] — 来自 React Refs 的核心命题
-- [[在React中有哪些更改数据不触发重新渲染的方式|Q-在React中有哪些更改数据不触发重新渲染的方式？]]
+- [[在React中有哪些更改数据不触发重新渲染的方式]]

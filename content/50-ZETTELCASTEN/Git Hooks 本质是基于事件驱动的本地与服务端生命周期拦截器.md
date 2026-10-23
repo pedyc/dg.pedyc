@@ -9,7 +9,7 @@ date-created: 2026-10-20
 date-modified: 2026-10-20
 status: active
 content-type: atomic
-up: Git Hooks
+up: "[[Git Hooks]]"
 noteId: 1792475160799
 ---
 

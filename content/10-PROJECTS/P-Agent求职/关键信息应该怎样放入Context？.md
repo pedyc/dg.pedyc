@@ -3,7 +3,7 @@ title: 关键信息应该怎样放入Context？
 date-created: 2026-10-03
 date-modified: 2026-10-03
 content-type: question
-up: ["[[Context Quality]]"]
+up: "[[Context Quality]]"
 ---
 
 ## 问题

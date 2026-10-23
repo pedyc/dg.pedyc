@@ -11,7 +11,7 @@ date-created: 2026-05-19
 date-modified: 2026-05-19
 status: active
 content-type: sop
-up: ""
+up:
 ---
 
 ## SOP：前端 CI/CD 流程

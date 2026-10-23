@@ -9,7 +9,7 @@ date-created: 2026-09-21
 date-modified: 2026-09-21
 status: fleeting
 content-type: concept
-up: ["[[ES2015|ES6]]"]
+up: "[[ES2015|ES6]]"
 ---
 
 ## 概念：Reflect

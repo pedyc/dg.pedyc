@@ -8,7 +8,7 @@ date-created: 2026-08-25
 date-modified: 2026-08-25
 status: active
 content-type: sop
-up: ["[[前端性能优化|MOC-前端性能优化]]"]
+up: "[[前端性能优化]]"
 ---
 
 ## SOP：使用 DevTools Performance 分析页面性能

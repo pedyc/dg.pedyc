@@ -14,7 +14,7 @@ date-created: 2025-05-21
 date-modified: 2026-05-17
 status: active
 content-type: question
-up: "[[React面试题|MOC-React面试题]]"
+up: "[[React面试题]]"
 noteId: 1792465708124
 ---
 

@@ -12,7 +12,7 @@ content-type: person
 death: ""
 nationality: 待核实（现居美国旧金山）
 occupation: 软件工程师（Replit）/ 独立研究者 / 开源开发者
-up: ["[[数字花园]]"]
+up: "[[数字花园]]"
 ---
 
 > Quartz 静态站点生成器的作者，把"数字花园"从理念变成大众可用的工具；也是程序化斑驳光着色器技术文章的作者。

@@ -7,7 +7,7 @@ date-created: 2026-06-01
 date-modified: 2026-06-23
 status: active
 content-type: article
-up: ["[[本库指南]]"]
+up: "[[本库指南]]"
 ---
 
 ## Suggest Log

@@ -7,7 +7,7 @@ date-created: 2026-05-20
 date-modified: 2026-08-18
 status: active
 content-type: article
-up: ["[[本库指南]]"]
+up: "[[本库指南]]"
 ---
 
 ## Wiki Log
@@ -331,7 +331,7 @@ up: ["[[本库指南]]"]
 		- 核心观点：UI 是状态到视图的映射函数 `UI = f(state)`，函数组件比 Class 组件更贴近这一模型
 - [2026-07-21] ingest | 新建 question「为什么更倾向函数组件」
 		- 位置：40-RESOURCES/为什么更倾向函数组件.md
-		- 父页面：[[React面试题|MOC-React面试题]]
+		- 父页面：[[React面试题]]
 		- 覆盖 4 个答案（认知负担、Hooks 优势、官方方向、TypeScript 契合）+ 探索路径与待验证点
 
 #### 2026-07-20
@@ -471,7 +471,7 @@ up: ["[[本库指南]]"]
 	- 覆盖 3 套策略（Gatekeeping、分层处理、Pull 驱动）+ 探索路径
 - [2026-06-15] ingest | 创建 SOP「信息收集工作流」
 	- 位置：40-RESOURCES/信息收集工作流.md
-	- 父页面：[[知识获取|MOC-知识获取]]
+	- 父页面：[[知识获取]]
 	- 覆盖三层管道：Follow RSS（主力）→ 抖音/掘金（补充）→ 个人博客（深读）
 	- 包含 mermaid 流程图和三管道核心步骤
 - [2026-06-15] ingest | 创建 Q-note「双向链接如何从引用变成思维脚手架」
@@ -744,18 +744,18 @@ up: ["[[本库指南]]"]
 - [2026-06-16] ingest | 创建 term「Signal(Angular)」
 	- 位置：40-RESOURCES/Signal(Angular).md
 	- aliases：T-Angular-Signal
-	- 父页面：[[Angular|A-前端/Angular]]
+	- 父页面：[[Angular]]
 	- 覆盖核心 API（signal/computed/effect/input/output/model 等 9 个）+ RxJS 互通 + 使用示例
 - [2026-06-16] ingest | 创建 concept「Angular变更检测」
 	- 位置：40-RESOURCES/Angular变更检测.md
 	- aliases：C-Angular-变更检测
-	- 父页面：[[Angular|A-前端/Angular]]
+	- 父页面：[[Angular]]
 	- 覆盖 Zone.js 触发 → Default/OnPush 策略 → Signal 模式演进
 	- 包含性能优化示例代码（OnPush / runOutsideAngular / Signal）
 - [2026-06-17] ingest | 创建 concept「Angular依赖注入」
 	- 位置：40-RESOURCES/Angular依赖注入.md
 	- aliases：C-Angular-依赖注入
-	- 父页面：[[Angular|A-前端/Angular]]
+	- 父页面：[[Angular]]
 	- 覆盖注入器树层级（root/module/component）+ 3 种注册方式 + 4 种提供者语法 + 令牌类型
 - [2026-06-17] ingest | 创建 concept「控制反转」
 	- 位置：40-RESOURCES/控制反转.md
@@ -765,16 +765,16 @@ up: ["[[本库指南]]"]
 	- 修复 2 处断链：[[依赖注入]]、[[Angular依赖注入]] 中的 [[控制反转]] 引用
 - [2026-06-19] ingest | 创建 atomic「权力是资源分配的核心驱动力」
 	- 位置：30-ZETTELKASTEN/权力是资源分配的核心驱动力.md
-	- 父页面：[[政治经济|MOC-政治经济]]
+	- 父页面：[[政治经济]]
 	- 覆盖 5 个论据：市场规则/预算博弈/注意力经济/公共财政/稀缺性制造
 - [2026-06-19] ingest | 创建 atomic「权力的日常形态是共识，终极担保是暴力」
 	- 位置：30-ZETTELKASTEN/权力的日常形态是共识，终极担保是暴力.md
-	- 父页面：[[政治经济|MOC-政治经济]]
+	- 父页面：[[政治经济]]
 	- 论据覆盖韦伯/阿伦特/日常体验/征税逻辑/暴力-共识反比关系
 - [2026-06-19] ingest | 消化 2 条政治经济原子笔记到 Wiki 层
 	- 更新 A-政治经济 原子洞见：纳入 [[权力的日常形态是共识，终极担保是暴力]]
 	- 更新 MOC-政治经济：新增「原子洞见」章节，收录 2 条 atomic
-	- 父页面：[[政治经济|MOC-政治经济]]、[[政治经济|A-政治经济]]
+	- 父页面：[[政治经济]]、[[政治经济]]
 - [2026-06-19] refactor | A-前端 Area 架构重构 + 冗余合并
 	- 合并 A-前端.md → 前端开发.md（A-前端 已作为 alias）
 	- 删除 A-前端.md，保持单一顶层 Area：前端开发
@@ -806,7 +806,7 @@ up: ["[[本库指南]]"]
 	- 核心观点：习惯回路三要素（Cue→Routine→Reward），改变习惯是替换行为而非消除
 	- [2026-06-20] ingest | 创建概念「否定之否定」C-否定之否定
 		- 位置：40-RESOURCES/否定之否定.md
-		- 父页面：[[政治经济|A-政治经济]]
+		- 父页面：[[政治经济]]
 		- 覆盖三阶段模型（肯定→否定→否定之否定）、螺旋上升运行机制、与形而上学发展观的对比
 		- 关联：[[反者道之动]]、[[形而上学]]、[[逻辑学]]
 	- [2026-06-20] ingest | 创建 atomic「否定是扬弃，既克服又保留」
@@ -919,7 +919,7 @@ up: ["[[本库指南]]"]
 - [2026-06-19] ingest | 消化 2 条政治经济原子笔记到 Wiki 层
 		- 更新 A-政治经济 原子洞见：纳入 [[权力的日常形态是共识，终极担保是暴力]]
 		- 更新 MOC-政治经济：新增「原子洞见」章节，收录 2 条 atomic
-		- 父页面：[[政治经济|MOC-政治经济]]、[[政治经济|A-政治经济]]
+		- 父页面：[[政治经济]]、[[政治经济]]
 
 #### 2026-10-20
 

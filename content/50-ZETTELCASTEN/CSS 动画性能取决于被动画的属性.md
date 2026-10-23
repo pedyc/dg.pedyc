@@ -9,7 +9,7 @@ date-created: 2026-10-20
 date-modified: 2026-10-20
 status: active
 content-type: atomic
-up: CSS Animation
+up: "[[CSS Animation]]"
 noteId: 1792475159113
 ---
 

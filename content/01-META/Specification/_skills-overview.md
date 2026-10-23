@@ -7,7 +7,7 @@ date-created: 2026-06-12
 date-modified: 2026-07-17
 status: active
 content-type: article
-up: [["llm-wiki-schema"]]
+up: "[[llm-wiki-schema]]"
 ---
 
 ## Skills 概览

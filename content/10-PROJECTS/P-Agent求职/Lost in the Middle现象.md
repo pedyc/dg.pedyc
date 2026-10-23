@@ -16,7 +16,7 @@ date-created: 2026-10-03
 date-modified: 2026-10-03
 status: fleeting
 content-type: concept
-up: ["[[Context Engineering]]"]
+up: "[[Context Engineering]]"
 ---
 
 ## 概念：Lost in the Middle

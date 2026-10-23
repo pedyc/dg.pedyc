@@ -4,7 +4,7 @@ aliases: [MOC-Vite相关问题]
 date-created: 2025-06-16
 date-modified: 2026-05-21
 content-type: moc
-up: ["[[Vite]]"]
+up: "[[Vite]]"
 ---
 
 | 编号  | 问题                                                        | 重要性 | 分类   |

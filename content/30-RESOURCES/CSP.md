@@ -8,7 +8,7 @@ date-created: 2025-05-23
 date-modified: 2026-03-23
 status: active
 content-type: concept
-up: [[浏览器安全机制]]
+up: "[[浏览器安全机制]]"
 ---
 
 > CSP（Content Security Policy，内容安全策略）是一种通过白名单机制控制资源加载的安全策略，用于减少 XSS、数据注入等攻击风险。

@@ -8,7 +8,7 @@ date-created: 2026-08-28
 date-modified: 2026-08-28
 status: active
 content-type: concept 
-up: ["[[前端工程演进]]"]
+up: "[[前端工程演进]]"
 ---
 
 ## 深度解析：iframe 在微前端中的应用与演进

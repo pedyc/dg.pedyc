@@ -9,7 +9,7 @@ date-created: 2026-10-20
 date-modified: 2026-10-20
 status: active
 content-type: atomic
-up: 浏览器渲染流程
+up: "[[浏览器渲染流程]]"
 noteId: 1792476213221
 ---
 

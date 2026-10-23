@@ -6,7 +6,7 @@ description: NextJS 首屏快是因为内容生成在服务端完成，hydration
 tags: []
 status: fleeting
 content-type: atomic
-up: null
+up:
 noteId: 1792465707749
 ---
 

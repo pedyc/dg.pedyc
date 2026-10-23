@@ -8,7 +8,7 @@ date-created: 2026-07-13
 date-modified: 2026-07-14
 status: active
 content-type: concept
-up: ["[[Angular变更检测]]"]
+up: "[[Angular变更检测]]"
 ---
 
 ## 概念：Zoneless 变更检测

@@ -7,7 +7,7 @@ date-created: 2026-05-20
 date-modified: 2026-08-16
 status: active
 content-type: article
-up: [["llm-wiki-schema"]]
+up: "[[llm-wiki-schema]]"
 ---
 
 ## Ingest 工作流

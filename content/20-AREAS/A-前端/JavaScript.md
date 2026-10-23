@@ -8,7 +8,7 @@ date-created: 2025-05-19
 date-modified: 2026-08-31
 status: active
 content-type: area
-up: ["[[前端开发]]"]
+up: "[[前端开发]]"
 ---
 
 ## Area: JavaScript

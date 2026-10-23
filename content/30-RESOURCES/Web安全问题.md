@@ -8,7 +8,7 @@ date-created: 2026-05-29
 date-modified: 2026-08-27
 status: active
 content-type: moc
-up: ["[[Web安全]]"]
+up: "[[Web安全]]"
 ---
 
 ## MOC: Web安全问题

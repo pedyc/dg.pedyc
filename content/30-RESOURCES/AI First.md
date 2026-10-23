@@ -8,7 +8,7 @@ date-created: 2026-08-27
 date-modified: 2026-08-27
 status: fleeting
 content-type: concept
-up: ["[[软件工程]]"]
+up: "[[软件工程]]"
 ---
 
 ## 概念：AI First (AI-First 研发范式)

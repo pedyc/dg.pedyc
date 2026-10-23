@@ -6,7 +6,7 @@ description: "ES2026 新增的精确浮点数求和函数，替代 reduce 累加
 tags: ["#JavaScript/API", "#ECMAScript/ES2026"]
 status: fleeting
 content-type: term
-up: [[ES2026]]
+up: "[[ES2026]]"
 ---
 
 ## 术语：Math.sumPrecise

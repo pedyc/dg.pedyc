@@ -8,7 +8,7 @@ date-created: 2026-05-12
 date-modified: 2026-05-12
 status: active
 content-type: sop
-up: ""
+up:
 ---
 
 ## SOP：调试 JavaScript 内存泄漏

@@ -15,7 +15,7 @@ up: "[[Context Engineering]]"
 ## SOP：管理 Context 长度并执行降级
 
 > 在长任务 Agent 中，避免 Context 因过长或超窗导致的行为退化（目标遗忘、约束失效、重复劳动、跑偏）。
-> **问题溯源**：本 SOP 是 [[Context过长会怎样？|Q-Context 过长为什么仍会影响 Agent 行为]] 和 [[Context Window用完之后会怎样？|Q-Context Window 用完之后会怎样]] 的收敛成果——经过多方案对比和实践验证，固化为标准流程。
+> **问题溯源**：本 SOP 是 [[Context过长会怎样？]] 和 [[Context Window用完之后会怎样？]] 的收敛成果——经过多方案对比和实践验证，固化为标准流程。
 
 ### 目标与边界
 
@@ -114,5 +114,5 @@ flowchart TD
 	- [[Context Engineering]]
 	- [[Context Quality]]
 - **问题来源**：
-	- [[Context过长会怎样？|Q-Context 过长为什么仍会影响 Agent 行为]] — 未超窗但行为退化的成因
-	- [[Context Window用完之后会怎样？|Q-Context Window 用完之后会怎样]] — 超窗后的失效模式与降级策略
+	- [[Context过长会怎样？]] — 未超窗但行为退化的成因
+	- [[Context Window用完之后会怎样？]] — 超窗后的失效模式与降级策略

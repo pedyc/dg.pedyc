@@ -9,7 +9,7 @@ date-created: 2026-10-20
 date-modified: 2026-10-20
 status: active
 content-type: atomic
-up: Angular变更检测
+up: "[[Angular变更检测]]"
 noteId: 1792475165383
 ---
 

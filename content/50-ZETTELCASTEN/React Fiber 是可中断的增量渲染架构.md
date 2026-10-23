@@ -7,7 +7,7 @@ date-created: 2026-05-06
 date-modified: 2026-08-30
 status: fleeting
 content-type: atomic
-up: null
+up:
 noteId: 1792465709002
 ---
 

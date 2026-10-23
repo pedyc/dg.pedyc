@@ -5,7 +5,7 @@ aliases:
   - C-Context Engineering
 date-created: 2026-10-02
 date-modified: 2026-10-03
-up: ["[[Agent]]"]
+up: "[[Agent]]"
 content-type: concept
 ---
 

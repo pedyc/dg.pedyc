@@ -8,7 +8,7 @@ date-created: 2026-03-20
 date-modified: 2026-05-08
 status: active
 content-type: concept
-up: ["[[前端交互]]"]
+up: "[[前端交互]]"
 ---
 
 ## 概念：Web 动画
@@ -77,7 +77,7 @@ flowchart TB
 - **相关概念**：
 	- [[合成层]]
 	- [[requestAnimationFrame]]
-	- [[动画效果示例|MOC-动画效果SOP]]
+	- [[动画效果示例]]
 
 ---
 

@@ -8,7 +8,7 @@ date-created: 2026-06-16
 date-modified: 2026-07-14
 status: active
 content-type: comparison
-up: ["[[前端面试真题库|前端面试题]]"]
+up: "[[前端面试真题库|前端面试题]]"
 ---
 
 ## Angular vs React

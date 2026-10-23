@@ -70,7 +70,7 @@ effect(() => {
 
 ### 相关概念
 
-- **父级概念**：[[Angular|A-前端/Angular]] — Angular 框架的响应式系统核心
+- **父级概念**：[[Angular]] — Angular 框架的响应式系统核心
 - **相关概念**：
 	- [[RxJS]] — 之前 Angular 的响应式方案，Signal 是轻量替代
 	- [[Zone.js]] — Angular 传统变更检测机制，Signal 旨在减少对其依赖

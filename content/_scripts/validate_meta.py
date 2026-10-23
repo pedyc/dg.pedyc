@@ -266,6 +266,98 @@ def _aliases_of(fm_text):
     return []
 
 
+def check_up_style():
+    """检查 up 字段写法（真值见 Truth/元数据规范「up 的写法」）。
+
+    合法只有两种：
+        up: "[[概念]]"                      单一父级
+        up: ["[[Agent]]", "[[LLM]]"]        多父级
+    另允许留空（无父级）。
+
+    非法：
+        up: [[概念]]    YAML 解析成嵌套列表 [["概念"]]，dataview 拿不到链接
+        up: 概念        解析成普通字符串，不是链接，反查失效
+        up: [概念]      数组但元素没写成链接
+        up: null / ""   空值的多余写法，噪音，应直接留空
+
+    另查悬空：链接目标找不到对应文件（不虚构父级，但写错的要报）。
+    """
+    quoted_re = re.compile(r'^"\[\[[^\[\]]+\]\]"$')
+    array_re = re.compile(r'^\[\s*(?:"\[\[[^\[\]]+\]\]"\s*,\s*)*"\[\[[^\[\]]+\]\]"\s*\]$')
+    inner_re = re.compile(r"\[\[([^\[\]]+?)\]\]")
+    # 40-ARCHIVE 是免维护区（真值见目录结构规范）：归档只管往里丢，不规整格式
+    skip_dirs = {".obsidian", ".trash", ".git", ".workbuddy", "40-ARCHIVE"}
+
+    files = [p for p in ROOT.rglob("*.md")
+             if not any(part in skip_dirs for part in p.relative_to(ROOT).parts)]
+    stems = {p.stem for p in files}
+    paths = {p.relative_to(ROOT).as_posix()[:-3] for p in files}
+
+    bad_style = []      # (文件, 原值, 原因)
+    dangling = []       # (文件, 目标)
+
+    for p in files:
+        rel = p.relative_to(ROOT).as_posix()
+        text = p.read_bytes().decode("utf-8", errors="ignore")
+        m = re.match(r"^---\n(.*?)\n---", text, re.S)
+        if not m:
+            continue
+        hit = re.search(r"^up\s*:(.*)$", m.group(1), re.M)
+        if not hit:
+            continue
+        val = hit.group(1).strip()
+
+        if val == "":
+            continue                       # 留空是合法的「无父级」
+        if val == "null" or val in ('""', "''") or re.fullmatch(r"\[\s*\]", val):
+            bad_style.append((rel, val, "空值应直接留空，不写 null/\"\"/[]"))
+            continue
+        if quoted_re.match(val):
+            pass
+        elif array_re.match(val):
+            pass
+        else:
+            if re.match(r"^\[\[", val):
+                why = "裸链接会解析成嵌套列表，需加双引号"
+            elif val.startswith("["):
+                why = "数组元素未写成 [[链接]]"
+            else:
+                why = "裸值不是链接，需写成 \"[[目标]]\""
+            bad_style.append((rel, val, why))
+
+        # 悬空检查：模板里的 {{父级}} 是占位符，不算
+        if rel.startswith("_templates/"):
+            continue
+        for t in inner_re.findall(val):
+            target = t.split("|")[0].split("#")[0].strip()
+            if not target or "{{" in target:
+                continue
+            t2 = target[:-3] if target.lower().endswith(".md") else target
+            if t2 in paths or t2 in stems or t2.split("/")[-1] in stems:
+                continue
+            dangling.append((rel, target))
+
+    print("\n== up 字段写法 ==")
+    if bad_style:
+        print(f"  {len(bad_style)} 处写法非法：")
+        for rel, val, why in bad_style[:12]:
+            print(f"    {rel}")
+            print(f"      up: {val}   <- {why}")
+    else:
+        print("  写法 0 处非法 ✓")
+
+    if dangling:
+        print(f"  待补父级 {len(dangling)} 处（up 指向的概念还没建）—— 这是知识缺口，不是违规：")
+        for rel, t in dangling:
+            print(f"    {rel}  ->  [[{t}]]")
+    else:
+        print("  待补父级 0 处 ✓")
+
+    # 悬空不计入 problems：本库的立场是「断链 = 引用了但还没提炼」，是待办而非错误。
+    # 它值得被看见（所以要打印），但不该让校验器常红，否则会被习惯性忽略。
+    return len(bad_style)
+
+
 def main():
     args = set(sys.argv[1:])
     allowed = load_allowed_fields()
@@ -392,6 +484,7 @@ def main():
     # ---------- 3. 链接规范 ----------
     if "--links" in args:
         problems += check_links()
+        problems += check_up_style()
 
     # ---------- 4. 待登记字段 ----------
     if unregistered:

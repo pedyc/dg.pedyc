@@ -11,7 +11,7 @@ date-modified: 2026-10-20
 status: fleeting
 content-type:
   - record
-up: []
+up:
 ---
 
 ## 前沿 AI Agent 架构演进、开发工具链及大模型应用技术分析与实践参考

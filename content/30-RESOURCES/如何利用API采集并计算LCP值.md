@@ -8,7 +8,7 @@ date-created: 2026-08-19
 date-modified: 2026-08-25
 status: fleeting
 content-type: question
-up: ["[[手写经典功能|MOC-手写经典功能]]"]
+up: "[[手写经典功能]]"
 ---
 
 ## 问题

@@ -8,7 +8,7 @@ date-created: 2026-05-30
 date-modified: 2026-05-30
 status: active
 content-type: sop
-up: [[人工智能]]
+up: "[[人工智能]]"
 ---
 
 ## SOP：AI 输出质量评估

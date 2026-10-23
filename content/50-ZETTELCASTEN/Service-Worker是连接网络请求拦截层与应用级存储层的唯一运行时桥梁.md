@@ -9,7 +9,7 @@ date-created: 2026-10-20
 date-modified: 2026-10-20
 status: active
 content-type: atomic
-up: 浏览器缓存与客户端存储体系
+up: "[[浏览器缓存与客户端存储体系]]"
 noteId: 1792475166852
 ---
 

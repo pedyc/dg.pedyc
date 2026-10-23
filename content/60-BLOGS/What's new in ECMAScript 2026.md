@@ -10,7 +10,7 @@ content-type: article
 created: 2026-07-11
 published: 2026-07-06
 source: "https://pawelgrzybek.com/whats-new-in-ecmascript-2026/?ref=dailydev"
-up: [[JavaScript]]
+up: "[[JavaScript]]"
 ---
 
 Published: · 6 minutes read

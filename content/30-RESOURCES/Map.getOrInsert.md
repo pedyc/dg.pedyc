@@ -6,7 +6,7 @@ description: "ES2026 新增的 Map/WeakMap upsert 方法，合并 get 和 set �
 tags: ["#JavaScript/API", "#ECMAScript/ES2026"]
 status: fleeting
 content-type: term
-up: [[ES2026]]
+up: "[[ES2026]]"
 ---
 
 ## 术语：Map.prototype.getOrInsert (Upsert)

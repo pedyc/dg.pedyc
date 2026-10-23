@@ -2,7 +2,7 @@
 title: Agent学习专项-ContextEngineering
 date-created: 2026-10-02
 date-modified: 2026-10-03
-up: ["[[Agent求职]]"]
+up: "[[Agent求职]]"
 content-type: record
 ---
 

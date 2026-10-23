@@ -5,7 +5,7 @@ description: 基于 Proxy 沙箱与 HTML Entry 加载的微前端框架，解决
 tags: [微前端, 前端架构, 概念]
 status: active
 content-type: concept
-up: ["[[微前端]]"]
+up: "[[微前端]]"
 date-created: 2026-08-28
 date-modified: 2026-08-28
 ---

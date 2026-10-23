@@ -8,7 +8,7 @@ date-created: 2026-08-18
 date-modified: 2026-08-18
 status: fleeting
 content-type: concept
-up: [[前端开发]]
+up: "[[前端开发]]"
 ---
 
 ## 概念：HTML

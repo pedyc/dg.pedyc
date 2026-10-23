@@ -13,7 +13,7 @@ date-created: 2026-03-13
 date-modified: 2026-09-22
 status: active
 content-type: concept
-up: ["[[Vue|vue]]"]
+up: "[[Vue|vue]]"
 ---
 
 ## 概念：响应式原理（Vue3）

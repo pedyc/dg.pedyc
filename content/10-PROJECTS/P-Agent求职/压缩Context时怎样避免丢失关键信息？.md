@@ -3,7 +3,7 @@ title: 压缩Context时怎样避免丢失关键信息？
 date-created: 2026-10-03
 date-modified: 2026-10-03
 content-type: question
-up: ["[[Context Quality]]"]
+up: "[[Context Quality]]"
 ---
 
 ## 问题

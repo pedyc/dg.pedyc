@@ -9,7 +9,7 @@ date-created: 2026-10-20
 date-modified: 2026-10-20
 status: active
 content-type: atomic
-up: HTTP~1.0
+up: "[[HTTP~1.0]]"
 noteId: 1792475162021
 ---
 

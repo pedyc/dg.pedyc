@@ -9,7 +9,7 @@ date-created: 2026-10-20
 date-modified: 2026-10-20
 status: active
 content-type: atomic
-up: Web标准
+up: "[[Web标准]]"
 noteId: 1792476245870
 ---
 

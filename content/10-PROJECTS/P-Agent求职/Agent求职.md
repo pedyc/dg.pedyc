@@ -7,7 +7,7 @@ description: 前端工程师掌握 AI 能力的系统学习路径：提示词工
 date-created: 2026-05-16
 date-modified: 2026-10-23
 status: fleeting
-area: ["[[人工智能|A-人工智能]]"]
+area: ["[[人工智能]]"]
 consequence: 5
 content-type: project
 expire: 2026/12/31

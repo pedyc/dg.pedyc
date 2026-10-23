@@ -7,7 +7,7 @@ date-created: 2026-07-31
 date-modified: 2026-07-31
 status: active
 content-type: article
-up: [["llm-wiki-schema"]]
+up: "[[llm-wiki-schema]]"
 ---
 
 ## Wiki Index 格式规范

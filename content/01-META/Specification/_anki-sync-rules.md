@@ -8,7 +8,7 @@ date-created: 2026-08-02
 date-modified: 2026-08-02
 status: active
 content-type: article
-up: [["llm-wiki-schema"]]
+up: "[[llm-wiki-schema]]"
 ---
 
 ## Anki 集成工作流

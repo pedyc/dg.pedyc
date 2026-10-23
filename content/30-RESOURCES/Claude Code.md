@@ -10,7 +10,7 @@ date-created: 2026-03-03
 date-modified: 2026-09-23
 content-type: concept
 source: https://code.claude.com/docs/zh-CN/overview
-up: "[[人工智能|A-人工智能]]"
+up: "[[人工智能]]"
 ---
 
 ## 概念：Claude Code
@@ -96,7 +96,7 @@ up: "[[人工智能|A-人工智能]]"
 
 ### 知识图谱
 
-- **父级概念**：[[人工智能|A-人工智能]] — AI 代理编码工具
+- **父级概念**：[[人工智能]] — AI 代理编码工具
 - **子级概念**：
 	- [[CLAUDE.md]] — 项目级持久记忆配置
 	- [[Skills]] — 可复用的行为配置

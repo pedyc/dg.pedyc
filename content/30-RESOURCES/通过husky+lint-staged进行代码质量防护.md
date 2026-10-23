@@ -13,7 +13,7 @@ date-created: 2026-08-29
 date-modified: 2026-09-01
 status: active
 content-type: sop
-up: ["[[前端工程]]"]
+up: "[[前端工程]]"
 ---
 
 ## SOP：使用 Husky 与 lint-staged 实现代码提交质量防护

@@ -10,7 +10,7 @@ published: 2026-07-06
 source: https://dev.to/lazydoomslayer/how-i-build-vue-3-applications-part-1-why-i-use-a-hybrid-folder-structure-48c2
 ---
 
-> 收敛:[[Vue3 混合文件夹结构|SOP-Vue3-混合文件夹结构]]
+> 收敛:[[Vue3 混合文件夹结构]]
 
 When a Vue project starts, almost any folder structure works. With only a handful of components and pages, it's easy to find what you're looking for.
 

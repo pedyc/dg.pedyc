@@ -8,7 +8,7 @@ date-created: 2026-06-17
 date-modified: 2026-06-17
 status: active
 content-type: concept
-up: "[[Angular|A-前端/Angular]]"
+up: "[[Angular]]"
 ---
 
 ## 概念：Angular 依赖注入
@@ -113,7 +113,7 @@ providers: [{ provide: API_URL, useValue: '/api/v1' }]
 
 ### 知识图谱
 
-- **父级概念**：[[Angular|A-前端/Angular]] — Angular 框架的核心机制之一
+- **父级概念**：[[Angular]] — Angular 框架的核心机制之一
 - **相关概念**：
 	- [[Signal(Angular)]] — 常配合 DI 服务实现全局状态管理
 	- [[Angular变更检测]] — DI 控制服务实例范围，间接影响变更检测行为

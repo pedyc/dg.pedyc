@@ -8,7 +8,7 @@ date-created: 2025-06-15
 date-modified: 2026-03-23
 status: active
 content-type: concept
-up: [[前端开发]]
+up: "[[前端开发]]"
 ---
 
 > Web 通信方式是前端与后端、客户端之间数据交换的各种方式。

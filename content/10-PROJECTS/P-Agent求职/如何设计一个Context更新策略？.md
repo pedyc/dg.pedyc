@@ -3,7 +3,7 @@ title: 如何设计一个Context更新策略？
 date-created: 2026-10-03
 date-modified: 2026-10-03
 content-type: question
-up: ["[[Context Quality]]"]
+up: "[[Context Quality]]"
 ---
 
 ## 问题

@@ -3,7 +3,7 @@ title: LLM如何理解Context？为什么冲突信息会让Agent决策失灵？
 date-created: 2026-10-03
 date-modified: 2026-10-03
 content-type: question
-up: ["[[Context Engineering]]"]
+up: "[[Context Engineering]]"
 ---
 
 ## 问题

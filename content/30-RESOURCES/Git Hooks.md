@@ -8,7 +8,7 @@ date-created: 2026-08-29
 date-modified: 2026-08-29
 status: active
 content-type: concept
-up: ["[[前端工程]]"]
+up: "[[前端工程]]"
 ---
 
 ## 概念：Git Hooks

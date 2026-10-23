@@ -8,7 +8,7 @@ date-created: 2026-05-12
 date-modified: 2026-05-12
 status: active
 content-type: sop
-up: ""
+up:
 ---
 
 ## SOP：开发一个最小 PWA 应用

@@ -8,7 +8,7 @@ date-created: 2026-06-15
 date-modified: 2026-06-15
 status: fleeting
 content-type: concept
-up: [[时间管理]]
+up: "[[时间管理]]"
 ---
 
 ## 概念：GTD（Getting Things Done）

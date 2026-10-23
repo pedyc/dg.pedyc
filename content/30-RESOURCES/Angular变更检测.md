@@ -8,7 +8,7 @@ date-created: 2026-06-16
 date-modified: 2026-07-14
 status: active
 content-type: concept
-up: "[[Angular|A-前端/Angular]]"
+up: "[[Angular]]"
 ---
 
 ## 概念：Angular 变更检测
@@ -135,7 +135,7 @@ count = signal(0);
 
 ### 知识图谱
 
-- **父级概念**：[[Angular|A-前端/Angular]]
+- **父级概念**：[[Angular]]
 - **基础组件**：
 	- [[Zone.js]] — 变更检测的触发机制
 	- [[Signal(Angular)]] — 下一代变更检测的基础

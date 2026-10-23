@@ -8,7 +8,7 @@ date-created: 2025-06-15
 date-modified: 2026-08-18
 status: active
 content-type: concept
-up: [[浏览器]]
+up: "[[浏览器]]"
 ---
 
 ## 概念：Web存储

@@ -49,6 +49,7 @@
 - **信源四态是一条生命周期而非并列标签**：候选（记下未消费，评分为空属正常）→ 待验证（观察期）→ 已验证（有 ingest）→ 已弃（退订，卡片保留作历史基线）。已弃不删卡片，否则下次遇到同类源要重新踩一遍。
 - **`source_risk` 的意义（不要删）**：五维评分量的全是「信息供给量」，**没有一维量「信息保真度」**，故阴谋论源与立场型源都能拿 3/3/4 稳定落在 B 级「观察」。`source_risk` 取 `无 / 推演型 / 立场型`，**不参与总分与评级**，回答的是「这条信息能拿来做什么」：推演型只能当假设种子，转译必须走 `question` 而非 `atomic`（atomic 标题即主张，阴谋论一旦成 atomic 就静默变成「你相信的东西」）；立场型只能当对立视角对冲，须成对消费。**只三值，不再细分**（2026-10-23 用户否决了「作者视角型」第四类的提案）：`立场型` 定义为「立场或叙事框架参与了取样与结论」，同时容纳「取样被裁剪」（寒清关下）与「素材真实而框架先行」（柴静）两种表现——判据是**采信动作是否相同**，动作相同就不该拆成两个标签。
 - **`output_rate` 不设否决线**（用户 2026-10-23 判断，勿"优化"掉）：它量的是「被转化成笔记的频率」，不是价值。**产出率 0 而总分仍 A/B 级，反证其质量高**——价值在改变判断框架，框架变了不会表现为新增笔记，却让其余所有源更好用（视野补充型，必留）。判定顺序是「先看总分、再看产出率」，低产出 + 低总分才是退订的完整证据。
+- **`git add` 的 pathspec 大小写会静默零命中**（2026-10-23 踩坑，代价是一次漏交 26 个文件）：git 索引里记录的日记目录是 `90-Diary`（小写 i），而实际路径一直写 `90-DIARY`。在 Windows 上两者都能访问（文件系统不敏感），但 `git add content/90-DIARY` **一条都匹配不上、不报错**，commit 照常"成功"，只装进去未受影响的少数文件。症状：下次 `git status` 冒出几十行 M，很容易被当成换行/格式噪音忽略。**提交后必须验证 `git show --stat` 的文件清单**，别只看"提交成功"。
 - **本库 git 仓库根在上一级** `D:/Workspace/pedyc/dg,pedyc`，vault 只是其中的 `content/`。根 `.gitignore` 已存在且**含忽略 `.gitignore` 自身的规则**（第 3 行），因此不要在 vault 内新建 .gitignore——改根文件。另：`.obsidian/` 被根忽略但其中若干文件已被跟踪，`git add` 需 `-f`。
 - **换行一律 LF**（`.gitattributes` 为 `* text=auto eol=lf`，但 `core.autocrlf=true`，故 git 只给 warning 不报错、仓库内始终存 LF）。**坑：python `pathlib.write_text()` 在 Windows 默认把 `\n` 写成 `\r\n`**，批量脚本改完 md 会让工作区变 CRLF（不明显但会污染同目录一致性）。批量改文件的脚本必须用二进制回写 `p.write_bytes(b.replace(b"\r\n", b"\n"))` 或 `open(..., newline="")`。
 - **`status` 只允许 3 个值**：fleeting / active / archived（2026-10-23 由 5 值收窄，`cultivating` 与 `completed` 并入 `active`，改写 344 篇）。历史上存在大量脏值（seed/sprout/evergreen/emoji/YCTODO 等），同日已清理 28 处；常驻巡检视图 `99-ASSETS/Bases/元数据巡检.base`。40-ARCHIVE 按免维护原则保留旧值（31 处）。仍有约 277 篇缺该字段。
@@ -72,4 +73,5 @@
   - 脚本内 `dv` 直接可用，**不含 `input` 以外的外部变量**
   - **三个必须知道的坑**：① dataview 用**纯字符串匹配**检测异步等待关键字，一旦出现就把整份文件包进 async IIFE，任何 `return` 被静默吞掉——注释里出现该词也会触发，所以脚本文件里连注释都别写它；② 非空返回值会被 `renderValue` **二次渲染**，务必只靠 `dv.xxx` 渲染、不 return；③ 路径写库内相对路径（如 `_scripts/scorecard`），不带 `.js`。三处都不能靠「看起来对」判断，用 `new Function` 在 node 里 stub 掉 `dv` 跑一遍即可等价验证。
   - 信源评分速览即用此机制：逻辑在 `_scripts/scorecard.js`，卡片正文只留一行。改评分规则只改一处。
+  - **领域页看板**同理：`_scripts/areaBacklinks.js`（3 个领域页 + `template_area.md`）。它收口的理由与日记不同——写在模板里的逻辑**副本数会随新建领域线性增长**，属于"未来型重复"。分组顺序按知识粒度（moc → area → project → concept → comparison → atomic → term → question → sop → roadmap → person → record → article → diary），「未分类」置顶，未登记类型垫底但不隐藏。**新建领域时不要把这 17 行贴回模板**。
 - 双副本：活跃 `D:\Workspace\pedyc\dg,pedyc\content`，旧副本 `D:\Workspace\pedyc\site\apps\dg\content`。

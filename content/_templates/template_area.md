@@ -41,20 +41,9 @@ up: "[[{{父级领域}}]]"
 
 ### 领域知识图谱
 
-```mermaid
-mindmap
-    root(({{领域名称}}))
-        父级
-            {{父级领域}}
-        子级
-            {{子概念1}}
-            {{子概念2}}
-        同级
-            {{同级领域1}}
-            {{同级领域2}}
-        关联
-            {{相关领域1}}
-            {{相关领域2}}
+```dataviewjs
+// 领域页看板（逻辑在 _scripts/areaBacklinks.js）
+await dv.view("_scripts/areaBacklinks")
 ```
 
 ### 领域定义

@@ -3,4 +3,4 @@ views:
     name: 表格
     filters:
       and:
-        - file.basename.startsWith("sop")
+        - note["content-type"] == "sop"

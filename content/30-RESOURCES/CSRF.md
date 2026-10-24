@@ -44,6 +44,18 @@ up: "[[Web安全问题]]"
 | SameSite Cookie | 限制 Cookie 在跨站请求中的发送 |
 | Origin/Referer 检测 | 检查请求来源 |
 
+#### SameSite 的三个取值
+
+| 值 | 行为 | 取舍 |
+|:---|:---|:---|
+| `Strict` | 仅同站请求发送 | 最安全，但从外站跳回来会掉登录态 |
+| `Lax` | 放行导航类安全请求（GET 链接、预加载），拦掉跨站 POST | 浏览器默认值，安全与体验的平衡点 |
+| `None` | 完全允许跨站发送 | 必须配合 `Secure`（仅 HTTPS） |
+
+```http
+Set-Cookie: session=abc; SameSite=Lax
+```
+
 ---
 
 ## 知识图谱

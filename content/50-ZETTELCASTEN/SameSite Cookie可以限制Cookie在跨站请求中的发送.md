@@ -2,63 +2,26 @@
 uid: 202603240002
 title: SameSite Cookie可以限制Cookie在跨站请求中的发送
 aliases: []
-description: Lax/Strict 模式下，浏览器不会在跨站请求中发送 Cookie
-tags:
-  - 前端开发/安全/原子
+description: 与 Token 思路相反：不加凭据，而是让浏览器在跨站时不带 Cookie
+tags: [前端开发/安全]
 date-created: 2026-03-24
-date-modified: 2026-08-27
-status: active
+date-modified: 2026-10-24
 content-type: atomic
 up: "[[CSRF]]"
 noteId: 1792465709591
 ---
 
-> SameSite Cookie 可以限制 Cookie 在~~跨站请求~~中的发送，在服务端进行设置
+> SameSite 让浏览器在跨站请求中**不发送 Cookie**，等于直接抽掉 CSRF 依赖的那份凭证。它与 Token 是相反的两条路：Token 是「多带一个攻击者拿不到的凭据」，SameSite 是「干脆不带那个凭据」。
 
-SameSite 是 Cookie 的一个属性，用于控制 Cookie 是否在跨站请求中被发送，从而有效防御 CSRF 攻击。
+**边界**：它只挡 Cookie，不挡请求本身，且只在浏览器侧生效。也不是免费的——Strict 会让从外站跳回来的用户掉登录态；None 必须配合 `Secure`（仅 HTTPS）。
 
-## 属性值
+## 论据/示例
 
-| 值 | 行为 | 安全性 |
-|:---|:---|:---|
-| Strict | 仅同站请求发送 | 最高 |
-| Lax | 仅导航安全请求发送（GET 链接、预加载） | 中等 |
-| None | 允许跨站发送 | 无保护 |
+`SameSite=Lax` 是现在的浏览器默认值：放行导航类的安全请求（GET 链接、预加载），但拦掉跨站 POST 表单——挡住最典型的 CSRF 姿势，同时不至于「从外链跳回来就掉登录」。`Strict` 只认同站，最安全也最容易打断体验；`None` 完全放开，跨站场景不得不用它，代价是必须加 `Secure`。
 
-## 对比
+三值的完整对照见 [[CSRF]] 的防御方法一节。
 
-**Strict（严格）**：
+## 关联
 
-```http
-Set-Cookie: session=abc; SameSite=Strict
-```
-
-- Cookie 只在同站请求中发送
-- 用户体验差，跨站导航会被拦截
-- 适合安全要求高的场景（如银行操作）
-
-**Lax（宽松）**：
-
-```http
-Set-Cookie: session=abc; SameSite=Lax
-```
-
-- 允许导航安全请求（GET 链接、预加载）
-- 阻止 POST 表单跨站请求
-- 推荐默认值，平衡安全与体验
-
-**None（无限制）**：
-
-```http
-Set-Cookie: session=abc; SameSite=None; Secure
-```
-
-- 允许跨站请求发送 Cookie
-- 必须配合 Secure（仅 HTTPS）
-- 用于需要跨站服务的场景
-
-## CSRF 防御效果
-
-- Lax 模式：阻止通过 POST 表单的 CSRF 攻击
-- Strict 模式：完全阻止跨站 Cookie 发送
-- 攻击者的恶意页面无法让浏览器发送目标网站的 Cookie
+- [[CSRF]] — 父级概念
+- [[CSRF Token是防御CSRF的核心方法]] — 相反的思路：多带一个凭据

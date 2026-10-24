@@ -5,7 +5,7 @@ aliases: [弱映射, T-WeakMap]
 description: JavaScript 中键为对象且键的引用为弱引用的 Map
 tags: [前端/JavaScript]
 date-created: 2026-03-17
-date-modified: 2026-03-16
+date-modified: 2026-03-17
 status: fleeting
 content-type: term
 ---

@@ -9,14 +9,13 @@ date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up:
-  - - Web存储
+up: "[[Web存储]]"
 noteId: 1792465705883
 ---
 
 > Cookie 是存储在浏览器的小型文本数据（~4KB），随每次 HTTP 请求~~自动发送~~到服务器，主要用于服务端识别用户和会话状态管理。
 
-### 论据/示例
+## 论据/示例
 
 **工作原理**：
 1. 服务器通过 `Set-Cookie` 响应头设置 Cookie
@@ -47,7 +46,7 @@ document.cookie  // 读取所有可访问的 Cookie
 - 购物车数据
 - 个性化设置偏好
 
-### 关联
+## 关联
 
 - [[Web存储]] — 本观点的主题
 - [[Session]] — 服务端会话概念

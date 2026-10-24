@@ -5,7 +5,6 @@ aliases:
   - R-{{信源名}}
 description: ""
 content-type: record
-status: fleeting
 source_type: 
 verify_status: 候选
 source_risk: 

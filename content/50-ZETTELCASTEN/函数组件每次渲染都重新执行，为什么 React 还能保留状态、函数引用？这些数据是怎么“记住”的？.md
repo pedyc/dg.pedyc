@@ -1,10 +1,10 @@
 ---
 title: 函数组件每次渲染都重新执行，为什么 React 还能保留状态、函数引用？这些数据是怎么“记住”的？
 date-created: 2025-05-21
-date-modified: 2026-03-21
+date-modified: 2026-10-23
 content-type: atomic
-up:
-  - "[[为什么社区更倾向函数组件]]"
+up: "[[Hooks(React)]]"
+
 noteId: 1792465697558
 ---
 

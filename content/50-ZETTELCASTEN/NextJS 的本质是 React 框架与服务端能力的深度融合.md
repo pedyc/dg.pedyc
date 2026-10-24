@@ -5,10 +5,11 @@ aliases: []
 description: NextJS 的本质是 React 框架与 Node.js 服务端能力的深度融合
 tags: []
 date-created: 2026-05-06
-date-modified: 2026-05-06
+date-modified: 2026-10-23
 status: fleeting
 content-type: atomic
-up:
+up: "[[NextJS]]"
+
 noteId: 1792465707572
 ---
 

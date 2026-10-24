@@ -9,14 +9,13 @@ date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up:
-  - - Web存储
+up: "[[Web存储]]"
 noteId: 1792465709775
 ---
 
 > sessionStorage 提供~~会话级~~的键值对存储，数据仅在当前标签页会话中有效，关闭标签页后自动清除。
 
-### 论据/示例
+## 论据/示例
 
 **基本用法**：
 ```javascript
@@ -48,7 +47,7 @@ const draft = sessionStorage.getItem('draft');
 - 页面间临时数据传递
 - 单页应用临时状态
 
-### 关联
+## 关联
 
 - [[Web存储]] — 本观点的主题
 - [[localStorage]] — 对比：持久化存储

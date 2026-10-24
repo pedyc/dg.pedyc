@@ -8,8 +8,7 @@ date-created: 2026-08-25
 date-modified: 2026-08-25
 status: fleeting
 content-type: question
-up:
-  - - 分布式系统与缓存设计
+up: "[[分布式系统与缓存设计]]"
 ---
 
 ## 问题

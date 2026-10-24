@@ -9,14 +9,13 @@ date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up:
-  - - 浏览器安全机制
+up: "[[浏览器安全机制]]"
 noteId: 1792465698877
 ---
 
 > 浏览器通过 ~~CSP（Content Security Policy，内容安全策略）~~ 限制资源加载和脚本执行，防止 XSS（跨站脚本攻击）。
 
-### 论据/示例
+## 论据/示例
 
 **CSP 工作原理**：
 - 服务器在响应头中添加 Content-Security-Policy
@@ -37,7 +36,7 @@ Content-Security-Policy:
 - 禁止内联脚本：``script-src 'self'``
 - 禁止 eval：`script-src 'self'`
 
-### 关联
+## 关联
 
 - [[浏览器安全机制]] — 本观点的主题
 - [[CSP]] — CSP 的详细配置

@@ -5,7 +5,7 @@ aliases: [Q-前端怎么应用CORS]
 description: 前端开发者如何在实际项目中配置和使用CORS
 tags: [前端开发/安全]
 date-created: 2026-03-24
-date-modified: 2026-03-23
+date-modified: 2026-03-24
 status: active
 content-type: question
 ---

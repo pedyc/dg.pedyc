@@ -9,14 +9,13 @@ date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up:
-  - - Web存储
+up: "[[Web存储]]"
 noteId: 1792465706811
 ---
 
 > IndexedDB 是浏览器内置的 NoSQL 数据库，支持存储大量结构化对象、~~事务操作~~和~~索引查询~~，适合离线应用和大数据存储场景。
 
-### 论据/示例
+## 论据/示例
 
 **基本结构**：
 ```
@@ -59,7 +58,7 @@ store.add({ id: 1, name: 'Alice' });
 - 大型数据集存储
 - 客户端搜索功能
 
-### 关联
+## 关联
 
 - [[Web存储]] — 本观点的主题
 - [[localStorage]] — 对比：简单键值对

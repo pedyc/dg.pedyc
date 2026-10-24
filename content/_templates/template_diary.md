@@ -3,7 +3,6 @@ uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
 title: template_diary
 tags:
   - diary
-status: active
 content-type: diary
 ---
 

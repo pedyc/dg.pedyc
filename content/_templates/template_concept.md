@@ -6,7 +6,6 @@ description: "{ 一句话定义这个概念 }"
 tags: []
 content-type: concept
 category: learning
-status: fleeting
 up: "[[{{父级}}]]"
 ---
 

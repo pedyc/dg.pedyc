@@ -1,3 +1,7 @@
+# 元数据巡检 —— 只查「填漏了」和「填错了」
+#
+# 2026-10-24：原「非法 status」「缺 status」两个视图随 status 字段一并删除。
+# 巡检范围缩到仍在校验的必填字段：content-type 与 uid。
 filters:
   or:
     - file.inFolder("30-RESOURCES")
@@ -6,17 +10,13 @@ filters:
     - file.inFolder("10-PROJECTS")
 views:
   - type: table
-    name: 非法 status
+    name: 缺 content-type
     filters:
       and:
-        - note.status
-        - note.status != "fleeting"
-        - note.status != "active"
-        - note.status != "archived"
+        - content-type.isEmpty()
+        - 'file.ext != ".excalidraw" '
     order:
       - file.name
-      - status
-      - content-type
       - file.folder
     sort:
       - property: file.folder
@@ -24,10 +24,10 @@ views:
       - property: file.name
         direction: ASC
   - type: table
-    name: 缺 status
+    name: 缺 uid
     filters:
       and:
-        - status.isEmpty()
+        - uid.isEmpty()
         - 'file.ext != ".excalidraw" '
     order:
       - file.name

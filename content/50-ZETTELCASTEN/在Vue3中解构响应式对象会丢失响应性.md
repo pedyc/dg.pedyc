@@ -5,11 +5,11 @@ aliases: []
 description: 在Vue3中解构响应式对象会丢失响应性
 tags: []
 date-created: 2026-08-19
-date-modified: 2026-08-19
+date-modified: 2026-10-23
 status: fleeting
 content-type: atomic
-up:
-  - "[[Vue]]"
+up: "[[Vue3响应式原理]]"
+
 noteId: 1792475156331
 ---
 

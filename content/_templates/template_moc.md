@@ -4,7 +4,6 @@ title: template_moc
 aliases: ["MOC-{{主题}}"]
 description: "{ 一句话或一段话概括这个 MOC 的范围和价值 }"
 tags: []
-status: active
 content-type: moc
 category: learning
 up: "[[{{父级领域}}]]"

@@ -5,7 +5,6 @@ aliases: ["{{文章别名}}"]
 description: "{{一句话描述文章核心内容}}"
 tags: []
 content-type: article
-status: fleeting
 up: "[[{{父级}}]]"
 category: blog
 published: false

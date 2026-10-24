@@ -1,6 +1,6 @@
 ---
-uid: "202608270557"
-title: HTTP3基于QUIC协议消除传输层队头阻塞
+uid: "202608270533"
+title: HTTP3基于QUIC协议消除传输层队头阻塞 1
 aliases:
   - QUIC消除队头阻塞
   - HTTP3多路复用与HOL阻塞解决
@@ -12,14 +12,10 @@ tags:
   - 传输层
   - 性能优化
 date-created: 2026-08-27
-date-modified: 2026-08-27
+date-modified: 2026-10-23
 status: archived
 content-type: atomic
-up:
-  - "[[QUIC]]"
-  - "[[队头阻塞]]"
-  - "[[HTTP~3|HTTP3]]"
-noteId: 1792475163523
+up: ["[[QUIC]]", "[[队头阻塞]]", "[[HTTP~3|HTTP3]]"]
 ---
 
 ## 命题：HTTP3基于QUIC协议消除传输层队头阻塞

@@ -9,8 +9,7 @@ date-created: 2026-03-23
 date-modified: 2026-05-19
 status: active
 content-type: atomic
-up:
-  - - XSS
+up: "[[XSS]]"
 noteId: 1792465712809
 ---
 

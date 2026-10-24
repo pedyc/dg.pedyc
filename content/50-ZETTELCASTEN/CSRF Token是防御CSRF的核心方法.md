@@ -2,51 +2,24 @@
 uid: 202603240001
 title: CSRF Token是防御CSRF的核心方法
 aliases: []
-description: 攻击者无法读取页面中的 Token，无法伪造请求
-tags:
-  - 前端开发/安全/原子
+description: 攻击者能借浏览器自动带上的 Cookie，但读不到页面内容，因此拿不到 Token
+tags: [前端开发/安全]
 date-created: 2026-03-24
-date-modified: 2026-03-23
-status: active
+date-modified: 2026-10-24
 content-type: atomic
-up:
-  - - CSRF
+up: "[[CSRF]]"
 noteId: 1792465706475
 ---
 
-> ~~CSRF Token~~ 是防御 CSRF 的核心方法
+> CSRF Token 之所以是核心手段：攻击者能借浏览器自动带上的 Cookie，却**读不到目标页面的内容**，因而拿不到嵌在页面里的 Token，伪造不出一个完整合法的请求。
 
-攻击者无法读取目标页面的内容，因此无法获取页面中嵌入的 CSRF Token，从而无法伪造有效的请求。
+**边界**：前提是 Token 不泄露。若存在 XSS，或把 Token 存进 Cookie（那就和 Cookie 一样被自动带上），整套防御失效。另外它防的是伪造，不防重放——同一 Token 可被重复使用，除非每次刷新。
 
-## 工作原理
+## 论据/示例
 
-1. **服务端生成**：用户访问页面时，服务端生成一个随机 Token
-2. **页面嵌入**：Token 嵌入到表单隐藏域或请求头
-3. **请求携带**：用户提交请求时，Token 随请求一起发送
-4. **服务端验证**：服务端验证 Token 是否匹配
+**同源策略是它的地基**：恶意页面读不到目标站的 DOM，也读不到自定义请求头，能自动带上的只有 Cookie。所以只要存在一个「不在 Cookie 里、每次请求要显式带上」的值，服务端就能把「用户主动发的」与「攻击者伪造的」区分开——这正是 [[CSRF的本质是服务器无法区分请求是用户主动发送的还是攻击者伪造的]] 那条困境的解法。
 
-## 实现方式
+## 关联
 
-**表单隐藏域**：
-
-```html
-<form action="/transfer" method="POST">
-  <input type="hidden" name="csrf_token" value="abc123...">
-  <button>转账</button>
-</form>
-```
-
-**请求头**：
-
-```javascript
-fetch('/api/delete', {
-  method: 'POST',
-  headers: { 'X-CSRF-Token': token }
-})
-```
-
-## 为什么有效
-
-- 攻击者的恶意页面无法读取目标网站的 DOM（同源策略）
-- 攻击者无法获取 Cookie 以外的请求头（除非存在 CORS 漏洞）
-- 每次请求 Token 应变化，防止暴力破解
+- [[CSRF]] — 父级概念
+- [[SameSite Cookie可以限制Cookie在跨站请求中的发送]] — 另一条思路：干脆不让 Cookie 发出去

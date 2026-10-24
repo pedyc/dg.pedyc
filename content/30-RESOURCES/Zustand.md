@@ -24,7 +24,7 @@ content-type: concept
 
 - [[A-极简即正义]]
 	- **原理**：Zustand 用 set() 函数直接修改状态，无需 action/reducer/dispatch 的繁琐流程
-- [[A-hooks是一等公民]]
+- [[Zustand中A-hooks是一等公民]]
 	- **原理**：React 16.8 后的 Hooks 哲学渗透到状态管理，useStore 让组件按需订阅状态片段
 
 ---

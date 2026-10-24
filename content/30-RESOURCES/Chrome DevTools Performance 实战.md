@@ -1,5 +1,5 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+uid: 202608250001
 title: Chrome DevTools Performance 实战
 aliases: [SOP-使用 DevTools Performance 分析页面性能, SOP-Chrome DevTools Performance 实战]
 description: 使用 Chrome 开发者工具的 Performance 面板排查运行时卡顿、Long Task、掉帧以及首屏加载瓶颈的标准化排查作业流程。

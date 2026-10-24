@@ -1,6 +1,0 @@
-views:
-  - type: table
-    name: fleeting
-    filters:
-      and:
-        - status == "fleeting"

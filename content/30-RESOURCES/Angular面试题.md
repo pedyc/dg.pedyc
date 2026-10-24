@@ -8,8 +8,7 @@ date-created: 2026-06-12
 date-modified: 2026-06-12
 status: active
 content-type: moc
-up:
-  - - 前端面试真题库|前端面试题
+up: "[[前端面试真题库]]"
 ---
 
 ## MOC-Angular 面试题

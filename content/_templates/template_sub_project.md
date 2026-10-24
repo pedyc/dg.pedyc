@@ -5,7 +5,6 @@ aliases:
   - "{{P-专项名称}}"
 description: "{ 一句话描述本专项的目标 }"
 tags: []
-status: fleeting
 content-type: project
 category: work
 consequence: 1

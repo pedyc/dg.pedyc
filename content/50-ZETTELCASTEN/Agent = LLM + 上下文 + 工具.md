@@ -7,11 +7,11 @@ tags:
   - AI
   - Agent
 date-created: 2026-08-20
-date-modified: 2026-10-20
+date-modified: 2026-10-23
 status: active
 content-type: atomic
-up:
-  - "[[Agent]]"
+up: "[[Agent]]"
+
 noteId: 1792465705185
 ---
 
@@ -26,4 +26,3 @@ noteId: 1792465705185
 - [[Agent]]
 - [[Agent 的循环控制由 Runtime 决定而非模型自行决定]]
 - [[Tool 的执行权在 Runtime 手中而非 LLM]]
-

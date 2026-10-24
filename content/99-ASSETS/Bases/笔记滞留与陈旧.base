@@ -1,0 +1,61 @@
+filters:
+  or:
+    - file.inFolder("00-INBOX")
+    - file.inFolder("10-PROJECTS")
+    - file.inFolder("20-AREAS")
+    - file.inFolder("30-RESOURCES")
+    - file.inFolder("50-ZETTELCASTEN")
+    - file.inFolder("60-BLOGS")
+    - file.inFolder("80-PRIVATE")
+    - file.inFolder("90-DIARY")
+formulas:
+  born: file.ctime.relative()
+  stale: file.mtime.relative()
+properties:
+  file.name:
+    displayName: 笔记
+  formula.born:
+    displayName: 创建
+  formula.stale:
+    displayName: 最后修改
+  content-type:
+    displayName: 类型
+  file.folder:
+    displayName: 目录
+views:
+  - type: table
+    name: 陈旧（最久没碰的排前）
+    order:
+      - file.name
+      - formula.stale
+      - formula.born
+      - content-type
+      - file.folder
+    sort:
+      - property: file.mtime
+        direction: ASC
+  - type: table
+    name: INBOX 滞留
+    filters:
+      and:
+        - file.inFolder("00-INBOX")
+    order:
+      - file.name
+      - formula.born
+      - formula.stale
+      - content-type
+    sort:
+      - property: file.ctime
+        direction: ASC
+  - type: table
+    name: 原子笔记陈旧度
+    filters:
+      and:
+        - file.inFolder("50-ZETTELCASTEN")
+    order:
+      - file.name
+      - formula.stale
+      - formula.born
+    sort:
+      - property: file.mtime
+        direction: ASC

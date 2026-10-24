@@ -56,10 +56,8 @@ function bornOf(p) {
   return null;
 }
 
-// 状态兜底统一走 active —— 不再写已废弃的 cultivating / open / draft
-function st(p) {
-  return p.status || "active";
-}
+// 2026-10-24：原「状态」列已删。它取 status 字段，而该字段已废除；
+// 且周记列的都是本周新建的笔记，status 恒为模板默认值，零信息。
 
 // ---------------- 主逻辑 ----------------
 
@@ -105,29 +103,29 @@ if (!wm) {
     {
       type: "atomic",
       title: "🧠 本周原子洞察",
-      head: ["新增原子笔记（陈述句核心观点）", "挂载父级（Concept）", "状态", "创建日期"],
-      row: (p) => [p.file.link, p.up || "-", st(p), bornOf(p) || "-"],
+      head: ["新增原子笔记（陈述句核心观点）", "挂载父级（Concept）", "创建日期"],
+      row: (p) => [p.file.link, p.up || "-", bornOf(p) || "-"],
       empty: "本周暂无新增原子洞察",
     },
     {
       type: "concept",
       title: "📚 本周概念整合",
-      head: ["新增概念笔记", "一句话定义", "挂载父级（Area）", "状态", "创建日期"],
-      row: (p) => [p.file.link, p.description || "-", p.up || "-", st(p), bornOf(p) || "-"],
+      head: ["新增概念笔记", "一句话定义", "挂载父级（Area）", "创建日期"],
+      row: (p) => [p.file.link, p.description || "-", p.up || "-", bornOf(p) || "-"],
       empty: "本周暂无新增概念笔记",
     },
     {
       type: "question",
       title: "❓ 本周问题沉淀",
-      head: ["问题", "关联主题", "状态", "创建日期"],
-      row: (p) => [p.file.link, p.up || "-", st(p), bornOf(p) || "-"],
+      head: ["问题", "关联主题", "创建日期"],
+      row: (p) => [p.file.link, p.up || "-", bornOf(p) || "-"],
       empty: "本周暂无新增问题",
     },
     {
       type: "sop",
       title: "🛠️ 本周流程沉淀",
-      head: ["SOP", "主题介绍", "关联问题", "状态", "创建日期"],
-      row: (p) => [p.file.link, p.description || "-", p.up || "-", st(p), bornOf(p) || "-"],
+      head: ["SOP", "主题介绍", "关联问题", "创建日期"],
+      row: (p) => [p.file.link, p.description || "-", p.up || "-", bornOf(p) || "-"],
       empty: "本周暂无新增 SOP",
     },
   ];
@@ -146,8 +144,8 @@ if (!wm) {
   dv.header(4, `🧩 本周其他知识沉淀（Term/对比/记录/演进/人物/MOC · ${rest.length} 篇）`);
   if (rest.length > 0) {
     dv.table(
-      ["笔记", "类型", "描述", "状态", "创建日期"],
-      rest.map((p) => [p.file.link, p["content-type"], p.description || "-", st(p), bornOf(p) || "-"])
+      ["笔记", "类型", "描述", "创建日期"],
+      rest.map((p) => [p.file.link, p["content-type"], p.description || "-", bornOf(p) || "-"])
     );
   } else {
     dv.paragraph("*(本周暂无其他类型知识沉淀)*");

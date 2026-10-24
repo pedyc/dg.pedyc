@@ -1,5 +1,5 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+uid: 202603070001
 title: systemd
 author: AI
 description: 原子笔记类型定义最小单位的知识点、术语、API接口、单一函数、专有名词

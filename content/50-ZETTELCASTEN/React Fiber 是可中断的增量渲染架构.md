@@ -4,10 +4,11 @@ title: React Fiber 是可中断的增量渲染架构
 description: React Fiber 通过拆分渲染任务实现可中断的增量渲染
 tags: []
 date-created: 2026-05-06
-date-modified: 2026-08-30
+date-modified: 2026-10-23
 status: fleeting
 content-type: atomic
-up:
+up: "[[Fiber]]"
+
 noteId: 1792465709002
 ---
 

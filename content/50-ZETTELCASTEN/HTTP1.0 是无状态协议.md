@@ -1,12 +1,12 @@
 ---
 uid: 202610201274
-title: HTTP/1.0 是无状态协议
+title: HTTP／1.0 是无状态协议
 aliases: []
 description: HTTP/1.0 是无状态协议
 tags:
   - 前端
 date-created: 2026-10-20
-date-modified: 2026-10-20
+date-modified: 2026-10-23
 status: active
 content-type: atomic
 up: "[[HTTP~1.0]]"

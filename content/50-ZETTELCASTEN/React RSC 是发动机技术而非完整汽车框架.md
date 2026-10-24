@@ -5,10 +5,11 @@ aliases: []
 description: React 19 RSC 提供了服务端渲染能力，但完整开发体验仍需 NextJS
 tags: []
 date-created: 2026-05-06
-date-modified: 2026-05-06
+date-modified: 2026-10-23
 status: fleeting
 content-type: atomic
-up:
+up: "[[React]]"
+
 noteId: 1792465709213
 ---
 

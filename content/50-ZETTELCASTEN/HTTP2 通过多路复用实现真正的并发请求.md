@@ -5,11 +5,11 @@ aliases:
   - HTTP/2 通过多路复用实现真正的并发请求
 tags: []
 date-created: 2026-08-26
-date-modified: 2026-08-26
+date-modified: 2026-10-23
 status: fleeting
 content-type: atomic
-up:
-  - "[[HTTP~2]]"
+up: "[[HTTP]]"
+
 noteId: 1792475163142
 ---
 

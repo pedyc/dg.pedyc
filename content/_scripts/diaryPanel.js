@@ -70,8 +70,8 @@ if (part === "tasks") {
     .pages('"10-PROJECTS"')
     .where((p) => {
       if (p["content-type"] !== "project") return false;
-      const st = String(p.status || "").toLowerCase();
-      if (st === "completed" || st === "archived") return false;
+      // 2026-10-24：原先按 status 排除「已完成 / 已归档」，该字段已废除。
+      // 完成或放弃的项目会被移出 10-PROJECTS，而本查询的 scope 天然不含 40-ARCHIVE。
       if (!p.expire) return true; // 未设截止日期 → 留在行动池
       const exp = dateOf(p.expire);
       if (!exp) return true;
@@ -82,7 +82,7 @@ if (part === "tasks") {
   dv.paragraph(`> 🎯 **当前行动基准日**：\`${today}\` · 聚焦未逾期且活跃的项目任务`);
 
   dv.table(
-    ["综合评分", "推进项目 (Project)", "状态", "关联领域", "截止日期", "工期状态"],
+    ["综合评分", "推进项目 (Project)", "最后修改", "关联领域", "截止日期", "工期状态"],
     projects.map((p) => {
       const score = (Number(p.urgency) || 0) + (Number(p.consequence) || 0);
       let left = "-";
@@ -93,7 +93,15 @@ if (part === "tasks") {
         else if (diff > 0) left = `⏳ 剩 ${diff} 天`;
         else left = `⚠️ 逾期 ${Math.abs(diff)} 天`;
       }
-      return [`⭐ ${score}`, p.file.link, p.status || "active", p.area || p.up || "-", p.expire || "长期", left];
+      // 原「状态」列取 status（已废除），换成「距上次修改」——这个数由文件系统给，不会腐烂
+      let mod = "-";
+      if (p.file.mtime) {
+        const d = new Date(p.file.mtime.ts);
+        const iso = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+        const n = daysBetween(iso, today);
+        mod = n <= 0 ? "今天" : `${n} 天前`;
+      }
+      return [`⭐ ${score}`, p.file.link, mod, p.area || p.up || "-", p.expire || "长期", left];
     })
   );
 }
@@ -124,14 +132,15 @@ if (part === "artifacts") {
   dv.paragraph(`> 📅 **当日沉淀捕获基准**：\`${today}\` · 共筛选出 \`${touched.length}\` 篇相关资产`);
 
   dv.table(
-    ["笔记资产", "类型 (content-type)", "状态", "所属目录", "最后更新时间"],
+    ["笔记资产", "类型 (content-type)", "所属目录", "最后更新时间"],
     touched.map((p) => {
       let hhmm = "-";
       if (p.file.mtime) {
         const d = new Date(p.file.mtime.ts);
         hhmm = `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
       }
-      return [p.file.link, p["content-type"] || "note", p.status || "-", p.file.folder, hhmm];
+      // 原「状态」列取 status（已废除），且本表已有「最后更新时间」，直接去掉该列
+      return [p.file.link, p["content-type"] || "note", p.file.folder, hhmm];
     })
   );
 }

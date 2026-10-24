@@ -6,7 +6,6 @@ description: "{ 一句话描述这个问题 }"
 tags: []
 content-type: question
 category: learning
-status: fleeting
 up: "[[{{父级}}]]"
 ---
 

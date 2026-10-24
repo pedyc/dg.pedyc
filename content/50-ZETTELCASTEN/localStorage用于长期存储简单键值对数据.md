@@ -9,14 +9,13 @@ date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up:
-  - - Web存储
+up: "[[Web存储]]"
 noteId: 1792465707403
 ---
 
 > localStorage 提供~~持久化~~的键值对存储，数据除非手动删除否则永不过期，同源策略下数据共享。
 
-### 论据/示例
+## 论据/示例
 
 **基本用法**：
 ```javascript
@@ -42,7 +41,7 @@ localStorage.clear(); // 清空所有
 - 语言设置
 - 购物车数据
 
-### 关联
+## 关联
 
 - [[Web存储]] — 本观点的主题
 - [[sessionStorage]] — 对比：会话级存储

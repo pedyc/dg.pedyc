@@ -1,82 +1,81 @@
 # 项目长期记忆（dg.pedyc / llm-wiki）
 
-## 核心原则（用户明确约定，必须遵守）
+> 只放「必须遵守的约定」与「反直觉的坑」。过程叙事、一次性数字、失效判断都在 `daily log` 里，不要往这里搬。
 
-### 1. 断链 ≠ 错误，而是「未掌握完全的知识」
-- 知识库中的 `[[断链]]` 不是 bug，而是标记了「这个洞见我认可了、引用了，但还没提炼成 atomic 掌握」。
-- 从断链提炼 atomic 是在「消化」这些悬而未决的知识，批量创建 atomic 只是副产品，本质是补全知识。
-- 因此「断链扫描 → 提炼 atomic」是持续可做的知识治理动作，不是一次性修复。
+## 一、核心原则（用户明确约定）
 
-### 2. 40-ARCHIVE 是「免维护区」（垃圾场）
-- 归档目录只管往里丢过期/废弃的笔记，**不关心 content-type 是否规范**。
-- 不要花精力去规整 40-ARCHIVE 里的 content-type、frontmatter 格式等——那是浪费。
-- 之前把 6 篇算法题/提示词从 atomic 改成 record 是多余动作，以后不再做。
+1. **断链 ≠ 错误，是「未掌握完全的知识」**。`[[断链]]` 标记「引用了但还没提炼成 atomic」。故「断链扫描 → 提炼 atomic」是持续的治理动作，`01-META/Index/知识缺口.md`（断链医院）**永远不该被清空**——它是库的熵。
+2. **40-ARCHIVE 免维护**。只管往里丢，不规整其 content-type、frontmatter、status。花精力规整归档区是浪费。
+3. **内容/包装二维分工**：人管内容（洞察、理解），AI 管包装（frontmatter、uid、up、aliases、交叉引用、index）。按职责分，不按目录分。
+4. **atomic 的本质**：有信息增量的陈述句洞见，标题即观点。论据归 concept，atomic 只存结论；靠 concept 的「核心命题」段 + MOC 挂载。**瘦身顺序：先读它的 up 概念，再删 atomic**——>500 字的 atomic 超出的部分几乎都能在 concept 里找到，删掉的是重复不是知识。常见形态错误：把「限定」（什么时候不成立）写成论据——那属于**边界**位，写进论据会越写越长。判据：这句话在支撑观点，还是在给观点划范围？
+5. **20-AREAS 边界**：一个领域 = 一个目录 = 一份 area 笔记，是「责任领域」的容器而非同类文件堆。口诀：领域问「我负责什么」→area；知识问「我懂什么」→concept/term/question 挂 `up` 回领域。
+6. **治理成本原则**：先不管遗留，遇到再改。不为「目录整洁」专门跑一轮搬迁。
+7. **用户写作习惯**：10-PROJECTS 项目制，相关文件全丢 `P-XXX/`，结束再消化归档。
 
-### 3. 内容/包装二维分工
-- 人类管「内容」（洞察、理解），AI 管「包装」（frontmatter、uid、up、aliases、交叉引用、index）。
-- 按职责划分，不按目录划分。
+## 二、字段铁律
 
-### 4. atomic 的本质
-- atomic = 有信息增量的陈述句洞见，标题即观点。
-- 论据归 concept，atomic 只存结论。
-- 靠 concept 的「核心命题」段 + MOC 索引挂载。
+- **派生值一律走 formula / 脚本，不落 frontmatter**。总分、评级、quadrant、占比都是。理由：可派生的值手工维护必然不一致。
+- **需要二次推导的字段必然被放弃**（实测结论，不是推测）：`quadrant` / `energy-type` 全库 0 篇；`status` 已确证并废除（见下条）。能填的只有「创建时一眼可见」的字段。凡是需要人定期回看内容才能填的字段，一律不设。
+- **自定义章节名只有两种成分**：机制展开（工作原理 / 实现方式 / 属性值 / 条件清单 → 属 concept）和限定（注意事项 / 为什么需要 / 适用场景 → 属 `边界`）。各归各位后剩下的多半不够一个 `## 论据/示例`，所以这类篇的操作是「补边界」而非「删内容」。
+- **定义式 atomic 不要搬到 concept**（concept 通常已有那份定义了），而是**改写成它能够断言的那一句**：`CORS是浏览器允许服务端控制跨域访问的机制` → `CORS的约束只在浏览器侧生效，服务端无法单方面实施`。旧标题进 `aliases`、`uid`/`noteId` 沿用、concept 的引用同步改。
+- **`## 论据/示例` 下再套 `### 论据 / ### 示例 / ### 推论` 是固定病灶**：父标题本身就是多余的层，机械的 `###`→`##` 替换治不了，只能整篇重写成「观点 + 边界 + 一段论据」。判据：一个 atomic 只该有一个论据，出现 `### 论据` 通常意味着有 3-5 条。
+- **`content-type` 必须纯字符串**。写 `[moc]` / `"concept"` 会被 YAML 解析成数组，`.base` 的 `content-type == "x"` 与 dataview 字符串比较**静默失效**（症状：视图什么都不显示，极难反查）。合法值 14 种：atomic / concept / term / sop / question / comparison / record / roadmap / person / moc / area / project / article / diary。旧字段 `type:` 是历史遗留，扫描两个都查。
+- **`up` 必须写 `"[[x]]"`**。`up: [[x]]` 解析成嵌套列表 `[["x"]]`、`up: x` 是普通字符串，两者都拿不到链接且**不报错**。单父级用标量、多父级才用数组、无父级留空。根因曾是 `Truth/元数据规范` 自己教错了示例——**真值文档里的错误示例会稳定复制错误**。
+- **`status` 字段已废除**（2026-10-24 用户拍板）。现无任何模板/base/脚本读它：阶段由目录表达（INBOX→RESOURCES→ZETTELCASTEN→ARCHIVE），新旧由 `file.mtime` 表达，「哪些卡住了」用 `99-ASSETS/Bases/笔记滞留与陈旧.base`。**不要加回来**，理由与实测证据在 `Truth/元数据规范`「为什么没有 status 字段」节。存量 913 篇字段保留不删（遇到再改），新代码/新视图不得依赖它。`validate_meta.py` 会在模板里发现 `status` 时报错。
+- **信源卡字段**：`source_type` / `verify_status`（候选·待验证·已验证·已弃，一条生命周期而非并列标签）/ `source_risk`（无·推演型·立场型，**不参与总分**）/ `scored_at` / 五维 1-5。`description` 在此库承担「一句话结论」，故无独立 verdict 字段。四态里「已弃」不删卡片，留作历史基线。
+- **`source_risk` 不要删**：五维量的全是信息供给量，**没有一维量信息保真度**，故立场型源也能拿 B 级。它回答「这条信息能拿来做什么」：推演型只能当假设种子，转译走 `question` 不走 `atomic`（atomic 标题即主张，阴谋论一旦成 atomic 就静默变成「你相信的东西」）。
+- **`output_rate` 不设否决线**（用户判断）：它量「被转化成笔记的频率」不是价值。产出率 0 而总分 A/B 级反证其质量高（视野补充型，价值在改变判断框架）。判定顺序先总分、再看产出率。
 
-### 5. 20-AREAS 边界（领域容器规则）
-- 一个领域 = 一个目录 = 一份 area 笔记。目录是「责任领域」的容器，不是「同类文件的堆」。
-- 判断口诀：「领域问『我负责什么』（→area 放 20-AREAS），知识问『我懂什么』（→concept/term/question 放 30-RESOURCES，用 up 挂回领域）」。
-- 一个领域目录通常只有 1 份 `XX.md`（area 本身）+ `_resources/`。`A-知识管理` 只有一份 `知识管理.md` 是正常的。
-- 已固化到 `Truth/本库目录结构.md` 的「20-AREAS 边界（领域容器规则）」小节。
+## 三、目录与命名
 
-### 6. 用户写作习惯
-- 10-PROJECTS：项目制，围绕项目的文件全丢进 `P-XXX/`，结束后再消化/归档。
-- 治理成本原则：**「先不管遗留，遇到再改」**——不要为了「目录整洁」专门花一轮成本去搬历史遗留文件，等自然遇到时顺手改。
+- 顶层：`00-INBOX`（唯一入口，不计入知识资产）→ `01-META` → 10-PROJECTS / 20-AREAS / 30-RESOURCES / 40-ARCHIVE / 50-ZETTELCASTEN / 60-BLOGS / 80-PRIVATE / 90-DIARY / 99-ASSETS。`_` 前缀 = 非知识工件（模板/脚本/附件）。
+- 前缀语义：十位 = 档位，个位 = 档内序号，**宽度统一 2 位**。真值在 `01-META/Truth/本库目录结构.md`。
+- **目录与 content-type 已解耦**：归属由目录决定、形态由 content-type 决定，**互不推导、不做一致性校验**。唯一方向性约束：三个单形态目录 `50-ZETTELCASTEN`→atomic、`60-BLOGS`→article、`90-DIARY`→diary。
+- **命名规则按对象分三层**：目录名 → `Truth/本库目录结构`；文件名 + aliases → `Truth/文件名与别名规范`；atomic 标题须为陈述句 → `Truth/笔记类型规范`。
+- **Guide/ 下不得有与 Truth/ 同名的文件**（曾出现僵尸副本，导致链接解析不可预测）。
+- 改顶层目录名：Obsidian 运行时 `git mv` 整目录会 Permission denied，用 `robocopy /MOVE` + `git add -A`（仍识别 rename）。
 
-## 技术约定
+## 四、链接规范
 
-- **`quadrant` / `energy-type` 是僵尸字段**（2026-10-23 实测）：`10-PROJECTS` 里 `content-type: project` 只有 2 篇，`consequence`/`urgency`/`expire` 各 2 篇（填了），而 `quadrant` 与 `energy-type` **0 篇**——只在模板、40-ARCHIVE 和 copilot 示例里出现。规律：需要二次推导的字段会被放弃，直观数字会被填。故 `quadrant` 应由 `consequence × urgency` 派生而非手工维护；`energy-type` 属日程层，不进 project 字段。
+- **链接一律用文件名，绝不用别名**：`[[闭包]]` 而非 `[[C-闭包]]`。别名只服务检索与语义提示。两条理由：① 别名随时该换，被依赖后改名即断链；② **别名甚至可能不存在**（实测 `[[A-宗教与神秘学]]` 被引 9 次而目标从未定义该别名）。
+- **`[[标题|显示文本]]` 允许**，但与 `aliases` 严格区分：`aliases` 是文件属性（改一次影响全库、可能不存在），显示文本是单次引用的局部写法。文件名通顺就别加 `|`；表格内写 `\|`；若同一显示文本重复十几处，说明**文件名该改**。
+- **改链接时不能碰的四类文件**：规范文档里的反例示例、`99-ASSETS/copilot/`（对话存档，改了等于篡改历史）、`.claude/`（配置示例）、`01-META/Log/`（流水日志）。
+- 常驻检查：`python _scripts/validate_meta.py --all`（脏值）、`--links`（别名引用 / 假前缀引用 / up 写法）。
+- **补 `up` 必须先校验目标真存在**（`_scripts/check_targets.py`）。实测凭印象写的父级名三个都不存在（`React Server Components` / `编译时与运行时` / `Vue3语法糖`），不校验就是用**一个新断链换掉一个空字段**。
+- **清单里的篇数会过期，动手前先重扫**。原子笔记整理清单原写「up 为空 51 篇」，前三组改写 frontmatter 时顺手消掉 24 篇，实测只剩 27 篇。
 
-- **Bases 看板（kanban）做法**（Obsidian 1.14+ 原生 `type: kanban`）：一卡 = 一文件，故清单类内容要转看板必须先拆成独立笔记；分列属性**不可用 `status`**（保留给笔记生命周期），改用业务属性如 `play_status`；视图里显式写 `groupOrder` 列出全部列，否则只有有值的列会渲染；属性引用统一用 `note.` 前缀（也规避了 `content-type` 这类带连字符标识符的表达式解析问题）。
-- **base 的组织形态：用户明确偏好「md + 独立 .base 文件」**，不要用 md 内的 ```base 内联代码块（曾按内联方案做过一版被否）。理由：独立 `.base` 能用图形界面调视图，且 `![[xx.base]]` 可直接嵌进别的笔记；而笔记再被嵌入时二级 base 不渲染。
-- **base 的 `formulas` / `properties` 用法**（真实语法出处 help.obsidian.md/bases/functions）：`formulas:` 与 `properties:` 都是**顶层键**（非 view 内），定义为表达式字符串，视图里用 `formula.<名>` 引用，公式之间可互引（不可循环）。`if()` 支持 3 参；`== null`、`||`、JS 语义均可用。**关键坑：JS 里 `number + null === 5`，空属性不守卫会被当 0 静默计入**，求和前须 `if(x == null, null, ...)` 判空。派生值一律走 formula，不落 frontmatter（与「quadrant 不落库」同一原则）。列名中文化用 `properties:` 下的 `displayName`（如 `description: {displayName: 结论}`），中文列名不进任何表达式。
-- **信源库结构（2026-10-23 起）**：`30-RESOURCES/信源/` 一源一卡（content-type: record，`aliases: R-源名`），`99-ASSETS/Bases/信源.base` 三视图——`总览`（表：信源/类型/状态/评分/评级/结论/评分时间/采信风险，**排第一，供 MOC 内嵌时首屏一目了然**）、`验证状态`（kanban 按 `verify_status`，四列 = 候选 / 待验证 / 已验证 / 已弃）、`五维明细`。字段：`source_type` / `verify_status` / `source_risk` / `scored_at`（上次打分日期，超 4 个月视为过期）/ 五维 `density`·`timeliness`·`depth`·`uniqueness`·`output_rate`（1-5）。**`description` 在这个库里承担「一句话结论」**，故不另设 verdict 字段。
-- **每张信源卡正文首部有「评分速览表」**（2026-10-23）：一段 `dataviewjs` 从 `dv.current()` 的 frontmatter 实时算出「维度/分值 + 综合行 + 评分时间·采信风险·状态」，块内零手填。**不要改成静态 markdown 表**——那会让同一批数字存两份、改分要记得改两处。逻辑已全部抽到 `_scripts/scorecard.js`（8 卡 + 模板一律只留 `await dv.view("_scripts/scorecard")`，实测路径解析正常），改评分规则只改那一处。注意它仍与 base `formulas.total` **平行**（JS vs base formula），这两处必须同步。
-- **dataviewjs 代码块可以离线验证**：`new Function("dv", code)(stubDv)`，stub 提供 `dv.current/table/paragraph` 并打印入参，用 node 直接跑出渲染结果。Obsidian 是 GUI 无法脚本验证，但纯逻辑块可以这样测，比"打开看看"可靠。注意本库 `package.json` 有 `"type": "module"`，测试脚本要用 `.cjs` 后缀才能 `require`。
-- **脚本体系的分工（2026-10-23 起，详见 [[本库脚本化]]）**：`_scripts/` 下 `.js` = Obsidian 运行时（`dv.view` 或 Templater），`.py` = 终端批处理。脚本价值只来自**收口 / 排序 / 校验**三样；不做自动补字段、不做依赖"记得定期跑"的提醒、不做自动提炼 atomic。
-- **`dv.view` 的三条契约**（dataview 0.5.68，main.js:18974）：① 逻辑放 `_scripts/<name>.js`，正文只留调用；② **脚本内不能出现异步等待关键字**（纯字符串匹配，注释里出现也算，命中后整份文件被包进 async IIFE、`return` 静默失效）；③ 执行环境是 `new Function("dv","input",contents)`，**作用域里只有全局变量与这两个形参**——`app`/`moment` 不保证可见，日期比较用 ISO 字符串字典序，ISO 周计算手写。第二个形参 `input` 可当分派开关（`diaryPanel.js` 用它让一个文件顶两块用）。
-- **`content-type` 必须写成纯字符串**：写成 `[moc]` / `"concept"` 会被 YAML 解析成数组，`.base` 的 `content-type == "x"` 过滤与 dataview 的字符串比较会**静默失效**（表现为"视图什么都不显示"，极难反查）。2026-10-23 一次性修了 58 篇。常驻检查：`python _scripts/validate_meta.py --all`。
-- **知识缺口页 = `01-META/Index/知识缺口.md`**（别名「断链医院」）：`_scripts/brokenLinks.js` 把全库未解析链接按被引用次数排序，回答"2249 个未掌握的洞里先补哪个"。断链在本库不是错误，是「引用了但还没提炼成 atomic」——所以这页永远不该被清空。
-- **Bases 的 filters 有两个层级**（2026-10-23 实测可用）：写顶层 = 作用于全部视图；写在某个 `views[]` 条目下 = 只作用于该视图。信源库据此让 `总览` 表排除 `已弃`（`verify_status != "已弃"`），而看板仍显示全部四列——这是「隐藏 vs 隐藏得没道理」的分界：看板就是生命周期全景，表是当前阅读清单。
-- **信源四态是一条生命周期而非并列标签**：候选（记下未消费，评分为空属正常）→ 待验证（观察期）→ 已验证（有 ingest）→ 已弃（退订，卡片保留作历史基线）。已弃不删卡片，否则下次遇到同类源要重新踩一遍。
-- **`source_risk` 的意义（不要删）**：五维评分量的全是「信息供给量」，**没有一维量「信息保真度」**，故阴谋论源与立场型源都能拿 3/3/4 稳定落在 B 级「观察」。`source_risk` 取 `无 / 推演型 / 立场型`，**不参与总分与评级**，回答的是「这条信息能拿来做什么」：推演型只能当假设种子，转译必须走 `question` 而非 `atomic`（atomic 标题即主张，阴谋论一旦成 atomic 就静默变成「你相信的东西」）；立场型只能当对立视角对冲，须成对消费。**只三值，不再细分**（2026-10-23 用户否决了「作者视角型」第四类的提案）：`立场型` 定义为「立场或叙事框架参与了取样与结论」，同时容纳「取样被裁剪」（寒清关下）与「素材真实而框架先行」（柴静）两种表现——判据是**采信动作是否相同**，动作相同就不该拆成两个标签。
-- **`output_rate` 不设否决线**（用户 2026-10-23 判断，勿"优化"掉）：它量的是「被转化成笔记的频率」，不是价值。**产出率 0 而总分仍 A/B 级，反证其质量高**——价值在改变判断框架，框架变了不会表现为新增笔记，却让其余所有源更好用（视野补充型，必留）。判定顺序是「先看总分、再看产出率」，低产出 + 低总分才是退订的完整证据。
-- **`git add` 的 pathspec 大小写会静默零命中**（2026-10-23 踩坑，代价是一次漏交 26 个文件）：git 索引里记录的日记目录是 `90-Diary`（小写 i），而实际路径一直写 `90-DIARY`。在 Windows 上两者都能访问（文件系统不敏感），但 `git add content/90-DIARY` **一条都匹配不上、不报错**，commit 照常"成功"，只装进去未受影响的少数文件。症状：下次 `git status` 冒出几十行 M，很容易被当成换行/格式噪音忽略。**提交后必须验证 `git show --stat` 的文件清单**，别只看"提交成功"。
-- **本库 git 仓库根在上一级** `D:/Workspace/pedyc/dg,pedyc`，vault 只是其中的 `content/`。根 `.gitignore` 已存在且**含忽略 `.gitignore` 自身的规则**（第 3 行），因此不要在 vault 内新建 .gitignore——改根文件。另：`.obsidian/` 被根忽略但其中若干文件已被跟踪，`git add` 需 `-f`。
-- **换行一律 LF**（`.gitattributes` 为 `* text=auto eol=lf`，但 `core.autocrlf=true`，故 git 只给 warning 不报错、仓库内始终存 LF）。**坑：python `pathlib.write_text()` 在 Windows 默认把 `\n` 写成 `\r\n`**，批量脚本改完 md 会让工作区变 CRLF（不明显但会污染同目录一致性）。批量改文件的脚本必须用二进制回写 `p.write_bytes(b.replace(b"\r\n", b"\n"))` 或 `open(..., newline="")`。
-- **`status` 只允许 3 个值**：fleeting / active / archived（2026-10-23 由 5 值收窄，`cultivating` 与 `completed` 并入 `active`，改写 344 篇）。历史上存在大量脏值（seed/sprout/evergreen/emoji/YCTODO 等），同日已清理 28 处；常驻巡检视图 `99-ASSETS/Bases/元数据巡检.base`。40-ARCHIVE 按免维护原则保留旧值（31 处）。仍有约 277 篇缺该字段。
+## 五、脚本体系（详见 `01-META/Guide/本库脚本化.md`）
 
-- **顶层目录结构（2026-10-23 起）**：`00-INBOX`（捕获篮，唯一入口）→ `01-META`（系统元数据）→ 10-PROJECTS / 20-AREAS / 30-RESOURCES / 40-ARCHIVE / 50-ZETTELCASTEN / 60-BLOGS / 80-PRIVATE / 90-DIARY / 99-ASSETS。原 `00-META` 已更名 `01-META`，原 `30-RESOURCES/Inbox` 已提升为顶层 `00-INBOX`。
-- **前缀语义（真值见 `01-META/Truth/本库目录结构.md`）**：十位 = 档位（0x 系统入口 / 1x 现在 / 2x 长期 / 3x 参考 / 4x 退役 / 5x 沉淀 / 6x 输出 / 8x 私密 / 9x 附属），个位 = 档内序号；**宽度统一 2 位**，禁止 `000-`/`010-` 混用；`_` 前缀 = 非知识工件（模板/脚本/附件）；留空档位即预留（7x 空着）。
-- **00-INBOX 不计入知识资产**：Inbox 是未加工原料，不参与沉淀统计（日记「今日知识资产沉淀」的排除条件为 `-"01-META" and -"_templates" and -"00-INBOX"`，21 篇日记 + 模板）。只有完成 ingest 迁出的内容才算沉淀。
-- 改顶层目录名的坑：Obsidian 运行时 `git mv` 整目录会 Permission denied，用 `robocopy /MOVE` + `git add -A`（仍识别 rename）。
-- **目录与 content-type 已解耦（2026-10-23）**：归属由目录决定、形态由 content-type 决定，两者**互不推导、不做一致性校验**。旧「目录↔类型一一映射」与「特定型/通用型」规则已废止。`project`/`area` 收窄为「工作区主页」角色；`10-PROJECTS`/`20-AREAS` 是工作区/容器，**形态不限**（项目里出现 concept/question 不是错位）。唯一方向性约束：三个单形态目录 `50-ZETTELCASTEN`→atomic、`60-BLOGS`→article、`90-DIARY`→diary。
-- 真值表在 `01-META/Truth/`（目录结构、笔记类型规范、命名规范、元数据规范、标签规范、人机分工规范、真值索引）。
-- **命名规则按对象分三层，各有唯一真值**：目录名 → `Truth/本库目录结构`「前缀语义」；文件名 + `aliases` → `Truth/文件名与别名规范`（2026-10-23 由 `命名规范.md` 改名，旧名保留为 alias）；`atomic` 标题须为陈述句 → `Truth/笔记类型规范`（形态特征，不属命名规则）。
-- **链接一律用文件名，绝不用别名**（2026-10-23 全库执行）：`[[闭包]]` 而不是 `[[C-闭包]]`。别名只服务检索与语义提示。两条理由：① 别名是检索标签，随时该换，被链接依赖后改名即成断链；② **别名甚至可能不存在**——实测 `[[A-宗教与神秘学]]` 被 5 篇引用 9 次，而目标文件根本没定义这个别名，一直是断链。文件名的存在性由文件系统保证，别名的存在性靠人记。常驻检查 `python _scripts/validate_meta.py --links`（同时查别名引用与「假前缀引用」）。当日改写 169 处别名引用 + 15 处假前缀引用。
-- **改链接时不能碰的四类文件**：规范文档里的 `[[C-闭包]]` 是「不要这么写」的反例示例，改了毁示例；`99-ASSETS/copilot/` 是 AI 对话存档，改了等于篡改历史；`.claude/` 是配置示例；`01-META/Log/` 是流水日志，反映当时状态。
-- **`[[标题|显示文本]]` 是允许的**（2026-10-23 用户确认并写入 `Truth/文件名与别名规范`「显示文本」节）：链接目标仍是文件名，竖线后只改这一处的渲染文字。用于文件名不通顺的场合（`[[Signal(Angular)|Angular Signals]]`、`[[SSR|服务端渲染]]`、`[[Hooks(React)|React Hooks]]`）。**但要和 frontmatter 的 `aliases` 严格区分**——两者常被混称为「别名」：`aliases` 是文件属性（改一次影响全库引用、可能压根不存在），显示文本是单次引用的局部写法（永远跟着那行文字）。三条约定：文件名通顺就别加 `|`；表格内必须写 `\|`（否则撑坏表格）；若同一显示文本在十几处重复出现，说明**文件名该改**，显示文本只是补丁。当日清掉 126 处「显示文本是前缀形态」的残留（`[[设计模式|MOC-设计模式]]` → `[[设计模式]]`，是上一轮别名改写只顾目标、没顾显示文本留下的）。
-- **`up` 字段必须写成 `"[[x]]"`，裸写 `[[x]]` 会静默失效**（2026-10-23 全库统一 842 处）：YAML 里 `up: [[x]]` 解析成**嵌套列表** `[["x"]]`，dataview 拿不到链接；`up: x` 只是普通字符串，也不是链接；只有 `up: "[[x]]"` 是「一个链接」。这个差异**不报错、不告警**，只在读取时表现为「字段是空的」。规则：单父级用标量、多父级才用数组（全库仅 10 处）、没有父级就留空（不写 `null`/`""`/`[]`）。**根因是 `Truth/元数据规范` 那张表的 up 示例本身写的是 `[[MOC/概念]]`**——规范教错了写法，属「真值文档里的错误示例会稳定复制错误」。常驻检查 `validate_meta.py --links` 的 `check_up_style()`，它另报「待补父级」（悬空 up 报出但不计 problems，断链是待办不是错误）。
-- **Guide/ 下不得存在与 Truth/ 同名的文件**：曾有过 `Guide/命名规范.md`、`Guide/元数据规范.md` 两个僵尸副本，导致 `[[命名规范]]` 等链接解析不可预测、锚点失效。Truth 建立后必须同步删除 Guide 旧版。
-- 合法 content-type 共 14 种：atomic / concept / term / sop / question / comparison / record / roadmap / person / moc / area / project / article / diary。校验只看取值合法性 + 单形态目录，不看目录匹配。
-- 新字段 `content-type:`，旧字段 `type:` 是历史遗留（扫描时两个都查）。
-- yanki 识别：`~~挖空~~`→Cloze 卡片；孤立 `---`→Basic 分隔符（需避免）；`noteId` 字段自动添加勿删。**但 yanki 的同步范围只有 `50-ZETTELCASTEN`（data.json 的 folders 仅此一项），所以 `_templates` 与 30-RESOURCES 里的 `---` 不会触发切卡**——切卡风险只存在于 50-ZETTELCASTEN 内的笔记。另：`obsidian-to-anki-plugin` 装了但未启用。
-- Templater 只认 `<% %>`，不认 `{{ }}`；Linter 的 `lintOnSave` 不走 foldersToIgnore，模板保护靠 filesToIgnore。
-- **模板正文分隔线约定（2026-10-23）**：frontmatter 的 `---` 必需；正文只用 `---` 分隔 `##` 一级章节，`##` 与 `###` 之间不要加——否则三级标题被抬到与二级等权。现状 15 处（article/project/question 各 4/4/6 + moc 1）。
-- **Templater 启动模板在 `_scripts/template_startup.md`，不在 `_templates/`**：放模板目录会被收进「插入模板」列表，误选即把当前笔记归档走。其路径登记在 `.obsidian/plugins/templater-obsidian/data.json` 的 `startup_templates`，移动文件必须同步改那里（插件按库内路径解析，不要求位于 templates_folder）。
-- dataviewjs 的 DataArray 无 reduce/find，用 flatMap/first。
-- **`dv.view()` 可抽出共享 dataviewjs 逻辑**（dataview 0.5.68 实测，实现见 `main.js:18953`）：`async view(viewName, input)` 按 `{name}.js` → `{name}/view.js` 两级用 `getFirstLinkpathDest` 解析，再 `new Function("dv","input",contents)` 执行。故：
-  - 脚本内 `dv` 直接可用，**不含 `input` 以外的外部变量**
-  - **三个必须知道的坑**：① dataview 用**纯字符串匹配**检测异步等待关键字，一旦出现就把整份文件包进 async IIFE，任何 `return` 被静默吞掉——注释里出现该词也会触发，所以脚本文件里连注释都别写它；② 非空返回值会被 `renderValue` **二次渲染**，务必只靠 `dv.xxx` 渲染、不 return；③ 路径写库内相对路径（如 `_scripts/scorecard`），不带 `.js`。三处都不能靠「看起来对」判断，用 `new Function` 在 node 里 stub 掉 `dv` 跑一遍即可等价验证。
-  - 信源评分速览即用此机制：逻辑在 `_scripts/scorecard.js`，卡片正文只留一行。改评分规则只改一处。
-  - **领域页看板**同理：`_scripts/areaBacklinks.js`（3 个领域页 + `template_area.md`）。它收口的理由与日记不同——写在模板里的逻辑**副本数会随新建领域线性增长**，属于"未来型重复"。分组顺序按知识粒度（moc → area → project → concept → comparison → atomic → term → question → sop → roadmap → person → record → article → diary），「未分类」置顶，未登记类型垫底但不隐藏。**新建领域时不要把这 17 行贴回模板**。
-  - **`dv.pages("[[名字]]")` 不计别名，是这类反查的默认陷阱**（2026-10-23 实测：知识管理页只显示 28，应为 82）。本库领域页都带 `A-xxx` 别名，实测 82 条引用里 54 条（66%）走别名——别名链接被 Obsidian 解析后指向文件完整路径，与「名字」对不上，整批静默丢弃，**没有报错**。正确做法是遍历 `p.file.inlinks` 用去 `.md` 的路径精确比对 `dv.current().file.path`。凡是「按名字反查反链」的 dataview 都要按这个写。
+- **脚本价值只来自三样：收口 / 排序 / 校验**。不做自动补字段打标签、不做依赖「记得定期跑」的提醒、不做自动提炼 atomic。
+- 分工：`_scripts/*.js` = Obsidian 运行时（`dv.view` 或 Templater）；`_scripts/*.py` = 终端批处理。
+- 已有：`scorecard.js`（信源五维速览）、`areaBacklinks.js`（领域页反链分组）、`diaryPanel.js`（日记双面板，`input.part` 分派）、`weekPanel.js`（周记五段）、`brokenLinks.js`（断链医院）、`validate_meta.py`（校验，枚举从 Truth 现场解析不硬编码）、`stats.py`（生成 `01-META/Log/本库统计.md`）、`count_words.py`（剔除 frontmatter 与代码块的字数，瘦身复核）、`scan_orphan_atomic.py`（列 `up` 为空的 atomic）、`check_targets.py`（校验候选父级存在性）、`apply_up_mapping.py`（按写死映射补 `up`）。
+- **`dv.view` 三条契约**（dataview 0.5.68，`main.js:18953`，`async view(name, input)`）：
+  1. 逻辑放 `_scripts/<name>.js`，正文只留 `await dv.view("_scripts/x")`，路径不带 `.js`。
+  2. **脚本内不能出现异步等待关键字**——dataview 用纯字符串匹配，注释里出现也会把整份文件包进 async IIFE，`return` 静默失效。
+  3. 执行环境是 `new Function("dv","input",contents)`，**作用域里只有全局变量与这两个形参**：`app`/`moment` 不保证可见，日期比较用 ISO 字符串字典序，ISO 周手写。`input` 可当分派开关。
+  4. 非空返回值会被 `renderValue` 二次渲染，**只靠 `dv.xxx` 渲染、不 return**。
+- **`dv.pages("[[名字]]")` 不计别名**，是反查类查询的默认陷阱（实测领域页只显示 28 应为 82，82 条引用里 54 条走别名，整批静默丢弃无报错）。正确做法：遍历 `p.file.inlinks`，用去 `.md` 的路径精确比对 `dv.current().file.path`。
+- **dataviewjs 可离线验证**：`new Function("dv", code)(stubDv)`，stub 提供 `current/table/paragraph` 并打印入参，node 直接跑。本库 `package.json` 有 `"type": "module"`，测试脚本要 `.cjs`。
+- **本地统计 vs 全局指标**：全局指标（原子数/总数/占比）由 `stats.py` 一次算出写成 **dataview inline field**（`原子笔记 [atom_count:: 226] 篇`），别处用 `dv.page("01-META/Log/本库统计").atom_count` 读——全库唯一数据源。inline field 不进 frontmatter，绕开「派生值不落库」。
+
+## 六、Bases
+
+- **组织形态：md + 独立 `.base` 文件**（用户明确偏好），不要 md 内联 ```base 代码块。理由：独立文件可图形调视图、可 `![[xx.base]]` 嵌入；笔记再被嵌入时二级 base 不渲染。
+- **filters 两个层级**：顶层 = 作用于全部视图；`views[]` 条目下 = 只作用于该视图。（信源库靠此让 `总览` 排除已弃、看板仍显示四列——「看板是生命周期全景，表是当前阅读清单」。）
+- **`formulas` / `properties` 是顶层键**（非 view 内），视图里用 `formula.<名>` 引用，公式可互引。`if()` 支持 3 参。**坑：空属性在 JS 语义下被当 0 静默计入**，求和前须 `if(x == null, null, ...)`。列名中文化用 `properties: {x: {displayName: 中文}}`，中文不进表达式。
+- **看板（kanban）**：一卡 = 一文件，清单类内容要转看板必须先拆成独立笔记；分列属性**不可用 `status`**，用业务属性（`play_status`/`read_status`/`apply_status`）；显式写 `groupOrder` 列全所有列，否则只渲染有值的列；属性引用统一 `note.` 前缀。
+- **base 读不到别的笔记的字段**（一行 = 一个笔记，无法跨笔记取值），故它永远「产出清单」不「产出数字」。下钻用它，指标别用它。
+- **零维护观测用 `file.ctime` / `file.mtime` 的 `.relative()`**（`笔记滞留与陈旧.base`）：文件系统时间不依赖任何字段、不可能漏记，比 `date-modified` 更根本（后者有 17 篇缺值）。formula **名用英文**、中文放 `properties.<名>.displayName`——中文 formula 名未验证。`file.inFolder()` 白名单列目录比「排除式 filter」可靠（已在元数据巡检实测）。
+
+## 七、工具链坑
+
+- **`git add` 的 pathspec 大小写会静默零命中**：索引记的是 `90-Diary`，实际写 `90-DIARY`，Windows 上两者都能访问但 pathspec **一条都匹配不上、不报错**，commit 照常「成功」。**提交后必须 `git show --stat` 核对文件清单**。
+- git 仓库根在上一级 `D:/Workspace/pedyc/dg,pedyc`，vault 只是 `content/`。根 `.gitignore` 含忽略自身的规则（第 3 行），不要新建；`.obsidian/` 被忽略但部分已跟踪，`git add` 需 `-f`。
+- **换行一律 LF**。**坑：python `pathlib.write_text()` 在 Windows 默认写 `\r\n`**，批量脚本必须 `write_bytes(b.replace(b"\r\n", b"\n"))` 或 `open(newline="")`。
+- **shell 会吞反斜杠**：带正则/转义的扫描一律写成 `.py` 文件再执行，不要 `python -c`。
+- **覆盖已存在文件前先看 `git status`**（用户可能同时在 Obsidian 里改）。
+- yanki：`~~挖空~~`→Cloze，孤立 `---`→Basic 分隔符。**同步范围只有 `50-ZETTELCASTEN`**，别处的 `---` 不会切卡。`noteId` 自动添加勿删。
+- Templater 只认 `<% %>`；Linter 的 `lintOnSave` 不走 foldersToIgnore，模板保护靠 filesToIgnore；Linter **不会**改 `up` 的写法。
+- **模板正文分隔线**：`---` 只分隔 `##` 一级章节，`##` 与 `###` 之间不加（否则三级标题被抬到与二级等权）。
+- **Templater 启动模板在 `_scripts/template_startup.md`**，不在 `_templates/`（放模板目录会被收进「插入模板」列表，误选即归档当前笔记）。路径登记在 `.obsidian/plugins/templater-obsidian/data.json` 的 `startup_templates`，移动必须同步改。
 - 双副本：活跃 `D:\Workspace\pedyc\dg,pedyc\content`，旧副本 `D:\Workspace\pedyc\site\apps\dg\content`。

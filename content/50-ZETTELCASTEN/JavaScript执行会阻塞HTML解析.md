@@ -9,14 +9,13 @@ date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up:
-  - - 浏览器渲染流程
+up: "[[浏览器渲染流程]]"
 noteId: 1792465707184
 ---
 
 > JavaScript 可能修改 DOM 或 CSSOM，因此渲染引擎在执行 JavaScript 时会暂停~~HTML 解析~~，直到 JS 执行完成。
 
-### 论据/示例
+## 论据/示例
 
 **阻塞原因**：
 - JS 可以通过 document.write() 修改 HTML
@@ -43,7 +42,7 @@ noteId: 1792465707184
 <script defer src="app.js"></script>
 ```
 
-### 关联
+## 关联
 
 - [[浏览器渲染流程]] — 本观点的主题
 - [[事件循环]] — JS 执行与渲染的协调机制

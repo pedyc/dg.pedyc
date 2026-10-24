@@ -8,7 +8,6 @@ tags:
   - 周回顾
   - weekly
   - diary
-status: active
 content-type: diary
 up: "[[90-DIARY/]]"
 ---

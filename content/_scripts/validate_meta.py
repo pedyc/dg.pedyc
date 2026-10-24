@@ -3,8 +3,9 @@
 """
 元数据校验器 —— 检查模板与笔记的 frontmatter 是否符合 Truth/ 里的规范。
 
-为什么需要它：改规范时必然漏改模板。2026-10-23 把 status 从 5 值收窄到 3 值时，
-一次改动了 8 个模板；下次再改，靠人记是不可靠的。
+为什么需要它：改规范时必然漏改模板。2026-10-24 废除 status 字段时，
+17 个模板要逐个删那一行；2026-10-23 把 status 从 5 值收窄到 3 值时改动了 8 个。
+下次再改，靠人记是不可靠的。
 
 用法（在 vault 根目录执行）：
     python _scripts/validate_meta.py            # 只校验模板
@@ -97,15 +98,6 @@ def load_allowed_fields():
     if not fields:
         sys.exit("✗ 无法从 Truth/元数据规范.md 解析字段表，请检查文件格式")
     return fields
-
-
-def load_status_values():
-    text = read(TRUTH / "元数据规范.md")
-    block = text.split("## status：笔记状态")[-1].split("## 按 content-type")[0]
-    vals = set(re.findall(r"^\|\s*`([a-z]+)`\s*\|", block, re.M))
-    if not vals:
-        sys.exit("✗ 无法从 Truth/元数据规范.md 解析 status 枚举")
-    return vals
 
 
 def load_content_types():
@@ -361,14 +353,13 @@ def check_up_style():
 def main():
     args = set(sys.argv[1:])
     allowed = load_allowed_fields()
-    statuses = load_status_values()
     ctypes = load_content_types()
     cats = load_categories()
     # yaml 里允许出现但不属于"元数据字段"的（模板占位等）
     allowed |= {"publish", "permalink", "draft"}
 
     print(f"真值来源：{TRUTH.relative_to(ROOT)}")
-    print(f"  合法字段 {len(allowed)} 个 · status {len(statuses)} 值 · content-type {len(ctypes)} 种")
+    print(f"  合法字段 {len(allowed)} 个 · content-type {len(ctypes)} 种")
     if cats:
         print(f"  category {len(cats)} 值：{' / '.join(sorted(cats))}")
     print()
@@ -393,12 +384,6 @@ def main():
                 elif k in KNOWN_EXTENSIONS and k not in allowed:
                     unregistered.setdefault(k, []).append(p.name)
 
-            st, st_style = norm_val(vals.get("status", ""))
-            if st and "<%" not in st and st not in statuses:
-                issues.append(f"status 值 `{st}` 非法（合法：{' / '.join(sorted(statuses))}）")
-            elif st_style:
-                issues.append(f"status 写法不规范：`{vals.get('status')}` 应写成纯字符串")
-
             ct, ct_style = norm_val(vals.get("content-type", ""))
             if ct and "<%" not in ct and ct not in ctypes:
                 issues.append(f"content-type 值 `{ct}` 非法")
@@ -409,7 +394,11 @@ def main():
             if ca and cats and "<%" not in ca and ca not in cats:
                 issues.append(f"category 值 `{ca}` 非法（合法：{' / '.join(sorted(cats))}）")
 
-            for need in ("uid", "title", "content-type", "status"):
+            # status 已于 2026-10-24 废除：模板里若又出现，视为「把废弃字段加回来了」
+            if "status" in keys:
+                issues.append("status 字段已于 2026-10-24 废除，模板不应再生成（见 Truth/元数据规范）")
+
+            for need in ("uid", "title", "content-type"):
                 if need not in keys:
                     issues.append(f"缺必填字段 `{need}`")
 
@@ -426,11 +415,10 @@ def main():
         print("\n== 全库脏值（只报数，不改） ==")
         # 40-ARCHIVE 按免维护原则不参与治理，旧值保留
         skip_dirs = {".obsidian", ".trash", ".workbuddy", ".git", ".claude", "_templates", "40-ARCHIVE"}
-        dirty_status = {}
-        style_status = []
         dirty_type = {}
         style_type = []
-        miss_status = 0
+        legacy_status = 0
+        legacy_related = 0
         miss_uid = 0
         total = 0
         for p in ROOT.rglob("*.md"):
@@ -440,13 +428,11 @@ def main():
             if keys is None:
                 continue
             total += 1
-            st, st_style = norm_val(vals.get("status", ""))
-            if not st:
-                miss_status += 1
-            elif st not in statuses:
-                dirty_status.setdefault(st, []).append(p.name)
-            elif st_style:
-                style_status.append(p.name)
+            # status / related 均已废除：只数存量，不比合法性、不计入 problems
+            if norm_val(vals.get("status", ""))[0]:
+                legacy_status += 1
+            if "related" in keys:
+                legacy_related += 1
             if "uid" not in keys:
                 miss_uid += 1
             ct, ct_style = norm_val(vals.get("content-type", ""))
@@ -456,15 +442,9 @@ def main():
                 style_type.append(p.name)
 
         print(f"  扫描 {total} 篇（已排除 01-META/_templates/40-ARCHIVE/.claude 等）")
-        print(f"  缺 status：{miss_status} 篇 · 缺 uid：{miss_uid} 篇")
-
-        if dirty_status:
-            print("\n  status 真脏值：")
-            for k, v in sorted(dirty_status.items(), key=lambda x: -len(x[1])):
-                print(f"    `{k}` × {len(v)}  例：{', '.join(v[:3])}")
-            problems += sum(len(v) for v in dirty_status.values())
-        else:
-            print("\n  status 无脏值 ✓")
+        print(f"  缺 uid：{miss_uid} 篇")
+        print(f"  存量 status：{legacy_status} 篇 · 存量 related：{legacy_related} 篇"
+              f"（两字段均已废除，仅计数、不报错，见 Truth/元数据规范 字段墓碑）")
 
         if dirty_type:
             print("\n  content-type 真脏值：")
@@ -474,12 +454,9 @@ def main():
         else:
             print("  content-type 无脏值 ✓")
 
-        if style_status or style_type:
+        if style_type:
             print("\n  写法不规范（值合法但用了引号/方括号，会让 .base 过滤失效）：")
-            if style_status:
-                print(f"    status × {len(style_status)}  例：{', '.join(style_status[:3])}")
-            if style_type:
-                print(f"    content-type × {len(style_type)}  例：{', '.join(style_type[:3])}")
+            print(f"    content-type × {len(style_type)}  例：{', '.join(style_type[:3])}")
 
     # ---------- 3. 链接规范 ----------
     if "--links" in args:

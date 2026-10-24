@@ -4,11 +4,11 @@ aliases: []
 description: await关键字是让出线程的标志，其后的语句被视作微任务
 tags: []
 date-created: 2026-08-18
-date-modified: 2026-08-30
+date-modified: 2026-10-23
 status: fleeting
 content-type: atomic
-up:
-  - "[[事件循环]]"
+up: "[[事件循环]]"
+
 noteId: 1792475157987
 ---
 

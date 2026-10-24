@@ -6,7 +6,6 @@ description: ""
 tags: []
 content-type: record
 category: learning
-status: fleeting
 up: "[[{{父级}}]]"
 date: ""
 location: ""

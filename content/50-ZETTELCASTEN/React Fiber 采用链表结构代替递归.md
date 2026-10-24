@@ -4,11 +4,11 @@ title: React Fiber 采用链表结构代替递归
 description: React Fiber 用链表代替递归树遍历，实现可中断的渲染
 tags: []
 date-created: 2026-05-06
-date-modified: 2026-07-14
+date-modified: 2026-10-23
 status: active
 content-type: atomic
-up:
-  - "[[Fiber]]"
+up: "[[Fiber]]"
+
 noteId: 1792465708630
 ---
 

@@ -4,7 +4,6 @@ title: template_term
 aliases: ["T-{{术语名称}}"]
 description: "{ 一句话定义这个术语 }"
 tags: []
-status: fleeting
 content-type: term
 category: learning
 up: "[[{{父级概念}}]]"

@@ -9,14 +9,13 @@ date-created: 2026-03-23
 date-modified: 2026-03-23
 status: active
 content-type: atomic
-up:
-  - - 浏览器安全机制
+up: "[[浏览器安全机制]]"
 noteId: 1792465699400
 ---
 
 > 浏览器通过 Cookie 的 ~~SameSite~~ 属性限制跨站请求时 Cookie 的发送，从而防止 CSRF（跨站请求伪造）攻击。
 
-### 论据/示例
+## 论据/示例
 
 **SameSite 取值**：
 
@@ -37,7 +36,7 @@ Set-Cookie: session=abc123; SameSite=Strict; Secure; HttpOnly
 - 若 Cookie 无 SameSite 限制，请求会携带 Cookie
 - SameSite=Lax/Strict 时，浏览器不发送 Cookie，请求被服务器拒绝
 
-### 关联
+## 关联
 
 - [[浏览器安全机制]] — 本观点的主题
 - [[CSRF]] — SameSite 防御的目标攻击

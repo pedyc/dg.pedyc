@@ -6,7 +6,6 @@ description: "{ 一句话概括这个人物 }"
 tags: []
 content-type: person
 category: learning
-status: fleeting
 up: "[[{{父级}}]]"
 birth: ""
 death: ""

@@ -5,7 +5,7 @@ aliases: [T-using声明, await using, using statement]
 description: ES2026 引入的声明式资源管理语法，通过 Symbol.dispose() 自动释放资源
 tags: [计算机科学, 前端开发, JavaScript, ECMAScript]
 date-created: 2026-04-18
-date-modified: 2026-04-17
+date-modified: 2026-04-18
 status: active
 content-type: concept
 related: ["[[ES2026]]"]

@@ -5,7 +5,6 @@ aliases:
   - "{{P-项目名称}}"
 description: "{ 一句话描述项目目标 }"
 tags: []
-status: fleeting
 content-type: project
 category: work
 consequence: 1

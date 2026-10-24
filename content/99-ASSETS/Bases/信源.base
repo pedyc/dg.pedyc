@@ -80,3 +80,8 @@ views:
     sort:
       - property: formula.total
         direction: DESC
+  - type: kanban
+    name: 评级
+    groupBy:
+      property: formula.grade
+      direction: ASC

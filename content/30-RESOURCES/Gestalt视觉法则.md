@@ -1,9 +1,11 @@
 ---
-content-type: concept
+content-type: term
 title: Gestalt视觉法则
-aliases: ["C-Gestalt视觉法则", 格式塔法则]
+aliases:
+  - C-Gestalt视觉法则
+  - 格式塔法则
 date-created: 2025-04-23
-date-modified: 2025-05-08
+date-modified: 2026-10-24
 para: resource
 zettel: permanent
 ---

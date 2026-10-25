@@ -59,6 +59,23 @@ await dv.view("_scripts/scorecard")
 - ⚠️ **{{有条件的部分}}**：{{用之前必须先做什么}}
 - ❌ **{{不可用的部分}}**：{{什么场合绝对不能用它}}
 
+## 消费证据 · 素材落地页
+
+<!-- 这里列的是「消费」——链到本卡的全部 record，不是「产出」。
+     产出（atomic / concept / term / sop / comparison）挂在各篇素材的 ## 产出 段，
+     要逐篇点进去数。两跳的完整口径见 [[信源质量审计标准]]。
+     加 WHERE 是为了滤掉别处随口一提的链接，只留真正的素材。 -->
+
+```dataview
+TABLE WITHOUT ID
+  file.link AS 素材落地页,
+  file.folder AS 目录,
+  date-created AS 入箱
+FROM [[]] AND -"01-META"
+WHERE content-type = "record"
+SORT date-created DESC
+```
+
 ## 下一动作
 
 - [ ] 实测产出率：{{观察周期内}}读了几篇 → 实际落成几条笔记/几个判断，填 `output_rate` 后自动出评级

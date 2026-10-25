@@ -44,6 +44,21 @@ Obsidian 视觉化知识管理领域的天花板。核心不在"怎么用插件"
 - ⚠️ **工作流层要翻译再抄**：他的图承担了本库由 `base` + `dataview` 承担的索引职能。直接搬会造成重复建设——本库的索引是自动生成的，他的图是手工维护的。学他的"用什么形状想问题"，不要学他的"用手绘图当目录"
 - ❌ 具体插件/版本操作可能过时，以官方文档为准
 
+## 消费证据 · 素材落地页
+
+<!-- 这里列的是「消费」——链到本卡的全部 record，不是「产出」。
+     产出挂在各篇素材的 ## 产出 段，要逐篇点进去数。 -->
+
+```dataview
+TABLE WITHOUT ID
+  file.link AS 素材落地页,
+  file.folder AS 目录,
+  date-created AS 入箱
+FROM [[]] AND -"01-META"
+WHERE content-type = "record"
+SORT date-created DESC
+```
+
 ## 下一动作
 
 - [x] 提炼一条可迁移的"图 vs 文"分工原则，写入 atomic ✅ 2026-10-23

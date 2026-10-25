@@ -13,7 +13,7 @@ up: "[[本库指南]]"
 
 本文件是知识库的导航索引，每篇笔记一条，按标题拼音排序。格式规范见 [[_wiki-index-format]]，维护规则见 [[llm-wiki-schema]]。
 
-**最后更新：2026-10-25** — 全量重建，条目 274 → 775，覆盖 30-RESOURCES 与 20-AREAS 中全部已标注 content-type 的笔记
+**最后更新：2026-10-25** — record 分区更名；信源卡补 content-type 后进入索引
 
 ---
 
@@ -781,7 +781,8 @@ up: "[[本库指南]]"
 
 ---
 
-## Records (事件记录) — 45 个
+## Records (记录) — 46 个
+- [[AI资讯日报 RSS Feed]] — 每日汇总 AI 领域资讯与论文条目的 RSS 聚合源
 - [[AI Agents in Depth（中文版）]]
 - [[奥博拉丁的回归]]
 - [[Baba Is You]]

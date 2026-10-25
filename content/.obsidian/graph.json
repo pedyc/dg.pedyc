@@ -32,7 +32,7 @@
       "query": "[\"content-type\":moc",
       "color": {
         "a": 1,
-        "rgb": 16777215
+        "rgb": 14033134
       }
     }
   ],
@@ -46,6 +46,6 @@
   "repelStrength": 11.080603224129,
   "linkStrength": 0.702590468657307,
   "linkDistance": 250,
-  "scale": 0.11705964391564663,
+  "scale": 0.23008729080081655,
   "close": false
 }

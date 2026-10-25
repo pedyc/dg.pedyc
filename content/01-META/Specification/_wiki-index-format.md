@@ -49,7 +49,7 @@ up: "[[llm-wiki-schema]]"
 | 5 | `## SOPs (标准流程)` | 标准流程（sop） |
 | 6 | `## Comparisons (比较分析)` | 对比分析（comparison） |
 | 7 | `## Questions (待探索)` | 待探索问题（question） |
-| 8 | `## Records (事件记录)` | 事件记录（record） |
+| 8 | `## Records (记录)` | 事件与素材（record） |
 | 9 | `## Meta (系统)` | 系统/规范文档，固定位于末尾 |
 
 分区之间以 `---` 分隔。

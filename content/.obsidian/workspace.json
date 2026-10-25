@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "19ee9773adff6dbb",
+        "id": "76a9075ec7239ab7",
         "type": "tabs",
         "children": [
           {
-            "id": "227d261d53c1b133",
+            "id": "fe89b7a1f33165e0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AGENTS.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,89 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "AGENTS"
+              "title": "index"
             }
           }
         ]
+      },
+      {
+        "id": "19ee9773adff6dbb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "227d261d53c1b133",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "90-DIARY/2026-10-25.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-10-25"
+            }
+          },
+          {
+            "id": "fbf989f8e3caa380",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "30-RESOURCES/信源/AI资讯日报 RSS Feed.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "AI资讯日报 RSS Feed"
+            }
+          },
+          {
+            "id": "f9399d147c42e3cf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00-INBOX/回顾性自蒸馏.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "回顾性自蒸馏"
+            }
+          }
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -73,7 +152,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "AGENTS.md",
+                "file": "index.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -96,7 +175,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.2726859917360067,
+                  "scale": 0.07058167567046497,
                   "close": true
                 }
               },
@@ -278,55 +357,55 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "227d261d53c1b133",
+  "active": "fe89b7a1f33165e0",
   "lastOpenFiles": [
+    "01-META/Log/wiki-log.md",
+    "index.md",
+    "30-RESOURCES/数字花园.md",
+    "50-ZETTELCASTEN/数字花园的状态反映了知识的成熟度.md",
+    "50-ZETTELCASTEN/数字花园强调观点间的紧密联系.md",
+    "AGENTS.md",
     "CLAUDE.md",
+    "99-ASSETS/书籍/SELF-EVOLVING AGENTS THROUGH PRIVILEGED RET- ROSPECTIVE DISTILLATION.pdf",
+    "00-INBOX/回顾性自蒸馏.md",
+    "30-RESOURCES/信源/AI资讯日报 RSS Feed.md",
+    "_scripts/tmp_add_consume_section.py",
+    "00-INBOX/AI资讯日报.md",
+    "99-ASSETS/Bases/信源.base",
+    "_templates/template_source.md",
+    "_templates/template_record.md",
+    "30-RESOURCES/信源/柴静.md",
+    "90-DIARY/2026-10-25.md",
+    "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
+    "30-RESOURCES/_resources/EP177 The Modern Software Stack/ac9a0c973e1860dc0ae75601ad9ef6e9_MD5.webp",
+    "30-RESOURCES/_resources/EP177 The Modern Software Stack/9ede500e163b1dfa88f690c752b3dcf7_MD5.webp",
+    "30-RESOURCES/_resources/EP177 The Modern Software Stack/1e0c43a4caa11b9c31b44a06f746bc1c_MD5.webp",
+    "30-RESOURCES/_resources/Grok/6da80c13a5dc86939bcb2d7e37351f9a_MD5.jpg",
+    "60-BLOGS/白色相簿2：关于爱、道德与自我超越的思考.md",
+    "_resources/7d82a68af745483f49fa2544f2194c60_MD5.webp",
+    "_resources/96bfc6e146a31ce7a7ffbb1da392ae01_MD5.webp",
+    "_resources/9c6acfe9972c79567baa84b2b6205f57_MD5.webp",
+    "_resources/80a6a47b0d0f8f01b0450ef934e76020_MD5.webp",
+    "_resources/2477709d323aff2f920bd05f18687991_MD5.webp",
+    "_resources/本库架构指南.excalidraw.md",
+    "01-META/Index/wiki-index.md",
     "01-META/Guide/本库踩坑手册.md",
     "_scripts/_tmp_agents_sec.py",
-    "AGENTS.md",
     "40-ARCHIVE/LLM Wiki.md",
     "_scripts/_tmp_strip_status.py",
     "01-META/Guide/本库Bases约定.md",
-    "01-META/Log/wiki-log.md",
     "_scripts/build_wiki_index.py",
     "_scripts/_tmp_log2.py",
     "_scripts/_tmp_verify_idx.py",
     "01-META/Index/_wiki-index.new.md",
     "_scripts/_tmp_build_index.py",
     "_scripts/_tmp_up_dist.py",
-    "_scripts/_tmp_idx_gap.py",
-    "_scripts/_tmp_scan_idx.py",
-    "_scripts/_tmp_p1c.py",
     "30-RESOURCES/_tmp_ct_test.md",
     "40-ARCHIVE/理解 React 的渲染机制：为什么组件会重新渲染？.md",
     "40-ARCHIVE/深入了解现代网络浏览器(4) 合成层.md",
     "40-ARCHIVE/深入了解现代网络浏览器(3) 渲染进程.md",
     "40-ARCHIVE/深入了解现代网络浏览器(2) 导航流程.md",
-    "40-ARCHIVE/深入了解现代网络浏览器(1) 多进程机构.md",
-    "40-ARCHIVE/从采集到回顾，我用 AI 搭建了一套个人信息处理系统.md",
-    "40-ARCHIVE/Frontend Development Trends 2026 AI, Edge & TypeScript.md",
-    "_scripts/template_startup.md",
-    "00-INBOX/待消化/深入了解现代网络浏览器(4) 合成层.md",
-    "00-INBOX/待消化/理解 React 的渲染机制：为什么组件会重新渲染？.md",
-    "00-INBOX/待消化/深入了解现代网络浏览器(3) 渲染进程.md",
-    "00-INBOX/待消化/深入了解现代网络浏览器(2) 导航流程.md",
-    "00-INBOX/待消化/从采集到回顾，我用 AI 搭建了一套个人信息处理系统.md",
-    "00-INBOX/待消化/深入了解现代网络浏览器(1) 多进程机构.md",
-    "00-INBOX/待消化/Frontend Development Trends 2026 AI, Edge & TypeScript.md",
-    "90-DIARY/2026-10-25.md",
-    "90-DIARY/2026-10-27.md",
-    "90-DIARY/2026-10-26.md",
-    "_resources/四象限示意图.excalidraw.svg",
     "10-PROJECTS/PROJECTS.canvas",
-    "30-RESOURCES/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/19ba4a157b41291c747cb12d964f195a_MD5.jpg",
-    "99-ASSETS/Excalidraw/_resources/Pasted Image 20250506104448_191.svg",
-    "99-ASSETS/Excalidraw/_resources/Pasted Image 20250506104448_547.svg",
-    "99-ASSETS/Excalidraw/_resources/Pasted Image 20250506104448_524.jpg",
-    "99-ASSETS/Excalidraw/_resources/Pasted Image 20250506104448_039.svg",
-    "99-ASSETS/Excalidraw/_resources/Pasted Image 20250506104447_962.svg",
-    "01-META/_resources/本库项目看板.excalidraw.svg",
-    "01-META/_resources/本库架构指南.excalidraw.svg",
-    "000-META/_resources/本库项目看板.excalidraw.svg",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "未命名.canvas",
     "Untitled.canvas",

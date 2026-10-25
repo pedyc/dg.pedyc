@@ -30,6 +30,7 @@
 | 判形态（14 种 content-type）、atomic 正文结构 | `Truth/笔记类型规范` |
 | 判归属（目录、20-AREAS 边界、40-ARCHIVE） | `Truth/本库目录结构` |
 | 字段定义、`up` 写法、`uid`、信源卡 | `Truth/元数据规范` |
+| 信源五维怎么打分、产出率怎么数 | `30-RESOURCES/信源质量审计标准`（SOP）· `30-RESOURCES/经过验证的高信噪比信源`（体系） |
 | 文件名、aliases、引用写法 | `Truth/文件名与别名规范` |
 | 查库里有没有相关笔记 | `01-META/Index/wiki-index.md`（全量名册），不要先 rglob 全扫 |
 | **命令、编码、git、Obsidian 配置、发布的坑** | `Guide/本库踩坑手册` |

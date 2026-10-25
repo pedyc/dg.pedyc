@@ -37,14 +37,14 @@ SECTION_OF = {
     "sop": "SOPs (标准流程)",
     "comparison": "Comparisons (比较分析)",
     "question": "Questions (待探索)",
-    "record": "Records (事件记录)",
+    "record": "Records (记录)",
     "roadmap": "Concepts (概念)",   # 规范无分区，暂并
     "article": "Concepts (概念)",   # 规范无分区，暂并
 }
 
 ORDER = [
     "Areas (领域)", "MOCs (领域入口)", "Concepts (概念)", "Terms (术语)",
-    "SOPs (标准流程)", "Comparisons (比较分析)", "Questions (待探索)", "Records (事件记录)",
+    "SOPs (标准流程)", "Comparisons (比较分析)", "Questions (待探索)", "Records (记录)",
 ]
 
 PUNCT = "，、；：,;:（("

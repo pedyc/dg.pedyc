@@ -43,6 +43,21 @@ PKM 领域中文社区，五维都在 3 分以上，是本次盘点里最均衡�
 - ⚠️ 社区文章质量有方差，看作者而非看站。同一篇主题优先读有具体配置截图的
 - ❌ 不要把它当"官方文档替代"——API 与语法细节仍以官方为准
 
+## 消费证据 · 素材落地页
+
+<!-- 这里列的是「消费」——链到本卡的全部 record，不是「产出」。
+     产出挂在各篇素材的 ## 产出 段，要逐篇点进去数。 -->
+
+```dataview
+TABLE WITHOUT ID
+  file.link AS 素材落地页,
+  file.folder AS 目录,
+  date-created AS 入箱
+FROM [[]] AND -"01-META"
+WHERE content-type = "record"
+SORT date-created DESC
+```
+
 ## 下一动作
 
 - [ ] 无

@@ -23,11 +23,11 @@ content-type: record
 
 ## 全景概览
 
-![](https://cdnfile.sspai.com/2026/02/21/article/2b3a6fbdecd2b17f7f63cc84c6e70829.png?imageView2/2/format/webp)
+![[../_resources/57a53c601460da7cee5ef90f114e35e8_MD5.webp]]
 
 图 1：信息流主线（采集 → 处理 → 存储 → 回顾）
 
-![](https://cdnfile.sspai.com/2026/02/21/article/55e4a32524c095e5d344b19b6b635938.png?imageView2/2/format/webp)
+![[../_resources/c48663fff8095a434db6988d322812ce_MD5.webp]]
 
 图 2：基础组件与硬件（谁跑在哪，谁调用谁）
 
@@ -49,7 +49,7 @@ content-type: record
 
 第二是**事件聚类去重**。对所有内容做 Embedding 向量嵌入（用的 text-embedding-3-small，非常便宜），计算相关性，剔除针对同一个主题、不同信息源的重复内容。这里有一套三级通知降噪机制：相似度低于 0.85 的视为全新事件，完整推送；0.85 到 0.97 之间的视为增量更新，只推送新增信息；超过 0.97 且实体高度重合的，直接静默。一个事件簇如果连续 7 天没有更新，会自动归档。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/c304d09b364d076de28638eedddcebc8.png?imageView2/2/format/webp)
+![[../_resources/69f22e23babb62990399028846feb6e0_MD5.webp]]
 
 热点的信息，多个信息源会同时报道，所以此时会做一个去重来提取增量信息。
 
@@ -61,7 +61,7 @@ content-type: record
 * 泛用型播客本身就原生支持 RSS 协议，可以直接下载音频
 * Newsletter 使用 Kill the Newsletter 服务转换成 RSS
 
-![](https://cdnfile.sspai.com/2026/02/21/article/f3b1c1cac1b604f87620254e739a6fe1.png?imageView2/2/format/webp)
+![[../_resources/2ff4146736a2fee171d5a23d9121d473_MD5.webp]]
 
 订阅管理——web 端
 
@@ -79,7 +79,7 @@ content-type: record
 		* 飞书单从阅读体验做得还是比较好的，但后续想要和我目前的系统联动就比较尴尬。因为我使用的是飞书卡片 2.0 的格式来发送内容，当我把这些内容转发给飞书的机器人想做一些后处理的时候，机器人竟然读取不到。不过我还是优先推荐把内容发送到飞书。
 * 网页端：我对推送过来的内容可能还需要进行一些后处理，比如收藏到 Memo 里面。但受限于 IM 平台的 API 限制，很多东西只能基于自家的网页来实现。网页端主要方便我复制文本到第三方 LLM 工具里进行进一步的提问，也可以合并查看一些聚类之后的主题文章。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/7d43095f8df741fdcfdb0f02b4728eb6.png?imageView2/2/format/webp)
+![[../_resources/a7ff52f5cbee4cbd13102e8352e3e83d_MD5.webp]]
 
 飞书端和 web 端查看内容
 
@@ -91,7 +91,7 @@ content-type: record
 
 本工具已开源，[地址](https://sspai.com/link?target=https%3A%2F%2Fgithub.com%2Fzj1123581321%2FVideoTranscriptAPI)。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/50737ae3ef58d883804a434c5fde7589.png?imageView2/2/format/webp)
+![[../_resources/dda50c094a8b3318a8ced8d313fb85e5_MD5.webp]]
 
 web 端展示页面
 
@@ -113,7 +113,7 @@ web 端展示页面
 * 想基于原始的转录内容做后续提问，但不想自己维护整套系统，尽量利用现有的 LLM 会员体系 → 在 URL 里添加参数，可以直接导出原始转录文本，以 URL 的形式粘贴到其他工具里进行快速提问；
 * …… 除此之外还有很多，具体可以看 Git history。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/0efe1e2faba8cf203002490537e80360.png?imageView2/2/format/webp)
+![[../_resources/02d364dc3f46af6bdbad66374274a6d8_MD5.webp]]
 
 企业微信内断网查看 + 第三方 LLM web 端继续提问
 
@@ -139,7 +139,7 @@ LLM 的总结支持任意 OpenAI 兼容格式的 API，校对和总结可以使�
 
 因为是基于 API 的，所以可以和各类自动化软件结合：Windows 上可以用 Quicker，iOS 和 Mac 上可以用捷径，Android 上可以用 Tasker 或 FV 悬浮球。同时也可以和自己开发的其他项目结合。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/e831cdc85c8d4a0616b5df9f78f0087d.png?imageView2/2/format/webp)
+![[../_resources/86ecb208b7a68ca4a1937e981f03d184_MD5.webp]]
 
 android、ios、web 端提交转录任务
 
@@ -157,7 +157,7 @@ PS：随着各个大厂在推自己家的 AI 工具，获取短视频的文字�
 
 有一个我觉得很实用的小设计：转发内容之后紧接着发 `// 你的评论`，评论会自动合并到同一条笔记里，不用再去 Memo 里面单独编辑。飞书上直接回复消息（有 `parent_id`）也会自动视为评论，连 `//` 都不用打。系统有一个 10 秒的聚合器超时，在这个窗口内发的评论都会合并到一起。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/47a9c0f434e64ec5ff6b44dbd38b789d.png?imageView2/2/format/webp)
+![[../_resources/089fd55a2149a739eb8e3a99623373fc_MD5.webp]]
 
 企微添加 Memo 并评论
 
@@ -175,13 +175,13 @@ PS：随着各个大厂在推自己家的 AI 工具，获取短视频的文字�
 
 这一块完全是根据我自己的内容消费习惯来的，后续如果习惯有迁移，就会引入新的工作流，添加到当前的后处理流程里面。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/827e2ab0fd1613612904ce1ba26f8af8.png?imageView2/2/format/webp)
+![[../_resources/c2bf656409a587d288bb41dbebea60f2_MD5.webp]]
 
 url 总结和小红书爬取、图片 ocr 和理解
 
 **第二块是相关笔记发现。** 对所有的笔记做 Embedding 嵌入（text-embedding-3-small），计算余弦相似度。有一个 Web 端可以展示某一条笔记的所有相关笔记，然后针对这些相关笔记做深度洞察——从 Flomo 学习的思路。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/d05116b3dbf5177f4561d7bafaf33e50.png?imageView2/2/format/webp)
+![[../_resources/3e1de6c2a1876670f98dc4b55bb24a36_MD5.webp]]
 
 另外还有每日回顾功能，会按策略选取历史笔记通过企业微信定时推送，帮我重新审视过去的想法。
 
@@ -209,7 +209,7 @@ url 总结和小红书爬取、图片 ocr 和理解
 
 整个流程的缓存策略也做了精细化处理：历史日期的 API 数据和 OCR 结果永久缓存，LLM 总结可以用 `--force-refresh` 单独刷新。当天的数据不走缓存。整套服务用 Docker 跑，cron 定时每天 00:05 自动执行。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/794362a25c73f1ff17ce2b0fa13ccaff.png?imageView2/2/format/webp)
+![[../_resources/96bfc6e146a31ce7a7ffbb1da392ae01_MD5.webp]]
 
 obsidian 的每日复盘
 
@@ -219,7 +219,7 @@ obsidian 的每日复盘
 
 不过 Chatlog Server 已经被腾讯起诉删库，不再更新维护了，所以新版本的微信就无法支持了。不过随着 AI coding agent 能力的提升，本地逆向也会更加轻松一些。后续或许可以自己维护一套方案。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/441379d659eeb6d58078fc673e29fbb1.png?imageView2/2/format/webp)
+![[../_resources/faf93f85c5a296f1ea4116b26bf64c1d_MD5.webp]]
 
 群聊总结项目架构
 
@@ -239,7 +239,7 @@ YouTube 的 History 同步没办法直接基于 Cookies 做，必须要有外部
 
 小宇宙 History 同步的门槛比较高，需要手机抓包，Android 需要 Root，iOS 没试过。而且小宇宙更离谱——响应的 API 里面没有任何播放日期相关的字段，只能拿脚本运行的时间当作播客的收听时间。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/17e070f5242e3f8f304af59079200bf8.png?imageView2/2/format/webp)
+![[../_resources/91084f7c99189c18fcb969444c238f0c_MD5.webp]]
 
 部分音视频消费记录节选
 
@@ -251,7 +251,7 @@ YouTube 的 History 同步没办法直接基于 Cookies 做，必须要有外部
 
 需要有一台机器 24 小时运行 Obsidian，同时安装 Local REST API 这个插件对外暴露 API。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/a0fda6aa2c39ebf6ec80d7da41a3f59a.png?imageView2/2/format/webp)
+![[../_resources/36625bd384c5f6cd6733e9bc6d9dff5b_MD5.webp]]
 
 obsidian 剪藏通知
 
@@ -263,7 +263,7 @@ obsidian 剪藏通知
 
 **MacOcrAPI**（[已开源](https://sspai.com/link?target=https%3A%2F%2Fgithub.com%2Fzj1123581321%2FMacOcrAPI)）：基于 Mac 系统原生 OCR 能力封装的 API 服务。调用量大，放在本地跑没有额外成本。接入了 LLM，可以选择是否调用 LLM 进行格式化 Markdown 排版。从我自己的体感来看，如果是给人读的，格式很重要；但如果是给 LLM 读的，有坐标信息和原始文本，它就能推测出来大差不差。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/608cb2fcf83e6ddaec537b0022287323.png?imageView2/2/format/webp)
+![[../_resources/9a834fd8394a8985b615ae6404c3d985_MD5.webp]]
 
 ocr 并发可以做到 20 有余
 
@@ -283,7 +283,7 @@ ocr 并发可以做到 20 有余
 
 这里多说一点：这么长时间用下来，区分说话人的转录结果对于 LLM 的总结和校对肯定是有帮助的，但帮助比较有限，因为 LLM 本身就可以结合上下文来推断这句话是谁说的，可能小有错误但不影响全局。区分说话人更多还是提升我们自己的阅读体验，看起来会更舒服一些。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/fbeba509cc2976e18f8d83f1d3de2111.png?imageView2/2/format/webp)
+![[../_resources/ee9f493dc257b16d5a0dd9d1c10d06f4_MD5.webp]]
 
 原始转录稿和校对后的结果
 
@@ -297,7 +297,7 @@ ocr 并发可以做到 20 有余
 
 如果你对本地转录的准确率有极致的要求，那么我还是推荐 [使用 Whisper large 模型](https://sspai.com/post/83644)。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/adf3415e799c0fbdc228074f3a97bb87.png?imageView2/2/format/webp)
+![[../_resources/7d82a68af745483f49fa2544f2194c60_MD5.webp]]
 
 paraformer-zh 的原始转录稿和 AI 校对稿件
 
@@ -315,7 +315,7 @@ paraformer-zh 的原始转录稿和 AI 校对稿件
 
 它同时支撑了 AI Information Processor 和 Video Transcript API 两个上层系统的视频下载需求。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/d23bb5cf3ed016ed5e1f23b39570cf0f.png?imageView2/2/format/webp)
+![[../_resources/80a6a47b0d0f8f01b0450ef934e76020_MD5.webp]]
 
 后台管理页面
 
@@ -359,7 +359,7 @@ paraformer-zh 的原始转录稿和 AI 校对稿件
 
 比 Happy 这些工具方便太多，网页版天然就是多平台的。这个春节假期很不一样的一点就是走亲访友的间隙，我可以直接远程连到开发环境改 bug、添加功能，非常爽。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/eb24e53230f1c7c1bed5c6500af5f4fb.png?imageView2/2/format/webp)
+![[../_resources/2477709d323aff2f920bd05f18687991_MD5.webp]]
 
 帮我重启 pm2 进程
 
@@ -367,7 +367,7 @@ paraformer-zh 的原始转录稿和 AI 校对稿件
 
 Windows 和 Mac 上可以记录电脑做了什么，以 Timeline 加间隔的截图形式上传到 Server。手机上直接可以上传 Android 的手机使用情况。是 Every Day Analysis 的核心数据来源。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/15f2127366ca8082a98fe3973a06b5dc.png?imageView2/2/format/webp)
+![[../_resources/58f1457c03aa7724fbac0aec7e47e3f0_MD5.webp]]
 
 多设备使用情况记录
 
@@ -375,7 +375,7 @@ Windows 和 Mac 上可以记录电脑做了什么，以 Timeline 加间隔的截
 
 可以把很多网页固定成应用常开。可以理解成一个只能打开特定网页的 Chrome 浏览器，非常适合有多个 AI 账号会员的人随时切换来问问题。我常用的有豆包、ChatGPT、Gemini、Claude、Todoist、Memo、NotebookLM。
 
-![](https://cdnfile.sspai.com/2026/02/21/article/b5d961ea28d22f7530e2aefe7523ed8a.png?imageView2/2/format/webp)
+![[../_resources/9c6acfe9972c79567baa84b2b6205f57_MD5.webp]]
 
 固定常用网页服务
 

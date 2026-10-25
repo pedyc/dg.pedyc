@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-INBOX/深入了解现代网络浏览器(1) 多进程机构.md",
+                "file": "AGENTS.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "深入了解现代网络浏览器(1) 多进程机构"
-            }
-          },
-          {
-            "id": "2d3bfd6eba69e52c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00-INBOX/深入了解现代网络浏览器(1) 多进程机构.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "深入了解现代网络浏览器(1) 多进程机构"
+              "title": "AGENTS"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "00-INBOX/深入了解现代网络浏览器(1) 多进程机构.md",
+                "file": "AGENTS.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -221,7 +196,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 397.5
+    "width": 286.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -303,44 +278,44 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "2d3bfd6eba69e52c",
+  "active": "227d261d53c1b133",
   "lastOpenFiles": [
-    "30-RESOURCES/浏览器核心架构.md",
-    "99-ASSETS/Bases/信源.base",
-    "00-INBOX/深入了解现代网络浏览器(1) 多进程机构.md",
-    "40-ARCHIVE/深入了解现代网络浏览器（第 1 部分）    Blog    Chrome for Developers.md",
-    "40-ARCHIVE/前端监控与告警实践.md",
-    "40-ARCHIVE/黏菌智能.md",
-    "00-INBOX/理解 React 的渲染机制：为什么组件会重新渲染？.md",
-    "40-ARCHIVE/将个人博客部署到Netlify.md",
-    "40-ARCHIVE/类比思维（Metaphorical Thinking）.md",
-    "40-ARCHIVE/工业信息化文明生育率解决方案.md",
-    "40-ARCHIVE/广度优先搜索 (BFS).md",
-    "40-ARCHIVE/存在主义困境下的伦理决断：从《SOMA》出发的讨论总结.md",
-    "00-INBOX/从采集到回顾，我用 AI 搭建了一套个人信息处理系统.md",
-    "40-ARCHIVE/变量对象.md",
-    "40-ARCHIVE/3月健康目标.md",
-    "40-ARCHIVE/P-健康重启计划.md",
-    "30-RESOURCES/彻底明白作用域、执行上下文.md",
-    "00-INBOX/深入了解现代网络浏览器(4) 合成层.md",
-    "00-INBOX/深入了解现代网络浏览器(3) 渲染进程.md",
-    "00-INBOX/深入了解现代网络浏览器(2) 导航流程.md",
-    "40-ARCHIVE/前端开发助手提示词 v2 1.md",
-    "40-ARCHIVE/前端开发助手提示词 1.md",
-    "40-ARCHIVE/前端开发助手提示词 v1 1.md",
-    "99-ASSETS/Bases/SOP.base",
-    "30-RESOURCES/大模型流式打字机效果实现及渲染性能优化.md",
-    "01-META/Index/本库看板索引.md",
-    "50-ZETTELCASTEN/CSS Animation 通过 @keyframes 定义关键帧实现动画.md",
-    "50-ZETTELCASTEN/Vue3响应式系统分为effect和reactive两部分.md",
-    "_scripts/apply_up_mapping.py",
-    "_scripts/check_targets.py",
-    "_scripts/scan_orphan_atomic.py",
-    "_scripts/count_words.py",
-    "99-ASSETS/Bases/笔记滞留与陈旧.base",
-    "_scripts/stats.py",
-    "_scripts/areaBacklinks.js",
-    "_scripts/validate_meta.py",
+    "CLAUDE.md",
+    "01-META/Guide/本库踩坑手册.md",
+    "_scripts/_tmp_agents_sec.py",
+    "AGENTS.md",
+    "40-ARCHIVE/LLM Wiki.md",
+    "_scripts/_tmp_strip_status.py",
+    "01-META/Guide/本库Bases约定.md",
+    "01-META/Log/wiki-log.md",
+    "_scripts/build_wiki_index.py",
+    "_scripts/_tmp_log2.py",
+    "_scripts/_tmp_verify_idx.py",
+    "01-META/Index/_wiki-index.new.md",
+    "_scripts/_tmp_build_index.py",
+    "_scripts/_tmp_up_dist.py",
+    "_scripts/_tmp_idx_gap.py",
+    "_scripts/_tmp_scan_idx.py",
+    "_scripts/_tmp_p1c.py",
+    "30-RESOURCES/_tmp_ct_test.md",
+    "40-ARCHIVE/理解 React 的渲染机制：为什么组件会重新渲染？.md",
+    "40-ARCHIVE/深入了解现代网络浏览器(4) 合成层.md",
+    "40-ARCHIVE/深入了解现代网络浏览器(3) 渲染进程.md",
+    "40-ARCHIVE/深入了解现代网络浏览器(2) 导航流程.md",
+    "40-ARCHIVE/深入了解现代网络浏览器(1) 多进程机构.md",
+    "40-ARCHIVE/从采集到回顾，我用 AI 搭建了一套个人信息处理系统.md",
+    "40-ARCHIVE/Frontend Development Trends 2026 AI, Edge & TypeScript.md",
+    "_scripts/template_startup.md",
+    "00-INBOX/待消化/深入了解现代网络浏览器(4) 合成层.md",
+    "00-INBOX/待消化/理解 React 的渲染机制：为什么组件会重新渲染？.md",
+    "00-INBOX/待消化/深入了解现代网络浏览器(3) 渲染进程.md",
+    "00-INBOX/待消化/深入了解现代网络浏览器(2) 导航流程.md",
+    "00-INBOX/待消化/从采集到回顾，我用 AI 搭建了一套个人信息处理系统.md",
+    "00-INBOX/待消化/深入了解现代网络浏览器(1) 多进程机构.md",
+    "00-INBOX/待消化/Frontend Development Trends 2026 AI, Edge & TypeScript.md",
+    "90-DIARY/2026-10-25.md",
+    "90-DIARY/2026-10-27.md",
+    "90-DIARY/2026-10-26.md",
     "_resources/四象限示意图.excalidraw.svg",
     "10-PROJECTS/PROJECTS.canvas",
     "30-RESOURCES/_resources/深入了解现代网络浏览器（第 4 部分）    Blog/19ba4a157b41291c747cb12d964f195a_MD5.jpg",

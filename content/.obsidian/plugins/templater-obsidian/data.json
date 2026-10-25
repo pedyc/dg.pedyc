@@ -7,8 +7,13 @@
   "auto_jump_to_cursor": false,
   "jump_to_cursor_after_file_name": false,
   "shell_path": "",
-  "user_scripts_folder": "_scripts",
-  "folder_templates": [],
+  "user_scripts_folder": "_scripts/templater",
+  "folder_templates": [
+    {
+      "folder": "90-DIARY",
+      "template": "_templates/template_diary.md"
+    }
+  ],
   "file_templates": [],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,

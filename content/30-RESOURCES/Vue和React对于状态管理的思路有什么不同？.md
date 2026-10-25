@@ -2,8 +2,7 @@
 title: Vue和React对于状态管理的思路有什么不同？
 date-created: 2026-09-22
 date-modified: 2026-09-22
-content-type:
-  - question
+content-type: question
 up:
   - "[[前端状态管理]]"
 ---

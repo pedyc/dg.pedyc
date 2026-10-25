@@ -1,5 +1,5 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: <% tp.file.creation_date("YYYYMMDDHHmmss") %>
 title: "{{问题名称}}"
 aliases: ["Q-{{问题名称}}"]
 description: "{ 一句话描述这个问题 }"

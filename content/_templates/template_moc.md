@@ -1,5 +1,5 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+uid: '<% tp.file.creation_date("YYYYMMDDHHmmss") %>'
 title: template_moc
 aliases: ["MOC-{{主题}}"]
 description: "{ 一句话或一段话概括这个 MOC 的范围和价值 }"

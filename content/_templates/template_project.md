@@ -1,5 +1,5 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: <% tp.file.creation_date("YYYYMMDDHHmmss") %>
 title: template_project
 aliases:
   - "{{P-项目名称}}"

@@ -9,6 +9,7 @@ date-modified: 2026-09-07
 created: 2026-09-07
 published: 2026-01-23
 source: "https://talent500.com/blog/frontend-development-trends-2026/"
+content-type: record
 ---
 
 ## The new reality of frontend in 2026

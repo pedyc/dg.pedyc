@@ -184,14 +184,6 @@
     }
   ],
   "editor:open-search": [],
-  "templater-obsidian:replace-in-file-templater": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "R"
-    }
-  ],
   "obsidian-excalidraw-plugin:save": [],
   "templater-obsidian:create-new-note-from-template": [
     {
@@ -199,6 +191,14 @@
         "Alt"
       ],
       "key": "N"
+    }
+  ],
+  "templater-obsidian:replace-in-file-templater": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "R"
     }
   ]
 }

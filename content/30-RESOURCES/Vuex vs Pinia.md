@@ -11,8 +11,7 @@ status: active
 comparison:
   - Vuex
   - Pinia
-content-type:
-  - comparison
+content-type: comparison
 related:
   - "[[前端开发]]"
   - "[[P-复习vue3]]"

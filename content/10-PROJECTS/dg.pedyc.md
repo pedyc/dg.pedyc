@@ -10,8 +10,7 @@ tags:
 date-created: 2026-08-16
 date-modified: 2026-09-22
 status: active
-content-type:
-  - project
+content-type: project
 up: "[[知识管理]]"
 ---
 

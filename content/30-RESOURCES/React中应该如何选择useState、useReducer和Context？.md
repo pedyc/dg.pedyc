@@ -2,8 +2,7 @@
 title: React中应该如何选择useState、useReducer和Context？
 date-created: 2026-09-22
 date-modified: 2026-09-22
-content-type:
-  - question
+content-type: question
 up:
   - "[[前端状态管理]]"
 ---

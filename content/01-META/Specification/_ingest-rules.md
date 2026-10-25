@@ -5,7 +5,6 @@ aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-05-20
 date-modified: 2026-08-16
-status: active
 content-type: article
 up: "[[llm-wiki-schema]]"
 ---
@@ -75,45 +74,44 @@ git mv "00-INBOX/源文件名.md" "40-ARCHIVE/"
 
 ## Inbox Review 工作流
 
-当你要求 " 审核 Inbox" 时，执行以下步骤：
+当你要求「审核 Inbox」时，执行以下步骤。
 
 ### 步骤 1：列出 Inbox 内容
 
-扫描 `00-INBOX/` 目录，获取所有待审核文件。
+扫描 `00-INBOX/`，取得全部待审核文件。Inbox 只有一层，不处理子目录。
 
-### 步骤 2：逐个判断类型
+### 步骤 2：判断形态
 
-读取文件 front matter，分析以下特征：
+形态的定义、判据、易混类型的辨析只有一处真值：[[笔记类型规范]]。复核时打开它对照，不要凭印象，也不要在本文件里另抄一份。
 
-| content-type | 特征 | 目标目录 |
-|--------------|------|----------|
-| article | 有 source、author、published=true | 60-BLOGS/ |
-| concept | 知识整合、核心命题、多概念关联 | 30-RESOURCES/ |
-| atomic | 一句话洞察、陈述句（如 "X 的本质是 Y"） | 50-ZETTELCASTEN/ |
-| term | 术语定义、" 什么是 X" | 30-RESOURCES/ (aliases: T-xxx) |
-| moc | 索引性质、链接集合 | 30-RESOURCES/ (aliases: MOC-xxx) |
+需要看的三节：
 
-### 步骤 3：移动文件
+- `content-type 总览` —— 14 种取值与各自的一句话定位
+- `各类型定位` —— 每种形态是什么、不是什么
+- `类型辨析（判断标准）` —— atomic / concept / term、area / concept / moc、sop / question 的分界
 
-使用 git mv 保持历史：
+剪藏素材最容易误判成 `article`：带 `author` / `source` / `published` 不等于「自己的文章」，那些是 Web Clipper 的字段。判形态看内容归属，对照 `各类型定位` 里 `record` 与 `article` 两节。
 
-```bash
-git mv "00-INBOX/xxx.md" "目标目录/xxx.md"
-```
+### 步骤 3：决定归属
+
+归属与形态是两个正交维度，互不推导。判归属只看「这篇东西归谁负责」，顺序见 [[本库目录结构]] 的 `归属判定顺序`。
+
+形态**不决定**目录——不存在「concept 就放 30-RESOURCES」这类映射。
 
 ### 步骤 4：更新 front matter
 
-根据目标目录补充/修改 front matter：
-- 添加 `aliases` 前缀（如 C-xxx）
-- 确保 `content-type` 正确
-- 移除 `source` 字段（如果是摘录，保留作为 reference）
+按 [[元数据规范]] 补齐字段。`content-type` 必须是标量字符串，写成数组会让 `.base` 的 `content-type == "x"` 静默失效。
 
-### 步骤 5：记录日志
+### 步骤 5：移动文件
 
-追加到 `wiki-log.md`：
+用 `git mv` 保留历史。移动后原路径的链接会自动解析到新位置——Obsidian 按文件名解析，不按路径。
+
+### 步骤 6：记录日志
+
+格式见 [[llm-wiki-schema]] 的 `wiki-log 记录规范`：
 
 ```markdown
 - [日期] inbox-review | 文件名
-  - 原类型：xxx → 新类型：xxx
-  - 移动：Inbox → 目标目录
+	- 原类型：xxx → 新类型：xxx
+	- 移动：Inbox → 目标目录
 ```

@@ -7,6 +7,7 @@ date-created: 2026-03-01
 date-modified: 2026-05-15
 published: 2025-06-24
 source: https://juejin.cn/post/7519131267293888522
+content-type: record
 ---
 
 React 是一个优秀的 UI 库，以其声明式、组件化、响应式的设计深受前端开发者喜爱。但在实际开发中，我们经常会遇到「组件频繁重新渲染」的问题，甚至因此导致性能下降、动画卡顿或者数据闪烁等现象。

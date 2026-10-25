@@ -1,5 +1,5 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: <% tp.file.creation_date("YYYYMMDDHHmmss") %>
 title: "{{文章标题}}"
 aliases: ["{{文章别名}}"]
 description: "{{一句话描述文章核心内容}}"

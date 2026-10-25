@@ -1,5 +1,5 @@
 ---
-uid: '<% tp.file.creation_date("YYYYMMDDHHmm") %>'
+uid: '<% tp.file.creation_date("YYYYMMDDHHmmss") %>'
 title: template_area
 aliases: ["A-{{标题}}"]
 description: "{ 一句话定义这个领域的核心范畴 }"

@@ -971,3 +971,30 @@ up: "[[本库指南]]"
 	- 同步改写 8 处引用：`Guide/本库指南`（章节标题 `## 命名规范` → `## 文件名与别名`）、`Guide/本库子系统概述`、`Specification/_content-type-rules`、`Truth/元数据规范`、`Truth/真值索引`（2 处，含正文示例路径）、`Truth/笔记类型规范`（2 处）、`Truth/人机分工规范`
 	- wiki-log 历史条目中的 `[[文件名与别名规范]]` 保留不改（时间线不改写）
 	- 删除空目录 `10-PROJECTS/P-Agent求职/_resources/_resources`（嵌套冗余，无内容）
+
+#### 2026-10-25
+
+- [2026-10-25] inbox-review | 00-INBOX 7 篇剪藏统一 content-type
+	- 判断依据：7 篇均带 `tags: clippings` 与 `author` / `source` / `published`，属外部素材；本库口径 `article` 只给「自己的文章」，故统一为 `record`
+	- 原类型 → 新类型：4 篇原本没有 `content-type` → `record`；3 篇原为 `article` → `record`（现代网络浏览器 1 / 3 / 4）
+	- `从采集到回顾，我用 AI 搭建了一套个人信息处理系统` 的 `tags: []` 补为 `[clippings]`
+	- 移动：不移动，7 篇全部留在 `00-INBOX`。按当前定位，Inbox 本身就是待消化队列，超过 14 天由启动脚本移入 `40-ARCHIVE`，需要时自取
+	- 涉及文件：Frontend Development Trends 2026 AI, Edge & TypeScript ／ 从采集到回顾，我用 AI 搭建了一套个人信息处理系统 ／ 深入了解现代网络浏览器(1) 多进程机构 ／ (2) 导航流程 ／ (3) 渲染进程 ／ (4) 合成层 ／ 理解 React 的渲染机制：为什么组件会重新渲染？
+
+- [2026-10-25] refactor | wiki-index 全量重建：条目 274 → 775
+	- 范围：`30-RESOURCES/` + `20-AREAS/`，排除 `_resources` 子目录
+	- 结构：8 个业务分区（Areas 18 / MOCs 58 / Concepts 340 / Terms 132 / SOPs 80 / Comparisons 16 / Questions 86 / Records 45）+ Meta；`person` 6 篇作为子条目挂在父页面下
+	- 排序：区内按标题拼音（`pypinyin`），不再保留旧的 60 余个临时子分区——那份结构是增量维护的残留，全量后平均每组不足 5 条，已失去分组意义；主题浏览由 `本库领域索引` 与 MOCs 承担
+	- 链接：800 条全部可解析、断链 0；其中 5 条因文件名与标题不一致走 `[[文件名|标题]]`（如 `[[存在|存在 (Being)]]`）
+	- 未收录 26 篇：`content-type` 为空，等补标后可再跑一次生成器
+	- 规范缺口：`roadmap`(5) 与 `article`(3) 在 `_wiki-index-format` 的分区表里没有位置，暂并入 Concepts，计数因此为 340 而非 concept 实际的 332
+
+- [2026-10-25] refactor | 删除 `action-suggest` skill
+	- 理由：它建立在「状态流转子系统（status 演化链）」之上，而 `status` 已于 2026-10-24 废除，读不到任何信号；`suggest-log.md` 最后一条停在 2026-06-14，已实际停用四个月
+	- 同步：`_skills-overview` 删表格行与小节、计数 6 → 5；`CLAUDE.md` 的 skill 清单删该行；目录 `.claude/skills/action-suggest/` 移除
+	- 未动：`01-META/Log/suggest-log.md`（历史日志不改写）、`30-RESOURCES/简历素材.md` 第 77 行「开发 6 个 Claude Skill」（属内容表述，等用户定要不要改成 5）
+
+- [2026-10-25] refactor | 工作流文档清理（P0 + P1）
+	- P0：10 份文档删 `status` 行；8 篇活跃笔记的 `content-type` 由多行列表改标量；`validate_meta.py --all` 新增多行列表检测
+	- P1：`_ingest-rules` 的 Inbox Review 改为引用式（删掉违反解耦的「类型→目录」表）；`_wiki-index-format` 的条目规则改为文件名直链；删两处状态流转死内容并重编号；连带清理 6 处「状态流转」字样
+	- schema 加边界声明：专供 llm-wiki 工作流，架构总览在 [[本库子系统概述]]，两份不合并

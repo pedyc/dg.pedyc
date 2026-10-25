@@ -1,5 +1,5 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: <% tp.file.creation_date("YYYYMMDDHHmmss") %>
 title: "{{主题}}演进"
 aliases: ["R-{{主题}}演进"]
 description: "{ 一句话定义这个演进历程的核心 }"

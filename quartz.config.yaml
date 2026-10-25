@@ -14,6 +14,10 @@ configuration:
     - _resources
     - _templates
     - _scripts
+    - AGENTS.md
+    - CLAUDE.md
+    - "**/AGENTS.md"
+    - "**/CLAUDE.md"
   theme:
     fontOrigin: local
     cdnCaching: true

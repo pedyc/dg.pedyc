@@ -417,6 +417,7 @@ def main():
         skip_dirs = {".obsidian", ".trash", ".workbuddy", ".git", ".claude", "_templates", "40-ARCHIVE"}
         dirty_type = {}
         style_type = []
+        list_style_type = []
         legacy_status = 0
         legacy_related = 0
         miss_uid = 0
@@ -424,7 +425,8 @@ def main():
         for p in ROOT.rglob("*.md"):
             if any(part in skip_dirs for part in p.parts):
                 continue
-            keys, vals = parse_frontmatter(read(p))
+            text = read(p)
+            keys, vals = parse_frontmatter(text)
             if keys is None:
                 continue
             total += 1
@@ -440,6 +442,14 @@ def main():
                 dirty_type.setdefault(ct, []).append(p.name)
             elif ct_style:
                 style_type.append(p.name)
+            # 多行列表形式：`content-type:` 换行后跟 `  - xxx`。
+            # parse_frontmatter 按行取值，这种写法解析成空串，会静默通过前两条判断，
+            # 但它在 Obsidian 里是数组，`.base` 的 content-type == "x" 会恒假。
+            # 99-ASSETS/copilot 是对话存档，改了等于篡改历史，不参与检查。
+            if "copilot" not in str(p) and re.search(
+                r"^content-type:[ \t]*\n[ \t]+-[ \t]+\S", text, re.M
+            ):
+                list_style_type.append(p.name)
 
         print(f"  扫描 {total} 篇（已排除 01-META/_templates/40-ARCHIVE/.claude 等）")
         print(f"  缺 uid：{miss_uid} 篇")
@@ -457,6 +467,11 @@ def main():
         if style_type:
             print("\n  写法不规范（值合法但用了引号/方括号，会让 .base 过滤失效）：")
             print(f"    content-type × {len(style_type)}  例：{', '.join(style_type[:3])}")
+
+        if list_style_type:
+            print("\n  content-type 写成多行列表（YAML 解析为数组，.base 过滤静默失效）：")
+            print(f"    × {len(list_style_type)}  例：{', '.join(list_style_type[:3])}")
+            problems += len(list_style_type)
 
     # ---------- 3. 链接规范 ----------
     if "--links" in args:

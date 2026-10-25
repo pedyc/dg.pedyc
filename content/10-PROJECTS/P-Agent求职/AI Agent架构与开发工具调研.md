@@ -9,8 +9,7 @@ tags: []
 date-created: 2026-08-18
 date-modified: 2026-10-20
 status: fleeting
-content-type:
-  - record
+content-type: record
 up:
 ---
 

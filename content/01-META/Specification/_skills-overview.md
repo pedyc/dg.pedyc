@@ -5,14 +5,18 @@ aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-06-12
 date-modified: 2026-07-17
-status: active
 content-type: article
 up: "[[llm-wiki-schema]]"
 ---
 
 ## Skills 概览
 
-本库 6 个本地 skill，按 PARA 分层组织，职责互不重叠。
+本库 5 个本地 skill，按 PARA 分层组织，职责互不重叠。
+
+> [!important] 两条必须遵守的义务，住在本文件
+> **创建或重写笔记一律走 `obsidian-note-local`**，它内部会同步 `wiki-index` / `wiki-log` / `sync-state`。跳过它就会留下不同步的索引。
+>
+> **改过任何 `SKILL.md` 之后同步本文件**：版本号、description、分层归属、总览表与计数。这条原来只写在 `CLAUDE.md`，而 WorkBuddy 不加载那个文件，所以搬到这里——规则要住在被约束对象旁边。
 
 ### 三层架构
 
@@ -23,7 +27,6 @@ up: "[[llm-wiki-schema]]"
 | | `content-evaluator-local` | v1.2.0 | 健康检查（lint），含 content-type 模板对比 | 全库只读 |
 | | `content-verifier-local` | v1.1.0 | 内容质量核查，按模板章节对比 | 指定笔记 |
 | **内容层** | `llm-wiki-local` | v1.0.0 | ingest / query / lint / graph | 内容页 |
-| | `action-suggest` | v1.0.0 | 基于状态生成行动建议 | 全库只读 |
 
 ### 调用流程
 
@@ -141,23 +144,12 @@ obsidian-note-local → 创建 + 挂父页面 + 同步 + 评估 + 核查（一�
 
 ---
 
-#### action-suggest
-
-**用途**：基于知识库状态，推荐下一步行动。
-
-```bash
-/action-suggest
-/action-suggest light
-```
-
----
-
 ### 相关文档
 
 - `llm-wiki-schema.md` — 知识库工作流整体架构
 - `_ingest-rules.md` — ingest 工作流详细规则
 - `_lint-rules.md` — lint 工作流 + 分析脚本
-- `_笔记类型规范.md` — content-type 的 Wiki 层内联规则、类型对比、状态流转（定义部分见 [[笔记类型规范]]）
+- `_笔记类型规范.md` — content-type 的 Wiki 层内联规则、类型对比（定义部分见 [[笔记类型规范]]）
 - `_content-type-rules.md` — 已废弃（DEPRECATED），定义见 [[笔记类型规范]]
 - `_query-rules.md` — query 工作流
 - `_sync-rules.md` — sync 工作流

@@ -5,7 +5,6 @@ aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-05-20
 date-modified: 2026-07-17
-status: active
 content-type: article
 up: "[[本库指南]]"
 ---
@@ -14,9 +13,12 @@ up: "[[本库指南]]"
 
 本文档是 LLM 维护本知识库的作业指南。LLM 根据此 schema 消化 (ingest) 新笔记、回答查询 (query)、以及定期检查 (lint) 知识库健康度。
 
+> [!note] 边界：本文件专供 llm-wiki 工作流
+> 这里只讲「怎么做」。本库的架构总览（目录结构、子系统关系、粒度模型）在 [[本库子系统概述]]，两份文件**不合并**：这份随工作流演进而改，那份随架构演进而改。类型定义、字段定义、命名规则一律引用 [[真值索引]] 里的文档，本文件不复制。
+
 > **详细规则**：本文件是索引，各工作流详细规则见子文档。
 > - [[_skills-overview]] — 所有 skill 的用法总览
-> - [[_笔记类型规范]] — content-type 的 Wiki 层内联规则、类型对比、状态流转（定义部分见 [[笔记类型规范]]）
+> - [[_笔记类型规范]] — content-type 的 Wiki 层内联规则、类型对比（定义部分见 [[笔记类型规范]]）
 > - [[_anki-sync-rules]] — Anki 集成规则（哪些笔记生成卡片、卡片格式、同步工作流）
 > - [[_content-type-rules]] — content-type 定义和前缀规则（兼容入口，已合并到 _笔记类型规范）
 > - [[_ingest-rules]] — ingest 工作流 + inbox review 工作流

@@ -6,7 +6,6 @@ description: Anki 集成子系统的作业规则：哪些笔记生成卡片、�
 tags: [方法论, llm-wiki, anki]
 date-created: 2026-08-02
 date-modified: 2026-08-02
-status: active
 content-type: article
 up: "[[llm-wiki-schema]]"
 ---

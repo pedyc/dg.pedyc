@@ -1,5 +1,5 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: <% tp.file.creation_date("YYYYMMDDHHmmss") %>
 title: "{{标题}}"
 aliases: ["VS-{{简短标题}}"]
 description: "{ 一句话概括核心区别 }"

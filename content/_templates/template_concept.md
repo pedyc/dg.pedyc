@@ -1,5 +1,5 @@
 ---
-uid: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+uid: <% tp.file.creation_date("YYYYMMDDHHmmss") %>
 title: template_concept
 aliases: ["C-{{概念名称}}"]
 description: "{ 一句话定义这个概念 }"

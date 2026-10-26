@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-个人成长/个人成长.md",
+                "file": "_templates/template_sop.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "个人成长"
+              "title": "template_sop"
             }
           },
           {
@@ -248,7 +248,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-个人成长/个人成长.md",
+                "file": "_templates/template_sop.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -455,14 +455,16 @@
   },
   "active": "fe89b7a1f33165e0",
   "lastOpenFiles": [
-    "_scripts/_tmp_sop_audit.py",
+    "_templates/template_area.md",
+    "30-RESOURCES/手写Promise.md",
+    "40-ARCHIVE/P-求职前端岗位/前端能力提升专项.md",
     "30-RESOURCES/怎样设计周回顾.md",
+    "30-RESOURCES/周回顾.md",
+    "20-AREAS/A-个人成长/个人成长.md",
+    "_scripts/_tmp_sop_audit.py",
     "_scripts/_tmp_area_types.py",
     "_scripts/_tmp_area_links.py",
     "_scripts/_tmp_area_scan.py",
-    "_templates/template_area.md",
-    "20-AREAS/A-个人成长/个人成长.md",
-    "30-RESOURCES/周回顾.md",
     "90-DIARY/2026-10-26.md",
     "_templates/template_diary.md",
     "50-ZETTELCASTEN/习惯能否养成取决于触发与奖励是否可及.md",
@@ -485,7 +487,6 @@
     "30-RESOURCES/个人认知维度建设.md",
     "30-RESOURCES/哲学与认知.md",
     "30-RESOURCES/精力成本.md",
-    "20-AREAS/A-个人成长/健康管理.md",
     "_scripts/tmp_ingest_article.py",
     "99-ASSETS/Bases/信源.base",
     "_resources/edfca64a705f03c7c676f00ad1379d91_MD5.gif",
@@ -493,7 +494,6 @@
     "_resources/34f17eb3143eed28c12b7938df5f2f26_MD5.gif",
     "Clippings",
     "99-ASSETS/书籍/SELF-EVOLVING AGENTS THROUGH PRIVILEGED RET- ROSPECTIVE DISTILLATION.pdf",
-    "_scripts/tmp_add_consume_section.py",
     "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
     "30-RESOURCES/_resources/EP177 The Modern Software Stack/ac9a0c973e1860dc0ae75601ad9ef6e9_MD5.webp",
     "30-RESOURCES/_resources/EP177 The Modern Software Stack/9ede500e163b1dfa88f690c752b3dcf7_MD5.webp",

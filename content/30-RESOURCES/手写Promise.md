@@ -3,7 +3,7 @@ uid: 202603210143
 title: 手写Promise
 aliases: [SOP-手写Promise]
 date-created: 2026-03-20
-date-modified: 2026-05-10
+date-modified: 2026-10-26
 content-type: sop
 ---
 

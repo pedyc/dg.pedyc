@@ -5,113 +5,78 @@ aliases: [A-ThreeJS, Three.js, three.js]
 description: 使用 Three.js 在浏览器中创建和展示 3D 图形的领域
 tags: [前端开发/图形]
 date-created: 2026-03-20
-date-modified: 2026-06-19
-status: active
+date-modified: 2026-10-26
 content-type: area
 up: "[[前端开发]]"
 ---
 
-## Area: Three.js 3D 图形
+## Area: ThreeJS
 
-> Three.js 是一个基于 WebGL 的 JavaScript 3D 图形库，简化了浏览器中的 3D 图形开发。
+> 基于 WebGL 的 3D 图形库，把场景、材质、光照、动画抽象成可组合的对象。
 
----
+### 领域定义
 
-### 知识图谱
+- **核心范畴**：场景图结构、材质系统、光照、后处理、粒子与着色器
+- **不包括**：原生 WebGL 底层开发、2D 图形渲染（属 Canvas / SVG）、游戏逻辑与物理引擎
+- **与相关领域的区别**：vs WebGL——Three.js 是高级封装，提供场景图、材质、光照等抽象；vs Canvas 2D——一个做 3D 渲染，一个做 2D 绘图；vs Babylon.js——Three.js 更轻、社区更大，Babylon.js 内置功能更全
 
-```mermaid
-mindmap
-    root((Three.js))
-        父级
-            WebGL
-        子级
-            场景图结构
-            材质系统
-            光照系统
-            后处理
-        同级
-            Babylon.js
-            WebGPU
-        关联
-            GSAP
-            Canvas
-            SVG
-```
+### 里程碑
 
----
-
-### 定义
-
-- **核心范畴**：使用 Three.js 构建 3D 场景、角色、动画、特效，并在浏览器中实时渲染
-- **不包括**：原生 WebGL 底层开发（属于 WebGL 领域）、2D 图形渲染（属于 Canvas/SVG 领域）、游戏逻辑/物理引擎本身
-- **与相关领域的区别**：
-	- vs WebGL：Three.js 是对 WebGL 的高级封装，提供场景图、材质、光照等抽象
-	- vs Canvas 2D：Three.js 用于 3D 渲染，Canvas 2D 用于 2D 绘图
-	- vs Babylon.js：Three.js 更广泛、社区更大；Babylon.js 更完整、内置功能更多
-
----
-
-### 长期目标
-
-- **愿景**：掌握 Three.js 核心概念（场景、材质、光照、动画），能够独立实现 3D 交互效果和可视化项目
+- **愿景**：掌握场景、材质、光照、动画，能独立实现 3D 交互效果与可视化项目
 - **里程碑**：
-	- [x] 理解 Three.js 场景图结构（Scene / Camera / Renderer）
-	- [x] 掌握材质系统（MeshPhysicalMaterial / ShaderMaterial）
-	- [x] 理解光照与阴影
-	- [ ] 掌握粒子系统和特效
-	- [ ] 掌握后处理（Bloom / Post-processing）
-	- [ ] 完成 3D 可视化作品集
+	- [x] 阶段 1：场景图结构（Scene / Camera / Renderer）
+	- [x] 阶段 2：材质系统（MeshPhysicalMaterial / ShaderMaterial）
+	- [x] 阶段 3：光照与阴影
+	- [ ] 阶段 4：粒子系统与特效
+	- [ ] 阶段 5：后处理（Bloom / EffectComposer）
+	- [ ] 阶段 6：完成 3D 可视化作品集
 
----
+> 判据：阶段 6 是唯一可数的验收点——「作品集」要有条目、能打开。前五条都以它为落点，所以它不是锦上添花的一条，而是这个领域的验收口。
 
-### 关键领域
+### 专题导航
 
-> 该领域的核心知识主题。链接指向尚未创建的 concept，表明尚未掌握。
+> 中观层：本领域是知识粒度的最小单元，没有独立 MOC，概念在此平铺。**未解析的链接不是错误，是尚未写下的洞**——排序见 [[知识缺口]]。
 
-- **场景与渲染**
-	- [[场景图结构]] — Scene / Camera / Mesh 的组织方式
-	- [[透视投影]] — PerspectiveCamera 的视锥体与透视感原理
-	- [[自定义着色器]] — ShaderMaterial 的顶点/片元着色器编程
-- **材质与光照**
-	- [[MeshPhysicalMaterial]] — 透射/折射/清漆层的物理材质
-	- [[光照模型]] — Ambient / Directional / Point / Spot 光源特性
-	- [[环境贴图]] — PMREMGenerator 生成预过滤环境贴图
-- **后处理与特效**
-	- [[后处理管线]] — EffectComposer + RenderPass + ShaderPass
-	- [[粒子系统]] — Points / BufferGeometry / AdditiveBlending
-	- [[流体模拟]] — 多材质混合与流动效果
-- **动画与交互**
-	- [[缓动函数]] — easeOutQuad / easeInOutSine 等动画曲线
-	- [[帧间隔标准化]] — deltaTime 控制动画速度一致性
+- **场景与渲染** — [[场景图结构]] · [[透视投影]] · [[自定义着色器]]
+- **材质与光照** — [[MeshPhysicalMaterial]] · [[光照模型]] · [[环境贴图]]
+- **后处理与特效** — [[后处理管线]] · [[粒子系统]] · [[流体模拟]]
+- **动画与交互** — [[缓动函数]] · [[帧间隔标准化]]
+- **外部资源**
+	- 官网：[threejs.org](https://threejs.org/)
+	- 课程：Three.js Journey（付费）
+	- [第一个 Three.js 项目（B 站）](https://www.bilibili.com/video/BV1SdkNBBE1r/)
 
----
-
-### SOP
-
-> 该领域的标准化操作流程
-
-- [[ThreeJS实现3D视差滚动]] — 3D 多层视差滚动
-- [[ThreeJS实现气泡粒子]] — 透射材质粒子系统
-- [[ThreeJS实现光影滤镜]] — 光照与后处理滤镜
-- [[ThreeJS实现平面凹凸效果]] — ShaderMaterial 自定义变形
-
----
+> 11 条概念里只写了 1 条（场景图结构）。这个领域的知识目前全在 SOP 里——四条实现流程写得比概念清楚，说明是「先会做，后解释」的顺序。
 
 ### FAQ
 
-> 该领域的常见问题（链接 Question）
+> 三条题面已登记，笔记未写（链接未解析）。
 
-- [[Q-ThreeJS和Babylonjs怎么选]] — Three.js vs Babylon.js 选型判断
-- [[Q-ThreeJS能做移动端吗]] — 移动端性能与优化
-- [[Q-ThreeJS性能瓶颈在哪]] — draw call / 纹理 / 着色器优化
+- [[Q-ThreeJS和Babylonjs怎么选]]
+- [[Q-ThreeJS能做移动端吗]]
+- [[Q-ThreeJS性能瓶颈在哪]]
 
----
+### 执行系统
 
----
+- **核心流程**
+	- [[ThreeJS实现3D视差滚动]] — 多层视差滚动
+	- [[ThreeJS实现气泡粒子]] — 透射材质粒子系统
+	- [[ThreeJS实现光影滤镜]] — 光照与后处理滤镜
+	- [[ThreeJS实现平面凹凸效果]] — ShaderMaterial 自定义变形
+- **跨领域引用**
+	- 这四条流程里的着色器与后处理概念，将来应提炼进 [[前端交互]] 的动画侧；现在只在本文实现，没有上升成概念
 
-### 参考延伸
+### 领域健康度
 
-- 官网：[threejs.org](https://threejs.org/)
-- 学习资源：
-	- Three.js Journey（付费课程）
-	- [03. 第一个 Three.js 项目_明文传输不_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1SdkNBBE1r/?spm_id_from=333.788.player.switch&vd_source=d909cd5773c434648664a934ea4a8dae&p=3)
+| 维度 | 状态 | 说明 |
+|:---:|:---:|---|
+| 目标进展 | 🟡 | 6 个阶段勾了 3 个，粒子、后处理、作品集未完成 |
+| 认知更新 | 🔴 | 12 条概念只写了 1 条，`up` 指向本领域的 4 篇全是 SOP |
+| 行动频率 | 🟢 | 四条实现流程全部建成，是「先会做」的典型样本 |
+
+### 领域知识图谱
+
+```dataviewjs
+// 领域页看板（逻辑在 _scripts/areaBacklinks.js）
+await dv.view("_scripts/areaBacklinks")
+```

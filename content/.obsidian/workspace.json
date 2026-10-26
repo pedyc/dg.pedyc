@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-10-26.md",
+                "file": "20-AREAS/A-个人成长/个人成长.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-10-26"
+              "title": "个人成长"
             }
           },
           {
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-INBOX/回顾性自蒸馏.md",
+                "file": "_templates/template_diary.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "回顾性自蒸馏"
+              "title": "template_diary"
             }
           },
           {
@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/知识内化.md",
+                "file": "90-DIARY/2026-W44.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,11 +100,34 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "知识内化"
+              "title": "2026-W44"
+            }
+          },
+          {
+            "id": "ab54e89a46b64968",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "90-DIARY/2026-W44.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-W44"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "19ee9773adff6dbb",
@@ -225,7 +248,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/知识内化.md",
+                "file": "20-AREAS/A-个人成长/个人成长.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -304,7 +327,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "强制学习",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -430,40 +453,45 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "51261c24a5bb1451",
+  "active": "fe89b7a1f33165e0",
   "lastOpenFiles": [
-    "30-RESOURCES/知识获取.md",
-    "30-RESOURCES/知识内化工作流.md",
-    "50-ZETTELCASTEN/AI提问质量取决于上下文结构化程度.md",
-    "30-RESOURCES/AI提问技巧.md",
-    "40-ARCHIVE/全渠道快速捕获工作流.md",
-    "30-RESOURCES/信息收集工作流.md",
-    "30-RESOURCES/经过验证的高信噪比信源.md",
-    "30-RESOURCES/书单/Building agents When to fold subagents into your main agent loop.md",
-    "00-INBOX/回顾性自蒸馏.md",
-    "00-INBOX/信源落地SOP.md",
-    "30-RESOURCES/信源落地SOP.md",
-    "30-RESOURCES/信源/AI资讯日报 RSS Feed.md",
-    "30-RESOURCES/子代理回传.md",
-    "30-RESOURCES/渐进披露.md",
-    "30-RESOURCES/智能体编排.md",
-    "50-ZETTELCASTEN/多团队共建的 Agent 会退化成组织架构的复印件.md",
-    "50-ZETTELCASTEN/渐进披露消除了拆子代理的主要动机.md",
-    "50-ZETTELCASTEN/子代理应按上下文边界拆分而非按问题类型拆分.md",
-    "00-INBOX/未命名.md",
-    "_scripts/tmp_ingest_article.py",
-    "00-INBOX/Untitled.md",
+    "_scripts/_tmp_sop_audit.py",
+    "30-RESOURCES/怎样设计周回顾.md",
+    "_scripts/_tmp_area_types.py",
+    "_scripts/_tmp_area_links.py",
+    "_scripts/_tmp_area_scan.py",
+    "_templates/template_area.md",
+    "20-AREAS/A-个人成长/个人成长.md",
+    "30-RESOURCES/周回顾.md",
     "90-DIARY/2026-10-26.md",
-    "00-INBOX/Building agents When to fold subagents into your main agent loop.md",
+    "_templates/template_diary.md",
+    "50-ZETTELCASTEN/习惯能否养成取决于触发与奖励是否可及.md",
+    "20-AREAS/A-个人成长/时间管理.md",
+    "40-ARCHIVE/习惯养成.md",
+    "90-DIARY/2026-W44.md",
+    "_templates/template_week.md",
+    "90-DIARY/2026-W43.md",
+    "_scripts/tmp_panel_w43.py",
+    "00-INBOX/回顾性自蒸馏.md",
+    "30-RESOURCES/信源/AI资讯日报 RSS Feed.md",
+    "90-DIARY/2026-10-19.md",
+    "_scripts/tmp_read_w43.py",
+    "10-PROJECTS/P-Agent求职/Agent求职.md",
+    "10-PROJECTS/P-Agent求职/Context Ordering & Formatting.md",
+    "10-PROJECTS/P-Agent求职/Context Isolation.md",
+    "10-PROJECTS/P-Agent求职/Context Engineering.md",
+    "10-PROJECTS/P-Agent求职/Context Compression.md",
+    "10-PROJECTS/P-Agent求职/Context Components.md",
+    "30-RESOURCES/个人认知维度建设.md",
+    "30-RESOURCES/哲学与认知.md",
+    "30-RESOURCES/精力成本.md",
+    "20-AREAS/A-个人成长/健康管理.md",
+    "_scripts/tmp_ingest_article.py",
     "99-ASSETS/Bases/信源.base",
     "_resources/edfca64a705f03c7c676f00ad1379d91_MD5.gif",
     "_resources/26287a5434ba11cfa975a12da4e1b362_MD5.webp",
     "_resources/34f17eb3143eed28c12b7938df5f2f26_MD5.gif",
     "Clippings",
-    "index.md",
-    "01-META/Log/wiki-log.md",
-    "30-RESOURCES/数字花园.md",
-    "50-ZETTELCASTEN/数字花园的状态反映了知识的成熟度.md",
     "99-ASSETS/书籍/SELF-EVOLVING AGENTS THROUGH PRIVILEGED RET- ROSPECTIVE DISTILLATION.pdf",
     "_scripts/tmp_add_consume_section.py",
     "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
@@ -473,11 +501,6 @@
     "30-RESOURCES/_resources/Grok/6da80c13a5dc86939bcb2d7e37351f9a_MD5.jpg",
     "_resources/7d82a68af745483f49fa2544f2194c60_MD5.webp",
     "_resources/96bfc6e146a31ce7a7ffbb1da392ae01_MD5.webp",
-    "_scripts/_tmp_agents_sec.py",
-    "_scripts/_tmp_strip_status.py",
-    "_scripts/build_wiki_index.py",
-    "_scripts/_tmp_log2.py",
-    "_scripts/_tmp_verify_idx.py",
     "10-PROJECTS/PROJECTS.canvas",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "未命名.canvas",

@@ -11,9 +11,9 @@ density: 5
 timeliness: 5
 depth: 1
 uniqueness: 2
-output_rate: 1
+output_rate: 4
 url: https://justlovemaki.github.io/CloudFlare-AI-Insight-Daily/rss.xml
-scored_at:
+scored_at: 2026-10-26
 up: "[[经过验证的高信噪比信源]]"
 date-created: 2026-10-25
 date-modified: 2026-10-25
@@ -57,4 +57,5 @@ SORT date-created DESC
 
 ## 下一动作
 
-- [ ] 观察 1 个月后测产出率：从上面表里逐篇点进去数各篇 `## 产出` 段的条数，按 [[信源质量审计标准]] 映射为 1-5
+- [x] 首测产出率（2026-10-26）：2 篇素材共催生 3 条 atomic（回顾性自蒸馏 0 + Building agents 3），按 [[信源质量审计标准]] 映射记 4 分
+- [ ] 观察满 1 个月后复测：确认 4 分不是单篇撑起来的虚高，而是能持续挑出值得深读的条目

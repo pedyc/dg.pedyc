@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "00-INBOX/回顾性自蒸馏.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "回顾性自蒸馏"
             }
           }
         ]
@@ -152,7 +152,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "index.md",
+                "file": "00-INBOX/回顾性自蒸馏.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -359,8 +359,8 @@
   },
   "active": "fe89b7a1f33165e0",
   "lastOpenFiles": [
-    "01-META/Log/wiki-log.md",
     "index.md",
+    "01-META/Log/wiki-log.md",
     "30-RESOURCES/数字花园.md",
     "50-ZETTELCASTEN/数字花园的状态反映了知识的成熟度.md",
     "50-ZETTELCASTEN/数字花园强调观点间的紧密联系.md",

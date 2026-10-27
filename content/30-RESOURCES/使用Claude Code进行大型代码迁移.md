@@ -161,11 +161,11 @@ flowchart TD
 
 ## 知识图谱
 
-- **相关概念**：
+- **相关**：
 	- [[Agent工作流模式]]
 	- [[代码库迁移策略]]
 	- [[代码重构策略]]
-- **参考文章**：[[How Anthropic runs large-scale code migrations with Claude Code]] — 完整来源文章
-- **官方工具包**：[Migration starter kit](https://github.com/anthropics/code-migration-kit-with-claude-code)
+	- [Migration starter kit](https://github.com/anthropics/code-migration-kit-with-claude-code)
+- **外部资料**：[[How Anthropic runs large-scale code migrations with Claude Code]] — 完整来源文章
 - **问题来源**：
 	- [[How Anthropic runs large-scale code migrations with Claude Code]] — 此 SOP 的来源文章

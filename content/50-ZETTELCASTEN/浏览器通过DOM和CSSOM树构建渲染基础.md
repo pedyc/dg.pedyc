@@ -6,7 +6,7 @@ description: 浏览器通过解析 HTML 和 CSS 分别构建 DOM 树和 CSSOM �
 tags:
   - 前端开发/浏览器
 date-created: 2026-03-23
-date-modified: 2026-03-23
+date-modified: 2026-10-27
 status: active
 content-type: atomic
 up: "[[浏览器渲染流程]]"
@@ -14,6 +14,8 @@ noteId: 1792465699036
 ---
 
 > 浏览器通过解析 HTML 和 CSS 分别构建 ~~DOM 树~~ 和 ~~CSSOM 树~~，两者独立构建，为后续渲染提供基础结构。
+
+**边界**：CSSOM 的构建会阻塞渲染——只要有一个样式表没下载完，渲染树就不能合成（这才是 CSS 放 head 的真正原因）。DOM 则是增量构建的，两者并非严格同步并行；JS 执行还会打断 DOM 构建。
 
 ## 论据/示例
 

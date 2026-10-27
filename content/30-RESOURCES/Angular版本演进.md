@@ -227,16 +227,16 @@ graph TD
 
 ### 知识图谱
 
-- **父级概念**：[[前端框架]] — Angular 所属的上位领域
-- **子级概念**：
+- **上位**：[[前端框架]] — Angular 所属的上位领域
+- **下位**：
 	- [[Signal(Angular)|Angular Signals]] — v16 引入的细粒度响应式原语
 	- [[Ivy渲染引擎]] — v8-v9 引入的第三代编译与渲染引擎
 	- [[Zoneless变更检测]] — v18-v19 稳定化的无 Zone.js 新范式
-- **并列概念**：
+- **并列**：
 	- [[React版本演进]] — React 从类组件到 Server Components 的演进路径
-- **相关概念**：
-	- [[前端工程化]] — CLI、monorepo、module federation 等工程实践
+- **相关**：
+	- [[前端工程]] — CLI、monorepo、module federation 等工程实践
 	- [[SSR演进]] — 从 CSR 到 SSR 再到全站渲染的演化
-- **参考文章**
+- **外部资料**
 	- [Angular 官方更新日志](https://angular.dev/update-guide)
 	- [Angular Blog - Releases](https://blog.angular.dev/tag/releases)

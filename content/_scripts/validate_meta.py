@@ -286,6 +286,8 @@ def check_up_style():
 
     bad_style = []      # (文件, 原值, 原因)
     dangling = []       # (文件, 目标)
+    single_arr = []     # (文件, 原值)：单元素数组，合法但冗余
+    no_up_comp = []     # comparison 缺 up：模板里有必填位
 
     for p in files:
         rel = p.relative_to(ROOT).as_posix()
@@ -293,13 +295,21 @@ def check_up_style():
         m = re.match(r"^---\n(.*?)\n---", text, re.S)
         if not m:
             continue
+        ctype_hit = re.search(r"^content-type:\s*(\S+)", m.group(1), re.M)
+        ctype = ctype_hit.group(1).strip() if ctype_hit else ""
         hit = re.search(r"^up\s*:(.*)$", m.group(1), re.M)
         if not hit:
+            if ctype == "comparison":
+                no_up_comp.append(rel)
             continue
         val = hit.group(1).strip()
 
         if val == "":
+            if ctype == "comparison":
+                no_up_comp.append(rel)
             continue                       # 留空是合法的「无父级」
+        if val.startswith("[") and val.count("[[") == 1:
+            single_arr.append((rel, val))
         if val == "null" or val in ('""', "''") or re.fullmatch(r"\[\s*\]", val):
             bad_style.append((rel, val, "空值应直接留空，不写 null/\"\"/[]"))
             continue
@@ -343,6 +353,20 @@ def check_up_style():
             print(f"    {rel}  ->  [[{t}]]")
     else:
         print("  待补父级 0 处 ✓")
+
+    if single_arr:
+        print(f"  单元素数组 {len(single_arr)} 处（合法但冗余，建议写成 up: \"[[X]]\"）：")
+        for rel, val in single_arr:
+            print(f"    {rel}  ->  {val}")
+    else:
+        print("  单元素数组 0 处 ✓")
+
+    if no_up_comp:
+        print(f"  comparison 缺 up {len(no_up_comp)} 处（模板 up 是必填位）：")
+        for rel in no_up_comp:
+            print(f"    {rel}")
+    else:
+        print("  comparison 缺 up 0 处 ✓")
 
     # 悬空不计入 problems：本库的立场是「断链 = 引用了但还没提炼」，是待办而非错误。
     # 它值得被看见（所以要打印），但不该让校验器常红，否则会被习惯性忽略。

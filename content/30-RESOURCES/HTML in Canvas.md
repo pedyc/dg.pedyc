@@ -9,7 +9,7 @@ date-modified: 2026-08-09
 status: fleeting
 content-type: concept
 related: ["[[Canvas动画]]", "[[DOM]]", "[[前端交互]]"]
-up: "[[前端开发]]"
+up: "[[前端交互]]"
 ---
 
 ## 概念：HTML in Canvas
@@ -117,15 +117,15 @@ flowchart LR
 
 ### 知识图谱
 
-- **父级概念**：[[前端开发]] — 前端图形与交互开发
-- **子级概念**：
+- **上位**：[[前端开发]] — 前端图形与交互开发
+- **下位**：
   - [[Canvas动画]] — 渲染到 Canvas 后的动画与绘制
-- **并列概念**：
+- **并列**：
   - [[DOM]] — HTML 结构的来源
   - [[前端交互]] — 交互与图形技术的聚合
-- **相关概念**：
+- **相关**：
   - [[语义化 HTML]] — HTML 结构设计
-- **参考文章**
+- **外部资料**
   - [MDN - foreignObject](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject)
   - [html2canvas 官方文档](https://html2canvas.hertzen.com/)
   - [html-to-image (GitHub)](https://github.com/bubkoo/html-to-image)

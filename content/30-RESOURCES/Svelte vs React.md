@@ -132,10 +132,10 @@ export default function Button() {
 
 ### 知识图谱
 
-- **父级话题**：[[前端框架]]
-- **相关对比**：
-	- [[Angular vs React]] — 全面框架 vs UI 库的对比
-	- [[Vue vs React]] — 渐进式框架 vs UI 库
-- **前置知识**：
+- **上位**：
+	- [[前端框架]]
 	- [[Svelte 无需虚拟 DOM，编译时直接生成 DOM 操作代码]]
 	- React 虚拟 DOM 和 Fiber 架构
+- **相关**：
+	- [[Angular vs React]] — 全面框架 vs UI 库的对比
+	- [[Vue vs React]] — 渐进式框架 vs UI 库

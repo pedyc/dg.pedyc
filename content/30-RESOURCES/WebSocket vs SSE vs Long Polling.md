@@ -109,13 +109,12 @@ graph TD
 
 ### 知识图谱
 
-- **父级概念**：[[Web通信]] — 三者的选型归属实时通信分类
-- **相关概念**：
+- **上位**：[[Web通信]] — 三者的选型归属实时通信分类
+- **相关**：
 	- [[WebSocket]] — 全双工二进制帧方案
 	- [[SSE]] — 单向文本推送方案
 	- [[HTTP]] — 三者的底层协议，HTTP/2 的 [[HPACK]] 与 [[持久连接]] 是长轮询成本塌缩的关键
-- **原子洞见**：
 	- [[长轮询的坏名声来自请求头的重复而非轮询模式本身]] — 长轮询 7.4× 成本的真正来源
 	- [[SSE比WebSocket只贵10%字节却换来免费的断线重连与续传]] — SSE 作为默认选择的依据
-- **参考来源**
+- **外部资料**
 	- [WebSocket vs SSE vs Long Polling: The Real Cost of 1,000 Events](https://theinfinity.dev/articles/websocket-vs-sse-vs-polling)

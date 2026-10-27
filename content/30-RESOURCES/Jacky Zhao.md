@@ -107,13 +107,12 @@ timeline
 
 ### 知识图谱
 
-- **父级领域**：[[数字花园]]（其创造的 Quartz 是数字花园的主要落地工具）
-- **相关概念**：
+- **上位**：[[数字花园]]（其创造的 Quartz 是数字花园的主要落地工具）
+- **相关**：
 	- [[数字花园]] — Quartz 所服务的核心理念
 	- [[斑驳光]] — 其 2024 年文章是本库该概念的直接来源
-- **相关人物**：
 	- [[尤雨溪]] — 同为前端开源工具创作者（Vue/Vite vs Quartz）
-- **参考来源**
+- **外部资料**
 	- GitHub: https://github.com/jackyzha0
 	- 个人网站: https://jzhao.xyz
 	- Quartz 官网: https://quartz.jzhao.xyz

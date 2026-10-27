@@ -9,6 +9,7 @@ date-modified: 2026-07-21
 status: active
 comparison: [函数组件, 类组件]
 content-type: comparison
+up: "[[React]]"
 related: ["[[React]]"]
 ---
 
@@ -143,8 +144,8 @@ class Counter extends React.Component {
 
 ### 知识图谱
 
-- **父级概念**：[[React]]
-- **相关概念**：
+- **上位**：[[React]]
+- **相关**：
 	- [[函数组件和类组件有什么区别？生命周期如何映射？]]
 	- [[为什么社区更倾向函数组件]]
-- **核心关联**：[[Hooks(React)]] / [[React.Component]]
+	- [[Hooks(React)]] / [[React.Component]]

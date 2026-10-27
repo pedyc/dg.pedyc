@@ -146,8 +146,8 @@ function Page() {
 
 ### 知识图谱
 
-- **父级概念**：[[NextJS]] — 本 SOP 是 Next.js 开发的实践指南
-- **关联概念**：
+- **上位**：[[NextJS]] — 本 SOP 是 Next.js 开发的实践指南
+- **相关**：
 	- [[Hydration]] — SOP 所涉及的核心概念
 	- [[SSR]] — Hydration 的应用场景
 	- [[CSR]] — 与 SSR 对比的渲染模式

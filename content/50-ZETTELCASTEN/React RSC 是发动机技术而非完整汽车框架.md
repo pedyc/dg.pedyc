@@ -15,6 +15,8 @@ noteId: 1792465709213
 
 > React 19 RSC 是~~发动机技术~~，而非~~完整汽车框架~~，完整开发体验仍需 NextJS
 
+**边界**：这个类比在「要不要选 NextJS」时有用，在「能不能用 RSC」时会误导——RSC 已进 React 本体，配 Vite、Remix 也能跑，不是必须搭配 NextJS。
+
 ## 论据/示例
 
 **1. React 19 vs NextJS 功能对比**

@@ -255,8 +255,8 @@ new ParallaxScene()
 
 ### 知识图谱
 
-- **父级概念**：[[ThreeJS]] — 本 SOP 是 Three.js 在视差场景的垂直应用
-- **关联概念**：
+- **上位**：[[ThreeJS]] — 本 SOP 是 Three.js 在视差场景的垂直应用
+- **相关**：
 	- [[CSS实现文字横向滚动效果]] — CSS 自动滚动方案（1D，无深度）
 	- [[Canvas实现无限滑动效果]] — Canvas 拖拽方案（2D，无透视）
 	- [[Canvas动画]] — Canvas 2D 动画基础

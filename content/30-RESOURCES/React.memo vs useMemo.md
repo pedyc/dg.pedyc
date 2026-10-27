@@ -156,8 +156,8 @@ const ThemedButton = React.memo(({ onClick }: { onClick: () => void }) => {
 
 ### 知识图谱
 
-- **父级概念**：[[Hooks(React)|React Hooks]] — 两者都是 React 性能优化相关的 API
-- **相关概念**：
+- **上位**：[[Hooks(React)|React Hooks]] — 两者都是 React 性能优化相关的 API
+- **相关**：
 	- [[React.memo]] — 组件记忆化高阶组件
 	- [[useMemo]] — 值记忆化 Hook
 	- [[React性能优化]] — 性能优化的完整策略

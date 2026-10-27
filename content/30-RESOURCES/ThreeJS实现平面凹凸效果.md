@@ -285,8 +285,8 @@ scene.add(new THREE.Points(particlesGeometry, particlesMaterial))
 
 ### 知识图谱
 
-- **父级概念**：[[ThreeJS]]
-- **关联概念**：
+- **上位**：[[ThreeJS]]
+- **相关**：
 	- [[ThreeJS实现气泡粒子]] — ShaderMaterial 进阶用法
 	- [[ThreeJS实现光影滤镜]] — 后期处理与 EffectComposer
 	- [[ThreeJS实现3D视差滚动]] — 滚动驱动的场景变化

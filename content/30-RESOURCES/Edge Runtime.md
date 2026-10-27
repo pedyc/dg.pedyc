@@ -91,13 +91,13 @@ graph TB
 
 > 知识图谱链接 term（术语定义）和相关 concept
 
-- **父级概念**：
+- **上位**：
 	- [[CDN]] — Edge 的基础设施层
-- **子级概念**：
+- **下位**：
 	- [[Cloudflare Workers]] — Edge Runtime 的具体实现
-- **并列概念**：
+- **并列**：
 	- [[NodeJS]] — 传统服务端运行时
-- **相关概念**：
+- **相关**：
 	- [[Serverless]] — 无服务器架构范式
 	- [[Deno Deploy]] — Deno 的边缘计算产品
 

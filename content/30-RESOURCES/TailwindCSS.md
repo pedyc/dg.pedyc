@@ -93,15 +93,15 @@ flowchart LR
 
 ### 知识图谱
 
-- **父级概念**：[[CSS]] — TailwindCSS 是 CSS 的原子化实现
-- **子级概念**：
+- **上位**：[[CSS]] — TailwindCSS 是 CSS 的原子化实现
+- **下位**：
 	- 工具类 — 原子化样式单元
 	- 设计系统配置 — Tailwind 的预设值定制
-- **并列概念**：
+- **并列**：
 	- [[CSS]] — 传统 CSS 写法
 	- SCSS/Sass — CSS 预处理器
 	- CSS-in-JS — 样式绑定 JavaScript 的方案
-- **相关概念**：
+- **相关**：
 	- [[前端开发]] — TailwindCSS 的应用领域
 	- [[前端交互]] — 交互样式实现
 

@@ -6,60 +6,25 @@ description: IndexedDB 是浏览器内置的数据库，支持存储大量结构
 tags:
   - 前端开发/浏览器
 date-created: 2026-03-23
-date-modified: 2026-03-23
+date-modified: 2026-10-27
 status: active
 content-type: atomic
-up: "[[Web存储]]"
+up: "[[Web Storage]]"
 noteId: 1792465706811
 ---
 
 > IndexedDB 是浏览器内置的 NoSQL 数据库，支持存储大量结构化对象、~~事务操作~~和~~索引查询~~，适合离线应用和大数据存储场景。
 
+**边界**：它解决的是「量大且要查询」，不是「要快」。单条小数据读写不如 localStorage 直接；而且默认不是持久化存储——浏览器在磁盘紧张时可以先清掉它，除非调用 `navigator.storage.persist()` 申请豁免。
+
 ## 论据/示例
 
-**基本结构**：
-```
-数据库 (Database)
-  ↓
-对象仓库 (Object Store) → 类似表
-  ↓
-索引 (Index)
-  ↓
-数据 (Record)
-```
+它的复杂度全部来自「要能查」：对象仓库对应表、索引对应查询路径、事务保证一致性。只存不查的数据放进来，就只是把简单问题做复杂。
 
-**基本用法**：
-```javascript
-// 打开数据库
-const request = indexedDB.open('MyDB', 1);
-
-// 创建对象仓库
-request.onupgradeneeded = (e) => {
-    const db = e.target.result;
-    const store = db.createObjectStore('users', { keyPath: 'id' });
-    store.createIndex('name', 'name', { unique: false });
-};
-
-// 写入数据
-const tx = db.transaction('users', 'readwrite');
-const store = tx.objectStore('users');
-store.add({ id: 1, name: 'Alice' });
-```
-
-**特点**：
-- 容量：无明确限制（取决于磁盘空间）
-- 数据类型：结构化对象（不限于字符串）
-- API：异步 API（基于回调/Promise）
-- 事务：支持事务，保证数据一致性
-- 索引：支持创建索引加速查询
-
-**常见用途**：
-- 离线应用数据缓存
-- 大型数据集存储
-- 客户端搜索功能
+结构、最小用法与选型分界见 [[Web Storage]] 的「IndexedDB 的结构与分工」。
 
 ## 关联
 
-- [[Web存储]] — 本观点的主题
+- [[Web Storage]] — 本观点的主题
 - [[localStorage]] — 对比：简单键值对
 - [[Cache API]] — 对比：资源缓存

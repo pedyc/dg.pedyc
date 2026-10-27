@@ -126,20 +126,20 @@ flowchart LR
 
 > 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
 
-- **父级概念**：[[响应式编程]] — RxJS 所属的编程范式
-- **子级概念**：
+- **上位**：[[响应式编程]] — RxJS 所属的编程范式
+- **下位**：
 	- [[RxJS-Observable]] — 被观察数据源
 	- [[RxJS-Observer]] — 观察者
 	- [[RxJS-Subscription]] — 用于终止观察者观察的执行过程
 	- [[RxJS-Operator]] — RxJS 数据流的转换工具（map,filter,reduce）
 	- [[RxJS-Subject]] — 特殊的多播 Observable
 	- [[RxJS-Schedulers]] — 调度器
-- **并列概念**：
+- **并列**：
 	- [[Bacon.js]] — 类似的响应式编程库
 	- [[lodash-flow]] — 同步场景的函数组合
-- **相关概念**：
+- **相关**：
 	- [[异步编程]] — RxJS 解决的核心问题域
 	- [[前端状态管理]] — RxJS 可辅助但不替代
-- **参考文章**
+- **外部资料**
 	- [RxJS 官方文档](https://rxjs.dev/)
 	- [RxJS 核心概念图解](https://rxjs-visualizer.com/)

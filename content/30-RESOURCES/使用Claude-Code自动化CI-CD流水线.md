@@ -126,11 +126,9 @@ jobs:
 
 ### 知识图谱
 
-- **相关概念**：
+- **相关**：
 	- [[Claude Code]] — Claude Code 核心概念和能力
 	- [[CI-CD流程]] — 持续集成/持续部署通用流程
-- **相关 SOP**：
 	- [[使用Claude-Code开发React组件]] — 同类 Claude Code 实践 SOP
 	- [[代码审查流程]] — 人工代码审查标准流程
-- **相关术语**：
 	- [[Headless模式]] — Claude Code 的无头运行模式

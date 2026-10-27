@@ -120,17 +120,17 @@ flowchart LR
 
 ### 知识图谱
 
-- **父级概念**：[[人工智能]] — Agent 是 AI 的重要分支
-- **子级概念**：
+- **上位**：[[人工智能]] — Agent 是 AI 的重要分支
+- **下位**：
 	- [[Harness]] — Agent 工程化框架
 	- [[智能体编排]] — 多个 Agent 协作
 	- [[AgentTool]]
 	- [[ToolCalling]]
 	- [[Context Engineering]]
-- **并列概念**：
+- **并列**：
 	- [[提示词工程|Prompt Engineering]] — 优化模型输出
 	- [[RAG]] — 检索增强生成
-- **相关领域**：
+- **相关**：
 	- [[强化学习]] — Agent 的学习方法论
 	- [[Claude Code]] — Agent 的具体实现
 	- [[开源Agent清单]]

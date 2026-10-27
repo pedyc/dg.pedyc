@@ -99,15 +99,15 @@ flowchart LR
 
 > 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
 
-- **父级概念**：[[LLM]] — RAG 是基于 LLM 的能力增强架构
-- **子级概念**：
+- **上位**：[[LLM]] — RAG 是基于 LLM 的能力增强架构
+- **下位**：
 	- [[上下文窗口]] — 上下文窗口大小影响 RAG 检索到的文档数量上限
 	- [[Token]] — Token 是 RAG 系统成本计算的基本单位
-- **并列概念**：
+- **并列**：
 	- [[提示词工程|Prompt Engineering]] — 提示词工程技术被 RAG 用于组装检索结果
 	- [[Agent]] — Agent 可能使用 RAG 作为知识获取工具
 	- [[LLM Wiki]] — RAG会在每次查询时重新检索，LLM Wiki维护一个结构化的Wiki索引
-- **相关概念**：
+- **相关**：
 	- [[MCP]] — MCP 提供了 RAG 检索的标准化协议
 	- Embedding — 向量化技术是 RAG 检索模块的核心
 	- Vector Database — 向量数据库是 RAG 的知识存储层

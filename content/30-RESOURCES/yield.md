@@ -79,10 +79,10 @@ sequenceDiagram
 
 ## 知识图谱
 
-- **父级概念**：[[Generator]] — yield 是 Generator 函数的控制关键字
-- **子级概念**：[[yield*]] — 委托给另一个 Generator
-- **并列概念**：[[async-await|async/await]] — 另一种异步流程控制方式
-- **相关概念**：[[迭代器]] [[协程]] [[生成器模式]]
+- **上位**：[[Generator]] — yield 是 Generator 函数的控制关键字
+- **下位**：[[yield*]] — 委托给另一个 Generator
+- **并列**：[[async-await|async/await]] — 另一种异步流程控制方式
+- **相关**：[[迭代器]] [[协程]] [[生成器模式]]
 
 ---
 

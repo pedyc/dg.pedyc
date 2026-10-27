@@ -6,14 +6,16 @@ description: sessionStorage 数据仅在当前会话有效，关闭标签页后�
 tags:
   - 前端开发/浏览器
 date-created: 2026-03-23
-date-modified: 2026-03-23
+date-modified: 2026-10-27
 status: active
 content-type: atomic
-up: "[[Web存储]]"
+up: "[[Web Storage]]"
 noteId: 1792465709775
 ---
 
 > sessionStorage 提供~~会话级~~的键值对存储，数据仅在当前标签页会话中有效，关闭标签页后自动清除。
+
+**边界**：「会话」的粒度是标签页，不是登录状态。用 `window.open` 打开的新标签页会复制一份初始值，之后两边各走各的。所以它适合草稿，不适合需要跨标签页共享的状态。
 
 ## 论据/示例
 
@@ -49,5 +51,5 @@ const draft = sessionStorage.getItem('draft');
 
 ## 关联
 
-- [[Web存储]] — 本观点的主题
+- [[Web Storage]] — 本观点的主题
 - [[localStorage]] — 对比：持久化存储

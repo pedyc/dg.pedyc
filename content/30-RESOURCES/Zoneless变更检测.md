@@ -116,14 +116,14 @@ bootstrapApplication(AppComponent, {
 
 ### 知识图谱
 
-- **父级概念**：[[Angular]] — Angular 企业级前端框架
-- **子级概念**：无
-- **并列概念**：
+- **上位**：[[Angular]] — Angular 企业级前端框架
+- **下位**：无
+- **并列**：
 	- [[Signal(Angular)|Angular Signals]] — Zoneless 的前置依赖，提供细粒度响应式能力
 	- [[Angular变更检测]] — 变更检测的通用概念
-- **相关概念**：
+- **相关**：
 	- [[Zone.js]] — Zoneless 试图替代的运行时补丁库
 	- [[SSR演进]] — Zoneless 在 SSR 场景下的优势
-- **参考文章**
+- **外部资料**
 	- [Angular Zoneless Change Detection 官方文档](https://angular.dev/guide/experimental/zoneless)
 	- [Angular Blog - Zoneless is Stable](https://blog.angular.dev/meet-angulars-new-approach-to-change-detection)

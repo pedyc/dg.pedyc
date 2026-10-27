@@ -83,5 +83,5 @@ function* makeIterableOfPromises() {
 
 ### 知识图谱
 
-- **父级概念**：[[JavaScript]]
-- **相关对比**：[[Promise.allSettled() vs Promise.all()]]
+- **上位**：[[JavaScript]]
+- **相关**：[[Promise.allSettled() vs Promise.all()]]

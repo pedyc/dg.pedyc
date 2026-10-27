@@ -111,14 +111,14 @@ flowchart TD
 
 ### 知识图谱
 
-* **父级概念**：[[Web Components]] — 浏览器原生组件化技术体系
-* **子级概念**：
+- **上位**：[[Web Components]] — 浏览器原生组件化技术体系
+- **下位**：
 	* [[T-Declarative-Shadow-DOM]] — 声明式影子 DOM
 	* [[T-CSS-Shadow-Parts]] — `::part` 穿透选择器规范
-* **并列概念**：
+- **并列**：
 	* [[Custom Elements]] — 自定义元素注册与生命周期管理
 	* [[HTML Templates]] — `<template>` 与 `<slot>` 模板复用机制
-* **相关概念**：
+- **相关**：
 	* [[CSS Modules]] — 编译期 CSS 作用域方案
 	* [[微前端]] — 架构层面的应用隔离与集成
 	* MDN Web Docs: Using Shadow DOM

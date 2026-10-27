@@ -90,15 +90,15 @@ flowchart LR
 
 ### 知识图谱
 
-- **父级概念**：[[SSR]] — Hydration 是 SSR 的一部分
-- **子级概念**：
+- **上位**：[[SSR]] — Hydration 是 SSR 的一部分
+- **下位**：
 	- SSR/CSR 一致性 — 避免 Hydration 不匹配
 	- 流式 Hydration — 分段进行 Hydration
-- **并列概念**：
+- **并列**：
 	- [[CSR]] — 纯客户端渲染，不需要 Hydration
 	- SSG — 静态生成，也需要 Hydration（如果框架支持交互）
-- **相关概念**：
+- **相关**：
 	- [[NextJS]] — Next.js 对 Hydration 的封装
-- **参考文章**
+- **外部资料**
 	- [React Hydration Docs](https://react.dev/reference/react-dom/client/hydrateRoot)
 	- [Next.js Server and Client Components](https://nextjs.org/docs/app/building-your-application/rendering/server-components)

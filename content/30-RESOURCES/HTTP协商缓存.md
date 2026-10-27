@@ -116,20 +116,20 @@ flowchart TD
 
 > 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
 
-- **父级概念**：[[HTTP缓存机制]] — 客户端与服务端协同的资源缓存体系
-- **子级概念**：
+- **上位**：[[HTTP缓存机制]] — 客户端与服务端协同的资源缓存体系
+- **下位**：
 	- [[ETag]] — 实体标签与强弱验证器原理
 	- [[Last-Modified]] — 最后修改时间戳机制
 	- [[304 Not Modified]] — 资源未修改的轻量级状态码
 	- [[If-None-Match]] — 基于 ETag 的条件请求头
 	- [[If-Modified-Since]] — 基于时间戳的条件请求头
-- **并列概念**：
+- **并列**：
 	- [[HTTP强缓存]] — 不与服务器通信、直接由浏览器拦截的本地缓存机制（Cache-Control / Expires）
-- **相关概念**：
+- **相关**：
 	- [[Cache-Control: no-cache]] — 跳过本地强缓存、强制向服务器发起协商验证的指令
 	- [[Inode]] — 影响 Linux 文件系统默认 ETag 计算的核心元数据
 	- [[Content-Hash]] — 工程化构建阶段直接将内容哈希植入文件名的方案
-- **参考文章**
+- **外部资料**
 	- RFC 9110: HTTP Semantics - Section 8.8 (Conditional Requests)
 	- RFC 7232: Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests
 	- MDN Web Docs: _HTTP Conditional Requests & Cache-Control_

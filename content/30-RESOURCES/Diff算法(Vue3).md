@@ -152,12 +152,11 @@ function updateChildren(oldChildren, newChildren) {
 
 ### 知识图谱
 
-- **父级概念**：[[Virtual DOM]]
-- **关联概念**：
+- **上位**：[[Virtual DOM]]
+- **相关**：
 	- [[Vue3响应式原理]] — 数据变化触发重新渲染
 	- [[模板编译(Vue3)]] — 生成 render 函数
 	- [[Block管理]] — Vue3 的优化机制
-- **相关问题**：
 	- [[Vue3的Diff算法与React有哪些异同？]]
 	- [[Vue2 vs Vue3 Diff算法|Vue3的Diff算法和Vue2有什么区别？]]
 

@@ -1,11 +1,15 @@
 ---
 uid: 202603230005
 title: HPACK
-aliases: [T-HPACK, HPACK Header Compression]
+aliases:
+  - T-HPACK
+  - HPACK Header Compression
+  - HPACK头部压缩
 description: HPACK是HTTP/2的头部压缩算法，通过静态表、动态表和哈夫曼编码减少头部传输开销
-tags: [前端开发/网络协议]
+tags:
+  - 前端开发/网络协议
 date-created: 2026-03-23
-date-modified: 2026-08-26
+date-modified: 2026-10-27
 status: active
 content-type: term
 ---
@@ -23,7 +27,7 @@ HPACK 是 HTTP/2 的头部压缩算法，专门设计用于高效压缩 HTTP 请
 
 ## 知识网络
 
-- **父级概念**：[[HTTP~2]] — HPACK 是 HTTP/2 的头部压缩机制
+- **父级概念**：[[HTTP2]] — HPACK 是 HTTP/2 的头部压缩机制
 - **相关概念**：
-	- [[HTTP~1.1]] — 无头部压缩
+	- [[HTTP1.1]] — 无头部压缩
 	- [[QPACK]] — HTTP/3 的头部压缩算法（HPACK 的改进版）

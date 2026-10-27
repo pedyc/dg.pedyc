@@ -204,11 +204,11 @@ function BlinkingCursor() {
 
 ### 知识图谱
 
-- **父级概念**：[[React]] — 本 SOP 是 React 开发的实践指南
-- **关联概念**：
+- **上位**：[[React]] — 本 SOP 是 React 开发的实践指南
+- **相关**：
 	- [[ASCII动画]] — SOP 所涉及的核心概念
 	- [[动画原理]] — 动画的理论基础
 	- [[CSS Animation]] — CSS 驱动的动画实现
 	- Framer Motion — React 动画库（本 SOP 使用的优化工具）
-- **参考文章**
+- **外部资料**
 	- [developedbyed/react-gradient-glow](https://github.com/developedbyed/react-gradient-glow)

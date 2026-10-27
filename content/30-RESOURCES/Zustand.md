@@ -105,17 +105,17 @@ flowchart LR
 
 > 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
 
-- **父级概念**：[[前端状态管理]] — Zustand 所属的领域
-- **子级概念**：
+- **上位**：[[前端状态管理]] — Zustand 所属的领域
+- **下位**：
 	- [[T-Store]] — 状态容器的抽象概念
 	- [[T-Hook]] — Zustand 暴露状态的方式
-- **并列概念**：
+- **并列**：
 	- [[Redux]] — 更规范但更复杂的状态管理方案
 	- [[Jotai]] — 原子化状态管理
 	- [[Valtio]] — 响应式状态管理
-- **相关概念**：
+- **相关**：
 	- [[Hooks(React)]] — Zustand 暴露状态的基础
 	- [[状态管理模式]] — 不同状态管理范式
-- **参考文章**
+- **外部资料**
 	- [Zustand 官方文档](https://zustand-demo.pmnd.rs/)
 	- [Redux vs Zustand vs Jotai](https://blog.openReplay.com/comparing-react-state-management-solutions-in-2024/)

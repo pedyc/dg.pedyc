@@ -82,10 +82,10 @@ graph LR
 
 ### 知识图谱
 
-- **父级概念**：[[JavaScript]] — Promise 所在的语言环境
-- **子集概念**：[[Promise.all]]、[[Promise.race]]、[[Promise.allSettled]]、[[Promise.any]] — Promise 的静态方法
-- **并列概念**：async/await — Promise 的语法糖
-- **相关概念**：
+- **上位**：[[JavaScript]] — Promise 所在的语言环境
+- **下位**：[[Promise.all]]、[[Promise.race]]、[[Promise.allSettled]]、[[Promise.any]] — Promise 的静态方法
+- **并列**：async/await — Promise 的语法糖
+- **相关**：
 	- [[事件循环]] — Promise 的微任务执行机制
 	- [[手写Promise]] — Promise 手写实践
 

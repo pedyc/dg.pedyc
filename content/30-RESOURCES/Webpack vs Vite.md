@@ -9,6 +9,7 @@ date-modified: 2026-08-18
 status: active
 comparison: [Webpack, Vite]
 content-type: comparison
+up: "[[前端工程]]"
 related: ["[[前端工程]]", "[[T-Rspack]]"]
 ---
 
@@ -101,11 +102,10 @@ graph TD
 
 ### 知识图谱
 
-- **父级概念**：[[前端工程]] — 同属构建工具领域
-- **相关对比**：
+- **上位**：[[前端工程]] — 同属构建工具领域
+- **相关**：
 	- [[T-Rspack]] — Vite 的高性能替代方案
 	- [[T-Rollup]] — 适合库打包
-- **相关工具**：
 	- [[前端工程化工具]]
 
 ---

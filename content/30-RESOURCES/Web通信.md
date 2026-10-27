@@ -5,7 +5,7 @@ aliases: [MOC-Web通信, Web通信方式]
 description: Web通信专题 MOC：聚合 HTTP 协议族、实时通信、跨域通信与客户端通信方式
 tags: [前端开发/网络]
 date-created: 2025-06-07
-date-modified: 2026-08-18
+date-modified: 2026-10-27
 status: active
 content-type: moc
 up: "[[前端开发]]"
@@ -45,6 +45,7 @@ up: "[[前端开发]]"
 	- [[EventEmitter]] — 发布/订阅模式实现
 	- [[CustomEvent]] — 自定义事件
 - **服务端通信**
+	- [[Cookie]]
 	- [[WebRTC]] — 浏览器间点对点通信
 	- [[GraphQL]] — 查询语言，从服务器获取数据
 
@@ -53,9 +54,9 @@ up: "[[前端开发]]"
 ### 协议基础
 
 - [[HTTP]] — 用于传输超文本的应用层协议
-- [[HTTP~1.1]] — 持久连接、管道化
-- [[HTTP~2]] — 多路复用、头部压缩
-- [[HTTP~3]] — QUIC 协议
+- [[HTTP1.1]] — 持久连接、管道化
+- [[HTTP2]] — 多路复用、头部压缩
+- [[HTTP3]] — QUIC 协议
 - [[HTTPS]] — 安全传输
 - [[AJAX]] — 异步通信技术
 

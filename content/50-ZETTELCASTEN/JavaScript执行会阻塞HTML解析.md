@@ -6,7 +6,7 @@ description: JavaScript 可能修改 DOM 或 CSSOM，因此渲染引擎在执行
 tags:
   - 前端开发/浏览器
 date-created: 2026-03-23
-date-modified: 2026-03-23
+date-modified: 2026-10-27
 status: active
 content-type: atomic
 up: "[[浏览器渲染流程]]"
@@ -14,6 +14,8 @@ noteId: 1792465707184
 ---
 
 > JavaScript 可能修改 DOM 或 CSSOM，因此渲染引擎在执行 JavaScript 时会暂停~~HTML 解析~~，直到 JS 执行完成。
+
+**边界**：阻塞的是解析，同时也就阻塞了后面资源的下载——普通 `<script>` 要等自己下载并执行完，解析才继续。但这只在脚本需要访问它后面的 DOM 时才成为问题：`defer` 与 `async` 的区别不在「是否阻塞下载」，而在「什么时候执行」。
 
 ## 论据/示例
 

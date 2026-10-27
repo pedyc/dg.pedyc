@@ -5,9 +5,10 @@ aliases: [Q-微前端vsMonorepo性能对比]
 description: 微前端是否一定比 Monorepo 性能差？性能差异的根源是什么？
 tags: [前端工程/架构]
 date-created: 2026-04-13
-date-modified: 2026-04-13
+date-modified: 2026-10-27
 status: active
 content-type: question
+up: "[[微前端]]"
 ---
 
 ## 问题

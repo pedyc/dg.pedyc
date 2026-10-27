@@ -96,17 +96,17 @@ up: "[[人工智能]]"
 
 ### 知识图谱
 
-- **父级概念**：[[人工智能]] — AI 代理编码工具
-- **子级概念**：
+- **上位**：[[人工智能]] — AI 代理编码工具
+- **下位**：
 	- [[CLAUDE.md]] — 项目级持久记忆配置
 	- [[Skills]] — 可复用的行为配置
 	- [[MCP]] — 外部服务集成协议
 	- [[Skills 最佳实践(Claude Code)]] — Skills 最佳实践指南
 	- [[Claude-Code-Agent-Loop]]
-- **并列概念**：
+- **并列**：
 	- [[GitHub Copilot]] — IDE 内联代码补全
 	- [[Claude API]] — 底层 API 接入方式
-- **参考文章**
+- **外部资料**
 	- [Claude Code 概述](https://code.claude.com/docs/zh-CN/overview)
 	- [Claude Code 基本命令](https://code.claude.com/docs/zh-CN/quickstart#基本命令)
 	- [Claude Code 最佳实践](https://code.claude.com/docs/zh-CN/best-practices)⭐

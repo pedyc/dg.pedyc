@@ -72,13 +72,13 @@ graph TB
 
 ## 知识图谱
 
-- **父级概念**：[[JavaScript]] — Generator 是一种特殊的函数类型
-- **子级概念**：
+- **上位**：[[JavaScript]] — Generator 是一种特殊的函数类型
+- **下位**：
 	- [[yield]] — Generator 的控制关键字
 	- [[yield*]] — 委托给另一个 Generator
-- **并列概念**：
+- **并列**：
 	- [[async-await|async/await]] — 另一种异步流程控制
-- **相关概念**：
+- **相关**：
 	- [[迭代器]]
 	- [[协程]]
 	- [[生成器模式]]

@@ -8,7 +8,7 @@ tags:
   - 编程范式
   - UI
 date-created: 2026-07-21
-date-modified: 2026-07-22
+date-modified: 2026-10-27
 status: fleeting
 content-type: atomic
 up: "[[为什么社区更倾向函数组件]]"
@@ -17,32 +17,13 @@ noteId: 1792465710931
 
 > UI 本质上是状态到视图的~~映射函数~~：`UI = f(state)`
 
+**边界**：这个模型假设视图完全由状态决定。动画中间态、焦点与滚动位置、IME 组合状态都由浏览器持有，不在 state 里——这正是 ref 与命令式逃生口存在的原因。
+
 ## 论据/示例
 
-**函数组件比 Class 组件更贴近这一模型**：
-- Class 组件的生命周期思维源于面向对象——`componentDidMount`、`componentDidUpdate` 告诉你在什么时候做什么事
-- 函数组件天然表达映射关系：给定 props → 返回视图，每次渲染都是独立快照
+这个模型的价值在于给出了两个可检验的推论：同样的 state 必然渲染出同样的界面（所以渲染函数里不能有「渲染一次就变一次」的逻辑）；也只有组件是纯函数时，跳过某次渲染才是安全的——Concurrent 的可中断与 React Forget 的自动 memo 都建立在这个前提上。
 
-**Concurrent Mode 依赖纯函数模型**：
-- React 的可中断渲染要求组件函数是幂等的——随时可以暂停和恢复
-- Class 组件的实例方法依赖 `this` 引用，容易产生副作用，中断后恢复的语义模糊
-
-**React Forget 编译优化**：
-- 自动 memo 编译器的核心假设：组件是纯函数，给定相同输入必然返回相同输出
-- 基于此才能安全地跳过不必要的重新渲染
-
-```tsx
-// Class 组件 — 侧重"什么时候做什么"
-class Counter extends React.Component {
-  componentDidMount() { /* 初始化 */ }
-  componentDidUpdate() { /* 响应更新 */ }
-}
-
-// 函数组件 — 侧重"映射关系"
-function Counter({ count }) {
-  return <div>{count}</div>; // UI = f(state)
-}
-```
+函数组件为什么更贴合这个模型，见 [[为什么社区更倾向函数组件]]。
 
 ## 关联
 

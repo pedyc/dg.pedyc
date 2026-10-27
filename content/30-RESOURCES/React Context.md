@@ -103,13 +103,13 @@ graph TB
 
 > 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
 
-- **父级概念**：[[Hooks(React)|React Hooks]] — Context 依赖 useContext Hook
-- **子级概念**：
+- **上位**：[[Hooks(React)|React Hooks]] — Context 依赖 useContext Hook
+- **下位**：
 	- [[useContext]] — 消费 Context 的 Hook
-- **并列概念**：
+- **并列**：
 	- [[Zustand]] — 更轻量的状态管理方案
 	- [[Redux]] — 成熟的全局状态管理方案
-- **相关概念**：
+- **相关**：
 	- [[React 状态管理]] — 包含 Context 在内的状态管理全景
 	- [[Prop Drilling]] — Context 试图解决的问题
 

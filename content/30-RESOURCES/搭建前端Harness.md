@@ -330,7 +330,7 @@ node scripts/harness/run.mjs --input .harness/task.example.json --json
 
 ### 知识图谱
 
-- **相关概念**：
+- **相关**：
 	- [[Harness]]
 	- [[Agent]]
 	- [[Provider Adapter]]

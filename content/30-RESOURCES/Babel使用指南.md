@@ -113,10 +113,9 @@ module.exports = {
 
 ### 知识图谱
 
-- **相关概念**：
+- **相关**：
 	- [[抽象语法树]] — Babel 工作流程中的中间表示
 	- [[前端工程]] — Babel 属于前端工程化工具链
-- **相关工具**：
 	- [[Webpack]] — 使用 babel-loader 集成 Babel
 	- [[Vite]] — 内置支持 Babel
 	- [[ESLint]] — 代码质量检查

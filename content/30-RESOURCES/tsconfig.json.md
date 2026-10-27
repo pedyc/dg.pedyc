@@ -140,14 +140,14 @@ flowchart TD
 
 ### 知识图谱
 
-* **父级概念**：[[TypeScript]] — JavaScript 的类型超集与类型系统
-* **子级概念**：
+- **上位**：[[TypeScript]] — JavaScript 的类型超集与类型系统
+- **下位**：
 	* [[T-moduleResolution]] — 模块寻址策略
 	* [[T-skipLibCheck]] — 类型声明忽略策略
 	* [[T-isolatedModules]] — 单文件隔离转译约束
-* **并列概念**：
+- **并列**：
 	* [[package.json]] — Node.js 项目元数据与依赖清单
 	* [[ESLint]] — 代码规范与静态分析工具
-* **相关概念**：
+- **相关**：
 	* [[前端工程]] — 现代构建体系与质量卡点基础设施
 	* [[Vite]] — 下一代前端工具链

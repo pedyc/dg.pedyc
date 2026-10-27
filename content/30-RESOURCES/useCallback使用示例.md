@@ -185,8 +185,8 @@ function ItemList({ items }) {
 
 ### 知识图谱
 
-- **父级概念**：[[useCallback]] — 本 SOP 对应的核心概念
-- **关联概念**：
+- **上位**：[[useCallback]] — 本 SOP 对应的核心概念
+- **相关**：
 	- [[Hooks(React)]] — useCallback 所属的 Hooks 体系
 	- [[React.memo]] — 需要配合使用的组件记忆化工具
 	- [[useMemo]] — 值缓存 Hook，与 useCallback 机制类似

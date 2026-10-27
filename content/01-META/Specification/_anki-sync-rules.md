@@ -35,8 +35,9 @@ up: "[[llm-wiki-schema]]"
 
 question 不直接同步，收敛后才进 Anki：
 
-- question 验证出明确答案 → 把「答案」做成卡，不同步整个 question 笔记
 - question 收敛为 SOP → SOP 的关键步骤/边界条件拆成卡
+- question 收敛为 atomic → 该 atomic 本身就是一张卡（卡面即观点句），不拆；证据写在那条的论据里
+- 收敛不到 SOP / atomic 的 → 只把已确定的「答案」做成卡，整篇 question 不同步
 - 关联规范见 [[笔记类型规范]] 的「sop 与 question：同一条轴，允许同主题并存」一节
 
 ### 卡片格式约定

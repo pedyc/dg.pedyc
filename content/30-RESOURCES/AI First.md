@@ -93,19 +93,19 @@ flowchart TD
 
 ### 知识图谱
 
-- **父级概念**：[[软件工程研发范式]] — 软件开发生命周期（SDLC）与组织方法论演进。
-- **子级概念**：
+- **上位**：[[软件工程研发范式]] — 软件开发生命周期（SDLC）与组织方法论演进。
+- **下位**：
 	- [[提示词工程]] — 为 AI Agent 提供精准代码与架构上下文的核心技术
 	- [[AI辅助设计与规范 (AI-Assisted Spec)]] — 需求与交互原型的自动化压缩机制
 	- [[智能体协同研发工作流 (Agentic Dev Workflow)]] — 自主规划、执行、重构与部署的多 Agent 协作体系
 	- [[AI驱动质量保障 (AI-Driven QA)]] — 自动化用例生成与智能断言测试闭环
-- **并列概念**：
+- **并列**：
 	- [[敏捷开发 (Agile Development)]] — 以迭代与快速反馈为核心的传统协作范式
 	- [[持续集成与持续部署|CI/CD]] — 贯穿研发到运维的自动化交付管道
 	- [[DevOps]]
-- **相关概念**：
+- **相关**：
 	- [[代码大模型 (Code LLMs)]] — 提供代码生成与理解的基础模型支撑
 	- [[软件架构与契约测试]] — 为 AI 提供确定性约束的底层设计原则
-- **参考文章**
+- **外部资料**
 	- [Auddia Adopts AI-First Development Model to Accelerate Product Delivery | GlobeNewswire](https://www.globenewswire.com/news-release/2026/08/25/3350297/0/en/auddia-adopts-ai-first-development-model-to-accelerate-product-delivery-across-its-platforms.html)
 	- [AI-First Software Development: Redefining How We Build Software](https://rywalker.com/ai-first-software)

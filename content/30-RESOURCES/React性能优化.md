@@ -8,7 +8,7 @@ date-created: 2026-04-29
 date-modified: 2026-06-16
 status: active
 content-type: sop
-up: "[[Refs(React)]]"
+up: "[[React]]"
 ---
 
 > React 性能优化的标准操作流程
@@ -38,6 +38,25 @@ const MyComponent = React.memo(function MyComponent({ name }) {
 ```
 
 **适用场景**：子组件渲染成本高、接收复杂 props。
+
+**浅比较会在两处失效**：
+
+- **父组件每次渲染都新建对象或函数**（`style={{ color: 'red' }}`、内联回调），引用每次都变，memo 判定「变了」，等于没包
+- **props 里的嵌套对象内部变了但引用没变**（直接改 `obj.x`），memo 判定「没变」，界面停在旧值
+
+两处都靠稳定引用来解决：`useMemo` 缓存对象、`useCallback` 缓存函数。反过来，如果 props 只有原始值、组件本身也轻，包一层 memo 的比较成本可能超过重渲染成本——memo 不是默认该加的。
+
+需要按业务字段而非引用比较时，传第二个参数：
+
+```jsx
+const Row = React.memo(
+  ({ data }) => <div>{data.value}</div>,
+  (prev, next) => prev.data.id === next.data.id
+);
+```
+
+> [!warning]
+> 自定义比较函数把「什么算相同」的责任交回给你：漏比一个字段，界面就会停在旧值，而且这种 bug 只在那一个字段变化时出现。
 
 #### 1.2 useMemo
 

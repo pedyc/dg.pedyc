@@ -15,6 +15,7 @@ comparison:
   - 观察者模式
   - 发布-订阅模式
 content-type: comparison
+up: "[[设计模式]]"
 related:
   - "[[前端开发]]"
   - "[[设计模式]]"

@@ -110,7 +110,7 @@ flowchart TD
 
 ### 知识图谱
 
-- **相关概念**：
+- **相关**：
 	- [[Context Engineering]]
 	- [[Context Quality]]
 - **问题来源**：

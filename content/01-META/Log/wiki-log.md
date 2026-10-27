@@ -4,22 +4,134 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-08-18
-status: active
+date-modified: 2026-10-27
 content-type: article
 up: "[[本库指南]]"
 ---
 
 ## Wiki Log
 
-本文件是知识库的 append-only 时间线，记录知识加工事件。格式：`## [日期] 操作类型 | 标题`。
+本文件是知识库的 append-only 时间线，记录知识加工事件。
 
-**应记录的操作类型**：`ingest`、`inbox-review`、`lint`、`query`
+**结构**：`## 年份` → `### 年月` → `#### 日期`，年份、月份、日期一律**倒序**（新的在上）。条目格式 `- [YYYY-MM-DD] 操作类型 | 标题`，续行用 Tab 缩进。
+
+**归位规则**：条目挂在**它自己标注的日期**下，不是挂在文件末尾最后一个小节下。追加时先找到对应的 `#### 日期`，没有就新建一个。直接往文件末尾接，是 2026-10-27 之前这份日志乱掉的唯一原因（6-24、6-27 的条目曾埋在 5-20 下，10-27 的条目曾埋在 10-25 下）。
+
+**应记录的操作类型**：`ingest`、`inbox-review`、`lint`、`query`、`refactor`
 **不应记录的操作**：`sync`、`update`、`create`（系统维护）
 
 ---
 
 ## 2026
+
+### 2026-10
+
+#### 2026-10-27
+
+- [2026-10-27] refactor | HTTP 族重组：新建 `HTTP版本演进`（roadmap），版本节点改名去 `~`，`HTTP1.0` 并入后归档
+	- 诊断：这一族 29 篇里有三种知识——协议本体（1 份）、每版增量（N 份）、版本差异矩阵（1 份）。第三类没有家，被抄成 5 份（`HTTP` 的「关键区别」与「版本演进」两表 + 四篇版本各自的「关键区别」），并且已经漂移：`HTTP` 表写「HTTP/2 队头阻塞：无」，`HTTP2` 自己写「TCP 层」，而 `HTTP` 的核心命题正在论证「阻塞被替换而非消除」
+	- 归位：差异矩阵收进 `HTTP版本演进`（`content-type: roadmap`，`up: "[[HTTP]]"`，先例 `Angular版本演进`），四篇版本笔记各删「关键区别」，改为一行指针；`HTTP` 删两张表，改为一段指向
+	- 改名：`HTTP~1.0`/`HTTP~1.1`/`HTTP~2`/`HTTP~3` → `HTTP1.0`/`HTTP1.1`/`HTTP2`/`HTTP3`。`~` 是 `/` 的临时替身，全库 66 处链接里 64 处直接渲染成 `HTTP~2`，而 alias 里的 `HTTP/2` 一次未被使用；17 条 atomic 的标题早已写 `HTTP1.0`/`HTTP2` 形式。同步 72 处字符串（含 `up` 值、40-ARCHIVE 内旧链）
+	- 归档：`HTTP1.0` 剥掉共性后只剩两条命题，独有内容并入 `HTTP版本演进` 的阶段详情，笔记移入 `40-ARCHIVE`（`up` 指向演进线）；两条 atomic 的 `up` 一并改指
+	- 顺带修正：`HTTP1.1` 补 `up`、`HTTP` 补 `up: "[[网络协议]]"`；`HTTP1.0` 知识图谱把 1.1 写成「下位」→「并列」（1.0 的结论「短连接」在 1.1 身上不成立，不满足下位判据）；`HTTP3` 描述「第三个主要版本／彻底解决队头阻塞」→「第四个／缩小到单流粒度」，与 atomic `QUIC只缩小阻塞粒度…` 对齐；`HTTP2` 知识图谱一条截断成 `[[HTTP2` 的死链删除
+	- 未动：`HTTP2`、`HTTP3` 的 5 处断链（`[[头部压缩]]`、`[[TLS]]`、`[[UDP]]`、两条 0-RTT／连接迁移命题）是待提炼信号；`HTTPS` 仍无 `up`；`持久连接` 的「知识网络」节仍是旧桶名（该节名不在收口的匹配范围内）
+- [2026-10-27] refactor | 删除 `Specification/_笔记类型规范`，17 处引用改指真值
+	- 理由：450 行里独有内容约 24 行（5%），其余是 `Truth/笔记类型规范`、`Truth/文件名与别名规范`、`Truth/本库目录结构` 的第三份抄本；10-26 已实证它「悄悄过期」——sop/question 判据与 Truth 打架
+	- 独有内容不迁移：第七节「各类型默认父级」经全库实测，7 类中 5 类不成立（concept 实际最多的是空 160 与 moc 68，不是 area 62；term 空 68 高于 concept 20；question 漏了 concept 28）→ 属未经验证的凭印象约定，不升格为真值；其 `question → 关联 area 的 FAQ` 还与 `_wiki-index-format` 的 `## Questions (待探索)` 固定分区冲突
+	- 引用改指：`真值索引`（删「特别说明」与相关链接）、`llm-wiki-schema`、`_skills-overview`、`_anki-sync-rules`×2、`_content-type-rules`、`知识粒度子系统`×2、`本库常见问题解答汇总`×2（锚点改指 Truth 的对应小节）、`content-evaluator-local` 与 `content-verifier-local` 两个 skill、`validate_meta.py` 的 exclude_files
+	- 未动：`Log/wiki-log.md` 5 处历史记录（不改写流水）、`.obsidian/plugins/obsidian-to-anki-plugin/data.json` 的哈希缓存（插件自愈）
+- [2026-10-27] refactor | 知识图谱桶名收口：70 种写法 → 6 个
+	- 起因：查「知识图谱要不要改成 dataview」。实测该节不是索引——只收录 12% 入链（240/1969）、85% 链接带「— 说明」、42% 目标是断链，它记的是「我认为它该连到哪」而非「谁已经连过我」，所以不改渲染层，改词表
+	- 收口后：上位 212 / 下位 106 / 并列 113 / 相关 244 / 外部资料 59 / 问题来源 15（唯一保留的第六个，记 Q→SOP 收敛血缘，与概念关系不同轴）
+	- 合并掉的同义写法：父级概念·父级领域·父级 Hook·母领域·母 MOC·上级·上游 → 上位；子级概念·子集概念·下位概念·基础组件·深入主题 → 下位；关联概念·演进关系·相关对比·技术栈关联·相关工具·生态库·相关人物 → 相关；参考文章·参考来源·参考资源·延伸阅读 → 外部资料
+	- 范围：246 篇（30-RESOURCES 与 10-PROJECTS），60 篇因同篇多桶合并而改写结构；排除 `.obsidian`/`.trash`/`.git`/`.workbuddy`/`_templates`/`01-META`/`40-ARCHIVE`/`99-ASSETS`
+	- 模板同步：`template_concept`（五桶）、`template_person`、`template_sop`（五桶 + 问题来源）
+	- 未动：`40-ARCHIVE` 4 篇、`01-META/Guide/本库子系统概述` 与 `01-META/Faq/为什么使用PARA笔记法` 仍用旧词（前者是架构说明、后者属内容笔记，都在排除清单里）
+- [2026-10-27] refactor | wiki-log 按日期重排：178 条全部归位到自身日期
+	- 起因：10-27 的记录在日志里找不到——它是往文件末尾追加的，落在当时最后一个小节 `#### 2026-10-25` 之下；而 2026-10 的条目整体挂在 `### 2026-05` 里，翻 2026-10 只能看到 10-25
+	- 根因：append-only 被当成「往文件尾接」，而条目自带的 `[日期]` 与所在小节日期是两条独立信息，从不校验。四种表现：同月乱序（08-11 在 08-14 之前）、月份重复（两个 `### 2026-08`）、跨月错位（06-24/06-27 埋在 05-20 下，06-28/06-23 埋在 05 月）、文件中部混入 `*Log 开始于 2026-05-20*` 与二级标题
+	- 做法：按条目自身的 `[YYYY-MM-DD]` 重新分组，重建 `## 年 / ### 月 / #### 日` 三级骨架，年、月、日一律倒序；正文逐行保留，比对结果 859 行内容行完全相同、0 增删
+	- 结构修正：`## Lint Report - 2026-06-12` 原为二级标题，把其后所有日期挤出大纲，降为 `#####`（内层三节降为 `######`）并归入 06-12
+	- 规则补写：文件头新增「结构」与「归位规则」，明确条目挂在自身日期下，并说明直接往文件尾接就是这次乱序的唯一原因
+	- 未动：条目正文一字未改（含 `40-RESOURCES` 等旧路径，时间线不改写）；frontmatter 只删废除字段 `status`、更新 `date-modified`
+- [2026-10-27] refactor | 新建真值「知识图谱词表」，定 `up` 管归档位置、`上位` 管认知层级
+	- 内容：六个桶（上位 / 下位 / 并列 / 相关 / 外部资料 / 问题来源）的回答对象、判据、判定顺序、使用范围，以及每个词的来源交代
+	- 分工结论：`up` = 归档位置（整体—部分，挂在树上哪一篇下面）；`上位` = 认知层级（一般—特殊，它是谁的实例）。实测 144 篇可比对里 21 篇不一致（15%），此前按「up 与父级不一致」判成缺陷属误判；分工定下后这 21 篇不改，典型如 `Reflect`（up=ES2015、上位=元编程）
+	- 词源交代：`并列`/`相关` 沿用 `template_concept` 原有的「并列概念」「相关概念」，去掉「概念」二字（桶里常装 term 或 atomic）；`外部资料` 沿用「参考文章」并接收 参考来源/参考资源/延伸阅读；`问题来源` 沿用 `template_sop` 未改名；`上位`/`下位` 是 10-27 收口时新定名，借自术语学的上位词/下位词——不用「父级」正是为了与 `up` 的父级语义分开
+	- 同步：`元数据规范`（`up` 用途改「归档父级」+ 新增 `up 与正文上位的分工` 小节）、`笔记类型规范`（模板映射后加指针）、`真值索引`（登记该真值文件）、三个模板（concept / sop / person 各加一句指向词表）、`AGENTS.md` 入口表加一行、`Guide/本库子系统概述` 3 处旧桶名改新词
+	- 未动：`40-ARCHIVE` 4 篇 7 处旧写法（免维护区，不碰）
+
+#### 2026-10-25
+
+- [2026-10-25] inbox-review | 00-INBOX 7 篇剪藏统一 content-type
+	- 判断依据：7 篇均带 `tags: clippings` 与 `author` / `source` / `published`，属外部素材；本库口径 `article` 只给「自己的文章」，故统一为 `record`
+	- 原类型 → 新类型：4 篇原本没有 `content-type` → `record`；3 篇原为 `article` → `record`（现代网络浏览器 1 / 3 / 4）
+	- `从采集到回顾，我用 AI 搭建了一套个人信息处理系统` 的 `tags: []` 补为 `[clippings]`
+	- 移动：不移动，7 篇全部留在 `00-INBOX`。按当前定位，Inbox 本身就是待消化队列，超过 14 天由启动脚本移入 `40-ARCHIVE`，需要时自取
+	- 涉及文件：Frontend Development Trends 2026 AI, Edge & TypeScript ／ 从采集到回顾，我用 AI 搭建了一套个人信息处理系统 ／ 深入了解现代网络浏览器(1) 多进程机构 ／ (2) 导航流程 ／ (3) 渲染进程 ／ (4) 合成层 ／ 理解 React 的渲染机制：为什么组件会重新渲染？
+- [2026-10-25] refactor | wiki-index 全量重建：条目 274 → 775
+	- 范围：`30-RESOURCES/` + `20-AREAS/`，排除 `_resources` 子目录
+	- 结构：8 个业务分区（Areas 18 / MOCs 58 / Concepts 340 / Terms 132 / SOPs 80 / Comparisons 16 / Questions 86 / Records 45）+ Meta；`person` 6 篇作为子条目挂在父页面下
+	- 排序：区内按标题拼音（`pypinyin`），不再保留旧的 60 余个临时子分区——那份结构是增量维护的残留，全量后平均每组不足 5 条，已失去分组意义；主题浏览由 `本库领域索引` 与 MOCs 承担
+	- 链接：800 条全部可解析、断链 0；其中 5 条因文件名与标题不一致走 `[[文件名|标题]]`（如 `[[存在|存在 (Being)]]`）
+	- 未收录 26 篇：`content-type` 为空，等补标后可再跑一次生成器
+	- 规范缺口：`roadmap`(5) 与 `article`(3) 在 `_wiki-index-format` 的分区表里没有位置，暂并入 Concepts，计数因此为 340 而非 concept 实际的 332
+- [2026-10-25] refactor | 删除 `action-suggest` skill
+	- 理由：它建立在「状态流转子系统（status 演化链）」之上，而 `status` 已于 2026-10-24 废除，读不到任何信号；`suggest-log.md` 最后一条停在 2026-06-14，已实际停用四个月
+	- 同步：`_skills-overview` 删表格行与小节、计数 6 → 5；`CLAUDE.md` 的 skill 清单删该行；目录 `.claude/skills/action-suggest/` 移除
+	- 未动：`01-META/Log/suggest-log.md`（历史日志不改写）、`30-RESOURCES/简历素材.md` 第 77 行「开发 6 个 Claude Skill」（属内容表述，等用户定要不要改成 5）
+- [2026-10-25] refactor | 工作流文档清理（P0 + P1）
+	- P0：10 份文档删 `status` 行；8 篇活跃笔记的 `content-type` 由多行列表改标量；`validate_meta.py --all` 新增多行列表检测
+	- P1：`_ingest-rules` 的 Inbox Review 改为引用式（删掉违反解耦的「类型→目录」表）；`_wiki-index-format` 的条目规则改为文件名直链；删两处状态流转死内容并重编号；连带清理 6 处「状态流转」字样
+	- schema 加边界声明：专供 llm-wiki 工作流，架构总览在 [[本库子系统概述]]，两份不合并
+
+#### 2026-10-23
+
+- [2026-10-23] refactor | 顶层目录结构调整：00-META → 01-META，Inbox 提升为顶层 00-INBOX
+	- `00-META/` 更名为 `01-META/`，`30-RESOURCES/Inbox/` 提升为顶层 `00-INBOX/`；`0x` 档位拆为两个槽位：00 = 每日入口，01 = 系统元数据
+	- 确立「前缀语义」：十位 = 档位（0x 系统入口 / 1x 现在 / 2x 长期 / 3x 参考 / 4x 退役 / 5x 沉淀 / 6x 输出 / 8x 私密 / 9x 附属），个位 = 档内序号，宽度统一 2 位；写入 `01-META/Truth/本库目录结构.md`
+	- 取舍：选 2 位统一而非 3 位全量重排——多数派已是 2 位，2 位化改 1 个目录 / 约 97 处引用，3 位重排需改 9 个目录 / 约 660 处引用 + 51 处 dv.pages() + 插件硬编码，收益仅视觉整齐
+	- 同步更新 46 个文件的路径引用：Truth/本库目录结构、Specification/*、Guide/*、Faq/Inbox规则、CLAUDE.md、_templates/template_diary.md、90-DIARY（21 篇的 dataviewjs 排除条件）、.claude/skills/*
+	- 日记「今日知识资产沉淀」排除条件定为 `-"01-META" and -"_templates" and -"00-INBOX"`（21 篇日记 + 模板共 22 处）：Inbox 属未加工原料，不计入当日沉淀；同时修正原 `-"templates"` 与实际目录 `_templates` 不符的失效排除
+	- 配置同步：SimpRead 剪藏目录 → `00-INBOX`；obsidian-to-anki 的 23 条路径映射 → `01-META/`
+	- 修复 _scripts/autoArchiveInbox.js：INBOX_PATH 由过期的 `40-RESOURCES/Inbox` 改为 `00-INBOX`；ARCHIVE_PATH 由错误的 `50-ARCHIVE` 改为 `40-ARCHIVE`
+	- 本日志历史条目保留旧路径（时间线不改写）；改名过程因 Obsidian 占用目录句柄，META 目录一度改用 robocopy /MOVE 完成，git 仍正确识别为 rename
+- [2026-10-23] refactor | 解耦目录与 content-type：从「一一映射」改为「归属／形态两个正交维度」
+	- 删除 `Truth/本库目录结构.md` 的「目录 ↔ content-type 映射」表与「特定型/通用型」规则，新增「归属与形态：两个正交维度」「目录侧约定」「归属判定顺序」
+	- 删除 `Truth/笔记类型规范.md` 总览表的「目录」列，新增「形态与归属的边界」三条约定；`Specification/_笔记类型规范.md` 的 17 处「目录」行改为「常见归属（非约束）」，第六节重写为「归属速查（不绑定形态）」
+	- 依据（实测）：`10-PROJECTS/` 59 篇中仅 2 篇为 `project`，其余 `question`(19)/`concept`(18)/`record`(7)；`01-META/` 含 23 篇 `article`、7 篇 `moc`。旧映射在实践中已被证伪
+	- 语义收窄：`project`/`area` 从「位置标签」改为「工作区主页角色」；`10-PROJECTS/`、`20-AREAS/` 明确为工作区/容器，形态不限
+	- 校验口径：不再比对「目录与类型是否一致」，只校验 14 种合法枚举 + 三个单形态目录（50-ZETTELCASTEN/atomic、60-BLOGS/article、90-DIARY/diary）
+	- 连带更新：`Guide/本库子系统概述.md`（核心命题 + 子系统表 + mermaid 流程图）、`Guide/本库指南.md`（原则 3 与 content-type 条）、`Truth/真值索引.md`、`.claude/skills/obsidian-note-local/SKILL.md`（目录选择改为归属判定顺序，速查表去掉「目标目录」列）
+	- 存量 frontmatter 不动：字段本身仍然有效，只是不再承担位置判断
+- [2026-10-23] refactor | 命名规范体系收口：清理 Truth/Guide 同名僵尸文件，明确三层的职责边界
+	- 根因：Truth/ 建立后 Guide/ 下的同名旧版未清理，`[[文件名与别名规范]]`/`[[元数据规范]]` 各有两个候选文件，链接解析不可预测
+	- 删除 `Guide/命名规范.md`（内容 100% 被 Truth 版覆盖，且正文写着「唯一真值在 [[文件名与别名规范]]」，形成自指）
+	- 删除 `Guide/元数据规范.md`（纯指针页，导航价值已由本库指南的两个小节承担）
+	- 连带修复断链：`Truth/笔记类型规范.md` 的 4 个锚点 `[[元数据规范#project项目笔记]]` 等，只在 Truth 版存在；若解析到 Guide 版则全部失效
+	- 修复前缀取值错误：`.claude/skills/obsidian-note-local/SKILL.md` 中 `comparison` 前缀误写为「无」，实际为 `VS-`（实测 8 篇 comparison 中 5 篇使用 `VS-`）
+	- `Truth/命名规范.md` 新增「适用范围」：明确本文件只定义**文件名 + aliases**，目录名归 `本库目录结构`，`atomic` 陈述句归 `笔记类型规范`
+	- 软化 SSOT 表述：由「其他文件不得复制本表」改为「前缀取值只在本表定义，允许速查副本但冲突以本表为准」——强约束与技能内联需求冲突，且未被遵守
+	- `Truth/元数据规范.md` 的 `aliases` 行由「方便检索」改为指向 `[[文件名与别名规范]]`；修正「目录前缀」节中解耦后遗留的「content-type 映射」表述
+	- 保留的已知冗余：`Specification/_笔记类型规范.md` 内 3 张前缀表 + 14 处「aliases 前缀」行（约 38 处）——属执行细则的自包含需要，暂不动
+- [2026-10-23] refactor | `Truth/命名规范.md` 改名为 `Truth/文件名与别名规范.md`，并清理空目录
+	- 改名理由：原名覆盖过宽，实际只定义「文件名 + aliases」，目录名归 `本库目录结构`、`atomic` 陈述句归 `笔记类型规范`，叫「命名规范」会让人以为管全部命名
+	- 旧名保留为 alias：`aliases: [Truth/文件名与别名规范, 命名规范, 命名规范真值]`——老链接 `[[文件名与别名规范]]` 仍可解析
+	- 同步改写 8 处引用：`Guide/本库指南`（章节标题 `## 命名规范` → `## 文件名与别名`）、`Guide/本库子系统概述`、`Specification/_content-type-rules`、`Truth/元数据规范`、`Truth/真值索引`（2 处，含正文示例路径）、`Truth/笔记类型规范`（2 处）、`Truth/人机分工规范`
+	- wiki-log 历史条目中的 `[[文件名与别名规范]]` 保留不改（时间线不改写）
+	- 删除空目录 `10-PROJECTS/P-Agent求职/_resources/_resources`（嵌套冗余，无内容）
+
+#### 2026-10-20
+
+- [2026-10-20] ingest | 同步 8-28~10-19 期间新增的 17 篇 Wiki 层概念
+	- 新增 concept：Shadow DOM、iframe、qiankun、Git Hooks、Husky、GitHub Actions、package.json、pnpm、tsconfig.json、DAG、Reflect、AgentTool、DeepSeek Harness
+	- 更新：wiki-index Concepts 分区登记 13 篇，计数 51 → 63
+	- 补全 frontmatter：GitHub Actions（缺 frontmatter）、AgentTool/iframe/pnpm/qiankun（补 content-type/description/up）、Husky（type: → content-type:）
+	- 修复模板残留：DAG、Git Hooks 的 uid 占位符 `<% tp.file.creation_date %>` → 固定值
+- [2026-10-20] inbox-review | 识别 2 篇外部剪藏（暂未消化）
+	- Best Three.js Websites 2026（clippings，source=utsubo.com）→ 待消化为 ThreeJS 相关 concept
+	- Frontend Development Trends 2026（clippings，source=talent500.com）→ 待消化为前端架构 concept
+	- 决策：本次仅标注，不移动/不删除，留待专门 ingest 操作消化
 
 ### 2026-08
 
@@ -108,40 +220,6 @@ up: "[[本库指南]]"
 	- 指南目录树/编号对齐新数字顺序（30-RESOURCES < 40-ARCHIVE < 50-ZETTELCASTEN）
 	- 跳过（历史/状态，不更新）：wiki-log 历史、suggest-log、copilot 对话、Obsidian UI 状态（workspace/bookmarks/copilot-index）、settings.local.json 权限授权串
 
-#### 2026-08-11
-
-- [2026-08-11] ingest | 新建 SOP「实现网页斑驳光背景效果」
-	- 位置：40-RESOURCES/实现网页斑驳光背景效果.md
-	- 父页面：[[斑驳光]]
-	- 覆盖：Canvas/Shader 初始化、五层渲染流水线（噪点→暖边→L系统→半影→视差）、CSS 自定义属性集成、性能优化、常见坑点
-	- 更新：wiki-index（SOPs 42→43）、斑驳光（SOP 章节）
-- [2026-08-11] ingest | 消化 Inbox 文章「Experiments in procedural dappled light shaders」
-	- 新建 concept「[[斑驳光]]」— 程序化着色器模拟自然光斑驳效果（木漏れ日），覆盖噪点抖动/金色暖边/L系统树枝/半影模糊/深度视差 五层流水线
-	- 新建 term「[[L系统]]」— Lindenmayer 并行重写系统，概率 L 系统用于程序化树枝生成
-	- 归档原始素材：40-RESOURCES/Inbox/Experiments in procedural dappled light shaders.md → 50-ARCHIVE/
-	- 更新：wiki-index（Concepts 40→41, Terms 70→71）
-
-#### 2026-08-14
-
-- [2026-08-14] ingest | 新建 person「Jacky Zhao」
-	- 位置：40-RESOURCES/Jacky Zhao.md
-	- 父页面：[[数字花园]]
-	- 覆盖：Quartz 作者，Replit 工程师，斑驳光着色器文章作者
-	- 更新：数字花园（关键人物章节）
-
-#### 2026-08-15
-
-- [2026-08-15] ingest | 新建 person「朱镕基」
-	- 位置：40-RESOURCES/朱镕基.md
-	- 父页面：[[时政]]
-	- 覆盖：第九届国务院总理（1998–2003），国企改革/金融改革/加入 WTO，2026-08-12 逝世
-	- 更新：MOC-时政（人物章节）
-- [2026-08-15] ingest | 新建 concept「分税制改革」
-	- 位置：40-RESOURCES/分税制改革.md
-	- 父页面：[[政治经济]]
-	- 覆盖：1994 财政体制改革，税种划分、增值税分成、土地财政根源
-	- 更新：wiki-index（Concepts 41→42）、政治经济（概念词典）、朱镕基（主要成就链接）
-
 #### 2026-08-16
 
 - [2026-08-16] ingest | 消化 Inbox 文章「WebSocket vs SSE vs Long Polling: The Real Cost of 1,000 Events」
@@ -174,6 +252,90 @@ up: "[[本库指南]]"
 	- 父页面：[[知识管理]]
 	- 覆盖：个人数字花园站点（Quartz 静态站）的持续维护责任，以专名 dg.pedyc 区分 concept [[数字花园]]
 	- 更新：wiki-index（Areas 13→14）、知识管理（知识网络下游）、P-斑驳光背景实现（area 重挂 dg.pedyc）
+
+#### 2026-08-15
+
+- [2026-08-15] ingest | 新建 person「朱镕基」
+	- 位置：40-RESOURCES/朱镕基.md
+	- 父页面：[[时政]]
+	- 覆盖：第九届国务院总理（1998–2003），国企改革/金融改革/加入 WTO，2026-08-12 逝世
+	- 更新：MOC-时政（人物章节）
+- [2026-08-15] ingest | 新建 concept「分税制改革」
+	- 位置：40-RESOURCES/分税制改革.md
+	- 父页面：[[政治经济]]
+	- 覆盖：1994 财政体制改革，税种划分、增值税分成、土地财政根源
+	- 更新：wiki-index（Concepts 41→42）、政治经济（概念词典）、朱镕基（主要成就链接）
+
+#### 2026-08-14
+
+- [2026-08-14] ingest | 新建 person「Jacky Zhao」
+	- 位置：40-RESOURCES/Jacky Zhao.md
+	- 父页面：[[数字花园]]
+	- 覆盖：Quartz 作者，Replit 工程师，斑驳光着色器文章作者
+	- 更新：数字花园（关键人物章节）
+
+#### 2026-08-11
+
+- [2026-08-11] ingest | 新建 SOP「实现网页斑驳光背景效果」
+	- 位置：40-RESOURCES/实现网页斑驳光背景效果.md
+	- 父页面：[[斑驳光]]
+	- 覆盖：Canvas/Shader 初始化、五层渲染流水线（噪点→暖边→L系统→半影→视差）、CSS 自定义属性集成、性能优化、常见坑点
+	- 更新：wiki-index（SOPs 42→43）、斑驳光（SOP 章节）
+- [2026-08-11] ingest | 消化 Inbox 文章「Experiments in procedural dappled light shaders」
+	- 新建 concept「[[斑驳光]]」— 程序化着色器模拟自然光斑驳效果（木漏れ日），覆盖噪点抖动/金色暖边/L系统树枝/半影模糊/深度视差 五层流水线
+	- 新建 term「[[L系统]]」— Lindenmayer 并行重写系统，概率 L 系统用于程序化树枝生成
+	- 归档原始素材：40-RESOURCES/Inbox/Experiments in procedural dappled light shaders.md → 50-ARCHIVE/
+	- 更新：wiki-index（Concepts 40→41, Terms 70→71）
+
+#### 2026-08-09
+
+- [2026-08-09] ingest | 新增 concept「HTML in Canvas」
+	- 位置：40-RESOURCES/HTML in Canvas.md
+	- 父页面：[[前端开发]]
+	- 更新：wiki-index（Concepts > 前端框架与工具 新增条目）
+
+#### 2026-08-06
+
+- [2026-08-06] ingest | 新增 record「简历素材」
+	- 位置：40-RESOURCES/R-简历素材.md
+	- 父页面：[[求职]]
+
+#### 2026-08-02
+
+- [2026-08-02] ingest | 新增 roadmap「Vue版本演进」
+	- 位置：40-RESOURCES/Vue版本演进.md
+	- 父页面：[[Vue]]
+- [2026-08-02] ingest | 新增 concept「Vapor Mode」
+	- 位置：40-RESOURCES/Vapor Mode.md
+	- 父页面：[[Vue]]
+- [2026-08-02] ingest | 新增 concept「Vue编译器优化」
+	- 位置：40-RESOURCES/Vue编译器优化.md
+	- 父页面：[[Vue]]
+- [2026-08-02] refactor | Anki 集成子系统落地，新增 _anki-sync-rules
+	- 新建规范：00-META/Specification/_anki-sync-rules.md（content-type: article，Anki 集成规则）
+	- 接入引用：llm-wiki-schema（详细规则列表）、_skills-overview、本库子系统概述、wiki-index（Meta 分区）
+- [2026-08-02] refactor | _anki-sync-rules 补充 Deck 分类原则与前端面试示例
+	- 变更：新增「Deck 分类原则」（deck 是调度容器非知识索引，少量 deck + 主题子 deck，不复制 PARA/MOC 目录）、「实践示例：前端面试复习」（deck 结构 / 卡片优先级表 / 手写代码卡注意点）
+	- 引用：[[前端面试知识清单]]（70/20/10 精力分配）
+- [2026-08-02] ingest | 新增 MOC「前端工程化相关面试题」
+	- 位置：40-RESOURCES/前端工程化相关面试题.md
+	- 父页面：[[前端工程]]
+	- 覆盖构建打包/架构选型/工程治理三类面试题聚合索引
+	- 更新：wiki-index（MOCs > 前端工程 新增条目）
+- [2026-08-02] ingest | 新增 SOP「搭建Vue工程的Claude Code Harness」
+	- 位置：40-RESOURCES/搭建Vue工程的Claude Code Harness.md
+	- 父页面：[[Harness]]（已在 Harness.md SOP 章节添加引用）
+	- 覆盖知识策划/工具实现/输入输出契约/执行管道/上下文权限/评估迭代 六阶段，为 [[Harness]] 概念的落地流程
+	- 更新：wiki-index（SOPs > Claude Code 新增条目）
+
+#### 2026-08-01
+
+- [2026-08-01] refactor | 孤儿笔记修复：126 个孤儿接入父级（双向链接）
+	- 检测：40-RESOURCES 与 20-AREAS 中无内容入链的页面，共 126 个孤儿、143 个弱连接
+	- 孤儿侧：为 123 个孤儿补充 `up` 字段指向父级（3 个跳过：已挂载/无父级）
+	- 父级侧：为 33 个父级页面补充反向引用（MOC/area/concept 的对应章节）
+	- 顺带修正死链：网络协议 Q- 前缀错链 ×3、Tailwind CSS→TailwindCSS、类型守卫大小写、SOP-在React中正确使用Ref 空格差异
+	- 结果：126 个孤儿全部获得入链，孤儿数为 0
 
 ### 2026-07
 
@@ -409,59 +571,166 @@ up: "[[本库指南]]"
 	- 新增：Duplicate Named Capturing Groups、Set 方法、Pattern Modifiers、Import Attributes、Promise.try、Float16Array、RegExp.escape
 	- 更新：特性表格
 
-### 2026-08
-
-#### 2026-08-09
-
-- [2026-08-09] ingest | 新增 concept「HTML in Canvas」
-	- 位置：40-RESOURCES/HTML in Canvas.md
-	- 父页面：[[前端开发]]
-	- 更新：wiki-index（Concepts > 前端框架与工具 新增条目）
-
-#### 2026-08-06
-
-- [2026-08-06] ingest | 新增 record「简历素材」
-	- 位置：40-RESOURCES/R-简历素材.md
-	- 父页面：[[求职]]
-
-#### 2026-08-02
-
-- [2026-08-02] ingest | 新增 roadmap「Vue版本演进」
-	- 位置：40-RESOURCES/Vue版本演进.md
-	- 父页面：[[Vue]]
-- [2026-08-02] ingest | 新增 concept「Vapor Mode」
-	- 位置：40-RESOURCES/Vapor Mode.md
-	- 父页面：[[Vue]]
-- [2026-08-02] ingest | 新增 concept「Vue编译器优化」
-	- 位置：40-RESOURCES/Vue编译器优化.md
-	- 父页面：[[Vue]]
-- [2026-08-02] refactor | Anki 集成子系统落地，新增 _anki-sync-rules
-	- 新建规范：00-META/Specification/_anki-sync-rules.md（content-type: article，Anki 集成规则）
-	- 接入引用：llm-wiki-schema（详细规则列表）、_skills-overview、本库子系统概述、wiki-index（Meta 分区）
-- [2026-08-02] refactor | _anki-sync-rules 补充 Deck 分类原则与前端面试示例
-	- 变更：新增「Deck 分类原则」（deck 是调度容器非知识索引，少量 deck + 主题子 deck，不复制 PARA/MOC 目录）、「实践示例：前端面试复习」（deck 结构 / 卡片优先级表 / 手写代码卡注意点）
-	- 引用：[[前端面试知识清单]]（70/20/10 精力分配）
-- [2026-08-02] ingest | 新增 MOC「前端工程化相关面试题」
-	- 位置：40-RESOURCES/前端工程化相关面试题.md
-	- 父页面：[[前端工程]]
-	- 覆盖构建打包/架构选型/工程治理三类面试题聚合索引
-	- 更新：wiki-index（MOCs > 前端工程 新增条目）
-- [2026-08-02] ingest | 新增 SOP「搭建Vue工程的Claude Code Harness」
-	- 位置：40-RESOURCES/搭建Vue工程的Claude Code Harness.md
-	- 父页面：[[Harness]]（已在 Harness.md SOP 章节添加引用）
-	- 覆盖知识策划/工具实现/输入输出契约/执行管道/上下文权限/评估迭代 六阶段，为 [[Harness]] 概念的落地流程
-	- 更新：wiki-index（SOPs > Claude Code 新增条目）
-
-#### 2026-08-01
-
-- [2026-08-01] refactor | 孤儿笔记修复：126 个孤儿接入父级（双向链接）
-	- 检测：40-RESOURCES 与 20-AREAS 中无内容入链的页面，共 126 个孤儿、143 个弱连接
-	- 孤儿侧：为 123 个孤儿补充 `up` 字段指向父级（3 个跳过：已挂载/无父级）
-	- 父级侧：为 33 个父级页面补充反向引用（MOC/area/concept 的对应章节）
-	- 顺带修正死链：网络协议 Q- 前缀错链 ×3、Tailwind CSS→TailwindCSS、类型守卫大小写、SOP-在React中正确使用Ref 空格差异
-	- 结果：126 个孤儿全部获得入链，孤儿数为 0
-
 ### 2026-06
+
+#### 2026-06-28
+
+- [2026-06-28] ingest | 创建 3 个 LLM 核心参数术语笔记
+	- 新建：[[上下文窗口]] — LLM 的令牌处理能力上限
+	- 新建：[[温度]] — 控制 LLM 输出随机性的采样参数
+	- 新建：[[Top-P]] — 动态截断采样的解码策略
+	- 父页面：[[LLM]]（已添加到知识图谱子级概念）
+	- 更新：[[wiki-index]] Terms 分类新增 AI 子分类
+	- 更新：[[人工智能]] 核心概念补充描述
+	- 位置：40-RESOURCES/
+
+#### 2026-06-27
+
+- [2026-06-27] ingest | 创建 concept「实现一个带并发限制的异步任务调度器」
+	- 位置：40-RESOURCES/实现一个带并发限制的异步任务调度器（Scheduler）.md
+	- 父页面：[[前端面试真题库]]
+	- 覆盖 3 种实现（Class 封装 / 函数式 Worker / 信号量）+ 常见追问
+
+#### 2026-06-24
+
+- [2026-06-24] ingest | 创建 Q-note「在响应式对象频繁更新的场景下如何减少不必要的响应式开销？」
+	- 位置：40-RESOURCES/在响应式对象频繁更新的场景下如何减少不必要的响应式开销？.md
+	- 父页面：[[前端开发]]
+	- 覆盖 4 套策略（框架选型、React 优化、Vue 优化、通用策略）+ 探索路径
+- [2026-06-24] ingest | 创建 atomic「本体论承诺决定了理论的解释力」
+	- 位置：30-ZETTELKASTEN/本体论承诺决定了理论的解释力.md
+	- 父页面：[[本体论]]
+	- 核心观点：任何理论都需要承诺实体存在，承诺范围决定解释边界
+- [2026-06-24] ingest | 创建 atomic「存在是最普遍的概念，不能被定义，只能被描述」
+	- 位置：30-ZETTELKASTEN/存在是最普遍的概念，不能被定义，只能被描述.md
+	- 父页面：[[本体论]]
+	- 核心观点：存在是最高的范畴，没有上位概念，只能被描述
+- [2026-06-24] ingest | 创建 concept「本体论」
+	- 位置：40-RESOURCES/本体论.md
+	- 父页面：[[形而上学]]
+	- 覆盖核心命题/运行机制/关键区别/适用范围/批判/知识图谱
+	- 更新：wiki-index Concepts 章节新增本体论、形而上学、存在条目
+	- 位置：40-RESOURCES/Svelte vs React.md
+	- 父页面：[[前端框架]]
+	- 覆盖架构哲学/响应式机制/DOM 更新/组件模型/状态管理/生命周期/TypeScript/生态 8 维对比
+	- 更新：wiki-index 断裂链接[[Svelte vs React]] 已恢复
+
+#### 2026-06-23
+
+- [2026-06-23] lint | full 健康检查
+	- 检查范围：30-ZETTELKASTEN、40-RESOURCES、20-AREAS
+	- **矛盾**：0 个
+	- **孤儿页面**：0 个
+	- **概念缺口**：3 个
+		- [[数字花园]] (3x) — 原子笔记引用，但文件实际为 `数字花园.md`（别名无"数字花园概述"）
+		- [[localStorage]] (2x) — 无专用 term 页面
+		- [[Scope]] (2x) — 无专用页面
+	- **半缺口**：1 个（[[变量提升]] (3x) — 有对应文件但无"变量提升"别名）
+	- **过时断言**：0 个
+	- **索引断裂链接**：3 个
+		- [[MOC-政治经济]] — 6/19 refactor 已删除，`政治经济.md` 未包含该别名
+		- [[MOC-动画效果SOP]] — 页面不存在
+		- [[Svelte vs React]] — 页面不存在（上次 lint 已知）
+	- **归档引用**：无
+	- **预警**：无（均在安全线内）
+
+#### 2026-06-20
+
+- [2026-06-20] ingest | 创建领域 A-设计
+	- 位置：20-AREAS/A-设计/设计.md
+	- 整合已有概念：视觉设计、视觉设计原则、色彩心理学、设计系统与组件库工程实践
+	- 为 4 个概念笔记添加 up: [[A-设计]]
+	- 标记 5 个待创建概念：排版基础、布局系统、交互设计模式、无障碍设计、Figma
+- [2026-06-20] ingest | 创建概念「色彩理论」C-色彩理论
+	- 位置：40-RESOURCES/色彩理论.md
+	- 父页面：[[A-设计]]
+	- 覆盖色彩模型（RGB/CMYK/HSL）、配色模式（互补/类似/三等分/四边形）、感知理论、实用法则
+	- 更新 A-设计 核心心智模型
+- [2026-06-20] ingest | 创建 atomic「习惯由触发、行为、奖励构成」
+	- 位置：30-ZETTELKASTEN/习惯由触发、行为、奖励构成.md
+	- 父页面：[[个人成长]]
+	- 核心观点：习惯回路三要素（Cue→Routine→Reward），改变习惯是替换行为而非消除
+	- [2026-06-20] ingest | 创建概念「否定之否定」C-否定之否定
+		- 位置：40-RESOURCES/否定之否定.md
+		- 父页面：[[政治经济]]
+		- 覆盖三阶段模型（肯定→否定→否定之否定）、螺旋上升运行机制、与形而上学发展观的对比
+		- 关联：[[反者道之动]]、[[形而上学]]、[[逻辑学]]
+	- [2026-06-20] ingest | 创建 atomic「否定是扬弃，既克服又保留」
+		- 位置：30-ZETTELKASTEN/否定是扬弃，既克服又保留.md
+		- 父页面：[[否定之否定]]
+		- 核心观点：辩证否定不是全盘抛弃，而是"扬弃"——克服局限性，保留合理成分
+		- 更新 否定之否定 核心命题引用该 atomic
+
+#### 2026-06-19
+
+- [2026-06-19] ingest | 创建 atomic「权力是资源分配的核心驱动力」
+	- 位置：30-ZETTELKASTEN/权力是资源分配的核心驱动力.md
+	- 父页面：[[政治经济]]
+	- 覆盖 5 个论据：市场规则/预算博弈/注意力经济/公共财政/稀缺性制造
+- [2026-06-19] ingest | 创建 atomic「权力的日常形态是共识，终极担保是暴力」
+	- 位置：30-ZETTELKASTEN/权力的日常形态是共识，终极担保是暴力.md
+	- 父页面：[[政治经济]]
+	- 论据覆盖韦伯/阿伦特/日常体验/征税逻辑/暴力-共识反比关系
+- [2026-06-19] ingest | 消化 2 条政治经济原子笔记到 Wiki 层
+	- 更新 A-政治经济 原子洞见：纳入 [[权力的日常形态是共识，终极担保是暴力]]
+	- 更新 MOC-政治经济：新增「原子洞见」章节，收录 2 条 atomic
+	- 父页面：[[政治经济]]、[[政治经济]]
+- [2026-06-19] refactor | A-前端 Area 架构重构 + 冗余合并
+	- 合并 A-前端.md → 前端开发.md（A-前端 已作为 alias）
+	- 删除 A-前端.md，保持单一顶层 Area：前端开发
+	- 降级 4 个子 Area 为 MOC → 40-RESOURCES：前端工程、前端交互、前端性能优化、算法与数据结构
+	- 迁移 6 个框架/工具 Area 为 Concept → 40-RESOURCES：Angular、React、Vue、CSS、ThreeJS、Web安全
+	- 更新 wiki-index（Areas → 前端 精简，新增 Concepts/MOCs 条目）
+- [2026-06-19] refactor | 20-AREAS 全面审计修复 + A-知识管理重构
+	- 重命名 6 个 area 文件（去掉文件名中 A- 前缀）：个人成长、个人博客、时间管理、健康管理、知识管理、宗教与神秘学
+	- 修正 3 个 MOC title 前缀（MOC-政治经济→政治经济，MOC-时政→时政，MOC-神秘主义→神秘主义）
+	- 补齐 3 个 MOC aliases 缺失的 MOC- 前缀
+	- 删除重复文件：A-视觉思维.md
+	- 修复 A-宗教与神秘学 缺失的 content-type 字段
+	- 修复 3 处 broken up 字段（个人博客→A-个人成长，个人成长/健康管理 设为顶层）
+	- 视觉思维(area) → concept，迁移到 40-RESOURCES
+	- 更新 wiki-index
+- [2026-06-19] ingest | 消化 2 条政治经济原子笔记到 Wiki 层
+		- 更新 A-政治经济 原子洞见：纳入 [[权力的日常形态是共识，终极担保是暴力]]
+		- 更新 MOC-政治经济：新增「原子洞见」章节，收录 2 条 atomic
+		- 父页面：[[政治经济]]、[[政治经济]]
+
+#### 2026-06-17
+
+- [2026-06-17] ingest | 创建 concept「Angular依赖注入」
+	- 位置：40-RESOURCES/Angular依赖注入.md
+	- aliases：C-Angular-依赖注入
+	- 父页面：[[Angular]]
+	- 覆盖注入器树层级（root/module/component）+ 3 种注册方式 + 4 种提供者语法 + 令牌类型
+- [2026-06-17] ingest | 创建 concept「控制反转」
+	- 位置：40-RESOURCES/控制反转.md
+	- aliases：C-控制反转
+	- 父页面：[[设计模式]]
+	- 覆盖 4 种实现方式（DI/模板方法/策略/事件）+ IoC vs DI 关键区别
+	- 修复 2 处断链：[[依赖注入]]、[[Angular依赖注入]] 中的 [[控制反转]] 引用
+
+#### 2026-06-16
+
+- [2026-06-16] refactor | 去重数字花园笔记（删除旧版，保留已修复版）
+	- 删除 40-RESOURCES/数字花园.md（旧版残留 uid 重复）
+	- 保留 40-RESOURCES/数字花园概述.md（已修复完整内容）
+	- [[数字花园]] 引用通过别名正常解析到数字花园概述
+- [2026-06-16] ingest | 创建 comparison「Angular vs React」
+	- 位置：40-RESOURCES/Angular vs React.md
+	- 父页面：[[前端面试真题库]]
+	- 覆盖架构哲学/响应式模型/变更检测/表单/HTTP/状态管理 8 维对比
+	- 更新：wiki-index Comparisons 章节
+- [2026-06-16] ingest | 创建 term「Signal(Angular)」
+	- 位置：40-RESOURCES/Signal(Angular).md
+	- aliases：T-Angular-Signal
+	- 父页面：[[Angular]]
+	- 覆盖核心 API（signal/computed/effect/input/output/model 等 9 个）+ RxJS 互通 + 使用示例
+- [2026-06-16] ingest | 创建 concept「Angular变更检测」
+	- 位置：40-RESOURCES/Angular变更检测.md
+	- aliases：C-Angular-变更检测
+	- 父页面：[[Angular]]
+	- 覆盖 Zone.js 触发 → Default/OnPush 策略 → Signal 模式演进
+	- 包含性能优化示例代码（OnPush / runOutsideAngular / Signal）
 
 #### 2026-06-15
 
@@ -534,6 +803,51 @@ up: "[[本库指南]]"
 	- 位置：30-ZETTELKASTEN/信噪比决定了信息传递的有效性.md
 	- 父页面：[[信息论]]
 	- 核心观点：香农公式 C = B×log2(1+S/N) 是知识管理信噪比策略的数学原点
+- [2026-06-15] ingest | 创建 concept「GTD」
+	- 位置：40-RESOURCES/GTD.md
+	- 父页面：[[时间管理]]
+	- 覆盖 GTD 五阶段工作流（收集→厘清→组织→反思→执行）+ 核心原则（心如止水、2 分钟原则、每周回顾）
+	- 关联：[[四象限法则]]、[[PARA笔记法]]、[[番茄工作法]]
+- [2026-06-15] ingest | 创建 atomic「痛点是知识管理的唯一动力源」
+	- 位置：30-ZETTELKASTEN/痛点是知识管理的唯一动力源.md
+	- 父页面：[[知识管理]]（已纳入核心心智模型 → 原子洞见）
+	- 核心观点：没有真实痛点驱动的知识管理系统注定无法持续
+- [2026-06-15] refactor | 重写「怎样架构混合型知识库」sop → concept
+	- 位置：40-RESOURCES/怎样架构混合型知识库.md
+	- 变更：sop → concept（内容实质是架构设计，非标准流程）
+	- aliases：SOP-怎样架构混合型知识库 → C-混合型知识库架构
+	- 更新：wiki-index（SOP → Concepts）、补全核心命题/运行机制/知识图谱
+- [2026-06-15] refactor | 修复 _templates 目录前缀规范（2 处）
+	- template_comp.md: aliases MOC- → VS-（comparison 应使用 VS- 前缀）
+	- template_roadmap.md: aliases R- → []（roadmap 无定义前缀，不应使用 R-）
+- [2026-06-15] refactor | 清除模板正文中的前缀 Wikilink
+	- template_area.md: SOP-/Q-/MOC- 前缀引用 → {{纯标题占位符}}
+	- template_concept.md: SOP-/Q- 前缀引用 → {{纯标题占位符}}
+	- 原则：前缀只在 aliases 字段使用，正文引用用纯标题
+- [2026-06-15] refactor | 修复数字花园概述（归档→资源 + 4 类问题）
+	- 位置：50-ARCHIVE/ → 40-RESOURCES/（active 状态不应在归档）
+	- 来源更正："Maggie Appleton 提出" → Mark Bernstein(1998) 源头 + Appleton 系统阐述
+	- 创建 3 条 atomic 补充核心命题：中间态/观点联系/状态标记
+	- 重写运行机制 mermaid：消除花圃/花朵的混乱比喻
+	- 重写关键区别表格：统一对比维度为内容粒度/公开程度/更新方式/发布门槛/组织逻辑
+	- 补充关键人物（Bernstein/Appleton/Critchlow）、状态标记特征
+	- 更新：wiki-index Concepts 章节
+- [2026-06-15] refactor | 修复第二大脑笔记（来源/运行机制/对比/FAQ/局限性）
+	- 来源更正："Tiago Forte 提出 PARA 方法" → "Tiago Forte, Building a Second Brain"
+	- 运行机制补充：渐进式总结（4 层提炼法）+ PARA 组织框架
+	- 关键区别：范围"主要是私有"→"完全私有"，新增与卡片盒的定位对比表
+	- 新增局限性章节：维护成本/工具绑定/过度外化/投入产出比
+	- 新增 FAQ 章节（2 个 Q-note 引用）
+	- 更新：知识图谱补充卡片盒笔记法和认知负荷
+- [2026-06-15] refactor | 批量重分类 163 条笔记的 content-type
+		- 原子笔记以陈述句命名，大量笔记误标为 atomic
+		- 重分类结果：concept × 126、term × 17、question × 16、sop × 3、moc × 1
+		- 保留 atomic × 3（TypeScript的类型是编译时约束、Vue3 响应式系统分为 effect 和 reactive 两部分、执行上下文分为创建阶段和执行阶段）
+		- 自动为无前缀的文件补齐 aliases 前缀
+- [2026-06-15] refactor | 修复 00-META 规格文档与实操的不一致
+		- settings.local.json: Skill(content-verifier) → Skill(content-verifier-local)，去掉冗余 skill(obsidian-note)
+		- _content-type-rules.md: "Diay" 拼写修正为 "Diary"
+		- 命名规范.md: 前缀表格中的空格清理（P- 求职 → P-求职 等）
 
 #### 2026-06-12
 
@@ -578,20 +892,20 @@ up: "[[本库指南]]"
 	- **索引一致性**：1 处断裂（[[Svelte vs React]] 链接无效）
 	- **预警**：无（矛盾 0/3、孤儿 4/5、概念缺口 1/5，均在安全线内）
 
-## Lint Report - 2026-06-12
+##### Lint Report - 2026-06-12
 
-### 矛盾
+###### 矛盾
 
 - 无
 
-### 孤儿页面
+###### 孤儿页面
 
 - [[心流体验]]：仅 wiki-index 自引用，建议补充 inbound link 或归档
 - [[时政]]：仅 wiki-index 自引用，建议补充 inbound link 或归档
 - [[MOC-政治经济]]：仅 wiki-index 自引用，建议补充 inbound link 或归档
 - [[前端缓存方案]]：仅 wiki-index 自引用，建议补充 inbound link 或归档
 
-### 概念缺口
+###### 概念缺口
 
 - "Svelte vs React" 被 [[Svelte]] 和 [[wiki-index]] 引用 2 次但无专属页面，建议创建 [[Svelte vs React]]
 
@@ -696,124 +1010,6 @@ up: "[[本库指南]]"
 	- 位置：`40-RESOURCES/存在主义.md`
 	- 新增 atomic：`30-ZETTELKASTEN/存在先于本质.md`
 	- 更新 [[wiki-index]] 添加 Concepts 条目
-- [2026-06-15] ingest | 创建 concept「GTD」
-	- 位置：40-RESOURCES/GTD.md
-	- 父页面：[[时间管理]]
-	- 覆盖 GTD 五阶段工作流（收集→厘清→组织→反思→执行）+ 核心原则（心如止水、2 分钟原则、每周回顾）
-	- 关联：[[四象限法则]]、[[PARA笔记法]]、[[番茄工作法]]
-- [2026-06-15] ingest | 创建 atomic「痛点是知识管理的唯一动力源」
-	- 位置：30-ZETTELKASTEN/痛点是知识管理的唯一动力源.md
-	- 父页面：[[知识管理]]（已纳入核心心智模型 → 原子洞见）
-	- 核心观点：没有真实痛点驱动的知识管理系统注定无法持续
-- [2026-06-15] refactor | 重写「怎样架构混合型知识库」sop → concept
-	- 位置：40-RESOURCES/怎样架构混合型知识库.md
-	- 变更：sop → concept（内容实质是架构设计，非标准流程）
-	- aliases：SOP-怎样架构混合型知识库 → C-混合型知识库架构
-	- 更新：wiki-index（SOP → Concepts）、补全核心命题/运行机制/知识图谱
-- [2026-06-15] refactor | 修复 _templates 目录前缀规范（2 处）
-	- template_comp.md: aliases MOC- → VS-（comparison 应使用 VS- 前缀）
-	- template_roadmap.md: aliases R- → []（roadmap 无定义前缀，不应使用 R-）
-- [2026-06-15] refactor | 清除模板正文中的前缀 Wikilink
-	- template_area.md: SOP-/Q-/MOC- 前缀引用 → {{纯标题占位符}}
-	- template_concept.md: SOP-/Q- 前缀引用 → {{纯标题占位符}}
-	- 原则：前缀只在 aliases 字段使用，正文引用用纯标题
-- [2026-06-15] refactor | 修复数字花园概述（归档→资源 + 4 类问题）
-	- 位置：50-ARCHIVE/ → 40-RESOURCES/（active 状态不应在归档）
-	- 来源更正："Maggie Appleton 提出" → Mark Bernstein(1998) 源头 + Appleton 系统阐述
-	- 创建 3 条 atomic 补充核心命题：中间态/观点联系/状态标记
-	- 重写运行机制 mermaid：消除花圃/花朵的混乱比喻
-	- 重写关键区别表格：统一对比维度为内容粒度/公开程度/更新方式/发布门槛/组织逻辑
-	- 补充关键人物（Bernstein/Appleton/Critchlow）、状态标记特征
-	- 更新：wiki-index Concepts 章节
-- [2026-06-15] refactor | 修复第二大脑笔记（来源/运行机制/对比/FAQ/局限性）
-	- 来源更正："Tiago Forte 提出 PARA 方法" → "Tiago Forte, Building a Second Brain"
-	- 运行机制补充：渐进式总结（4 层提炼法）+ PARA 组织框架
-	- 关键区别：范围"主要是私有"→"完全私有"，新增与卡片盒的定位对比表
-	- 新增局限性章节：维护成本/工具绑定/过度外化/投入产出比
-	- 新增 FAQ 章节（2 个 Q-note 引用）
-	- 更新：知识图谱补充卡片盒笔记法和认知负荷
-- [2026-06-16] refactor | 去重数字花园笔记（删除旧版，保留已修复版）
-	- 删除 40-RESOURCES/数字花园.md（旧版残留 uid 重复）
-	- 保留 40-RESOURCES/数字花园概述.md（已修复完整内容）
-	- [[数字花园]] 引用通过别名正常解析到数字花园概述
-- [2026-06-16] ingest | 创建 comparison「Angular vs React」
-	- 位置：40-RESOURCES/Angular vs React.md
-	- 父页面：[[前端面试真题库]]
-	- 覆盖架构哲学/响应式模型/变更检测/表单/HTTP/状态管理 8 维对比
-	- 更新：wiki-index Comparisons 章节
-- [2026-06-16] ingest | 创建 term「Signal(Angular)」
-	- 位置：40-RESOURCES/Signal(Angular).md
-	- aliases：T-Angular-Signal
-	- 父页面：[[Angular]]
-	- 覆盖核心 API（signal/computed/effect/input/output/model 等 9 个）+ RxJS 互通 + 使用示例
-- [2026-06-16] ingest | 创建 concept「Angular变更检测」
-	- 位置：40-RESOURCES/Angular变更检测.md
-	- aliases：C-Angular-变更检测
-	- 父页面：[[Angular]]
-	- 覆盖 Zone.js 触发 → Default/OnPush 策略 → Signal 模式演进
-	- 包含性能优化示例代码（OnPush / runOutsideAngular / Signal）
-- [2026-06-17] ingest | 创建 concept「Angular依赖注入」
-	- 位置：40-RESOURCES/Angular依赖注入.md
-	- aliases：C-Angular-依赖注入
-	- 父页面：[[Angular]]
-	- 覆盖注入器树层级（root/module/component）+ 3 种注册方式 + 4 种提供者语法 + 令牌类型
-- [2026-06-17] ingest | 创建 concept「控制反转」
-	- 位置：40-RESOURCES/控制反转.md
-	- aliases：C-控制反转
-	- 父页面：[[设计模式]]
-	- 覆盖 4 种实现方式（DI/模板方法/策略/事件）+ IoC vs DI 关键区别
-	- 修复 2 处断链：[[依赖注入]]、[[Angular依赖注入]] 中的 [[控制反转]] 引用
-- [2026-06-19] ingest | 创建 atomic「权力是资源分配的核心驱动力」
-	- 位置：30-ZETTELKASTEN/权力是资源分配的核心驱动力.md
-	- 父页面：[[政治经济]]
-	- 覆盖 5 个论据：市场规则/预算博弈/注意力经济/公共财政/稀缺性制造
-- [2026-06-19] ingest | 创建 atomic「权力的日常形态是共识，终极担保是暴力」
-	- 位置：30-ZETTELKASTEN/权力的日常形态是共识，终极担保是暴力.md
-	- 父页面：[[政治经济]]
-	- 论据覆盖韦伯/阿伦特/日常体验/征税逻辑/暴力-共识反比关系
-- [2026-06-19] ingest | 消化 2 条政治经济原子笔记到 Wiki 层
-	- 更新 A-政治经济 原子洞见：纳入 [[权力的日常形态是共识，终极担保是暴力]]
-	- 更新 MOC-政治经济：新增「原子洞见」章节，收录 2 条 atomic
-	- 父页面：[[政治经济]]、[[政治经济]]
-- [2026-06-19] refactor | A-前端 Area 架构重构 + 冗余合并
-	- 合并 A-前端.md → 前端开发.md（A-前端 已作为 alias）
-	- 删除 A-前端.md，保持单一顶层 Area：前端开发
-	- 降级 4 个子 Area 为 MOC → 40-RESOURCES：前端工程、前端交互、前端性能优化、算法与数据结构
-	- 迁移 6 个框架/工具 Area 为 Concept → 40-RESOURCES：Angular、React、Vue、CSS、ThreeJS、Web安全
-	- 更新 wiki-index（Areas → 前端 精简，新增 Concepts/MOCs 条目）
-- [2026-06-19] refactor | 20-AREAS 全面审计修复 + A-知识管理重构
-	- 重命名 6 个 area 文件（去掉文件名中 A- 前缀）：个人成长、个人博客、时间管理、健康管理、知识管理、宗教与神秘学
-	- 修正 3 个 MOC title 前缀（MOC-政治经济→政治经济，MOC-时政→时政，MOC-神秘主义→神秘主义）
-	- 补齐 3 个 MOC aliases 缺失的 MOC- 前缀
-	- 删除重复文件：A-视觉思维.md
-	- 修复 A-宗教与神秘学 缺失的 content-type 字段
-	- 修复 3 处 broken up 字段（个人博客→A-个人成长，个人成长/健康管理 设为顶层）
-	- 视觉思维(area) → concept，迁移到 40-RESOURCES
-	- 更新 wiki-index
-- [2026-06-20] ingest | 创建领域 A-设计
-	- 位置：20-AREAS/A-设计/设计.md
-	- 整合已有概念：视觉设计、视觉设计原则、色彩心理学、设计系统与组件库工程实践
-	- 为 4 个概念笔记添加 up: [[A-设计]]
-	- 标记 5 个待创建概念：排版基础、布局系统、交互设计模式、无障碍设计、Figma
-- [2026-06-20] ingest | 创建概念「色彩理论」C-色彩理论
-	- 位置：40-RESOURCES/色彩理论.md
-	- 父页面：[[A-设计]]
-	- 覆盖色彩模型（RGB/CMYK/HSL）、配色模式（互补/类似/三等分/四边形）、感知理论、实用法则
-	- 更新 A-设计 核心心智模型
-- [2026-06-20] ingest | 创建 atomic「习惯由触发、行为、奖励构成」
-	- 位置：30-ZETTELKASTEN/习惯由触发、行为、奖励构成.md
-	- 父页面：[[个人成长]]
-	- 核心观点：习惯回路三要素（Cue→Routine→Reward），改变习惯是替换行为而非消除
-	- [2026-06-20] ingest | 创建概念「否定之否定」C-否定之否定
-		- 位置：40-RESOURCES/否定之否定.md
-		- 父页面：[[政治经济]]
-		- 覆盖三阶段模型（肯定→否定→否定之否定）、螺旋上升运行机制、与形而上学发展观的对比
-		- 关联：[[反者道之动]]、[[形而上学]]、[[逻辑学]]
-	- [2026-06-20] ingest | 创建 atomic「否定是扬弃，既克服又保留」
-		- 位置：30-ZETTELKASTEN/否定是扬弃，既克服又保留.md
-		- 父页面：[[否定之否定]]
-		- 核心观点：辩证否定不是全盘抛弃，而是"扬弃"——克服局限性，保留合理成分
-		- 更新 否定之否定 核心命题引用该 atomic
 
 #### 2026-05-20
 
@@ -849,158 +1045,5 @@ up: "[[本库指南]]"
 	- 创建 [[llm-wiki-schema]]
 	- 创建 [[wiki-index]]
 	- 创建 [[wiki-log]]
-- [2026-06-24] ingest | 创建 Q-note「在响应式对象频繁更新的场景下如何减少不必要的响应式开销？」
-	- 位置：40-RESOURCES/在响应式对象频繁更新的场景下如何减少不必要的响应式开销？.md
-	- 父页面：[[前端开发]]
-	- 覆盖 4 套策略（框架选型、React 优化、Vue 优化、通用策略）+ 探索路径
-- [2026-06-24] ingest | 创建 atomic「本体论承诺决定了理论的解释力」
-	- 位置：30-ZETTELKASTEN/本体论承诺决定了理论的解释力.md
-	- 父页面：[[本体论]]
-	- 核心观点：任何理论都需要承诺实体存在，承诺范围决定解释边界
-- [2026-06-24] ingest | 创建 atomic「存在是最普遍的概念，不能被定义，只能被描述」
-	- 位置：30-ZETTELKASTEN/存在是最普遍的概念，不能被定义，只能被描述.md
-	- 父页面：[[本体论]]
-	- 核心观点：存在是最高的范畴，没有上位概念，只能被描述
-- [2026-06-24] ingest | 创建 concept「本体论」
-	- 位置：40-RESOURCES/本体论.md
-	- 父页面：[[形而上学]]
-	- 覆盖核心命题/运行机制/关键区别/适用范围/批判/知识图谱
-	- 更新：wiki-index Concepts 章节新增本体论、形而上学、存在条目
-	- 位置：40-RESOURCES/Svelte vs React.md
-	- 父页面：[[前端框架]]
-	- 覆盖架构哲学/响应式机制/DOM 更新/组件模型/状态管理/生命周期/TypeScript/生态 8 维对比
-	- 更新：wiki-index 断裂链接[[Svelte vs React]] 已恢复
-- [2026-06-27] ingest | 创建 concept「实现一个带并发限制的异步任务调度器」
-	- 位置：40-RESOURCES/实现一个带并发限制的异步任务调度器（Scheduler）.md
-	- 父页面：[[前端面试真题库]]
-	- 覆盖 3 种实现（Class 封装 / 函数式 Worker / 信号量）+ 常见追问
-
-#### 2026-06-28
-
-- [2026-06-28] ingest | 创建 3 个 LLM 核心参数术语笔记
-	- 新建：[[上下文窗口]] — LLM 的令牌处理能力上限
-	- 新建：[[温度]] — 控制 LLM 输出随机性的采样参数
-	- 新建：[[Top-P]] — 动态截断采样的解码策略
-	- 父页面：[[LLM]]（已添加到知识图谱子级概念）
-	- 更新：[[wiki-index]] Terms 分类新增 AI 子分类
-	- 更新：[[人工智能]] 核心概念补充描述
-	- 位置：40-RESOURCES/
-
-#### 2026-06-23
-
-- [2026-06-23] lint | full 健康检查
-	- 检查范围：30-ZETTELKASTEN、40-RESOURCES、20-AREAS
-	- **矛盾**：0 个
-	- **孤儿页面**：0 个
-	- **概念缺口**：3 个
-		- [[数字花园]] (3x) — 原子笔记引用，但文件实际为 `数字花园.md`（别名无"数字花园概述"）
-		- [[localStorage]] (2x) — 无专用 term 页面
-		- [[Scope]] (2x) — 无专用页面
-	- **半缺口**：1 个（[[变量提升]] (3x) — 有对应文件但无"变量提升"别名）
-	- **过时断言**：0 个
-	- **索引断裂链接**：3 个
-		- [[MOC-政治经济]] — 6/19 refactor 已删除，`政治经济.md` 未包含该别名
-		- [[MOC-动画效果SOP]] — 页面不存在
-		- [[Svelte vs React]] — 页面不存在（上次 lint 已知）
-	- **归档引用**：无
-	- **预警**：无（均在安全线内）
 
 *Log 开始于 2026-05-20*
-
-- [2026-06-15] refactor | 批量重分类 163 条笔记的 content-type
-		- 原子笔记以陈述句命名，大量笔记误标为 atomic
-		- 重分类结果：concept × 126、term × 17、question × 16、sop × 3、moc × 1
-		- 保留 atomic × 3（TypeScript的类型是编译时约束、Vue3 响应式系统分为 effect 和 reactive 两部分、执行上下文分为创建阶段和执行阶段）
-		- 自动为无前缀的文件补齐 aliases 前缀
-- [2026-06-15] refactor | 修复 00-META 规格文档与实操的不一致
-		- settings.local.json: Skill(content-verifier) → Skill(content-verifier-local)，去掉冗余 skill(obsidian-note)
-		- _content-type-rules.md: "Diay" 拼写修正为 "Diary"
-		- 命名规范.md: 前缀表格中的空格清理（P- 求职 → P-求职 等）
-- [2026-06-19] ingest | 消化 2 条政治经济原子笔记到 Wiki 层
-		- 更新 A-政治经济 原子洞见：纳入 [[权力的日常形态是共识，终极担保是暴力]]
-		- 更新 MOC-政治经济：新增「原子洞见」章节，收录 2 条 atomic
-		- 父页面：[[政治经济]]、[[政治经济]]
-
-#### 2026-10-20
-
-- [2026-10-20] ingest | 同步 8-28~10-19 期间新增的 17 篇 Wiki 层概念
-	- 新增 concept：Shadow DOM、iframe、qiankun、Git Hooks、Husky、GitHub Actions、package.json、pnpm、tsconfig.json、DAG、Reflect、AgentTool、DeepSeek Harness
-	- 更新：wiki-index Concepts 分区登记 13 篇，计数 51 → 63
-	- 补全 frontmatter：GitHub Actions（缺 frontmatter）、AgentTool/iframe/pnpm/qiankun（补 content-type/description/up）、Husky（type: → content-type:）
-	- 修复模板残留：DAG、Git Hooks 的 uid 占位符 `<% tp.file.creation_date %>` → 固定值
-- [2026-10-20] inbox-review | 识别 2 篇外部剪藏（暂未消化）
-	- Best Three.js Websites 2026（clippings，source=utsubo.com）→ 待消化为 ThreeJS 相关 concept
-	- Frontend Development Trends 2026（clippings，source=talent500.com）→ 待消化为前端架构 concept
-	- 决策：本次仅标注，不移动/不删除，留待专门 ingest 操作消化
-
-#### 2026-10-23
-
-- [2026-10-23] refactor | 顶层目录结构调整：00-META → 01-META，Inbox 提升为顶层 00-INBOX
-	- `00-META/` 更名为 `01-META/`，`30-RESOURCES/Inbox/` 提升为顶层 `00-INBOX/`；`0x` 档位拆为两个槽位：00 = 每日入口，01 = 系统元数据
-	- 确立「前缀语义」：十位 = 档位（0x 系统入口 / 1x 现在 / 2x 长期 / 3x 参考 / 4x 退役 / 5x 沉淀 / 6x 输出 / 8x 私密 / 9x 附属），个位 = 档内序号，宽度统一 2 位；写入 `01-META/Truth/本库目录结构.md`
-	- 取舍：选 2 位统一而非 3 位全量重排——多数派已是 2 位，2 位化改 1 个目录 / 约 97 处引用，3 位重排需改 9 个目录 / 约 660 处引用 + 51 处 dv.pages() + 插件硬编码，收益仅视觉整齐
-	- 同步更新 46 个文件的路径引用：Truth/本库目录结构、Specification/*、Guide/*、Faq/Inbox规则、CLAUDE.md、_templates/template_diary.md、90-DIARY（21 篇的 dataviewjs 排除条件）、.claude/skills/*
-	- 日记「今日知识资产沉淀」排除条件定为 `-"01-META" and -"_templates" and -"00-INBOX"`（21 篇日记 + 模板共 22 处）：Inbox 属未加工原料，不计入当日沉淀；同时修正原 `-"templates"` 与实际目录 `_templates` 不符的失效排除
-	- 配置同步：SimpRead 剪藏目录 → `00-INBOX`；obsidian-to-anki 的 23 条路径映射 → `01-META/`
-	- 修复 _scripts/autoArchiveInbox.js：INBOX_PATH 由过期的 `40-RESOURCES/Inbox` 改为 `00-INBOX`；ARCHIVE_PATH 由错误的 `50-ARCHIVE` 改为 `40-ARCHIVE`
-	- 本日志历史条目保留旧路径（时间线不改写）；改名过程因 Obsidian 占用目录句柄，META 目录一度改用 robocopy /MOVE 完成，git 仍正确识别为 rename
-
-- [2026-10-23] refactor | 解耦目录与 content-type：从「一一映射」改为「归属／形态两个正交维度」
-	- 删除 `Truth/本库目录结构.md` 的「目录 ↔ content-type 映射」表与「特定型/通用型」规则，新增「归属与形态：两个正交维度」「目录侧约定」「归属判定顺序」
-	- 删除 `Truth/笔记类型规范.md` 总览表的「目录」列，新增「形态与归属的边界」三条约定；`Specification/_笔记类型规范.md` 的 17 处「目录」行改为「常见归属（非约束）」，第六节重写为「归属速查（不绑定形态）」
-	- 依据（实测）：`10-PROJECTS/` 59 篇中仅 2 篇为 `project`，其余 `question`(19)/`concept`(18)/`record`(7)；`01-META/` 含 23 篇 `article`、7 篇 `moc`。旧映射在实践中已被证伪
-	- 语义收窄：`project`/`area` 从「位置标签」改为「工作区主页角色」；`10-PROJECTS/`、`20-AREAS/` 明确为工作区/容器，形态不限
-	- 校验口径：不再比对「目录与类型是否一致」，只校验 14 种合法枚举 + 三个单形态目录（50-ZETTELCASTEN/atomic、60-BLOGS/article、90-DIARY/diary）
-	- 连带更新：`Guide/本库子系统概述.md`（核心命题 + 子系统表 + mermaid 流程图）、`Guide/本库指南.md`（原则 3 与 content-type 条）、`Truth/真值索引.md`、`.claude/skills/obsidian-note-local/SKILL.md`（目录选择改为归属判定顺序，速查表去掉「目标目录」列）
-	- 存量 frontmatter 不动：字段本身仍然有效，只是不再承担位置判断
-
-- [2026-10-23] refactor | 命名规范体系收口：清理 Truth/Guide 同名僵尸文件，明确三层的职责边界
-	- 根因：Truth/ 建立后 Guide/ 下的同名旧版未清理，`[[文件名与别名规范]]`/`[[元数据规范]]` 各有两个候选文件，链接解析不可预测
-	- 删除 `Guide/命名规范.md`（内容 100% 被 Truth 版覆盖，且正文写着「唯一真值在 [[文件名与别名规范]]」，形成自指）
-	- 删除 `Guide/元数据规范.md`（纯指针页，导航价值已由本库指南的两个小节承担）
-	- 连带修复断链：`Truth/笔记类型规范.md` 的 4 个锚点 `[[元数据规范#project项目笔记]]` 等，只在 Truth 版存在；若解析到 Guide 版则全部失效
-	- 修复前缀取值错误：`.claude/skills/obsidian-note-local/SKILL.md` 中 `comparison` 前缀误写为「无」，实际为 `VS-`（实测 8 篇 comparison 中 5 篇使用 `VS-`）
-	- `Truth/命名规范.md` 新增「适用范围」：明确本文件只定义**文件名 + aliases**，目录名归 `本库目录结构`，`atomic` 陈述句归 `笔记类型规范`
-	- 软化 SSOT 表述：由「其他文件不得复制本表」改为「前缀取值只在本表定义，允许速查副本但冲突以本表为准」——强约束与技能内联需求冲突，且未被遵守
-	- `Truth/元数据规范.md` 的 `aliases` 行由「方便检索」改为指向 `[[文件名与别名规范]]`；修正「目录前缀」节中解耦后遗留的「content-type 映射」表述
-	- 保留的已知冗余：`Specification/_笔记类型规范.md` 内 3 张前缀表 + 14 处「aliases 前缀」行（约 38 处）——属执行细则的自包含需要，暂不动
-
-- [2026-10-23] refactor | `Truth/命名规范.md` 改名为 `Truth/文件名与别名规范.md`，并清理空目录
-	- 改名理由：原名覆盖过宽，实际只定义「文件名 + aliases」，目录名归 `本库目录结构`、`atomic` 陈述句归 `笔记类型规范`，叫「命名规范」会让人以为管全部命名
-	- 旧名保留为 alias：`aliases: [Truth/文件名与别名规范, 命名规范, 命名规范真值]`——老链接 `[[文件名与别名规范]]` 仍可解析
-	- 同步改写 8 处引用：`Guide/本库指南`（章节标题 `## 命名规范` → `## 文件名与别名`）、`Guide/本库子系统概述`、`Specification/_content-type-rules`、`Truth/元数据规范`、`Truth/真值索引`（2 处，含正文示例路径）、`Truth/笔记类型规范`（2 处）、`Truth/人机分工规范`
-	- wiki-log 历史条目中的 `[[文件名与别名规范]]` 保留不改（时间线不改写）
-	- 删除空目录 `10-PROJECTS/P-Agent求职/_resources/_resources`（嵌套冗余，无内容）
-
-#### 2026-10-25
-
-- [2026-10-25] inbox-review | 00-INBOX 7 篇剪藏统一 content-type
-	- 判断依据：7 篇均带 `tags: clippings` 与 `author` / `source` / `published`，属外部素材；本库口径 `article` 只给「自己的文章」，故统一为 `record`
-	- 原类型 → 新类型：4 篇原本没有 `content-type` → `record`；3 篇原为 `article` → `record`（现代网络浏览器 1 / 3 / 4）
-	- `从采集到回顾，我用 AI 搭建了一套个人信息处理系统` 的 `tags: []` 补为 `[clippings]`
-	- 移动：不移动，7 篇全部留在 `00-INBOX`。按当前定位，Inbox 本身就是待消化队列，超过 14 天由启动脚本移入 `40-ARCHIVE`，需要时自取
-	- 涉及文件：Frontend Development Trends 2026 AI, Edge & TypeScript ／ 从采集到回顾，我用 AI 搭建了一套个人信息处理系统 ／ 深入了解现代网络浏览器(1) 多进程机构 ／ (2) 导航流程 ／ (3) 渲染进程 ／ (4) 合成层 ／ 理解 React 的渲染机制：为什么组件会重新渲染？
-
-- [2026-10-25] refactor | wiki-index 全量重建：条目 274 → 775
-	- 范围：`30-RESOURCES/` + `20-AREAS/`，排除 `_resources` 子目录
-	- 结构：8 个业务分区（Areas 18 / MOCs 58 / Concepts 340 / Terms 132 / SOPs 80 / Comparisons 16 / Questions 86 / Records 45）+ Meta；`person` 6 篇作为子条目挂在父页面下
-	- 排序：区内按标题拼音（`pypinyin`），不再保留旧的 60 余个临时子分区——那份结构是增量维护的残留，全量后平均每组不足 5 条，已失去分组意义；主题浏览由 `本库领域索引` 与 MOCs 承担
-	- 链接：800 条全部可解析、断链 0；其中 5 条因文件名与标题不一致走 `[[文件名|标题]]`（如 `[[存在|存在 (Being)]]`）
-	- 未收录 26 篇：`content-type` 为空，等补标后可再跑一次生成器
-	- 规范缺口：`roadmap`(5) 与 `article`(3) 在 `_wiki-index-format` 的分区表里没有位置，暂并入 Concepts，计数因此为 340 而非 concept 实际的 332
-
-- [2026-10-25] refactor | 删除 `action-suggest` skill
-	- 理由：它建立在「状态流转子系统（status 演化链）」之上，而 `status` 已于 2026-10-24 废除，读不到任何信号；`suggest-log.md` 最后一条停在 2026-06-14，已实际停用四个月
-	- 同步：`_skills-overview` 删表格行与小节、计数 6 → 5；`CLAUDE.md` 的 skill 清单删该行；目录 `.claude/skills/action-suggest/` 移除
-	- 未动：`01-META/Log/suggest-log.md`（历史日志不改写）、`30-RESOURCES/简历素材.md` 第 77 行「开发 6 个 Claude Skill」（属内容表述，等用户定要不要改成 5）
-
-- [2026-10-25] refactor | 工作流文档清理（P0 + P1）
-	- P0：10 份文档删 `status` 行；8 篇活跃笔记的 `content-type` 由多行列表改标量；`validate_meta.py --all` 新增多行列表检测
-	- P1：`_ingest-rules` 的 Inbox Review 改为引用式（删掉违反解耦的「类型→目录」表）；`_wiki-index-format` 的条目规则改为文件名直链；删两处状态流转死内容并重编号；连带清理 6 处「状态流转」字样
-	- schema 加边界声明：专供 llm-wiki 工作流，架构总览在 [[本库子系统概述]]，两份不合并
-
-- [2026-10-27] refactor | 删除 `Specification/_笔记类型规范`，17 处引用改指真值
-	- 理由：450 行里独有内容约 24 行（5%），其余是 `Truth/笔记类型规范`、`Truth/文件名与别名规范`、`Truth/本库目录结构` 的第三份抄本；10-26 已实证它「悄悄过期」——sop/question 判据与 Truth 打架
-	- 独有内容不迁移：第七节「各类型默认父级」经全库实测，7 类中 5 类不成立（concept 实际最多的是空 160 与 moc 68，不是 area 62；term 空 68 高于 concept 20；question 漏了 concept 28）→ 属未经验证的凭印象约定，不升格为真值；其 `question → 关联 area 的 FAQ` 还与 `_wiki-index-format` 的 `## Questions (待探索)` 固定分区冲突
-	- 引用改指：`真值索引`（删「特别说明」与相关链接）、`llm-wiki-schema`、`_skills-overview`、`_anki-sync-rules`×2、`_content-type-rules`、`知识粒度子系统`×2、`本库常见问题解答汇总`×2（锚点改指 Truth 的对应小节）、`content-evaluator-local` 与 `content-verifier-local` 两个 skill、`validate_meta.py` 的 exclude_files
-	- 未动：`Log/wiki-log.md` 5 处历史记录（不改写流水）、`.obsidian/plugins/obsidian-to-anki-plugin/data.json` 的哈希缓存（插件自愈）

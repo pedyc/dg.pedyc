@@ -125,7 +125,8 @@ function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T) => voi
 
 ### 知识图谱
 
-- **父级概念**：[[Hooks(React)|React Hooks]]
-- **关联概念**：[[useState 与 useReducer]]
-- **关联概念**：[[useEffect 最佳实践]]
-- **关联概念**：[[自定义 Hooks 模式]]
+- **上位**：[[Hooks(React)|React Hooks]]
+- **相关**：
+	- [[useState 与 useReducer]]
+	- [[useEffect 最佳实践]]
+	- [[自定义 Hooks 模式]]

@@ -9,6 +9,7 @@ date-modified: 2026-08-31
 status: active
 comparison: [Vue2, Vue3]
 content-type: comparison
+up: "[[Vue]]"
 related: ["[[前端开发]]", "[[P-复习vue3]]", "[[Vue3-响应式系统原理]]", "[[Vue]]"]
 ---
 

@@ -126,21 +126,21 @@ graph TB
 
 > 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
 
-- **父级概念**：[[Agent Harness]] — 环绕大模型、负责工具调度与执行闭环的控制系统
-- **子级概念**：
+- **上位**：[[Agent Harness]] — 环绕大模型、负责工具调度与执行闭环的控制系统
+- **下位**：
 	- [[Cordis]] — DSH 底层的插件元框架，提供依赖调度与生命周期管理
 	- [[Capability Seam]] — 能力接口契约，解耦定义、实现与消费
 	- [[Revertible Effect]] — 可回退的注册副作用，保证插件可干净卸载
 	- [[Typed Event]] — 类型化事件系统，支持多种分发模式
 	- [[DSH-Agent-Loop]]
-- **并列概念**：
+- **并列**：
 	- [[Claude Code]] — Anthropic 的闭源 Coding Agent 产品
 	- [[OpenAI Codex]] — OpenAI 的 Agent 产品线
-- **相关概念**：
+- **相关**：
 	- [[依赖注入]] — Cordis 的 inject 机制借鉴并扩展了 DI 的思路
 	- [[微内核架构]] — "无特权内核"是微内核思想的体现
 	- [[时空可组合性]] — Cordis 的理论基础，论文形式化了时间与空间两个维度的组合问题
-- **参考文章**
+- **外部资料**
 	- DeepSeek Harness 官方文档与 GitHub 仓库
 	- 《A Programming Paradigm for Spatiotemporal Composability》（北京大学 & DeepSeek-AI）
 	- Cordis 源码与 Koishi 插件生态实践

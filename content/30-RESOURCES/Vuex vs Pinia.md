@@ -12,6 +12,7 @@ comparison:
   - Vuex
   - Pinia
 content-type: comparison
+up: "[[Vue]]"
 related:
   - "[[前端开发]]"
   - "[[P-复习vue3]]"

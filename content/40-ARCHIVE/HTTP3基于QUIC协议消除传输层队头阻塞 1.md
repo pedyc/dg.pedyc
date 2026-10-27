@@ -15,7 +15,7 @@ date-created: 2026-08-27
 date-modified: 2026-10-23
 status: archived
 content-type: atomic
-up: ["[[QUIC]]", "[[队头阻塞]]", "[[HTTP~3|HTTP3]]"]
+up: ["[[QUIC]]", "[[队头阻塞]]", "[[HTTP3|HTTP3]]"]
 ---
 
 ## 命题：HTTP3基于QUIC协议消除传输层队头阻塞

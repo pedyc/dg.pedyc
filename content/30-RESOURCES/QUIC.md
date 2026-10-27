@@ -34,9 +34,9 @@ QUIC（Quick UDP Internet Connections）是 Google 开发的基于 UDP 的安全
 
 ### 知识网络
 
-- **父级概念**：[[HTTP~3]] — QUIC 是 HTTP/3 的底层协议
+- **父级概念**：[[HTTP3]] — QUIC 是 HTTP/3 的底层协议
 - **相关概念**：
 	- [[UDP]] — QUIC 基于 UDP
-	- [[HTTP~2]] — TCP 协议，HTTP/3 的前身
+	- [[HTTP2]] — TCP 协议，HTTP/3 的前身
 	- [[队头阻塞]] — QUIC 切断了跨流级联阻塞，单流内的有序等待仍在（见 [[QUIC只缩小阻塞粒度而不消除单流内的有序等待]]）
 	- [[TLS]] — QUIC 内置 TLS 1.3

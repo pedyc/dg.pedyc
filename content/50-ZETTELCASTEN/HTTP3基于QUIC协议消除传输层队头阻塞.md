@@ -7,7 +7,7 @@ tags: [计算机网络, HTTP3, QUIC, 传输层, 性能优化]
 date-created: 2026-08-27
 date-modified: 2026-10-24
 content-type: atomic
-up: ["[[QUIC]]", "[[队头阻塞]]", "[[HTTP~3|HTTP3]]"]
+up: ["[[QUIC]]", "[[队头阻塞]]", "[[HTTP3|HTTP3]]"]
 noteId: 1792475163523
 ---
 

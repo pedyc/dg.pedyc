@@ -10,7 +10,7 @@ status: fleeting
 category: blog
 content-type: article
 published: false
-up:
+up: "[[微前端]]"
 ---
 
 在微前端的语境中，**Shadow DOM** 确实扮演了样式防线的角色。"原生物理隔离"是浏览器最彻底的底层样式沙箱手段。

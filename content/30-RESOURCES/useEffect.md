@@ -67,6 +67,20 @@ graph LR
     D --> G[每次渲染后都执行]
 ```
 
+#### cleanup 的触发时机
+
+| 依赖数组 | effect 执行 | cleanup 执行 |
+|:---|:---|:---|
+| 省略 | 每次渲染后 | 每次重新执行前 |
+| `[a]` | 首次 + `a` 变化时 | 重新执行前 + 卸载时 |
+| `[]` | 仅首次 | 仅卸载时 |
+
+最常见的误解是把 `[]` 读成「只跑一次，所以 cleanup 也只跑一次」——cleanup 仍会在卸载时执行，这正是它清理订阅与定时器的地方。
+
+反过来，cleanup 不保证一定执行：组件在渲染中断时被丢弃、或父组件提前返回了别的分支，它可能一次都不跑。所以不能把「必须完成」的逻辑放进 cleanup，那个位置只适合做释放。
+
+另外 StrictMode 下开发环境会刻意多跑一轮（挂载 → 卸载 → 再挂载），用来暴露没写 cleanup 的副作用，不能当成 bug。
+
 ---
 
 ### 关键区别
@@ -106,14 +120,13 @@ graph LR
 
 ### 知识图谱
 
-- **父级概念**：[[Hooks(React)]] — useEffect 是 React Hooks 之一
-- **相关概念**：
+- **上位**：[[Hooks(React)]] — useEffect 是 React Hooks 之一
+- **相关**：
 	- [[useState]] — useEffect 常配合 useState 使用
 	- [[useCallback]] — 缓存回调函数，防止 effect 重新执行
 	- [[useMemo]] — 缓存计算结果，避免在 effect 中重复计算
 	- [[useRef]] — 保存不需要触发更新的可变值
 	- [[useLayoutEffect]] — 同步执行的副作用
-- **应用场景**：
 	- [[SOP-正确使用useEffect]] — useEffect 标准操作流程
 	- [[React面试题]] — React 相关面试题汇总
 

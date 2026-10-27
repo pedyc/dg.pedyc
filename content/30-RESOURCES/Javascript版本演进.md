@@ -2,13 +2,12 @@
 uid: "202604170003"
 title: Javascript版本演进
 aliases: [ECMAScript版本演进, JavaScript版本演进, R-JavaScript演进]
-description: 记录 JavaScript/ECMAScript 语言从 ES3 到 ES2026 的版本演进历程
+description: 记录 JavaScript/ECMAScript 语言从 ES3 到 ES2026 的版本演进历程，兼收各版之间的差异对照
 tags: [计算机科学, 前端开发, JavaScript]
 date-created: 2026-04-17
-date-modified: 2026-08-03
-status: active
+date-modified: 2026-10-27
 content-type: roadmap
-related: "[[前端开发]]"
+up: "[[JavaScript]]"
 ---
 
 ## JavaScript 版本演进
@@ -33,8 +32,8 @@ timeline
     section 进化期
         ES2016+ : 2016-2024 : 逐年小幅更新：async/await、Optional Chaining、空值合并
     section 新时代
-        ES2025 : 2025 : 迭代器辅助方法、延迟模块评估
-        ES2026 : 2026 : 资源管理、异步增强、Temporal API（最大更新之一）
+        ES2025 : 2025 : 迭代器辅助方法、Set 集合运算、Promise.try
+        ES2026 : 2026 : 标准库补齐 7 项，无语法变化
 ```
 
 ---
@@ -99,32 +98,37 @@ timeline
 
 #### ES2025 (2025)
 
-- **时间**：2025 年 6 月
+- **时间**：2025 年 6 月（第 16 版，11 项）
 - **核心变化**：
-	- 迭代器辅助方法：`Iterator.prototype.map`、`filter`、`take`、`drop` 等
-	- 延迟模块评估：`defer import` 按需加载模块
-	- `Promise.try()`：统一处理同步/异步函数错误
-	- 原生 JSON 模块导入：`import json from './config.json' with { type: 'json' }`
-- **解决的关键问题**：优化大型应用首屏性能 + 简化异步错误处理
+	- 迭代器辅助方法：`Iterator.prototype.map`、`filter`、`take`、`drop`、`flatMap`、`reduce`、`toArray`，惰性求值
+	- Set 集合运算：`union`、`intersection`、`difference`、`symmetricDifference`、`isSubsetOf`、`isSupersetOf`、`isDisjointFrom`
+	- `Promise.try()`：把同步抛错与异步拒绝收进同一条链
+	- 正则三件套：`RegExp.escape()`、`(?i:…)` 局部修饰符、同名捕获组跨分支复用、`/v` 标志
+	- `Float16Array` + `Math.f16round()`：半精度浮点
+	- Import Attributes 与原生 JSON 模块导入：`import data from './c.json' with { type: 'json' }`
+- **解决的关键问题**：把迭代、集合、正则三处的手写样板收进标准库
 - **相关概念**：
 	- [[async-await]] — 异步编程
+	- [[ES2025]] — 本版术语页
 	- [[What's new in ECMAScript 2025]]
 
 #### ES2026 (2026)
 
-- **时间**：2026 年 6 月
-- **核心变化**（第二次重大更新，20+ 新特性）：
-	- 资源管理：`using` / `await using` 声明（类似 C# `using`）
-	- 错误处理：`Error.isError()` 精确判断错误类型
-	- 日期时间：`Temporal API` 现代化日期时间处理
-	- 异步增强：`AsyncIterator` 辅助方法
-	- 二进制编码：`Uint8Array` 的 Base64/十六进制编解码
-	- 不可变数据结构：`Records & Tuples`（`#record` / `#tuple`）
-- **解决的关键问题**：填补资源管理、日期时间处理、错误类型判断等长期痛点
+- **时间**：2026 年 6 月 30 日获批（第 17 版，7 项）
+- **核心变化**（全部是标准库补齐，无语法层改动）：
+	- `Map`/`WeakMap` 的 `getOrInsert` / `getOrInsertComputed`：一次调用完成取值或插入
+	- `JSON.parse` reviver 第三参数（源文本访问）与 `JSON.rawJSON()`：大整数精度不再丢失
+	- `Iterator.concat`：惰性串联多个迭代器
+	- `Uint8Array` 的 `toBase64`/`toHex`/`fromBase64`/`fromHex` 等六个方法
+	- `Math.sumPrecise`：中间不丢精度的求和
+	- `Error.isError`：跨 realm 判断错误对象
+	- `Array.fromAsync`：从异步可迭代对象构造数组
+- **解决的关键问题**：消灭 has→set→get、`btoa`、`reduce` 求和、手写大整数后处理这几类样板代码
+- **不在本版**：`using`（2025-05 达 Stage 4，未进当年版本）、`Temporal`（错过截止，归 ES2027）、`Records & Tuples`（2025-04 撤回，由 Composites 接替）
 - **相关概念**：
-	- [[using 声明]] — 资源管理
-	- [[Temporal API]] — 全新的日期 API，代替 Date
-	- [[Error.isError]] — 精确判断错误类型
+	- [[ES2026]] — 本版术语页
+	- [[Error.isError]]
+	- [[Math.sumPrecise]]
 	- [[What's new in ECMAScript 2026]]
 
 ---
@@ -138,7 +142,25 @@ timeline
 | 2009 ES5        | 严格模式 + JSON                    | 现代化开端           |
 | 2015 ES6        | 50+ 新特性，模块化、类、Promise          | 工程化门槛大幅降低       |
 | 2017 ES2017     | async/await                    | 异步编程主流方案        |
-| 2026 [[ES2026]] | 20+ 新特性，资源管理、Temporal API      | 现代化日期时间和资源管理    |
+| 2026 [[ES2026]] | 7 项标准库补齐，无语法变化                 | 消灭一批样板代码         |
+
+---
+
+### 版本对照
+
+只看数量会误判：ES2015 有 50+ 项、ES2026 只有 7 项，但真正的分界是「有没有动语法」。
+
+| 维度 | ES2015 | ES2025 | ES2026 |
+|:---|:---|:---|:---|
+| 版次 | 第 6 版 | 第 16 版 | 第 17 版 |
+| 批准时间 | 2015-06 | 2025-06 | 2026-06-30 |
+| 特性数 | 50+ | 11 | 7 |
+| 语法层改动 | 有：`let`/`const`、`class`、模块、箭头函数 | 无 | 无 |
+| 主题 | 语言重构 | 迭代器、Set、正则补齐 | 标准库缺口补齐 |
+| 典型收益 | 能写工程化代码 | 少写工具函数 | 少写样板代码 |
+| 定位 | 分水岭 | 打磨 | 补洞 |
+
+判断某特性是否属于某版，看两处：TC39 finished-proposals 表里的 Expected Publication Year，以及该提案达 Stage 4 的月份是否赶在当年 3 月冻结之前。`Array.fromAsync` 2023 年就能用，但规范 PR 2025-12 才合入，所以算 ES2026 而不是 ES2025；`Temporal` 2026-03 达 Stage 4 却晚于冻结，归 ES2027。
 
 ---
 
@@ -149,19 +171,21 @@ timeline
 	- 更多声明式语法糖
 	- 更好的类型安全方案（TypeScript 协作）
 - **ES2027+ 待定方向**：
-	- Pattern Matching：模式匹配语法（Stage 3）
-	- 装饰器标准化（Decorators 历经多年讨论）
-	- 更好的并发模型（当前 SharedArrayBuffer 使用复杂）
+	- Temporal API：已定 Stage 4，2027 年版的头号特性
+	- Composites：Records & Tuples 撤回后的接替方案，当前 Stage 2
+	- Pattern Matching：模式匹配语法，仍在提案阶段
+	- 装饰器：Stage 3 停留四年后 2026-05 降回 Stage 2.7
 - **值得关注**：
 	- ECMAScript 提案流程（新特性通过 Stage 推进）
 	- TypeScript 与 ECMAScript 的协作
 
 ---
 
-### 关联概念
+### 知识图谱
 
-- **父级概念**：
- - [[JavaScript]] — JavaScript 是前端开发的核心语言
-- **相关概念**：
-	- [[ES2015|ES6]]
-	- [[ES2026]]
+- **上位**：
+	- [[JavaScript]] — 演进线所属的语言
+	- [[ECMAScript]] — 每年发布的规范
+- **相关**：
+	- [[ES2015]] · [[ES2025]] · [[ES2026]] — 三个节点各自成页
+	- [[TypeScript]] — 编译目标逐年跟随 ECMAScript 版次

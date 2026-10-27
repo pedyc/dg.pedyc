@@ -115,10 +115,10 @@ function useCallback(fn, deps) {
 
 ### 知识图谱
 
-- **父级概念**：[[React]] — React Hooks 之一
-- **父级 Hook**：
+- **上位**：
+	- [[React]] — React Hooks 之一
 	- [[Hooks(React)]] — useCallback 所属的 Hooks 体系
-- **相关概念**：
+- **相关**：
 	- [[useMemo]] — 值缓存，与 useCallback 机制类似但缓存的是值
 	- [[React.memo]] — 组件记忆化，需要配合 useCallback 使用
 	- [[虚拟DOM(React)]] — useCallback 影响 Virtual DOM diff 结果

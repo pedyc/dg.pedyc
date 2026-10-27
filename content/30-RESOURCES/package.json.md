@@ -141,15 +141,15 @@ flowchart TD
 
 [cite: 12]
 
-* **父级概念**：[[前端工程]] — 现代前端基础设施与质量体系
-* **子级概念**：
+- **上位**：[[前端工程]] — 现代前端基础设施与质量体系
+- **下位**：
 	* [[T-SemVer]] — 语义化版本规范
 	* [[T-Package-Exports]] — Package 条件导出与子路径封装规范
 	* [[T-PeerDependencies]] — 对等依赖契约
-* **并列概念**：
+- **并列**：
 	* [[tsconfig.json]] — TypeScript 编译器与类型检查配置文件
 	* [[Lockfile]] — 确定性依赖树与版本锁定清单（如 pnpm-lock.yaml）
-* **相关概念**：
+- **相关**：
 	* [[Node.js]] — JavaScript 服务端与工具链运行时
 	* [[pnpm]] — 基于内容寻址的高效包管理器
 	* [[Git Hooks]] — 代码生命周期拦截机制

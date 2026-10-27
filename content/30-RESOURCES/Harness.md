@@ -115,13 +115,13 @@ flowchart LR
 
 ### 知识图谱
 
-- **父级概念**：[[Agent]] — Harness 是 Agent 的工程化框架
-- **子级概念**
+- **上位**：[[Agent]] — Harness 是 Agent 的工程化框架
+- **下位**
 	- [[智能体编排]] — 智能体编排是 Harness 的核心实现
-- **并列概念**：
+- **并列**：
 	- [[提示词工程|Prompt Engineering]] — 优化 Agent 能力
 	- [[Claude Code]] — Agent 实现案例
-- **相关领域**：
+- **相关**：
 	- [[前端交互]] — Agent 可赋能前端交互
 	- [[工作流引擎]] — Agent 流水线的编排方式
 

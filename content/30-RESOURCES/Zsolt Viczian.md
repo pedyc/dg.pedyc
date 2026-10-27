@@ -113,13 +113,12 @@ timeline
 
 ### 知识图谱
 
-- **父级领域**：[[知识内化]]（MOC-知识内化）
-- **相关概念**：
+- **上位**：[[知识内化]]（MOC-知识内化）
+- **相关**：
 	- [[视觉思维]] — 核心领域
 	- [[双重编码理论]] — 视觉思维的理论支撑
 	- [[知识管理]] — 所属领域
-- **相关人物**：
 	- Nick Milo — PKM 社区代表人物（Linking Your Thinking）
 	- Nicole van der Hoeven — PKM 博主/视频创作者
-- **参考来源**
+- **外部资料**
 	- PKM Summit、Amazon 作者页、Linking Your Thinking、Nicole van der Hoeven 博客等（2026-07 检索）

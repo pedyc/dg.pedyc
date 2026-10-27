@@ -11,6 +11,7 @@ date-modified: 2026-09-22
 status: active
 comparison: [ref, reactive]
 content-type: comparison
+up: "[[Vue3响应式原理]]"
 ---
 
 > ref 和 reactive 是 Vue3 的两种响应式 API，ref 适合原始值，reactive 适合对象。

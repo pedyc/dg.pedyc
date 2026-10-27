@@ -178,7 +178,7 @@ socket.send({ type: 'ping', ts: Date.now() });
 
 ### 知识图谱
 
-- **相关概念**：
+- **相关**：
 	- [[WebSocket]] — 本 SOP 所属的协议概念，握手与帧格式详见其运行机制
 	- [[SSE]] — 单向推送的替代方案，选型对比见 [[WebSocket vs SSE vs Long Polling]]
 	- [[HTTP]] — WebSocket 握手基于 HTTP Upgrade，鉴权与反向代理配置沿用 HTTP 体系

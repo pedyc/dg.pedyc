@@ -129,9 +129,9 @@ graph LR
 
 ### 知识图谱
 
-- **父级概念**：[[React]] — React 生态的核心特性
-- **演进关系**：[[React版本演进]] — Hooks 在 React 16.8 中引入
-- **相关概念**：
+- **上位**：[[React]] — React 生态的核心特性
+- **相关**：
+	- [[React版本演进]] — Hooks 在 React 16.8 中引入
 	- [[Fiber]] — Hooks 依赖 Fiber 的链表结构实现
 	- [[虚拟DOM(React)]] — Hooks 操作的 state 影响 Virtual DOM 更新
 	- [[useState]] — 基础状态 Hook

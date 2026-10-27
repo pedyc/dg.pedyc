@@ -135,11 +135,11 @@ console.log(newDeadline); // 新对象
 
 ### 知识图谱
 
-- **父级概念**：
+- **上位**：
 	- [[ES2026]] — Temporal API 是 ES2026 的核心特性
 	- [[Javascript版本演进]] — ES2026 是最新版本
-- **相关概念**：
+- **相关**：
 	- [[Date]] — 被替代的传统 API
 	- [[ECMAScript]] — JavaScript 遵循的标准
-- **参考文章**
+- **外部资料**
 	- [MDN - Temporal](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Temporal)

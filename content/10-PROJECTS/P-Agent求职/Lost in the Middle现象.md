@@ -143,22 +143,22 @@ graph TD
 
 > 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
 
-- **父级概念**：[[Context Engineering]] — 新知识的概括性上位概念
-- **子级概念**：
+- **上位**：[[Context Engineering]] — 新知识的概括性上位概念
+- **下位**：
 	- [[Attention Sinks]] — 首因效应的结构性机制
 	- [[U 形曲线]] — 性能随位置变化的典型形态
 	- [[位置偏差]] — 更广泛的位置相关性能偏差
 	- [[知晓但不告知]] — 检索与利用解耦现象
-- **并列概念**：
+- **并列**：
 	- [[近因效应]] — 末尾位置偏好
 	- [[首因效应]] — 开头位置偏好
 	- [[灾难性遗忘]] — 参数层面的知识覆盖
-- **相关概念**：
+- **相关**：
 	- [[RAG]] — 检索增强生成，受本现象直接影响
 	- [[位置编码]] — RoPE、ALiBi 等，与位置偏差相关
 	- [[注意力机制]] — Transformer 核心，偏差来源之一
 	- [[上下文窗口]] — 名义容量与有效容量的差距
-- **参考文章**
+- **外部资料**
 	- Liu, N. F. et al. (2024). Lost in the Middle: How Language Models Use Long Contexts. *TACL*, 12, 157–173.
 	- Yu, Y. et al. (2025). Mitigate Position Bias in LLMs via Scaling a Single Hidden States Channel. *Findings of ACL 2025*.
 	- Tian, R. et al. (2025). Distance between Relevant Information Pieces Causes Bias in Long-Context LLMs. *Findings of ACL 2025*.

@@ -156,8 +156,8 @@ flowchart TD
 
 ### 知识图谱
 
-- **父级概念**：[[Claude Code]] — 本 SOP 是 Claude Code 在前端开发的具体应用
-- **关联概念**：
+- **上位**：[[Claude Code]] — 本 SOP 是 Claude Code 在前端开发的具体应用
+- **相关**：
 	- [[Agent]] — Agent 能力是本 SOP 的技术基础
 	- [[Harness]] — 输入/输出契约是组件质量的保障
 	- [[智能体编排]] — 复杂组件使用多 Agent 编排模式

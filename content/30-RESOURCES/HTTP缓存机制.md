@@ -107,21 +107,21 @@ flowchart TD
 
 > 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
 
-- **父级概念**：[[HTTP]] — 超文本传输协议
-- **子级概念**：
+- **上位**：[[HTTP]] — 超文本传输协议
+- **下位**：
 	- [[HTTP强缓存]] — 本地直接拦截的缓存阶段
 	- [[HTTP协商缓存]] — 与服务器握手比对的条件请求阶段
 	- [[Cache-Control]] — 核心缓存控制指令集
 	- [[ETag]] — 实体内容指纹验证器
 	- [[Last-Modified]] — 最后修改时间戳验证器
-- **并列概念**：
+- **并列**：
 	- [[Service Worker 缓存]] — 运行在客户端独立线程的应用级离线拦截缓存
 	- [[Memory Cache 与 Disk Cache]] — 浏览器底层的内存与磁盘存储实现
-- **相关概念**：
+- **相关**：
 	- [[CDN]] — 分布式多级网络代理节点缓存
 	- [[Content-Hash]] — 构建阶段生成的内容签名
 	- [[304 Not Modified]] — 协商缓存成功命中的响应状态码
-- **参考文章**
+- **外部资料**
 	- RFC 9111: HTTP Caching (Obsoletes RFC 7234)
 	- MDN Web Docs: _HTTP Caching Architecture_
 	- web.dev: _Prevent unnecessary network requests with the HTTP Cache_

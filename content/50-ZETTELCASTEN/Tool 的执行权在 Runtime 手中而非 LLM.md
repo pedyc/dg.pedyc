@@ -16,6 +16,8 @@ noteId: 1792465710322
 
 > Tool 的执行权在 ~~Runtime~~ 手中，而非 LLM。
 
+**边界**：这只在 Runtime 真的校验时成立。若 Runtime 把 LLM 给的参数直接透传（早期实现常见），执行权实际仍在 LLM，只是多了一层转发。
+
 ## 论据/示例（可选）
 
 LLM 输出 Tool Call 只是请求 Runtime 执行，Runtime 可能依据 Policy / Permission 拒绝执行。因为 Tool 是 LLM 与外部环境交互的接口，可能影响外部环境，所以需要权限约束，不能完全信任 LLM 进行越权操作。Tool 的执行结果也必须由 Runtime 提供——Tool Calling 本身不能证明执行成功。

@@ -6,7 +6,7 @@ description: Webpack 通过递归解析模块依赖构建依赖图，再生成�
 tags:
   - 前端/构建工具
 date-created: 2026-05-18
-date-modified: 2026-05-18
+date-modified: 2026-10-27
 status: active
 content-type: atomic
 up: "[[Webpack]]"
@@ -15,55 +15,13 @@ noteId: 1792465712060
 
 > Webpack 模块打包的本质是建立~~依赖图~~并生成优化后的资源集合。
 
+**边界**：依赖图只覆盖构建期能静态看到的模块。运行时拼出的 `import()`、外部 CDN 脚本、以变量为参数的 `require` 都不在图里，拆包与 tree shaking 的边界到图为止。
+
 ## 论据/示例
 
-**依赖图构建过程**：
+「图 → chunk → 文件」这条链解释了两件事：为什么改一个深层模块会让某个 chunk 的 hash 全变；为什么 `splitChunks` 是在图上切分，而不是按目录切分。
 
-```javascript
-// 入口文件 src/index.js
-import { foo } from './foo.js';
-import styles from './styles.css';
-
-console.log(foo);
-```
-
-```javascript
-// foo.js
-export const foo = 'hello';
-```
-
-Webpack 解析流程：
-1. 从 `entry`（`src/index.js`）开始
-2. 检测到 `import './foo.js'` → 将 foo.js 加入依赖图
-3. 检测到 `import './styles.css'` → 调用 css-loader 处理
-4. 递归解析所有模块，构建完整依赖图
-5. 根据图关系，将相关模块打包到同一个 chunk
-
-**构建后的依赖图**：
-
-```mermaid
-graph TD
-    A[index.js<br/>入口] --> B[foo.js<br/>ES Module]
-    A --> C[styles.css<br/>CSS Module]
-    B --> D[bar.js<br/>深层依赖]
-    D --> E[utils.js<br/>工具函数]
-    F[bundle.js<br/>主 chunk] -.->|包含| A
-    F -.->|包含| B
-    F -.->|包含| C
-    F -.->|包含| D
-    F -.->|包含| E
-    G[vendor.js<br/>公共依赖] -.->|共享| D
-    G -.->|共享| E
-```
-
-**优化后的资源集合**：
-
-| 优化手段 | 效果 |
-|:---|:---|
-| Tree Shaking | 移除未使用的 export |
-| Code Splitting | 按需加载，减小首屏体积 |
-| Minification | 压缩代码，移除空格注释 |
-| Module Concatenation | 合并模块减少函数调用开销 |
+构建流程与 chunk 划分规则见 [[Webpack]]。
 
 ## 关联
 

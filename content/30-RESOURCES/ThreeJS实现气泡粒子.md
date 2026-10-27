@@ -347,7 +347,7 @@ replayBtn.addEventListener('click', resetAnimation)
 
 ### 知识图谱
 
-- **父级概念**：[[ThreeJS]]
-- **关联概念**：
+- **上位**：[[ThreeJS]]
+- **相关**：
 	- [[ThreeJS实现光影滤镜]] — 光照与材质的进阶应用
 	- [[ThreeJS实现3D视差滚动]] — Three.js 的动态场景应用

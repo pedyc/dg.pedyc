@@ -346,10 +346,10 @@ function GlitchEffect({ text }: { text: string }) {
 
 ### 知识图谱
 
-- **父级概念**：[[Web动画]] — 本 SOP 属于 Web 动画的 CSS/JS 动画分支
-- **关联概念**：
+- **上位**：[[Web动画]] — 本 SOP 属于 Web 动画的 CSS/JS 动画分支
+- **相关**：
 	- [[CSS Animation]] — 纯 CSS 实现动画的基础
 	- [[在React中实现ASCII动画]] — 另一种 React 文本动画实现
 	- [[Canvas动画]] — 更底层的动画实现方式
 	- Framer Motion — React 动画库（本 SOP 的优化工具）
-- **参考文章**：[【前端 | 教程】实现酷酷的文字故障效果_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1LN4y1D7aC/?spm_id_from=333.1387.homepage.video_card.click&vd_source=d909cd5773c434648664a934ea4a8dae)
+- **外部资料**：[【前端 | 教程】实现酷酷的文字故障效果_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1LN4y1D7aC/?spm_id_from=333.1387.homepage.video_card.click&vd_source=d909cd5773c434648664a934ea4a8dae)

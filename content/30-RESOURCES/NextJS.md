@@ -52,6 +52,16 @@ graph TB
 - **ISR (Incremental Static Regeneration)**：定时重新生成，适合频繁更新内容
 - **RSC (React Server Components)**：组件级服务端渲染，直接在服务器执行逻辑
 
+**三种服务端能力的边界**：
+
+| 能力 | 解决什么 | 代码位置 | 代价 |
+|:---|:---|:---|:---|
+| SSR（`getServerSideProps`） | 首屏直接拿到完整 HTML | 页面级导出 | 每次请求都要渲染；返回的 props 必须可序列化 |
+| API Routes | 前后端同仓，省一层部署 | `pages/api/*.ts` | 与页面共享进程，重活会拖慢渲染 |
+| RSC（App Router） | 组件直接在服务端取数，免去 API 层 | `app/` 下的 async 组件 | 组件不能带交互；`'use client'` 边界要人工划 |
+
+三者共同点是「在服务端执行 React」，差别在执行粒度：页面级 → 接口级 → 组件级。粒度越细，省掉的样板越多，但「哪段代码在哪一侧运行」就越需要显式声明。
+
 ---
 
 ### 关键区别
@@ -98,16 +108,16 @@ graph TB
 
 > 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
 
-- **父级概念**：
+- **上位**：
 	- [[React]] — NextJS 的 UI 渲染基础
 	- [[NodeJS]] — NextJS 运行的服务端环境
-- **子级概念**：
+- **下位**：
 	- [[SSR]] — NextJS 的核心渲染模式
 	- [[React Server Components]] — NextJS App Router 的核心技术
-- **并列概念**：
+- **并列**：
 	- [[Nuxt]] — Vue 生态的对标框架
 	- [[Remix]] — 另一个 React 全栈框架
-- **相关概念**：
+- **相关**：
 	- [[Vercel]] — NextJS 官方推荐的部署平台
 	- [[静态站点生成]] — SSG 是一种预渲染策略
 

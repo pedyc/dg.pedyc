@@ -12,6 +12,7 @@ date-created: 2026-04-20
 date-modified: 2026-04-20
 status: active
 content-type: comparison
+up: "[[React]]"
 comparison:
   - "Zustand"
   - "Redux"
@@ -112,11 +113,11 @@ graph TD
 
 ### 知识图谱
 
-- **父级概念**：[[前端状态管理]] — 两者都属于状态管理领域
-- **相关对比**：
+- **上位**：[[前端状态管理]] — 两者都属于状态管理领域
+- **相关**：
 	- [[MobX vs Redux]] — 另一种状态管理范式对比
 	- [[Jotai vs Zustand]] — 轻量状态管理方案对比
-- **延伸阅读**
+- **外部资料**
 	- [Zustand GitHub](https://github.com/pmndrs/zustand)
 	- [Redux 官方文档](https://redux.js.org/)
 	- [Redux Toolkit](https://redux-toolkit.js.org/)

@@ -113,13 +113,13 @@ graph LR
 
 ### 知识图谱
 
-- **父级概念**：[[Vue]] — Vue 的核心框架
-- **并列概念**：
+- **上位**：[[Vue]] — Vue 的核心框架
+- **并列**：
 	- [[组合式API]] — 与 Vapor 搭配的组合式开发范式
-- **相关概念**：
+- **相关**：
 	- [[Vue编译器优化]] — 编译器优化方向的延续
 	- [[模板编译(Vue3)]] — Virtual DOM 模式下的模板编译
 	- [[Diff算法(Vue3)]] — Vapor 试图绕开的运行时 diff
-- **参考文章**
+- **外部资料**
 	- [Vue Vapor Mode 官方 RFC](https://github.com/vuejs/core-vapor)
 	- [Vue.js 3.6 What's New](https://versionlog.com/vuejs/3.6/)

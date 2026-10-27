@@ -114,21 +114,21 @@ flowchart LR
 
 > 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
 
-- **父级概念**：[[前端状态管理]] — Redux 所属的领域
-- **子级概念**：
+- **上位**：[[前端状态管理]] — Redux 所属的领域
+- **下位**：
 	- [[T-Action]] — 描述事件的普通对象
 	- [[T-Reducer]] — 状态更新的纯函数
 	- [[T-Store]] — 单一状态容器
 	- [[T-RTK]] — Redux Toolkit，官方推荐的现代 Redux 方案
-- **并列概念**：
+- **并列**：
 	- [[Zustand]] — 轻量替代方案
 	- [[MobX]] — 响应式状态管理
 	- [[Jotai]] — 原子化状态管理
-- **相关概念**：
+- **相关**：
 	- [[Hooks(React)]] — 组件连接 Redux 的桥梁
 	- [[单向数据流]] — Redux 的核心架构原则
 	- [[函数式编程]] — Reducer 纯函数背后的编程范式
-- **参考文章**
+- **外部资料**
 	- [Redux 官方文档](https://redux.js.org/)
 	- [Redux Toolkit 官方文档](https://redux-toolkit.js.org/)
 	- [Redux 架构解析](https://omingm.github.io/posts/redux-architecture/)

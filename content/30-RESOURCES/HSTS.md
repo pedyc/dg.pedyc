@@ -8,6 +8,7 @@ date-created: 2025-05-26
 date-modified: 2026-05-29
 status: active
 content-type: term
+up: "[[Web安全策略]]"
 ---
 
 ## 术语：HSTS（HTTP 严格传输安全）

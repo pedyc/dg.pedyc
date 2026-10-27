@@ -7,7 +7,7 @@ description: useEffect 返回的 cleanup 函数在组件卸载和依赖变化时
 tags:
   - 前端开发/框架/React
 date-created: 2026-04-18
-date-modified: 2026-04-18
+date-modified: 2026-10-27
 status: active
 content-type: atomic
 up: "[[useEffect]]"
@@ -16,47 +16,13 @@ noteId: 1792465711055
 
 > useEffect 返回的~~cleanup~~函数在组件卸载和依赖变化时都会被调用，确保副作用被正确清理。
 
+**边界**：cleanup 的保证是「下一次 effect 执行前或卸载时」，不是「一定跑」。渲染被中断、组件被丢弃时可能一次都不跑；StrictMode 下开发环境会刻意多跑一轮，用来暴露没写 cleanup 的副作用。
+
 ## 论据/示例
 
-**场景 1：依赖变化时调用**
+cleanup 的语义是「与上一次 effect 配对的下半场」，不是「组件销毁钩子」。由此可以直接推出执行顺序：依赖变化时先跑上一次的 cleanup，再跑新的 effect——顺序若反过来，订阅就会叠成两份。
 
-```tsx
-useEffect(() => {
-  console.log('effect 执行');
-  return () => console.log('cleanup 执行');
-}, [count]);
-
-// 首次渲染: effect 执行
-// count 变化: cleanup 执行 → effect 执行
-// 组件卸载: cleanup 执行
-```
-
-**场景 2：组件卸载时调用**
-
-```tsx
-useEffect(() => {
-  const timer = setInterval(() => {
-    console.log('tick');
-  }, 1000);
-
-  return () => clearInterval(timer); // 组件卸载时清理
-}, []);
-
-// 组件卸载时: cleanup 执行（timer 被清除）
-```
-
-**场景 3：常见误解**
-
-```tsx
-// ❌ 误解：空依赖数组只在卸载时调用 cleanup
-useEffect(() => {
-  return () => console.log('只调用一次？');
-}, []);
-
-// ✅ 正确：空依赖数组在组件卸载时调用 cleanup
-// 依赖变化不会触发 effect 重新执行，所以 cleanup 也不会
-// 但组件卸载时一定会调用 cleanup
-```
+三种依赖数组各自在什么时机触发 cleanup，见 [[useEffect]]。
 
 ## 关联
 

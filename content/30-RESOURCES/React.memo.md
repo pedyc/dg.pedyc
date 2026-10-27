@@ -101,12 +101,12 @@ const MyComponent = React.memo(
 
 ### 知识图谱
 
-- **父级概念**：[[React]] — React 生态的核心特性
-- **并列概念**：
+- **上位**：[[React]] — React 生态的核心特性
+- **并列**：
 	- [[useMemo]] — 值缓存，与 React.memo 互补
 	- [[useCallback]] — 函数缓存，常与 React.memo 配合使用
 	- [[React重新渲染]] — React.memo 解决的核心问题
-- **相关概念**：
+- **相关**：
 	- [[虚拟DOM(React)]] — React.memo 基于 Virtual DOM 的比较机制
 	- [[Fiber]] — React 的协调渲染架构
 

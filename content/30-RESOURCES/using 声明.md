@@ -143,12 +143,12 @@ async function readConfig() {
 
 ### 知识图谱
 
-- **父级概念**：
+- **上位**：
 	- [[ES2026]] — using 声明是 ES2026 的核心特性
 	- [[Javascript版本演进]] — ES2026 是最新版本
-- **相关概念**：
+- **相关**：
 	- [[Promise]] — 异步资源管理依赖 Promise
 	- [[Symbol.dispose]] — 资源释放的核心协议
 	- [[async-await]] — 异步资源管理语法
-- **参考文章**
+- **外部资料**
 	- [MDN - using](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/using)

@@ -210,7 +210,7 @@ root.plugin({
 
 ### 知识图谱
 
-- **相关概念**：
+- **相关**：
 	- [[Cordis]] — DSH 底层的插件元框架，本 SOP 是它的最小抽象
 	- [[Fiber]] — 插件实例的运行时句柄，承载状态机与 effect 栈
 	- [[Capability Seam]] — 服务作为能力接口，Definition/Provider/Consumer 三角色解耦

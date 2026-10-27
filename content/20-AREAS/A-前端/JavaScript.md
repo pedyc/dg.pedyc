@@ -38,7 +38,7 @@ up: "[[前端开发]]"
 - **运行机制** — [[事件循环]] · [[执行上下文]] · [[V8 引擎]] · [[JS引擎]]
 - **异步编程** — [[Promise]] · [[async-await|async/await]] · [[Array.fromAsync() vs Promise.all()]]
 - **函数式技巧** — [[柯里化]]
-- **版本与模块** — [[Javascript版本演进]] · [[ES2015]] · [[ES2025]] · [[ESModule]]
+- **版本与模块** — [[ECMAScript]] · [[Javascript版本演进]] · [[ES2015]] · [[ES2025]] · [[ES2026]] · [[ESModule]]
 - **对外输出** — [[What's new in ECMAScript 2025]] · [[What's new in ECMAScript 2026]]
 
 ### FAQ

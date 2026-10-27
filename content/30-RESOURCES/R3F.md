@@ -118,14 +118,13 @@ flowchart TB
 
 ### 知识图谱
 
-- **父级概念**：[[ThreeJS]] — R3F 是 Three.js 的 React 封装
-- **并列概念**：
+- **上位**：[[ThreeJS]] — R3F 是 Three.js 的 React 封装
+- **并列**：
 	- [[WebGL]] — 底层技术
 	- 原生 Three.js — 非 React 方案
-- **相关领域**：
+- **相关**：
 	- [[前端交互]] — R3F 是实现 3D 交互的技术
 	- [[着色器]] — 3D 视觉效果的核心
-- **生态库**：
 	- **drei** — R3F 官方辅助库
 	- **react-three/postprocessing** — 后处理效果
 	- **@react-three/rapier** — 物理引擎

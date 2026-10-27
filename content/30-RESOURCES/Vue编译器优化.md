@@ -121,14 +121,14 @@ flowchart TB
 
 ### 知识图谱
 
-- **父级概念**：[[Vue]] — Vue 的核心框架
-- **子级概念**：
+- **上位**：[[Vue]] — Vue 的核心框架
+- **下位**：
 	- [[模板编译(Vue3)]] — 编译器优化发生在模板编译的转换/生成阶段
-- **并列概念**：
+- **并列**：
 	- [[Vapor Mode]] — 范式级替代方案
-- **相关概念**：
+- **相关**：
 	- [[Vue3响应式原理]] — 优化后的更新路径依赖响应式依赖收集
 	- [[Diff算法(Vue3)]] — patchFlag 优化的是 diff 的检查范围
-- **参考文章**
+- **外部资料**
 	- Vue 官方文档：Template Compilation
 	- Vue3 源码：`packages/compiler-core` / `packages/compiler-dom`

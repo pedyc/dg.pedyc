@@ -8,7 +8,7 @@ date-created: 2026-06-16
 date-modified: 2026-07-14
 status: active
 content-type: comparison
-up: "[[前端面试真题库|前端面试题]]"
+up: "[[前端框架]]"
 ---
 
 ## Angular vs React
@@ -85,11 +85,10 @@ graph TD
 
 ### 知识图谱
 
-- **父级概念**：[[前端面试真题库]]
-- **相关概念**：
+- **上位**：[[前端面试真题库]]
+- **相关**：
 	- [[Vue vs React]] — Vue 与 React 的对比，Angular 是第三种路线
 	- [[Signal(Angular)]] — Signal 在 Angular 中的具体实现
 	- [[Hooks(React)]] — React 的响应式基础
-- **相关对比**：
 	- [[Vue2 vs Vue3]]
 	- [[Vue vs React]]

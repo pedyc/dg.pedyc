@@ -11,7 +11,7 @@ date-created: 2026-03-24
 date-modified: 2026-03-24
 status: active
 content-type: concept
-up: "[[前端开发]]"
+up: "[[Web通信]]"
 ---
 
 ## 概念：AJAX
@@ -97,8 +97,8 @@ async function getData() {
 
 ### 知识图谱
 
-- **父级概念**：[[前端开发]]
-- **关联概念**：
+- **上位**：[[前端开发]]
+- **相关**：
   - [[HTTP]] — 通信协议
   - [[CORS]] — 跨域资源共享
   - [[Fetch API]] — 现代异步请求

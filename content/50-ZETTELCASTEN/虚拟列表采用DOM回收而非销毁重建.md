@@ -6,7 +6,7 @@ description: 虚拟列表对离开视口的 DOM 节点采取复用策略，避�
 tags:
   - 前端开发/性能优化
 date-created: 2026-07-07
-date-modified: 2026-07-07
+date-modified: 2026-10-27
 status: fleeting
 content-type: atomic
 up: "[[虚拟列表]]"
@@ -15,34 +15,13 @@ noteId: 1792465703223
 
 > 虚拟列表采用 DOM ~~回收~~而非销毁重建——滚动时离开视口的节点不销毁，而是移动到另一端的缓冲区复用，避免频繁的 createElement/removeChild 和 GC 抖动。
 
+**边界**：回收复用的前提是节点结构相同。行内有异构内容（有的带图、有的带表格）时，复用节点就要重建子树，回收的收益被抵消，此时直接销毁重建反而更简单。
+
 ## 论据/示例
 
-```js
-// 对象池模式：维护固定数量的 DOM 节点
-class NodePool {
-  constructor(size) {
-    this.pool = Array.from({ length: size }, () => this.createNode())
-    this.free = [...this.pool]
-  }
+要不要回收，看节点结构是否同构：同构时复用只是改 `textContent`，销毁重建却要重新创建元素、重算样式；异构时（有的行带图、有的带表格）复用要先清空子树，收益被抵消，不如直接重建。
 
-  acquire() {
-    return this.free.pop() || this.createNode()  // 优先复用
-  }
-
-  release(node) {
-    this.free.push(node)  // 不销毁，放回池中
-  }
-}
-
-// 对比：销毁重建 vs 回收复用
-// 销毁重建：1000 次滚动 → 1000 次 createElement + 1000 次 removeChild
-// 回收复用：1000 次滚动 → 0 次 create + 0 次 remove（仅更新 textContent）
-```
-
-数据表现：
-- 频繁滚动时，销毁重建模式会导致明显的 GC 暂停（~50-200ms）
-- 回收复用模式几乎无 GC 开销（~0-5ms）
-- 节点对象缓存也保留了样式计算和布局信息，减少重排成本
+节点池写法与两者的实测差距见 [[虚拟列表]]。
 
 ## 关联
 

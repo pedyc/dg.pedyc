@@ -12,7 +12,7 @@ date-created: 2026-04-21
 date-modified: 2026-04-21
 status: active
 content-type: sop
-up: "[[前端开发]]"
+up: "[[React]]"
 ---
 
 ## SOP：React 最佳实践

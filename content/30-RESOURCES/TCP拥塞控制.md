@@ -109,21 +109,21 @@ stateDiagram-v2
 
 > 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
 
-- **父级概念**：[[TCP]] — 传输层面向连接的可靠字节流协议
-- **子级概念**：
+- **上位**：[[TCP]] — 传输层面向连接的可靠字节流协议
+- **下位**：
 	- [[慢启动]] — 指数级增长的初始探测机制
 	- [[拥塞避免]] — 线性加性增的稳态逼近机制
 	- [[快重传与快恢复]] — 基于 3-Dup-ACK 的快速容灾机制
 	- [[BBR算法]] — 基于模型估计传输瓶颈的现代拥塞控制算法
 	- [[Cubic算法]] — 基于三次方程的高带宽长时延默认算法
-- **并列概念**：
+- **并列**：
 	- [[TCP流量控制]] — 基于滑动窗口保护接收端的机制
 	- [[TCP重传机制]] — 保证数据可靠性的丢包重传策略
-- **相关概念**：
+- **相关**：
 	- [[带宽时延积 BDP]] — 决定最优拥塞窗口上限的核心物理参数
 	- [[缓冲区膨胀 Bufferbloat]] — 中间路由器过度缓存导致的严重延迟现象
 	- [[ECN 显式拥塞通知]] — 网络层路由器主动通知端主机的早期拥塞标记
-- **参考文章**
+- **外部资料**
 	- RFC 5681: TCP Congestion Control
 	- RFC 6582: The NewReno Modification to TCP's Fast Recovery Algorithm
 	- Neal Cardwell et al. (Google): _BBR: Congestion-Based Congestion Control_ (ACM Queue 2016)

@@ -9,7 +9,7 @@ date-modified: 2026-07-21
 status: active
 content-type: concept
 related: ["[[动画原理]]", "[[CSS Animation]]", "[[前端开发]]"]
-up: "[[前端开发]]"
+up: "[[前端交互]]"
 ---
 
 ## 概念：Canvas 动画
@@ -128,19 +128,19 @@ flowchart LR
 
 ### 知识图谱
 
-- **父级概念**：[[前端开发]] — Canvas 动画是前端图形开发的重要组成
-- **子级概念**：
+- **上位**：[[前端开发]] — Canvas 动画是前端图形开发的重要组成
+- **下位**：
 	- requestAnimationFrame — 帧同步核心 API
 	- Canvas 2D Context — 绘制 API
 	- 离屏渲染（OffscreenCanvas）— Worker 线程绘制
 	- 分层渲染 — 动静分离优化
 	- 脏矩形 — 局部重绘策略
 	- 粒子系统 — 大量独立粒子的动画系统
-- **并列概念**：
+- **并列**：
 	- [[CSS Animation]] — CSS 实现的交互动画
 	- SVG 动画 — 矢量图形动画
 	- WebGL — 3D 图形 API
-- **相关概念**：
+- **相关**：
 	- [[动画原理]] — 动画的理论基础
 	- [[Canvas]] — Canvas API 基础
 	- [[前端性能优化]] — 性能优化与渲染策略

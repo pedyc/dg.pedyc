@@ -113,13 +113,13 @@ providers: [{ provide: API_URL, useValue: '/api/v1' }]
 
 ### 知识图谱
 
-- **父级概念**：[[Angular]] — Angular 框架的核心机制之一
-- **相关概念**：
+- **上位**：[[Angular]] — Angular 框架的核心机制之一
+- **相关**：
 	- [[Signal(Angular)]] — 常配合 DI 服务实现全局状态管理
 	- [[Angular变更检测]] — DI 控制服务实例范围，间接影响变更检测行为
 	- [[依赖注入]] — 抽象的依赖注入设计模式
 	- [[控制反转]] — DI 的底层设计模式
-- **相关对比**：[[Angular vs React]] — React 无内置 DI，是两者核心差异之一
+	- [[Angular vs React]] — React 无内置 DI，是两者核心差异之一
 
 ### 参考延伸
 

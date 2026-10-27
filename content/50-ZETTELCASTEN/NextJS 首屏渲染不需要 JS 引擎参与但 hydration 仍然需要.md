@@ -10,10 +10,12 @@ up: "[[NextJS]]"
 
 noteId: 1792465707749
 date-created: 2026-10-08
-date-modified: 2026-10-23
+date-modified: 2026-10-27
 ---
 
 > NextJS 首屏渲染不需要 JS 引擎参与，但~~hydration~~仍然需要
+
+**边界**：不需要的是浏览器端的 JS 引擎，服务端仍然要跑 React 渲染。而且 hydration 完成前，页面看得见但点不动——首屏快不等于可交互快。JS 包过大或 hydration 成本高时，用户感知到的仍然是卡顿。
 
 ## 论据/示例
 

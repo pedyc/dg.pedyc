@@ -176,10 +176,9 @@ self.addEventListener('fetch', event => {
 
 ### 知识图谱
 
-- **相关概念**：
+- **相关**：
 		- [[PWA]] — PWA 的完整概念
 		- [[Service Worker]] — 实现离线缓存的核心技术
 		- [[Web App Manifest]] — 定义 PWA 元数据
-- **相关 SOP**：
 		- [[开发一个最小PWA应用]] — 本笔记
 		- [[调试JavaScript内存泄漏]] — Service Worker 缓存可能导致的内存问题

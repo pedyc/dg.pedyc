@@ -77,19 +77,19 @@ up: "[[ES2015|ES6]]"
 
 > 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
 
-- **父级概念**：[[元编程]] — 在语言层面操作程序自身结构与行为的能力
-- **子级概念**：
+- **上位**：[[元编程]] — 在语言层面操作程序自身结构与行为的能力
+- **下位**：
 	- [[Reflect 方法]] — 如 `Reflect.get`、`Reflect.set`、`Reflect.apply` 等
 	- [[receiver 参数]] — 控制 getter/setter 中 this 指向的机制
 	- [[内部方法]] — [[Get]]、[[Set]]、[[Construct]] 等语言规范层操作
-- **并列概念**：
+- **并列**：
 	- [[Proxy]] — 拦截操作的代理对象，与 Reflect 一一对应、配合使用
 	- [[Object]] — 面向普通对象操作的同名方法集合
-- **相关概念**：
+- **相关**：
 	- [[Vue3响应式原理]] — Vue3 等基于 Proxy + Reflect 的实现
 	- [[陷阱（trap）]] — Proxy 中的拦截钩子
 	- [[Reflect.ownKeys]] — 获取对象自身所有键（含 Symbol）
-- **参考文章**
+- **外部资料**
 	- [Reflect - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect)
 	- ECMAScript 规范：Reflect Object
 	- 《你不知道的 JavaScript》下卷

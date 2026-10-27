@@ -65,8 +65,8 @@ graph LR
 
 ### 知识图谱
 
-- **父级概念**：[[Claude Code]]
-- **关联概念**：[[Obsidian]]、[[Quartz]]
+- **上位**：[[Claude Code]]
+- **相关**：[[Obsidian]]、[[Quartz]]
 
 ---
 

@@ -5,7 +5,7 @@ aliases: []
 description: React.memo 通过浅比较 props 决定是否重新渲染
 tags: []
 date-created: 2026-04-30
-date-modified: 2026-10-23
+date-modified: 2026-10-27
 status: active
 content-type: atomic
 up: "[[React性能优化]]"
@@ -15,53 +15,13 @@ noteId: 1792465709381
 
 > React.memo 通过~~浅比较~~props 决定是否重新渲染
 
+**边界**：浅比较只比一层，props 里嵌套对象的内部变化会被判为「没变」。而且它只挡父组件重渲染的传播，组件自身 state 或 context 变化照旧渲染。
+
 ## 论据/示例
 
-**核心原理**：
+memo 省下的是「同等输入下的重复计算」，收益正比于「渲染成本 ÷ 比较成本」。渲染 3ms、props 有五个字段的组件值得包；只返回 `<div>{name}</div>` 的组件，包了反而更慢。
 
-- `React.memo` 是一个高阶组件，包装后会对 props 进行浅比较
-- 只有当 props 变化时才会触发重新渲染
-- 默认浅比较是 referential equality（引用相等性）
-
-**代码示例**：
-
-```jsx
-const MyComponent = React.memo(function MyComponent({ name, count }) {
-  return <div>{name}: {count}</div>;
-});
-```
-
-**浅比较的局限性**：
-
-```jsx
-function Parent() {
-  const [count, setCount] = useState(0);
-
-  // ❌ 每次渲染创建新对象，memo 无法检测内部变化
-  const style = { color: 'red' };
-  return <MyComponent style={style} />;
-
-  // ✅ useMemo 保持对象引用不变
-  const style = useMemo(() => ({ color: 'red' }), []);
-  return <MyComponent style={style} />;
-
-  // ✅ 或使用 useRef 存储
-}
-```
-
-**自定义比较函数**：
-
-```jsx
-const MyComponent = React.memo(
-  function MyComponent({ data }) {
-    return <div>{data.value}</div>;
-  },
-  (prevProps, nextProps) => {
-    // 自定义比较逻辑
-    return prevProps.data.id === nextProps.data.id;
-  }
-);
-```
+浅比较的两处失效条件与自定义比较函数，见 [[React性能优化]] 的 1.1 节。
 
 ## 关联
 

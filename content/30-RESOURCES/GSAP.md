@@ -70,15 +70,15 @@ flowchart TB
 
 ### 知识图谱
 
-- **父级概念**：[[Web动画]]
-- **子集概念**：
+- **上位**：[[Web动画]]
+- **下位**：
 	- [[ScrollTrigger]]
 	- [[Flip]]
-- **并列概念**：
+- **并列**：
 	- [[CSS Animation]]
 	- [[Web Animations API]]
 	- [[Framer Motion]]
-- **相关概念**：
+- **相关**：
 	- [[SVG]]
 	- [[Canvas]]
 

@@ -242,9 +242,9 @@ photobox.init()
 
 ### 知识图谱
 
-- **父级概念**：[[Canvas动画]] — 本 SOP 是 Canvas 动画的垂直场景扩展
-- **关联概念**：
+- **上位**：[[Canvas动画]] — 本 SOP 是 Canvas 动画的垂直场景扩展
+- **相关**：
 	- [[动画原理]] — 动画的理论基础（帧率、插值）
 	- [[CSS实现文字横向滚动效果]] — CSS 实现的横向无限滚动（对比：自动滚动 vs 拖拽滚动）
-- **参考文章**
+- **外部资料**
 	- [进化！网页无限滑动：高性能canvas版_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV11D421T7AV/?spm_id_from=333.788.comment.all.click&vd_source=d909cd5773c434648664a934ea4a8dae)

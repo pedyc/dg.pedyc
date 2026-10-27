@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-10-27.md",
+                "file": "50-ZETTELCASTEN/localStorage用于长期存储简单键值对数据.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,55 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-10-27"
+              "title": "localStorage用于长期存储简单键值对数据"
+            }
+          },
+          {
+            "id": "fc33e989f2442dab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "30-RESOURCES/Javascript版本演进.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Javascript版本演进"
+            }
+          },
+          {
+            "id": "98f0c8680576f6a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "50-ZETTELCASTEN/HTTP 是基于请求-响应模型的无状态协议.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "HTTP 是基于请求-响应模型的无状态协议"
             }
           },
           {
@@ -190,7 +238,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "90-DIARY/2026-10-27.md",
+                "file": "50-ZETTELCASTEN/localStorage用于长期存储简单键值对数据.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -397,42 +445,42 @@
   },
   "active": "fe89b7a1f33165e0",
   "lastOpenFiles": [
-    "10-PROJECTS/dg.pedyc.md",
+    "30-RESOURCES/Cookie.md",
+    "50-ZETTELCASTEN/SameSite按站而非源判定是否附带Cookie.md",
+    "50-ZETTELCASTEN/Cookie用于服务端通信和会话状态管理.md",
+    "30-RESOURCES/CSRF.md",
+    "_templates/template_concept.md",
+    "_templates/template_atomic.md",
+    "30-RESOURCES/HTTP.md",
+    "30-RESOURCES/HTTP3.md",
+    "20-AREAS/A-前端/浏览器.md",
+    "_scripts/_tmp_scan_heading_gap.py",
+    "_scripts/_tmp_shrink4.py",
+    "_scripts/_tmp_shrink3.py",
+    "_scripts/_tmp_shrink2.py",
+    "_scripts/_tmp_fix_blank.py",
+    "_scripts/_tmp_shrink.py",
+    "30-RESOURCES/浏览器渲染流程.md",
+    "20-AREAS/A-前端/前端工程.md",
+    "_scripts/_tmp_dump_long.py",
+    "_scripts/_tmp_add_b48.py",
+    "20-AREAS/A-前端/Web安全.md",
+    "_scripts/_tmp_dump_noB.py",
+    "20-AREAS/A-前端/Vue.md",
+    "CLAUDE.md",
+    "_scripts/_tmp_rest_scan.py",
+    "AGENTS.md",
     "90-DIARY/2026-10-27.md",
-    "01-META/Truth/笔记类型规范.md",
-    "30-RESOURCES/如何实现一个带并发限制的异步任务调度器（Scheduler）.md",
-    "_resources/思维分类及视觉工具.excalidraw.md",
-    "30-RESOURCES/手写经典功能.md",
-    "30-RESOURCES/手写Promise.md",
-    "50-ZETTELCASTEN/Promise 状态一旦确定就不会再改变.md",
-    "50-ZETTELCASTEN/Promise 通过 thenable 接口实现链式调用，解决回调地狱.md",
-    "30-RESOURCES/实现简易虚拟列表.md",
-    "30-RESOURCES/虚拟列表.md",
-    "30-RESOURCES/如何利用API采集并计算LCP值.md",
-    "30-RESOURCES/防抖和节流.md",
-    "01-META/Index/知识缺口.md",
-    "20-AREAS/A-前端/React.md",
-    "30-RESOURCES/Virtual DOM.md",
-    "01-META/Log/本库统计.md",
-    "index.md",
-    "30-RESOURCES/拆分长任务并让出主线程.md",
-    "30-RESOURCES/主线程让渡与异步调度.md",
-    "99-ASSETS/书籍/SELF-EVOLVING AGENTS THROUGH PRIVILEGED RET- ROSPECTIVE DISTILLATION.pdf",
-    "00-INBOX/回顾性自蒸馏.md",
-    "20-AREAS/A-个人成长/时间管理.md",
-    "30-RESOURCES/番茄工作法.md",
-    "30-RESOURCES/周回顾.md",
-    "10-PROJECTS/P-Agent求职/Agent求职.md",
-    "20-AREAS/A-人工智能/人工智能.md",
-    "_scripts/_tmp_term_up.py",
-    "_scripts/_tmp_sop_audit.py",
-    "_scripts/_tmp_area_types.py",
-    "_scripts/_tmp_area_links.py",
-    "_scripts/_tmp_area_scan.py",
-    "_scripts/tmp_panel_w43.py",
-    "_scripts/tmp_read_w43.py",
-    "_scripts/tmp_ingest_article.py",
-    "99-ASSETS/Bases/信源.base",
+    "30-RESOURCES/ECMAScript.md",
+    "30-RESOURCES/Javascript版本演进.md",
+    "30-RESOURCES/ES2025.md",
+    "30-RESOURCES/ES2015.md",
+    "40-ARCHIVE/知识管理大师提示词v5 个人语境版本.md",
+    "40-ARCHIVE/知识管理大师提示词v4 动态重构版本.md",
+    "30-RESOURCES/微前端方案对比.md",
+    "30-RESOURCES/HTTP版本演进.md",
+    "30-RESOURCES/HTTP1.1.md",
+    "30-RESOURCES/HPACK.md",
     "_resources/edfca64a705f03c7c676f00ad1379d91_MD5.gif",
     "_resources/26287a5434ba11cfa975a12da4e1b362_MD5.webp",
     "_resources/34f17eb3143eed28c12b7938df5f2f26_MD5.gif",

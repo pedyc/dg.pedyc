@@ -67,14 +67,14 @@ flowchart TB
 
 ### 知识图谱
 
-- **子集概念**：
+- **下位**：
 	- [[CSS Animation]]
 	- [[GSAP]]：高性能 Javascript 动画库
 	- [[Web Animations API]]
-- **并列概念**：
+- **并列**：
 	- [[Canvas]]
 	- [[SVG]]
-- **相关概念**：
+- **相关**：
 	- [[合成层]]
 	- [[requestAnimationFrame]]
 	- [[动画效果示例]]

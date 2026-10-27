@@ -237,12 +237,11 @@ function trigger(target, key) {
 
 ### 知识图谱
 
-- **父级概念**：[[前端开发]]
-- **关联概念**：
+- **上位**：[[前端开发]]
+- **相关**：
 	- [[Vue3-ref和reactive的区别]]
 	- [[Vue2与Vue3 数组响应式原理深度剖析]]
 	- [[Virtual DOM]] — 响应式数据变化后通过 render 函数生成新的 VNode
-- **相关问题**：
 	- [[为什么Vue3的响应式系统要使用WeakMap]]
 
 ---

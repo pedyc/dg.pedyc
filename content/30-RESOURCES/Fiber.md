@@ -85,6 +85,31 @@ graph LR
     B -->|commit| C[Current Tree]
 ```
 
+#### 调度细节
+
+React 没有直接用 `requestIdleCallback`，而是自己实现了一套带优先级的调度器。原因很简单：`requestIdleCallback` 只有「空闲 / 不空闲」两个状态，表达不了「用户点击应当打断列表渲染」——它能回答「还能跑多久」，回答不了「下一个该跑谁」。
+
+```javascript
+// 简化后的 workLoop：每处理完一个单元，问一次「还能继续吗」
+function workLoop() {
+  while (nextUnitOfWork && !shouldYield()) {
+    nextUnitOfWork = performUnitOfWork(nextUnitOfWork)  // 返回下一个待处理节点
+  }
+  if (nextUnitOfWork) scheduleCallback(workLoop)        // 没做完，排进下一帧
+}
+```
+
+`shouldYield()` 内部判断的是「这一帧还剩多少时间」，默认切片约 5ms——留出余量给浏览器做样式计算与绘制，否则感知上仍然是卡顿。
+
+| 优先级 | 典型来源 | 是否被抢占 |
+|:---|:---|:---|
+| Immediate | 同步任务、`flushSync` | 否（自己会打断别人） |
+| UserBlocking | 点击、输入、hover | 否（同上） |
+| Normal | `setState` 触发的常规更新、列表渲染 | 是 |
+| Low / Idle | 预加载、数据分析 | 是 |
+
+低优先级任务长时间被打断会饿死，React 用过期的兜底机制强制推进——所以「低优先级」不等于「一定最后完成」，只是「先让位」。
+
 ---
 
 ### 关键区别
@@ -113,9 +138,9 @@ graph LR
 
 ### 知识图谱
 
-- **父级概念**：[[React]] — React 生态的核心架构
-- **演进关系**：[[React版本演进]] — Fiber 在 React 16 中引入
-- **相关概念**：
+- **上位**：[[React]] — React 生态的核心架构
+- **相关**：
+	- [[React版本演进]] — Fiber 在 React 16 中引入
 	- [[Virtual DOM|VDOM]] — Fiber 操作的底层对象
 	- [[Concurrent Mode]] — Fiber 的能力扩展
 	- [[useTransition]] — 基于 Fiber 优先级的 API

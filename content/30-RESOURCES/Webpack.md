@@ -62,6 +62,35 @@ graph TD
 | **编译** | 解析模块，构建依赖图 | Loader（转换）、Plugin（干预） |
 | **输出** | 生成 chunk，写入文件 | optimization、splitChunks |
 
+#### Tree Shaking 的前提
+
+Tree Shaking 能成立，唯一依赖是「不执行代码也能判断谁用了谁」。ESM 提供了这一点，CommonJS 没有：
+
+```javascript
+// ESM：import 必须在顶层，不能进 if / try
+import { add } from './math.js'
+
+// CommonJS：require 可以在任意位置，参数可以是变量
+const name = './' + mod
+const lib = require(name)   // 构建期无法知道这是哪个模块
+```
+
+三条静态约束：`import` 只能出现在模块顶层、不能写在条件分支里、导出名在编译期确定。有了这三条，打包器才能在不运行代码的情况下画出「谁引用了谁」，进而删掉没人引用的导出。
+
+| 配置项 | 作用 |
+|:---|:---|
+| `sideEffects: false` | 声明包内模块无副作用，允许整个模块被移除 |
+| `usedExports` | 标记哪些导出被用过，配合压缩器删除未用代码 |
+| `mode: 'production'` | 自动开启上述优化 |
+
+反过来，只要一项不满足就不成立：Babel 把 ESM 编译成 CommonJS（需设 `modules: false`）、模块顶层有副作用、`sideEffects` 标错，都会让分析结果落不了地。
+
+#### 依赖图决定 chunk 划分
+
+从入口文件递归解析 `import`，得到的是一张图；打包就是「在图上分组」。同一入口可达的模块默认进同一 chunk，`splitChunks` 做的是在图上按规则切开——被多个 chunk 共享的部分独立出来，体积过大的部分拆出去。
+
+所以「代码分割」谈的从来不是文件怎么切，而是图上的边怎么断：断在哪里，决定了首屏要下载多少。
+
 ---
 
 ### 关键区别
@@ -107,14 +136,14 @@ graph TD
 
 > 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
 
-- **父级概念**：[[前端工程]] — 构建工具的上游领域
-- **并列概念**：
+- **上位**：[[前端工程]] — 构建工具的上游领域
+- **并列**：
 	- [[Vite]] — 新一代构建工具，对比学习
 	- [[Rollup]] — 专注于库打包
-- **相关工具**：
+- **相关**：
 	- esbuild — 极速打包器
 	- Parcel — 零配置打包工具
-- **深入主题**：
+- **下位**：
 	- [[Webpack vs Vite]] — 核心差异对比
 	- Tree-Shaking — 死代码消除
 	- Code-Splitting — 代码分割策略

@@ -142,15 +142,15 @@ function Parent() {
 
 ### 知识图谱
 
-- **父级概念**：[[React]] — React 核心机制
-- **子级概念**：
+- **上位**：[[React]] — React 核心机制
+- **下位**：
 	- [[React 虚拟 DOM]] — Diff 算法的基础
 	- [[Fiber]] — React 16+ 的重新渲染架构
-- **并列概念**：
+- **并列**：
 	- [[React 状态管理]] — useState、useReducer、Zustand 等
-- **相关概念**：
+- **相关**：
 	- [[React.memo]] — 避免不必要的子组件渲染
 	- [[Hooks(React)]] — useState、useEffect、useCallback 等
-- **参考文章**
+- **外部资料**
 	- [React 官方文档 - Reconciliation](https://react.dev/learn/preserving-and-resetting-state)
 	- [React 官方文档 - useCallback](https://react.dev/reference/react/useCallback)

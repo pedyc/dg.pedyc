@@ -135,12 +135,12 @@ count = signal(0);
 
 ### 知识图谱
 
-- **父级概念**：[[Angular]]
-- **基础组件**：
+- **上位**：[[Angular]]
+- **下位**：
 	- [[Zone.js]] — 变更检测的触发机制
 	- [[Signal(Angular)]] — 下一代变更检测的基础
 	- [[Zoneless变更检测]] — 变更检测的触发机制
-- **相关概念**：
+- **相关**：
 	- [[Virtual DOM]] — React 的变更检测方案，与 Angular 对比
 	- [[RxJS]] — 可与 `ChangeDetectorRef` 配合使用
-- **相关对比**：[[Angular vs React]] — 变更检测是核心差异之一
+	- [[Angular vs React]] — 变更检测是核心差异之一

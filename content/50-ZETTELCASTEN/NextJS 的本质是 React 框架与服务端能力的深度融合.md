@@ -5,7 +5,7 @@ aliases: []
 description: NextJS 的本质是 React 框架与 Node.js 服务端能力的深度融合
 tags: []
 date-created: 2026-05-06
-date-modified: 2026-10-23
+date-modified: 2026-10-27
 status: fleeting
 content-type: atomic
 up: "[[NextJS]]"
@@ -15,47 +15,13 @@ noteId: 1792465707572
 
 > NextJS 的本质是 React 框架与 Node.js 服务端能力的~~深度融合~~
 
+**边界**：这个说法在 App Router 之后已经不够准。Server Components 让「服务端」不再是外挂的一层渲染（SSR），而是组件本身的另一类运行环境——数据和 UI 的边界被重新划过。用「React + Node」理解 Pages Router 够用，理解 App Router 会漏掉最关键的部分。
+
 ## 论据/示例
 
-**1. 服务端渲染（SSR）**
+三件事共用同一个前提——React 能在服务端跑；差别只在执行粒度：页面级（SSR）、接口级（API Routes）、组件级（RSC）。粒度越细，省掉的样板越多，但「哪段代码在哪一侧执行」就越需要显式声明。
 
-```jsx
-// pages/index.tsx - 默认服务端渲染
-export default function Home({ data }) {
-  return <div>{data.message}</div>
-}
-
-export async function getServerSideProps() {
-  const res = await fetch('https://api.example.com/data')
-  const data = await res.json()
-  return { props: { data } }
-}
-```
-
-NextJS 让 React 组件可以在服务器端执行，直接返回完整 HTML。
-
-**2. API Routes**
-
-```js
-// pages/api/user.ts
-export default function handler(req, res) {
-  res.status(200).json({ name: 'NextJS' })
-}
-```
-
-前后端代码可以在同一个项目中管理。
-
-**3. App Router（NextJS 13+）**
-
-```jsx
-// app/page.tsx - React Server Components
-async function Page() {
-  const data = await db.query('SELECT * FROM posts')
-  return <div>{data.map(post => <Post key={post.id} post={post} />)}</div>
-}
-```
-
-服务端组件直接查询数据库，无需 API 层。
+三种能力的对比与代价，见 [[NextJS]] 的「三种服务端能力的边界」。
 
 ## 关联
 

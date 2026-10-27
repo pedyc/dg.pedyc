@@ -5,7 +5,7 @@ aliases: [A-Web安全]
 description: 保护 Web 应用免受常见攻击的安全知识体系
 tags: [前端/安全]
 date-created: 2026-05-29
-date-modified: 2026-10-26
+date-modified: 2026-10-27
 content-type: area
 up: "[[前端开发]]"
 ---
@@ -24,7 +24,7 @@ up: "[[前端开发]]"
 
 - **愿景**：建立完整的前端安全知识体系，能识别并防御常见 Web 攻击
 - **里程碑**：
-	- [ ] 阶段 1：掌握安全响应头（HSTS、CSP、X-Frame-Options）
+	- [x] 阶段 1：掌握安全响应头（HSTS、CSP、X-Frame-Options） ✅ 2026-10-27
 	- [ ] 阶段 2：理解 XSS / CSRF 的成因与防御
 	- [ ] 阶段 3：在真实项目里落一次安全配置
 
@@ -35,7 +35,7 @@ up: "[[前端开发]]"
 > 中观层：本领域是知识粒度的最小单元，没有独立 MOC，概念在此平铺。**未解析的链接不是错误，是尚未写下的洞**——排序见 [[知识缺口]]。
 
 - **安全策略（[[Web安全策略]]）** — [[HSTS]] · [[CSP]] · [[X-Frame-Options]] · [[X-Content-Type-Options]]
-- **攻击与防御（[[Web安全问题]]）** — [[XSS]] · [[CSRF]] · [[SSL Stripping]] · [[中间人攻击]]
+- **攻击与防御（[[Web安全问题]]）** — [[XSS]] · [[CSRF]] · [[点击劫持]] · [[SSL Stripping]] · [[中间人攻击]]
 
 > 10 条里有 4 条原本只是纯文本（X-Frame-Options、X-Content-Type-Options、SSL Stripping、中间人攻击），根本不算链接。补成链接后它们才成为可排队的洞，而不是看不见的空白。
 

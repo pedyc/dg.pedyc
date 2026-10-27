@@ -998,3 +998,9 @@ up: "[[本库指南]]"
 	- P0：10 份文档删 `status` 行；8 篇活跃笔记的 `content-type` 由多行列表改标量；`validate_meta.py --all` 新增多行列表检测
 	- P1：`_ingest-rules` 的 Inbox Review 改为引用式（删掉违反解耦的「类型→目录」表）；`_wiki-index-format` 的条目规则改为文件名直链；删两处状态流转死内容并重编号；连带清理 6 处「状态流转」字样
 	- schema 加边界声明：专供 llm-wiki 工作流，架构总览在 [[本库子系统概述]]，两份不合并
+
+- [2026-10-27] refactor | 删除 `Specification/_笔记类型规范`，17 处引用改指真值
+	- 理由：450 行里独有内容约 24 行（5%），其余是 `Truth/笔记类型规范`、`Truth/文件名与别名规范`、`Truth/本库目录结构` 的第三份抄本；10-26 已实证它「悄悄过期」——sop/question 判据与 Truth 打架
+	- 独有内容不迁移：第七节「各类型默认父级」经全库实测，7 类中 5 类不成立（concept 实际最多的是空 160 与 moc 68，不是 area 62；term 空 68 高于 concept 20；question 漏了 concept 28）→ 属未经验证的凭印象约定，不升格为真值；其 `question → 关联 area 的 FAQ` 还与 `_wiki-index-format` 的 `## Questions (待探索)` 固定分区冲突
+	- 引用改指：`真值索引`（删「特别说明」与相关链接）、`llm-wiki-schema`、`_skills-overview`、`_anki-sync-rules`×2、`_content-type-rules`、`知识粒度子系统`×2、`本库常见问题解答汇总`×2（锚点改指 Truth 的对应小节）、`content-evaluator-local` 与 `content-verifier-local` 两个 skill、`validate_meta.py` 的 exclude_files
+	- 未动：`Log/wiki-log.md` 5 处历史记录（不改写流水）、`.obsidian/plugins/obsidian-to-anki-plugin/data.json` 的哈希缓存（插件自愈）

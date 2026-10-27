@@ -16,7 +16,7 @@ allowed-tools:
 # content-evaluator-local
 
 执行前读取 `content/01-META/Guide/llm-wiki-schema.md` 获取 lint 检查清单。
-同时读取 `content/01-META/Truth/笔记类型规范.md` 获取 content-type 定义和模板对应关系（Wiki 层内联规则见 `content/01-META/Specification/_笔记类型规范.md`）。
+同时读取 `content/01-META/Truth/笔记类型规范.md` 获取 content-type 定义和模板对应关系（Wiki 层各类型的挂载位置见 `content/01-META/Specification/_wiki-index-format.md`，ingest 条件见 `_ingest-rules.md`）。
 
 详细评估维度见 `llm-wiki-schema.md` 第 4 节。
 

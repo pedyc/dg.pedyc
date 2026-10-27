@@ -149,7 +149,6 @@ obsidian-note-local → 创建 + 挂父页面 + 同步 + 评估 + 核查（一�
 - `llm-wiki-schema.md` — 知识库工作流整体架构
 - `_ingest-rules.md` — ingest 工作流详细规则
 - `_lint-rules.md` — lint 工作流 + 分析脚本
-- `_笔记类型规范.md` — content-type 的 Wiki 层内联规则、类型对比（定义部分见 [[笔记类型规范]]）
 - `_content-type-rules.md` — 已废弃（DEPRECATED），定义见 [[笔记类型规范]]
 - `_query-rules.md` — query 工作流
 - `_sync-rules.md` — sync 工作流

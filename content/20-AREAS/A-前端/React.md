@@ -5,7 +5,7 @@ aliases: [A-React, React.js, ReactJS]
 description: 用于构建用户界面的 JavaScript 库，采用组件化和 Virtual DOM
 tags: [前端开发/框架]
 date-created: 2025-05-21
-date-modified: 2026-10-26
+date-modified: 2026-10-27
 content-type: area
 up: "[[前端开发]]"
 ---
@@ -38,7 +38,7 @@ up: "[[前端开发]]"
 
 - **版本与题型** — [[React版本演进]] · [[React面试题]] · [[Zustand vs Redux]]
 - **核心概念** — [[Hooks(React)]] · [[Refs(React)]] · [[useCallback]] · [[useMemo]] · [[React.memo]] · [[Fiber]]
-- **渲染机制** — [[虚拟DOM(React)]] · [[React重新渲染]] · [[React组件通信]] · [[Suspense]] · [[Server Components]]
+- **渲染机制** — [[Virtual DOM|虚拟DOM]] · [[React重新渲染]] · [[React组件通信]] · [[Suspense]] · [[Server Components]]
 - **并发模式** — [[useTransition]] · [[useDeferredValue]]
 - **状态管理** — [[状态管理(React)]] · [[React Context]] · [[Zustand]] · [[Redux]]
 - **路由与生态** — [[React Router]] · [[Next.js]] · [[R3F]]

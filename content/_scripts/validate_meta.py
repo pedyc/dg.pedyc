@@ -136,7 +136,6 @@ def check_links():
     # 反例示例所在文件：里面的 [[C-闭包]] 正在演示「不要这么写」
     exclude_files = {
         "01-META/Truth/文件名与别名规范.md",
-        "01-META/Specification/_笔记类型规范.md",
         "01-META/Faq/本库常见问题解答汇总.md",
     }
     exclude_prefixes = ("99-ASSETS/copilot/", ".claude/", "01-META/Log/")

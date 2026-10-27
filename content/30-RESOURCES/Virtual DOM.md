@@ -1,16 +1,11 @@
 ---
 uid: 202603240000
 title: Virtual DOM
-aliases:
-  - VDOM
-  - 虚拟DOM
-  - C-Virtual DOM
+aliases: [VDOM, 虚拟DOM, C-Virtual DOM]
 description: Vue中用于优化DOM操作的核心技术，通过JavaScript对象模拟真实DOM结构
-tags:
-  - 前端/Vue
-  - 前端/原理
+tags: [前端/Vue, 前端/原理]
 date-created: 2026-03-24
-date-modified: 2026-05-09
+date-modified: 2026-10-27
 status: active
 content-type: concept
 up: "[[前端开发]]"
@@ -32,8 +27,6 @@ up: "[[前端开发]]"
 - **Vue 中的实现**
 	- Vue2：使用 `vnodes` 对象树
 	- Vue3：使用更强的类型系统（VNode TS 类型）
-
----
 
 ### 运行机制
 
@@ -92,8 +85,6 @@ const vnode = {
 - 首尾指针法：双向遍历减少比较次数
 - 静态节点标记：跳过不需要更新的节点
 
----
-
 ### 关键区别
 
 | 维度 | 虚拟 DOM | 直接操作 DOM |
@@ -101,8 +92,6 @@ const vnode = {
 | **性能** | 批量更新，最小化操作 | 每次修改都触发重排 |
 | **可预测性** | 数据驱动，结果可预测 | 依赖操作顺序 |
 | **跨平台** | 可渲染到不同平台 | 仅限浏览器 |
-
----
 
 ### 应用场景
 
@@ -114,8 +103,6 @@ const vnode = {
 	- 静态页面（无需频繁更新）
 	- 简单场景下过度使用框架
 
----
-
 ### 知识图谱
 
 - **父级概念**：[[前端开发]]
@@ -126,8 +113,6 @@ const vnode = {
 	- [[模板编译(Vue3)]] — 模板如何转换为 render 函数
 - **相关问题**：
 	- Vue3 比 Vue2 的 VDOM 更快吗
-
----
 
 ### 参考延伸
 

@@ -6,7 +6,7 @@ author: ped_yc
 description:
 tags: []
 date-created: 2024-08-23
-date-modified: 2026-10-25
+date-modified: 2026-10-27
 content-type: moc
 ---
 
@@ -27,5 +27,4 @@ content-type: moc
 
 - **Blog** · [ped-Yc's Blog](https://blog.ped-yc.site/)
 - **GitHub** · [@ped-Yc](https://github.com/ped-Yc)
-
-> 全局视图 · 按下 `Ctrl+G` 或点击右上角图形按钮
+- [[我的收藏清单]]

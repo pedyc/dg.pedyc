@@ -2,19 +2,26 @@
 uid: 202610201288
 title: Promise 通过 thenable 接口实现链式调用，解决回调地狱
 aliases: []
-description: Promise 通过 thenable 接口实现链式调用，解决回调地狱
+description: then 返回新 Promise，回调的返回值决定下一环状态，嵌套由此被压平成接力链——省掉的不是缩进，是「下一步调谁、出错走哪」这两个决定
 tags:
   - 前端
 date-created: 2026-10-20
-date-modified: 2026-10-20
-status: active
+date-modified: 2026-10-27
 content-type: atomic
 up: "[[Promise]]"
 noteId: 1792476243719
 ---
 
-> Promise 通过~~thenable 接口实现链式调用，解决回调地狱~~
+> then 返回一个新的 Promise，回调的返回值决定下一环的状态：普通值 → 兑现，抛错 → 拒绝，返回 thenable → 等它兑现。嵌套因此被压平成一条接力的链，每一环只关心上一环吐出了什么。
+
+**边界**：链式管的是组织形态，不管并发——一串 then 仍然严格串行，要并发得另交给 all / race。它还有一种不报错的失效方式：某一环忘了 return，下一环拿到的是 undefined，链照常往下跑，错误直到链尾才显形。
+
+## 论据/示例
+
+以「读配置 → 解析 → 写回」为例：回调版要在每一层重复 `if (err) return cb(err)`，想在中间插一步，插入点之后的嵌套要整体右移一层；链式版只在链中间接一个 then，已有分支一个字都不用改，错误交给链尾一个 catch。省掉的不是缩进，是「下一步调谁、出错走哪条路」这两个决定——它们原本散落在每一层里，改一处得顺着嵌套往回捋。
 
 ## 关联
 
-- [[Promise]]
+- [[Promise]] — 三态模型与链式调用的宿主
+- [[手写Promise]] — then 返回新实例、返回值自动展开的实现
+- [[Promise 状态一旦确定就不会再改变]] — 链上每一环的落定规则，忘了它链式就会重复落定

@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-10-27.md",
+                "file": "01-META/Truth/笔记类型规范.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +52,24 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-10-27"
+              "title": "笔记类型规范"
+            }
+          },
+          {
+            "id": "e3ced7b211da31ac",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://github.com/bvaughn/react-virtualized",
+                "title": "GitHub - bvaughn/react-virtualized: React components for efficiently rendering large lists and tabular data · GitHub",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "GitHub - bvaughn/react-virtualized: React components for efficiently rendering large lists and tabular data · GitHub"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "19ee9773adff6dbb",
@@ -382,47 +395,47 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "b9ba14a6ca819160",
+  "active": "fe89b7a1f33165e0",
   "lastOpenFiles": [
+    "10-PROJECTS/dg.pedyc.md",
+    "90-DIARY/2026-10-27.md",
+    "01-META/Truth/笔记类型规范.md",
+    "30-RESOURCES/如何实现一个带并发限制的异步任务调度器（Scheduler）.md",
+    "_resources/思维分类及视觉工具.excalidraw.md",
+    "30-RESOURCES/手写经典功能.md",
+    "30-RESOURCES/手写Promise.md",
+    "50-ZETTELCASTEN/Promise 状态一旦确定就不会再改变.md",
+    "50-ZETTELCASTEN/Promise 通过 thenable 接口实现链式调用，解决回调地狱.md",
+    "30-RESOURCES/实现简易虚拟列表.md",
+    "30-RESOURCES/虚拟列表.md",
+    "30-RESOURCES/如何利用API采集并计算LCP值.md",
+    "30-RESOURCES/防抖和节流.md",
+    "01-META/Index/知识缺口.md",
+    "20-AREAS/A-前端/React.md",
+    "30-RESOURCES/Virtual DOM.md",
+    "01-META/Log/本库统计.md",
+    "index.md",
+    "30-RESOURCES/拆分长任务并让出主线程.md",
+    "30-RESOURCES/主线程让渡与异步调度.md",
     "99-ASSETS/书籍/SELF-EVOLVING AGENTS THROUGH PRIVILEGED RET- ROSPECTIVE DISTILLATION.pdf",
     "00-INBOX/回顾性自蒸馏.md",
     "20-AREAS/A-个人成长/时间管理.md",
     "30-RESOURCES/番茄工作法.md",
     "30-RESOURCES/周回顾.md",
-    "90-DIARY/2026-10-27.md",
     "10-PROJECTS/P-Agent求职/Agent求职.md",
     "20-AREAS/A-人工智能/人工智能.md",
-    "90-DIARY/2026-10-26.md",
-    "90-DIARY/2026-10-25.md",
     "_scripts/_tmp_term_up.py",
-    "_templates/template_sop.md",
-    "_templates/template_area.md",
-    "30-RESOURCES/手写Promise.md",
-    "40-ARCHIVE/P-求职前端岗位/前端能力提升专项.md",
-    "30-RESOURCES/怎样设计周回顾.md",
-    "20-AREAS/A-个人成长/个人成长.md",
     "_scripts/_tmp_sop_audit.py",
     "_scripts/_tmp_area_types.py",
     "_scripts/_tmp_area_links.py",
     "_scripts/_tmp_area_scan.py",
-    "_templates/template_diary.md",
-    "50-ZETTELCASTEN/习惯能否养成取决于触发与奖励是否可及.md",
-    "40-ARCHIVE/习惯养成.md",
-    "90-DIARY/2026-W44.md",
-    "_templates/template_week.md",
-    "90-DIARY/2026-W43.md",
     "_scripts/tmp_panel_w43.py",
-    "30-RESOURCES/信源/AI资讯日报 RSS Feed.md",
-    "90-DIARY/2026-10-19.md",
     "_scripts/tmp_read_w43.py",
-    "10-PROJECTS/P-Agent求职/Context Ordering & Formatting.md",
-    "10-PROJECTS/P-Agent求职/Context Isolation.md",
     "_scripts/tmp_ingest_article.py",
     "99-ASSETS/Bases/信源.base",
     "_resources/edfca64a705f03c7c676f00ad1379d91_MD5.gif",
     "_resources/26287a5434ba11cfa975a12da4e1b362_MD5.webp",
     "_resources/34f17eb3143eed28c12b7938df5f2f26_MD5.gif",
-    "Clippings",
     "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
     "30-RESOURCES/_resources/EP177 The Modern Software Stack/ac9a0c973e1860dc0ae75601ad9ef6e9_MD5.webp",
     "30-RESOURCES/_resources/EP177 The Modern Software Stack/9ede500e163b1dfa88f690c752b3dcf7_MD5.webp",

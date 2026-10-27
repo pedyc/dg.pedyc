@@ -10,6 +10,7 @@ date-created: 2026-10-26
 date-modified: 2026-10-26
 content-type: atomic
 up: "[[智能体编排]]"
+noteId: 1793032597976
 ---
 
 > 多个团队共建一个 agent 时，若按团队边界切分子代理，架构必然变成组织架构的复印件——这是 Conway 定律在 agent 设计上的直接投影。

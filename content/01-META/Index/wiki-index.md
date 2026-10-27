@@ -4,7 +4,7 @@ title: wiki-index
 aliases: [wiki-index, wiki导航]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-10-26
+date-modified: 2026-10-27
 content-type: moc
 up: "[[本库指南]]"
 ---
@@ -13,7 +13,7 @@ up: "[[本库指南]]"
 
 本文件是知识库的导航索引，每篇笔记一条，按标题拼音排序。格式规范见 [[_wiki-index-format]]，维护规则见 [[llm-wiki-schema]]。
 
-**最后更新：2026-10-26** — 全量重建；11 个 area 页统一到 `template_area` 结构，周回顾 SOP 瘦身、设计推理移入 [[怎样设计周回顾]]
+**最后更新：2026-10-27** — 全量重建
 
 ---
 
@@ -451,7 +451,7 @@ up: "[[本库指南]]"
 
 ---
 
-## Terms (术语) — 134 个
+## Terms (术语) — 135 个
 - [[AbortController API]]
 - [[按位异或]] — 一种位运算操作，相同为0，不同为1
 - [[AutoHotKey]] — Windows 平台的自动化脚本工具
@@ -477,6 +477,7 @@ up: "[[本库指南]]"
 - [[ES2025]] — ES2025 是 JavaScript 的最新版本
 - [[ESLint]] — JavaScript 静态代码分析工具
 - [[ESModule]] — ECMAScript 模块化标准
+- [[番茄工作法]] — Cirillo 提出的专注时段方法
 - [[反向类型提取]]
 - [[泛型（TypeScript）]] — 泛型允许创建可复用的组件，能够支持多种类型而非单一类型
 - [[Fetch API]]

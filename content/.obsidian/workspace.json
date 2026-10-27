@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_templates/template_sop.md",
+                "file": "90-DIARY/2026-10-27.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "template_sop"
+              "title": "2026-10-27"
             }
           },
           {
-            "id": "729602d44907acef",
+            "id": "b9ba14a6ca819160",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_templates/template_diary.md",
+                "file": "90-DIARY/2026-10-27.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,82 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "template_diary"
-            }
-          },
-          {
-            "id": "143e91b1a38c7c88",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "30-RESOURCES/书单/Building agents When to fold subagents into your main agent loop.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Building agents When to fold subagents into your main agent loop"
-            }
-          },
-          {
-            "id": "51261c24a5bb1451",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "90-DIARY/2026-W44.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2026-W44"
-            }
-          },
-          {
-            "id": "ab54e89a46b64968",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "90-DIARY/2026-W44.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2026-W44"
+              "title": "2026-10-27"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "19ee9773adff6dbb",
@@ -248,7 +177,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "_templates/template_sop.md",
+                "file": "90-DIARY/2026-10-27.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -453,47 +382,47 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "fe89b7a1f33165e0",
+  "active": "b9ba14a6ca819160",
   "lastOpenFiles": [
+    "99-ASSETS/书籍/SELF-EVOLVING AGENTS THROUGH PRIVILEGED RET- ROSPECTIVE DISTILLATION.pdf",
+    "00-INBOX/回顾性自蒸馏.md",
+    "20-AREAS/A-个人成长/时间管理.md",
+    "30-RESOURCES/番茄工作法.md",
+    "30-RESOURCES/周回顾.md",
+    "90-DIARY/2026-10-27.md",
+    "10-PROJECTS/P-Agent求职/Agent求职.md",
+    "20-AREAS/A-人工智能/人工智能.md",
+    "90-DIARY/2026-10-26.md",
+    "90-DIARY/2026-10-25.md",
+    "_scripts/_tmp_term_up.py",
+    "_templates/template_sop.md",
     "_templates/template_area.md",
     "30-RESOURCES/手写Promise.md",
     "40-ARCHIVE/P-求职前端岗位/前端能力提升专项.md",
     "30-RESOURCES/怎样设计周回顾.md",
-    "30-RESOURCES/周回顾.md",
     "20-AREAS/A-个人成长/个人成长.md",
     "_scripts/_tmp_sop_audit.py",
     "_scripts/_tmp_area_types.py",
     "_scripts/_tmp_area_links.py",
     "_scripts/_tmp_area_scan.py",
-    "90-DIARY/2026-10-26.md",
     "_templates/template_diary.md",
     "50-ZETTELCASTEN/习惯能否养成取决于触发与奖励是否可及.md",
-    "20-AREAS/A-个人成长/时间管理.md",
     "40-ARCHIVE/习惯养成.md",
     "90-DIARY/2026-W44.md",
     "_templates/template_week.md",
     "90-DIARY/2026-W43.md",
     "_scripts/tmp_panel_w43.py",
-    "00-INBOX/回顾性自蒸馏.md",
     "30-RESOURCES/信源/AI资讯日报 RSS Feed.md",
     "90-DIARY/2026-10-19.md",
     "_scripts/tmp_read_w43.py",
-    "10-PROJECTS/P-Agent求职/Agent求职.md",
     "10-PROJECTS/P-Agent求职/Context Ordering & Formatting.md",
     "10-PROJECTS/P-Agent求职/Context Isolation.md",
-    "10-PROJECTS/P-Agent求职/Context Engineering.md",
-    "10-PROJECTS/P-Agent求职/Context Compression.md",
-    "10-PROJECTS/P-Agent求职/Context Components.md",
-    "30-RESOURCES/个人认知维度建设.md",
-    "30-RESOURCES/哲学与认知.md",
-    "30-RESOURCES/精力成本.md",
     "_scripts/tmp_ingest_article.py",
     "99-ASSETS/Bases/信源.base",
     "_resources/edfca64a705f03c7c676f00ad1379d91_MD5.gif",
     "_resources/26287a5434ba11cfa975a12da4e1b362_MD5.webp",
     "_resources/34f17eb3143eed28c12b7938df5f2f26_MD5.gif",
     "Clippings",
-    "99-ASSETS/书籍/SELF-EVOLVING AGENTS THROUGH PRIVILEGED RET- ROSPECTIVE DISTILLATION.pdf",
     "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
     "30-RESOURCES/_resources/EP177 The Modern Software Stack/ac9a0c973e1860dc0ae75601ad9ef6e9_MD5.webp",
     "30-RESOURCES/_resources/EP177 The Modern Software Stack/9ede500e163b1dfa88f690c752b3dcf7_MD5.webp",

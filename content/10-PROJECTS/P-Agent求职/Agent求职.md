@@ -1,5 +1,5 @@
 ---
-uid: "202605160001"
+uid: "20260516000135"
 title: Agent求职
 aliases:
   - P-Agent求职
@@ -11,7 +11,7 @@ area:
   - "[[个人成长]]"
 consequence: 5
 content-type: project
-expire: 2026/12/31
+expire: 2026-12-31
 urgency: 5
 ---
 

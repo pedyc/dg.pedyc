@@ -5,7 +5,6 @@ aliases: ["Q-{{问题名称}}"]
 description: "{ 一句话描述这个问题 }"
 tags: []
 content-type: question
-category: learning
 up: "[[{{父级}}]]"
 ---
 

@@ -5,7 +5,6 @@ aliases: ["C-{{概念名称}}"]
 description: "{ 一句话定义这个概念 }"
 tags: []
 content-type: concept
-category: learning
 up: "[[{{父级}}]]"
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: React 中的 setState 是同步还是异步的？为什么有时候打印不到最新值？
+title: setState 本身同步，异步的是批量更新
 date-created: 2025-05-21
-date-modified: 2026-10-23
+date-modified: 2026-10-28
 content-type: atomic
 up: "[[React 重新渲染]]"
 

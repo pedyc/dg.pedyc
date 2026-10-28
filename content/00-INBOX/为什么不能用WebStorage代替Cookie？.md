@@ -43,7 +43,7 @@ Cookie 拥有 `localStorage`/`sessionStorage` 根本不具备的、由**服务�
 
 ### 我的理解
 
-Cookie和Web Storage的设计目标完全不同，[[Cookie用于服务端通信和会话状态管理]]，Web Storage用于本地存储。
+Cookie和Web Storage的设计目标完全不同，[[Cookie 的特殊性在自动随请求发送，不在存储容量]]，Web Storage用于客户端存储。
 
 在 `localStorage` 出现之前，Cookie 确实被**滥用**为通用的客户端存储工具，存储各种不需要发给服务器的数据。但 Web Storage 的诞生，正是为了**把 Cookie 从"存储"任务中解放出来**，让 Cookie 专注于它最擅长的会话管理。
 
@@ -64,3 +64,6 @@ Cookie和Web Storage的设计目标完全不同，[[Cookie用于服务端通信�
 
 - [[Cookie有唯一随请求发送的机制]]
 - [[Cookie有服务端可控的安全属性]]
+
+## 关联
+- [[Web Storage]]

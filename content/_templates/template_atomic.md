@@ -3,7 +3,6 @@ uid: <% tp.file.creation_date("YYYYMMDDHHmmss") %>
 title: template_atomic
 tags: []
 content-type: atomic
-category: learning
 up: "[[{{父级}}]]"
 ---
 

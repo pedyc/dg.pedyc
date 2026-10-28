@@ -6,7 +6,6 @@ description: "{{一句话描述文章核心内容}}"
 tags: []
 content-type: article
 up: "[[{{父级}}]]"
-category: blog
 published: false
 ---
 

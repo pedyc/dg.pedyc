@@ -1,12 +1,11 @@
 ---
 uid: 202603230023
-title: Cookie 用于服务端通信和会话状态管理
+title: Cookie 的特殊性在自动随请求发送，不在存储容量
 aliases: []
 description: Cookie 是存储在浏览器的小型文本数据，会随每次 HTTP 请求自动发送到服务器
-tags:
-  - 前端开发/浏览器
+tags: [前端开发/浏览器]
 date-created: 2026-03-23
-date-modified: 2026-10-27
+date-modified: 2026-10-28
 content-type: atomic
 up: "[[Cookie]]"
 noteId: 1792465705883

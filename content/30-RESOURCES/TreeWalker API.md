@@ -3,8 +3,8 @@ title: TreeWalker API
 description: TreeWalker 接口表示一个 DOM 树节点的过滤器和一个方向。
 tags: [前端开发, DOM]
 date-created: 2025-06-02
-date-modified: 2025-06-14
-content-type: concept
+date-modified: 2026-10-28
+content-type: term
 keywords: [TreeWalker, DOM 遍历]
 para: AREA
 related: ["[[DOM]]", "[[NodeIterator]]"]

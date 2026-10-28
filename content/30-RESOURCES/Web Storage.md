@@ -1,125 +1,93 @@
 ---
-uid: 202506150001
+uid: 20261028175500
 title: Web Storage
-aliases: [Web Storage API, C-WebStorage, Web存储]
-description: Web存储概念：聚合 Cookie、Web Storage API 与 IndexedDB 等客户端存储技术，解释各自原理与区别
-tags: [前端开发/浏览器]
-date-created: 2025-06-15
-date-modified: 2026-10-27
-status: active
-content-type: concept
-up: "[[浏览器]]"
+aliases:
+  - T-Web Storage
+  - Web存储
+  - Web Storage API
+description: 同步、只存字符串的两个键值容器；代价全在阻塞主线程
+tags:
+  - 前端开发/浏览器
+date-created: 2026-10-28
+date-modified: 2026-10-28
+content-type: term
+category: learning
+up: "[[客户端存储]]"
 ---
 
-## 概念：Web Storage
+## 术语：Web Storage
 
-> Web 存储概念：聚合在浏览器客户端存储数据的技术，包括 Cookie（与服务端通信）、Web Storage API（localStorage/sessionStorage）和 IndexedDB，解释各自的运行原理、区别与适用场景。
+> **主题**：#前端/浏览器 API
 
-**解决的核心痛点**：如何在客户端存储数据以提高性能、减少服务器请求、支持离线应用？
+### 定义
 
----
+Web Storage 是一份规范的名字，它只定义两个对象：`localStorage` 与 `sessionStorage`。两者都是「字符串到字符串」的映射，都按源隔离，都是同步 API。
 
-### 存储方案
+**它不是「Web 上所有存储」的总称。** 这是本库里出现最多的一处混用——把 Cookie、IndexedDB 一并叫作 Web Storage，会直接推出一条错结论：以为它们共享同一套配额与淘汰规则。实际它们是三份不同的规范，淘汰策略也不同。
 
-- [[Cookie用于服务端通信和会话状态管理]]
-	- **原理**：Cookie 随每次 HTTP 请求自动发送，用于服务端识别用户会话
-- [[localStorage用于长期存储简单键值对数据]]
-	- **原理**：数据持久存储，除非手动删除永不过期，同源窗口均可访问
-	- **注意**：同步 API，读取大体积数据可能阻塞主线程
-- [[sessionStorage用于会话级临时存储]]
-	- **原理**：数据仅在当前会话（标签页）有效，关闭页面自动清除，仅创建它的窗口可访问
-- [[IndexedDB用于存储大量结构化数据]]
-	- **原理**：支持事务、索引、异步操作，适合离线应用和大数据存储
+三个共同点：
 
----
+| | 表现 |
+|:--|:--|
+| 同步 | 读写是阻塞调用，不是 Promise |
+| 只存字符串 | 存对象必须自行序列化 |
+| 按源隔离 | 协议 + 域名 + 端口，任一不同即不共享 |
 
-### 运行机制
+### 两个 API 的差别只有两处
 
-```mermaid
-graph TD
-    WebStorage["Web 存储"]
+| | `localStorage` | `sessionStorage` |
+|:--|:--|:--|
+| 何时消失 | 手动删或浏览器清数据 | 标签页关闭 |
+| 谁能看到 | 同源的所有标签页与窗口 | 只属于创建它的那个标签页（含其同源 iframe） |
+| 通过 `opener` 新开标签页时 | 共享同一份 | **复制一份快照**，之后各自独立 |
 
-    WebStorage --> Cookie["Cookie<br>~4KB 随请求发送"]
-    WebStorage --> Local["localStorage<br>5-10MB 持久"]
-    WebStorage --> Session["sessionStorage<br>5-10MB 会话"]
-    WebStorage --> IndexedDB["IndexedDB<br>无限制 结构化"]
-```
+第三行才是真正会出事的地方：`sessionStorage` 的「会话级」不等于「不共享」。用「复制标签页」或 `window.open` 打开时，新标签页会拿到当前内容的一份拷贝——于是两个标签页看起来数据一致，但此后写入互不可见。以为在共享、或者以为不会重复，都会踩到。
 
-#### IndexedDB 的结构与分工
+### 同步是它的核心代价，不是实现细节
 
-| 层级 | 对应关系 | 说明 |
-|:---|:---|:---|
-| Database | 一个库 | 用版本号控制结构升级，在 `onupgradeneeded` 里建表 |
-| Object Store | 类似「表」 | 必须指定 `keyPath` 或 key generator |
-| Index | 类似「索引」 | 按非主键字段查询；不建索引就只能用游标全表遍历 |
-| Record | 一行 | 可以是结构化对象，不限于字符串 |
+规范把读写定义成同步操作，于是浏览器只能阻塞调用方。Chromium 里这个代价还多一层：数据存在浏览器的进程里（按源分库的 LevelDB），渲染进程的一次读取要阻塞等一次跨进程往返——它不是内存读，而是「同步等待的 IPC」。这也是为什么在 `localStorage` 上做高频读写会直接掉帧。
 
-```javascript
-const req = indexedDB.open('MyDB', 1)
-req.onupgradeneeded = (e) => {
-  const store = e.target.result.createObjectStore('users', { keyPath: 'id' })
-  store.createIndex('name', 'name', { unique: false })
-}
-const tx = db.transaction('users', 'readwrite')
-tx.objectStore('users').add({ id: 1, name: 'Alice' })
-```
+三个量级值得记住：
 
-**选型分界**：需要事务、索引、大对象时才用它。存几十条配置用 localStorage 更快也更简单——IndexedDB 的异步 API 把「打开连接 → 起事务 → 取结果」拆成多步回调，简单读写反而绕远。
+- 几百字节的读写：通常亚毫秒，感觉不到；
+- 几十到几百 KB：可以到毫秒级，放进渲染或输入处理里就会丢帧；
+- MB 级：光是 `JSON.parse` 一遍就要十几毫秒，读写各一次，一帧就没了。
 
-> [!warning]
-> 它默认**不是**持久化存储。磁盘紧张时浏览器可以清掉整个源的数据，除非调用 `navigator.storage.persist()` 申请豁免——离线应用必须在启动时检查这个状态。
+**所以它的定位是「小配置的容器」，不是数据库。** 判断方法：这份数据在启动时读一次就够，且用户不会感知到那几毫秒——放这里；否则换 [[IndexedDB]]。
 
----
+### 四条边界
 
-### 关键区别
+- **`storage` 事件只在别的同源文档里触发。** 改动数据的那个页面自己收不到事件，它得自己知道自己改了。这是「跨标签页同步」最常见的 bug。
+- **没有事务，也没有原子自增。** 两个标签页同时对同一键做「读—改—写」，后写的覆盖先写的（lost update）。要正确就得单写者，或用 `BroadcastChannel`／`navigator.locks` 排他。
+- **超限抛 `QuotaExceededError`，不静默截断。** 写入路径必须能接住；Safari 在私密浏览的历史版本里甚至对 `setItem` 直接抛，导致「一进页面就报错」。稳妥做法是启动时探测一次可写性。
+- **`file://` 与部分隐私模式行为不统一。** 各浏览器对「每个文件是否算独立源」处理不同，本地打开的页面上不要依赖它做持久化。
 
-| 特性 | Cookie | localStorage | sessionStorage | IndexedDB |
-|:--- |:--- |:--- |:--- |:--- |
-| **容量** | ~4KB | ~5-10MB | ~5-10MB | 无限制 |
-| **随请求发送** | ✅ 自动 | ❌ | ❌ | ❌ |
-| **有效期** | 可设置 | 永久 | 会话级 | 永久 |
-| **数据类型** | 字符串 | 字符串 | 字符串 | 结构化对象 |
-| **API** | 简单 | 同步 | 同步 | 异步 |
-| **事务** | 不支持 | 不支持 | 不支持 | 支持 |
-| **用途** | 会话通信 | 客户端存储 | 客户端存储 | 大数据存储 |
+### 与 Cookie、IndexedDB 的分界
 
----
+| | Cookie | Web Storage | IndexedDB |
+|:--|:--|:--|:--|
+| 随请求发送 | 是 | 否 | 否 |
+| 服务端可读 | 是 | 否 | 否 |
+| 值类型 | 字符串 | 字符串 | 结构化克隆的任何类型 |
+| 读写 | 由浏览器管理 | 同步，阻塞主线程 | 异步 |
+| 查询 | 无 | 按键取 | 索引、游标、范围 |
 
-### 应用场景
-
-- ✅ **适用场景**
-	- **会话管理**：用户登录状态（Cookie，或 localStorage/sessionStorage 存 Token）
-	- **用户偏好**：主题、语言设置（localStorage）
-	- **临时状态**：表单草稿、会话数据（sessionStorage）
-	- **未登录购物车**：缓存购物车商品信息（localStorage/sessionStorage）
-	- **API 响应缓存**：减少对服务器请求、提升页面加载速度
-	- **离线应用**：缓存大量数据（IndexedDB）
-- ⛔ **误用**
-	- **客户端存储用 Cookie**：容量小、性能差
-	- **存储敏感信息**：客户端存储可被查看和篡改
-
----
-
-### 注意事项
-
-- 存储的数据为字符串类型，需自行序列化和反序列化
-- 不支持过期时间，需手动管理数据过期
-- localStorage 为同步 API，读取大体积数据可能阻塞主线程
-- 存在跨域访问风险，需注意安全问题
-
----
+与 Cookie 的分界最为关键：**Web Storage 服务端永远看不到**。所以它不能替代 Cookie 存鉴权态——要存就得靠 JS 手动塞进请求头，于是 `HttpOnly` 这一层防护也就没了。反过来，Cookie 也不该用来存纯客户端数据，因为每个同源请求都会带着它。
 
 ### 知识网络
 
-- **父级**：[[浏览器]] — Web 存储是浏览器的客户端存储能力
-- **子级**：[[Cookie用于服务端通信和会话状态管理]] · [[localStorage用于长期存储简单键值对数据]] · [[sessionStorage用于会话级临时存储]] · [[IndexedDB用于存储大量结构化数据]]
-- **相关**：[[Cache API]] — 资源缓存（Service Worker）；[[前端性能优化]] — 缓存与性能
-
----
-
-### 待探索
-
-- [ ] 补齐 Service Worker 与 Cache API 的离线存储专题 #todo
-- [x] 沉淀「前端存储选型」决策 SOP（按容量/会话/离线需求） ✅ 2026-10-28
-	- [[浏览器缓存与客户端存储体系|前端存储机制]]
-- [ ] 收集 5~20 篇高价值客户端存储资料，对接 NotebookLM 专题研究
+- **上位**：
+	- [[客户端存储]] — 四种本地存法里的「同步键值」这一档
+- **下位**：
+	- [[localStorage 的「长期」只是不会被主动过期]] — 手动删才失效
+	- [[sessionStorage 的「会话」指标签页，不是登录状态]] — 标签页关闭即失效
+- **并列**：
+	- [[Cookie]] — 容量最小，但唯一随请求走
+	- [[IndexedDB]] — 异步、结构化、可查询；量大时的去处
+	- [[Cache API]] — 同样异步，但存的是整份响应而非键值
+- **相关**：
+	- [[Content-Hash]] — 静态资源的失效靠换名字，不靠本地存储
+	- [[前端性能优化]] — 同步读写落在关键路径上时是性能问题
+- **外部资料**
+	- [MDN: Web Storage API](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Storage_API) — 两个对象的 API 与事件
+	- [HTML Standard: Web storage](https://html.spec.whatwg.org/multipage/webstorage.html) — `storage` 事件的触发条件、`sessionStorage` 的复制规则原文

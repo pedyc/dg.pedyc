@@ -1,7 +1,7 @@
 ---
-title: 函数组件每次渲染都重新执行，为什么 React 还能保留状态、函数引用？这些数据是怎么“记住”的？
+title: 函数组件重新执行不会丢状态，因为状态挂在 Fiber 而非作用域
 date-created: 2025-05-21
-date-modified: 2026-10-23
+date-modified: 2026-10-28
 content-type: atomic
 up: "[[Hooks(React)]]"
 

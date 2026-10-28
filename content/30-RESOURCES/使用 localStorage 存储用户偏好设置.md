@@ -1,11 +1,18 @@
 ---
-content-type: concept
+content-type: record
 title: 使用 localStorage 存储用户偏好设置
 date-created: 2025-05-23
-date-modified: 2025-05-23
+date-modified: 2026-10-28
+uid: 20261008142251
+aliases: []
+description: ""
+tags: []
+up: ["[[Web Storage]]"]
 ---
 
-- 存储用户主题偏好
+> 使用存储用户主题偏好
+
+## 主体
 
 ```javascript
 // 设置主题

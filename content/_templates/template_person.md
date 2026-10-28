@@ -5,7 +5,6 @@ aliases: ["R-{{人物姓名}}"]
 description: "{ 一句话概括这个人物 }"
 tags: []
 content-type: person
-category: learning
 up: "[[{{父级}}]]"
 birth: ""
 death: ""

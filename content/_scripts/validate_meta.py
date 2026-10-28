@@ -88,12 +88,23 @@ def norm_val(v):
 
 
 def load_allowed_fields():
-    """从 Truth/元数据规范.md 抓表格首列的 `字段名`。
+    """从 Truth/元数据规范.md 的前半段抓表格首列的 `字段名`。
 
     字段名允许下划线（source_type / output_rate 这类），早先只写了连字符，
     导致这批字段全部漏抓、被误报成"未登记"。
+
+    **只解析到「## 字段墓碑」之前**（2026-10-28 修）。此前是全表扫描，
+    于是把两类「首列也是反引号词」的表一起当成了字段定义：
+      - 「字段墓碑」表首列 = 已废除的字段名（status / related / quadrant / energy-type）
+      - 「按 content-type 的归档语义」表首列 = content-type 名（atomic / concept / moc /
+        roadmap / sop / term / area）
+    后果是假绿灯：`energy-type` 一边在墓碑里判死、一边仍被当合法字段放行，
+    template_project.md 因此一直在生成它，而 `validate_meta.py` 报「17 个模板全部通过」。
     """
     text = read(TRUTH / "元数据规范.md")
+    cut = text.find("## 字段墓碑")
+    if cut > 0:
+        text = text[:cut]
     fields = set(re.findall(r"^\|\s*`([a-z][a-z0-9_\-]*)`\s*\|", text, re.M))
     if not fields:
         sys.exit("✗ 无法从 Truth/元数据规范.md 解析字段表，请检查文件格式")
@@ -111,7 +122,15 @@ def load_content_types():
 
 
 def load_categories():
+    """读 category 的取值域。字段已于 2026-10-28 废除，正常应返回 None。
+
+    保留本函数是为了兼容「真值里重新出现该字段」的情况；同时必须在「## 字段墓碑」
+    之前截断——否则会匹配到墓碑表里那行登记，把「废除理由」当成枚举值。
+    """
     text = read(TRUTH / "元数据规范.md")
+    cut = text.find("## 字段墓碑")
+    if cut > 0:
+        text = text[:cut]
     m = re.search(r"`category`\s*\|[^|]*\|([^|]+)\|", text)
     if not m:
         return None

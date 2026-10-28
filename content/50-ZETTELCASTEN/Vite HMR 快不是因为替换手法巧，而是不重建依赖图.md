@@ -1,11 +1,11 @@
 ---
 uid: 202605261000
-title: Vite HMR 的本质是基于浏览器原生 ESM 的按需编译机制
+title: Vite HMR 快不是因为替换手法巧，而是不重建依赖图
 aliases: []
 description: Vite HMR 快不是因为替换手法更巧，而是根本不重建依赖图——改哪个模块就重新请求哪个
 tags: [前端工程, Vite, HMR]
 date-created: 2026-05-26
-date-modified: 2026-10-24
+date-modified: 2026-10-28
 content-type: atomic
 up: "[[Vite]]"
 noteId: 1792465711431

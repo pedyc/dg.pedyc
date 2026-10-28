@@ -48,7 +48,7 @@ _数据的获取与实时交换_
 
 _数据持久化方案_
 
-- [[Web Storage API]] — localStorage/sessionStorage，同步，5MB
+- [[Web Storage]] — localStorage/sessionStorage，同步，约 5-10MB
 - [[IndexedDB]] — 异步 NoSQL 数据库，容量大
 - [[Cookie]] — 随请求发送，容量小，用于身份认证
 - [[Cache API]] — Request/Response 对象对缓存，Service Worker 使用

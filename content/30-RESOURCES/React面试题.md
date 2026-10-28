@@ -38,8 +38,8 @@ up: "[[React]]"
 | [[自定义 Hook 的最佳实践？有哪些使用限制？]]                           | 自定义 Hooks       | 封装逻辑复用、抽象副作用                                                |
 | [[React Router 是如何实现路由变化监听的？]]                        | 路由              | React Router 原理、懒加载                                         |
 | [[React SSR 的原理？hydrate 和客户端渲染的区别？]]                  | SSR & Hydration | Next.js、hydrate                                             |
-| [[函数组件每次渲染都重新执行，为什么 React 还能保留状态、函数引用？这些数据是怎么“记住”的？]] | Hooks 原理、性能优化   | 为什么函数组件每次执行都重头开始、`useState` 为什么能 " 记住 " 旧值、闭包为什么 " 看不见 " 新值 |
-| [[React 中的 setState 是同步还是异步的？为什么有时候打印不到最新值？]]         | Hooks 原理        | setState                                                    |
+| [[函数组件重新执行不会丢状态，因为状态挂在 Fiber 而非作用域]] | Hooks 原理、性能优化   | 为什么函数组件每次执行都重头开始、`useState` 为什么能 " 记住 " 旧值、闭包为什么 " 看不见 " 新值 |
+| [[setState 本身同步，异步的是批量更新]]         | Hooks 原理        | setState                                                    |
 
 ### 场景
 

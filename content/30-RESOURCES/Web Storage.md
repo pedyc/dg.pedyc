@@ -1,13 +1,9 @@
 ---
 uid: 202506150001
 title: Web Storage
-aliases:
-  - Web Storage API
-  - C-WebStorage
-  - Web存储
+aliases: [Web Storage API, C-WebStorage, Web存储]
 description: Web存储概念：聚合 Cookie、Web Storage API 与 IndexedDB 等客户端存储技术，解释各自原理与区别
-tags:
-  - 前端开发/浏览器
+tags: [前端开发/浏览器]
 date-created: 2025-06-15
 date-modified: 2026-10-27
 status: active
@@ -123,7 +119,7 @@ tx.objectStore('users').add({ id: 1, name: 'Alice' })
 
 ### 待探索
 
-- [ ] 补齐 Service Worker 与 Cache API 的离线存储专题
-- [ ] 沉淀「前端存储选型」决策 SOP（按容量/会话/离线需求）
+- [ ] 补齐 Service Worker 与 Cache API 的离线存储专题 #todo
+- [x] 沉淀「前端存储选型」决策 SOP（按容量/会话/离线需求） ✅ 2026-10-28
 	- [[浏览器缓存与客户端存储体系|前端存储机制]]
 - [ ] 收集 5~20 篇高价值客户端存储资料，对接 NotebookLM 专题研究

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50-ZETTELCASTEN/localStorage用于长期存储简单键值对数据.md",
+                "file": "30-RESOURCES/HTTP缓存机制.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,175 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "localStorage用于长期存储简单键值对数据"
-            }
-          },
-          {
-            "id": "fc33e989f2442dab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "30-RESOURCES/Javascript版本演进.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Javascript版本演进"
-            }
-          },
-          {
-            "id": "98f0c8680576f6a3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "50-ZETTELCASTEN/HTTP 是基于请求-响应模型的无状态协议.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "HTTP 是基于请求-响应模型的无状态协议"
-            }
-          },
-          {
-            "id": "b9ba14a6ca819160",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01-META/Truth/笔记类型规范.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "笔记类型规范"
-            }
-          },
-          {
-            "id": "e3ced7b211da31ac",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://github.com/bvaughn/react-virtualized",
-                "title": "GitHub - bvaughn/react-virtualized: React components for efficiently rendering large lists and tabular data · GitHub",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "GitHub - bvaughn/react-virtualized: React components for efficiently rendering large lists and tabular data · GitHub"
+              "title": "HTTP缓存机制"
             }
           }
         ]
-      },
-      {
-        "id": "19ee9773adff6dbb",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "227d261d53c1b133",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "90-DIARY/2026-10-25.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2026-10-25"
-            }
-          },
-          {
-            "id": "fbf989f8e3caa380",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "30-RESOURCES/信源/AI资讯日报 RSS Feed.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "AI资讯日报 RSS Feed"
-            }
-          },
-          {
-            "id": "f9399d147c42e3cf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00-INBOX/回顾性自蒸馏.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "回顾性自蒸馏"
-            }
-          }
-        ],
-        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -238,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "50-ZETTELCASTEN/localStorage用于长期存储简单键值对数据.md",
+                "file": "30-RESOURCES/HTTP缓存机制.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -317,7 +152,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "强制学习",
+                "query": "tag:#todo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -387,7 +222,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00-META/Architecture/本库子系统概述.md",
+                "file": "30-RESOURCES/HTTP缓存机制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -406,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00-META/Architecture/本库子系统概述.md",
+                "file": "30-RESOURCES/HTTP缓存机制.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -414,12 +249,12 @@
               "title": "出链"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 519.5,
-    "collapsed": true
+    "width": 519.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -445,52 +280,52 @@
   },
   "active": "fe89b7a1f33165e0",
   "lastOpenFiles": [
-    "30-RESOURCES/Cookie.md",
-    "50-ZETTELCASTEN/SameSite按站而非源判定是否附带Cookie.md",
-    "50-ZETTELCASTEN/Cookie用于服务端通信和会话状态管理.md",
-    "30-RESOURCES/CSRF.md",
-    "_templates/template_concept.md",
-    "_templates/template_atomic.md",
+    "30-RESOURCES/前端缓存方案.md",
+    "30-RESOURCES/HTTP缓存机制.md",
     "30-RESOURCES/HTTP.md",
-    "30-RESOURCES/HTTP3.md",
-    "20-AREAS/A-前端/浏览器.md",
+    "30-RESOURCES/HTTP协商缓存.md",
+    "30-RESOURCES/浏览器缓存与客户端存储体系.md",
+    "30-RESOURCES/Web Storage.md",
+    "30-RESOURCES/Cookie.md",
+    "00-INBOX/为什么不能用WebStorage代替Cookie？.md",
+    "90-DIARY/2026-10-27.md",
+    "90-DIARY/2026-10-28.md",
+    "30-RESOURCES/我的简历.md",
+    "30-RESOURCES/简历素材.md",
+    "30-RESOURCES/面试提问的三层递进.md",
+    "30-RESOURCES/单元测试.md",
+    "30-RESOURCES/双跑.md",
+    "30-RESOURCES/灰度.md",
+    "30-RESOURCES/持续集成与持续部署.md",
+    "20-AREAS/A-个人成长/求职.md",
+    "30-RESOURCES/模拟面试01.md",
+    "30-RESOURCES/Webpack.md",
+    "30-RESOURCES/Angular版本演进.md",
+    "20-AREAS/A-前端/Angular.md",
+    "20-AREAS/A-前端/JavaScript.md",
+    "30-RESOURCES/关于我.md",
+    "60-BLOGS.md",
+    "60-BLOGS 1.md",
+    "_scripts/_tmp_areas.py",
+    "_resources/艾宾浩斯记忆曲线/b42ff3bfc56d6aa8bc11c88696d04a26_MD5.jpeg",
+    "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
+    "_resources/08知识管理领域/f1682794a0227c1a0c5065bd634e8808_MD5.jpeg",
+    "_resources/08知识管理领域/fa545b9686cb506c5b3dae7f8217ee4f_MD5.jpeg",
+    "_resources/00知识管理领域/57f0f1e5b6fa22ab83de5f7dab87cca4_MD5.jpeg",
+    "_resources/卡片盒笔记法实施工作流/d12dda6972096f88f7b6ecad31884b61_MD5.jpeg",
+    "_resources/draw_PKM_Processes.excalidraw.svg",
+    "_resources/draw_PKM_methods.svg",
+    "_scripts/_tmp_count_buckets.py",
+    "_scripts/_tmp_reorder.py",
+    "_scripts/_tmp_scan_fields.py",
     "_scripts/_tmp_scan_heading_gap.py",
     "_scripts/_tmp_shrink4.py",
     "_scripts/_tmp_shrink3.py",
     "_scripts/_tmp_shrink2.py",
     "_scripts/_tmp_fix_blank.py",
     "_scripts/_tmp_shrink.py",
-    "30-RESOURCES/浏览器渲染流程.md",
-    "20-AREAS/A-前端/前端工程.md",
-    "_scripts/_tmp_dump_long.py",
-    "_scripts/_tmp_add_b48.py",
-    "20-AREAS/A-前端/Web安全.md",
-    "_scripts/_tmp_dump_noB.py",
-    "20-AREAS/A-前端/Vue.md",
-    "CLAUDE.md",
-    "_scripts/_tmp_rest_scan.py",
-    "AGENTS.md",
-    "90-DIARY/2026-10-27.md",
-    "30-RESOURCES/ECMAScript.md",
-    "30-RESOURCES/Javascript版本演进.md",
-    "30-RESOURCES/ES2025.md",
-    "30-RESOURCES/ES2015.md",
-    "40-ARCHIVE/知识管理大师提示词v5 个人语境版本.md",
-    "40-ARCHIVE/知识管理大师提示词v4 动态重构版本.md",
-    "30-RESOURCES/微前端方案对比.md",
-    "30-RESOURCES/HTTP版本演进.md",
-    "30-RESOURCES/HTTP1.1.md",
-    "30-RESOURCES/HPACK.md",
     "_resources/edfca64a705f03c7c676f00ad1379d91_MD5.gif",
     "_resources/26287a5434ba11cfa975a12da4e1b362_MD5.webp",
-    "_resources/34f17eb3143eed28c12b7938df5f2f26_MD5.gif",
-    "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
-    "30-RESOURCES/_resources/EP177 The Modern Software Stack/ac9a0c973e1860dc0ae75601ad9ef6e9_MD5.webp",
-    "30-RESOURCES/_resources/EP177 The Modern Software Stack/9ede500e163b1dfa88f690c752b3dcf7_MD5.webp",
-    "30-RESOURCES/_resources/EP177 The Modern Software Stack/1e0c43a4caa11b9c31b44a06f746bc1c_MD5.webp",
-    "30-RESOURCES/_resources/Grok/6da80c13a5dc86939bcb2d7e37351f9a_MD5.jpg",
-    "_resources/7d82a68af745483f49fa2544f2194c60_MD5.webp",
-    "_resources/96bfc6e146a31ce7a7ffbb1da392ae01_MD5.webp",
     "10-PROJECTS/PROJECTS.canvas",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "未命名.canvas",

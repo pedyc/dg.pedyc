@@ -79,6 +79,8 @@ Set-Cookie: sid=abc123; Path=/; Max-Age=86400; Secure; HttpOnly; SameSite=Lax
 
 Cookie 与 Web Storage 常被当成同类，实际分的是「要不要跟着请求走」：
 
+> 问题：[[为什么不能用WebStorage代替Cookie？]]
+
 | | Cookie | localStorage / sessionStorage | IndexedDB |
 |:---|:---|:---|:---|
 | 随请求自动发送 | ✅ 唯一 | ✗ 要 JS 手动塞进 Header | ✗ |

@@ -86,9 +86,9 @@ graph TD
 ### 知识图谱
 
 - **上位**：[[前端面试真题库]]
+- **并列**：
+	- [[Vue vs React]] — 同层的另一种框架对比
+	- [[Vue2 vs Vue3]] — 同一框架的版本内对比
 - **相关**：
-	- [[Vue vs React]] — Vue 与 React 的对比，Angular 是第三种路线
 	- [[Signal(Angular)]] — Signal 在 Angular 中的具体实现
 	- [[Hooks(React)]] — React 的响应式基础
-	- [[Vue2 vs Vue3]]
-	- [[Vue vs React]]

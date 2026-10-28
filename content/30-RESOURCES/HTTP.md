@@ -86,7 +86,7 @@ sequenceDiagram
 	- [[HTTP1.1]] — 持久连接、管道化
 	- [[HTTP2]] — 二进制分帧、多路复用
 	- [[HTTP3]] — 基于 QUIC
-	- [[HTTP缓存机制]] — HTTP 的缓存层，与版本无关
+	- [[HTTP缓存机制]] — HTTP 的缓存层，与版本无关⭐
 - **并列**：
 	- [[WebSocket]] — 双向通信协议
 - **相关**：

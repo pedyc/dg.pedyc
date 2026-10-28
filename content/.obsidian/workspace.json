@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fe89b7a1f33165e0",
+            "id": "76afaa8b8fd4c59e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/HTTP缓存机制.md",
+                "file": "60-BLOGS/新兴前端框架 Svelte 从入门到原理.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,83 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "HTTP缓存机制"
+              "title": "新兴前端框架 Svelte 从入门到原理"
+            }
+          },
+          {
+            "id": "d4642b182d8210e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "60-BLOGS/新兴前端框架 Svelte 从入门到原理.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "新兴前端框架 Svelte 从入门到原理"
+            }
+          },
+          {
+            "id": "93e16e8aa1e6bfd0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00-INBOX/为什么不能用WebStorage代替Cookie？.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "为什么不能用WebStorage代替Cookie？"
+            }
+          },
+          {
+            "id": "ef222d45b0e599b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "30-RESOURCES/浏览器渲染流程.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "浏览器渲染流程"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -73,7 +146,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/HTTP缓存机制.md",
+                "file": "30-RESOURCES/浏览器渲染流程.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -222,7 +295,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "30-RESOURCES/HTTP缓存机制.md",
+                "file": "30-RESOURCES/浏览器渲染流程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +314,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "30-RESOURCES/HTTP缓存机制.md",
+                "file": "30-RESOURCES/浏览器渲染流程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -254,7 +327,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 519.5
+    "width": 519.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -278,43 +352,45 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "fe89b7a1f33165e0",
+  "active": "ef222d45b0e599b2",
   "lastOpenFiles": [
-    "30-RESOURCES/前端缓存方案.md",
-    "30-RESOURCES/HTTP缓存机制.md",
-    "30-RESOURCES/HTTP.md",
-    "30-RESOURCES/HTTP协商缓存.md",
-    "30-RESOURCES/浏览器缓存与客户端存储体系.md",
-    "30-RESOURCES/Web Storage.md",
-    "30-RESOURCES/Cookie.md",
+    "30-RESOURCES/渲染进程.md",
+    "30-RESOURCES/合成层.md",
+    "_templates/template_concept.md",
+    "00-INBOX/深入了解现代网络浏览器(3) 渲染进程.md",
+    "40-ARCHIVE/深入了解现代网络浏览器(3) 渲染进程.md",
+    "_resources/cf82dabb058a352b74e9d0d5ef11dddb_MD5.webp",
+    "_resources/26dcff4e0541926bf320a692856940eb_MD5.webp",
+    "_resources/a28d3c6bef5950faea43e4945235c60a_MD5.webp",
+    "_resources/8f768aa5b75e68a16ca7f88bbb66d1f0_MD5.webp",
+    "_resources/30ede55058c66e54d41c4d2340f8b039_MD5.webp",
+    "_resources/d3681217902b8d28b34ab4f9583d1d48_MD5.webp",
+    "_resources/a86c8490dcfa4b5ed0b944521c4a6a61_MD5.webp",
+    "_resources/4b9b046161929819b647779cac15d369_MD5.webp",
+    "_resources/7f41191121331c5ff6edfce851f8644b_MD5.webp",
+    "_resources/8a5f13d3ca78293586c6a434b8d18d22_MD5.webp",
+    "30-RESOURCES/浏览器渲染流程.md",
     "00-INBOX/为什么不能用WebStorage代替Cookie？.md",
-    "90-DIARY/2026-10-27.md",
-    "90-DIARY/2026-10-28.md",
-    "30-RESOURCES/我的简历.md",
-    "30-RESOURCES/简历素材.md",
-    "30-RESOURCES/面试提问的三层递进.md",
-    "30-RESOURCES/单元测试.md",
-    "30-RESOURCES/双跑.md",
-    "30-RESOURCES/灰度.md",
-    "30-RESOURCES/持续集成与持续部署.md",
-    "20-AREAS/A-个人成长/求职.md",
-    "30-RESOURCES/模拟面试01.md",
-    "30-RESOURCES/Webpack.md",
-    "30-RESOURCES/Angular版本演进.md",
-    "20-AREAS/A-前端/Angular.md",
-    "20-AREAS/A-前端/JavaScript.md",
-    "30-RESOURCES/关于我.md",
-    "60-BLOGS.md",
-    "60-BLOGS 1.md",
+    "00-INBOX/Virtual DOM is pure overhead.md",
+    "60-BLOGS/新兴前端框架 Svelte 从入门到原理.md",
+    "30-RESOURCES/合成层 vs 合成线程.md",
+    "30-RESOURCES/JS执行机制.md",
+    "30-RESOURCES/Web安全问题.md",
+    "30-RESOURCES/抽象语法树.md",
+    "30-RESOURCES/Virtual DOM.md",
+    "30-RESOURCES/Svelte.md",
+    "20-AREAS/A-前端/前端开发.md",
+    "30-RESOURCES/前端框架.md",
+    "50-ZETTELCASTEN/Svelte通过位掩码记录脏数据.md",
+    "30-RESOURCES/Vue3响应式原理.md",
+    "30-RESOURCES/Fiber.md",
+    "50-ZETTELCASTEN/React Fiber的时间切片基于优先级调度.md",
+    "50-ZETTELCASTEN/React Fiber是可中断的增量渲染架构.md",
+    "50-ZETTELCASTEN/React Fiber采用链表结构代替递归.md",
+    "20-AREAS/领域总览.md",
+    "index.md",
+    "60-BLOGS/效率加速主义.md",
     "_scripts/_tmp_areas.py",
-    "_resources/艾宾浩斯记忆曲线/b42ff3bfc56d6aa8bc11c88696d04a26_MD5.jpeg",
-    "_resources/2026-08-22/d271c78212148a3edb00d3350c777387_MD5.jpg",
-    "_resources/08知识管理领域/f1682794a0227c1a0c5065bd634e8808_MD5.jpeg",
-    "_resources/08知识管理领域/fa545b9686cb506c5b3dae7f8217ee4f_MD5.jpeg",
-    "_resources/00知识管理领域/57f0f1e5b6fa22ab83de5f7dab87cca4_MD5.jpeg",
-    "_resources/卡片盒笔记法实施工作流/d12dda6972096f88f7b6ecad31884b61_MD5.jpeg",
-    "_resources/draw_PKM_Processes.excalidraw.svg",
-    "_resources/draw_PKM_methods.svg",
     "_scripts/_tmp_count_buckets.py",
     "_scripts/_tmp_reorder.py",
     "_scripts/_tmp_scan_fields.py",
@@ -324,8 +400,6 @@
     "_scripts/_tmp_shrink2.py",
     "_scripts/_tmp_fix_blank.py",
     "_scripts/_tmp_shrink.py",
-    "_resources/edfca64a705f03c7c676f00ad1379d91_MD5.gif",
-    "_resources/26287a5434ba11cfa975a12da4e1b362_MD5.webp",
     "10-PROJECTS/PROJECTS.canvas",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "未命名.canvas",

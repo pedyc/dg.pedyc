@@ -1,11 +1,11 @@
 ---
 uid: 202605061500
-title: React Fiber 的时间切片基于优先级调度
+title: React Fiber的时间切片基于优先级调度
 aliases: []
 description: React Fiber 通过优先级队列调度工作单元，高优先级可打断低优先级
 tags: []
 date-created: 2026-05-06
-date-modified: 2026-10-27
+date-modified: 2026-10-28
 status: fleeting
 content-type: atomic
 up: "[[Fiber]]"
@@ -27,5 +27,5 @@ noteId: 1792465708846
 
 - [[React]]
 - [[Fiber]]
-- [[React Fiber 采用链表结构代替递归]]
-- [[React Fiber 是可中断的增量渲染架构]]
+- [[React Fiber采用链表结构代替递归]]
+- [[React Fiber是可中断的增量渲染架构]]

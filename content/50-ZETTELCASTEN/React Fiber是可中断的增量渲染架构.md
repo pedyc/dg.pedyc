@@ -1,18 +1,16 @@
 ---
 uid: 202605061300
-title: React Fiber 是可中断的增量渲染架构
+title: Fiber是可中断的增量渲染架构
 description: React Fiber 通过拆分渲染任务实现可中断的增量渲染
 tags: []
 date-created: 2026-05-06
-date-modified: 2026-10-27
-status: fleeting
+date-modified: 2026-10-28
 content-type: atomic
 up: "[[Fiber]]"
-
 noteId: 1792465709002
 ---
 
-> React Fiber 是把渲染工作拆成小任务，利用浏览器空闲时间执行，实现~~可中断~~的~~增量渲染~~架构
+> React Fiber是把渲染工作拆成小任务，利用浏览器空闲时间执行，实现~~可中断~~的~~增量渲染~~架构
 
 **边界**：可中断的只有渲染阶段（render phase），commit 阶段一旦开始就不能中断，必须一次性把变更刷到 DOM。而且中断依赖调度器让出主线程——如果某个组件自己的渲染函数耗时过长，单个任务仍然会卡住。
 

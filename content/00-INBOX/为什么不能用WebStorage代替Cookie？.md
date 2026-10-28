@@ -8,7 +8,7 @@ content-type: question
 category: learning
 up: "[[Cookie]]"
 date-created: 2026-10-27
-date-modified: 2026-10-27
+date-modified: 2026-10-28
 ---
 
 ## 问题
@@ -27,7 +27,7 @@ Cookie用来存储，Web Storage也用于存储，那么为什么要用Cookie而
 
 ### 答案 1：Cookie具有唯一的"随请求发送"机制
 
-[[HTTP 是基于请求-响应模型的无状态协议]]。服务器要识别"两次请求来自同一个已登录用户"，就需要浏览器在每次请求时**自动携带一个凭证**。Cookie 正是为此而生：浏览器会**自动将当前域名下符合条件的 Cookie 放入每个 HTTP 请求头中**，服务器据此识别用户会话。[](https://bbs.huaweicloud.com/blogs/494682)[](https://mdn.org.cn/en-US/docs/Web/HTTP/Guides/Cookies)
+HTTP 是基于请求-响应模型的无状态协议。服务器要识别"两次请求来自同一个已登录用户"，就需要浏览器在每次请求时**自动携带一个凭证**。Cookie 正是为此而生：浏览器会**自动将当前域名下符合条件的 Cookie 放入每个 HTTP 请求头中**，服务器据此识别用户会话。[](https://bbs.huaweicloud.com/blogs/494682)[](https://mdn.org.cn/en-US/docs/Web/HTTP/Guides/Cookies)
 
 `localStorage` 和 `sessionStorage` **完全不会参与网络请求**，数据只留在浏览器本地。如果用它存登录凭证，你必须用 JavaScript **手动**读取，再塞进每个请求的 Header 里。这看似只是多写几行代码，却会引入两个严重问题：
 - **安全风险**：手动附加凭证的代码一旦遗漏（如请求了第三方 API），凭证就会泄露。[](https://wiki.owasp.org/images/8/8d/20181101_-_Common_API_security_pitfalls_%28OWASP%29_small.pdf#2#2#2)

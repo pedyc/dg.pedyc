@@ -24,14 +24,7 @@
       "key": "C"
     }
   ],
-  "file-explorer:new-file": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "N"
-    }
-  ],
+  "file-explorer:new-file": [],
   "templater-obsidian:create-_template/template_article.md": [
     {
       "modifiers": [
@@ -188,7 +181,7 @@
   "templater-obsidian:create-new-note-from-template": [
     {
       "modifiers": [
-        "Alt"
+        "Mod"
       ],
       "key": "N"
     }
@@ -199,6 +192,14 @@
         "Alt"
       ],
       "key": "R"
+    }
+  ],
+  "templater-obsidian:insert-templater": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "N"
     }
   ]
 }

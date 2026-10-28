@@ -25,4 +25,4 @@ noteId: 1792465708630
 ## 关联
 
 - [[React]]
-- [[React Fiber 是可中断的增量渲染架构]]
+- [[React Fiber是可中断的增量渲染架构]]

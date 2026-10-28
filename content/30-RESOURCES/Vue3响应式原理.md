@@ -1,16 +1,11 @@
 ---
 uid: 202603130000
 title: Vue3响应式原理
-aliases:
-  - 响应式原理
-  - C-Vue3响应式原理
-  - Vue3响应式系统
+aliases: [响应式原理, C-Vue3响应式原理, Vue3响应式系统]
 description: Vue3 响应式系统的核心实现原理
-tags:
-  - 前端/Vue
-  - 前端/原理
+tags: [前端/Vue, 前端/原理]
 date-created: 2026-03-13
-date-modified: 2026-09-22
+date-modified: 2026-10-28
 status: active
 content-type: concept
 up: "[[Vue|vue]]"
@@ -34,8 +29,6 @@ up: "[[Vue|vue]]"
 	- **effect** 负责收集依赖和触发更新
 	- **reactive** 负责将普通对象转换为响应式对象
 - [[在Vue3中解构响应式对象会丢失响应性]]
-
----
 
 ### 运行机制
 
@@ -209,8 +202,6 @@ function trigger(target, key) {
 - **异步**：将 effect 放入微任务队列，避免同步执行多次
 - **优先级**：支持 computed 的优先级调度
 
----
-
 ### 关键区别
 
 | 维度 | Vue3 Proxy | Vue2 Object.defineProperty |
@@ -220,8 +211,6 @@ function trigger(target, key) {
 | **数组操作** | 自动监听 | 需重写数组方法 |
 | **删除属性** | 自动监听 | 需使用 Vue.delete |
 | **性能** | 更好 | 较差 |
-
----
 
 ### 应用场景
 
@@ -233,8 +222,6 @@ function trigger(target, key) {
 	- **直接修改响应式对象的原始引用**：应创建副本
 	- **在 computed 中修改响应式数据**：导致无限循环
 
----
-
 ### 知识图谱
 
 - **上位**：[[前端开发]]
@@ -243,8 +230,6 @@ function trigger(target, key) {
 	- [[Vue2与Vue3 数组响应式原理深度剖析]]
 	- [[Virtual DOM]] — 响应式数据变化后通过 render 函数生成新的 VNode
 	- [[为什么Vue3的响应式系统要使用WeakMap]]
-
----
 
 ### 参考延伸
 

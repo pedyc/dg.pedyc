@@ -5,7 +5,7 @@ aliases: [JS, A-JavaScript]
 description: JavaScript 知识领域，包含核心概念、运行机制、生态工具
 tags: [前端开发/JavaScript]
 date-created: 2025-05-19
-date-modified: 2026-10-26
+date-modified: 2026-10-28
 content-type: area
 up: "[[前端开发]]"
 ---
@@ -35,7 +35,7 @@ up: "[[前端开发]]"
 > 中观层：本领域是知识粒度的最小单元，没有独立 MOC，概念在此平铺。**未解析的链接不是错误，是尚未写下的洞**——排序见 [[知识缺口]]。
 
 - **语言核心** — [[闭包]] · [[作用域链]] · [[原型链]] · [[This绑定|this 绑定]] · [[为何在setTimeout中要显式绑定this]]
-- **运行机制** — [[事件循环]] · [[执行上下文]] · [[V8 引擎]] · [[JS引擎]]
+- **运行机制** — [[JS执行机制]]（总览：引擎 / 调度 / 回收三层） · [[事件循环]] · [[执行上下文]] · [[V8 引擎]] · [[JS引擎]]
 - **异步编程** — [[Promise]] · [[async-await|async/await]] · [[Array.fromAsync() vs Promise.all()]]
 - **函数式技巧** — [[柯里化]]
 - **版本与模块** — [[ECMAScript]] · [[Javascript版本演进]] · [[ES2015]] · [[ES2025]] · [[ES2026]] · [[ESModule]]

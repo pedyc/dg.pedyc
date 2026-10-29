@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
+                "file": "30-RESOURCES/浏览器缓存与客户端存储体系.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "缓存机制学习专项"
+              "title": "浏览器缓存与客户端存储体系"
             }
           },
           {
@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/原子笔记拆分标准.md",
+                "file": "90-DIARY/2026-10-27.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "原子笔记拆分标准"
+              "title": "2026-10-27"
             }
           },
           {
@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
+                "file": "00-INBOX/为什么不能用WebStorage代替Cookie？.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,11 +100,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "缓存机制学习专项"
+              "title": "为什么不能用WebStorage代替Cookie？"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -146,7 +146,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
+                "file": "30-RESOURCES/浏览器缓存与客户端存储体系.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -295,7 +295,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
+                "file": "30-RESOURCES/浏览器缓存与客户端存储体系.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -314,7 +314,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
+                "file": "30-RESOURCES/浏览器缓存与客户端存储体系.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -351,34 +351,34 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "ef222d45b0e599b2",
+  "active": "e89c1cd029b9e978",
   "lastOpenFiles": [
+    "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
+    "90-DIARY/2026-10-27.md",
+    "_templates/template_source.md",
+    "_templates/template_sub_project.md",
+    "_templates/template_term.md",
+    "_templates/template_week.md",
+    "_templates/template_atomic.md",
+    "_templates/template_article.md",
+    "_templates/template_area.md",
+    "50-ZETTELCASTEN/「值不值得做」不能外包给 AI，事实性问题可以直接问.md",
+    "50-ZETTELCASTEN/「能不能用一句话说清」不能当拆分判据，它是观点已成形的结果.md",
+    "30-RESOURCES/原子笔记拆分标准.md",
+    "50-ZETTELCASTEN/QUIC只缩小阻塞粒度而不消除单流内的有序等待.md",
+    "00-INBOX/为什么不能用WebStorage代替Cookie？.md",
+    "_templates/template_question.md",
+    "_templates/template_project.md",
+    "_templates/template_person.md",
+    "30-RESOURCES/Cookie.md",
     "90-DIARY/2026-10-28.md",
+    "90-DIARY/2026-10-29.md",
     "30-RESOURCES/浏览器渲染流程.md",
     "10-PROJECTS/P-Agent求职/DSH-Agent-Loop.md",
     "40-ARCHIVE/HTTP3基于QUIC协议消除传输层队头阻塞 1.md",
-    "30-RESOURCES/原子笔记拆分标准.md",
-    "50-ZETTELCASTEN/「能不能用一句话说清」不能当拆分判据，它是观点已成形的结果.md",
-    "50-ZETTELCASTEN/「值不值得做」不能外包给 AI，事实性问题可以直接问.md",
     "50-ZETTELCASTEN/闭包可以创建私有变量.md",
     "50-ZETTELCASTEN/闭包会导致内存泄漏.md",
     "50-ZETTELCASTEN/熵减必然有信息代价.md",
-    "50-ZETTELCASTEN/await 让出的是 async 函数的执行，不是线程.md",
-    "50-ZETTELCASTEN/全双工只保证通道双向，不保证推得到人.md",
-    "50-ZETTELCASTEN/一串 then 仍是串行，忘写 return 也不报错.md",
-    "50-ZETTELCASTEN/「存在先于本质」反对的是目的论，不是否认处境的约束.md",
-    "50-ZETTELCASTEN/Vite HMR 快不是因为替换手法巧，而是不重建依赖图.md",
-    "50-ZETTELCASTEN/DOM 树与 CSSOM 树独立构建，但只有 CSSOM 会挡住首次绘制.md",
-    "50-ZETTELCASTEN/React RSC 是局部能力，完整开发体验仍要 NextJS 补.md",
-    "50-ZETTELCASTEN/数字花园的价值在链接密度，不在单篇深度.md",
-    "50-ZETTELCASTEN/把系统的临界状态暴露给操作者，比制造绝对安全的错觉更有效.md",
-    "50-ZETTELCASTEN/靠使用过程自然清理管不到冷门领域，定期审查仍要保留.md",
-    "50-ZETTELCASTEN/Agent 的 Context 是对 LLM 可见信息的动态选择，不是静态快照.md",
-    "50-ZETTELCASTEN/React Context 只是结构上像观察者模式，它没法只通知一个订阅者.md",
-    "50-ZETTELCASTEN/useRef 存的是可变值不是界面状态，它变了界面不会跟.md",
-    "50-ZETTELCASTEN/前端框架的默认转义只覆盖插值边界，不覆盖直接操作 HTML 的 API.md",
-    "50-ZETTELCASTEN/Vue 的宏拿不到运行时信息，参数必须是字面量.md",
-    "50-ZETTELCASTEN/HTTP2 的多路复用省的是连接数，不是带宽.md",
     "_scripts/_tmp_fix_titles.py",
     "_scripts/_tmp_titles.py",
     "_scripts/_tmp_map8.json",

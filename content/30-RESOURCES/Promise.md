@@ -21,9 +21,9 @@ up: "[[JavaScript]]"
 
 ### 核心命题
 
-- [[Promise 通过 thenable 接口实现链式调用，解决回调地狱]]
+- [[一串 then 仍是串行，忘写 return 也不报错]]
 	- **原理**：Promise 返回一个新的 Promise，支持 `.then()` 链式调用，将嵌套回调拍平成链式结构。
-- [[Promise 状态一旦确定就不会再改变]]
+- [[resolve 一个 thenable 时状态仍是 pending，要等它自己兑现]]
 	- **原理**：Promise 有三种状态：pending（进行中）、fulfilled（已成功）、rejected（已失败），状态只能从 pending 转向 fulfilled 或 rejected，且不可逆。
 - [[Promise.all 失败时立即终止，Promise.allSettled 等待所有 Promise 完成]]
 	- **原理**：Promise.all 采用 " 短路 " 逻辑，任一 Promise rejected 则整体 rejected；Promise.allSettled 等待所有 Promise settled，无论成功或失败。

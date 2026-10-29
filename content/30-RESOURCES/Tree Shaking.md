@@ -88,4 +88,4 @@ console.log(add(1, 2));
 - **相关概念**：
 	- [[ESModule|ESM]] — Tree Shaking 的技术基础
 	- [[Rollup]] — Tree Shaking 效果更好的打包工具
-	- [[Tree Shaking 的本质是 ESM 静态分析]] — atomic 洞见
+	- [[Tree Shaking 的静态分析只保证能判定，不保证会删]] — atomic 洞见

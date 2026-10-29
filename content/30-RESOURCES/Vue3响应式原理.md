@@ -25,10 +25,10 @@ up: "[[Vue|vue]]"
 	- **原理**：Proxy 可以监听对象的任何操作，包括新增属性、删除属性、数组索引变化
 - [[Vue3使用Reflect保证Proxy行为的正确性]]
 	- **原理**：Reflect 提供了统一的 API 操作对象，确保 this 指向正确
-- [[Vue3响应式系统分为effect和reactive两部分]]
+- [[reactive 与 effect 是职责二分，不是两个可替换的模块]]
 	- **effect** 负责收集依赖和触发更新
 	- **reactive** 负责将普通对象转换为响应式对象
-- [[在Vue3中解构响应式对象会丢失响应性]]
+- [[解构丢响应性只发生在 reactive 代理上，取 ref 的 value 不会]]
 
 ### 运行机制
 

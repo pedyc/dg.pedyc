@@ -21,7 +21,7 @@ related: "[[React]]"
 
 ### 核心命题
 
-- [[React.memo通过浅比较props决定是否重新渲染]]
+- [[memo 的浅比较看不见嵌套变化，也拦不住自身 state 更新]]
 	- **原理**：React.memo 对新旧 props 进行浅比较（Object.is），只有当 props 变化时才重新渲染
 - [[React.memo不会阻止子组件因父组件渲染而渲染]]
 	- **原理**：memo 只比较传入的 props，不关心父组件的渲染状态

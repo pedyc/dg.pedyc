@@ -1,0 +1,48 @@
+---
+uid: 202603230017
+title: 同源策略拦的是读响应，不是发请求，所以挡不住 CSRF
+aliases: []
+description: 同源策略限制不同源的文档或脚本对当前文档的读取和修改
+tags:
+  - 前端开发/浏览器
+date-created: 2026-03-23
+date-modified: 2026-03-23
+status: active
+content-type: atomic
+up: "[[浏览器安全机制]]"
+noteId: 1792465698502
+---
+
+> 浏览器通过~~同源策略（Same Origin Policy）~~限制来自不同源（协议+域名+端口）的文档或脚本，对当前文档的读取或修改操作。
+
+**边界**：同源策略约束的是「脚本能否读写另一份文档」，不约束「请求是否发出」。跨源请求照常到达服务器，只是响应读不到——所以它挡不住 CSRF，那种攻击不需要读响应。
+
+## 论据/示例
+
+**同源的定义**：
+- 协议相同（http vs https）
+- 域名相同（example.com vs api.example.com 不同源）
+- 端口相同（8080 vs 3000 不同源）
+
+**限制范围**：
+- Cookie/LocalStorage 读取
+- DOM 操作
+- AJAX 响应读取
+
+**示例**：
+```
+# 同源
+http://example.com/page.html
+http://example.com/api.js
+
+# 不同源
+https://example.com  ← 协议不同
+http://api.example.com  ← 域名不同
+http://example.com:8080  ← 端口不同
+```
+
+## 关联
+
+- [[浏览器安全机制]] — 本观点的主题
+- [[同源策略]] — 同源策略的详细说明
+- [[CORS]] — 同源策略的"后门"

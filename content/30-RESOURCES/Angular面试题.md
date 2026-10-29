@@ -163,8 +163,8 @@ up: "[[前端面试真题库]]"
 
 | 示例题目 | 关联笔记 |
 |---|:---|
-| Angular 的默认 XSS 防护机制 (DomSanitizer) | [[框架的默认转义不覆盖直接操作HTML的API]] |
-| 什么时候需要使用 bypassSecurityTrustXxx？风险是什么？ | [[框架的默认转义不覆盖直接操作HTML的API]] |
+| Angular 的默认 XSS 防护机制 (DomSanitizer) | [[前端框架的默认转义只覆盖插值边界，不覆盖直接操作 HTML 的 API]] |
+| 什么时候需要使用 bypassSecurityTrustXxx？风险是什么？ | [[前端框架的默认转义只覆盖插值边界，不覆盖直接操作 HTML 的 API]] |
 
 ---
 

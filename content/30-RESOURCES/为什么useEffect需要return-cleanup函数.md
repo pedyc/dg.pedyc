@@ -96,7 +96,7 @@ cleanup 是 React 推崇的 **" 每次 effect 执行都是干净的开始 "** �
 
 - **相关问题**：
 	- [[useEffect]] — 本问题的上位概念
-	- [[useEffect的return语句在组件卸载和依赖变化时都会被调用]] — cleanup 调用时机
+	- [[cleanup 的保证是「下次执行前」，不是「一定会跑」]] — cleanup 调用时机
 - **相关概念**：
 	- [[cleanup函数防止内存泄漏]] — cleanup 的核心作用
 - **参考资料**：

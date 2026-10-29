@@ -22,11 +22,11 @@ content-type: concept
 
 > 核心命题引用 atomic 笔记（陈述句观点），每个命题是一句话洞见
 
-- [[NextJS 的本质是 React 框架与服务端能力的深度融合]]
+- [[App Router 之后，「React + Node」不再足以解释 NextJS]]
 	- **原理**：通过 React 组件服务端执行、直接查询数据库、API Routes 等机制实现前后端能力统一
 - [[NextJS 首屏渲染不需要 JS 引擎参与但 hydration 仍然需要]]
 	- **原理**：首屏 HTML 由服务端生成，浏览器直接显示内容无需等待 JS 执行，但后续交互（事件绑定、状态更新）仍需要 JS 引擎执行 Hydration
-- [[React RSC 是发动机技术而非完整汽车框架]]
+- [[React RSC 是局部能力，完整开发体验仍要 NextJS 补]]
 	- **原理**：RSC（React Server Components）只在服务端执行逻辑、返回序列化数据，本身不处理路由/状态/样式，需要 NextJS 等框架整合才能成为完整应用
 
 ---

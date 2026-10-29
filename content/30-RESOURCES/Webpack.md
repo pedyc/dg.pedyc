@@ -29,9 +29,9 @@ Webpack 本质上是一个现代Javascript应用程序的静态模块打包器�
 
 > 核心命题引用 atomic 笔记（陈述句观点），每个命题是一句话洞见
 
-- [[Webpack模块打包的本质是建立依赖图并生成优化后的资源集合]]
+- [[Webpack 的依赖图只覆盖静态可见的模块，拆包与 tree shaking 到图为止]]
 	- **原理**：Webpack 通过入口文件递归分析 `import`/`require` 依赖，构建完整依赖图（Dependency Graph），再根据图关系打包
-- [[Tree Shaking 的本质是 ESM 静态分析]]
+- [[Tree Shaking 的静态分析只保证能判定，不保证会删]]
 	- **原理**：Webpack 4+ 利用 ES Module 的静态结构，在打包阶段移除未使用的导出（unused exports），需要开启 `sideEffects: false`
 
 ---

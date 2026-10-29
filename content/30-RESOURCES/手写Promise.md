@@ -273,8 +273,8 @@ const mine = scenario(MyPromise);
 - 父级概念：
 	- [[Promise]] — 本 SOP 是该概念的可执行链路
 - 核心命题：
-	- [[Promise 状态一旦确定就不会再改变]] — 对应 `#settle` 的第一行状态检查
-	- [[Promise 通过 thenable 接口实现链式调用，解决回调地狱]] — 对应 then 返回新实例
+	- [[resolve 一个 thenable 时状态仍是 pending，要等它自己兑现]] — 对应 `#settle` 的第一行状态检查
+	- [[一串 then 仍是串行，忘写 return 也不报错]] — 对应 then 返回新实例
 	- Promise.all 失败时立即终止，Promise.allSettled 等待所有 Promise 完成 — 对应两个静态方法的差异
 - 关联：
 	- [[微任务]] — then 回调必须进微任务队列，这是整篇最核心的判据

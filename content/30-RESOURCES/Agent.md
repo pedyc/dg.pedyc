@@ -26,9 +26,9 @@ related: ["[[人工智能]]", "[[Harness]]"]
 
 ### 核心命题
 
-- [[Agent = LLM + 上下文 + 工具]] — 通用Agent定义
+- [[Agent 的分界不在有没有工具，在会不会基于工具结果再决策]] — 通用Agent定义
 - [[Agent 的循环控制由 Runtime 决定而非模型自行决定]] — 循环控制权在 Runtime，模型只负责生成请求
-- [[Tool 的执行权在 Runtime 手中而非 LLM]] — 执行权与权限校验在 Runtime，LLM 输出 Tool Call 不代表执行
+- [[Agent 的工具执行权在 Runtime 手中，不在 LLM]] — 执行权与权限校验在 Runtime，LLM 输出 Tool Call 不代表执行
 - Agent = LLM + Harness — DSH对Agent的定义
 - Agent 的本质是「感知 - 推理 - 执行」的闭环系统，而非单一工具调用
 - Agent 的可靠性取决于 Harness（工程化框架），而非单纯的 Prompt 优化

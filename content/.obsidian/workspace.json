@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50-ZETTELCASTEN/IndexedDB 的复杂度买的是「能查」，不是「快」.md",
+                "file": "30-RESOURCES/原子笔记拆分标准.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "IndexedDB 的复杂度买的是「能查」，不是「快」"
+              "title": "原子笔记拆分标准"
             }
           },
           {
@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/浏览器渲染流程.md",
+                "file": "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,31 +100,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "浏览器渲染流程"
+              "title": "缓存机制学习专项"
             }
           }
         ],
-        "currentTab": 2
-      },
-      {
-        "id": "b9e1e7adfcd5b59b",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "3fae22e429df6c78",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://developer.mozilla.org/zh-CN/docs/Web/Performance/Guides/How_browsers_work",
-                "title": "渲染页面：浏览器的工作原理 - Web 性能 | MDN",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "渲染页面：浏览器的工作原理 - Web 性能 | MDN"
-            }
-          }
-        ]
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -166,7 +146,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "50-ZETTELCASTEN/IndexedDB 的复杂度买的是「能查」，不是「快」.md",
+                "file": "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -315,7 +295,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "50-ZETTELCASTEN/IndexedDB 的复杂度买的是「能查」，不是「快」.md",
+                "file": "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -334,7 +314,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "50-ZETTELCASTEN/IndexedDB 的复杂度买的是「能查」，不是「快」.md",
+                "file": "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -347,8 +327,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 519.5,
-    "collapsed": true
+    "width": 519.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -372,39 +351,44 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "93e16e8aa1e6bfd0",
+  "active": "ef222d45b0e599b2",
   "lastOpenFiles": [
-    "50-ZETTELCASTEN/sessionStorage 的「会话」指标签页，不是登录状态.md",
-    "30-RESOURCES/使用 localStorage 存储用户偏好设置.md",
-    "30-RESOURCES/Web Storage.md",
-    "50-ZETTELCASTEN/localStorage 的「长期」只是不会被主动过期.md",
-    "30-RESOURCES/Cookie.md",
-    "50-ZETTELCASTEN/Cookie 的特殊性在自动随请求发送，不在存储容量.md",
-    "30-RESOURCES/浏览器缓存与客户端存储体系.md",
-    "50-ZETTELCASTEN/函数组件重新执行不会丢状态，因为状态挂在 Fiber 而非作用域.md",
-    "50-ZETTELCASTEN/setState 本身同步，异步的是批量更新.md",
-    "50-ZETTELCASTEN/Vite HMR 快不是因为替换手法巧，而是不重建依赖图.md",
-    "50-ZETTELCASTEN/IndexedDB 的复杂度买的是「能查」，不是「快」.md",
-    "_scripts/rename_atomic_titles.py",
-    "_scripts/_probe_atomic_quality.py",
-    "_scripts/_audit_atomic_titles.py",
-    "_scripts/_scan_atomic_titles.py",
-    "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
     "90-DIARY/2026-10-28.md",
-    "60-BLOGS/前端缓存怎么分类.md",
-    "_templates/template_project.md",
-    "_templates/template_learning_project.md",
-    "00-INBOX/Virtual DOM is pure overhead.md",
-    "00-INBOX/为什么不能用WebStorage代替Cookie？.md",
-    "40-ARCHIVE/Web Storage API.md",
-    "50-ZETTELCASTEN/sessionStorage用于会话级临时存储.md",
-    "30-RESOURCES/客户端存储.md",
-    "30-RESOURCES/HTTP缓存机制.md",
-    "30-RESOURCES/IndexedDB.md",
-    "30-RESOURCES/Cache API.md",
-    "30-RESOURCES/Content-Hash.md",
-    "10-PROJECTS/P-缓存机制学习专项",
-    "30-RESOURCES/HTTP强缓存.md",
+    "30-RESOURCES/浏览器渲染流程.md",
+    "10-PROJECTS/P-Agent求职/DSH-Agent-Loop.md",
+    "40-ARCHIVE/HTTP3基于QUIC协议消除传输层队头阻塞 1.md",
+    "30-RESOURCES/原子笔记拆分标准.md",
+    "50-ZETTELCASTEN/「能不能用一句话说清」不能当拆分判据，它是观点已成形的结果.md",
+    "50-ZETTELCASTEN/「值不值得做」不能外包给 AI，事实性问题可以直接问.md",
+    "50-ZETTELCASTEN/闭包可以创建私有变量.md",
+    "50-ZETTELCASTEN/闭包会导致内存泄漏.md",
+    "50-ZETTELCASTEN/熵减必然有信息代价.md",
+    "50-ZETTELCASTEN/await 让出的是 async 函数的执行，不是线程.md",
+    "50-ZETTELCASTEN/全双工只保证通道双向，不保证推得到人.md",
+    "50-ZETTELCASTEN/一串 then 仍是串行，忘写 return 也不报错.md",
+    "50-ZETTELCASTEN/「存在先于本质」反对的是目的论，不是否认处境的约束.md",
+    "50-ZETTELCASTEN/Vite HMR 快不是因为替换手法巧，而是不重建依赖图.md",
+    "50-ZETTELCASTEN/DOM 树与 CSSOM 树独立构建，但只有 CSSOM 会挡住首次绘制.md",
+    "50-ZETTELCASTEN/React RSC 是局部能力，完整开发体验仍要 NextJS 补.md",
+    "50-ZETTELCASTEN/数字花园的价值在链接密度，不在单篇深度.md",
+    "50-ZETTELCASTEN/把系统的临界状态暴露给操作者，比制造绝对安全的错觉更有效.md",
+    "50-ZETTELCASTEN/靠使用过程自然清理管不到冷门领域，定期审查仍要保留.md",
+    "50-ZETTELCASTEN/Agent 的 Context 是对 LLM 可见信息的动态选择，不是静态快照.md",
+    "50-ZETTELCASTEN/React Context 只是结构上像观察者模式，它没法只通知一个订阅者.md",
+    "50-ZETTELCASTEN/useRef 存的是可变值不是界面状态，它变了界面不会跟.md",
+    "50-ZETTELCASTEN/前端框架的默认转义只覆盖插值边界，不覆盖直接操作 HTML 的 API.md",
+    "50-ZETTELCASTEN/Vue 的宏拿不到运行时信息，参数必须是字面量.md",
+    "50-ZETTELCASTEN/HTTP2 的多路复用省的是连接数，不是带宽.md",
+    "_scripts/_tmp_fix_titles.py",
+    "_scripts/_tmp_titles.py",
+    "_scripts/_tmp_map8.json",
+    "_scripts/_tmp_map7.json",
+    "_scripts/_tmp_map6.json",
+    "_scripts/_tmp_map5.json",
+    "_scripts/_tmp_map4.json",
+    "_scripts/_tmp_map3.json",
+    "_scripts/_tmp_map2.json",
+    "_scripts/_tmp_map1.json",
     "_resources/2053a78bf0323938d7ebfbf1d8f40f59_MD5.webp",
     "_resources/1ff95cb0537c7ba6838f236942847399_MD5.webp",
     "_resources/efadd15e30f38de83b0311944b88285c_MD5.webp",
@@ -415,11 +399,6 @@
     "_resources/0d895f52a4b7376ffb598405c1a91c4b_MD5.webp",
     "_resources/abb304d2c400213ba846ebf72b70a76b_MD5.webp",
     "_resources/a990b21921a5caa52316fdc54f530cb1_MD5.svg",
-    "_scripts/_tmp_areas.py",
-    "_scripts/_tmp_count_buckets.py",
-    "_scripts/_tmp_reorder.py",
-    "_scripts/_tmp_scan_fields.py",
-    "_scripts/_tmp_scan_heading_gap.py",
     "10-PROJECTS/PROJECTS.canvas",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "未命名.canvas",

@@ -33,7 +33,7 @@ up: "[[Hooks(React)|React Hooks]]"
 	- **原理**：Context 可能导致性能问题，搭配 React.memo 不再重渲染 props 稳定的组件
 - [[React Context 不等于状态管理库]]
 	- **原理**：Context 是 React 内置的 " 注射 " 机制，而非状态管理方案。状态管理需要配合 useState/useReducer 或外部库实现
-- [[React Context 是观察者模式的变体]]
+- [[React Context 只是结构上像观察者模式，它没法只通知一个订阅者]]
 	- **原理**：Provider 持有 Consumer 的引用，Provider.props.value 更新时，会通知所有 Consumer 重渲染
 ---
 

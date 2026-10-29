@@ -158,7 +158,7 @@ export default function Button() {
 	- [[Virtual DOM]] — React 一侧的中间结构，也是本文分界之所指
 	- [[Fiber]] — React 的调和架构
 	- [[Runes]]（待写） — Svelte 5 的响应式原语，对比表第二行的依据
-	- [[Svelte 无需虚拟 DOM，编译时直接生成 DOM 操作代码]] — Svelte 一侧的机制依据
+	- [[Svelte 无虚拟 DOM 的前提是更新点可静态识别]] — Svelte 一侧的机制依据
 	- [[Vue编译器优化]] — 同样在编译期下手，但目标是缩小 diff 而非取消 diff
 	- [[Vapor Mode]] — Vue 侧的同类尝试，三方对照时更清楚
 - **外部资料**

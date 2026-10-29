@@ -103,5 +103,5 @@ function MyComponent() {
 ## 关联
 
 - [[React R[[Refs(React)]] 总览
-- [[useRef变化不会触发重新渲染]] — atomic 笔记
+- [[useRef 存的是可变值不是界面状态，它变了界面不会跟]] — atomic 笔记
 - [[为什么useRef不需要是响应式的]] — 待探索

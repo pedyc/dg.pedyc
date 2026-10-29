@@ -29,7 +29,7 @@ up: "[[React]]"
 
 包装组件，避免 props 没变化时重新渲染。
 
-> [[React.memo通过浅比较props决定是否重新渲染]]
+> [[memo 的浅比较看不见嵌套变化，也拦不住自身 state 更新]]
 
 ```jsx
 const MyComponent = React.memo(function MyComponent({ name }) {
@@ -190,5 +190,5 @@ function LongList({ items }) {
 ## 关联
 
 - [[Refs(React)]] — Ref 优化相关
-- [[useRef变化不会触发重新渲染]] — atomic 笔记
+- [[useRef 存的是可变值不是界面状态，它变了界面不会跟]] — atomic 笔记
 - [[在React中有哪些更改数据不触发重新渲染的方式]] — question 笔记

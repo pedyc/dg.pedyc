@@ -19,7 +19,7 @@ up: "[[前端面试真题库|前端面试题]]"
 |---|:---|
 | [[Vue3使用Proxy实现响应式]] | [[Vue3响应式原理]] |
 | [[Vue3-ref和reactive的区别]] | [[Vue3响应式原理]] |
-| [[Vue3响应式系统分为effect和reactive两部分]] | [[Vue3响应式原理]] |
+| [[reactive 与 effect 是职责二分，不是两个可替换的模块]] | [[Vue3响应式原理]] |
 | [[为什么Vue3的响应式系统要使用WeakMap]] | [[Vue3响应式原理]] |
 | [[Vue3使用Reflect保证Proxy行为的正确性]] | [[Vue3响应式原理]] |
 

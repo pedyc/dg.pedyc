@@ -1,6 +1,6 @@
 ---
 uid: 202603240001
-title: CSRF Token 的有效性取决于攻击者读不到页面
+title: CSRF Token的有效性取决于攻击者读不到页面
 aliases: [CSRF Token的有效性取决于攻击者读不到页面]
 description: 攻击者能借浏览器自动带上的 Cookie，但读不到页面内容，因此拿不到嵌在页面里的 Token
 tags: [前端开发/安全]

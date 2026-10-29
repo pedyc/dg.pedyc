@@ -1,6 +1,6 @@
 ---
 uid: 202603240002
-title: SameSite 按站而非源判定是否附带 Cookie
+title: SameSite按站而非源判定是否附带Cookie
 aliases: [SameSite按站而非源判定是否附带Cookie]
 description: SameSite 的判定单位是「站」（scheme + 可注册域名），比同源策略的「源」更粗，所以同站不同源之间仍会带上
 tags: [前端开发/浏览器]

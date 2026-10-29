@@ -58,6 +58,6 @@ graph TD
 ### 关联
 
 - [[Webpack]] — 上位概念
-- [[Webpack模块打包的本质是建立依赖图并生成优化后的资源集合]] — atomic 洞见
+- [[Webpack 的依赖图只覆盖静态可见的模块，拆包与 tree shaking 到图为止]] — atomic 洞见
 - [[Tree Shaking]] — 依赖图构建后的优化阶段
 - [[Webpack配置流程]] — 标准配置流程

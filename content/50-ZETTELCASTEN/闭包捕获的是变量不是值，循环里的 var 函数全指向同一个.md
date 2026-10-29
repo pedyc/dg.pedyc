@@ -1,0 +1,44 @@
+---
+uid: 202603111126
+title: 闭包捕获的是变量不是值，循环里的 var 函数全指向同一个
+aliases:
+  - 闭包原理
+description: 闭包是函数与其定义时的词法环境的组合，函数通过 [[Scope]] 属性记住定义时的作用域链
+tags:
+  - 前端开发/JavaScript
+date-created: 2026-03-15
+date-modified: 2026-10-27
+status: active
+content-type: atomic
+up: "[[闭包]]"
+noteId: 1792465695725
+---
+
+> 闭包是函数和声明该函数的词法环境的组合。当函数被定义时，它的内部属性 `[[Scope]]` 会保存当前的~~作用域链~~，即使函数后来被调用时已离开原作用域，仍能访问那些变量。
+
+**边界**：保存的是词法环境，不是当时所有变量的值。变量是引用而非快照——闭包读到的永远是变量当前的值，所以循环里用 `var` 创建的函数会全部指向同一个变量。要固化值，得靠额外的函数作用域或 `let`。
+
+## 论据/示例
+
+```javascript
+function outer() {
+  let count = 0;  // 被闭包"记住"的变量
+
+  return function inner() {
+    count++;
+    return count;
+  };
+}
+
+const counter = outer();
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
+```
+
+- JavaScript 采用**词法作用域**（静态作用域），函数的作用域在定义时确定，而非调用时
+
+## 关联
+
+- **父级**：[[闭包]]
+- **相关**：[[作用域链]] [[词法作用域]] [[执行上下文]]

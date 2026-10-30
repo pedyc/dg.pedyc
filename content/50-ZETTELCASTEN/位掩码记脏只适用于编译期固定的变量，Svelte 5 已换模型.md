@@ -3,12 +3,14 @@ uid: 20261028115727
 title: 位掩码记脏只适用于编译期固定的变量，Svelte 5 已换模型
 aliases: []
 description: 用整数的位标记哪些响应式变量变脏，更新按位与判断
-tags: [前端开发/框架/Svelte]
+tags:
+  - 前端开发/框架/Svelte
 date-created: 2026-10-28
 date-modified: 2026-10-28
 content-type: atomic
 category: learning
 up: "[[Svelte]]"
+noteId: 1793326241306
 ---
 
 > Svelte（4 及以前）不在运行时记录「旧值」来判断变化，而是给每个响应式变量在编译期分配固定的一位：赋值即 `|=` 点灯，更新函数用一次 `&` 判断自己那一组依赖里有没有灯亮。

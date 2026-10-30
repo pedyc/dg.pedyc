@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-10-30.md",
+                "file": "01-META/Guide/本库指南.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-10-30"
+              "title": "本库指南"
             }
           },
           {
@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-10-27.md",
+                "file": "_templates/template_atomic.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-10-27"
+              "title": "template_atomic"
             }
           },
           {
@@ -146,7 +146,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "90-DIARY/2026-10-30.md",
+                "file": "01-META/Guide/本库指南.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -295,7 +295,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "90-DIARY/2026-10-30.md",
+                "file": "01-META/Guide/本库指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -351,34 +351,36 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "e89c1cd029b9e978",
+  "active": "60236dec7012791f",
   "lastOpenFiles": [
+    "01-META/Truth/atomic 设计.md",
     "30-RESOURCES/浏览器缓存与客户端存储体系.md",
-    "90-DIARY/2026-10-30.md",
-    "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
+    "30-RESOURCES/多级缓存示例.md",
+    "00-INBOX/文件名能否随内容变化，决定了它敢不敢用长期强缓存.md",
+    "50-ZETTELCASTEN/闭包捕获的是变量不是值，循环里的 var 函数全指向同一个.md",
+    "00-INBOX/缓存分层分的是失效判定权，不是存储介质.md",
+    "00-INBOX/选localStorage还是IndexedDB比较的应是同步阻塞而非容量.md",
+    "00-INBOX/只有ServiceWorker同时握有请求拦截与存储写入，离线策略因此只能写在它里面.md",
+    "30-RESOURCES/客户端存储.md",
+    "_templates/template_atomic.md",
     "90-DIARY/2026-10-27.md",
+    "_scripts/_tmp_rel2.py",
+    "_scripts/_tmp_rel.py",
+    "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
+    "30-RESOURCES/浏览器工作原理.md",
+    "60-BLOGS/前端缓存怎么分类.md",
+    "30-RESOURCES/HTTP缓存机制.md",
+    "30-RESOURCES/HTTP协商缓存.md",
+    "90-DIARY/2026-10-30.md",
     "_templates/template_source.md",
     "_templates/template_sub_project.md",
     "_templates/template_term.md",
     "_templates/template_week.md",
-    "_templates/template_atomic.md",
     "_templates/template_article.md",
     "_templates/template_area.md",
     "50-ZETTELCASTEN/「值不值得做」不能外包给 AI，事实性问题可以直接问.md",
     "50-ZETTELCASTEN/「能不能用一句话说清」不能当拆分判据，它是观点已成形的结果.md",
     "30-RESOURCES/原子笔记拆分标准.md",
-    "50-ZETTELCASTEN/QUIC只缩小阻塞粒度而不消除单流内的有序等待.md",
-    "00-INBOX/为什么不能用WebStorage代替Cookie？.md",
-    "_templates/template_question.md",
-    "_templates/template_project.md",
-    "_templates/template_person.md",
-    "30-RESOURCES/Cookie.md",
-    "90-DIARY/2026-10-28.md",
-    "90-DIARY/2026-10-29.md",
-    "30-RESOURCES/浏览器渲染流程.md",
-    "10-PROJECTS/P-Agent求职/DSH-Agent-Loop.md",
-    "40-ARCHIVE/HTTP3基于QUIC协议消除传输层队头阻塞 1.md",
-    "50-ZETTELCASTEN/闭包可以创建私有变量.md",
     "_scripts/_tmp_fix_titles.py",
     "_scripts/_tmp_titles.py",
     "_scripts/_tmp_map8.json",
@@ -387,8 +389,6 @@
     "_scripts/_tmp_map5.json",
     "_scripts/_tmp_map4.json",
     "_scripts/_tmp_map3.json",
-    "_scripts/_tmp_map2.json",
-    "_scripts/_tmp_map1.json",
     "_resources/2053a78bf0323938d7ebfbf1d8f40f59_MD5.webp",
     "_resources/1ff95cb0537c7ba6838f236942847399_MD5.webp",
     "_resources/efadd15e30f38de83b0311944b88285c_MD5.webp",

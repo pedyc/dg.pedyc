@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-META/Guide/本库指南.md",
+                "file": "01-META/Truth/笔记类型规范.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "本库指南"
+              "title": "笔记类型规范"
             }
           },
           {
@@ -146,7 +146,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "01-META/Guide/本库指南.md",
+                "file": "01-META/Truth/笔记类型规范.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -295,7 +295,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01-META/Guide/本库指南.md",
+                "file": "01-META/Truth/笔记类型规范.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -353,7 +353,10 @@
   },
   "active": "60236dec7012791f",
   "lastOpenFiles": [
+    "01-META/Guide/Design/atomic 设计依据.md",
+    "01-META/Guide/Design",
     "01-META/Truth/atomic 设计.md",
+    "01-META/Guide/本库指南.md",
     "30-RESOURCES/浏览器缓存与客户端存储体系.md",
     "30-RESOURCES/多级缓存示例.md",
     "00-INBOX/文件名能否随内容变化，决定了它敢不敢用长期强缓存.md",
@@ -379,8 +382,6 @@
     "_templates/template_article.md",
     "_templates/template_area.md",
     "50-ZETTELCASTEN/「值不值得做」不能外包给 AI，事实性问题可以直接问.md",
-    "50-ZETTELCASTEN/「能不能用一句话说清」不能当拆分判据，它是观点已成形的结果.md",
-    "30-RESOURCES/原子笔记拆分标准.md",
     "_scripts/_tmp_fix_titles.py",
     "_scripts/_tmp_titles.py",
     "_scripts/_tmp_map8.json",
@@ -388,7 +389,6 @@
     "_scripts/_tmp_map6.json",
     "_scripts/_tmp_map5.json",
     "_scripts/_tmp_map4.json",
-    "_scripts/_tmp_map3.json",
     "_resources/2053a78bf0323938d7ebfbf1d8f40f59_MD5.webp",
     "_resources/1ff95cb0537c7ba6838f236942847399_MD5.webp",
     "_resources/efadd15e30f38de83b0311944b88285c_MD5.webp",

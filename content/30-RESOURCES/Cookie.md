@@ -5,7 +5,7 @@ aliases: [C-Cookie, HTTP Cookie, 浏览器 Cookie]
 description: 服务端通过 Set-Cookie 写入、浏览器按键值存储、此后每次请求自动附带的 HTTP 状态管理机制；容量约 4KB，是唯一能随请求自动发送的客户端存储
 tags: [前端开发/浏览器, 前端开发/安全]
 date-created: 2026-10-27
-date-modified: 2026-10-27
+date-modified: 2026-10-31
 content-type: concept
 category: learning
 up: "[[HTTP]]"
@@ -17,20 +17,15 @@ up: "[[HTTP]]"
 
 **解决的核心痛点**：HTTP 是无状态协议，服务端凭什么判断「这两次请求来自同一个已登录用户」？让浏览器每次自动带上一个凭证，是最省事的答案。
 
----
-
-## 核心命题
+### 核心命题
 
 - [[Cookie 的特殊性在自动随请求发送，不在存储容量]]
-	- **原理**：写入在服务端（`Set-Cookie`）、读取也在服务端（`Cookie` 头），浏览器只做保管与附带，所以 Cookie 天生是「会话」而非「本地数据」
 - [[SameSite按站而非源判定是否附带Cookie]]
-	- **原理**：是否附带由「站」（scheme + 可注册域名）判定，比源更粗：兄弟子域互为跨源却同站，照样带
+- [[Cookie 有服务端可控的安全属性，而 WebStorage 没有]]
 
 > 两条命题合起来给出本页的范围：这里只回答「Cookie 在哪一步被写入、在哪一步被附带、判据是什么单位」。至于该给某个业务配哪些属性、token 该放 Cookie 还是 Header，属于策略侧，见 [[Web安全]]。
 
----
-
-## 运行机制
+### 运行机制
 
 一次往返分三段：服务端写、浏览器存、浏览器带。
 
@@ -49,7 +44,7 @@ graph TD
     G -->|同站，或 Lax 的顶层导航，或 None+Secure| H["写进 Cookie 请求头"]
 ```
 
-### 属性各自作用在哪一步
+#### 属性各自作用在哪一步
 
 | 属性 | 作用环节 | 省略时的默认行为 |
 |:---|:---|:---|
@@ -63,7 +58,7 @@ graph TD
 
 三个前缀不是装饰，是服务端自证：`__Secure-` 要求带 `Secure`；`__Host-` 要求 `Secure` + `Path=/` + 不带 `Domain`，把作用域钉死在单个主机上。
 
-### 三个容易记错的点
+#### 三个容易记错的点
 
 - **端口与 scheme 都不参与匹配**：`localhost:3000` 与 `localhost:8080` 共用同一批 Cookie；`http://example.com` 与 `https://example.com` 也共用（`Secure` 只拦发送，不拦存储）。两者只在 SameSite 的「站」判定里才有区别。
 - **`HttpOnly` 挡的是「读」，不是「带」**：它让 `document.cookie` 看不见该条，但该条照样随请求发出。这也是为什么它能防 XSS 偷凭证，却对 CSRF 毫无作用。
@@ -73,9 +68,7 @@ graph TD
 Set-Cookie: sid=abc123; Path=/; Max-Age=86400; Secure; HttpOnly; SameSite=Lax
 ```
 
----
-
-## 关键区别
+### 关键区别
 
 Cookie 与 Web Storage 常被当成同类，实际分的是「要不要跟着请求走」：
 
@@ -91,9 +84,7 @@ Cookie 与 Web Storage 常被当成同类，实际分的是「要不要跟着请
 
 所以「用 localStorage 存 token 更灵活」是把最贵的一层（`HttpOnly`）换成了最便宜的便利。四种方案的分工与取舍见 [[客户端存储]]，那一页不重复 Cookie 的机制。
 
----
-
-## 适用范围
+### 适用范围
 
 - ✅ **该用 Cookie**
 	- **会话标识**：需要服务端读、且希望浏览器自动携带的凭证
@@ -107,26 +98,28 @@ Cookie 与 Web Storage 常被当成同类，实际分的是「要不要跟着请
 	- **分区之后不再是全局身份**：`Partitioned` 把第三方 Cookie 绑到顶层站点，同一个嵌入方在两个站点下拿到的是两份不同的值
 	- **它无法证明请求是谁发起的**：请求头由浏览器代填，服务端拿到 Cookie 只能确认「这个浏览器持有凭证」，不能确认这次点击出自用户本人——[[CSRF]] 的根就在这里
 
----
+### 问题与流程
 
-## 演进
+#### FAQ
 
-| 时间 | 事件 |
-|:---|:---|
-| 1994 | Netscape 为购物车引入 Cookie，没有规范 |
-| 2011 | RFC 6265 收口，成为第一个正式标准 |
-| 2016 | `SameSite` 进入 6265bis 草案，此前跨站附带是默认行为 |
-| 2020-02 | Chrome 80 把 `SameSite` 缺省值改为 `Lax`，跨站附带从默认变成例外 |
-| 2024-01 | Chrome 对 1% 用户默认限制第三方 Cookie（作测试） |
-| 2024-07 / 2025-04 | Google 先后放弃「淘汰第三方 Cookie」与「独立授权提示」，改为保留用户在设置里自行管理 |
-| 2025-10-17 | Google 退役大部分 Privacy Sandbox API（Topics、Protected Audience、Attribution Reporting 等），只留 CHIPS、FedCM、Private State Tokens |
-| 2026-10 | RFC 10025（6265bis）处于 RFC Editor 最终审校，尚未发布；发布后废止 RFC 6265 |
+- [[为什么不能用WebStorage代替Cookie？]]
+
+### 演进
+
+| 时间                | 事件                                                                                                                      |
+| :---------------- | :---------------------------------------------------------------------------------------------------------------------- |
+| 1994              | Netscape 为购物车引入 Cookie，没有规范                                                                                             |
+| 2011              | RFC 6265 收口，成为第一个正式标准                                                                                                   |
+| 2016              | `SameSite` 进入 6265bis 草案，此前跨站附带是默认行为                                                                                    |
+| 2020-02           | Chrome 80 把 `SameSite` 缺省值改为 `Lax`，跨站附带从默认变成例外                                                                          |
+| 2024-01           | Chrome 对 1% 用户默认限制第三方 Cookie（作测试）                                                                                       |
+| 2024-07 / 2025-04 | Google 先后放弃「淘汰第三方 Cookie」与「独立授权提示」，改为保留用户在设置里自行管理                                                                       |
+| 2025-10-17        | Google 退役大部分 Privacy Sandbox API（Topics、Protected Audience、Attribution Reporting 等），只留 CHIPS、FedCM、Private State Tokens |
+| 2026-10           | RFC 10025（6265bis）处于 RFC Editor 最终审校，尚未发布；发布后废止 RFC 6265                                                                |
 
 第三方 Cookie 的现状因此是分裂的：Safari 自 2020 年起默认阻断，Firefox 自 2019 年 ETP 起阻断、2022 年改为按顶层站点分区，Chrome 至今默认启用。「Chrome 要淘汰第三方 Cookie」这句话在 2024 年 7 月之后已经过期，写方案时不能再按它做规划。
 
----
-
-## 知识图谱
+### 知识图谱
 
 - **上位**：[[客户端存储]] — Cookie 是其中唯一与网络请求绑定的一个
 - **下位**：

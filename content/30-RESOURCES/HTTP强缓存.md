@@ -5,7 +5,7 @@ aliases: [C-HTTP强缓存, 强缓存, 本地强缓存]
 description: "中文教材对本地副本新鲜时直出、不发请求这一段行为的命名；规范里它只是 RFC 9111 §4 复用判定的结果"
 tags: [计算机网络/HTTP, 计算机网络/缓存]
 date-created: 2026-10-28
-date-modified: 2026-10-28
+date-modified: 2026-10-31
 content-type: concept
 category: learning
 up: "[[HTTP缓存机制]]"
@@ -142,7 +142,7 @@ flowchart TD
 
 > 本节同样只留标题。两条分工是「按规范配好」与「配好了却没生效时怎么查」，不是同一件事的两个版本。
 
-- [[SOP-前端静态资源多级缓存配置规范]] — 区分哈希资产与 HTML 入口的 Nginx 缓存策略（已有两篇 concept 引用，仍是红链）
+- [[前端静态资源多级缓存配置规范]] — 区分哈希资产与 HTML 入口的 Nginx 缓存策略（已有两篇 concept 引用，仍是红链）
 - [[SOP-排查强缓存不生效的定位流程]] — 按复用期的五道门逐条排除：请求指令 → `Vary` → 响应 `no-cache` → 新鲜度计算 → 是否被中间件改写
 
 ### 知识图谱

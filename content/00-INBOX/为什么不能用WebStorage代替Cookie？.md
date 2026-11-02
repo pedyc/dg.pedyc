@@ -8,7 +8,7 @@ content-type: question
 category: learning
 up: "[[Cookie]]"
 date-created: 2026-10-27
-date-modified: 2026-10-29
+date-modified: 2026-10-31
 ---
 
 ## 问题
@@ -33,7 +33,7 @@ HTTP 是基于请求-响应模型的无状态协议。服务器要识别"两次�
 - **安全风险**：手动附加凭证的代码一旦遗漏（如请求了第三方 API），凭证就会泄露。[](https://wiki.owasp.org/images/8/8d/20181101_-_Common_API_security_pitfalls_%28OWASP%29_small.pdf#2#2#2)
 - **无法支持某些关键场景**：例如，**图片、CSS 等静态资源请求**无法用 JS 干预，如果服务器需要对这些资源做权限校验（如私有图片），只有 Cookie 能自动携带凭证。
 
-### 答案 2：Cookie有服务端可控的安全属性
+### 答案 2：[[Cookie 有服务端可控的安全属性，而 WebStorage 没有]]
 
 Cookie 拥有 `localStorage`/`sessionStorage` 根本不具备的、由**服务端设置**的安全防线：
 
@@ -60,7 +60,7 @@ Cookie和Web Storage的设计目标完全不同，[[Cookie 的特殊性在自动
 
 **Cookie 负责"让服务器认识你"，Storage 负责"在本地记住一些事"**。两者定位清晰，不能互相替代。
 
-## 知识图谱
+## 收敛
 
-
-- [[Web Storage]]
+- [[Cookie 的特殊性在自动随请求发送，不在存储容量]]
+- [[Cookie 有服务端可控的安全属性，而 WebStorage 没有]]

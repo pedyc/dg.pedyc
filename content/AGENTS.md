@@ -28,6 +28,7 @@
 |:---|:---|
 | 工作流（ingest / query / lint / sync / inbox-review） | `Guide/llm-wiki-schema.md` |
 | 判形态（14 种 content-type）、atomic 正文结构、名字该不该聚合 | `Truth/笔记类型规范` |
+| 写 concept 时不知怎么组织 atomic（要一篇可对照的范文） | `Guide/概念与原子笔记的组织范例` |
 | 判 atomic 标题够不够格（主语可指认 / 可证伪 / 有增量） | `.claude/agents/atomic-title-reviewer.md`（subagent，只判不改） |
 | 判归属（目录、20-AREAS 边界、40-ARCHIVE） | `Truth/本库目录结构` |
 | 字段定义、`up` 写法、`uid`、信源卡 | `Truth/元数据规范` |

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
+                "file": "30-RESOURCES/前端构建与打包.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Agent求职"
+              "title": "前端构建与打包"
+            }
+          },
+          {
+            "id": "de006b92ae8d073c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "30-RESOURCES/Webpack 和 Vite 的核心构建理念有什么不同？为什么 Vite 启动更快？.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Webpack 和 Vite 的核心构建理念有什么不同？为什么 Vite 启动更快？"
             }
           }
         ]
@@ -73,7 +97,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
+                "file": "30-RESOURCES/前端构建与打包.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -222,7 +246,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
+                "file": "30-RESOURCES/前端构建与打包.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -278,9 +302,15 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "60236dec7012791f",
+  "active": "e89c1cd029b9e978",
   "lastOpenFiles": [
+    "30-RESOURCES/Webpack 和 Vite 的核心构建理念有什么不同？为什么 Vite 启动更快？.md",
+    "30-RESOURCES/前端构建与打包.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
+    "30-RESOURCES/前端监控.md",
+    "30-RESOURCES/埋点.md",
+    "30-RESOURCES/持续集成与持续部署.md",
+    "10-PROJECTS/P-Agent求职/Agent求职.md",
     "10-PROJECTS/P-前端工程学习专项",
     "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
     "20-AREAS/A-前端/前端工程.md",
@@ -301,12 +331,6 @@
     "30-RESOURCES/为什么不能用WebStorage代替Cookie？.md",
     "00-INBOX/未命名.md",
     "30-RESOURCES/WebSocket.md",
-    "60-BLOGS/前端缓存怎么分类.md",
-    "30-RESOURCES/HTTP缓存机制.md",
-    "01-META/Guide/概念与原子笔记的组织范例.md",
-    "30-RESOURCES/浏览器缓存与客户端存储体系.md",
-    "50-ZETTELCASTEN/AI提问质量取决于上下文结构化程度.md",
-    "30-RESOURCES/知识内化工作流.md",
     "01-META/Guide/Design",
     "_scripts/_tmp_rel2.py",
     "_scripts/_tmp_rel.py",

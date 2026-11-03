@@ -1,135 +1,127 @@
 ---
-uid: "202608270523"
+uid: "20260827052300"
 title: HTTP协商缓存
-aliases: [协商缓存, 对比缓存, HTTP Conditional Requests, ETag与Last-Modified]
-description: "客户端在强缓存失效后携带资源验证标识（ETag / Last-Modified）向服务器发起条件请求，由服务器决策返回 304 Not Modified 复用本地缓存或 200 OK 传输最新资源的网络优化机制。"
-tags: [计算机网络, HTTP, 性能优化, 浏览器缓存]
+aliases: [C-HTTP协商缓存, 协商缓存, 对比缓存, HTTP Conditional Requests, ETag与Last-Modified]
+description: "客户端拿本地副本的验证器向源站问「还能用吗」，未变更即 304：省下的是响应体，一次往返照付"
+tags: [计算机网络/HTTP, 计算机网络/缓存]
 date-created: 2026-08-27
-date-modified: 2026-08-27
-status: fleeting
+date-modified: 2026-11-03
 content-type: concept
 up: "[[HTTP缓存机制]]"
 ---
 
 ## 概念：HTTP协商缓存
 
-> **HTTP协商缓存（Conditional Requests）** 是指当浏览器本地强缓存（`Cache-Control` / `Expires`）失效或被显式绕过时，客户端携带该资源的验证元数据（`If-None-Match` / `If-Modified-Since`）向源服务器发起条件请求；服务器校验资源若未发生实质变更，则返回 **304 Not Modified**（无响应体），通知客户端安全复用本地缓存副本的传输优化机制。
+> 协商缓存指这样一个往返：客户端手里有一份副本，把它携带的验证器（`ETag` 对 `If-None-Match`，`Last-Modified` 对 `If-Modified-Since`）发给源站，由源站裁决这份副本还能不能用。未变更则回 `304 Not Modified`——没有响应体，只有头，客户端复用本地副本；已变更则回 `200 OK` 与全量内容。
 
-**解决的核心痛点**：避免客户端因强缓存过期而盲目拉取未发生变更的静态资源，消除大体积资源重复传输所消耗的网络带宽与首屏延迟，同时保证数据更新时客户端能近实时获取最新版本。
+**解决的核心痛点**：强缓存一旦过期，客户端就不再知道副本是否还成立。没有这一层，唯一的选择是回源重下整份资源；有了它，一个大概率没变的副本只需付一次「头对头」的往返，就能把几 MB 的重复传输压到几百字节。
 
----
+**它是一层条件请求语义，不是一个缓存档位**：3==04 不是「命中」的另一种形式，而是「验证通过」这一个结论==。副本能不能用本来由 [[新鲜度]] 判定，这里只是把判定权临时交回源站。下面四条命题都挂在这个交接上。
 
 ### 核心命题
 
-> 核心命题引用 atomic 笔记（陈述句观点），每个命题是一句话洞见
-
+- [[强缓存省掉整个请求，协商缓存省掉响应体]]
 - [[ETag的校验优先级严格高于Last-Modified以保证内容层面的强一致性]]
-	- **原理**：依据 RFC 9110 / RFC 7232 规范，当请求头同时存在 `If-None-Match` 和 `If-Modified-Since` 时，服务器必须优先评估 `If-None-Match`；只要 ETag 不匹配，立即判定缓存失效返回 200，忽略时间戳判断。
 - [[Last-Modified存在秒级精度截断与伪变更误判双重缺陷]]
-	- **原理**：HTTP 时间戳格式（GMT）最小精度为 1 秒，无法感知 1 秒内的多次高频写操作；同时文件重新构建或移动触发修改时间变动但内容不变时，会导致无效的 200 重复下载。
 - [[分布式集群环境下默认ETag计算策略容易引发协商缓存击穿]]
-	- **原理**：Nginx/Apache 等 Web 服务器默认生成的 ETag 包含底层文件系统的 `Inode` 编号；在多台负载均衡节点上同一文件的 Inode 往往不同，导致跨节点轮询请求时 ETag 无法命中。
 
----
+四条的顺序是从收益退回前提。第一条先划清这一档到底省了什么（响应体，不是往返），后三条都在回答「这次往返怎么会白付」：第二条给裁决次序，第三条给这个次序的理由（时间戳只有秒级，还会被伪变更触发，因此只能当兜底），第四条把同一件事从协议换到部署视角。第三条是第二条的支撑；第四条则是另一类失败——它与协议实现得对不对无关，只与部署得齐不齐有关。
 
 ### 运行机制
 
-客户端与服务器之间的条件请求与协商验证遵循自上而下的优先级裁决链路：
+一次条件请求只有两条可能的裁决路径，规范把 `If-None-Match` 放在前面：
 
 ```mermaid
 flowchart TD
-    Start([强缓存失效 / 强制协商]) --> CheckHeaders{请求头包含验证标识?}
-    CheckHeaders -- 无标识 --> Fetch200[发起普通请求 -> 200 OK 返回完整资源]
-    
-    CheckHeaders -- 携带 If-None-Match 或 If-Modified-Since --> CheckETag{存在 If-None-Match ?}
-    
-    %% ETag 路径（高优先级）
-    CheckETag -- 是 --> ValidateETag{服务器资源 ETag 匹配?}
-    ValidateETag -- 不匹配 (内容变更) --> Resp200[200 OK + 返回新资源与新标头]
-    ValidateETag -- 匹配 (内容未变) --> CheckBoth{同时存在 If-Modified-Since ?}
-    
-    CheckBoth -- 是 --> ValidateTime{修改时间未变?}
-    CheckBoth -- 否 --> Resp304[304 Not Modified 响应头无 Body]
-    ValidateTime -- 是 --> Resp304
-    ValidateTime -- 否 / 规范允许忽略时间 --> Resp304
-    
-    %% 仅 Last-Modified 路径（低优先级兜底）
-    CheckETag -- 否 (仅 If-Modified-Since) --> ValidateTimeOnly{资源修改时间 > If-Modified-Since ?}
-    ValidateTimeOnly -- 是 (文件已更新) --> Resp200
-    ValidateTimeOnly -- 否 (未修改) --> Resp304
-````
+    Req([请求携带条件头]) --> Has{带 If-None-Match?}
+    Has -- 是 --> Match{源站当前 ETag 与之一致?}
+    Has -- 否 --> Has2{带 If-Modified-Since?}
+    Match -- 一致 --> N304[304 Not Modified<br/>无 body，按本次响应头刷新本地元数据]
+    Match -- 不一致 --> N200[200 OK<br/>回全量 body]
+    Has2 -- 是 --> Mod{资源在 since 之后改过?}
+    Has2 -- 否 --> Plain[200 OK，无条件可验，等同普通请求]
+    Mod -- 未改 --> S304[304 Not Modified]
+    Mod -- 已改 --> S200[200 OK + 全量 body]
+```
 
-1. **初次请求阶段**：服务器响应 `200 OK`，并在 Response Headers 中附加 `ETag: "hash-or-version"` 与 `Last-Modified: <GMT时间戳>`，客户端将响应体与两类元数据存入本地缓存。
-2. **二次验证阶段**：
+图里没有「两个都验一遍」的分支，因为规范要求的就是忽略它：请求同时带 `If-None-Match` 与 `If-Modified-Since` 时，源站必须以 `If-None-Match` 的结果为准，不再去评估后者（RFC 9110 §13.1.3）。「优先级」三个字的实际含义是这个，而不是「先验一个再验一个、两个都过才返回 304」。
 
-		- 客户端在 Request Headers 中自动将 `ETag` 转换为 `If-None-Match`，将 `Last-Modified` 转换为 `If-Modified-Since`。
+三个容易被漏掉的细节：
 
-		- **优先级决策**：服务器端优先比对 `If-None-Match`。若 ETag 一致，即使某些系统判定修改时间有微小差异，仍直接返回 `304 Not Modified`（约 1KB 极小响应头）。若 ETag 发生变化，直接中断后续比对并返回 `200 OK`。
+1. 304 不是空响应。`Cache-Control`、`ETag`、`Date`、`Vary` 都可能在这次响应里出现，客户端据此刷新本地副本的元数据——新的 `Date` 把 `current_age` 归零，副本于是重新变新鲜。这就是「一次 304 顺带给强缓存续了命」；漏掉这一环，会以为协商完还得再回源一次。
+2. 强验证器比字节，弱验证器比语义。`W/` 前缀表示「语义等价即可」，所以动态压缩会按编码把同一份内容分出多个 ETag 版本，CDN 也常把源站的强 ETag 降为弱 ETag。
+3. 这一档的收益与响应体大小成正比。一两个 KB 的小文件，304 的等待时间可能比直接 200 还长——往返还在，服务端仍要算一次哈希。
 
 ### 关键区别
 
-|**维度**|**[[ETag]]（实体标签）**|**[[Last-Modified]]（最后修改时间）**|
-|---|---|---|
-|**本质定位**|资源的**内容指纹 / 版本标识**（Hash 或版本号）|资源的**时间元数据**（GMT 绝对时间戳）|
-|**请求映射头**|`If-None-Match`（或 `If-Match` 用于并发更新锁）|`If-Modified-Since`（或 `If-Unmodified-Since`）|
-|**精度粒度**|**精确到字节级**（强 ETag）或语义级（弱 ETag `W/`）|**秒级（1s）**，1 秒以内的修改无法感知|
-|**RFC 优先级**|**最高**（RFC 9110 规定其优先级高于时间戳验证）|**次之**（通常作为降级兜底方案）|
-|**服务器开销**|需读取文件或哈希计算（CPU 开销相对较高）|直接读取文件系统 `mtime` 属性（极低 I/O 与 CPU 消耗）|
-|**分布式一致性**|需配置剥离 Inode（仅保留 mtime + size 或内容哈希）|只依赖各节点时钟同步（NTP 对齐即可）|
+协商缓存内部真正的分岔是两种验证器，而不是「协商缓存 vs 强缓存」——后者是 [[HTTP缓存机制]] 那张表，这里不重复：
+
+| 维度 | [[ETag]]（实体标签） | [[Last-Modified]]（最后修改时间） |
+|:--|:--|:--|
+| 是什么 | 内容指纹，字节或语义层面的版本标识 | 时间元数据，GMT 绝对时间戳 |
+| 请求映射头 | `If-None-Match` / `If-Match` | `If-Modified-Since` / `If-Unmodified-Since` |
+| 精度 | 字节级（强）或语义级（弱，`W/`） | 秒级，1 秒内的多次写看不见 |
+| 规范地位 | 同时在场时以它为准 | 次之，兜底 |
+| 服务端开销 | 要读文件或算哈希，用 CPU 换精度 | 读 `mtime`，几乎零成本 |
+| 集群一致性 | 默认策略含 inode，节点间天然不同 | 靠 NTP 对齐时钟即可 |
+
+`If-Match` 与 `If-Unmodified-Since` 是同一对验证器的另一副面孔：它们服务的是并发写（乐观锁），不是缓存。条件请求这个语义比缓存宽，本页只取缓存那一半。
 
 ### 适用范围
 
-- ✅ **适用场景**
-	- **频繁迭代但依赖缓存的静态入口**：如 SPA 单页应用的 `index.html`，配置 `Cache-Control: no-cache` 强制每次走协商缓存，既能秒级感知发布上线，又能在未更新时复用本地 HTML。
-	- **动态接口响应**：服务端返回大体积 JSON 报文时，可通过对响应体进行 MD5 计算生成 ETag，实现 304 节省接口带宽。
-- ⛔ **误用**
-	- **在带 Content-Hash 的打包资源上单独依赖协商缓存**：如 Webpack/Vite 产出的 `app.[contenthash].js`，此类资源应使用 `Cache-Control: max-age=31536000, immutable` 走极致强缓存，若配置为协商缓存将徒增大量无意义的 304 网络往返（RTT）。
-	- **高并发大文件实时计算强 ETag**：若每个请求都对几十兆的动态流式文件计算 SHA-256，会造成网关 CPU 瞬间过载击穿。
-- **失效边界**
-	- **跨源代理缓存剥离**：部分反向代理中间件可能会抹除自定义 ETag 或篡改时间戳，导致协商失效。
-	- **CDN 边缘节点弱 ETag 降级**：当开启 Gzip/Brotli 动态压缩时，CDN 边缘可能将源站的强 ETag 自动转为弱 ETag（`W/"…"`），若下游客户端逻辑硬匹配强 ETag 则会误判为未命中。
+- ✅ 适用场景
+	- 频繁发布、又必须秒级感知的入口文件：SPA 的 `index.html` 配 `Cache-Control: no-cache`，未变更时 304 复用本地 HTML，变更时立刻拿到新版本。
+	- 大体积、变更不频繁的动态响应：对 JSON 或报表按内容算 ETag，重复请求由 304 省掉传输。判据是响应体够大、算哈希的成本低于传输成本。
+	- 接不上构建管线的老系统：文件名带不了哈希，就没有命名式失效可用，协商缓存是唯一还能感知更新的手段。
+- ⛔ 误用
+	- 带内容哈希的资源又配协商缓存：`app.[contenthash].js` 本该 `max-age=31536000, immutable`，配成协商缓存等于每次刷新都白付一次往返。
+	- 高并发下对超大响应实时算强 ETag：每个请求都对几十 MB 的内容算 SHA-256，会把网关 CPU 打满，换来的是本就不多的带宽节省。
+	- 把 `no-cache` 当成「不缓存」：它恰恰是要存下来，只是每次都要验证。真正的「不存」是 `no-store`。
+- 失效边界
+	- 省带宽不等于省时间：在 RTT 主导的弱网里，304 与 200 的首字节时间几乎一样，用户感知不到改善。要救首屏，得靠强缓存或不发请求。
+	- 验证器被中间层改写：反向代理抹掉自定义 ETag、动态压缩改变 ETag、CDN 把强降弱，都会让本可复用的请求落空，而客户端侧看不出来。
+	- 时钟与精度不受控：`Last-Modified` 的秒级截断与 NTP 偏差、默认 ETag 里的 inode，都是部署环境的属性，协议层无法纠正。
+	- 服务端要真的会算：不少框架默认不发 `ETag`，或只拼一个固定值；没有可比的验证器，条件请求根本不会发生。
 
 ### 批判
 
-- **外部批判**
-	- **RTT 往返时延代价（Web 性能学派观点）**：协商缓存虽然省下了下载 Response Body 的带宽，但仍无法消除建立 TCP/TLS 连接和一次完整的往返时延（1 RTT）。在移动弱网（高 RTT）下，304 的等待白屏时间与 200 几乎没有质的差距。
-	- **现代工程构建体系的降维替代**：现代前端构建工具通过 AST 分析与 Content-Hash，已经将静态资源的失效控制完全移交至应用层（URL 指纹），强缓存 + 覆盖式发布的组合使得针对静态 JS/CSS 的协商缓存变得边缘化。
-- **内在张力**
-	- **计算精确性与网关性能的权衡**：强 ETag 保证 100% 准确但消耗计算资源；Last-Modified 开销低但存在秒级盲区与构建时间抖动；弱 ETag 虽折中了性能但牺牲了字节级严格一致性。
+- 外部批判
+	- 省带宽的收益正在被传输层吃掉：HTTP/2 头部压缩之后，一次 304 的开销主要落在 RTT 而不是字节上。在 RTT 敏感的场景用协商缓存救首屏，是选错了工具。
+	- 现代构建体系把它挤到了边缘：内容哈希加 URL 指纹把失效控制上移到构建期，静态资源一旦落进这一档就被视为配置失误。真正还依赖它的，只剩入口文件、API 响应和接不上构建管线的老系统。
+- 内在张力
+	- 精确性与开销反向：强 ETag 保证字节级一致但要算哈希，`Last-Modified` 几乎免费却会误判，弱 ETag 折中而放弃严格一致。三者之间没有免费的中间点。
+	- 一致性责任被推给部署：协议只要求「验证器能代表内容」，没说它怎么生成。于是同一份规则在单机上成立、在集群上失效，而失败的形态是命中率缓慢下降——不报错，只在成本报表里显形。
+	- 304 的语义依赖客户端守规矩：「顺带刷新新鲜度」被写进规范却不受实现约束，同一份配置在不同客户端上的实际效果可以不同。
 
-### FAQ
+### 问题与流程
 
-> 与本概念相关的开放性问题，先理解问题（发散），再看标准流程（收敛）
-
-- [[为什么浏览器按F5刷新和Ctrl+F5强制刷新时协商缓存的表现完全不同？]]
-- [[Nginx中开启gzip压缩后为什么ETag会自动加上W前缀变成弱验证？]]
-- [[大文件分片断点续传时If-Range是如何与ETag协同工作的？]]
-
-### SOP
-
-> 与本概念相关的标准操作流程，是 FAQ 中问题经过实践验证后的收敛成果
-
-- [[前端静态资源多级缓存配置规范]] — 区分 Hash 资产（强缓存）与入口 HTML（协商缓存）的 Nginx 配置最佳实践
-- [[SOP-分布式集群Nginx关闭Inode避免ETag击穿调优]] — 针对负载均衡后端节点统一 `etag on` 与 `etag_format` 调优
+- 相关问题
+	- [[为什么浏览器按F5刷新和Ctrl+F5强制刷新时协商缓存的表现完全不同？]]（待写）— 请求侧指令与验证器的两种改法
+	- [[Nginx中开启gzip压缩后为什么ETag会自动加上W前缀变成弱验证？]]（待写）— 编码参与内容哈希，校验范围因此收窄
+	- [[大文件分片断点续传时If-Range是如何与ETag协同工作的？]]（待写）— 范围请求要求验证器可比到字节
+- 相关流程
+	- [[前端静态资源多级缓存配置规范]] — 哈希资产走强缓存、入口 HTML 走协商缓存的 Nginx 编排
+	- [[SOP-分布式集群Nginx关闭Inode避免ETag击穿调优]]（待写）— 统一后端节点的 ETag 生成口径，让验证器回到全局事实
 
 ### 知识图谱
 
-> 知识图谱链接 term（术语定义）和相关 concept，建立概念关系网络
-
-- **上位**：[[HTTP缓存机制]] — 客户端与服务端协同的资源缓存体系
-- **下位**：
-	- [[ETag]] — 实体标签与强弱验证器原理
-	- [[Last-Modified]] — 最后修改时间戳机制
-	- [[304 Not Modified]] — 资源未修改的轻量级状态码
-	- [[If-None-Match]] — 基于 ETag 的条件请求头
-	- [[If-Modified-Since]] — 基于时间戳的条件请求头
-- **并列**：
-	- [[HTTP强缓存]] — 不与服务器通信、直接由浏览器拦截的本地缓存机制（Cache-Control / Expires）
-- **相关**：
-	- [[Cache-Control: no-cache]] — 跳过本地强缓存、强制向服务器发起协商验证的指令
-	- [[Inode]] — 影响 Linux 文件系统默认 ETag 计算的核心元数据
-	- [[Content-Hash]] — 工程化构建阶段直接将内容哈希植入文件名的方案
-- **外部资料**
-	- RFC 9110: HTTP Semantics - Section 8.8 (Conditional Requests)
-	- RFC 7232: Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests
-	- MDN Web Docs: _HTTP Conditional Requests & Cache-Control_
+- 上位：[[HTTP缓存机制]] — 协商缓存是它复用判定失败后的那一步
+- 下位：
+	- [[ETag]]（待写）— 内容指纹式验证器，强弱两档
+	- [[Last-Modified]]（待写）— 时间戳式验证器，秒级精度
+	- [[304 Not Modified]]（待写）— 验证通过的响应形态，无 body 有头
+- 并列：
+	- [[HTTP强缓存]] — 同一个「要不要发请求」问题的另一侧解法
+- 相关：
+	- [[新鲜度]] — 强缓存那一侧的判定式，304 之后靠新的 `Date` 重新起算
+	- [[If-None-Match]]（待写）— 条件请求头，携带 ETag 的那一半
+	- [[If-Modified-Since]]（待写）— 条件请求头，携带时间戳的那一半
+	- [[Cache-Control]]（待写）— `no-cache` 与 `must-revalidate` 的载体
+	- [[Content-Hash]] — 把失效控制上移到构建期的那个替代方案
+	- [[Inode]]（待写）— 默认 ETag 在集群上不一致的根源
+	- [[RTT]] — 协商缓存省不掉的那个往返
+- 外部资料
+	- [RFC 9110 §13 Conditional Requests](https://www.rfc-editor.org/rfc/rfc9110#name-conditional-requests) — 优先级与求值顺序的规范原文
+	- [RFC 9111 §4.3 Validation](https://www.rfc-editor.org/rfc/rfc9111#name-validation) — 304 之后缓存如何更新元数据
+	- [MDN: ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag) — 强弱验证器与生成策略
+	- [Nginx: etag 指令](https://nginx.org/en/docs/http/ngx_http_core_module.html#etag) — 默认 ETag 的实现细节

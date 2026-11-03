@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
+                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,47 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "缓存机制学习专项"
-            }
-          },
-          {
-            "id": "ef222d45b0e599b2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "90-DIARY/2026-11-03.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2026-11-03"
-            }
-          },
-          {
-            "id": "5039cc34018e11ca",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.15.0"
-              },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.15.0"
+              "title": "Agent求职"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,6 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -258,6 +222,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "10-PROJECTS/P-Agent求职/Agent求职.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -313,34 +278,35 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "5039cc34018e11ca",
+  "active": "60236dec7012791f",
   "lastOpenFiles": [
-    "30-RESOURCES/HTTP缓存机制.md",
-    "90-DIARY/2026-11-03.md",
-    "01-META/Guide/概念与原子笔记的组织范例.md",
-    "50-ZETTELCASTEN/强缓存省掉整个请求，协商缓存省掉响应体.md",
+    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
+    "10-PROJECTS/P-前端工程学习专项",
     "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
-    "30-RESOURCES/浏览器缓存与客户端存储体系.md",
+    "20-AREAS/A-前端/前端工程.md",
+    "20-AREAS/A-前端/前端开发.md",
     "30-RESOURCES/前端静态资源多级缓存配置规范.md",
-    "90-DIARY/2026-11-02.md",
+    "30-RESOURCES/HTTP协商缓存.md",
     "30-RESOURCES/HTTP强缓存.md",
+    "90-DIARY/2026-10-31.md",
+    "90-DIARY/2026-11-03.md",
+    "01-META/Truth/笔记类型规范.md",
+    "30-RESOURCES/HTTP.md",
+    "90-DIARY/2026-11-02.md",
+    "50-ZETTELCASTEN/强缓存省掉整个请求，协商缓存省掉响应体.md",
+    "50-ZETTELCASTEN/文件名能否随内容变化，决定了它敢不敢用长期强缓存.md",
+    "00-INBOX/Virtual DOM is pure overhead.md",
+    "30-RESOURCES/只有ServiceWorker同时握有请求拦截与存储写入，离线策略因此只能写在它里面.md",
+    "30-RESOURCES/选localStorage还是IndexedDB比较的应是同步阻塞而非容量.md",
+    "30-RESOURCES/为什么不能用WebStorage代替Cookie？.md",
+    "00-INBOX/未命名.md",
+    "30-RESOURCES/WebSocket.md",
+    "60-BLOGS/前端缓存怎么分类.md",
+    "30-RESOURCES/HTTP缓存机制.md",
+    "01-META/Guide/概念与原子笔记的组织范例.md",
+    "30-RESOURCES/浏览器缓存与客户端存储体系.md",
     "50-ZETTELCASTEN/AI提问质量取决于上下文结构化程度.md",
     "30-RESOURCES/知识内化工作流.md",
-    "50-ZETTELCASTEN/reactive 与 effect 是职责二分，不是两个可替换的模块.md",
-    "50-ZETTELCASTEN/按可行动性分类只在自己用的库里成立，公共档案仍需主题法.md",
-    "30-RESOURCES/知识组织.md",
-    "50-ZETTELCASTEN/Agent 的工具执行权在 Runtime 手中，不在 LLM.md",
-    "50-ZETTELCASTEN/用户态QUIC在高并发下的CPU开销高于内核TCP.md",
-    "50-ZETTELCASTEN/权力的日常形态是共识，终极担保是暴力.md",
-    "30-RESOURCES/政治经济.md",
-    "50-ZETTELCASTEN/缓存派生值不算存状态，只有独立生命周期的数据才是真状态.md",
-    "50-ZETTELCASTEN/靠使用过程自然清理管不到冷门领域，定期审查仍要保留.md",
-    "30-RESOURCES/客户端存储.md",
-    "30-RESOURCES/Cookie.md",
-    "50-ZETTELCASTEN/Cookie 有服务端可控的安全属性，而 WebStorage 没有.md",
-    "90-DIARY/2026-10-31.md",
-    "_templates/template_concept.md",
-    "00-INBOX/为什么不能用WebStorage代替Cookie？.md",
     "01-META/Guide/Design",
     "_scripts/_tmp_rel2.py",
     "_scripts/_tmp_rel.py",
@@ -350,7 +316,6 @@
     "_scripts/_tmp_map7.json",
     "_scripts/_tmp_map6.json",
     "_scripts/_tmp_map5.json",
-    "_scripts/_tmp_map4.json",
     "_resources/2053a78bf0323938d7ebfbf1d8f40f59_MD5.webp",
     "_resources/1ff95cb0537c7ba6838f236942847399_MD5.webp",
     "_resources/efadd15e30f38de83b0311944b88285c_MD5.webp",

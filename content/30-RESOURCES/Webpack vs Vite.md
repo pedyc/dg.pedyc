@@ -9,7 +9,7 @@ date-modified: 2026-08-18
 status: active
 comparison: [Webpack, Vite]
 content-type: comparison
-up: "[[前端工程]]"
+up: "[[前端构建与打包]]"
 related: ["[[前端工程]]", "[[T-Rspack]]"]
 ---
 

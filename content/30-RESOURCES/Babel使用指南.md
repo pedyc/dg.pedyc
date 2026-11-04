@@ -8,7 +8,7 @@ date-created: 2026-05-27
 date-modified: 2026-05-27
 status: active
 content-type: sop
-up: "[[前端工程]]"
+up: "[[前端构建与打包]]"
 ---
 
 ## SOP：Babel 使用指南

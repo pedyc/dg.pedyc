@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/前端构建与打包.md",
+                "file": "30-RESOURCES/AI First.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端构建与打包"
+              "title": "AI First"
             }
           },
           {
@@ -97,7 +97,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/前端构建与打包.md",
+                "file": "30-RESOURCES/AI First.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -246,7 +246,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "30-RESOURCES/前端构建与打包.md",
+                "file": "30-RESOURCES/AI First.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -304,33 +304,33 @@
   },
   "active": "e89c1cd029b9e978",
   "lastOpenFiles": [
-    "30-RESOURCES/Webpack 和 Vite 的核心构建理念有什么不同？为什么 Vite 启动更快？.md",
+    "30-RESOURCES/软件工程.md",
+    "30-RESOURCES/DevOps.md",
+    "99-ASSETS/copilot/system-prompts/Obsidian Smart Librarian.md",
+    "30-RESOURCES/GitHub Actions.md",
+    "30-RESOURCES/持续集成与持续部署.md",
+    "30-RESOURCES/CI-CD流程.md",
+    "20-AREAS/A-前端/前端工程.md",
+    "30-RESOURCES/前端质量闸门.md",
+    "30-RESOURCES/Playwright.md",
+    "30-RESOURCES/版本控制与协作流程.md",
+    "30-RESOURCES/代码审查流程.md",
     "30-RESOURCES/前端构建与打包.md",
+    "30-RESOURCES/前端工程师能力地图.md",
+    "30-RESOURCES/前端交付与观测.md",
+    "30-RESOURCES/Webpack 和 Vite 的核心构建理念有什么不同？为什么 Vite 启动更快？.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
     "30-RESOURCES/前端监控.md",
     "30-RESOURCES/埋点.md",
-    "30-RESOURCES/持续集成与持续部署.md",
     "10-PROJECTS/P-Agent求职/Agent求职.md",
     "10-PROJECTS/P-前端工程学习专项",
     "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
-    "20-AREAS/A-前端/前端工程.md",
     "20-AREAS/A-前端/前端开发.md",
     "30-RESOURCES/前端静态资源多级缓存配置规范.md",
     "30-RESOURCES/HTTP协商缓存.md",
     "30-RESOURCES/HTTP强缓存.md",
     "90-DIARY/2026-10-31.md",
     "90-DIARY/2026-11-03.md",
-    "01-META/Truth/笔记类型规范.md",
-    "30-RESOURCES/HTTP.md",
-    "90-DIARY/2026-11-02.md",
-    "50-ZETTELCASTEN/强缓存省掉整个请求，协商缓存省掉响应体.md",
-    "50-ZETTELCASTEN/文件名能否随内容变化，决定了它敢不敢用长期强缓存.md",
-    "00-INBOX/Virtual DOM is pure overhead.md",
-    "30-RESOURCES/只有ServiceWorker同时握有请求拦截与存储写入，离线策略因此只能写在它里面.md",
-    "30-RESOURCES/选localStorage还是IndexedDB比较的应是同步阻塞而非容量.md",
-    "30-RESOURCES/为什么不能用WebStorage代替Cookie？.md",
-    "00-INBOX/未命名.md",
-    "30-RESOURCES/WebSocket.md",
     "01-META/Guide/Design",
     "_scripts/_tmp_rel2.py",
     "_scripts/_tmp_rel.py",

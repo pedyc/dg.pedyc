@@ -9,12 +9,10 @@ tags:
   - 前端工程化
   - 测试
 date-created: 2026-04-01
-date-modified: 2026-04-01
+date-modified: 2026-11-04
 status: active
 content-type: term
-related:
-  - "[[E2E]]"
-  - "[[前端工程]]"
+up: "[[前端质量闸门]]"
 ---
 
 ## 术语：Playwright

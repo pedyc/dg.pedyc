@@ -7,7 +7,7 @@ date-created: 2026-08-29
 date-modified: 2026-08-29
 status: active
 content-type: concept
-up: ["[[Git Hooks]]", "[[前端工程]]"]
+up: "[[Git Hooks]]"
 created: 2026-08-29
 ---
 

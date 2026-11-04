@@ -8,6 +8,7 @@ date-created: 2025-04-29
 date-modified: 2026-07-27
 status: active
 content-type: term
+up: "[[前端工程化工具]]"
 ---
 
 ## 术语：Monorepo

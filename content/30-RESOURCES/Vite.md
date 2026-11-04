@@ -8,7 +8,7 @@ date-created: 2025-05-29
 date-modified: 2026-07-21
 status: active
 content-type: concept
-up: "[[前端工程]]"
+up: "[[前端构建与打包]]"
 ---
 
 ## 概念：Vite

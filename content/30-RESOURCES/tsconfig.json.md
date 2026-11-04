@@ -17,7 +17,7 @@ date-created: 2026-09-01
 date-modified: 2026-09-21
 status: active
 content-type: concept
-up: ["[[TypeScript]]", "[[前端工程]]"]
+up: ["[[TypeScript]]", "[[前端构建与打包]]"]
 ---
 
 ## 概念：tsconfig.json

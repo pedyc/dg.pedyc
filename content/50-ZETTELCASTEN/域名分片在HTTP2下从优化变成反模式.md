@@ -10,7 +10,7 @@ tags:
 date-created: 2026-10-24
 date-modified: 2026-10-24
 content-type: atomic
-up: "[[前端工程]]"
+up: "[[HTTP2]]"
 noteId: 1792780063212
 ---
 

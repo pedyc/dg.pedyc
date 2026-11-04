@@ -8,7 +8,7 @@ date-created: 2026-05-27
 date-modified: 2026-05-27
 status: active
 content-type: term
-up: "[[前端工程]]"
+up: "[[前端质量闸门]]"
 ---
 
 ## 术语：ESLint

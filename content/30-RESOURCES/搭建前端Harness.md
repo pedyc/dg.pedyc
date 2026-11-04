@@ -339,4 +339,4 @@ node scripts/harness/run.mjs --input .harness/task.example.json --json
 	- [[Vue]]
 	- [[提示词工程]]
 - **问题来源**：
-	- [[Q-如何让 LLM 稳定完成开发任务]] — 本 SOP 解决的核心问题来源
+	- [[如何让 LLM 稳定完成开发任务]] — 本 SOP 解决的核心问题来源

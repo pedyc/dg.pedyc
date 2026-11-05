@@ -1,17 +1,11 @@
 ---
-uid: '202608291706'
+uid: '20260829170600'
 title: 通过husky+lint-staged进行代码质量防护
-aliases:
-  - SOP-使用Husky与lint-staged进行代码质量防护
+aliases: [SOP-使用Husky与lint-staged进行代码质量防护]
 description: 配置 Git Hooks 拦截机制，在提交暂存区代码时自动执行 ESLint/Prettier 等检查与修复
-tags:
-  - 前端工程化
-  - 代码质量
-  - GitHooks
-  - SOP
+tags: [前端工程化, 代码质量, GitHooks, SOP]
 date-created: 2026-08-29
-date-modified: 2026-09-01
-status: active
+date-modified: 2026-11-05
 content-type: sop
 up: "[[前端质量闸门]]"
 ---
@@ -22,7 +16,7 @@ up: "[[前端质量闸门]]"
 
 * **目标**：在代码提交（`git commit`）阶段自动化拦截不符合规范的代码，防止劣质代码入库。
 * **实现**：安装配置 `husky` (v9+) 与 `lint-staged`，并在 `.husky/pre-commit` 中注入触发钩子。
-* **问题溯源**：本 SOP 是 [[Q-如何确保代码在本地提交前通过规范校验]] 的收敛成果——经过全量校验与增量校验的方案对比和实践验证，固化为标准流程。
+* **问题溯源**：本 SOP 是 [[如何确保代码在本地提交前通过规范校验]] 的收敛成果——全量与增量两种方案的对比在那一篇，结论固化为本流程。
 
 ---
 
@@ -59,7 +53,7 @@ pnpm add -D husky lint-staged
 ```
 
 2. **步骤 2：初始化 Husky 配置**
-	* 初始化 husky（生成 `.husky` 目录并配置 `package.json` 的 `prepare` 脚本）：
+	* 初始化 husky（生成 `.husky/_` 执行器、一个示例 `.husky/pre-commit`，并配置 `package.json` 的 `prepare` 脚本）：
 
 	```bash
 	npx husky init
@@ -126,17 +120,20 @@ npx lint-staged
 
 * ⛔ **反模式**：在 `lint-staged` 规则中执行 `git add .`。现代 `lint-staged` 会自动将修改后的暂存区文件重新 stage，手动加 `git add` 反而可能把未被暂存的改动误提上去。
 * ⛔ **反模式**：在 `pre-commit` 中直接运行全量 `npm run lint`。项目体量庞大时会导致每次 commit 卡顿数十秒，应使用 `lint-staged` 做增量过滤。
-* 🔧 **排查**：若提交时未触发检查，排查是否满足以下条件：
+* 🔧 **排查**：若提交时未触发检查，按下面顺序查。前两条最常见，且**都不会报错**——表现为「提交顺利通过」，看起来像没问题：
 
 	1. 根目录是否存在 `.git` 仓库；
-	2. 是否执行过 `npm run prepare`（`.husky/pre-commit` 必须具备可执行权限）；
-	3. Git GUI 客户端是否绕过了 hook（如使用了 `--no-verify`）。
+	2. `git config core.hooksPath` 是否输出 `.husky/_`。为空说明 `prepare` 没跑过：`npm install --ignore-scripts`、生产安装不装 devDependencies、从旧版本拖过来的工作区都会这样，此时钩子根本不存在；
+	3. `.husky/pre-commit` 是否已提交、文件名是否拼对。v9 由 `.husky/_/h` 按文件名转调，**可执行位与 shebang 都不再是必要条件**（那是 v8 及以前的写法，照旧清单去 chmod 只会白折腾）；
+	4. 是否被跳过：`git commit -n` / `--no-verify`、`HUSKY=0`、或走自带 Git 实现的 GUI 客户端。
 
 ### 知识图谱
 
-- **相关**：
+* **上位**：[[前端质量闸门]] — 它按「错误在哪一刻被拦下」分三道门，本页是「提交前」那道门的搭法
+* **相关**：
+	* [[Husky]] — 钩子的分发层；本页第 2 步只写命令，`prepare` 与 `core.hooksPath` 在哪一层见那篇
 	* [[ESLint]] — 代码语法与风格检查工具
 	* [[Prettier]] — 专注代码排版的格式化工具
 	* [[Git Hooks]] — Git 提供的生命周期拦截机制
-- **问题来源**：
-	* [[Q-如何确保代码在本地提交前通过规范校验]] — 此 SOP 解决的问题来源
+* **问题来源**：
+	* [[如何确保代码在本地提交前通过规范校验]] — 此 SOP 解决的问题来源：全量还是增量、这道门要不要强制

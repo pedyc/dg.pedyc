@@ -36,9 +36,10 @@
 | 信源五维怎么打分、产出率怎么数 | `30-RESOURCES/信源质量审计标准`（SOP）· `30-RESOURCES/经过验证的高信噪比信源`（体系） |
 | 文件名、aliases、引用写法 | `Truth/文件名与别名规范` |
 | 查库里有没有相关笔记 | `01-META/Index/wiki-index.md`（全量名册），不要先 rglob 全扫 |
+| 查某处改动、设计取舍的历史理由 | 库根 `.workbuddy/memory/YYYY-MM-DD.md`（10-28 起，任何 agent 可读）；更早的查 `Log/wiki-log.md`（冻结于 10-27，grep 关键词或只看最近 20 条，勿通读） |
 | **命令、编码、git、Obsidian 配置、发布的坑** | `Guide/本库踩坑手册` |
 | 写 `.base` / 写脚本 | `Guide/本库Bases约定` / `Guide/本库脚本化` |
-| 创建或重写笔记 | `obsidian-note-local` skill（内部同步 wiki-index / wiki-log / sync-state） |
+| 创建或重写笔记 | `obsidian-note-local` skill（索引更新见下方 `build_wiki_index.py`） |
 | 库的整体设计 | `Guide/本库指南`（人读入口）、`Guide/本库子系统概述`（架构） |
 | 全部真值清单 | `Truth/真值索引` |
 

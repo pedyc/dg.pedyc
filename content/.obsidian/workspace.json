@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
+                "file": "30-RESOURCES/前端构建与打包.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端工程学习专项"
+              "title": "前端构建与打包"
             }
           },
           {
@@ -97,7 +97,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
+                "file": "30-RESOURCES/前端构建与打包.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -246,7 +246,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
+                "file": "30-RESOURCES/前端构建与打包.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -304,6 +304,16 @@
   },
   "active": "e89c1cd029b9e978",
   "lastOpenFiles": [
+    "20-AREAS/A-前端/前端工程.md",
+    "30-RESOURCES/前端质量闸门.md",
+    "30-RESOURCES/通过husky+lint-staged进行代码质量防护.md",
+    "30-RESOURCES/如何确保代码在本地提交前通过规范校验.md",
+    "01-META/Log/wiki-log.md",
+    "01-META/Log/suggest-log.md",
+    "AGENTS.md",
+    "01-META/Index/wiki-index.md",
+    "30-RESOURCES/Husky.md",
+    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
     "90-DIARY/2026-11-05.md",
     "30-RESOURCES/DevOps.md",
     "30-RESOURCES/AI First.md",
@@ -313,8 +323,6 @@
     "30-RESOURCES/GitHub Actions.md",
     "30-RESOURCES/持续集成与持续部署.md",
     "30-RESOURCES/CI-CD流程.md",
-    "20-AREAS/A-前端/前端工程.md",
-    "30-RESOURCES/前端质量闸门.md",
     "30-RESOURCES/Playwright.md",
     "30-RESOURCES/版本控制与协作流程.md",
     "30-RESOURCES/代码审查流程.md",
@@ -322,15 +330,7 @@
     "30-RESOURCES/前端工程师能力地图.md",
     "30-RESOURCES/前端交付与观测.md",
     "30-RESOURCES/Webpack 和 Vite 的核心构建理念有什么不同？为什么 Vite 启动更快？.md",
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
-    "30-RESOURCES/前端监控.md",
-    "30-RESOURCES/埋点.md",
-    "10-PROJECTS/P-Agent求职/Agent求职.md",
     "10-PROJECTS/P-前端工程学习专项",
-    "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
-    "20-AREAS/A-前端/前端开发.md",
-    "30-RESOURCES/前端静态资源多级缓存配置规范.md",
-    "30-RESOURCES/HTTP协商缓存.md",
     "01-META/Guide/Design",
     "_scripts/_tmp_rel2.py",
     "_scripts/_tmp_rel.py",

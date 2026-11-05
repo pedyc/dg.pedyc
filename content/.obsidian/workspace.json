@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/DevOps.md",
+                "file": "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "DevOps"
+              "title": "前端工程学习专项"
             }
           },
           {
@@ -97,7 +97,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/DevOps.md",
+                "file": "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -246,7 +246,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "30-RESOURCES/DevOps.md",
+                "file": "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -304,10 +304,11 @@
   },
   "active": "e89c1cd029b9e978",
   "lastOpenFiles": [
+    "90-DIARY/2026-11-05.md",
+    "30-RESOURCES/DevOps.md",
     "30-RESOURCES/AI First.md",
     "30-RESOURCES/如何让 LLM 稳定完成开发任务.md",
     "30-RESOURCES/软件工程.md",
-    "30-RESOURCES/DevOps.md",
     "99-ASSETS/copilot/system-prompts/Obsidian Smart Librarian.md",
     "30-RESOURCES/GitHub Actions.md",
     "30-RESOURCES/持续集成与持续部署.md",
@@ -330,7 +331,6 @@
     "20-AREAS/A-前端/前端开发.md",
     "30-RESOURCES/前端静态资源多级缓存配置规范.md",
     "30-RESOURCES/HTTP协商缓存.md",
-    "30-RESOURCES/HTTP强缓存.md",
     "01-META/Guide/Design",
     "_scripts/_tmp_rel2.py",
     "_scripts/_tmp_rel.py",

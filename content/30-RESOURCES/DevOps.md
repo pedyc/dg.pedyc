@@ -5,7 +5,7 @@ aliases: [C-DevOps]
 description: 删掉「开发」与「运维」之间的交接点，让发出变更的人自己承担变更落地后的后果；判据是出事时第一个动作是查监控还是找运维
 tags: [软件工程/DevOps]
 date-created: 2025-03-05
-date-modified: 2026-11-04
+date-modified: 2026-11-05
 content-type: concept
 up: "[[软件工程]]"
 ---

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/前端构建与打包.md",
+                "file": "01-META/Guide/本库子系统概述.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,28 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端构建与打包"
+              "title": "本库子系统概述"
             }
           },
           {
-            "id": "de006b92ae8d073c",
+            "id": "4377bcb0d0a09b1e",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "_resources/本库架构.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "本库架构.excalidraw"
+            }
+          },
+          {
+            "id": "57f7351a0daa7004",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/Webpack 和 Vite 的核心构建理念有什么不同？为什么 Vite 启动更快？.md",
+                "file": "01-META/Guide/本库指南.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,10 +64,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Webpack 和 Vite 的核心构建理念有什么不同？为什么 Vite 启动更快？"
+              "title": "本库指南"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +110,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/前端构建与打包.md",
+                "file": "_resources/本库架构.excalidraw.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -220,7 +233,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5
+    "width": 353.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -246,7 +259,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "30-RESOURCES/前端构建与打包.md",
+                "file": "_resources/本库架构.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -302,34 +315,36 @@
       "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "e89c1cd029b9e978",
+  "active": "4377bcb0d0a09b1e",
   "lastOpenFiles": [
-    "20-AREAS/A-前端/前端工程.md",
-    "30-RESOURCES/前端质量闸门.md",
-    "30-RESOURCES/通过husky+lint-staged进行代码质量防护.md",
-    "30-RESOURCES/如何确保代码在本地提交前通过规范校验.md",
-    "01-META/Log/wiki-log.md",
-    "01-META/Log/suggest-log.md",
-    "AGENTS.md",
-    "01-META/Index/wiki-index.md",
-    "30-RESOURCES/Husky.md",
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
-    "90-DIARY/2026-11-05.md",
-    "30-RESOURCES/DevOps.md",
-    "30-RESOURCES/AI First.md",
-    "30-RESOURCES/如何让 LLM 稳定完成开发任务.md",
-    "30-RESOURCES/软件工程.md",
-    "99-ASSETS/copilot/system-prompts/Obsidian Smart Librarian.md",
-    "30-RESOURCES/GitHub Actions.md",
-    "30-RESOURCES/持续集成与持续部署.md",
-    "30-RESOURCES/CI-CD流程.md",
-    "30-RESOURCES/Playwright.md",
-    "30-RESOURCES/版本控制与协作流程.md",
-    "30-RESOURCES/代码审查流程.md",
-    "30-RESOURCES/前端构建与打包.md",
-    "30-RESOURCES/前端工程师能力地图.md",
-    "30-RESOURCES/前端交付与观测.md",
-    "30-RESOURCES/Webpack 和 Vite 的核心构建理念有什么不同？为什么 Vite 启动更快？.md",
+    "01-META/Guide/本库子系统概述.md",
+    "_resources/本库架构.excalidraw.md",
+    "_tmp_old.json",
+    "20-AREAS/A-知识管理/知识管理.md",
+    "_resources/本库架构指南.excalidraw.svg",
+    "01-META/Guide/本库指南.md",
+    "index.md",
+    "CLAUDE.md",
+    "01-META/Truth/本库目录结构.md",
+    "00-INBOX/回顾性自蒸馏.md",
+    "30-RESOURCES/存量治理.md",
+    "30-RESOURCES/本库的实际运行方式.md",
+    "30-RESOURCES/资源加载与网络优化.md",
+    "30-RESOURCES/浏览器导航.md",
+    "40-ARCHIVE/深入了解现代网络浏览器(2) 导航过程.md",
+    "30-RESOURCES/从输入URL到页面展示发生了什么.md",
+    "20-AREAS/A-前端/浏览器.md",
+    "40-ARCHIVE/深入了解现代网络浏览器(1) 多进程架构.md",
+    "00-INBOX/深入了解现代网络浏览器(2) 导航过程.md",
+    "01-META/Specification/_wiki-index-format.md",
+    "01-META/Specification/_sync-rules.md",
+    "01-META/Specification/_skills-overview.md",
+    "01-META/Specification/_query-rules.md",
+    "01-META/Specification/_lint-rules.md",
+    "01-META/Specification/_ingest-rules.md",
+    "01-META/Specification/_content-type-rules.md",
+    "01-META/Specification/_anki-sync-rules.md",
+    "01-META/Log/原子笔记整理清单.md",
     "10-PROJECTS/P-前端工程学习专项",
     "01-META/Guide/Design",
     "_scripts/_tmp_rel2.py",
@@ -339,7 +354,6 @@
     "_scripts/_tmp_map8.json",
     "_scripts/_tmp_map7.json",
     "_scripts/_tmp_map6.json",
-    "_scripts/_tmp_map5.json",
     "_resources/2053a78bf0323938d7ebfbf1d8f40f59_MD5.webp",
     "_resources/1ff95cb0537c7ba6838f236942847399_MD5.webp",
     "_resources/efadd15e30f38de83b0311944b88285c_MD5.webp",
@@ -349,7 +363,6 @@
     "_resources/0d9fd78ef8d67ce2df3928507224a006_MD5.webp",
     "_resources/0d895f52a4b7376ffb598405c1a91c4b_MD5.webp",
     "_resources/abb304d2c400213ba846ebf72b70a76b_MD5.webp",
-    "_resources/a990b21921a5caa52316fdc54f530cb1_MD5.svg",
     "10-PROJECTS/PROJECTS.canvas",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "未命名.canvas",

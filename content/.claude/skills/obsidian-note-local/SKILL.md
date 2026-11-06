@@ -1,6 +1,6 @@
 ---
 name: obsidian-note-local
-version: 3.3.0
+version: 3.3.1
 description: |
   创建/更新笔记全流程：读取模板 → 生成/修改笔记 → 更新父级引用 → 同步 wiki 元数据 → 评估健康度 → 核查内容质量。
   **一条命令完成从创建/更新到知识网络挂载的全链路，无需再单独调用其他 skill。**
@@ -104,7 +104,7 @@ allowed-tools:
 
 创建或更新完成后，启动 subagent 依次执行以下任务：
 
-1. **wiki-sync-local** — 更新 wiki-index、wiki-log、sync-state
+1. **wiki-sync-local** — 更新 wiki-index、sync-state（不写 wiki-log，该文件已冻结）
 2. **content-evaluator-local** — 评估笔记健康度（模板结构对比）
 3. **content-verifier-local** — 核查内容质量（create 用 light，update 用 full）
 

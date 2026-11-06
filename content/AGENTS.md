@@ -24,9 +24,17 @@
 
 ## 二、入口
 
+先判走哪条路，再查下表：
+
+- `00-INBOX/` 有素材要消化 → ingest：`Guide/llm-wiki-schema` → `_ingest-rules`
+- 用户质疑某篇或某族的结构、字段、归属 → 存量治理：诊断 → 定判据 → 改真值 → 回填（主线，流程见 `30-RESOURCES/存量治理`）
+- 要回答一个问题 → query：查 wiki-index → 读 wiki 层 → 深入 atomic
+- 发现字段或链接脏值 → 直接跑 `_scripts/validate_meta.py --all`，不经工作流
+
 | 要做的事 | 去哪 |
 |:---|:---|
 | 工作流（ingest / query / lint / sync / inbox-review） | `Guide/llm-wiki-schema.md` |
+| 存量治理的步骤（诊断 / 定判据 / 回填 / 收尾） | `30-RESOURCES/存量治理.md` |
 | 判形态（14 种 content-type）、atomic 正文结构、名字该不该聚合 | `Truth/笔记类型规范` |
 | 写 concept 时不知怎么组织 atomic（要一篇可对照的范文） | `Guide/概念与原子笔记的组织范例` |
 | 判 atomic 标题够不够格（主语可指认 / 可证伪 / 有增量） | `.claude/agents/atomic-title-reviewer.md`（subagent，只判不改） |

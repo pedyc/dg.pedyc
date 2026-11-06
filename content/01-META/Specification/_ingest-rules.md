@@ -4,7 +4,7 @@ title: _ingest-rules
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-05-20
-date-modified: 2026-08-16
+date-modified: 2026-11-06
 content-type: article
 up: "[[llm-wiki-schema]]"
 ---
@@ -40,16 +40,9 @@ up: "[[llm-wiki-schema]]"
 - 如果创建了新 concept/moc/area，在对应分类下添加条目
 - 如果删除了页面，从索引中移除
 
-### 步骤 5：记录日志
+### 步骤 5：不写 wiki-log
 
-追加条目到 `wiki-log.md`：
-
-```markdown
-## [2026-05-20] ingest | 笔记标题
-- 主题：xxx
-- 更新的页面：[[页面名]]
-- 新建页面：[[页面名]]
-```
+wiki-log 已冻结于 2026-10-27（见 [[llm-wiki-schema]] 的「wiki-log（2026-10-28 起停用）」），本步骤不再追加条目。消化过程与决策理由记到库根 `.workbuddy/memory/YYYY-MM-DD.md`，不在此重复。
 
 ### 步骤 6：归档原始素材
 
@@ -106,12 +99,6 @@ git mv "00-INBOX/源文件名.md" "40-ARCHIVE/"
 
 用 `git mv` 保留历史。移动后原路径的链接会自动解析到新位置——Obsidian 按文件名解析，不按路径。
 
-### 步骤 6：记录日志
+### 步骤 6：不写 wiki-log
 
-格式见 [[llm-wiki-schema]] 的 `wiki-log 记录规范`：
-
-```markdown
-- [日期] inbox-review | 文件名
-	- 原类型：xxx → 新类型：xxx
-	- 移动：Inbox → 目标目录
-```
+wiki-log 已冻结，inbox-review 的结果不追加到 `01-META/Log/wiki-log.md`。审核结论与移动理由记到库根 `.workbuddy/memory/YYYY-MM-DD.md`。

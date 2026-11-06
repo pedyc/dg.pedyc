@@ -4,7 +4,7 @@ title: _lint-rules
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-05-20
-date-modified: 2026-07-17
+date-modified: 2026-11-06
 content-type: article
 up: "[[llm-wiki-schema]]"
 ---
@@ -42,7 +42,6 @@ up: "[[llm-wiki-schema]]"
 #### 5. 索引一致性
 
 - 检查 `wiki-index.md` 是否与实际页面一致
-- 检查 `wiki-log.md` 是否有遗漏的 ingest 记录
 
 ### Lint 输出格式
 
@@ -70,8 +69,8 @@ up: "[[llm-wiki-schema]]"
 
 **执行内容**：
 1. 调用 `/content-evaluator-local full`
-2. 检查结果追加到 `wiki-log.md`
-3. 如发现问题，标记到日志并发出预警
+2. 检查结果写入库根 `.workbuddy/memory/YYYY-MM-DD.md`（wiki-log 已冻结，不写）
+3. 如发现问题，发出预警
 
 **预警条件**：
 - 矛盾 > 3 个

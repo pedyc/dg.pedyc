@@ -4,10 +4,12 @@ title: wiki-log
 aliases: [wiki-log, wiki日志]
 tags: [llm-wiki, 元数据]
 date-created: 2026-05-20
-date-modified: 2026-10-27
+date-modified: 2026-11-06
 content-type: article
 up: "[[本库指南]]"
 ---
+
+> [!warning] 已冻结
 
 ## Wiki Log
 

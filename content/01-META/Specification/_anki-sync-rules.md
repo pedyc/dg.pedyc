@@ -5,7 +5,7 @@ aliases: [Anki集成规则]
 description: Anki 集成子系统的作业规则：哪些笔记生成卡片、卡片格式、同步工作流
 tags: [方法论, llm-wiki, anki]
 date-created: 2026-08-02
-date-modified: 2026-08-02
+date-modified: 2026-11-06
 content-type: article
 up: "[[llm-wiki-schema]]"
 ---
@@ -75,7 +75,7 @@ Vue 3 的响应式基于 {{c1::Proxy}} 实现。
 1. **标记**：LLM 在生成/更新笔记时，对符合卡片来源规则的笔记添加 `#card` 标记
 2. **同步**：用户或 LLM 在 Obsidian 中运行 obsidian-to-anki-plugin，将标记的卡片推送到 Anki
 3. **维护**：源笔记变更 → 重新同步覆盖卡片；源笔记归档 → 卡片随笔记移除或保留在 Anki 原 deck
-4. **wiki-log**：不单独记录卡片同步（属于系统维护，不记录）；若新创建了 atomic/term 源笔记，按常规 ingest 记录
+4. **wiki-log**：已冻结（2026-10-27），卡片同步与 ingest 均不再向其追加条目
 
 ### 与现有子系统关系
 

@@ -5,7 +5,7 @@ aliases: [Q-从输入URL到页面展示发生了什么]
 description: 浏览器从输入URL到渲染页面的完整流程
 tags: [question, 网络, 浏览器, HTTP]
 date-created: 2026-05-22
-date-modified: 2026-05-22
+date-modified: 2026-11-06
 status: active
 content-type: question
 up: ["[[前端面试真题库|前端面试题]]", "[[网络协议相关问题]]"]
@@ -122,5 +122,6 @@ DOM + CSSOM → Render Tree（包含所有可见节点及样式）
 
 - [[Q-HTTP有哪些请求方法？它们有什么区别？]]
 - [[Q-TLS 握手流程是怎样的？]]
+- [[浏览器导航]] — 从进程视角看「URL 解析 → 响应到达」这一段：谁在发请求、谁在等数据
 - [[回流和重绘]]
 - [[浏览器与 Web]]

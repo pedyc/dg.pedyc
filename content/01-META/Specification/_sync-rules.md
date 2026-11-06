@@ -4,7 +4,7 @@ title: _sync-rules
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-05-20
-date-modified: 2026-07-17
+date-modified: 2026-11-06
 content-type: article
 up: "[[llm-wiki-schema]]"
 ---
@@ -20,7 +20,7 @@ up: "[[llm-wiki-schema]]"
 - **不记录 wiki-log**（这是系统维护，不是知识加工）
 - 维护 `wiki-index.md`（仅系统条目）
 
-**Content 变更由 ingest 工作流处理**：sync 检测到变更后，由 ingest 工作流决定如何整合并记录到 wiki-log。
+**Content 变更由 ingest 工作流处理**：sync 检测到变更后，由 ingest 工作流决定如何整合（wiki-log 已冻结，不记录）。
 
 ### 触发条件
 

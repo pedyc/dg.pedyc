@@ -4,14 +4,14 @@ title: llm-wiki-schema
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-05-20
-date-modified: 2026-07-17
+date-modified: 2026-11-06
 content-type: article
 up: "[[本库指南]]"
 ---
 
 ## LLM Wiki Schema for 本库
 
-本文档是 LLM 维护本知识库的作业指南。LLM 根据此 schema 消化 (ingest) 新笔记、回答查询 (query)、以及定期检查 (lint) 知识库健康度。
+本文档是 LLM 维护本知识库的作业指南，定义四条工作流：ingest、query、lint、sync。它们不是本库的日常主线——日常是存量治理（判据先行 → 固化到 Truth → 全库回填），两者的关系见 [[本库的实际运行方式]]，存量治理的操作步骤见 [[存量治理]]。
 
 > [!note] 边界：本文件专供 llm-wiki 工作流
 > 这里只讲「怎么做」。本库的架构总览（目录结构、子系统关系、粒度模型）在 [[本库子系统概述]]，两份文件**不合并**：这份随工作流演进而改，那份随架构演进而改。类型定义、字段定义、命名规则一律引用 [[真值索引]] 里的文档，本文件不复制。
@@ -20,7 +20,7 @@ up: "[[本库指南]]"
 > - [[_skills-overview]] — 所有 skill 的用法总览
 > - [[_anki-sync-rules]] — Anki 集成规则（哪些笔记生成卡片、卡片格式、同步工作流）
 > - [[_content-type-rules]] — 已废弃（DEPRECATED），定义见 [[笔记类型规范]]
-> - [[_ingest-rules]] — ingest 工作流 + inbox review 工作流
+> - [[_ingest-rules]] — ingest 工作流（INBOX 有素材时启动）+ inbox review 工作流
 > - [[_query-rules]] — query 工作流
 > - [[_lint-rules]] — lint 工作流 + 健康检查
 > - [[_sync-rules]] — sync 工作流
@@ -28,34 +28,43 @@ up: "[[本库指南]]"
 
 ---
 
-### 三层架构
+### 四层架构
 
 | 层级 | 位置 | 负责方 | 说明 |
 |------|------|--------|------|
-| 原子笔记层 | `50-ZETTELCASTEN/` | 你 | 已内化的洞见（atomic），source of truth，不修改 |
+| 原子笔记层 | `50-ZETTELCASTEN/` | 你 | 已内化的洞见（atomic），source of truth |
 | Wiki | `30-RESOURCES/` | LLM | concept/moc/SOP/term/comparison/question/record/roadmap/person，由 LLM 持续维护 |
+| 真值层 | `01-META/Truth/` | 你 + LLM | 判据、字段定义、命名规则的唯一来源。2026-10 起独立成层，原三层架构里没有它的位置 |
 | Archive | `40-ARCHIVE/` | 你 + LLM | 过时知识、已完成项目 |
 
-> **关键原则**：atomic 是已内化的洞见、source of truth，永不修改。Wiki 层是 LLM 的作品，LLM 负责维护其一致性和完整性。
+> **关键原则**：Wiki 层是 LLM 的作品，LLM 负责维护其一致性和完整性。
 
-### wiki-log 记录规范
+> [!warning] atomic 的「不修改」有条件
+> 它成立的前提是判据已稳定。判据还在演进时，按旧判据写的 atomic 必须回填——2026-10 至 11 月已发生多轮（atomic 写作方法论定稿、`up` 改挂、族内重切）。把「永不修改」当绝对规则，会让旧判据的产物一直留在库里。
 
-**目的**：wiki-log 是 append-only 时间线，记录**知识加工事件**，不是系统操作日志。
+### 工作流的实际权重（2026-11-06 修正）
 
-**应记录的操作类型**：
+| 工作流 | 实际状态 |
+|:---|:---|
+| ingest | 只在 `00-INBOX/` 有素材时启动，不是日常主线。它解决「新素材怎么并入」，不解决「已有结构不对」 |
+| query | 按需。回答问题时读 wiki-index → wiki 层 → atomic，不沉淀（沉淀交给新建笔记） |
+| lint | 内容层检查（矛盾、孤儿、缺口）按需跑；字段与链接校验已由 `_scripts/validate_meta.py` 承担，两条线不重叠也不互相替代 |
+| sync | 已停用，`wiki-sync-state.json` 停在 2026-10-23 |
 
-| 操作 | 说明 | 示例 |
-|------|------|------|
-| `ingest` | 新笔记整合到 wiki 层 | `ingest | 新增 concept「闭包」` |
-| `inbox-review` | Inbox 审核结果 | `inbox-review | 移动 4 个文章到 BLOGS` |
-| `lint` | 健康检查结果 | `lint | full 健康检查，矛盾 0 个` |
-| `query` | 有价值的查询结果 | `query | 关于闭包的回答，产生新洞见` |
-| `refactor` | 系统重构（skill/spec/规则变更） | `refactor | skill 分层重构，obsidian-note-local v2.1.0` |
+日常主线不属于 llm-wiki，见 [[本库的实际运行方式]]。这里是权重声明，不是第二份定义。
 
-**不应记录的操作**：
-- `sync` — 系统状态同步（系统维护）
-- `update` — 常规文件编辑（系统维护）
-- `create` — 笔记创建（应归入 ingest）
+### wiki-log（2026-10-28 起停用）
+
+`01-META/Log/wiki-log.md` 冻结于 2026-10-27，**不再追加条目**。知识加工事件（ingest / inbox-review / lint / refactor）的叙事与决策理由，改记库根 `.workbuddy/memory/YYYY-MM-DD.md`。
+
+停用的原因不是「读的人少」，而是读写两端同时断了：
+
+- **写端**：条目由 `wiki-sync-local` 追加，该链条在 2026-10-27 后未再执行——同期有 43 篇笔记的改动、13 次备份，wiki-log 零条目。
+- **读端**：没有任何工作流把「读 wiki-log」写进步骤。它在本文件里只以「记录规范」出现，是输出契约，不是输入依赖。
+
+载体迁移后，memory 承担同一职责，且不需要维护「条目挂在自己日期下」这种骨架。
+
+**不要在 wiki-log 里补记 10-27 之后的条目**：该文件只作考古，补记等于制造一段从未真实发生过的时间线。需要查历史时按 `AGENTS.md` 入口表走，不要通读。
 
 ---
 

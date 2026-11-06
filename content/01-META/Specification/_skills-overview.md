@@ -4,7 +4,7 @@ title: _skills-overview
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-06-12
-date-modified: 2026-07-17
+date-modified: 2026-11-06
 content-type: article
 up: "[[llm-wiki-schema]]"
 ---
@@ -14,7 +14,7 @@ up: "[[llm-wiki-schema]]"
 本库 5 个本地 skill，按 PARA 分层组织，职责互不重叠。
 
 > [!important] 两条必须遵守的义务，住在本文件
-> **创建或重写笔记一律走 `obsidian-note-local`**，它内部会同步 `wiki-index` / `wiki-log` / `sync-state`。跳过它就会留下不同步的索引。
+> **创建或重写笔记一律走 `obsidian-note-local`**，它内部会同步 `wiki-index` / `sync-state`。跳过它就会留下不同步的索引。
 >
 > **改过任何 `SKILL.md` 之后同步本文件**：版本号、description、分层归属、总览表与计数。这条原来只写在 `CLAUDE.md`，而 WorkBuddy 不加载那个文件，所以搬到这里——规则要住在被约束对象旁边。
 
@@ -22,8 +22,8 @@ up: "[[llm-wiki-schema]]"
 
 | 层 | Skill | 版本 | 职责 | 操作范围 |
 |---|---|---|---|---|
-| **创建层** | `obsidian-note-local` | v3.3.0 | 创建/更新笔记 + 挂载父页面 + 同步元数据 + 评估 + 核查 | 内容页 + 父页面 + 01-META |
-| **元数据层** | `wiki-sync-local` | v3.1.0 | 维护 wiki-index、wiki-log、suggest-log、sync-state（wiki-index 格式遵守 `_wiki-index-format`） | 仅 `01-META/` |
+| **创建层** | `obsidian-note-local` | v3.3.1 | 创建/更新笔记 + 挂载父页面 + 同步元数据 + 评估 + 核查 | 内容页 + 父页面 + 01-META |
+| **元数据层** | `wiki-sync-local` | v3.2.0 | 维护 wiki-index、suggest-log、sync-state（wiki-index 格式遵守 `_wiki-index-format`；不写 wiki-log） | 仅 `01-META/` |
 | | `content-evaluator-local` | v1.2.0 | 健康检查（lint），含 content-type 模板对比 | 全库只读 |
 | | `content-verifier-local` | v1.1.0 | 内容质量核查，按模板章节对比 | 指定笔记 |
 | **内容层** | `llm-wiki-local` | v1.0.0 | ingest / query / lint / graph | 内容页 |
@@ -63,7 +63,7 @@ obsidian-note-local → 创建 + 挂父页面 + 同步 + 评估 + 核查（一�
 **做了什么**：
 1. 按 content-type 读取对应模板，生成/修改笔记
 2. 读取 `up` 字段，更新父页面引用
-3. 内部调用 `wiki-sync-local`：更新 wiki-index、wiki-log、sync-state
+3. 内部调用 `wiki-sync-local`：更新 wiki-index、sync-state
 4. 内部调用 `content-evaluator-local`：评估笔记健康度
 5. 内部调用 `content-verifier-local`：核查内容质量（create 用 light，update 用 full）
 
@@ -82,11 +82,10 @@ obsidian-note-local → 创建 + 挂父页面 + 同步 + 评估 + 核查（一�
 
 **做了什么**：
 1. 更新 `wiki-index.md`（添加/移除条目）
-2. 记录 `wiki-log.md`
-3. 更新 `wiki-sync-state.json`
-4. git commit 状态文件
+2. 更新 `wiki-sync-state.json`
+3. git commit 状态文件
 
-**不做什么**：不修改任何内容页。
+**不做什么**：不修改任何内容页；**不写 `wiki-log.md`**（该文件冻结于 2026-10-27，变更与决策记录改记库根 `.workbuddy/memory/YYYY-MM-DD.md`）。
 
 ---
 

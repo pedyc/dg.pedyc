@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-META/Guide/本库设计原则.md",
+                "file": "20-AREAS/A-前端/前端开发.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "本库设计原则"
+              "title": "前端开发"
             }
           }
         ]
@@ -73,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "01-META/Guide/本库设计原则.md",
+                "file": "20-AREAS/A-前端/前端开发.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -222,7 +222,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01-META/Guide/本库设计原则.md",
+                "file": "20-AREAS/A-前端/前端开发.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -254,7 +254,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 519.5
+    "width": 519.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -281,44 +282,45 @@
   },
   "active": "e89c1cd029b9e978",
   "lastOpenFiles": [
+    "20-AREAS/领域总览.md",
+    "index.md",
+    "10-PROJECTS/P-Agent求职/Context Quality.md",
+    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
+    "90-DIARY/2026-11-07.md",
+    "01-META/Truth/真值索引.md",
+    "01-META/Truth/元数据规范.md",
+    "01-META/Truth/文件名与别名规范.md",
+    "01-META/Truth/人机分工规范.md",
+    "01-META/Truth/标签规范.md",
+    "01-META/Truth/笔记类型规范.md",
+    "01-META/Truth/本库目录结构.md",
+    "01-META/Guide/Design/判据总览.md",
+    "01-META/Guide/Design/_resources/判据六层推导.excalidraw.md",
+    "01-META/Guide/Design/_resources/判据六层推导.excalidraw.svg",
+    "01-META/Guide/Design/_resources",
+    "99-ASSETS/Bases/SOP.base",
+    "99-ASSETS/Bases/EXCALIDRAW.base",
+    "99-ASSETS/Bases/ALL.base",
+    "99-ASSETS/Bases/元数据巡检.base",
+    "99-ASSETS/Bases/游戏收藏.base",
+    "99-ASSETS/Bases/信源.base",
+    "99-ASSETS/Bases/书单.base",
+    "99-ASSETS/Bases/求职投递.base",
+    "99-ASSETS/Bases/电影收藏.base",
+    "60-BLOGS/前端有趣问题03.md",
+    "60-BLOGS/前端有趣问题02.md",
+    "60-BLOGS/前端有趣问题01.md",
+    "01-META/Guide/Design/atomic 设计依据.md",
+    "30-RESOURCES/混合型知识库架构.md",
+    "30-RESOURCES/卡片盒笔记法.md",
     "01-META/Guide/Design/判据谱系.md",
+    "30-RESOURCES/PARA笔记法.md",
     "01-META/Guide/本库设计原则.md",
     "50-ZETTELCASTEN/痛点是知识管理的唯一动力源.md",
     "_templates/template_concept.md",
     "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
-    "30-RESOURCES/前端缓存方案.md",
-    "30-RESOURCES/前端性能优化.md",
-    "30-RESOURCES/如何利用API采集并计算LCP值.md",
-    "20-AREAS/A-前端/前端工程.md",
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
-    "10-PROJECTS/P-Agent求职/_resources/Agent Architecture.excalidraw.md",
-    "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.md",
-    "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.md",
     "10-PROJECTS/P-Agent求职/_resources/Agent Architecture.excalidraw.svg",
-    "40-ARCHIVE/RSS.md",
-    "01-META/Truth/笔记类型规范.md",
-    "01-META/Truth/本库子系统概述.md",
-    "01-META/Truth/本库目录结构.md",
-    "_templates/template_learning_project.md",
-    "30-RESOURCES/逻辑学.md",
-    "_tmpcheck/README.md",
-    "_tmpcheck",
-    "50-ZETTELCASTEN/「存在先于本质」反对的是目的论，不是否认处境的约束.md",
-    "01-META/Guide/本库指南.md",
-    "_resources/本库架构.excalidraw.md",
-    "90-DIARY/2026-11-07.md",
-    "60-BLOGS/前端缓存怎么分类.md",
-    "30-RESOURCES/思维方式.md",
-    "_tmp_old.json",
     "_resources/本库架构指南.excalidraw.svg",
-    "10-PROJECTS/P-前端工程学习专项",
-    "01-META/Guide/Design",
-    "_scripts/_tmp_rel2.py",
-    "_scripts/_tmp_rel.py",
-    "_scripts/_tmp_fix_titles.py",
-    "_scripts/_tmp_titles.py",
-    "_scripts/_tmp_map8.json",
-    "_scripts/_tmp_map7.json",
     "_resources/2053a78bf0323938d7ebfbf1d8f40f59_MD5.webp",
     "_resources/1ff95cb0537c7ba6838f236942847399_MD5.webp",
     "_resources/efadd15e30f38de83b0311944b88285c_MD5.webp",
@@ -326,7 +328,6 @@
     "_resources/7fde8598642ea009262a0a3270e06490_MD5.webp",
     "_resources/f5dd21dceb51d6e5b6911e9f19145296_MD5.webp",
     "_resources/0d9fd78ef8d67ce2df3928507224a006_MD5.webp",
-    "_resources/0d895f52a4b7376ffb598405c1a91c4b_MD5.webp",
     "10-PROJECTS/PROJECTS.canvas",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "未命名.canvas",

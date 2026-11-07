@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-META/Guide/本库子系统概述.md",
+                "file": "01-META/Guide/本库设计原则.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,47 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "本库子系统概述"
-            }
-          },
-          {
-            "id": "4377bcb0d0a09b1e",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_resources/本库架构.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "本库架构.excalidraw"
-            }
-          },
-          {
-            "id": "57f7351a0daa7004",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01-META/Guide/本库指南.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "本库指南"
+              "title": "本库设计原则"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +73,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "_resources/本库架构.excalidraw.md",
+                "file": "01-META/Guide/本库设计原则.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -233,7 +196,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.5
+    "width": 291.5
   },
   "right": {
     "id": "6f965a0263edffe0",
@@ -259,7 +222,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_resources/本库架构.excalidraw.md",
+                "file": "01-META/Guide/本库设计原则.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -312,39 +275,42 @@
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "obsidian-git:Open Git source control": false,
       "cmdr:堆叠/取消堆叠标签页": false,
-      "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false
+      "obsidian-local-images-plus:Local Images Plus  0.17.1\r\nLocalize attachments (plugin folder)": false,
+      "obsidian-local-images-plus:Local Images Plus  0.18.9\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "4377bcb0d0a09b1e",
+  "active": "e89c1cd029b9e978",
   "lastOpenFiles": [
-    "01-META/Guide/本库子系统概述.md",
-    "_resources/本库架构.excalidraw.md",
-    "_tmp_old.json",
-    "20-AREAS/A-知识管理/知识管理.md",
-    "_resources/本库架构指南.excalidraw.svg",
-    "01-META/Guide/本库指南.md",
-    "index.md",
-    "CLAUDE.md",
+    "01-META/Guide/Design/判据谱系.md",
+    "01-META/Guide/本库设计原则.md",
+    "50-ZETTELCASTEN/痛点是知识管理的唯一动力源.md",
+    "_templates/template_concept.md",
+    "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
+    "30-RESOURCES/前端缓存方案.md",
+    "30-RESOURCES/前端性能优化.md",
+    "30-RESOURCES/如何利用API采集并计算LCP值.md",
+    "20-AREAS/A-前端/前端工程.md",
+    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
+    "10-PROJECTS/P-Agent求职/_resources/Agent Architecture.excalidraw.md",
+    "10-PROJECTS/P-Agent求职/_resources/Agent Loop.excalidraw.md",
+    "10-PROJECTS/P-Agent求职/_resources/Agent Context.excalidraw.md",
+    "10-PROJECTS/P-Agent求职/_resources/Agent Architecture.excalidraw.svg",
+    "40-ARCHIVE/RSS.md",
+    "01-META/Truth/笔记类型规范.md",
+    "01-META/Truth/本库子系统概述.md",
     "01-META/Truth/本库目录结构.md",
-    "00-INBOX/回顾性自蒸馏.md",
-    "30-RESOURCES/存量治理.md",
-    "30-RESOURCES/本库的实际运行方式.md",
-    "30-RESOURCES/资源加载与网络优化.md",
-    "30-RESOURCES/浏览器导航.md",
-    "40-ARCHIVE/深入了解现代网络浏览器(2) 导航过程.md",
-    "30-RESOURCES/从输入URL到页面展示发生了什么.md",
-    "20-AREAS/A-前端/浏览器.md",
-    "40-ARCHIVE/深入了解现代网络浏览器(1) 多进程架构.md",
-    "00-INBOX/深入了解现代网络浏览器(2) 导航过程.md",
-    "01-META/Specification/_wiki-index-format.md",
-    "01-META/Specification/_sync-rules.md",
-    "01-META/Specification/_skills-overview.md",
-    "01-META/Specification/_query-rules.md",
-    "01-META/Specification/_lint-rules.md",
-    "01-META/Specification/_ingest-rules.md",
-    "01-META/Specification/_content-type-rules.md",
-    "01-META/Specification/_anki-sync-rules.md",
-    "01-META/Log/原子笔记整理清单.md",
+    "_templates/template_learning_project.md",
+    "30-RESOURCES/逻辑学.md",
+    "_tmpcheck/README.md",
+    "_tmpcheck",
+    "50-ZETTELCASTEN/「存在先于本质」反对的是目的论，不是否认处境的约束.md",
+    "01-META/Guide/本库指南.md",
+    "_resources/本库架构.excalidraw.md",
+    "90-DIARY/2026-11-07.md",
+    "60-BLOGS/前端缓存怎么分类.md",
+    "30-RESOURCES/思维方式.md",
+    "_tmp_old.json",
+    "_resources/本库架构指南.excalidraw.svg",
     "10-PROJECTS/P-前端工程学习专项",
     "01-META/Guide/Design",
     "_scripts/_tmp_rel2.py",
@@ -353,7 +319,6 @@
     "_scripts/_tmp_titles.py",
     "_scripts/_tmp_map8.json",
     "_scripts/_tmp_map7.json",
-    "_scripts/_tmp_map6.json",
     "_resources/2053a78bf0323938d7ebfbf1d8f40f59_MD5.webp",
     "_resources/1ff95cb0537c7ba6838f236942847399_MD5.webp",
     "_resources/efadd15e30f38de83b0311944b88285c_MD5.webp",
@@ -362,7 +327,6 @@
     "_resources/f5dd21dceb51d6e5b6911e9f19145296_MD5.webp",
     "_resources/0d9fd78ef8d67ce2df3928507224a006_MD5.webp",
     "_resources/0d895f52a4b7376ffb598405c1a91c4b_MD5.webp",
-    "_resources/abb304d2c400213ba846ebf72b70a76b_MD5.webp",
     "10-PROJECTS/PROJECTS.canvas",
     "10-PROJECTS/P-Agent求职/Context Engineering.canvas",
     "未命名.canvas",

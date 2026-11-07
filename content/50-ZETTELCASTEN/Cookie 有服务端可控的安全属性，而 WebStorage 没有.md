@@ -6,6 +6,7 @@ uid: 20261031111901
 tags: []
 content-type: atomic
 up: "[[Cookie]]"
+noteId: 1794020623888
 ---
 
 > Cookie 有服务端可控的安全属性，而 WebStorage 没有

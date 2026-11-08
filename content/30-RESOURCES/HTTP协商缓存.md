@@ -107,8 +107,8 @@ flowchart TD
 
 - 上位：[[HTTP缓存机制]] — 协商缓存是它复用判定失败后的那一步
 - 下位：
-	- [[ETag]]（待写）— 内容指纹式验证器，强弱两档
-	- [[Last-Modified]]（待写）— 时间戳式验证器，秒级精度
+	- [[ETag]] — 内容指纹式验证器，强弱两档
+	- [[Last-Modified]] — 时间戳式验证器，秒级精度
 	- [[304 Not Modified]]（待写）— 验证通过的响应形态，无 body 有头
 - 并列：
 	- [[HTTP强缓存]] — 同一个「要不要发请求」问题的另一侧解法
@@ -116,7 +116,7 @@ flowchart TD
 	- [[新鲜度]] — 强缓存那一侧的判定式，304 之后靠新的 `Date` 重新起算
 	- [[If-None-Match]]（待写）— 条件请求头，携带 ETag 的那一半
 	- [[If-Modified-Since]]（待写）— 条件请求头，携带时间戳的那一半
-	- [[Cache-Control]]（待写）— `no-cache` 与 `must-revalidate` 的载体
+	- [[Cache-Control]] — `no-cache` 与 `must-revalidate` 的载体
 	- [[Content-Hash]] — 把失效控制上移到构建期的那个替代方案
 	- [[Inode]]（待写）— 默认 ETag 在集群上不一致的根源
 	- [[RTT]] — 协商缓存省不掉的那个往返

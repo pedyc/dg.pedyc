@@ -1,14 +1,20 @@
 ---
-uid: '202605161109'
+uid: "202605161109"
 title: props 和 state 有何区别？state 更新是同步还是异步？
-aliases: [Q-props 和 state]
-description: "React 中 props 和 state 的区别？setState 是同步还是异步？"
-tags: [React, props, state, 状态管理, 批量更新]
+aliases:
+  - Q-props 和 state
+description: React 中 props 和 state 的区别？setState 是同步还是异步？
+tags:
+  - React
+  - props
+  - state
+  - 状态管理
+  - 批量更新
 date-created: 2026-05-16
 date-modified: 2026-05-17
 status: active
 content-type: question
-up: "[[React面试题]]"
+up: "[[React 相关问题]]"
 ---
 
 ## 问题

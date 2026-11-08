@@ -128,7 +128,7 @@ graph LR
 	- [[useRef]] — 保存不需要触发更新的可变值
 	- [[useLayoutEffect]] — 同步执行的副作用
 	- [[SOP-正确使用useEffect]] — useEffect 标准操作流程
-	- [[React面试题]] — React 相关面试题汇总
+	- [[React 相关问题]] — React 相关面试题汇总
 
 ---
 

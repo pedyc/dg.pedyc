@@ -1,8 +1,8 @@
 ---
-title: React面试题
-aliases: [MOC-React面试题]
+title: React 相关问题
+aliases: [MOC-React 相关问题, React 面试题]
 date-created: 2025-05-21
-date-modified: 2026-07-22
+date-modified: 2026-11-08
 content-type: moc
 up: "[[React]]"
 ---
@@ -45,4 +45,4 @@ up: "[[React]]"
 
 ### 相关链接
 
-- [[Vue 面试题]]
+- [[Vue 相关问题]]

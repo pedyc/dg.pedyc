@@ -35,7 +35,7 @@ up: "[[前端开发]]"
 > 中观层：本领域是知识粒度的最小单元，没有独立 MOC，概念在此平铺。未解析的链接不是错误，是尚未写下的洞——排序见 [[知识缺口]]。
 
 - 安全策略（[[Web安全策略]]） — [[HSTS]] · [[CSP]] · [[X-Frame-Options]] · [[X-Content-Type-Options]]
-- 攻击与防御（[[Web安全问题]]） — [[XSS]] · [[CSRF]] · [[点击劫持]] · [[SSL Stripping]] · [[中间人攻击]]
+- 攻击与防御（[[Web安全 相关问题]]） — [[XSS]] · [[CSRF]] · [[点击劫持]] · [[SSL Stripping]] · [[中间人攻击]]
 
 > 10 条里有 4 条原本只是纯文本（X-Frame-Options、X-Content-Type-Options、SSL Stripping、中间人攻击），根本不算链接。补成链接后它们才成为可排队的洞，而不是看不见的空白。
 

@@ -1,11 +1,11 @@
 ---
 uid: 202606121200
-title: Angular面试题
-aliases: [MOC-Angular面试题]
+title: Angular 相关问题
+aliases: [MOC-Angular 相关问题, Angular 面试题]
 description: Angular 面试题目汇总，按模块分类，关联知识库笔记
 tags: [前端开发/Angular, 前端面试]
 date-created: 2026-06-12
-date-modified: 2026-06-12
+date-modified: 2026-11-08
 status: active
 content-type: moc
 up: "[[前端面试真题库]]"

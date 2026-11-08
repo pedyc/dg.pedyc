@@ -36,7 +36,7 @@ up: "[[前端开发]]"
 
 > 中观层：本领域是知识粒度的最小单元，没有独立 MOC，概念在此平铺。**未解析的链接不是错误，是尚未写下的洞**——排序见 [[知识缺口]]。
 
-- **版本与题型** — [[React版本演进]] · [[React面试题]] · [[Zustand vs Redux]]
+- **版本与题型** — [[React版本演进]] · [[React 相关问题]] · [[Zustand vs Redux]]
 - **核心概念** — [[Hooks(React)]] · [[Refs(React)]] · [[useCallback]] · [[useMemo]] · [[React.memo]] · [[Fiber]]
 - **渲染机制** — [[Virtual DOM|虚拟DOM]] · [[React重新渲染]] · [[React组件通信]] · [[Suspense]] · [[Server Components]]
 - **并发模式** — [[useTransition]] · [[useDeferredValue]]
@@ -45,7 +45,7 @@ up: "[[前端开发]]"
 
 ### FAQ
 
-- [[React面试题]] — 常见问题汇总
+- [[React 相关问题]] — 常见问题汇总
 - [[JSX 是什么？如何被转换？React 渲染过程是怎样的？]]
 
 ### 执行系统
@@ -58,7 +58,7 @@ up: "[[前端开发]]"
 	- [[在React中实现ASCII动画]] — ASCII 动画
 - **跨领域引用**
 	- [[使用Claude-Code开发React组件]] 的工具侧归属 [[人工智能]]，React 侧的做法归本领域
-	- [[React面试题]] 的组织方式沿用 [[前端面试真题库]] 的题集格式
+	- [[React 相关问题]] 的组织方式沿用 [[前端面试真题库]] 的题集格式
 
 ### 领域健康度
 

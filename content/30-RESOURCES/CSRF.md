@@ -1,14 +1,18 @@
 ---
 uid: 202512170005
 title: CSRF
-aliases: [C-CSRF, Cross-Site Request Forgery, 跨站请求伪造]
+aliases:
+  - C-CSRF
+  - Cross-Site Request Forgery
+  - 跨站请求伪造
 description: CSRF是一种利用用户已登录身份，诱导浏览器发送恶意请求的攻击方式
-tags: [前端开发/安全]
+tags:
+  - 前端开发/安全
 date-created: 2025-12-17
 date-modified: 2026-08-27
 status: active
 content-type: concept
-up: "[[Web安全问题]]"
+up: "[[Web安全 相关问题]]"
 ---
 
 > CSRF（Cross-Site Request Forgery，跨站请求伪造）是一种利用用户已登录身份的攻击。攻击者诱导用户访问恶意页面，浏览器会自动携带目标网站的 Cookie 向受信任网站发送恶意请求。
@@ -62,7 +66,7 @@ Set-Cookie: session=abc; SameSite=Lax
 
 ## 知识图谱
 
-- **上位**：[[Web安全问题]] — CSRF 是一种攻击类型，不是一个浏览器机制
+- **上位**：[[Web安全 相关问题]] — CSRF 是一种攻击类型，不是一个浏览器机制
 - **相关**：
 	- [[XSS]] — 另一种 Web 攻击
 	- [[Cookie]] — CSRF 利用的凭证

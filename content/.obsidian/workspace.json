@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
+                "file": "01-META/Guide/Design/判据总览.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,10 +52,48 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "缓存机制学习专项"
+              "title": "判据总览"
+            }
+          },
+          {
+            "id": "17575ffd320812fe",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "99-ASSETS/Bases/判据.base",
+                "viewName": "按作用范围"
+              },
+              "icon": "lucide-table",
+              "title": "判据"
+            }
+          },
+          {
+            "id": "a7bd9041653701b1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_templates/template_learning_project.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "template_learning_project"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -97,7 +135,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "90-DIARY/2026-11-09.md",
+                "file": "99-ASSETS/Bases/判据.base",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -302,34 +340,36 @@
       "obsidian-local-images-plus:Local Images Plus  0.18.9\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "e89c1cd029b9e978",
+  "active": "17575ffd320812fe",
   "lastOpenFiles": [
-    "90-DIARY/2026-11-08.md",
+    "01-META/Index/判据/P16 不按程度或题材划分类型.md",
+    "01-META/Index/判据/E9 content-type 十三种枚举.md",
+    "01-META/Truth/类型设计判据.md",
+    "01-META/Truth/笔记类型规范.md",
+    "99-ASSETS/Bases/判据.base",
     "90-DIARY/2026-11-09.md",
-    "_templates/template_sub_project.md",
-    "10-PROJECTS/P-缓存机制学习专项/缓存机制相关问题.md",
-    "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
-    "20-AREAS/A-前端/前端工程.md",
-    "_templates/template_learning_project.md",
-    "30-RESOURCES/费曼技巧.md",
-    "30-RESOURCES/Vue 相关问题.md",
-    "30-RESOURCES/前端面试真题库.md",
-    "30-RESOURCES/Web安全 相关问题.md",
-    "30-RESOURCES/每日一题JS题单.md",
-    "30-RESOURCES/Angular 相关问题.md",
-    "30-RESOURCES/React 相关问题.md",
-    "50-ZETTELCASTEN/强缓存省掉整个请求，协商缓存省掉响应体.md",
-    "30-RESOURCES/浏览器缓存与客户端存储体系.md",
-    "30-RESOURCES/游戏收藏.md",
-    "30-RESOURCES/游戏收藏/女王魔域.md",
-    "30-RESOURCES/Memory Cache 与 Disk Cache.md",
-    "30-RESOURCES/HTTP缓存机制.md",
-    "30-RESOURCES/Last-Modified.md",
-    "30-RESOURCES/ETag.md",
-    "30-RESOURCES/Cache-Control.md",
-    "30-RESOURCES/HTTP.md",
-    "30-RESOURCES/HTTP协商缓存.md",
-    "30-RESOURCES/HTTP强缓存.md",
+    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
+    "01-META/Guide/Design/判据总览.md",
+    "01-META/Index/判据/P9 PARA 只贡献三个容器位.md",
+    "01-META/Index/判据/P7 单一真值，其余只引用.md",
+    "01-META/Index/判据/P8 归属与形态正交.md",
+    "01-META/Index/判据/P6 抗不整理.md",
+    "01-META/Index/判据/P5 树 + 网，共用同一批节点.md",
+    "01-META/Index/判据/P4 原子化 + 双链（卡片盒）.md",
+    "01-META/Index/判据/P3 按行动组织，不按主题（PARA）.md",
+    "01-META/Index/判据/P2 知识只有被调用时才产生价值.md",
+    "01-META/Index/判据/P16 不按程度划分类型.md",
+    "01-META/Index/判据/P15 判据必须有失效对象.md",
+    "01-META/Index/判据/P14 人类只维护四个目录.md",
+    "01-META/Index/判据/P13 不删内容，只移动.md",
+    "01-META/Index/判据/P12 atomic 永不归档.md",
+    "01-META/Index/判据/P11 缺省目录的判据在出口.md",
+    "01-META/Index/判据/P10 树必须有缺省位.md",
+    "01-META/Index/判据/P1 痛点是唯一动力源.md",
+    "01-META/Index/判据/E9 content-type 十四种枚举.md",
+    "01-META/Index/判据/E8 40-ARCHIVE 免维护.md",
+    "01-META/Index/判据/E7 归档只有一层，移入目录；判据是单篇失效，不是容器结束.md",
+    "01-META/Index/判据",
     "_resources/SOP-前端高性能动画与渲染节流实施指南/981e4329bc20b14f94d3714c0a777726_MD5.webp",
     "01-META/Guide/Design/_resources/判据六层推导.excalidraw.svg",
     "01-META/Guide/Design/_resources",
@@ -340,8 +380,6 @@
     "99-ASSETS/Bases/游戏收藏.base",
     "99-ASSETS/Bases/信源.base",
     "99-ASSETS/Bases/书单.base",
-    "99-ASSETS/Bases/求职投递.base",
-    "99-ASSETS/Bases/电影收藏.base",
     "10-PROJECTS/P-Agent求职/_resources/Agent Architecture.excalidraw.svg",
     "_resources/本库架构指南.excalidraw.svg",
     "_resources/2053a78bf0323938d7ebfbf1d8f40f59_MD5.webp",

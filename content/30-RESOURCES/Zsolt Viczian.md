@@ -7,11 +7,7 @@ tags: [人物, 视觉思维, 知识管理]
 date-created: 2026-07-31
 date-modified: 2026-07-31
 status: fleeting
-birth: ""
-content-type: person
-death: ""
-nationality: 匈牙利
-occupation: 企业架构主管 / Obsidian 插件独立开发者
+content-type: record
 up: "[[知识内化]]"
 ---
 

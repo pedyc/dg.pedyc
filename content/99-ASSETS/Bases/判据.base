@@ -1,0 +1,93 @@
+filters:
+  and:
+    - file.inFolder("01-META/Index/判据")
+properties:
+  file.name:
+    displayName: 条目
+  criterion:
+    displayName: 编号
+  kind:
+    displayName: 类型
+  scope:
+    displayName: 作用范围
+  statement:
+    displayName: 判据
+  purpose:
+    displayName: 目的
+  layer:
+    displayName: 层级
+  carrier:
+    displayName: 载体
+  source:
+    displayName: 原文
+views:
+  - type: table
+    name: 全部条目（按层）
+    groupBy:
+      property: layer
+      direction: ASC
+    groupOrder:
+      - 第 0 层
+      - 第 1 层
+      - 第 2 层
+      - 第 3 层
+      - 第 4 层
+      - 第 5 层
+      - 第 6 层
+    order:
+      - criterion
+      - statement
+      - kind
+      - scope
+      - carrier
+      - purpose
+      - source
+    sort:
+      - property: seq
+        direction: ASC
+  - type: table
+    name: 按类型
+    groupBy:
+      property: kind
+      direction: ASC
+    groupOrder:
+      - 预设
+      - 工程
+    order:
+      - criterion
+      - statement
+      - scope
+      - layer
+      - carrier
+      - purpose
+      - source
+    sort:
+      - property: seq
+        direction: ASC
+  - type: table
+    name: 按作用范围
+    groupBy:
+      property: scope
+      direction: ASC
+    groupOrder:
+      - 全局
+      - 容器
+      - 字段
+      - 链接
+      - 命名
+      - 维护
+      - atomic
+      - MOC
+      - sop
+      - 学习专项
+    order:
+      - criterion
+      - statement
+      - kind
+      - layer
+      - carrier
+      - purpose
+      - source
+    sort:
+      - property: seq
+        direction: ASC

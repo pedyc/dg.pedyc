@@ -33,7 +33,7 @@ up: "[[本库指南]]"
 | 层级 | 位置 | 负责方 | 说明 |
 |------|------|--------|------|
 | 原子笔记层 | `50-ZETTELCASTEN/` | 你 | 已内化的洞见（atomic），source of truth |
-| Wiki | `30-RESOURCES/` | LLM | concept/moc/SOP/term/comparison/question/record/roadmap/person，由 LLM 持续维护 |
+| Wiki | `30-RESOURCES/` | LLM | concept/moc/SOP/term/comparison/question/record/roadmap，由 LLM 持续维护 |
 | 真值层 | `01-META/Truth/` | 你 + LLM | 判据、字段定义、命名规则的唯一来源。2026-10 起独立成层，原三层架构里没有它的位置 |
 | Archive | `40-ARCHIVE/` | 你 + LLM | 过时知识、已完成项目 |
 

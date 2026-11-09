@@ -4,7 +4,7 @@ version: 3.3.1
 description: |
   创建/更新笔记全流程：读取模板 → 生成/修改笔记 → 更新父级引用 → 同步 wiki 元数据 → 评估健康度 → 核查内容质量。
   **一条命令完成从创建/更新到知识网络挂载的全链路，无需再单独调用其他 skill。**
-  支持所有 content-type 包括 roadmap 和 person。
+  支持所有 content-type 包括 roadmap 与 record 的人物形态（`template_person`）。
 argument-hint: "<create|update> <content-type> <标题/路径> [内容]"
 allowed-tools:
   - Read
@@ -75,7 +75,7 @@ allowed-tools:
 | atomic | concept | 相关原子笔记章节 | `- [[atomic-title]]` |
 | moc | MOC | 列表末尾 | `- [[MOC-X]]` |
 | concept/question | MOC | 列表末尾 | `- [[笔记]]` |
-| person | MOC | 列表末尾 | `- [[{{人名}}]] — 描述`（无对应 MOC 时挂 Area 人物小节） |
+| 人物（record 子模板） | MOC | 列表末尾 | `- [[{{人名}}]] — 描述`（无对应 MOC 时挂 Area 人物小节） |
 
 ---
 
@@ -127,7 +127,7 @@ subagent 关闭时自动清理上下文，不污染主会话。
 | comparison | `VS-` | `30-RESOURCES/` |
 | record | `R-` | `30-RESOURCES/` |
 | roadmap | `R-`（同 record 共享） | `30-RESOURCES/` |
-| person | `R-`（同 record/roadmap 共享） | `30-RESOURCES/` |
+| 人物（`template_person`） | `R-`（同 record/roadmap 共享） | `30-RESOURCES/`，`content-type: record` |
 | area | `A-` | `20-AREAS/A-XXX/`（领域主页） |
 | project | `P-` | `10-PROJECTS/P-XXX/`（工作区主页） |
 | article | 无 | `60-BLOGS/`（单形态目录） |

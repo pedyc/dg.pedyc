@@ -7,11 +7,7 @@ tags: [人物, 人工智能, 知识管理]
 date-created: 2026-07-31
 date-modified: 2026-08-14
 status: fleeting
-birth: ""
-content-type: person
-death: ""
-nationality: 斯洛伐克裔（现居美国）
-occupation: AI 研究者/工程师，前特斯拉 AI 总监
+content-type: record
 up: "[[知识内化]]"
 ---
 

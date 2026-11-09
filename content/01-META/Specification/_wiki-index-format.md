@@ -76,7 +76,7 @@ up: "[[llm-wiki-schema]]"
 - 描述取自笔记 frontmatter 的 `description`，压缩为短语（≤ 30 字），**不以句号结尾**
 - **禁止**在条目内标注 `（aliases: …）`——别名属于 frontmatter，索引内不重复
 
-**子条目**（person / 归属子页）：
+**子条目**（人物 / 归属子页）：
 
 ```markdown
 - [[父条目]] — 描述

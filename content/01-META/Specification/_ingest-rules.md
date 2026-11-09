@@ -79,7 +79,7 @@ git mv "00-INBOX/源文件名.md" "40-ARCHIVE/"
 
 需要看的三节：
 
-- `content-type 总览` —— 14 种取值与各自的一句话定位
+- `content-type 总览` —— 13 种取值与各自的一句话定位
 - `各类型定位` —— 每种形态是什么、不是什么
 - `类型辨析（判断标准）` —— atomic / concept / term、area / concept / moc、sop / question 的分界
 

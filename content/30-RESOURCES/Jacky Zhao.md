@@ -7,11 +7,7 @@ tags: [人物, 开源, 数字花园, Quartz]
 date-created: 2026-08-14
 date-modified: 2026-08-14
 status: fleeting
-birth: ""
-content-type: person
-death: ""
-nationality: 待核实（现居美国旧金山）
-occupation: 软件工程师（Replit）/ 独立研究者 / 开源开发者
+content-type: record
 up: "[[数字花园]]"
 ---
 

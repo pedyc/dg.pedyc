@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_templates/template_learning_project.md",
+                "file": "90-DIARY/2026-11-09.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "template_learning_project"
+              "title": "2026-11-09"
             }
           },
           {
@@ -97,7 +97,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "_templates/template_learning_project.md",
+                "file": "90-DIARY/2026-11-09.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -304,6 +304,8 @@
   },
   "active": "e89c1cd029b9e978",
   "lastOpenFiles": [
+    "90-DIARY/2026-11-08.md",
+    "90-DIARY/2026-11-09.md",
     "_templates/template_sub_project.md",
     "10-PROJECTS/P-缓存机制学习专项/缓存机制相关问题.md",
     "10-PROJECTS/P-缓存机制学习专项/缓存机制学习专项.md",
@@ -328,8 +330,6 @@
     "30-RESOURCES/HTTP.md",
     "30-RESOURCES/HTTP协商缓存.md",
     "30-RESOURCES/HTTP强缓存.md",
-    "20-AREAS/A-前端/Web安全.md",
-    "20-AREAS/A-前端/Vue.md",
     "_resources/SOP-前端高性能动画与渲染节流实施指南/981e4329bc20b14f94d3714c0a777726_MD5.webp",
     "01-META/Guide/Design/_resources/判据六层推导.excalidraw.svg",
     "01-META/Guide/Design/_resources",

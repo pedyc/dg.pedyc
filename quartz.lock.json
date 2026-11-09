@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "plugins": {
+    "floating-nav": {
+      "source": "./custom/floating-nav",
+      "resolved": "D:\\Workspace\\pedyc\\dg,pedyc\\custom\\floating-nav",
+      "commit": "local",
+      "installedAt": "2026-11-09T16:08:46.305Z"
+    },
+    "poetry": {
+      "source": "./custom/poetry",
+      "resolved": "D:\\Workspace\\pedyc\\dg,pedyc\\custom\\poetry",
+      "commit": "local",
+      "installedAt": "2026-11-09T16:08:46.303Z"
+    }
+  }
+}

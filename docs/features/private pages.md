@@ -8,12 +8,14 @@ There may be some notes you want to avoid publishing as a website. Quartz suppor
 
 ## Filter Plugins
 
-[[making plugins#Filters|Filter plugins]] are plugins that filter out content based off of certain criteria. By default, Quartz uses the [[RemoveDrafts]] plugin which filters out any note that has `draft: true` in the frontmatter.
+[[making plugins#Filters|Filter plugins]] are plugins that filter out content based off of certain criteria. By default, Quartz's built-in [[RemoveDrafts|draft handling]] filters out any note that has `draft: true` in the frontmatter.
 
 If you'd like to only publish a select number of notes, you can instead use [[ExplicitPublish]] which will filter out all notes except for any that have `publish: true` in the frontmatter.
 
+Bases, canvases and Excalidraw drawings follow the same filters. A drawing stored as Markdown has frontmatter of its own. A `.base` or `.canvas` file has none: with [[ExplicitPublish]] it is published when a published note links to it, and with encrypted pages it is encrypted with the password of the encrypted note that links to it.
+
 > [!warning]
-> Regardless of the filter plugin used, **all non-markdown files will be emitted and available publically in the final build.** This includes files such as images, voice recordings, PDFs, etc.
+> Regardless of the filter plugin used, **all non-markdown files will be emitted and available publicly in the final build.** This includes files such as images, voice recordings, PDFs, etc.
 
 ## `ignorePatterns`
 

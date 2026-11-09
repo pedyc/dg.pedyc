@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-META/Truth/笔记类型规范.md",
+                "file": "01-META/Truth/类型设计判据.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "笔记类型规范"
+              "title": "类型设计判据"
             }
           },
           {
@@ -135,7 +135,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "01-META/Truth/笔记类型规范.md",
+                "file": "01-META/Truth/类型设计判据.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -342,6 +342,8 @@
   },
   "active": "a894a3ca80ee9705",
   "lastOpenFiles": [
+    "01-META/Truth/真值索引.md",
+    "01-META/Truth/笔记类型规范.md",
     "01-META/Truth/本库子系统概述.md",
     "01-META/Truth/atomic 设计.md",
     "01-META/Truth/类型设计判据.md",
@@ -349,7 +351,6 @@
     "99-ASSETS/Bases/判据.base",
     "01-META/Index/判据/P16 不按程度或题材划分类型.md",
     "01-META/Index/判据/E9 content-type 十三种枚举.md",
-    "01-META/Truth/笔记类型规范.md",
     "90-DIARY/2026-11-09.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
     "01-META/Index/判据/P9 PARA 只贡献三个容器位.md",
@@ -368,7 +369,6 @@
     "01-META/Index/判据/P11 缺省目录的判据在出口.md",
     "01-META/Index/判据/P10 树必须有缺省位.md",
     "01-META/Index/判据/P1 痛点是唯一动力源.md",
-    "01-META/Index/判据/E9 content-type 十四种枚举.md",
     "01-META/Index/判据",
     "_resources/SOP-前端高性能动画与渲染节流实施指南/981e4329bc20b14f94d3714c0a777726_MD5.webp",
     "01-META/Guide/Design/_resources/判据六层推导.excalidraw.svg",

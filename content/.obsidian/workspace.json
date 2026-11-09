@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-META/Guide/Design/判据总览.md",
+                "file": "01-META/Truth/笔记类型规范.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "判据总览"
+              "title": "笔记类型规范"
             }
           },
           {
@@ -93,7 +93,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -135,7 +135,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "99-ASSETS/Bases/判据.base",
+                "file": "01-META/Truth/笔记类型规范.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -340,16 +340,18 @@
       "obsidian-local-images-plus:Local Images Plus  0.18.9\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "17575ffd320812fe",
+  "active": "a894a3ca80ee9705",
   "lastOpenFiles": [
+    "01-META/Truth/本库子系统概述.md",
+    "01-META/Truth/atomic 设计.md",
+    "01-META/Truth/类型设计判据.md",
+    "01-META/Guide/Design/判据总览.md",
+    "99-ASSETS/Bases/判据.base",
     "01-META/Index/判据/P16 不按程度或题材划分类型.md",
     "01-META/Index/判据/E9 content-type 十三种枚举.md",
-    "01-META/Truth/类型设计判据.md",
     "01-META/Truth/笔记类型规范.md",
-    "99-ASSETS/Bases/判据.base",
     "90-DIARY/2026-11-09.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
-    "01-META/Guide/Design/判据总览.md",
     "01-META/Index/判据/P9 PARA 只贡献三个容器位.md",
     "01-META/Index/判据/P7 单一真值，其余只引用.md",
     "01-META/Index/判据/P8 归属与形态正交.md",
@@ -367,8 +369,6 @@
     "01-META/Index/判据/P10 树必须有缺省位.md",
     "01-META/Index/判据/P1 痛点是唯一动力源.md",
     "01-META/Index/判据/E9 content-type 十四种枚举.md",
-    "01-META/Index/判据/E8 40-ARCHIVE 免维护.md",
-    "01-META/Index/判据/E7 归档只有一层，移入目录；判据是单篇失效，不是容器结束.md",
     "01-META/Index/判据",
     "_resources/SOP-前端高性能动画与渲染节流实施指南/981e4329bc20b14f94d3714c0a777726_MD5.webp",
     "01-META/Guide/Design/_resources/判据六层推导.excalidraw.svg",

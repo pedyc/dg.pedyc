@@ -18,6 +18,8 @@ properties:
     displayName: 层级
   carrier:
     displayName: 载体
+  applies:
+    displayName: 适用模板
   source:
     displayName: 原文
 views:
@@ -88,6 +90,20 @@ views:
       - carrier
       - purpose
       - source
+    sort:
+      - property: seq
+        direction: ASC
+  - type: table
+    name: 按模板
+    groupBy:
+      property: applies
+      direction: ASC
+    order:
+      - criterion
+      - statement
+      - scope
+      - carrier
+      - purpose
     sort:
       - property: seq
         direction: ASC

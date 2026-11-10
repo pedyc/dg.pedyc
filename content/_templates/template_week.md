@@ -12,6 +12,12 @@ content-type: diary
 up: "[[90-DIARY/]]"
 ---
 
+<!-- 判据:begin 由 _scripts/sync_criteria.py 从登记条目生成，勿手改 -->
+	子模板，父模板 `template_diary` 亦无专属判据（2026-11-10 实测）。
+	判定与写法见 [[笔记类型规范]]；这一型还没有判据专为它而写，空位已登记在 [[判据总览]]。
+	通用判据与写作速查见 [[判据速查]]。
+<!-- 判据:end -->
+
 ```dataviewjs
 // 周知识沉淀统计（逻辑在 _scripts/weekPanel.js）
 await dv.view("_scripts/weekPanel")

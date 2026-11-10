@@ -11,8 +11,9 @@ criterion: P12
 seq: 12
 kind: 预设
 scope: atomic
+applies: [atomic]
 layer: 第 2 层
-carrier: 无
+carrier: 脚本
 statement: "atomic 永不归档"
 purpose: "洞察是资产，不随时间过期。归档意味着它退役，而它没有退役的理由"
 source: "[[atomic 设计]]"

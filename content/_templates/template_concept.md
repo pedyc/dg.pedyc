@@ -8,6 +8,13 @@ content-type: concept
 up: "[[{{父级}}]]"
 ---
 
+<!-- 判据:begin 由 _scripts/sync_criteria.py 从登记条目生成，勿手改 -->
+	本型判据 2 条（原文在条目，此处只引不抄）：
+	- [[E14 论据归谁看复用度|E14]] 论据归谁看复用度
+	- [[E16 atomic 与 concept 看形式，不看主客观|E16]] atomic 与 concept 看形式，不看主客观
+	通用判据与写作速查见 [[判据速查]]。
+<!-- 判据:end -->
+
 <!--
 	概念笔记 (Concept Note) 设计原则：
 

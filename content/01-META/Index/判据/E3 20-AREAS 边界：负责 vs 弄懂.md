@@ -11,6 +11,7 @@ criterion: E3
 seq: 15
 kind: 工程
 scope: 容器
+applies: [moc, area]
 layer: 第 2 层
 carrier: 无
 statement: "20-AREAS 边界：负责 vs 弄懂"

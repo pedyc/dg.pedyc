@@ -20,6 +20,12 @@ date-created: <% tp.file.creation_date("YYYY-MM-DD") %>
 date-modified: <% tp.file.creation_date("YYYY-MM-DD") %>
 ---
 
+<!-- 判据:begin 由 _scripts/sync_criteria.py 从登记条目生成，勿手改 -->
+	子模板，不映射独立类型；判据随父模板 `template_record` 走。
+	- [[E17 注记与 atomic：可反驳 vs 可核实|E17]] 注记与 atomic：可反驳 vs 可核实
+	通用判据与写作速查见 [[判据速查]]。
+<!-- 判据:end -->
+
 <!--
 	信源卡设计原则：
 

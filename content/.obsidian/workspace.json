@@ -32,12 +32,12 @@
             }
           },
           {
-            "id": "a894a3ca80ee9705",
+            "id": "1e5b0acc1eeef4ca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-11-10.md",
+                "file": "01-META/Truth/笔记类型规范.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,20 +52,41 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-11-10"
+              "title": "笔记类型规范"
             }
           },
           {
-            "id": "17575ffd320812fe",
+            "id": "b9f527edfbccfd76",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "k-plex-react-view",
               "state": {
-                "file": "99-ASSETS/Bases/判据.base",
-                "viewName": "按作用范围"
+                "centerPresentation": {
+                  "embedCentralNode": false,
+                  "centralNodeMarkdownMode": "source"
+                },
+                "plexSession": {
+                  "version": 1,
+                  "ownerId": "b9f527edfbccfd76",
+                  "centerPath": "01-META/Guide/Design/判据总览.md",
+                  "targetId": null,
+                  "plexView": {
+                    "version": 1,
+                    "id": "classic",
+                    "states": {},
+                    "areaHeights": {},
+                    "roots": {}
+                  },
+                  "documentSyncMode": "off",
+                  "sidecarOpen": false,
+                  "sidecarPosition": "right",
+                  "sidecarLastFilePath": "",
+                  "sidecarLastUrl": "",
+                  "sidecarMarkdownMode": "source"
+                }
               },
-              "icon": "lucide-table",
-              "title": "判据"
+              "icon": "brain-circuit",
+              "title": "判据总览"
             }
           },
           {
@@ -74,7 +95,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_templates/template_learning_project.md",
+                "file": "01-META/Guide/Design/判据总览.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -89,11 +110,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "template_learning_project"
+              "title": "判据总览"
+            }
+          },
+          {
+            "id": "c54be47a0e97dc0c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01-META/Faq/手写笔记规则.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "手写笔记规则"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -135,7 +180,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "90-DIARY/2026-11-10.md",
+                "file": "01-META/Faq/手写笔记规则.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -337,38 +382,42 @@
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "obsidian-git:Open Git source control": false,
       "cmdr:堆叠/取消堆叠标签页": false,
-      "obsidian-local-images-plus:Local Images Plus  0.18.9\r\nLocalize attachments (plugin folder)": false
+      "obsidian-local-images-plus:Local Images Plus  0.18.9\r\nLocalize attachments (plugin folder)": false,
+      "k-plex:Open K-Plex canvas": false
     }
   },
-  "active": "a894a3ca80ee9705",
+  "active": "c54be47a0e97dc0c",
   "lastOpenFiles": [
-    "01-META/Truth/类型设计判据.md",
-    "90-DIARY/2026-11-10.md",
-    "01-META/Truth/真值索引.md",
+    "_templates/template_atomic.md",
+    "_templates/template_article.md",
+    "_templates/template_area.md",
+    "99-ASSETS/Bases/判据.base",
+    "_scripts/check_criteria.py",
+    "01-META/Guide/Design/判据速查.md",
+    "_scripts/sync_criteria.py",
+    "_scripts/criteria_lib.py",
+    "01-META/Guide/Design/判据总览.md",
+    "01-META/Index/判据/E24 comparison 的被比较对象不进桶.md",
+    "01-META/Index/判据/E38 判据要有触发点.md",
+    "_templates/template_moc.md",
+    "_templates/template_learning_project.md",
     "01-META/Truth/笔记类型规范.md",
     "01-META/Truth/本库子系统概述.md",
+    "01-META/Log/原子笔记整理清单.md",
+    "01-META/Index/判据/E18 MOC 只索引不消化.md",
+    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
+    "01-META/Index/判据/P3 按行动组织，不按主题（PARA）.md",
+    "01-META/Index/判据/E19 规范名不越界.md",
+    "30-RESOURCES/V8 引擎.md",
+    "90-DIARY/2026-11-10.md",
+    "01-META/Truth/类型设计判据.md",
+    "01-META/Truth/真值索引.md",
     "01-META/Truth/atomic 设计.md",
-    "01-META/Guide/Design/判据总览.md",
-    "99-ASSETS/Bases/判据.base",
     "01-META/Index/判据/P16 不按程度或题材划分类型.md",
     "01-META/Index/判据/E9 content-type 十三种枚举.md",
     "90-DIARY/2026-11-09.md",
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
     "01-META/Index/判据/P9 PARA 只贡献三个容器位.md",
     "01-META/Index/判据/P7 单一真值，其余只引用.md",
-    "01-META/Index/判据/P8 归属与形态正交.md",
-    "01-META/Index/判据/P6 抗不整理.md",
-    "01-META/Index/判据/P5 树 + 网，共用同一批节点.md",
-    "01-META/Index/判据/P4 原子化 + 双链（卡片盒）.md",
-    "01-META/Index/判据/P3 按行动组织，不按主题（PARA）.md",
-    "01-META/Index/判据/P2 知识只有被调用时才产生价值.md",
-    "01-META/Index/判据/P16 不按程度划分类型.md",
-    "01-META/Index/判据/P15 判据必须有失效对象.md",
-    "01-META/Index/判据/P14 人类只维护四个目录.md",
-    "01-META/Index/判据/P13 不删内容，只移动.md",
-    "01-META/Index/判据/P12 atomic 永不归档.md",
-    "01-META/Index/判据/P11 缺省目录的判据在出口.md",
-    "01-META/Index/判据/P10 树必须有缺省位.md",
     "01-META/Index/判据",
     "_resources/SOP-前端高性能动画与渲染节流实施指南/981e4329bc20b14f94d3714c0a777726_MD5.webp",
     "01-META/Guide/Design/_resources/判据六层推导.excalidraw.svg",
@@ -377,9 +426,6 @@
     "99-ASSETS/Bases/EXCALIDRAW.base",
     "99-ASSETS/Bases/ALL.base",
     "99-ASSETS/Bases/元数据巡检.base",
-    "99-ASSETS/Bases/游戏收藏.base",
-    "99-ASSETS/Bases/信源.base",
-    "99-ASSETS/Bases/书单.base",
     "10-PROJECTS/P-Agent求职/_resources/Agent Architecture.excalidraw.svg",
     "_resources/本库架构指南.excalidraw.svg",
     "_resources/2053a78bf0323938d7ebfbf1d8f40f59_MD5.webp",

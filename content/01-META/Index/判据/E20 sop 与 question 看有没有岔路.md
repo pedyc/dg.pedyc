@@ -11,6 +11,7 @@ criterion: E20
 seq: 32
 kind: 工程
 scope: sop
+applies: [sop, question]
 layer: 第 3 层
 carrier: 无
 statement: "sop 与 question 看有没有岔路"

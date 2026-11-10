@@ -11,6 +11,7 @@ criterion: E24
 seq: 40
 kind: 工程
 scope: 链接
+applies: [comparison]
 layer: 第 4 层
 carrier: 模板
 statement: "comparison 的被比较对象不进桶"

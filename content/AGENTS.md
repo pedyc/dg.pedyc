@@ -36,6 +36,8 @@
 | 工作流（ingest / query / lint / sync / inbox-review） | `Guide/llm-wiki-schema.md` |
 | 存量治理的步骤（诊断 / 定判据 / 回填 / 收尾） | `30-RESOURCES/存量治理.md` |
 | 判形态（13 种 content-type）、atomic 正文结构、名字该不该聚合 | `Truth/笔记类型规范` |
+| 写某一型时该守哪几条判据 | `Guide/Design/判据速查`（按模板分组，脚本生成的投影） |
+| 查某类笔记违反了哪些判据、哪条判据还没人查 | `_scripts/check_criteria.py`（`--detail E15` 看明细，`--coverage` 看载体覆盖） |
 | 写 concept 时不知怎么组织 atomic（要一篇可对照的范文） | `Guide/概念与原子笔记的组织范例` |
 | 判 atomic 标题够不够格（主语可指认 / 可证伪 / 有增量） | `.claude/agents/atomic-title-reviewer.md`（subagent，只判不改） |
 | 判归属（目录、20-AREAS 边界、40-ARCHIVE） | `Truth/本库目录结构` |
@@ -65,6 +67,8 @@
 ## 四、动手前后
 
 - **改完必跑**：`python _scripts/validate_meta.py --all`（字段脏值）；动了链接或 `up` 再跑 `--links`。
+- **改过判据条目必跑** `python _scripts/sync_criteria.py`：模板注释与 [[判据速查]] 都是从条目生成的投影，不重跑就停在旧版本，而旧版本不报错。
+- **改过某一型笔记的正文结构**，跑 `python _scripts/check_criteria.py --only <编号>` 确认没把旧账算到新改动上。
 - **覆盖已存在文件前先看 `git status`**（用户可能同时在 Obsidian 里改）。
 - **只在被要求的范围内动手**：顺手发现的问题先说出来，不要自己扩大范围（P0 变 P0+P1 就是范围蔓延）。
 - **补 `up` 前先跑 `check_targets.py`**：凭印象写的父级名很可能不存在，不校验就是用一个新断链换掉一个空字段。

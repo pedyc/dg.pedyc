@@ -11,6 +11,7 @@ criterion: E16
 seq: 28
 kind: 工程
 scope: atomic
+applies: [atomic, concept]
 layer: 第 3 层
 carrier: 无
 statement: "atomic 与 concept 看形式，不看主客观"

@@ -11,8 +11,9 @@ criterion: E11
 seq: 23
 kind: 工程
 scope: atomic
+applies: [atomic]
 layer: 第 3 层
-carrier: 模板
+carrier: 模板 + 脚本
 statement: "atomic 标题先主语、后可判断"
 purpose: "标题会离开本文单独出现（被引用、搜索结果、图谱）。主语悬空时无所谓真假，读者连它在说什么都不确定"
 source: "[[atomic 设计]]"

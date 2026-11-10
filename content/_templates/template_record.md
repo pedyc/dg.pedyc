@@ -13,6 +13,12 @@ location: ""
 participants: ""
 ---
 
+<!-- 判据:begin 由 _scripts/sync_criteria.py 从登记条目生成，勿手改 -->
+	本型判据 1 条（原文在条目，此处只引不抄）：
+	- [[E17 注记与 atomic：可反驳 vs 可核实|E17]] 注记与 atomic：可反驳 vs 可核实
+	通用判据与写作速查见 [[判据速查]]。
+<!-- 判据:end -->
+
 <!--
 	记录笔记 (Record) 设计原则：
 

@@ -11,6 +11,7 @@ criterion: E17
 seq: 29
 kind: 工程
 scope: atomic
+applies: [atomic, record]
 layer: 第 3 层
 carrier: 模板
 statement: "注记与 atomic：可反驳 vs 可核实"

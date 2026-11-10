@@ -11,6 +11,7 @@ criterion: E18
 seq: 30
 kind: 工程
 scope: MOC
+applies: [moc]
 layer: 第 3 层
 carrier: 模板
 statement: "MOC 只索引不消化"

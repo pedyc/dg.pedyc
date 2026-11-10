@@ -11,6 +11,7 @@ criterion: E42
 seq: 35
 kind: 工程
 scope: 学习专项
+applies: [learning_project]
 layer: 第 3 层
 carrier: 无
 statement: "链是逐点分解，KR 是跨环节抽样，个数不必相等"

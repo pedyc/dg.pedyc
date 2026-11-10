@@ -181,7 +181,7 @@ def check_e35(rel, fm, body, text):
 
 
 def check_e43(rel, fm, body, text):
-    """学习专项不设「进展」节。"""
+    """不设「进展」节（全部 project 形态）。"""
     if fm.get("content-type") != "project":
         return
     for line in body.splitlines():
@@ -196,6 +196,33 @@ def check_e44(rel, fm, body, text):
         m = HEADING.match(line)
         if m and "台账" in m.group(2):
             add("E44", rel, lineno_of(body, line), f"设了 `{m.group(2)}` 节")
+
+
+def check_e45(rel, fm, body, text):
+    """project 的 expire 必填——它是时间盒的唯一载体。"""
+    if fm.get("content-type") != "project":
+        return
+    if not fm.get("expire"):
+        add("E45", rel, 0, "project 缺 `expire`（填不出的不是 project，是 area）")
+
+
+def check_e46(rel, fm, body, text):
+    """project 不写进度百分比或 KR 权重。只看标题行，避开发言正文里的合法百分比。"""
+    if fm.get("content-type") != "project":
+        return
+    for line in body.splitlines():
+        if HEADING.match(line) and re.search(r"\d+\s*%", line):
+            add("E46", rel, lineno_of(body, line), f"标题含百分比 `{line.strip()[:28]}`")
+
+
+def check_e47(rel, fm, body, text):
+    """project 不设「复盘」节，归档时补。"""
+    if fm.get("content-type") != "project" or is_archive(rel):
+        return
+    for line in body.splitlines():
+        m = HEADING.match(line)
+        if m and "复盘" in m.group(2):
+            add("E47", rel, lineno_of(body, line), f"设了 `{m.group(2)}` 节")
 
 
 def check_p12(rel, fm, body, text):
@@ -250,8 +277,11 @@ CHECKS = [
     ("E22", "六桶词表", "存量", check_e22, False),
     ("E25", "不设「关联」节", "存量", check_e25, False),
     ("E35", "不设 status / related / category", "存量", check_e35, False),
-    ("E43", "学习专项不设「进展」节", "存量", check_e43, False),
+    ("E43", "不设「进展」节", "存量", check_e43, False),
     ("E44", "不设知识点台账", "存量", check_e44, False),
+    ("E45", "project 的 expire 必填", "存量", check_e45, False),
+    ("E46", "project 不写百分比", "存量", check_e46, False),
+    ("E47", "project 不设「复盘」节", "存量", check_e47, False),
     ("E21", "断链 = 待提炼", "提示", check_e21, False),
 ]
 
@@ -334,10 +364,77 @@ def coverage():
     print(f"  {' '.join(todo) if todo else '无'}")
 
 
+READ_SECTIONS = ("读什么", "学习路径")
+# 节内以这些词开头的子标题是排除项，里面的链接不是读物
+EXCLUDE_SUB = re.compile(r"不读|排除")
+
+
+def todo():
+    """未知领域学习专项的待写清单：指定节里的灰链。
+
+    灰链不是缺陷，是产出清单——见 Truth/project 设计「读什么：断链即待写」。
+    这里只把「还缺哪些读物」从全库 2208 条断链里挑出来，按文件分组。
+    """
+    if not notes:
+        load_notes()
+    rows = []
+    for rel, fm, body, text in notes:
+        if fm.get("content-type") != "project" or is_archive(rel):
+            continue
+        cur = None
+        cur_lv = 0
+        miss = []
+        tot = 0
+        for i, line in enumerate(body.splitlines(), 1):
+            m = HEADING.match(line)
+            if m:
+                lv = len(m.group(1))
+                title = m.group(2).strip()
+                if any(title.startswith(s) for s in READ_SECTIONS):
+                    cur, cur_lv = title, lv
+                elif lv > cur_lv and EXCLUDE_SUB.search(title):
+                    # 节内的排除项子标题不算读物：那几条写的是「不读」的理由
+                    cur = None
+                elif lv <= cur_lv:
+                    cur = None
+                # 其余 lv > cur_lv 的子标题是分组，留在本节内
+                continue
+            if cur and any(cur.startswith(s) for s in READ_SECTIONS):
+                for w in WIKILINK.finditer(line):
+                    target = w.group(1).strip().rsplit("/", 1)[-1].strip()
+                    if not target or target.lower().endswith(".base"):
+                        continue
+                    tot += 1
+                    if target not in link_targets:
+                        miss.append((i, target))
+        if tot:
+            rows.append((rel, miss, tot))
+
+    gray = sum(len(m) for _, m, _ in rows)
+    total = sum(n for _, _, n in rows)
+    pct = gray / total * 100 if total else 0.0
+    print(f"读什么 / 学习路径节：{len(rows)} 篇，{total} 条读物链，其中灰 {gray} 条（{pct:.1f}%）")
+    print("  冷领域的期望形状是**大部分读物为灰**；灰率 < 20% 说明清单多半是照库的存量列的，")
+    print("  不是按领域该读的列的——见 Truth/project 设计「读什么：断链即待写」。")
+    print("")
+    for rel, miss, n in rows:
+        p = len(miss) / n * 100 if n else 0.0
+        flag = "  ← 可疑：几乎全是已有笔记" if p < 20 else ""
+        print(f"  {rel}  ({len(miss)} 灰 / {n} 链，{p:.0f}%){flag}")
+        for i, t in miss:
+            print(f"    L{i:<4} {t}")
+        print("")
+    if not rows:
+        print("  （无：所有读物链接都指向已存在的笔记）")
+
+
 def main():
     args = sys.argv[1:]
     if "--coverage" in args:
         coverage()
+        return 0
+    if "--todo" in args:
+        todo()
         return 0
     only = None
     if "--only" in args:

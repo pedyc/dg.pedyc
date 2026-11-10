@@ -37,7 +37,6 @@ CONTENT_TYPE_OF = {
 SUB_OF = {
     "person": "record",
     "source": "record",
-    "sub_project": "project",
     "week": "diary",
 }
 

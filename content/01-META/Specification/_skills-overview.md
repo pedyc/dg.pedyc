@@ -4,14 +4,14 @@ title: _skills-overview
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-06-12
-date-modified: 2026-11-06
+date-modified: 2026-11-10
 content-type: article
 up: "[[llm-wiki-schema]]"
 ---
 
 ## Skills 概览
 
-本库 5 个本地 skill，按 PARA 分层组织，职责互不重叠。
+本库 6 个本地 skill，按 PARA 分层组织，职责互不重叠。
 
 > [!important] 两条必须遵守的义务，住在本文件
 > **创建或重写笔记一律走 `obsidian-note-local`**，它内部会同步 `wiki-index` / `sync-state`。跳过它就会留下不同步的索引。
@@ -27,6 +27,7 @@ up: "[[llm-wiki-schema]]"
 | | `content-evaluator-local` | v1.2.0 | 健康检查（lint），含 content-type 模板对比 | 全库只读 |
 | | `content-verifier-local` | v1.1.0 | 内容质量核查，按模板章节对比 | 指定笔记 |
 | **内容层** | `llm-wiki-local` | v1.0.0 | ingest / query / lint / graph | 内容页 |
+| | `learning-project-local` | v1.0.0 | 为陌生领域起草学习专项：画链 → 列缺口 → 对库，缺的读物留灰链 | 起草期只读库外；落盘委托创建层 |
 
 ### 调用流程
 
@@ -39,10 +40,12 @@ flowchart LR
     A --> E[content-verifier-local]
     B -.-> F[(内容页)]
     C -.-> G[(01-META)]
+    H[/learning-project-local v1/] -->|落盘委托| A
 ```
 
 ```bash
 obsidian-note-local → 创建 + 挂父页面 + 同步 + 评估 + 核查（一键完成）
+learning-project-local → 起草完交给 obsidian-note-local，不自己写文件
 ```
 
 ### 各 skill 详解
@@ -140,6 +143,31 @@ obsidian-note-local → 创建 + 挂父页面 + 同步 + 评估 + 核查（一�
 2. 知识网络 — 引用是否正确、双向链接
 3. 逻辑正确 — 断言是否准确
 4. 内容覆盖 — 是否有明显缺口
+
+---
+
+#### learning-project-local
+
+**用途**：为一个陌生领域起草学习专项。**只管起草，不管落盘**——写完交给 `obsidian-note-local`，否则索引不同步。
+
+```bash
+/learning-project-local "分布式缓存" 锚点=课纲某份
+/learning-project-local "Agent 工程" 锚点=某 JD 的能力项
+```
+
+**为什么值得独立成 skill**：它的价值不在步骤内容，在**信息到达的顺序**。Truth 文档是整篇读进去的，「此刻还不许看库」这种约束，文档表达不了；skill 在任务被识别时注入，先于任何探索，才能真的拦住。
+
+**三道闸**（违反顺序 = 白做）：
+
+| 闸 | 能看什么 | 不能看什么 |
+|:--|:--|:--|
+| G1 画链 | 领域名、锚点 | 库内任何文件 |
+| G2 列缺口 | 同 G1 | 库；也不能看 G1 的结果 |
+| G3 对库 | 全库 | —— |
+
+**验收**：`check_criteria.py --todo` 的灰率（冷领域 40% 以上正常，低于 20% 说明又照库列了）；`validate_meta --all` / `--links`。
+
+**实测背景**（2026-11-10）：四篇在用专项共 46 条读物链，灰的只有 2 条（4.3%）。灰链为 0 不是完备，是清单被库约束过的痕迹——详见 `Truth/project 设计`「读什么：断链即待写」。
 
 ---
 

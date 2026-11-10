@@ -1,0 +1,60 @@
+---
+uid: <% tp.file.creation_date("YYYYMMDDHHmmss") %>
+title: template_sub_project
+aliases:
+  - "{{P-专项名称}}"
+description: "{{一句话描述本专项的目标}}"
+tags: []
+content-type: project
+consequence: 1
+urgency: 1
+area: []
+expire: YYYY-MM-DD
+up: "[[{{父级项目}}]]"
+---
+
+<!-- 判据:begin 由 _scripts/sync_criteria.py 从登记条目生成，勿手改 -->
+	子模板，不映射独立类型；判据随父模板 `template_project` 走。
+	- [[E43 不设「进展」节|E43]] 不设「进展」节
+	- [[E45 project 的 expire 必填|E45]] project 的 expire 必填
+	- [[E46 project 不写进度百分比|E46]] project 不写进度百分比或 KR 权重
+	- [[E47 project 不设「复盘」节|E47]] project 不设「复盘」节，归档时补
+	通用判据与写作速查见 [[判据速查]]。
+<!-- 判据:end -->
+
+<!--
+	本模板真值来源：[[project 设计]]（content-type 同为 project，是主页型的缩小版）
+
+	准入不是「它是父项目的一部分」，而是它自己有独立的 expire 与可判定结果。
+	没有这两样，它就是父项目某条 KR 下的一条任务——照真实形态写成 concept 或 question，
+	写成子专项只会多出一个永远不勾的壳。2026-11-10 实测：此骨架全库零实例，
+	P-Agent求职 的 51 篇里只有父页是 project。
+
+	与 template_project 的差别只有一条：只做一件事，所以不摆三个 KR，用一列可勾选的成功标准。
+	复盘不设，归档时补；进展不设（理由见 project 设计）。
+-->
+
+## 目标
+
+{{不做会怎样，一句话}}
+
+**Outcome**：{{这一段结束时要能指认的东西，一句话}}
+
+---
+
+## 成功标准
+
+> 勾掉即达成。每条要能被别人验证，不写「我配过」。
+
+- [ ] {{可观察、可验证的结果 1}}
+- [ ] {{可观察、可验证的结果 2}}
+
+---
+
+## 决策日志
+
+> 按需：只做一件事的专项往往不需要，跨过两周或改过方向才写。
+
+| 日期 | 当时的判断 | 后来（验证 / 推翻） |
+|:--|:--|:--|
+| YYYY-MM-DD | {{为什么这么定}} | {{实际结果}} |

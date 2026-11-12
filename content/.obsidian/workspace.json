@@ -119,7 +119,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
+                "file": "90-DIARY/2026-11-13.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -134,7 +134,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "前端工程学习专项"
+              "title": "2026-11-13"
             }
           }
         ],
@@ -180,7 +180,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
+                "file": "90-DIARY/2026-11-13.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -388,10 +388,11 @@
   },
   "active": "c54be47a0e97dc0c",
   "lastOpenFiles": [
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-构建.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
+    "90-DIARY/2026-11-13.md",
+    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-构建.md",
     "10-PROJECTS/P-Agent求职/Agent求职.md",
-    "00-INBOX/Virtual DOM is pure overhead.md",
+    "40-ARCHIVE/Virtual DOM is pure overhead.md",
     "30-RESOURCES/灰度.md",
     "AGENTS.md",
     "01-META/Specification/_skills-overview.md",
@@ -414,7 +415,6 @@
     "01-META/Truth/atomic 设计.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-质量.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-交付.md",
-    "10-PROJECTS/P-Agent求职/Agent学习清单.md",
     "99-ASSETS/Bases/SOP.base",
     "99-ASSETS/Bases/判据.base",
     "_scripts/check_criteria.py",

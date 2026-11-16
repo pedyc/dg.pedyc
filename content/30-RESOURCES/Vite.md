@@ -96,7 +96,7 @@ flowchart LR
 ### SOP
 
 - [[Vite配置流程]] — Vite 标准配置流程
-- [[如何在Vite中配置环境变量？]]
+- [[在Vite中配置环境变量]]
 
 ---
 

@@ -5,7 +5,7 @@ aliases: [SOP-ThreeJS实现3D视差滚动, SOP-使用ThreeJS实现3D视差滚动
 description: 使用 Three.js 实现 3D 视差滚动效果的标准流程
 tags: [前端开发/动画, ThreeJS]
 date-created: 2026-04-13
-date-modified: 2026-05-05
+date-modified: 2026-11-15
 status: active
 content-type: sop
 up: "[[ThreeJS]]"
@@ -23,13 +23,14 @@ up: "[[ThreeJS]]"
 - ✅ 场景 2：产品展示的多层次深度滚动
 - ✅ 场景 3：创意作品集的 3D 卡片视差
 - ✅ 场景 4：游戏风格的滚动背景（多层 parallax）
+- 
 
 ---
 
 ### 流程图解
 
 ```mermaid
-flowchart LR
+flowchart TB
     A[初始化 Three.js 场景] --> B[创建 PerspectiveCamera]
     B --> C[创建多个 PlaneMesh 置于不同 Z 深度]
     C --> D[加载纹理图片]

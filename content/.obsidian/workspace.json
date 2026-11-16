@@ -85,8 +85,8 @@
                   "sidecarMarkdownMode": "source"
                 }
               },
-              "icon": "brain-circuit",
-              "title": "判据总览"
+              "icon": "lucide-ghost",
+              "title": "k-plex-react-view"
             }
           },
           {
@@ -119,7 +119,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-11-13.md",
+                "file": "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-构建.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -134,11 +134,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-11-13"
+              "title": "前端工程学习专项-构建"
+            }
+          },
+          {
+            "id": "67a0526ff07e0b8b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20-AREAS/A-前端/Node.js.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Node.js"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -180,7 +204,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "90-DIARY/2026-11-13.md",
+                "file": "20-AREAS/A-前端/Node.js.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -370,7 +394,6 @@
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "publish:发布更改": false,
@@ -383,14 +406,27 @@
       "obsidian-git:Open Git source control": false,
       "cmdr:堆叠/取消堆叠标签页": false,
       "obsidian-local-images-plus:Local Images Plus  0.18.9\r\nLocalize attachments (plugin folder)": false,
-      "k-plex:Open K-Plex canvas": false
+      "obsidian-local-images-plus:Local Images Plus  0.19.3\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "c54be47a0e97dc0c",
+  "active": "67a0526ff07e0b8b",
   "lastOpenFiles": [
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
-    "90-DIARY/2026-11-13.md",
+    "30-RESOURCES/Node IO 与并发.md",
+    "20-AREAS/A-前端/Node.js.md",
+    "30-RESOURCES/Node 模块与包.md",
+    "30-RESOURCES/Node 运行时模型.md",
+    "50-ZETTELCASTEN/App Router 之后，「React + Node」不再足以解释 NextJS.md",
+    "20-AREAS/A-前端/JavaScript.md",
+    "30-RESOURCES/SSR.md",
+    "40-ARCHIVE/Diving Into Reactive Programming in Node.js  AppSignal Blog.md",
+    "30-RESOURCES/ThreeJS实现3D视差滚动.md",
+    "20-AREAS/A-前端/ThreeJS.md",
+    "90-Diary/2026-11-10.md",
+    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-质量.md",
+    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-交付.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-构建.md",
+    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
+    "30-RESOURCES/在Vite中配置环境变量.md",
     "10-PROJECTS/P-Agent求职/Agent求职.md",
     "40-ARCHIVE/Virtual DOM is pure overhead.md",
     "30-RESOURCES/灰度.md",
@@ -402,19 +438,6 @@
     "40-ARCHIVE/P-斑驳光背景实现",
     "_templates/template_sub_project.md",
     "_templates/template_project.md",
-    "01-META/Truth/project 设计.md",
-    "01-META/Guide/Design/学习专项设计依据.md",
-    "01-META/Guide/Design/判据速查.md",
-    "01-META/Index/判据/E47 project 不设「复盘」节.md",
-    "01-META/Index/判据/E46 project 不写进度百分比.md",
-    "01-META/Index/判据/E45 project 的 expire 必填.md",
-    "01-META/Index/判据/E43 不设「进展」节.md",
-    "_templates/template_atomic.md",
-    "01-META/Guide/Design/判据总览.md",
-    "01-META/Guide/Design/_resources/判据六层推导.excalidraw.md",
-    "01-META/Truth/atomic 设计.md",
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-质量.md",
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-交付.md",
     "99-ASSETS/Bases/SOP.base",
     "99-ASSETS/Bases/判据.base",
     "_scripts/check_criteria.py",

@@ -1,16 +1,16 @@
 ---
 uid: 202506160000
-title: 如何在Vite中配置环境变量？
-aliases: [SOP-如何在Vite中配置环境变量？]
+title: 在Vite中配置环境变量
+aliases: [SOP-在Vite中配置环境变量]
 description: Vite 环境变量配置指南
 tags: [前端开发, Vite]
 date-created: 2025-06-16
-date-modified: 2026-05-18
+date-modified: 2026-11-10
 status: active
 content-type: sop
 ---
 
-## 回答
+## 背景
 
 在 Vite 中配置环境变量，可以通过以下步骤：
 

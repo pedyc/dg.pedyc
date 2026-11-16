@@ -7525,7 +7525,7 @@ isSvg$2.exports.default = isSvg;
 var isSvgExports = isSvg$2.exports;
 var isSvg$1 = /*@__PURE__*/getDefaultExportFromCjs(isSvgExports);
 
-const APP_TITLE = "Local Images Plus  0.18.9";
+const APP_TITLE = "Local Images Plus  0.19.3";
 //Option to enable debugging
 let VERBOSE = false;
 function setDebug(value = false) {
@@ -7534,6 +7534,8 @@ function setDebug(value = false) {
 const SUPPORTED_OS = { "win": "win32", "unix": "linux,darwin,freebsd,openbsd" };
 const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82  Safari/537.36';
 const MD_CORE_SEARCH_PATTERN = [
+    //linked image: [![alt](thumb "title")](full_url) — must match BEFORE regular images
+    /\[!\[(?<anchor>[^\]]*)\]\((?<innerLink>[^\s\)]+)(?:\s+"[^"]*")?\)\]\((?<link>[^\s\)]+)\)/gm,
     //file link
     /\!\[(?<anchor>(.{0}|(?!^file\:\/)+?))\]\((?<link>((file\:\/)[^\!]+?(\.{1}.{3,4}\) {0,1}|\)$|\)\n|\)])))/gm,
     //hypertext link
@@ -7604,7 +7606,8 @@ const DEFAULT_SETTINGS = {
     useMarkdownLinkFormat: false,
     processCanvas: true,
     UrlExcludeRegexps: "",
-    plainFmPaths: false
+    plainFmPaths: false,
+    saveSourceUrl: "link"
 };
 
 var md5$1 = {exports: {}};
@@ -8768,6 +8771,10 @@ function buildImageTag(o) {
     let caption = o.caption;
     let imageTag = "";
     const isFmValue = o.keypart !== undefined && o.keypart !== "";
+    //caption mode: use source URL as caption instead of alt text
+    if (o.saveSourceUrl === "caption" && o.sourceUrl) {
+        caption = o.sourceUrl;
+    }
     if (isFmValue && o.plainFmPaths) {
         //plain path for Bases: no embed brackets, no caption/size
         imageTag = o.pathWiki;
@@ -8795,6 +8802,17 @@ function buildImageTag(o) {
     if (isFmValue) {
         const quote = o.q1 || o.q2 || `"`;
         imageTag = o.keypart + quote + imageTag + quote;
+    }
+    //append source URL below the tag if configured
+    //skip for frontmatter values: a newline inside YAML breaks parsing
+    if (!isFmValue && o.saveSourceUrl && o.saveSourceUrl !== "none" && o.sourceUrl) {
+        if (o.saveSourceUrl === "link") {
+            imageTag += `\n[Source](${o.sourceUrl})`;
+        }
+        else if (o.saveSourceUrl === "text") {
+            imageTag += `\n${o.sourceUrl}`;
+        }
+        //"caption" mode replaces caption inside the tag — handled above
     }
     return { imageTag, bareImageTag };
 }
@@ -8838,7 +8856,7 @@ function logError(str, isObj = false) {
     });
 }
 function MarkdownLinkParser(match) {
-    var _a, _b, _c, _d, _e, _f, _g, _h;
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
     let link, anchor, replp, caption = "", AttSize = "";
     const keypart = (_a = match.groups) === null || _a === void 0 ? void 0 : _a.keypart;
     const q1 = (_b = match.groups) === null || _b === void 0 ? void 0 : _b.q1;
@@ -8864,8 +8882,10 @@ function MarkdownLinkParser(match) {
         ? (_h = match.groups.link.split(link)[1]) !== null && _h !== void 0 ? _h : ""
         : "");
     //keep the exact match text for frontmatter keys and wiki brackets: replaceAll searches for it literally
+    //linked images [![alt](thumb)](full) also need the exact match — trimAny would strip the outer [
+    const isLinkedImage = match[0].startsWith("[![");
     replp =
-        keypart !== undefined || isWikiEmbed
+        keypart !== undefined || isWikiEmbed || isLinkedImage
             ? match[0]
             : trimAny(match[0], ["[", "(", "]"]);
     if (protocol == "file:") {
@@ -8890,6 +8910,7 @@ function MarkdownLinkParser(match) {
         replp: replp,
         anchor: anchor,
         link: link,
+        innerLink: (_k = (_j = match.groups) === null || _j === void 0 ? void 0 : _j.innerLink) !== null && _k !== void 0 ? _k : link,
         protocol: protocol,
         caption: caption,
         AttSize: AttSize,
@@ -16762,6 +16783,19 @@ var ru = {
     "This command requires the settings 'Next to note in the folder specified below' and pattern '${notename}' at the end to be enabled, also the path cannot contain ${date} pattern.\nPlease, change settings first!\r\n": "Эта команда требует настройки 'Рядом с заметкой в папке, указанной ниже' и шаблона '${notename}' в конце, также путь не может содержать шаблон ${date}.\nПожалуйста, сначала измените настройки!\r\n",
     "You obsidian media folder set to {p}, and has been created by the plugin. Please, try again.": "Ваша папка медиа Obsidian установлена на {p} и создана плагином. Пожалуйста, попробуйте снова.",
     "{p} attachments for note {p} were processed.": "{p} вложений для заметки {p} обработано.",
+    "Buy me a coffee": "Купи мне кофе",
+    "If Local Images Plus makes your Obsidian workflow better, consider supporting its development. Every coffee helps keep this project alive!": "Если Local Images Plus делает вашу работу в Obsidian удобнее, поддержите разработку. Каждая чашка кофе помогает проекту жить!",
+    "Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.": "Шаблон для имён новых вложений. Переменные: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. По умолчанию: ${md5}_MD5 (обратная совместимость). Примеры: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Используйте папку для сохранения новых вложений для подпапок.",
+    "Save source URL": "Сохранять URL источника",
+    "Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag.": "Сохранять исходный URL после обработки. 'Ссылка под картинкой' добавляет строку [Источник](url) под тегом.",
+    "Don't save": "Не сохранять",
+    "Link below image": "Ссылка под картинкой",
+    "Text below image": "Текст под картинкой",
+    "As caption": "Как подпись",
+    "Support": "Поддержка",
+    "Enjoying this plugin?": "Нравится этот плагин?",
+    "Searching for orphaned attachments...": "Поиск осиротевших вложений...",
+    "Searching": "Поиск",
 };
 
 var pl = {
@@ -16877,6 +16911,19 @@ var pl = {
     "This command requires the settings 'Next to note in the folder specified below' and pattern '${notename}' at the end to be enabled, also the path cannot contain ${date} pattern.\nPlease, change settings first!\r\n": "To polecenie wymaga ustawień 'Obok notatki w folderze określonym poniżej' i wzorca '${notename}' na końcu włączonego, ścieżka również nie może zawierać wzorca ${date}.\nProszę najpierw zmienić ustawienia!\r\n",
     "WARNING!\r\nAttachments for \'{p}\' were processed, but some attachments were not downloaded/replaced...": "OSTRZEŻENIE!\r\nZałączniki dla \'{p}\' zostały przetworzone, ale niektóre załączniki nie zostały pobrane/zastąpione...",
     "{p} attachments for note {p} were processed.": "{p} załączników dla notatki {p} przetworzono.",
+    "Buy me a coffee": "Postaw mi kawę",
+    "If Local Images Plus makes your Obsidian workflow better, consider supporting its development. Every coffee helps keep this project alive!": "Jeśli Local Images Plus ulepsza Twój przepływ pracy w Obsidian, rozważ wsparcie rozwoju. Każda kawa pomaga utrzymać ten projekt przy życiu!",
+    "Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.": "Szablon dla nowych nazw załączników. Zmienne: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Domyślnie: ${md5}_MD5 (wstecznie kompatybilne). Przykłady: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Użyj 'Folder do zapisywania nowych załączników' dla podfolderów.",
+    "Save source URL": "Zapisz URL źródła",
+    "Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag.": "Zachowaj oryginalny URL po przetwarzaniu. 'Link pod obrazkiem' dodaje linię [Źródło](url) pod tagiem.",
+    "Don't save": "Nie zapisuj",
+    "Link below image": "Link pod obrazkiem",
+    "Text below image": "Tekst pod obrazkiem",
+    "As caption": "Jako podpis",
+    "Support": "Wsparcie",
+    "Enjoying this plugin?": "Podoba Ci się ta wtyczka?",
+    "Searching for orphaned attachments...": "Szukanie osieroconych załączników...",
+    "Searching": "Szukanie",
 };
 
 var de = {
@@ -16989,6 +17036,19 @@ var de = {
     "You obsidian media folder set to {p}, and has been created by the plugin. Please, try again.": "Ihr Obsidian-Medienordner ist auf {p} gesetzt und wurde vom Plugin erstellt. Bitte versuchen Sie es erneut.",
     "{p} attachments for note {p} were processed.": "{p} Anhänge für Notiz {p} wurden verarbeitet.",
     "{p} file(s) {p}": "{p} Datei(en) {p}",
+    "Buy me a coffee": "Kauf mir einen Kaffee",
+    "If Local Images Plus makes your Obsidian workflow better, consider supporting its development. Every coffee helps keep this project alive!": "Wenn Local Images Plus Ihren Obsidian-Workflow verbessert, unterstützen Sie die Entwicklung. Jeder Kaffee hilft, dieses Projekt am Leben zu erhalten!",
+    "Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.": "Vorlage für neue Anhangsnamen. Variablen: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Standard: ${md5}_MD5 (abwärtskompatibel). Beispiele: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Verwenden Sie 'Ordner zum Speichern neuer Anhänge' für Unterordner.",
+    "Save source URL": "Quell-URL speichern",
+    "Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag.": "Die ursprüngliche URL nach der Verarbeitung beibehalten. 'Link unter Bild' fügt eine [Quelle](url)-Zeile unter dem Tag hinzu.",
+    "Don't save": "Nicht speichern",
+    "Link below image": "Link unter Bild",
+    "Text below image": "Text unter Bild",
+    "As caption": "Als Bildunterschrift",
+    "Support": "Unterstützung",
+    "Enjoying this plugin?": "Gefällt Ihnen dieses Plugin?",
+    "Searching for orphaned attachments...": "Suche nach verwaisten Anhängen...",
+    "Searching": "Suche",
 };
 
 var fr = {
@@ -17104,6 +17164,19 @@ var fr = {
     "This command requires the settings 'Next to note in the folder specified below' and pattern '${notename}' at the end to be enabled, also the path cannot contain ${date} pattern.\nPlease, change settings first!\r\n": "Cette commande nécessite les paramètres 'À côté de la note dans le dossier spécifié ci-dessous' et le motif '${notename}' à la fin activé, aussi le chemin ne peut pas contenir le motif ${date}.\nVeuillez d'abord modifier les paramètres!\r\n",
     "WARNING!\r\nAttachments for \'{p}\' were processed, but some attachments were not downloaded/replaced...": "ATTENTION!\r\nLes pièces jointes pour \'{p}\' ont été traitées, mais certaines pièces jointes n'ont pas été téléchargées/remplacées...",
     "{p} attachments for note {p} were processed.": "{p} pièces jointes pour la note {p} ont été traitées.",
+    "Buy me a coffee": "Offrez-moi un café",
+    "If Local Images Plus makes your Obsidian workflow better, consider supporting its development. Every coffee helps keep this project alive!": "Si Local Images Plus améliore votre flux de travail Obsidian, envisagez de soutenir son développement. Chaque café aide à maintenir ce projet en vie !",
+    "Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.": "Modèle pour les nouveaux noms de pièces jointes. Variables : ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Par défaut : ${md5}_MD5 (rétrocompatible). Exemples : ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Utilisez 'Dossier pour enregistrer les nouvelles pièces jointes' pour les sous-dossiers.",
+    "Save source URL": "Enregistrer l'URL source",
+    "Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag.": "Conserver l'URL d'origine après le traitement. 'Lien sous l'image' ajoute une ligne [Source](url) sous la balise.",
+    "Don't save": "Ne pas enregistrer",
+    "Link below image": "Lien sous l'image",
+    "Text below image": "Texte sous l'image",
+    "As caption": "En légende",
+    "Support": "Soutien",
+    "Enjoying this plugin?": "Vous aimez ce plugin ?",
+    "Searching for orphaned attachments...": "Recherche de pièces jointes orphelines...",
+    "Searching": "Recherche",
 };
 
 var es = {
@@ -17219,6 +17292,19 @@ var es = {
     "This command requires the settings 'Next to note in the folder specified below' and pattern '${notename}' at the end to be enabled, also the path cannot contain ${date} pattern.\nPlease, change settings first!\r\n": "Este comando requiere la configuración 'Junto a la nota en la carpeta especificada abajo' y el patrón '${notename}' al final habilitado, además la ruta no puede contener el patrón ${date}.\n¡Por favor, cambie la configuración primero!\r\n",
     "WARNING!\r\nAttachments for \'{p}\' were processed, but some attachments were not downloaded/replaced...": "¡ADVERTENCIA!\r\nLos adjuntos para \'{p}\' fueron procesados, pero algunos adjuntos no fueron descargados/reemplazados...",
     "{p} attachments for note {p} were processed.": "{p} adjuntos para la nota {p} fueron procesados.",
+    "Buy me a coffee": "Cómprame un café",
+    "If Local Images Plus makes your Obsidian workflow better, consider supporting its development. Every coffee helps keep this project alive!": "Si Local Images Plus mejora tu flujo de trabajo en Obsidian, considera apoyar su desarrollo. ¡Cada café ayuda a mantener vivo este proyecto!",
+    "Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.": "Plantilla para nuevos nombres de archivos adjuntos. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Por defecto: ${md5}_MD5 (compatible con versiones anteriores). Ejemplos: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Usa 'Carpeta para guardar nuevos archivos adjuntos' para subcarpetas.",
+    "Save source URL": "Guardar URL de origen",
+    "Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag.": "Conservar la URL original después del procesamiento. 'Enlace debajo de la imagen' añade una línea [Fuente](url) debajo de la etiqueta.",
+    "Don't save": "No guardar",
+    "Link below image": "Enlace debajo de la imagen",
+    "Text below image": "Texto debajo de la imagen",
+    "As caption": "Como pie de foto",
+    "Support": "Apoyo",
+    "Enjoying this plugin?": "¿Te gusta este plugin?",
+    "Searching for orphaned attachments...": "Buscando archivos adjuntos huérfanos...",
+    "Searching": "Búsqueda",
 };
 
 var it = {
@@ -17334,6 +17420,19 @@ var it = {
     "This command requires the settings 'Next to note in the folder specified below' and pattern '${notename}' at the end to be enabled, also the path cannot contain ${date} pattern.\nPlease, change settings first!\r\n": "Questo comando richiede le impostazioni 'Accanto alla nota nella cartella specificata sotto' e il pattern '${notename}' alla fine abilitato, anche il percorso non può contenere il pattern ${date}.\nPer favore, cambia prima le impostazioni!\r\n",
     "WARNING!\r\nAttachments for \'{p}\' were processed, but some attachments were not downloaded/replaced...": "ATTENZIONE!\r\nGli allegati per \'{p}\' sono stati elaborati, ma alcuni allegati non sono stati scaricati/sostituiti...",
     "{p} attachments for note {p} were processed.": "{p} allegati per la nota {p} elaborati.",
+    "Buy me a coffee": "Offrimi un caffè",
+    "If Local Images Plus makes your Obsidian workflow better, consider supporting its development. Every coffee helps keep this project alive!": "Se Local Images Plus migliora il tuo flusso di lavoro in Obsidian, considera di supportarne lo sviluppo. Ogni caffè aiuta a mantenere vivo questo progetto!",
+    "Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.": "Modello per i nuomi nomi degli allegati. Variabili: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Predefinito: ${md5}_MD5 (retrocompatibile). Esempi: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Usa 'Cartella per salvare i nuovi allegati' per le sottocartelle.",
+    "Save source URL": "Salva URL di origine",
+    "Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag.": "Mantieni l'URL originale dopo l'elaborazione. 'Link sotto l'immagine' aggiunge una riga [Fonte](url) sotto il tag.",
+    "Don't save": "Non salvare",
+    "Link below image": "Link sotto l'immagine",
+    "Text below image": "Testo sotto l'immagine",
+    "As caption": "Come didascalia",
+    "Support": "Supporto",
+    "Enjoying this plugin?": "Ti piace questo plugin?",
+    "Searching for orphaned attachments...": "Ricerca allegati orfani...",
+    "Searching": "Ricerca",
 };
 
 var pt = {
@@ -17449,6 +17548,19 @@ var pt = {
     "This command requires the settings 'Next to note in the folder specified below' and pattern '${notename}' at the end to be enabled, also the path cannot contain ${date} pattern.\nPlease, change settings first!\r\n": "Este comando requer as configurações 'Ao lado da nota na pasta especificada abaixo' e o padrão '${notename}' no final habilitado, também o caminho não pode conter o padrão ${date}.\nPor favor, altere as configurações primeiro!\r\n",
     "WARNING!\r\nAttachments for \'{p}\' were processed, but some attachments were not downloaded/replaced...": "AVISO!\r\nAnexos para \'{p}\' foram processados, mas alguns anexos não foram baixados/substituídos...",
     "{p} attachments for note {p} were processed.": "{p} anexos para a nota {p} foram processados.",
+    "Buy me a coffee": "Pague-me um café",
+    "If Local Images Plus makes your Obsidian workflow better, consider supporting its development. Every coffee helps keep this project alive!": "Se o Local Images Plus torna seu fluxo de trabalho no Obsidian melhor, considere apoiar seu desenvolvimento. Cada café ajuda a manter este projeto vivo!",
+    "Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.": "Modelo para novos nomes de anexos. Variáveis: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Padrão: ${md5}_MD5 (compatível com versões anteriores). Exemplos: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use 'Pasta para salvar novos anexos' para subpastas.",
+    "Save source URL": "Salvar URL de origem",
+    "Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag.": "Manter a URL original após o processamento. 'Link abaixo da imagem' adiciona uma linha [Fonte](url) abaixo da tag.",
+    "Don't save": "Não salvar",
+    "Link below image": "Link abaixo da imagem",
+    "Text below image": "Texto abaixo da imagem",
+    "As caption": "Como legenda",
+    "Support": "Apoio",
+    "Enjoying this plugin?": "Gostando deste plugin?",
+    "Searching for orphaned attachments...": "Procurando anexos órfãos...",
+    "Searching": "Pesquisa",
 };
 
 var ptBR = {
@@ -17564,6 +17676,19 @@ var ptBR = {
     "This command requires the settings 'Next to note in the folder specified below' and pattern '${notename}' at the end to be enabled, also the path cannot contain ${date} pattern.\nPlease, change settings first!\r\n": "Este comando requer as configurações 'Ao lado da nota na pasta especificada abaixo' e o padrão '${notename}' no final habilitado, também o caminho não pode conter o padrão ${date}.\nPor favor, altere as configurações primeiro!\r\n",
     "WARNING!\r\nAttachments for \'{p}\' were processed, but some attachments were not downloaded/replaced...": "AVISO!\r\nAnexos para \'{p}\' foram processados, mas alguns anexos não foram baixados/substituídos...",
     "{p} attachments for note {p} were processed.": "{p} anexos para a nota {p} foram processados.",
+    "Buy me a coffee": "Pague-me um café",
+    "If Local Images Plus makes your Obsidian workflow better, consider supporting its development. Every coffee helps keep this project alive!": "Se o Local Images Plus torna seu fluxo de trabalho no Obsidian melhor, considere apoiar seu desenvolvimento. Cada café ajuda a manter este projeto vivo!",
+    "Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.": "Modelo para novos nomes de anexos. Variáveis: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Padrão: ${md5}_MD5 (compatível com versões anteriores). Exemplos: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use 'Pasta para salvar novos anexos' para subpastas.",
+    "Save source URL": "Salvar URL de origem",
+    "Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag.": "Manter a URL original após o processamento. 'Link abaixo da imagem' adiciona uma linha [Fonte](url) abaixo da tag.",
+    "Don't save": "Não salvar",
+    "Link below image": "Link abaixo da imagem",
+    "Text below image": "Texto abaixo da imagem",
+    "As caption": "Como legenda",
+    "Support": "Apoio",
+    "Enjoying this plugin?": "Gostando deste plugin?",
+    "Searching for orphaned attachments...": "Procurando anexos órfãos...",
+    "Searching": "Pesquisa",
 };
 
 var ja = {
@@ -17679,6 +17804,19 @@ var ja = {
     "This command requires the settings 'Next to note in the folder specified below' and pattern '${notename}' at the end to be enabled, also the path cannot contain ${date} pattern.\nPlease, change settings first!\r\n": "このコマンドは、下記指定フォルダの 'ノートの隣' 設定と末尾の '${notename}' パターンが有効で、パスに ${date} パターンを含まないことが必要です。\nまず設定を変更してください!\r\n",
     "WARNING!\r\nAttachments for \'{p}\' were processed, but some attachments were not downloaded/replaced...": "警告!\r\n\'{p}\' の添付ファイルが処理されましたが、一部の添付ファイルがダウンロード/置換されませんでした...",
     "{p} attachments for note {p} were processed.": "ノート {p} の {p} 個の添付ファイルが処理されました。",
+    "Buy me a coffee": "コーヒーを奢る",
+    "If Local Images Plus makes your Obsidian workflow better, consider supporting its development. Every coffee helps keep this project alive!": "Local Images PlusがObsidianのワークフローを改善しているなら、開発をサポートしてください。一杯のコーヒーがこのプロジェクトの活力になります！",
+    "Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.": "新しい添付ファイル名のテンプレート。変数: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. デフォルト: ${md5}_MD5（後方互換性）。例: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. サブフォルダーには「新しい添付ファイルの保存フォルダー」を使用してください。",
+    "Save source URL": "ソースURLを保存",
+    "Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag.": "処理後に元のURLを保持します。「画像の下にリンク」はタグの下に[ソース](url)行を追加します。",
+    "Don't save": "保存しない",
+    "Link below image": "画像の下にリンク",
+    "Text below image": "画像の下にテキスト",
+    "As caption": "キャプションとして",
+    "Support": "サポート",
+    "Enjoying this plugin?": "このプラグインは気に入っていますか？",
+    "Searching for orphaned attachments...": "孤立した添付ファイルを検索中...",
+    "Searching": "検索",
 };
 
 var ko = {
@@ -17794,6 +17932,19 @@ var ko = {
     "This command requires the settings 'Next to note in the folder specified below' and pattern '${notename}' at the end to be enabled, also the path cannot contain ${date} pattern.\nPlease, change settings first!\r\n": "이 명령은 아래 지정된 폴더의 '노트 옆' 설정과 끝에 '${notename}' 패턴이 활성화되어야 하며, 경로에 ${date} 패턴이 포함될 수 없습니다.\n먼저 설정을 변경하세요!\r\n",
     "WARNING!\r\nAttachments for \'{p}\' were processed, but some attachments were not downloaded/replaced...": "경고!\r\n\'{p}\'의 첨부 파일이 처리되었으나 일부 첨부 파일이 다운로드/교체되지 않았습니다...",
     "{p} attachments for note {p} were processed.": "노트 {p}의 {p}개 첨부 파일이 처리되었습니다.",
+    "Buy me a coffee": "커피 한 잔 사주세요",
+    "If Local Images Plus makes your Obsidian workflow better, consider supporting its development. Every coffee helps keep this project alive!": "Local Images Plus가 Obsidian 워크플로우를 개선하고 있다면 개발을 지원해 주세요. 커피 한 잔이 이 프로젝트를 살아 있게 합니다!",
+    "Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.": "새 첨부 파일 이름 템플릿. 변수: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. 기본값: ${md5}_MD5 (하위 호환성). 예시: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. 하위 폴더에는 '새 첨부 파일 저장 폴더'를 사용하세요.",
+    "Save source URL": "소스 URL 저장",
+    "Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag.": "처리 후 원래 URL을 유지합니다. '이미지 아래 링크'는 태그 아래에 [소스](url) 줄을 추가합니다.",
+    "Don't save": "저장 안 함",
+    "Link below image": "이미지 아래 링크",
+    "Text below image": "이미지 아래 텍스트",
+    "As caption": "캡션으로",
+    "Support": "지원",
+    "Enjoying this plugin?": "이 플러그인이 마음에 드시나요?",
+    "Searching for orphaned attachments...": "고아 첨부 파일 검색 중...",
+    "Searching": "검색",
 };
 
 var zh = {
@@ -17909,6 +18060,19 @@ var zh = {
     "This command requires the settings 'Next to note in the folder specified below' and pattern '${notename}' at the end to be enabled, also the path cannot contain ${date} pattern.\nPlease, change settings first!\r\n": "此命令需要启用设置 '下方指定文件夹中的笔记旁' 和末尾的 '${notename}' 模式，路径也不能包含 ${date} 模式。\n请先更改设置!\r\n",
     "WARNING!\r\nAttachments for \'{p}\' were processed, but some attachments were not downloaded/replaced...": "警告!\r\n已处理 \'{p}\' 的附件，但某些附件未下载/替换...",
     "{p} attachments for note {p} were processed.": "已处理笔记 {p} 的 {p} 个附件。",
+    "Buy me a coffee": "请我喝杯咖啡",
+    "If Local Images Plus makes your Obsidian workflow better, consider supporting its development. Every coffee helps keep this project alive!": "如果 Local Images Plus 让您的 Obsidian 工作流更顺畅，请考虑支持开发。每杯咖啡都让这个项目保持活力！",
+    "Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.": "新附件名称的模板。变量：${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}。默认：${md5}_MD5（向后兼容）。示例：${originalname}, ${notename}-${originalname}, ${date}-${md5:8}。使用「保存新附件的文件夹」设置子文件夹。",
+    "Save source URL": "保存来源URL",
+    "Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag.": "处理后保留原始URL。「图片下方链接」在标签下方添加[来源](url)行。",
+    "Don't save": "不保存",
+    "Link below image": "图片下方链接",
+    "Text below image": "图片下方文本",
+    "As caption": "作为标题",
+    "Support": "支持",
+    "Enjoying this plugin?": "喜欢这个插件吗？",
+    "Searching for orphaned attachments...": "正在搜索孤立附件...",
+    "Searching": "搜索",
 };
 
 var zhTW = {
@@ -18022,6 +18186,19 @@ var zhTW = {
     "You obsidian media folder set to {p}, and has been created by the plugin. Please, try again.": "您的 Obsidian 媒體資料夾設置為 {p} 並由外掛程式建立。請重試。",
     "{p} attachments for note {p} were processed.": "已處理筆記 {p} 的 {p} 個附件。",
     "{p} file(s) {p}": "{p} 個檔案 {p}",
+    "Buy me a coffee": "請我喝杯咖啡",
+    "If Local Images Plus makes your Obsidian workflow better, consider supporting its development. Every coffee helps keep this project alive!": "如果 Local Images Plus 讓您的 Obsidian 工作流程更順暢，請考慮支持開發。每杯咖啡都讓這個專案保持活力！",
+    "Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.": "新附件名稱的範本。變數：${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}。預設：${md5}_MD5（向後相容）。範例：${originalname}, ${notename}-${originalname}, ${date}-${md5:8}。使用「儲存新附件的資料夾」設定子資料夾。",
+    "Save source URL": "儲存來源URL",
+    "Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag.": "處理後保留原始URL。「圖片下方連結」在標籤下方新增[來源](url)行。",
+    "Don't save": "不儲存",
+    "Link below image": "圖片下方連結",
+    "Text below image": "圖片下方文字",
+    "As caption": "作為標題",
+    "Support": "支援",
+    "Enjoying this plugin?": "喜歡此外掛嗎？",
+    "Searching for orphaned attachments...": "正在搜尋孤立附件...",
+    "Searching": "搜尋",
 };
 
 var uk = {
@@ -18137,6 +18314,19 @@ var uk = {
     "This command requires the settings 'Next to note in the folder specified below' and pattern '${notename}' at the end to be enabled, also the path cannot contain ${date} pattern.\nPlease, change settings first!\r\n": "Ця команда вимагає налаштування 'Поруч з нотаткою в папці, вказаній нижче' та шаблону '${notename}' в кінці, також шлях не може містити шаблон ${date}.\nБудь ласка, спочатку змініть налаштування!\r\n",
     "WARNING!\r\nAttachments for \'{p}\' were processed, but some attachments were not downloaded/replaced...": "УВАГА!\r\nВкладення для \'{p}\' оброблено, але деякі вкладення не були завантажені/замінені...",
     "{p} attachments for note {p} were processed.": "{p} вкладень для нотатки {p} оброблено.",
+    "Buy me a coffee": "Пригостіть мене кавою",
+    "If Local Images Plus makes your Obsidian workflow better, consider supporting its development. Every coffee helps keep this project alive!": "Якщо Local Images Plus робить вашу роботу в Obsidian зручнішою, підтримайте розробку. Кожна чашка кави допомагає проекту жити!",
+    "Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.": "Шаблон для імен нових вкладень. Змінні: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. За замовчуванням: ${md5}_MD5 (зворотна сумісність). Приклади: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Використовуйте папку для збереження нових вкладень для підпапок.",
+    "Save source URL": "Зберігати URL джерела",
+    "Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag.": "Зберігати вихідний URL після обробки. 'Посилання під картинкою' додає рядок [Джерело](url) під тегом.",
+    "Don't save": "Не зберігати",
+    "Link below image": "Посилання під картинкою",
+    "Text below image": "Текст під картинкою",
+    "As caption": "Як підпис",
+    "Support": "Підтримка",
+    "Enjoying this plugin?": "Подобається цей плагін?",
+    "Searching for orphaned attachments...": "Пошук осиротілих вкладень...",
+    "Searching": "Пошук",
 };
 
 var tr = {
@@ -18252,6 +18442,19 @@ var tr = {
     "This command requires the settings 'Next to note in the folder specified below' and pattern '${notename}' at the end to be enabled, also the path cannot contain ${date} pattern.\nPlease, change settings first!\r\n": "Bu komut, aşağıda belirtilen klasördeki 'Notun yanında' ayarının ve '${notename}' deseninin sonunda etkinleştirilmesini, ayrıca yolların ${date} desenini içermemesini gerektirir.\nLütfen önce ayarları değiştirin!\r\n",
     "WARNING!\r\nAttachments for \'{p}\' were processed, but some attachments were not downloaded/replaced...": "UYARI!\r\n\'{p}\' için ekler işlendi ancak bazı ekler indirilmedi/değiştirilmedi...",
     "{p} attachments for note {p} were processed.": "{p} not için {p} ek işlendi.",
+    "Buy me a coffee": "Bana bir kahve ısmarla",
+    "If Local Images Plus makes your Obsidian workflow better, consider supporting its development. Every coffee helps keep this project alive!": "Local Images Plus Obsidian iş akışınızı geliştiriyorsa, geliştirmeyi desteklemeyi düşünün. Her fincan kahve bu projeyi ayakta tutmaya yardımcı olur!",
+    "Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.": "Yeni ek adları için şablon. Değişkenler: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Varsayılan: ${md5}_MD5 (geriye dönük uyumlu). Örnekler: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Alt klasörler için 'Yeni ekleri kaydetme klasörü'nü kullanın.",
+    "Save source URL": "Kaynak URL'yi kaydet",
+    "Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag.": "İşlemden sonra orijinal URL'yi koru. 'Resmin altında bağlantı' etiketin altına [Kaynak](url) satırı ekler.",
+    "Don't save": "Kaydetme",
+    "Link below image": "Resmin altında bağlantı",
+    "Text below image": "Resmin altında metin",
+    "As caption": "Açıklama olarak",
+    "Support": "Destek",
+    "Enjoying this plugin?": "Bu eklentiyi beğendiniz mi?",
+    "Searching for orphaned attachments...": "Yetim ekler aranıyor...",
+    "Searching": "Arama",
 };
 
 var nl = {
@@ -18367,6 +18570,19 @@ var nl = {
     "This command requires the settings 'Next to note in the folder specified below' and pattern '${notename}' at the end to be enabled, also the path cannot contain ${date} pattern.\nPlease, change settings first!\r\n": "Deze opdracht vereist de instelling 'Naast notitie in de onderstaand opgegeven map' en het patroon '${notename}' aan het einde ingeschakeld, ook mag het pad geen ${date} patroon bevatten.\nWijzig eerst de instellingen!\r\n",
     "WARNING!\r\nAttachments for \'{p}\' were processed, but some attachments were not downloaded/replaced...": "WAARSCHUWING!\r\nBijlagen voor \'{p}\' zijn verwerkt, maar sommige bijlagen zijn niet gedownload/vervangen...",
     "{p} attachments for note {p} were processed.": "{p} bijlagen voor notitie {p} zijn verwerkt.",
+    "Buy me a coffee": "Koop me een kopje koffie",
+    "If Local Images Plus makes your Obsidian workflow better, consider supporting its development. Every coffee helps keep this project alive!": "Als Local Images Plus je Obsidian-workflow verbetert, overweeg dan de ontwikkeling te ondersteunen. Elke koffie helpt dit project levend te houden!",
+    "Template for new attachment names. Variables: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Default: ${md5}_MD5 (backward compatible). Examples: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Use Folder to save new attachments for subfolders.": "Sjabloon voor nieuwe bijlagenamen. Variabelen: ${md5}, ${md5:N}, ${originalname}, ${notename}, ${date}, ${unique}. Standaard: ${md5}_MD5 (achterwaarts compatibel). Voorbeelden: ${originalname}, ${notename}-${originalname}, ${date}-${md5:8}. Gebruik 'Map om nieuwe bijlagen op te slaan' voor submappen.",
+    "Save source URL": "Bron-URL opslaan",
+    "Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag.": "Bewerk de originele URL na verwerking. 'Link onder afbeelding' voegt een [Bron](url)-regel toe onder de tag.",
+    "Don't save": "Niet opslaan",
+    "Link below image": "Link onder afbeelding",
+    "Text below image": "Tekst onder afbeelding",
+    "As caption": "Als bijschrift",
+    "Support": "Ondersteuning",
+    "Enjoying this plugin?": "Bevalt deze plugin?",
+    "Searching for orphaned attachments...": "Zoeken naar weesbijlagen...",
+    "Searching": "Zoeken",
 };
 
 const dicts = {
@@ -18529,6 +18745,19 @@ class SettingTab extends obsidian.PluginSettingTab {
             .setValue(this.plugin.settings.plainFmPaths)
             .onChange((value) => __awaiter(this, void 0, void 0, function* () {
             this.plugin.settings.plainFmPaths = value;
+            yield this.plugin.saveSettings();
+        })));
+        new obsidian.Setting(elProcessing)
+            .setName(translate("Save source URL"))
+            .setDesc(translate("Keep the original URL after processing. 'Link below image' adds a [Source](url) line under the tag."))
+            .addDropdown((dropdown) => dropdown
+            .addOption("none", translate("Don't save"))
+            .addOption("link", translate("Link below image"))
+            .addOption("text", translate("Text below image"))
+            .addOption("caption", translate("As caption"))
+            .setValue(this.plugin.settings.saveSourceUrl)
+            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
+            this.plugin.settings.saveSourceUrl = value;
             yield this.plugin.saveSettings();
         })));
         new obsidian.Setting(elProcessing)
@@ -25041,6 +25270,8 @@ function imageTagProcessor(app, noteFile, settings, defaultdir, source = "") {
                             useCaptions: settings.useCaptions,
                             plainFmPaths: settings.plainFmPaths,
                             useMarkdownLinkFormat: settings.useMarkdownLinkFormat,
+                            sourceUrl: link,
+                            saveSourceUrl: settings.saveSourceUrl,
                         });
                         return [replp, imageTag, bareImageTag];
                     }
@@ -25284,14 +25515,15 @@ class ModalW1 extends obsidian.Modal {
         contentEl.createDiv({
             text: this.messg
         });
-        contentEl.createEl("button", {
-            cls: ["mod-cta"],
+        const btnContainer = contentEl.createDiv({ cls: "modal-btn-container" });
+        btnContainer.createEl("button", {
+            cls: ["mod-cta", "modal-btn"],
             text: "Cancel"
         }).addEventListener("click", () => __awaiter(this, void 0, void 0, function* () {
             this.close();
         }));
-        contentEl.createEl("button", {
-            cls: ["mod-cta"],
+        btnContainer.createEl("button", {
+            cls: ["mod-cta", "modal-btn", "modal-btn-primary"],
             text: "Confirm"
         }).addEventListener("click", () => __awaiter(this, void 0, void 0, function* () {
             this.close();
@@ -25528,8 +25760,14 @@ class LocalImagesPlugin extends obsidian.Plugin {
                 const allAttachments = (_f = this.app.vault.getAbstractFileByPath(obsmediadir)) === null || _f === void 0 ? void 0 : _f.children;
                 let orphanedAttachments = [];
                 let allAttachmentsLinks = [];
+                const progressNotice = new obsidian.Notice(translate("Searching for orphaned attachments..."), 0);
+                let processed = 0;
                 if (allFiles) {
                     for (const file of allFiles) {
+                        processed++;
+                        if (processed % 25 === 0) {
+                            progressNotice.setMessage(`${APP_TITLE}\n${translate("Searching")}... ${processed}/${allFiles.length}`);
+                        }
                         //Fix for canvas files
                         if (file !== null && this.ExemplaryOfCANVAS(file.path)) {
                             logError(file);
@@ -25640,6 +25878,7 @@ class LocalImagesPlugin extends obsidian.Plugin {
                             }
                         }
                     }
+                    progressNotice.hide();
                     logError(allAttachments);
                     for (const attach of allAttachments) {
                         if (!allAttachmentsLinks.includes(attach.name) &&
@@ -26232,8 +26471,10 @@ class LocalImagesPlugin extends obsidian.Plugin {
                 const processor = imageTagProcessor(this, file, this.settings, false, source);
                 const target = this.normalizeRemoteUrl(targetUrl);
                 const onlyTarget = (replPattern) => {
-                    var _a;
-                    if (this.normalizeRemoteUrl(String((_a = replPattern.link) !== null && _a !== void 0 ? _a : "")) !== target) {
+                    var _a, _b;
+                    const linkMatch = this.normalizeRemoteUrl(String((_a = replPattern.link) !== null && _a !== void 0 ? _a : "")) === target;
+                    const innerMatch = this.normalizeRemoteUrl(String((_b = replPattern.innerLink) !== null && _b !== void 0 ? _b : "")) === target;
+                    if (!linkMatch && !innerMatch) {
                         return replPattern.replp;
                     }
                     return processor(replPattern);
@@ -26331,11 +26572,7 @@ class LocalImagesPlugin extends obsidian.Plugin {
                 });
                 this.Notify(translate("WARNING!\r\nAttachments for \'{p}\' were processed, but some attachments were not downloaded/replaced...", [file.path]));
             }
-            else {
-                if (this.settings.showNotifications) {
-                    this.Notify(translate("Page '{p}' has been processed, but nothing was changed.", [file.path]));
-                }
-            }
+            else ;
         });
     }
     onPasteFunc(evt = undefined, editor = undefined, info = undefined) {

@@ -26,5 +26,5 @@ noteId: 1792465707572
 ## 关联
 
 - [[React]]
-- [[NodeJS]]
+- [[Node.js]]
 - [[SSR]]

@@ -110,7 +110,7 @@ graph TB
 
 - **上位**：
 	- [[React]] — NextJS 的 UI 渲染基础
-	- [[NodeJS]] — NextJS 运行的服务端环境
+	- [[Node.js]] — NextJS 运行的服务端环境
 - **下位**：
 	- [[SSR]] — NextJS 的核心渲染模式
 	- [[React Server Components]] — NextJS App Router 的核心技术

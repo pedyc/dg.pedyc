@@ -96,7 +96,7 @@ graph TB
 - **下位**：
 	- [[Cloudflare Workers]] — Edge Runtime 的具体实现
 - **并列**：
-	- [[NodeJS]] — 传统服务端运行时
+	- [[Node.js]] — 传统服务端运行时
 - **相关**：
 	- [[Serverless]] — 无服务器架构范式
 	- [[Deno Deploy]] — Deno 的边缘计算产品

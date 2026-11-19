@@ -8,94 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e89c1cd029b9e978",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "90-DIARY/2026-11-09.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2026-11-09"
-            }
-          },
-          {
-            "id": "1e5b0acc1eeef4ca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01-META/Truth/笔记类型规范.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "笔记类型规范"
-            }
-          },
-          {
-            "id": "b9f527edfbccfd76",
-            "type": "leaf",
-            "state": {
-              "type": "k-plex-react-view",
-              "state": {
-                "centerPresentation": {
-                  "embedCentralNode": false,
-                  "centralNodeMarkdownMode": "source"
-                },
-                "plexSession": {
-                  "version": 1,
-                  "ownerId": "b9f527edfbccfd76",
-                  "centerPath": "01-META/Guide/Design/判据总览.md",
-                  "targetId": null,
-                  "plexView": {
-                    "version": 1,
-                    "id": "classic",
-                    "states": {},
-                    "areaHeights": {},
-                    "roots": {}
-                  },
-                  "documentSyncMode": "off",
-                  "sidecarOpen": false,
-                  "sidecarPosition": "right",
-                  "sidecarLastFilePath": "",
-                  "sidecarLastUrl": "",
-                  "sidecarMarkdownMode": "source"
-                }
-              },
-              "icon": "lucide-ghost",
-              "title": "k-plex-react-view"
-            }
-          },
-          {
             "id": "a7bd9041653701b1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-META/Guide/Design/判据总览.md",
+                "file": "30-RESOURCES/滑动窗口解题心得.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -110,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "判据总览"
+              "title": "滑动窗口解题心得"
             }
           },
           {
@@ -161,8 +79,7 @@
               "title": "Node.js"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -204,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "20-AREAS/A-前端/Node.js.md",
+                "file": "30-RESOURCES/滑动窗口解题心得.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -408,10 +325,14 @@
       "obsidian-local-images-plus:Local Images Plus  0.19.3\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "67a0526ff07e0b8b",
+  "active": "a7bd9041653701b1",
   "lastOpenFiles": [
-    "30-RESOURCES/Node IO 与并发.md",
+    "30-RESOURCES/哈希表.md",
+    "30-RESOURCES/滑动窗口解题心得.md",
+    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-构建.md",
+    "01-META/Guide/Design/判据总览.md",
     "20-AREAS/A-前端/Node.js.md",
+    "30-RESOURCES/Node IO 与并发.md",
     "30-RESOURCES/Node 模块与包.md",
     "30-RESOURCES/Node 运行时模型.md",
     "50-ZETTELCASTEN/App Router 之后，「React + Node」不再足以解释 NextJS.md",
@@ -423,7 +344,6 @@
     "90-Diary/2026-11-10.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-质量.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-交付.md",
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-构建.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
     "30-RESOURCES/在Vite中配置环境变量.md",
     "10-PROJECTS/P-Agent求职/Agent求职.md",
@@ -433,10 +353,7 @@
     "01-META/Specification/_skills-overview.md",
     "_templates/template_learning_project.md",
     "20-AREAS/A-知识管理/dg.pedyc.md",
-    "40-ARCHIVE/P-斑驳光背景实现/斑驳光背景实现.md",
     "40-ARCHIVE/P-斑驳光背景实现",
-    "_templates/template_sub_project.md",
-    "_templates/template_project.md",
     "99-ASSETS/Bases/SOP.base",
     "99-ASSETS/Bases/判据.base",
     "_scripts/check_criteria.py",

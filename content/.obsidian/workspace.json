@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/滑动窗口解题心得.md",
+                "file": "30-RESOURCES/回溯算法.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "滑动窗口解题心得"
+              "title": "回溯算法"
             }
           },
           {
@@ -121,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/滑动窗口解题心得.md",
+                "file": "30-RESOURCES/回溯算法.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -322,15 +322,20 @@
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "obsidian-git:Open Git source control": false,
       "cmdr:堆叠/取消堆叠标签页": false,
-      "obsidian-local-images-plus:Local Images Plus  0.19.3\r\nLocalize attachments (plugin folder)": false
+      "obsidian-local-images-plus:Local Images Plus  0.19.3\r\nLocalize attachments (plugin folder)": false,
+      "daily-notes:打开/创建今天的日记": false
     }
   },
   "active": "a7bd9041653701b1",
   "lastOpenFiles": [
-    "30-RESOURCES/哈希表.md",
+    "Untitled.md",
+    "30-RESOURCES/回溯算法.md",
+    "_templates/template_diary.md",
+    "2026-11-20.md",
     "30-RESOURCES/滑动窗口解题心得.md",
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-构建.md",
     "01-META/Guide/Design/判据总览.md",
+    "30-RESOURCES/哈希表.md",
+    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-构建.md",
     "20-AREAS/A-前端/Node.js.md",
     "30-RESOURCES/Node IO 与并发.md",
     "30-RESOURCES/Node 模块与包.md",
@@ -349,10 +354,6 @@
     "10-PROJECTS/P-Agent求职/Agent求职.md",
     "40-ARCHIVE/Virtual DOM is pure overhead.md",
     "30-RESOURCES/灰度.md",
-    "AGENTS.md",
-    "01-META/Specification/_skills-overview.md",
-    "_templates/template_learning_project.md",
-    "20-AREAS/A-知识管理/dg.pedyc.md",
     "40-ARCHIVE/P-斑驳光背景实现",
     "99-ASSETS/Bases/SOP.base",
     "99-ASSETS/Bases/判据.base",

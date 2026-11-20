@@ -24,5 +24,7 @@
     "/CLAUDE/"
   ],
   "newFileFolderPath": "00-INBOX",
-  "openBehavior": ""
+  "openBehavior": "",
+  "readableLineLength": true,
+  "strictLineBreaks": false
 }

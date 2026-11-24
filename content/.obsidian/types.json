@@ -62,6 +62,8 @@
     "urgency": "number",
     "consequence": "number",
     "up": "text",
-    "published": "checkbox"
+    "published": "checkbox",
+    "excalidraw-anchors": "multitext",
+    "excalidraw-thumbnail": "text"
   }
 }

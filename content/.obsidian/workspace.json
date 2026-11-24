@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/回溯算法.md",
+                "file": "90-DIARY/2026-11-23.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "回溯算法"
+              "title": "2026-11-23"
             }
           },
           {
@@ -121,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/回溯算法.md",
+                "file": "90-DIARY/2026-11-23.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -321,15 +321,17 @@
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "obsidian-git:Open Git source control": false,
-      "cmdr:堆叠/取消堆叠标签页": false,
       "obsidian-local-images-plus:Local Images Plus  0.19.3\r\nLocalize attachments (plugin folder)": false,
-      "daily-notes:打开/创建今天的日记": false
+      "daily-notes:打开/创建今天的日记": false,
+      "cmdr:堆叠/取消堆叠标签页": false,
+      "obsidian-local-images-plus:Local Images Plus  0.19.8\r\nLocalize attachments (plugin folder)": false
     }
   },
   "active": "a7bd9041653701b1",
   "lastOpenFiles": [
-    "30-RESOURCES/动态规划.md",
     "30-RESOURCES/回溯算法.md",
+    "90-DIARY/2026-11-23.md",
+    "30-RESOURCES/动态规划.md",
     "Untitled.md",
     "_templates/template_diary.md",
     "2026-11-20.md",
@@ -347,13 +349,12 @@
     "40-ARCHIVE/Diving Into Reactive Programming in Node.js  AppSignal Blog.md",
     "30-RESOURCES/ThreeJS实现3D视差滚动.md",
     "20-AREAS/A-前端/ThreeJS.md",
-    "90-Diary/2026-11-10.md",
+    "90-DIARY/2026-11-10.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-质量.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-交付.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
     "30-RESOURCES/在Vite中配置环境变量.md",
     "10-PROJECTS/P-Agent求职/Agent求职.md",
-    "40-ARCHIVE/Virtual DOM is pure overhead.md",
     "40-ARCHIVE/P-斑驳光背景实现",
     "99-ASSETS/Bases/SOP.base",
     "99-ASSETS/Bases/判据.base",

@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/Node 运行时模型.md",
+                "file": "30-RESOURCES/Node.js 知识测评.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Node 运行时模型"
+              "title": "Node.js 知识测评"
             }
           }
         ],
@@ -98,7 +98,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/Node 运行时模型.md",
+                "file": "30-RESOURCES/Node.js 知识测评.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -305,6 +305,7 @@
   },
   "active": "67a0526ff07e0b8b",
   "lastOpenFiles": [
+    "30-RESOURCES/Node 运行时模型.md",
     "30-RESOURCES/Node.js 知识测评.md",
     "30-RESOURCES/V8 引擎.md",
     "20-AREAS/A-前端/Node.js.md",
@@ -332,7 +333,6 @@
     "01-META/Guide/Design/判据总览.md",
     "30-RESOURCES/哈希表.md",
     "30-RESOURCES/Node IO 与并发.md",
-    "30-RESOURCES/Node 模块与包.md",
     "40-ARCHIVE/P-斑驳光背景实现",
     "99-ASSETS/Bases/SOP.base",
     "99-ASSETS/Bases/判据.base",

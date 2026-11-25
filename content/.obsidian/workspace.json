@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/TypeScript版本演进.md",
+                "file": "30-RESOURCES/Node 运行时模型.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "TypeScript版本演进"
+              "title": "Node 运行时模型"
             }
           }
         ],
@@ -98,7 +98,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/TypeScript版本演进.md",
+                "file": "30-RESOURCES/Node 运行时模型.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -305,8 +305,11 @@
   },
   "active": "67a0526ff07e0b8b",
   "lastOpenFiles": [
-    "20-AREAS/A-前端/TypeScript.md",
+    "30-RESOURCES/Node.js 知识测评.md",
+    "30-RESOURCES/V8 引擎.md",
+    "20-AREAS/A-前端/Node.js.md",
     "30-RESOURCES/TypeScript版本演进.md",
+    "20-AREAS/A-前端/TypeScript.md",
     "30-RESOURCES/第三方库.md",
     "30-RESOURCES/Babel.md",
     "30-RESOURCES/Babel使用指南.md",
@@ -316,7 +319,6 @@
     "99-ASSETS/报告/2026前端就业形势与技术趋势深度研究报告.html",
     "99-ASSETS/报告/未命名.md",
     "99-ASSETS/报告",
-    "20-AREAS/A-前端/Node.js.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-构建.md",
     "30-RESOURCES/大模型流式打字机效果实现及渲染性能优化.md",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-质量.md",
@@ -331,8 +333,6 @@
     "30-RESOURCES/哈希表.md",
     "30-RESOURCES/Node IO 与并发.md",
     "30-RESOURCES/Node 模块与包.md",
-    "30-RESOURCES/Node 运行时模型.md",
-    "50-ZETTELCASTEN/App Router 之后，「React + Node」不再足以解释 NextJS.md",
     "40-ARCHIVE/P-斑驳光背景实现",
     "99-ASSETS/Bases/SOP.base",
     "99-ASSETS/Bases/判据.base",

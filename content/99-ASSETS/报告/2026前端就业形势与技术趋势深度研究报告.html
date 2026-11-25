@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 年前端就业形势与技术发展趋势深度研究报告</title>
+<style>
+  :root{
+    --bg:#0b1017; --bg2:#0f1621; --card:#151e2b; --card2:#1a2432;
+    --line:#26344a; --line2:#1e2b3d;
+    --tx:#e8eef6; --tx2:#a9b8cc; --tx3:#7d8ea6;
+    --blue:#5aa9ff; --purple:#b18cff; --green:#4cc38a; --red:#ff6b6b;
+    --amber:#f5b955; --cyan:#4fd1c5;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--tx);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size:15px; line-height:1.85; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px 100px}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;font-size:.88em;
+    background:#1b2736;border:1px solid var(--line2);border-radius:4px;padding:1px 6px;color:#c9dcff}
+
+  /* ---------- cover ---------- */
+  .cover{padding:76px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{display:inline-block;font-size:12px;letter-spacing:.18em;color:var(--cyan);
+    border:1px solid #24504e;background:#102321;padding:5px 12px;border-radius:20px;margin-bottom:24px}
+  h1{font-size:38px;line-height:1.3;margin:0 0 16px;font-weight:700;letter-spacing:-.5px}
+  .sub{font-size:17px;color:var(--tx2);margin:0 0 32px;max-width:820px}
+  .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+  .meta div{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:14px 16px}
+  .meta .k{font-size:11px;color:var(--tx3);letter-spacing:.08em;margin-bottom:5px}
+  .meta .v{font-size:14px;font-weight:600;color:var(--tx)}
+
+  /* ---------- toc ---------- */
+  .toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 26px;margin:34px 0 46px}
+  .toc h3{margin:0 0 14px;font-size:14px;color:var(--tx3);letter-spacing:.12em;font-weight:600}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:40px}
+  .toc li{margin:6px 0;break-inside:avoid}
+  .toc a{color:var(--tx2)}
+  .toc a:hover{color:var(--blue)}
+
+  /* ---------- sections ---------- */
+  section{margin:0 0 72px;scroll-margin-top:20px}
+  .sec-head{display:flex;align-items:baseline;gap:16px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:28px}
+  .sec-num{font-size:13px;font-weight:700;color:var(--blue);letter-spacing:.1em;font-family:monospace}
+  h2{font-size:27px;margin:0;font-weight:700;letter-spacing:-.3px}
+  h3{font-size:19px;margin:38px 0 14px;font-weight:650;color:var(--tx)}
+  h4{font-size:15.5px;margin:24px 0 10px;font-weight:650;color:var(--cyan)}
+  p{margin:0 0 15px;color:var(--tx2)}
+  p strong,li strong{color:var(--tx);font-weight:650}
+  ul,ol{color:var(--tx2);padding-left:22px;margin:0 0 18px}
+  li{margin:7px 0}
+
+  /* ---------- callouts ---------- */
+  .lead{background:linear-gradient(135deg,#132438,#101a28);border:1px solid #2b4a6b;
+    border-left:3px solid var(--blue);border-radius:10px;padding:22px 26px;margin:0 0 30px}
+  .lead .t{font-size:12px;letter-spacing:.14em;color:var(--blue);font-weight:700;margin-bottom:12px}
+  .lead p{color:#d6e3f2;margin:0 0 10px;font-size:15.5px}
+  .lead p:last-child{margin-bottom:0}
+  .note{background:#1a1d16;border:1px solid #4a4224;border-left:3px solid var(--amber);
+    border-radius:8px;padding:16px 20px;margin:20px 0;font-size:14px;color:#e3d9bd}
+  .note .t{font-weight:700;color:var(--amber);margin-bottom:6px;font-size:13px}
+  .warn{background:#241719;border:1px solid #5c2d33;border-left:3px solid var(--red);
+    border-radius:8px;padding:16px 20px;margin:20px 0;font-size:14px;color:#f0d2d4}
+  .warn .t{font-weight:700;color:var(--red);margin-bottom:6px;font-size:13px}
+  .good{background:#12241d;border:1px solid #28513f;border-left:3px solid var(--green);
+    border-radius:8px;padding:16px 20px;margin:20px 0;font-size:14px;color:#cdebdc}
+  .good .t{font-weight:700;color:var(--green);margin-bottom:6px;font-size:13px}
+
+  /* ---------- cards / grids ---------- */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:22px 0}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px}
+  .card .ct{font-size:14px;font-weight:700;color:var(--tx);margin-bottom:10px;display:flex;align-items:center;gap:9px}
+  .card p{font-size:13.5px;margin:0;line-height:1.75}
+  .dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;text-align:left}
+  .stat .n{font-size:27px;font-weight:750;letter-spacing:-1px;line-height:1.2;margin-bottom:4px}
+  .stat .l{font-size:12.5px;color:var(--tx2);line-height:1.6}
+  .stat .s{font-size:11px;color:var(--tx3);margin-top:7px}
+
+  /* ---------- table ---------- */
+  .tw{overflow-x:auto;margin:20px 0 24px;border:1px solid var(--line);border-radius:10px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:620px}
+  th{background:#1b2635;color:var(--tx);text-align:left;padding:12px 15px;font-weight:650;
+    border-bottom:1px solid var(--line);white-space:nowrap}
+  td{padding:11px 15px;border-bottom:1px solid var(--line2);color:var(--tx2);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:#182231}
+  .up{color:var(--green);font-weight:650}
+  .down{color:var(--red);font-weight:650}
+  .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:5px;
+    border:1px solid var(--line);color:var(--tx2);background:#1b2635;white-space:nowrap}
+  .tag.a{border-color:#2f5a8a;color:#9ccbff;background:#152436}
+  .tag.b{border-color:#5a4a2c;color:#f0cd8a;background:#252015}
+  .tag.c{border-color:#5c3038;color:#f0a9ae;background:#25181b}
+  .tag.g{border-color:#2d5845;color:#8fdcb4;background:#14241d}
+
+  /* ---------- charts ---------- */
+  .chart{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:24px 26px;margin:24px 0}
+  .chart .ct{font-size:14px;font-weight:650;margin-bottom:4px}
+  .chart .cs{font-size:12px;color:var(--tx3);margin-bottom:20px}
+  svg{display:block;width:100%;height:auto}
+  .lg{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:var(--tx2);margin-top:14px}
+  .lg i{width:10px;height:10px;border-radius:2px;display:inline-block;margin-right:6px}
+
+  /* ---------- timeline ---------- */
+  .tl{position:relative;margin:24px 0 24px 8px;padding-left:26px;border-left:2px solid var(--line)}
+  .tl .item{position:relative;margin-bottom:22px}
+  .tl .item:before{content:"";position:absolute;left:-33px;top:7px;width:10px;height:10px;
+    border-radius:50%;background:var(--blue);border:2px solid var(--bg)}
+  .tl .d{font-size:11.5px;color:var(--cyan);font-family:monospace;letter-spacing:.04em;margin-bottom:3px}
+  .tl .h{font-size:14.5px;font-weight:650;color:var(--tx);margin-bottom:4px}
+  .tl .b{font-size:13px;color:var(--tx2)}
+
+  /* ---------- roadmap ---------- */
+  .phase{border:1px solid var(--line);border-radius:11px;margin:18px 0;overflow:hidden}
+  .phase .ph{background:#1b2635;padding:14px 20px;display:flex;align-items:center;gap:14px;
+    border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .phase .badge{font-size:11.5px;font-weight:750;letter-spacing:.08em;padding:4px 10px;border-radius:5px}
+  .phase .pname{font-size:16px;font-weight:700}
+  .phase .ptime{font-size:12px;color:var(--tx3);margin-left:auto}
+  .phase .pb{padding:18px 22px;background:var(--card)}
+  .phase .pb ul{margin:0}
+  .deliver{background:#121c28;border:1px dashed #34506f;border-radius:8px;padding:12px 16px;
+    margin-top:14px;font-size:13px;color:#bcd6f2}
+  .deliver b{color:var(--blue)}
+
+  .ref{font-size:12px;color:var(--tx3)}
+  .ref sup{color:var(--blue);font-weight:700}
+  footer{border-top:1px solid var(--line);padding-top:26px;margin-top:20px;font-size:12.5px;color:var(--tx3)}
+  .srclist{columns:2;column-gap:36px;font-size:12.5px;color:var(--tx2);line-height:1.75}
+  .srclist div{break-inside:avoid;margin-bottom:9px;padding-left:20px;text-indent:-20px}
+  .srcid{color:var(--cyan);font-family:monospace;font-weight:700}
+  @media(max-width:760px){
+    .wrap{padding:0 18px 60px} h1{font-size:28px} h2{font-size:22px}
+    .meta,.grid2,.grid3{grid-template-columns:1fr}
+    .toc ol,.srclist{columns:1} .phase .ptime{margin-left:0}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+  <div class="kicker">DEEP RESEARCH · 技术人才市场研究</div>
+  <h1>2026 年前端就业形势与技术发展趋势<br>深度研究报告</h1>
+  <p class="sub">面向 TypeScript / React / Vite 技术栈工程师的岗位结构分析、技术演进判断与能力增强路线。本报告以"结论先行、证据分层、口径可追溯"为原则，对相互冲突的市场数据给出辨析，并输出可执行的分层能力建设方案。</p>
+  <div class="meta">
+    <div><div class="k">研究截点</div><div class="v">2026 年 11 月 24 日</div></div>
+    <div><div class="k">研究范围</div><div class="v">中国市场为主 / 全球交叉印证</div></div>
+    <div><div class="k">方法</div><div class="v">多源检索 · 交叉验证 · 口径辨析</div></div>
+    <div><div class="k">目标读者</div><div class="v">TS / React / Vite 栈前端工程师</div></div>
+  </div>
+</div>
+
+<!-- ============ TOC ============ -->
+<div class="toc">
+  <h3>目录 / CONTENTS</h3>
+  <ol>
+    <li><a href="#s0">执行摘要：五条核心判断</a></li>
+    <li><a href="#s1">第一章　就业形势：K 型分化与入口关闭</a></li>
+    <li><a href="#s2">第二章　技术趋势：三重重构与两个变量</a></li>
+    <li><a href="#s3">第三章　价值迁移：AI 替代的是任务，不是岗位</a></li>
+    <li><a href="#s4">第四章　能力增强方向：分层路线与锚点项目</a></li>
+    <li><a href="#s5">第五章　风险、数据可信度与行动清单</a></li>
+    <li><a href="#s6">附录　参考来源与证据分级</a></li>
+  </ol>
+</div>
+
+<!-- ============ S0 ============ -->
+<section id="s0">
+  <div class="sec-head"><span class="sec-num">00</span><h2>执行摘要：五条核心判断</h2></div>
+
+  <div class="lead">
+    <div class="t">CORE CONCLUSION</div>
+    <p><strong>结论先行：前端岗位没有消失，消失的是"只负责把设计稿翻译成代码"这一职能层级。</strong>2026 年的市场不是总量崩塌，而是从"金字塔"变为"哑铃 / K 型"——初级执行岗被批量压缩，中高级、全栈化、AI 融合型岗位同时扩张。对一名已具备 TS / React / Vite 能力的工程师而言，风险不在"栈过时"，而在"能力停留在该栈最容易被商品化的那一层"。</p>
+    <p>因此本报告的最终建议是：<strong>不换赛道，沿现有栈向两侧各延伸一层</strong>——向下延伸到工具链、渲染原理、类型系统与质量治理；向后延伸到服务端 / BFF / 全链路交付；向前延伸到 AI 应用前端工程化与 Agent 编排；并以垂直业务理解作为不可替代性的落点。</p>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <div class="ct"><span class="dot" style="background:var(--red)"></span>判断一 · 就业：结构性替代，非周期性衰退</div>
+      <p>国内多个口径同时出现"初级岗 −62%、普通前端岗 −52%"与"前端相关岗位总量 +12.2%"的相反读数，本质是<strong>统计口径不同</strong>：前者统计"普通前端开发"细类，后者含 AI 融合、全栈与灵活用工。结构性信号在所有来源中高度一致：初级占比从 48% 降至 22%，3 年以上经验要求岗位超七成，中高级 / 全栈可视化岗 +38%。<sup class="ref"><sup>[S8][S20]</sup></sup></p>
+    </div>
+    <div class="card">
+      <div class="ct"><span class="dot" style="background:var(--blue)"></span>判断二 · 机制：AI 切断的是"学徒制"入口</div>
+      <p>斯坦福数字经济实验室基于 ADP 薪资数据的研究显示，22–25 岁高 AI 暴露职业的就业较趋势低约 <strong>19%</strong>，资深群体无同类缺口，缺口主要来自<strong>少招新人而非裁员</strong>。美国劳工统计局同时预测 2025–2035 软件开发者 +10%、纯"程序员"岗位 −7%。AI 替代的是可编码化知识，互补的是实践中积累的隐性知识。<sup class="ref"><sup>[S7]</sup></sup></p>
+    </div>
+    <div class="card">
+      <div class="ct"><span class="dot" style="background:var(--purple)"></span>判断三 · 技术：编译期化 + 原生化 + AI 原生化</div>
+      <p>React Compiler v1.0 与 RSC 把优化从运行时搬到编译期与服务端；TypeScript 7.0（Go 重写，8–12× 提速）、Vite 8 + Rolldown（Rust，10–30× vs Rollup）完成工具链原生化；AI 从编码辅助升级为应用形态本身（流式 UI、Generative UI、Agent UI、MCP / AG-UI / A2UI）。<strong>业务代码写法几乎未变，变的是工程基座与交付对象。</strong><sup class="ref"><sup>[S1][S5][S6][S12]</sup></sup></p>
+    </div>
+    <div class="card">
+      <div class="ct"><span class="dot" style="background:var(--green)"></span>判断四 · 定位：TS/React/Vite 是资产，不是负债</div>
+      <p>State of JS 2025 显示 React 仍以 <strong>83.6%</strong> 使用率居首、Vite 满意度 <strong>98%</strong>、仅用 TypeScript 的开发者达 <strong>40%</strong>。三者均有清晰升级路径且治理稳定（React 于 2026-02 移交 Linux 基金会）。真正贬值的不是栈本身，而是"只会调用框架 API 写组件"这一层能力。<sup class="ref"><sup>[S1][S2][S3]</sup></sup></p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px;border-color:#2f4d70;background:linear-gradient(135deg,#152232,#141c29)">
+    <div class="ct"><span class="dot" style="background:var(--cyan)"></span>判断五 · 优先级：先补"验证与判断"，再补"生成与广度"</div>
+    <p>Stack Overflow 2026 调查（30,000+ 样本）：<strong>66%</strong> 使用编码助手 / Agent，但仅 <strong>6.6%</strong> 愿意让 AI 做重要决策，<strong>78.7%</strong> 认为代码来源可追溯重要或非常重要，仅 <strong>24%</strong> 的企业发布了正式 AI 使用规范。稀缺的不是"会用 AI 生成"，而是"能定义任务、审查产出、约束边界、并对结果负责"。这也是能力建设应最先投入的方向。<sup class="ref"><sup>[S4]</sup></sup></p>
+  </div>
+
+  <div class="note">
+    <div class="t">阅读前须知 · 关于数据强度</div>
+    本报告中，React / Linux Foundation / State of JS / Stack Overflow / The Register / BLS 等属于可核验的一手或权威二手来源；国内招聘平台的 −62%、−52%、+12.2%、127:1 等数字多为<strong>媒体与内容聚合站转述</strong>，原始报告样本与口径难以直接核验。本报告将其作为<strong>方向性信号</strong>而非精确值使用，并在第五章给出完整的可信度分级与冲突辨析。个别流传极广的说法（如"高阶 AI 前端薪资差 100 倍""三年淘汰 90% 程序员"）缺乏数据支撑，不予采信。
+  </div>
+</section>
+
+<!-- ============ S1 ============ -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">01</span><h2>就业形势：K 型分化与入口关闭</h2></div>
+
+  <h3>1.1 数据全景：先解决"互相打架"的口径问题</h3>
+  <p>检索到的 2026 年国内前端就业数据存在表面上完全矛盾的读数。若不做口径辨析，很容易得出"行业崩溃"或"行业繁荣"两种都错误的结论。下表把主要指标按<strong>统计对象</strong>拆开，可以看到它们描述的是同一枚硬币的两面。</p>
+
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:30%">指标</th><th style="width:14%">读数</th><th style="width:26%">统计对象 / 口径</th><th>解读</th></tr></thead>
+    <tbody>
+      <tr><td>0–3 年初级前端招聘量同比</td><td class="down">−62%</td><td>拉勾《2026 Q1 互联网前端人才就业报告》，初级岗细类</td><td>收缩最剧烈的一段，入门通道被压缩</td></tr>
+      <tr><td>普通前端 / 后端开发岗需求同比</td><td class="down">−52%</td><td>智联招聘 2026 Q1，"普通开发岗"细类</td><td>与上一行相互印证，方向一致</td></tr>
+      <tr><td>月均"前端相关岗位"总量 vs 2024</td><td class="up">+12.2%</td><td>BOSS 直聘宽口径，含 AI 融合 / 全栈 / 外包</td><td>总量未崩，增长来自岗位类型置换</td></tr>
+      <tr><td>初级岗位占比</td><td class="down">48% → 22%</td><td>BOSS 直聘岗位结构</td><td>结构性变化最直接的证据</td></tr>
+      <tr><td>中高级前端 / 全栈可视化岗同比</td><td class="up">+38%</td><td>拉勾</td><td>增长端所在</td></tr>
+      <tr><td>AI 相关岗位量同比</td><td class="up">约 8.7 倍</td><td>脉脉高聘（含算法与 AI 科学家，<strong>非前端薪资</strong>）</td><td>仅作需求迁移背景，不可套用于前端</td></tr>
+      <tr><td>初级岗单岗投递量</td><td class="down">127 : 1</td><td>脉脉《2026 春招求职行为洞察》</td><td>供给端竞争烈度，面试转化率不足 1%</td></tr>
+      <tr><td>要求 3 年以上经验岗位占比</td><td>&gt; 70%</td><td>脉脉春招洞察</td><td>"去初级化"，应届岗缩减约 20%</td></tr>
+      <tr><td>全球前端岗招聘量同比</td><td class="down">−9.89%</td><td>Revealera 全球招聘信息分析；同期全栈岗 +9%</td><td>国际口径同样指向"前端收缩、全栈扩张"</td></tr>
+      <tr><td>美国软件开发职位发布</td><td class="up">约 +15%</td><td>Indeed（自 2025-02 起），增长 71% 来自高级职位、37% 来自含 AI 标题职位</td><td>总量回暖但增量高度偏向资深与 AI</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="ref">数据来源见 [S8][S20][S21]；−62% / −52% 与 +12.2% 不矛盾，属不同统计对象。国内数据多为二手转述，精确值应谨慎使用。</p>
+
+  <div class="chart">
+    <div class="ct">图 1 · 2026 年前端岗位结构的 K 型分化（方向性示意，非等比例）</div>
+    <div class="cs">横轴为岗位层级，纵轴为需求变化方向；数据取自多源转述的趋势方向，仅用于表达结构而非精确幅度</div>
+    <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="前端岗位K型分化示意图">
+      <line x1="40" y1="132" x2="650" y2="132" stroke="#3a4a60" stroke-width="1.5"/>
+      <text x="44" y="24" fill="#7d8ea6" font-size="11">需求变化</text>
+      <text x="44" y="40" fill="#4cc38a" font-size="11">▲ 扩张</text>
+      <text x="44" y="238" fill="#ff6b6b" font-size="11">▼ 收缩</text>
+
+      <!-- bars -->
+      <g font-size="11" fill="#a9b8cc" text-anchor="middle">
+        <rect x="72" y="132" width="62" height="94" rx="3" fill="#ff6b6b" opacity=".82"/>
+        <text x="103" y="246">纯切图 / 静态页</text>
+        <text x="103" y="150" fill="#ffb3b3" font-size="12" font-weight="700">−80%</text>
+
+        <rect x="164" y="132" width="62" height="72" rx="3" fill="#ff6b6b" opacity=".7"/>
+        <text x="195" y="246">基础 CRUD / 中后台</text>
+        <text x="195" y="150" fill="#ffb3b3" font-size="12" font-weight="700">−52%</text>
+
+        <rect x="256" y="132" width="62" height="60" rx="3" fill="#ff6b6b" opacity=".55"/>
+        <text x="287" y="246">初级 / 应届岗</text>
+        <text x="287" y="150" fill="#ffb3b3" font-size="12" font-weight="700">−62%</text>
+
+        <rect x="348" y="98" width="62" height="34" rx="3" fill="#4cc38a" opacity=".55"/>
+        <text x="379" y="246">前端 + 全栈 / BFF</text>
+        <text x="379" y="90" fill="#8fe0b8" font-size="12" font-weight="700">+38%</text>
+
+        <rect x="440" y="72" width="62" height="60" rx="3" fill="#4cc38a" opacity=".75"/>
+        <text x="471" y="246">可视化 / 架构</text>
+        <text x="471" y="64" fill="#8fe0b8" font-size="12" font-weight="700">增长</text>
+
+        <rect x="532" y="44" width="62" height="88" rx="3" fill="#4cc38a" opacity=".92"/>
+        <text x="563" y="246">AI 应用前端 / Agent</text>
+        <text x="563" y="36" fill="#8fe0b8" font-size="12" font-weight="700">强增长</text>
+      </g>
+      <text x="40" y="262" fill="#7d8ea6" font-size="10">资料来源：拉勾 / 智联 / BOSS 直聘 / 脉脉（媒体转述）· 本研究整理</text>
+    </svg>
+    <div class="lg"><span><i style="background:#ff6b6b"></i>执行层岗位（标准化、可验证、易被 AI 覆盖）</span><span><i style="background:#4cc38a"></i>判断层岗位（架构、业务、AI 编排、复杂体验）</span></div>
+  </div>
+
+  <h3>1.2 结构变化的三个机制</h3>
+  <h4>机制一：AI 优先替代"学徒岗"，而非"工程师岗"</h4>
+  <p>被压缩的岗位具有高度一致的特征：需求明确、输出可视化、结果易验证、训练数据充足——基础页面、标准组件、CRUD 接口、测试用例、文档、简单缺陷修复。这些恰是历史上用于培养新人的任务。资深工程师现在用 AI 直接完成，不再向下分派，导致<strong>"初级写代码 → 中级管项目 → 高级定架构"的阶梯被抽掉第一级</strong>。斯坦福研究者称之为"资历偏向型技术变革"（seniority-biased technological change）。<sup class="ref"><sup>[S7][S20]</sup></sup></p>
+  <p>需强调一个重要的<strong>长期反噬风险</strong>：企业个体"砍初级 + 给资深配 AI"是短期理性决策，但行业整体将面临 3–5 年后的资深工程师供给断层。多家来源（Korn Ferry、McKinsey 相关引用）已提出该问题，但招聘市场尚未响应。这意味着当前中级工程师在中期反而可能获得稀缺性溢价。</p>
+
+  <h4>机制二：前后端职能边界被 AI Coding 抹平</h4>
+  <p>多家媒体报道 2026 年国内大厂出现密集的组织调整：美团 Keemart 前后端团队合并、得物前端部门并入服务端、网易智企前端并入后端、蚂蚁推动测试转研发并过渡为全栈。这类信息的<strong>原始出处多为技术自媒体，属三级来源，应作为趋势信号而非确证事实</strong>。但更可靠的证据来自招聘 JD 本身——岗位名称与任职要求的变化是可直接观察的：</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:26%">真实 JD 样本</th><th>关键要求摘录</th><th style="width:22%">信号</th></tr></thead>
+    <tbody>
+      <tr><td>蚂蚁集团 · 大前端研发工程师（AI Native）<br><span class="ref">2026-11-16，上海/杭州</span></td><td>"负责 H5 / Node.js 等全栈研发"；"采用 AI Native 研发模式，参与 Agent 工程体系建设，将 AI Coding、Agentic Workflow 应用于需求分析—架构—编码—测试—上线全流程"；"沉淀大前端 Agent、Context、Knowledge、Skill 组织级 AI 能力"</td><td><span class="tag a">AI 工程化</span> <span class="tag a">全栈</span></td></tr>
+      <tr><td>某 AI 企业 · AI 全栈工程师（Web 前端）<br><span class="ref">15–25K·14 薪，深圳</span></td><td>"具备服务端开发能力，善于借助 AI 工具快速完成中小型需求的全链路交付（前端 + BFF/轻量后端）"；要求 Node.js 生态、Next/Nuxt 或 Express/Koa/Nest、数据库基本操作、Vite/Webpack/Rollup/Turborepo、Cursor/Copilot/Claude Code</td><td><span class="tag g">BFF 进 JD</span> <span class="tag g">AI 工具成必备</span></td></tr>
+      <tr><td>27 秋 · 全栈开发工程师（Web 前端）</td><td>"探索并落地 AI Coding 实践"；"熟悉大模型 API 接入、Agent 工作流设计，能实现工具调用、任务编排等前端交互"；"AI 驱动的自动化测试：Jest/Vitest/Playwright，构建 AI 辅助的 CI 测试流程"</td><td><span class="tag a">校招已改名</span> <span class="tag a">Agent 编排</span></td></tr>
+      <tr><td>资深 AI 开发工程师（前后端全栈）</td><td>前端 60% / 全栈 25% / AI 大模型应用 15%；必备项含 LLM 应用、LangChain/LlamaIndex、Prompt、AI 交互设计；加分项含 RAG、Function Calling、向量数据库</td><td><span class="tag g">职责配比量化</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="ref">来源见 [S9]；JD 为公开职位原文摘录，用于观察能力要求迁移，不代表整体市场分布。</p>
+  <p>结论很明确：<strong>"Node.js / BFF / 全栈链路"已从加分项变为高级岗默认要求，"AI 工具使用与 AI 应用集成"从加分项移入必备项</strong>。这比任何宏观百分比都更能指导个人投入。</p>
+
+  <h4>机制三：供给端过剩放大筛选强度</h4>
+  <p>国内计算机类专业年毕业生规模超 50 万，简历同质化严重（大量"学了 Vue/React + 做了个电商网站"）。需求结构收缩叠加供给放量，把筛选推到极端：初级岗 127:1、1–3 年纯编码岗简历通过率从 2023 年 25% 降至 2026 年 7%。<strong>学历与框架熟练度的区分度下降，差异化项目经历、工程深度与业务理解成为主要筛选器。</strong><sup class="ref"><sup>[S8][S20]</sup></sup></p>
+
+  <h3>1.3 薪酬：中间层价格崩塌，两端溢价</h3>
+  <div class="grid3">
+    <div class="stat"><div class="n down">14K → 5–7K</div><div class="l">纯页面岗薪资中位数（2023 → 2026），且全职 HC 大量转为外包/兼职</div><div class="s">[S8] 二手转述</div></div>
+    <div class="stat"><div class="n">15K – 40K</div><div class="l">一线城市 1–3 年 / 3–5 年经验的主流月薪区间，趋于理性但未断崖</div><div class="s">[S8][S20] 挂牌价口径</div></div>
+    <div class="stat"><div class="n up">25K – 40K</div><div class="l">AI Agent 编排 / 端侧前端方向起薪区间，复合能力溢价约 30%–45%</div><div class="s">[S8] 方向性参考</div></div>
+  </div>
+  <p>三点必要澄清：其一，上述多为<strong>招聘挂牌价而非实发中位数</strong>，不同城市、行业、职级差异极大；其二，广泛流传的"AI 岗位平均月薪 62,850 元"包含算法科学家与 AI 负责人，<strong>不能代表前端薪资</strong>；其三，"年薪差 100 倍"属个案叙事，不构成统计结论。相对可靠的定量判断是：<strong>AI + 业务复合能力相对同资历传统岗位存在约 30%–45% 的溢价，且这一溢价主要体现在高级岗位筛选上</strong>（JD 明确要求生成式 AI 技能的岗位占比 12.7%，其中入门岗仅 0.7%、高级岗 16%–18%）。<sup class="ref"><sup>[S8][S20]</sup></sup></p>
+
+  <div class="warn">
+    <div class="t">常见误读纠正 · FDE 不是"前端岗位"</div>
+    多篇 2026 年中文爆款文章将 FDE（Forward Deployed Engineer）译作"前端部署工程师"，并以"FDE 暴涨 42 倍 / 1523%"论证前端行情反转。这是<strong>概念误用</strong>：FDE 中的 "front" 指<strong>客户现场的最前线（front line）</strong>，源自 Palantir 的驻场工程师模式，职责是把模型 / 平台能力部署进客户真实业务，与 frontend 技术栈无直接关系。该岗位确实高薪且增长快，但它<strong>不是前端工程师的直接转型岗位</strong>，把它算作"前端岗位增长"会显著高估本赛道机会。涉及 FDE 的中文报道自己也已在正文中澄清这一点，但标题与数据表仍造成广泛误读。
+  </div>
+
+  <h3>1.4 国际交叉印证：这不是中国独有现象</h3>
+  <ul>
+    <li><strong>美国 BLS（2026-08 更新）：</strong>软件开发者 2025 年 171.78 万个岗位，2025–2035 预计 <span class="up">+10%</span>（约 +17.5 万）；"计算机程序员" <span class="down">−7%</span>。BLS 明确将差异归因于重复性编程任务自动化，以及部分高技能编程工作向开发者岗位转移。<sup class="ref"><sup>[S7]</sup></sup></li>
+    <li><strong>斯坦福数字经济实验室（ADP 薪资数据，2026-08 修订）：</strong>未发现大范围岗位替代，但 22–25 岁高 AI 暴露职业就业较趋势低约 <span class="down">19%</span>，资深群体无同类缺口；作者强调这是<strong>描述性早期指标而非因果估计</strong>，且部分分化早于生成式 AI。<sup class="ref"><sup>[S7]</sup></sup></li>
+    <li><strong>Dice（2026 Q1）：</strong>软件开发职位发布 −22%，而标题含 AI 的职位 +173%。<strong>Indeed：</strong>软件开发职位自 2025-02 起 +15%，但增量 71% 来自高级职位。<sup class="ref"><sup>[S20][S21]</sup></sup></li>
+    <li><strong>Stack Overflow 2026：</strong>仅 22% 开发者对当前工作满意，45% 处于"躺平"状态；自由职业（一人公司）比例从 4% 升至 <strong>10%</strong>——AI 使单人覆盖全栈更可行，这既是机会也是雇佣关系弱化的信号。<sup class="ref"><sup>[S4]</sup></sup></li>
+  </ul>
+  <p><strong>综合判断：</strong>"前端岗位减少"与"前端相关需求增长"可以同时成立，它们描述同一 K 型结构的两端。对个人的含义是——<strong>不要用行业总量做职业决策，要用自己所处的岗位层级做决策。</strong>处于执行层，宏观回暖与你无关；处于判断层，宏观收缩也不必然伤及你。</p>
+</section>
+
+<!-- ============ S2 ============ -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">02</span><h2>技术趋势：三重重构与两个变量</h2></div>
+  <p>2026 年前端技术的关键特征，不是"又出了新框架"，而是<strong>工程基座被整体替换，而业务代码几乎保持不变</strong>。这意味着：追新框架的边际收益下降，理解底层重构的边际收益上升。以下按三条主线 + 两个横切变量展开。</p>
+
+  <div class="chart">
+    <div class="ct">图 2 · 2025 Q4 – 2026 Q4 前端生态关键事件时间轴</div>
+    <div class="cs">仅列出可核验的官方发布 / 权威媒体报道事件</div>
+    <div class="tl">
+      <div class="item"><div class="d">2025-10-07</div><div class="h">React Compiler v1.0 稳定发布</div><div class="b">自动 memoization 落地，手动 useMemo / useCallback / React.memo 逐步退出日常代码；社区实测不必要的重渲染减少约 25%–40%。[S1]</div></div>
+      <div class="item"><div class="d">2025-10-21</div><div class="h">Next.js 16 发布，Turbopack 成为默认打包器</div><div class="b">App Router / RSC 由实验特性转为默认路径；缓存模型由隐式激进缓存转向 opt-in 的 Cache Components（<code>use cache</code>）。[S11]</div></div>
+      <div class="item"><div class="d">2025-12-03</div><div class="h">RSC 曝出 CVSS 10.0 未认证 RCE（"React2Shell"）</div><div class="b">随后半年内 RSC / Next.js 连续披露多个 CVE。安全从"后端议题"变成 React 全栈团队的日常议题。[S1][S14]</div></div>
+      <div class="item"><div class="d">2026-02-24</div><div class="h">React Foundation 在 Linux Foundation 下正式成立</div><div class="b">React / React Native / JSX 所有权从 Meta 移交；8 家白金创始成员（Amazon、Callstack、Expo、华为、Meta、Microsoft、Software Mansion、Vercel），技术治理独立于董事会。[S1][S2]</div></div>
+      <div class="item"><div class="d">2026-02（发布）</div><div class="h">State of JS 2025 调查结果公布</div><div class="b">TypeScript 独占使用 40%、React 83.6%、Vite 满意度 98% vs Webpack 26%、Rolldown 使用率 1%→10%、Claude 22%→44%、Cursor 11%→26%。[S3]</div></div>
+      <div class="item"><div class="d">2026-03-12/16</div><div class="h">Vite 8 发布，Rolldown 成为唯一打包器</div><div class="b">统一替换 esbuild（开发）+ Rollup（生产），周下载量约 6500 万；官方称比 Rollup 快 10–30×，与 esbuild 相当。[S5]</div></div>
+      <div class="item"><div class="d">2026-07-08</div><div class="h">TypeScript 7.0 GA：编译器 Go 原生重写</div><div class="b">全量构建提速 8–12×（VS Code 代码库 125.7s → 10.6s）；TS 6.0 为最后一个 JS 实现版本。TS 7.0 暂无稳定 public API（预计 7.1），依赖 Compiler API 的工具链需暂留 6.0。[S6]</div></div>
+      <div class="item"><div class="d">2026-09-09</div><div class="h">React 19.3 发布</div><div class="b">新增 View Transitions、Fragment Refs、<code>browser()</code>、Trusted Types 等；视图过渡与可信类型进入框架层。[S1]</div></div>
+      <div class="item"><div class="d">2026-10-06</div><div class="h">Stack Overflow 2026 开发者调查发布</div><div class="b">30,000+ 样本 / 169 国；66% 使用编码助手或 Agent，26.2% 使用自动化 Agent 工作流，仅 6.6% 信任 AI 做重要决策。[S4]</div></div>
+    </div>
+  </div>
+
+  <h3>2.1 主线一 · 编译期化与服务端化：前端正在变成"编译器问题"</h3>
+  <p>过去十余年，框架在<strong>运行时</strong>解决性能问题（Virtual DOM diff 是典型代表）。2026 年主流框架已收敛到同一判断：运行时工作太贵，应尽可能前移到构建期或服务端。</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:20%">方向</th><th style="width:38%">2026 年状态</th><th>对日常开发的影响</th></tr></thead>
+    <tbody>
+      <tr><td>自动优化</td><td>React Compiler v1.0 稳定，Rust 化推进中；Adobe React Spectrum、Sanity 等早期采用者报告 5–6× 性能改善</td><td>手写 memo 逐渐消失，性能优化重心从"组件级缓存"转向"渲染边界与数据流设计"</td></tr>
+      <tr><td>服务端优先</td><td>RSC 成为 React 生态默认路径；Next 16 Cache Components 把缓存改为 opt-in；PPR / 流式 Suspense 让静态壳 + 动态流成为标准形态</td><td>组件默认在服务端，客户端 JS 可减 40%–60%；需要理解服务端/客户端边界、序列化约束、缓存语义</td></tr>
+      <tr><td>细粒度响应式</td><td>Signals 成为 Angular / Vue / Solid / Svelte 的事实标准；Vue 3.6 Vapor Mode 绕开 VDOM；Angular 21 移除 zone.js</td><td>React 走编译器路线、其余走 Signals 路线，是 2026 年最主要的架构分野</td></tr>
+      <tr><td>零 JS / 岛屿架构</td><td>Astro 默认零 JS，Astro 7 升级 Vite 8 并引入 Rust Markdown 管线；HTMX 在服务端渲染场景回潮</td><td>内容型站点不再默认 SPA，"选不选框架"重新成为需要做取舍的架构决策</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="ref">来源 [S1][S3][S11][S12]；"25%–40% 重渲染减少""40%–60% 包体缩减"为厂商/社区实测口径，随项目差异较大。</p>
+
+  <div class="note">
+    <div class="t">值得注意的反向信号</div>
+    State of JS 2025 中，Next.js 使用率 59% 却只有 21% 正面情绪 / 17% 负面情绪，是评论最多的项目，高频抱怨为"复杂度已经高得离谱"与对 Vercel 商业策略的疑虑。Solid.js 连续第五年满意度最高，Astro 在内容型场景持续扩张。<strong>这说明"元框架一统江湖"并非无代价</strong>：Cache Components、PPR、Server Actions 带来的是认知负担与调试复杂度的显著上升。对工程师而言，理解"何时不该用 RSC"与"何时用"同样有价值。
+  </div>
+
+  <h3>2.2 主线二 · 工具链原生化：JS 工具用原生语言重写完成</h3>
+  <p>2026 年是前端工具链十余年来最集中的一次替换：<strong>VoidZero 系（Vite / Rolldown / Oxc / Oxlint / Oxfmt）+ TypeScript Go 移植 + Node 原生类型擦除</strong>共同构成端到端原生链路。关键特征有三：</p>
+  <ul>
+    <li><strong>统一而非叠加：</strong>Vite 8 用 Rolldown 同时承担开发与生产打包，消除了"dev 与 prod 行为不一致"这一整类缺陷；Oxc 提供共享 parser，让编辑器、CI、构建工具使用同一基础设施。</li>
+    <li><strong>破坏性变更集中在配置层：</strong>TS 7.0 移除 <code>target: es5</code>、<code>baseUrl</code>、AMD/UMD/SystemJS 模块选项；TS 6.0 已把 strict 设为默认。升级工作主要是清理 tsconfig 与验证插件兼容性，而非重写业务代码。</li>
+    <li><strong>职责分离：</strong>Node.js 24.12 / 25.2 起原生类型擦除稳定（自 22.18 默认开启），但只擦除不检查、不支持需要代码生成的 TS 语法；类型检查交给 TS 7。"能运行类型化文件"与"类型正确"成为两件独立的事。</li>
+  </ul>
+  <p>配套变化：Biome / Oxlint 正在替代 ESLint + Prettier（速度 10–100×）；Vitest / Playwright 是测试层增长最快的两项（State of JS 2025 各 +14% 使用率）；Interop 2026 于 2026-02-12 发布 20 个重点领域，anchor positioning、滚动驱动动画、可定制 select、<code>if()</code> 等原生 CSS 能力逐步替代 JS 定位计算与滚动监听。<sup class="ref"><sup>[S3][S5][S6][S12]</sup></sup></p>
+
+  <div class="good">
+    <div class="t">对 TS / Vite 使用者的直接含义</div>
+    你的工具链经验没有作废，但需要<strong>从"会配置"升级到"会诊断"</strong>：理解 Rolldown 与 Rollup 插件 API 的兼容边界、能读构建分析 DevTools、能评估 full bundle dev 模式的适用性、能规划 Vite 7 → <code>rolldown-vite</code> → Vite 8 的渐进迁移、能判断 TS 7 对 vue-tsc / typescript-eslint / 代码生成类工具的影响。这类能力无法靠 AI 直接生成，且在大团队里稀缺。
+  </div>
+
+  <h3>2.3 主线三 · AI 原生化：从"用 AI 写代码"到"为 AI 做前端"</h3>
+  <p>这是与职业前景关联最强的一条主线，需区分两个不同层次：</p>
+  <h4>层次 A：AI 进入研发流程（工具侧）</h4>
+  <p>Stack Overflow 2026：66% 使用编码助手 / Agent、63% 使用通用聊天工具、26.2% 使用自动化 Agent 工作流，仅 17.2% 完全不用；74% 认为 AI 对"实现"有用，66% 对调试/重构有用，但涉及团队沟通（45%）与设计（50%）时 usefulness 显著下降。<strong>AI 的价值集中在离代码近的环节。</strong>框架也开始把 Agent 当作一等用户：Next.js 通过 DevTools MCP 与 <code>AGENTS.md</code> 向编码 Agent 暴露运行时错误、路由信息与版本匹配文档。<sup class="ref"><sup>[S4][S12][S18]</sup></sup></p>
+
+  <h4>层次 B：AI 成为前端的交付对象（产品侧）</h4>
+  <p>这一层是 2026 年前端新增的技术面，也是 TS/React 工程师最自然的扩展方向：</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:20%">能力面</th><th style="width:40%">2026 年主流技术</th><th>前端要解决的问题</th></tr></thead>
+    <tbody>
+      <tr><td>流式 UI</td><td>SSE / WebSocket、Vercel AI SDK <code>UIMessage</code> / <code>message.parts</code>、RSC 流式渲染</td><td>idle → thinking → streaming → tool_call → done/error 状态机；断流重连、部分水合、占位降级、取消与重试</td></tr>
+      <tr><td>Generative UI</td><td>AI SDK <code>streamUI</code> / 受控组件目录、Google A2UI（声明式 JSON）、MCP Apps（沙箱 iframe）、Open-JSON-UI</td><td>把工具调用的类型与状态映射为组件；props 可序列化、副作用受控、AI State 与 UI State 双轨同步、消息持久化与回放</td></tr>
+      <tr><td>Agent 交互协议</td><td>MCP（工具）、WebMCP（网页暴露为工具）、AG-UI（Agent↔前端事件流，@ag-ui/core 1.0 于 2026-09 发布）、A2UI（UI 描述）</td><td>协议分层与选型；工具审批（human-in-the-loop）、权限分级、跨信任边界的安全模型</td></tr>
+      <tr><td>端侧推理</td><td>WebGPU + Transformers.js v4 / ONNX Runtime Web、WebLLM、Chrome 内置 AI（Gemini Nano）</td><td>模型加载与缓存、Web Worker 隔离、量化与显存、三级降级（WebGPU → WASM → 服务端）、隐私与离线闭环</td></tr>
+      <tr><td>可观测与评测</td><td>Langfuse / LangSmith / Phoenix（tracing）、Promptfoo（离线回归）、Token 与成本审计</td><td>把"AI 系统是否正确"变成可测量、可回归的工程问题——这是 AI 应用从 demo 走向生产的主要卡点</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="ref">来源 [S12][S13][S18]；协议与版本号来自 2026 年技术文章，迭代较快，采用前应以官方文档复核。</p>
+  <p>前端工程师在这一层具备<strong>结构性优势</strong>：async/await、SSE、API 集成、状态机、组件化、错误边界这些日常技能可直接迁移到 LLM 流式输出、工具调用与 Agent 状态管理；而多数 AI 后端工程师做不出可用的交互界面。<strong>这是本报告建议优先投入"AI 应用前端"而非"转算法 / 转纯后端"的核心依据。</strong></p>
+
+  <h3>2.4 横切变量一 · 安全与供应链成为新的能力壁垒</h3>
+  <p>2025-12 至 2026 年，RSC 协议连续出现多个高危漏洞：CVE-2025-55182（CVSS 10.0，"React2Shell" 未认证 RCE）、源码泄露与多个 DoS 类 CVE、2026-05 单批 13 个 Next.js 公告、2026-10 一份 CVSS 9.5 的 RSC RCE 公告。同期还出现 axios npm 包供应链投毒（2026-03-31）。AI 生成代码的常见缺陷被反复记录为：IDOR、无鉴权管理后台、密钥硬编码进前端 bundle。<sup class="ref"><sup>[S14]</sup></sup></p>
+  <p>三个实践结论：<strong>（1）</strong>"升级 react 包"不等于修复——Next.js 内置自己的 RSC 运行时副本，必须同时升级框架并重新部署所有 preview / branch 环境；<strong>（2）</strong>采用 BFF 模式隐藏密钥、集中鉴权，是 AI 应用的标准安全边界；<strong>（3）</strong>把 AI 输出一律视为不可信输入，渲染前净化，工具调用按副作用严重度分级审批。<strong>这类"对结果负责"的能力，正是 AI 最难替代、企业最愿意付费的部分。</strong></p>
+
+  <h3>2.5 横切变量二 · 跨端与端侧算力（中国市场特有增量）</h3>
+  <p>HarmonyOS NEXT 采用 ArkTS / ArkUI，不再兼容传统 Android 思路，带来一批明确要求"React / TypeScript 背景 + 鸿蒙转化"的岗位。真实 JD 中出现这样的表述：<em>"若具备前端 React 背景：利用 React / TypeScript / JSX 思维优势，承接 Web 或跨端业务向 ArkUI 的转化，处理前端工程化（Webpack / Vite）、状态管理（Redux / Zustand）与鸿蒙原生状态的映射"</em>，以及 <em>"React Native 与鸿蒙原生模块之间的通信及混合开发"</em>。<sup class="ref"><sup>[S15]</sup></sup></p>
+  <p>同时，WebGPU 成熟使 3D / 可视化 / 端侧推理成为可持续增长的细分方向（Three.js、Babylon.js、点云与三维编辑器岗位在招）。<strong>判断：</strong>这两条属于"有明确业务场景才值得投入"的差异化方向，不建议作为通用前置技能；但若你所在行业是移动端、车机、IoT、工业软件或数据密集型产品，它们的稀缺度显著高于通用 Web 前端。</p>
+
+  <h3>2.6 技术趋势对 TS / React / Vite 栈的影响评估</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:22%">既有能力</th><th style="width:15%">状态</th><th style="width:31%">2026 年应升级到</th><th>不升级的风险</th></tr></thead>
+    <tbody>
+      <tr><td>TypeScript</td><td><span class="tag g">延续 / 升值</span></td><td>strict 全开、Zod 运行时校验、tRPC / Hono 端到端类型安全、TS 7 迁移规划</td><td>类型只停留在 UI 层，无法支撑全栈交付</td></tr>
+      <tr><td>React</td><td><span class="tag a">延续 / 变形</span></td><td>React 19.3、Compiler 心智模型、RSC 边界、<code>use()</code>、View Transitions、Suspense 流式</td><td>会写类组件思维的业务页，但看不懂服务端渲染边界与缓存语义</td></tr>
+      <tr><td>Vite</td><td><span class="tag g">延续 / 升值</span></td><td>Vite 8 + Rolldown、插件兼容诊断、构建分析、Oxc / Biome、CI 性能预算</td><td>停留在"会配 vite.config"，无法处理大型项目构建问题</td></tr>
+      <tr><td>仅客户端 SPA 开发</td><td><span class="tag c">贬值</span></td><td>元框架 + 服务端渲染 + BFF 全链路</td><td>与 AI 生成能力高度重叠，议价能力持续下降</td></tr>
+      <tr><td>AI 应用前端</td><td><span class="tag b">全新</span></td><td>流式 UI、Generative UI、Agent 协议、评测与可观测</td><td>错过增长最快的岗位增量</td></tr>
+      <tr><td>安全 / 质量治理</td><td><span class="tag b">全新</span></td><td>依赖审计、RSC 漏洞响应、AI 产出审查规范、AI 使用政策</td><td>无法承担"对结果负责"的资深职责</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============ S3 ============ -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">03</span><h2>价值迁移：AI 替代的是任务，不是岗位</h2></div>
+
+  <h3>3.1 从"信任缺口"读出真实的能力缺口</h3>
+  <p>把 Stack Overflow 2025 与 2026 两年的数据放在一起，可以看出一条清晰的曲线：</p>
+  <div class="grid3">
+    <div class="stat"><div class="n">84% <span style="font-size:15px;color:var(--tx3)">→ 66%</span></div><div class="l">AI 工具使用 / 编码助手使用（2025 → 2026，口径略有变化）</div><div class="s">[S4][S10]</div></div>
+    <div class="stat"><div class="n down">46% 不信任</div><div class="l">2025 年不信任 AI 输出准确性的比例高于信任（33%）；66% 最大抱怨是"几乎对，但差一点"</div><div class="s">[S10]</div></div>
+    <div class="stat"><div class="n">6.6%</div><div class="l">2026 年愿意让 AI 做重要决策的开发者比例；78.7% 要求来源可追溯；仅 24% 企业有正式 AI 规范</div><div class="s">[S4]</div></div>
+  </div>
+  <p>这组数据推翻了两种流行叙事：既不是"AI 已经能取代工程师"，也不是"AI 只是噱头"。准确表述是——<strong>代码生成正在快速商品化，而验证、判断、约束与担责正在快速升值</strong>。"几乎对但差一点"的代码之所以昂贵，是因为它能通过一眼扫视，却在评审、测试或生产环境才暴露。<sup class="ref"><sup>[S4][S10]</sup></sup></p>
+
+  <h3>3.2 护城河从"会写"迁移到"会判"</h3>
+  <div class="grid2">
+    <div class="card" style="border-color:#5c3038">
+      <div class="ct"><span class="dot" style="background:var(--red)"></span>高替代风险的能力画像</div>
+      <p>按设计稿 1:1 还原页面；模板化 CRUD 与基础组件；靠记忆调用框架 API；缺乏系统调试与线上问题定位能力；无法判断 AI 生成代码是否合理；把"熟练使用某框架"当作主要资历；工作内容高度标准化且产出可立即目视验证。</p>
+    </div>
+    <div class="card" style="border-color:#2d5845">
+      <div class="ct"><span class="dot" style="background:var(--green)"></span>高溢价的能力画像</div>
+      <p>需求拆解与技术方案权衡（"为什么这样而不是那样"）；架构设计与边界划分；对 AI 产出的审查、纠错与安全把关；性能 / 稳定性 / 成本的系统性治理；垂直行业 know-how；把模糊业务目标翻译成可执行技术指标；端到端交付并对结果负责。</p>
+    </div>
+  </div>
+
+  <h3>3.3 能力坐标系：从一维熟练度到四个象限</h3>
+  <p>建议用下面这个框架定位自己，而不是用"会哪些框架"来定位。横轴是<strong>价值层次</strong>（实现 → 判断），纵轴是<strong>交付范围</strong>（客户端 → 全链路）。2026 年市场溢价集中在右上象限。</p>
+  <div class="chart">
+    <div class="ct">图 3 · 前端工程师能力价值矩阵</div>
+    <div class="cs">越靠右上，AI 替代难度越高、岗位溢价越明显</div>
+    <svg viewBox="0 0 680 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="前端能力价值矩阵">
+      <rect x="70" y="30" width="270" height="130" fill="#1b2635" stroke="#2c3a4e"/>
+      <rect x="340" y="30" width="270" height="130" fill="#152a24" stroke="#2d5845"/>
+      <rect x="70" y="160" width="270" height="130" fill="#251b20" stroke="#4a3038"/>
+      <rect x="340" y="160" width="270" height="130" fill="#2a1d25" stroke="#5c3038"/>
+
+      <text x="86" y="52" fill="#a9b8cc" font-size="12" font-weight="700">Ⅱ 工程深度型</text>
+      <text x="86" y="74" fill="#7d8ea6" font-size="11">性能 / 渲染原理 / 工具链 / 设计系统</text>
+      <text x="86" y="92" fill="#7d8ea6" font-size="11">类型系统与质量治理</text>
+      <text x="86" y="123" fill="#4cc38a" font-size="11">稀缺度：中高　·　AI 难替代</text>
+
+      <text x="356" y="52" fill="#8fe0b8" font-size="12" font-weight="700">Ⅰ 目标象限 · 产品/架构型</text>
+      <text x="356" y="74" fill="#a9b8cc" font-size="11">全链路交付 + AI 编排 + 业务判断</text>
+      <text x="356" y="92" fill="#a9b8cc" font-size="11">架构权衡 / 安全担责 / 成本与评测</text>
+      <text x="356" y="123" fill="#4cc38a" font-size="11">稀缺度：高　·　溢价最明显</text>
+
+      <text x="86" y="182" fill="#f0a9ae" font-size="12" font-weight="700">Ⅳ 待补充型</text>
+      <text x="86" y="204" fill="#7d8ea6" font-size="11">单点技能、缺乏纵深</text>
+      <text x="86" y="253" fill="#ff6b6b" font-size="11">稀缺度：低</text>
+
+      <text x="356" y="182" fill="#f0a9ae" font-size="12" font-weight="700">Ⅲ 高风险区 · 纯执行型</text>
+      <text x="356" y="204" fill="#7d8ea6" font-size="11">切图 / 基础 CRUD / 模板化组件</text>
+      <text x="356" y="222" fill="#7d8ea6" font-size="11">标准化、可视化、易验证</text>
+      <text x="356" y="253" fill="#ff6b6b" font-size="11">AI 覆盖度最高　·　价格持续下压</text>
+
+      <text x="205" y="322" fill="#7d8ea6" font-size="11" text-anchor="middle">← 实现层　　　　价值层次　　　　判断层 →</text>
+      <text x="30" y="110" fill="#7d8ea6" font-size="11" transform="rotate(-90 30 110)" text-anchor="middle">交付范围：全链路 ↑</text>
+      <text x="30" y="250" fill="#7d8ea6" font-size="11" transform="rotate(-90 30 250)" text-anchor="middle">客户端 ↓</text>
+      <path d="M 400 250 Q 300 190 240 105" stroke="#5aa9ff" stroke-width="2" fill="none" stroke-dasharray="6 5"/>
+      <circle cx="400" cy="250" r="6" fill="#ff6b6b"/>
+      <circle cx="240" cy="105" r="6" fill="#4cc38a"/>
+      <text x="404" y="272" fill="#ff9b9b" font-size="10.5">当前典型位置</text>
+      <text x="222" y="92" fill="#8fe0b8" font-size="10.5">建议迁移方向</text>
+    </svg>
+  </div>
+  <p><strong>对 TS / React / Vite 工程师的现实定位：</strong>通常已位于第 Ⅱ 与第 Ⅲ 象限之间——有框架熟练度和一定工程化经验，但交付范围多止于客户端、价值层次多止于"实现"。<strong>最短的增值路径不是横向学第三个框架，而是纵向补服务端与 AI 链路、并把工作重心从实现上移到判断。</strong></p>
+</section>
+
+<!-- ============ S4 ============ -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">04</span><h2>能力增强方向：分层路线与锚点项目</h2></div>
+
+  <div class="lead">
+    <div class="t">STRATEGY</div>
+    <p><strong>总策略：不换赛道，沿现有栈向外延伸一层。</strong>TS / React / Vite 是当前最主流、升级路径最清晰、且与 AI 工具配合最好的组合；放弃它去从零学 Java 或 Rust 全栈，会同时损失既有资产与迁移速度。真正需要做的是三个延伸：<strong>向下</strong>（工具链、渲染原理、类型系统、质量治理）、<strong>向后</strong>（Node / BFF / 数据 / 部署 / 全链路交付）、<strong>向前</strong>（AI 应用前端与 Agent 编排），再以<strong>垂直业务理解</strong>作为差异化落点。</p>
+  </div>
+
+  <h3>4.1 方向优先级总览</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:20%">方向</th><th style="width:11%">优先级</th><th style="width:12%">投入周期</th><th style="width:26%">对应市场 / 技术信号</th><th>预期收益</th></tr></thead>
+    <tbody>
+      <tr><td>AI 编码工程化与产出审查</td><td><span class="tag c">P0 最高</span></td><td>0–1 个月</td><td>66% 使用 vs 6.6% 信任；仅 24% 企业有 AI 规范</td><td>立即提升交付质量，且是所有后续方向的杠杆</td></tr>
+      <tr><td>TypeScript 深度 + 端到端类型安全</td><td><span class="tag c">P0 最高</span></td><td>1–2 个月</td><td>TS 独占使用 40%；JD 普遍要求 TS 与全栈类型安全</td><td>复用既有资产，成本最低、迁移最平滑</td></tr>
+      <tr><td>React 19 现代渲染模型</td><td><span class="tag c">P0 最高</span></td><td>1–2 个月</td><td>Compiler v1.0、RSC 默认化、Next 16 Cache Components</td><td>避免"会写 React 但看不懂现代 React 应用"</td></tr>
+      <tr><td>Vite 8 / Rolldown 与构建诊断</td><td><span class="tag a">P1</span></td><td>2–4 周</td><td>Vite 8 统一 Rolldown、TS 7 Go 移植、Oxc / Biome</td><td>大型项目与团队级工程问题的解决能力</td></tr>
+      <tr><td>全栈 / BFF 全链路交付</td><td><span class="tag a">P1 高</span></td><td>3–4 个月</td><td>JD 中 Node / BFF 由加分项变必备项；前后端岗位合并</td><td>直接打开中小企业与 AI 业务线的岗位池</td></tr>
+      <tr><td>AI 应用前端工程化</td><td><span class="tag a">P1 高</span></td><td>3–4 个月</td><td>流式 UI / Generative UI / MCP / AG-UI 成新岗位增量</td><td>前端背景迁移成本最低的高增长方向</td></tr>
+      <tr><td>性能 / 可观测 / 测试体系</td><td><span class="tag a">P1</span></td><td>持续</td><td>RUM 取代 Lighthouse 分数、AI 辅助 CI 测试写入 JD</td><td>构成"对结果负责"的可验证证据</td></tr>
+      <tr><td>安全与 AI 治理</td><td><span class="tag a">P1</span></td><td>持续</td><td>RSC 连续 CVE、供应链投毒、AI 生成代码常见漏洞</td><td>资深岗位的准入门槛，AI 最难替代</td></tr>
+      <tr><td>Agent 编排与评测</td><td><span class="tag b">P2</span></td><td>6–12 个月</td><td>78% 企业启动 Agent 试点但仅约 14% 进入生产</td><td>从"会做 AI 界面"升级到"能做生产级 AI 系统"</td></tr>
+      <tr><td>可视化 / 端侧 / 跨端 / 垂直领域</td><td><span class="tag b">P2 按需</span></td><td>6–18 个月</td><td>可视化岗 +38%；WebGPU 与鸿蒙 ArkTS 为结构性增量</td><td>差异化护城河，取决于所在行业</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>4.2 分层路线：P0 / P1 / P2</h3>
+
+  <div class="phase">
+    <div class="ph"><span class="badge" style="background:#3a1f24;color:#ff9b9b">P0 · 立即</span><span class="pname">把现有栈从"会用"升级到"能诊断、能审查"</span><span class="ptime">0 – 3 个月</span></div>
+    <div class="pb">
+      <ul>
+        <li><strong>AI 编码工程化（第一优先）：</strong>在仓库落地 <code>AGENTS.md</code> 项目规则、把重复任务沉淀为可复用 Skill、建立"外部验证"闭环（类型检查 + 测试 + 浏览器验证 + diff 边界），而不是靠 Agent 自称完成。学会写精确的任务说明、审查大体积 diff、识别"几乎对但差一点"的产出。同步建立团队级 AI 使用规范（哪些代码 / 数据可外发、生成代码的来源与许可、评审要求）——Stack Overflow 数据显示 76% 的组织尚未做这件事，这本身就是可陈述的差异化贡献。</li>
+        <li><strong>TypeScript 深度：</strong>strict 全开并补 <code>noUncheckedIndexedAccess</code> / <code>exactOptionalPropertyTypes</code>；掌握泛型、判别联合、模板字面量类型、<code>satisfies</code>、<code>never</code> 穷尽检查；用 Zod（或 Valibot）把运行时校验与静态类型统一到单一 schema；理解 TS 7 的破坏性变更并清理 tsconfig（移除 <code>target: es5</code>、<code>baseUrl</code>、AMD/UMD/SystemJS），评估依赖 Compiler API 的工具链兼容性。</li>
+        <li><strong>React 19 现代模型：</strong>理解 Compiler 之后"无需手写 memo"的心智模型；掌握 RSC 服务端/客户端边界、序列化约束、<code>use()</code>、Server Actions、Suspense 流式与 View Transitions；理解 Next 16 Cache Components 的 opt-in 缓存与 PPR 静态壳；同时明确"何时不该用 RSC"。</li>
+        <li><strong>Vite 8 / 构建诊断：</strong>走通 Vite 7 → <code>rolldown-vite</code> → Vite 8 的渐进迁移；能读构建分析 DevTools、定位大模块图瓶颈、评估插件兼容；用 Oxlint / Biome 替换 ESLint + Prettier 的可行性与代价。</li>
+        <li><strong>性能与质量基线：</strong>接入 web-vitals RUM，看 LCP / INP / CLS 的 <strong>P75 而非平均值</strong>；把性能预算写进 CI（bundle 体积、LCP 2500ms、INP 200ms）；用 Vitest + Playwright 建立可回归的测试层。</li>
+      </ul>
+      <div class="deliver"><b>可验证产出：</b>一份仓库级 AGENTS.md + AI 使用规范；一次现有项目 Vite/TS 升级的迁移记录（含前后构建与 CI 时长数据）；一个带 RUM 看板与性能预算的性能基线报告；一段"AI 生成代码被发现并修正"的具体案例复盘。</div>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="ph"><span class="badge" style="background:#152b40;color:#9ccbff">P1 · 半年内</span><span class="pname">补齐全链路交付与 AI 应用前端</span><span class="ptime">3 – 6 个月</span></div>
+    <div class="pb">
+      <ul>
+        <li><strong>全栈 / BFF（按 TS 优先顺序）：</strong>Next.js App Router + Server Actions 或 Hono / NestJS；PostgreSQL + Drizzle / Prisma；Zod 契约 + tRPC 端到端类型推理（内部系统）或 OpenAPI 生成类型化客户端（对外 API）；认证与会话（JWT / OAuth / HttpOnly Cookie）、缓存、幂等、限流、结构化日志；Docker + CI/CD + 部署与回滚。<strong>关键不是"会写接口"，而是能独立完成"数据库设计 → 接口 → 页面 → 上线"的一条需求。</strong></li>
+        <li><strong>AI 应用前端：</strong>用 Vercel AI SDK 走通 SSE 流式输出、<code>message.parts</code> 工具调用状态渲染、Generative UI 受控组件目录；理解 AI State / UI State 双轨与消息持久化回放；处理断流重连、取消、占位降级、错误态；了解 AG-UI（事件流）、A2UI（声明式 UI）、MCP Apps（第三方 UI 沙箱）的分工与选型。</li>
+        <li><strong>BFF 作为安全边界：</strong>隐藏 LLM API Key、集中鉴权与权限校验、输入脱敏、AI 输出净化（DOMPurify 类）、按副作用严重度对工具调用分级审批。这既是安全实践，也是 JD 里高频出现的职责。</li>
+        <li><strong>可观测与评测：</strong>前端监控（白屏、脚本错误、API 失败、长任务）；AI 侧 tracing 与 Token / 成本审计；用固定评测集做离线回归门禁。</li>
+      </ul>
+      <div class="deliver"><b>锚点项目 A · 生产级 AI 知识库问答工作台：</b>文档上传 → 切块与 Embedding → 混合检索（向量 + BM25，检索前做权限过滤）→ LLM 流式回答带引用高亮 → 人机协同审核节点 → tracing 与评测集 → 部署上线。要求有架构文档、失败 case 复盘、成本与延迟数据。<b>这个项目同时覆盖 P0 与 P1 的绝大多数能力点，比"再做一个聊天页面"高一个量级。</b></div>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="ph"><span class="badge" style="background:#241d38;color:#c9adff">P2 · 1–2 年</span><span class="pname">形成架构判断力与不可替代的纵深</span><span class="ptime">6 – 24 个月</span></div>
+    <div class="pb">
+      <ul>
+        <li><strong>架构与取舍：</strong>设计系统与组件治理、微前端 / Module Federation 的适用边界与代价、渲染策略选型（CSR / SSR / SSG / ISR / PPR / 岛屿）、多端一致性与渐进迁移、技术债与成本建模。<strong>核心训练是"能写出为什么不这样"的文档，而不是画出更多框。</strong></li>
+        <li><strong>Agent 编排纵深：</strong>Function Calling / Tool 暴露三种模式（进程内 / CLI / MCP）、分层记忆、RAG 作为持续数据管道、LangGraph 状态机、多 Agent 的引入条件（单 Agent 稳定且任务边界清晰之后再上）、Prompt 版本化与评测。</li>
+        <li><strong>按需选择的差异化纵深：</strong>① 可视化 / 3D / WebGPU / Wasm（数据密集型、工业、电商）；② 端侧推理（金融、医疗等隐私敏感场景）；③ 跨端与鸿蒙 ArkTS / RN 新架构（移动端与车机行业）；④ 平台工程 / DX / 低代码平台建设（大厂中台与 ToB）；⑤ 一个垂直行业（金融、医疗、跨境 SaaS、工业软件）的业务建模能力。</li>
+        <li><strong>影响力外化：</strong>开源贡献、技术文章、内部工具沉淀、可公开的架构复盘。在简历同质化（80% 是"学了框架做了电商网站"）与初级岗 127:1 的筛选环境下，<strong>可验证的公开产出比证书与培训经历有效得多</strong>。</li>
+      </ul>
+      <div class="deliver"><b>锚点项目 B · 团队级 AI 研发效能平台：</b>把 AGENTS.md 规则、Skill 库、AI 生成代码审查门禁、评测与成本看板整合为内部平台，并用"需求交付周期 / 缺陷逃逸率 / 人均产出"前后对比量化收益。<b>锚点项目 C · 复杂体验专项：</b>一个高性能可视化或跨端项目，附 RUM P75 数据、长任务拆解记录与低端设备实测。</div>
+    </div>
+  </div>
+
+  <h3>4.3 12 个月节奏建议</h3>
+  <div class="chart">
+    <div class="ct">图 4 · 12 个月能力建设路线（可与全职工作并行）</div>
+    <div class="cs">每个阶段以一个可交付项目收口，避免"学了一堆零散 demo"</div>
+    <svg viewBox="0 0 680 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="12个月能力建设路线图">
+      <line x1="40" y1="92" x2="650" y2="92" stroke="#3a4a60" stroke-width="3"/>
+      <g font-size="11">
+        <circle cx="90" cy="92" r="9" fill="#ff6b6b"/><text x="90" y="66" fill="#ff9b9b" text-anchor="middle" font-weight="700">M1–M2</text>
+        <text x="90" y="122" fill="#a9b8cc" text-anchor="middle">AI 工程化</text><text x="90" y="139" fill="#7d8ea6" text-anchor="middle">TS 深度</text>
+
+        <circle cx="215" cy="92" r="9" fill="#f5b955"/><text x="215" y="66" fill="#f5cd8a" text-anchor="middle" font-weight="700">M3–M4</text>
+        <text x="215" y="122" fill="#a9b8cc" text-anchor="middle">React 19 / RSC</text><text x="215" y="139" fill="#7d8ea6" text-anchor="middle">Vite 8 / RUM</text>
+
+        <circle cx="340" cy="92" r="9" fill="#5aa9ff"/><text x="340" y="66" fill="#9ccbff" text-anchor="middle" font-weight="700">M5–M7</text>
+        <text x="340" y="122" fill="#a9b8cc" text-anchor="middle">BFF / 全栈交付</text><text x="340" y="139" fill="#7d8ea6" text-anchor="middle">端到端类型安全</text>
+
+        <circle cx="465" cy="92" r="9" fill="#b18cff"/><text x="465" y="66" fill="#c9adff" text-anchor="middle" font-weight="700">M8–M10</text>
+        <text x="465" y="122" fill="#a9b8cc" text-anchor="middle">AI 应用前端</text><text x="465" y="139" fill="#7d8ea6" text-anchor="middle">Agent / 评测</text>
+
+        <circle cx="590" cy="92" r="9" fill="#4cc38a"/><text x="590" y="66" fill="#8fe0b8" text-anchor="middle" font-weight="700">M11–M12</text>
+        <text x="590" y="122" fill="#a9b8cc" text-anchor="middle">架构 / 安全治理</text><text x="590" y="139" fill="#7d8ea6" text-anchor="middle">公开作品集</text>
+      </g>
+      <rect x="40" y="162" width="610" height="32" rx="6" fill="#152232" stroke="#2c3a4e"/>
+      <text x="345" y="183" fill="#9ccbff" font-size="11.5" text-anchor="middle">贯穿全程：每个阶段产出 1 个可运行项目 + 1 份架构/复盘文档，用可验证证据替代技能清单</text>
+    </svg>
+  </div>
+
+  <h3>4.4 明确不建议的方向（及理由）</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:28%">不建议</th><th>理由与替代方案</th></tr></thead>
+    <tbody>
+      <tr><td>放弃 TS 栈从零转 Java / Rust 后端</td><td>学习曲线陡、与既有资产协同弱，且目标是"全链路交付"而非"换一门语言"。先用 Node / Hono / Next.js 打通链路，仅在遇到明确的性能或团队栈约束时再考虑 Go 旁路。<strong>Go 的价值在于国内后端基建，不在于替代 TS。</strong></td></tr>
+      <tr><td>横向追第三个 / 第四个 UI 框架</td><td>State of JS 2025 显示框架格局异常稳定（React 83.6%），框架知识已非护城河。Svelte / Solid / Vue Vapor 值得<strong>理解其编译期与 Signals 思路</strong>，但不必作为求职主技能投入。</td></tr>
+      <tr><td>只学 Prompt 技巧、跳过工程基础</td><td>Stack Overflow 2026 显示 AI 在设计、沟通、重要决策上可信度低；生产级 AI 系统的瓶颈是状态一致性、权限、评测、可观测与成本，不是提示词措辞。</td></tr>
+      <tr><td>把 FDE 当作前端转型目标</td><td>见 1.3 节纠错。FDE 是客户现场部署工程，核心是业务与模型落地，不是 frontend 技术栈的直接延伸。</td></tr>
+      <tr><td>以证书、培训班、Demo 数量作为能力证明</td><td>当前筛选环境下，简历同质化是初级岗机会枯竭的直接原因。可核验的公开项目、架构文档、性能数据与失败复盘，区分度显著更高。</td></tr>
+      <tr><td>因"前端已死"叙事而彻底转行</td><td>BLS 预测软件开发者 2025–2035 仍 +10%；岗位结构变化是职能升级而非职业消失。现有栈的迁移成本远低于彻底转行，且 AI 应用前端恰好放大了前端背景的优势。</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============ S5 ============ -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">05</span><h2>风险、数据可信度与行动清单</h2></div>
+
+  <h3>5.1 证据分级</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:12%">等级</th><th style="width:36%">来源类型</th><th>本报告中的用途</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag g">A · 一手</span></td><td>React 官方博客、Linux Foundation 新闻稿、Stack Overflow 官方调查新闻稿、State of JS 官方结果（经 InfoQ 报道）、BLS Occupational Outlook Handbook</td><td>用于确立版本号、发布日期、调查比例、就业预测等硬事实</td></tr>
+      <tr><td><span class="tag a">B · 权威二手</span></td><td>The Register、InfoQ、Computer Weekly、羊城晚报、斯坦福数字经济实验室研究（经汇总报道）、公开 JD 原文（猎聘 / 智联 / JDWatch）</td><td>用于交叉印证趋势方向、观察真实岗位要求</td></tr>
+      <tr><td><span class="tag b">C · 聚合 / 自媒体</span></td><td>报告聚合站、技术自媒体、培训机构文章、微信公众号爆款文</td><td><strong>仅作方向性信号</strong>，不作精确值引用；其中薪酬与岗位同比数字需原始报告核验</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>5.2 需要明确标注的不确定性</h3>
+  <ul>
+    <li><strong>国内招聘数据口径不可直接核验：</strong>−62%、−52%、+12.2%、127:1、85% 替代率等数字广泛流传但多来自媒体转述，原始报告的样本量、统计周期与岗位分类定义未公开。本报告已按统计对象拆分，仍建议将其理解为"方向一致、幅度存疑"。</li>
+    <li><strong>组织变革信息为三级来源：</strong>美团 / 京东 / 蚂蚁 / 得物的前后端合并报道多出自技术自媒体，缺乏公司正式公告。JD 层面的变化（BFF 进 JD、岗位改名）证据强度更高，应以此为准。</li>
+    <li><strong>AI 领域协议与版本迭代极快：</strong>AG-UI、A2UI、MCP Apps、Vercel AI SDK 的版本与能力在数月内可能变化，采用前须以官方文档复核。</li>
+    <li><strong>本研究的时间截点为 2026-11-24：</strong>Q4 后续发布、年末招聘数据与政策变化未纳入。</li>
+    <li><strong>判断可能出错的地方：</strong>若 AI 编码 Agent 在 2027 年显著攻克长上下文架构推理与线上问题定位，第 Ⅱ 象限（工程深度型）的稀缺度会下降得比预期快；反之若企业因人才断层重启校招与培养体系，初级岗收缩可能部分回补。<strong>建议每 6 个月用同样的指标复核一次，而不是把本报告当作一次性结论。</strong></li>
+  </ul>
+
+  <div class="note">
+    <div class="t">关于"数据打架"的方法论提醒</div>
+    当同一时期出现"岗位 +12.2%"与"岗位 −52%"时，正确做法不是选一个相信，而是<strong>追问统计对象</strong>：是"前端相关岗位"还是"普通前端开发岗"？是同比还是对比两年前？是否含外包与灵活用工？是否含 AI 融合岗？本报告的 K 型结论之所以稳健，恰恰因为<strong>它在所有口径下都成立</strong>——无论总量增或减，初级收缩与高端扩张都同时被观测到。
+  </div>
+
+  <h3>5.3 30 天行动清单</h3>
+  <div class="grid2">
+    <div class="card">
+      <div class="ct"><span class="dot" style="background:var(--blue)"></span>第 1 周 · 建立基线</div>
+      <p>① 用当前项目的下一个真实需求，完整走一遍 AI 辅助开发，并记录：任务如何拆解、AI 出错在哪、你如何发现、验证用了什么手段。② 检查项目实际解析的 React / Next / Vite / TypeScript 版本（<code>npm ls</code>），核对 RSC 相关 CVE 修复状态与所有 preview 部署。③ 接入 web-vitals，拿到 LCP / INP / CLS 的 P75。</p>
+    </div>
+    <div class="card">
+      <div class="ct"><span class="dot" style="background:var(--purple)"></span>第 2 周 · 固化规范</div>
+      <p>① 写仓库级 <code>AGENTS.md</code>：项目结构、技术约束、禁止模式、验证命令。② 把 2–3 个高频重复任务沉淀为 Skill。③ 起草团队 AI 使用规范（可外发的代码/数据边界、生成代码评审与来源要求）。④ 清理 tsconfig 中 TS 7 已移除的配置项。</p>
+    </div>
+    <div class="card">
+      <div class="ct"><span class="dot" style="background:var(--green)"></span>第 3 周 · 打通链路</div>
+      <p>① 用 Next.js App Router 或 Hono + Zod + tRPC 做一个最小全栈模块（数据库 → 接口 → 页面 → 部署）。② 用 Vercel AI SDK 跑通一次 SSE 流式输出与工具调用状态渲染。③ 把 BFF 作为密钥与鉴权边界落进去。</p>
+    </div>
+    <div class="card">
+      <div class="ct"><span class="dot" style="background:var(--amber)"></span>第 4 周 · 选定纵深</div>
+      <p>① 依据所在行业，从可视化 / 端侧推理 / 跨端鸿蒙 / 平台工程 / 垂直业务中<strong>只选一个</strong>作为 6–12 个月的主纵深。② 写出锚点项目 A 的架构文档与验收标准。③ 把前 3 周的产出整理成可公开的项目与复盘，作为作品集第一版。</p>
+    </div>
+  </div>
+
+  <div class="lead" style="margin-top:30px">
+    <div class="t">FINAL TAKEAWAY</div>
+    <p>2026 年前端就业的核心矛盾，不是"人 vs AI"，而是<strong>"标准化实现"与"非标准化判断"之间的价值重估</strong>。对 TS / React / Vite 工程师，最理性的策略是保留既有栈、拒绝赛道切换，用 3–6 个月补齐全链路交付与 AI 应用前端，用 1–2 年建立架构判断力与一个垂直纵深。<strong>先成为能审查 AI、并为结果负责的人，再谈其他方向。</strong></p>
+  </div>
+</section>
+
+<!-- ============ S6 ============ -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">06</span><h2>附录：参考来源与证据分级</h2></div>
+  <p class="ref">检索日期 2026-11-24。以下列出本报告实际引用的主要来源，按证据等级标注。链接为检索时可访问的原始地址。</p>
+  <div class="srclist">
+    <div><span class="srcid">[S1]</span> <span class="tag g">A</span> React 官方博客（版本发布索引、React Foundation 2026-02-24、React 19.3 2026-09-09、React Compiler v1.0 2025-10-07、RSC 安全公告 2025-12）— react.dev/blog</div>
+    <div><span class="srcid">[S2]</span> <span class="tag g">A</span> Linux Foundation 新闻稿《Linux Foundation Announces the Formation of the React Foundation》2026-02-24 — linuxfoundation.org/press</div>
+    <div><span class="srcid">[S3]</span> <span class="tag g">A</span> State of JavaScript 2025（2025-11 调研 / 2026-02 发布）及 InfoQ 报道《State of JavaScript 2025: Survey Reveals a Maturing Ecosystem》— 2025.stateofjs.com / infoq.com</div>
+    <div><span class="srcid">[S4]</span> <span class="tag g">A</span> Stack Overflow 2026 Annual Developer Survey 官方新闻稿（2026-10-06，30,000+ 样本 / 169 国）— stackoverflow.co/company/press</div>
+    <div><span class="srcid">[S5]</span> <span class="tag a">B</span> The Register《Vite team boasts 10-30x faster builds with Rust-powered Rolldown》2026-03-16 — theregister.com</div>
+    <div><span class="srcid">[S6]</span> <span class="tag a">B</span> TypeScript 7.0 GA 与工具链原生化多源报道（besthub.dev、nextsoftcorp.com、掘金《智能栈报》第十一期、ilabubu 前端 2026 全景）；一致口径：2026-07-08 发布、Go 重写、8–12× 提速、7.1 提供 public API</div>
+    <div><span class="srcid">[S7]</span> <span class="tag a">B</span> US BLS Occupational Outlook Handbook（2026-08-27 更新）与 Stanford Digital Economy Lab（Brynjolfsson 等，ADP 薪资数据，2026-08 修订），经 ComputeSE / HeroHunt 等汇总报道交叉引用</div>
+    <div><span class="srcid">[S8]</span> <span class="tag b">C</span> 国内招聘平台数据聚合：拉勾《2026 Q1 互联网前端人才就业报告》、BOSS 直聘《2026 前端人才白皮书》、智联招聘 2026 Q1、脉脉《2026 春招求职行为洞察》（经 sgpjbg.com 等聚合站与多篇技术自媒体转述）</div>
+    <div><span class="srcid">[S9]</span> <span class="tag a">B</span> 公开 JD 原文：蚂蚁集团「大前端研发工程师（AI Native）」（JDWatch，2026-11-16）、猎聘「AI 全栈工程师（Web 前端）」、27 秋「全栈开发工程师（Web 前端）」、今日招聘网「资深 AI 开发工程师（前后端全栈）」</div>
+    <div><span class="srcid">[S10]</span> <span class="tag g">A</span> Stack Overflow 2025 Developer Survey（84% 使用 / 46% 不信任 / 66% "几乎对" / 45% 调试更耗时）</div>
+    <div><span class="srcid">[S11]</span> <span class="tag a">B</span> Next.js 16 / Cache Components / PPR 实践与迁移记录（掘金《前端架构新范式：Server Components 与微前端》、Front Talk、Gautam Khorana 迁移笔记）</div>
+    <div><span class="srcid">[S12]</span> <span class="tag a">B</span> AI 原生前端技术资料：Vercel AI SDK / streamUI、AG-UI、Google A2UI、MCP Apps、Generative UI 对比（fechuck.com、博客园 A2UI 解析、zhenjia.dev 转行指南、稀土掘金《2026 年的前端》、ilabubu 全景）、Framework Training《The JavaScript ecosystem is rewriting itself》</div>
+    <div><span class="srcid">[S13]</span> <span class="tag a">B</span> 端侧推理：Transformers.js / WebGPU / ONNX Runtime Web 实践（jsjson.com、OpenReplay、CSDN 实战、微信公众号实测记录）</div>
+    <div><span class="srcid">[S14]</span> <span class="tag a">B</span> 安全：RSC CVE 序列（CVE-2025-55182 等）、GHSA 2026-10 CVSS 9.5、Next.js 批量公告、axios 供应链事件、AI 生成应用渗透测试发现（appsafe.dev、shouldiusethisframework.com、ismysitehackable.com、fullstacktechies.com）</div>
+    <div><span class="srcid">[S15]</span> <span class="tag a">B</span> 鸿蒙 / 跨端公开 JD（智联招聘「鸿蒙开发工程师」「RN 鸿蒙开发工程师」、猎聘「鸿蒙客户端开发工程师」）及 HarmonyOS NEXT 生态综述</div>
+    <div><span class="srcid">[S16]</span> <span class="tag a">B</span> 性能工程：OpenReplay《2026 年网站性能优化决议》、华为云社区《前端性能优化实战》、Core Web Vitals / RUM / 性能预算 CI 实践</div>
+    <div><span class="srcid">[S17]</span> <span class="tag a">B</span> 端到端类型安全：tRPC / Zod / Drizzle / Hono（apiscout.dev、redlinesoft.net、starterpick.com、pillaiinfotech.com 2026 实践指南）</div>
+    <div><span class="srcid">[S18]</span> <span class="tag b">C</span> 能力转型路线多源参考：GitCode《前端转 Agent 全栈能力路线图》、besthub.dev《How Front-End Developers Can Transition to AI Agent Engineering》、guibai.dev《Frontend-to-AI-Full-Stack Roadmap》、多篇前端转型公众号长文</div>
+    <div><span class="srcid">[S19]</span> <span class="tag b">C</span> 国内大厂组织调整报道（美团 Keemart、得物、网易智企、蚂蚁、京东），多为技术自媒体，仅作趋势信号</div>
+    <div><span class="srcid">[S20]</span> <span class="tag a">B</span> 本研究针对「2026 年前端就业市场结构性变化与薪酬分化」执行的多源综合检索结果（含拉勾/BOSS/智联/脉脉、羊城晚报、赛迪智库、Hudson、麦可思、Indeed、Revealera、Dice 等的转述与交叉比对）</div>
+    <div><span class="srcid">[S21]</span> <span class="tag a">B</span> Indeed Hiring Lab、Dice Q1 2026 报告、Stanford AI Index 2026 等，经 Computer Weekly / HeroHunt / 今日头条等转述引用</div>
+  </div>
+
+  <footer>
+    <p style="color:var(--tx3);font-size:12.5px">本报告为基于公开信息的研究分析，不构成职业决策、投资或薪酬谈判的保证。所有涉及具体数值的引用均标注了证据等级与口径限制；用于对外场合前，建议核对原始报告发布时间、样本定义与统计周期。</p>
+    <p style="color:var(--tx3);font-size:12.5px;margin-top:10px">研究截点：2026 年 11 月 24 日　·　建议复核周期：每 6 个月</p>
+  </footer>
+</section>
+
+</div>
+</body>
+</html>

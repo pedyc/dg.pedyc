@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "90-DIARY/2026-11-23.md",
+                "file": "30-RESOURCES/大模型流式打字机效果实现及渲染性能优化.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,31 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-11-23"
-            }
-          },
-          {
-            "id": "c54be47a0e97dc0c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-构建.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "前端工程学习专项-构建"
+              "title": "大模型流式打字机效果实现及渲染性能优化"
             }
           },
           {
@@ -61,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20-AREAS/A-前端/Node.js.md",
+                "file": "30-RESOURCES/TypeScript版本演进.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,10 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Node.js"
+              "title": "TypeScript版本演进"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -121,7 +98,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "90-DIARY/2026-11-23.md",
+                "file": "30-RESOURCES/TypeScript版本演进.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -321,16 +298,30 @@
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "obsidian-git:Open Git source control": false,
-      "obsidian-local-images-plus:Local Images Plus  0.19.3\r\nLocalize attachments (plugin folder)": false,
       "daily-notes:打开/创建今天的日记": false,
       "cmdr:堆叠/取消堆叠标签页": false,
       "obsidian-local-images-plus:Local Images Plus  0.19.8\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "a7bd9041653701b1",
+  "active": "67a0526ff07e0b8b",
   "lastOpenFiles": [
-    "30-RESOURCES/回溯算法.md",
+    "20-AREAS/A-前端/TypeScript.md",
+    "30-RESOURCES/TypeScript版本演进.md",
+    "30-RESOURCES/第三方库.md",
+    "30-RESOURCES/Babel.md",
+    "30-RESOURCES/Babel使用指南.md",
+    "30-RESOURCES/前沿技术考察.md",
+    "90-DIARY/2026-11-24.md",
+    "index.md",
+    "99-ASSETS/报告/2026前端就业形势与技术趋势深度研究报告.html",
+    "99-ASSETS/报告/未命名.md",
+    "99-ASSETS/报告",
+    "20-AREAS/A-前端/Node.js.md",
+    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-构建.md",
+    "30-RESOURCES/大模型流式打字机效果实现及渲染性能优化.md",
+    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-质量.md",
     "90-DIARY/2026-11-23.md",
+    "30-RESOURCES/回溯算法.md",
     "30-RESOURCES/动态规划.md",
     "Untitled.md",
     "_templates/template_diary.md",
@@ -338,23 +329,10 @@
     "30-RESOURCES/滑动窗口解题心得.md",
     "01-META/Guide/Design/判据总览.md",
     "30-RESOURCES/哈希表.md",
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-构建.md",
-    "20-AREAS/A-前端/Node.js.md",
     "30-RESOURCES/Node IO 与并发.md",
     "30-RESOURCES/Node 模块与包.md",
     "30-RESOURCES/Node 运行时模型.md",
     "50-ZETTELCASTEN/App Router 之后，「React + Node」不再足以解释 NextJS.md",
-    "20-AREAS/A-前端/JavaScript.md",
-    "30-RESOURCES/SSR.md",
-    "40-ARCHIVE/Diving Into Reactive Programming in Node.js  AppSignal Blog.md",
-    "30-RESOURCES/ThreeJS实现3D视差滚动.md",
-    "20-AREAS/A-前端/ThreeJS.md",
-    "90-DIARY/2026-11-10.md",
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-质量.md",
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-交付.md",
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项.md",
-    "30-RESOURCES/在Vite中配置环境变量.md",
-    "10-PROJECTS/P-Agent求职/Agent求职.md",
     "40-ARCHIVE/P-斑驳光背景实现",
     "99-ASSETS/Bases/SOP.base",
     "99-ASSETS/Bases/判据.base",
@@ -365,8 +343,6 @@
     "_resources/SOP-前端高性能动画与渲染节流实施指南/981e4329bc20b14f94d3714c0a777726_MD5.webp",
     "01-META/Guide/Design/_resources/判据六层推导.excalidraw.svg",
     "01-META/Guide/Design/_resources",
-    "99-ASSETS/Bases/EXCALIDRAW.base",
-    "99-ASSETS/Bases/ALL.base",
     "10-PROJECTS/P-Agent求职/_resources/Agent Architecture.excalidraw.svg",
     "_resources/本库架构指南.excalidraw.svg",
     "_resources/2053a78bf0323938d7ebfbf1d8f40f59_MD5.webp",

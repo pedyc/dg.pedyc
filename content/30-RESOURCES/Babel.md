@@ -5,7 +5,7 @@ aliases: [Babel, T-Babel]
 description: JavaScript 编译器，用于将新版本语法转换为旧版本语法
 tags: [前端开发/工程化]
 date-created: 2026-03-16
-date-modified: 2026-05-27
+date-modified: 2026-11-24
 status: active
 content-type: term
 up: "[[前端构建与打包]]"
@@ -23,7 +23,7 @@ Babel 是一个 JavaScript 编译器，主要用于将 ES6+ 新语法转换为�
 ### 工作流程
 
 ```mermaid
-flowchart LR
+flowchart TB
     ES6[ES6+ 代码] -->|解析| Babel[Babel 编译器]
     Babel -->|转换| AST[AST]
     AST -->|插件处理| NewAST[新 AST]

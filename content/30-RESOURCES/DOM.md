@@ -5,7 +5,7 @@ aliases: ["T-概念-DOM", "DOM", "文档对象模型"]
 description: "DOM 是将 HTML/XML 文档解析为树状结构的数据模型"
 tags: [前端开发/概念]
 date-created: 2025-05-22
-date-modified: 2026-08-31
+date-modified: 2026-11-26
 status: active
 content-type: term
 ---
@@ -34,8 +34,6 @@ DOM（Document Object Model，文档对象模型）是一种**树状数据结构
 | **平台无关** | W3C 标准，浏览器统一实现 |
 | **实时性** | 文档结构变化会立即反映在 DOM 树上 |
 
----
-
 ### 关键区别：DOM vs HTML
 
 ```bash
@@ -48,8 +46,6 @@ document
     └── p (Element)
         └── "Hello" (Text)
 ```
-
----
 
 ### 核心 API
 
@@ -70,15 +66,11 @@ document
 | **事件** | `addEventListener()` | 绑定事件 |
 | **事件** | `removeEventListener()` | 解绑事件 |
 
----
-
 ### 跨学科含义
 
 - **在浏览器中**：DOM 是页面渲染的基础，浏览器根据 DOM 计算布局和绘制
 - **在 JavaScript 中**：JS 通过 DOM API 操作 DOM 树实现动态交互
 - **在 SSR 中**：Node.js 用 jsdom、happy-dom 模拟 DOM 进行服务端测试
-
----
 
 ### 知识网络
 
@@ -95,8 +87,6 @@ document
 - **相关概念**：
 	- [[HTML]] — DOM 的文本来源
 	- [[浏览器渲染管线]] — DOM 是渲染管线的一环
-
----
 
 ### 参考延伸
 

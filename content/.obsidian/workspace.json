@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30-RESOURCES/Node.js 知识测评.md",
+                "file": "30-RESOURCES/Node 运行时模型.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +52,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Node.js 知识测评"
+              "title": "Node 运行时模型"
+            }
+          },
+          {
+            "id": "343b05d8904b0d73",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "30-RESOURCES/词法分析.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "词法分析"
+            }
+          },
+          {
+            "id": "835b2a828d604e08",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AGENTS.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "AGENTS"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -98,7 +146,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "30-RESOURCES/Node.js 知识测评.md",
+                "file": "AGENTS.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -303,12 +351,24 @@
       "obsidian-local-images-plus:Local Images Plus  0.19.8\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "67a0526ff07e0b8b",
+  "active": "60236dec7012791f",
   "lastOpenFiles": [
+    "10-PROJECTS/P-Node.js 判定链学习专项/Node.js 判定链学习专项.md",
+    "10-PROJECTS/P-Node.js 判定链学习专项",
+    "01-META/Specification/_skills-overview.md",
+    "AGENTS.md",
+    "20-AREAS/A-前端/Node.js.md",
     "30-RESOURCES/Node 运行时模型.md",
+    "30-RESOURCES/Node 模块与包.md",
+    "20-AREAS/A-前端/JavaScript.md",
+    "30-RESOURCES/微任务.md",
+    "30-RESOURCES/HTML.md",
+    "30-RESOURCES/DOM.md",
+    "30-RESOURCES/ECMAScript.md",
+    "30-RESOURCES/JavaScript 引擎.md",
+    "30-RESOURCES/词法分析.md",
     "30-RESOURCES/Node.js 知识测评.md",
     "30-RESOURCES/V8 引擎.md",
-    "20-AREAS/A-前端/Node.js.md",
     "30-RESOURCES/TypeScript版本演进.md",
     "20-AREAS/A-前端/TypeScript.md",
     "30-RESOURCES/第三方库.md",
@@ -322,17 +382,6 @@
     "99-ASSETS/报告",
     "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-构建.md",
     "30-RESOURCES/大模型流式打字机效果实现及渲染性能优化.md",
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-质量.md",
-    "90-DIARY/2026-11-23.md",
-    "30-RESOURCES/回溯算法.md",
-    "30-RESOURCES/动态规划.md",
-    "Untitled.md",
-    "_templates/template_diary.md",
-    "2026-11-20.md",
-    "30-RESOURCES/滑动窗口解题心得.md",
-    "01-META/Guide/Design/判据总览.md",
-    "30-RESOURCES/哈希表.md",
-    "30-RESOURCES/Node IO 与并发.md",
     "40-ARCHIVE/P-斑驳光背景实现",
     "99-ASSETS/Bases/SOP.base",
     "99-ASSETS/Bases/判据.base",
@@ -342,7 +391,6 @@
     "01-META/Index/判据",
     "_resources/SOP-前端高性能动画与渲染节流实施指南/981e4329bc20b14f94d3714c0a777726_MD5.webp",
     "01-META/Guide/Design/_resources/判据六层推导.excalidraw.svg",
-    "01-META/Guide/Design/_resources",
     "10-PROJECTS/P-Agent求职/_resources/Agent Architecture.excalidraw.svg",
     "_resources/本库架构指南.excalidraw.svg",
     "_resources/2053a78bf0323938d7ebfbf1d8f40f59_MD5.webp",

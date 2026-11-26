@@ -5,7 +5,7 @@ aliases: [C-HTML, HyperText Markup Language, 超文本标记语言]
 description: HTML 是 Web 的结构层标记语言，通过元素与标签定义网页内容的语义结构
 tags: [前端开发/HTML]
 date-created: 2026-08-18
-date-modified: 2026-08-18
+date-modified: 2026-11-26
 status: fleeting
 content-type: concept
 up: "[[前端开发]]"
@@ -25,8 +25,6 @@ up: "[[前端开发]]"
 - [[语义化标签通过表达内容结构提升可访问性与 SEO]] — 表达结构而非样式，机器可理解
 - HTML 通过 `href`/`src` 等属性与其他资源建立链接，构成"超文本"网络
 
----
-
 ### 运行机制
 
 ```mermaid
@@ -41,8 +39,6 @@ graph LR
 
 HTML 文档被浏览器解析为 DOM 树，CSS 与 JavaScript 分别作用于结构与行为。
 
----
-
 ### 关键区别
 
 | 维度 | [[HTML]] | [[CSS]] | [[JavaScript]] |
@@ -50,8 +46,6 @@ HTML 文档被浏览器解析为 DOM 树，CSS 与 JavaScript 分别作用于结
 | **角色** | 结构层 | 表现层 | 行为层 |
 | **语言类型** | 标记语言 | 样式语言 | 编程语言 |
 | **浏览器产物** | DOM 树 | 计算样式 | 运行效果 |
-
----
 
 ### 适用范围
 
@@ -62,15 +56,11 @@ HTML 文档被浏览器解析为 DOM 树，CSS 与 JavaScript 分别作用于结
 	- **用 HTML 做样式**：如用 `<br>`/`<table>` 排版，应由 CSS 负责
 	- **用 HTML 做交互**：应交给 JavaScript 与事件机制
 
----
-
 ### 知识图谱
 
 - **上位**：[[前端开发]] — 前端领域顶层 area
 - **并列**：[[CSS]] — 表现层语言；[[浏览器]] — HTML 的宿主环境
 - **相关**：[[前端框架]] — 框架将组件编译为 HTML
-
----
 
 ### 参考延伸
 

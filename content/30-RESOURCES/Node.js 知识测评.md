@@ -5,7 +5,7 @@ aliases: [MOC-Node.js知识测评, NodeJS知识测评]
 description: 按能力域逐条自评的 Node.js 知识点清单，断链即库内尚无对应笔记的待补缺口
 tags: [前端开发/Node, 自评]
 date-created: 2026-11-25
-date-modified: 2026-11-25
+date-modified: 2026-11-26
 content-type: moc
 up: "[[Node.js]]"
 ---
@@ -25,7 +25,7 @@ up: "[[Node.js]]"
 
 ### 运行时与调度
 
-- [ ] [[V8 引擎]] — 能说清 Node 借用了 V8 的哪一层，运行时自己补了哪一层 
+- [ ] [[V8 引擎]] — 能说清 Node 借用了 V8 的哪一层，运行时自己补了哪一层
 - [ ] [[JavaScript 引擎]] — 能区分「引擎」与「运行时」各自负责什么
 - [ ] [[JS执行机制]] — 能指出引擎执行与宿主调度的交接点
 - [ ] [[事件循环]] — 能讲清 Node 的循环与浏览器任务队列差在哪

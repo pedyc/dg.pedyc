@@ -5,7 +5,7 @@ aliases: [MOC-Node模块与包, Node模块与包, Node 模块系统]
 description: Node 模块专题 MOC：require 解析顺序、条件导出与 CJS 与 ESM 的互操作
 tags: [前端开发/Node]
 date-created: 2026-11-16
-date-modified: 2026-11-16
+date-modified: 2026-11-26
 content-type: moc
 up: "[[Node.js]]"
 ---
@@ -36,8 +36,6 @@ up: "[[Node.js]]"
 
 - [[package.json]] — 依赖与入口声明的载体
 - [[pnpm]] — 依赖布局的实现，扁平与嵌套的取舍
-
----
 
 ### 知识图谱
 

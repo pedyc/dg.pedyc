@@ -4,7 +4,7 @@ title: JavaScript 引擎
 aliases: [JS Engine]
 tags: ["前端开发/Javascript"]
 date-created: 2025-06-15
-date-modified: 2026-03-15
+date-modified: 2026-11-26
 status: active
 content-type: concept
 up: "[[JS执行机制]]"

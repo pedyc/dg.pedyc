@@ -5,7 +5,7 @@ aliases: [JS, A-JavaScript]
 description: JavaScript 知识领域，包含核心概念、运行机制、生态工具
 tags: [前端开发/JavaScript]
 date-created: 2025-05-19
-date-modified: 2026-10-28
+date-modified: 2026-11-26
 content-type: area
 up: "[[前端开发]]"
 ---

@@ -5,7 +5,7 @@ aliases: [MOC-Node运行时模型, Node运行时模型, Node 事件循环]
 description: Node 运行时专题 MOC：事件循环的分阶段调度、libuv 线程池与阻塞判定
 tags: [前端开发/Node]
 date-created: 2026-11-16
-date-modified: 2026-11-25
+date-modified: 2026-11-26
 content-type: moc
 up: "[[Node.js]]"
 ---
@@ -41,10 +41,7 @@ up: "[[Node.js]]"
 
 ### 代价：什么写法会让先后失效
 
-
 - [[阻塞事件循环]]（待写）— 同步 I/O、大 JSON 序列化、正则回溯三类写法与判定方式
-
----
 
 ### 知识图谱
 

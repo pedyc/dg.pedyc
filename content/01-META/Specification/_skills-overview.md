@@ -4,7 +4,7 @@ title: _skills-overview
 aliases: []
 tags: [方法论, llm-wiki]
 date-created: 2026-06-12
-date-modified: 2026-11-10
+date-modified: 2026-11-27
 content-type: article
 up: "[[llm-wiki-schema]]"
 ---
@@ -27,7 +27,7 @@ up: "[[llm-wiki-schema]]"
 | | `content-evaluator-local` | v1.2.0 | 健康检查（lint），含 content-type 模板对比 | 全库只读 |
 | | `content-verifier-local` | v1.1.0 | 内容质量核查，按模板章节对比 | 指定笔记 |
 | **内容层** | `llm-wiki-local` | v1.0.0 | ingest / query / lint / graph | 内容页 |
-| | `learning-project-local` | v1.0.0 | 为陌生领域起草学习专项：画链 → 列缺口 → 对库，缺的读物留灰链 | 起草期只读库外；落盘委托创建层 |
+| | `learning-project-local` | v1.1.0 | 为陌生领域起草学习专项：画链 → 列缺口 → 对库，缺的读物留灰链；骨架固定 `template_learning_project` | 起草期只读库外；落盘委托创建层 |
 
 ### 调用流程
 
@@ -148,7 +148,9 @@ learning-project-local → 起草完交给 obsidian-note-local，不自己写文
 
 #### learning-project-local
 
-**用途**：为一个陌生领域起草学习专项。**只管起草，不管落盘**——写完交给 `obsidian-note-local`，否则索引不同步。
+**用途**：为一个陌生领域起草学习专项。**只管起草与验收，不自己写文件**——写完交给 `obsidian-note-local`，否则索引不同步。
+
+**产物三件**：判定链（范围）、成功标准（验收）、`读什么` 节里带灰链的清单（判断缺口）。灰链不是笔记，也不裁定体裁；标题语法决定将来落成 `atomic` / `term` / `concept`，优先命题句。骨架固定 `template_learning_project`，不再二选一；结果外在他处的专项不属本 skill 触发范围。
 
 ```bash
 /learning-project-local "分布式缓存" 锚点=课纲某份

@@ -1,6 +1,6 @@
 ---
 date-created: 2026-10-24
-date-modified: 2026-11-10
+date-modified: 2026-11-27
 title: AGENTS
 ---
 
@@ -43,7 +43,7 @@ title: AGENTS
 | 存量治理的步骤（诊断 / 定判据 / 回填 / 收尾） | `30-RESOURCES/存量治理.md` |
 | 判形态（13 种 content-type）、atomic 正文结构、名字该不该聚合 | `Truth/笔记类型规范` |
 | 写 project（含学习专项）：两种形态怎么选、判定链怎么画、读什么为什么留灰链 | `Truth/project 设计` |
-| **为陌生领域起草学习专项**（要动手起草，不只是查规则） | `.claude/skills/learning-project-local`（三遍：画链 → 列缺口 → 对库；对库前不许看库。**产物是一份带灰链的读物清单，不是一份现成的 project 页**——落成 `template_project` 还是 `template_learning_project` 另判，见 `Truth/project 设计`） |
+| **为陌生领域起草学习专项**（要动手起草，不只是查规则） | `.claude/skills/learning-project-local`（三遍：画链 → 列缺口 → 对库；对库前不许看库。产物是判定链 + 成功标准 + 带灰链的读物清单，骨架固定 `template_learning_project`；灰链不裁定体裁，形态由标题语法定。库级形态判据仍见 `Truth/project 设计`） |
 | 写某一型时该守哪几条判据 | `Guide/Design/判据速查`（按模板分组，脚本生成的投影） |
 | 查某类笔记违反了哪些判据、哪条判据还没人查 | `_scripts/check_criteria.py`（`--detail E15` 看明细，`--coverage` 看载体覆盖，`--todo` 看学习专项还缺哪些读物） |
 | 写 concept 时不知怎么组织 atomic（要一篇可对照的范文） | `Guide/概念与原子笔记的组织范例` |

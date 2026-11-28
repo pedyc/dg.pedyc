@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-PROJECTS/P-Node.js 判定链学习专项/Node.js 判定链学习专项.md",
+                "file": "90-DIARY/2026-11-28.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Node.js 判定链学习专项"
+              "title": "2026-11-28"
             }
           }
         ],
@@ -146,7 +146,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "10-PROJECTS/P-Node.js 判定链学习专项/Node.js 判定链学习专项.md",
+                "file": "90-DIARY/2026-11-28.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -353,8 +353,9 @@
   },
   "active": "835b2a828d604e08",
   "lastOpenFiles": [
-    "_templates/template_learning_project.md",
     "10-PROJECTS/P-Node.js 判定链学习专项/Node.js 判定链学习专项.md",
+    "90-DIARY/2026-11-28.md",
+    "_templates/template_learning_project.md",
     "01-META/Specification/_skills-overview.md",
     "AGENTS.md",
     "10-PROJECTS/P-Node.js 判定链学习专项",
@@ -381,7 +382,6 @@
     "99-ASSETS/报告/2026前端就业形势与技术趋势深度研究报告.html",
     "99-ASSETS/报告/未命名.md",
     "99-ASSETS/报告",
-    "10-PROJECTS/P-前端工程学习专项/前端工程学习专项-构建.md",
     "40-ARCHIVE/P-斑驳光背景实现",
     "99-ASSETS/Bases/SOP.base",
     "99-ASSETS/Bases/判据.base",
